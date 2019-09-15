@@ -1,12 +1,12 @@
 ---
 title: fprintf, _fprintf_l, fwprintf, _fwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fwprintf
 - fprintf
 - _fprintf_l
 - _fwprintf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fprintf
 - fwprintf
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - print formatted data to streams
 - fwprintf_l function
 ms.assetid: 34a87e1c-6e4d-4d48-a611-58314dd4dc4b
-ms.openlocfilehash: d84ef50e6fd522e393bb87664fb1eb47f3d32bb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a296b8ac97a7f20a3834814c1ca3b7319720148
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333195"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956987"
 ---
-# <a name="fprintf-fprintfl-fwprintf-fwprintfl"></a>fprintf, _fprintf_l, fwprintf, _fwprintf_l
+# <a name="fprintf-_fprintf_l-fwprintf-_fwprintf_l"></a>fprintf, _fprintf_l, fwprintf, _fwprintf_l
 
 Geben formatierte Daten an einen Stream aus Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
 
@@ -89,17 +92,17 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Fprintf** gibt die Anzahl der geschriebenen Bytes zurück. **Fwprintf** gibt die Anzahl der geschriebenen Breitzeichen zurück. Jede dieser Funktionen gibt stattdessen einen negativen Wert zurück, wenn ein Ausgabefehler auftritt. Wenn *Stream* oder *Format* ist **NULL**, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**. Die Formatzeichenfolge wird nicht auf gültige Formatierungszeichen überprüft, wie es bei **Fprintf_s** oder **Fwprintf_s**.
+" **f** " gibt die Anzahl der geschriebenen Bytes zurück. " **f** " gibt die Anzahl der geschriebenen breit Zeichen zurück. Jede dieser Funktionen gibt stattdessen einen negativen Wert zurück, wenn ein Ausgabefehler auftritt. Wenn *Stream* oder *Format* **null**ist, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben die Funktionen-1 zurück und legen **errno** auf **EINVAL**fest. Die Format Zeichenfolge wird nicht auf gültige Formatierungszeichen wie bei Verwendung von **fprintf_s** oder **fwprintf_s**geprüft.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-**Fprintf** formatiert und gibt eine Reihe von Zeichen und Werten für die Ausgabe *Stream*. Jede Funktion *Argument* (sofern vorhanden) konvertiert und ausgegeben wird, entsprechend der jeweiligen Formatangabe in *Format*. Für **Fprintf**, *Format* Argument verfügt über die gleiche Syntax und Verwendung in **Printf**.
+**fprintf** formatiert und druckt eine Reihe von Zeichen und Werten in den *Ausgabestream*. Jedes Funktions *Argument* (sofern vorhanden) wird entsprechend der entsprechenden Format Spezifikation im- *Format*konvertiert und ausgegeben. Für **"f"** weist das *Format* -Argument die gleiche Syntax auf und verwendet es in **printf**.
 
-**Fwprintf** ist eine Breitzeichen-Version von **Fprintf**in **Fwprintf**, *Format* ist eine Breitzeichen-Zeichenfolge. Diese Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Fprintf** unterstützt derzeit keine Ausgabe in eine UNICODE-Stream.
+" **swprintf** " ist eine breit Zeichen Version **von "f"** . in **"f"** ist *Format* eine Zeichenfolge mit breit Zeichen. Diese Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. die Ausgabe in einen Unicode-Stream wird von " **f printf** " derzeit nicht unterstützt.
 
-Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
+Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebiets Schema Parameter, der anstelle des aktuellen Thread Gebiets Schemas übergeben wurde.
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist.

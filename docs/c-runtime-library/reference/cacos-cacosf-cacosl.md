@@ -1,11 +1,11 @@
 ---
 title: cacos, cacosf, cacosl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cacos
 - cacosf
 - cacosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cacos
 - cacosf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-ms.openlocfilehash: 18757ecd30f399ca3d1fdb77e8bff8213a265e74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b0751703b9b9cdcdb50e265a6b5d3c929d89ae1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348574"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939400"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos, cacosf, cacosl
 
-Ruft den Arkuskosinus einer komplexen Zahl mit achsenabschnitten außerhalb des Intervalls [-1, + 1] auf der reellen Achse ab.
+Ruft den Arkus Kosinus einer komplexen Zahl mit Verzweigungs Schnitten außerhalb des Intervalls [-1, + 1] auf der reellen Achse ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,11 +64,11 @@ Eine komplexe Zahl, die einen Winkel als Bogenmaß darstellt
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Arkuskosinus der *z*, im Bogenmaß zurück. Das Ergebnis ist unbegrenzt, auf der imaginären Achse, und klicken Sie in der im Intervall [0, π] auf der reellen Achse. Domänenfehler werden auftreten, wenn *z* liegt außerhalb des Intervalls [-1, + 1].
+Der Arkus Kosinus von *z*im Bogenmaße. Das Ergebnis wird an der imaginären Achse und im Intervall [0,.] entlang der reellen Achse nicht gebunden. Ein Domänen Fehler tritt auf, wenn sich *z* außerhalb des Intervalls [-1, + 1] befindet.
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Cacos** verwenden und zurückgeben **_Fcomplex** und **_Lcomplex** Werte. In einem C-Programm **Cacos** immer Double und gibt eine **_Dcomplex** Wert.
+Da C++ das überladen zulässt, können Sie über Ladungen von **cacos** aufzurufen, die **_Fcomplex** -und **_Lcomplex** -Werte verwenden und zurückgeben. In einem C-Programm nimmt **cacos** immer einen **_Dcomplex** -Wert an und gibt ihn zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

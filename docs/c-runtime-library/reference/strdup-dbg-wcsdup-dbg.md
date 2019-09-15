@@ -1,10 +1,10 @@
 ---
 title: _strdup_dbg, _wcsdup_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strdup_dbg
 - _wcsdup_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wcsdup_dbg
 - strdup_dbg
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - _strdup_dbg function
 - wcsdup_dbg function
 ms.assetid: 681db70c-d124-43ab-b83e-5eeea9035097
-ms.openlocfilehash: 3092c27df1e39c7b719f6e7037efa202d29c9e81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f7d4fd8781269ee37f7515fdcab72e5195fdf00
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353879"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958197"
 ---
-# <a name="strdupdbg-wcsdupdbg"></a>_strdup_dbg, _wcsdup_dbg
+# <a name="_strdup_dbg-_wcsdup_dbg"></a>_strdup_dbg, _wcsdup_dbg
 
-Versionen von [_strdup und _wcsdup](strdup-wcsdup-mbsdup.md) , verwenden die Debugversion des **Malloc**.
+Versionen von [_strdup und _wcsdup](strdup-wcsdup-mbsdup.md) , die die Debugversion von **malloc**verwenden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,20 +71,20 @@ Mit NULL endende Quellzeichenfolge.
 Angeforderter Typ des Speicherblocks: **_CLIENT_BLOCK** oder **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Zeiger auf den Namen der Quelldatei, die Belegung angefordert oder **NULL**.
+Zeiger auf den Namen der Quelldatei, die den Zuordnungs Vorgang angefordert hat, oder **null**.
 
 *linenumber*<br/>
-Zeilennummer in der Quelldatei, in denen Belegung angefordert wurde, oder **NULL**.
+Zeilennummer in der Quelldatei, in der der Zuordnungs Vorgang angefordert wurde, oder **null**.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt einen Zeiger auf den Speicherort für die kopierte Zeichenfolge oder **NULL** Wenn Speicher zugeordnet werden kann.
+Jede dieser Funktionen gibt einen Zeiger auf den Speicherort für die kopierte Zeichenfolge oder **null** zurück, wenn der Speicher nicht zugeordnet werden kann.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_strdup_dbg** und **_wcsdup_dbg** -Funktionen sind identisch mit **_strdup** und **_wcsdup** mit dem Unterschied, dass wenn **_ DEBUGGEN von** wird definiert, verwenden Sie diese Funktionen die Debugversion von **Malloc**, **_malloc_dbg**, um Speicher für die duplizierte Zeichenfolge zu belegen. Informationen zu den Debugfunktionen von **_malloc_dbg**, finden Sie unter [_malloc_dbg](malloc-dbg.md).
+Die Funktionen **_strdup_dbg** und **_wcsdup_dbg** sind mit **_strdup** und **_wcsdup** identisch, außer dass bei Definition von **_DEBUG** die Debugversion von **malloc**, **_malloc_dbg**, zum Zuordnen von verwendet wird. der Arbeitsspeicher für die duplizierte Zeichenfolge. Weitere Informationen zu den Debuggingfunktionen von **_malloc_dbg**finden Sie unter [_malloc_dbg](malloc-dbg.md).
 
-In den meisten Fällen müssen Sie diese Funktionen nicht explizit aufrufen. Stattdessen definieren Sie das Flag **_CRTDBG_MAP_ALLOC**. Wenn **_CRTDBG_MAP_ALLOC** definiert ist, werden Aufrufe von **_strdup** und **_wcsdup** neu zu **_strdup_dbg** und **_ Wcsdup_dbg**, mit der *BlockType* festgelegt **_NORMAL_BLOCK**. Also, Sie müssen nicht dieser Funktionen explizit aufrufen, es sei denn, Sie möchten die Heapblöcke als markieren **_CLIENT_BLOCK**. Weitere Informationen zu den Blocktypen finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details).
+In den meisten Fällen müssen Sie diese Funktionen nicht explizit aufrufen. Stattdessen können Sie das Flag **_CRTDBG_MAP_ALLOC**definieren. Wenn **_CRTDBG_MAP_ALLOC** definiert ist, werden Aufrufe von **_strdup** und **_wcsdup** zu **_strdup_dbg** bzw. **_wcsdup_dbg**neu zugeordnet, wobei *blockType* auf **_NORMAL_BLOCK**festgelegt ist. Daher müssen Sie diese Funktionen nicht explizit aufzurufen, es sei denn, Sie möchten die Heap Blöcke als **_CLIENT_BLOCK**markieren. Weitere Informationen zu den Blocktypen finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

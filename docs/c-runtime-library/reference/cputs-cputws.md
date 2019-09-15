@@ -1,10 +1,10 @@
 ---
 title: _cputs, _cputws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cputws
 - _cputs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cputws
 - _cputs
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 81d2364cd1fc409ca3267bc416bd3cbd16c62a15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46fce16078b9ce289d45ee4e62bb4076eaf5795a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340236"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942632"
 ---
-# <a name="cputs-cputws"></a>_cputs, _cputws
+# <a name="_cputs-_cputws"></a>_cputs, _cputws
 
 Fügt eine Zeichenfolge in der Konsole ein.
 
@@ -62,13 +65,13 @@ Ausgabezeichenfolge.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Im Erfolgsfall **_cputs** gibt 0 zurück. Wenn die Funktion fehlschlägt, wird einen Wert ungleich null zurückgegeben.
+Bei erfolgreicher Ausführung gibt **_cputs** 0 zurück. Wenn die Funktion fehlschlägt, wird einen Wert ungleich null zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_cputs** Funktion schreibt die Null-terminierte Zeichenfolge, auf das von *str* direkt an die Konsole. Eine Kombination aus Wagenrücklauf-Zeilenvorschub (CR-LF) wird nicht automatisch an die Zeichenfolge angefügt.
+Die **_cputs** -Funktion schreibt die auf NULL endenden Zeichenfolge, auf die von *Str* verwiesen wird, direkt in die Konsole. Eine Kombination aus Wagenrücklauf-Zeilenvorschub (CR-LF) wird nicht automatisch an die Zeichenfolge angefügt.
 
-Diese Funktion überprüft seine Parameter. Wenn *str* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und-1 zurückgegeben.
+Diese Funktion überprüft seine Parameter. Wenn *Str* **null**ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird **errno** auf **EINVAL** festgelegt, und-1 wird zurückgegeben.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

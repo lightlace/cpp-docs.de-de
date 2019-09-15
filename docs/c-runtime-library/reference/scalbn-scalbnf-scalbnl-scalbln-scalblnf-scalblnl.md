@@ -1,14 +1,14 @@
 ---
 title: scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - scalblnl
 - scalbnl
 - scalbnf
 - scalblnf
 - scalbn
 - scalbln
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - scalblnf
 - scalbnl
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: 7109340afaa634fc21177380d015c9eace506081
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 794d0bdceb13aafb83de85fb29e47a4fa3125cd6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357160"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948919"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -102,15 +105,15 @@ Ganzzahlexponent.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Scalbn** Funktionen geben den Wert der *x* \* **FLT_RADIX**<sup>"exp"</sup> bei erfolgreicher Ausführung. Bei einem Überlauf (abhängig vom Vorzeichen *x*), **Scalbn** gibt **HUGE_VAL**; die **Errno** Wert wird festgelegt, um **ERANGE** .
+Die **scalbn** -Funktionen geben den Wert von *x* \* **FLT_RADIX**<sup>Exp</sup> zurück, wenn erfolgreich. Bei einem Überlauf (abhängig vom Vorzeichen von *x*) gibt **scalbn** +/- **HUGE_VAL**; zurück. der **errno** -Wert ist auf **ERANGE**festgelegt.
 
-Weitere Informationen zu **Errno** und mögliche Rückgabewerte finden Sie unter [Errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Weitere Informationen zu **errno** und möglichen Fehlerrückgabe Werten finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-**FLT_RADIX** ist definiert \<float.h > als native gleitkommabasis; in binären Systemen hat es den Wert 2, und **Scalbn** entspricht [Ldexp](ldexp.md).
+**FLT_RADIX** wird in \<float. h > als systemeigene Gleit Komma Basis definiert; in binären Systemen hat es den Wert 2, und **scalbn** entspricht [LDE XP](ldexp.md).
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Scalbn** und **Scalbln** verwenden und zurückgeben **"float"** oder **lange** **doppelte** Typen. In einem C-Programm **Scalbn** immer eine **doppelte** und **Int** und gibt eine **doppelte**, und **Scalbln**immer eine **doppelte** und **lange** und gibt eine **doppelte**.
+Da C++ das überladen zulässt, können Sie über Ladungen von **scalbn** und **scalbln** aufzurufen, die **float** -oder **Long** **Double** -Typen verwenden und zurückgeben. In einem C-Programm nimmt **scalbn** immer einen **Double** -und einen **int** -Wert an und gibt einen **Double**-Wert zurück. **scalbln** nimmt immer einen **Double** -Wert und einen **Long** -Wert und gibt einen **Double**zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -138,7 +141,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 6.4 times FLT_RADIX to the power of 3 is 51.2

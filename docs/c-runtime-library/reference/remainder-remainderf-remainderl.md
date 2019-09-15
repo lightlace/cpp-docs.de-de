@@ -1,11 +1,11 @@
 ---
 title: remainder, remainderf, remainderl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - remainderl
 - remainder
 - remainderf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - remainderf
 - remainder
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 9a9abe82e69122ca87f44e293e1da725c97045d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 851f022325bb617cb2b0ae9a331b680b9d9fd303
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357641"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949425"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -61,13 +64,13 @@ Der Nenner.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Gleitkommarest von *x* / *y*. Wenn der Wert des *y* ist 0,0, **Rest** ein stilles NaN zurückgegeben. Informationen über die Darstellung eines stillen NaN durch die **Printf** -Familie finden Sie unter [Printf, _printf_l, Wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+Der Gleit Komma Rest von *x* / *y*. Wenn der Wert von *y* 0,0 ist, gibt **Rest** einen stillen NaN-Wert zurück. Informationen zur Darstellung eines stillen Nan durch die **printf** -Familie finden Sie unter [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Rest** Funktionen berechnet den Gleitkommarest *r* von *x* / *y* so, dass *x*   =  *n* \* *y* + *r*, wobei *n*ist die Integer-Wert zum nächsten *x* / *y* und *n*sogar wenn &#124; *n*  -  *x* / *y* &#124; = 1/2. Wenn *r* = 0, *r* hat die gleichen Vorzeichen wie *x*.
+Die **Rest** -Funktionen berechnen den Gleit Komma Rest *r* von *x* / *y* , sodass *x* = *n* \* *y* + *r*, wobei *n* die ganze Zahl, die dem Wert am nächsten liegt, bis zu *x* / *y* , und *n*ist auch immer, wenn &#124; *n* - *x* / *y* &#124; = 1/2 Wenn *r* = 0 ist, hat *r* das gleiche Vorzeichen wie *x*.
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Rest** verwenden und zurückgeben **"float"** oder **lange** **doppelte** Werte. In einem C-Programm **Rest** nimmt immer zwei **doppelte** Argumente und gibt eine **doppelte**.
+Da C++ das überladen zulässt, können Sie über Ladungen von **Restwerten** aufzurufen, die **float** -oder **Long** **Double** -Werte verwenden und zurückgeben. In einem C-Programm nimmt **Rest** immer zwei **doppelte** Argumente an und gibt einen **Double**-Wert zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

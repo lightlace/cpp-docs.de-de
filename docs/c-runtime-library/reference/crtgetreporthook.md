@@ -1,9 +1,9 @@
 ---
 title: _CrtGetReportHook
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtGetReportHook
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtGetReportHook
 - _CrtGetReportHook
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - CrtGetReportHook function
 - _CrtGetReportHook function
 ms.assetid: 922758ed-7edd-4359-9c92-0535192dc11a
-ms.openlocfilehash: 0b8b666093807c95312d4328ca9b3043ad1e09df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc005dda435b5e11d6c3c886de180ed85b9c2a04
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339415"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942400"
 ---
-# <a name="crtgetreporthook"></a>_CrtGetReportHook
+# <a name="_crtgetreporthook"></a>_CrtGetReportHook
 
 Ruft die clientdefinierte Berichtsfunktion ab, um sie mit der C-Laufzeit für den Debug-Berichterstellungsprozess zu verknüpfen (nur Debugversion).
 
@@ -45,7 +48,7 @@ Gibt die aktuelle clientdefinierte Berichtsfunktion zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-**_CrtGetReportHook** ermöglicht einer Anwendung, die die aktuelle Berichtsfunktion für die C-Laufzeit-Bibliothek Berichterstellungsprozess abzurufen.
+**_CrtGetReportHook** ermöglicht es einer Anwendung, die aktuelle Berichtsfunktion für den Debugbibliothek-Bericht Erstellungs Prozess der C-Laufzeit abzurufen.
 
 Weitere Informationen zur Verwendung anderer hookfähiger Laufzeitfunktionen und zum Schreiben eigener clientdefinierter Hookfunktionen finden Sie unter [Debug Hook Function Writing (Schreiben von Hookfunktionen zum Debuggen)](/visualstudio/debugger/debug-hook-function-writing).
 
@@ -63,7 +66,7 @@ Nur Debugversionen von [C-Laufzeitbibliotheken](../../c-runtime-library/crt-libr
 
 ## <a name="example"></a>Beispiel
 
-Ein Beispiel zur Verwendung **_CrtSetReportHook**, finden Sie unter [Bericht](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/report).
+Ein Beispiel für die Verwendung von **_CrtSetReportHook**finden Sie unter [Report](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/report).
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,10 +1,10 @@
 ---
 title: vscanf, vwscanf
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vscanf
 - vwscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vscanf
 - vwscanf
 - _vtscanf
 ms.assetid: d1df595b-11bc-4682-9441-a92616301e3b
-ms.openlocfilehash: 936dcc34fb0d2ed73919ca59c7419f2090c54e28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86e6588f6309989317c4cee7ec398cfa809afe9b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383502"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945445"
 ---
 # <a name="vscanf-vwscanf"></a>vscanf, vwscanf
 
@@ -57,18 +60,18 @@ Variablenargumentenliste.
 
 Gibt die Anzahl von Feldern zurück, die erfolgreich konvertiert und zugewiesen wurden. Der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden.
 
-Wenn *Format* ist eine **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EOF** und **Errno** zu **EINVAL**.
+Wenn *Format* ein **null** -Zeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen **EOF** zurück und legen **errno** auf **EINVAL**fest.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (errno, _doserrno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Vscanf** -Funktion liest Daten aus dem Standardeingabestream **Stdin** und schreibt die Daten in die Speicherorte, die von erhalten die *Arglist* Argumentliste. Jedes Argument in der Liste muss ein Zeiger auf eine Variable eines Typs, der einem Typspezifizierer in entspricht *Format*. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
+Die **vscanf** -Funktion liest Daten aus dem Standardeingabestream **stdin** und schreibt die Daten in die Speicherorte, die von der *Arglist* -Argumentliste angegeben werden. Jedes Argument in der Liste muss ein Zeiger auf eine Variable eines Typs sein, der einem Typspezifizierer im- *Format*entspricht. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
 
 > [!IMPORTANT]
-> Bei Verwendung von **Vscanf** um eine Zeichenfolge zu lesen, geben Sie immer eine Breite für die **%s** Format (z. B. **"% 32 Sekunden"** anstelle von **"%s"**); falsch formatierte Eingabe kann, andernfalls einen Pufferüberlauf verursachen. Alternativ können Sie auch [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md) oder [fgets](fgets-fgetws.md) verwenden.
+> Wenn Sie mit **vscanf** eine Zeichenfolge lesen, geben Sie immer eine Breite für das **% s** -Format an (z. b. **"% 32s"** anstelle von **"% s"** ); Andernfalls kann eine falsch formatierte Eingabe zu einem Pufferüberlauf führen. Alternativ können Sie auch [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md) oder [fgets](fgets-fgetws.md) verwenden.
 
-**Vwscanf** ist eine Breitzeichen-Version von **Vscanf**; die *Format* Argument **Vwscanf** ist eine Breitzeichen-Zeichenfolge. **Vwscanf** und **Vscanf** Verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Vscanf** unterstützt keine Eingabe aus einem unicodestream.
+**vwscanf** ist eine breit Zeichen Version von **vscanf**. Das *Format* -Argument für **vwscanf** ist eine Zeichenfolge mit breit Zeichen. **vwscanf** und **vscanf** Verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **vscanf** unterstützt nicht die Eingabe aus einem Unicode-Stream.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -85,7 +88,7 @@ Weitere Informationen finden Sie unter [Format Specification Fields: scanf and w
 |**vscanf**|\<stdio.h>|
 |**vwscanf**|\<stdio.h> oder \<wchar.h>|
 
-Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Standardstreamhandles, die mit der Konsole verknüpft sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die-Konsole wird in universelle Windows-Plattform-Apps (UWP) nicht unterstützt. Die Standarddaten Strom Handles, die der Konsole, **stdin**, **stdout**und **stderr**zugeordnet sind, müssen umgeleitet werden, bevor Sie von C-Lauf Zeitfunktionen in UWP-Apps verwendet werden können. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

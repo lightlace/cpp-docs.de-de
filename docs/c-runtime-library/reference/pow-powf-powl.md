@@ -1,11 +1,11 @@
 ---
 title: pow, powf, powl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - powl
 - pow
 - powf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - powl
 - pow
@@ -33,16 +36,16 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: edf6116413caba52f9311f03bdfcc1d87e68a011
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 863d2b76ec131670b10eefc086fa3485bd0a983d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232233"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950286"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
-Berechnet *x* potenziert mit der *y*.
+Berechnet das in *y*angegebene *x* .
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,29 +73,29 @@ Exponent.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Wert der *x*<sup>*y*</sup>. Zu Überlauf oder Unterlauf wird keine Fehlermeldung ausgegeben.
+Gibt den Wert von *x*<sup>*y*</sup>zurück. Zu Überlauf oder Unterlauf wird keine Fehlermeldung ausgegeben.
 
 |Werte von x und y|Rückgabewert von "pow"|
 |-----------------------|-------------------------|
-|*X* ! = 0,0 und *y* 0,0 ==|1|
-|*X* == 0,0 und *y* 0,0 ==|1|
-|*X* == 0,0 und *y* < 0|INF|
+|*x* ! = 0,0 und *y* = = 0,0|1|
+|*x* = = 0,0 und *y* = = 0,0|1|
+|*x* = = 0,0 und *y* < 0|INF|
 
 ## <a name="remarks"></a>Hinweise
 
-**Pow** erkennt keine ganzzahligen Gleitkommawerte größer als 2<sup>64</sup> (z. B. 1.0E100).
+**Pow** erkennt keine ganzzahligen Gleit Komma Werte, die größer als 2<sup>64</sup> sind (z. b. 1.0 E100).
 
-**Pow** verfügt über eine Implementierung, Streaming SIMD Extensions 2 (SSE2) verwendet. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](set-sse2-enable.md).
+**Pow** verfügt über eine Implementierung, die Streaming SIMD Extensions 2 (SSE2) verwendet. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](set-sse2-enable.md).
 
-Da C++ das Überladen zulässt, können Sie eine der verschiedenen Überladungen von Aufrufen **pow**. In einem C-Programm **pow** nimmt immer zwei **doppelte** Werte und gibt eine **doppelte** Wert.
+Da C++ das überladen zulässt, können Sie jede der verschiedenen über Ladungen von **Pow**aufzurufen. In einem C-Programm übernimmt **Pow** immer zwei **Double** -Werte und gibt einen **Double** -Wert zurück.
 
-Die `pow(int, int)`-Überladung ist nicht mehr verfügbar. Wenn Sie diese Überladung verwenden, kann der Compiler ausgeben [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Um dieses Problem zu vermeiden, wandeln Sie den ersten Parameter um **doppelte**, **"float"**, oder **lange** **doppelte**.
+Die `pow(int, int)`-Überladung ist nicht mehr verfügbar. Wenn Sie diese Überladung verwenden, gibt der Compiler möglicherweise [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)aus. Um dieses Problem zu vermeiden, wandeln Sie den ersten Parameter in **Double**, **float**oder **Long** **Double**um.
 
 ## <a name="requirements"></a>Anforderungen
 
 |-Routine zurückgegebener Wert|Erforderlicher Header (C)|Erforderlicher Header (C++)|
 |-|-|-|
-|**pow**, **powf**, **powl**|\<math.h>|\<math.h> oder \<cmath>|
+|**Pow**, **powf**, **powl**|\<math.h>|\<math.h> oder \<cmath>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

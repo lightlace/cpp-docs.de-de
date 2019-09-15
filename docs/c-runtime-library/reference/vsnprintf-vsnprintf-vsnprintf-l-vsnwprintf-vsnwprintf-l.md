@@ -1,7 +1,7 @@
 ---
 title: vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vsnprintf
 - _vsnprintf_l
 - _vsnwprintf
@@ -12,7 +12,7 @@ apiname:
 - _vsnwprintf;
 - _vsnprintf_l;
 - _vsnwprintf_l;
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -24,7 +24,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ntoskrnl.exe
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vsnprintf
 - _vsnwprintf
@@ -52,12 +55,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: 2e665562f3dd8ee0be70b4e50068955a91233c60
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 721ea80272f7a76e959528ec4114d69bd0e80507
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499080"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945311"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -160,7 +163,7 @@ Weitere Informationen finden Sie unter [Formatangaben](../../c-runtime-library/f
 
 Die **vsnprintf** -Funktion gibt die Anzahl der geschriebenen Zeichen zurück. das abschließende Null-Zeichen wird dabei nicht gezählt. Wenn die von *count* angegebene Puffergröße nicht ausreichend groß ist, um die durch *Format* und *argptr*angegebene Ausgabe zu enthalten, entspricht der Rückgabewert von **vsnprintf** der Anzahl der Zeichen, die geschrieben werden, ohne den NULL-Wert zu zählen. Zeichen, wenn die *Anzahl* ausreichend groß war. Wenn der Rückgabewert größer als *count* -1 ist, wurde die Ausgabe abgeschnitten. Der Rückgabewert „-1“ gibt an, dass ein Codierungsfehler aufgetreten ist.
 
-Sowohl die **_vsnprintf** -als auch die **_vsnwprintf** -Funktion geben die Anzahl der geschriebenen Zeichen zurück, wenn die Anzahl der zu Schreibenden Zeichen kleiner oder gleich der Anzahl ist. Wenn die Anzahl der zu schreibenden Zeichen größer als *count*ist, geben diese Funktionen-1 zurück, um anzugeben, dass die Ausgabe abgeschnitten wurde.
+Sowohl die **_vsnprintf** -als auch die **_vsnwprintf** -Funktion geben die Anzahl der geschriebenen Zeichen zurück, wenn die Anzahl der zu schreibenden Zeichen kleiner oder gleich *der Anzahl ist.* Wenn die Anzahl der zu schreibenden Zeichen größer als *count*ist, geben diese Funktionen-1 zurück, um anzugeben, dass die Ausgabe abgeschnitten wurde.
 
 Der von allen diesen Funktionen zurückgegebene Wert enthält nicht das abschließende Zeichen NULL, unabhängig davon, ob es geschrieben wurde oder nicht. Wenn *count* 0 (null) ist, ist der zurückgegebene Wert die Anzahl von Zeichen, die von den Funktionen geschrieben werden, ohne abschließende NULL-Werte. Sie können dieses Ergebnis dazu verwenden, ausreichend Pufferspeicher für die Zeichenfolge und dessen abschließendes NULL-Zeichen zuzuordnen, und die Funktion dann erneut aufrufen, um den Puffer zu füllen.
 
@@ -168,7 +171,7 @@ Wenn *Format* **null**ist, oder wenn der Puffer **null** und *count* ungleich 0 
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen nimmt einen Zeiger auf eine Argumentliste, formatiert die Daten und schreibt bis zum *zählen* von Zeichen in den Speicher, auf den von *buffer*verwiesen wird. Die **vsnprintf** -Funktion schreibt immer einen NULL-Terminator, selbst wenn die Ausgabe abgeschnitten wird. Bei Verwendung von **_vsnprintf** und **_vsnwprintf**wird der Puffer nur dann mit Null beendet, wenn am Ende Platz vorhanden ist (d. h., wenn die Anzahl der zu schreibenden Zeichenkleiner als die Anzahl ist).
+Jede dieser Funktionen nimmt einen Zeiger auf eine Argumentliste, formatiert die Daten und schreibt bis zum *zählen* von Zeichen in den Speicher, auf den von *buffer*verwiesen wird. Die **vsnprintf** -Funktion schreibt immer einen NULL-Terminator, selbst wenn die Ausgabe abgeschnitten wird. Bei Verwendung von **_vsnprintf** und **_vsnwprintf**wird der Puffer nur dann mit Null beendet, wenn am Ende Platz vorhanden ist (d. h., wenn die Anzahl der zu schreibenden Zeichen *kleiner als die Anzahl ist*).
 
 > [!IMPORTANT]
 > Um bestimmte Arten von Sicherheitsrisiken zu verhindern, stellen Sie sicher, dass das *Format* keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).

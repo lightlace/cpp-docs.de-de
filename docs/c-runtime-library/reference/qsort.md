@@ -1,9 +1,9 @@
 ---
 title: qsort
 ms.date: 11/04/2016
-apiname:
+api_name:
 - qsort
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - qsort
 helpviewer_keywords:
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: 8a770965a03e43227b99f122924c723691f79c61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f445158bb72c50507af913986aff2d225ee50928
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358098"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949708"
 ---
 # <a name="qsort"></a>qsort
 
@@ -53,7 +56,7 @@ void qsort(
 *base*<br/>
 Start des Zielarrays.
 
-*Anzahl*<br/>
+*number*<br/>
 Arraygröße in Elementen.
 
 *width*<br/>
@@ -64,9 +67,9 @@ Zeiger auf eine benutzerdefinierte Routine, die zwei Elemente des Arrays verglei
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Qsort** -Funktion implementiert einen Schnellsortierungsalgorithmus, um ein Array von sortieren *Anzahl* Elementen, die jeweils von *Breite* Bytes. Das Argument *Basis* ist ein Zeiger auf die Basis des Arrays, das sortiert werden. **Qsort** überschreibt dieses Array mit den sortierten Elementen.
+Die **qsort** -Funktion implementiert einen Quick-Sort-Algorithmus, um ein Array von *Zahlen* Elementen zu sortieren, wobei jede *Breite* von Bytes ist. Die Argument *Basis* ist ein Zeiger auf die Basis des Arrays, das sortiert werden soll. **qsort** überschreibt dieses Array mit den sortierten Elementen.
 
-**Qsort** Aufrufe der *vergleichen* -Routine einmal oder mehrere Male während der Sortierung und Zeiger auf zwei Arrayelemente übergeben, bei jedem Aufruf.
+**qsort** Ruft die *Vergleichs* Routine mindestens ein Mal während der Sortierung auf und übergibt bei jedem Aufruf Zeiger auf zwei Array Elemente.
 
 ```C
 compare( (void *) & elem1, (void *) & elem2 );
@@ -77,12 +80,12 @@ Die Routine vergleicht die Elemente und gibt einen der folgenden Werte zurück.
 |Vergleich des Rückgabewerts der Funktion|Beschreibung|
 |-----------------------------------|-----------------|
 |< 0|**elem1** kleiner als **elem2**|
-|0|**elem1** entspricht **elem2**|
+|0|**elem1** Äquivalent zu **elem2**|
 |> 0|**elem1** größer als **elem2**|
 
 Das Array wird in aufsteigender Reihenfolge sortiert, wie von der Vergleichsfunktion definiert. Kehren Sie den Sinn der „größer als“ und „kleiner als“ in der Vergleichsfunktion um, um ein Array in absteigender Reihenfolge zu sortieren.
 
-Diese Funktion überprüft ihre Parameter. Wenn *vergleichen* oder *Anzahl* ist **NULL**, oder wenn *Basis* ist **NULL** und *Anzahl* ungleich NULL ist, oder wenn *Breite* ist kleiner als 0 (null), Handler für ungültige Parameter aufgerufen wird, der unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion und **Errno** nastaven NA hodnotu **EINVAL**.
+Diese Funktion überprüft ihre Parameter. Wenn *Compare* oder *Number* **null**ist, oder wenn *Base* **null** und *Number* ungleich NULL ist, oder wenn *Width* kleiner als 0 (null) ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion zurück, und **errno** ist auf **EINVAL**festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 

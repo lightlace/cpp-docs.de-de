@@ -1,12 +1,12 @@
 ---
 title: sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _sscanf_s_l
 - sscanf_s
 - _swscanf_s_l
 - swscanf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _stscanf_s
 - sscanf_s
@@ -41,14 +44,14 @@ helpviewer_keywords:
 - strings [C++], reading
 - _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
-ms.openlocfilehash: 07911b7254e74c28310669a697c7492b69567b7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14707b64a9c5c49837391be59d83ee39b79d5065
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354796"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957975"
 ---
-# <a name="sscanfs-sscanfsl-swscanfs-swscanfsl"></a>sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
+# <a name="sscanf_s-_sscanf_s_l-swscanf_s-_swscanf_s_l"></a>sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
 
 Liest formatierte Daten aus einer Zeichenfolge. Diese Versionen von [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md) enthalten Sicherheitsverbesserungen wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
@@ -95,15 +98,15 @@ Das zu verwendende Gebietsschema
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Der Rückgabewert ist **EOF** für einen Fehler oder am Ende der Zeichenfolge vor der ersten Konvertierung erreicht wird.
+Jede dieser Funktionen gibt die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Der Rückgabewert ist **EOF** für einen Fehler oder, wenn das Ende der Zeichenfolge vor der ersten Konvertierung erreicht wird.
 
-Wenn *Puffer* oder *Format* ist eine **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**
+Wenn *buffer* oder *Format* ein **null** -Zeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen-1 zurück und legen **errno** auf **EINVAL** fest.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (errno, _doserrno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Sscanf_s** -Funktion liest Daten aus *Puffer* an der Position, die von jeder Instanz erhält *Argument*. Die Argumente nach der Formatzeichenfolge geben Zeiger zu den Variablen, die einen Typ aufweisen, der einem Typspezifizierer in entspricht *Format*. Im Gegensatz zu den weniger sicheren Version [Sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md), ein puffergrößenparameter ist erforderlich, bei der Verwendung der typfeldzeichen **c**, **C**, **s**, **S**, oder, die in eingeschlossen sind **[]**. Nach jedem Pufferparameter, der dies erfordert, muss die Puffergröße in Zeichen als zusätzlicher Parameter angegeben werden. Beim Einlesen einer Zeichenfolge wird beispielsweise die Puffergröße für diese Zeichenfolge wie folgt übergeben:
+Die **sscanf_s** -Funktion liest Daten aus dem *Puffer* in den Speicherort, der von jedem *Argument*angegeben wird. Die Argumente nach der Format Zeichenfolge geben Zeiger auf Variablen an, die einen Typ haben, der einem Typspezifizierer im- *Format*entspricht. Anders als die weniger sichere Version von [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md)ist ein Puffergrößen Parameter erforderlich, wenn Sie die tyfeldzeichen **c**, **c**, **s**, **s**oder Zeichen folgen-Steuerungs Sätze verwenden, die in **[]** eingeschlossen sind. Nach jedem Pufferparameter, der dies erfordert, muss die Puffergröße in Zeichen als zusätzlicher Parameter angegeben werden. Beim Einlesen einer Zeichenfolge wird beispielsweise die Puffergröße für diese Zeichenfolge wie folgt übergeben:
 
 ```C
 wchar_t ws[10];
@@ -129,13 +132,13 @@ sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated
 Weitere Informationen finden Sie unter [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) und [scanf-Typenfeldzeichen](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> Size-Parameter ist vom Typ **ohne Vorzeichen**, nicht **"size_t"**. Wenn für 64-Bit-Ziele kompiliert wird, verwenden Sie eine statische Umwandlung konvertieren **_countof** oder **"sizeof"** Ergebnisse an die richtige Größe.
+> Der Size-Parameter ist vom Typ **Ganzzahl ohne Vorzeichen**, nicht **size_t**. Wenn Sie für 64-Bit-Ziele kompilieren, verwenden Sie eine statische Umwandlung, um **_countof** -oder **sizeof** -Ergebnisse in die richtige Größe zu konvertieren.
 
-Die *Format* -Argument steuert die Interpretation der Eingabefelder und hat die gleiche form und Funktion wie der *Format* Argument für die **Scanf_s** Funktion. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
+Das *Format* -Argument steuert die Interpretation der Eingabefelder und hat die gleiche Form und Funktion wie das *Format* -Argument für die **scanf_s** -Funktion. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
 
-**Swscanf_s** ist eine Breitzeichen-Version von **Sscanf_s**; die Argumente für **Swscanf_s** sind Breitzeichen Zeichenfolgen. **Sscanf_s** verarbeitet keine multibyte-Hexadezimalzeichen. **Swscanf_s** verarbeitet keine Unicode-voller Breite Hexadezimal- oder im "Kompatibilität der Zone" Zeichen. Andernfalls **Swscanf_s** und **Sscanf_s** Verhalten sich identisch.
+**swscanf_s** ist eine breit Zeichen Version von **sscanf_s**. die Argumente für **swscanf_s** sind Zeichen folgen mit breit Zeichen. **sscanf_s** verarbeitet keine Multibytezeichen-hexadezimal Zeichen. **swscanf_s** verarbeitet keine Unicode-Hexadezimal-oder-Kompatibilitäts Zonen Zeichen in voller Breite. Andernfalls Verhalten sich **swscanf_s** und **sscanf_s** identisch.
 
-Die Versionen dieser Funktionen, die **_l** -Suffix sind beinahe identisch, außer dass sie verwenden den Gebietsschemaparameter, der übergeben wird anstelle des aktuellen threadgebietsschemas.
+Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebiets Schema Parameter, der anstelle des aktuellen Thread Gebiets Schemas übergeben wurde.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

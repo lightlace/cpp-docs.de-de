@@ -1,9 +1,9 @@
 ---
 title: _calloc_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _calloc_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _calloc_dbg
 - calloc_dbg
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _calloc_dbg function
 - calloc_dbg function
 ms.assetid: 7f62c42b-eb9f-4de5-87d0-df57036c87de
-ms.openlocfilehash: c525aa2f19b39ba3cb8304c59c96196707ad859c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eab17348e473a4f642e784defe4569e0e799299e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340860"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939320"
 ---
-# <a name="callocdbg"></a>_calloc_dbg
+# <a name="_calloc_dbg"></a>_calloc_dbg
 
 Belegt einige Speicherblöcke im Heap mit zusätzlichem Speicherplatz für einen Debugheader und Überschreibungspuffer (nur Debugversion).
 
@@ -47,7 +50,7 @@ void *_calloc_dbg(
 
 ### <a name="parameters"></a>Parameter
 
-*Anzahl*<br/>
+*number*<br/>
 Angeforderte Anzahl von Speicherblöcken.
 
 *size*<br/>
@@ -59,30 +62,30 @@ Angeforderter Typ des Speicherblocks: **_CLIENT_BLOCK** oder **_NORMAL_BLOCK**.
 Weitere Informationen zu den Zuordnungsblocktypen und ihrer Verwendung finden Sie unter [Types of Blocks on the Debug Heap (Blocktypen auf dem Debugheap)](/visualstudio/debugger/crt-debug-heap-details).
 
 *filename*<br/>
-Zeiger auf den Namen der Quelldatei, die Belegung angefordert oder **NULL**.
+Zeiger auf den Namen der Quelldatei, die den Zuordnungs Vorgang angefordert hat, oder **null**.
 
 *linenumber*<br/>
-Zeilennummer in der Quelldatei, in denen Belegung angefordert wurde, oder **NULL**.
+Zeilennummer in der Quelldatei, in der der Zuordnungs Vorgang angefordert wurde, oder **null**.
 
-Die *Filename* und *Linenumber* Parameter sind nur verfügbar, wenn **_calloc_dbg** explizit aufgerufen wurde oder die [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)Präprozessorkonstante definiert wurde.
+Die Parameter " *filename* " und " *LineNumber* " sind nur verfügbar, wenn " **_calloc_dbg** " explizit aufgerufen wurde oder die [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) -präprozessorkonstante definiert wurde.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei erfolgreichem Abschluss diese Funktion gibt einen Zeiger an den benutzerteil des zuletzt belegten Speicherblocks zurück, ruft die neue Handlerfunktion, oder gibt zurück, **NULL**. Eine vollständige Beschreibung des Rückgabeverhaltens finden Sie im Abschnitt "Hinweise". Weitere Informationen zur Verwendung der neuen Handlerfunktion finden Sie unter der [calloc](calloc.md)-Funktion.
+Nach erfolgreichem Abschluss gibt diese Funktion einen Zeiger auf den Benutzer Teil des zuletzt belegten Speicherblocks zurück, ruft die neue Handlerfunktion auf oder gibt **null**zurück. Eine vollständige Beschreibung des Rückgabeverhaltens finden Sie im Abschnitt "Hinweise". Weitere Informationen zur Verwendung der neuen Handlerfunktion finden Sie unter der [calloc](calloc.md)-Funktion.
 
 ## <a name="remarks"></a>Hinweise
 
-**_calloc_dbg** ist eine Debugversion von der ["calloc"](calloc.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, jeden Aufruf von **_calloc_dbg** wird nach einer Verkleinerung auf einen Aufruf von **"calloc"**. Beide **"calloc"** und **_calloc_dbg** zuordnen *Anzahl* -Speicherblöcke im Basisheap, jedoch **_calloc_dbg** bietet mehrere Debuggen Funktionen:
+**_calloc_dbg** ist eine Debugversion der [czuzuordnen](calloc.md) -Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, wird jeder **_calloc_dbg** -Rückruf auf einen **czuzuordnen**-Befehl reduziert. Sowohl **calloc** als auch _calloc_dbg *weisen Speicherblöcke* im Basisheap zu, **_calloc_dbg** bietet jedoch mehrere Debugfunktionen:
 
 - Puffer auf beiden Seiten des Benutzerteils des Blocks zum Prüfen auf Speicherverluste.
 
 - Blocktypparameter zum Nachverfolgen von bestimmten Belegungstypen.
 
-- *FileName*/*Linenumber* Informationen zum Ermitteln des Ursprungs von belegungsanforderungen.
+- *Dateiname*/:*LineNumber* -Informationen zum Ermitteln des Ursprungs von Zuordnungs Anforderungen.
 
-**_calloc_dbg** belegt jeden Speicherblock mit etwas mehr Speicherplatz als der angeforderten *Größe*. Der zusätzliche Speicherplatz wird vom Debugheapmanager verwendet, um die Debugspeicherblöck zu verknüpfen und Debugheaderinformationen und Überschreibungspuffer für die Anwendung bereitzustellen. Wenn der Block belegt wurde, wird der Benutzerteil des Blocks mit dem Wert "0xCD" gefüllt, und jeder der Überschreibungspuffer wird mit "0xFD" gefüllt.
+**_calloc_dbg** ordnet jeden Speicherblock mit etwas mehr Speicherplatz als die angeforderte *Größe*zu. Der zusätzliche Speicherplatz wird vom Debugheapmanager verwendet, um die Debugspeicherblöck zu verknüpfen und Debugheaderinformationen und Überschreibungspuffer für die Anwendung bereitzustellen. Wenn der Block belegt wurde, wird der Benutzerteil des Blocks mit dem Wert "0xCD" gefüllt, und jeder der Überschreibungspuffer wird mit "0xFD" gefüllt.
 
-**_calloc_dbg** legt **Errno** zu **ENOMEM** , wenn eine speicherbelegung fehlschlägt. **EINVAL** wird zurückgegeben, wenn der Umfang des erforderlichen Arbeitsspeichers (einschließlich der bereits erwähnten Mehraufwands) überschreitet **_HEAP_MAXREQ**. Informationen hierzu und über andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**_calloc_dbg** legt **errno** auf **den** Wert fest, wenn eine Speicher Belegung fehlschlägt. " **EINVAL** " wird zurückgegeben, wenn der benötigte Speicherplatz (einschließlich des bereits erwähnten Mehraufwands) **_HEAP_MAXREQ**überschreitet. Informationen hierzu und über andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Weitere Informationen zu den Unterschieden zwischen dem Aufruf einer Standardheapfunktion und der Debugversion in einem Debugbuild einer Anwendung finden Sie unter [Debugversionen von Heapreservierungsfunktionen](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 

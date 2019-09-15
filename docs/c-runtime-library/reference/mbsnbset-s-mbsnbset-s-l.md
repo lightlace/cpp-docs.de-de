@@ -1,10 +1,10 @@
 ---
 title: _mbsnbset_s, _mbsnbset_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbset_s_l
 - _mbsnbset_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbset_s
 - _mbsnbset_s_l
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-ms.openlocfilehash: 5d021f147ba407f5b0b7316afc7cfd79fe300997
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b54a05d163430aa01f4c12e841a11d1faf5a6c4b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331245"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952110"
 ---
-# <a name="mbsnbsets-mbsnbsetsl"></a>_mbsnbset_s, _mbsnbset_s_l
+# <a name="_mbsnbset_s-_mbsnbset_s_l"></a>_mbsnbset_s, _mbsnbset_s_l
 
-Legt die ersten **n** Bytes einer Multibyte-Zeichenfolge auf ein angegebenes Zeichen. Diese Versionen von [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md) enthalten Sicherheitserweiterungen wie unter [Sicherheitserweiterungen im CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
+Legt die ersten **n** Bytes einer Multibytezeichenfolge auf ein angegebenes Zeichen fest. Diese Versionen von [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md) enthalten Sicherheitserweiterungen wie unter [Sicherheitserweiterungen im CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
 > [!IMPORTANT]
 > Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -100,13 +103,13 @@ Null, wenn erfolgreich, andernfalls ein Fehlercode.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbsnbset_s** und **_mbsnbset_s_l** Funktionen legen höchstens die ersten *Anzahl* Bytes *str* zu *c*. Wenn *Anzahl* ist größer als die Länge des *str*, die Länge des *str* anstelle *Anzahl*. Wenn *c* ein Multibytezeichen und kann nicht festgelegt werden, vollständig auf das letzte Byte, die angegebenen *Anzahl*, das letzte Byte mit einem Leerzeichen aufgefüllt ist. **_mbsnbset_s** und **_mbsnbset_s_l** platzieren kein abschließendes null am Ende der *str*.
+Die **_mbsnbset_s** -Funktion und die **_mbsnbset_s_l** -Funktion legen höchstens die ersten Byte *Anzahl* von *Str* bis *c*fest. Wenn *count* größer als die Länge von *Str*ist, wird die Länge von *Str* anstelle von *count*verwendet. Wenn *c* ein Multibytezeichen ist und nicht vollständig in das letzte Byte festgelegt werden kann, das durch *count*angegeben wird, wird das letzte Byte mit einem leeren Zeichen aufgefüllt. **_mbsnbset_s** und **_mbsnbset_s_l** platzieren keinen abschließenden NULL-Wert am Ende von *Str*.
 
-**_mbsnbset_s** und **_mbsnbset_s_l** ähneln **_mbsnset**, außer dass sie festgelegt *Anzahl* Bytes statt *Anzahl* Zeichen des *c*.
+**_mbsnbset_s** und **_mbsnbset_s_l** ähneln **_mbsnset**, mit dem Unterschied, dass Sie die *Anzahl* von Bytes anstelle der *Anzahl* von Zeichen *c*festlegen.
 
-Wenn *str* ist **NULL** oder *Anzahl* NULL ist, diese Funktion generiert eine Ausnahme für ungültige Parameter, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt **NULL**. Auch wenn *c* ist kein gültiges Multibytezeichen, **Errno** nastaven NA hodnotu **EINVAL** und ein Leerzeichen wird stattdessen verwendet.
+Wenn *Str* **null** oder *count* gleich NULL ist, generiert diese Funktion eine Ausnahme wegen eines ungültigen Parameters, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird **errno** auf **EINVAL** festgelegt, und die Funktion gibt **null**zurück. Auch wenn *c* kein gültiges Multibytezeichen ist, wird **errno** auf **EINVAL** festgelegt, und stattdessen wird ein Leerzeichen verwendet.
 
-Der Ausgabewert wird von der Einstellung beeinflusst die **LC_CTYPE** -kategorieeinstellung des Gebietsschemas, siehe [Setlocale, _wsetlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die **_mbsnbset_s** Version dieser Funktion verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die **_mbsnbset_s_l** -Version ist beinahe identisch, jedoch stattdessen den Gebietsschemaparameter verwendet, der übergeben. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert wird von der Einstellung der **LC_CTYPE** -Kategorieeinstellung des Gebiets Schemas beeinflusst. Weitere Informationen finden Sie [unter setlocale, _wsetlocale](setlocale-wsetlocale.md) . Die **_mbsnbset_s** -Version dieser Funktion verwendet das aktuelle Gebiets Schema für dieses vom Gebiets Schema abhängige Verhalten. die **_mbsnbset_s_l** -Version ist beinahe identisch, verwendet jedoch stattdessen den übergebenen Gebiets Schema Parameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 Die Verwendung dieser Funktionen in C++ wird durch Vorlagenüberladungen vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -145,7 +148,7 @@ int main( void )
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>Ausgabe
 
 ```Output
 Before: This is a test

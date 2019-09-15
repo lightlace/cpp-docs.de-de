@@ -1,14 +1,14 @@
 ---
 title: 'Bessel-Funktionen: _j0, _j1, _jn, _y0, _y1, _yn'
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _j0
 - _j1
 - _jn
 - _y0
 - _y1
 - _yn
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - c.bessel
 - _j0
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5420b34846998cdbcb4814d8319274f1a3516d91
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341112"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939456"
 ---
-# <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Bessel-Funktionen: _j0, _j1, _jn, _y0, _y1, _yn
+# <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Bessel-Funktionen: _j0, _j1, _jn, _y0, _y1, _yn
 
 Berechnet die Bessel-Funktion der ersten oder zweiten Art und der 0-ten, 1-ten oder n-ten Ordnung. Die Bessel-Funktionen werden in der mathematischen Behandlung von elektromagnetischen Wellen in breitem Umfang eingesetzt.
 
@@ -84,23 +87,23 @@ Ganzzahlige Ordnung der Bessel-Funktion.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Routinen gibt eine Bessel-Funktion von *x*. Wenn *x* ist ein negativer Wert in der **_y0**, **_y1**, oder **_yn** Funktionen, legt die Routine **Errno** zu  **EDOM**, gibt eine **_DOMAIN** Fehlermeldung **"stderr"**, und gibt **_HUGE_VAL**. Sie können ändern, für die Fehlerbehandlung mit **_matherr**.
+Jede dieser Routinen gibt eine Bessel-Funktion von *x*zurück. Wenn *x* in den **_y0**-, **_y1**-oder **_yn** -Funktionen negativ ist, legt die Routine **errno** auf **Edom**fest, druckt eine **_DOMAIN** -Fehlermeldung an **stderr**und gibt **_HUGE_VAL**zurück. Sie können die Fehlerbehandlung mithilfe von **_matherr**ändern.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_j0**, **_j1**, und **_jn** Routinen geben Bessel Funktionen der ersten Art zurück: 0, 1 und n, bzw. sortiert.
+Die Routinen **_j0**, **_j1**und **_jn** geben Bessel-Funktionen der ersten Art zurück: Orders 0, 1 bzw. n.
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
 |± **QNAN**, **IND**|**UNGÜLTIG**|**_DOMAIN**|
 
-Die **_y0**, **_y1**, und **_yn** Routinen geben Bessel Funktionen der zweiten Art zurück: 0, 1 und n, bzw. ordnet.
+Die Routinen **_y0**, **_y1**und **_yn** geben Bessel-Funktionen der zweiten Art zurück: Orders 0, 1 bzw. n.
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
 |± **QNAN**, **IND**|**UNGÜLTIG**|**_DOMAIN**|
-|± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0.0|**UNGÜLTIG**|**_DOMAIN**|
+|± 0|**NULL**|**_SING**|
+|&#124;x&#124; < 0,0|**UNGÜLTIG**|**_DOMAIN**|
 
 ## <a name="requirements"></a>Anforderungen
 

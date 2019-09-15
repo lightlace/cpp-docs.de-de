@@ -1,10 +1,10 @@
 ---
 title: fopen, _wfopen
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wfopen
 - fopen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fopen
 - _wfopen
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: b57ed2b26428c48efbe544c2b4802e347b915c29
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0e50854cf35dd58f7f59f67ed861247b51fd4541
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499938"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957049"
 ---
 # <a name="fopen-_wfopen"></a>fopen, _wfopen
 
@@ -128,7 +131,7 @@ Wenn eine Datei mit dem Zugriffstyp **"a"** oder dem Zugriffstyp **"a +"** geöf
 
 Der **"a"** -Modus entfernt die EOF-Markierung nicht, bevor Sie an die Datei angefügt wird. Nach dem Anfügen werden durch den MS-DOS-Befehl TYPE nur Daten bis zur ursprünglichen EOF-Markierung angezeigt, aber keine Daten, die an die Datei angefügt wurden. Bevor Sie an die Datei angefügt wird, wird die EOF-Markierung durch den Modus **"a +"** entfernt. Nach dem Anhängen werden mit dem Befehl MS-DOS TYPE alle Daten in der Datei angezeigt. Der Modus **"a +"** ist zum Anfügen an eine streamdatei erforderlich, die mit der EOF-Markierung STRG + Z beendet wird.
 
-Wenn der Zugriffstyp **"r +"** , **"w +"** oder **"a +** " angegeben wird, sind sowohl Lese-als auch Schreibvorgänge aktiviert (die Datei ist zum Aktualisieren geöffnet). Wenn Sie jedoch vom Lesevorgang in den Schreibvorgang wechseln, muss die Eingabeoperation eine EOF-Markierung antreffen. Wenn keine EOF-Markierung vorhanden ist, müssen Sie einen zwischenzeitlichen Aufruf einer dateipositionierenden Funktion verwenden. Die Datei Positionierungsfunktionen sind " **f**", " [f Seek](fseek-fseeki64.md)" und " [Rewind](rewind.md)". Wenn Sie vom Schreibvorgang in den Lesevorgang wechseln, müssen Sie entweder einen zwischen zeitlichen oder einen zwischenzeitlichen aufzurufenden oder zu einer Datei positionierenden Funktion verwenden.
+Wenn der Zugriffstyp **"r +"** , **"w +"** oder **"a +** " angegeben wird, sind sowohl Lese-als auch Schreibvorgänge aktiviert (die Datei ist zum Aktualisieren geöffnet). Wenn Sie jedoch vom Lesevorgang in den Schreibvorgang wechseln, muss die Eingabeoperation eine EOF-Markierung antreffen. Wenn keine EOF-Markierung vorhanden ist, müssen Sie einen zwischenzeitlichen Aufruf einer dateipositionierenden Funktion verwenden. Die Datei Positionierungsfunktionen sind " **f**", " [f Seek](fseek-fseeki64.md)" und " [Rewind](rewind.md)". Wenn Sie vom Schreibvorgang in den Lesevorgang wechseln, müssen **Sie entweder einen** zwischenzeitlichen oder einen zwischenzeitlichen aufzurufenden oder zu einer Datei positionierenden Funktion verwenden.
 
 Zusätzlich zu den früheren Werten können die folgenden Zeichen an den- *Modus* angehängt werden, um den Übersetzungsmodus für Zeilen Umleitungs Zeichen anzugeben.
 
@@ -158,7 +161,7 @@ Die folgenden Optionen können an den- *Modus* angehängt werden, um zusätzlich
 | **D** | Gibt an, dass eine Datei temporär ist. Sie wird gelöscht, wenn der letzte Dateizeiger geschlossen wird. |
 | **CCS =** _Codierung_ | Gibt den codierten Zeichensatz an, der für diese Datei verwendet werden soll (einer der **UTF-8**, **UTF-16LE**oder **Unicode**). Machen Sie keine Angabe, wenn Sie ANSI-Codierung wünschen. |
 
-Gültige Zeichen für die moduszeichenfolge, die in **fopen** und **_fdopen** verwendet wird, entsprechen den *Oflag* -Argumenten, die in [_open](open-wopen.md) und [_sopen](sopen-wsopen.md)verwendet werden, wie folgt.
+Gültige Zeichen für die moduszeichenfolge, die in **fopen** und **_fdopen** verwendet wird, *entsprechen den* *Oflag* -Argumenten, die in [_open](open-wopen.md) und [_sopen](sopen-wsopen.md)verwendet werden, wie folgt.
 
 |Zeichen in der *Mode* -Zeichenfolge|Entsprechender *Oflag* -Wert \_für Open\_/sopen|
 |-------------------------------|----------------------------------------------------|
@@ -191,7 +194,7 @@ Wenn Sie den **RB** -Modus verwenden, müssen Sie Ihren Code nicht portieren. We
 
 **_wfopen** ist eine Microsoft-Erweiterung. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
-Die Optionen " **c**", " **n**", " **t**", " **R**", " **t**" und " **D** " sind Microsoft-Erweiterungen für " **f Open** " und " **_fdopen** " und sollten nicht verwendet werden, wenn die ANSI
+Die *Optionen "* **c**", " **n**", " **t** **", "** **R**", " **t**" und " **D** " sind Microsoft-Erweiterungen für " **f Open** " und " **_fdopen** " und sollten nicht verwendet werden, wenn die ANSI
 
 ## <a name="example-1"></a>Beispiel 1
 

@@ -1,10 +1,10 @@
 ---
 title: _dupenv_s, _wdupenv_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _dupenv_s
 - _wdupenv_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tdupenv_s
 - _dupenv_s
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-ms.openlocfilehash: bc8af3282b57c9fa411aac97f5fa4d414bc3305b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f66828e0941c2324d75797cbb1fa77bdfa184205
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288861"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942021"
 ---
-# <a name="dupenvs-wdupenvs"></a>_dupenv_s, _wdupenv_s
+# <a name="_dupenv_s-_wdupenv_s"></a>_dupenv_s, _wdupenv_s
 
 Ruft einen Wert aus der aktuellen Umgebung ab.
 
@@ -68,7 +71,7 @@ errno_t _wdupenv_s(
 Puffer zum Speichern des Variablenwerts.
 
 *numberOfElements*<br/>
-Größe des *Puffer*.
+Größe des *Puffers*.
 
 *varname*<br/>
 Umgebungsvariablenname.
@@ -77,26 +80,26 @@ Umgebungsvariablenname.
 
 Null bei Erfolg, ein Fehlercode, wenn ein Fehler auftritt.
 
-Diese Funktionen überprüfen ihre Parameter; Wenn *Puffer* oder *Varname* ist **NULL**, wird der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzen die Funktionen **Errno** zu **EINVAL** und zurückgeben **EINVAL**.
+Diese Funktionen überprüfen Ihre Parameter. Wenn *buffer* oder *varname* **null**ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, legen die Funktionen " **errno** " auf " **EINVAL** " fest und geben " **EINVAL**" zurück.
 
-Wenn diese Funktionen können nicht genügend Arbeitsspeicher zuordnen, die sie festgelegt *Puffer* zu **NULL** und *NumberOfElements* 0, und Rückgabe **ENOMEM**.
+Wenn diese Funktionen nicht genügend Arbeitsspeicher zuordnen können, legen Sie den *Puffer* auf **null** und die *Anzahl* der Werte auf 0 fest und geben **ENOMEM**zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_dupenv_s** -Funktion sucht die Liste von Umgebungsvariablen für *Varname*. Wenn die Variable gefunden wird, **_dupenv_s** weist einen Puffer und kopiert den Wert der Variablen in den Puffer. Adresse und die Länge des Puffers in zurückgegeben werden *Puffer* und *NumberOfElements*. Durch die selbstzuweisung des Puffers, **_dupenv_s** bietet eine zweckmäßigere Alternative zu [Getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
+Die **_dupenv_s** -Funktion durchsucht die Liste der Umgebungsvariablen nach *varname*. Wenn die Variable gefunden wird, ordnet **_dupenv_s** einen Puffer zu und kopiert den Wert der Variablen in den Puffer. Die Adresse und die Länge des Puffers werden in *buffer* und *nummerioements*zurückgegeben. Wenn Sie den Puffer selbst zuweisen, bietet **_dupenv_s** eine etwas bequemere Alternative zu [Getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
 
 > [!NOTE]
 > Das aufrufende Programm ist dafür zuständig, den Arbeitsspeicher durch Aufruf von [free](free.md) zu leeren.
 
-Wenn die Variable nicht, klicken Sie dann gefunden wird *Puffer* nastaven NA hodnotu **NULL**, *NumberOfElements* auf 0 (null) festgelegt ist und der Rückgabewert ist 0, da diese Situation kein Fehler betrachtet wird Bedingung.
+Wenn die Variable nicht gefunden wird, wird *buffer* auf **null**festgelegt, der Wert für " *" ist auf* "0" festgelegt, und der Rückgabewert ist 0, da diese Situation nicht als Fehlerbedingung angesehen wird.
 
-Wenn Sie nicht die Größe des Puffers interessiert sind können Sie übergeben **NULL** für *NumberOfElements*.
+Wenn Sie nicht an der Größe des Puffers interessiert sind, können Sie **null** für " *numofelements*" übergeben.
 
-**_dupenv_s** ist nicht in der Groß-/Kleinschreibung beachtet, im Windows-Betriebssystem. **_dupenv_s** verwendet die Kopie der Umgebung auf die globale Variable zeigt **_environ** auf die Umgebung zuzugreifen. Finden Sie unter den Hinweisen in [Getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) eine Erläuterung der **_environ**.
+bei **_dupenv_s** wird im Windows-Betriebssystem die Groß-/Kleinschreibung nicht beachtet **_dupenv_s** verwendet die Kopie der Umgebung, auf die durch die globale Variable **_environ** verwiesen wird, um auf die Umgebung zuzugreifen. Eine Erläuterung zu **_environ**finden Sie in den Hinweisen unter [Getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) .
 
-Der Wert in *Puffer* ist eine Kopie der der Wert der Umgebungsvariablen; Änderung hat keine Auswirkungen auf die Umgebung. Verwenden Sie die Funktion [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md), um den Wert einer Umgebungsvariablen zu ändern.
+Der Wert in *buffer* ist eine Kopie des Werts der Umgebungsvariablen. eine Änderung der Umgebung hat keine Auswirkungen auf die Umgebung. Verwenden Sie die Funktion [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md), um den Wert einer Umgebungsvariablen zu ändern.
 
-**_wdupenv_s** ist eine Breitzeichen-Version von **_dupenv_s**; die Argumente des **_wdupenv_s** sind Breitzeichen Zeichenfolgen. Die **_wenviron** globale Variable ist eine Breitzeichen-Version von **_environ**. Finden Sie unter den Hinweisen in [Getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) Weitere Informationen zu **_wenviron**.
+**_wdupenv_s** ist eine breit Zeichen Version von **_dupenv_s**. die Argumente von **_wdupenv_s** sind Zeichen folgen mit breit Zeichen. Die globale **_wenviron** -Variable ist eine breit Zeichen Version von **_environ**. Weitere Informationen zu **_wenviron**finden Sie in den Hinweisen unter [Getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) .
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

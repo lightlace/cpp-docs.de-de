@@ -1,9 +1,9 @@
 ---
 title: fgetpos
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fgetpos
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fgetpos
 helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27d25b29f656d1df889e5f83857ca437f609a07a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333929"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940842"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -47,16 +50,16 @@ int fgetpos(
 *stream*<br/>
 Der Zielstream
 
-*pos*<br/>
+*POS*<br/>
 Speicher des Positionsindikators
 
 ## <a name="return-value"></a>Rückgabewert
 
-Im Erfolgsfall **Fgetpos** gibt 0 zurück. Bei einem Fehler, es gibt einen Wert ungleich NULL zurück und legt **Errno** auf eine der folgenden Manifestkonstanten, die (definiert in STDIO. H): **EBADF**, ist kein gültiger Dateizeiger oder kann nicht zugegriffen werden, was bedeutet, dass den angegebenen Stream oder **EINVAL**, d. h. die *Stream* Wert oder der Wert des *pos*ist ungültig, z. B. If ist ein null-Zeiger. Wenn *Stream* oder *pos* ist eine **NULL** -Zeiger ist, ruft die Funktion den Handler für ungültige Parameter an, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
+Wenn der Vorgang erfolgreich ist, gibt die Funktion " **f** . Bei einem Fehler wird ein Wert ungleich 0 (null) zurückgegeben, und **errno** wird auf eine der folgenden Manifest-Konstanten (definiert in stdio) festgelegt. H): **EBADF**, d. h. der angegebene Stream ist kein gültiger Dateizeiger, oder der Zugriff darauf ist nicht möglich, oder **EINVAL**, d. h. der *Streamwert* oder der Wert von *POS* ist ungültig, z. b. Wenn ein NULL-Zeiger ist. Wenn *Stream* oder *POS* ein **null** -Zeiger ist, ruft die Funktion den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Fgetpos** Funktion ruft den aktuellen Wert der ab der *Stream* des Arguments dateipositionszeiger und speichert ihn in das Objekt verweist *pos*. Die **Fsetpos** -Funktion kann in gespeicherten Informationen später verwenden *pos* zum Zurücksetzen der *Stream* argumentzeiger auf seine Position zum Zeitpunkt **Fgetpos** aufgerufen wurde. Die *pos* Wert wird in einem internen Format gespeichert und dient zur Verwendung nur durch **Fgetpos** und **Fsetpos**.
+Die **fgetpos** -Funktion Ruft den aktuellen Wert des Datei Positions Indikators des *Stream* -Arguments ab und speichert ihn in dem Objekt, auf *das von Torys verwiesen wird.* Die **fsetpos** -Funktion kann später in *POS* gespeicherte Informationen verwenden, um den Zeiger des *Stream* -Arguments auf seine Position zum Zeitpunkt des Aufrufs von **fgetpos** zurückzusetzen. Der *POS* -Wert wird in einem internen Format gespeichert und ist nur für die Verwendung durch " **f** " und " **ssetpos**" vorgesehen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -108,13 +111,13 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfgetpostxt"></a>Eingabe: crt_fgetpos.txt
+## <a name="input-crt_fgetpostxt"></a>Eingabe: crt_fgetpos.txt
 
 ```Input
 fgetpos gets a stream's file-position indicator.
 ```
 
-### <a name="output-crtfgetpostxt"></a>Ausgabe: crt_fgetpos.txt
+### <a name="output-crt_fgetpostxt"></a>Ausgabe: crt_fgetpos.txt
 
 ```Output
 after fgetpos: gets a stream

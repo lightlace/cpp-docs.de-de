@@ -1,10 +1,10 @@
 ---
 title: _dup, _dup2
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _dup
 - _dup2
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _dup2
 - _dup
@@ -28,16 +31,16 @@ helpviewer_keywords:
 - dup2 function
 - _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
-ms.openlocfilehash: a00b9506102e6b274a9aa87c33c144d75cfc2508
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da47d6f040b62906d30107f9036ffa2a3ea05a1c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288965"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937788"
 ---
-# <a name="dup-dup2"></a>_dup, _dup2
+# <a name="_dup-_dup2"></a>_dup, _dup2
 
-Erstellt einen zweiten Dateideskriptor für eine geöffnete Datei (**_dup**), oder weist einen Dateideskriptor neu (**_dup2**).
+Erstellt einen zweiten Dateideskriptor für eine geöffnete Datei ( **_dup**) oder weist einen Dateideskriptor neu zu ( **_dup2**).
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,15 +59,15 @@ Jeder beliebige Dateideskriptor.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_dup** gibt einen neuen Dateideskriptor zurück. **_dup2** gibt 0, um Erfolg anzuzeigen. Wenn ein Fehler auftritt, jede Funktion gibt-1 zurück und legt **Errno** zu **EBADF** , wenn der Dateideskriptor ungültig ist, oder um **EMFILE** Wenn keine weiteren Dateideskriptoren verfügbar sind. Bei einem ungültigen Dateideskriptor ruft die Funktion auch den Handler für ungültige Parameter auf, wie unter [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben.
+**_dup** gibt einen neuen Dateideskriptor zurück. **_dup2** gibt 0 zurück, um einen Erfolg anzugeben. Wenn ein Fehler auftritt, gibt jede Funktion-1 zurück und legt **errno** auf **EBADF** fest, wenn der Dateideskriptor ungültig **ist, oder, wenn keine** weiteren Dateideskriptoren verfügbar sind. Bei einem ungültigen Dateideskriptor ruft die Funktion auch den Handler für ungültige Parameter auf, wie unter [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben.
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_dup** und **_dup2** Funktionen ordnen einen zweiten Dateideskriptor einer momentan geöffneten Datei. Diese Funktionen können verwendet werden, um einen vordefinierten Dateideskriptor – wie z. B. zuordnen **"stdout"**, mit einer anderen Datei. Das Durchführen von Operationen an der Datei ist mit jedem der beiden Dateideskriptoren möglich. Der für die Datei zulässige Zugriffstyp ist von der Erstellung eines neuen Deskriptors nicht betroffen. **_dup** gibt den nächsten verfügbaren Dateideskriptor für die angegebene Datei. **_dup2** erzwingt *fd2* zum Verweisen auf dieselbe Datei wie *fd1*. Wenn *fd2* ist verknüpft mit einer geöffneten Datei zum Zeitpunkt des Aufrufs, diese Datei geschlossen.
+Die Funktionen **_dup** und **_dup2** ordnen einen zweiten Dateideskriptor einer momentan geöffneten Datei zu. Diese Funktionen können verwendet werden, um einen vordefinierten Dateideskriptor (z. b. " **stdout**") einer anderen Datei zuzuordnen. Das Durchführen von Operationen an der Datei ist mit jedem der beiden Dateideskriptoren möglich. Der für die Datei zulässige Zugriffstyp ist von der Erstellung eines neuen Deskriptors nicht betroffen. **_dup** gibt den nächsten verfügbaren Dateideskriptor für die angegebene Datei zurück. **_dup2** erzwingt *FD2* , auf dieselbe Datei wie *FD1*zu verweisen. Wenn *FD2* zum Zeitpunkt des Aufrufes einer geöffneten Datei zugeordnet ist, wird diese Datei geschlossen.
 
-Beide **_dup** und **_dup2** akzeptieren Dateideskriptoren als Parameter. Um einen Stream zu übergeben (`FILE *`) verwenden, um jede dieser Funktionen, [_fileno](fileno.md). Die **Fileno** -Routine gibt den Dateideskriptor, der derzeit zugeordnet sind, mit dem angegebenen Stream zurück. Das folgende Beispiel zeigt, wie Sie zuordnen **"stderr"** (definiert als `FILE *` in Stdio.h) einem Dateideskriptor:
+Sowohl **_dup** als auch **_dup2** akzeptieren Dateideskriptoren als Parameter. Um einen Stream (`FILE *`) an eine dieser Funktionen zu übergeben, verwenden Sie [_fileno](fileno.md). Die **fileno** -Routine gibt den Dateideskriptor zurück, der derzeit dem angegebenen Stream zugeordnet ist. Im folgenden Beispiel wird gezeigt, wie **stderr** (definiert als `FILE *` in stdio. h) einem Dateideskriptor zugeordnet wird:
 
 ```C
 int cstderr = _dup( _fileno( stderr ));
@@ -77,7 +80,7 @@ int cstderr = _dup( _fileno( stderr ));
 |**_dup**|\<io.h>|
 |**_dup2**|\<io.h>|
 
-Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Standardstreamhandles, die mit der Konsole verknüpft sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die-Konsole wird in universelle Windows-Plattform-Apps (UWP) nicht unterstützt. Die Standarddaten Strom Handles, die der Konsole, **stdin**, **stdout**und **stderr**zugeordnet sind, müssen umgeleitet werden, bevor Sie von C-Lauf Zeitfunktionen in UWP-Apps verwendet werden können. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

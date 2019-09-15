@@ -1,12 +1,12 @@
 ---
 title: _rotl, _rotl64, _rotr, _rotr64
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _rotr64
 - _rotl
 - _rotr
 - _rotl64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _rotr64
 - rotl64
@@ -40,16 +43,16 @@ helpviewer_keywords:
 - _rotr64 function
 - bits, rotating
 ms.assetid: cfce439b-366f-4584-8ab1-d527b13fcfc6
-ms.openlocfilehash: c8cf61ecd8ffab9433f5c6ad077ddba39401c0e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ae2df7d80778cd4c573192a13b1fd91fb358eef
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357407"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949153"
 ---
-# <a name="rotl-rotl64-rotr-rotr64"></a>_rotl, _rotl64, _rotr, _rotr64
+# <a name="_rotl-_rotl64-_rotr-_rotr64"></a>_rotl, _rotl64, _rotr, _rotr64
 
-Rotiert Bits nach links (**_rotl**) oder rechts (**_rotr**).
+Rotiert Bits nach links ( **_rotl**) oder nach rechts ( **_rotr**).
 
 ## <a name="syntax"></a>Syntax
 
@@ -87,7 +90,7 @@ Der gedrehte Wert. Es gibt keine Fehlerrückgabe.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_rotl** und **_rotr** Funktionen ohne Vorzeichen Drehen *Wert* von *UMSCHALT* Bits. **_rotl** rotiert den Wert nach links. **_rotr** rotiert den Wert nach rechts. Beide Funktionen umschließen Bits, die von einem Ende des *value* zum anderen Ende rotieren.
+Die **_rotl** -Funktion und die **_rotr** -Funktion drehen den *Wert* ohne Vorzeichen durch *UMSCHALT* Bits. **_rotl** dreht den Wert nach links. **_rotr** dreht den Wert nach rechts. Beide Funktionen umschließen Bits, die von einem Ende des *value* zum anderen Ende rotieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -129,7 +132,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 0xfd93 rotated left three times is 0x7ec98

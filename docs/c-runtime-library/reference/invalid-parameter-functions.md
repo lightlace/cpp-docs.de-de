@@ -1,14 +1,17 @@
 ---
 title: _invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _invalid_parameter
 - _invalid_parameter_noinfo
 - _invalid_parameter_noinfo_noreturn
 - _invoke_watson
-apilocation:
+api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CORECRT/_invalid_parameter
 - _invalid_parameter
@@ -19,14 +22,14 @@ f1_keywords:
 - CORECRT/_invoke_watson
 - _invoke_watson
 ms.assetid: a4d6f1fd-ce56-4783-8719-927151a7a814
-ms.openlocfilehash: e43d5caaeebb6303d209d870c804357117812985
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2714c140a2396d88c700689244c6ec04e12169c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157538"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954612"
 ---
-# <a name="invalidparameter-invalidparameternoinfo-invalidparameternoinfonoreturn-invokewatson"></a>_invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
+# <a name="_invalid_parameter-_invalid_parameter_noinfo-_invalid_parameter_noinfo_noreturn-_invoke_watson"></a>_invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
 
 Diese Funktionen werden von der C-Laufzeitbibliothek verwendet, um ungültige Parameter zu behandeln, die an CRT-Bibliotheksfunktionen übergeben werden. Ihr Code verwendet diese Funktionen möglicherweise auch zur Unterstützung der Standard- oder anpassbaren Behandlung der ungültigen Parameter.
 
@@ -70,22 +73,22 @@ Die Quellcodedatei, in der der Handler aufgerufen wurde.
 *line_number*<br/>
 Die Zeilennummer im Quellcode, in der der Handler aufgerufen wurde.
 
-*reserved*<br/>
+*bleiben*<br/>
 Nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Funktionen geben keinen Wert zurück. Die **_invalid_parameter_noinfo_noreturn** und **_invoke_watson** Funktionen werden nicht zurück an den Aufrufer, und klicken Sie in einigen Fällen **_invalid_parameter** und **_invalid_parameter_noinfo** möglicherweise nicht an den Aufrufer zurück.
+Die Funktionen geben keinen Wert zurück. Die **_invalid_parameter_noinfo_noreturn** -Funktion und die **_invoke_watson** -Funktion kehren nicht zum Aufrufer zurück, und in einigen Fällen werden **_invalid_parameter** und **_invalid_parameter_noinfo** möglicherweise nicht an den Aufrufer zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn Funktionen der C-Laufzeitbibliothek ungültige Parameter übergeben, rufen die Bibliotheksfunktionen einen *Handler für ungültige Parameter* auf, eine Funktion, die möglicherweise vom Programmierer angegeben wird, um mehrere Aufgaben auszuführen. Es kann dem Benutzer möglicherweise das Problem melden, in ein Protokoll schreiben, einen Debugger anhalten, das Programm beenden oder gar nichts machen. Wenn keine Funktion, wird dem Programmierer, ein Standardhandler angegeben wird, **_invoke_watson**, aufgerufen wird.
+Wenn Funktionen der C-Laufzeitbibliothek ungültige Parameter übergeben, rufen die Bibliotheksfunktionen einen *Handler für ungültige Parameter* auf, eine Funktion, die möglicherweise vom Programmierer angegeben wird, um mehrere Aufgaben auszuführen. Es kann dem Benutzer möglicherweise das Problem melden, in ein Protokoll schreiben, einen Debugger anhalten, das Programm beenden oder gar nichts machen. Wenn vom Programmierer keine Funktion angegeben wird, wird ein Standard Handler, **_invoke_watson**, aufgerufen.
 
-In der Standardeinstellung, wenn ungültige Parameter im Debugcode identifiziert wird CRT-Bibliotheksfunktionen rufen Sie die Funktion **_invalid_parameter** mithilfe von ausführlichen Parametern. Im nichtdebugcode die **_invalid_parameter_noinfo** Funktion aufgerufen wird, wird die **_invalid_parameter** funktionieren mithilfe von leeren Parametern. Wenn die nichtdebug-CRT-Bibliotheksfunktion eine programmterminierung benötigt die **_invalid_parameter_noinfo_noreturn** Funktion aufgerufen wird, wird die **_invalid_parameter** -Funktion mithilfe von leeren Parameter, gefolgt von einem Aufruf der **_invoke_watson** Funktion, um die programmterminierung zu erzwingen.
+Wenn ein ungültiger Parameter im Debugcode identifiziert wird, wird standardmäßig die Funktion **_invalid_parameter** mithilfe von ausführlichen Parametern aufgerufen. In nicht Debuggingcode wird die **_invalid_parameter_noinfo** -Funktion aufgerufen, die die **_invalid_parameter** -Funktion mithilfe von leeren Parametern aufruft. Wenn die nicht debuggingbibliotheks-Funktion eine Programm Beendigung erfordert, wird die **_invalid_parameter_noinfo_noreturn** -Funktion aufgerufen, die die **_invalid_parameter** -Funktion mithilfe von leeren Parametern aufruft, gefolgt von einem Aufruf von **_invoke_ Watson** -Funktion, um die Beendigung des Programms zu erzwingen.
 
-Die **_invalid_parameter** -Funktion überprüft, ob ein ungültiger parametertyphandler festgelegt wurde, und wenn dies der Fall ist, ruft er. Beispielsweise wird die Funktion zurückgegebene, wenn ein benutzerdefinierter lokaler Threadhandler durch einen Aufruf von [set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) im aktuellen Thread festgelegt wurde. Andernfalls wird sie aufgerufen, wenn ein benutzerdefinierter globaler ungültiger Parametertyphandler durch einen Aufruf von [set_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) festgelegt wurde; danach springt die Funktion zurück. Andernfalls der Standardhandler **_invoke_watson** aufgerufen wird. Das Standardverhalten des **_invoke_watson** besteht darin, das Programm beendet. Benutzerdefinierte Handler werden möglicherweise beendet oder zurückgegeben. Es wird empfohlen, dass benutzerdefinierte Handler das Programm beenden, es sei denn, die Wiederherstellung ist sicher.
+Die **_invalid_parameter** -Funktion überprüft, ob ein benutzerdefinierter Handler für ungültige Parameter festgelegt wurde, und ruft, wenn ja, ihn auf. Beispielsweise wird die Funktion zurückgegebene, wenn ein benutzerdefinierter lokaler Threadhandler durch einen Aufruf von [set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) im aktuellen Thread festgelegt wurde. Andernfalls wird sie aufgerufen, wenn ein benutzerdefinierter globaler ungültiger Parametertyphandler durch einen Aufruf von [set_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) festgelegt wurde; danach springt die Funktion zurück. Andernfalls wird der Standard Handler **_invoke_watson** aufgerufen. Das Standardverhalten von **_invoke_watson** besteht darin, das Programm zu beenden. Benutzerdefinierte Handler werden möglicherweise beendet oder zurückgegeben. Es wird empfohlen, dass benutzerdefinierte Handler das Programm beenden, es sei denn, die Wiederherstellung ist sicher.
 
-Wenn der standardmäßige Handler **_invoke_watson** aufgerufen wird, wenn der Prozessor unterstützt eine [__fastfail](../../intrinsics/fastfail.md) -Vorgang mithilfe eines Parameters, der Aufruf erfolgte **FAST_FAIL_INVALID_ARG** und der Prozess beendet wird. Andernfalls wird eine Fast-Fail-Ausnahme ausgelöst, die durch einen angefügten Debugger abgefangen wird. Wenn der Vorgang zugelassen wird, wird Sie durch einen Aufruf der Windows beendet **TerminateProcess** -Funktion mit einem ausnahmecodestatus **STATUS_INVALID_CRUNTIME_PARAMETER**.
+Wenn der Standard Handler **_invoke_watson** aufgerufen wird und der Prozessor einen [__fastfail](../../intrinsics/fastfail.md) -Vorgang unterstützt, wird er mit einem Parameter von **FAST_FAIL_INVALID_ARG** aufgerufen, und der Prozess wird beendet. Andernfalls wird eine Fast-Fail-Ausnahme ausgelöst, die durch einen angefügten Debugger abgefangen wird. Wenn der Prozess fortgesetzt werden kann, wird er durch einen Aufrufen der Windows-Funktion **TerminateProcess** mit dem Ausnahme Code Status **STATUS_INVALID_CRUNTIME_PARAMETER**beendet.
 
 ## <a name="requirements"></a>Anforderungen
 

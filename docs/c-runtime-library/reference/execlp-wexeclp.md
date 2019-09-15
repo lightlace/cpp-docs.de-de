@@ -1,10 +1,10 @@
 ---
 title: _execlp, _wexeclp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wexeclp
 - _execlp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wexeclp
 - wexeclp
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _wexeclp function
 - wexeclp function
 ms.assetid: 7b179163-4bcd-4d6a-8baf-68f886791928
-ms.openlocfilehash: db13263ca4574d59821d5783b9ae83f278fef14d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ae1805dd00428aee0acca4bcb3ee221bce1d271
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339688"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937184"
 ---
-# <a name="execlp-wexeclp"></a>_execlp, _wexeclp
+# <a name="_execlp-_wexeclp"></a>_execlp, _wexeclp
 
 Lädt neue untergeordnete Prozesse und führt sie aus.
 
@@ -63,14 +66,14 @@ intptr_t _wexeclp(
 *cmdname*<br/>
 Pfad der auszuführenden Datei.
 
-*arg0*,... *Argn*<br/>
+*arg0*,... *argN*<br/>
 Liste von Zeigern zu Parametern.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg kehren diese Funktionen nicht zum aufrufenden Prozess zurück. Ein Rückgabewert 1 gibt einen Fehler, in diesem Fall die **Errno** globale Variable festgelegt ist.
+Bei Erfolg kehren diese Funktionen nicht zum aufrufenden Prozess zurück. Der Rückgabewert-1 gibt einen Fehler an. in diesem Fall ist die globale Variable **errno** festgelegt.
 
-|**Errno** Wert|Beschreibung|
+|**errno** -Wert|Beschreibung|
 |-------------------|-----------------|
 |**E2BIG**|Für die Argumente und die Umgebungseinstellungen werden mehr als 32 KB Speicherplatz benötigt.|
 |**EACCES**|Für die angegebene Datei ist eine Sperr- oder Freigabeverletzung aufgetreten.|
@@ -84,9 +87,9 @@ Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_do
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen lädt einen neuen Prozess und führt, übergibt jedes Befehlszeilenargument als separaten Parameter und Verwenden der **Pfad** -Umgebungsvariable zum Ermitteln der auszuführenden Datei.
+Jede dieser Funktionen lädt einen neuen Prozess und führt diesen aus. dabei wird jedes Befehlszeilenargument als separater Parameter übergeben und die **path** -Umgebungsvariable verwendet, um die auszuführende Datei zu suchen.
 
-Die **_execlp** Funktionen überprüfen ihre Parameter. Wenn *Cmdname* oder *arg0* ist ein null-Zeiger oder leere Zeichenfolge ist, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und geben-1 zurück. Es wird kein neuer Prozess gestartet.
+Die **_execlp** -Funktionen überprüfen Ihre Parameter. Wenn *cmdname* oder *arg0* ein NULL-Zeiger oder eine leere Zeichenfolge ist, rufen diese Funktionen den Handler für ungültige Parameter auf, wie unter [Parameter Validierung](../../c-runtime-library/parameter-validation.md)beschrieben. Wenn die weitere Ausführung zugelassen wird, legen diese Funktionen **errno** auf **EINVAL** fest und geben-1 zurück. Es wird kein neuer Prozess gestartet.
 
 ## <a name="requirements"></a>Anforderungen
 

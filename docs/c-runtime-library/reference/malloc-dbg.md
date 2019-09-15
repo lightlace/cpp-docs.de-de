@@ -1,9 +1,9 @@
 ---
 title: _malloc_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _malloc_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - malloc_dbg
 - _malloc_dbg
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - memory allocation
 - _malloc_dbg function
 ms.assetid: c97eca51-140b-4461-8bd2-28965b49ecdb
-ms.openlocfilehash: b126678a9aecf6ae4041764576e8d06d1557dcc1
-ms.sourcegitcommit: fc6bdffcf7d5521609da629621cc8459b200b004
+ms.openlocfilehash: cfaaaec17dc8546c937045f93027e9609981bd93
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67351785"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952881"
 ---
-# <a name="mallocdbg"></a>_malloc_dbg
+# <a name="_malloc_dbg"></a>_malloc_dbg
 
 Belegt einen Speicherblock im Heap mit zusätzlichem Speicherplatz für einen Debugheader und Überschreibungspuffern (nur Debugversion).
 
@@ -54,24 +57,24 @@ Angeforderte Größe des Speicherblocks (Bytes).
 Angeforderter Typ des Speicherblocks: **_CLIENT_BLOCK** oder **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Zeiger auf den Namen der Quelldatei, die die Belegung angefordert hat oder **NULL**.
+Zeiger auf den Namen der Quelldatei, die den Zuordnungs Vorgang angefordert hat, oder **null**.
 
 *linenumber*<br/>
-Zeilennummer in der Quelldatei, in denen die Belegung angefordert wurde, oder **NULL**.
+Zeilennummer in der Quelldatei, in der der Zuordnungs Vorgang angefordert wurde, oder **null**.
 
-Die *Filename* und *Linenumber* Parameter sind nur verfügbar, wenn **_malloc_dbg** explizit aufgerufen wurde oder die [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)Präprozessorkonstante definiert wurde.
+Die Parameter " *filename* " und " *LineNumber* " sind nur verfügbar, wenn " **_malloc_dbg** " explizit aufgerufen wurde oder die [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) -präprozessorkonstante definiert wurde.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei erfolgreichem Abschluss diese Funktion gibt einen Zeiger an den benutzerteil des belegten Speicherblocks zurück, ruft die neue Handlerfunktion, oder gibt zurück, **NULL**. Eine vollständige Beschreibung des Rückgabeverhaltens finden Sie im folgenden Abschnitt "Hinweise". Weitere Informationen zur Verwendung der neuen Handlerfunktion finden Sie unter der [malloc](malloc.md)-Funktion.
+Nach erfolgreichem Abschluss gibt diese Funktion einen Zeiger auf den Benutzer Teil des belegten Speicherblocks zurück, ruft die neue Handlerfunktion auf oder gibt **null**zurück. Eine vollständige Beschreibung des Rückgabeverhaltens finden Sie im folgenden Abschnitt "Hinweise". Weitere Informationen zur Verwendung der neuen Handlerfunktion finden Sie unter der [malloc](malloc.md)-Funktion.
 
 ## <a name="remarks"></a>Hinweise
 
-**_malloc_dbg** ist eine Debugversion von der [Malloc](malloc.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, jeden Aufruf von **_malloc_dbg** wird nach einer Verkleinerung auf einen Aufruf von **Malloc**. Beide **Malloc** und **_malloc_dbg** belegen einen Speicherblock im Basisheap, jedoch **_malloc_dbg** bietet mehrere Debugfunktionen: Puffer auf beiden Seiten des Benutzers Teil des Blocks zum Prüfen auf Speicherverluste, einen blocktypparameter zum Nachverfolgen bestimmter belegungstypen und *Filename*/*Linenumber* -Informationen zum Ermitteln des Ursprungs von Anforderungen für speicherbelegung.
+**_malloc_dbg** ist eine Debugversion der [malloc](malloc.md) -Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, wird jeder **_malloc_dbg** -Rückruf auf einen **malloc**-Aufrufwert reduziert. Sowohl **malloc** als auch **_malloc_dbg** weisen einen Speicherblock im Basisheap zu, aber **_malloc_dbg** bietet mehrere Debugfunktionen: Puffer auf beiden Seiten des Benutzer Teils des Blocks zum Prüfen auf Speicher Verluste, einen Blocktyp Parameter zum Nachverfolgen bestimmte Zuordnungs Typen und *Dateiname*/-*LineNumber* -Informationen, um den Ursprung von Zuordnungs Anforderungen zu bestimmen.
 
-**_malloc_dbg** belegt den Speicherblock mit etwas mehr Speicherplatz als der angeforderten *Größe*. Der zusätzliche Speicherplatz wird vom Debugheapmanager verwendet, um die Debugspeicherblöck zu verknüpfen und Debugheaderinformationen und Überschreibungspuffer für die Anwendung bereitzustellen. Wenn der Block belegt wurde, wird der Benutzerteil des Blocks mit dem Wert "0xCD" gefüllt, und jeder der Überschreibungspuffer wird mit "0xFD" gefüllt.
+**_malloc_dbg** ordnet den Speicherblock mit etwas mehr Speicherplatz als die angeforderte *Größe*zu. Der zusätzliche Speicherplatz wird vom Debugheapmanager verwendet, um die Debugspeicherblöck zu verknüpfen und Debugheaderinformationen und Überschreibungspuffer für die Anwendung bereitzustellen. Wenn der Block belegt wurde, wird der Benutzerteil des Blocks mit dem Wert "0xCD" gefüllt, und jeder der Überschreibungspuffer wird mit "0xFD" gefüllt.
 
-**_malloc_dbg** legt **Errno** zu **ENOMEM** , wenn eine speicherbelegung fehlschlägt oder die Menge an Speicherplatz (einschließlich der bereits erwähnten Mehraufwands) überschreitet **_HEAP_ MAXREQ**. Informationen hierzu und über andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**_malloc_dbg** legt **errno** auf **ENOMEM** fest, wenn eine Speicher Belegung fehlschlägt oder wenn der benötigte Speicherplatz (einschließlich des bereits erwähnten Mehraufwands) **_HEAP_MAXREQ**überschreitet. Informationen hierzu und über andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Informationen über die Belegung, Initialisierung und Verwaltung der Speicherblöcke in der Debugversion des Basisheaps finden Sie unter [Details zum CRT-Debugheap](/visualstudio/debugger/crt-debug-heap-details). Informationen zu den Belegungsblocktypen und ihrer Verwendung finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details). Weitere Informationen zu den Unterschieden zwischen dem Aufruf einer Standardheapfunktion und ihrer Debugversion in einem Debugbuild einer Anwendung finden Sie unter [Debugversionen von Heapbelegungsfunktionen](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
@@ -89,7 +92,7 @@ Nur Debugversionen von [C-Laufzeitbibliotheken](../../c-runtime-library/crt-libr
 
 ## <a name="example"></a>Beispiel
 
-Ein Beispiel zur Verwendung **_malloc_dbg**, finden Sie unter [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1).
+Ein Beispiel für die Verwendung von **_malloc_dbg**finden Sie unter [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1).
 
 ## <a name="see-also"></a>Siehe auch
 

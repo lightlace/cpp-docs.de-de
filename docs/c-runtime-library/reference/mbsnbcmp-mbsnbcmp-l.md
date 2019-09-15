@@ -1,10 +1,10 @@
 ---
 title: _mbsnbcmp, _mbsnbcmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbcmp
 - _mbsnbcmp_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbcmp
 - tcsnbmp
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - _tcsncmp function
 - _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
-ms.openlocfilehash: 4b21fde122f9804633ac037efaf1f343b5cb9440
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 512fd2dae54afa4a37b2b3d3103ab090d81909fa
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285303"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952302"
 ---
-# <a name="mbsnbcmp-mbsnbcmpl"></a>_mbsnbcmp, _mbsnbcmp_l
+# <a name="_mbsnbcmp-_mbsnbcmp_l"></a>_mbsnbcmp, _mbsnbcmp_l
 
-Vergleicht die ersten **n** Bytes von zwei Multibyte-Zeichenfolgen.
+Vergleicht die ersten **n** Bytes von zwei Multibyte-Zeichen folgen.
 
 > [!IMPORTANT]
 > Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -74,25 +77,25 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert gibt an, die ordinale Beziehung der Teilzeichenfolgen von *string1* und *Zeichenfolge2*.
+Der Rückgabewert gibt die ordinalbeziehung zwischen den Teil Zeichenfolgen von *Zeichenfolge1* und *Zeichenfolge2*an.
 
 |Rückgabewert|Beschreibung|
 |------------------|-----------------|
-|< 0|*Zeichenfolge1* Teilzeichenfolge ist kleiner als *Zeichenfolge2* Teilzeichenfolge.|
-|0|*Zeichenfolge1* Teilzeichenfolge ist identisch mit *Zeichenfolge2* Teilzeichenfolge.|
-|> 0|*Zeichenfolge1* Teilzeichenfolge ist größer als *Zeichenfolge2* Teilzeichenfolge.|
+|< 0|*Zeichenfolge1* Teil Zeichenfolge ist kleiner als *Zeichenfolge2* Teil Zeichenfolge.|
+|0|*Zeichenfolge1* Teil Zeichenfolge ist mit *Zeichenfolge2* Teil Zeichenfolge identisch.|
+|> 0|*Zeichenfolge1* Teil Zeichenfolge ist größer als *Zeichenfolge2* Teil Zeichenfolge.|
 
-Bei einem parametervalidierungsfehler **_mbsnbcmp** und **_mbsnbcmp_l** zurückgeben **_NLSCMPERROR**, definiert in \<string.h > und \< MBSTRING.h >.
+Bei einem Parameter Validierungs Fehler geben **_mbsnbcmp** und **_mbsnbcmp_l** **_NLSCMPERROR**zurück, das in \<String. h > und \<mbstring. h > definiert ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbsnbcmp** -Funktionen vergleichen höchstens die ersten *Anzahl* Bytes *string1* und *Zeichenfolge2* und ein Rückgabewert, der angibt der Beziehung zwischen den untergeordneten Zeichenfolgen. **_mbsnbcmp** ist eine Groß-/Kleinschreibung Version **_mbsnbicmp**. Im Gegensatz zu **_mbsnbcoll**, **_mbsnbcmp** wird nicht durch die Sortierung des Gebietsschemas beeinflusst. **_mbsnbcmp** erkennt multibytezeichensequenzen gemäß der aktuellen Multibyte- [Codepage](../../c-runtime-library/code-pages.md).
+Die **_mbsnbcmp** -Funktionen vergleichen höchstens die ersten *Anzahl* Bytes in *Zeichenfolge1* und *Zeichenfolge2* und geben einen Wert zurück, der die Beziehung zwischen den untergeordneten Zeichen folgen angibt. **_mbsnbcmp** ist eine Version von **_mbsnbicmp**mit Beachtung der Groß-/Kleinschreibung. Im Gegensatz zu **_mbsnbcoll**wird **_mbsnbcmp** nicht von der Sortierreihenfolge des Gebiets Schemas beeinflusst. **_mbsnbcmp** erkennt multibytezeichensequenzen entsprechend der aktuellen Multibytezeichen- [Codepage](../../c-runtime-library/code-pages.md).
 
-**_mbsnbcmp** ähnelt **_mbsncmp**, außer dass **_mbsncmp** Zeichenfolgen nach Zeichen und nicht nach Bytes verglichen.
+**_mbsnbcmp** ähnelt **_mbsncmp**, mit der Ausnahme, dass **_mbsncmp** Zeichen folgen nach Zeichen und nicht nach Bytes vergleicht.
 
-Der Ausgabewert wird von beeinflusst die **LC_CTYPE** Kategorie des Gebietsschemas, die angibt, die führenden Bytes und nachstehenden Bytes von Multibytezeichen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die **_mbsnbcmp** Funktion verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten. Die **_mbsnbcmp_l** -Funktion ist identisch, außer dass mithilfe der *Gebietsschema* Parameter stattdessen. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert wird von der **LC_CTYPE** -Kategorieeinstellung des Gebiets Schemas beeinflusst, das die führenden Bytes und nachfolgenden Bytes von Multibytezeichen angibt. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die **_mbsnbcmp** -Funktion verwendet das aktuelle Gebiets Schema für dieses vom Gebiets Schema abhängige Verhalten. Die **_mbsnbcmp_l** -Funktion ist beinahe identisch, verwendet jedoch stattdessen den *locale* -Parameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Wenn entweder *string1* oder *Zeichenfolge2* ist ein null-Zeiger rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktionen geben **_NLSCMPERROR** und **Errno** nastaven NA hodnotu **EINVAL**.
+Wenn entweder *Zeichenfolge1* oder *Zeichenfolge2* ein NULL-Zeiger ist, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben die Funktionen **_NLSCMPERROR** und **errno** auf **EINVAL**fest.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -147,7 +150,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 Compare strings:

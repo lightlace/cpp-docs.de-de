@@ -1,12 +1,12 @@
 ---
 title: fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fwscanf_s
 - _fscanf_s_l
 - _fwscanf_s_l
 - fscanf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fwscanf_s_l
 - _fscanf_s_l
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - streams [C++], reading formatted data from
 - fscanf_s_l function
 ms.assetid: b6e88194-714b-4322-be82-1cc0b343fe01
-ms.openlocfilehash: f9c1686d7e42e0e885a65e153ee4e1ff2be01f27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ceeba78aa70d3569742415551d20296d726d896e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332922"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956560"
 ---
-# <a name="fscanfs-fscanfsl-fwscanfs-fwscanfsl"></a>fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l
+# <a name="fscanf_s-_fscanf_s_l-fwscanf_s-_fwscanf_s_l"></a>fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l
 
 Liest formatierte Daten aus einem Stream. Diese Versionen von [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md) enthalten Sicherheitsverbesserungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
@@ -94,20 +97,20 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Wenn ein Fehler auftritt oder wenn das Ende des Dateistreams vor der ersten Konvertierung erreicht wird, des Rückgabewerts ist **EOF** für **Fscanf_s** und **Fwscanf_s**.
+Jede dieser Funktionen gibt die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Wenn ein Fehler auftritt oder das Ende des Dateistreams vor der ersten Konvertierung erreicht wird, ist der Rückgabewert **EOF** für **fscanf_s** und **fwscanf_s**.
 
-Diese Funktionen überprüfen ihre Parameter. Wenn *Stream* ist ein ungültiger Dateizeiger ist oder *Format* ist ein null-Zeiger rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EOF** und **Errno** zu **EINVAL**.
+Diese Funktionen überprüfen ihre Parameter. Wenn der *Stream* ein ungültiger Dateizeiger ist oder *Format* ein NULL-Zeiger ist, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen **EOF** zurück und legen **errno** auf **EINVAL**fest.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Fscanf_s** -Funktion liest Daten aus der aktuellen Position des *Stream* in die Speicherorte, die von erhalten *Argument* (sofern vorhanden). Jede *Argument* muss ein Zeiger auf eine Variable eines Typs, der einem Typspezifizierer in entspricht *Format*. *Format* steuert die Interpretation der Eingabefelder und hat die gleiche form und Funktion wie der *Format* Argument für **Scanf_s**; finden Sie unter [Formatangabefelder: Scanf und Wscanf-Funktionen](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) eine Beschreibung der *Format*.  **Fwscanf_s** ist eine Breitzeichen-Version von **Fscanf_s**; das Formatargument für **Fwscanf_s** ist eine Breitzeichen-Zeichenfolge. Diese Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Fscanf_s** unterstützt derzeit keine Eingabe aus einem unicodestream.
+Die **fscanf_s** -Funktion liest Daten aus der aktuellen *Streamposition* in die Speicherorte, die durch das- *Argument* angegeben werden (falls vorhanden). Jedes *Argument* muss ein Zeiger auf eine Variable eines Typs sein, der einem Typspezifizierer im- *Format*entspricht. *Format* steuert die Interpretation der Eingabefelder und hat die gleiche Form und Funktion wie das *Format* -Argument für **scanf_s**; eine Beschreibung des *Formats*finden Sie unter [formatangabefelder: scanf-und wscanf-Funktionen](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) .  **fwscanf_s** ist eine breit Zeichen Version von **fscanf_s**. das Format Argument für **fwscanf_s** ist eine Zeichenfolge mit breit Zeichen. Diese Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **fscanf_s** unterstützt derzeit keine Eingaben aus einem Unicode-Stream.
 
-Der Hauptunterschied zwischen den sichereren Funktionen (die die **_s** Suffix) und den anderen Versionen ist, dass die sichereren Funktionen, die Größe in Zeichen von jedem erfordern **c**, **C**, **s**, **S**, und **[** -Typfeld als Argument sofort nach der folgenden Variablen übergeben werden. Weitere Informationen finden Sie unter [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) und [scanf-Breitenangabe](../../c-runtime-library/scanf-width-specification.md).
+Der Hauptunterschied zwischen den sichereren Funktionen (mit dem Suffix " **_s** ") und den anderen Versionen besteht darin, dass für die sichereren Funktionen die Größe in Zeichen jedes **c**-, **c**-, **s**-, **s**-und **[** Type-Felds erforderlich ist. wird als Argument an die Variable geleitet, die unmittelbar auf die Variable folgt Weitere Informationen finden Sie unter [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) und [scanf-Breitenangabe](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
-> Size-Parameter ist vom Typ **ohne Vorzeichen**, nicht **"size_t"**.
+> Der Size-Parameter ist vom Typ **Ganzzahl ohne Vorzeichen**, nicht **size_t**.
 
-Die Versionen dieser Funktionen, die **_l** -Suffix sind beinahe identisch, außer dass sie verwenden den Gebietsschemaparameter, der übergeben wird anstelle des aktuellen threadgebietsschemas.
+Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebiets Schema Parameter, der anstelle des aktuellen Thread Gebiets Schemas übergeben wurde.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

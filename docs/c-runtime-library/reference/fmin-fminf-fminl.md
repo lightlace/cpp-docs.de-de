@@ -1,11 +1,11 @@
 ---
 title: fmin, fminf, fminl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fmin
 - fminf
 - fminl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmin
 - fminf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: f73853e18bd5d7f699cd2c3109fe5fb830859bf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df01f2205291920b8c0519db622c93048278beb1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333377"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957095"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 
@@ -80,19 +83,19 @@ Der zweite zu vergleichende Wert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn erfolgreich, wird die kleinere von *x* oder *y*.
+Bei erfolgreicher Ausführung wird der kleinere von *x* oder *y*zurückgegeben.
 
 |Eingabe|Ergebnis|
 |-----------|------------|
-|*X* ist NaN|*y*|
+|*x* ist NaN|*y*|
 |*y* ist NaN|*w*|
-|*X* und *y* sind NaN|NaN|
+|*x* und *y* sind Nan|NaN|
 
-Die Funktion löst keine [_matherr](matherr.md) Gleitkommaausnahmen um aufgerufen werden soll, oder ändern Sie den Wert der **Errno**.
+Die Funktion bewirkt nicht, dass [_matherr](matherr.md) aufgerufen wird, keine Gleit Komma Ausnahmen verursacht oder der Wert von **errno**geändert wird.
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Fmin** verwenden und zurückgeben **"float"** und **lange** **doppelte** Typen. In einem C-Programm **Fmin** immer Double und gibt eine **doppelte**.
+Da C++ das überladen zulässt, können Sie über Ladungen von **FMIN** aufzurufen, die **float** -und **Long** **Double** -Typen annehmen und zurückgeben. In einem C-Programm nimmt die **Formatierung immer einen** **Double**-Wert an und gibt diesen zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,9 +1,9 @@
 ---
 title: _RTC_GetErrDesc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _RTC_GetErrDesc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - RTC_GetErrDesc
 - _RTC_GetErrDesc
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - _RTC_GetErrDesc function
 - RTC_GetErrDesc function
 ms.assetid: 7994ec2b-5488-4fd4-806d-a166c9a9f927
-ms.openlocfilehash: d164626ea89bbe10f5b2ffe4224bf6381e40bab0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7174e9242b77a904df817886df4f8c763e3e0b2c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357381"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949056"
 ---
-# <a name="rtcgeterrdesc"></a>_RTC_GetErrDesc
+# <a name="_rtc_geterrdesc"></a>_RTC_GetErrDesc
 
 Gibt eine kurze Beschreibung eines Fehlertyps der Fehlerprüfung zur Laufzeit (RTC) zurück.
 
@@ -49,7 +52,7 @@ Eine Zahl zwischen null und einem um eins kleineren als dem von **_RTC_NumErrors
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Zeichenfolge, die eine kurze Beschreibung eines der vom Laufzeit-Fehlerprüfsystem zurückgegebenen Fehlertypen enthält. Wenn Fehler kleiner als 0 (null) oder größer als oder gleich dem Wert, der vom [_RTC_NumErrors](rtc-numerrors.md), **_RTC_GetErrDesc** gibt **NULL**.
+Eine Zeichenfolge, die eine kurze Beschreibung eines der vom Laufzeit-Fehlerprüfsystem zurückgegebenen Fehlertypen enthält. Wenn der Fehler kleiner als 0 (null) oder größer als der oder gleich dem von [_RTC_NumErrors](rtc-numerrors.md)zurückgegebenen Wert ist, gibt **_RTC_GetErrDesc** den Wert **null**zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

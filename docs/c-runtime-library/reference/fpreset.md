@@ -1,9 +1,9 @@
 ---
 title: _fpreset
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _fpreset
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fpreset
 - fpreset
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-ms.openlocfilehash: 0b3ea4289cd0ff031fd2828e3c4183911459297c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 842b9c794d04d71f8f6ca97e35fb3cac2f7bb1ec
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333234"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957014"
 ---
-# <a name="fpreset"></a>_fpreset
+# <a name="_fpreset"></a>_fpreset
 
 Setzt das Gleitkommapaket zurück.
 
@@ -43,9 +46,9 @@ void _fpreset( void );
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_fpreset** Funktion initialisiert mathematischen gleitkommapaket. **_fpreset** dient in der Regel mit **Signal**, **System**, oder die **_exec** oder **_spawn** Funktionen. Wenn ein Programm Signale für Gleitkommafehler traps (**SIGFPE**) mit **Signal**, sie können problemlos von Gleitkommafehlern wiederhergestellt, durch den Aufruf **_fpreset** und verwenden**Longjmp**.
+Mit der **_fpreset** -Funktion wird das mathematische Gleit Komma Paket erneut initialisiert. **_fpreset** wird in der Regel mit **Signal**-, **System**-oder **_exec** -oder **_spawn** -Funktionen verwendet. Wenn ein Programm Gleit Komma Fehlersignale (**sigf**) mit **Signal**abfängt, kann es problemlos von Gleit Komma Fehlern wieder hergestellt werden, indem **_fpreset** aufgerufen und **longjmp**verwendet wird.
 
-Diese Funktion ist veraltet, beim Kompilieren mit [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) da die common Language Runtime nur die Genauigkeit der standardgleitkommawerte unterstützt.
+Diese Funktion ist als veraltet markiert, wenn die Kompilierung mit [/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) erfolgt, da die Common Language Runtime nur die standardmäßige Gleit Komma Genauigkeit unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,12 +1,12 @@
 ---
 title: _isctype, iswctype, _isctype_l, _iswctype_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _isctype_l
 - iswctype
 - _iswctype_l
 - _isctype
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswctype
 - _isctype
@@ -38,16 +41,16 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-ms.openlocfilehash: c5eb0b51cf0371100ed884221ee04885dfbe9ad9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9fefb852f8ebd34b932842ee4c12b53f79b29641
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157307"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954396"
 ---
-# <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype, iswctype, _isctype_l, _iswctype_l
+# <a name="_isctype-iswctype-_isctype_l-_iswctype_l"></a>_isctype, iswctype, _isctype_l, _iswctype_l
 
-Tests *c* für die Ctype-Eigenschaft, die gemäß der *Desc* Argument. Für jeden gültigen Wert des *Desc*, es wird eine entsprechende breitzeichenklassifizierungs-Routine.
+Testet *c* für die CType-Eigenschaft, die vom *DESC* -Argument angegeben wird. Für jeden gültigen *Wert von "* Debug" gibt es eine entsprechende breit Zeichen-Klassifizierungs Routine.
 
 ## <a name="syntax"></a>Syntax
 
@@ -85,9 +88,9 @@ Das für alle gebietsschemaabhängigen Tests zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_isctype** und **Iswctype** einen Wert ungleich NULL zurück, wenn *c* verfügt über die Eigenschaft, die anhand des *Desc* in das aktuelle Gebietsschema oder 0, wenn dies nicht der Fall. Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie das Gebietsschema für den übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+**_isctype** und **iswctype** geben einen Wert ungleich 0 (null) zurück, wenn *c* die vom *DESC* im aktuellen Gebiets Schema angegebene Eigenschaft oder 0 (null) aufweist. Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch das übergebene Gebiets Schema anstelle des aktuellen Gebiets Schemas für Ihr vom Gebiets Schema abhängiges Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Das Verhalten der **_isctype** und **_isctype_l** ist undefiniert, wenn *c* nicht EOF-Markierung ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
+Das Verhalten von **_isctype** und **_isctype_l** ist nicht definiert, wenn *c* nicht EOF ist, oder im Bereich von 0 bis 0xFF (einschließlich). Wenn eine Debug-CRT-Bibliothek verwendet wird und *c* keiner dieser Werte ist, wird von den Funktionen eine-Assertion erhoben.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
