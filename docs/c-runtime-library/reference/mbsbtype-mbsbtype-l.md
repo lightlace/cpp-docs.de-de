@@ -1,10 +1,10 @@
 ---
 title: _mbsbtype, _mbsbtype_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsbtype_l
 - _mbsbtype
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsbtype
 - mbsbtype_l
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _mbsbtype_l function
 - mbsbtype_l function
 ms.assetid: 0d5dd91a-d32d-4f98-ac57-98dfc9e98eac
-ms.openlocfilehash: 5c2927b4e4b68b1284341fe7e767ec50feb21a44
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c474cad9027b7914a08816346e38e954a7200bb5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331505"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952395"
 ---
-# <a name="mbsbtype-mbsbtypel"></a>_mbsbtype, _mbsbtype_l
+# <a name="_mbsbtype-_mbsbtype_l"></a>_mbsbtype, _mbsbtype_l
 
 Gibt den Bytetyp in einer Zeichenfolge zurück.
 
@@ -69,22 +72,22 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_mbsbtype** und **_mbsbtype_l** gibt einen ganzzahligen Wert, der das Ergebnis des Tests für das angegebene Byte. Die Manifestkonstanten in der folgenden Tabelle sind in Mbctype.h definiert.
+**_mbsbtype** und **_mbsbtype_l** gibt einen ganzzahligen Wert zurück, der das Ergebnis des Tests für das angegebene Byte angibt. Die Manifestkonstanten in der folgenden Tabelle sind in Mbctype.h definiert.
 
 |Rückgabewert|Bytetyp|
 |------------------|---------------|
-|**_MBC_SINGLE** (0)|Einzelbytezeichen. Beispielsweise in Codepage 932 **_mbsbtype** gibt 0 zurück, wenn das angegebene Byte im Bereich 0 x 20 – 0x7E oder 0xA1 - 0xDF liegt.|
-|**_MBC_LEAD** (1)|Führendes Byte des Multibytezeichens. Beispielsweise in Codepage 932 **_mbsbtype** gibt 1 zurück, wenn das angegebene Byte im Bereich 0 x 81 – 0x9F oder 0xE0 - 0xFC liegt.|
-|**_MBC_TRAIL** (2)|Nachfolgendes Byte des Multibytezeichens. Beispielsweise in Codepage 932 **_mbsbtype** gibt 2 zurück, wenn das angegebene Byte im Bereich 0 x 40-0x7E oder 0 x 80 – 0xFC liegt.|
-|**_MBC_ILLEGAL** (-1)|**NULL** Zeichenfolge, ungültiges Zeichen oder null Byte, gefunden vor dem Byte am Offset *Anzahl* in *Mbstr*.|
+|**_MBC_SINGLE** (0)|Einzelbytezeichen. In der Codepage 932 gibt **_mbsbtype** beispielsweise 0 zurück, wenn das angegebene Byte im Bereich 0x20-0x7E oder 0xA1-0xDF liegt.|
+|**_MBC_LEAD** (1)|Führendes Byte des Multibytezeichens. In der Codepage 932 gibt **_mbsbtype** beispielsweise 1 zurück, wenn das angegebene Byte im Bereich 0x81-0x9F oder 0xE0-0xFC liegt.|
+|**_MBC_TRAIL** (2)|Nachfolgendes Byte des Multibytezeichens. In der Codepage 932 gibt **_mbsbtype** beispielsweise 2 zurück, wenn das angegebene Byte im Bereich 0x40-0x7E oder 0x80-0xFC liegt.|
+|**_MBC_ILLEGAL** (-1)|**Null** -Zeichenfolge, ungültiges Zeichen oder NULL-Byte gefunden vor dem Byte bei der Offset *Anzahl* in *mbstr*.|
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbsbtype** -Funktion bestimmt den Typ eines Bytes in einer Multibyte-Zeichenfolge. Die Funktion überprüft nur das Byte am Offset *Anzahl* in *Mbstr*, ignoriert ungültige Zeichen vor dem angegebenen Byte.
+Die **_mbsbtype** -Funktion bestimmt den Typ eines Bytes in einer Multibytezeichenfolge. Die-Funktion überprüft nur das Byte bei der Offset *Anzahl* in *mbstr*, wobei ungültige Zeichen vor dem angegebenen Byte ignoriert werden.
 
-Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Version dieser Funktion ohne die **_l** -Suffix verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Version mit der **_l** -Suffix ist beinahe identisch, außer dass es den übergebenen Gebietsschemaparameter verwenden in stattdessen. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Version dieser Funktion ohne das **_l** -Suffix verwendet das aktuelle Gebiets Schema für dieses vom Gebiets Schema abhängige Verhalten. die Version mit dem **_l** -Suffix ist beinahe identisch, verwendet jedoch stattdessen den übergebenen Gebiets Schema Parameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Wenn die Eingabezeichenfolge **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt **_MBC_ILLEGAL**.
+Wenn die Eingabe Zeichenfolge **null**ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird **errno** auf **EINVAL** festgelegt, und die Funktion gibt **_MBC_ILLEGAL**zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

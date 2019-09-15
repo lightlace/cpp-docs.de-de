@@ -1,10 +1,10 @@
 ---
 title: _access_s, _waccess_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _access_s
 - _waccess_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - waccess_s
 - access_s
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: 17d19527323f3e97edecd22ca7c0a0262b1cfbad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0550b8fb42cb62d1a175960d6b0d4ed4dbecdcac
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335684"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939902"
 ---
-# <a name="accesss-waccesss"></a>_access_s, _waccess_s
+# <a name="_access_s-_waccess_s"></a>_access_s, _waccess_s
 
 Bestimmt die Lese-/Schreibberechtigungen einer Datei. Dies ist eine sicherere Version von [_access, _waccess](access-waccess.md), wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
@@ -76,20 +79,20 @@ Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_
 
 ## <a name="remarks"></a>Hinweise
 
-Bei Verwendung mit Dateien, die **_access_s** Funktion bestimmt, ob die angegebene Datei vorhanden ist, und werden, als zugegriffen kann durch den Wert der angegebenen *Modus*. Bei Verwendung mit Verzeichnissen **_access_s** bestimmt nur, ob das angegebene Verzeichnis vorhanden ist. In Windows 2000 und höher werden alle Verzeichnisse Lese- und Schreibzugriff.
+Bei Verwendung mit-Dateien bestimmt die **_access_s** -Funktion, ob die angegebene Datei vorhanden ist und wie im Wert des- *Modus*angegeben darauf zugegriffen werden kann. Bei Verwendung mit Verzeichnissen bestimmt **_access_s** nur, ob das angegebene Verzeichnis vorhanden ist. In Windows 2000 und neueren Betriebssystemen haben alle Verzeichnisse Lese-und Schreibzugriff.
 
-|Mode-Wert|überprüft nur, ob die Datei|
+|Moduswert|überprüft nur, ob die Datei|
 |----------------|---------------------|
 |00|existiert.|
 |02|Schreibberechtigung.|
 |04|Leseberechtigung.|
 |06|Lese- und Schreibberechtigung.|
 
-Die Berechtigung zum Lesen oder Schreiben einer Datei garantiert nicht, dass diese Datei auch geöffnet werden kann. Z. B. wenn eine Datei von einem anderen Prozess gesperrt ist, möglicherweise nicht zugegriffen werden kann, obwohl **_access_s** gibt 0 zurück.
+Die Berechtigung zum Lesen oder Schreiben einer Datei garantiert nicht, dass diese Datei auch geöffnet werden kann. Wenn eine Datei z. b. von einem anderen Prozess gesperrt ist, ist Sie möglicherweise nicht verfügbar, obwohl **_access_s** 0 zurückgibt.
 
-**waccess_s** ist eine Breitzeichen-Version von **_access_s**, wobei die *Pfad* Argument **waccess_s** ist eine Breitzeichen-Zeichenfolge. Andernfalls **waccess_s** und **_access_s** Verhalten sich identisch.
+**_waccess_s** ist eine breit Zeichen Version von **_access_s**, wobei das *path* -Argument für **_waccess_s** eine Zeichenfolge mit breit Zeichen ist. Andernfalls Verhalten sich **_waccess_s** und **_access_s** identisch.
 
-Diese Funktionen überprüfen ihre Parameter. Wenn *Pfad* ist NULL oder *Modus* gibt keinen gültigen Modus, den Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben `EINVAL` zurück.
+Diese Funktionen überprüfen ihre Parameter. Wenn der *Pfad* NULL ist oder der *Modus* keinen gültigen Modus angibt, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben `EINVAL` zurück.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -106,7 +109,7 @@ Diese Funktionen überprüfen ihre Parameter. Wenn *Pfad* ist NULL oder *Modus* 
 
 ## <a name="example"></a>Beispiel
 
-Dieses Beispiel verwendet **_access_s** überprüfen Sie die Datei crt_access_s.c, um festzustellen, ob es vorhanden ist und ob Schreiben zulässig ist.
+In diesem Beispiel wird **_access_s** verwendet, um die Datei mit dem Namen crt_access_s. c zu überprüfen und festzustellen, ob Sie vorhanden ist und ob Schreibvorgänge zulässig
 
 ```C
 // crt_access_s.c

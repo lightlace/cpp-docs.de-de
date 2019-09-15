@@ -1,9 +1,9 @@
 ---
 title: _CrtMemCheckpoint
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtMemCheckpoint
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtMemCheckpoint
 - _CrtMemCheckpoint
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - CrtMemCheckpoint function
 - _CrtMemCheckpoint function
 ms.assetid: f1bacbaa-5a0c-498a-ac7a-b6131d83dfbc
-ms.openlocfilehash: ee435ba3e9e40795280dee0f97feaad32c8b0fc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edf91cd8c76fd080326e2e5eeac98f7f81ab90cf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339870"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942370"
 ---
-# <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
+# <a name="_crtmemcheckpoint"></a>_CrtMemCheckpoint
 
-Ruft den aktuellen Zustand des Debugheaps und speichert Sie in einer Anwendung bereitgestellten **_CrtMemState** Struktur (nur Debugversion).
+Ruft den aktuellen Zustand des Debugheaps ab und speichert ihn in einer von der Anwendung bereitgestellten **_CrtMemState** -Struktur (nur Debugversion).
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,17 +48,17 @@ void _CrtMemCheckpoint(
 ### <a name="parameters"></a>Parameter
 
 *state*<br/>
-Zeiger auf **_CrtMemState** Struktur mit dem arbeitsspeicherprüfpunkt ausgefüllt.
+Zeiger auf die **_CrtMemState** -Struktur, die mit dem Arbeitsspeicher Prüf Punkt ausgefüllt werden
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_CrtMemCheckpoint** -Funktion erstellt eine Momentaufnahme des aktuellen Zustands des Debugheaps zu einem bestimmten Zeitpunkt. Diese Momentaufnahme kann von anderen Heapzustandsfunktionen wie [_CrtMemDifference](crtmemdifference.md) verwendet werden, um das Erkennen von Speicherverlusten und anderen Problemen zu unterstützen. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtMemState** werden während der vorverarbeitung entfernt.
+Die **_CrtMemCheckpoint** -Funktion erstellt eine Momentaufnahme des aktuellen Status des Debugheaps zu einem beliebigen Zeitpunkt. Diese Momentaufnahme kann von anderen Heapzustandsfunktionen wie [_CrtMemDifference](crtmemdifference.md) verwendet werden, um das Erkennen von Speicherverlusten und anderen Problemen zu unterstützen. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtMemState** während der Vorverarbeitung entfernt.
 
-Die Anwendung muss einen Zeiger auf eine zuvor zugeordnete Instanz von übergeben die **_CrtMemState** Struktur, definiert in "CRTDBG.h" definiert, in der *Zustand* Parameter. Wenn **_CrtMemCheckpoint** einen Fehler bei der prüfpunkterstellung erkennt, generiert die Funktion eine **_CRT_WARN** Debugbericht, die Beschreibung des Problems.
+Die Anwendung muss einen Zeiger auf eine zuvor zugeordnete Instanz der **_CrtMemState** -Struktur, die in CRTDBG. h definiert ist, im *State* -Parameter übergeben. Wenn **_CrtMemCheckpoint** während der Prüf Punkt Erstellung einen Fehler feststellt, generiert die Funktion einen **_CRT_WARN** -Debugbericht, der das Problem beschreibt.
 
-Weitere Informationen über heapzustandsfunktionen und die **_CrtMemState** Struktur, siehe [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Weitere Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Weitere Informationen zu Heap Zustands Funktionen und der **_CrtMemState** -Struktur finden Sie unter [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Weitere Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
-Wenn *Zustand* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, [Errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) nastaven NA hodnotu **EINVAL** und die Funktion zurück.
+Wenn *State* **null**ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) auf **EINVAL** festgelegt, und die Funktion gibt zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,7 +68,7 @@ Wenn *Zustand* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
-**Bibliotheken:** Debugversionen der UCRT nur.
+**Bibliotheken** Nur Debugversionen der ucrt.
 
 ## <a name="see-also"></a>Siehe auch
 

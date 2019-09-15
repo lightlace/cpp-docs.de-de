@@ -1,11 +1,11 @@
 ---
 title: modf, modff, modfl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - modff
 - modf
 - modfl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - modff
 - _modfl
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 59d6e2b9b02ad182c5630d6dc9a989c035e8fa92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32caadb787031dca0b0726c546a11c5cd6722b82
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156329"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951539"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -69,11 +72,11 @@ Diese Funktion gibt den Bruchteil von *x* mit Vorzeichen zurück. Es gibt keine 
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Modf** Funktionen beeinträchtigen den Gleitkommawert *x* in Nachkommastellen und ganze Zahlen, von denen jedes die gleichen Vorzeichen wie hat *x*. Der signierte Bruchteil von *x* zurückgegeben wird. Der ganzzahlige Teil wird als Gleitkommawert unter gespeichert *Intptr*.
+Die **modf** -Funktionen unterbrechen den Gleit Komma Wert *x* in Bruchteile und ganzzahlige Teile, von denen jedes dasselbe Vorzeichen wie *x*aufweist. Der Wert von *x* mit Vorzeichen wird zurückgegeben. Der ganzzahlige Teil wird als Gleit Komma Wert bei *IntPtr*gespeichert.
 
-**Modf** verfügt über eine Implementierung, Streaming SIMD Extensions 2 (SSE2) verwendet. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](set-sse2-enable.md).
+**modf** verfügt über eine Implementierung, die Streaming SIMD Extensions 2 (SSE2) verwendet. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](set-sse2-enable.md).
 
-Da C++ das Überladen zulässt, können Sie Überladungen von aufrufen können **Modf** verwenden und zurückgeben **"float"** oder **lange** **doppelte** Parameter. In einem C-Programm **Modf** immer zwei double-Werten und gibt einen doppelten Wert zurück.
+C++ermöglicht überladen, sodass Sie über Ladungen von **modf** abrufen können, die **float** -oder **Long** **Double** -Parameter verwenden und zurückgeben. In einem C-Programm übernimmt **modf** immer zwei Double-Werte und gibt einen Double-Wert zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

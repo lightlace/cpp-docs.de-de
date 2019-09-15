@@ -1,14 +1,14 @@
 ---
 title: strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 ms.date: 03/25/2019
-apiname:
+api_name:
 - _mbstok_l
 - _mbstok
 - wcstok
 - _mbstok
 - strtok
 - _wcstok_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbstok
 - strtok
@@ -45,12 +48,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: 13fbc0e305f7ad183db06ec0060b2059b4964fe7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 62ed9edc6ec5a7ee60223f1c5e908aa14f421a25
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500797"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957654"
 ---
 # <a name="strtok-_strtok_l-wcstok-_wcstok_l-_mbstok-_mbstok_l"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -113,7 +116,7 @@ Die " **strautok** "-Funktion findet das nächste Token in " *strautoken*". Der 
 > [!IMPORTANT]
 > Diese Funktionen stellen eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar. Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Beim ersten aufrutok-Aufrufvorgang überspringt die Funktion führende Trennzeichen und gibt einen Zeiger auf das erste Token in " *strautoken*" zurück, wobei das Token mit einem NULL-Zeichen beendet wird. Weitere Token können aus dem Rest von " *strautoken* " durch eine Reihe von Aufrufen von " **strintok**" aufgeteilt werden. Jeder aufzurufende Befehl von " **Strauch** " ändert " *ertotoken* ", indem er ein NULL-Zeichen nach dem **Token** einfügt Um das nächste Token aus " *strautoken*" zu lesen, nennen Sie " **Strauch** " mit einem **null** -Wert für das ""-Argument "" Das **null** -" *strautoken* "-Argument bewirkt, dass " **strautok** " im geänderten " *strautoken*" nach dem nächsten Token sucht. Das " *chandelimit* "-Argument kann einen beliebigen Wert von einem Befehl zum nächsten annehmen, sodass der Satz von Trennzeichen variieren kann.
+Beim ersten **aufrutok**-Aufrufvorgang überspringt die Funktion führende Trennzeichen und gibt einen Zeiger auf das erste Token in " *strautoken*" zurück, wobei das Token mit einem NULL-Zeichen beendet wird. Weitere Token können aus dem Rest von " *strautoken* " durch eine Reihe von Aufrufen von " **strintok**" aufgeteilt werden. Jeder aufzurufende Befehl von " **Strauch** " ändert " *ertotoken* ", indem er ein NULL-Zeichen nach dem **Token** einfügt Um das nächste Token aus " *strautoken*" zu lesen, nennen Sie " **Strauch** " mit einem **null** -Wert *für das "* "-Argument "" Das **null** -" *strautoken* "-Argument bewirkt, dass " **strautok** " im geänderten " *strautoken*" nach dem nächsten Token sucht. Das " *chandelimit* "-Argument kann einen beliebigen Wert von einem Befehl zum nächsten annehmen, sodass der Satz von Trennzeichen variieren kann.
 
 Der Ausgabewert ist von der Einstellung der **LC_CTYPE** -Kategorieeinstellung des Gebiets Schemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md).
 

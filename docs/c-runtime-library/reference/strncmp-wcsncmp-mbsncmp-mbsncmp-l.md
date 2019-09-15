@@ -1,12 +1,12 @@
 ---
 title: strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strncmp
 - _mbsncmp
 - wcsncmp
 - _mbsncmp_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftcsnccmp
 - _ftcsncmp
@@ -49,19 +52,19 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-ms.openlocfilehash: 8f022dec6c161814ade5c6be5aaccfcd239a4af4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 597db3825d1d6165fb6bd4b98b8d469ea8947b59
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209855"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947350"
 ---
-# <a name="strncmp-wcsncmp-mbsncmp-mbsncmpl"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
+# <a name="strncmp-wcsncmp-_mbsncmp-_mbsncmp_l"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 
 Vergleicht die angegebene Anzahl von Zeichen zweier Zeichenfolgen.
 
 > [!IMPORTANT]
-> **_mbsncmp** und **_mbsncmp_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncmp** und **_mbsncmp_l** können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -106,25 +109,25 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert gibt an, die Beziehung der Teilzeichenfolgen von *string1* und *Zeichenfolge2* wie folgt.
+Der Rückgabewert gibt die Beziehung der Teil Zeichenfolgen von *Zeichenfolge1* und *Zeichenfolge2* wie folgt an.
 
 |Rückgabewert|Beschreibung|
 |------------------|-----------------|
-|< 0|*Zeichenfolge1* Teilzeichenfolge höchstens *Zeichenfolge2* Teilzeichenfolge|
-|0|*Zeichenfolge1* identisch *Zeichenfolge2* Teilzeichenfolge|
-|> 0|*Zeichenfolge1* größer als *Zeichenfolge2* Teilzeichenfolge|
+|< 0|*Zeichenfolge1* Teil Zeichenfolge kleiner als *Zeichenfolge2* Teil Zeichenfolge|
+|0|*Zeichenfolge1* -Teil Zeichenfolge identisch mit *Zeichenfolge2* Teil Zeichenfolge|
+|> 0|*Zeichenfolge1* Teil Zeichenfolge größer als *Zeichenfolge2* Teil Zeichenfolge|
 
-Bei einem parametervalidierungsfehler **_mbsncmp** und **_mbsncmp_l** zurückgeben **_NLSCMPERROR**, definiert in \<string.h > und \< MBSTRING.h >.
+Bei einem Parameter Validierungs Fehler geben **_mbsncmp** und **_mbsncmp_l** **_NLSCMPERROR**zurück, das in \<String. h > und \<mbstring. h > definiert ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Strncmp** -Funktion führt einen Ordinalvergleich von höchstens der ersten *Anzahl* Zeichen in *string1* und *Zeichenfolge2* und Gibt einen Wert, der die Beziehung zwischen den untergeordneten Zeichenfolgen. **Strncmp** ist eine Groß-/Kleinschreibung Version **_strnicmp**. **Wcsncmp** und **_mbsncmp** werden Groß-/Kleinschreibung Versionen **_wcsnicmp** und **_mbsnicmp**.
+Die **strncmp** -Funktion führt einen Ordinalvergleich von höchstens der ersten *Anzahl* von Zeichen in *Zeichenfolge1* und *Zeichenfolge2* aus und gibt einen Wert zurück, der die Beziehung zwischen den untergeordneten Zeichen folgen angibt. bei " **strintermp** " handelt es sich um eine **_strnicmp**-Version. in **wcsncmp** und **_mbsncmp** werden die Groß-/Kleinschreibung beachtet, die für **_wcsnicmp** und **_mbsnicmp**gelten.
 
-**Wcsncmp** und **_mbsncmp** sind Breitzeichen- und multibytezeichenversionen von Versionen von **Strncmp**. Die Argumente des **Wcsncmp** sind Breitzeichen-Zeichenfolgen, die von **_mbsncmp** sind Multibyte Zeichenfolgen. **_mbsncmp** erkennt multibytezeichensequenzen gemäß der Mehrbyte-Codepage und gibt **_NLSCMPERROR** bei einem Fehler.
+**wcsncmp** und **_mbsncmp** sind breit Zeichen-und multibytezeichenversionen von " **strencmp**". Die Argumente von **wcsncmp** sind Zeichen folgen mit breit Zeichen. bei den **_mbsncmp** handelt es sich um Multibyte-Zeichen folgen. **_mbsncmp** erkennt multibytezeichensequenzen gemäß einer Multibytezeichen-Codepage und gibt **_NLSCMPERROR** bei einem Fehler zurück.
 
-Darüber hinaus **_mbsncmp** und **_mbsncmp_l** Parameter überprüft. Wenn *string1* oder *Zeichenfolge2* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **_mbsncmp** und **_mbsncmp_l** zurückgeben **_NLSCMPERROR** und **Errno** zu  **EINVAL**. **Strncmp** und **Wcsncmp** überprüfen ihre Parameter nicht. Anderenfalls verhalten sich diese Funktionen identisch.
+Außerdem **_mbsncmp** -und **_mbsncmp_l** Validate-Parameter. Wenn *Zeichenfolge1* oder *Zeichenfolge2* ein NULL-Zeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben **_mbsncmp** und **_mbsncmp_l** **_NLSCMPERROR** zurück und legen **errno** auf **EINVAL**fest. die Parameter werden von " **strinncmp** " und " **wcsncmp** " nicht überprüft. Anderenfalls verhalten sich diese Funktionen identisch.
 
-Das Vergleichsverhalten von **_mbsncmp** und **_mbsncmp_l** wird von der Einstellung beeinflusst die **LC_CTYPE** -kategorieeinstellung des Gebietsschemas. Hierdurch wird die Erkennung von vorangestellten und nachfolgenden Bytes von Multibytezeichen gesteuert. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die **_mbsncmp** Funktion verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten. Die **_mbsncmp_l** -Funktion ist identisch, außer dass mithilfe der *Gebietsschema* Parameter stattdessen. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md). Wenn das Gebietsschema ein Einzelbyte-Gebietsschema ist, ist das Verhalten dieser Funktionen mit **Strncmp**.
+Das Vergleichs Verhalten von **_mbsncmp** und **_mbsncmp_l** wird von der Einstellung der **LC_CTYPE** -Kategorieeinstellung des Gebiets Schemas beeinflusst. Hierdurch wird die Erkennung von vorangestellten und nachfolgenden Bytes von Multibytezeichen gesteuert. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die **_mbsncmp** -Funktion verwendet das aktuelle Gebiets Schema für dieses vom Gebiets Schema abhängige Verhalten. Die **_mbsncmp_l** -Funktion ist beinahe identisch, verwendet jedoch stattdessen den *locale* -Parameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md). Wenn das Gebiets Schema ein Einzel Byte-Gebiets Schema ist, ist das Verhalten dieser Funktionen mit dem Wert von " **renncmp**" identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

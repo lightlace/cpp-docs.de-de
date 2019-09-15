@@ -1,10 +1,10 @@
 ---
 title: _fputchar, _fputwchar
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fputchar
 - _fputwchar
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fputtchar
 - _fputwchar
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-ms.openlocfilehash: 57ec2350fa1d0b681c6eed0c4cfc4ec4660977e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39642be871c1c5b5c2deaf35b7c26d19c188b440
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287929"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956935"
 ---
-# <a name="fputchar-fputwchar"></a>_fputchar, _fputwchar
+# <a name="_fputchar-_fputwchar"></a>_fputchar, _fputwchar
 
 Schreibt ein Zeichen in **stdout**.
 
@@ -62,13 +65,13 @@ Zu schreibende Zeichen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt das geschriebene Zeichen zurück. Für **_fputchar**, einen Rückgabewert von **EOF** gibt einen Fehler an. Für **_fputwchar**, einen Rückgabewert von **WEOF** gibt einen Fehler an. Wenn c **NULL**, wie in beschrieben, generieren diese Funktionen eine Ausnahme für ungültige Parameter, wegen [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben sie zurück **EOF** (oder **WEOF**) und legen Sie **Errno** zu **EINVAL**.
+Jede dieser Funktionen gibt das geschriebene Zeichen zurück. Bei **_fputchar**gibt der Rückgabewert von **EOF** einen Fehler an. Bei **_fputwchar**gibt der Rückgabewert **WEOF** einen Fehler an. Wenn c **null**ist, generieren diese Funktionen eine Ausnahme wegen eines ungültigen Parameters, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben Sie **EOF** (oder **WEOF**) zurück und legen **errno** auf **EINVAL**fest.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Beide dieser Funktionen schreibt das einzelne Zeichen *c* zu **"stdout"** und verschieben den Indikator entsprechend. **_fputchar** entspricht `fputc( stdout )`. Dies entspricht auch **Putchar**, jedoch nur als Funktion anstelle einer Funktion und Makro implementiert. Im Gegensatz zu **Fputc** und **Putchar**, diese Funktionen sind nicht mit dem ANSI-Standard kompatibel.
+Beide Funktionen schreiben das einzelne Zeichen *c* in **stdout** und verschieben den Indikator entsprechend. **_fputchar** entspricht `fputc( stdout )`. Sie entspricht auch **putchar**, wird jedoch nur als Funktion und nicht als Funktion und Makro implementiert. Anders als bei **fputc** und **putchar**sind diese Funktionen nicht mit dem ANSI-Standard kompatibel.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -83,7 +86,7 @@ Beide dieser Funktionen schreibt das einzelne Zeichen *c* zu **"stdout"** und ve
 |**_fputchar**|\<stdio.h>|
 |**_fputwchar**|\<stdio.h> oder \<wchar.h>|
 
-Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Die mit der Konsole verknüpften standardstreamhandles,**Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die-Konsole wird in universelle Windows-Plattform-Apps (UWP) nicht unterstützt. Die Standarddaten Strom Handles, die der Konsole –**stdin**, **stdout**und **stderr**– zugeordnet sind, müssen umgeleitet werden, bevor Sie von C-Lauf Zeitfunktionen in UWP-Apps verwendet werden können. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

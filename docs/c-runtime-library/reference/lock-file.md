@@ -1,9 +1,9 @@
 ---
 title: _lock_file
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lock_file
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lock_file
 - lock_file
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 4c6d9ef3ae9e2f63e702dd3fc6b01f7edea40626
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43030030d1674cfba24c1300487f576b7a2085ea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157434"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953301"
 ---
-# <a name="lockfile"></a>_lock_file
+# <a name="_lock_file"></a>_lock_file
 
-Sperrt eine **Datei** Objekt zur Gewährleistung der Konsistenz für Threads, die Zugriff auf die **Datei** Objekt gleichzeitig.
+Sperrt ein **Datei** Objekt, um die Konsistenz für Threads sicherzustellen, die gleichzeitig auf das **Datei** Objekt zugreifen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +51,7 @@ Dateihandle.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_lock_file** -Funktion sperrt die **Datei** angegebene Objekt *Datei*. Die zugrunde liegende Datei ist nicht gesperrt, indem **_lock_file**. Verwenden Sie [_unlock_file](unlock-file.md), um die Sperre der Datei aufzuheben. Aufrufe von **_lock_file** und **_unlock_file** muss in einem Thread übereinstimmen.
+Die **_lock_file** -Funktion sperrt das **Datei** Objekt, das durch die *Datei*angegeben wird. Die zugrunde liegende Datei wird nicht von **_lock_file**gesperrt. Verwenden Sie [_unlock_file](unlock-file.md), um die Sperre der Datei aufzuheben. Aufrufe von **_lock_file** und **_unlock_file** müssen in einem Thread abgeglichen werden.
 
 ## <a name="requirements"></a>Anforderungen
 

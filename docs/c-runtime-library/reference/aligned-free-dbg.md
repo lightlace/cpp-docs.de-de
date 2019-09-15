@@ -1,9 +1,9 @@
 ---
 title: _aligned_free_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_free_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_free_dbg
 - aligned_free_dbg
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _aligned_free_dbg function
 - aligned_free_dbg function
 ms.assetid: eb0cb3c8-0992-4db8-bac3-65f1b8311ca6
-ms.openlocfilehash: f51b9b9573ab2e23a0a60979c55a33d2e5cff747
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b510d16b6e784202094bb05e6364f7af1b1fff97
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341898"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939920"
 ---
-# <a name="alignedfreedbg"></a>_aligned_free_dbg
+# <a name="_aligned_free_dbg"></a>_aligned_free_dbg
 
 Gibt einen Speicherblock frei, der mit [_aligned_malloc](aligned-malloc.md) oder [_aligned_offset_malloc](aligned-offset-malloc.md) belegt ist (nur in der Debugversion).
 
@@ -44,13 +47,13 @@ void _aligned_free_dbg(
 ### <a name="parameters"></a>Parameter
 
 *memblock*<br/>
-Ein Zeiger auf den Speicherblock, die zurückgegeben wurde, die [_aligned_malloc](aligned-malloc.md) oder [_aligned_offset_malloc](aligned-offset-malloc.md) Funktion.
+Ein Zeiger auf den Speicherblock, der an die [_aligned_malloc](aligned-malloc.md) -oder [_aligned_offset_malloc](aligned-offset-malloc.md) -Funktion zurückgegeben wurde.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_aligned_free_dbg** -Funktion ist eine Debugversion der [_aligned_free](aligned-free.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, jeden Aufruf von **_aligned_free_dbg** wird nach einer Verkleinerung auf einen Aufruf von `_aligned_free`. Beide `_aligned_free` und **_aligned_free_dbg** geben einen Speicherblock im Basisheap, jedoch **_aligned_free_dbg** ermöglicht eine Debugfunktion: die Möglichkeit, um Speichermangel zu halten, freigegebene Blöcke in der verknüpften Liste des Heaps simulieren Sie Bedingungen mit unzureichendem Arbeitsspeicher.
+Die **_aligned_free_dbg** -Funktion ist eine Debugversion der [_aligned_free](aligned-free.md) -Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, wird jeder **_aligned_free_dbg** -Rückruf auf `_aligned_free`einen-Befehl reduziert. Sowohl `_aligned_free` als auch **_aligned_free_dbg** freigeben einen Speicherblock im Basisheap, aber **_aligned_free_dbg** bietet eine Debugfunktion: die Möglichkeit, freigegebene Blöcke in der verknüpften Liste des Heaps beizubehalten, um Speichermangel zu simulieren.
 
-**_aligned_free_dbg** führt eine gültigkeitsüberprüfung für alle angegebenen Dateien und blockspeicherorte, bevor Sie eine Freigabe erfolgt. Die Anwendung stellt diese Informationen wahrscheinlich nicht bereit. Wenn ein Speicherblock freigegeben wird, überprüft der Debugheapmanager automatisch die Pufferintegrität auf beiden Seiten des Benutzerteils und erstellt einen Fehlerbericht, falls über den Puffer hinaus geschrieben wurde. Wenn die _CRTDBG_DELAY_FREE_MEM_DF--Feld Bit der [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) Flags festgelegt ist, wird der freigegebene Block mit dem Wert "0xDD" gefüllt, die _FREE_BLOCK-Block-Datentyp zugewiesen und in der verknüpften Liste von Speicherblöcken beibehalten wird.
+**_aligned_free_dbg** führt eine Gültigkeits Überprüfung für alle angegebenen Dateien und Blockspeicher Orte aus, bevor der kostenlose Vorgang durchgeführt wird. Die Anwendung stellt diese Informationen wahrscheinlich nicht bereit. Wenn ein Speicherblock freigegeben wird, überprüft der Debugheapmanager automatisch die Pufferintegrität auf beiden Seiten des Benutzerteils und erstellt einen Fehlerbericht, falls über den Puffer hinaus geschrieben wurde. Wenn das _CRTDBG_DELAY_FREE_MEM_DF-Bitfeld des [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) -Flags festgelegt ist, wird der freigegebene Block mit dem Wert "0xDD" gefüllt, dem _FREE_BLOCK-Blocktyp zugewiesen und in der verknüpften Liste von Speicherblöcken des Heaps aufbewahrt.
 
 Wenn bei der Freigabe des Speichers ein Fehler auftritt, wird `errno` mit Informationen des Betriebssystems über die Art des Fehlers angegeben. Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

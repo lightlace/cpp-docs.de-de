@@ -1,9 +1,9 @@
 ---
 title: _CrtDumpMemoryLeaks
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtDumpMemoryLeaks
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CRTDBG_LEAK_CHECK_DF
 - CRTDBG_CHECK_CRT_DF
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - CRTDBG_CHECK_CRT_DF macro
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: 71b2eab4-7f55-44e8-a55a-bfea4f32d34c
-ms.openlocfilehash: baf4f8d8234ba744acda20541d37bbc3ed076678
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dae93577f5c0c0297606577c05d6b6ef2040c831
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339454"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938827"
 ---
-# <a name="crtdumpmemoryleaks"></a>_CrtDumpMemoryLeaks
+# <a name="_crtdumpmemoryleaks"></a>_CrtDumpMemoryLeaks
 
 Legt alle Speicherblöcke im Debugheap ab, wenn ein Speicherverlust aufgetreten ist (nur Debugversion).
 
@@ -50,19 +53,19 @@ int _CrtDumpMemoryLeaks( void );
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_CrtDumpMemoryLeaks** gibt TRUE zurück, wenn ein Speicherverlust erkannt wird. Andernfalls gibt die Funktion FALSE zurück.
+**_CrtDumpMemoryLeaks** gibt true zurück, wenn ein Speicherlecks gefunden wird. Andernfalls gibt die Funktion FALSE zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_CrtDumpMemoryLeaks** Funktion bestimmt, ob seit dem Beginn der programmausführung ein Speicherverlust aufgetreten ist. Wenn ein Verlust erkannt wird, werden die Debugheaderinformationen für alle Objekte im Heap in einer für den Benutzer lesbaren Form ausgegeben. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtDumpMemoryLeaks** werden während der vorverarbeitung entfernt.
+Die **_CrtDumpMemoryLeaks** -Funktion bestimmt, ob seit dem Start der Programmausführung ein Speicherfehler aufgetreten ist. Wenn ein Verlust erkannt wird, werden die Debugheaderinformationen für alle Objekte im Heap in einer für den Benutzer lesbaren Form ausgegeben. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtDumpMemoryLeaks** während der Vorverarbeitung entfernt.
 
-**_CrtDumpMemoryLeaks** wird häufig aufgerufen werden, am Ende der Ausführung des Programms stellen Sie sicher, dass alle von der Anwendung belegten Arbeitsspeicher freigegeben wurde. Die Funktion kann aufgerufen werden automatisch bei Beendigung des Programms durch Aktivieren der **_CRTDBG_LEAK_CHECK_DF** -Bitfeld des der [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) Flags mithilfe der [_CrtSetDbgFlag](crtsetdbgflag.md)Funktion.
+**_CrtDumpMemoryLeaks** wird häufig am Ende der Programmausführung aufgerufen, um zu überprüfen, ob der gesamte von der Anwendung zugewiesene Arbeitsspeicher freigegeben wurde. Die-Funktion kann bei der Programm Beendigung automatisch aufgerufen werden, indem das **_CRTDBG_LEAK_CHECK_DF** -Bitfeld des [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) -Flags mithilfe der [_CrtSetDbgFlag](crtsetdbgflag.md) -Funktion eingeschaltet wird.
 
-**_CrtDumpMemoryLeaks** Aufrufe [_CrtMemCheckpoint](crtmemcheckpoint.md) auf den aktuellen Zustand des Heaps abzurufen und sucht dann in den Zustand für Speicherblöcke, die nicht freigegeben wurden. Bei ein-Blocks auftreten **_CrtDumpMemoryLeaks** Aufrufe [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) um Informationen für alle Objekte, die seit dem Beginn der programmausführung im Heap zugeordnet.
+**_CrtDumpMemoryLeaks** ruft [_CrtMemCheckpoint](crtmemcheckpoint.md) auf, um den aktuellen Zustand des Heaps abzurufen, und scannt dann den Zustand auf Blöcke, die nicht freigegeben wurden. Wenn ein nicht frei gegebener Block gefunden wird, ruft **_CrtDumpMemoryLeaks** [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) auf, um Informationen für alle Objekte zu sichern, die vom Beginn der Programmausführung im Heap zugeordnet wurden.
 
-Standardmäßig sind interne C-laufzeitblöcke (**_CRT_BLOCK**) sind nicht in speicherabbildvorgängen enthalten. Die [_CrtSetDbgFlag](crtsetdbgflag.md) Funktion kann verwendet werden, zum Aktivieren der **_CRTDBG_CHECK_CRT_DF** -Bit von **_crtDbgFlag** um diese Blöcke bei der Erkennung von Speicherverlusten einzuschließen.
+Standardmäßig sind interne C-Lauf Zeitblöcke ( **_CRT_BLOCK**) nicht in Speicher Abbild Vorgängen enthalten. Die [_CrtSetDbgFlag](crtsetdbgflag.md) -Funktion kann zum Aktivieren des **_CRTDBG_CHECK_CRT_DF** -Bits von **_crtDbgFlag** verwendet werden, um diese Blöcke in den Prozess zur Erkennung von Lecks einzubeziehen.
 
-Weitere Informationen über heapzustandsfunktionen und die **_CrtMemState** Struktur, siehe [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Weitere Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Weitere Informationen zu Heap Zustands Funktionen und der **_CrtMemState** -Struktur finden Sie unter [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Weitere Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,7 +81,7 @@ Nur Debugversionen von [C-Laufzeitbibliotheken](../../c-runtime-library/crt-libr
 
 ## <a name="example"></a>Beispiel
 
-Ein Beispiel zur Verwendung **_CrtDumpMemoryLeaks**, finden Sie unter [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1).
+Ein Beispiel für die Verwendung von **_CrtDumpMemoryLeaks**finden Sie unter [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1).
 
 ## <a name="see-also"></a>Siehe auch
 

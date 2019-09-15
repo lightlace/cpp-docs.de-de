@@ -1,9 +1,9 @@
 ---
 title: _CrtSetDbgFlag
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtSetDbgFlag
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CRTDBG_REPORT_FLAG
 - _CRTDBG_CHECK_EVERY_16_DF
@@ -50,14 +53,14 @@ helpviewer_keywords:
 - CRTDBG_CHECK_CRT_DF macro
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
-ms.openlocfilehash: dcb8e37090e4c15ba849e76ca1cb1cc646a7bcc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8506b593a579c8dd1791e56c320bd9d8e2ee9ba2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348184"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938615"
 ---
-# <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
+# <a name="_crtsetdbgflag"></a>_CrtSetDbgFlag
 
 Ruft den Zustand des **_crtDbgFlag**-Flags ab oder ändert ihn, um das Zuordnungsverhalten des Debugheapmanagers zu steuern (nur Debugversion).
 
@@ -80,23 +83,23 @@ Gibt den vorherigen Zustand von **_crtDbgFlag** zurück
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_CrtSetDbgFlag** -Funktion ermöglicht der Anwendung steuern, wie der debugheapmanager speicherbelegungen nachverfolgt, indem die Bitfelder des Ändern der **_crtDbgFlag** Flag. Durch Einstellen (Aktivieren) der Bits kann die Anwendung den Debugheapmanager anweisen, spezielle Debugvorgänge durchzuführen, z. B. Überprüfen von Speicherverlusten beim Beenden der Anwendung, und einen Bericht zu erstellen, wenn Speicherverluste erkannt werden. Hierzu wird Speichermangel simuliert, indem festgelegt wird, dass die freigegebenen Speicherblöcke in der verknüpften Liste des Heaps verbleiben sollen, und indem die Integrität des Heaps durch Überprüfen jeden Speicherblocks bei jeder Belegungsanforderung verifiziert wird. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtSetDbgFlag** werden während der vorverarbeitung entfernt.
+Mit der **_CrtSetDbgFlag** -Funktion kann die Anwendung steuern, wie der debugheapmanager Speicher Belegungen nachverfolgt, indem die Bitfelder des **_crtDbgFlag** -Flags geändert werden. Durch Einstellen (Aktivieren) der Bits kann die Anwendung den Debugheapmanager anweisen, spezielle Debugvorgänge durchzuführen, z. B. Überprüfen von Speicherverlusten beim Beenden der Anwendung, und einen Bericht zu erstellen, wenn Speicherverluste erkannt werden. Hierzu wird Speichermangel simuliert, indem festgelegt wird, dass die freigegebenen Speicherblöcke in der verknüpften Liste des Heaps verbleiben sollen, und indem die Integrität des Heaps durch Überprüfen jeden Speicherblocks bei jeder Belegungsanforderung verifiziert wird. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtSetDbgFlag** während der Vorverarbeitung entfernt.
 
 In der folgenden Tabelle werden die Bitfelder für **_crtDbgFlag** aufgeführt und deren Verhalten beschrieben. Da durch das Festlegen der Bits die Diagnoseausgabe erhöht und die Geschwindigkeit der Programmausführung verringert wird, sind diese Bits standardmäßig deaktiviert. Weitere Informationen zu diesen Bitfeldern finden Sie unter [Berichtsfunktionen für den Heapzustand](/visualstudio/debugger/crt-debug-heap-details).
 
-|Bitfeld|Standard|Beschreibung|
+|Bitfeld|Default|Beschreibung|
 |---------------|-------------|-----------------|
-|**_CRTDBG_ALLOC_MEM_DF**|ON|ON: Aktivieren Sie debugheapzuordnungen und die Verwendung von Speicher-Block-Typ-IDs, z. B. **_CLIENT_BLOCK**. AUS: Fügt neue Zuordnungen zur verknüpften Liste des Heaps hinzu, jedoch festgelegt Blocktyp auf **_IGNORE_BLOCK**.<br /><br /> Kann auch mit einem beliebigen Heap-Häufigkeitsüberprüfungsmakros kombiniert werden.|
-|**_CRTDBG_CHECK_ALWAYS_DF**|OFF|ON: Rufen Sie [_CrtCheckMemory](crtcheckmemory.md) bei jeder Anforderung belegen und freigeben. OFF: **_CrtCheckMemory** muss explizit aufgerufen werden.<br /><br /> Heap-Häufigkeitsüberprüfungsmakros haben keine Auswirkungen, wenn dieses Flag festgelegt ist.|
-|**_CRTDBG_CHECK_CRT_DF**|OFF|ON: Umfassen **_CRT_BLOCK** Vorgängen zu speicherzustandsunterschieden Typen von Speicherverlusten Erkennung und Arbeitsspeicher-Status. AUS: Von der Laufzeitbibliothek intern verwendete Speicher wird von diesen Vorgänge ignoriert.<br /><br /> Kann auch mit einem beliebigen Heap-Häufigkeitsüberprüfungsmakros kombiniert werden.|
-|**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|ON: Behalten Sie die freigegebenen Speicherblöcke in der verknüpften Liste des Heaps bei, weist sie der **_FREE_BLOCK** -Typ zu und füllt sie mit dem Bytewert "0xDD". AUS: Keine freigegebene Blöcke in der verknüpften Liste des Heaps beibehalten.<br /><br /> Kann auch mit einem beliebigen Heap-Häufigkeitsüberprüfungsmakros kombiniert werden.|
-|**_CRTDBG_LEAK_CHECK_DF**|OFF|ON: Automatische Überprüfung von Speicherverlusten beim Beenden des Programms durch einen Aufruf von [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) und ein Fehlerbericht generiert, wenn die Anwendung nicht belegten Speicher freigeben konnte. AUS: Führen Sie beim Beenden des Programms Überprüfung von Speicherverlusten nicht automatisch aus.<br /><br /> Kann auch mit einem beliebigen Heap-Häufigkeitsüberprüfungsmakros kombiniert werden.|
+|**_CRTDBG_ALLOC_MEM_DF**|ON|AUF Aktivieren Sie die debugheapzuordnungen und die Verwendung von Speicher Blocktyp bezeichgern, z. b. **_CLIENT_BLOCK**. ABGESCHRIEBEN Fügen Sie neue Zuordnungen zur verknüpften Liste des Heaps hinzu, legen Sie jedoch Blocktyp auf **_IGNORE_BLOCK**fest.<br /><br /> Kann auch mit einem beliebigen Heap-Häufigkeitsüberprüfungsmakros kombiniert werden.|
+|**_CRTDBG_CHECK_ALWAYS_DF**|OFF|AUF Ruft [_CrtCheckMemory](crtcheckmemory.md) bei jeder Anforderung zur Zuordnung und Aufhebung der Zuordnung auf. Off: **_CrtCheckMemory** muss explizit aufgerufen werden.<br /><br /> Heap-Häufigkeitsüberprüfungsmakros haben keine Auswirkungen, wenn dieses Flag festgelegt ist.|
+|**_CRTDBG_CHECK_CRT_DF**|OFF|AUF **_CRT_BLOCK** -Typen in Fehlererkennungs-und Speicher Zustands Unterschiede einschließen. ABGESCHRIEBEN Arbeitsspeicher, der von der Lauf Zeit Bibliothek intern verwendet wird, wird von diesen Vorgängen ignoriert.<br /><br /> Kann auch mit einem beliebigen Heap-Häufigkeitsüberprüfungsmakros kombiniert werden.|
+|**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|AUF Behalten Sie freigegebene Speicherblöcke in der verknüpften Liste des Heaps bei, weisen Sie Ihnen den **_FREE_BLOCK** -Typ zu, und füllen Sie Sie mit dem Bytewert 0xDD. ABGESCHRIEBEN Behalten Sie keine freigegebenen Blöcke in der verknüpften Liste des Heaps bei.<br /><br /> Kann auch mit einem beliebigen Heap-Häufigkeitsüberprüfungsmakros kombiniert werden.|
+|**_CRTDBG_LEAK_CHECK_DF**|OFF|AUF Automatische Überprüfung beim Programm beenden durch einen [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) -Aufrufvorgang ausführen und einen Fehlerbericht generieren, wenn die Anwendung nicht den gesamten zugeordneten Arbeitsspeicher freigeben konnte. ABGESCHRIEBEN Keine automatische Überprüfung beim Programm beenden.<br /><br /> Kann auch mit einem beliebigen Heap-Häufigkeitsüberprüfungsmakros kombiniert werden.|
 
 **Heap-Häufigkeitsüberprüfungsmakros**
 
-Sie können angeben, wie oft die C-Laufzeitbibliothek Validierung des Debugheaps (**_CrtCheckMemory**) basierend auf der Anzahl der Aufrufe von **Malloc**, **Realloc**, **kostenlose**, und **_msize**.
+Sie können angeben, wie häufig die C-Lauf Zeit Bibliothek die Validierung des Debugheaps ( **_CrtCheckMemory**) basierend auf der Anzahl der Aufrufe **an malloc**, **rezuordc**, **Free**und **_msize**durchführt.
 
-**_CrtSetDbgFlag** überprüft dann die oberen 16 Bits des der *NewFlag* -Parameter für einen Wert. Der angegebene Wert ist die Anzahl der **Malloc**, **Realloc**, **kostenlose**, und **_msize** -Aufrufen zwischen **_CrtCheckMemory**  aufrufen. Vier vordefinierte Makros werden zu diesem Zweck bereitgestellt.
+**_CrtSetDbgFlag** überprüft dann die oberen 16 Bits des *newFlag* -Parameters auf einen Wert. Der angegebene Wert ist die Anzahl der Aufrufe von " **malloc**", " **rezuweisungen**", " **Free**" und " **_msize** " zwischen **_CrtCheckMemory** -aufrufen. Vier vordefinierte Makros werden zu diesem Zweck bereitgestellt.
 
 |Makro|Anzahl von malloc-, realloc-, free- und _msize-Aufrufen zwischen Aufrufen von _CrtCheckMemory|
 |-----------|------------------------------------------------------------------------------------------|
@@ -105,9 +108,9 @@ Sie können angeben, wie oft die C-Laufzeitbibliothek Validierung des Debugheaps
 |_CRTDBG_CHECK_EVERY_1024_DF|1024|
 |_CRTDBG_CHECK_DEFAULT_DF|0 (standardmäßig, keine Heapüberprüfungen)|
 
-In der Standardeinstellung **_CrtCheckMemory** wird aufgerufen, wenn alle 1.024 Male, die Sie aufrufen **Malloc**, **Realloc**, **kostenlose**, und **_ Msize**.
+Standardmäßig wird **_CrtCheckMemory** einmal alle 1.024 Mal aufgerufen, wenn Sie **malloc**, **rezuweisungen**, **Free**und **_msize**aufrufen.
 
-Angenommen, Sie Heapüberprüfung einer jeden 16. **Malloc**, **Realloc**, **kostenlose**, und **_msize** Vorgänge mit den folgenden Code:
+Sie können z. b. alle 16 **malloc**-, **rezuweisung**-, **Free**-und **_msize** -Vorgänge mit dem folgenden Code eine Heap Überprüfung angeben:
 
 ```C
 #include <crtdbg.h>
@@ -126,21 +129,21 @@ int main( )
 }
 ```
 
-Die oberen 16 Bits des der *NewFlag* Parameter werden ignoriert, wenn _CRTDBG_CHECK_ALWAYS_DF angegeben wird. In diesem Fall **_CrtCheckMemory** wird aufgerufen, bei jedem Aufruf **Malloc**, **Realloc**, **kostenlose**, und **_msize**.
+Die oberen 16 Bits des *newFlag* -Parameters werden ignoriert, wenn _CRTDBG_CHECK_ALWAYS_DF angegeben wird. In diesem Fall wird **_CrtCheckMemory** jedes Mal aufgerufen, wenn Sie " **malloc**", " **rezuweisung**", " **Free**" und " **_msize**" aufrufen.
 
-*NewFlag* ist der neue Zustand Zuweisen der **_crtDbgFlag** und eine Kombination der Werte für jedes Bitfeld.
+*newFlag* ist der neue Zustand, der auf das **_crtDbgFlag** angewendet werden soll, und ist eine Kombination der Werte für jedes Bitfeld.
 
 ### <a name="to-change-one-or-more-of-these-bit-fields-and-create-a-new-state-for-the-flag"></a>So ändern Sie einen oder mehrere dieser Bitfelder und erstellen einen neuen Zustand für das Flag
 
-1. Rufen Sie **_CrtSetDbgFlag** mit *NewFlag* gleich **_CRTDBG_REPORT_FLAG** Abrufen des aktuellen **_crtDbgFlag** Status und speichern Sie die zurückgegebene Wert in einer temporären Variablen.
+1. Rufen Sie **_CrtSetDbgFlag** mit *newFlag* gleich **_CRTDBG_REPORT_FLAG** auf, um den aktuellen **_crtDbgFlag** -Zustand zu erhalten und den zurückgegebenen Wert in einer temporären Variablen zu speichern.
 
-1. Aktivieren Sie Bits durch eine bitweise **oder** der temporären Variable mit den entsprechenden Bitmasken (im Anwendungscode durch Manifestkonstanten dargestellt).
+1. Schalten Sie alle Bits durch ein bitweises **or** der temporären Variablen mit den entsprechenden Bitmasken (im Anwendungscode durch Manifest-Konstanten dargestellt) ein.
 
 1. Deaktivieren Sie die anderen Bits durch eine **AND**-Verknüpfung mit einer bitweisen **NOT**-Verknüpfung der entsprechenden Bitmasks.
 
-1. Rufen Sie **_CrtSetDbgFlag** mit *NewFlag* gleich dem Wert in der temporären Variable zum Festlegen des neuen Status für die gespeicherten **_crtDbgFlag**.
+1. Ruft **_CrtSetDbgFlag** mit *newFlag* gleich dem in der temporären Variablen gespeicherten Wert auf, um den neuen Zustand für **_crtDbgFlag**festzulegen.
 
-Der folgende Code veranschaulicht, wie Speichermangel simuliert Bedingungen durch aufbewahren freigegebene Speicherblöcke in der verknüpften Liste des Heaps und zu verhindern, dass **_CrtCheckMemory** bei jeder belegungsanforderung aufgerufen wird:
+Der folgende Code veranschaulicht, wie Speichermangel simuliert wird, indem freigegebene Speicherblöcke in der verknüpften Liste des Heaps aufbewahrt werden und verhindert wird, dass **_CrtCheckMemory** bei jeder Zuordnungs Anforderung aufgerufen wird:
 
 ```C
 // Get the current state of the flag
@@ -161,9 +164,9 @@ _CrtSetDbgFlag( tmpFlag );
 
 Eine Übersicht der Speicherverwaltung und des Debugheaps finden Sie unter [Details zum CRT-Debugheap](/visualstudio/debugger/crt-debug-heap-details).
 
-Zum Deaktivieren eines Flags mit der **_CrtSetDbgFlag** -Funktion sollten Sie **und** die Variable mit dem bitweisen **nicht** -Verknüpfung der Bitmaske verbinden.
+Wenn Sie ein Flag mit der **_CrtSetDbgFlag** -Funktion deaktivieren möchten, sollten Sie **und** die Variable mit der bitweisen **Not** der Bitmaske.
 
-Wenn *NewFlag* ist kein gültiger Wert, ruft diese Funktion den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und gibt den vorherigen Zustand der **_crtDbgFlag**.
+Wenn *newFlag* kein gültiger Wert ist, ruft diese Funktion den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, legt diese Funktion **errno** auf **EINVAL** fest und gibt den vorherigen Zustand von **_crtDbgFlag**zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

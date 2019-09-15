@@ -1,9 +1,9 @@
 ---
 title: clearerr_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clearerr_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clearerr_s
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-ms.openlocfilehash: 03bdc533d3afa265be22ae3567fabe8e78f752a4
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 12e76ba5133d99ed2d45d7cf15bada2ad1c5c38b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342943"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939151"
 ---
-# <a name="clearerrs"></a>clearerr_s
+# <a name="clearerr_s"></a>clearerr_s
 
 Setzt den Fehlerindikator für einen Stream zurück. Dies ist eine sicherere Version von [clearerr](clearerr.md), wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.
 
@@ -49,13 +52,13 @@ Zeiger auf **Datei** Struktur
 
 ## <a name="return-value"></a>Rückgabewert
 
-NULL, wenn erfolgreich; **EINVAL** Wenn *Stream* ist **NULL**.
+NULL, wenn erfolgreich; **EINVAL** , wenn der *Stream* **null**ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Clearerr_s** Funktion setzt den Fehlerindikator und den Dateiende-Indikator für *Stream*. Fehlerindikatoren werden nicht automatisch gelöscht; Sobald der Fehlerindikator für einen bestimmten Stream festgelegt wurde, Operationen in diesem Stream weiterhin einen Fehlerwert bis zurück **Clearerr_s**, **Clearerr**, [Fseek](fseek-fseeki64.md), **Fsetpos**, oder [rewind](rewind.md) aufgerufen wird.
+Die **clearerr_s** -Funktion setzt den Fehler Indikator und den Dateiende-Indikator für den *Stream*zurück. Fehlerindikatoren werden nicht automatisch gelöscht. Sobald der Fehler Indikator für einen angegebenen Stream festgelegt ist, geben Vorgänge in diesem Stream weiterhin einen Fehlerwert zurück, bis **clearerr_s**, **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**oder [Rewind](rewind.md) aufgerufen wird.
 
-Wenn *Stream* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und gibt **EINVAL**.
+Wenn der Stream **null**ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, legt diese Funktion " **errno** " auf " **EINVAL** " fest und gibt " **EINVAL**" zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -113,7 +116,7 @@ int main( void )
 n
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 Write error: Bad file descriptor

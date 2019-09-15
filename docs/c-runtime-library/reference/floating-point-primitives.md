@@ -1,7 +1,7 @@
 ---
-title: Gleitkomma-primitive
+title: Gleitkommaprimitive
 ms.date: 01/31/2019
-apiname:
+api_name:
 - _dclass
 - _ldclass
 - _fdclass
@@ -37,7 +37,7 @@ apiname:
 - _dsin
 - _ldsin
 - _fdsin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -49,7 +49,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _dclass
 - _ldclass
@@ -122,18 +125,18 @@ helpviewer_keywords:
 - _dsin
 - _ldsin
 - _fdsin
-ms.openlocfilehash: 230d0def145bcb443437b59303b2b36e348da2bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25d70062a76f9c32692f5df3f7abb96b49892725
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333611"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957174"
 ---
-# <a name="floating-point-primitives"></a>Gleitkomma-primitive
+# <a name="floating-point-primitives"></a>Gleitkommaprimitive
 
-Microsoft-spezifischen primitiven Funktionen, die verwendet werden, um einige standardmäßige C Runtime Library (CRT) Gleitkomma-Funktionen zu implementieren. Sie sind aus Gründen der Vollständigkeit hier dokumentiert, jedoch werden nicht empfohlen. Einige dieser Funktionen sind als nicht verwendet werden, gekennzeichnet werden, da sie bekannt sind, um Probleme mit einfacher Genauigkeit, Ausnahmebehandlung und Konformität mit IEEE-754-Verhalten zu erhalten. Damit sind sie in der Bibliothek nur für Abwärtskompatibilität vorhanden. Ziehen Sie für das korrekte Verhalten, Portabilität und Einhaltung von Standards die standardmäßigen Gleitkommafunktionen diese Funktionen vor.
+Microsoft-spezifische primitive Funktionen, die verwendet werden, um einige Standardfunktionen der C-Lauf Zeit Bibliothek (CRT) zu implementieren. Sie sind hier aus Gründen der Vollständigkeit dokumentiert, werden jedoch nicht für die Verwendung empfohlen. Einige dieser Funktionen werden als nicht verwendet bezeichnet, da sie bekanntermaßen Probleme in Bezug auf die Genauigkeit, die Ausnahmebehandlung und die Konformität mit IEEE-754-Verhalten haben. Sie sind in der Bibliothek nur aus Gründen der Abwärtskompatibilität vorhanden. Für das korrekte Verhalten, die Portabilität und die Einhaltung von Standards bevorzugen Sie die standardmäßigen Gleit Komma Funktionen für diese Funktionen.
 
-## <a name="dclass-ldclass-fdclass"></a>_dclass, _ldclass, _fdclass
+## <a name="_dclass-_ldclass-_fdclass"></a>_dclass, _ldclass, _fdclass
 
 ### <a name="syntax"></a>Syntax
 
@@ -146,23 +149,23 @@ short __cdecl _fdclass(float x);
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gleitkomma Funktionsargument.
+Gleit Komma Funktions Argument.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Gleitkomma-primitive Typen implementieren die C-Versionen der CRT-Makros [Fpclassify](fpclassify.md) für Gleitkomma-Datentypen. Die Klassifizierung des Arguments *x* als eines der folgenden Konstanten, die in math.h definiert zurückgegeben wird:
+Diese Gleit Komma primitiven implementieren die C-Versionen des CRT-Makros [fpklassifiziert](fpclassify.md) für Gleit Komma Typen. Die Klassifizierung des Arguments *x* wird als eine dieser Konstanten zurückgegeben, die in Math. h definiert ist:
 
 |Wert|Beschreibung|
 |-----------|-----------------|
 | **FP_NAN** | Ein stiller, signalisierender oder unbestimmter NaN |
 | **FP_INFINITE** | Eine positive oder negative Unendlichkeit |
 | **FP_NORMAL** | Ein positiver oder negativer ungleich null normalisierter Wert |
-| **FP_SUBNORMAL** | Ein positiver oder negativer subnormal (denormalisierten) Wert |
+| **FP_SUBNORMAL** | Ein positiver oder negativer subnormal-Wert (Denormalized) |
 | **FP_ZERO** | Ein positiver oder negativer Nullwert |
 
-Weitere Informationen können Sie die Microsoft-spezifischen [_fpclass, _fpclassf](fpclass-fpclassf.md) Funktionen. Verwenden der [Fpclassify](fpclassify.md) Makro oder die Funktion zur Portabilität.
+Um weitere Details zu erhalten, können Sie die Microsoft-spezifischen Funktionen [_fpclass, _fpclassf](fpclass-fpclassf.md) verwenden. Verwenden Sie das [fpklassifiziert](fpclassify.md) -Makro oder die Funktion für die Portabilität.
 
-## <a name="dsign-ldsign-fdsign"></a>_dsign, _ldsign, _fdsign
+## <a name="_dsign-_ldsign-_fdsign"></a>_dsign, _ldsign, _fdsign
 
 ### <a name="syntax"></a>Syntax
 
@@ -175,13 +178,13 @@ int __cdecl _fdsign(float x);
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gleitkomma Funktionsargument.
+Gleit Komma Funktions Argument.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Gleitkomma-primitive Typen implementieren die [Signbit](signbit.md) Makro oder in der CRT-Funktion. Sie einen Wert ungleich NULL zurückgeben, wenn das signierte Bit, in der Mantisse (Mantisse) des Arguments festgelegt ist *x*, und 0, wenn das signierte Bit nicht festgelegt ist.
+Diese Gleit Komma primitiven implementieren das [SignBit](signbit.md) -Makro oder die-Funktion in der CRT. Sie geben einen Wert ungleich 0 (null) zurück, wenn das Signier Bit in signifikanund (Mantisse) des Arguments *x*festgelegt ist, und 0, wenn das Signier Bit nicht festgelegt ist.
 
-## <a name="dpcomp-ldpcomp-fdpcomp"></a>_dpcomp, _ldpcomp, _fdpcomp
+## <a name="_dpcomp-_ldpcomp-_fdpcomp"></a>_dpcomp, _ldpcomp, _fdpcomp
 
 ### <a name="syntax"></a>Syntax
 
@@ -194,21 +197,21 @@ int __cdecl _fdpcomp(float x, float y);
 ### <a name="parameters"></a>Parameter
 
 *x*, *y*<br/>
-Gleitkomma-Funktionsargumente.
+Gleit Komma Funktionsargumente.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Gleitkomma-primitive werden zwei Argumente, *x* und *y*, und geben Sie einen Wert, der zeigt, deren Sortierung Beziehungen, ausgedrückt als dem bitweisen oder der folgenden Konstanten, die in math.h definiert zurück:
+Diese Gleit Komma primitiven akzeptieren zwei Argumente: *x* und *y*und geben einen Wert zurück, der ihre Reihenfolge Beziehung anzeigt, ausgedrückt als bitweises OR dieser Konstanten, die in Math. h definiert sind:
 
 | Wert | Beschreibung |
 |------------|-----------------|
-| **_FP_LT** | *X* kann betrachtet werden weniger als *y* |
-| **_FP_EQ** | *X* können als gleich betrachtet werden *y* |
-| **_FP_GT** | *X* können als größer betrachtet werden *y* |
+| **_FP_LT** | *x* kann als kleiner als *y* angesehen werden. |
+| **_FP_EQ** | *x* kann als gleich *y* betrachtet werden. |
+| **_FP_GT** | *x* kann als größer als *y* angesehen werden. |
 
-Diese primitiven implementieren die [Isgreater, Isgreaterequal, Isless, Islessequal, Islessgreater, und Isunordered](floating-point-ordering.md) Makros und Funktionen in der CRT.
+Diese primitiven implementieren die Makros und Funktionen [isgreater, isgreaterequal, isless, islessequal, islessgreater und isunsortierte](floating-point-ordering.md) in der CRT.
 
-## <a name="dtest-ldtest-fdtest"></a>_dtest, _ldtest, _fdtest
+## <a name="_dtest-_ldtest-_fdtest"></a>_dtest, _ldtest, _fdtest
 
 ### <a name="syntax"></a>Syntax
 
@@ -220,24 +223,24 @@ short __cdecl _fdtest(float* px);
 
 ### <a name="parameters"></a>Parameter
 
-*px*<br/>
-Zeiger auf ein Gleitkommaargument.
+*entworfen*<br/>
+Zeiger auf ein Gleit Komma Argument.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Gleitkomma-primitive implementieren, die C++-Versionen der CRT-Funktion [Fpclassify](fpclassify.md) für Gleitkomma-Datentypen. Das Argument *x* wird ausgewertet, und die Klassifizierung wird zurückgegeben, als eine der folgenden Konstanten, die in math.h definiert sind:
+Diese Gleit Komma primitiven implementieren die C++ Versionen der CRT-Funktion [fpklassifiziert](fpclassify.md) für Gleit Komma Typen. Das Argument *x* wird ausgewertet, und die Klassifizierung wird als eine dieser Konstanten zurückgegeben, die in Math. h definiert ist:
 
 |Wert|Beschreibung|
 |-----------|-----------------|
 | **FP_NAN** | Ein stiller, signalisierender oder unbestimmter NaN |
 | **FP_INFINITE** | Eine positive oder negative Unendlichkeit |
 | **FP_NORMAL** | Ein positiver oder negativer ungleich null normalisierter Wert |
-| **FP_SUBNORMAL** | Ein positiver oder negativer subnormal (denormalisierten) Wert |
+| **FP_SUBNORMAL** | Ein positiver oder negativer subnormal-Wert (Denormalized) |
 | **FP_ZERO** | Ein positiver oder negativer Nullwert |
 
-Weitere Informationen können Sie die Microsoft-spezifischen [_fpclass, _fpclassf](fpclass-fpclassf.md) Funktionen. Verwenden der [Fpclassify](fpclassify.md) -Funktion für Portabilität.
+Um weitere Details zu erhalten, können Sie die Microsoft-spezifischen Funktionen [_fpclass, _fpclassf](fpclass-fpclassf.md) verwenden. Verwenden Sie die [fpklassifiziert](fpclassify.md) -Funktion für die Portabilität.
 
-## <a name="dint-ldint-fdint"></a>_d_int, _ld_int, _fd_int
+## <a name="_d_int-_ld_int-_fd_int"></a>_d_int, _ld_int, _fd_int
 
 ### <a name="syntax"></a>Syntax
 
@@ -249,17 +252,17 @@ short __cdecl _fd_int(float* px, short exp);
 
 ### <a name="parameters"></a>Parameter
 
-*px*<br/>
-Zeiger auf ein Gleitkommaargument.
+*entworfen*<br/>
+Zeiger auf ein Gleit Komma Argument.
 
 *exp*<br/>
 Ein Exponent als ganzzahliger Typ.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Gleitkomma-primitive nutzen, einen Zeiger auf einen Gleitkommawert *px* und einen Wert für den Exponenten *"exp"*, und entfernen Sie die Nachkommastellen des Gleitkommawerts unter dem angegebenen Exponenten, falls möglich . Der zurückgegebene Wert ist das Ergebnis des **Fpclassify** auf den Eingabewert in *px* Wenn es sich um NaN oder unendlich ist, und auf den Ausgabewert in *px* andernfalls.
+Diese Gleit Komma primitiven akzeptieren einen Zeiger auf einen Gleit Komma Wert *px* und einen Exponent-Wert *Exp*und entfernen den Bruch Teil des Gleit Komma Werts, sofern möglich, unter den angegebenen Exponenten. Der zurückgegebene Wert ist das Ergebnis von **fpklassifiziert** für den Eingabe Wert in *px* , wenn er ein NaN oder unendlich ist, und andernfalls für den Ausgabewert in *px* .
 
-## <a name="dscale-ldscale-fdscale"></a>_dscale, _ldscale, _fdscale
+## <a name="_dscale-_ldscale-_fdscale"></a>_dscale, _ldscale, _fdscale
 
 ### <a name="syntax"></a>Syntax
 
@@ -271,17 +274,17 @@ short __cdecl _fdscale(float* px, long exp);
 
 ### <a name="parameters"></a>Parameter
 
-*px*<br/>
-Zeiger auf ein Gleitkommaargument.
+*entworfen*<br/>
+Zeiger auf ein Gleit Komma Argument.
 
 *exp*<br/>
 Ein Exponent als ganzzahliger Typ.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Gleitkomma-primitive nutzen, einen Zeiger auf einen Gleitkommawert *px* und einen Wert für den Exponenten *"exp"*, und skalieren Sie den Wert in *px* durch 2<sup> *"exp"*</sup>, sofern möglich. Der zurückgegebene Wert ist das Ergebnis des **Fpclassify** auf den Eingabewert in *px* Wenn es sich um NaN oder unendlich ist, und auf den Ausgabewert in *px* andernfalls. Zur Portabilität bevorzugen die [Ldexp, Ldexpf, und Ldexpl](ldexp.md) Funktionen.
+Diese Gleit Komma primitiven übernehmen einen Zeiger auf einen Gleit Komma Wert *px* und einen Exponent-Wert *Exp*und Skalieren den Wert in *px* um 2<sup>*Exp*</sup>, wenn möglich. Der zurückgegebene Wert ist das Ergebnis von **fpklassifiziert** für den Eingabe Wert in *px* , wenn er ein NaN oder unendlich ist, und andernfalls für den Ausgabewert in *px* . Bevorzugen Sie für die Portabilität die [ldexp-, ldexpf-und ldexpl-](ldexp.md) Funktionen.
 
-## <a name="dunscale-ldunscale-fdunscale"></a>_dunscale, _ldunscale, _fdunscale
+## <a name="_dunscale-_ldunscale-_fdunscale"></a>_dunscale, _ldunscale, _fdunscale
 
 ### <a name="syntax"></a>Syntax
 
@@ -294,16 +297,16 @@ short __cdecl _fdunscale(short* pexp, float* px);
 ### <a name="parameters"></a>Parameter
 
 *pexp*<br/>
-Ein Zeiger auf ein Exponent als ganzzahliger Typ.
+Ein Zeiger auf einen Exponenten als ganzzahliger Typ.
 
-*px*<br/>
-Zeiger auf ein Gleitkommaargument.
+*entworfen*<br/>
+Zeiger auf ein Gleit Komma Argument.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Gleitkomma-primitive unterteilen den Gleitkommawert an, auf die von *px* in einer Mantisse (Mantisse) und einen Exponenten, falls möglich. Die Mantisse wird skaliert, sodass der Absolute Wert größer als oder gleich 0,5 und kleiner als 1,0 ist. Der Exponent ist der Wert *n*, wobei die ursprüngliche Gleitkommawert gleich die skalierte Mantisse Mal 2 ist<sup>*n*</sup>. Diese ganzzahlexponent *n* befindet sich in den Speicherort verweist *Pexp*. Der zurückgegebene Wert ist das Ergebnis des **Fpclassify** auf den Eingabewert in *px* Wenn es sich um NaN oder unendlich ist, und auf den Ausgabewert, der andernfalls. Zur Portabilität bevorzugen die [Frexp, Frexpf, Frexpl](frexp.md) Funktionen.
+Diese Gleit Komma primitiven unterbrechen den Gleit Komma Wert, auf den von *px* gezeigt wird, in einen signifikan(Mantisse) und einen Exponenten, wenn möglich. Der signifiund wird so skaliert, dass der absolute Wert größer oder gleich 0,5 und kleiner als 1,0 ist. Der Exponent ist der Wert *n*, bei dem der ursprüngliche Gleit Komma Wert gleich dem skalierten signifikanand 2<sup>*n*</sup>ist. Dieser ganzzahlige *Exponent wird* an dem Speicherort gespeichert, auf den von *pexp*verwiesen wird. Der zurückgegebene Wert ist das Ergebnis von **fpklassifiziert** für den Eingabe Wert in *px* , wenn es sich um einen NaN-Wert oder unendlich handelt, und andernfalls auf dem Ausgabewert. Bevorzugen Sie für die Portabilität die [frexp-, frexpf-und frexpl](frexp.md) -Funktionen.
 
-## <a name="dexp-ldexp-fdexp"></a>_dexp, _ldexp, _fdexp
+## <a name="_dexp-_ldexp-_fdexp"></a>_dexp, _ldexp, _fdexp
 
 ### <a name="syntax"></a>Syntax
 
@@ -316,19 +319,19 @@ short __cdecl _fdexp(float* px, float y, long exp);
 ### <a name="parameters"></a>Parameter
 
 *y*<br/>
-Gleitkomma Funktionsargument.
+Gleit Komma Funktions Argument.
 
-*px*<br/>
-Zeiger auf ein Gleitkommaargument.
+*entworfen*<br/>
+Zeiger auf ein Gleit Komma Argument.
 
 *exp*<br/>
 Ein Exponent als ganzzahliger Typ.
 
 ### <a name="remarks"></a>Hinweise
 
-Erstellen Sie einen Gleitkommawert in den Speicherort an, auf die von dieser Gleitkomma-primitive *px* gleich *y* * 2<sup>*"exp"*</sup>. Der zurückgegebene Wert ist das Ergebnis des **Fpclassify** auf den Eingabewert in *y* Wenn es sich um NaN oder unendlich ist, und auf den Ausgabewert in *px* andernfalls. Zur Portabilität bevorzugen die [Ldexp, Ldexpf, und Ldexpl](ldexp.md) Funktionen.
+Diese Gleit Komma primitiven erstellen einen Gleit Komma Wert in dem Speicherort, auf den von *px* mit *y* * 2<sup>*Exp*</sup>gezeigt wird. Der zurückgegebene Wert ist das Ergebnis von **fpklassifiziert** für den Eingabe Wert in *y* , wenn er ein NaN oder unendlich ist, und andernfalls für den Ausgabewert in *px* . Bevorzugen Sie für die Portabilität die [ldexp-, ldexpf-und ldexpl-](ldexp.md) Funktionen.
 
-## <a name="dnorm-fdnorm"></a>_dnorm, _fdnorm
+## <a name="_dnorm-_fdnorm"></a>_dnorm, _fdnorm
 
 ### <a name="syntax"></a>Syntax
 
@@ -339,14 +342,14 @@ short __cdecl _fdnorm(unsigned short* ps);
 
 ### <a name="parameters"></a>Parameter
 
-*ps*<br/>
-Zeiger auf die bitweise-Darstellung ein Gleitkommawert, ausgedrückt als ein Array von **ohne Vorzeichen** **kurze**.
+*Psel*<br/>
+Ein Zeiger auf die bitweise Darstellung eines Gleit Komma Werts, ausgedrückt als Array von **Ganzzahl ohne Vorzeichen** **Short**.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Gleitkomma-primitive den Bruchteil einer underflowed Gleitkommawert zu normalisieren, und passen Sie die *Merkmal*, oder gewichtete Exponent, übereinstimmen. Der Wert wird übergeben, als die bitweise-Darstellung an der Gleitkommatyp konvertiert in ein Array von **ohne Vorzeichen** **kurze** über die `_double_val`, `_ldouble_val`, oder `_float_val` Typ punning Union, die in math.h deklariert werden. Der Rückgabewert ist das Ergebnis des **Fpclassify** auf der Eingabe Gleitkommawert, wenn es sich um ein NaN oder unendlich ist, und klicken Sie auf der Ausgabewert, der andernfalls.
+Diese Gleit Komma primitiven normalisieren den Bruch Teil eines Gleit Komma Werts mit Unterlauf und passen das *Merkmal*oder den dezischen Exponent entsprechend an. Der-Wert wird als bitweise Darstellung des Gleit Komma Typs übergeben, der in ein Array vom Typ " **Ganzzahl ohne Vorzeichen** **Short** " konvertiert `_double_val`wird `_ldouble_val`, der `_float_val` durch die-,-oder-Typ-punning-Union in Math. h konvertiert wurde. Der Rückgabewert ist das Ergebnis von **fpklassifiziert** für den Eingabe Gleit Komma Wert, wenn es sich um einen NaN-Wert oder unendlich handelt, und andernfalls auf dem Ausgabewert.
 
-## <a name="dpoly-ldpoly-fdpoly"></a>_dpoly, _ldpoly, _fdpoly
+## <a name="_dpoly-_ldpoly-_fdpoly"></a>_dpoly, _ldpoly, _fdpoly
 
 ### <a name="syntax"></a>Syntax
 
@@ -359,19 +362,19 @@ float __cdecl _fdpoly(float x, _float const* table, int n);
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gleitkomma Funktionsargument.
+Gleit Komma Funktions Argument.
 
 *table*<br/>
-Zeiger auf eine Tabelle mit Konstanten Koeffizienten für eine Polynom.
+Zeiger auf eine Tabelle konstanter Koeffizienten für ein polynomal.
 
 *n*<br/>
-Die Reihenfolge des Polynoms ausgewertet.
+Die Reihenfolge des auszuwertenden Polynoms.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Gleitkomma-primitive zurück, die Auswertung von *x* in der Reihenfolge Polynoms *n* , deren Koeffizienten werden durch die entsprechenden Konstanten Werte im dargestellt *Tabelle*. Z. B. wenn *Tabelle*\[0] = 3.0, *Tabelle*\[1] =-4.0 *Tabelle*\[2] = 5.0 und *n* = 2, es stellt die polynomische 5.0 x<sup>2</sup> + 4.0 X + 3.0. Wenn dieser Polynom ausgewertet wird, für die *x* von 2.0, ist das Ergebnis 31,0. Diese Funktionen sind nicht intern verwendet.
+Diese Gleit Komma primitiven geben die Auswertung von *x* im Polynoms der Reihenfolge *n* zurück, deren Koeffizienten durch die entsprechenden Konstanten Werte in der *Tabelle*dargestellt werden. Wenn z. b. *Tabelle*\[0] = 3,0, *Tabelle*\[1] = 4,0 *, Tabelle*\[2] = 5,0 und *n* = 2 ist, stellt Sie die Polynoms 5.0 x<sup>2</sup> + 4.0 x + 3,0 dar. Wenn diese polynommial für *x* von 2,0 ausgewertet wird, ist das Ergebnis 31,0. Diese Funktionen werden intern nicht verwendet.
 
-## <a name="dlog-dlog-dlog"></a>_dlog, _dlog, _dlog
+## <a name="_dlog-_dlog-_dlog"></a>_dlog, _dlog, _dlog
 
 ### <a name="syntax"></a>Syntax
 
@@ -384,16 +387,16 @@ float __cdecl _fdlog(float x, int base_flag);
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gleitkomma Funktionsargument.
+Gleit Komma Funktions Argument.
 
 *base_flag*<br/>
-Flag, das die Basis zu verwenden, 0 für Basis steuert *e* und ungleich NULL für die Basis 10.
+Flag, das die zu verwendende Basis steuert, 0 für Basis *e* und ungleich NULL für Basis 10.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Gleitkomma-primitive zurückgeben den natürlichen Logarithmus von *x*, "ln" (*x*) oder<sub>*e*</sub>(*x*), Wenn *Base_flag* ist 0. Sie geben das Protokoll Basis 10 zurück *x*, oder<sub>10</sub>(*x*), wenn *Base_flag* ungleich NULL ist. Diese Funktionen sind nicht intern verwendet. Möchten Sie die Funktionen zur Portabilität [Log, Logf, Logl, log10, log10f und log10l](log-logf-log10-log10f.md).
+Diese Gleit Komma primitiven geben das natürliche Protokoll von *x*, ln (*x*) oder log<sub>*e*</sub>(*x*) zurück, wenn *base_flag* den Wert 0 hat. Sie geben die Protokoll Basis 10 von *x*oder log<sub>10</sub>(*x*) zurück, wenn *base_flag* ungleich 0 (null) ist. Diese Funktionen werden intern nicht verwendet. Bevorzugen Sie für die Portabilität die Funktionen [Log, logf, logl, log10, log10f und log10l](log-logf-log10-log10f.md).
 
-## <a name="dsin-ldsin-fdsin"></a>_dsin, _ldsin, _fdsin
+## <a name="_dsin-_ldsin-_fdsin"></a>_dsin, _ldsin, _fdsin
 
 ### <a name="syntax"></a>Syntax
 
@@ -406,24 +409,24 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gleitkomma Funktionsargument.
+Gleit Komma Funktions Argument.
 
 *quadrant*<br/>
-Quadrant Offset von 0, 1, 2 oder 3 zu verwenden, um zu erzeugen `sin`, `cos`, `-sin`, und `-cos` Ergebnisse.
+Der Quadranten Offset von 0, 1, 2 oder 3, der zum erzielen `sin`der `cos`Ergebnisse `-sin`,, `-cos` und verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Gleitkomma-primitive zurück, den Sinus des *x* Offset von der *Quadrant* modulo 4. Effektiv, geben sie den Sinus zurück Kosinus, -Sinus "und"-Kosinus *x* beim *Quadrant* modulo 4 ist 0, 1, 2 oder 3, bzw. Diese Funktionen sind nicht intern verwendet. Zur Portabilität bevorzugen die [sin, Sinf, Sinl](sin-sinf-sinl.md), [cos, Cosf, Cosl, und](cos-cosf-cosl.md) Funktionen.
+Diese Gleit Komma primitiven geben den Sinus des *x* -Offsets von der *Quadranten* -modulo 4 zurück. Effektiv geben Sie den Sinus, Kosinus,-Sinus und-Kosinus von *x* zurück, wenn *Quadrant* modulo 4 0, 1, 2 bzw. 3 ist. Diese Funktionen werden intern nicht verwendet. Bevorzugen Sie für die Portabilität die Funktionen [Sin, sinf, sinl](sin-sinf-sinl.md), [cos, cosf und COSL](cos-cosf-cosl.md) .
 
 ## <a name="requirements"></a>Anforderungen
 
-Header: \<math.h>
+Header: \<Math. h >
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Gleitkommaunterstützung](../floating-point-support.md)<br/>
+[Gleit Komma Unterstützung](../floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
@@ -432,6 +435,6 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 [isnormal](isnormal.md)<br/>
 [cos, cosf, cosl](cos-cosf-cosl.md)<br/>
 [frexp, frexpf, frexpl](frexp.md)<br/>
-[ldexp, ldexpf, and ldexpl](ldexp.md)<br/>
+[LDE XP, ldexpf und ldexpl](ldexp.md)<br/>
 [log, logf, logl, log10, log10f, log10l](log-logf-log10-log10f.md)<br/>
 [sin, sinf, sinl](sin-sinf-sinl.md)<br/>

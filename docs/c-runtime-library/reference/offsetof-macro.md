@@ -1,7 +1,7 @@
 ---
 title: offsetof-Makro
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,19 +12,22 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - offsetof
 helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-ms.openlocfilehash: a0f367dbe6fa2681a7d413304f32b5699b8f7cee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 278fca89046fcfc98e8c3ff726918cb4319e4ab0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156063"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951247"
 ---
 # <a name="offsetof-macro"></a>offsetof-Makro
 
@@ -49,14 +52,14 @@ Der Name des Elements in der übergeordneten Datenstruktur, für das der Offset 
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Offsetof** gibt den Offset in Bytes, des angegebenen Elements vom Anfang seiner übergeordneten Datenstruktur zurück. Ist für Bitfelder nicht definiert.
+**offsetof** gibt den Offset des angegebenen Elements vom Anfang seiner übergeordneten Datenstruktur in Bytes zurück. Ist für Bitfelder nicht definiert.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **"offsetof"** Makro gibt den Offset in Bytes der *MemberName* vom Anfang der Struktur von *StructName* als ein Wert vom Typ **Size_ t**. Sie können angeben, dass Typen mit den **Struktur** Schlüsselwort.
+Das **offsetof** -Makro gibt den Offset in Bytes des *Mitgliedsnamens* von dem Anfang der Struktur zurück, der von *structname* als Wert des Typs **size_t**angegeben wird. Sie können Typen mit dem **struct** -Schlüsselwort angeben.
 
 > [!NOTE]
-> **Offsetof** ist keine Funktion und kann nicht mit einem C-Prototyp beschrieben werden.
+> **offsetof** ist keine Funktion und kann nicht mit einem C-Prototyp beschrieben werden.
 
 ## <a name="requirements"></a>Anforderungen
 

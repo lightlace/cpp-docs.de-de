@@ -1,9 +1,9 @@
 ---
 title: setbuf
 ms.date: 04/08/2019
-apiname:
+api_name:
 - setbuf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - setbuf
 helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: 89f8a4d8eb853c774f4f7299ceaa9b9eb6177b42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6c78297b1818131dcfcb10f4f2eaadd752d8ef4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356388"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948276"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -52,9 +55,9 @@ Vom Benutzer zugewiesener Puffer.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Setbuf** -Funktion steuert die Pufferung für *Stream*. Die *Stream* -Argument muss auf eine geöffnete Datei, die gelesen oder geschrieben wurde noch nicht verweisen. Wenn die *Puffer* Argument **NULL**, der Stream wird ungepufferten. Wenn nicht, der Puffer auf ein Zeichenarray der Länge zeigen muss **BUFSIZ**, wobei **BUFSIZ** in STDIO definiert die Größe des Puffers entspricht. H. Für den E/A-Pufferbetrieb wird anstelle des systemseitig für den gegebenen Stream reservierten Puffers der vom Benutzer angegebene Puffer verwendet. Die **"stderr"** Stream wird ungepufferten standardmäßig, jedoch können Sie **Setbuf** Puffer zuweisen **"stderr"**.
+Die **setbuf** -Funktion steuert die Pufferung für *Stream*. Das *Stream* -Argument muss auf eine geöffnete Datei verweisen, die nicht gelesen oder geschrieben wurde. Wenn das *Puffer* Argument **null**ist, wird der Datenstrom nicht gepuffert. Andernfalls muss der Puffer auf ein Zeichen Array der Länge " **BUFSIZ**" zeigen, wobei " **BUFSIZ** " die in stdio definierte Puffergröße ist. Micha. Für den E/A-Pufferbetrieb wird anstelle des systemseitig für den gegebenen Stream reservierten Puffers der vom Benutzer angegebene Puffer verwendet. Der **stderr** -Datenstrom ist standardmäßig nicht gepuffert, Sie können jedoch " **setbuf** " verwenden, um Puffer zu " **stderr**" zuzuweisen.
 
-**Setbuf** wurde ersetzt durch [Setvbuf](setvbuf.md), dies ist die bevorzugte Routine für neuen Code. Im Gegensatz zu **Setvbuf**, **Setbuf** hat keine Möglichkeit, Fehler melden. **Setvbuf** auch können Sie steuern, sowohl der Puffermodus als auch die Größe des Puffers. **Setbuf** für Kompatibilität mit vorhandenem Code vorhanden ist.
+**setbuf** wurde durch [setvbuf](setvbuf.md)ersetzt, was die bevorzugte Routine für neuen Code ist. Im Gegensatz zu **setvbuf**kann **setbuf** keine Fehler melden. mit **setvbuf** können Sie auch den Puffer Modus und die Puffergröße steuern. **setbuf** ist für die Kompatibilität mit vorhandenem Code vorhanden.
 
 ## <a name="requirements"></a>Anforderungen
 

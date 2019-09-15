@@ -1,9 +1,9 @@
 ---
 title: _setmode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _setmode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _setmode
 helpviewer_keywords:
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 67cca27ba03a99d7e192d438a98f1bb3a93845ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f14cc9451b93a9077916b8c650645990ba654a3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356391"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948591"
 ---
-# <a name="setmode"></a>_setmode
+# <a name="_setmode"></a>_setmode
 
 Legt den Dateiübersetzungsmodus fest.
 
@@ -58,23 +61,23 @@ Neuer Übersetzungsmodus.
 
 Im Erfolgsfall wird der vorherige Übersetzungsmodus zurückgegeben.
 
-Wenn ungültige Parameter an die Funktion übergeben werden, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md)beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, diese Funktion gibt-1 zurück und legt **Errno** entweder **EBADF**, wodurch einen Ungültiger Dateideskriptor, oder **EINVAL**, kennzeichnet eine ungültige *Modus* Argument.
+Wenn ungültige Parameter an die Funktion übergeben werden, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md)beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt diese Funktion-1 zurück und legt **errno** entweder auf **EBADF**fest, das einen ungültigen Dateideskriptor angibt, oder auf **EINVAL**, das ein ungültiges Modusargument *angibt* .
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_setmode** -Funktion legt fest, um *Modus* den Übersetzungsmodus der Datei durch *fd*. Übergeben von **_O_TEXT** als *Modus* legt Text (die übersetzt wird,) Modus. Carriage Return-Line feed (CR-LF) Kombinationen werden in ein einzelnes Zeilenvorschubzeichen bei Eingabe übersetzt. Zeilenvorschubzeichen werden bei der Ausgabe in Kombinationen aus Wagenrücklauf und Zeilenvorschub (CR-LF) übersetzt. Übergeben von **_O_BINARY** legt binären (unübersetzten) Modus, in dem diese Übersetzungen unterdrückt werden.
+Die **_setmode** -Funktion legt den *Modus* in den Übersetzungsmodus der von *FD*angegebenen Datei fest. Durch das Übergeben von **_O_TEXT** as *Mode* wird der Modus Text (übersetzt) festgelegt. Die Kombinationen aus Wagen Rücklauf/Zeilenvorschub (CR-LF) werden bei der Eingabe in ein Einzel Zeilen-Feed-Zeichen übersetzt. Zeilenvorschubzeichen werden bei der Ausgabe in Kombinationen aus Wagenrücklauf und Zeilenvorschub (CR-LF) übersetzt. Übergeben von **_O_BINARY** legt den binären (nicht übersetzten) Modus fest, in dem diese Übersetzungen unterdrückt werden.
 
-Sie können auch übergeben **_O_U16TEXT**, **_O_U8TEXT**, oder **_O_WTEXT** Unicode-Modus zu aktivieren, wie im zweiten Beispiel weiter unten in diesem Dokument veranschaulicht.
-
-> [!CAUTION]
-> Unicode-Modus ist für Breitzeichen Druckfunktionen (z. B. `wprintf`) und wird für schmale Druckfunktionen nicht unterstützt. Verwenden einer schmalen print-Funktion auf einen Unicode-Modus-Stream wird eine Bestätigung ausgelöst.
-
-**_setmode** dient normalerweise zum Ändern der Standardmodus für die Übersetzung von **Stdin** und **"stdout"**, aber Sie können auf eine beliebige Datei verwenden. Wenn Sie anwenden **_setmode** aufrufen, um den Dateideskriptor für einen Stream, **_setmode** vor dem Ausführen von Eingabe- oder Vorgänge für den Stream.
+Sie können **_O_U16TEXT**, **_O_U8TEXT**oder **_O_WTEXT** auch übergeben, um den Unicode-Modus zu aktivieren, wie im zweiten Beispiel weiter unten in diesem Dokument veranschaulicht.
 
 > [!CAUTION]
-> Wenn Sie Daten in einen Dateistream explizit leeren den Code mithilfe von schreiben [Fflush](fflush.md) vor der Verwendung **_setmode** zum Ändern des websitemodus. Wenn Sie den Code nicht leeren, kann es zu unerwartetem Verhalten kommen. Wenn Sie keine Daten in den Stream geschrieben haben, müssen Sie den Code nicht leeren.
+> Der Unicode-Modus ist für breit Druckfunktionen (z `wprintf`. b.) und wird für schmale Druckfunktionen nicht unterstützt. Die Verwendung einer schmalen Druckfunktion in einem Unicode-modusstream löst eine Assert-Funktion aus.
+
+**_setmode** wird normalerweise verwendet, um den Standard Übersetzungsmodus von **stdin** und **stdout**zu ändern, aber Sie können Sie in jeder beliebigen Datei verwenden. Wenn Sie **_setmode** auf den Dateideskriptor für einen Stream anwenden, wird **_setmode** aufgerufen, bevor Sie Eingabe-oder Ausgabe Vorgänge im Stream ausführen.
+
+> [!CAUTION]
+> Wenn Sie Daten in einen Dateistream schreiben, leeren Sie den Code explizit, indem Sie [fflush](fflush.md) verwenden, bevor Sie **_setmode** verwenden, um den Modus zu ändern. Wenn Sie den Code nicht leeren, kann es zu unerwartetem Verhalten kommen. Wenn Sie keine Daten in den Stream geschrieben haben, müssen Sie den Code nicht leeren.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,10 +1,10 @@
 ---
 title: fputc, fputwc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fputc
 - fputwc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fputc
 - fputwc
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - fputwc function
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
-ms.openlocfilehash: fc06c9f2060baae63071339768cef11fc5f34023
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d289e54bca53be52d0b308d759f4200eca8599c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288018"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956959"
 ---
 # <a name="fputc-fputwc"></a>fputc, fputwc
 
@@ -62,15 +65,15 @@ Zeiger auf die **FILE**-Struktur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt das geschriebene Zeichen zurück. Für **Fputc**, einen Rückgabewert von **EOF** gibt einen Fehler an. Für **Fputwc**, einen Rückgabewert von **WEOF** gibt einen Fehler an. Wenn *Stream* ist **NULL**, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben sie zurück **EOF** und **Errno** zu **EINVAL**.
+Jede dieser Funktionen gibt das geschriebene Zeichen zurück. Bei **fputc**deutet der Rückgabewert von **EOF** auf einen Fehler hin. Bei **fputwc**weist der Rückgabewert **WEOF** auf einen Fehler hin. Wenn der Stream **null**ist, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben Sie **EOF** zurück und legen **errno** auf **EINVAL**fest.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen schreibt das einzelne Zeichen *c* in eine Datei an der Position durch die dazugehörige dateipositionsanzeige (sofern definiert) und verschieben den Indikator entsprechend. Im Fall von **Fputc** und **Fputwc**, die Datei zugeordnet ist *Stream*. Wenn die Datei keine Positionierungsanforderungen unterstützt oder im Append-Modus geöffnet wurde, wird das Zeichen am Ende des Streams angefügt.
+Jede dieser Funktionen schreibt das einzelne Zeichen *c* in eine Datei an der Position, die durch den zugehörigen Datei Positionsindikator angegeben wird (sofern definiert), und erhöht den Indikator nach Bedarf. Bei **fputc** und **fputwc**ist die Datei dem *Stream*zugeordnet. Wenn die Datei keine Positionierungsanforderungen unterstützt oder im Append-Modus geöffnet wurde, wird das Zeichen am Ende des Streams angefügt.
 
-Die zwei Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Fputc** unterstützt derzeit keine Ausgabe in eine UNICODE-Stream.
+Die zwei Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **fputc** unterstützt derzeit keine Ausgabe in einen Unicode-Stream.
 
 Die Versionen mit dem Suffix **_nolock** sind identisch, allerdings sind sie nicht vor Störungen durch andere Threads geschützt. Weitere Informationen finden Sie unter [_fputc_nolock, _fputwc_nolock](fputc-nolock-fputwc-nolock.md).
 
@@ -78,8 +81,8 @@ Es folgen routinespezifische Hinweise.
 
 |-Routine zurückgegebener Wert|Hinweise|
 |-------------|-------------|
-|**fputc**|Äquivalent zu **Putc**, jedoch nur als Funktion anstelle einer Funktion und Makro implementiert.|
-|**fputwc**|Breitzeichen Version von **Fputc**. Schreibt *c* als Multibytezeichen oder Breitzeichen, je nachdem, ob *Stream* im Textmodus oder Binärmodus geöffnet ist.|
+|**fputc**|Äquivalent zu **putc**, aber nur als Funktion und nicht als Funktion und Makro implementiert.|
+|**fputwc**|Breit Zeichen Version von **fputc**. Schreibt *c* als Multibytezeichen oder breit Zeichen, je nachdem, ob der *Stream* im Textmodus oder im Binärmodus geöffnet ist.|
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -94,7 +97,7 @@ Es folgen routinespezifische Hinweise.
 |**fputc**|\<stdio.h>|
 |**fputwc**|\<stdio.h> oder \<wchar.h>|
 
-Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Die mit der Konsole verknüpften standardstreamhandles,**Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die-Konsole wird in universelle Windows-Plattform-Apps (UWP) nicht unterstützt. Die Standarddaten Strom Handles, die der Konsole –**stdin**, **stdout**und **stderr**– zugeordnet sind, müssen umgeleitet werden, bevor Sie von C-Lauf Zeitfunktionen in UWP-Apps verwendet werden können. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

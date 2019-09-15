@@ -1,9 +1,9 @@
 ---
 title: mbrlen
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbrlen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbrlen
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-ms.openlocfilehash: ec9079b9b164e2b609a956ddf3a75cd42923bafc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9559731f39db35e03f640bb30b9af3fff00cf66
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156771"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952496"
 ---
 # <a name="mbrlen"></a>mbrlen
 
@@ -51,7 +54,7 @@ Zeiger auf das nächste Byte, das in einer Multibytezeichenfolge überprüft wer
 Die maximale Anzahl der zu überprüfenden Bytes.
 
 *mbstate*<br/>
-Zeiger auf den aktuellen Umschaltzustand des ersten Bytes des *str*.
+Zeiger auf den aktuellen UMSCHALT Zustand des ersten Bytes von *Str*.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -59,18 +62,18 @@ Einer der folgenden Werte:
 
 |||
 |-|-|
-0|Die nächste *Anzahl* oder weniger Bytes schließen das Multibytezeichen, die die Null-Breitzeichen darstellt.
-1 bis *Anzahl*(einschließlich)|Die nächste *Anzahl* oder weniger Bytes schließen ein gültiges Multibytezeichen handelt. Der zurückgegebene Wert ist die Anzahl der Bytes, die das Multybytezeichen abschließen.
-(size_t)(-2)|Die nächste *Anzahl* Bytes tragen zu einem unvollständigen, jedoch Möglicherweisen gültigen Multibytezeichen bei und alle *Anzahl* Bytes wurden verarbeitet.
-(size_t)(-1)|Es ist ein Codierungsfehler aufgetreten. Die nächste *Anzahl* oder weniger Bytes tragen nicht in einer vollständigen und gültigen Multibytezeichen. In diesem Fall **Errno** nastaven NA hodnotu EILSEQ und der konvertierungszustand in *Mbstate* ist nicht angegeben.
+0|Die nächste *Anzahl* oder weniger Bytes vervollständigen das Multibytezeichen, das das breite NULL-Zeichen darstellt.
+1 zum *zählen*, inklusiv|Die nächste *Anzahl* oder weniger Bytes vervollständigen ein gültiges Multibytezeichen. Der zurückgegebene Wert ist die Anzahl der Bytes, die das Multybytezeichen abschließen.
+(size_t)(-2)|Die nächsten *Anzahl* Bytes tragen zu einem unvollständigen, aber potenziell gültigen Multibytezeichen bei, und alle *Anzahl* Bytes wurden verarbeitet.
+(size_t)(-1)|Es ist ein Codierungsfehler aufgetreten. Die nächste *Anzahl* oder weniger Bytes tragen nicht zu einem kompletten und gültigen Multibytezeichen bei. In diesem Fall wird **errno** auf EILSEQ festgelegt, und der Konvertierungs Zustand in *mbstate* ist nicht angegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Mbrlen** -Funktion prüft höchstens *Anzahl* Bytes, beginnend mit dem Byte zeigt *str* um die Anzahl von Bytes zu bestimmen, die erforderlich sind, um die nächste abzuschließen Multibytezeichen, einschließlich eventueller umschaltsequenzen. Dies entspricht dem Aufruf `mbrtowc(NULL, str, count, &mbstate)` , in denen *Mbstate* ist entweder eine vom Benutzer bereitgestellte **Mbstate_t** Objekt oder ein statisches internes Objekt von der Bibliothek bereitgestellt.
+Die **mbrlen** -Funktion unter *sucht höchstens Anzahl Bytes beginnend* mit dem Byte, auf das *Str* zeigt, um die Anzahl von Bytes zu bestimmen, die zum Vervollständigen des nächsten multibytezeichens erforderlich sind, einschließlich der Verschiebe Sequenzen. Dies entspricht dem `mbrtowc(NULL, str, count, &mbstate)` -Befehl, bei dem *mbstate* entweder ein vom Benutzer bereitgestelltes **mbstate_t** -Objekt oder ein statisches internes Objekt ist, das von der Bibliothek bereitgestellt wird.
 
-Die **Mbrlen** -Funktion speichert und verwendet Umschaltzustand eines unvollständigen multibytezeichens in die *Mbstate* Parameter. Dadurch werden **Mbrlen** die Möglichkeit, in der Mitte eines multibytezeichens neu zu starten, wenn sein muss, untersuchen höchstens *Anzahl* Bytes. Wenn *Mbstate* ist ein null-Zeiger **Mbrlen** verwendet ein internes, statisches **Mbstate_t** Objekt, das Speichern des umschaltzustands. Da das interne **Mbstate_t** Objekt nicht threadsicher, es wird empfohlen, dass Sie immer zuordnen, und übergeben Ihren eigenen *Mbstate* Parameter.
+Die **mbrlen** -Funktion speichert und verwendet den UMSCHALT Zustand eines unvollständigen multibytezeichens im *mbstate* -Parameter. Dies ermöglicht es **mbrlen** , bei Bedarf in der Mitte eines multibytezeichens neu zu starten, wobei höchstens *Anzahl* Bytes untersucht werden. Wenn *mbstate* ein NULL-Zeiger ist, verwendet **mbrlen** ein internes, statisches **mbstate_t** -Objekt zum Speichern des UMSCHALT Zustands. Da das interne **mbstate_t** -Objekt nicht Thread sicher ist, wird empfohlen, immer ihren eigenen *mbstate* -Parameter zuzuordnen und zu übergeben.
 
-Die **Mbrlen** Funktion unterscheidet sich von [_mbclen, Mblen, _mblen_l](mbclen-mblen-mblen-l.md) durch die neustartmöglichkeit. Die UMSCHALT-Status befindet sich in *Mbstate* für nachfolgende Aufrufe der gleichen oder anderer erneut startbaren Funktionen. Wenn sowohl Funktionen, die neu gestartet werden können, als auch Funktionen, die nicht neu gestartet werden könnnen, verwendet werden, sind die Ergebnisse undefiniert.  Z. B. eine Anwendung verwendet soll **Wcsrlen** anstelle von **Wcslen** Wenn ein nachfolgender Aufruf von **Wcsrtombs** anstelle **Wcstombs**.
+Die **mbrlen** -Funktion unterscheidet [sich von _mbclen, Mblen, _mblen_l](mbclen-mblen-mblen-l.md) durch die Neustart Fähigkeit. Der Verschiebungs Zustand wird für nachfolgende Aufrufe der gleichen oder anderer Neu startbarer Funktionen in *mbstate* gespeichert. Wenn sowohl Funktionen, die neu gestartet werden können, als auch Funktionen, die nicht neu gestartet werden könnnen, verwendet werden, sind die Ergebnisse undefiniert.  Beispielsweise sollte eine Anwendung **wcsrlen** anstelle von **wcslen** verwenden, wenn ein nachfolgender **wcsr-** aufrufsausdruck anstelle von **wcstomb**verwendet wird.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -88,7 +91,7 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 
 ## <a name="example"></a>Beispiel
 
-Dieses Beispiel zeigt, wie die Interpretation von multibyte-Zeichensequenz hängt von der aktuellen Codepage, und zeigt die Funktion zum Fortsetzen der **Mbrlen**.
+Dieses Beispiel zeigt, wie die Interpretation von Multibytezeichen von der aktuellen Codepage abhängt, und veranschaulicht die fort Setz **barkeit von mbrlen**.
 
 ```C
 // crt_mbrlen.c
