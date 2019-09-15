@@ -1,9 +1,9 @@
 ---
 title: wcsrtombs
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcsrtombs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcsrtombs
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - string conversion, wide characters
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
-ms.openlocfilehash: 46ef195ec4685c327c4b5951ec44e5c363214b59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6640a027b03b7aa0dceaf8e61af6cb43a44d6e0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155328"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945054"
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
 
@@ -64,7 +67,7 @@ Indirekter Zeiger auf den Speicherort der Breitzeichenfolge, die konvertiert wer
 Die Anzahl der zu konvertierenden Zeichen.
 
 *mbstate*<br/>
-Ein Zeiger auf ein **Mbstate_t** konvertierungszustandsobjekt.
+Ein Zeiger auf ein **mbstate_t** -Konvertierungs Zustands Objekt.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -72,19 +75,19 @@ Gibt die Anzahl der erfolgreich konvertierten Bytes zurück, wobei das abschlie�
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Wcsrtombs** -Funktion konvertiert eine Zeichenfolge mit Breitzeichen, beginnend beim angegebenen Konvertierungsstatus, der in enthaltenen *Mbstate*, von den Werten, die indirekt auf das gezeigt *Wcstr*, in die Adresse von *Mbstr*. Die Konvertierung wird für jedes Zeichen bis fortgesetzt: Nachdem eine abschließendes Zeichen Null gefunden wird, wenn ein nicht übereinstimmendes Zeichen gefunden wird, oder wenn das nächste Zeichen den in enthaltenen Grenzwert übersteigen würde *Anzahl*. Wenn **Wcsrtombs** das Breitzeichen Null-Zeichen (L '\0') erkennt, entweder vor oder bei *Anzahl* auftritt, konvertiert es in eine 8-Bit-0 "und" beendet.
+Die **wcsrgräber** -Funktion konvertiert eine Zeichenfolge mit breit Zeichen, beginnend mit dem angegebenen Konvertierungs Zustand, der in *mbstate*enthalten ist, von den Werten, auf die in *wcstr*verwiesen wird, in die Adresse von *mbstr*. Die Konvertierung wird für jedes Zeichen fortgesetzt, bis: nach einem NULL abschließenden breit Zeichen, wenn ein nicht entsprechendes Zeichen gefunden wird oder wenn das nächste Zeichen das in *count*enthaltene Limit überschreiten würde. Wenn **wcsrgräber** das breit Zeichen NULL-Zeichen (L ' \ 0 ') erkennt, entweder vor oder wenn *count* auftritt, wird es in 8-Bit 0 konvertiert und beendet.
 
-Daher die Multibyte-Zeichenfolge an *Mbstr* ist Null-terminierte nur, wenn **Wcsrtombs** während der Konvertierung ein Breitzeichen Null findet. Wenn die Sequenzen, zeigt *Wcstr* und *Mbstr* überlappen, ist das Verhalten der **Wcsrtombs** ist nicht definiert. **Wcsrtombs** wird von der LC_TYPE-Kategorie des aktuellen Gebietsschemas beeinflusst.
+Folglich ist die Multibytezeichenfolge bei *mbstr* nur dann NULL-terminiert, wenn **wcsrgräber** bei der Konvertierung ein breit Zeichen NULL-Zeichen trifft. Wenn die Sequenzen, auf die von *wcstr* und *mbstr* verwiesen wird, überlappen, ist das Verhalten von **wcsrgrabeln** nicht definiert. **wcsrgräbern** ist von der Kategorie LC_TYPE des aktuellen Gebiets Schemas betroffen.
 
-Die **Wcsrtombs** Funktion unterscheidet sich von [Wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md) durch die neustartmöglichkeit. Der konvertierungszustand befindet sich in *Mbstate* für nachfolgende Aufrufe der gleichen oder anderer erneut startbaren Funktionen. Wenn sowohl Funktionen, die neu gestartet werden können, als auch Funktionen, die nicht neu gestartet werden könnnen, verwendet werden, sind die Ergebnisse undefiniert.  Eine Anwendung verwendet z. B. **Wcsrlen** statt **Wcsnlen**, wenn ein nachfolgender Aufruf von **Wcsrtombs** verwendet wurden, anstelle von **Wcstombs**.
+Die **wcsrgräber** -Funktion unterscheidet [sich von wcstomsb, _wcstombs_l](wcstombs-wcstombs-l.md) durch die Neustart Fähigkeit. Der Konvertierungs Zustand wird für nachfolgende Aufrufe der gleichen oder anderer Neu startbarer Funktionen in *mbstate* gespeichert. Wenn sowohl Funktionen, die neu gestartet werden können, als auch Funktionen, die nicht neu gestartet werden könnnen, verwendet werden, sind die Ergebnisse undefiniert.  Beispielsweise würde eine Anwendung **wcsrlen** anstelle von **wcsnlen**verwenden, wenn ein nachfolgender **wcsr-** aufrufsausdruck anstelle von **wcstomsb**verwendet würde.
 
-Wenn die *Mbstr* Argument **NULL**, **Wcsrtombs** gibt die erforderliche Größe der Zielzeichenfolge in Bytes zurück. Wenn *Mbstate* null ist, die interne **Mbstate_t** konvertierungszustand wird verwendet. Wenn die Zeichensequenz *Wchar* verfügt nicht über eine entsprechende Multibyte zeichendarstellung verfügt, wird-1 zurückgegeben und die **Errno** nastaven NA hodnotu **EILSEQ**.
+Wenn das *mbstr* -Argument **null**ist, gibt **wcsrgrabeln** die erforderliche Größe in Byte der Ziel Zeichenfolge zurück. Wenn *mbstate* den Wert NULL aufweist, wird der interne **mbstate_t** -Konvertierungs Status verwendet. Wenn die Zeichenfolge *WCHAR* nicht über eine entsprechende Multibytezeichen-Zeichen Darstellung verfügt, wird-1 zurückgegeben, und der **errno** -Wert wird auf **EILSEQ**festgelegt.
 
 In C++ hat diese Funktion eine Vorlagenüberladung, mit der die neuere, sichere Entsprechung dieser Funktion aufgerufen wird. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Ausnahmen
 
-Die **Wcsrtombs** -Funktion ist multithreadsicher, solange keine Funktion im aktuellen Thread ruft **Setlocale** während diese Funktion ausgeführt wird und die *Mbstate* nicht null ist.
+Die **wcsrgräber** -Funktion ist multithreadsicher, solange keine Funktion im aktuellen Thread **setlocale** aufruft, während diese Funktion ausgeführt wird und *mbstate* nicht NULL ist.
 
 ## <a name="example"></a>Beispiel
 

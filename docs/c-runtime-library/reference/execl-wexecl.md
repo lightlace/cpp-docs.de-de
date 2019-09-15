@@ -1,10 +1,10 @@
 ---
 title: _execl, _wexecl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execl
 - _wexecl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _execl
 - _wexecl
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _wexecl function
 - execl function
 ms.assetid: 81fefb8a-0a06-4221-b2bc-be18e38e89f4
-ms.openlocfilehash: 3d736849f90782425e6e1c1cff04536972318c91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 714ef80c4909e92100c4fa869b7544239f8edeb7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339272"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941942"
 ---
-# <a name="execl-wexecl"></a>_execl, _wexecl
+# <a name="_execl-_wexecl"></a>_execl, _wexecl
 
 Lädt neue untergeordnete Prozesse und führt sie aus.
 
@@ -63,12 +66,12 @@ intptr_t _wexecl(
 *cmdname*<br/>
 Pfad der auszuführenden Datei.
 
-*arg0*,... *Argn*<br/>
+*arg0*,... *argN*<br/>
 Liste von Zeigern zu den Parametern.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg kehren diese Funktionen nicht zum aufrufenden Prozess zurück. Ein Rückgabewert 1 gibt einen Fehler, in diesem Fall die **Errno** globale Variable festgelegt ist.
+Bei Erfolg kehren diese Funktionen nicht zum aufrufenden Prozess zurück. Der Rückgabewert-1 gibt einen Fehler an. in diesem Fall ist die globale Variable **errno** festgelegt.
 
 |errno-Wert|Beschreibung|
 |-----------------|-----------------|
@@ -84,7 +87,7 @@ Bei Erfolg kehren diese Funktionen nicht zum aufrufenden Prozess zurück. Ein R�
 
 Jede dieser Funktionen lädt einen neuen Prozess und führt ihn aus. Jedes Befehlszeilenargument wird dabei als separater Parameter übergeben. Das erste Argument ist der Name des Befehls oder der ausführbaren Datei. Das zweite Argument muss das gleiche wie das erste sein. Es wird im ausgeführten Prozess zu `argv[0]`. Das dritte Argument `argv[1]` ist das erste Argument des ausgeführten Prozesses.
 
-Die **_execl** Funktionen überprüfen ihre Parameter. Wenn entweder *Cmdname* oder *arg0* ist ein null-Zeiger oder leere Zeichenfolge ist, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) Wenn Ausführung um den Vorgang fortzusetzen, legen diese Funktionen kann **Errno** zu **EINVAL** und geben-1 zurück. Es wird kein neuer Prozess ausgeführt.
+Die **_execl** -Funktionen überprüfen Ihre Parameter. Wenn entweder *cmdname* oder *arg0* ein NULL-Zeiger oder eine leere Zeichenfolge ist, rufen diese Funktionen den Handler für ungültige Parameter auf, wie unter [Parameter Validierung](../../c-runtime-library/parameter-validation.md) beschrieben, wenn die weitere Ausführung zugelassen wird. diese Funktionen legen **errno** auf **fest. EINVAL** und Rückgabe-1. Es wird kein neuer Prozess ausgeführt.
 
 ## <a name="requirements"></a>Anforderungen
 

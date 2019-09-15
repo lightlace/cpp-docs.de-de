@@ -1,9 +1,9 @@
 ---
 title: set_terminate (CRT)
 ms.date: 11/04/2016
-apiname:
+api_name:
 - set_terminate
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_terminate
 helpviewer_keywords:
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-ms.openlocfilehash: 7be81dec7fba80a273d635cbd30b96b09928bc66
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 860789a3f2fda5ef13cadffa2a00dba4fbd2090a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356445"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948356"
 ---
-# <a name="setterminate-crt"></a>set_terminate (CRT)
+# <a name="set_terminate-crt"></a>set_terminate (CRT)
 
-Installiert Ihre eigene beendigungsroutine, die aufgerufen werden, indem **beenden**.
+Installiert ihre eigene Beendigungs Routine, um durch **Beenden**aufgerufen zu werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,24 +50,24 @@ Zeiger auf eine Funktion zum Beenden, die Sie schreiben.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf die vorherige Funktion registriert **Set_terminate** , damit die vorherige Funktion später wiederhergestellt werden kann. Wenn keine vorherige Funktion festgelegt wurde, kann der Rückgabewert verwendet werden, um das Standardverhalten wiederherzustellen; Dieser Wert möglicherweise **NULL**.
+Gibt einen Zeiger auf die vorherige Funktion zurück, die von **Set_terminate** registriert wurde, sodass die vorherige Funktion später wieder hergestellt werden kann. Wenn keine vorherige Funktion festgelegt wurde, kann der Rückgabewert verwendet werden, um das Standardverhalten wiederherzustellen. Dieser Wert kann **null**sein.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Set_terminate** -Funktion installiert *TermFunction* wie die Funktion wird aufgerufen, indem **beenden**. **Set_terminate** wird zusammen mit C++ Ausnahmebehandlung und kann zu einem beliebigen Zeitpunkt im Programm aufgerufen werden, bevor die Ausnahme ausgelöst wird. **Beenden Sie** Aufrufe [Abbrechen](abort.md) standardmäßig. Sie können diese Standardeinstellung ändern, indem Sie Ihre eigene Beendigungsfunktion schreiben und Aufrufen **Set_terminate** mit dem Namen Ihrer Funktion als Argument. **Beenden Sie** Ruft die letzte Funktion, die als Argument an **Set_terminate**. Nach Ausführung aller Bereinigungsaufgaben gewünschten *TermFunction* sollte das Programm zu beenden. Wenn es nicht beendet wird (Wenn sie sich an den Aufrufer zurückgibt), [Abbrechen](abort.md) aufgerufen wird.
+Die **Set_terminate** -Funktion installiert *termfunction* als die Funktion, die durch **Beenden**aufgerufen wird. **Set_terminate** wird mit C++ Ausnahmebehandlung verwendet und kann an einem beliebigen Punkt im Programm aufgerufen werden, bevor die Ausnahme ausgelöst wird. **Beendigungs Aufrufe werden** standardmäßig [abgebrochen](abort.md) . Sie können diesen Standardwert ändern, indem Sie eine eigene Beendigungs Funktion schreiben und **Set_terminate** mit dem Namen ihrer Funktion als Argument aufrufen. **Beenden** Ruft die letzte Funktion auf, die als Argument für **Set_terminate**angegeben wurde. Nach dem Ausführen gewünschter Bereinigungs Tasks sollte *termfunction* das Programm beenden. Wenn Sie nicht beendet wird (wenn Sie zu Ihrem Aufrufer zurückkehrt), wird [Abbruch](abort.md) aufgerufen.
 
 In einer Multithreadumgebung werden die Beendigungsfunktionen für jeden Thread separat verwaltet. Jeder neue Thread muss eine eigene Beendigungsfunktion installieren. Daher ist jeder Thread für die eigene Beendigungsbehandlung verantwortlich.
 
-Die **Terminate_function** Typ in der EH definiert ist. H als Zeiger auf eine benutzerdefinierte Beendigungsfunktion *TermFunction* zurückgibt **"void"**. Die benutzerdefinierte Funktion *TermFunction* kann keine Argumente annehmen und sollte nicht an den Aufrufer zurückgeben. Wenn dies der Fall, [Abbrechen](abort.md) aufgerufen wird. Eine Ausnahme kann nicht innerhalb von *TermFunction*.
+Der **terminate_function** -Typ ist in eh definiert. H als Zeiger auf eine benutzerdefinierte Beendigungs Funktion, *termfunction* , die **void**zurückgibt. Die benutzerdefinierte Funktion *termfunction* kann keine Argumente annehmen und sollte nicht an ihren Aufrufer zurückgegeben werden. Wenn dies der Fall ist, wird [Abbruch](abort.md) aufgerufen. Eine Ausnahme kann nicht innerhalb von *termfunction*ausgelöst werden.
 
 ```cpp
 typedef void ( *terminate_function )( );
 ```
 
 > [!NOTE]
-> Die **Set_terminate** Funktion kann nur außerhalb des Debuggers.
+> Die **Set_terminate** -Funktion funktioniert nur außerhalb des Debuggers.
 
-Es gibt einen einzigen **Set_terminate** Handler für alle dynamisch verknüpften DLLs oder EXEs; auch wenn Sie aufgerufen **Set_terminate** Ihr Handler möglicherweise durch einen anderen ersetzt, oder Sie ersetzen einen Handler durch einen anderen festgelegt DLL oder EXE-Datei.
+Es gibt einen einzelnen **Set_terminate** -Handler für alle dynamisch verknüpften DLLs oder EXEs. auch wenn Sie **Set_terminate** aufzurufen, wird der Handler möglicherweise durch einen anderen ersetzt, oder Sie ersetzen einen Handler, der von einer anderen DLL oder exe festgelegt wurde.
 
 ## <a name="requirements"></a>Anforderungen
 

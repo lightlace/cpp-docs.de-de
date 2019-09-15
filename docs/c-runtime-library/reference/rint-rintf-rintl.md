@@ -1,11 +1,11 @@
 ---
 title: rint, rintf, rintl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - rintf
 - rintl
 - rint
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rintf
 - rintl
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57c4dc60d6b4d29e5c46fa6f1d03d0710ed44309
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357589"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949266"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -58,16 +61,16 @@ Der zu rundende Gleitkommawert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Rint** Funktionen geben einen Gleitkommawert, der die nächste ganze Zahl, um darstellt zurück *x*. Halbe Werte werden gerundet, gemäß der aktuellen Einstellung des Gleitkomma-Rundungsmodus, identisch mit der **Nearbyint** Funktionen. Im Gegensatz zu der **Nearbyint** Funktionen, die **Rint** Funktionen auslösen können die **FE_INEXACT** Gleitkomma-Ausnahmezustände, wenn das Ergebnis im Wert des Arguments unterscheidet. Es gibt keine Fehlerrückgabe.
+Die **rint** -Funktionen geben einen Gleit Komma Wert zurück, der die nächste Ganzzahl in *x*darstellt. Die halbwerte werden entsprechend der aktuellen Einstellung des Gleit Komma-Rundungs Modus gerundet, identisch mit den **nearbyint** -Funktionen. Im Gegensatz zu den **nearbyint** -Funktionen können die **rint** -Funktionen die **FE_INEXACT** -Gleit Komma Ausnahme ausgelöst werden, wenn sich das Ergebnis in dem Wert des-Arguments unterscheidet. Es gibt keine Fehlerrückgabe.
 
-|Eingabe|SEH-Ausnahme|**_matherr** Ausnahme|
+|Eingabe|SEH-Ausnahme|**_matherr** Distanzieren|
 |-----------|-------------------|--------------------------|
 |± ∞, QNAN, IND|none|none|
 |Abbrüche|EXCEPTION_FLT_UNDERFLOW|none|
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Rint** verwenden und zurückgeben **"float"** und **lange** **doppelte** Werte. In einem C-Programm **Rint** immer Double und gibt eine **doppelte**.
+Da C++ das überladen zulässt, können Sie über Ladungen von **rint** aufzurufen, die **float** -und **Long** **Double** -Werte akzeptieren und zurückgeben. In einem C-Programm nimmt **rint** immer einen **Double**-Wert an und gibt ihn zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,9 +1,9 @@
 ---
 title: _lfind_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lfind_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lfind_s
 - _lfind_s
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - searching, linear
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
-ms.openlocfilehash: 08c04d9d1ca69998d54304c96468298013907179
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69db97dc24b567714bda3e02f5f53ff381ae4911
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286426"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953452"
 ---
-# <a name="lfinds"></a>_lfind_s
+# <a name="_lfind_s"></a>_lfind_s
 
 Führt eine lineare Suche für den angegebenen Schlüssel aus. Dies ist eine Version von [_lfind](lfind.md) mit Sicherheitserweiterungen, wie in den [Sicherheitsfunktionen in CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
@@ -59,7 +62,7 @@ Das Objekt, nach dem gesucht werden soll.
 *base*<br/>
 Zeiger auf die Basis der Suchdaten.
 
-*Anzahl*<br/>
+*number*<br/>
 Die Anzahl der Arrayelemente.
 
 *size*<br/>
@@ -73,9 +76,9 @@ Ein Zeiger auf ein Objekt, auf das in der Vergleichsfunktion zugegriffen werden 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn der Schlüssel gefunden wird, **_lfind_s** gibt einen Zeiger auf das Element des Arrays, an *Basis* entspricht *Schlüssel*. Wenn der Schlüssel nicht gefunden wird, **_lfind_s** gibt **NULL**.
+Wenn der Schlüssel gefunden wird, gibt **_lfind_s** einen Zeiger auf das Element des Arrays an der *Basis* zurück, die mit dem *Schlüssel*übereinstimmt. Wenn der Schlüssel nicht gefunden wird, gibt _lfind_s **null**zurück.
 
-Wenn ungültige Parameter an die Funktion übergeben werden, ruft sie den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parametervalidierung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt **NULL**.
+Wenn ungültige Parameter an die Funktion übergeben werden, ruft sie den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parametervalidierung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird **errno** auf **EINVAL** festgelegt, und die Funktion gibt **null**zurück.
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
@@ -88,9 +91,9 @@ Wenn ungültige Parameter an die Funktion übergeben werden, ruft sie den Handle
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_lfind_s** Funktion führt eine lineare Suche für den Wert *Schlüssel* in ein Array von *Anzahl* Elementen, die jeweils von *Breite* Bytes. Im Gegensatz zu **Bsearch_s**, **_lfind_s** erfordert keine Arrays, das sortiert werden. Die *Basis* Argument ist ein Zeiger auf die Basis des Arrays, das gesucht werden soll. Die *vergleichen* Argument ist ein Zeiger auf eine benutzerdefinierte Routine, die zwei Elemente des Arrays vergleicht und dann gibt einen Wert, der ihre Beziehung angibt. **_lfind_s** Aufrufe der *vergleichen* -Routine einmal oder mehrere Male während der Suche, und übergeben die *Kontext* Zeiger und Verweise auf zwei Arrayelemente bei jedem Aufruf. Die *vergleichen* Routine muss die Elemente vergleichen und Zurückgeben von ungleich Null (d. h., dass die Elemente unterscheiden) oder 0 (d.h. die Elemente sind identisch).
+Die **_lfind_s** -Funktion führt eine lineare Suche nach dem Wert *Schlüssel* in einem Array von *Zahlen* Elementen durch, wobei jede *Breite* Bytes beträgt. Anders als bei **bsearch_s**erfordert **_lfind_s** nicht, dass das Array sortiert wird. Das *Basis* Argument ist ein Zeiger auf die Basis des zu durchsuchenden Arrays. Das *Compare* -Argument ist ein Zeiger auf eine vom Benutzer bereitgestellte Routine, die zwei Array Elemente vergleicht und dann einen Wert zurückgibt, der Ihre Beziehung angibt. **_lfind_s** Ruft die *Vergleichs* Routine einmal oder mehrmals während der Suche auf und übergibt den *Kontext* Zeiger und Zeiger auf zwei Array Elemente bei jedem Aufruf. Die *Vergleichs* Routine muss die Elemente vergleichen und dann ungleich NULL (d.h. die Elemente unterscheiden sich) oder 0 (d.h. die Elemente sind identisch) zurückgeben.
 
-**_lfind_s** ähnelt **_lfind** mit Ausnahme der Hinzufügung von der *Kontext* Zeiger auf den Argumenten der Vergleichsfunktion und der Parameterliste der Funktion. Die *Kontext* Zeiger ist nützlich, wenn die durchsuchte Datenstruktur Teil eines Objekts ist und die *vergleichen* Funktion, die auf Member des Objekts zugreifen muss. Die *vergleichen* Funktion kann den void-Zeiger umgewandelt, in das entsprechende Objekt und auf Member des Objekts. Das Hinzufügen der *Kontext* -Parameters macht **_lfind_s** sicherer, da weiterer Kontext verwendet werden kann, um Wiedereintreten mit der Verwendung statischer Variablen zur Daten zur Verfügung stellen zu vermeiden. die *vergleichen* Funktion.
+**_lfind_s** ähnelt **_lfind** außer dem Hinzufügen des *Kontext* Zeigers zu den Argumenten der Vergleichsfunktion und der Parameterliste der Funktion. Der *Kontext* Zeiger kann nützlich sein, wenn die durchsuchte Datenstruktur Teil eines Objekts ist und die *Vergleichs* Funktion auf Member des Objekts zugreifen muss. Mit der *Compare* -Funktion kann der void-Zeiger in den entsprechenden Objekttyp umgewandelt und auf Member des Objekts zugegriffen werden. Durch das Hinzufügen des *Kontext* Parameters wird **_lfind_s** sicherer, da zusätzlicher Kontext verwendet werden kann, um Fehler beim erneuten eintreten zu vermeiden, die mit der Verwendung statischer Variablen zur Bereitstellung von Daten für die *Vergleichs* Funktion einhergehen.
 
 ## <a name="requirements"></a>Anforderungen
 

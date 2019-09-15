@@ -1,9 +1,9 @@
 ---
 title: _chsize
 ms.date: 03/29/2018
-apiname:
+api_name:
 - _chsize
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _chsize
 helpviewer_keywords:
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-ms.openlocfilehash: 5c60f3aa08a405eb9a83dc6ba8636cd316a32925
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fe07b2261396be491b833ff52186024edd0b919
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340325"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942978"
 ---
-# <a name="chsize"></a>_chsize
+# <a name="_chsize"></a>_chsize
 
 Ändert die Größe einer Datei. Es ist eine sicherere Version verfügbar. Informationen dazu finden Sie unter [_chsize_s](chsize-s.md).
 
@@ -55,15 +58,15 @@ Neue Länge der Datei in Bytes.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_chsize** gibt den Wert 0 zurück, wenn die Dateigröße erfolgreich geändert wurde. Der Rückgabewert 1 gibt an, einen Fehler: **Errno** nastaven NA hodnotu **EACCES** , wenn die angegebene Datei schreibgeschützt ist oder auf die angegebene Datei ist für den Zugriff gesperrt **EBADF** Wenn die der Deskriptor ungültig ist, **ENOSPC** , wenn kein Speicherplatz mehr auf dem Gerät vorhanden ist oder **EINVAL** Wenn *Größe* ist kleiner als 0 (null).
+**_chsize** gibt den Wert 0 (null) zurück, wenn die Dateigröße erfolgreich geändert wurde. Der Rückgabewert-1 weist auf einen Fehler hin: **errno** ist auf **EACCES** festgelegt, wenn die angegebene Datei schreibgeschützt ist oder die angegebene Datei für den Zugriff gesperrt ist, auf **EBADF** , wenn der Deskriptor ungültig ist, **ENOSPC** , wenn kein Speicherplatz auf dem Gerät vorhanden ist, oder **EINVAL** , wenn die *Größe* kleiner als 0 (null) ist.
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_chsize** -Funktion erweitert oder verkürzt die zugeordnete Datei *fd* der vom angegebenen Länge *Größe*. Die Datei muss in einem Modus geöffnet sein, der Schreiben zulässt. Wenn die Datei erweitert wird, werden NULL-Zeichen ('\0') angefügt. Wenn die Datei abgeschnitten wird, gehen alle Daten vom Ende der gekürzten Datei bis zur ursprünglichen Länge der Datei verloren.
+Die **_chsize** -Funktion erweitert oder verkürzt die mit *FD* zugeordnete Datei mit der durch *size*angegebenen Länge. Die Datei muss in einem Modus geöffnet sein, der Schreiben zulässt. Wenn die Datei erweitert wird, werden NULL-Zeichen ('\0') angefügt. Wenn die Datei abgeschnitten wird, gehen alle Daten vom Ende der gekürzten Datei bis zur ursprünglichen Länge der Datei verloren.
 
-Diese Funktion überprüft ihre Parameter. Wenn *Größe* ist kleiner als 0 (null) oder *fd* ein fehlerhafter Dateideskriptor, wird der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
+Diese Funktion überprüft ihre Parameter. Wenn die *Größe* kleiner als 0 (null) oder *FD* ein fehlerhafter Dateideskriptor ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben.
 
 ## <a name="requirements"></a>Anforderungen
 

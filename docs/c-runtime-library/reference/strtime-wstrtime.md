@@ -1,10 +1,10 @@
 ---
 title: _strtime, _wstrtime
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wstrtime
 - _strtime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wstrtime
 - _strtime
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-ms.openlocfilehash: 9d874321418854a703886eb80ee23ac1cba57fa4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea4a2b304dc30ec167f8a9094bcf278ff0d31f77
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223092"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946560"
 ---
-# <a name="strtime-wstrtime"></a>_strtime, _wstrtime
+# <a name="_strtime-_wstrtime"></a>_strtime, _wstrtime
 
 Kopieren der Zeit in einen Puffer. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_strtime_s, _wstrtime_s](strtime-s-wstrtime-s.md).
 
@@ -70,13 +73,13 @@ Zeitzeichenfolge
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf die resultierende Zeichenfolge *Timestr*.
+Gibt einen Zeiger auf die resultierende Zeichenfolge *timestr*zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_strtime** Funktion kopiert die aktuelle lokale Zeit in den Puffer, der auf *Timestr*. Die Zeit wird als formatiert **hh: mm:** , in denen **Hh** zwei Ziffern für die Stunde im 24-Stunden-Notation **mm** zwei Ziffern für die Minuten nach der Stunde und **ss** zwei Ziffern für Sekunden. Z. B. die Zeichenfolge **18:23:44** stellt 23 Minuten und 44 Sekunden nach 6 Uhr Der Puffer muss mindestens 9 Bytes lang sein.
+Die **_strtime** -Funktion kopiert die aktuelle Ortszeit in den Puffer, auf den von *timestr*verwiesen wird. Die Uhrzeit ist als **hh: mm: SS** formatiert, wobei **HH** zwei Ziffern darstellt, die die Stunde in 24-Stunden-Notation darstellen, **mm** zwei Ziffern, die die Minuten nach der Stunde darstellen, und **SS** zwei Ziffern darstellt, die Sekunden darstellen. Die Zeichenfolge **18:23:44** stellt z. b. 23 Minuten und 44 Sekunden nach 6 Uhr dar. Der Puffer muss mindestens 9 Bytes lang sein.
 
-**_wstrtime** ist eine Breitzeichen-Version von **_strtime**; der Wert Argument- und Rückgabetypen der **_wstrtime** sind Breitzeichen Zeichenfolgen. Anderenfalls verhalten sich diese Funktionen identisch. Wenn *Timestr* ist eine **NULL** Zeiger oder wenn *Timestr* falsch formatiert ist, die ungültige parameterhandler wird aufgerufen, wie in beschrieben [Parameter Überprüfung](../../c-runtime-library/parameter-validation.md). Wenn die Ausnahme zulässig ist, um den Vorgang fortzusetzen, geben diese Funktionen zurück eine **NULL** und **Errno** zu **EINVAL** Wenn *Timestr* wurde eine **NULL** oder **Errno** zu **ERANGE** Wenn *Timestr* ist falsch formatiert.
+**_wstrtime** ist eine breit Zeichen Version von **_strtime**. Das Argument und der Rückgabewert von **_wstrtime** sind Zeichen folgen mit breit Zeichen. Anderenfalls verhalten sich diese Funktionen identisch. Wenn *timestr* ein **null** -Zeiger ist oder *timestr* falsch formatiert ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die Ausnahme fortgesetzt werden darf, geben diese Funktionen einen **null** -Wert zurück und legen **errno** auf **EINVAL** fest, wenn *timestr* **null** war, oder legen Sie **errno** auf **ERANGE** fest, wenn *timestr* falsch formatiert ist.
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

@@ -1,10 +1,10 @@
 ---
 title: _strtime_s, _wstrtime_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wstrtime_s
 - _strtime_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wstrtime_s
 - strtime_s
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: 579c4a99b52c66bd14cea947eaa1f301cc1127e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 855c88f22e00cad398f6357b8e35931598041aeb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375326"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946568"
 ---
-# <a name="strtimes-wstrtimes"></a>_strtime_s, _wstrtime_s
+# <a name="_strtime_s-_wstrtime_s"></a>_strtime_s, _wstrtime_s
 
 Kopieren der aktuellen Zeit in einen Puffer. Dies sind Versionen von [_strtime, _wstrtime](strtime-wstrtime.md) mit Sicherheitsverbesserungen wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
@@ -78,24 +81,24 @@ Wenn ein Fehler auftritt, wird der Handler für ungültige Parameter aufgerufen,
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|*buffer*|*numberOfElements*|Zurück|Inhalt der *Puffer*|
+|*buffer*|*numberOfElements*|Zurück|Inhalt des *Puffers*|
 |--------------|------------------------|------------|--------------------------|
 |**NULL**|(alle)|**EINVAL**|Nicht geändert|
-|Nicht **NULL** (zeigt auf gültigen Puffer)|0|**EINVAL**|Nicht geändert|
-|Nicht **NULL** (zeigt auf gültigen Puffer)|0 < Größe < 9|**EINVAL**|Leere Zeichenfolge|
-|Nicht **NULL** (zeigt auf gültigen Puffer)|Größe > 9|0|Aktuelle Zeit, wie sie in den Hinweisen angegeben wurde|
+|Not **null** (Verweis auf gültigen Puffer)|0|**EINVAL**|Nicht geändert|
+|Not **null** (Verweis auf gültigen Puffer)|0 < Größe < 9|**EINVAL**|Leere Zeichenfolge|
+|Not **null** (Verweis auf gültigen Puffer)|Größe > 9|0|Aktuelle Zeit, wie sie in den Hinweisen angegeben wurde|
 
 ## <a name="security-issues"></a>Sicherheitsprobleme
 
-Übergabe eines ungültigen nicht-**NULL** Wert für der Puffer zu einer zugriffsverletzung führt, wenn die *NumberOfElements* Parameter größer als 9 ist.
+Wenn Sie einen ungültigen Wert ungleich**null** für den Puffer übergeben, führt dies zu einer Zugriffsverletzung, wenn der Parameter " *numofelements* " größer als 9 ist.
 
-Übergeben eines Werts für *NumberOfElements* , die größer ist als die tatsächliche Größe des Puffers Pufferüberlauf führt.
+Wenn Sie einen Wert für " *numofelements* " übergeben, der größer ist als die tatsächliche Größe des Puffers, führt dies zu einem Pufferüberlauf.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktionen bieten sicherere Versionen [_strtime](strtime-wstrtime.md) und [_wstrtime](strtime-wstrtime.md). Die **_strtime_s** Funktion kopiert die aktuelle lokale Zeit in den Puffer, der auf *Timestr*. Die Zeit wird als formatiert **hh: mm:** , in denen **Hh** zwei Ziffern für die Stunde im 24-Stunden-Notation **mm** zwei Ziffern für die Minuten nach der Stunde und **ss** zwei Ziffern für Sekunden. Z. B. die Zeichenfolge **18:23:44** stellt 23 Minuten und 44 Sekunden nach 6 Uhr Der Puffer muss mindestens 9 Bytes lang sein. Die tatsächliche Größe wird durch den zweiten Parameter angegeben.
+Diese Funktionen bieten sicherere Versionen von [_strtime](strtime-wstrtime.md) und [_wstrtime](strtime-wstrtime.md). Die **_strtime_s** -Funktion kopiert die aktuelle Ortszeit in den Puffer, auf den von *timestr*verwiesen wird. Die Uhrzeit ist als **hh: mm: SS** formatiert, wobei **HH** zwei Ziffern darstellt, die die Stunde in 24-Stunden-Notation darstellen, **mm** zwei Ziffern, die die Minuten nach der Stunde darstellen, und **SS** zwei Ziffern darstellt, die Sekunden darstellen. Die Zeichenfolge **18:23:44** stellt z. b. 23 Minuten und 44 Sekunden nach 6 Uhr dar. Der Puffer muss mindestens 9 Bytes lang sein. Die tatsächliche Größe wird durch den zweiten Parameter angegeben.
 
-**_wstrtime** ist eine Breitzeichen-Version von **_strtime**; der Wert Argument- und Rückgabetypen der **_wstrtime** sind Breitzeichen Zeichenfolgen. Anderenfalls verhalten sich diese Funktionen identisch.
+**_wstrtime** ist eine breit Zeichen Version von **_strtime**. Das Argument und der Rückgabewert von **_wstrtime** sind Zeichen folgen mit breit Zeichen. Anderenfalls verhalten sich diese Funktionen identisch.
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

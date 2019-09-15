@@ -1,14 +1,14 @@
 ---
 title: lrint, lrintf, lrintl, llrint, llrintf, llrintl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - lrint
 - lrintl
 - lrintf
 - llrint
 - llrintf
 - llrintl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lrint
 - lrintf
@@ -42,12 +45,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: 01680a62e654112475a55bd8eac0cc14d254e2a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72870c3548f0fd6972183b0c090708c6eddc591e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285771"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953130"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -104,19 +107,19 @@ Der zu rundende Wert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn erfolgreich, wird der gerundete Integralwert von *x*.
+Wenn erfolgreich, wird der abgerundete ganzzahlige Wert von *x*zurückgegeben.
 
 |Problem|Zurück|
 |-----------|------------|
-|*X* liegt außerhalb des Bereichs des Rückgabetyps<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|Löst **FE_INVALID** und gibt Sie 0 (null) zurück.|
+|*x* liegt außerhalb des Bereichs des Rückgabe Typs.<br /><br /> *x* = ± \<br /><br /> *x* = Nan|Löst **FE_INVALID** aus und gibt NULL (0) zurück.|
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Lrint** und **Llrint** , Take **"float"** und **lange**  **doppelte** Typen. In einem C-Programm **Lrint** und **Llrint** immer eine **doppelte**.
+Da C++ das überladen zulässt, können Sie über Ladungen von **lrint** und **llrint** aufzurufen, die **float** -und **Long** **Double** -Typen annehmen. In einem C-Programm nehmen **lrint** und **llrint** immer einen **Double**-Vorgang auf.
 
-Wenn *x* stellt keinen dar. die entsprechende Gleitkommazahl eines integralwerts, diese Funktionen lösen **FE_INEXACT**.
+Wenn *x* die Gleit Komma Entsprechung eines ganzzahligen Werts nicht darstellt, rufen diese Funktionen **FE_INEXACT**auf.
 
-**Microsoft-spezifisch**: Wenn das Ergebnis außerhalb des Bereichs des Rückgabetyps ist oder wenn der Parameter NaN oder unendlich ist, ist der Rückgabewert Implementierung definiert. Der Microsoft-Compiler gibt den Wert 0 (null) zurück.
+**Microsoft-spezifisch**: Wenn das Ergebnis außerhalb des Bereichs des Rückgabe Typs liegt oder wenn der Parameter ein NaN oder unendlich ist, wird der Rückgabewert durch die Implementierung definiert. Der Microsoft-Compiler gibt den Wert 0 (null) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

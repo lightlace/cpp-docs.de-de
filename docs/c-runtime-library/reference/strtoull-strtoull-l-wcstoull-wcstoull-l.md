@@ -1,12 +1,12 @@
 ---
 title: strtoull, _strtoull_l, wcstoull, _wcstoull_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strtoull_l
 - _wcstoull_l
 - strtoull
 - wcstoull
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wcstoull_l
 - _tcstoull
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _strtoull_l function
 - wcstoull function
 ms.assetid: 36dac1cc-e901-40a0-8802-63562d6d01df
-ms.openlocfilehash: f23799b43a356600f48fb0fbf32b4604966c416b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 70d7a53219a9176e848fde239d90291366b67eb0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379206"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957596"
 ---
-# <a name="strtoull-strtoulll-wcstoull-wcstoulll"></a>strtoull, _strtoull_l, wcstoull, _wcstoull_l
+# <a name="strtoull-_strtoull_l-wcstoull-_wcstoull_l"></a>strtoull, _strtoull_l, wcstoull, _wcstoull_l
 
 Konvertiert eine Zeichenfolge in einen langenganzzahligen Wert ohne Vorzeichen.
 
@@ -88,19 +91,19 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Strtoull** gibt den konvertierten Wert zurück, sofern vorhanden, oder **ULLONG_MAX** bei einem Überlauf. **Strtoull** gibt 0 zurück, wenn keine Konvertierung ausgeführt werden kann. **Wcstoull** gibt Werte analog zu **Strtoull**. Für beide Funktionen **Errno** nastaven NA hodnotu **ERANGE** Wenn Überlauf oder Unterlauf auftritt.
+" **strinll** " gibt den konvertierten Wert zurück, sofern vorhanden, oder " **ULLONG_MAX** " bei einem Überlauf. " **" gibt "** " 0 "zurück, wenn keine Konvertierung ausgeführt werden kann. **wcstoull** gibt Werte analog zu " **straull**" zurück. Bei beiden Funktionen wird **errno** auf **ERANGE** festgelegt, wenn ein Überlauf oder ein Unterlauf auftritt.
 
 Weitere Informationen zu diesen Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen konvertiert die Eingabezeichenfolge *StrSource* auf eine **ohne Vorzeichen** **lange** **lange** Integer-Wert.
+Jede dieser Funktionen konvertiert die *Eingabe Zeichenfolge* von " **Ganzzahl ohne Vorzeichen** " in **einen ganzzahligen** Wert ohne Vorzeichen.
 
-**Strtoull** stoppt das Lesen der Zeichenfolge *StrSource* mit dem ersten Zeichen, die nicht als Teil einer Zahl erkannt. Dies ist möglicherweise das abschließende Nullzeichen, oder es ist das erste numerische Zeichen, die größer als oder gleich ist *Basis*. Die Einstellung der **LC_NUMERIC** -Kategorie des Gebietsschemas bestimmt das Erkennen des Basiszeichens in *StrSource*; Weitere Informationen finden Sie unter [Setlocale, _wsetlocale](setlocale-wsetlocale.md). **Strtoull** und **Wcstoull** verwenden das aktuelle Gebietsschema. **_strtoull_l** und **_wcstoull_l** stattdessen verwenden Sie das Gebietsschema, das übergeben wird jedoch die gleiche andernfalls. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+*mit "* **strautoull** " wird das Lesen der Zeichenfolge "" mit dem ersten Zeichen beendet, das nicht als Teil einer Zahl erkannt werden kann. Dies kann das abschließende Null-Zeichen sein, oder es kann das erste numerische Zeichen sein, das größer oder gleich der *Basis*ist. Die Einstellung der **LC_NUMERIC** -Kategorie des Gebiets Schemas bestimmt die Erkennung des Basis Zeichens in " *strinsource*". Weitere Informationen finden Sie unter [setlocale, _wsetlocale](setlocale-wsetlocale.md). " **straull** " und " **wcstoull** " verwenden das aktuelle Gebiets Schema. **_strtoull_l** und **_wcstoull_l** verwenden stattdessen das übergebene Gebiets Schema, sind andernfalls identisch. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Wenn *Endptr* nicht **NULL**, ein Zeiger auf das Zeichen, die Überprüfung beendet, wird gespeichert, an dem Speicherort, auf das von *Endptr*. Wenn keine Konvertierung ausgeführt werden kann (keine gültigen Ziffern gefunden oder ungültige Basis angegeben) den Wert der *StrSource* wird an dem Speicherort gespeichert, auf das von *Endptr*.
+Wenn *endptr* nicht **null**ist, wird ein Zeiger auf das Zeichen, das die Überprüfung beendet hat, an dem Speicherort gespeichert, auf den von *endptr*verwiesen wird. Wenn keine Konvertierung ausgeführt werden kann (keine gültigen Ziffern gefunden oder ungültige Basis angegeben), wird der Wert von " *strinsource* " an dem Speicherort gespeichert, auf den von *endptr*verwiesen wird.
 
-**Wcstoull** ist eine Breitzeichen-Version von **Strtoull** und die zugehörige *StrSource* Argument ist eine Breitzeichen-Zeichenfolge. Ansonsten verhalten sich diese Funktionen identisch.
+**wcstoull** ist eine breit Zeichen Version von " **Strauch** ", und das zugehörige " *strinsource* "-Argument ist eine breit Zeichenfolge. Ansonsten verhalten sich diese Funktionen identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -109,11 +112,11 @@ Wenn *Endptr* nicht **NULL**, ein Zeiger auf das Zeichen, die Überprüfung been
 |**_tcstoull**|**strtoull**|**strtoull**|**wcstoull**|
 |**_tcstoull_l**|**strtoull_l**|**_strtoull_l**|**_wcstoull_l**|
 
-**Strtoull** erwartet *StrSource* auf eine Zeichenfolge der folgenden Form zeigt:
+" **Strauch** " erwartet, dass " *Strauch* " auf eine Zeichenfolge der folgenden Form verweist:
 
-> [*Leerzeichen*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*Ziffern* &#124; *Buchstaben*]  
+> [*Leerzeichen*] [{ **+** &#124; &#124; &#124; }] [0 [{x x}]] [Ziffern Buchstaben] **-**
 
-Ein *Leerzeichen* besteht möglicherweise aus Leerzeichen und Tabulatorzeichen, die ignoriert werden. *Ziffern* sind eine oder mehrere Dezimalstellen. *Buchstaben* können eine oder mehrere der Buchstaben "a" bis "Z" (oder "A" bis "Z"). Das erste Zeichen, das dieser Form nicht entspricht, beendet die Überprüfung. Wenn *Basis* zwischen 2 und 36 liegt, ist er als der Basis der Zahl verwendet wird. Wenn *Basis* ist 0, die ersten Zeichen der Zeichenfolge, auf das von *StrSource* werden verwendet, um die Basis festzulegen. Wenn das erste Zeichen "0 " und das zweite Zeichen nicht "x" oder "X" ist, wird die Zeichenfolge als oktale ganze Zahl interpretiert. Wenn das erste Zeichen "0" und das zweite Zeichen nicht "x" oder "X" ist, wird die Zeichenfolge als hexadezimale ganze Zahl interpretiert. Wenn das erste Zeichen "1" bis "9 " ist, wird die Zeichenfolge als ganze Dezimalzahl interpretiert. Den Buchstaben „a“ bis „z“ (bzw. „A“ bis „Z“) werden die Werten 10 bis 35 zugewiesen. Es sind nur Buchstaben zulässig, deren zugewiesene Werte kleiner als *base* sind. Das erste Zeichen außerhalb des Bereichs der Basis beendet die Überprüfung. Z. B. wenn *Basis* ist 0 und das erste überprüfte Zeichen "0", eine ganze Oktalzahl angenommen und ein "8" oder "9"-Zeichen beendet die Überprüfung. **Strtoull** lässt ein Pluszeichen (**+**) oder Minuszeichen (-) (**-**) Präfix, einem führenden Minuszeichen gibt an, dass der Rückgabewert invertiert wird.
+Ein Leerraum kann aus *Leerzeichen und* Tabstopp Zeichen bestehen, die ignoriert werden. *Ziffern* sind eine oder mehrere Dezimalstellen. *Buchstaben* sind mindestens einer der Buchstaben "a" bis "z" (oder "a" bis "z"). Das erste Zeichen, das dieser Form nicht entspricht, beendet die Überprüfung. Wenn die *Basis* zwischen 2 und 36 ist, wird Sie als Basis der Zahl verwendet. Wenn *Base* den Wert 0 hat, werden die ersten Zeichen der Zeichenfolge, auf die von " *darsource* " verwiesen wird, zur Bestimmung der Basis verwendet. Wenn das erste Zeichen "0 " und das zweite Zeichen nicht "x" oder "X" ist, wird die Zeichenfolge als oktale ganze Zahl interpretiert. Wenn das erste Zeichen "0" und das zweite Zeichen nicht "x" oder "X" ist, wird die Zeichenfolge als hexadezimale ganze Zahl interpretiert. Wenn das erste Zeichen "1" bis "9 " ist, wird die Zeichenfolge als ganze Dezimalzahl interpretiert. Den Buchstaben „a“ bis „z“ (bzw. „A“ bis „Z“) werden die Werten 10 bis 35 zugewiesen. Es sind nur Buchstaben zulässig, deren zugewiesene Werte kleiner als *base* sind. Das erste Zeichen außerhalb des Bereichs der Basis beendet die Überprüfung. Wenn die *Basis* beispielsweise 0 und das erste überprüfte Zeichen "0" ist, wird eine ganze Oktalzahl angenommen und ein "8"-oder "9"-Zeichen beendet die Überprüfung. " **Strauch** " lässt ein Pluszeichen ( **+** ) oder ein Minuszeichen **-** () als Präfix zu. ein führendes Minuszeichen gibt an, dass der Rückgabewert negiert wird.
 
 ## <a name="requirements"></a>Anforderungen
 

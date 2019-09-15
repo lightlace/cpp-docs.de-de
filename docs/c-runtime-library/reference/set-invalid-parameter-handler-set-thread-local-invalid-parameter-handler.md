@@ -1,10 +1,10 @@
 ---
 title: _set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_invalid_parameter_handler
 - _set_thread_local_invalid_parameter_handler
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_invalid_parameter_handler
 - _set_invalid_parameter_handler
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _set_invalid_parameter_handler function
 - _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
-ms.openlocfilehash: 1df876d6df9327e817d5d2c401e0abe97ad7a548
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 090eb43289313f12b900e671df61f74e7b464872
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356510"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948497"
 ---
-# <a name="setinvalidparameterhandler-setthreadlocalinvalidparameterhandler"></a>_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
+# <a name="_set_invalid_parameter_handler-_set_thread_local_invalid_parameter_handler"></a>_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
 
 Legt eine Funktion fest, die aufzurufen ist, wenn die CRT ein ungültiges Argument erkennt.
 
@@ -51,7 +54,7 @@ _invalid_parameter_handler _set_thread_local_invalid_parameter_handler(
 
 ### <a name="parameters"></a>Parameter
 
-*pNew*<br/>
+*Pnew*<br/>
 Der Funktionszeiger auf den neuen Handler für ungültige Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -60,7 +63,7 @@ Ein Zeiger auf den Handler für ungültigen Parameter vor dem Aufruf.
 
 ## <a name="remarks"></a>Hinweise
 
-Viele C-Laufzeitfunktionen überprüfen die Gültigkeit der an sie übergebenen Argumente. Wenn ein ungültiges Argument übergeben wird, kann die Funktion Festlegen der **Errno** Fehlernummer oder einen Fehlercode zurückgeben. In solchen Fällen wird der Handler für ungültige Parameter ebenfalls aufgerufen. Die C-Laufzeit stellt einen globalen Standardhandler für ungültige Parameter bereit, der das Programm beendet und eine Laufzeitfehlermeldung anzeigt. Sie können die **_set_invalid_parameter_handler** Ihre eigene Funktion als der globaler Ungültiger parametertyphandler festgelegt. Die C-Laufzeitbibliothek unterstützt auch einen threadlokalen Handler für ungültige Parameter. Wenn ein Thread-lokalen parameterhandler in einem Thread festgelegt ist, mithilfe von **_set_thread_local_invalid_parameter_handler**, über den Thread aufgerufenen C-Laufzeitfunktionen diesen Handler verwenden, nicht den globalen Handler. Es kann jederzeit immer nur eine Funktion als globaler Handler für ungültige Argumente angegeben werden. Nur eine Funktion kann als threadlokaler Handler für ungültige Argumente pro Thread angegeben werden, aber verschiedene Threads können über unterschiedliche threadlokale Handler verfügen. Dadurch können Sie den in einem Teil des Codes verwendeten Handler ohne Auswirkung auf das Verhalten anderer Threads zu ändern.
+Viele C-Laufzeitfunktionen überprüfen die Gültigkeit der an sie übergebenen Argumente. Wenn ein ungültiges Argument ausgegeben wird, kann die Funktion die **errno** -Fehlernummer festlegen oder einen Fehlercode zurückgeben. In solchen Fällen wird der Handler für ungültige Parameter ebenfalls aufgerufen. Die C-Laufzeit stellt einen globalen Standardhandler für ungültige Parameter bereit, der das Programm beendet und eine Laufzeitfehlermeldung anzeigt. Sie können **_set_invalid_parameter_handler** verwenden, um Ihre eigene Funktion als den globalen Handler für ungültige Parameter festzulegen. Die C-Laufzeitbibliothek unterstützt auch einen threadlokalen Handler für ungültige Parameter. Wenn ein Thread lokaler Parameter Handler mithilfe von **_set_thread_local_invalid_parameter_handler**in einem Thread festgelegt wird, verwenden die C-Lauf Zeitfunktionen, die vom Thread aufgerufen werden, diesen Handler anstelle des globalen Handlers. Es kann jederzeit immer nur eine Funktion als globaler Handler für ungültige Argumente angegeben werden. Nur eine Funktion kann als threadlokaler Handler für ungültige Argumente pro Thread angegeben werden, aber verschiedene Threads können über unterschiedliche threadlokale Handler verfügen. Dadurch können Sie den in einem Teil des Codes verwendeten Handler ohne Auswirkung auf das Verhalten anderer Threads zu ändern.
 
 Wenn die Laufzeit die Funktion für ungültige Parameter aufruft, bedeutet dies normalerweise, dass ein nicht behebbarer Fehler aufgetreten ist. Die Funktion Handler für ungültige Parameter sollte alle Daten speichern, bei denen dies möglich ist, und dann abbrechen. Sie sollte die Steuerung nur dann an die Funktion "main" zurückgeben, wenn Sie sicher sind, dass der Fehler behebbar ist.
 
@@ -76,7 +79,7 @@ void _invalid_parameter(
 );
 ```
 
-Die *Ausdruck* Argument ist die Darstellung einer breiten Zeichenfolge des Argumentausdrucks, der den Fehler ausgelöst hat. Die *Funktion* Argument ist der Name der CRT-Funktion, die das ungültige Argument empfangen. Die *Datei* Argument ist der Name der CRT-Quelldatei, die die Funktion enthält. Die *Zeile* Argument ist die Nummer der Zeile in dieser Datei. Das letzte Argument ist reserviert. Alle Parameter haben den Wert **NULL** , wenn eine Debugversion der CRT-Bibliothek verwendet wird.
+Das *Expression* -Argument ist eine Breite Zeichen folgen Darstellung des Argument Ausdrucks, der den Fehler ausgelöst hat. Das *Function* -Argument ist der Name der CRT-Funktion, die das ungültige Argument empfangen hat. Das *Datei* Argument ist der Name der CRT-Quelldatei, die die Funktion enthält. Das *Zeilen* Argument ist die Zeilennummer in dieser Datei. Das letzte Argument ist reserviert. Alle Parameter haben den Wert **null** , es sei denn, es wird eine Debugversion der CRT-Bibliothek verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,7 +87,7 @@ Die *Ausdruck* Argument ist die Darstellung einer breiten Zeichenfolge des Argum
 |-------------|---------------------|
 |**_set_invalid_parameter_handler**, **_set_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> oder \<stdlib.h>|
 
-Die **_set_invalid_parameter_handler** und **_set_thread_local_invalid_parameter_handler** Funktionen sind Microsoft-spezifisch. Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die Funktionen **_set_invalid_parameter_handler** und **_set_thread_local_invalid_parameter_handler** sind Microsoft-spezifisch. Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

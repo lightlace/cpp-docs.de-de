@@ -1,9 +1,9 @@
 ---
 title: _getw
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getw
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getw
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: 615d3ac9bdc73ad200368eaeabf7c84951bc91ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad03c92ce90542ecae13609ee228ad094f64fc07
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157629"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954875"
 ---
-# <a name="getw"></a>_getw
+# <a name="_getw"></a>_getw
 
 Ruft eine Ganzzahl aus einem Stream ab.
 
@@ -49,11 +52,11 @@ Zeiger auf die **FILE**-Struktur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_getw** gibt den ganzzahligen Wert zu lesen. Der Rückgabewert **EOF** gibt an, einen Fehler oder ein Dateiende. Aber da die **EOF** Wert ist auch ein legitimer Ganzzahlwert, verwenden Sie **Feof** oder **Ferror** um eine End-of-File oder eine fehlerbedingung zu überprüfen. Wenn *Stream* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt **EOF**.
+**_getw** gibt den gelesenen ganzzahligen Wert zurück. Der Rückgabewert von **EOF** gibt entweder einen Fehler oder ein Dateiende an. Da der **EOF** -Wert auch ein berechtigter ganzzahliger Wert ist, verwenden Sie " **feof** " oder " **ferror** ", um eine dateiendebedingung oder eine Fehlerbedingung zu überprüfen. Wenn der Stream **null**ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird **errno** auf **EINVAL** festgelegt, und die Funktion gibt **EOF**zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_getw** Funktion liest den nächsten Binärwert des Typs **Int** aus der Datei zugeordneten *Stream* und erhöht den zugeordneten Dateizeiger (sofern vorhanden), um zu zeigen auf das nächste ungelesene Zeichen. **_getw** allen speziellen elementausrichtungen im Stream nicht vorausgesetzt. Probleme beim Portieren können beim Auftreten **_getw** da die Größe der **Int** Typ und die Anordnung der Bytes in der **Int** Typ über Systeme hinweg zu unterscheiden.
+Die **_getw** -Funktion liest den nächsten binären Wert vom Typ " **int** " aus der Datei, die dem *Stream* zugeordnet ist, und erhöht den zugeordneten Dateizeiger (sofern vorhanden), um auf das nächste ungelesene Zeichen zu zeigen. **_getw** nimmt keine besondere Ausrichtung von Elementen im Stream an. Probleme beim Portieren können mit **_getw** auftreten, da die Größe des **int** -Typs und die Reihenfolge von Bytes innerhalb des Typs " **int** " zwischen Systemen unterschiedlich sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -98,14 +101,14 @@ int main( void )
 }
 ```
 
-### <a name="input-crtgetwtxt"></a>Eingabe: crt_getw.txt
+### <a name="input-crt_getwtxt"></a>Eingabe: crt_getw.txt
 
 ```Input
 Line one.
 Line two.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 First data word in file: 0x656e694c

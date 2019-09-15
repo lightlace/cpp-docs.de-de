@@ -1,13 +1,13 @@
 ---
 title: snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _snwprintf
 - _snprintf
 - _snprintf_l
 - _snwprintf_l
 - snprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _snprintf
 - snprintf_l
@@ -48,12 +51,12 @@ helpviewer_keywords:
 - sntprintf function
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
-ms.openlocfilehash: 8f7ce565467321c8e2ea5c80cae9ef41297ccaed
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a1d11efebad57bdcf44ca959384f449640dad701
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499516"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948006"
 ---
 # <a name="snprintf-_snprintf-_snprintf_l-_snwprintf-_snwprintf_l"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 
@@ -151,11 +154,11 @@ Weitere Informationen finden Sie unter [Format Specification Syntax: printf and 
 
 Bei allen Funktionen, wenn **len** < *count*, **len** -Zeichen im *Puffer*gespeichert werden, wird ein NULL-Terminator angehängt, und **len** wird zurückgegeben.
 
-Die **snprintf** -Funktion verkürzt die Ausgabe, wenn **len** größer oder gleich der *Anzahl*ist, indem ein NULL-Terminator bei `buffer[count-1]`platziert wird. Der zurückgegebene Wert ist **len**, die Anzahl der Zeichen, die ausgegeben worden wären , wenn die Anzahl groß genug wäre. Die **snprintf** -Funktion gibt einen negativen Wert zurück, wenn ein Codierungsfehler auftritt.
+Die **snprintf** -Funktion verkürzt die Ausgabe, wenn **len** größer oder gleich der *Anzahl*ist, indem ein NULL-Terminator bei `buffer[count-1]`platziert wird. Der zurückgegebene Wert ist **len**, die Anzahl der Zeichen, die ausgegeben worden wären *, wenn die Anzahl groß* genug wäre. Die **snprintf** -Funktion gibt einen negativen Wert zurück, wenn ein Codierungsfehler auftritt.
 
 Für alle anderen Funktionen als **snprintf**, wenn **len** = *count*, **len** -Zeichen im *Puffer*gespeichert werden, wird kein NULL-Terminator angehängt, und **len** wird zurückgegeben. Wenn die Anzahl der Anzahl der Zeichen im Puffer gespeichert ist, wird kein NULL-Terminator angefügt, und ein negativer Wert wird zurückgegeben. > 
 
-Wenn *buffer* ein NULL-Zeiger ist und *count* 0 (null) ist, wird **len** als Anzahl von Zeichen zurückgegeben, die zum Formatieren der Ausgabe erforderlich sind, ohne das abschließende Null-Zeichen. Um einen erfolgreichen Rückruf mit denselben *Argument* -und Gebiets Schema Parametern durchzuführen, weisen Sie einen Puffer zu, der mindestens **len** + 1 Zeichen enthält.
+Wenn *buffer* ein NULL-Zeiger ist und *count* 0 (null) ist, wird **len** als Anzahl von Zeichen zurückgegeben, die zum Formatieren der Ausgabe erforderlich sind, ohne das abschließende Null-Zeichen. Um einen erfolgreichen Rückruf mit denselben *Argument* *-und* Gebiets Schema Parametern durchzuführen, weisen Sie einen Puffer zu, der mindestens **len** + 1 Zeichen enthält.
 
 Wenn der *Puffer* ein NULL-Zeiger ist und *count* ungleich NULL ist, oder wenn *Format* ein NULL-Zeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen-1 zurück und legen **errno** auf **EINVAL**fest.
 

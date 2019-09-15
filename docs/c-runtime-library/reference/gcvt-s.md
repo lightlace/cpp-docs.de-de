@@ -1,9 +1,9 @@
 ---
 title: _gcvt_s
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _gcvt_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _gcvt_s
 - gcvt_s
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: 168e0657150d072bbe41cd0ad6e914ca1f53e512
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ecb6fe105d8a976979f91d38c9e536b10989310
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332293"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956112"
 ---
-# <a name="gcvts"></a>_gcvt_s
+# <a name="_gcvt_s"></a>_gcvt_s
 
 Konvertiert einen Gleitkommawert in eine Zeichenfolge. Dies ist eine sicherere Version von [_gcvt](gcvt.md), wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.
 
@@ -77,19 +80,19 @@ Null, wenn erfolgreich. Tritt ein Fehler aufgrund eines ungültigen Parameters a
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|*buffer*|*sizeInBytes*|*value*|*Ziffern*|Zurück|Wert in *Puffer*|
+|*buffer*|*sizeInBytes*|*value*|*Ziffern*|Zurück|Wert im *Puffer*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
 |**NULL**|any|any|any|**EINVAL**|Nicht geändert.|
-|Nicht **NULL** (zeigt auf gültigen Speicher)|Null|any|any|**EINVAL**|Nicht geändert.|
-|Nicht **NULL** (zeigt auf gültigen Speicher)|any|any|>= *sizeInBytes*|**EINVAL**|Nicht geändert.|
+|Not **null** (zeigt auf gültigen Speicher)|Null|any|any|**EINVAL**|Nicht geändert.|
+|Not **null** (zeigt auf gültigen Speicher)|any|any|>= *sizeInBytes*|**EINVAL**|Nicht geändert.|
 
 **Sicherheitsprobleme**
 
-**_gcvt_s** kann eine zugriffsverletzung erzeugen, wenn *Puffer* nicht auf gültigen Speicher verweist und nicht **NULL**.
+**_gcvt_s** kann eine Zugriffsverletzung generieren, wenn der *Puffer* nicht auf einen gültigen Speicher verweist und nicht **null**ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_gcvt_s** Funktion konvertiert ein Gleitkomma *Wert* in eine Zeichenfolge (enthält Dezimaltrennzeichen und einem möglichen Zeichen-Byte) und speichert die Zeichenfolge in *Puffer* . *Puffer* muss groß genug für den konvertierten Wert und ein abschließendes Nullzeichen, das automatisch angefügt wird. Ein Puffer der Länge **_CVTBUFSIZE** reicht für alle Gleitkommawerte Wert. Wenn eine Puffergröße *Ziffern* + 1 verwendet wird, wird die Funktion überschreibt nicht das Ende des Puffers, daher unbedingt einen ausreichenden Puffer für diesen Vorgang übergeben. **_gcvt_s** versucht, erzeugen *Ziffern* -Ziffern im Dezimalformat. Wenn dies nicht möglich ist, erzeugt es *Ziffern* -Ziffern im Exponentialformat. Bei der Konvertierung können Nachstellen von Nullen unterdrückt werden.
+Die **_gcvt_s** -Funktion konvertiert einen Gleit Komma *Wert* in eine Zeichenfolge (mit einem Dezimaltrennzeichen und einem möglichen Byte) und speichert die Zeichenfolge im *Puffer*. der *Puffer* sollte groß genug sein, um den konvertierten Wert und ein abschließendes NULL-Zeichen zu berücksichtigen, das automatisch angefügt wird. Ein Puffer der Länge **_CVTBUFSIZE** ist für alle Gleit Komma Werte ausreichend. Wenn eine Puffergröße von *Ziffern* + 1 verwendet wird, überschreibt die Funktion das Ende des Puffers nicht. Stellen Sie daher sicher, dass Sie für diesen Vorgang einen ausreichenden Puffer angeben. **_gcvt_s** versucht, *Ziffern* Ziffern im Dezimal Format zu liefern. Wenn dies nicht möglich ist, werden *Ziffern* Ziffern im exponentiellen Format erzeugt. Bei der Konvertierung können Nachstellen von Nullen unterdrückt werden.
 
 Die Verwendung dieser Funktion in C++ wird durch eine Überladung (als Vorlagen vorhanden) vereinfacht. Eine Überladung kann automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

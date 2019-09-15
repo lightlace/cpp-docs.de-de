@@ -1,14 +1,14 @@
 ---
 title: strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strncat
 - _strncat_l
 - _mbsncat
 - _mbsncat_l
 - wcsncat
 - wcsncat_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsncat_l
 - _wcsncat_l
@@ -58,12 +61,12 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 2165ab1c379c89be658341b154f2d5823b2add0b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f27c2cb9b59d789e34da19b531a20d13475e62ee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499436"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947347"
 ---
 # <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
@@ -143,10 +146,10 @@ Gibt einen Zeiger zur Zielzeichenfolge zurück. Kein Rückgabewert ist zur Fehle
 
 ## <a name="remarks"></a>Hinweise
 
-Die " **strinncat** "-Funktion fügt höchstens die ersten *Anzahl* Zeichen von " *darsource* " an " *strandest*" an. Das Anfangs Zeichen von "grasource" überschreibt das abschließende Null-Zeichen von " *strandest*". Wenn ein NULL-Zeichen in "darsource" angezeigt wird, bevor *count* -Zeichen angehängt werden, fügt " **strinncat** " alle Zeichen von " *strausource*" bis zum NULL-Zeichen an. Wenn *count* größer als die Länge von "-" ist, wird die Länge von "chansource" anstelle von " *count*" verwendet. In jedem Fall wird die Ergebniszeichenfolge mit einem NULL-Zeichen beendet. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
+Die " **strinncat** "-Funktion fügt höchstens die ersten *Anzahl* Zeichen von " *darsource* " an " *strandest*" an. Das Anfangs Zeichen von " *grasource* " überschreibt das abschließende Null-Zeichen von " *strandest*". Wenn ein NULL-Zeichen in " *darsource* " angezeigt wird, bevor *count* -Zeichen angehängt werden, fügt " **strinncat** " alle Zeichen von " *strausource*" bis zum NULL-Zeichen an. Wenn *count* größer als die Länge von "-" *ist, wird die Länge von "* *chansource* " anstelle von " *count*" verwendet. In jedem Fall wird die Ergebniszeichenfolge mit einem NULL-Zeichen beendet. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
 
 > [!IMPORTANT]
-> " **strauncat** " prüft nicht, ob ausreichendSpeicherplatz in der Daher ist dies eine mögliche Ursache von Pufferüberläufen. Beachten Sie, dass *count* die Anzahl der angefügten Zeichen beschränkt. Es handelt sich nicht um eine Begrenzung der Größe von " *strandest*". Siehe das unten aufgeführte Beispiel. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).
+> " **strauncat** " prüft *nicht, ob*ausreichend Speicherplatz in der Daher ist dies eine mögliche Ursache von Pufferüberläufen. Beachten Sie, dass *count* die Anzahl der angefügten Zeichen beschränkt. Es handelt sich nicht um eine Begrenzung der Größe von " *strandest*". Siehe das unten aufgeführte Beispiel. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 **wcsncat** und **_mbsncat** sind breit Zeichen-und multibytezeichenversionen von " **strinncat**". Die Zeichen folgen Argumente und der Rückgabewert von **wcsncat** sind Zeichen folgen mit breit Zeichen. bei den **_mbsncat** handelt es sich um Multibyte-Zeichen folgen. Diese drei Funktionen verhalten sich andernfalls identisch.
 

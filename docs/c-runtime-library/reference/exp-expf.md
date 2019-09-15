@@ -1,11 +1,11 @@
 ---
 title: exp, expf, expl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - expf
 - expl
 - exp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _expl
 - expf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: b9fb38adcc442e60864ec632cd92793f16e47502
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 380f3e861b3ae1ba2f57aa781c32829771612b9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288187"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941636"
 ---
 # <a name="exp-expf-expl"></a>exp, expf, expl
 
@@ -64,24 +67,24 @@ long double expl(
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Der Gleitkommadatentyp Wert exponentiate den natürlichen Logarithmus zur Basis *e* durch.
+Der Gleit Komma Wert, der die natürliche Logarithmus Basis *e* durch exponentiell berechnen soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **"exp"** Funktionen zurück, den Exponentialwert des gleitkommaparameters, *x*, wenn erfolgreich. Das Ergebnis ist also *e*<sup>*x*</sup>, wobei *e* ist die Basis des natürlichen Logarithmus. Bei einem Überlauf der Funktion INF (Unendlichkeit) zurück, bei Unterlauf **"exp"** gibt 0 zurück.
+Die **Exp** -Funktionen geben den Exponentialwert des Gleit Komma Parameters *x*zurück, wenn erfolgreich. Das Ergebnis ist " *e*<sup>*x*</sup>", wobei " *e* " die Basis des natürlichen Logarithmus ist. Bei einem Überlauf gibt die Funktion inf (unendlich) zurück. bei einem Unterlauf gibt **Exp** 0 zurück.
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
-|± Stilles NaN, unbestimmt|Keiner|_DOMAIN|
+|± Quiet NaN, unbestimmt|None|_DOMAIN|
 |± Unendlich|INVALID|_DOMAIN|
 |x ≥ 7.097827e+002|INEXACT+OVERFLOW|OVERFLOW|
 |X ≤ -7.083964e+002|INEXACT+UNDERFLOW|UNDERFLOW|
 
-Die **"exp"** Funktion verfügt über eine Implementierung, Streaming SIMD Extensions 2 (SSE2) verwendet. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](set-sse2-enable.md).
+Die **Exp** -Funktion verfügt über eine Implementierung, die Streaming SIMD Extensions 2 (SSE2) verwendet. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von aufrufen können **"exp"** , nehmen eine **"float"** oder **long double** Argument. In einem C-Programm **"exp"** immer Double und gibt eine **doppelte**.
+C++ermöglicht überladen, sodass Sie über Ladungen von **Exp** aufzurufen können, die ein **float** -oder **long Double** -Argument akzeptieren. In einem C-Programm nimmt **Exp** immer einen **Double**-Wert an und gibt ihn zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

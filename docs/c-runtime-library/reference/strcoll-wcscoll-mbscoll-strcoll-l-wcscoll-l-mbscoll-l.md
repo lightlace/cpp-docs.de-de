@@ -1,14 +1,14 @@
 ---
 title: strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcscoll
 - _mbscoll
 - _mbscoll_l
 - strcoll
 - _strcoll_l
 - _wcscoll_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcscoll
 - _mbscoll
@@ -43,19 +46,19 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: 900a7540-c7ec-4c2f-b292-7a85f63e3fe8
-ms.openlocfilehash: ae72b4cbb2b001a332d41a74883a0e2a9d20a181
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7519b8f41d77ed668bb7da1e8ced18ee13c0a5bf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354209"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957879"
 ---
-# <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
+# <a name="strcoll-wcscoll-_mbscoll-_strcoll_l-_wcscoll_l-_mbscoll_l"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 
 Vergleicht Zeichenfolgen mithilfe des aktuellen Gebietsschemas oder einer angegebenen LC_COLLATE-Konvertierungszustandskategorie.
 
 > [!IMPORTANT]
-> **_mbscoll** und **_mbscoll_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscoll** und **_mbscoll_l** können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -99,7 +102,7 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt einen Wert, der angibt, der Beziehung zwischen *string1* zu *Zeichenfolge2*wie folgt.
+Jede dieser Funktionen gibt einen Wert zurück, der die Beziehung zwischen *Zeichenfolge1* und *Zeichenfolge2*wie folgt angibt.
 
 |Rückgabewert|Verhältnis von string1 zu string2|
 |------------------|----------------------------------------|
@@ -107,15 +110,15 @@ Jede dieser Funktionen gibt einen Wert, der angibt, der Beziehung zwischen *stri
 |0|*Zeichenfolge1* identisch mit *Zeichenfolge2*|
 |> 0|*Zeichenfolge1* größer als *Zeichenfolge2*|
 
-Jede dieser Funktionen gibt **_NLSCMPERROR** bei einem Fehler. Verwendung von **_NLSCMPERROR**, entweder Zeichenfolge enthalten. H oder MBSTRING. H. **Wcscoll** kann fehlschlagen, wenn *string1* oder *Zeichenfolge2* ist **NULL** bzw. breitzeichencodes außerhalb der Domäne der Sortierreihenfolge enthält. Wenn ein Fehler auftritt, **Wcscoll** kann festgelegt **Errno** zu **EINVAL**. Zu prüfen, ein Fehler bei einem Aufruf von **Wcscoll**legen **Errno** auf 0, und klicken Sie dann überprüfen **Errno** nach dem Aufruf **Wcscoll**.
+Jede dieser Funktionen gibt **_NLSCMPERROR** bei einem Fehler zurück. Um **_NLSCMPERROR**zu verwenden, schließen Sie beide Zeichen folgen ein. H oder mbstring. Micha. **wcscoll** kann fehlschlagen, wenn entweder *Zeichenfolge1* oder *Zeichenfolge2* **null** ist oder Code mit breit Zeichen außerhalb der Domäne der Sortierreihenfolge enthält. Wenn ein Fehler auftritt, kann **wcscoll** **errno** auf **EINVAL**festlegen. Um einen Aufruf von **wcscoll**auf einen Fehler zu überprüfen, legen Sie **errno** auf 0 fest, und überprüfen Sie dann **errno** , nachdem Sie **wcscoll**aufgerufen haben.
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen vergleicht Groß-/Kleinschreibung *string1* und *Zeichenfolge2* entsprechend der derzeit verwendeten Codepage. Diese Funktionen sollten nur verwendet werden, wenn es in der aktuellen Codepage einen Unterschied zwischen der Reihenfolge des Zeichensatzes und der lexikografischen Reihenfolge gibt, und dieser Unterschied für den Zeichenfolgenvergleich relevant ist.
+Jede dieser Funktionen führt einen Vergleich von *Zeichenfolge1* und *Zeichenfolge2* entsprechend der derzeit verwendeten Codepage durch. Diese Funktionen sollten nur verwendet werden, wenn es in der aktuellen Codepage einen Unterschied zwischen der Reihenfolge des Zeichensatzes und der lexikografischen Reihenfolge gibt, und dieser Unterschied für den Zeichenfolgenvergleich relevant ist.
 
-Mit allen diesen Funktionen werden ihre Parameter überprüft. Wenn entweder *string1* oder *Zeichenfolge2* ist ein null-Zeiger oder wenn *Anzahl* ist größer als **INT_MAX**, wird der Handler für ungültige Parameter aufgerufen. , siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **_NLSCMPERROR** und **Errno** zu **EINVAL**.
+Mit allen diesen Funktionen werden ihre Parameter überprüft. Wenn entweder *Zeichenfolge1* oder *Zeichenfolge2* ein NULL-Zeiger ist, oder wenn *count* größer als **INT_MAX**ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md) Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen **_NLSCMPERROR** zurück und legen **errno** auf **EINVAL**fest.
 
-Der Vergleich der beiden Zeichenfolgen ist ein gebietsschemaabhängiger Vorgang, da jedes Gebietsschema andere Regeln für die Sortierung von Zeichen besitzt. Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Threadgebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l** -Suffix sind beinahe identisch, mit der entsprechenden Funktion ohne das Suffix, verwenden sie das Gebietsschema als Parameter anstelle des aktuellen Gebietsschemas übergeben. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Vergleich der beiden Zeichenfolgen ist ein gebietsschemaabhängiger Vorgang, da jedes Gebietsschema andere Regeln für die Sortierung von Zeichen besitzt. Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Thread Gebiets Schema für dieses vom Gebiets Schema abhängige Verhalten. die Versionen mit dem Suffix **_l** sind mit der entsprechenden Funktion ohne das-Suffix identisch, verwenden jedoch das übergebene Gebiets Schema als Parameter anstelle des aktuellen Gebiets Schemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

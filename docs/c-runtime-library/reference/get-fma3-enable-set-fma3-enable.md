@@ -1,15 +1,18 @@
 ---
 title: _get_FMA3_enable, _set_FMA3_enable
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _get_FMA3_enable
 - _set_FMA3_enable
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _get_FMA3_enable
 - _set_FMA3_enable
@@ -19,16 +22,16 @@ helpviewer_keywords:
 - _get_FMA3_enable
 - _set_FMA3_enable
 ms.assetid: 4c1dc4bc-e86b-451b-9211-5a2ba6c98ee4
-ms.openlocfilehash: 19eabc3b5a11246d5b0056bdafbb169e2a7de9f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e18db90779ed59a6ca6976f69a5993d94d61c6bc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332194"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955931"
 ---
-# <a name="getfma3enable-setfma3enable"></a>_get_FMA3_enable, _set_FMA3_enable
+# <a name="_get_fma3_enable-_set_fma3_enable"></a>_get_FMA3_enable, _set_FMA3_enable
 
-Übernimmt oder bestimmt ein Flag, das angibt, ob die Gleitkomma Transzendente Math-Bibliotheksfunktionen FMA3-Anweisungen im kompilierten Code für X64 verwenden Plattformen.
+Ruft ein Flag ab, das angibt, ob die Funktionen der transendental-Gleit Komma Bibliothek FMA3 im für x64-Plattformen kompilierten Code verwenden, oder legt dieses fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,30 +42,30 @@ int _get_FMA3_enable();
 
 ### <a name="parameters"></a>Parameter
 
-*flag*<br/>
-Auf 1 festgelegt ist, aktivieren Sie die FMA3-Implementierungen, der das Gleitkomma Transzendente Math-Bibliotheksfunktionen auf X64 Plattformen, oder 0, um die Implementierungen zu verwenden, die keine FMA3-Anweisungen verwenden.
+*ssen*<br/>
+Legen Sie den Wert auf 1 fest, um die FMA3-Implementierungen der Funktionen der transendental-Gleit Komma Bibliothek auf x64-Plattformen zu aktivieren, oder auf 0, um die Implementierungen zu verwenden, die keine FMA3-Anweisungen verwenden.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein Wert ungleich NULL, wenn die FMA3-Implementierungen, der das Gleitkomma Transzendente Math-Bibliotheksfunktionen aktiviert sind. Andernfalls 0 (null).
+Ein Wert ungleich 0 (null), wenn die FMA3-Implementierungen der Funktionen der transendental-Gleit Komma Bibliothek aktiviert sind. Andernfalls 0 (null).
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die **_set_FMA3_enable** Funktion zu aktivieren oder deaktivieren Sie die Verwendung von FMA3-Anweisungen in die Transzendente mathematische Gleitkommafunktionen in der CRT-Bibliothek. Der Rückgabewert gibt die Implementierung verwendet, nach der Änderung wieder. Wenn die CPU FMA3-Anweisungen nicht unterstützt, diese Funktion nicht aktivieren, in der Bibliothek und der Rückgabewert ist 0 (null). Verwendung **_get_FMA3_enable** auf den aktuellen Status der Bibliothek abzurufen. Standardmäßig auf X64 Plattformen, die die CRT-Startcode erkennt, ob die CPU FMA3-Anweisungen unterstützt und aktiviert oder die FMA3-Implementierungen in der Bibliothek deaktiviert.
+Verwenden Sie die **_set_FMA3_enable** -Funktion, um die Verwendung von FMA3-Anweisungen in den transendental-Gleit Komma Funktionen in der CRT-Bibliothek zu aktivieren oder zu deaktivieren. Der Rückgabewert gibt die-Implementierung an, die nach der Änderung verwendet wird. Wenn die CPU FMA3-Anweisungen nicht unterstützt, kann diese Funktion Sie nicht in der Bibliothek aktivieren, und der Rückgabewert ist 0 (null). Verwenden Sie **_get_FMA3_enable** , um den aktuellen Zustand der Bibliothek zu erhalten. Standardmäßig erkennt der CRT-Startcode auf x64-Plattformen, ob die CPU FMA3-Anweisungen unterstützt, und aktiviert oder deaktiviert die FMA3-Implementierungen in der Bibliothek.
 
-Da die FMA3-Implementierungen verschiedene Algorithmen verwenden, möglicherweise geringfügige Unterschiede in das Ergebnis von Berechnungen Observable-Objekt, wenn die FMA3-Implementierungen aktiviert oder deaktiviert sind, oder zwischen Computern, die oder FMA3 nicht unterstützt. Weitere Informationen finden Sie unter [Gleitkomma-Migrationsprobleme](../../porting/floating-point-migration-issues.md).
+Da die FMA3-Implementierungen verschiedene Algorithmen verwenden, sind geringfügige Unterschiede im Ergebnis von Berechnungen möglicherweise Observable, wenn die FMA3-Implementierungen aktiviert oder deaktiviert werden, oder zwischen Computern, die FMA3 unterstützen oder nicht unterstützen. Weitere Informationen finden Sie unter [Probleme](../../porting/floating-point-migration-issues.md)bei der Migration von Gleit Komma Werten.
 
 ## <a name="requirements"></a>Anforderungen
 
-Die **_set_FMA3_enable** und **_get_FMA3_enable** Funktionen sind nur verfügbar, in der X64 CRT-Versionen.
+Die **_set_FMA3_enable** -Funktion und die **_get_FMA3_enable** -Funktion sind nur in den x64-Versionen der CRT verfügbar.
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
-|**_set_FMA3_enable**, **_get_FMA3_enable**| C: \<math.h><br />C++: \<Cmath > oder \<math.h >|
+|**_set_FMA3_enable**, **_get_FMA3_enable**| C: \<math.h><br />C++: \<cmath > oder \<Math. h >|
 
-Die **_set_FMA3_enable** und **_get_FMA3_enable** Funktionen sind Microsoft-spezifisch. Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die Funktionen **_set_FMA3_enable** und **_get_FMA3_enable** sind Microsoft-spezifisch. Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)<br/>
+[Gleit Komma Unterstützung](../../c-runtime-library/floating-point-support.md)<br/>
 [Gleitkomma-Migrationsprobleme](../../porting/floating-point-migration-issues.md)<br/>

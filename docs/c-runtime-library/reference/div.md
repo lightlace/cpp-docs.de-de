@@ -1,9 +1,9 @@
 ---
-title: div-Element Ldiv, lldiv
+title: div, ldiv, lldiv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - div
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - div
 helpviewer_keywords:
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-ms.openlocfilehash: 0ee1b3b6a5d7b15470ffe1e667b4077d1f9581e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b40fa0c4cc9cdf0c0de0f6af21da04b0c70369f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339259"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937694"
 ---
-# <a name="div-ldiv-lldiv"></a>div-Element Ldiv, lldiv
+# <a name="div-ldiv-lldiv"></a>div, ldiv, lldiv
 
 Berechnet den Quotienten und den Rest von zwei ganzzahligen Werten.
 
@@ -66,21 +69,21 @@ lldiv_t div(
 
 ### <a name="parameters"></a>Parameter
 
-*numer*<br/>
+*Zahl*<br/>
 Der Zähler.
 
-*denom*<br/>
+*Denom*<br/>
 Der Nenner.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Div** mithilfe von Argumenten des Typs aufgerufen **Int** gibt eine Struktur des Typs **Div_t**, die besteht aus den Quotienten und den Rest. Der Rückgabewert mit Argumenten vom Typ **lange** ist **Ldiv_t**, und der Rückgabewert mit Argumenten vom Typ **lange** **lange** ist **Lldiv_t**. **Div_t**, **Ldiv_t**, und **Lldiv_t** in definiert \<stdlib.h >.
+mithilfe von Argumenten des Typs **int** aufgerufene **div** gibt eine Struktur vom Typ **div_t**zurück, die den Quotienten und den Rest enthält. Der Rückgabewert mit Argumenten vom Typ **Long** ist **ldiv_t**, und der Rückgabewert mit Argumenten vom Typ **Long** **Long** ist **lldiv_t**. **div_t**, **ldiv_t**und **lldiv_t** sind in \<STDLIB. h > definiert.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Div** -Funktion teilt *Anzahl* von *Denom* und berechnet dadurch den Quotienten und den Rest. Die [Div_t](../../c-runtime-library/standard-types.md) Struktur enthält den Quotienten **Quot**, und den Rest **Rem**. Das Zeichen des Quotienten entspricht dem Zeichen des mathematischen Quotienten. Der absolute Wert ist die größte ganze Zahl, die kleiner ist als der absolute Wert des mathematischen Quotienten. Wenn der Nenner 0 ist, wird das Programm mit einer Fehlermeldung beendet.
+Die **div** -Funktion dividiert den *Zahl* durch *denom* und berechnet dadurch den Quotienten und den Rest. Die [div_t](../../c-runtime-library/standard-types.md) -Struktur enthält den Quotienten, **quot**und den Rest, **REM**. Das Zeichen des Quotienten entspricht dem Zeichen des mathematischen Quotienten. Der absolute Wert ist die größte ganze Zahl, die kleiner ist als der absolute Wert des mathematischen Quotienten. Wenn der Nenner 0 ist, wird das Programm mit einer Fehlermeldung beendet.
 
-Die Überladungen der **Div** , die Argumente des Typs annehmen **lange** oder **lange** **lange** sind nur für C++-Code verfügbar. Die Rückgabetypen [Ldiv_t](../../c-runtime-library/standard-types.md) und [Lldiv_t](../../c-runtime-library/standard-types.md) enthält Member **Quot** und **Rem**, die die gleiche Bedeutung wie die Elemente der haben**Div_t**.
+Die über Ladungen von **div** , die Argumente vom Typ " **Long** " oder " **Long** **Long** " C++ akzeptieren, sind nur für Code verfügbar. Die Rückgabe Typen [ldiv_t](../../c-runtime-library/standard-types.md) und [lldiv_t](../../c-runtime-library/standard-types.md) enthalten die Member **quot** und **REM**, die die gleiche Bedeutung wie die Member von **div_t**haben.
 
 ## <a name="requirements"></a>Anforderungen
 

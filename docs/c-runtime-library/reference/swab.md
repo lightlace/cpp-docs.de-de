@@ -1,10 +1,10 @@
 ---
 title: _swab
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _swab
 - stdlib/_swab
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _swab
 - stdlib/_swab
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-ms.openlocfilehash: 64753383bcb94947e6b413b5f55ac6e2d9c7dbca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0faba55c42023f4d66adae68de6be2c1ab009a0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245504"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946293"
 ---
-# <a name="swab"></a>_swab
+# <a name="_swab"></a>_swab
 
 Tauscht Bytes.
 
@@ -60,13 +63,13 @@ Anzahl der zu kopierenden und tauschender Bytes.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Swab** Funktion gibt keinen Wert zurück. Legt die Funktion **Errno** zu **EINVAL** Wenn entweder die *Src* oder *Dest* Zeiger null ist oder *n* liegt als 0 (null), und der ungültige Parameter Handler wird aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
+Die Funktion " **Swap** " gibt keinen Wert zurück. Die-Funktion legt **errno** auf **EINVAL** fest, wenn der *src* -oder *dest* -Zeiger NULL ist oder *n* kleiner als 0 (null) ist und der Handler für ungültige Parameter aufgerufen wird, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben.
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn *n* gerade ist, die **_swab** -Funktion kopiert *n* Bytes vom *Src*, tauscht jedes Paar von benachbarten Bytes und speichert das Ergebnis in *Dest*. Wenn *n* ungerade ist, **_swab** kopiert und tauscht die erste *n*-1 Byte der *Src*, und das letzte Byte wird nicht kopiert. Die **_swab** Funktion wird in der Regel verwendet, um binäre Daten für die Übertragung auf einen Computer vorzubereiten, die eine andere Bytereihenfolge verwendet.
+Wenn *n* gleich ist, kopiert die **_swab** -Funktion *n* Bytes aus *src*, tauscht die einzelnen Paare von angrenzenden Bytes aus und speichert das Ergebnis am *dest*. Wenn *n* ungerade ist, kopiert **_swab** die ersten *n*-1 Byte von *src*, und das endgültige Byte wird nicht kopiert. Die **_swab** -Funktion wird normalerweise verwendet, um Binärdaten für die Übertragung auf einen Computer vorzubereiten, der eine andere Byte Reihenfolge verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 

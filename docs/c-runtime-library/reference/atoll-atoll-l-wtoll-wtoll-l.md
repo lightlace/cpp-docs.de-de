@@ -1,12 +1,12 @@
 ---
 title: atoll, _atoll_l, _wtoll, _wtoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wtoll
 - _atoll_l
 - _wtoll_l
 - atoll
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tstoll_l
 - _wtoll
@@ -33,16 +36,16 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: 7933b3e25185b5abdbd10c1b3fd616742bb28f92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1b5fca9c3428bce26a8a40cf8271760fa97b10b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341183"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939480"
 ---
-# <a name="atoll-atolll-wtoll-wtolll"></a>atoll, _atoll_l, _wtoll, _wtoll_l
+# <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
-Konvertiert eine Zeichenfolge in eine **lange** **lange** ganze Zahl.
+Konvertiert eine Zeichenfolge in eine **lange** **ganze Zahl** .
 
 ## <a name="syntax"></a>Syntax
 
@@ -73,27 +76,27 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede Funktion gibt die **lange** **lange** -Wert, der erstellt wird, indem die Eingabezeichen als Zahl interpretiert. Der Rückgabewert für **Atoll** ist 0, wenn die Eingabe auf einen Wert dieses Typs umgewandelt werden kann.
+Jede Funktion gibt den **Long** **Long** -Wert zurück, der erzeugt wird, indem die Eingabezeichen als Zahl interpretiert werden. Der Rückgabewert für das **Atoll** ist 0, wenn die Eingabe nicht in einen Wert dieses Typs konvertiert werden kann.
 
-Bei einem Überlauf mit großen positiven ganzzahligen Werten **Atoll** gibt **LLONG_MAX**, und für den Überlauf mit großen negativen ganzzahligen Werten gibt **LLONG_MIN**.
+Bei einem Überlauf mit großen positiven ganzzahligen Werten gibt das **Atoll** **LLONG_MAX**zurück, und bei einem Überlauf mit großen negativen ganzzahligen Werten wird **LLONG_MIN**zurückgegeben.
 
-In allen Fällen außerhalb des gültigen Bereichs **Errno** nastaven NA hodnotu **ERANGE**. Wenn der Parameter, die übergeben werden **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und gibt 0 zurück.
+In allen Fällen außerhalb des gültigen Bereichs wird **errno** auf **ERANGE**festgelegt. Wenn der übergebenen Parameter **null**ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, legen diese Funktionen **errno** auf **EINVAL** fest und geben 0 zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktionen konvertieren eine Zeichenfolge in eine **lange** **lange** Integer-Wert.
+Diese Funktionen konvertieren eine Zeichenfolge in einen **langen** **langen** ganzzahligen Wert.
 
 Die Eingabezeichenfolge ist eine Sequenz von Zeichen, die als numerischer Wert des angegebenen Typs interpretiert werden. Die Funktion beendet das Lesen der Eingabezeichenfolge am ersten Zeichen, das nicht als Teil einer Zahl erkannt wird. Dieses Zeichen kann das NULL-Zeichen ('\0' or L'\0') sein, das die Zeichenfolge beendet.
 
-Die *str* Argument **Atoll** hat folgendes Format:
+Das *Str* -Argument für das **Atoll** weist die folgende Form auf:
 
-> [*Leerzeichen*] [*anmelden*] [*Ziffern*]
+> [*Leerzeichen*] [*Sign*] [*Ziffern*]
 
-Ein *Leerzeichen* besteht aus Leerzeichen oder Tabulatorzeichen, die ignoriert werden; *anmelden* ist entweder Pluszeichen (+) oder Minuszeichen (-) und *Ziffern* sind eine oder mehrere Ziffern.
+Ein *Leerraum* besteht aus Leerzeichen oder Tabulator Zeichen, die ignoriert werden. das Vorzeichen ist entweder Pluszeichen (+) oder minus *Zeichen* (-); und *Ziffern* sind eine oder mehrere Ziffern.
 
-**_wtoll** ist identisch mit **Atoll** außer dass es sich um eine Zeichenfolge mit Breitzeichen als Parameter verwendet.
+**_wtoll** ist mit dem **Atoll** identisch, außer dass es eine Zeichenfolge mit breit Zeichen als Parameter annimmt.
 
-Die Versionen dieser Funktionen, die **_l** -Suffix sind identisch mit den Versionen, die keinen, außer dass sie verwenden den Gebietsschemaparameter, der übergeben wird, anstelle des aktuellen Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die Versionen dieser Funktionen mit dem **_l** -Suffix sind identisch mit den Versionen, die nicht über das Suffix verfügen, mit dem Unterschied, dass Sie den Gebiets Schema Parameter verwenden, der anstelle des aktuellen Gebiets Schemas übergeben wurde. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -112,7 +115,7 @@ Die Versionen dieser Funktionen, die **_l** -Suffix sind identisch mit den Versi
 
 ## <a name="example"></a>Beispiel
 
-Dieses Programm zeigt, wie Sie mit der **Atoll** Funktionen zum Konvertieren von Zahlen als Zeichenfolgen in numerische Werte gespeichert.
+Dieses Programm zeigt, wie die **Atoll** -Funktionen verwendet werden, um als Zeichen folgen gespeicherte Zahlen in numerische Werte zu konvertieren.
 
 ```C
 // crt_atoll.c

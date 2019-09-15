@@ -1,9 +1,9 @@
 ---
 title: clearerr
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clearerr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clearerr
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr function
 ms.assetid: a9711cd4-3335-43d4-a018-87bbac5b3bac
-ms.openlocfilehash: c282a577bb7496f899f18abeac857c08388d12f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9fd2f7e7dfcf272e806a887b356418b7555913f5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340553"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942949"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -49,9 +52,9 @@ Zeiger auf die **FILE**-Struktur.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Clearerr** Funktion setzt den Fehlerindikator und den Dateiende-Indikator für *Stream*. Fehlerindikatoren werden nicht automatisch gelöscht; Sobald der Fehlerindikator für einen bestimmten Stream festgelegt wurde, Operationen in diesem Stream weiterhin einen Fehlerwert bis zurück **Clearerr**, [Fseek](fseek-fseeki64.md), **Fsetpos**, oder [rewind](rewind.md) aufgerufen wird.
+Die **clearerr** -Funktion setzt den Fehler Indikator und den Dateiende-Indikator für den *Stream*zurück. Fehlerindikatoren werden nicht automatisch gelöscht. Sobald der Fehler Indikator für einen angegebenen Stream festgelegt ist, geben Vorgänge in diesem Stream weiterhin einen Fehlerwert zurück, bis **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**oder [Rewind](rewind.md) aufgerufen wird.
 
-Wenn *Stream* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und zurückgibt. Weitere Informationen zu **Errno** und Fehlercodes finden Sie unter [Errno-Konstanten](../../c-runtime-library/errno-constants.md).
+Wenn der Stream **null**ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, legt diese Funktion **errno** auf **EINVAL** fest und gibt zurück. Weitere Informationen zu **errno** und Fehlercodes finden Sie unter [Errno-Konstanten](../../c-runtime-library/errno-constants.md).
 
 Es ist eine sicherere Version dieser Funktion verfügbar. Informationen dazu finden Sie unter [clearerr_s](clearerr-s.md).
 
@@ -103,7 +106,7 @@ int main( void )
 n
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 Write error: No error

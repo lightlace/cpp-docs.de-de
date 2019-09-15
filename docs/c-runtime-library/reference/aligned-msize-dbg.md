@@ -1,9 +1,9 @@
 ---
 title: _aligned_msize_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_msize_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,20 +14,23 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_msize_dbg
 helpviewer_keywords:
 - _aligned_msize_dbg
 ms.assetid: f1c44af0-3f66-4033-81d1-d71d3afecba0
-ms.openlocfilehash: 054f7b88f93eef37a9a88fbb7895452f7c158716
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2a0ceab906dccacb2e1c78a8789d524b608a4ff
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62342030"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939865"
 ---
-# <a name="alignedmsizedbg"></a>_aligned_msize_dbg
+# <a name="_aligned_msize_dbg"></a>_aligned_msize_dbg
 
 Gibt die Größe eines im Heap belegten Speicherblocks zurück (nur Debugversion).
 
@@ -58,11 +61,11 @@ Gibt die Größe (in Bytes) als ganze Zahl ohne Vorzeichen zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die *Ausrichtung* und *Offset* Werte müssen identisch sein, die die Werte, die an die Funktion, die der Block belegt.
+Die *Ausrichtungs* -und *Offset* Werte müssen mit den Werten identisch sein, die an die Funktion, die den Block zugeordnet hat, übermittelt wurden.
 
-**_aligned_msize_dbg** ist eine Debugversion von der [_aligned_msize](aligned-msize.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, jeden Aufruf von **_aligned_msize_dbg** wird nach einer Verkleinerung auf einen Aufruf von **_aligned_msize**. Beide **_aligned_msize** und **_aligned_msize_dbg** berechnen Sie die Größe eines Speicherblocks im Basisheap, jedoch **_aligned_msize_dbg** Fügt eine Debugfunktion: Sie enthält der Puffer auf beiden Seiten des benutzerteils des Speicherblocks in der zurückgegebenen Größe ein.
+**_aligned_msize_dbg** ist eine Debugversion der [_aligned_msize](aligned-msize.md) -Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, wird jeder **_aligned_msize_dbg** -Rückruf auf einen **_aligned_msize**-aufrufenden Wert reduziert. Sowohl **_aligned_msize** als auch **_aligned_msize_dbg** berechnen die Größe eines Speicherblocks im Basisheap, **_aligned_msize_dbg** fügt jedoch eine Debugfunktion hinzu: Sie schließt die Puffer auf beiden Seiten des Benutzer Teils des Speicherblocks in der zurückgegebenen Größe ein.
 
-Diese Funktion überprüft seine Parameter. Wenn *Memblock* ist ein null-Zeiger oder *Ausrichtung* ist es sich nicht um eine Potenz von 2, **_msize** ruft der Handler für ungültige Parameter, wie in [Parametervalidierung ](../../c-runtime-library/parameter-validation.md). Die Funktion legt fest, wenn der Fehler behandelt wird, **Errno** zu **EINVAL** und gibt-1 zurück.
+Diese Funktion überprüft seine Parameter. Wenn *memblock* ein NULL-Zeiger ist oder die *Ausrichtung* keine Potenz von 2 ist, ruft **_msize** einen Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn der Fehler behandelt wird, legt die Funktion **errno** auf **EINVAL** fest und gibt-1 zurück.
 
 Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Informationen zu den Belegungsblocktypen und ihrer Verwendung finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details). Weitere Informationen zu den Unterschieden zwischen dem Aufruf einer Standardheapfunktion und ihrer Debugversion in einem Debugbuild einer Anwendung finden Sie unter [Debugversionen von Heapbelegungsfunktionen](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 

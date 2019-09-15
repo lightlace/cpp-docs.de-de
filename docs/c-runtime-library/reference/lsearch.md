@@ -1,9 +1,9 @@
 ---
 title: _lsearch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lsearch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lsearch
 - lsearch
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - searching, linear
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
-ms.openlocfilehash: 340e8ac382972b15acc52013d5d6a51352db969c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92973536df478f4176970929c5f4dd48352bed13
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285655"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954072"
 ---
-# <a name="lsearch"></a>_lsearch
+# <a name="_lsearch"></a>_lsearch
 
 Führt eine lineare Suche nach einem Wert aus. Fügt ihn am Ende der Liste hinzu, falls nicht gefunden. Es ist eine sicherere Version dieser Funktion verfügbar. Informationen dazu finden Sie unter [_lsearch_s](lsearch-s.md).
 
@@ -59,7 +62,7 @@ Das Objekt, nach dem gesucht werden soll.
 *base*<br/>
 Zeiger auf der Basis des zu durchsuchenden Arrays.
 
-*Anzahl*<br/>
+*number*<br/>
 Anzahl der Elemente.
 
 *width*<br/>
@@ -70,15 +73,15 @@ Ein Zeiger auf die Vergleichsroutine. Der erste Parameter ist ein Zeiger auf den
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn der Schlüssel gefunden wird, **_lsearch** gibt einen Zeiger auf das Element des Arrays, an *Basis* entspricht *Schlüssel*. Wenn der Schlüssel nicht gefunden wird, **_lsearch** gibt einen Zeiger auf das neu hinzugefügte Element am Ende des Arrays zurück.
+Wenn der Schlüssel gefunden wird, gibt **_lsearch** einen Zeiger auf das Element des Arrays an der *Basis* zurück, die mit dem *Schlüssel*übereinstimmt. Wenn der Schlüssel nicht gefunden wird, gibt **_lsearch** einen Zeiger auf das neu hinzugefügte Element am Ende des Arrays zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_lsearch** Funktion führt eine lineare Suche für den Wert *Schlüssel* in ein Array von *Anzahl* Elementen, die jeweils von *Breite* Bytes. Im Gegensatz zu **Bsearch**, **_lsearch** erfordert keine Arrays, das sortiert werden. Wenn *Schlüssel* nicht gefunden wird, **_lsearch** fügt es am Ende des Arrays und Schritten *Anzahl*.
+Die **_lsearch** -Funktion führt eine lineare Suche nach dem Wert *Schlüssel* in einem Array von *Zahlen* Elementen durch, wobei jede *Breite* Bytes beträgt. Anders als bei **bsearch**erfordert **_lsearch** nicht, dass das Array sortiert wird. Wenn *Key* nicht gefunden wird, fügt **_lsearch** ihn am Ende des Arrays hinzu und erhöht die *Zahl*.
 
-Die *vergleichen* Argument ist ein Zeiger auf eine benutzerdefinierte Routine, die zwei Elemente des Arrays vergleicht und gibt einen Wert, der ihre Beziehung angibt. **_lsearch** Aufrufe der *vergleichen* -Routine einmal oder mehrere Male während der Suche, die Übergabe von Zeigern auf zwei Arrayelemente bei jedem Aufruf. *Vergleichen Sie* die Elemente vergleichen und zurückgeben muss ungleich Null (d.h. die Elemente unterscheiden sich) oder 0 (d.h. die Elemente sind identisch).
+Das *Compare* -Argument ist ein Zeiger auf eine vom Benutzer bereitgestellte Routine, die zwei Array Elemente vergleicht und einen Wert zurückgibt, der Ihre Beziehung angibt. **_lsearch** Ruft die *Vergleichs* Routine einmal oder mehrmals während der Suche auf, wobei bei jedem Aufruf Zeiger auf zwei Array Elemente übergeben werden. *Compare* muss die Elemente vergleichen und entweder ungleich NULL (d.h. die Elemente unterscheiden sich) oder 0 (d.h. die Elemente sind identisch) zurückgeben.
 
-Diese Funktion überprüft ihre Parameter. Wenn *vergleichen*, *Schlüssel* oder *Anzahl* ist **NULL**, oder wenn *Basis* ist **NULL**und *Anzahl* ungleich NULL ist, oder wenn *Breite* ist kleiner als 0 (null), Handler für ungültige Parameter aufgerufen wird, der unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt **NULL**.
+Diese Funktion überprüft ihre Parameter. Wenn *Compare*, *Key* oder *Number* **null**ist, oder wenn *Base* **null** und *Number* ungleich NULL ist, oder wenn *Width* kleiner als 0 (null) ist, wird der Handler für ungültige Parameter aufgerufen, wie in Parameter beschrieben. [ Validierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, wird **errno** auf **EINVAL** festgelegt, und die Funktion gibt **null**zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,12 +1,12 @@
 ---
 title: _cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cwscanf_s_l
 - _cwscanf_s
 - _cscanf_s
 - _cscanf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cscanf_s
 - cscanf_s_l
@@ -48,14 +51,14 @@ helpviewer_keywords:
 - _tcscanf_s function
 - tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
-ms.openlocfilehash: b49c464c7262a60bb7744a68c0144234e152edd3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be9d2b0af461b25f5c4db37bb084afcf822480ea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288913"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938528"
 ---
-# <a name="cscanfs-cscanfsl-cwscanfs-cwscanfsl"></a>_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
+# <a name="_cscanf_s-_cscanf_s_l-_cwscanf_s-_cwscanf_s_l"></a>_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 
 Liest formatierte Daten aus der Konsole. Diese sichereren Versionen von [scanf, _scanf_l, wscanf, _wscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md) enthalten Sicherheitserweiterungen, wie unter [Sicherheitserweiterungen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
@@ -98,20 +101,20 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Anzahl der Felder, die erfolgreich konvertiert und zugewiesen wurden. Der Rückgabewert enthält keine nicht zugewiesenen gelesenen Felder. Der Rückgabewert ist **EOF** versucht wurde, am Ende der Datei zu lesen. Dies kann vorkommen, wenn Tastatureingaben auf der Befehlszeilenebene des Betriebssystems umgeleitet wurden. Ein Rückgabewert von 0 bedeutet, dass keine Felder zugewiesen wurden.
+Die Anzahl der Felder, die erfolgreich konvertiert und zugewiesen wurden. Der Rückgabewert enthält keine nicht zugewiesenen gelesenen Felder. Der Rückgabewert ist **EOF** für den Versuch, am Dateiende zu lesen. Dies kann vorkommen, wenn Tastatureingaben auf der Befehlszeilenebene des Betriebssystems umgeleitet wurden. Ein Rückgabewert von 0 bedeutet, dass keine Felder zugewiesen wurden.
 
-Diese Funktionen überprüfen ihre Parameter. Wenn *Format* ist ein null-Zeiger rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EOF** und **Errno** nastaven NA hodnotu **EINVAL**.
+Diese Funktionen überprüfen ihre Parameter. Wenn *Format* ein NULL-Zeiger ist, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen " **EOF** " und " **errno** " auf " **EINVAL**" zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_cscanf_s** -Funktion liest Daten direkt in der Konsole in die Speicherorte, die vom *Argument*. Die Funktion [_getche](getch-getwch.md) wird verwendet, um Zeichen zu lesen. Jeder Optionaler Parameter muss ein Zeiger auf eine Variable mit einem Typ, der einem Typspezifizierer in entspricht *Format*. Das Format steuert die Interpretation der Eingabefelder und hat die gleiche form und Funktion wie der *Format* -Parameter für die [Scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) Funktion. Während **_cscanf_s** normalerweise das Eingabezeichen, es geschieht nicht, wenn der letzte Aufruf war **_ungetch**.
+Die **_cscanf_s** -Funktion liest Daten direkt aus der Konsole in die Speicherorte, die durch das- *Argument*angegeben werden. Die Funktion [_getche](getch-getwch.md) wird verwendet, um Zeichen zu lesen. Jeder optionale Parameter muss ein Zeiger auf eine Variable mit einem Typ sein, der einem Typspezifizierer im- *Format*entspricht. Das Format steuert die Interpretation der Eingabefelder und hat die gleiche Form und Funktion wie der *Format* -Parameter für die [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) -Funktion. Obwohl **_cscanf_s** normalerweise das Eingabezeichen wiederholt, erfolgt dies nicht, wenn der letzte-Befehl an **_ungetch**erfolgt ist.
 
-Wie andere sichere Versionen von Funktionen in der **Scanf** -Familie **_cscanf_s** und **_cswscanf_s** erfordern größenargumente für die typfeldzeichen **c** , **C**, **s**, **S**, und **[**. Weitere Informationen finden Sie unter [scanf Width Specification (scanf-Breitenangabe)](../../c-runtime-library/scanf-width-specification.md).
+Wie andere sichere Versionen von Funktionen in der **scanf** -Familie erfordern **_cscanf_s** und **_cswscanf_s** Größen Argumente für die tyfeldzeichen **c**, **c**, **s**, **s**und **[** . Weitere Informationen finden Sie unter [scanf Width Specification (scanf-Breitenangabe)](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
-> Size-Parameter ist vom Typ **ohne Vorzeichen**, nicht **"size_t"**.
+> Der Size-Parameter ist vom Typ **Ganzzahl ohne Vorzeichen**, nicht **size_t**.
 
-Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
+Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebiets Schema Parameter, der anstelle des aktuellen Thread Gebiets Schemas übergeben wurde.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

@@ -1,9 +1,9 @@
 ---
 title: _isatty
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _isatty
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _isatty
 helpviewer_keywords:
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-ms.openlocfilehash: ef0df5f859779c081df47ef4bfe938ec2601d524
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d2ba2fdfeb1c8bffe47b0953f0629746d2eb599
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157473"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954555"
 ---
-# <a name="isatty"></a>_isatty
+# <a name="_isatty"></a>_isatty
 
 Bestimmt, ob ein Dateideskriptor einem Zeichengerät zugeordnet ist.
 
@@ -48,13 +51,13 @@ Dateideskriptor, der auf das zu testende Gerät verweist.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_isatty** gibt einen Wert ungleich NULL zurück, wenn der Deskriptor einem Zeichengerät zugeordnet ist. Andernfalls **_isatty** gibt 0 zurück.
+**_isatty** gibt einen Wert ungleich 0 (null) zurück, wenn der Deskriptor einem Zeichengerät zugeordnet ist. Andernfalls gibt **_isatty** 0 zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_isatty** Funktion bestimmt, ob *fd* einem Zeichengerät (ein Terminal, Konsole, Drucker oder seriellen Anschluss) zugeordnet ist.
+Die **_isatty** -Funktion bestimmt, ob *FD* einem Zeichengerät (Terminal, Konsole, Drucker oder serieller Anschluss) zugeordnet ist.
 
-Diese Funktion überprüft den *fd* Parameter. Wenn *fd* ein ungültiger Dateizeiger ist, wird der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktion gibt 0 zurück und legt **Errno** zu **EBADF**.
+Diese Funktion überprüft den *FD* -Parameter. Wenn *FD* ein fehlerhafter Dateizeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion 0 zurück und legt **errno** auf **EBADF**fest.
 
 ## <a name="requirements"></a>Anforderungen
 

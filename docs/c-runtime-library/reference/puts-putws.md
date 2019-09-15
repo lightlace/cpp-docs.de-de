@@ -1,10 +1,10 @@
 ---
 title: puts, _putws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putws
 - puts
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putts
 - _putws
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-ms.openlocfilehash: 0151d29f627a8f6b91142d619f64921333bb48f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cd38678b321853cb229d86f9554bb76efbc84d6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358085"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949801"
 ---
-# <a name="puts-putws"></a>puts, _putws
+# <a name="puts-_putws"></a>puts, _putws
 
 Schreibt eine Zeichenfolge in **stdout**.
 
@@ -59,17 +62,17 @@ Ausgabezeichenfolge.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen nicht negativen Wert zurück. Wenn **setzt** fehlschlägt, wird **EOF**; Wenn **_putws** fehlschlägt, wird **WEOF**. Wenn *str* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzen die Funktionen **Errno** zu **EINVAL** und zurückgeben **EOF** oder **WEOF**.
+Gibt bei Erfolg einen nicht negativen Wert zurück. Wenn bei **Puts** ein Fehler auftritt, wird **EOF**zurückgegeben. Wenn **_putws** fehlschlägt, wird **WEOF**zurückgegeben. Wenn *Str* ein NULL-Zeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, legen die Funktionen **errno** auf **EINVAL** fest und geben **EOF** oder **WEOF**zurück.
 
 Weitere Informationen über diese und andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (_doserrno, errno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **setzt** -Funktion schreibt *str* in den Standardausgabestream **"stdout"**, ersetzt das abschließende Null-Zeichen ('\0') mit einem neue Zeilenumbruchzeichen ('\n') in der der Ausgabestream.
+Die **-** Funktion schreibt *Str* in den **Standardausgabestream stdout**und ersetzt das abschließende Null-Zeichen (' \ 0 ') durch ein Zeilen vorzeichenfolgenzeichen (' \n ') im Ausgabestream.
 
-**_putws** ist die Breitzeichen-Version von **setzt**; die zwei Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **setzt** unterstützt derzeit keine Ausgabe in eine UNICODE-Stream.
+**_putws** ist die breit Zeichen Version von **Puts**; die beiden Funktionen Verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. " **Puts** " unterstützt derzeit keine Ausgabe in einen Unicode-Stream.
 
-**_putwch** Unicode-Zeichen mit der aktuellen Einstellung des KONSOLENGEBIETSSCHEMAS.
+**_putwch** schreibt Unicode-Zeichen mithilfe der aktuellen Einstellung des Konsolen Gebiets Schemas.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -84,7 +87,7 @@ Die **setzt** -Funktion schreibt *str* in den Standardausgabestream **"stdout"**
 |**puts**|\<stdio.h>|
 |**_putws**|\<stdio.h>|
 
-Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Standardstreamhandles, die mit der Konsole verknüpft sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die-Konsole wird in universelle Windows-Plattform-Apps (UWP) nicht unterstützt. Die Standarddaten Strom Handles, die der Konsole, **stdin**, **stdout**und **stderr**zugeordnet sind, müssen umgeleitet werden, bevor Sie von C-Lauf Zeitfunktionen in UWP-Apps verwendet werden können. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotheken
 
@@ -104,7 +107,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 Hello world from puts!

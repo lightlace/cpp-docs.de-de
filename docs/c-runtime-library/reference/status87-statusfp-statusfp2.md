@@ -1,11 +1,11 @@
 ---
 title: _status87, _statusfp, _statusfp2
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _statusfp2
 - _statusfp
 - _status87
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _statusfp2
 - _statusfp
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - floating-point functions
 - status word
 ms.assetid: 7ef963fa-b1fb-429d-94d6-fbf282ab7432
-ms.openlocfilehash: 271c28dd4e267e5b3b702858cc398689e3e35d6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54faf70296ef41f2682f88a8edaa82ee0d2071d4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354430"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958093"
 ---
-# <a name="status87-statusfp-statusfp2"></a>_status87, _statusfp, _statusfp2
+# <a name="_status87-_statusfp-_statusfp2"></a>_status87, _statusfp, _statusfp2
 
 Ruft das Gleitkommastatuswort ab.
 
@@ -67,17 +70,17 @@ Diese Adresse ist mit dem Statuswort für die SSE2-Gleitkommaeinheit gefüllt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Für **_status87** und **_statusfp**, die Bits in der zurückgegebene Wert den gleitkommastatus. Finden Sie unter der "float". H-Includedatei für eine Definition der Bits, die von zurückgegeben werden **_statusfp**. Viele Funktionen der mathematischen Bibliothek ändern das Gleitkommastatuswort, was zu unvorhersehbaren Ergebnissen führt. Optimierung neu anordnen, kombinieren und Entfernen von Gleitkommaoperationen um die Aufrufe kann **_status87**, **_statusfp**, und verwandte Funktionen. Verwenden Sie die Compileroption [/Od (Deaktivieren (Debuggen))](../../build/reference/od-disable-debug.md) oder die Pragma-Direktive [fenv_access](../../preprocessor/fenv-access.md), um Optimierungen zu verhindern, durch die Gleitkommaoperationen neu angeordnet werden. Rückgabewerte von **_clearfp** und **_statusfp**, und auch die Rückgabeparameter **_statusfp2**, sind zuverlässiger, wenn weniger Gleitkommaoperationen ausgeführt werden zwischen den bekannten Zuständen des gleitkommastatusworts.
+Bei **_status87** und **_statusfp**geben die Bits im zurückgegebenen Wert den Gleit Komma Status an. Siehe float. H-Includedatei für eine Definition der Bits, die von **_statusfp**zurückgegeben werden. Viele Funktionen der mathematischen Bibliothek ändern das Gleitkommastatuswort, was zu unvorhersehbaren Ergebnissen führt. Die Optimierung kann Gleit Komma Vorgänge im Zusammenhang mit Aufrufen von **_status87**, **_statusfp**und verwandten Funktionen neu anordnen, kombinieren und eliminieren. Verwenden Sie die Compileroption [/Od (Deaktivieren (Debuggen))](../../build/reference/od-disable-debug.md) oder die Pragma-Direktive [fenv_access](../../preprocessor/fenv-access.md), um Optimierungen zu verhindern, durch die Gleitkommaoperationen neu angeordnet werden. Rückgabewerte von **_clearfp** und **_statusfp**sowie die Rückgabe Parameter von **_statusfp2**sind zuverlässiger, wenn weniger Gleit Komma Vorgänge zwischen den bekannten Zuständen des Gleit Komma Status Worts ausgeführt werden.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_statusfp** Funktion ruft das gleitkommastatuswort ab. Das Statuswort ist eine Kombination aus dem Gleitkommaprozessorstatus und anderen Bedingungen, die von dem Handler für Gleitkommaausnahmen – z. B. ein Gleitkomma-Stapelüberlauf und -Stapelunterlauf – erkannt werden. Ausnahmen ohne Maskierung werden überprüft, bevor der Inhalt des Statusworts zurückgegeben wird. Dies bedeutet, dass der Aufrufer über ausstehende Ausnahmen informiert wird. Auf X86 Plattformen **_statusfp** gibt eine Kombination von der X87 und SSE2-gleitkommastatus zurück. Auf x64-Plattformen basiert der zurückgegebene Status auf dem MXCSR-Status von SSE. Auf ARM-Plattformen **_statusfp** Status aus dem FPSCR-Register zurückgegeben.
+Die **_statusfp** -Funktion Ruft das Gleit Komma Status Wort ab. Das Statuswort ist eine Kombination aus dem Gleitkommaprozessorstatus und anderen Bedingungen, die von dem Handler für Gleitkommaausnahmen – z. B. ein Gleitkomma-Stapelüberlauf und -Stapelunterlauf – erkannt werden. Ausnahmen ohne Maskierung werden überprüft, bevor der Inhalt des Statusworts zurückgegeben wird. Dies bedeutet, dass der Aufrufer über ausstehende Ausnahmen informiert wird. Auf x86-Plattformen gibt **_statusfp** eine Kombination aus dem x87-und SSE2-Gleit Komma Status zurück. Auf x64-Plattformen basiert der zurückgegebene Status auf dem MXCSR-Status von SSE. Auf Arm-Plattformen gibt **_statusfp** den Status aus dem fpscr-Register zurück.
 
-**_statusfp** ist eine plattformunabhängige, portable Version der **_status87**. Es ist identisch mit **_status87** auf Intel (x86)-Plattformen und wird auch von der X64 und ARM-Plattformen unterstützt. Um sicherzustellen, dass Ihr gleitkommacode für alle Architekturen portabel ist, verwenden **_statusfp**. Wenn Sie nur X86 Anzielen-Plattformen können Sie mithilfe einer **_status87** oder **_statusfp**.
+**_statusfp** ist eine plattformunabhängige, Portable Version von **_status87**. Es ist identisch mit **_status87** auf Intel (x86)-Plattformen und wird auch von den x64-und Arm-Plattformen unterstützt. Um sicherzustellen, dass Ihr Gleit Komma Code für alle Architekturen portabel ist, verwenden Sie **_statusfp**. Wenn Sie nur x86-Plattformen als Ziel verwenden, können Sie entweder **_status87** oder **_statusfp**verwenden.
 
-Es wird empfohlen **_statusfp2** für Chips (wie Pentium IV), die sowohl eine X87 und eine SSE2-Gleitkommaprozessor haben. Für **_statusfp2**, die Adressen mithilfe von für die X87 und SSE2-Gleitkommaprozessor das gleitkommastatuswort ausgefüllt. Bei einem Chip, die X87 und SSE2-Gleitkommaprozessoren unterstützt, wird EM_AMBIGUOUS auf 1 festgelegt **_statusfp** oder **_controlfp** wird verwendet, und die Aktion mehrdeutig war, da er die X87 oder SSE2 verweisen könnte Das gleitkommastatuswort. Die **_statusfp2** Funktion wird nur unterstützt, auf X86 Plattformen.
+Wir empfehlen **_statusfp2** für Chips (z. b. den Pentium IV), die sowohl einen x87-als auch einen SSE2-Gleit Komma Prozessor haben. Für **_statusfp2**werden die Adressen mit dem Gleit Komma Status Wort sowohl für den x87-als auch für den SSE2-Gleit Komma Prozessor gefüllt. Bei einem Chip, der x87-und SSE2-Gleit Komma Prozessoren unterstützt, wird EM_AMBIGUOUS auf 1 festgelegt, wenn **_statusfp** oder **_controlfp** verwendet wird und die Aktion mehrdeutig war, da Sie auf den x87 oder das SSE2-Gleit Komma Status Wort verweisen konnte. Die **_statusfp2** -Funktion wird nur auf x86-Plattformen unterstützt.
 
-Diese Funktionen sind nicht nützlich für [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) da die common Language Runtime (CLR) nur die Genauigkeit der standardgleitkommawerte unterstützt.
+Diese Funktionen sind für [/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) nicht nützlich, da die Common Language Runtime (CLR) nur die standardmäßige Gleit Komma Genauigkeit unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,10 +1,10 @@
 ---
 title: _fdopen, _wfdopen
 ms.date: 12/12/2017
-apiname:
+api_name:
 - _fdopen
 - _wfdopen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tfdopen
 - _fdopen
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-ms.openlocfilehash: 0cde110bf1dd12c23a6b0b658809502743d9edd3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5202c84cd1a9038faf68587f9207d376ed8c0af1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334774"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941262"
 ---
-# <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
+# <a name="_fdopen-_wfdopen"></a>_fdopen, _wfdopen
 
 Verknüpft einen Stream mit einer Datei, die zuvor für E/A auf niedriger Ebene geöffnet war.
 
@@ -67,62 +70,62 @@ Der Typ des Dateizugriffs.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt einen Zeiger auf den geöffneten Stream zurück. Ein NULL-Zeigerwert gibt einen Fehler an. Wenn ein Fehler auftritt, wird der ungültige Parameterhandler aufgerufen, so wie dies unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** entweder auf festgelegt ist **EBADF**, das angibt, dass eines fehlerhafter Dateideskriptor, oder **EINVAL**, die angibt, dass *Modus*  wurde ein null-Zeiger.
+Jede dieser Funktionen gibt einen Zeiger auf den geöffneten Stream zurück. Ein NULL-Zeigerwert gibt einen Fehler an. Wenn ein Fehler auftritt, wird der ungültige Parameterhandler aufgerufen, so wie dies unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird. Wenn die weitere Ausführung zugelassen wird, wird **errno** entweder auf **EBADF**festgelegt, was auf einen fehlerhaften Dateideskriptor hinweist, oder auf **EINVAL**, das angibt, dass der *Modus* ein NULL-Zeiger war.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_fdopen** Funktion verknüpft einen e/a-Stream mit der Datei, die durch identifiziert wird *fd*, und daher kann eine Datei, die geöffnet wird, für Low-Level e/a, gepuffert und formatiert werden. **_wfdopen** ist eine Breitzeichen-Version von **_fdopen**; die *Modus* Argument **_wfdopen** ist eine Breitzeichen-Zeichenfolge. **_wfdopen** und **_fdopen** Verhalten sich andernfalls identisch.
+Die **_fdopen** -Funktion ordnet einen e/a-Datenstrom mit der von *FD*identifizierten Datei zu und ermöglicht so, dass eine Datei, die für e/a auf niedriger Ebene geöffnet ist, gepuffert und formatiert wird. **_wfdopen** ist eine breit Zeichen Version von **_fdopen**. Das *Mode* -Argument für **_wfdopen** ist eine Zeichenfolge mit breit Zeichen. **_wfdopen** und **_fdopen** Verhalten sich andernfalls identisch.
 
-Dateideskriptoren übergebenen **_fdopen** gehören mit dem zurückgegebenen **Datei &#42;**  Stream. Wenn **_fdopen** erfolgreich ist, rufen Sie keine [ \_schließen](close.md) auf den Dateideskriptor. Aufrufen von [Fclose](fclose-fcloseall.md) für das zurückgegebene **Datei &#42;**  schließt auch den Dateideskriptor.
+An **_fdopen** übertrage Dateideskriptoren sind im Besitz des zurückgegebenen **Datei Daten &#42;**  Stroms. Wenn **_fdopen** erfolgreich ist, sollten Sie nicht [ \_close](close.md) für den Dateideskriptor aufzurufen. Wenn Sie [fclose](fclose-fcloseall.md) für die zurückgegebene **Datei &#42;**  aufrufen, wird auch der Dateideskriptor geschlossen.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
-|Tchar.h-Routine|\_UNICODE und \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|
+|Tchar.h-Routine|\_Unicode und \_MBCS sind nicht definiert.|\_Definierte MBCS|\_Unicode definiert|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfdopen**|**_fdopen**|**_fdopen**|**_wfdopen**|
 
-Die *Modus* Zeichenfolge gibt den Typ des Dateizugriffs, die für die Datei angeforderten:
+Die Zeichenfolge im *Modus* gibt den Typ des Datei Zugriffs an, der für die Datei angefordert wird:
 
 | *mode* | Zugriff |
 |--------|--------|
-| **"r"** | Öffnet zum Lesen. Wenn die Datei nicht vorhanden ist oder wurde nicht gefunden, die **Fopen** -Aufruf fehl. |
+| **"r"** | Öffnet zum Lesen. Wenn die Datei nicht vorhanden ist oder nicht gefunden werden kann, schlägt der **fopen** -Befehl fehl. |
 | **"w"** | Öffnet eine leere Datei zum Schreiben. Wenn die angegebene Datei vorhanden ist, wird ihr Inhalt zerstört. |
-| **„a“** | Öffnet zum Schreiben am Ende der Datei (Anfügen). Erstellt die Datei, wenn sie nicht vorhanden ist. |
+| **„a“** | Öffnet zum Schreiben am Ende der Datei (Anhängen). Erstellt die Datei, wenn sie nicht vorhanden ist. |
 | **„r+“** | Öffnet sowohl zum Lesen als auch zum Schreiben. Die Datei muss vorhanden sein. |
 | **„w+“** | Öffnet eine leere Datei zum Lesen und Schreiben. Wenn die Datei vorhanden ist, wird ihr Inhalt zerstört. |
 | **„a+“** | Öffnet sich zum Lesen und Anfügen. Erstellt die Datei, wenn sie nicht vorhanden ist. |
 
-Wenn eine Datei geöffnet wird, mit der **"a"** oder **"a +"** Zugriffstyp am Ende der Datei erfolgen alle Schreibvorgänge. Der Dateizeiger kann mit [Fseek](fseek-fseeki64.md) oder [rewind](rewind.md), er wird jedoch immer verschoben zurück an das Ende der Datei, bevor ein Schreibvorgang durchgeführt wird. Folglich können vorhandene Daten nicht überschrieben werden. Wenn die **"R +"**, **"w +"**, oder **"a +"** angegeben wird, sind Lese- und Schreibvorgänge zulässig (die Datei gilt als für "Update" geöffnet). Aber wenn Sie zwischen Lesen und Schreiben wechseln, muss vorhanden sein einen dazwischen liegenden [Fflush](fflush.md), [Fsetpos](fsetpos.md), [Fseek](fseek-fseeki64.md), oder [rewind](rewind.md) der Vorgang. Sie können angeben, dass die aktuelle Position für die [Fsetpos](fsetpos.md) oder [Fseek](fseek-fseeki64.md) -Operation, wenn Sie möchten.
+Wenn eine Datei mit dem Zugriffstyp **"a"** oder **"a +"** geöffnet wird, erfolgen alle Schreibvorgänge am Ende der Datei. Der Dateizeiger kann mithilfe von [fseek](fseek-fseeki64.md) oder [Rewind](rewind.md)neu positioniert werden. er wird jedoch immer wieder zurück an das Ende der Datei verschoben, bevor ein Schreibvorgang durchgeführt wird. Folglich können vorhandene Daten nicht überschrieben werden. Wenn der Zugriffstyp **"r +"** , **"w +"** oder **"a +** " angegeben wird, sind sowohl Lese-als auch Schreibvorgänge zulässig (die Datei ist zum Aktualisieren geöffnet). Wenn Sie jedoch zwischen lesen und schreiben wechseln, muss ein dazwischenliegende [fflush](fflush.md)-, [fsetpos](fsetpos.md)-, [fseek](fseek-fseeki64.md)-oder [Rewind](rewind.md) -Vorgang vorhanden sein. Wenn Sie möchten, können Sie die aktuelle Position für den [fsetpos](fsetpos.md) -oder [fseek](fseek-fseeki64.md) -Vorgang angeben.
 
-Zusätzlich zu den obigen Werten können die folgenden Zeichen enthalten sein *Modus* um den Übersetzungsmodus für Zeilenumbruchzeichen anzugeben:
+Zusätzlich zu den obigen Werten können die folgenden Zeichen auch im- *Modus* enthalten sein, um den Übersetzungsmodus für Zeilen Umleitungs Zeichen anzugeben:
 
-| *Modus* Modifizierer | Verhalten |
+| modusmodifizierer | Verhalten |
 |-----------------|----------|
 | **t** | Öffnen im Textmodus (übersetzt). Im Textmodus werden Wagenrücklauf-/Zeilenvorschub-Kombinationen (CR-LF) bei der Eingabe in einzelne Zeilenvorschübe (LF) übersetzt. LF-Zeichen werden bei der Ausgabe in CR-LF-Kombinationen übersetzt. Außerdem wird STRG+Z bei der Eingabe als EOF-Zeichen interpretiert. |
-| **b** | Wird im binären (nicht übersetzten) Modus geöffnet. Übersetzungen aus **t** -Modus werden unterdrückt. |
-| **c** | Aktivieren Sie das commitflag für den zugeordneten *Filename* , damit der Inhalt des Dateipuffers direkt, wenn entweder auf den Datenträger geschrieben werden **Fflush** oder **_flushall** aufgerufen wird. |
-| **n** | Zurücksetzen der Commit-Flag für das zugeordnete *Filename* auf "No-Commit". Dies ist die Standardeinstellung. Dabei wird auch das globale Commitflag überschrieben, wenn Sie das Programm mit „Commode.obj“ verknüpfen. Der Standardwert des globalen Commitflags lautet „no-commit“, es sei denn, Sie verknüpfen das Programm explizit mit „Commode.obj“. |
+| **b** | Wird im binären (nicht übersetzten) Modus geöffnet. Alle Übersetzungen aus dem **t** -Modus werden unterdrückt. |
+| **c** | Aktivieren Sie das commitflag für den zugeordneten *Dateinamen* , damit der Inhalt des Datei Puffers direkt auf den Datenträger geschrieben wird, wenn **fflush** oder **_flushall** aufgerufen wird. |
+| **n** | Setzen Sie das commitflag für den zugeordneten *Dateinamen* auf "No-Commit" zurück. Dies ist die Standardeinstellung. Dabei wird auch das globale Commitflag überschrieben, wenn Sie das Programm mit „Commode.obj“ verknüpfen. Der Standardwert des globalen Commitflags lautet „no-commit“, es sei denn, Sie verknüpfen das Programm explizit mit „Commode.obj“. |
 
-Die **t**, **c**, und **n** *Modus* Optionen sind Microsoft-Erweiterungen für **Fopen** und **_fdopen**. Verwenden Sie sie nicht, wenn Sie die ANSI-Portabilität beibehalten möchten.
+Die *Optionen "* **t**", " **c**" und " **n** " sind **Microsoft-Erweiterungen** für " **_fdopen**". Verwenden Sie sie nicht, wenn Sie die ANSI-Portabilität beibehalten möchten.
 
-Wenn **t** oder **b** nicht erhält, *Modus*, wird der standardübersetzungsmodus durch die globale Variable definiert [ \_Fmode](../../c-runtime-library/fmode.md). Wenn **t** oder **b** das Argument, schlägt die Funktion vorangestellt ist, und gibt NULL zurück. Eine Erörterung von Text- und Binärmodi finden Sie unter [Text- und Binärmodus-Datei-E/A](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
+Wenn " **t** " oder " **b** " im *Modus*nicht angegeben wird, wird der Standard Übersetzungsmodus durch die globale Variable [ \_"f Mode](../../c-runtime-library/fmode.md)" definiert. Wenn **t** oder **b** dem Argument vorangestellt wird, schlägt die Funktion fehl und gibt NULL zurück. Eine Erörterung von Text- und Binärmodi finden Sie unter [Text- und Binärmodus-Datei-E/A](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
-Gültige Zeichen für die *Modus* in verwendete Zeichenfolge **Fopen** und **_fdopen** entsprechen *Oflag* verwendeten Argumenten [ \_öffnen](open-wopen.md) und [ \_Sopen](sopen-wsopen.md), wie in dieser Tabelle dargestellt:
+Gültige Zeichen für die in **fopen** und **_fdopen** verwendete moduszeichenfolge entsprechen *Oflag* -Argumenten, die in [ \_Open](open-wopen.md) und [ \_sopen](sopen-wsopen.md)verwendet werden, wie in dieser Tabelle dargestellt:
 
-|Zeichen in *Modus* Zeichenfolge|Entsprechende *Oflag* Wert für **_open** und **_sopen**|
+|Zeichen in der *Mode* -Zeichenfolge|Entsprechender *Oflag* -Wert für **_open** und **_sopen**|
 |---------------------------------|---------------------------------------------------|
-|**a**|**\_O\_WRONLY &#124; \_O\_APPEND** (in der Regel  **\_O\_WRONLY &#124; \_O\_erstellen &#124; \_O \_APPEND**)|
-|**a+**|**\_O\_RDWR &#124; \_O\_APPEND** (in der Regel  **\_O\_RDWR &#124; \_O\_APPEND &#124; \_O\_ CREAT** )|
+|**a**|**\_&#124; O wronly\_oAppend\_(normalerweise o wronly o |\_**  **\_ &#124; \_\_\_ &#124; \_\_ Anfügen**)|
+|**a+**|**\_&#124; O\_ rdwr\_o\_Append** (Normal **\_erweiseo\_rdwr &#124; \_ &#124; o Append\_oup\_\_** )|
 |**r**|**\_O\_RDONLY**|
-|**r+**|**\_O\_RDWR**|
-|**w**|**\_O\_WRONLY** (usually **\_O\_WRONLY &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
-|**w+**|**\_O\_RDWR** (usually **\_O\_RDWR &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
-|**b**|**\_O\_BINÄRE**|
+|**r +**|**\_O\_RDWR**|
+|**w**|**\_O\_wronly** ( **\_ &#124; \_\_i.d. a. &#124; " \_ owronly\_o" o trunc)\_**|
+|**w +**|**\_O\_rdwr**  **\_ &#124; \_ &#124; \_\_(i. d. r. o\_rdwr o up o trunc)\_**|
+|**b**|**\_O\_-BINÄRDATEI**|
 |**t**|**\_O\_TEXT**|
-|**c**|Keiner|
-|**n**|Keiner|
+|**c**|None|
+|**n**|None|
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -170,14 +173,14 @@ int main( void )
 }
 ```
 
-### <a name="input-crtfdopentxt"></a>Eingabe: crt_fdopen.txt
+### <a name="input-crt_fdopentxt"></a>Eingabe: crt_fdopen.txt
 
 ```Input
 Line one
 Line two
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 Lines in file: 2
@@ -186,8 +189,8 @@ Lines in file: 2
 ## <a name="see-also"></a>Siehe auch
 
 [Stream-E/A](../../c-runtime-library/stream-i-o.md)<br/>
-[\_dup, \_dup2](dup-dup2.md)<br/>
-[fclose, \_fcloseall](fclose-fcloseall.md)<br/>
-[fopen, \_wfopen](fopen-wfopen.md)<br/>
+[\_DUP, \_dup2](dup-dup2.md)<br/>
+["f" \_, "vollständig"](fclose-fcloseall.md)<br/>
+["Open" \_, "WF"](fopen-wfopen.md)<br/>
 [freopen, \_wfreopen](freopen-wfreopen.md)<br/>
-[\_Öffnen von \_Wopen](open-wopen.md)<br/>
+[\_Öffnen, \_Wopen](open-wopen.md)<br/>

@@ -1,10 +1,10 @@
 ---
 title: _memicmp, _memicmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _memicmp_l
 - _memicmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _memicmp
 - memicmp_l
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: 8beb632c8bd2cfac486fc58fc930b94490bdecbc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a463b9c79a76879311bb811b38e4aabcfd6e7226
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285273"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951844"
 ---
-# <a name="memicmp-memicmpl"></a>_memicmp, _memicmp_l
+# <a name="_memicmp-_memicmp_l"></a>_memicmp, _memicmp_l
 
 Vergleicht Zeichen in zwei Puffern (ohne Berücksichtigung der Groß- und Kleinschreibung).
 
@@ -81,11 +84,11 @@ Der Rückgabewert gibt die Beziehung zwischen den Puffern an.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_memicmp** -Funktion vergleicht die ersten *Anzahl* Zeichen der beiden Puffer *buffer1* und *buffer2* byteweise. Beim Vergleich wird die Groß-/Kleinschreibung nicht berücksichtigt.
+Die **_memicmp** -Funktion vergleicht die ersten *count* -Zeichen der beiden Puffer *buffer1* und *buffer2* Byte mit Byte. Beim Vergleich wird die Groß-/Kleinschreibung nicht berücksichtigt.
 
-Wenn entweder *buffer1* oder *buffer2* ist ein null-Zeiger ruft diese Funktion einen Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **_NLSCMPERROR** und **Errno** zu **EINVAL**.
+Wenn entweder *buffer1* oder *buffer2* ein NULL-Zeiger ist, ruft diese Funktion einen Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **_NLSCMPERROR** zurück und legt **errno** auf **EINVAL**fest.
 
-**_memicmp** verwendet das aktuelle Gebietsschema für gebietsschemaabhängige Verhalten. **_memicmp_l** ist identisch, außer dass sie das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+**_memicmp** verwendet das aktuelle Gebiets Schema für vom Gebiets Schema abhängiges Verhalten. **_memicmp_l** ist beinahe identisch, verwendet jedoch stattdessen das übergebene Gebiets Schema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Anforderungen
 

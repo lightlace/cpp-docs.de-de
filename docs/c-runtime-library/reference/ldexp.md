@@ -1,12 +1,12 @@
 ---
 title: ldexp, ldexpf, ldexpl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - ldexp
 - ldexpf
 - ldexpl
 - _ldexpl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ldexp
 - ldexpf
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 7fbf89f8d78e8a2ce1018a790350ec986dcab87e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fabd00c7ddc5c430c158089b7e5769158b46328
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286292"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953505"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
@@ -80,13 +83,13 @@ Ganzzahlexponent.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Ldexp** Funktionen geben den Wert der *x* \* 2<sup>*"exp"* </sup> bei erfolgreicher Ausführung. Bei einem Überlauf und abhängig vom Vorzeichen *x*, **Ldexp** gibt **HUGE_VAL**; die **Errno** Wert wird festgelegt, um **ERANGE** .
+Die **ldexp** -Funktionen geben bei Erfolg den Wert von *x* \* 2<sup>*Exp*</sup> zurück. Bei einem Überlauf und abhängig vom Vorzeichen von *x*gibt **LDE XP** +/- **HUGE_VAL**; zurück. der **errno** -Wert ist auf **ERANGE**festgelegt.
 
-Weitere Informationen zu **Errno** und mögliche Rückgabewerte finden Sie unter [Errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Weitere Informationen zu **errno** und möglichen Fehlerrückgabe Werten finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Ldexp** , Take **"float"** oder **lange** **doppelte** Typen. In einem C-Programm **Ldexp** immer eine **doppelte** und **Int** und gibt eine **doppelte**.
+Da C++ das überladen zulässt, können Sie über Ladungen von **LDE XP** aufzurufen, die **float** -oder **Long** **Double** -Typen annehmen. In einem C-Programm nimmt **ldebug** immer einen **Double** -und einen **int** -Wert und gibt einen **Double**-Wert zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -114,7 +117,7 @@ int main( void )
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>Ausgabe
 
 ```Output
 4.0 times two to the power of 3 is 32.0

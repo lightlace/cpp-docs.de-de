@@ -1,11 +1,11 @@
 ---
 title: acosh, acoshf, acoshl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - acoshf
 - acosh
 - acoshl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - acosh
 - acoshf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: e61b9ed4222898e3f2340a5e54f6983fb0411c72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b547bc0db23f446672c8838419aeb9b0f32c16c3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341690"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944077"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -61,7 +64,7 @@ Gleitkommawert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Acosh** Funktionen geben den umgekehrten hyperbolischen Cosinus (hyperbolischen arcuscosinus) von *x*. Diese Funktionen sind in der Domäne gültig *x* ≥ 1. Wenn *x* ist kleiner als 1, `errno` nastaven NA hodnotu `EDOM` und das Ergebnis ist ein stilles NaN. Wenn *x* wird eine stille NaN, undefiniert oder unendlich ist, wird der gleiche Wert zurückgegeben.
+Die **acosh** -Funktionen geben den umgekehrten hyberbolischen Kosinus (hyperbolischen Arkus Kosinus) von *x*zurück. Diese Funktionen sind für die Domäne *x* 1 gültig. Wenn *x* kleiner als 1 ist, `errno` wird auf `EDOM` festgelegt, und das Ergebnis ist ein stilles Nan. Wenn *x* eine Stille Nan, unbegrenzt oder unendlich ist, wird derselbe Wert zurückgegeben.
 
 |Eingabe|SEH-Ausnahme|`_matherr` -Ausnahme|
 |-----------|-------------------|--------------------------|
@@ -70,7 +73,7 @@ Die **Acosh** Funktionen geben den umgekehrten hyperbolischen Cosinus (hyperboli
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn Sie C++ verwenden, können Sie Überladungen von Aufrufen **Acosh** verwenden und zurückgeben **"float"** oder **lange** **doppelte** Werte. In einem C-Programm **Acosh** immer Double und gibt **doppelte**.
+Wenn Sie verwenden C++, können Sie über Ladungen von **acosh** aufzurufen, die **float** -oder **Long** **Double** -Werte verwenden und zurückgeben. In einem C-Programm übernimmt **acosh** immer Double und gibt **Double**zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

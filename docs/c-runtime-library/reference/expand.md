@@ -1,9 +1,9 @@
 ---
 title: _expand
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _expand
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _bexpand
 - fexpand
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-ms.openlocfilehash: c1606bedbb1264bddb7674c829fe456f506d6584
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb986d893bd862e61ae595317a890fb489c19919
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335203"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941559"
 ---
-# <a name="expand"></a>_expand
+# <a name="_expand"></a>_expand
 
 Ändert die Größe eines Speicherblocks.
 
@@ -60,24 +63,24 @@ Neue Größe in Bytes.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_expand** gibt einen void-Zeiger auf den neu belegten Speicherblock zurück. **_expand**anders als beim **Realloc**, einen Block, um die Änderung der Größe kann nicht verschoben werden. Also, wenn genügend Arbeitsspeicher verfügbar, um den Block auszudehnen, ohne zu verschieben, die *Memblock* Parameter **_expand** entspricht der zurückgegebene Wert.
+**_expand** gibt einen void-Zeiger auf den neu belegten Speicherblock zurück. **_expand**kann im Gegensatz zu **rezuzuweisungen**einen Block nicht verschieben, um seine Größe zu ändern. Wenn ausreichend Arbeitsspeicher verfügbar ist, um den Block zu erweitern, ohne ihn zu verschieben, ist der *memblock* -Parameter für **_expand** derselbe wie der Rückgabewert.
 
-**_expand** gibt **NULL** Wenn während des Vorgangs ein Fehler erkannt wird. Z. B. wenn **_expand** wird verwendet, um einen Speicherblock zu verkleinern, können sie erkennen eine Beschädigung im kleinen blockheap oder ein ungültiger blockzeiger und zurückgibt **NULL**.
+**_expand** gibt **null** zurück, wenn während des Vorgangs ein Fehler erkannt wird. Wenn z. b. **_expand** verwendet wird, um einen Speicherblock zu verkleinern, erkennt er möglicherweise Beschädigungen im kleinen blockheap oder einen ungültigen Block Zeiger und gibt **null**zurück.
 
-Wenn es nicht genügend Arbeitsspeicher verfügbar ist, um den Block an die angegebene Größe auszudehnen, ohne ihn zu verschieben, gibt die Funktion **NULL**. **_expand** gibt einen Block nie erweitert auf eine Größe kleiner als angeforderte zurück. Wenn ein Fehler auftritt, **Errno** die Art des Fehlers angibt. Weitere Informationen zu **Errno**, finden Sie unter [Errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Wenn nicht genügend Arbeitsspeicher verfügbar ist, um den Block auf die angegebene Größe auszudehnen, ohne ihn zu verschieben, gibt die Funktion **null**zurück. **_expand** gibt niemals einen Block zurück, der auf eine Größe kleiner als angefordert erweitert ist. Wenn ein Fehler auftritt, gibt **errno** die Art des Fehlers an. Weitere Informationen zu **errno**finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Der Rückgabewert zeigt auf einen Speicherplatz, der für die Speicherung eines beliebigen Objekttyps geeignet ist. Um die neue Größe des Elements zu überprüfen, verwenden Sie **_msize**. Um einen Zeiger auf einem Typ als **"void"**, verwenden Sie eine Typumwandlung für den Rückgabewert.
+Der Rückgabewert zeigt auf einen Speicherplatz, der für die Speicherung eines beliebigen Objekttyps geeignet ist. Verwenden Sie **_msize**, um die neue Größe des Elements zu überprüfen. Um einen Zeiger auf einen anderen Typ als **void**abzurufen, verwenden Sie eine Typumwandlung für den Rückgabewert.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_expand** -Funktion ändert die Größe von einer vorherigen belegten Speicherblock, indem Sie versuchen, erweitern oder verkleinern den Block ohne Verschieben seiner Position im Heap. Die *Memblock* Parameter verweist auf den Anfang des Blocks. Die *Größe* Parameter gibt die neue Größe des Blocks in Bytes. Der Inhalt des Blocks bleibt bis zum Minimum von neuer und alter Größe unverändert. *Memblock* sollte sich nicht auf ein Block, der freigegeben wurde.
+Die **_expand** -Funktion ändert die Größe eines zuvor zugeordneten Speicherblocks, indem versucht wird, den Block zu erweitern oder zu verkleinern, ohne seine Position im Heap zu verschieben. Der *memblock* -Parameter verweist auf den Anfang des Blocks. Der *size* -Parameter gibt die neue Größe des Blocks in Bytes an. Der Inhalt des Blocks bleibt bis zum Minimum von neuer und alter Größe unverändert. *memblock* darf kein Block sein, der freigegeben wurde.
 
 > [!NOTE]
-> Auf 64-Bit-Plattformen **_expand** den Block kann keinen Vertrag, wenn die neue Größe kleiner als die aktuelle Größe ist; insbesondere, ist wenn der Block Größe kleiner als 16K war und daher die niedrige Heap-Fragmentierung, zugeordnet **_expand**  verlässt den Block nicht und gibt *Memblock*.
+> Auf 64-Bit-Plattformen kann **_expand** den Block ggf. nicht schrumpfen, wenn die neue Größe kleiner als die aktuelle Größe ist. insbesondere wenn der Block kleiner als 16K ist und daher im niedrigen Fragmentierungs Heap zugeordnet ist, lässt **_expand** den Block unverändert und gibt *memblock*zurück.
 
-Wenn die Anwendung mit einer Debugversion der C-Laufzeitbibliotheken verknüpft ist **_expand** löst in [_expand_dbg](expand-dbg.md). Weitere Informationen dazu, wie der Heap während des Debugprozesses verwaltet wird, finden Sie unter [CRT-Debugheap](/visualstudio/debugger/crt-debug-heap-details).
+Wenn die Anwendung mit einer Debugversion der C-Laufzeitbibliotheken verknüpft ist, wird **_expand** in [_expand_dbg](expand-dbg.md)aufgelöst. Weitere Informationen dazu, wie der Heap während des Debugprozesses verwaltet wird, finden Sie unter [CRT-Debugheap](/visualstudio/debugger/crt-debug-heap-details).
 
-Diese Funktion überprüft ihre Parameter. Wenn *Memblock* ist ein null-Zeiger ruft diese Funktion einen Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt **NULL**. Wenn *Größe* ist größer als **_HEAP_MAXREQ**, **Errno** nastaven NA hodnotu **ENOMEM** und die Funktion gibt **NULL**.
+Diese Funktion überprüft ihre Parameter. Wenn *memblock* ein NULL-Zeiger ist, ruft diese Funktion einen Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird **errno** auf **EINVAL** festgelegt, und die Funktion gibt **null**zurück. Wenn die *Größe* größer als **_HEAP_MAXREQ**ist, wird **errno** auf **ENOMEM** festgelegt, und die Funktion gibt **null**zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

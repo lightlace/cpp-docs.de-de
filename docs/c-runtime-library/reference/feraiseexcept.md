@@ -1,9 +1,9 @@
 ---
 title: feraiseexcept
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feraiseexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,20 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: HeaderDef
+api_type:
+- HeaderDef
 f1_keywords:
 - feraiseexcept
 - fenv/feraiseexcept
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: 581dd4026a20ce7221945c5815af3ae102f132fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40ff315c179a6b62a3073d4f07e4e6a6d1c1acab
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334358"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941130"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -42,7 +43,7 @@ int feraiseexcept(
 
 ### <a name="parameters"></a>Parameter
 
-*excepts*<br/>
+*ausgenommen*<br/>
 Die auszulösenden Gleitkommaausnahmen
 
 ## <a name="return-value"></a>Rückgabewert
@@ -51,7 +52,7 @@ Wenn alle angegebenen Ausnahmen erfolgreich ausgelöst werden, wird 0 zurückgeg
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Feraiseexcept** Funktion versucht, die vom angegebenen Gleitkommaausnahmen auszulösen *Ausnahme*.   Die **Feraiseexcept** -Funktion unterstützt diese definierten Ausnahmemakros \<fenv.h >:
+Die **feraianwith** -Funktion versucht, die durch *Exception*angegebenen Gleit Komma Ausnahmen zu erhöhen.   Die **feraionaußer** -Funktion unterstützt diese in \<fenv. h > definierten Ausnahme Makros:
 
 |Ausnahmemakro|Beschreibung|
 |---------------------|-----------------|
@@ -62,11 +63,11 @@ Die **Feraiseexcept** Funktion versucht, die vom angegebenen Gleitkommaausnahmen
 |FE_UNDERFLOW|Das Ergebnis einer früheren Gleitkommaoperation war zu klein, um ganz genau dargestellt zu werden; ein nicht normaler Wert wurde erstellt.|
 |FE_ALLEXCEPT|Bitweiser OR-Operator oder alle unterstützten Gleitkommaausnahmen|
 
-Die *Ausnahme* Argument kann NULL sein, eines der ausnahmemakrowerte oder das bitweise OR von mindestens zwei der unterstützten Ausnahmemakros. Wenn eines der angegebenen Ausnahmemakros FE_OVERFLOW oder FE_UNDERFLOW ist, kann die Ausnahme FE_INEXACT als Nebeneffekt ausgelöst werden.
+Das *excepts* -Argument kann NULL, einer der ausnahmemakrowerte oder das bitweise OR von mindestens zwei unterstützten Ausnahme Makros sein. Wenn eines der angegebenen Ausnahmemakros FE_OVERFLOW oder FE_UNDERFLOW ist, kann die Ausnahme FE_INEXACT als Nebeneffekt ausgelöst werden.
 
 Um diese Funktion zu verwenden, müssen Sie vor dem Aufruf Gleitkommaoptimierungen deaktivieren, die den Zugriff mithilfe der `#pragma fenv_access(on)`-Direktive verhindern könnten. Weitere Informationen finden Sie unter [fenv_access](../../preprocessor/fenv-access.md).
 
-**Microsoft Specific:** Die Ausnahmen, die im angegebenen *Ausnahme* werden ausgelöst, in der Reihenfolge FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Allerdings FE_INEXACT ausgelöst werden kann, wenn FE_OVERFLOW oder FE_UNDERFLOW ausgelöst wird, wenn auch nicht in angegeben *Ausnahme*. **Ende Microsoft-spezifisch**
+**Microsoft-spezifisch:** Die in " *excepts* " angegebenen Ausnahmen werden in der Reihenfolge FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT, ausgelöst. FE_INEXACT kann jedoch auch dann ausgelöst werden, wenn FE_OVERFLOW oder FE_UNDERFLOW ausgelöst wird, auch wenn Sie nicht in *excepts*angegeben werden. **Ende Microsoft-spezifisch**
 
 ## <a name="requirements"></a>Anforderungen
 

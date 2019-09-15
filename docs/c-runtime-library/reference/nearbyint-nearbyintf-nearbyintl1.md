@@ -1,11 +1,11 @@
 ---
 title: nearbyint, nearbyintf, nearbyintl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - nearbyint
 - nearbyintf
 - nearbyintl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - nearbyint
 - nearbyintf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-ms.openlocfilehash: 827286c840c6564c8c3f8b351197b0201509d241
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd0a7d00c5019dd1e483d555df6db8d9770e61c1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156199"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951395"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 
@@ -61,23 +64,23 @@ Der zu rundende Wert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn erfolgreich, wird *x*, gerundet auf die nächste ganze Zahl, mit dem aktuellen Rundungsformat, von gemeldeten [Fegetround](fegetround-fesetround2.md). Andernfalls gibt die Funktion möglicherweise einen der folgenden Werte zurück:
+Wenn erfolgreich, wird *x*(auf die nächste ganze Zahl gerundet) zurückgegeben, wobei das aktuelle Rundungs Format verwendet wird, wie von [fegetround](fegetround-fesetround2.md)gemeldet. Andernfalls gibt die Funktion möglicherweise einen der folgenden Werte zurück:
 
 |Problem|Zurück|
 |-----------|------------|
-|*x* = ±INFINITY|±Infinity, unverändert|
-|*x* = ±0|±0, unverändert|
-|*x* = NaN|NaN|
+|*x* = ±INFINITY|± Unendlich, unverändert|
+|*x* = ±0|± 0, unverändert|
+|*x* = Nan|NaN|
 
-Fehler werden nicht gemeldet, über [_matherr](matherr.md), genauer gesagt, diese Funktion meldet keine **FE_INEXACT** Ausnahmen.
+Fehler werden nicht über [_matherr](matherr.md)gemeldet; Diese Funktion meldet insbesondere keine **FE_INEXACT** -Ausnahmen.
 
 ## <a name="remarks"></a>Hinweise
 
-Der Hauptunterschied zwischen dieser Funktion und [Rint](rint-rintf-rintl.md) besteht darin, dass diese Funktion keine ungenaue Gleitkommaausnahme auslöst.
+Der primäre Unterschied zwischen dieser Funktion und [rint](rint-rintf-rintl.md) besteht darin, dass diese Funktion nicht die inexakte Gleit Komma Ausnahme auslöst.
 
 Da die maximalen Gleitkommawerte genaue ganze Zahlen sind, überläuft diese Funktion nie von selbst. Stattdessen ist es möglich, dass der Rückgabewert je nach Version der verwendeten Funktion von der Ausgabe überlaufen wird.
 
-Da C++ das Überladen zulässt, können Sie Überladungen von aufrufen können **Nearbyint** verwenden und zurückgeben **"float"** oder **lange** **doppelte** Parameter. In einem C-Programm **Nearbyint** immer zwei double-Werten und gibt einen doppelten Wert zurück.
+C++ermöglicht überladen, sodass Sie über Ladungen von **nearbyint** abrufen können, die **float** -oder **Long** **Double** -Parameter annehmen und zurückgeben. In einem C-Programm übernimmt **nearbyint** immer zwei Double-Werte und gibt einen Double-Wert zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -90,4 +93,4 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 ## <a name="see-also"></a>Siehe auch
 
 [Alphabetische Funktionsreferenz](crt-alphabetical-function-reference.md)<br/>
-[Mathematische Unterstützung und gleitkommaunterstützung](../floating-point-support.md)<br/>
+[Mathematische und Gleit Komma Unterstützung](../floating-point-support.md)<br/>

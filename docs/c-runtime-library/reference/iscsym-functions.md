@@ -1,7 +1,7 @@
 ---
 title: iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _iswcsym_l
 - __iswcsym
 - __iscsym
@@ -10,7 +10,7 @@ apiname:
 - __iswcsymf
 - __iscsymf
 - _iscsymf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _iswcsym_l
 - _iswcsymf_l
@@ -62,14 +65,14 @@ helpviewer_keywords:
 - iscsym function
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
-ms.openlocfilehash: 8ee84243b98c08504ac0bb63593e39c32230b706
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef5b2487fb49739f9a073adbc87546fb5d49d542
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331635"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954414"
 ---
-# <a name="iscsym-iscsymf-iscsym-iswcsym-iscsymf-iswcsymf-iscsyml-iswcsyml-iscsymfl-iswcsymfl"></a>iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
+# <a name="iscsym-iscsymf-__iscsym-__iswcsym-__iscsymf-__iswcsymf-_iscsym_l-_iswcsym_l-_iscsymf_l-_iswcsymf_l"></a>iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 
 Bestimmt, ob eine Ganzzahl ein Zeichen darstellt, das in einem Bezeichner verwendet werden kann.
 
@@ -111,20 +114,20 @@ int _iswcsymf_l(
 ### <a name="parameters"></a>Parameter
 
 *c*<br/>
-Zu testende ganze Zahl. *c* muss im Bereich von 0 – 255 für die schmale zeichenversion der Funktion.
+Zu testende ganze Zahl. *c* muss im Bereich von 0-255 für die schmale Zeichen Version der Funktion liegen.
 
 *locale*<br/>
 Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Beide **__iscsym** und **__iswcsym** einen Wert ungleich NULL zurück, wenn *c* ist ein Buchstabe, Unterstrich oder Ziffer. Beide **__iscsymf** und **__iswcsymf** einen Wert ungleich NULL zurück, wenn *c* ein Buchstabe oder Unterstrich. Jede dieser Routinen gibt 0 zurück, wenn *c* die testbedingung nicht erfüllt. Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie verwenden die *Gebietsschema* für den übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängige Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Sowohl **__iscsym** als auch **__iswcsym** geben einen Wert ungleich 0 (null) zurück, wenn *c* ein Buchstabe, ein Unterstrich oder eine Ziffer ist. Sowohl **__iscsymf** als auch **__iswcsymf** geben einen Wert ungleich 0 (null) zurück, wenn *c* ein Buchstabe oder ein Unterstrich ist. Jede dieser Routinen gibt 0 zurück, wenn *c* die Test Bedingung nicht erfüllt. Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch das *übergebene Gebiets* Schema anstelle des aktuellen Gebiets Schemas für Ihr vom Gebiets Schema abhängiges Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Hinweise
 
 Diese Routinen werden als Makros implementiert, es sei denn, die Präprozessormakro _CTYPE_DISABLE_MACROS ist definiert. Wenn Sie die Makroversionen dieser Routinen verwenden, können die Argumente mehr als einmal ausgewertet werden. Seien Sie vorsichtig, wenn Sie Ausdrücke mit Nebeneffekten in der Argumentliste verwenden.
 
-Für die Abwärtskompatibilität **Iscsym** und **Iscsymf** werden als Makros definiert nur, wenn [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) ist nicht definiert oder definiert ist als 0; Andernfalls sind sie nicht definiert.
+Aus Gründen der Abwärtskompatibilität werden **iscsym** und **iscsymf** nur als Makros definiert, wenn [ &#95; &#95;stdc&#95; ](../../preprocessor/predefined-macros.md) nicht definiert oder als 0 definiert ist. Andernfalls sind Sie nicht definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -132,7 +135,7 @@ Für die Abwärtskompatibilität **Iscsym** und **Iscsymf** werden als Makros de
 |-------------|---------------------|
 |**iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, **_iswcsymf_l**|C: \<ctype.h><br /><br /> C++: \<cctype> oder \<ctype.h>|
 
-Die **Iscsym**, **Iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__ Iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, und **_iswcsymf_l** Routinen sind Microsoft-spezifisch. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die **Routinen iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l** **, _iswcsym_l,** **_iscsymf_l**und **_iswcsymf_l** sind Microsoft-spezifisch. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Siehe auch
 

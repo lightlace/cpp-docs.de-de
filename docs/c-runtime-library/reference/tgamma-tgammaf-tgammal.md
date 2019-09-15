@@ -1,11 +1,11 @@
 ---
 title: tgamma, tgammaf, tgammal
 ms.date: 04/05/2018
-apiname:
+api_name:
 - tgamma
 - tgammaf
 - tgammal
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tgamma
 - tgammaf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: c9ff92658163fc20ce21496aba34b22b3661748b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02926fa49bbabeb9cf532f53cfa6e30a77805e70
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155614"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946213"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 
@@ -72,27 +75,27 @@ Der Wert, dessen Gamma gefunden werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn erfolgreich, wird das Gamma von *x*.
+Wenn erfolgreich, wird das Gamma von *x*zurückgegeben.
 
-Ein Bereichsfehler kann auftreten, wenn die Größe der *x* ist zu groß oder zu klein für den Datentyp. Ein Domänen- oder Bereichsfehler kann auftreten, wenn *x* < = 0.
+Ein Bereichs Fehler kann auftreten, wenn die Größe von *x* für den Datentyp zu groß oder zu klein ist. Wenn *x* < = 0 ist, kann ein Domänen Fehler oder ein Bereichs Fehler auftreten.
 
 |Problem|Zurück|
 |-----------|------------|
-|x = ±0|±INFINITY|
+|x = ±0|± UNENDLICH|
 |x = negative ganze Zahl|NaN|
-|x = -INFINITY|NaN|
+|x =-unendlich|NaN|
 |x = +INFINITY|+INFINITY|
 |x = NaN|NaN|
 |Domänenfehler|NaN|
-|pole-Fehler|±HUGE_VAL ±HUGE_VALF oder ±HUGE_VALL|
-|Überlaufbereichsfehler|±HUGE_VAL ±HUGE_VALF oder ±HUGE_VALL|
+|pole-Fehler|± HUGE_VAL, ± HUGE_VALF oder ± HUGE_VALL|
+|Überlaufbereichsfehler|± HUGE_VAL, ± HUGE_VALF oder ± HUGE_VALL|
 |Unterlaufbereichsfehler|Richtiger Wert nach dem Runden|
 
 Fehler werden gemäß der Angaben in [_matherr](matherr.md) gemeldet.
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Tgamma** verwenden und zurückgeben **"float"** und **lange** **doppelte** Typen. In einem C-Programm **Tgamma** immer Double und gibt eine **doppelte**.
+Da C++ das überladen zulässt, können Sie über Ladungen von **tgamma** aufzurufen, die **float** -und **Long** **Double** -Typen annehmen und zurückgeben. In einem C-Programm nimmt **tgamma** immer einen **Double**-Wert an und gibt ihn zurück.
 
 Wenn x eine natürliche Zahl ist, gibt diese Funktion die Fakultät von (x-1) zurück.
 
@@ -100,7 +103,7 @@ Wenn x eine natürliche Zahl ist, gibt diese Funktion die Fakultät von (x-1) zu
 
 |Funktion|C-Header|C++-Header|
 |--------------|--------------|------------------|
-|**tgamma**, **tgammaf**,  **tgammal**|\<math.h>|\<cmath>|
+|**tgamma**, **tgammaf**, **tgammal**|\<math.h>|\<cmath>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

@@ -1,9 +1,9 @@
 ---
 title: fwrite
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fwrite
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fwrite
 helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-ms.openlocfilehash: f05e39390f3a2d0ad41627f6aed1aecd77b57cca
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 8149e0f2cbc84c2c28093d86fecd5ff2a9db7aba
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376064"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956194"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -64,7 +67,7 @@ Zeiger auf die **FILE**-Struktur.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **fwrite** -Funktion schreibt bis zum *zählen* von Elementen  vom *Puffer* in den Ausgabestream. Der dem *Stream* zugeordnete Dateizeiger (sofern vorhanden) wird um die Anzahl der tatsächlich geschriebenen Bytes erhöht. Wenn der *Stream* im Textmodus geöffnet ist, wird jeder Zeilenvorschub durch ein Wagen Rücklauf-Zeilenvorschub Paar ersetzt. Diese Ersetzung hat keine Auswirkung auf den Rückgabewert.
+Die **fwrite** -Funktion schreibt bis zum *zählen* von Elementen vom *Puffer* in den Ausgabestream. Der dem *Stream* zugeordnete Dateizeiger (sofern vorhanden) wird um die Anzahl der tatsächlich geschriebenen Bytes erhöht. Wenn der *Stream* im Textmodus geöffnet ist, wird jeder Zeilenvorschub durch ein Wagen Rücklauf-Zeilenvorschub Paar ersetzt. Diese Ersetzung hat keine Auswirkung auf den Rückgabewert.
 
 Wenn der *Stream* im Unicode-Übersetzungsmodus geöffnet wird – z. b. wenn der *Stream* durch Aufrufen von **fopen** geöffnet wird und ein Modusparameter verwendet wird, der **CCS = Unicode**, **CCS = UTF-16LE**oder **CCS = UTF-8**enthält, oder wenn der Modus ist wird in einen Unicode-Übersetzungsmodus mithilfe von **_setmode** geändert, und ein Modusparameter, der **_O_WTEXT**, **_O_U16TEXT**oder **_O_U8TEXT**–*buffer* enthält, wird als Zeiger auf ein Array von **wchar_t** interpretiert, das Folgendes enthält: UTF-16-Daten. Der Versuch, in diesem Modus eine ungerade Anzahl von Bytes zu schreiben, führt zu einem Parametervalidierungsfehler.
 

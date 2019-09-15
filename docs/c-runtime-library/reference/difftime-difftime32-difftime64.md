@@ -1,11 +1,11 @@
 ---
 title: difftime, _difftime32, _difftime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _difftime32
 - difftime
 - _difftime64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _difftime64
 - difftime
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-ms.openlocfilehash: 80aaac1696fc82db248b097e73a2d89d81a20346
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51d74ae447e87e91e9be3c27864b8dfe7f490b14
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288522"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937641"
 ---
-# <a name="difftime-difftime32-difftime64"></a>difftime, _difftime32, _difftime64
+# <a name="difftime-_difftime32-_difftime64"></a>difftime, _difftime32, _difftime64
 
 Ermittelt die Differenz zwischen zwei Uhrzeiten.
 
@@ -61,17 +64,17 @@ Uhrzeit Anfang.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Difftime** gibt die verstrichene Zeit in Sekunden an, von *TimeStart* zu *TimeEnd*. Der zurückgegebene Wert ist eine Gleitkommazahl mit doppelter Genauigkeit. Der zurückgegeben Wert ist möglicherweise 0, was auf einen Fehler hindeutet.
+**difftime** gibt die verstrichene Zeit in Sekunden zurück (von *TimeStart* bis *timeend*). Der zurückgegebene Wert ist eine Gleitkommazahl mit doppelter Genauigkeit. Der zurückgegeben Wert ist möglicherweise 0, was auf einen Fehler hindeutet.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Difftime** Funktion berechnet den Unterschied zwischen den beiden angegebenen Zeitwerten *TimeStart* und *TimeEnd*.
+Die **difftime** -Funktion berechnet den Unterschied zwischen den beiden angegebenen Zeitwerten *TimeStart* und *timeend*.
 
-Der angegebene Zeitwert muss innerhalb des Bereichs von passen **Time_t**. **Time_t** ist ein 64-Bit-Wert. Das Bereichsende wurde vom 18. Januar 2038, 23:59:59 UTC auf den 31. Dezember 3000, 23:59:59 verlegt. Der untere Bereich von **Time_t** ist nach wie vor Mitternacht, 1. Januar 1970.
+Der angegebene Zeitwert muss in den Bereich von **time_t**passen. **time_t** ist ein 64-Bit-Wert. Das Bereichsende wurde vom 18. Januar 2038, 23:59:59 UTC auf den 31. Dezember 3000, 23:59:59 verlegt. Der untere Bereich von **time_t** ist nach wie vor Mitternacht, 1. Januar 1970.
 
-**Difftime** ist eine Inlinefunktion, die ausgewertet wird **_difftime32** oder **_difftime64** je nachdem, ob **_USE_32BIT_TIME_T** definiert ist. _difftime32 und _difftime64 können direkt verwendet werden, um die Verwendung einer bestimmten Größe des time-Typs zu erzwingen.
+**difftime** ist eine Inline Funktion, die abhängig davon, ob **_USE_32BIT_TIME_T** definiert ist, zu **_difftime32** oder **_difftime64** ausgewertet wird. _difftime32 und _difftime64 können direkt verwendet werden, um die Verwendung einer bestimmten Größe des time-Typs zu erzwingen.
 
-Diese Funktionen überprüfen ihre Parameter. Wenn einer der Parameter Null oder negativ ist, wird der Handler für ungültige Parameter aufgerufen, wie unter [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen 0 zurück und legen Sie **Errno** zu **EINVAL**.
+Diese Funktionen überprüfen ihre Parameter. Wenn einer der Parameter Null oder negativ ist, wird der Handler für ungültige Parameter aufgerufen, wie unter [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen 0 zurück und legen **errno** auf **EINVAL**fest.
 
 ## <a name="requirements"></a>Anforderungen
 

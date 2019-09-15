@@ -1,11 +1,11 @@
 ---
 title: time, _time32, _time64
 ms.date: 11/06/2018
-apiname:
+api_name:
 - time
 - _time64
 - _time32
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - time
 - _time64
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-ms.openlocfilehash: 693b70b3682876d7e6c3721f5d06aa13d31abb96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02dc7f250fe26d9ed7abfd89ca9a4c2163312e6d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155588"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946091"
 ---
-# <a name="time-time32-time64"></a>time, _time32, _time64
+# <a name="time-_time32-_time64"></a>time, _time32, _time64
 
 Ruft die Systemzeit ab.
 
@@ -59,19 +62,19 @@ Zeiger auf den Speicherort für die Zeit.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Zeit, als Sekunden seit Mitternacht des 1. Januar 1970, oder-1 im Fall eines Fehlers verstrichen sind.
+Gibt die Zeit als Sekunden zurück, die seit Mitternacht, dem 1. Januar 1970 oder-1 verstrichen sind, wenn ein Fehler aufgetreten ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Zeit** Funktion gibt die Anzahl der Sekunden seit Mitternacht vergangenen (00: 00:00), 1. Januar 1970, koordinierte Weltzeit (UTC), entsprechend der Systemuhr. Der zurückgegebene Wert befindet sich in den Speicherort von *DestTime*. Dieser Parameter ist möglicherweise **NULL**, wobei der Rückgabewert nicht gespeichert ist.
+Die **time** -Funktion gibt die Anzahl der Sekunden zurück, die seit Mitternacht (00:00:00), 1. Januar 1970, koordinierte Weltzeit (UTC), gemäß der Systemuhr verstrichen sind. Der Rückgabewert wird an dem Speicherort gespeichert, der von *desttime*angegeben wird. Dieser Parameter kann **null**sein. in diesem Fall wird der Rückgabewert nicht gespeichert.
 
-**Zeit** ist ein Wrapper für **_time64** und **Time_t** ist, in der Standardeinstellung entspricht **__time64_t**. Wenn Sie erzwingen, dass den Compiler interpretiert müssen **Time_t** als das alte 32-Bit **Time_t**, können Sie definieren **_USE_32BIT_TIME_T**. Dies ist nicht zu empfehlen, weil die Anwendung nach dem 18. Januar 2038 fehlschlagen kann. Die Verwendung dieses Makros ist auf 64-Bit-Plattformen nicht zulässig.
+**time** ist ein Wrapper für **_time64** und **time_t** entspricht standardmäßig **__time64_t**. Wenn Sie den Compiler zwingen müssen, **time_t** als das alte 32-Bit- **time_t**zu interpretieren, können Sie **_USE_32BIT_TIME_T**definieren. Dies ist nicht zu empfehlen, weil die Anwendung nach dem 18. Januar 2038 fehlschlagen kann. Die Verwendung dieses Makros ist auf 64-Bit-Plattformen nicht zulässig.
 
 ## <a name="requirements"></a>Anforderungen
 
 |-Routine zurückgegebener Wert|Erforderlicher C-Header|Erforderlicher C++-Header|
 |-------|------|---------------------|
-|**time**, **\_time32**, **\_time64**|\<time.h>|\<CTime > oder \<time.h >|
+|**time**, **\_time32**, **\_time64**|\<time.h>|\<CTime-> \<oder Time. h >|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

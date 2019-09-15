@@ -1,10 +1,10 @@
 ---
 title: _fsopen, _wfsopen
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wfsopen
 - _fsopen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wfsopen
 - fsopen
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - _wfsopen function
 - file sharing [C++]
 ms.assetid: 5e4502ab-48a9-4bee-a263-ebac8d638dec
-ms.openlocfilehash: 197a4f690a6626edbfec27ea4abef1999b6cedaf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ffc3aa5801ff2ed63ecf815f3351e4d7a8cf459
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287696"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956482"
 ---
-# <a name="fsopen-wfsopen"></a>_fsopen, _wfsopen
+# <a name="_fsopen-_wfsopen"></a>_fsopen, _wfsopen
 
 Ein Stream mit Dateifreigabe öffnen
 
@@ -74,41 +77,41 @@ Freigabetyp erlaubt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt einen Zeiger auf den Stream zurück. Ein NULL-Zeigerwert gibt einen Fehler an. Wenn *Filename* oder *Modus* ist **NULL** oder eine leere Zeichenfolge ist, rufen diese Funktionen den Handler für ungültige Parameter an, wie in beschrieben [Parametervalidierung ](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **NULL** und **Errno** zu **EINVAL**.
+Jede dieser Funktionen gibt einen Zeiger auf den Stream zurück. Ein NULL-Zeigerwert gibt einen Fehler an. Wenn *filename* oder *Mode* **null** oder eine leere Zeichenfolge ist, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen **null** zurück und legen **errno** auf **EINVAL**fest.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_fsopen** -Funktion öffnet die angegebene Datei *Filename* als Datenstrom und die Datei für die nachfolgende Lese- oder Schreibfreigabe, vorbereitet, gemäß den Modus und *Shflag*Argumente. **_wfsopen** ist eine Breitzeichen-Version von **_fsopen**; die *Filename* und *Modus* Argumente **_wfsopen** sind Zeichenfolgen mit Breitzeichen. **_wfsopen** und **_fsopen** Verhalten sich andernfalls identisch.
+Die **_fsopen** -Funktion öffnet die Datei, die durch *filename* angegeben ist, als Stream und bereitet die Datei auf nachfolgende freigegebene Lese-oder Schreibvorgänge vor, wie im Modus-und *shflag* -Argument definiert. **_wfsopen** ist eine breit Zeichen Version von **_fsopen**. der *Dateiname* und der *Mode* -Argument für **_wfsopen** sind Zeichen folgen mit breit Zeichen. **_wfsopen** und **_fsopen** Verhalten sich andernfalls identisch.
 
-Die Zeichenfolge *Modus* gibt den Typ für die Datei angeforderten Zugriffstyp wie in der folgenden Tabelle dargestellt.
+Der Zeichen folgen *Modus* gibt den für die Datei angeforderten Zugriffstyp an, wie in der folgenden Tabelle dargestellt.
 
 |Begriff|Definition|
 |----------|----------------|
-|**"r"**|Öffnet zum Lesen. Wenn die Datei nicht vorhanden ist oder wurde nicht gefunden, die **_fsopen** -Aufruf fehl.|
+|**"r"**|Öffnet zum Lesen. Wenn die Datei nicht vorhanden ist oder nicht gefunden werden kann, schlägt der **_fsopen** -Befehl fehl.|
 |**"w"**|Öffnet eine leere Datei zum Schreiben. Wenn die angegebene Datei vorhanden ist, wird ihr Inhalt zerstört.|
 |**„a“**|Öffnet zum Schreiben am Ende der Datei (Anfügen); erstellt die Datei zuerst, wenn sie nicht vorhanden ist.|
 |**„r+“**|Öffnet sowohl zum Lesen als auch zum Schreiben. (Die Datei muss vorhanden sein.)|
 |**„w+“**|Öffnet eine leere Datei zum Lesen und Schreiben. Wenn die angegebene Datei vorhanden ist, wird ihr Inhalt zerstört.|
 |**„a+“**|Öffnet zum Lesen und Anhängen; erstellt die Datei zuerst, wenn sie nicht vorhanden ist.|
 
-Verwenden der **"w"** und **"w +"** Typen mit Bedacht, da sie vorhandene Dateien zerstören können.
+Verwenden Sie die Typen **"w"** und **"w +"** mit Sorgfalt, da Sie vorhandene Dateien zerstören können.
 
-Wenn eine Datei geöffnet wird, mit der **"a"** oder **"a +"** Zugriffstyp am Ende der Datei erfolgen alle Schreibvorgänge. Der Dateizeiger kann mit neu angeordnet werden [Fseek](fseek-fseeki64.md) oder [rewind](rewind.md), er wird jedoch immer verschoben zurück an das Ende der Datei, bevor ein Schreibvorgang durchgeführt wird. Folglich können vorhandene Daten nicht überschrieben werden. Wenn die **"R +"**, **"w +"**, oder **"a +"** angegeben wird, sind Lese- und Schreibvorgänge zulässig (die Datei heißt es, zum Aktualisieren geöffnet). Wenn Sie jedoch zwischen Lesen und Schreiben wechseln, muss ein sich dazwischen befindender Vorgang wie [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md) oder [rewind](rewind.md) vorhanden sein. Die aktuelle Position kann angegeben werden, für die [Fsetpos](fsetpos.md) oder [Fseek](fseek-fseeki64.md) Vorgang, bei Bedarf. Zusätzlich zu den oben aufgeführten Werten kann eines der folgenden Zeichen im enthalten sein kann *Modus* den Übersetzungsmodus für neue Zeilen, und klicken Sie für die dateiverwaltung angeben.
+Wenn eine Datei mit dem Zugriffstyp **"a"** oder **"a +"** geöffnet wird, erfolgen alle Schreibvorgänge am Ende der Datei. Der Dateizeiger kann mithilfe von [fseek](fseek-fseeki64.md) oder [Rewind](rewind.md)neu positioniert werden. er wird jedoch immer wieder zurück an das Ende der Datei verschoben, bevor ein Schreibvorgang durchgeführt wird. Folglich können vorhandene Daten nicht überschrieben werden. Wenn der Zugriffstyp **"r +"** , **"w +"** oder **"a +** " angegeben wird, sind sowohl Lese-als auch Schreibvorgänge zulässig (die Datei ist zum Aktualisieren geöffnet). Wenn Sie jedoch zwischen Lesen und Schreiben wechseln, muss ein sich dazwischen befindender Vorgang wie [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md) oder [rewind](rewind.md) vorhanden sein. Wenn gewünscht, kann die aktuelle Position für den Vorgang " [f](fsetpos.md) " oder " [f](fseek-fseeki64.md) " angegeben werden. Zusätzlich zu den oben aufgeführten Werten kann eines der folgenden Zeichen in den- *Modus* eingeschlossen werden, um den Übersetzungsmodus für neue Zeilen anzugeben, und für die Dateiverwaltung.
 
 |Begriff|Definition|
 |----------|----------------|
-|**t**|Öffnet eine Datei im Textmodus (übersetzt). In diesem Modus Carriage Return-Line feed (CR-LF) Kombinationen bei der Eingabe in einzelne Zeilenvorschübe (LF) übersetzt, und LF-Zeichen, bei der Ausgabe in CR-LF-Kombinationen aus übersetzt. Außerdem wird STRG+Z bei der Eingabe als EOF-Zeichen interpretiert. In den Dateien geöffnet, die für das Lesen oder Lesen/Schreiben **_fsopen** STRG + Z am Ende der Datei überprüft und entfernt, wenn möglich die Markierung. Dies geschieht, da mit [Fseek](fseek-fseeki64.md) und [Ftell](ftell-ftelli64.md) zum Navigieren innerhalb einer Datei, die mit STRG + Z endet verursachen können [Fseek](fseek-fseeki64.md) am Ende der Datei nicht ordnungsgemäß verhält.|
+|**t**|Öffnet eine Datei im Textmodus (übersetzt). In diesem Modus werden Wagen Rücklauf-Zeilenvorschub-Kombinationen (CR-LF) bei der Eingabe in einzeilige Feeds (LF) übersetzt. LF-Zeichen werden bei der Ausgabe in CR-LF-Kombinationen übersetzt. Außerdem wird STRG+Z bei der Eingabe als EOF-Zeichen interpretiert. In Dateien, die für Lese-oder Lese-/Schreibzugriff geöffnet sind, überprüft **_fsopen** , ob am Ende der Datei STRG + Z angezeigt wird, und entfernt, wenn möglich. Dies geschieht, da die Verwendung von [fseek](fseek-fseeki64.md) und [ftell](ftell-ftelli64.md) zum Verschieben innerhalb einer Datei, die mit STRG + Z endet, dazu führen kann, dass sich [fseek](fseek-fseeki64.md) in der Nähe des Datei Endes nicht ordnungsgemäß verhält.|
 |**b**|Öffnet im (unübersetzten) Binärmodus eine Datei; die oben genannten Übersetzungen werden unterdrückt.|
 |**S**|Gibt an, dass das Zwischenspeichern für den sequenziellen Zugriff vom Datenträger optimiert, aber nicht darauf beschränkt ist.|
 |**R**|Gibt an, dass das Zwischenspeichern für den zufälligen Zugriff vom Datenträger optimiert, aber nicht darauf beschränkt ist.|
 |**T**|Gibt an, dass eine Datei temporär ist. Wenn möglich, wird sie nicht auf den Datenträger geschrieben.|
 |**D**|Gibt an, dass eine Datei temporär ist. Sie wird gelöscht, wenn der letzte Dateizeiger geschlossen wird.|
 
-Wenn **t** oder **b** nicht in *mode* angegeben ist, wird der Übersetzungsmodus durch die Standardmodusvariable **_fmode** definiert. Wenn **t** oder **b** ist das Argument, die Funktion schlägt fehl und gibt mit dem Präfix **NULL**. Eine Erörterung von Text- und Binärmodi finden Sie unter [Text- und Binärmodus-Datei-E/A](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
+Wenn **t** oder **b** nicht in *mode* angegeben ist, wird der Übersetzungsmodus durch die Standardmodusvariable **_fmode** definiert. Wenn **t** oder **b** dem Argument vorangestellt wird, schlägt die Funktion fehl und gibt **null**zurück. Eine Erörterung von Text- und Binärmodi finden Sie unter [Text- und Binärmodus-Datei-E/A](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
-Das Argument *Shflag* ist ein konstanter Ausdruck, bestehend aus einem der folgenden Manifestkonstanten, die in Share.h definiert.
+Das Argument *shflag* ist ein konstanter Ausdruck, der aus einer der folgenden Manifest-Konstanten besteht, die in "Share. h" definiert sind.
 
 |Begriff|Definition|
 |----------|----------------|
@@ -128,8 +131,8 @@ Das Argument *Shflag* ist ein konstanter Ausdruck, bestehend aus einem der folge
 
 |Funktion|Erforderlicher Header|Optionale Header|
 |--------------|---------------------|----------------------|
-|**_fsopen**|\<stdio.h>|\<share.h><br /><br /> Für die manifestkonstante für *Shflag* Parameter.|
-|**_wfsopen**|\<stdio.h> oder \<wchar.h>|\<share.h><br /><br /> Für die manifestkonstante für *Shflag* Parameter.|
+|**_fsopen**|\<stdio.h>|\<share.h><br /><br /> Für die Manifest-Konstante für den *shflag* -Parameter.|
+|**_wfsopen**|\<stdio.h> oder \<wchar.h>|\<share.h><br /><br /> Für die Manifest-Konstante für den *shflag* -Parameter.|
 
 ## <a name="example"></a>Beispiel
 

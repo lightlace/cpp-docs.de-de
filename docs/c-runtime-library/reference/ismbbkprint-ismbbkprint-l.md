@@ -1,10 +1,10 @@
 ---
 title: _ismbbkprint, _ismbbkprint_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbkprint
 - _ismbbkprint_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbkprint_l
 - ismbbkprint
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - ismbbkprint function
 - _ismbbkprint_l function
 ms.assetid: 8d1d3258-1e34-4365-81ed-97c95de25475
-ms.openlocfilehash: 9d30abb0bcb587aeb15087ceb80d60d54ac1bebe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2417718d7cb90e8032cfe9dad903d6610dc6ae7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157525"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954115"
 ---
-# <a name="ismbbkprint-ismbbkprintl"></a>_ismbbkprint, _ismbbkprint_l
+# <a name="_ismbbkprint-_ismbbkprint_l"></a>_ismbbkprint, _ismbbkprint_l
 
 Bestimmt, ob ein bestimmtes Multibytezeichen ein Interpunktionszeichen ist.
 
@@ -61,7 +64,7 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_ismbbkprint** gibt einen Wert ungleich NULL zurück, wenn die ganze Zahl *c* einen nicht-ASCII-Text oder nicht-ASCII- interpunktionssymbol 0 ist, ist dies nicht. Beispielsweise in Codepage 932 nur **_ismbbkprint** Tests für alphanumerische Katakana-Zeichen oder Katakana-Interpunktion (Bereich: 0xA1–0xDF). **_ismbbkprint** verwendet das aktuelle Gebietsschema für gebietsschemaabhängige zeicheneinstellungen. **_ismbbkprint_l** ist identisch mit dem Unterschied, dass das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+**_ismbbkprint** gibt einen Wert ungleich 0 (null) zurück, wenn die ganze Zahl *c* ein nicht-ASCII-Text oder ein nicht-ASCII-Interpunktions Symbol ist. andernfalls wird 0 zurückgegeben. Beispielsweise testet **_ismbbkprint** nur in der Codepage 932 auf alphanumerische Katakana-oder Katakana-Interpunktions Zeichen (Bereich: 0xA1–0xDF). **_ismbbkprint** verwendet das aktuelle Gebiets Schema für Gebiets Schema abhängige Zeichen Einstellungen. **_ismbbkprint_l** ist beinahe identisch, verwendet jedoch das übergebene Gebiets Schema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Anforderungen
 

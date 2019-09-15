@@ -1,10 +1,10 @@
 ---
 title: _getch_nolock, _getwch_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getwch_nolock
 - _getch_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getch_nolock
 - getwch_nolock
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - getch_nolock function
 - gettch_nolock function
 ms.assetid: 9d248546-26ca-482c-b0c6-55812a987e83
-ms.openlocfilehash: dbfc670b70a278e97794fc19f170cef565626dbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c8f27b468d0471f44211efa12dcee6453b3fac1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287533"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955467"
 ---
-# <a name="getchnolock-getwchnolock"></a>_getch_nolock, _getwch_nolock
+# <a name="_getch_nolock-_getwch_nolock"></a>_getch_nolock, _getwch_nolock
 
 Ruft ein Zeichen aus der Konsole ohne Echo ab und ohne den Thread zu sperren.
 
@@ -61,7 +64,7 @@ Gibt das gelesene Zeichen zurück. Es gibt keine Fehlerrückgabe.
 
 ## <a name="remarks"></a>Hinweise
 
-**_getch_nolock** und **_getwch_nolock** sind identisch mit **_getch** und **_getchw** mit dem Unterschied, dass sie nicht vor Störungen durch andere Threads geschützt. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
+**_getch_nolock** und **_getwch_nolock** sind mit **_getch** und **_getchw** identisch, mit dem Unterschied, dass Sie nicht vor Störungen durch andere Threads geschützt sind. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

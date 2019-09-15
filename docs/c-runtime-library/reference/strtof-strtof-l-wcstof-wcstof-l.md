@@ -1,12 +1,12 @@
 ---
 title: strtof, _strtof_l, wcstof, _wcstof_l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _strtof_l
 - wcstof
 - strtof
 - _wcstof_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcstof
 - _tcstof_l
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-ms.openlocfilehash: 10a50a175685f3e8f7f1241683c7705fd9a9b142
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2b2e7d230074b5a464260d36b41c28b9951d65b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376431"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957747"
 ---
-# <a name="strtof-strtofl-wcstof-wcstofl"></a>strtof, _strtof_l, wcstof, _wcstof_l
+# <a name="strtof-_strtof_l-wcstof-_wcstof_l"></a>strtof, _strtof_l, wcstof, _wcstof_l
 
 Konvertiert eine Zeichenfolge in einen Gleitkommawert mit einfacher Genauigkeit.
 
@@ -85,15 +88,15 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Strtof** gibt den Wert der Gleitkommazahl, außer wenn die Darstellung würde einen Überlauf, verursachen in dem Fall wird die Funktion zurückgegeben werden, +/-**HUGE_VALF**. Das Vorzeichen des **HUGE_VALF** entspricht dem Zeichen des Werts, der nicht dargestellt werden kann. **Strtof** gibt 0 zurück, wenn keine Konvertierung ausgeführt werden kann oder ein Unterlauf auftritt.
+" **strintof** " gibt den Wert der Gleit Komma Zahl zurück, es sei denn, die Darstellung würde einen Überlauf verursachen. in diesem Fall gibt die Funktion +/-**HUGE_VALF**zurück. Das Vorzeichen von **HUGE_VALF** stimmt mit dem Vorzeichen des Werts überein, der nicht dargestellt werden kann. " **strintof** " gibt "0" zurück, wenn keine Konvertierung ausgeführt werden kann oder ein Unterlauf auftritt.
 
-**Wcstof** gibt Werte analog zu **Strtof**. Für beide Funktionen **Errno** nastaven NA hodnotu **ERANGE** Überlauf oder Unterlauf auftritt und der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
+**wcstof** gibt Werte analog zu " **stringron**" zurück. Bei beiden Funktionen wird **errno** auf **ERANGE** festgelegt, wenn ein Überlauf oder ein Unterlauf auftritt, und der Handler für ungültige Parameter wird aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben.
 
 Weitere Informationen zu diesen Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Jede Funktion wandelt die Eingabezeichenfolge *StrSource* zu einem **"float"**. Die **Strtof** -Funktion konvertiert *StrSource* auf einen Wert mit einfacher Genauigkeit. **Strtof** stoppt das Lesen der Zeichenfolge *StrSource* mit dem ersten Zeichen, die nicht als Teil einer Zahl erkannt. Dies ist möglicherweise das beendende NULL-Zeichen. **Wcstof** ist eine Breitzeichen-Version von **Strtof**, dessen *StrSource* Argument ist eine Breitzeichen-Zeichenfolge. Ansonsten verhalten sich diese Funktionen identisch.
+Jede Funktion konvertiert die *Eingabe Zeichenfolge* in einen **float**-Wert. Die Funktion " **strintof** " konvertiert " *stresource* " in einen Wert mit einfacher Genauigkeit. " **Straume** " beendet das Lesen der zeichenfolgenzeichenfolge beim ersten Zeichen, das nicht als Teil einer Zahl erkannt werden kann. Dies ist möglicherweise das beendende NULL-Zeichen. **wcstof** ist eine breit Zeichen Version von " **strintof**;". Das *unsource* -Argument ist eine Zeichenfolge mit breit Zeichen. Ansonsten verhalten sich diese Funktionen identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -102,17 +105,17 @@ Jede Funktion wandelt die Eingabezeichenfolge *StrSource* zu einem **"float"**. 
 |**_tcstof**|**strtof**|**strtof**|**wcstof**|
 |**_tcstof_l**|**_strtof_l**|**_strtof_l**|**_wcstof_l**|
 
-Die **LC_NUMERIC** -kategorieeinstellung des aktuellen Gebietsschemas bestimmt das Erkennen des Basiszeichens in *StrSource*; Weitere Informationen finden Sie unter [Setlocale, _wsetlocale](setlocale-wsetlocale.md). Die Funktionen ohne das **_l** Suffix verwenden das aktuelle Gebietsschema; diejenigen, die das Suffix sind identisch, außer dass sie das Gebietsschema verwenden, die stattdessen übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die **LC_NUMERIC** -Kategorieeinstellung des aktuellen Gebiets Schemas bestimmt die Erkennung des Basis Zeichens in " *strinsource*". Weitere Informationen finden Sie unter [setlocale, _wsetlocale](setlocale-wsetlocale.md). Die Funktionen, die nicht über das **_l** -Suffix verfügen, verwenden das aktuelle Gebiets Schema. diejenigen mit dem-Suffix sind beinahe identisch, verwenden jedoch stattdessen das übergebene Gebiets Schema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Wenn *Endptr* nicht **NULL**, ein Zeiger auf das Zeichen, die Überprüfung beendet, wird gespeichert, an dem Speicherort, auf das von *Endptr*. Wenn keine Konvertierung ausgeführt werden kann (keine gültigen Ziffern gefunden oder ungültige Basis angegeben) den Wert der *StrSource* wird an dem Speicherort gespeichert, auf das von *Endptr*.
+Wenn *endptr* nicht **null**ist, wird ein Zeiger auf das Zeichen, das die Überprüfung beendet hat, an dem Speicherort gespeichert, auf den von *endptr*verwiesen wird. Wenn keine Konvertierung ausgeführt werden kann (keine gültigen Ziffern gefunden oder ungültige Basis angegeben), wird der Wert von " *strinsource* " an dem Speicherort gespeichert, auf den von *endptr*verwiesen wird.
 
-**Strtof** erwartet *StrSource* auf eine Zeichenfolge der folgenden Form zeigt:
+der Wert von " **strintof** " erwartet, dass " *Strauch* " auf eine Zeichenfolge der folgenden Form verweist:
 
-[*Leerzeichen*] [*anmelden*] [*Ziffern*] [__.__ *Ziffern*] [{**e** &#124; **E**} [*anmelden*] *Ziffern*]
+[*Leerzeichen*] [*Sign*] [*Ziffern*] [ __.__ *Ziffern*] [{**e** &#124; **e**} [*Sign*] *Ziffern*]
 
-Ein *Leerzeichen* besteht möglicherweise aus Leerzeichen und Tabulatorzeichen, die ignoriert werden; *anmelden* ist entweder plus (**+**) oder ein Minuszeichens (**-**); und *Ziffern* sind eine oder mehrere Dezimalstellen. Wenn keine Ziffern vor dem Basiszeichen stehen, muss mindestens eine Ziffer nach dem Basiszeichen stehen. Die Dezimalstellen können ein Exponent, der besteht aus einem einführenden Buchstaben folgen (**e** oder **E**) und einer optional Zahl mit Vorzeichen. Wenn weder ein Exponententeil noch ein Basiszeichen angezeigt wird, wird davon ausgegangen, dass ein Basiszeichen auf die letzte Ziffer in der Zeichenfolge folgt. Das erste Zeichen, das dieser Form nicht entspricht, beendet die Überprüfung.
+Ein Leerraum kann aus *Leerzeichen und* Tabstopp Zeichen bestehen, die ignoriert werden. *das Vorzeichen* ist entweder Plus **+** Zeichen () oder **-** Minuszeichen (), und *Ziffern* sind eine oder mehrere Dezimalstellen. Wenn keine Ziffern vor dem Basiszeichen stehen, muss mindestens eine Ziffer nach dem Basiszeichen stehen. Auf die Dezimalstellen kann ein Exponent folgen, der aus einem einführenden Buchstaben (**e** oder **e**) und einer optionalen Ganzzahl mit Vorzeichen besteht. Wenn weder ein Exponententeil noch ein Basiszeichen angezeigt wird, wird davon ausgegangen, dass ein Basiszeichen auf die letzte Ziffer in der Zeichenfolge folgt. Das erste Zeichen, das dieser Form nicht entspricht, beendet die Überprüfung.
 
-Die UCRT-Versionen dieser Funktionen unterstützen keine Konvertierung von Fortran-Stil (**d** oder **D**) Buchstaben in Exponenten. Diese nicht-standardmäßige Erweiterung wurde in früheren Versionen der CRT unterstützt. Sie ist möglicherweise eine fehlerhafte Änderung für Ihren Code.
+Die ucrt-Versionen dieser Funktionen unterstützen nicht die Konvertierung von Exponent-Buchstaben vom Fortran-Stil (**d** oder **d**). Diese nicht-standardmäßige Erweiterung wurde in früheren Versionen der CRT unterstützt. Sie ist möglicherweise eine fehlerhafte Änderung für Ihren Code.
 
 ## <a name="requirements"></a>Anforderungen
 

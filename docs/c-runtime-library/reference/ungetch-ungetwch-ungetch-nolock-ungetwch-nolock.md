@@ -1,12 +1,12 @@
 ---
 title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ungetch_nolock
 - _ungetwch_nolock
 - _ungetwch
 - _ungetch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ungetch_nolock
 - ungetwch
@@ -44,14 +47,14 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 7407d26606bd5242c430961faa4f60090b83f036
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f6b782334df710ac9fe6359fda77b40a31e060c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268870"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945906"
 ---
-# <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
+# <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
 Schiebt das zuletzt aus der Konsole gelesene Zeichen zurück.
 
@@ -82,11 +85,11 @@ Zu verschiebendes Zeichen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Beide Funktionen geben das Zeichen zurück *c* bei erfolgreicher Ausführung. Wenn ein Fehler auftritt, **_ungetch** Rückgabewert **EOF** und **_ungetwch** gibt **WEOF**.
+Beide Funktionen geben bei Erfolg das Zeichen *c* zurück. Wenn ein Fehler auftritt, gibt **_ungetch** den Wert " **EOF** " und " **_ungetwch** " den Wert " **WEOF**" zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktionen schieben das Zeichen *c* zurück an die Konsole, verursacht *c* sich das nächste Zeichen lesen, indem **_getch** oder **_getche** (oder **_getwch** oder **_getwche**). **_ungetch** und **_ungetwch** fehl, wenn sie vor dem nächsten Lesevorgang mehrmals aufgerufen werden. Die *c* Argument möglicherweise nicht **EOF** (oder **WEOF**).
+Diese Funktionen schieben das Zeichen *c* zurück in die Konsole, sodass *c* das nächste Zeichen ist, das von **_getch** oder **_getche** (oder **_getwch** oder **_getwche**) gelesen wird. **_ungetch** und **_ungetwch** schlagen fehl, wenn Sie vor dem nächsten Lesevorgang mehrmals aufgerufen werden. Das *c* -Argument darf nicht **EOF** (oder **WEOF**) sein.
 
 Die Versionen mit dem Suffix **_nolock** sind identisch, allerdings sind sie nicht vor Störungen durch andere Threads geschützt. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
 

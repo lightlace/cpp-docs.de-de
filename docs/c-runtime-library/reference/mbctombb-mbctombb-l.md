@@ -1,10 +1,10 @@
 ---
 title: _mbctombb, _mbctombb_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbctombb_l
 - _mbctombb
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbctombb_l
 - _mbctombb
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-ms.openlocfilehash: 7395d94a6ec18f989d4a7153425b7af406a0bf45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b449dfae04f875c819f34422b9a0ae92e2b8a7c2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331596"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952526"
 ---
-# <a name="mbctombb-mbctombbl"></a>_mbctombb, _mbctombb_l
+# <a name="_mbctombb-_mbctombb_l"></a>_mbctombb, _mbctombb_l
 
 Konvertiert ein Doppelbyte-Multibytezeichen in ein entsprechendes Einzelbyte-Multibytezeichen.
 
@@ -64,15 +67,15 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Im Erfolgsfall **_mbctombb** und **_mbctombb_l** gibt das Einzelbyte-Zeichen zurück, die entspricht *c*; andernfalls *c* .
+Bei erfolgreicher Ausführung gibt **_mbctombb** und **_mbctombb_l** das Einzel Byte Zeichen zurück, das *c*entspricht. Andernfalls wird *c*zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbctombb** und **_mbctombb_l** Funktionen konvertieren ein angegebenes Multibytezeichen in ein entsprechendes Einzelbyte-Multibytezeichen. Zeichen müssen ein-Byte-Zeichen innerhalb des Bereichs 0 x 20 – 0x7E oder 0xA1 – 0xDF konvertiert werden entsprechen.
+Die **_mbctombb** -Funktion und die **_mbctombb_l** -Funktion konvertieren ein angegebenes Multibytezeichen in ein entsprechendes Einzel Byte-Multibytezeichen. Zeichen müssen Einzel Byte Zeichen innerhalb des Bereichs 0x20-0x7E oder 0xA1-0xDF entsprechen, um konvertiert zu werden.
 
-Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Version dieser Funktion ohne die **_l** -Suffix verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Version mit der **_l** -Suffix ist beinahe identisch, außer dass es den übergebenen Gebietsschemaparameter verwenden in stattdessen. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Version dieser Funktion ohne das **_l** -Suffix verwendet das aktuelle Gebiets Schema für dieses vom Gebiets Schema abhängige Verhalten. die Version mit dem **_l** -Suffix ist beinahe identisch, verwendet jedoch stattdessen den übergebenen Gebiets Schema Parameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-In früheren Versionen **_mbctombb** hieß **Zentohan**. Verwendung **_mbctombb** stattdessen.
+In früheren Versionen wurde **_mbctombb** als **zentohan**bezeichnet. Verwenden Sie stattdessen **_mbctombb** .
 
 ## <a name="requirements"></a>Anforderungen
 

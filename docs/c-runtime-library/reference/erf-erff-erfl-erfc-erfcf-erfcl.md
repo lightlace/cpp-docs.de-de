@@ -1,14 +1,14 @@
 ---
 title: erf, erff, erfl, erfc, erfcf, erfcl
 ms.date: 01/31/2019
-apiname:
+api_name:
 - erff
 - erfl
 - erf
 - erfc
 - erfcf
 - erfcl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - erfl
 - erf
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: 4270d8366686ea282a4dd37741d9f8e37991b88f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df724ed056c02d79b5b51f97ae4aaf8ae267fde5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289200"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937619"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
@@ -89,17 +92,17 @@ Ein Gleitkommawert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Erf** Funktionen geben die Gauß-Fehlerfunktion von *x*. Die **Erfc** Funktionen geben die komplementäre Gauß-Fehlerfunktion von *x*.
+Die **ERF** -Funktionen geben die Gauß-Fehlerfunktion von *x*zurück. Die **erfc** -Funktionen geben die komplementäre Gauß-Fehlerfunktion von *x*zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Erf** -Funktionen berechnen die Gauß-Fehlerfunktion von *x*, die als definiert ist:
+Die **ERF** -Funktionen berechnen die Gauß-Fehlerfunktion von *x*, die wie folgt definiert ist:
 
-![Die Fehlerfunktion von x](media/crt_erf_formula.PNG "die Fehlerfunktion von x")
+![Die Fehlerfunktion von x] . (media/crt_erf_formula.PNG "Die Fehlerfunktion von x") .
 
-Die komplementäre Gauß-Fehlerfunktion ist definiert als 1 - erf(x). Die **Erf** Funktionen geben einen Wert im Bereich-1,0 1,0 zurück. Es gibt keine Fehlerrückgabe. Die **Erfc** Funktionen geben einen Wert im Bereich von 0 bis 2 zurück. Wenn *x* ist zu groß für **Erfc**, **Errno** Variable nastaven NA hodnotu **ERANGE**.
+Die komplementäre Gauß-Fehlerfunktion ist als 1-ERF (x) definiert. Die **ERF** -Funktionen geben einen Wert im Bereich von-1,0 bis 1,0 zurück. Es gibt keine Fehlerrückgabe. Die **erfc** -Funktionen geben einen Wert im Bereich 0 bis 2 zurück. Wenn *x* für **erfc**zu groß ist, wird die **errno** -Variable auf **ERANGE**festgelegt.
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Erf** und **Erfc** verwenden und zurückgeben **"float"** und **lange** **doppelte** Typen. In einem C-Programm **Erf** und **Erfc** immer annehmen und Zurückgeben einer **doppelte**.
+Da C++ das überladen zulässt, können Sie über Ladungen von **ERF** und **erfc** aufzurufen, die **float** -und **Long** **Double** -Typen annehmen und zurückgeben. In einem C-Programm verwenden **ERF** und **erfc** immer einen **Double**-Wert.
 
 ## <a name="requirements"></a>Anforderungen
 

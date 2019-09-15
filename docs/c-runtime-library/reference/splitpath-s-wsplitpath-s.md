@@ -1,10 +1,10 @@
 ---
 title: _splitpath_s, _wsplitpath_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wsplitpath_s
 - _splitpath_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wsplitpath_s
 - splitpath_s
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: 87af8bac525844c06fdfc16d7d13a06eef4d61ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f97c07ed01ae629fe3eb61346c6c0fcd8fa803f0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355028"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958055"
 ---
-# <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
+# <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s, _wsplitpath_s
 
 Unterteilen eines Pfadnamens in Komponenten Dies sind Versionen von [_splitpath, _wsplitpath](splitpath-wsplitpath.md) mit Sicherheitsverbesserungen, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
@@ -90,29 +93,29 @@ errno_t _wsplitpath_s(
 *path*<br/>
 Vollständiger Pfad
 
-*drive*<br/>
-Laufwerkbuchstabe, gefolgt von einem Doppelpunkt (**:**). Sie können übergeben **NULL** für diesen Parameter, wenn Sie nicht der Buchstabe des Laufwerks erforderlich ist.
+*Antrie*<br/>
+Laufwerk Buchstabe, gefolgt von einem Doppelpunkt ( **:** ). Sie können **null** für diesen Parameter übergeben, wenn Sie den Laufwerk Buchstaben nicht benötigen.
 
 *driveNumberOfElements*<br/>
-Die Größe der *Laufwerk* Puffers in Einzelbyte-oder Breitzeichen. Wenn *Laufwerk* ist **NULL**, dieser Wert muss 0 sein.
+Die Größe des *Laufwerk* Puffers in Einzel Byte-oder breit Zeichen. Wenn das *Laufwerk* NULL ist, muss dieser Wert 0 ( **null**) sein.
 
 *dir*<br/>
-Verzeichnispfad, einschl. nachstehender Schrägstrich. Schrägstriche ( **/** ), umgekehrte Schrägstriche ( **\\** ), oder beides verwendet werden können. Sie können übergeben **NULL** für diesen Parameter, wenn Sie den Verzeichnispfad nicht erforderlich ist.
+Verzeichnispfad, einschl. nachstehender Schrägstrich. Schrägstriche ( **/** ), umgekehrte Schrägstriche ( **\\** ) oder beides können verwendet werden. Sie können **null** für diesen Parameter übergeben, wenn Sie den Verzeichnispfad nicht benötigen.
 
 *dirNumberOfElements*<br/>
-Die Größe der *Dir* Puffers in Einzelbyte-oder Breitzeichen. Wenn *Dir* ist **NULL**, dieser Wert muss 0 sein.
+Die Größe des *dir* -Puffers in Einzel Byte-oder breit Zeichen. Wenn *dir* NULL ist, muss dieser Wert 0 ( **null**) sein.
 
 *fname*<br/>
-Basisdateiname (ohne Erweiterung). Sie können übergeben **NULL** für diesen Parameter, wenn Sie den Dateinamen nicht erforderlich ist.
+Basisdateiname (ohne Erweiterung). Sie können **null** für diesen Parameter übergeben, wenn Sie den Dateinamen nicht benötigen.
 
 *nameNumberOfElements*<br/>
-Die Größe der *Fname* Puffers in Einzelbyte-oder Breitzeichen. Wenn *Fname* ist **NULL**, dieser Wert muss 0 sein.
+Die Größe des *bName* -Puffers in Einzel Byte-oder breit Zeichen. Wenn der Name von " *f* " **null**ist, muss dieser Wert "0" lauten.
 
-*ext*<br/>
-Dateierweiterung, einschl. führender Punkt (**.**). Sie können übergeben **NULL** für diesen Parameter, wenn Sie die Dateierweiterung nicht erforderlich ist.
+*Antrags*<br/>
+Erweiterung des Datei namens, einschließlich des führenden Zeitraums ( **.** ). Sie können **null** für diesen Parameter übergeben, wenn Sie die Dateinamenerweiterung nicht benötigen.
 
-*extNumberOfElements*<br/>
-Die Größe des *Ext* Puffers in Einzelbyte-oder Breitzeichen. Wenn *Ext* ist **NULL**, dieser Wert muss 0 sein.
+*extzahlosterements*<br/>
+Die Größe des *ext* -Puffers in Einzel Byte-oder breit Zeichen. Wenn *ext* NULL ist, muss dieser Wert 0 ( **null**) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -122,23 +125,23 @@ Null, wenn erfolgreich, ein Fehlercode, wenn ein Fehler auftritt.
 
 |Bedingung|Rückgabewert|
 |---------------|------------------|
-|*Pfad* ist **NULL**|**EINVAL**|
-|*Laufwerk* ist **NULL**, *DriveNumberOfElements* ungleich NULL ist|**EINVAL**|
-|*Laufwerk* nicht**NULL**, *DriveNumberOfElements* ist 0 (null)|**EINVAL**|
-|*Dir* ist **NULL**, *DirNumberOfElements* ungleich NULL ist|**EINVAL**|
-|*Dir* nicht**NULL**, *DirNumberOfElements* ist 0 (null)|**EINVAL**|
-|*Fname* ist **NULL**, *NameNumberOfElements* ungleich NULL ist|**EINVAL**|
-|*Fname* nicht**NULL**, *NameNumberOfElements* ist 0 (null)|**EINVAL**|
-|*Ext* ist **NULL**, *ExtNumberOfElements* ungleich NULL ist|**EINVAL**|
-|*Ext* nicht**NULL**, *ExtNumberOfElements* ist 0 (null)|**EINVAL**|
+|der *Pfad* ist **null** .|**EINVAL**|
+|*Laufwerk* ist **null**, *drivenumschlag* ist nicht NULL|**EINVAL**|
+|*Laufwerk* ist nicht**null**, *drivenumschlag* ist 0 (null)|**EINVAL**|
+|" *dir* " ist **null**, *dirnumosterements* ist ungleich 0 (null).|**EINVAL**|
+|" *dir* " ist nicht**null**, *dirnumosterements* ist 0 (null).|**EINVAL**|
+|*fname* ist **null**, *namenumberosterements* ist ungleich 0 (null).|**EINVAL**|
+|*fname* ist nicht**null**, *namenumberosterements* ist 0 (null).|**EINVAL**|
+|*ext* ist **null**, *extnummeriosterements* ist ungleich 0 (null).|**EINVAL**|
+|*ext* ist nicht**null**, *extnumosterements* ist 0 (null).|**EINVAL**|
 
-Wenn eine dieser Bedingungen auftritt, wird die Ausnahme für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und zurückgeben **EINVAL**.
+Wenn eine dieser Bedingungen auftritt, wird die Ausnahme für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, legen diese Funktionen " **errno** " auf " **EINVAL** " fest und geben " **EINVAL**" zurück.
 
-Wenn einer der Puffer ist zu kurz, um das Ergebnis aufzunehmen, löschen diese Funktionen alle Puffer in leere Zeichenfolgen, setzen **Errno** zu **ERANGE**, und zurückgeben **ERANGE**.
+Wenn einer der Puffer zu kurz ist, um das Ergebnis aufzunehmen, löschen diese Funktionen alle Puffer in leere Zeichen folgen, legen Sie **errno** auf **ERANGE**fest, und geben Sie **ERANGE**zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_splitpath_s** -Funktion teilt einen Pfad in seine vier Komponenten. **_splitpath_s** behandelt automatisch Multibyte-Zeichenfolge nach Bedarf erkennt multibytezeichensequenzen gemäß dem multibyte-Codepage aktuell. **_wsplitpath_s** ist eine Breitzeichen-Version von **_splitpath_s**; die Argumente für **_wsplitpath_s** sind Breitzeichen Zeichenfolgen. Andernfalls verhalten sich diese Funktionen identisch
+Die **_splitpath_s** -Funktion unterteilt einen Pfad in seine vier Komponenten. **_splitpath_s** verarbeitet nach Bedarf automatisch Multibytezeichen-Zeichen folgen Argumente und erkennt multibytezeichensequenzen gemäß der derzeit verwendeten Multibytezeichen-Codepage. **_wsplitpath_s** ist eine breit Zeichen Version von **_splitpath_s**. die Argumente für **_wsplitpath_s** sind Zeichen folgen mit breit Zeichen. Andernfalls verhalten sich diese Funktionen identisch
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -146,7 +149,7 @@ Die **_splitpath_s** -Funktion teilt einen Pfad in seine vier Komponenten. **_sp
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath_s**|**_splitpath_s**|**_splitpath_s**|**_wsplitpath_s**|
 
-Jede Komponente des vollständigen Pfads wird in einem separaten Puffer gespeichert. die Manifestkonstanten **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**, und **_MAX_EXT** (definiert in STDLIB. H) Geben Sie die maximale zulässige Größe für jede Dateikomponente an. Dateikomponenten, die größer als die entsprechenden Manifestkonstanten sind, können zur Beschädigung des Heaps führen.
+Jede Komponente des vollständigen Pfads wird in einem separaten Puffer gespeichert. Die Manifest-Konstanten **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**und **_MAX_EXT** (in stdlib definiert). H) geben Sie die maximal zulässige Größe für jede Datei Komponente an. Dateikomponenten, die größer als die entsprechenden Manifestkonstanten sind, können zur Beschädigung des Heaps führen.
 
 In der folgenden Tabelle werden die Werte der Manifestkonstanten aufgelistet.
 
@@ -157,7 +160,7 @@ In der folgenden Tabelle werden die Werte der Manifestkonstanten aufgelistet.
 |_MAX_FNAME|256|
 |_MAX_EXT|256|
 
-Wenn der vollständige Pfad keine Komponente (z. B. Dateiname), enthält **_splitpath_s** weist eine leere Zeichenfolge in den entsprechenden Puffer.
+Wenn der vollständige Pfad keine Komponente (z. b. ein Dateiname) enthält, weist **_splitpath_s** dem entsprechenden Puffer eine leere Zeichenfolge zu.
 
 Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen vorhanden) vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

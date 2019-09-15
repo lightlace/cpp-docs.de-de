@@ -1,9 +1,9 @@
 ---
 title: _msize_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _msize_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _msize_dbg
 - msize_dbg
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - _msize_dbg function
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
-ms.openlocfilehash: 3b6d08d44162d8263ca88147fe86166924d7d162
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fa12689a35beaad0727c14327d1b948a62c29d0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156303"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951489"
 ---
-# <a name="msizedbg"></a>_msize_dbg
+# <a name="_msize_dbg"></a>_msize_dbg
 
 Berechnet die Größe eines Speicherblocks im Heap (nur Debugversion).
 
@@ -53,15 +56,15 @@ Typ des angegebenen Speicherblocks: **_CLIENT_BLOCK** oder **_NORMAL_BLOCK**.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei erfolgreichem Abschluss **_msize_dbg** gibt die Größe (in Bytes) des angegebenen Speicherblocks; andernfalls **NULL**.
+Nach erfolgreichem Abschluss gibt **_msize_dbg** die Größe (in Bytes) des angegebenen Speicherblocks zurück. Andernfalls wird **null**zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-**_msize_dbg** ist eine Debugversion der _[Msize](msize.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, jeden Aufruf von **_msize_dbg** wird nach einer Verkleinerung auf einen Aufruf von **_msize**. Beide **_msize** und **_msize_dbg** berechnen Sie die Größe eines Speicherblocks im Basisheap, jedoch **_msize_dbg** fügt zwei Debugfunktionen: Es schließt die Puffer auf beiden Seiten des benutzerteils des Speicherblocks, in der zurückgegebenen Größe ein, und ermöglicht größenberechnungen für bestimmte Blocktypen.
+**_msize_dbg** ist eine Debugversion der _[MSize](msize.md) -Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, wird jeder **_msize_dbg** -Rückruf auf einen **_msize**-aufrufenden Wert reduziert. Sowohl **_msize** als auch **_msize_dbg** berechnen die Größe eines Speicherblocks im Basisheap, **_msize_dbg** fügt jedoch zwei Debugfunktionen hinzu: Sie enthält die Puffer auf beiden Seiten des Benutzer Teils des Speicherblocks in der zurückgegebenen Größe und ermöglicht größenberechnungen für bestimmte Blocktypen.
 
 Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Informationen zu den Belegungsblocktypen und ihrer Verwendung finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details). Informationen zu den Unterschieden zwischen dem Aufruf einer Standardheapfunktion und der Debugversion in einem Debugbuild finden Sie unter [Debugversionen von Heapreservierungsfunktionen](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
-Diese Funktion überprüft seine Parameter. Wenn *Memblock* ist ein null-Zeiger **_msize** ruft der Handler für ungültige Parameter, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Die Funktion legt fest, wenn der Fehler behandelt wird, **Errno** zu **EINVAL** und gibt-1 zurück.
+Diese Funktion überprüft seine Parameter. Wenn *memblock* ein NULL-Zeiger ist, ruft **_msize** einen Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn der Fehler behandelt wird, legt die Funktion **errno** auf **EINVAL** fest und gibt-1 zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -127,7 +130,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 Size of block after _malloc_dbg of 40 longs: 160

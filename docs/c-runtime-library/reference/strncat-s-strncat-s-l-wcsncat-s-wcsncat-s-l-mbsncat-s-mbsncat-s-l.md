@@ -1,14 +1,14 @@
 ---
 title: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcsncat_s_l
 - wcsncat_s
 - _mbsncat_s_l
 - _mbsncat_s
 - strncat_s
 - _strncat_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strncat_s_l
 - _mbsncat_s_l
@@ -48,19 +51,19 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-ms.openlocfilehash: 6651bb6ac405ed51945f021e8d1e19f1db05d5e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a3c8d7019c271b2673e85e124d50139d34866c6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209895"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947408"
 ---
-# <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
+# <a name="strncat_s-_strncat_s_l-wcsncat_s-_wcsncat_s_l-_mbsncat_s-_mbsncat_s_l"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 
 Fügt einer Zeichenfolge Zeichen an. Diese Versionen von [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) enthalten Sicherheitsverbesserungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
 > [!IMPORTANT]
-> **_mbsncat_s** und **_mbsncat_s_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncat_s** und **_mbsncat_s_l** können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -168,17 +171,17 @@ Gibt bei Erfolg 0 (null) zurück und einen Fehlercode, wenn ein Fehler auftritt.
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|*strDestination*|*numberOfElements*|*strSource*|Rückgabewert|Inhalt der *StrDestination*|
+|*strDestination*|*numberOfElements*|*strSource*|Rückgabewert|Inhalt von " *straudestination* "|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULL** oder nicht abgeschlossen|any|any|**EINVAL**|nicht geändert|
+|**Null** oder nicht verwaltet|any|any|**EINVAL**|nicht geändert|
 |any|any|**NULL**|**EINVAL**|nicht geändert|
 |any|0 oder zu klein|any|**ERANGE**|nicht geändert|
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktionen versuchen, fügen Sie die erste *D* Zeichen *StrSource* bis zum Ende des *StrDest*, wobei *D* ist kleiner als *Anzahl* und die Länge der *StrSource*. Wenn die Anfügen *D* Zeichen in passt *StrDest* (, dessen Größe als angegeben wird *NumberOfElements*) und noch Platz für einen null-Terminator, und klicken Sie dann auf diese Zeichen angefügt werden, beginnend ab der ursprünglichen Beenden von null *StrDest*, und eine neue beendende Null wird angehängt ist, andernfalls *StrDest*[0] auf das Null-Zeichen und der ungültige Parameter festgelegt ist Handler wird aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
+Diese Funktionen versuchen, die ersten *D-* Zeichen von " *strinsource* " an das Ende des " *strandest*" anzufügen, wobei " *D* *" der kleinere Wert und die* Länge von " *darsource*" ist. Wenn das Anfügen dieser *D-* Zeichen in " *strindest* " passt (dessen Größe als " *suffioements*" angegeben ist) und weiterhin Platz für ein NULL-Terminator ist, dann werden diese Zeichen angehängt, beginnend beim ursprünglichen abschließenden NULL von *. die schnellste*und eine neue abschließende Null wird angehängt. Andernfalls wird " *strandest*[0]" auf das NULL-Zeichen festgelegt und der Handler für ungültige Parameter wird aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben.
 
-Zu der oberen Aufführung gibt es eine Ausnahme. Wenn *Anzahl* ist [_TRUNCATE](../../c-runtime-library/truncate.md) wird so viel von *StrSource* wie Anpassung an angefügt *StrDest* während weiterhin Platz zum Anhängen einer Beenden von null.
+Zu der oberen Aufführung gibt es eine Ausnahme. Wenn *count* gleich [_TRUNCATE](../../c-runtime-library/truncate.md) ist, wird der Wert von " *straust* " an den *schnellsten* angehängt, während er weiterhin Platz hat, um ein abschließendes NULL-Zeichen anzufügen.
 
 Ein auf ein Objekt angewendeter
 
@@ -188,9 +191,9 @@ strncpy_s(dst, _countof(dst), "12", 2);
 strncat_s(dst, _countof(dst), "34567", 3);
 ```
 
-bedeutet, die wir stellen **Strncat_s** zum Anfügen von drei Zeichen an zwei Zeichen in einem Puffer fünf Zeichen langen; Dies wird allerdings kein Platz mehr für den null-Terminator, daher **Strncat_s** Nullen der Zeichenfolge Handler für ungültige Parameter aufgerufen.
+bedeutet, dass **strncat_s** in einem Puffer mit einer Länge von fünf Zeichen drei Zeichen an zwei Zeichen anfügen soll. Dadurch würde kein Platz mehr für das NULL-Terminator bestehen, daher wird **strncat_s** die Zeichenfolge Nullen und den Handler für ungültige Parameter aufrufen.
 
-Wenn ein abschneideverhalten erforderlich ist, verwenden Sie **_TRUNCATE** oder passen Sie die *Größe* Parameter entsprechend:
+Wenn das abkürzen von Verhalten erforderlich ist, verwenden Sie **_TRUNCATE** , oder passen Sie den *Größen* Parameter entsprechend an:
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _TRUNCATE);
@@ -204,9 +207,9 @@ strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 
 In jedem Fall wird die Ergebniszeichenfolge mit einem NULL-Zeichen beendet. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
 
-Wenn *StrSource* oder *StrDest* ist **NULL**, oder *NumberOfElements* ist 0 (null), Handler für ungültige Parameter aufgerufen, wie in beschrieben. [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **EINVAL** ohne Parameter zu ändern.
+Wenn " *strinsource* " oder " *strindest* **" NULL ist, oder**" *zahlofelements* " gleich NULL ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion " **eival** " zurück, ohne die Parameter zu ändern.
 
-**Wcsncat_s** und **_mbsncat_s** sind Breitzeichen- und multibytezeichenversionen von Versionen von **Strncat_s**. Die Zeichenfolgenargumente und der Rückgabewert von **Wcsncat_s** sind Breitzeichen-Zeichenfolgen, die von **_mbsncat_s** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
+**wcsncat_s** und **_mbsncat_s** sind breit Zeichen-und multibytezeichenversionen von **strncat_s**. Die Zeichen folgen Argumente und der Rückgabewert von **wcsncat_s** sind Zeichen folgen mit breit Zeichen. bei den **_mbsncat_s** handelt es sich um Multibyte-Zeichen folgen. Diese drei Funktionen verhalten sich andernfalls identisch.
 
 Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
@@ -221,7 +224,7 @@ Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf
 |**_tcsncat_s**|**strncat_s**|**_mbsnbcat_s**|**wcsncat_s**|
 |**_tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
-**_strncat_s_l** und **_wcsncat_s_l** haben keine gebietsschemaabhängigkeit; sie stehen nur für **_tcsncat_s_l**.
+**_strncat_s_l** und **_wcsncat_s_l** haben keine Gebiets Schema Abhängigkeit. Sie werden nur für **_tcsncat_s_l**bereitgestellt.
 
 ## <a name="requirements"></a>Anforderungen
 

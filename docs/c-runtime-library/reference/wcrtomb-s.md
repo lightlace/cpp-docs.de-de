@@ -1,9 +1,9 @@
 ---
 title: wcrtomb_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcrtomb_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcrtomb_s
 helpviewer_keywords:
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
-ms.openlocfilehash: 7fe7fba861eecec562928cf381973f62a4db60fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1612e7fc4e40e05c46f06d8a29b69534c359421
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155471"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945848"
 ---
-# <a name="wcrtombs"></a>wcrtomb_s
+# <a name="wcrtomb_s"></a>wcrtomb_s
 
 Konvertieren von Breitzeichen in die Multibyte-Zeichendarstellung. Eine Version von [wcrtomb](wcrtomb.md) mit Sicherheitserweiterungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
@@ -63,31 +66,31 @@ Gibt die Anzahl geschriebener Bytes oder „-1“ bei einem Fehler zurück.
 Das resultierende in Multibyte konvertierte Zeichen.
 
 *sizeOfmbchar*<br/>
-Die Größe der *Mbchar* -Variable in Bytes.
+Die Größe der *mbchar* -Variablen in Bytes.
 
 *wchar*<br/>
 Ein zu konvertierendes Breitzeichen.
 
 *mbstate*<br/>
-Ein Zeiger auf ein **Mbstate_t** Objekt.
+Ein Zeiger auf ein **mbstate_t** -Objekt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) oder ein **Errno** -Wert, wenn ein Fehler auftritt.
+Gibt 0 (null) oder einen **errno** -Wert zurück, wenn ein Fehler auftritt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Wcrtomb_s** -Funktion konvertiert ein Breitzeichen, beginnend beim angegebenen Konvertierungsstatus, der in enthaltenen *Mbstate*, aus dem Wert, der in enthaltenen *Wchar*, in der Adresse dargestellt werden, indem *Mbchar*. Die *pReturnValue* Wert werden die Anzahl der Bytes, die konvertiert wird, aber nicht mehr als **MB_CUR_MAX** Bytes oder-1 bei einem Fehler.
+Die **wcrtomb_s** -Funktion konvertiert ein breit Zeichen, beginnend mit dem angegebenen Konvertierungs Zustand in *mbstate*, von dem in *WCHAR*enthaltenen Wert in die von *mbchar*dargestellte Adresse. Der *pReturnValue* -Wert ist die Anzahl der konvertierten bytes, jedoch nicht mehr als **MB_CUR_MAX** bytes, oder-1, wenn ein Fehler aufgetreten ist.
 
-Wenn *Mbstate* null ist, die interne **Mbstate_t** konvertierungszustand wird verwendet. Wenn das Zeichen in enthalten *Wchar* verfügt nicht über ein entsprechendes Multibytezeichen, den Wert der *pReturnValue* beträgt-1, und die Funktion gibt die **Errno** Wert des **EILSEQ**.
+Wenn *mbstate* den Wert NULL aufweist, wird der interne **mbstate_t** -Konvertierungs Status verwendet. Wenn das in *WCHAR* enthaltene Zeichen nicht über ein entsprechendes Multibytezeichen verfügt, ist der Wert von *pReturnValue* -1, und die Funktion gibt den **errno** -Wert von **EILSEQ**zurück.
 
-Die **Wcrtomb_s** Funktion unterscheidet sich von [Wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md) durch die neustartmöglichkeit. Der konvertierungszustand befindet sich in *Mbstate* für nachfolgende Aufrufe der gleichen oder anderer erneut startbaren Funktionen. Wenn sowohl Funktionen, die neu gestartet werden können, als auch Funktionen, die nicht neu gestartet werden könnnen, verwendet werden, sind die Ergebnisse undefiniert. Eine Anwendung verwendet z. B. **Wcsrlen** statt **Wcslen**, wenn ein nachfolgender Aufruf von **Wcsrtombs_s** verwendet wurden, anstelle von **Wcstombs_s**.
+Die **wcrtomb_s** -Funktion unterscheidet [sich von wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md) durch die Neustart Fähigkeit. Der Konvertierungs Zustand wird für nachfolgende Aufrufe der gleichen oder anderer Neu startbarer Funktionen in *mbstate* gespeichert. Wenn sowohl Funktionen, die neu gestartet werden können, als auch Funktionen, die nicht neu gestartet werden könnnen, verwendet werden, sind die Ergebnisse undefiniert. Beispielsweise würde eine Anwendung **wcsrlen** anstelle von **wcslen**verwenden, wenn ein nachfolgende **wcsrtombs_s** anstelle von **wcstombs_s**verwendet wurde.
 
 In C++ wird die Verwendung dieser Funktion durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Ausnahmen
 
-Die **Wcrtomb_s** -Funktion ist multithreadsicher, solange keine Funktion im aktuellen Thread ruft **Setlocale** während diese Funktion ausgeführt wird und die *Mbstate* ist null.
+Die **wcrtomb_s** -Funktion ist multithreadsicher, solange keine Funktion im aktuellen Thread **setlocale** aufruft, während diese Funktion ausgeführt wird und *mbstate* gleich NULL ist.
 
 ## <a name="example"></a>Beispiel
 

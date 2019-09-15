@@ -1,10 +1,10 @@
 ---
 title: _get_daylight
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __daylight
 - _get_daylight
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_daylight
 - _get_daylight
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - daylight saving time offset
 - _get_daylight function
 ms.assetid: f85a6ba3-e187-4ca7-aed7-ffc694c8ac4c
-ms.openlocfilehash: 03c3386e59379f460d3c07dc310153d990c02b05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f63d3baa1e9411039d1482b4cbfbf4bce4e9872
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332313"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956053"
 ---
-# <a name="getdaylight"></a>_get_daylight
+# <a name="_get_daylight"></a>_get_daylight
 
 Ruft die Sommerzeitverschiebung in Stunden ab.
 
@@ -44,20 +47,20 @@ error_t _get_daylight( int* hours );
 
 ### <a name="parameters"></a>Parameter
 
-*Stunden*<br/>
+*Hours*<br/>
 Die Verschiebung der Sommerzeit in Stunden.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg NULL oder eine **Errno** -Wert, wenn ein Fehler auftritt.
+NULL, wenn erfolgreich, oder ein **errno** -Wert, wenn ein Fehler auftritt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_get_daylight** Funktion ruft die Anzahl der Stunden in der Sommerzeit als Ganzzahl. Wenn die Sommerzeit gültig ist, beträgt die Standardzeitverschiebung eine Stunde (obwohl in ein paar Regionen eine Zeitverschiebung von zwei Stunden gilt).
+Die **_get_daylight** -Funktion Ruft die Anzahl der Stunden in der Sommerzeit als Ganzzahl ab. Wenn die Sommerzeit gültig ist, beträgt die Standardzeitverschiebung eine Stunde (obwohl in ein paar Regionen eine Zeitverschiebung von zwei Stunden gilt).
 
-Wenn *Stunden* ist **NULL**, wird der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und gibt **EINVAL**.
+Wenn *Hours* den Wert **null**hat, wird der Handler für ungültige Parameter aufgerufen, wie unter [Parameter Validierung](../../c-runtime-library/parameter-validation.md)beschrieben. Wenn die weitere Ausführung zugelassen wird, legt diese Funktion " **errno** " auf " **EINVAL** " fest und gibt " **EINVAL**" zurück.
 
-Es wird empfohlen, diese Funktion statt des Makros **_daylight** oder der veralteten Funktion **__daylight**.
+Es wird empfohlen, diese Funktion anstelle des Makros **_daylight** oder der veralteten Funktion **__daylight**zu verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 

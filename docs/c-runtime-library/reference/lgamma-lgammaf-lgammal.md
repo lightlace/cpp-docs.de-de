@@ -1,11 +1,11 @@
 ---
 title: lgamma, lgammaf, lgammal
 ms.date: 04/05/2018
-apiname:
+api_name:
 - lgamma
 - lgammaf
 - lgammal
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lgamma
 - lgammaf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: 43ce1599ab9161b9fadf5643ddd2ec739ab2d8b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9baf8f0fefb50cea6a5301aac9ffd48ff3cd5bde
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157283"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953377"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
@@ -61,24 +64,24 @@ Der zu berechnende Wert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg zurückgegeben. der natürliche Logarithmus des absoluten Werts der Gammafunktion des *x*.
+Bei erfolgreicher Ausführung wird der natürliche Logarithmus des absoluten Werts der Gamma-Funktion von *x*zurückgegeben.
 
 |Problem|Zurück|
 |-----------|------------|
-|*x* = NaN|NaN|
+|*x* = Nan|NaN|
 |*x* = ±0|+INFINITY|
-|*X*= negative ganze Zahl|+INFINITY|
-|±INFINITY|+INFINITY|
+|*x*= negative ganze Zahl|+INFINITY|
+|± UNENDLICH|+INFINITY|
 |pole-Fehler|+HUGE_VAL, +HUGE_VALF, oder +HUGE_VALL|
-|Überlaufbereichsfehler|±HUGE_VAL ±HUGE_VALF oder ±HUGE_VALL|
+|Überlaufbereichsfehler|± HUGE_VAL, ± HUGE_VALF oder ± HUGE_VALL|
 
 Fehler werden wie in [_matherr](matherr.md) angegeben gemeldet.
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Lgamma** verwenden und zurückgeben **"float"** und **lange** **doppelte** Typen. In einem C-Programm **Lgamma** immer Double und gibt eine **doppelte**.
+Da C++ das überladen zulässt, können Sie über Ladungen von **lgamma** aufzurufen, die **float** -und **Long** **Double** -Typen annehmen und zurückgeben. In einem C-Programm nimmt **lgamma** immer einen **Double**-Wert an und gibt ihn zurück.
 
-Wenn x eine rationale Zahl ist, gibt diese Funktion den Logarithmus der Fakultät von (X - 1) zurück.
+Wenn x eine rationale Zahl ist, gibt diese Funktion den Logarithmus der Fakultät von (x-1) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,9 +1,9 @@
 ---
 title: _findclose
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _findclose
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _findclose
 - findclose
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - _findclose function
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
-ms.openlocfilehash: 29010f8a502d463eeb6ca98837a1b7dae9f5ae6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c67336cc12bcdee754edd40b91078faa83a17984
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333754"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957319"
 ---
-# <a name="findclose"></a>_findclose
+# <a name="_findclose"></a>_findclose
 
 Schließt das angegebene Suchhandle und gibt zugeordnete Ressourcen frei.
 
@@ -44,12 +47,12 @@ int _findclose(
 
 ### <a name="parameters"></a>Parameter
 
-*handle*<br/>
-Von einem vorherigen Aufruf zurückgegebene Suchhandle **_findfirst**.
+*bewältigen*<br/>
+Such handle, das von einem vorherigen-Befehl an **_findfirst**zurückgegeben wurde.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Im Erfolgsfall **_findclose** gibt 0 zurück. Andernfalls wird-1 zurückgegeben und legt **Errno** zu **ENOENT**, gibt an, dass keine übereinstimmenden Dateien gefunden werden.
+Bei erfolgreicher Ausführung gibt **_findclose** 0 zurück. Andernfalls wird-1 zurückgegeben und **errno** auf **ENOENT**festgelegt, um anzugeben, dass keine weiteren übereinstimmenden Dateien gefunden werden konnten.
 
 ## <a name="requirements"></a>Anforderungen
 

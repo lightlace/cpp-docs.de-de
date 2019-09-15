@@ -1,12 +1,12 @@
 ---
 title: strtod, _strtod_l, wcstod, _wcstod_l
 ms.date: 10/20/2017
-apiname:
+api_name:
 - wcstod
 - _wcstod_l
 - _strtod_l
 - strtod
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcstod
 - strtod
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: c8c2b3b491e2e7265829fa88580529dc757ace8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5372525eb99dc9d39e31b10def0377c9aad5296c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376470"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946494"
 ---
-# <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod, _strtod_l, wcstod, _wcstod_l
+# <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
 Konvertieren von Zeichenfolgen in einen Wert mit doppelter Genauigkeit
 
@@ -89,13 +92,13 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Strtod** gibt den Wert der Gleitkommazahl, außer wenn die Darstellung würde einen Überlauf, verursachen in dem Fall wird die Funktion zurückgegeben werden, +/-**HUGE_VAL**. Das Vorzeichen des **HUGE_VAL** entspricht dem Zeichen des Werts, der nicht dargestellt werden kann. **Strtod** gibt 0 zurück, wenn keine Konvertierung ausgeführt werden kann oder ein Unterlauf auftritt.
+" **dartod** " gibt den Wert der Gleit Komma Zahl zurück, es sei denn, die Darstellung würde einen Überlauf verursachen. in diesem Fall gibt die Funktion "+/-**HUGE_VAL**" zurück. Das Vorzeichen von **HUGE_VAL** stimmt mit dem Vorzeichen des Werts überein, der nicht dargestellt werden kann. " **Straume** " gibt "0" zurück, wenn keine Konvertierung ausgeführt werden kann oder ein Unterlauf auftritt.
 
-**Wcstod** gibt Werte analog zu **Strtod**. Für beide Funktionen **Errno** nastaven NA hodnotu **ERANGE** Überlauf oder Unterlauf auftritt und der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**wcstod** gibt Werte analog zu " **strantod**" zurück. Bei beiden Funktionen wird **errno** auf **ERANGE** festgelegt, wenn ein Überlauf oder ein Unterlauf auftritt, und der Handler für ungültige Parameter wird aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Jede Funktion wandelt die Eingabezeichenfolge *StrSource* zu einem **doppelte**. Die **Strtod** -Funktion konvertiert *StrSource* auf einen Wert mit doppelter Genauigkeit. **Strtod** stoppt das Lesen der Zeichenfolge *StrSource* mit dem ersten Zeichen, die nicht als Teil einer Zahl erkannt. Dies ist möglicherweise das beendende NULL-Zeichen. **Wcstod** ist eine Breitzeichen-Version von **Strtod**, dessen *StrSource* Argument ist eine Breitzeichen-Zeichenfolge. Anderenfalls verhalten sich diese Funktionen identisch.
+Jede Funktion konvertiert die *Eingabe Zeichenfolge* in einen **Double**-Wert. Die " **strautod** "-Funktion konvertiert " *strausource* " in einen Wert mit doppelter Genauigkeit. der Wert von " **stretod** " stoppt das Lesen der Zeichenfolge " *Strauch* " beim ersten Zeichen, das nicht als Teil einer Zahl erkannt wird. Dies ist möglicherweise das beendende NULL-Zeichen. **wcstod** ist eine breit Zeichen Version von " **strantod**;". Das *unsource* -Argument ist eine Zeichenfolge mit breit Zeichen. Anderenfalls verhalten sich diese Funktionen identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -104,17 +107,17 @@ Jede Funktion wandelt die Eingabezeichenfolge *StrSource* zu einem **doppelte**.
 |**_tcstod**|**strtod**|**strtod**|**wcstod**|
 |**_tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
 
-Die **LC_NUMERIC** -kategorieeinstellung des aktuellen Gebietsschemas bestimmt das Erkennen des Basiszeichens in Punkt *StrSource*. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema. **_strtod_l** ist identisch mit **_strtod_l** , allerdings verwenden das *Gebietsschema* stattdessen den übergebenen. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die **LC_NUMERIC** -Kategorieeinstellung des aktuellen Gebiets Schemas bestimmt die Erkennung des Basispunkt Zeichens in " *strinsource*". Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebiets Schema. **_strtod_l** ist mit **_strtod_l** identisch, *mit der Ausnahme* , dass Sie stattdessen das übergebene Gebiets Schema verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Wenn *Endptr* nicht **NULL**, ein Zeiger auf das Zeichen, die Überprüfung beendet, wird gespeichert, an der Position zeigt *Endptr*. Wenn keine Konvertierung ausgeführt werden kann (keine gültigen Ziffern gefunden oder ungültige Basis angegeben) den Wert der *StrSource* befindet sich in den Speicherort verweist *Endptr*.
+Wenn *endptr* nicht **null**ist, wird ein Zeiger auf das Zeichen, das die Überprüfung beendet hat, an dem Speicherort gespeichert, auf den von *endptr*verwiesen wird. Wenn keine Konvertierung ausgeführt werden kann (keine gültigen Ziffern gefunden oder ungültige Basis angegeben), wird der Wert von " *strinsource* " an dem Speicherort gespeichert, auf den von *endptr*verwiesen wird.
 
-**Strtod** erwartet *StrSource* , zeigen Sie auf eine Zeichenfolge von einem der folgenden Formate:
+der Wert von " **stretod** *" erwartet eine Zeichenfolge mit einer* der folgenden Formen:
 
-[*Leerzeichen*] [*anmelden*] {*Ziffern* [*Basis* *Ziffern*] &#124;  *Basis* *Ziffern*} [{**e** &#124; **E**} [*anmelden*] *Ziffern*] [*Leerzeichen*] [*anmelden*] {**0 X** &#124; **0 X**} {*Hexdigits* [ *Basis* *Hexdigits*] &#124; *Basis* *Hexdigits*} [{**p** &#124; **P**} [*anmelden*] *Hexdigits*] [*Leerzeichen*] [*anmelden*] {} **INF** &#124; **UNENDLICH**} [*Leerzeichen*] [*anmelden*]  **NAN** [*Sequenz*]
+[*Leerzeichen*] [*Sign*] {*Ziffern* [*Basis*-Ziffern &#124; *] Basis* *Ziffern*} [{**e** &#124; **e**} [*Sign*] *Ziffern*] [*Leerzeichen*] [*Sign*] {**0x** &#124; **0x**} {*Hexziffern* [*Basis* - *Hexziffern*] &#124;  *Basis-* *Hexziffern*} [{**p** &#124; **p**} [*Sign*] *Hexziffern*] [*Leerzeichen*] [*Sign*] {**INF** &#124; **Infinity**} [*Leerzeichen*] [ *Sign*] **NaN** [*Sequence*]
 
-Das optionale führende *Leerzeichen* besteht möglicherweise aus Leerzeichen und Tabulatorzeichen, die ignoriert werden; *anmelden* ist entweder Pluszeichen (+) oder Minuszeichen (-); *Ziffern* sind eine oder mehrere Dezimalstellen sind; *Hexdigits* sind einer oder mehreren hexadezimale Ziffern; *Basis* ist der Punkt Basiszeichens, entweder einen Punkt (.) im Gebietsschema "C" Standard oder die Gebietsschema-spezifische-Wert, wenn das aktuelle Gebietsschema unterscheidet, oder wenn *Gebietsschema* angegeben ist; eine *Sequenz* ist eine Sequenz von alphanumerischen Zeichen oder Unterstriche. In dezimalen und hexadezimalen Number Forms Wenn keine Ziffern vor dem Basiszeichen Punkt angezeigt werden muss mindestens eine nach dem Punkt Basiszeichen angezeigt. Im Dezimalformat, die Dezimalstellen können ein Exponent folgen, besteht aus einem einführenden Buchstaben (**e** oder **E**) und einer optional Zahl mit Vorzeichen. In hexadezimaler Form, die Hexadezimalziffern gefolgt werden ein Exponent, der besteht aus einem einführenden Buchstaben (**p** oder **P**) und eine Zahl mit optionalem Vorzeichen hexadezimale darstellt, die die der Exponent als Potenz von 2. In einer der Formen Wenn weder ein exponententeil noch ein Punkt Basiszeichen angezeigt wird, wird ein Punkt Basiszeichen angenommen, dass die letzte Ziffer in der Zeichenfolge folgen. Groß-/Kleinschreibung wird ignoriert, sowohl die **INF** und **NAN** Forms. Das erste Zeichen, das nicht mit einer der folgenden Formen passt beendet die Überprüfung.
+Die optionalen führenden *leer* Zeichen können aus Leerzeichen und Tabstopp Zeichen bestehen, die ignoriert werden. das Vorzeichen ist entweder Pluszeichen (+) oder minus *Zeichen* (-); *Ziffern* sind eine oder mehrere Dezimalstellen. *Hexziffern* sind eine oder mehrere hexadezimale Ziffern. *Basis* ist das Basis-Punktzeichen, entweder ein Punkt (.) im Standard Gebiets Schema "C", oder der Gebiets Schema spezifische Wert, wenn das aktuelle Gebiets Schema anders *ist oder wenn das* Gebiets Schema angegeben ist. eine *Sequenz* ist eine Sequenz von alphanumerischen Zeichen oder Unterstrich Zeichen. In Dezimal-und hexadezimalen Zahlen Formularen, wenn keine Ziffern vor dem Basiszeichen stehen, muss mindestens eine Zeichenfolge nach dem Basispunkt Zeichen angezeigt werden. Im Dezimal Format kann ein Exponent folgen, der aus einem einführenden Buchstaben (**e** oder **e**) und einer optionalen Ganzzahl mit Vorzeichen besteht. Im hexadezimalen Format kann auf die hexadezimalen Ziffern ein Exponent folgen, der aus einem einführenden Buchstaben (**p** oder **p**) und einer optional signierten hexadezimalen Ganzzahl besteht, die den Exponent als Potenz von 2 darstellt. Wenn in beiden Formen weder ein Exponententeil noch ein Basiszeichen angezeigt wird, wird davon ausgegangen, dass ein Basiszeichen auf die letzte Ziffer in der Zeichenfolge folgt. Die Groß-/Kleinschreibung wird in den **INF** -und **NaN** -Formularen ignoriert. Das erste Zeichen, das nicht in eines dieser Formulare passt, hält den Scanvorgang an.
 
-Die UCRT-Versionen dieser Funktionen unterstützen keine Konvertierung von Fortran-Stil (**d** oder **D**) Buchstaben in Exponenten. Diese nicht-standardmäßige Erweiterung wurde in früheren Versionen der CRT unterstützt. Sie ist möglicherweise eine fehlerhafte Änderung für Ihren Code. Die UCRT-Versionen unterstützen Hexadezimalzeichenfolgen und Roundtripping für INF und NAN-Werte, die in früheren Versionen nicht unterstützt wurden. Dies kann auch wichtige Änderungen in Ihrem Code führen. Beispielsweise würde die Zeichenfolge "0x1a" interpretiert werden, von **Strtod** als 0,0 in früheren Versionen, sondern als 26.0 in der UCRT-Version.
+Die ucrt-Versionen dieser Funktionen unterstützen nicht die Konvertierung von Exponent-Buchstaben vom Fortran-Stil (**d** oder **d**). Diese nicht-standardmäßige Erweiterung wurde in früheren Versionen der CRT unterstützt. Sie ist möglicherweise eine fehlerhafte Änderung für Ihren Code. Die ucrt-Versionen unterstützen hexadezimale Zeichen folgen und Roundtrips von INF-und Nan-Werten, die in früheren Versionen nicht unterstützt wurden. Dies kann auch zu wichtigen Änderungen im Code führen. Beispielsweise würde die Zeichenfolge "0x1A" von " **strautod** " in früheren Versionen als 0,0 interpretiert werden, aber als 26,0 in der ucrt-Version.
 
 ## <a name="requirements"></a>Anforderungen
 

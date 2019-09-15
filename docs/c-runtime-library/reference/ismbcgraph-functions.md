@@ -1,7 +1,7 @@
 ---
 title: _ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbcpunct_l
 - _ismbcblank
 - _ismbcprint
@@ -12,7 +12,7 @@ apiname:
 - _ismbcspace_l
 - _ismbcspace
 - _ismbcgraph
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -24,7 +24,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbcspace
 - _ismbcgraph
@@ -56,14 +59,14 @@ helpviewer_keywords:
 - _ismbcgraph_l function
 - _ismbcspace function
 ms.assetid: 8e0a5f47-ba64-4411-92a3-3c525d16e3be
-ms.openlocfilehash: 05946def8c4d832751554a1653afa98c9965fee9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25136896555128339aaa4c79cec2ca9bf3ded43c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286874"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953908"
 ---
-# <a name="ismbcgraph-ismbcgraphl-ismbcprint-ismbcprintl-ismbcpunct-ismbcpunctl-ismbcblank-ismbcblankl-ismbcspace-ismbcspacel"></a>_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
+# <a name="_ismbcgraph-_ismbcgraph_l-_ismbcprint-_ismbcprint_l-_ismbcpunct-_ismbcpunct_l-_ismbcblank-_ismbcblank_l-_ismbcspace-_ismbcspace_l"></a>_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
 
 Bestimmt, ob ein Zeichen ein Grafikzeichen, ein Anzeigenzeichen, ein Interpunktionszeichen oder ein Leerzeichen ist.
 
@@ -120,9 +123,9 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Routinen gibt einen Wert ungleich 0 zurück, wenn das Zeichen die Testbedingung erfüllt, bzw. 0, wenn es sie nicht erfüllt. Wenn *c* < = 255 und gibt es eine entsprechende **_ismbb** Routine (z. B. **_ismbcalnum** entspricht **_ismbbalnum**), wird die Ergebnis ist der Rückgabewert der entsprechenden **_ismbb** Routine.
+Jede dieser Routinen gibt einen Wert ungleich 0 zurück, wenn das Zeichen die Testbedingung erfüllt, bzw. 0, wenn es sie nicht erfüllt. Wenn *c* < = 255 und es eine entsprechende **_ismbb** -Routine gibt (z. b. **_ismbcalnum** entspricht **_ismbbalnum**), ist das Ergebnis der Rückgabewert der entsprechenden **_ismbb** -Routine.
 
-Die Versionen dieser Funktionen sind nahezu identisch, außer dass diejenigen, die über verfügen den **_l** -Suffix verwenden das Gebietsschema, das für ihr vom Gebietsschema abhängiges Verhalten verwenden, anstelle des aktuellen Gebietsschemas übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die Versionen dieser Funktionen sind identisch, außer dass diejenigen mit dem **_l** -Suffix das Gebiets Schema verwenden, das für Ihr vom Gebiets Schema abhängiges Verhalten anstelle des aktuellen Gebiets Schemas übergangen wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Hinweise
 
@@ -130,11 +133,11 @@ Jede dieser Funktionen testet ein angegebenes Mehrbytezeichen auf eine angegeben
 
 |-Routine zurückgegebener Wert|Testbedingung|Beispiel für Codepage 932|
 |-------------|--------------------|---------------------------|
-|**_ismbcgraph**|Grafik|Gibt einen Wert ungleich NULL und nur, wenn *c* ist eine einzelbytedarstellung jedes beliebigen druckbaren ASCII- oder Katakana-Zeichens außer eines Leerzeichens ().|
-|**_ismbcprint**|Druckbar|Gibt einen Wert ungleich NULL und nur, wenn *c* ist eine einzelbytedarstellung jedes beliebigen druckbaren ASCII- oder Katakana-Zeichens einschließlich eines Leerzeichens ().|
-|**_ismbcpunct**|Interpunktion|Gibt einen Wert ungleich NULL und nur, wenn *c* ist eine Single-Byte-Darstellung der ASCII- oder Katakana-interpunktionszeichens ist.|
-|**_ismbcblank**|Leerzeichen oder horizontaler Tabulator|Gibt einen Wert ungleich NULL und nur, wenn *c* ist ein Leerzeichen oder horizontaler Tabulatorzeichen: *c*= 0 x 20 oder *c*= 0 x 09.|
-|**_ismbcspace**|Leerraum|Gibt einen Wert ungleich NULL und nur, wenn *c* ein Leerzeichen ist: *c*= 0 x 20 oder 0 x 09 < =*c*< = 0x0D.|
+|**_ismbcgraph**|Grafik|Gibt nur dann einen Wert ungleich 0 (null) zurück, wenn *c* eine Einzel Byte Darstellung jedes beliebigen ASCII-oder Katakana-Druck Zeichens ist, mit Ausnahme eines leer Zeichens ().|
+|**_ismbcprint**|Druckbar|Gibt nur dann einen Wert ungleich 0 (null) zurück, wenn *c* eine Einzel Byte Darstellung jedes beliebigen ASCII-oder Katakana-druckbaren Zeichens einschließlich eines leer Zeichens () ist.|
+|**_ismbcpunct**|Interpunktion|Gibt nur dann einen Wert ungleich 0 (null) zurück, wenn *c* eine Einzel Byte Darstellung jedes beliebigen ASCII-oder Katakana-Interpunktions Zeichens ist.|
+|**_ismbcblank**|Leerzeichen oder horizontaler Tabulator|Gibt nur dann einen Wert ungleich 0 (null) zurück, wenn *c* ein Leerzeichen oder ein horizontales Tabstopp Zeichen ist: *c*= 0x20 oder *c*= 0x09.|
+|**_ismbcspace**|Leerraum|Gibt nur dann einen Wert ungleich 0 (null) zurück, wenn *c* ein Leerzeichen ist: *c*= 0x20 oder 0x09 < =*c*< = 0x0D.|
 
 ## <a name="requirements"></a>Anforderungen
 

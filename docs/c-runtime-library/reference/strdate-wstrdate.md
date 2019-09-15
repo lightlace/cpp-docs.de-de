@@ -1,10 +1,10 @@
 ---
 title: _strdate, _wstrdate
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strdate
 - _wstrdate
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tstrdate
 - wstrdate
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-ms.openlocfilehash: 4dc2ea7f25e644c9bf7a4ddca4a625991f37d912
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1164db5857643bac649e96493a3d66cdee3b6e2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353962"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958223"
 ---
-# <a name="strdate-wstrdate"></a>_strdate, _wstrdate
+# <a name="_strdate-_wstrdate"></a>_strdate, _wstrdate
 
 Kopieren des aktuellen Systemdatums in einen Puffer Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md).
 
@@ -65,22 +68,22 @@ wchar_t *_wstrdate(
 
 ### <a name="parameters"></a>Parameter
 
-*datestr*<br/>
+*dateStr*<br/>
 Ein Zeiger auf einen Puffer, der die formatierte Datumszeichenfolge enthält.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt einen Zeiger auf die resultierende Zeichenfolge *Datestr*.
+Jede dieser Funktionen gibt einen Zeiger auf die resultierende Zeichenfolge *dateStr*zurück.
 
 ## <a name="remarks"></a>Hinweise
 
 Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md). Es wird empfohlen, nach Möglichkeit die sichereren Funktionen zu verwenden.
 
-Die **_strdate** Funktion kopiert das aktuelle Datum in den Puffer, der auf *Datestr*, im Format **mm**/**TT** / **Yy**, wobei **mm** zwei Ziffern für den Monat **TT** zwei Ziffern für den Tag und **JJ**  ist die letzten zwei Ziffern des Jahres. Z. B. die Zeichenfolge **12/05/99** 5. Dezember 1999 darstellt. Der Puffer muss mindestens 9 Bytes lang sein.
+Die **_strdate** -Funktion kopiert das aktuelle Systemdatum in den Puffer, auf das von *dateStr*, formatiertem **mm**/**DD**/**yy**, verwiesen wird, wobei **mm** zwei Ziffern darstellt, die den Monat, **DD** , darstellen. gibt zwei Ziffern an, die den Tag darstellen, und **yy** ist die letzten zwei Ziffern des Jahres. Die Zeichenfolge **12/05/99** stellt z. b. den 5. Dezember 1999 dar. Der Puffer muss mindestens 9 Bytes lang sein.
 
-Wenn *Datestr* ist eine **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
+Wenn *dateStr* ein **null** -Zeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen-1 zurück und legen **errno** auf **EINVAL**fest.
 
-**_wstrdate** ist eine Breitzeichen-Version von **_strdate**; der Wert Argument- und Rückgabetypen der **_wstrdate** sind Breitzeichen Zeichenfolgen. Anderenfalls verhalten sich diese Funktionen identisch.
+**_wstrdate** ist eine breit Zeichen Version von **_strdate**. Das Argument und der Rückgabewert von **_wstrdate** sind Zeichen folgen mit breit Zeichen. Anderenfalls verhalten sich diese Funktionen identisch.
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

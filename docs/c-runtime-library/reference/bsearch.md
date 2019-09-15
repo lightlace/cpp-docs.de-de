@@ -1,9 +1,9 @@
 ---
 title: bsearch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - bsearch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,19 +16,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - bsearch
 helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: e170ce67d22c0d97825a7eb754546a29daac6d89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e44e85d1c6d73a68da2edd099cdeb6156f9759d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347755"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939436"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -54,7 +57,7 @@ Das Objekt, nach dem gesucht werden soll.
 *base*<br/>
 Zeiger auf die Basis der Suchdaten.
 
-*Anzahl*<br/>
+*number*<br/>
 Anzahl der Elemente.
 
 *width*<br/>
@@ -65,19 +68,19 @@ Rückruffunktion, die zwei Elemente vergleicht. Da erste ist ein Zeiger auf den 
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Bsearch** gibt einen Zeiger auf ein Vorkommen von *Schlüssel* in das Array verweist *Basis*. Wenn *Schlüssel* nicht gefunden wird, wird die Funktion gibt **NULL**. Wenn das Array nicht in aufsteigender Reihenfolge sortiert ist oder doppelte Datensätze mit identischen Schlüsseln enthält, ist das Ergebnis nicht vorhersehbar.
+**bsearch** gibt einen Zeiger auf ein Vorkommen von *Key* in dem Array zurück, auf das von *Base*verwiesen wird. Wenn *Key* nicht gefunden wird, gibt die Funktion **null**zurück. Wenn das Array nicht in aufsteigender Reihenfolge sortiert ist oder doppelte Datensätze mit identischen Schlüsseln enthält, ist das Ergebnis nicht vorhersehbar.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Bsearch** Funktion führt eine binäre Suche eines sortierten Arrays von *Anzahl* Elementen, die jeweils von *Breite* Bytes groß. Die *Basis* Wert ist ein Zeiger auf die Basis des Arrays, das gesucht werden soll, und *Schlüssel* ist der Wert, der gesucht wird. Die *vergleichen* Parameter ist ein Zeiger auf eine benutzerdefinierte Routine, die den angeforderten Schlüssel auf ein Arrayelement vergleicht und gibt einen der folgenden Werte, der ihre Beziehung angibt:
+Die **bsearch** -Funktion führt eine binäre Suche eines sortierten Arrays von *Zahlen* Elementen durch, wobei jede *Breite* Byte groß ist. Der *Basiswert* ist ein Zeiger auf die Basis des zu durchsuchenden Arrays, und *Key* ist der Wert, der gesucht wird. Der *Compare* -Parameter ist ein Zeiger auf eine vom Benutzer bereitgestellte Routine, die den angeforderten Schlüssel mit einem Array Element vergleicht und einen der folgenden Werte zurückgibt, die die zugehörige Beziehung angeben:
 
-|Rückgabewert von *vergleichen* Routine|Beschreibung|
+|Von der *Vergleichs* Routine zurückgegebener Wert|Beschreibung|
 |-----------------------------------------|-----------------|
 |\< 0|Der Schlüssel ist kleiner als das Arrayelement.|
 |0|Schlüssel und Arrayelement sind gleich.|
 |> 0|Der Schlüssel ist größer als das Arrayelement.|
 
-Diese Funktion überprüft ihre Parameter. Wenn *vergleichen*, *Schlüssel* oder *Anzahl* ist **NULL**, oder wenn *Basis* ist **NULL**und *Anzahl* ungleich NULL ist, oder wenn *Breite* ist 0 (null), Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu `EINVAL` und die Funktion gibt **NULL**.
+Diese Funktion überprüft ihre Parameter. Wenn *Compare*, *Key* oder *Number* **null**ist, oder wenn *Base* **null** und *Number* ungleich 0 (NULL *) ist,* wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter Überprüfung) beschrieben. ](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, wird **errno** auf `EINVAL` festgelegt, und die Funktion gibt **null**zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

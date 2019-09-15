@@ -1,9 +1,9 @@
 ---
 title: _expand_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _expand_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - expand_dbg
 - _expand_dbg
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - expand_dbg function
 - _expand_dbg function
 ms.assetid: dc58c91f-72a8-48c6-b643-fe130fb6c1fd
-ms.openlocfilehash: cc3aa2b7e39b52eb71ac10a9b5c4a221ba6fb70c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 836b9cffcf0367f248a14469b30c1a355e2bdec2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288044"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941578"
 ---
-# <a name="expanddbg"></a>_expand_dbg
+# <a name="_expand_dbg"></a>_expand_dbg
 
 Ändert die Größe eines angegebenen Speicherblocks im Heap durch Erweitern oder Verkürzen des Blocks (nur Debugversion).
 
@@ -55,31 +58,31 @@ Zeiger zum vorherigen belegten Speicherblock.
 Angeforderte neue Größe des Blocks (in Bytes).
 
 *blockType*<br/>
-Angeforderter Typ für vergrößerten/verkleinerten Block: **_CLIENT_BLOCK** oder **_NORMAL_BLOCK**.
+Angeforderter Typ für Block mit Größenänderung: **_CLIENT_BLOCK** oder **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Zeiger auf den Namen der Quelldatei, die angeforderte Erweiterung oder **NULL**.
+Zeiger auf den Namen der Quelldatei, die den Erweiterungs Vorgang angefordert hat, oder **null**.
 
 *linenumber*<br/>
-Zeilennummer in der Quelldatei, in dem die Erweiterung angefordert wurde, oder **NULL**.
+Zeilennummer in der Quelldatei, in der der Erweiterungs Vorgang angefordert wurde, oder **null**.
 
-Die *Filename* und *Linenumber* Parameter sind nur verfügbar, wenn **_expand_dbg** explizit aufgerufen wurde oder die [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)Präprozessorkonstante definiert wurde.
+Die Parameter " *filename* " und " *LineNumber* " sind nur verfügbar, wenn " **_expand_dbg** " explizit aufgerufen wurde oder die [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) -präprozessorkonstante definiert wurde.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei erfolgreichem Abschluss **_expand_dbg** einen Zeiger auf den vergrößerten/verkleinerten Speicherblock zurück. Da der Speicher nicht verschoben wird, ist die Adresse identisch mit "userData". Wenn ein Fehler aufgetreten ist, oder der Block nicht auf die angeforderte Größe erweitert werden kann, gibt es **NULL**. Wenn ein Fehler auftritt, **Errno** mit Informationen aus dem Betriebssystem über die Art des Fehlers ist. Weitere Informationen zu **Errno**, finden Sie unter [Errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Nach erfolgreichem Abschluss gibt **_expand_dbg** einen Zeiger auf den Speicherblock mit Größenänderung zurück. Da der Speicher nicht verschoben wird, ist die Adresse identisch mit "userData". Wenn ein Fehler aufgetreten ist oder der Block nicht auf die angeforderte Größe erweitert werden konnte, wird **null**zurückgegeben. Wenn ein Fehler auftritt, ist **errno** mit Informationen des Betriebssystems über die Art des Fehlers zu tun. Weitere Informationen zu **errno**finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_expand_dbg** Funktion ist eine Debugversion der _[erweitern](expand.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, jeden Aufruf von **_expand_dbg** wird nach einer Verkleinerung auf einen Aufruf von **_expand**. Beide **_expand** und **_expand_dbg** Ändern der Größe eines Speicherblocks im Basisheap, jedoch **_expand_dbg** Datenbankmodell kann mehrere Debugfunktionen: Puffer auf beiden Seiten des Benutzers Teil des Blocks zum Prüfen auf Speicherverluste, einen blocktypparameter zum Nachverfolgen bestimmter belegungstypen und *Filename*/*Linenumber* -Informationen zum Ermitteln des Ursprungs von Anforderungen für speicherbelegung.
+Die **_expand_dbg** -Funktion ist eine Debugversion der _[Expand](expand.md) -Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, wird jeder **_expand_dbg** -Rückruf auf einen **_expand**-aufrufenden Wert reduziert. Sowohl **_expand** als auch **_expand_dbg** ändern die Größe eines Speicherblocks im Basisheap, **_expand_dbg** bietet jedoch mehrere Debugfunktionen: Puffer auf beiden Seiten des Benutzer Teils des Blocks zum Prüfen auf Speicher Verluste, einen Blocktyp Parameter zum Nachverfolgen bestimmte Zuordnungs Typen und *Dateiname*/-*LineNumber* -Informationen, um den Ursprung von Zuordnungs Anforderungen zu bestimmen.
 
-**_expand_dbg** ändert die Größe des angegebene Speicherblocks mit etwas mehr Speicherplatz als der angeforderten *NewSize*. *NewSize* größer oder kleiner als die Größe des ursprünglich zugeordneten Speicherblocks sein kann. Der zusätzliche Speicherplatz wird vom Debugheapmanager verwendet, um die Debugspeicherblöck zu verknüpfen und Debugheaderinformationen und Überschreibungspuffer für die Anwendung bereitzustellen. Die Größenänderung wird erreicht, indem der ursprüngliche Speicherblock erweitert oder verkürzt wird. **_expand_dbg** ändert nicht den Speicherblock, wie die [_realloc_dbg](realloc-dbg.md) Funktion.
+**_expand_dbg** ändert die Größe des angegebenen Speicherblocks mit etwas mehr Speicherplatz als der angeforderte *newSize*. *newSize* ist möglicherweise größer oder kleiner als die Größe des ursprünglich zugeordneten Speicherblocks. Der zusätzliche Speicherplatz wird vom Debugheapmanager verwendet, um die Debugspeicherblöck zu verknüpfen und Debugheaderinformationen und Überschreibungspuffer für die Anwendung bereitzustellen. Die Größenänderung wird erreicht, indem der ursprüngliche Speicherblock erweitert oder verkürzt wird. **_expand_dbg** verschiebt den Speicherblock nicht wie die [_realloc_dbg](realloc-dbg.md) -Funktion.
 
-Wenn *NewSize* größer ist als der ursprüngliche Block Größe der Speicherblock erweitert wird. Während einer Erweiterung, wenn der Speicherblock nicht erweitert werden kann, um die angeforderte Größe aufzunehmen **NULL** zurückgegeben wird. Wenn *NewSize* ist kleiner als der ursprüngliche Block Größe der Speicherblock verkürzt, bis die neue Größe erreicht ist.
+Wenn *newSize* größer als die ursprüngliche Blockgröße ist, wird der Speicherblock erweitert. Wenn während einer Erweiterung der Speicherblock nicht auf die angeforderte Größe erweitert werden kann, wird **null** zurückgegeben. Wenn *newSize* kleiner als die ursprüngliche Blockgröße ist, wird der Speicherblock so lange gebunden, bis die neue Größe abgerufen wird.
 
 Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Informationen zu den Belegungsblocktypen und ihrer Verwendung finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details). Weitere Informationen zu den Unterschieden zwischen dem Aufruf einer Standardheapfunktion und der Debugversion in einem Debugbuild finden Sie unter [Debugversionen von Heapreservierungsfunktionen](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
-Diese Funktion überprüft ihre Parameter. Wenn *Memblock* ein null-Zeiger ist oder wenn Sie größer als ist **_HEAP_MAXREQ**, ruft diese Funktion einen Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt **NULL**.
+Diese Funktion überprüft ihre Parameter. Wenn *memblock* ein NULL-Zeiger ist oder die Größe größer als **_HEAP_MAXREQ**ist, ruft diese Funktion einen Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird **errno** auf **EINVAL** festgelegt, und die Funktion gibt **null**zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

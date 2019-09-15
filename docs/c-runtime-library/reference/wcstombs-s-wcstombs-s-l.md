@@ -1,10 +1,10 @@
 ---
 title: wcstombs_s, _wcstombs_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcstombs_s_l
 - wcstombs_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcstombs_s
 - _wcstombs_s_l
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 105f2d33-221a-4f6d-864c-23c1865c42af
-ms.openlocfilehash: 3f30ef1f94803005a1afd99a6f82c46296f5c4f7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 135bcb90e6a82591bf05e56b60575719f4c7d45c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498998"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945031"
 ---
 # <a name="wcstombs_s-_wcstombs_s_l"></a>wcstombs_s, _wcstombs_s_l
 
@@ -131,7 +134,7 @@ Wenn **wcstombs_s** auf ein breit Zeichen stößt, das nicht in ein Multibytezei
 Wenn die Sequenzen, auf die von *wcstr* und *mbstr* verwiesen wird, überlappen, ist das Verhalten von **wcstombs_s** nicht definiert.
 
 > [!IMPORTANT]
-> Stellen Sie sicher, dass sich *wcstr* und *mbstr* nicht über Lappen und dass die Anzahl der zu konvertierenden breit Zeichen korrekt ist.
+> Stellen Sie sicher, dass sich *wcstr* und *mbstr* nicht überlappen und dass die Anzahl der zu konvertierenden breit *Zeichen korrekt ist* .
 
 **wcstombs_s** verwendet das aktuelle Gebiets Schema für jedes vom Gebiets Schema abhängige Verhalten. **_wcstombs_s_l** ist mit **wcstomsb** identisch, mit dem Unterschied, dass stattdessen das übergebene Gebiets Schema verwendet wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 

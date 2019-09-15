@@ -1,11 +1,11 @@
 ---
 title: log1p, log1pf, log1pl2
 ms.date: 04/05/2018
-apiname:
+api_name:
 - log1p
 - log1pf
 - log1pl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - log1p
 - log1pf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: 2ac864d7e28823c95b0202c0a8f2454d03c64aff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aad6675a832e1715c505026fe11ffe77f1f6d275
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285985"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953217"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 
@@ -72,7 +75,7 @@ Das Gleitkommaargument.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn erfolgreich, wird der natürliche (Basis*e*) melden Sie sich von (*x* + 1).
+Bei erfolgreicher Ausführung wird das natürliche Protokoll (Base-*e*) von (*x* + 1) zurückgegeben.
 
 Andernfalls wird möglicherweise einer der folgenden Werte zurückgeben:
 
@@ -87,15 +90,15 @@ Andernfalls wird möglicherweise einer der folgenden Werte zurückgeben:
 |±SNaN|Identisch mit der Eingabe|INVALID||
 |±QNaN, indefinite|Identisch mit der Eingabe|||
 
-Die **Errno** Wert wird auf ERANGE festgelegt, wenn *x* =-1. Die **Errno** Wert wird festgelegt, um **EDOM** Wenn *x* < -1.
+Der **errno** -Wert ist auf ERANGE festgelegt, wenn *x* =-1. Der **errno** -Wert ist auf **Edom** festgelegt, wenn *x* <-1.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **log1p** Funktionen sind möglicherweise genauer als `log(x + 1)` beim *x* nahe 0 ist.
+Die **log1p** -Funktionen sind möglicherweise präziser als `log(x + 1)` die Verwendung von, wenn *x* nahe 0 (null) ist.
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **log1p** verwenden und zurückgeben **"float"** und **lange** **doppelte** Typen. In einem C-Programm **log1p** immer Double und gibt eine **doppelte**.
+Da C++ das überladen zulässt, können Sie über Ladungen von **log1p** aufzurufen, die **float** -und **Long** **Double** -Typen annehmen und zurückgeben. In einem C-Programm nimmt **log1p** immer einen **Double**-Wert an und gibt ihn zurück.
 
-Wenn *x* eine natürliche Zahl ist, wird diese Funktion gibt den Logarithmus der Fakultät von (*x* - 1).
+Wenn *x* eine natürliche Zahl ist, gibt diese Funktion den Logarithmus der Fakultät von (*x* -1) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

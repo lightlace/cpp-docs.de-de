@@ -1,10 +1,10 @@
 ---
 title: _tell, _telli64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _telli64
 - _tell
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tell
 - telli64
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: 628f37d3b8a39a75fb2329a1b2805426f15e821f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54f672a1b230103d6f9ae1c45d2c9e487764939e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258571"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946258"
 ---
-# <a name="tell-telli64"></a>_tell, _telli64
+# <a name="_tell-_telli64"></a>_tell, _telli64
 
 Aktuelle Position des Dateizeigers
 
@@ -54,20 +57,20 @@ __int64 _telli64(
 
 ### <a name="parameters"></a>Parameter
 
-*handle*<br/>
+*bewältigen*<br/>
 Dateideskriptoren, die auf eine geöffnete Datei verweisen.
 
 ## <a name="return-value"></a>Rückgabewert
 
 Aktuelle Position des Dateizeigers Auf Geräten, die Suchvorgänge nicht unterstützen, ist der Rückgabewert nicht definiert.
 
-Der Rückgabewert-1 L gibt einen Fehler an. Wenn *behandeln* ist ein ungültiger Dateideskriptor, der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EBADF** und -1 L zurück.
+Der Rückgabewert-1L gibt einen Fehler an. Wenn *handle* ein ungültiger Dateideskriptor ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, legen diese Funktionen **errno** auf **EBADF** fest und geben "-1L" zurück.
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_tell** Funktion ruft die aktuelle Position des Dateizeigers (sofern vorhanden) zugeordneten ab die *behandeln* Argument. Die Position wird als Anzahl von Bytes ab dem Anfang der Datei angegeben. Für die **_telli64** -Funktion, dieser Wert wird als eine 64-Bit-Ganzzahl angegeben.
+Die **_tell** -Funktion Ruft die aktuelle Position des Dateizeigers (sofern vorhanden) ab, der dem *handle* -Argument zugeordnet ist. Die Position wird als Anzahl von Bytes ab dem Anfang der Datei angegeben. Bei der **_telli64** -Funktion wird dieser Wert als 64-Bit-Ganzzahl ausgedrückt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -110,14 +113,14 @@ int main( void )
 }
 ```
 
-### <a name="input-crttelltxt"></a>Eingabe: crt_tell.txt
+### <a name="input-crt_telltxt"></a>Eingabe: crt_tell.txt
 
 ```Input
 Line one.
 Line two.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 Current file position is: 20

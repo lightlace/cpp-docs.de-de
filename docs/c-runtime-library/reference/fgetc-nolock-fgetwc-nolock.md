@@ -1,10 +1,10 @@
 ---
 title: _fgetc_nolock, _fgetwc_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fgetc_nolock
 - _fgetwc_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fgetwc_nolock
 - fgettc_nolock
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - reading characters from streams
 - _fgettc_nolock function
 ms.assetid: fb8e7c5b-4503-493a-879e-6a1db75aa114
-ms.openlocfilehash: 568a96caf481fbaf3e80cf60958dc826db49dd86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bc2ff8e8ca36a9c6acee821d1507767f4b1a0d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333968"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940884"
 ---
-# <a name="fgetcnolock-fgetwcnolock"></a>_fgetc_nolock, _fgetwc_nolock
+# <a name="_fgetc_nolock-_fgetwc_nolock"></a>_fgetc_nolock, _fgetwc_nolock
 
 Liest ein Zeichen in einem Stream, ohne den Thread zu sperren.
 
@@ -68,7 +71,7 @@ Weitere Informationen finden Sie unter [fgetc, fgetwc](fgetc-fgetwc.md).
 
 ## <a name="remarks"></a>Hinweise
 
-**_fgetc_nolock** und **_fgetwc_nolock** sind identisch mit **Fgetc** und **Fgetwc**, außer dass sie nicht vor Störungen durch geschützt sind andere Threads. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
+**_fgetc_nolock** und **_fgetwc_nolock** sind identisch mit **fgetc** bzw. **fgetwc**, mit dem Unterschied, dass Sie nicht vor Störungen durch andere Threads geschützt sind. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -121,14 +124,14 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfgetcnolocktxt"></a>Eingabe: crt_fgetc_nolock.txt
+## <a name="input-crt_fgetc_nolocktxt"></a>Eingabe: crt_fgetc_nolock.txt
 
 ```Input
 Line one.
 Line two.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 Line one.

@@ -1,9 +1,9 @@
 ---
 title: __security_init_cookie
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __security_init_cookie
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - security_init_cookie
 - __security_init_cookie
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - security_init_cookie function
 - global security cookie
 ms.assetid: 32119905-0897-4a1c-84ca-bffd16c9b2af
-ms.openlocfilehash: c7b25e05b4574a7b397cd07d55000a5e53db58f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f7e9924f4a96803749418d777e5ee2020f9df78
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356835"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948716"
 ---
-# <a name="securityinitcookie"></a>__security_init_cookie
+# <a name="__security_init_cookie"></a>__security_init_cookie
 
 Initialisiert das globale Sicherheitscookie.
 
@@ -45,9 +48,9 @@ void __security_init_cookie(void);
 
 Das globale Sicherheitscookie wird zum Schutz vor Pufferüberlauf in dem Code verwendet, der mit [/GS (Puffer-Sicherheitsüberprüfung)](../../build/reference/gs-buffer-security-check.md) kompiliert wurde, sowie in Code mit Ausnahmebehandlung. Beim Einstieg in eine vor Pufferüberlauf geschützte Funktion wird das Cookie auf dem Stapel abgelegt, und bei Funktionsende wird der Wert auf dem Stapel mit dem globalen Cookie verglichen. Jeglicher Unterschied zwischen diesen Werten weist darauf hin, dass ein Pufferüberlauf eingetreten ist. Das Programm wird daraufhin sofort beendet.
 
-In der Regel **"__security_init_cookie"** wird von der CRT aufgerufen, wenn es initialisiert wird. Wenn Sie die CRT-Initialisierung umgehen, z. B. bei Verwendung von [/Entry](../../build/reference/entry-entry-point-symbol.md) zum Angeben eines einstiegpunkts – Sie aufrufen müssen **"__security_init_cookie"** selbst. Wenn **"__security_init_cookie"** nicht aufgerufen wird, das globale Sicherheitscookie auf den Standardwert festgelegt ist, und Schutz vor Pufferüberlauf ist beeinträchtigt. Da ein Angreifer diesen Cookie-Standardwert zum der pufferüberlaufprüfungen nutzen kann, es wird empfohlen, dass Sie immer Aufrufen **"__security_init_cookie"** beim Definieren Ihres eigenen Einstiegspunkts.
+Normalerweise wird **__security_init_cookie** von der CRT aufgerufen, wenn Sie initialisiert wird. Wenn Sie die CRT-Initialisierung umgehen – Wenn Sie z. b. [/Entry](../../build/reference/entry-entry-point-symbol.md) verwenden, um einen Einstiegspunkt anzugeben –, müssen Sie **__security_init_cookie** selbst abrufen. Wenn **__security_init_cookie** nicht aufgerufen wird, wird das globale Sicherheits Cookie auf einen Standardwert festgelegt, und der Schutz vor Pufferüberlauf ist gefährdet. Da ein Angreifer diesen Standardwert für den Cookie ausnutzen kann, um die Pufferüberlauf Prüfungen zu besiegen, empfiehlt es sich, immer **__security_init_cookie** aufzurufen, wenn Sie einen eigenen Einstiegspunkt definieren.
 
-Der Aufruf von **"__security_init_cookie"** müssen vorgenommen werden, bevor eine vor Pufferüberlauf geschützte Funktion eingegeben wird; andernfalls wird ein unechter Pufferüberlauf erkannt. Weitere Informationen finden Sie unter [C-Laufzeitfehler R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md).
+Der **__security_init_cookie** -Aufrufe muss erfolgen, bevor eine Überlauf geschützte Funktion eingegeben wird. Andernfalls wird ein falscher Pufferüberlauf erkannt. Weitere Informationen finden Sie unter [C-Laufzeitfehler R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -59,7 +62,7 @@ Beispiele finden Sie unter [C-Laufzeitfehler R6035](../../error-messages/tool-er
 |-------------|---------------------|
 |**__security_init_cookie**|\<process.h>|
 
-**"__security_init_cookie"** ist eine Microsoft-Erweiterung für die standard-C-Laufzeitbibliothek. Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+**__security_init_cookie** ist eine Microsoft-Erweiterung der Standard-C-Lauf Zeit Bibliothek. Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Siehe auch
 

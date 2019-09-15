@@ -1,13 +1,13 @@
 ---
 title: logb, logbf, logbl, _logb, _logbf
 ms.date: 04/05/2018
-apiname:
+api_name:
 - logb
 - _logb
 - _logbl
 - logbf
 - logbl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - logb
 - logbl
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: 9f598eedaf30b1f2a1858129e648a117355d112e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c5fc59f786b00dcf4ab1056424d8442a03f3adbf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285711"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953149"
 ---
-# <a name="logb-logbf-logbl-logb-logbf"></a>logb, logbf, logbl, _logb, _logbf
+# <a name="logb-logbf-logbl-_logb-_logbf"></a>logb, logbf, logbl, _logb, _logbf
 
 Extrahiert den Exponentenwert eines Gleitkommaarguments.
 
@@ -82,17 +85,17 @@ Ein Gleitkommawert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Logb** gibt den zufälligen Exponentenwert von *x* als eine Ganzzahl mit Vorzeichen als Gleitkommawert dargestellt.
+**logb** gibt den unausgewogenen Exponent-Wert von *x* als eine Ganzzahl mit Vorzeichen zurück, die als Gleit Komma Wert dargestellt wird.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Logb** -Funktionen extrahieren den Exponentialwert des gleitkommaarguments *x*, als dass *x* mit unbegrenztem Bereich dargestellt würde. Wenn das Argument *x* ist denormalisiert, es wird behandelt, als ob er normalisiert wurden.
+Die **logb** -Funktionen extrahieren den Exponentialwert des Gleit Komma Arguments *x*, als wäre *x* mit einem unendlichen Bereich dargestellt. Wenn das Argument *x* denormalisiert ist, wird es so behandelt, als wäre es normalisiert worden.
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Logb** verwenden und zurückgeben **"float"** oder **lange** **doppelte** Werte. In einem C-Programm **Logb** immer Double und gibt eine **doppelte**.
+Da C++ das überladen zulässt, können Sie über Ladungen von **logb** aufzurufen, die **float** -oder **Long** **Double** -Werte verwenden und zurückgeben. In einem C-Programm nimmt **logb** immer einen **Double**-Wert an und gibt ihn zurück.
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|Keiner|_DOMAIN|
+|± QNAN,IND|None|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
 
 ## <a name="requirements"></a>Anforderungen

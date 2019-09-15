@@ -1,12 +1,12 @@
 ---
 title: strchr, wcschr, _mbschr, _mbschr_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strchr
 - wcschr
 - _mbschr_l
 - _mbschr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftcschr
 - strchr
@@ -41,14 +44,14 @@ helpviewer_keywords:
 - tcschr function
 - mbschr_l function
 ms.assetid: 2639905d-e983-43b7-b885-abef32cfac43
-ms.openlocfilehash: 8668c186a16dc3f3dc2c7223eb10c100fa6d72fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb0b170473ae48b8d339f5e3db8350087997bfeb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354262"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940833"
 ---
-# <a name="strchr-wcschr-mbschr-mbschrl"></a>strchr, wcschr, _mbschr, _mbschr_l
+# <a name="strchr-wcschr-_mbschr-_mbschr_l"></a>strchr, wcschr, _mbschr, _mbschr_l
 
 Sucht ein Zeichen in einer Zeichenfolge unter Verwendung des aktuellen Gebietsschemas oder einer angegebenen LC_CTYPE-Konvertierungszustandskategorie.
 
@@ -124,17 +127,17 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt einen Zeiger auf das erste Vorkommen des *c* in *str*, oder NULL, wenn *c* wurde nicht gefunden.
+Jede dieser Funktionen gibt einen Zeiger auf das erste Vorkommen von *c* in *Str*oder NULL zurück, wenn *c* nicht gefunden wurde.
 
 ## <a name="remarks"></a>Hinweise
 
-Die `strchr` -Funktion sucht das erste Vorkommen des *c* in *str*, oder es gibt NULL zurück, wenn *c* wurde nicht gefunden. Das abschließende Nullzeichen ist in der Suche nicht enthalten.
+Die `strchr` -Funktion sucht das erste Vorkommen von *c* in *Str*oder gibt NULL zurück, wenn *c* nicht gefunden wurde. Das abschließende Nullzeichen ist in der Suche nicht enthalten.
 
-`wcschr`, `_mbschr` und `_mbschr_l` sind Breitzeichen- und Multibytezeichenversionen von `strchr`. Die Argumente und der Rückgabewert von `wcschr` sind Breitzeichen-Zeichenfolgen; die von `_mbschr` sind Mehrbyte-Zeichenfolgen. `_mbschr` erkennt Multibyte-Zeichenfolgen. Wenn die Zeichenfolge ein NULL-Zeiger ist, ruft `_mbschr`, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben, den Handler für ungültige Parameter auf. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, `_mbschr` gibt NULL zurück und legt `errno` zu EINVAL. `strchr` und `wcschr` überprüfen ihre Parameter nicht. Diese drei Funktionen verhalten sich andernfalls identisch.
+`wcschr`, `_mbschr` und `_mbschr_l` sind Breitzeichen- und Multibytezeichenversionen von `strchr`. Die Argumente und der Rückgabewert von `wcschr` sind Breitzeichen-Zeichenfolgen; die von `_mbschr` sind Mehrbyte-Zeichenfolgen. `_mbschr` erkennt Multibyte-Zeichenfolgen. Wenn die Zeichenfolge ein NULL-Zeiger ist, ruft `_mbschr`, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben, den Handler für ungültige Parameter auf. Wenn die weitere Ausführung zugelassen wird, `_mbschr` gibt NULL zurück und `errno` legt auf EINVAL fest. `strchr` und `wcschr` überprüfen ihre Parameter nicht. Diese drei Funktionen verhalten sich andernfalls identisch.
 
-Der Ausgabewert ist von der Einstellung von den LC_CTYPE--kategorieeinstellung des Gebietsschemas betroffen; Weitere Informationen finden Sie unter [Setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert wird von der Einstellung der LC_CTYPE-Kategorieeinstellung des Gebiets Schemas beeinflusst. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-In C akzeptieren diese Funktionen eine **const** Zeiger für das erste Argument. In C++ sind zwei Überladungen verfügbar. Die Überladung, die einen Zeiger auf **const** gibt einen Zeiger auf **const**; die Version, die einen Zeiger auf nicht-akzeptiert**const** gibt einen Zeiger auf nicht-**const** . Das Makro _CRT_CONST_CORRECT_OVERLOADS definiert ist, wenn sowohl die **const** und nicht-**const** Versionen dieser Funktionen sind verfügbar. Wenn Sie nicht benötigen**const** Verhalten für beide C++ Überladungen, definieren Sie das Symbol _CONST_RETURN.
+In C akzeptieren diese Funktionen einen **Konstanten** Zeiger für das erste Argument. In C++ sind zwei Überladungen verfügbar. Die Überladung, die einen Zeiger auf "Konstante" annimmt **, gibt einen Zeiger auf "** **konstant**" zurück. die Version, die einen Zeiger auf nicht-konstante annimmt **, gibt einen** Zeiger auf einen nicht**Konstanten**Wert zurück. Das Makro _CRT_CONST_CORRECT_OVERLOADS wird definiert, wenn sowohl die **Konstanten** als auch die nicht**Konstanten** Versionen dieser Funktionen verfügbar sind. Wenn Sie für beide C++ über Ladungen das nicht konstante Verhalten benötigen, definieren Sie das Symbol _CONST_RETURN.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

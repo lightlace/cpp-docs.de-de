@@ -1,9 +1,9 @@
 ---
 title: _close
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _close
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _close
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-ms.openlocfilehash: faea008903136e8abdc39297672b31800ada796d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e274cd45c42a5cf49430ecce69e111cbbf6fe88b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340013"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942934"
 ---
-# <a name="close"></a>_close
+# <a name="_close"></a>_close
 
 Schließt eine Datei.
 
@@ -49,15 +52,15 @@ Dateideskriptor, der auf die geöffnete Datei verweist.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_close** gibt 0 zurück, wenn die Datei erfolgreich geschlossen wurde. Ein Rückgabewert 1 gibt einen Fehler.
+**_close** gibt 0 zurück, wenn die Datei erfolgreich geschlossen wurde. Der Rückgabewert-1 gibt einen Fehler an.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_close** -Funktion schließt die zugeordnete Datei *fd*.
+Die **_close** -Funktion schließt die mit *FD*verknüpfte Datei.
 
-Der Dateideskriptor und das zugrunde liegende Betriebssystem-Dateihandle werden geschlossen. Folglich ist es nicht notwendig, **"CloseHandle"** wird die Datei ursprünglich geöffnet wurde, mithilfe der Win32-Funktion **CreateFile** und konvertiert Sie in eine Sicherheitsbeschreibung **_open_osfhandle**.
+Der Dateideskriptor und das zugrunde liegende Betriebssystem-Dateihandle werden geschlossen. Folglich ist es nicht notwendig, **CloseHandle** aufzurufen, wenn die Datei ursprünglich mithilfe der **Win32-Funktion** "" mit " **_open_osfhandle**" geöffnet wurde.
 
-Diese Funktion überprüft ihre Parameter. Wenn *fd* ein fehlerhafter Dateideskriptor, wird der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktionen-1 zurück und **Errno** nastaven NA hodnotu **EBADF**.
+Diese Funktion überprüft ihre Parameter. Wenn *FD* ein fehlerhafter Dateideskriptor ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion-1 zurück, und **errno** ist auf **EBADF**festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 

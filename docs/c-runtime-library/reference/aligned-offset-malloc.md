@@ -1,9 +1,9 @@
 ---
 title: _aligned_offset_malloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_offset_malloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_offset_malloc
 - aligned_offset_malloc
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - _aligned_offset_malloc function
 - aligned_offset_malloc function
 ms.assetid: 447681a3-7c95-4655-86ba-fa3a4ca4c521
-ms.openlocfilehash: 824edfd8bb96d805a030fb205dee62fa9eb4fd06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e8d6f839f3c675b7543ff14f3f633b0c7d5151f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341768"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943856"
 ---
-# <a name="alignedoffsetmalloc"></a>_aligned_offset_malloc
+# <a name="_aligned_offset_malloc"></a>_aligned_offset_malloc
 
 Weist Speicher mit einer definierten Zuweisungsgrenze zu.
 
@@ -57,17 +60,17 @@ Der Offset in der Speicherbelegung zum Erzwingen der Ausrichtung.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf den Speicherblock, der zugewiesen wurde oder **NULL** bei fehlgeschlagenem Vorgang.
+Ein Zeiger auf den Speicherblock, der zugeordnet wurde, oder **null** , wenn der Vorgang fehlgeschlagen ist.
 
 ## <a name="remarks"></a>Hinweise
 
-**_aligned_offset_malloc** eignet sich für Situationen, in denen Ausrichtung für ein geschachteltes Element; erforderlich ist z. B., wenn die Ausrichtung auf eine geschachtelte Klasse erforderlich war.
+**_aligned_offset_malloc** ist in Situationen nützlich, in denen eine Ausrichtung für ein struktursted Element erforderlich ist. beispielsweise, wenn die Ausrichtung für eine in einer Klasse eine Klasse erforderlich war.
 
-**_aligned_offset_malloc** basiert auf **Malloc**; Weitere Informationen finden Sie unter [Malloc](malloc.md).
+**_aligned_offset_malloc** basiert auf **malloc**; Weitere Informationen finden Sie unter [malloc](malloc.md).
 
-**_aligned_offset_malloc** RuntimeCompatibility `__declspec(noalias)` und `__declspec(restrict)`, was bedeutet, dass die Funktion garantiert nicht, so ändern Sie globale Variablen und der zurückgegebene Zeiger keinen Alias. Weitere Informationen finden Sie unter [noalias](../../cpp/noalias.md) und [restrict](../../cpp/restrict.md).
+**_aligned_offset_malloc** ist als `__declspec(noalias)` und `__declspec(restrict)`gekennzeichnet, was bedeutet, dass die Funktion globale Variablen garantiert nicht ändert und dass der zurückgegebene Zeiger keinen Alias hat. Weitere Informationen finden Sie unter [noalias](../../cpp/noalias.md) und [restrict](../../cpp/restrict.md).
 
-Diese Funktion legt **Errno** zu **ENOMEM** , wenn die speicherbelegung fehlgeschlagen ist oder die angeforderte Größe größer als war **_HEAP_MAXREQ**. Weitere Informationen zu **Errno**, finden Sie unter [Errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Darüber hinaus **_aligned_offset_malloc** überprüft die eigenen Parameter. Wenn *Ausrichtung* ist keine Potenz von 2 ist oder wenn *Offset* ist größer als oder gleich *Größe* und ungleich NULL ist, ruft diese Funktion den Handler für ungültige Parameter wie beschrieben in [ Parametervalidierung](../../c-runtime-library/parameter-validation.md). Diese Funktion gibt zurück, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **NULL** und **Errno** zu **EINVAL**.
+Diese Funktion legt **errno** auf **ENOMEM** fest, wenn die Speicher Belegung fehlgeschlagen ist oder die angeforderte Größe größer als **_HEAP_MAXREQ**ist. Weitere Informationen zu **errno**finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Außerdem überprüft **_aligned_offset_malloc** seine Parameter. Wenn die *Ausrichtung* keine Potenz von 2 ist oder *Offset* größer oder gleich *Größe* und ungleich NULL ist, ruft diese Funktion den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt diese Funktion **null** zurück und legt **errno** auf **EINVAL**fest.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,14 +1,14 @@
 ---
 title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _atoldbl
 - _atoldbl_l
 - _atodbl
 - _atoflt
 - _atoflt_l
 - _atodbl_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _atoflt
 - _atoflt_l
@@ -49,16 +52,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-ms.openlocfilehash: bb8d711dc8dfa912333f34603ad607f0a74143bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f3b164042006cab22d0dfd9a7968e2d2e494f5c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349276"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943623"
 ---
-# <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
+# <a name="_atodbl-_atodbl_l-_atoldbl-_atoldbl_l-_atoflt-_atoflt_l"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 
-Konvertiert eine Zeichenfolge in einen Double-Wert (**_atodbl**), long double (**_atoldbl**), oder "float" (**_atoflt**).
+Konvertiert eine Zeichenfolge in einen Double-Wert ( **_atodbl**), long Double ( **_atoldbl**) oder float ( **_atoflt**).
 
 ## <a name="syntax"></a>Syntax
 
@@ -84,15 +87,15 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück. Mögliche Fehlercodes sind **_UNDERFLOW** oder **_OVERFLOW**, die definiert werden, in der Headerdatei \<math.h >.
+Gibt bei Erfolg 0 zurück. Mögliche Fehlercodes sind " **_UNDERFLOW** " oder " **_OVERFLOW**", die in der \<Header Datei "Math. h" > definiert sind.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktionen konvertieren eine Zeichenfolge in einen Gleitkommawert. Der Unterschied zwischen diesen Funktionen und die **Atof** Funktionsreihe ist, dass diese Funktionen nicht gleitkommacode generieren und keine Hardwareausnahmen verursachen. Stattdessen werden Fehlerzustände als Fehlercodes gemeldet.
+Diese Funktionen konvertieren eine Zeichenfolge in einen Gleitkommawert. Der Unterschied zwischen diesen Funktionen und der **atof** -Funktions Familie besteht darin, dass diese Funktionen keinen Gleit Komma Code generieren und keine Hardware Ausnahmen verursachen. Stattdessen werden Fehlerzustände als Fehlercodes gemeldet.
 
-Wenn eine Zeichenfolge keine gültige Interpretation als Gleitkommawert *Wert* nastaven NA hodnotu 0 (null) und der Rückgabetyp Wert ist 0 (null).
+Wenn eine Zeichenfolge keine gültige Interpretation als Gleit Komma Wert aufweist, wird der *Wert* auf 0 (null) festgelegt, und der Rückgabewert ist 0 (null).
 
-Die Versionen dieser Funktionen, die **_l** -Suffix sind beinahe identisch die Versionen, die keinen der Suffix haben, verwenden jedoch die *Gebietsschema* Parameter, der anstelle des aktuellen Threads übergeben wird Gebietsschema.
+Die Versionen dieser Funktionen mit dem **_l** -Suffix sind identisch mit den Versionen, die nicht über das-Suffix verfügen, mit dem Unterschied, dass Sie den Gebiets *Schema Parameter verwenden, der anstelle* des aktuellen Thread Gebiets Schemas übergeben wurde.
 
 ## <a name="requirements"></a>Anforderungen
 

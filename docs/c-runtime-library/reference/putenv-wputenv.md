@@ -1,10 +1,10 @@
 ---
 title: _putenv, _wputenv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putenv
 - _wputenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tputenv
 - _wputenv
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _tputenv function
 - environment variables, modifying
 ms.assetid: 9ba9b7fd-276e-45df-8420-d70c4204b8bd
-ms.openlocfilehash: 952a4d62f6ceb6b689091ac09f6ca338d0b10864
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8fe699a476ea1dd09a6ce9922294bce398df16b2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357888"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949882"
 ---
-# <a name="putenv-wputenv"></a>_putenv, _wputenv
+# <a name="_putenv-_wputenv"></a>_putenv, _wputenv
 
 Erstellt, ändert oder entfernt Umgebungsvariablen. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md).
 
@@ -66,11 +69,11 @@ Definition der Umgebungszeichenfolge.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Geben bei Erfolg 0 oder-1 im Fall eines Fehlers zurück.
+Gibt 0 (null) zurück, wenn erfolgreich, oder-1 im Fall eines Fehlers.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_putenv** Funktion fügt neue Umgebungsvariablen hinzu oder ändert die Werte vorhandener Umgebungsvariablen. Umgebungsvariablen definieren die Umgebung, in der ein Prozess ausgeführt wird (beispielsweise der Standardsuchpfad für die mit einem Programm zu verknüpfenden Bibliotheken). **_wputenv** ist eine Breitzeichen-Version von **_putenv**; die *Envstring* Argument **_wputenv** ist eine Breitzeichen-Zeichenfolge.
+Die **_putenv** -Funktion fügt neue Umgebungsvariablen hinzu oder ändert die Werte vorhandener Umgebungsvariablen. Umgebungsvariablen definieren die Umgebung, in der ein Prozess ausgeführt wird (beispielsweise der Standardsuchpfad für die mit einem Programm zu verknüpfenden Bibliotheken). **_wputenv** ist eine breit Zeichen Version von **_putenv**. Das *envstring* -Argument für **_wputenv** ist eine Zeichenfolge mit breit Zeichen.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -78,16 +81,16 @@ Die **_putenv** Funktion fügt neue Umgebungsvariablen hinzu oder ändert die We
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tputenv**|**_putenv**|**_putenv**|**_wputenv**|
 
-Die *Envstring* Argument muss ein Zeiger auf eine Zeichenfolge der Form *Varname*=*Value_string*, wobei *Varname* ist der Name der Umgebungsvariablen hinzugefügt oder geändert werden und *Value_string* ist der Wert der Variablen. Wenn *Varname* ist bereits Teil der Umgebung durch seinen Wert ersetzt *Value_string*ist, andernfalls das neue *Varname* Variable und die zugehörige *Value_string*  Wert in der Umgebung hinzugefügt werden. Sie können eine Variable aus der Umgebung entfernen, durch Angabe einer leeres *Value_string*, oder anders gesagt, durch Angeben von nur *Varname*=.
+Das *envstring* -Argument muss ein Zeiger auf eine Zeichenfolge in der Form *varname*=*value_string*sein, wobei *varname* der Name der hinzu zufügenden oder zu ändernden Umgebungsvariablen und *value_string* der der Variablen ist. Wert. Wenn *varname* bereits Teil der Umgebung ist, wird sein Wert durch *value_string*ersetzt; Andernfalls werden die neue *varname* -Variable und Ihr *value_string* -Wert der Umgebung hinzugefügt. Sie können eine Variable aus der Umgebung entfernen, indem Sie eine leere *value_string*angeben, oder anders ausgedrückt, indem Sie nur *varname*= angeben.
 
-**_putenv** und **_wputenv** beeinflussen nur die Umgebung, die für den aktuellen Prozess lokal ist; Sie können nicht zum Ändern der Befehlsebene-Umgebung. Das bedeutet, dass diese Funktionen nur bei Datenstrukturen funktionieren, auf die die Laufzeitbibliothek zugreifen kann, aber nicht bei dem Umgebungssegment, das vom Betriebssystem für einen Prozess erstellt wurde. Wenn der aktuelle Prozess beendet wird, wird die Umgebung auf die Ebene des aufrufenden Prozesses zurückgesetzt (in den meisten Fällen die Betriebssystemebene). Die geänderte Umgebung kann jedoch an alle neue Prozesse, die von erstellten übergeben werden **_spawn**, **_exec**, oder **System**, und diese neuen Prozesse rufen alle neuen Elemente hinzugefügt, indem **_putenv** und **_wputenv**.
+**_putenv** und **_wputenv** wirken sich nur auf die Umgebung aus, die für den aktuellen Prozess lokal ist. Sie können Sie nicht zum Ändern der Umgebung auf Befehls Ebene verwenden. Das bedeutet, dass diese Funktionen nur bei Datenstrukturen funktionieren, auf die die Laufzeitbibliothek zugreifen kann, aber nicht bei dem Umgebungssegment, das vom Betriebssystem für einen Prozess erstellt wurde. Wenn der aktuelle Prozess beendet wird, wird die Umgebung auf die Ebene des aufrufenden Prozesses zurückgesetzt (in den meisten Fällen die Betriebssystemebene). Die geänderte Umgebung kann jedoch an alle neuen, von **_spawn**, **_exec**oder **System**erstellten Prozesse übermittelt werden, und diese neuen Prozesse erhalten alle neuen Elemente, die von **_putenv** und **_wputenv**hinzugefügt werden.
 
-Ändern Sie einen Umgebungseintrag nicht direkt: Verwenden Sie stattdessen **_putenv** oder **_wputenv** , ihn zu ändern. Direkte Loslösen von Elementen, die von der **_environ []** globales Array kann dazu führen, dass ungültiger Speicher anvisiert wird.
+Ändern Sie keinen Umgebungs Eintrag direkt: Verwenden Sie stattdessen **_putenv** oder **_wputenv** , um ihn zu ändern. Insbesondere direkte Freigabe Elemente des globalen Arrays " **_environ []** " können dazu führen, dass ein ungültiger Speicher adressiert wird.
 
-**Getenv** und **_putenv** verwenden die globale Variable **_environ** auf die umgebungstabelle zuzugreifen; **_wgetenv** und **_wputenv** verwenden **_wenviron**. **_putenv** und **_wputenv** ändern möglicherweise den Wert der **_environ** und **_wenviron**, daher ungültig. die **_envp** Argument **main** und **_wenvp** Argument **Wmain**. Es ist daher sicherer mit **_environ** oder **_wenviron** auf die Umgebungsinformationen zuzugreifen. Weitere Informationen über die Beziehung von **_putenv** und **_wputenv** mit globalen Variablen finden Sie unter [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).
+**getenv** und **_putenv** verwenden die globale Variable **_environ** , um auf die Umgebungs Tabelle zuzugreifen. **_wgetenv** und **_wputenv** verwenden Sie **_wenviron**. **_putenv** und **_wputenv** können den Wert von **_environ** und **_wenviron**ändern, wodurch das **_envp** -Argument für **Main** und das **_wenvp** -Argument für **wmain**ungültig wird. Daher ist es sicherer, **_environ** oder **_wenviron** zu verwenden, um auf die Umgebungs Informationen zuzugreifen. Weitere Informationen zur Beziehung zwischen **_putenv** und **_wputenv** und globalen Variablen finden Sie unter [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).
 
 > [!NOTE]
-> Die **_putenv** und **_getenv** Funktionsreihe sind nicht threadsicher. **_getenv** gibt möglicherweise einen Zeichenfolgenzeiger beim zurück **_putenv** ist die Zeichenfolge ändert, was zu zufällige Fehlern führt. Stellen Sie sicher, dass Aufrufe dieser Funktionen synchronisiert sind.
+> Die **_putenv** -und **_getenv** -Funktions Familien sind nicht Thread sicher. **_getenv** könnte einen Zeichen folgen Zeiger zurückgeben, während **_putenv** die Zeichenfolge ändert, was zu zufälligen Fehlern führt. Stellen Sie sicher, dass Aufrufe dieser Funktionen synchronisiert sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,7 +103,7 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 
 ## <a name="example"></a>Beispiel
 
-Ein Beispiel zur Verwendung **_putenv**, finden Sie unter [Getenv, _wgetenv](getenv-wgetenv.md).
+Ein Beispiel für die Verwendung von **_putenv**finden Sie unter [getenv, _wgetenv](getenv-wgetenv.md).
 
 ## <a name="see-also"></a>Siehe auch
 
