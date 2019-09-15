@@ -1,9 +1,9 @@
 ---
 title: _CrtReportBlockType
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtReportBlockType
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtReportBlockType
 - CrtReportBlockType
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-ms.openlocfilehash: 186c63ce1619d6427436ff1458ca551e464d0bce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd50de1d1ade1d83b97bc465ff7e4c73b52fba2d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347414"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942340"
 ---
-# <a name="crtreportblocktype"></a>_CrtReportBlockType
+# <a name="_crtreportblocktype"></a>_CrtReportBlockType
 
 Gibt den Blocktyp/den Untertyp zurück, der einem angegebenen Debugheapblockzeiger zugeordnet ist.
 
@@ -52,11 +55,11 @@ Zeiger für einen gültigen Debugheapblock.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn einen gültiger debugheapzeiger übergeben die **_CrtReportBlockType** Funktionsergebnis Blocktyp und Untertyp in Form von einer **Int**. Wenn ein ungültiger Zeiger übergeben wird, gibt die Funktion -1 zurück.
+Wenn ein gültiger debugheapzeiger übermittelt wird, gibt die **_CrtReportBlockType** -Funktion den Blocktyp und den Untertyp in Form eines **int**-Typs zurück. Wenn ein ungültiger Zeiger übergeben wird, gibt die Funktion -1 zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Extrahieren Sie den zurückgegebenen Typ und Untertyp von **_CrtReportBlockType**, verwenden Sie die Makros **_BLOCK_TYPE** und **_BLOCK_SUBTYPE** (beide in "CRTDBG.h" definiert) auf den Rückgabewert.
+Um den von **_CrtReportBlockType**zurückgegebenen Typ und Untertyp zu extrahieren, verwenden Sie die Makros **_BLOCK_TYPE** und **_BLOCK_SUBTYPE** (beide in "Crtdbg. h" definiert) für den Rückgabewert.
 
 Weitere Informationen zu den Zuordnungsblocktypen und ihrer Verwendung finden Sie unter [Types of Blocks on the Debug Heap (Blocktypen auf dem Debugheap)](/visualstudio/debugger/crt-debug-heap-details).
 

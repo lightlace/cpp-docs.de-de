@@ -1,11 +1,11 @@
 ---
 title: ilogb, ilogbf, ilogbl2
 ms.date: 04/05/2018
-apiname:
+api_name:
 - ilogb
 - ilogbf
 - ilogbl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ilogb
 - ilogbf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-ms.openlocfilehash: 272544124dd8a8a666fc434516d3c45c73b1d011
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fdafba039537358c9b6a1de21dc176ceea38b4fa
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331674"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954766"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
@@ -72,22 +75,22 @@ Der angegebene Wert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Im Erfolgsfall zurückgegeben den Exponenten zur Basis 2 von *x* als signiertes **Int** Wert.
+Wenn erfolgreich, wird der Basis-2-Exponent von *x* **als Wert mit** Vorzeichen zurückgegeben.
 
 Andernfalls gibt er die folgenden, in \<math.h> definierten Werte zurück:
 
 |Eingabe|Ergebnis|
 |-----------|------------|
 |±0|FP_ILOGB0|
-|±inf, ±nan, indefinite|FP_ILOGBNAN|
+|± inf, ± Nan, unbegrenzt|FP_ILOGBNAN|
 
 Fehler werden gemäß den Angaben in [_matherr](matherr.md) gemeldet.
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Ilogb** verwenden und zurückgeben **"float"** und **lange** **doppelte** Typen. In einem C-Programm **Ilogb** immer Double und gibt eine **doppelte**.
+Da C++ das überladen zulässt, können Sie über Ladungen von **ilogb** aufzurufen, die **float** -und **Long** **Double** -Typen annehmen und zurückgeben. In einem C-Programm nimmt **ilogb** immer einen **Double**-Wert an und gibt ihn zurück.
 
-Das Aufrufen dieser Funktion ist ähnlich wie das Aufrufen der entsprechenden **Logb** -Funktion und die anschließende Umwandlung des Rückgabewerts zu **Int**.
+Das Aufrufen dieser Funktion ähnelt dem Aufrufen der entsprechenden **logb** -Funktion und dem anschließenden Umwandeln des Rückgabewerts in **int**.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,10 +1,10 @@
 ---
 title: _rmdir, _wrmdir
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wrmdir
 - _rmdir
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - trmdir
 - _trmdir
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: 0d0d9a25b70746174a66abbe088b297a5d9a0942
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 396e620bfabe240638dc070ff87582b16287ff60
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357459"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949218"
 ---
-# <a name="rmdir-wrmdir"></a>_rmdir, _wrmdir
+# <a name="_rmdir-_wrmdir"></a>_rmdir, _wrmdir
 
 Löscht ein Verzeichnis.
 
@@ -62,7 +65,7 @@ Der Pfad des Verzeichnisses, das entfernt werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt 0 zurück, wenn das Verzeichnis erfolgreich gelöscht wird. Der Rückgabewert 1 gibt an, einen Fehler und **Errno** auf einen der folgenden Werte festgelegt:
+Jede dieser Funktionen gibt 0 zurück, wenn das Verzeichnis erfolgreich gelöscht wird. Der Rückgabewert-1 gibt einen Fehler an, und **errno** wird auf einen der folgenden Werte festgelegt:
 
 |errno-Wert|Bedingung|
 |-|-|
@@ -74,9 +77,9 @@ Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_do
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_rmdir** Funktion löscht die im angegebenen Verzeichnis *Dirname*. Das Verzeichnis muss leer sein, und es darf sich nicht um das aktuelle Arbeitsverzeichnis oder das Stammverzeichnis handeln.
+Die **_rmdir** -Funktion löscht das von *dirname*angegebene Verzeichnis. Das Verzeichnis muss leer sein, und es darf sich nicht um das aktuelle Arbeitsverzeichnis oder das Stammverzeichnis handeln.
 
-**_wrmdir** ist eine Breitzeichen-Version von **_rmdir**; die *Dirname* Argument **_wrmdir** ist eine Breitzeichen-Zeichenfolge. **_wrmdir** und **_rmdir** Verhalten sich andernfalls identisch.
+**_wrmdir** ist eine breit Zeichen Version von **_rmdir**. Das *dirname* -Argument für **_wrmdir** ist eine Zeichenfolge mit breit Zeichen. **_wrmdir** und **_rmdir** Verhalten sich andernfalls identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

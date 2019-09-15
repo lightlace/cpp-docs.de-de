@@ -1,9 +1,9 @@
 ---
 title: _read
 ms.date: 02/13/2019
-apiname:
+api_name:
 - _read
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _read
 helpviewer_keywords:
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: f4dd599f227192b8c3ce17a0321d6399319e1925
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 32238923aeef14230f68def15e27c676753faf61
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376303"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949533"
 ---
-# <a name="read"></a>_read
+# <a name="_read"></a>_read
 
 Liest Daten aus einer Datei.
 
@@ -64,7 +67,7 @@ Maximale Anzahl der zu lesenden Bytes.
 
 Wenn die Funktion versucht, am Ende der Datei zu lesen, wird 0 zurückgegeben. Wenn *FD* nicht gültig ist, die Datei nicht zum Lesen geöffnet ist oder die Datei gesperrt ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion-1 zurück und legt **errno** auf **EBADF**fest.
 
-Wenn  der Puffer **null**ist oder wenn *buffer_size* > **INT_MAX**, wird der Handler für ungültige Parameter aufgerufen. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion-1 zurück, und **errno** ist auf **EINVAL**festgelegt.
+Wenn der Puffer **null**ist oder wenn *buffer_size* > **INT_MAX**, wird der Handler für ungültige Parameter aufgerufen. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion-1 zurück, und **errno** ist auf **EINVAL**festgelegt.
 
 Weitere Informationen zu diesem und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -126,7 +129,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtreadtxt"></a>Eingabe: crt_read.txt
+### <a name="input-crt_readtxt"></a>Eingabe: crt_read.txt
 
 ```Input
 Line one.

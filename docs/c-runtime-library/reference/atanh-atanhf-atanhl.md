@@ -1,11 +1,11 @@
 ---
 title: atanh, atanhf, atanhl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - atanhl
 - atanhf
 - atanh
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - atanhl
 - atanhf
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: 6044c40427e407ee9746867e4b04104c1ca29c7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 539d015d5691f62f990faf650ab738f60066a2a6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341287"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939598"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
@@ -58,16 +61,16 @@ Gleitkommawert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Atanh** Funktionen geben den umgekehrten hyperbolischen Tangens (hyperbolischen Arcustangens) *x*. Wenn *x* ist größer als 1 oder kleiner als -1, **Errno** nastaven NA hodnotu **EDOM** und das Ergebnis ist ein stilles NaN. Wenn *x* ist gleich 1 oder-1 ist, eine positive oder negative Unendlichkeit zurückgegeben wird, bzw. und **Errno** nastaven NA hodnotu **ERANGE**.
+Die **atanh** -Funktionen geben den umgekehrten hyberbolischen Tangens (hyperbolischen Arkus Tangens) von *x*zurück. Wenn *x* größer als 1 oder kleiner als-1 ist, wird **errno** auf **Edom** festgelegt, und das Ergebnis ist ein stilles Nan. Wenn *x* gleich 1 oder-1 ist, wird ein positives oder negatives Unendlichkeits Wert zurückgegeben, und **errno** wird auf **ERANGE**festgelegt.
 
-|Eingabe|SEH-Ausnahme|**Matherr** Ausnahme|
+|Eingabe|SEH-Ausnahme|**Matherr** Distanzieren|
 |-----------|-------------------|-------------------------|
 |± QNAN,IND|none|none|
-|*X* ≥ 1; *x* ≤ -1|none|none|
+|*X* 1; *x* -1|none|none|
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Atanh** verwenden und zurückgeben **"float"** oder **lange** **doppelte** Werte. In einem C-Programm **Atanh** immer Double und gibt **doppelte**.
+Da C++ das überladen zulässt, können Sie über Ladungen von **atanh** aufzurufen, die **float** -oder **Long** **Double** -Werte verwenden und zurückgeben. In einem C-Programm nimmt **atanh** immer einen **Double**-Wert an und gibt ihn zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

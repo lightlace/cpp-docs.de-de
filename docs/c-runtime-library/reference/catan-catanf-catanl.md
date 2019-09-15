@@ -1,11 +1,11 @@
 ---
 title: catan, catanf, catanl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - catan
 - catanf
 - catanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - catan
 - catanf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - catanf function
 - catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
-ms.openlocfilehash: 99acdccca1b83be2fa667b5e5ef6e5181dc1ba81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 204a05b4293fefa4378e54ce93a625bf890cf4d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335515"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943364"
 ---
 # <a name="catan-catanf-catanl"></a>catan, catanf, catanl
 
-Ruft den Arkustangens einer komplexen Zahl mit achsenabschnitten außerhalb des Intervalls [-1; + 1] auf der imaginären Achse ab.
+Ruft den Arkus Tangens einer komplexen Zahl mit Verzweigungs Schnitten außerhalb des Intervalls [-1; + 1] auf der imaginären Achse ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,11 +64,11 @@ Eine komplexe Zahl, die einen Winkel als Bogenmaß darstellt
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Arkustangens des *z*, im Bogenmaß zurück. Das Ergebnis ist unbegrenzt, auf der imaginären Achse, und klicken Sie im Intervall [-π/2; + π/2] auf der reellen Achse.
+Der Arkus Tangens von *z*im Bogenmaße. Das Ergebnis wird an der imaginären Achse und im Intervall [-y/2; +./2] entlang der reellen Achse gebunden.
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Catan** verwenden und zurückgeben **_Fcomplex** und **_Lcomplex** Werte. In einem C-Programm **Catan** immer Double und gibt eine **_Dcomplex** Wert.
+Da C++ das überladen zulässt, können Sie über Ladungen von "von" aufzurufen **, die** **_Fcomplex** -und **_Lcomplex** -Werte verwenden und zurückgeben. In einem C-Programm übernimmt und **gibt immer einen** **_Dcomplex** -Wert zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

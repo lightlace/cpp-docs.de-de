@@ -1,9 +1,9 @@
 ---
 title: mbsrtowcs_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbsrtowcs_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,20 +15,23 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsrtowcs_s
 helpviewer_keywords:
 - mbsrtowcs_s function
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
-ms.openlocfilehash: a935b5181078f3b08ba5f2f89c581ed8cce8ded5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d79cceaf923c1da126a1d133a8d2eb8752883457
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156667"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952099"
 ---
-# <a name="mbsrtowcss"></a>mbsrtowcs_s
+# <a name="mbsrtowcs_s"></a>mbsrtowcs_s
 
 Konvertieren einer Zeichenfolge mit Multibytezeichen im aktuellen Gebietsschema in die entsprechende Zeichenfolge mit Breitzeichen. Eine Version von [mbsrtowcs](mbsrtowcs.md) mit Sicherheitserweiterungen wie sie unter [Sicherheitserweiterungen im CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben ist.
 
@@ -62,64 +65,64 @@ Die Anzahl von konvertierten Zeichen.
 Pufferadresse zum Speichern der resultierenden konvertierten Zeichenfolge mit Breitzeichen.
 
 *sizeInWords*<br/>
-Die Größe des *Wcstr* in Wörtern (Breitzeichen).
+Die Größe von *wcstr* in Wörtern (breit Zeichen).
 
 *mbstr*<br/>
 Indirekter Zeiger auf den Speicherort der Multibyte-Zeichenfolge, die konvertiert werden soll.
 
 *count*<br/>
-Die maximale Anzahl von Breitzeichen, das Speichern in der *Wcstr* Puffer, ohne das abschließende Nullzeichen oder [_TRUNCATE](../../c-runtime-library/truncate.md).
+Die maximale Anzahl von breit Zeichen, die im *wcstr* -Puffer gespeichert werden sollen, ohne das abschließende Null-Zeichen oder [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *mbstate*<br/>
-Ein Zeiger auf ein **Mbstate_t** konvertierungszustandsobjekt. Wenn dieser Wert ein NULL-Zeiger ist, wird ein statisches internes Konvertierungszustandsobjekt verwendet. Da das interne **Mbstate_t** Objekt nicht threadsicher, es wird empfohlen, dass Sie immer Ihren eigenen übergeben *Mbstate* Parameter.
+Ein Zeiger auf ein **mbstate_t** -Konvertierungs Zustands Objekt. Wenn dieser Wert ein NULL-Zeiger ist, wird ein statisches internes Konvertierungszustandsobjekt verwendet. Da das interne **mbstate_t** -Objekt nicht Thread sicher ist, wird empfohlen, immer ihren eigenen *mbstate* -Parameter zu übergeben.
 
 ## <a name="return-value"></a>Rückgabewert
 
 Null, wenn die Konvertierung erfolgreich ist, oder ein Fehlercode bei einem Fehler.
 
-|Fehlerbedingung|Rückgabewert und **Errno**|
+|Fehlerbedingung|Rückgabewert und **errno**|
 |---------------------|------------------------------|
-|*Wcstr* ist ein null-Zeiger und *SizeInWords* > 0|**EINVAL**|
-|*Mbstr* ist ein null-Zeiger|**EINVAL**|
-|Die Zeichenfolge indirekt verweist *Mbstr* enthält eine multibyte-Sequenz, die für das aktuelle Gebietsschema ungültig ist.|**EILSEQ**|
-|Der Zielpuffer ist zu klein, um die konvertierte Zeichenfolge enthalten (es sei denn, *Anzahl* ist **_TRUNCATE**; Weitere Informationen finden Sie unter "Hinweise")|**ERANGE**|
+|*wcstr* ist ein NULL-Zeiger und *sizeIn Words* > 0|**EINVAL**|
+|*mbstr* ist ein NULL-Zeiger.|**EINVAL**|
+|Die Zeichenfolge, auf die von *mbstr* indirekt verwiesen wird, enthält eine Multibytezeichen-Sequenz, die für das aktuelle Gebiets Schema ungültig ist.|**EILSEQ**|
+|Der Ziel Puffer ist zu klein, um die konvertierte Zeichenfolge zu enthalten (es sei denn, *count* ist **_TRUNCATE**; Weitere Informationen finden Sie unter Hinweise).|**ERANGE**|
 
-Wenn eine dieser Bedingungen auftritt, wird die Ausnahme für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion einen Fehlercode zurück und legt **Errno** wie in der Tabelle angegeben.
+Wenn eine dieser Bedingungen auftritt, wird die Ausnahme für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion einen Fehlercode zurück und legt **errno** wie in der Tabelle angegeben fest.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Mbsrtowcs_s** -Funktion konvertiert eine Zeichenfolge mit Multibytezeichen, die indirekt verweist *Mbstr* in Breitzeichen, die in den Puffer, die auf gespeicherten *Wcstr*, Mithilfe des in enthaltenen Konvertierungsstatus *Mbstate*. Die Konvertierung wird für jedes Zeichen fortgesetzt, bis eine der folgenden Bedingungen eintritt:
+Die **mbsrtowcs_s** -Funktion konvertiert eine Zeichenfolge von Multibytezeichen, auf die von *mbstr* indirekt gezeigt wird, in im Puffer gespeicherte breit Zeichen, auf die von *wcstr*verwiesen wird, unter Verwendung des in *mbstate*enthaltenen Konvertierungs Zustands. Die Konvertierung wird für jedes Zeichen fortgesetzt, bis eine der folgenden Bedingungen eintritt:
 
 - Ein Multibyte-Nullzeichen wird erkannt.
 
 - Ein ungültiges Multibytezeichen wird erkannt.
 
-- Die Anzahl der gespeicherten Breitzeichen die *Wcstr* Puffer ist gleich *Anzahl*.
+- Die Anzahl der breit Zeichen, die im *wcstr* -Puffer gespeichert sind, ist " *count*".
 
-Die Zielzeichenfolge *Wcstr* ist immer Null-terminiert ist, selbst bei einem Fehler, es sei denn, *Wcstr* ist ein null-Zeiger.
+Die Ziel Zeichenfolge *wcstr* wird immer mit Null beendet, auch im Falle eines Fehlers, es sei denn, *wcstr* ist ein NULL-Zeiger.
 
-Wenn *Anzahl* der spezielle Wert [_TRUNCATE](../../c-runtime-library/truncate.md), **Mbsrtowcs_s** konvertiert Anteil der Zeichenfolge wie in den Zielpuffer passt, und weiterhin Platz für ein NULL-Wert Abschlusszeichen.
+Wenn *count* der besondere Wert [_TRUNCATE](../../c-runtime-library/truncate.md)ist, konvertiert **mbsrtowcs_s** einen Großteil der Zeichenfolge, die in den Ziel Puffer passt, während er weiterhin Platz für ein NULL-Terminator bleibt.
 
-Wenn **Mbsrtowcs_s** die Quellzeichenfolge erfolgreich konvertiert wird die Größe in Breitzeichen der konvertierten Zeichenfolge und der null-Terminator in  *&#42;pReturnValue*aus  *pReturnValue* ist kein null-Zeiger. Dies tritt auf, auch wenn die *Wcstr* Argument ist ein null-Zeiger und die erforderliche Puffergröße bestimmen. Beachten Sie, dass bei *Wcstr* ist ein null-Zeiger *Anzahl* wird ignoriert.
+Wenn **mbsrtowcs_s** die Quell Zeichenfolge erfolgreich konvertiert, wird die Größe der konvertierten Zeichenfolge in breit Zeichen und der NULL-Terminator in  *&#42;pReturnValue*eingefügt, vorausgesetzt, dass *pReturnValue* kein NULL-Zeiger ist. Dies tritt auch dann auf, wenn das *wcstr* -Argument ein NULL-Zeiger ist und Sie die erforderliche Puffergröße bestimmen können. Beachten Sie, dass die *Anzahl* ignoriert wird, wenn *wcstr* ein NULL-Zeiger ist.
 
-Wenn *Wcstr* ist kein null-Zeiger, das Zeigerobjekt verweist *Mbstr* wird einen null-Zeiger zugewiesen, wenn die Konvertierung beendet, da ein abschließendes Nullzeichen erreicht wurde. Andernfalls wird es ggf. der Adresse unmittelbar nach dem letzten konvertierten Multibytezeichen zugewiesen. Auf diese Weise kann ein nachfolgender Funktionsaufruf die Konvertierung an der Stelle neu starten, an der der Aufruf beendet wurde.
+Wenn *wcstr* kein NULL-Zeiger ist, wird dem Zeiger Objekt, auf das von *mbstr* verwiesen wird, ein NULL-Zeiger zugewiesen, wenn die Konvertierung beendet wird, da ein abschließendes NULL-Zeichen erreicht wurde. Andernfalls wird es ggf. der Adresse unmittelbar nach dem letzten konvertierten Multibytezeichen zugewiesen. Auf diese Weise kann ein nachfolgender Funktionsaufruf die Konvertierung an der Stelle neu starten, an der der Aufruf beendet wurde.
 
-Wenn *Mbstate* ist ein null-Zeiger der internen Bibliothek **Mbstate_t** statische konvertierungszustandsobjekt verwendet wird. Da dieses interne statische Objekt nicht threadsicher ist, es wird empfohlen, dass Sie Ihre eigenen übergeben *Mbstate* Wert.
+Wenn *mbstate* ein NULL-Zeiger ist, wird das statische **mbstate_t** -Konvertierungs Zustands Objekt verwendet. Da dieses interne statische Objekt nicht Thread sicher ist, wird empfohlen, dass Sie Ihren eigenen *mbstate* -Wert übergeben.
 
-Wenn **Mbsrtowcs_s** findet ein Multibytezeichen, die im aktuellen Gebietsschema ungültig ist-1 und speichert Sie im  *&#42;pReturnValue*, der Zielpuffer *Wcstr* Klicken Sie auf eine leere Zeichenfolge festgelegt **Errno** zu **EILSEQ**, und gibt **EILSEQ**.
+Wenn **mbsrtowcs_s** auf ein Multibytezeichen stößt, das im aktuellen Gebiets Schema ungültig ist, wird-1 in  *&#42;pReturnValue*eingefügt, der Ziel Puffer *wcstr* auf eine leere Zeichenfolge festgelegt, **errno** auf **EILSEQ**festgelegt und zurückgegeben. **Eilsekunden**.
 
-Wenn die Sequenzen, zeigt *Mbstr* und *Wcstr* überlappen, ist das Verhalten der **Mbsrtowcs_s** ist nicht definiert. **Mbsrtowcs_s** wird von der LC_TYPE-Kategorie des aktuellen Gebietsschemas beeinflusst.
+Wenn die Sequenzen, auf die von *mbstr* und *wcstr* verwiesen wird, überlappen, ist das Verhalten von **mbsrtowcs_s** nicht definiert. **mbsrtowcs_s** wird von der Kategorie LC_TYPE des aktuellen Gebiets Schemas beeinflusst.
 
 > [!IMPORTANT]
-> Sicherstellen, dass *Wcstr* und *Mbstr* nicht überlappen und dass *Anzahl* die Anzahl zu konvertierendermultibytezeichen korrekt darstellt.
+> Stellen Sie sicher, dass sich *wcstr* und *mbstr* nicht überlappen *und dass die* Anzahl der zu konvertierenden Multibytezeichen korrekt widerspiegelt.
 
-Die **Mbsrtowcs_s** Funktion unterscheidet sich von [_mbsnbcpy_s, _mbsnbcpy_s_l](mbstowcs-s-mbstowcs-s-l.md) durch die neustartmöglichkeit. Der konvertierungszustand befindet sich in *Mbstate* für nachfolgende Aufrufe der gleichen oder anderer erneut startbaren Funktionen. Wenn sowohl Funktionen, die neu gestartet werden können, als auch Funktionen, die nicht neu gestartet werden könnnen, verwendet werden, sind die Ergebnisse undefiniert. Z. B. eine Anwendung verwendet soll **Mbsrlen** anstelle von **Mbslen**, wenn ein nachfolgender Aufruf von **Mbsrtowcs_s** anstelle **Mbstowcs_s**.
+Die **mbsrtowcs_s** -Funktion unterscheidet [sich von mbstowcs_s, _mbstowcs_s_l](mbstowcs-s-mbstowcs-s-l.md) durch die Neustart Fähigkeit. Der Konvertierungs Zustand wird für nachfolgende Aufrufe der gleichen oder anderer Neu startbarer Funktionen in *mbstate* gespeichert. Wenn sowohl Funktionen, die neu gestartet werden können, als auch Funktionen, die nicht neu gestartet werden könnnen, verwendet werden, sind die Ergebnisse undefiniert. Beispielsweise sollte eine Anwendung **mbsrlen** anstelle von **mbslen**verwenden, wenn ein nachfolgende **mbsrtowcs_s** anstelle von **mbstowcs_s**verwendet wird.
 
 In C++ wird die Verwendung dieser Funktion durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Ausnahmen
 
-Die **Mbsrtowcs_s** -Funktion ist multithreadsicher ist, wenn keine Funktion in der aktuellen Thread ruft **Setlocale** solange diese Funktion ausgeführt wird und die *Mbstate* Argument ist keine null-Zeiger.
+Die **mbsrtowcs_s** -Funktion ist multithreadsicher, wenn keine Funktion im aktuellen Thread **setlocale** aufruft, solange diese Funktion ausgeführt wird und das *mbstate* -Argument kein NULL-Zeiger ist.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,9 +1,9 @@
 ---
 title: terminate (CRT)
 ms.date: 11/04/2016
-apiname:
+api_name:
 - terminate
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,23 +15,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - terminate
 helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-ms.openlocfilehash: 1f655d328b4d97a2989ad49005ed8a9f44fd9d79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b76ce42817fa1a6b79ef32965fcfa550a508e88d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155627"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946199"
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 
-Aufrufe [Abbrechen](abort.md) oder eine Funktion, die Sie angeben mit **Set_terminate**.
+Ruft [Abbruch](abort.md) oder eine Funktion auf, die Sie mit **Set_terminate**angeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +44,7 @@ void terminate( void );
 
 ## <a name="remarks"></a>Hinweise
 
-Die **beenden** -Funktion wird mit C++-Ausnahmebehandlung verwendet und wird in den folgenden Fällen aufgerufen:
+Die Funktion " **Beenden** " wird C++ mit Ausnahmebehandlung verwendet und wird in den folgenden Fällen aufgerufen:
 
 - Ein übereinstimmender Catch-Handler kann nicht für eine ausgelöste C++.Ausnahme gefunden werden.
 
@@ -49,7 +52,7 @@ Die **beenden** -Funktion wird mit C++-Ausnahmebehandlung verwendet und wird in 
 
 - Der Stapel ist nach dem Auslösen einer Ausnahme beschädigt.
 
-**Beenden Sie** Aufrufe [Abbrechen](abort.md) standardmäßig. Sie können diese Standardeinstellung ändern, indem Sie Ihre eigene Beendigungsfunktion schreiben und Aufrufen **Set_terminate** mit dem Namen Ihrer Funktion als Argument. **Beenden Sie** Ruft die letzte Funktion, die als Argument an **Set_terminate**. Weitere Informationen finden Sie unter [Nicht behandelte C++-Ausnahmen](../../cpp/unhandled-cpp-exceptions.md).
+**Beendigungs Aufrufe werden** standardmäßig [abgebrochen](abort.md) . Sie können diesen Standardwert ändern, indem Sie eine eigene Beendigungs Funktion schreiben und **Set_terminate** mit dem Namen ihrer Funktion als Argument aufrufen. **Beenden** Ruft die letzte Funktion auf, die als Argument für **Set_terminate**angegeben wurde. Weitere Informationen finden Sie unter [Nicht behandelte C++-Ausnahmen](../../cpp/unhandled-cpp-exceptions.md).
 
 ## <a name="requirements"></a>Anforderungen
 

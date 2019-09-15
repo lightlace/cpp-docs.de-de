@@ -1,10 +1,10 @@
 ---
 title: isleadbyte, _isleadbyte_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _isleadbyte_l
 - isleadbyte
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istleadbyte
 - _isleadbyte_l
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 1a3f427e49e53bb553020da100b0e713350fab3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b853dcea82c2afea91b2e0545d253786c88ae5e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286917"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954313"
 ---
-# <a name="isleadbyte-isleadbytel"></a>isleadbyte, _isleadbyte_l
+# <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte, _isleadbyte_l
 
 Bestimmt, ob ein Zeichen das führende Byte eines Multibytezeichens ist.
 
@@ -56,15 +59,15 @@ Zu testende ganze Zahl.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Isleadbyte** gibt einen Wert ungleich NULL zurück, wenn das Argument die testbedingung "oder" 0 erfüllt, wenn dies nicht der Fall. Im Gebietsschema "C" und im Einzelbyte-Zeichensatz (SBCS) Gebietsschemas **Isleadbyte** gibt immer 0 zurück.
+**isleadbyte** gibt einen Wert ungleich 0 (null) zurück, wenn das Argument die Test Bedingung erfüllt, oder 0, wenn dies nicht der Fall ist. Im Gebiets Schema "C" und in Einzel Byte-Zeichensatz (SBCS)-Gebiets Schemas gibt **isleadbyte** immer 0 (null) zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Isleadbyte** Makro gibt einen Wert ungleich NULL zurück, wenn dessen Argument das erste Byte eines multibytezeichens ist. **Isleadbyte** erzeugt ein aussagekräftiges Ergebnis für alle Ganzzahlargumente von-1 (**EOF**) zu **UCHAR_MAX** (0xFF) einschließlich.
+Das **isleadbyte** -Makro gibt einen Wert ungleich 0 (null) zurück, wenn das Argument das erste Byte eines multibytezeichens ist. **isleadbyte** erzeugt ein sinnvolles Ergebnis für ein beliebiges ganzzahliges Argument von-1 (**EOF**) bis **UCHAR_MAX** (0xFF) (einschließlich).
 
-Der erwartete Argumenttyp von **Isleadbyte** ist **Int**; Wenn ein Vorzeichen übergebenes Zeichen wird, der Compiler möglicherweise konvertieren in eine ganze Zahl von vorzeichenerweiterung, unvorhersehbare Ergebnisse bereitzustellen.
+Der erwartete Argumenttyp von **isleadbyte** ist **int**. Wenn ein signiertes Zeichen erfolgreich ist, kann der Compiler es durch die Signierungs Erweiterung in eine ganze Zahl konvertieren, was zu unvorhersehbaren Ergebnissen führt.
 
-Die Version dieser Funktion mit dem **_l** -Suffix ist beinahe identisch, außer dass er das Gebietsschema für den übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängige Verhalten verwendet.
+Die Version dieser Funktion mit dem **_l** -Suffix ist beinahe identisch, verwendet jedoch das übergebene Gebiets Schema anstelle des aktuellen Gebiets Schemas für Ihr vom Gebiets Schema abhängiges Verhalten.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

@@ -1,9 +1,9 @@
 ---
 title: feupdateenv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feupdateenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,20 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: HeaderDef
+api_type:
+- HeaderDef
 f1_keywords:
 - feupdateenv
 - fenv/feupdateenv
 helpviewer_keywords:
 - feupdateenv function
 ms.assetid: 3d170042-dfd5-4e4f-a55f-038cf2296cc9
-ms.openlocfilehash: 6d553d6899f55f5bdfb3ff313e88abfcb56ab4ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f40cab42e4a89b1fc5a100587b11b0e2aeeb55c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334073"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940985"
 ---
 # <a name="feupdateenv"></a>feupdateenv
 
@@ -42,8 +43,8 @@ int feupdateenv(
 
 ### <a name="parameters"></a>Parameter
 
-*penv*<br/>
-Zeiger auf eine **Fenv_t** Objekt, das eine gleitkommaumgebung als Satz von einem Aufruf von enthält [Fegetenv](fegetenv1.md) oder [Feholdexcept](feholdexcept2.md). Sie können auch die standardmäßige Startgleitkommaumgebung mit dem Makro FE_DFL_ENV angeben.
+*nach-oben*<br/>
+Zeiger auf ein **fenv_t** -Objekt, das eine Gleit Komma Umgebung enthält, wie durch einen Aufrufen von [fegetenv](fegetenv1.md) oder [feholdexcept](feholdexcept2.md)festgelegt. Sie können auch die standardmäßige Startgleitkommaumgebung mit dem Makro FE_DFL_ENV angeben.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -51,7 +52,7 @@ Gibt 0 zurück, wenn alle Aktionen erfolgreich abgeschlossen wurden. Andernfalls
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Feupdateenv** Funktion führt mehrere Aktionen. Zunächst speichert sie die aktuellen, ausgelösten Statusflags der Gleitkommaausnahmen in einem automatischen Speicher. Klicken Sie dann die aktuelle gleitkommaumgebung aus dem Wert, der in gespeicherten wird die **Fenv_t** Objekt verweist *Penv*. Wenn *Penv* nicht **FE_DFL_ENV** oder verweist nicht auf ein gültiges **Fenv_t** -Objekt resultierende Verhalten nicht definiert ist. Zum Schluss **Feupdateenv** löst die lokal gespeicherten Gleitkommaausnahmen.
+Die Funktion " **feupdateenv** " führt mehrere Aktionen aus. Zunächst speichert sie die aktuellen, ausgelösten Statusflags der Gleitkommaausnahmen in einem automatischen Speicher. Anschließend wird die aktuelle Gleit Komma Umgebung von dem Wert festgelegt, der im **fenv_t** -Objekt gespeichert ist, auf das von " *KV*" gezeigt wird. Wenn " *KV* " nicht **FE_DFL_ENV** ist oder nicht auf ein gültiges **fenv_t** -Objekt verweist, ist das nachfolgende Verhalten nicht definiert. Zum Schluss löst **feupdateerv** die lokal gespeicherten Gleit Komma Ausnahmen aus.
 
 Um diese Funktion zu verwenden, müssen Sie vor dem Aufruf Gleitkommaoptimierungen deaktivieren, die den Zugriff mithilfe der `#pragma fenv_access(on)`-Direktive verhindern könnten. Weitere Informationen finden Sie unter [fenv_access](../../preprocessor/fenv-access.md).
 

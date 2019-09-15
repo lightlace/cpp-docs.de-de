@@ -1,10 +1,10 @@
 ---
 title: rename, _wrename
 ms.date: 11/04/2016
-apiname:
+api_name:
 - rename
 - _wrename
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wrename
 - _trename
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: 3536bfb6c38c99a8d6d943102fb9303dd4d85b7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3d88c46fc055fb173264b40a56c755c360c7adf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357492"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949305"
 ---
-# <a name="rename-wrename"></a>rename, _wrename
+# <a name="rename-_wrename"></a>rename, _wrename
 
 Benennt eine Datei oder ein Verzeichnis um.
 
@@ -68,7 +71,7 @@ Zeiger auf den neuen Namen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt bei Erfolg 0 zurück. Bei einem Fehler, die Funktion gibt einen Wert ungleich NULL zurück und legt **Errno** auf einen der folgenden Werte:
+Jede dieser Funktionen gibt bei Erfolg 0 zurück. Bei einem Fehler gibt die Funktion einen Wert ungleich 0 (null) zurück und legt **errno** auf einen der folgenden Werte fest:
 
 |errno-Wert|Bedingung|
 |-|-|
@@ -82,7 +85,7 @@ Weitere mögliche Rückgabewerte finden Sie unter [_doserrno, _errno, syserrlist
 
 Die **rename**-Funktion benennt die Datei oder das Verzeichnis, die von *oldname* angegeben wurden, auf den von *newname* gegebenen Namen. Der alte Name muss der Pfad einer vorhandenen Datei oder eines vorhandenen Verzeichnisses sein. Der neue Name darf nicht der Name einer vorhandenen Datei oder eines vorhandenen Verzeichnisses sein. Sie können **rename** nutzen, um eine Datei von einem Verzeichnis oder Gerät zu einem anderen zu verschieben, indem Sie einen anderen Pfad im *newname*-Argument angeben. Allerdings können Sie **rename** nicht verwenden, um ein Verzeichnis zu verschieben. Verzeichnisse können umbenannt, aber nicht verschoben werden.
 
-**_wrename** ist eine Breitzeichen-Version von **_rename**; die Argumente für **_wrename** sind Breitzeichen Zeichenfolgen. **_wrename** und **_rename** Verhalten sich andernfalls identisch.
+**_wrename** ist eine breit Zeichen Version von **_rename**. die Argumente für **_wrename** sind Zeichen folgen mit breit Zeichen. **_wrename** und **_rename** Verhalten sich andernfalls identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -129,7 +132,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 File 'CRT_RENAMER.OBJ' renamed to 'CRT_RENAMER.JBO'

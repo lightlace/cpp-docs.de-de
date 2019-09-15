@@ -1,9 +1,9 @@
 ---
 title: _ecvt_s
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _ecvt_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ecvt_s
 - _ecvt_s
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: 0123c618eb5ba614bd8e5b5b3f1f4b0aff539c4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c50200d16a5e542c247d1c85f8c104381af4a883
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288249"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937714"
 ---
-# <a name="ecvts"></a>_ecvt_s
+# <a name="_ecvt_s"></a>_ecvt_s
 
-Konvertiert eine **doppelte** -Zahl in eine Zeichenfolge. Dies ist eine sicherere Version von [_ecvt](ecvt.md), wie unter [Security Features in the CRT (Sicherheitsfunktionen in der CRT)](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.
+Konvertiert eine **doppelte** Zahl in eine Zeichenfolge. Dies ist eine sicherere Version von [_ecvt](ecvt.md), wie unter [Security Features in the CRT (Sicherheitsfunktionen in der CRT)](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -81,30 +84,30 @@ Vorzeichen der konvertierten Zahl.
 
 Null, wenn erfolgreich. Der Rückgabewert ist ein Fehlercode, wenn ein Fehler auftritt. Fehlercodes sind in Errno.h definiert. Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Bei einem in der folgenden Tabelle enthaltenen ungültigen Parameter wird von dieser Funktion der Handler für ungültige Parameter aufgerufen, wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und gibt **EINVAL**.
+Bei einem in der folgenden Tabelle enthaltenen ungültigen Parameter wird von dieser Funktion der Handler für ungültige Parameter aufgerufen, wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, legt diese Funktion " **errno** " auf " **EINVAL** " fest und gibt " **EINVAL**" zurück.
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|Rückgabewert|Wert in *Puffer*|
+|*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|Rückgabewert|Wert im *Puffer*|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
 |**NULL**|any|any|any|any|any|**EINVAL**|Nicht geändert.|
-|Nicht **NULL** (zeigt auf gültigen Speicher)|<=0|any|any|any|any|**EINVAL**|Nicht geändert.|
+|Not **null** (zeigt auf gültigen Speicher)|<=0|any|any|any|any|**EINVAL**|Nicht geändert.|
 |any|any|any|any|**NULL**|any|**EINVAL**|Nicht geändert.|
 |any|any|any|any|any|**NULL**|**EINVAL**|Nicht geändert.|
 
 ## <a name="security-issues"></a>Sicherheitsprobleme
 
-**_ecvt_s** kann eine zugriffsverletzung erzeugen, wenn *Puffer* nicht auf gültigen Speicher verweist und nicht **NULL**.
+**_ecvt_s** generiert möglicherweise eine Zugriffsverletzung, wenn der *Puffer* nicht auf einen gültigen Speicher verweist und nicht **null**ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_ecvt_s** -Funktion konvertiert eine Gleitkommazahl in eine Zeichenfolge. Die *"_value"* -Parameter ist die zu konvertierende Gleitkommazahl. Diese Funktion speichert bis zu *Anzahl* Ziffern *"_value"* als Zeichenfolge und fügt ein Null-Zeichen ('\0'). Wenn die Anzahl der Ziffern in *"_value"* überschreitet *_Count*, wird die untere Ziffer gerundet. Wenn weniger als *Anzahl* Ziffern, die Zeichenfolge mit Nullen aufgefüllt.
+Die **_ecvt_s** -Funktion konvertiert eine Gleit Komma Zahl in eine Zeichenfolge. Der *_Value* -Parameter ist die zu konvertierende Gleit Komma Zahl. Diese Funktion speichert bis zu *zählungs* Ziffern von *_Value* als Zeichenfolge und fügt ein NULL-Zeichen (' \ 0 ') an. Wenn die Anzahl der Ziffern in *_Value* *_Count*überschreitet, wird die nieder wertige Ziffer gerundet. Wenn weniger als *Zähl* Ziffern vorhanden sind, wird die Zeichenfolge mit Nullen aufgefüllt.
 
-In der Zeichenfolge werden nur Ziffern gespeichert. Die Position der Dezimalstelle und das Vorzeichen des *"_value"* erhalten *_Dec* und *_signieren* nach dem Aufruf. Die *_Dec* Parameter verweist auf einen ganzzahligen Wert, der die Position der Dezimalstelle im Verhältnis der Anfang der Zeichenfolge. Der Wert 0 oder ein negativer Integer-Wert geben an, dass sich die Dezimalstelle links neben der ersten Ziffer befindet. Die *_signieren* Parameter verweist auf eine ganze Zahl, die das Vorzeichen der konvertierten Zahl angibt. Wenn der Integer-Wert 0 ist, ist die Zahl positiv. Andernfalls ist die Zahl negativ.
+In der Zeichenfolge werden nur Ziffern gespeichert. Die Position des Dezimal Trennzeichens und das Vorzeichen von *_Value* können nach dem-Befehl von *_Dec* und *_Sign* abgerufen werden. Der *_Dec* -Parameter verweist auf einen ganzzahligen Wert, der die Position des Dezimal Trennzeichens in Bezug auf den Anfang der Zeichenfolge gibt. Der Wert 0 oder ein negativer Integer-Wert geben an, dass sich die Dezimalstelle links neben der ersten Ziffer befindet. Der *_Sign* -Parameter verweist auf eine Ganzzahl, die das Vorzeichen der konvertierten Zahl angibt. Wenn der Integer-Wert 0 ist, ist die Zahl positiv. Andernfalls ist die Zahl negativ.
 
-Ein Puffer der Länge **_CVTBUFSIZE** reicht für alle Gleitkommawerte.
+Ein Puffer der Länge **_CVTBUFSIZE** ist für alle Gleit Komma Werte ausreichend.
 
-Der Unterschied zwischen **_ecvt_s** und **_fcvt_s** befindet sich in die Interpretation der *_Count* Parameter. **_ecvt_s** interpretiert *_Count* als die Gesamtanzahl von Ziffern in der Ausgabezeichenfolge während **_fcvt_s** interpretiert *_Count* als die Anzahl der Ziffern nach dem dem Dezimaltrennzeichen an.
+Der Unterschied zwischen **_ecvt_s** und **_fcvt_s** liegt in der Interpretation des *_Count* -Parameters. **_ecvt_s** interpretiert *_Count* als die Gesamtanzahl der Ziffern in der Ausgabe Zeichenfolge, während **_fcvt_s** *_Count* als Anzahl der Ziffern nach dem Dezimaltrennzeichen interpretiert.
 
 Die Verwendung dieser Funktion in C++ wird durch eine Vorlagenüberladung vereinfacht. Eine Überladung kann automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

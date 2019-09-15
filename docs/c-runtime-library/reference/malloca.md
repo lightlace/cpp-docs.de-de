@@ -1,9 +1,9 @@
 ---
 title: _malloca
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _malloca
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - malloca
 - _malloca
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: 22a63002c900d69e8a7706a54acedf0b4b4f6376
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b12b4adde710f2fc46b3a3790519006fabbb1fc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156871"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952776"
 ---
-# <a name="malloca"></a>_malloca
+# <a name="_malloca"></a>_malloca
 
 Belegt Speicher für den Stapel. Dies ist eine sicherere Version von [_alloca](alloca.md), wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.
 
@@ -49,28 +52,28 @@ Bytes, die vom Stapel zugeordnet werden.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **_malloca** -Routine gibt einen **"void"** Zeiger auf den zugewiesenen Speicherplatz, der für die Speicherung eines beliebigen Objekttyps geeignet. Wenn *Größe* ist 0 (null) **_malloca** weist ein Element der Länge 0 (null) und gibt einen gültigen Zeiger auf dieses Element zurück.
+Die **_malloca** -Routine gibt einen **void** -Zeiger auf den zugeordneten Speicherplatz zurück, der für die Speicherung eines beliebigen Objekt Typs geeignet ist. Wenn *size* gleich 0 ist, ordnet **_malloca** ein Element der Länge 0 zu und gibt einen gültigen Zeiger auf dieses Element zurück.
 
-Wenn *Größe* ist größer als **_ALLOCA_S_THRESHOLD**, klicken Sie dann **_malloca** versucht, auf dem Heap zugewiesen werden soll, und gibt einen null-Zeiger zurück, wenn der Speicherplatz nicht zugeordnet werden kann. Wenn *Größe* ist kleiner als oder gleich **_ALLOCA_S_THRESHOLD**, klicken Sie dann **_malloca** versucht, auf dem Stapel und eine Stapelüberlaufausnahme zugewiesen wird generiert, wenn der Speicherplatz nicht möglich ist zugeordnet werden. Die Stapelüberlaufausnahme ist eine C++-Ausnahme nicht. Es ist eine strukturierte Ausnahme. Sie müssen anstelle der C++-Ausnahmebehandlung verwenden [Structured Exception Handling](../../cpp/structured-exception-handling-c-cpp.md) (SEH), um diese Ausnahme abzufangen.
+Wenn die *Größe* größer als **_ALLOCA_S_THRESHOLD**ist, versucht **_malloca** , dem Heap zuzuordnen, und gibt einen NULL-Zeiger zurück, wenn der Speicherplatz nicht zugeordnet werden kann. Wenn die *Größe* kleiner oder gleich **_ALLOCA_S_THRESHOLD**ist, versucht **_malloca** , dem Stapel zuzuweisen, und eine Stapelüberlauf Ausnahme wird generiert, wenn der Speicherplatz nicht zugeordnet werden kann. Die Stapelüberlauf Ausnahme ist keine C++ Ausnahme. Es handelt sich um eine strukturierte Ausnahme. Anstatt die Ausnahme C++ Behandlung zu verwenden, müssen Sie die [strukturierte Ausnahmebehandlung](../../cpp/structured-exception-handling-c-cpp.md) (SEH) verwenden, um diese Ausnahme abzufangen.
 
 ## <a name="remarks"></a>Hinweise
 
-**_malloca** ordnet *Größe* Bytes aus dem Programmstapel oder dem Heap, wenn die Anforderung eine bestimmte Größe in Bytes, die vom überschreitet **_ALLOCA_S_THRESHOLD**. Der Unterschied zwischen **_malloca** und **_alloca** ist, die **_alloca** immer auf dem Stapel, unabhängig von der Größe zuordnet. Im Gegensatz zu **_alloca**, die nicht erfordern oder einen Aufruf von zulassen **kostenlose** um den zugeordneten, Arbeitsspeicher freizugeben **_malloca** erfordert die Verwendung von [_freea](freea.md)um Arbeitsspeicher freizugeben. Im Debugmodus befindet **_malloca** weist immer Speicher vom Heap.
+**_malloca** ordnet *Größe* Bytes aus dem Programm Stapel oder dem Heap zu, wenn die Anforderung eine bestimmte Größe in Byte überschreitet, die von **_ALLOCA_S_THRESHOLD**angegeben wird. Der Unterschied zwischen **_malloca** und **_alloca** besteht darin, dass **_alloca** unabhängig von der Größe immer auf dem Stapel zugeordnet wird. Anders als bei **_alloca**, bei der **der frei** zugeordnete Speicher freigegeben werden kann, ist für **_malloca** die Verwendung von [_freea](freea.md) erforderlich, um Arbeitsspeicher freizugeben. Im Debugmodus weist **_malloca** immer Arbeitsspeicher vom Heap zu.
 
-Es gibt Einschränkungen beim expliziten Aufruf **_malloca** in einem Ausnahmehandler (EH). EH-Routinen, die auf X86-Klasse-Prozessoren ausgeführt, die in ihrem eigenen Speicherrahmen ausgeführt werden: Sie führen ihre Tasks im Speicherbereich, der nicht auf der aktuellen Position des Stapelzeigers der einschließenden Funktion basiert. Die am häufigsten verwendeten Implementierungen umfassen die strukturierte Windows NT-Ausnahmebehandlung (SEH) und C++-Catch-Klauselausdrücke. Aus diesem Grund explizit aufrufen **_malloca** in einem der folgenden Szenarien Ergebnisse in einem Programmfehler während an die aufrufende EH-Routine zurückgegeben:
+Es gibt Einschränkungen beim expliziten Aufrufen von **_malloca** in einem Ausnahmehandler (eh). EH-Routinen, die auf x86-Klassen-Prozessoren ausgeführt werden, arbeiten in Ihrem eigenen Arbeitsspeicher Rahmen: Sie führen ihre Aufgaben im Speicherbereich aus, der nicht auf dem aktuellen Speicherort des Stapel Zeigers der einschließenden Funktion basiert. Die am häufigsten verwendeten Implementierungen umfassen die strukturierte Windows NT-Ausnahmebehandlung (SEH) und C++-Catch-Klauselausdrücke. Daher führt das explizite Aufrufen von **_malloca** in einem der folgenden Szenarien zu einem Programmfehler während der Rückgabe an die aufrufenden eh-Routine:
 
-- Windows NT-SEH-Ausnahme-Filterausdruck: **__except** (`_malloca ()` )
+- Ausnahme Filter Ausdruck für Windows NT SEH : __except`_malloca ()` ()
 
-- Endgültige Ausnahmehandler von Windows NT-SEH: **__finally** {`_malloca ()` }
+- Abschließender Ausnahmehandler für Windows NT SEH:`_malloca ()` __finally {}
 
 - C++-EH-Catch-Klauselausdruck
 
-Allerdings **_malloca** können direkt aufgerufen werden innerhalb einer EH-Routine oder von einer Anwendung bereitgestellten Rückruf, der aufgerufen wird, ruft einer der zuvor aufgeführten EH-Szenarios.
+**_Malloca** kann jedoch direkt innerhalb einer eh-Routine oder von einem von der Anwendung bereitgestellten Rückruf aufgerufen werden, der von einem der zuvor aufgelisteten eh-Szenarien aufgerufen wird.
 
 > [!IMPORTANT]
-> In Windows XP Wenn **_malloca** wird aufgerufen, Sie müssen in einem Try/Catch-Block Aufrufen [_resetstkoflw](resetstkoflw.md) im Catch-Block.
+> Wenn in Windows XP **_malloca** innerhalb eines try/catch-Blocks aufgerufen wird, müssen Sie [_resetstkoflw](resetstkoflw.md) im catch-Block aufrufen.
 
-Zusätzlich zu den oben genannten Einschränkungen kann bei Verwendung der [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) Option **_malloca** kann nicht verwendet werden, **__except** Blöcke. Weitere Informationen finden Sie unter [/clr Restrictions](../../build/reference/clr-restrictions.md).
+Zusätzlich zu den oben genannten Einschränkungen kann **_malloca** nicht in **__except** -Blöcken verwendet werden, wenn die Option [/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) verwendet wird. Weitere Informationen finden Sie unter [/clr Restrictions](../../build/reference/clr-restrictions.md).
 
 ## <a name="requirements"></a>Anforderungen
 

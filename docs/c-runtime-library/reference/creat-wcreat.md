@@ -1,10 +1,10 @@
 ---
 title: _creat, _wcreat
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _creat
 - _wcreat
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcreat
 - _wcreat
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - creat function
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
-ms.openlocfilehash: 901a95a6a9361f95f38749dacf1a5001d97b3761
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d278bffbfdf856956a20b01da4dad2ba00952359
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335307"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938895"
 ---
-# <a name="creat-wcreat"></a>_creat, _wcreat
+# <a name="_creat-_wcreat"></a>_creat, _wcreat
 
-Erstellt eine neue Datei. **_creat** und **_wcreat** sind veraltet; verwenden Sie [_sopen_s, _wsopen_s](sopen-s-wsopen-s.md) stattdessen.
+Erstellt eine neue Datei. **_creat** und **_wcreat** sind veraltet. Verwenden Sie stattdessen [_sopen_s, _wsopen_s](sopen-s-wsopen-s.md) .
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,21 +69,21 @@ Berechtigungseinstellung.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Funktionen, sofern erfolgreich, geben einen Dateideskriptor an die erstellte Datei zurück. Andernfalls die Funktionen-1 zurück und legen Sie **Errno** wie in der folgenden Tabelle gezeigt.
+Diese Funktionen, sofern erfolgreich, geben einen Dateideskriptor an die erstellte Datei zurück. Andernfalls geben die Funktionen-1 zurück und legen **errno** fest, wie in der folgenden Tabelle gezeigt.
 
-|**Errno** Einstellung|Beschreibung|
+|**errno** -Einstellung|Beschreibung|
 |---------------------|-----------------|
-|**EACCES**|*FileName* gibt eine vorhandene schreibgeschützte Datei oder ein Verzeichnis anstelle einer Datei.|
+|**EACCES**|*filename* gibt eine vorhandene schreibgeschützte Datei an oder gibt ein Verzeichnis anstelle einer Datei an.|
 |**EMFILE**|Es sind keine Dateideskriptoren mehr verfügbar.|
 |**ENOENT**|Die angegebene Datei wurde nicht gefunden.|
 
-Wenn *Filename* ist **NULL**, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und geben-1 zurück.
+Wenn *filename* **null**ist, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, legen diese Funktionen **errno** auf **EINVAL** fest und geben-1 zurück.
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_creat** -Funktion erstellt eine neue Datei oder öffnet und verkleinert eine vorhandene. **_wcreat** ist eine Breitzeichen-Version von **_creat**; die *Filename* Argument **_wcreat** ist eine Breitzeichen-Zeichenfolge. **_wcreat** und **_creat** Verhalten sich andernfalls identisch.
+Die **_creat** -Funktion erstellt eine neue Datei oder öffnet und verkürzt eine vorhandene Datei. **_wcreat** ist eine breit Zeichen Version von **_creat**. Das *filename* -Argument von **_wcreat** ist eine Zeichenfolge mit breit Zeichen. **_wcreat** und **_creat** Verhalten sich andernfalls identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -88,7 +91,7 @@ Die **_creat** -Funktion erstellt eine neue Datei oder öffnet und verkleinert e
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcreat**|**_creat**|**_creat**|**_wcreat**|
 
-Wenn die Datei durch angegeben *Filename* ist nicht vorhanden, eine neue Datei mit der angegebenen berechtigungseinstellung erstellt und zum Schreiben geöffnet wird. Wenn die Datei bereits vorhanden ist und die berechtigungseinstellung das Schreiben ermöglicht, **_creat** schneidet die Datei, die Länge 0. der bisherige Inhalt und zum Schreiben geöffnet. Die berechtigungseinstellung *Pmode*, gilt nur für neu erstellte Dateien. Die neue Datei erhält die angegebene Berechtigungseinstellung, nachdem sie zum ersten Mal geschlossen wurde. Der ganzzahlige Ausdruck *Pmode* enthält eine oder beide der Manifestkonstanten **_S_IWRITE** und **_S_IREAD**, definiert in sys\stat. Wenn beide Konstanten gegeben sind, werden sie verknüpft, mit dem bitweisen or -Operator ( **&#124;** ). Die *Pmode* Parameter auf einen der folgenden Werte festgelegt ist.
+Wenn die durch *filename* angegebene Datei nicht vorhanden ist, wird eine neue Datei mit der angegebenen Berechtigungseinstellung erstellt und zum Schreiben geöffnet. Wenn die Datei bereits vorhanden ist und die Berechtigungseinstellung das Schreiben zulässt, verkürzt **_creat** die Datei auf die Länge 0, wodurch der vorherige Inhalt zerstört und zum Schreiben geöffnet wird. Die Berechtigungseinstellung *pmode*gilt nur für neu erstellte Dateien. Die neue Datei erhält die angegebene Berechtigungseinstellung, nachdem sie zum ersten Mal geschlossen wurde. Der ganzzahlige Ausdruck *pmode* enthält eine oder beide der Manifest-Konstanten **_S_IWRITE** und **_S_IREAD**, die in sys\status definiert sind. Wenn beide Konstanten angegeben werden, werden Sie mit dem bitweisen OR-Operator ( **&#124;** ) verknüpft. Der *pmode* -Parameter wird auf einen der folgenden Werte festgelegt.
 
 |Wert|Definition|
 |-----------|----------------|
@@ -96,9 +99,9 @@ Wenn die Datei durch angegeben *Filename* ist nicht vorhanden, eine neue Datei m
 |**_S_IREAD**|Lesen erlaubt.|
 |**_S_IREAD** &#124; **_S_IWRITE**|Lesen und Schreiben erlaubt.|
 
-Wenn keine Schreibberechtigung gewährt wird, kann die Datei nur gelesen werden. Hinweis: Alle Dateien sind stets lesbar; es ist nicht möglich, nur Schreibberechtigungen zu vergeben. Die Modi **_S_IWRITE** und **_S_IREAD** | **_S_IWRITE** sind äquivalent. Mit geöffneten Dateien **_creat** werden immer im Kompatibilitätsmodus geöffnet (siehe [_sopen](sopen-wsopen.md)) mit **_SH_DENYNO**.
+Wenn keine Schreibberechtigung gewährt wird, kann die Datei nur gelesen werden. Hinweis: Alle Dateien sind stets lesbar; es ist nicht möglich, nur Schreibberechtigungen zu vergeben. Die Modi **_S_IWRITE** und **_S_IREAD** |  **_S_IWRITE** sind dann gleichwertig. Dateien, die mit **_creat** geöffnet werden, werden immer im Kompatibilitätsmodus geöffnet (siehe [_sopen](sopen-wsopen.md)) mit **_SH_DENYNO**.
 
-**_creat** wendet auf die aktuelle dateiberechtigungsmaske *Pmode* vor dem Festlegen der Berechtigungen (finden Sie unter [_umask](umask.md)). **_creat** wird in erster Linie für Kompatibilität mit früheren Bibliotheken bereitgestellt. Ein Aufruf von **_open** mit **_O_CREAT** und **_O_TRUNC** in die *Oflag* Parameter entspricht dem **_creat**und empfiehlt sich für neuen Code.
+**_creat** wendet die aktuelle Datei Berechtigungs Maske auf *pmode* an, bevor die Berechtigungen festgelegt werden (siehe [_umask](umask.md)). **_creat** wird in erster Linie für die Kompatibilität mit früheren Bibliotheken bereitgestellt. Ein Aufrufen von **_open** mit **_O_CREAT** und **_O_TRUNC** im *Oflag* -Parameter entspricht **_creat** und wird für neuen Code bevorzugt.
 
 ## <a name="requirements"></a>Anforderungen
 

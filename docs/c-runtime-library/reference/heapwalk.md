@@ -1,9 +1,9 @@
 ---
 title: _heapwalk
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapwalk
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - heapwalk
 - _heapwalk
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - heapwalk function
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
-ms.openlocfilehash: cc2a49d9032746cc6c82c9dc401fc96baabbe2e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dc7ee9335f227bde93a414748ff70b165c44f8d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331687"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954776"
 ---
-# <a name="heapwalk"></a>_heapwalk
+# <a name="_heapwalk"></a>_heapwalk
 
 Durchläuft den Heap und gibt Informationen zum folgenden Eintrag zurück.
 
@@ -51,22 +54,22 @@ Der Puffer, der die Heapinformationen enthält.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_heapwalk** gibt einen der folgenden ganzzahligen Manifestkonstanten in Malloc.h definiert sind.
+**_heapwalk** gibt eine der folgenden ganzzahligen Manifest-Konstanten zurück, die in malloc. h definiert sind.
 
 |Rückgabewert|Bedeutung|
 |-|-|
 |**_HEAPBADBEGIN**| Ursprüngliche Headerinformationen ungültig oder nicht gefunden.|
 |**_HEAPBADNODE**| Heap beschädigt oder ungültiger Knoten gefunden.|
-|**_HEAPBADPTR**| Die **_pentry** Feld der **_HEAPINFO** -Struktur enthält keinen gültigen Zeiger im Heap oder *Entryinfo* ist ein null-Zeiger.|
+|**_HEAPBADPTR**| Das **_pentry** -Feld der **_HEAPINFO** -Struktur enthält keinen gültigen Zeiger auf den Heap, oder *entryinfo* ist ein NULL-Zeiger.|
 |**_HEAPEND**| Ende des Heaps erfolgreich erreicht.|
 |**_HEAPEMPTY**| Heap wurde nicht initialisiert.|
-|**_HEAPOK**| Keine Fehler bisher; *Entryinfo* mit Informationen zum nächsten heapeintrag aktualisiert.|
+|**_HEAPOK**| Bisher sind keine Fehler aufgetreten. *entryinfo* wird mit Informationen zum nächsten Heap Eintrag aktualisiert.|
 
-Darüber hinaus, wenn ein Fehler auftritt **_heapwalk** legt **Errno** zu **ENOSYS**.
+Wenn ein Fehler auftritt, legt **_heapwalk** außerdem **errno** auf **enosys**fest.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_heapwalk** Funktion hilft beim Debuggen heapbezogener Probleme in Programmen. Die Funktion durchläuft den Heap, durchsucht einen Eintrag pro Aufruf und gibt einen Zeiger auf eine Struktur des Typs **_HEAPINFO** , die Informationen zum nächsten heapeintrag enthält. Die **_HEAPINFO** Typ, der in Malloc.h definiert, enthält die folgenden Elemente.
+Die **_heapwalk** -Funktion unterstützt das Debuggen von Heap bezogenen Problemen in Programmen. Die Funktion durchläuft den Heap und führt einen Eintrag pro-Befehl aus und gibt einen Zeiger auf eine Struktur vom Typ **_HEAPINFO** zurück, die Informationen über den nächsten Heap Eintrag enthält. Der in malloc. h definierte **_HEAPINFO** -Typ enthält die folgenden Elemente.
 
 |Feld|Bedeutung|
 |-|-|
@@ -74,9 +77,9 @@ Die **_heapwalk** Funktion hilft beim Debuggen heapbezogener Probleme in Program
 |`size_t _size`|Größe des Heapeintrags.|
 |`int _useflag`|Kennzeichnung, die angibt, ob der Heapeintrag verwendet wird.|
 
-Ein Aufruf von **_heapwalk** zurückgibt **_HEAPOK** speichert die Größe des Eintrags in der **_Größe** -Feld und setzt die **_useflag** -Feld auf **_FREEENTRY** oder **_USEDENTRY** (beide sind Konstanten, die in Malloc.h definiert sind). Zum Abrufen dieser Informationen zu den ersten Eintrag im Heap übergeben **_heapwalk** ein Zeiger auf eine **_HEAPINFO** Struktur, deren **_pentry** angehört **NULL** . Wenn das Betriebssystem nicht unterstützt **_heapwalk**(z. B. Windows 98), die Funktion gibt **_HEAPEND** und **Errno** zu **ENOSYS**.
+Ein **_heapwalk** , der **_HEAPOK** zurückgibt, speichert die Größe des Eintrags im Feld **_Size** und legt das Feld **_useflag** auf **_FREEENTRY** oder **_USEDENTRY** (beide Konstanten sind in malloc. h definiert) fest. Um diese Informationen zum ersten Eintrag im Heap zu erhalten, übergeben Sie **_heapwalk** einen Zeiger auf eine **_HEAPINFO** -Struktur, deren **_pentry** -Member **null**ist. Wenn das Betriebssystem **_heapwalk**nicht unterstützt (z. b. Windows 98), gibt die Funktion **_HEAPEND** zurück und legt **errno** auf **enosys**fest.
 
-Diese Funktion überprüft seine Parameter. Wenn *Entryinfo* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt **_HEAPBADPTR**.
+Diese Funktion überprüft seine Parameter. Wenn *entryinfo* ein NULL-Zeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird **errno** auf **EINVAL** festgelegt, und die Funktion gibt **_HEAPBADPTR**zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

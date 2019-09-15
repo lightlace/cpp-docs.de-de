@@ -1,14 +1,14 @@
 ---
 title: _strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnset_s_l
 - _strnset_s
 - _mbsnset_s
 - _strnset_s_l
 - _wcsnset_s_l
 - _wcsnset_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbsnset_s_l
 - wcsnset_s
@@ -55,19 +58,19 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-ms.openlocfilehash: 9fc8149bcabb2708f644c80837a93cee72658b8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3542d2272282a9c3f6b2aed8cc443bef85dfe883
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209622"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946992"
 ---
-# <a name="strnsets-strnsetsl-wcsnsets-wcsnsetsl-mbsnsets-mbsnsetsl"></a>_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
+# <a name="_strnset_s-_strnset_s_l-_wcsnset_s-_wcsnset_s_l-_mbsnset_s-_mbsnset_s_l"></a>_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
 
 Initialisiert Zeichen einer Zeichenfolge auf ein angegebenes Zeichen. Diese Versionen von [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) enthalten Sicherheitsverbesserungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
 > [!IMPORTANT]
-> **_mbsnset_s** und **_mbsnset_s_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnset_s** und **_mbsnset_s_l** können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -119,7 +122,7 @@ errno_t _mbsnset_s_l(
 Zu ändernde Zeichenfolge.
 
 *numberOfElements*<br/>
-Die Größe der *str* Puffer.
+Die Größe des *Str* -Puffers.
 
 *c*<br/>
 Zeicheneinstellung.
@@ -134,13 +137,13 @@ Zu verwendendes Gebietsschema.
 
 Null, wenn erfolgreich, andernfalls ein Fehlercode.
 
-Diese Funktionen überprüfen ihre Argumente. Wenn *str* ist keine gültige Null-terminierte Zeichenfolge oder das "Size"-Argument ist kleiner oder gleich 0 ist, wird der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, diese einem Fehlercode von Funktionen zurück und legen **Errno** auf diesen Fehlercode. Der standardfehlercode ist **EINVAL** Wenn kein spezifischerer Wert nicht anwendbar ist.
+Diese Funktionen überprüfen ihre Argumente. Wenn *Str* keine gültige NULL-terminierte Zeichenfolge ist oder das Größen Argument kleiner oder gleich 0 ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen einen Fehlercode zurück und legen **errno** auf diesen Fehlercode fest. Der Standardfehler Code ist " **Deval** ", wenn kein spezifischeren Wert angewendet wird.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktionen legen höchstens die ersten *Anzahl* Zeichen *str* zu *c*. Wenn *Anzahl* ist größer als die Größe des *str*, wird die Größe des *str* anstelle *Anzahl*. Ein Fehler tritt auf, wenn *Anzahl* ist größer als *NumberOfElements* und diese beiden Parameter sind größer als die Größe des *str*.
+Diese Funktionen legen höchstens die ersten *count* -Zeichen von *Str* bis *c*fest. Wenn *count* größer als die Größe von *Str*ist, wird die Größe von *Str* anstelle von *count*verwendet. Es tritt ein Fehler auf, wenn die *Anzahl* größer als die Anzahl der *Nummerierungen* ist, und beide Parameter größer als die Größe von *Str*.
 
-**_wcsnset_s** und **_mbsnset_s** sind Breitzeichen- und multibytezeichenversionen von Versionen von **_strnset_s**. Das Zeichenfolgenargument von **_wcsnset_s** ist eine Breitzeichen-Zeichenfolge; das Zeichenfolgenargument von **_mbsnset_s** Multibyte-Zeichenfolge ist. Diese drei Funktionen verhalten sich andernfalls identisch.
+**_wcsnset_s** und **_mbsnset_s** sind breit Zeichen-und multibytezeichenversionen von **_strnset_s**. Das Zeichen folgen Argument von **_wcsnset_s** ist eine Zeichenfolge mit breit Zeichen. das von **_mbsnset_s** ist eine amultibyte-Zeichenfolge. Diese drei Funktionen verhalten sich andernfalls identisch.
 
 Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 

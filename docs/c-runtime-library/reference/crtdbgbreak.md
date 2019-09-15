@@ -1,9 +1,9 @@
 ---
 title: _CrtDbgBreak
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtDbgBreak
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtDbgBreak
 - CrtDbgBreak
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - CrtDbgBreak function
 - _CrtDbgBreak function
 ms.assetid: 01f8b4a2-a2c7-4e1f-9f39-e573b4a7871f
-ms.openlocfilehash: 4cf64daaea3193f7cf6b3aaa0b1aab031f104704
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9471b1a93abd9777c3a53c54c2517e59896d8160
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340169"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942582"
 ---
-# <a name="crtdbgbreak"></a>_CrtDbgBreak
+# <a name="_crtdbgbreak"></a>_CrtDbgBreak
 
 Legt einen Haltepunkt in einer bestimmten Zeile des Codes (Nur im Debugmodus aktiviert)
 
@@ -45,7 +48,7 @@ Es ist kein Rückgabewert vorhanden.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_CrtDbgBreak** Funktion Debuggen legt einen Haltepunkt fest in der bestimmten Zeile des Codes, in dem sich die Funktion befindet. Diese Funktion wird nur im Debugmodus verwendet und ist abhängig von **_DEBUG** , was zuvor definiert.
+Die **_CrtDbgBreak** -Funktion legt einen debugbreakspunkt für die jeweilige Codezeile fest, in der sich die Funktion befindet. Diese Funktion wird nur im Debugmodus verwendet und ist abhängig von **_DEBUG** , die zuvor definiert wurde.
 
 Weitere Informationen zur Verwendung anderer hookfähiger Laufzeitfunktionen und zum Schreiben eigener clientdefinierter Hookfunktionen finden Sie unter [Writing Your Own Debug Hook Functions (Schreiben von Hookfunktionen zum Debuggen)](/visualstudio/debugger/debug-hook-function-writing).
 

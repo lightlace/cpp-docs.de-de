@@ -1,12 +1,12 @@
 ---
 title: _cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cwprintf_l
 - _cprintf_l
 - _cwprintf
 - _cprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cwprintf
 - cwprintf
@@ -45,14 +48,14 @@ helpviewer_keywords:
 - cwprintf_l function
 - _cprintf function
 ms.assetid: 67ffefd4-45b3-4be0-9833-d8d26ac7c4e2
-ms.openlocfilehash: ce1913012ee37b19e15602daaa4eea042a69a3de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa0dfe22312f5a4736a6bc1b7a52e90dfa425a14
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335333"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942665"
 ---
-# <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
+# <a name="_cprintf-_cprintf_l-_cwprintf-_cwprintf_l"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 
 Formatiert und druckt in die Konsole. Sicherere Versionen sind verfügbar. Weitere Informationen finden Sie unter [_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md).
 
@@ -84,7 +87,7 @@ int _cwprintf_l(
 Formatsteuerzeichenfolge.
 
 *argument_list*<br/>
-Optionale Parameter für die Formatzeichenfolge.
+Optionale Parameter für die Format Zeichenfolge.
 
 *locale*<br/>
 Das zu verwendende Gebietsschema.
@@ -95,13 +98,13 @@ Die Anzahl der zu gedruckten Zeichen.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktionen formatieren und drucken Sie eine Reihe von Zeichen und Werten, die direkt an die Konsole, mit der **_putch** Funktion (**_putwch** für **_cwprintf**) für die Zeichenausgabe . Jedes Argument im *Argument_list* (sofern vorhanden) konvertiert und ausgegeben wird, entsprechend der jeweiligen Formatangabe in *Format*. Die *Format* Argument verwendet die [Syntax der Formatangabe für Printf und Wprintf-Funktionen](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Im Gegensatz zu den **Fprintf**, **Printf**, und **Sprintf** funktioniert, weder **_cprintf** noch **_cwprintf**übersetzt Zeilenvorschubzeichen in Carriage Return-Zeilenvorschub (CR-LF) Kombinationen bei der Ausgabe.
+Diese Funktionen formatieren und Drucken eine Reihe von Zeichen und Werten direkt in der Konsole, wobei die **_putch** -Funktion ( **_putwch** für **_cwprintf**) verwendet wird, um Zeichen auszugeben. Jedes Argument in *argument_list* (sofern vorhanden) wird entsprechend der entsprechenden Format Spezifikation im- *Format*konvertiert und ausgegeben. Das *Format* -Argument verwendet die [formatspezifikations Syntax für printf-und wprintf-Funktionen](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Im Gegensatz **zu den Funktionen "f"** , " **printf**" und " **sprintf** " übersetzt weder **_cprintf** noch **_cwprintf** Zeilenvorschub Zeichen bei der Ausgabe in Kombinationen aus Wagen Rücklauf-und Zeilenvorschub (CR-LF).
 
-Ein wichtiger Unterschied ist, die **_cwprintf** Unicode-Zeichen, die bei der Verwendung in Windows anzeigt. Im Gegensatz zu **_cprintf**, **_cwprintf** verwendet die aktuellen Einstellungen des konsolengebietsschemas.
+Ein wichtiger Unterschied besteht darin, dass **_cwprintf** bei der Verwendung in Windows Unicode-Zeichen anzeigt. Im Gegensatz zu **_cprintf**verwendet **_cwprintf** die aktuellen Einstellungen des Konsolen Gebiets Schemas.
 
-Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den Locale-Parameter übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas verwenden.
+Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebiets Schema Parameter, der anstelle des aktuellen Gebiets Schemas übergeben wurde.
 
-**_cprintf** überprüft die *Format* Parameter. Wenn *Format* ein null-Zeiger ist die Funktion ruft der Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktion gibt-1 zurück und legt **Errno** zu **EINVAL**.
+**_cprintf** überprüft den *Format* -Parameter. Wenn *Format* ein NULL-Zeiger ist, ruft die Funktion den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion-1 zurück und legt **errno** auf **EINVAL**fest.
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist.

@@ -1,9 +1,9 @@
 ---
 title: imaxdiv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - imaxdiv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - imaxdiv
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-ms.openlocfilehash: 23067b2028fc11193fae707e25165fb0ce754515
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72bbb1198b79d79bb81acc35ce6c2a836fdd5f1d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157330"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954632"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -43,19 +46,19 @@ imaxdiv_t imaxdiv(
 
 ### <a name="parameters"></a>Parameter
 
-*numer*<br/>
+*Zahl*<br/>
 Der Zähler.
 
-*denom*<br/>
+*Denom*<br/>
 Der Nenner.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Imaxdiv** mit Argumenten des Typs aufgerufen [Intmax_t](../../c-runtime-library/standard-types.md) gibt eine Struktur des Typs [Imaxdiv_t](../../c-runtime-library/standard-types.md) , die besteht aus den Quotienten und den Rest.
+**imaxdiv** , aufgerufen mit Argumenten vom Typ [intmax_t](../../c-runtime-library/standard-types.md) gibt eine Struktur vom Typ [welches mithilfe](../../c-runtime-library/standard-types.md) zurück, die den Quotienten und den Rest enthält.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Imaxdiv** -Funktion teilt *Anzahl* von *Denom* und berechnet dadurch den Quotienten und den Rest. Die **Imaxdiv_t** Struktur enthält den Quotienten **Intmax_t** **Quot**, und den Rest **Intmax_t** **Rem**. Das Zeichen des Quotienten entspricht dem Zeichen des mathematischen Quotienten. Der absolute Wert ist die größte ganze Zahl, die kleiner ist als der absolute Wert des mathematischen Quotienten. Wenn der Nenner 0 ist, wird das Programm mit einer Fehlermeldung beendet.
+Die **imaxdiv** -Funktion dividiert den *Zahl* durch *denom* und berechnet dadurch den Quotienten und den Rest. Die **welches mithilfe** -Struktur enthält den Quotienten **intmax_t** **quot**und den Rest **intmax_t** **REM**. Das Zeichen des Quotienten entspricht dem Zeichen des mathematischen Quotienten. Der absolute Wert ist die größte ganze Zahl, die kleiner ist als der absolute Wert des mathematischen Quotienten. Wenn der Nenner 0 ist, wird das Programm mit einer Fehlermeldung beendet.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,10 +1,10 @@
 ---
 title: memcpy_s, wmemcpy_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memcpy_s
 - wmemcpy_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wmemcpy_s
 - memcpy_s
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: 802d75307096e649df15b1864b99699fba92a3a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8078590df6950201ef81356ba6c28173e80572ee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285330"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952797"
 ---
-# <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
+# <a name="memcpy_s-wmemcpy_s"></a>memcpy_s, wmemcpy_s
 
 Kopiert Bytes zwischen Puffern. Dabei handelt es sich um Versionen von [memcpy, wmemcpy](memcpy-wmemcpy.md) mit den unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschriebenen Erweiterungen.
 
@@ -73,18 +76,18 @@ Null, wenn erfolgreich, ein Fehlercode, wenn ein Fehler auftritt.
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|*dest*|*destSize*|*src*|*count*|Rückgabewert|Inhalt der *Dest*|
+|*dest*|*destSize*|*src*|*count*|Rückgabewert|Inhalt von *dest*|
 |------------|----------------|-----------|---|------------------|------------------------|
 |any|any|any|0|0|Nicht geändert|
 |**NULL**|any|any|ungleich null|**EINVAL**|Nicht geändert|
-|any|any|**NULL**|ungleich null|**EINVAL**|*Dest* ist auf NULL gesetzt werden|
-|any|< *count*|any|ungleich null|**ERANGE**|*Dest* ist auf NULL gesetzt werden|
+|any|any|**NULL**|ungleich null|**EINVAL**|*dest* ist nulgerout|
+|any|< *Countdown*|any|ungleich null|**ERANGE**|*dest* ist nulgerout|
 
 ## <a name="remarks"></a>Hinweise
 
-**Memcpy_s** Kopien *Anzahl* Bytes vom *Src* zu *Dest*; **Wmemcpy_s** Kopien *Anzahl* Breitzeichen (zwei Bytes). Wenn sich Quelle und Ziel überlappen, ist das Verhalten der **Memcpy_s** ist nicht definiert. Verwendung **Memmove_s** um überlappende Bereiche zu behandeln.
+**memcpy_s** kopiert die *Anzahl* von Bytes von *src* in *dest*. **wmemcpy_s** kopiert die *Anzahl* von breit Zeichen (zwei Bytes). Wenn sich Quelle und Ziel überlappen, ist das Verhalten von **memcpy_s** nicht definiert. Verwenden Sie **memmove_s** , um überlappende Bereiche zu behandeln.
 
-Diese Funktionen überprüfen ihre Parameter. Wenn *Anzahl* ungleich NULL und *Dest* oder *Src* ist ein null-Zeiger oder *DestSize* ist kleiner als *Anzahl*, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EINVAL** oder **ERANGE** und **Errno** auf den Rückgabewert.
+Diese Funktionen überprüfen ihre Parameter. Wenn *count* ungleich NULL und *dest* oder *src* ein NULL-Zeiger ist oder *destSize* kleiner als *count*ist, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen " **EINVAL** " oder " **ERANGE** " zurück und legen " **errno** " auf den Rückgabewert fest.
 
 ## <a name="requirements"></a>Anforderungen
 

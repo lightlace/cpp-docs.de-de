@@ -1,10 +1,10 @@
 ---
 title: memchr, wmemchr
 ms.date: 03/31/2019
-apiname:
+api_name:
 - wmemchr
 - memchr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memchr
 - wmemchr
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: 00a1f0d12047cc388b56074a657ffd739e986827
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c951716d623d900f975e9d6f8a1c762a155b1a7a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285260"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951944"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -83,13 +86,13 @@ Anzahl der zu prüfenden Zeichen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn erfolgreich, gibt Sie einen Zeiger auf den ersten Speicherort der *c* in *Puffer*. Andernfalls wird NULL zurückgegeben.
+Wenn erfolgreich, wird ein Zeiger auf die erste Position von *c* im *Puffer*zurückgegeben. Andernfalls wird NULL zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-`memchr` und `wmemchr` suchen Sie nach dem ersten Vorkommen des *c* in der ersten *Anzahl* Zeichen *Puffer*. Es wird beendet, wenn er findet *c* oder wenn sie die erste aktiviert hat *Anzahl* Zeichen.
+`memchr`und `wmemchr` suchen nach dem ersten Vorkommen von *c* in den ersten *zählungs* Zeichen des *Puffers*. Sie wird beendet, wenn Sie *c* findet oder wenn Sie die ersten *Anzahl* von Zeichen geprüft hat.
 
-In C akzeptieren diese Funktionen eine **const** Zeiger für das erste Argument. In C++ sind zwei Überladungen verfügbar. Die Überladung, die einen Zeiger auf **const** gibt einen Zeiger auf **const**; die Version, die einen Zeiger auf nicht-akzeptiert**const** gibt einen Zeiger auf nicht-**const** . Das Makro \_CRT\_CONST\_richtig\_ÜBERLADUNGEN definiert ist, wenn sowohl die **const** und nicht-**const** Versionen dieser Funktionen sind verfügbar. Wenn Sie nicht benötigen**const** Verhalten für beide C++-Überladungen in C++, definieren Sie das Symbol \_CONST\_zurück.
+In C akzeptieren diese Funktionen einen **Konstanten** Zeiger für das erste Argument. In C++ sind zwei Überladungen verfügbar. Die Überladung, die einen Zeiger auf "Konstante" annimmt **, gibt einen Zeiger auf "** **konstant**" zurück. die Version, die einen Zeiger auf nicht-konstante annimmt **, gibt einen** Zeiger auf einen nicht**Konstanten**Wert zurück. \_ Die Konstanten \_CRT\_-konstantenüberladungen werden definiert, wenn sowohl die Konstanten als auch die nicht konstanten Versionen dieser Funktionen verfügbar sind.\_ Wenn Sie für beide C++ über Ladungen C++in das nicht konstante Verhalten benötigen, \_\_definieren Sie das Symbol Konstanten Rückgabe.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -135,7 +138,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 String to be searched:
