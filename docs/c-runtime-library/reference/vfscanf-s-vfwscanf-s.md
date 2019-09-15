@@ -1,10 +1,10 @@
 ---
 title: vfscanf_s, vfwscanf_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vfscanf_s
 - vfwscanf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,20 +15,23 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vfscanf_s
 - vfwscanf_s
 - _vftscanf_s
 ms.assetid: 9b0133f0-9a18-4581-b24b-3b72683ad432
-ms.openlocfilehash: 7f2f39ef124220ddee0b42242a9991d63fe5969a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c6f3504c9c12ad5429a1b9649eda351c473671a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364856"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957376"
 ---
-# <a name="vfscanfs-vfwscanfs"></a>vfscanf_s, vfwscanf_s
+# <a name="vfscanf_s-vfwscanf_s"></a>vfscanf_s, vfwscanf_s
 
 Liest formatierte Daten aus einem Stream. Diese Versionen von vfscanf, vfwscanf enthalten Sicherheitserweiterungen, wie unter [Security Features in the CRT (Sicherheitserweiterungen in der CRT)](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
@@ -60,18 +63,18 @@ Variablenargumentenliste.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Wenn ein Fehler auftritt oder wenn das Ende des Dateistreams vor der ersten Konvertierung erreicht wird, des Rückgabewerts ist **EOF** für **Vfscanf_s** und **Vfwscanf_s**.
+Jede dieser Funktionen gibt die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Wenn ein Fehler auftritt oder das Ende des Dateistreams vor der ersten Konvertierung erreicht wird, ist der Rückgabewert **EOF** für **vfscanf_s** und **vfwscanf_s**.
 
-Diese Funktionen überprüfen ihre Parameter. Wenn *Stream* ist ein ungültiger Dateizeiger ist oder *Format* ist ein null-Zeiger rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EOF** und **Errno** zu **EINVAL**.
+Diese Funktionen überprüfen ihre Parameter. Wenn der *Stream* ein ungültiger Dateizeiger ist oder *Format* ein NULL-Zeiger ist, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen **EOF** zurück und legen **errno** auf **EINVAL**fest.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Vfscanf_s** -Funktion liest Daten aus der aktuellen Position des *Stream* in die Speicherorte, die von erhalten die *Arglist* Argumentliste (sofern vorhanden). Jedes Argument in der Liste muss ein Zeiger auf eine Variable eines Typs, der einem Typspezifizierer in entspricht *Format*. *Format* steuert die Interpretation der Eingabefelder und hat die gleiche form und Funktion wie der *Format* Argument für **Scanf_s**; finden Sie unter [Formatangabefelder: Scanf und Wscanf-Funktionen](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) eine Beschreibung der *Format*. **Vfwscanf_s** ist eine Breitzeichen-Version von **Vfscanf_s**; das Formatargument für **Vfwscanf_s** ist eine Breitzeichen-Zeichenfolge. Diese Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Vfscanf_s** unterstützt derzeit keine Eingabe aus einem unicodestream.
+Die **vfscanf_s** -Funktion liest Daten aus der aktuellen *Streamposition* in die Speicherorte, die von der *Arglist* -Argumentliste angegeben werden (falls vorhanden). Jedes Argument in der Liste muss ein Zeiger auf eine Variable eines Typs sein, der einem Typspezifizierer im- *Format*entspricht. *Format* steuert die Interpretation der Eingabefelder und hat die gleiche Form und Funktion wie das *Format* -Argument für **scanf_s**; eine Beschreibung des *Formats*finden Sie unter [formatangabefelder: scanf-und wscanf-Funktionen](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) . **vfwscanf_s** ist eine breit Zeichen Version von **vfscanf_s**. das Format Argument für **vfwscanf_s** ist eine Zeichenfolge mit breit Zeichen. Diese Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **vfscanf_s** unterstützt derzeit keine Eingaben aus einem Unicode-Stream.
 
-Der Hauptunterschied zwischen den sichereren Funktionen (die die **_s** Suffix) und den anderen Versionen ist, dass die sichereren Funktionen, die Größe in Zeichen von jedem erfordern **c**, **C**, **s**, **S**, und **[** -Typfeld als Argument sofort nach der folgenden Variablen übergeben werden. Weitere Informationen finden Sie unter [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) und [scanf-Breitenangabe](../../c-runtime-library/scanf-width-specification.md).
+Der Hauptunterschied zwischen den sichereren Funktionen (mit dem Suffix " **_s** ") und den anderen Versionen besteht darin, dass für die sichereren Funktionen die Größe in Zeichen jedes **c**-, **c**-, **s**-, **s**-und **[** Type-Felds erforderlich ist. wird als Argument an die Variable geleitet, die unmittelbar auf die Variable folgt Weitere Informationen finden Sie unter [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) und [scanf-Breitenangabe](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
-> Size-Parameter ist vom Typ **ohne Vorzeichen**, nicht **"size_t"**.
+> Der Size-Parameter ist vom Typ **Ganzzahl ohne Vorzeichen**, nicht **size_t**.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

@@ -1,12 +1,12 @@
 ---
 title: _snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _snwscanf_s_l
 - _snwscanf_s
 - _snscanf_s
 - _snscanf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sntscanf_s
 - snscanf_s
@@ -49,14 +52,14 @@ helpviewer_keywords:
 - _sntscanf_s function
 - snwscanf_s_l function
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
-ms.openlocfilehash: 8d56999aea69c4674070410774d5a2fa11abb178
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33507990c1b7e2c6fd1b30e2bdb9277ab611ef2a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355691"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947946"
 ---
-# <a name="snscanfs-snscanfsl-snwscanfs-snwscanfsl"></a>_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
+# <a name="_snscanf_s-_snscanf_s_l-_snwscanf_s-_snwscanf_s_l"></a>_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 
 Liest formatierte Daten einer angegebenen Länge aus einer Zeichenfolge. Dies sind Versionen von [_snscanf, _snscanf_l, _snwscanf, _snwscanf_l](snscanf-snscanf-l-snwscanf-snwscanf-l.md) mit Sicherheitsverbesserungen, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
@@ -89,11 +92,11 @@ int __cdecl _snwscanf_s_l(
 
 ### <a name="parameters"></a>Parameter
 
-*input*<br/>
+*der*<br/>
 Zu untersuchende Eingabezeichenfolge
 
 *length*<br/>
-Anzahl der zu untersuchenden Zeichen in *Eingabe*.
+Anzahl der in der *Eingabe*zu untersuchenden Zeichen.
 
 *format*<br/>
 Mindestens ein Formatbezeichner
@@ -102,26 +105,26 @@ Mindestens ein Formatbezeichner
 Das zu verwendende Gebietsschema.
 
 *argument_list*<br/>
-Optionale Argumente, die gemäß der Formatzeichenfolge zugewiesen werden.
+Optionale Argumente, die entsprechend der Format Zeichenfolge zugewiesen werden sollen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die beiden Funktionen geben die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Der Rückgabewert ist **EOF** für einen Fehler oder am Ende der Zeichenfolge vor der ersten Konvertierung erreicht wird. Weitere Informationen finden Sie unter [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
+Die beiden Funktionen geben die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Der Rückgabewert ist **EOF** für einen Fehler oder, wenn das Ende der Zeichenfolge vor der ersten Konvertierung erreicht wird. Weitere Informationen finden Sie unter [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
-Wenn *Eingabe* oder *Format* ist eine **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EOF** und **Errno** zu **EINVAL**.
+Wenn *Input* oder *Format* ein **null** -Zeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen **EOF** zurück und legen **errno** auf **EINVAL**fest.
 
 Weitere Informationen über diese und andere Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion ist wie **Sscanf_s** mit dem Unterschied, dass es sich um die Möglichkeit, geben Sie eine feste Anzahl von Zeichen aus der Eingabezeichenfolge untersuchen bereitstellt. Weitere Informationen finden Sie unter [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
+Diese Funktion ähnelt **sscanf_s** , mit dem Unterschied, dass Sie die Möglichkeit bietet, eine festgelegte Anzahl von Zeichen anzugeben, die aus der Eingabe Zeichenfolge untersucht werden Weitere Informationen finden Sie unter [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
-Der puffergrößenparameter ist erforderlich, mit dem typfeldzeichen **c**, **C**, **s**, **S**, und **[** . Weitere Informationen finden Sie unter [scanf-Typenfeldzeichen](../../c-runtime-library/scanf-type-field-characters.md).
+Der Puffergrößen Parameter ist für die tyfeldzeichen **c**, **c**, **s**, **s**und **[** erforderlich. Weitere Informationen finden Sie unter [scanf-Typenfeldzeichen](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> Size-Parameter ist vom Typ **ohne Vorzeichen**, nicht **"size_t"**.
+> Der Size-Parameter ist vom Typ **Ganzzahl ohne Vorzeichen**, nicht **size_t**.
 
-Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
+Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebiets Schema Parameter, der anstelle des aktuellen Thread Gebiets Schemas übergeben wurde.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

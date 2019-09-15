@@ -1,9 +1,9 @@
 ---
 title: feclearexcept1
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feclearexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - feclearexcept
 - fenv/feclearexcept
 helpviewer_keywords:
 - feclearexcept function
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
-ms.openlocfilehash: 3c2f037a5be903fc006debfa7319c483431fdd92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9899d7068a289e7d5f71cb42a8373869d60c3070
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334735"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941271"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
@@ -43,16 +46,16 @@ int feclearexcept(
 
 ### <a name="parameters"></a>Parameter
 
-*excepts*<br/>
+*ausgenommen*<br/>
 Die zu löschenden Gleitkommaausnahme-Flags.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt zurück, NULL, wenn *Ausnahme* NULL ist, oder wenn alle angegebenen Ausnahmen erfolgreich gelöscht wurden. Andernfalls wird ein Wert ungleich 0 (null) zurückgegeben.
+Gibt 0 (null) zurück, wenn die *Ausnahme* 0 (null) ist, oder wenn alle angegebenen Ausnahmen erfolgreich gelöscht wurden. Andernfalls wird ein Wert ungleich 0 (null) zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Feclearexcept** zeigen Sie Funktion versucht, das Löschen von angegebenen Gleitkommaausnahme-Flags *Ausnahme*. Die Funktion unterstützt diese in fenv.h> definierten Ausnahmemakros:
+Die Funktion " **feclearaußer** " versucht, die von " *excepts*" angegebenen Gleit Komma Ausnahme-Statusflags zu löschen. Die Funktion unterstützt diese in fenv.h> definierten Ausnahmemakros:
 
 |Ausnahmemakro|Beschreibung|
 |---------------------|-----------------|
@@ -63,7 +66,7 @@ Die **Feclearexcept** zeigen Sie Funktion versucht, das Löschen von angegebenen
 |FE_UNDERFLOW|Das Ergebnis einer früheren Gleitkommaoperation war zu klein, um ganz genau dargestellt zu werden; ein nicht normaler Wert wurde erstellt.|
 |FE_ALL_EXCEPT|Bitweiser OR-Operator oder alle unterstützten Gleitkommaausnahmen|
 
-Die *Ausnahme* Argument kann 0 (null) oder das bitweise OR von mindestens einer der unterstützten Ausnahmemakros sein. Das Ergebnis von jedem anderen Argumentwert ist nicht definiert.
+Das *excepts* -Argument kann NULL oder das bitweise OR von mindestens einem der unterstützten Ausnahme Makros sein. Das Ergebnis von jedem anderen Argumentwert ist nicht definiert.
 
 ## <a name="requirements"></a>Anforderungen
 

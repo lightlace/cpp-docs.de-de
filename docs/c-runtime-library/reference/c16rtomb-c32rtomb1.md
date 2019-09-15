@@ -1,10 +1,10 @@
 ---
 title: c16rtomb, c32rtomb
 ms.date: 01/22/2018
-apiname:
+api_name:
 - c16rtomb
 - c32rtomb
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - c16rtomb
 - c32rtomb
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-ms.openlocfilehash: ad58184c7bab6f95a842bda5f9eb545f09434a3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a16effe48442ccbb5144b57ead2fb15c908fe898
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341755"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943431"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb, c32rtomb
 
@@ -61,19 +64,19 @@ Zeiger auf ein Array zum Speichern des in Multibyte konvertierten Zeichens.
 Ein zu konvertierendes Breitzeichen.
 
 *state*<br/>
-Ein Zeiger auf ein **Mbstate_t** Objekt.
+Ein Zeiger auf ein **mbstate_t** -Objekt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Anzahl der Bytes, die in Arrayobjekt gespeicherten *Mbchar*, einschließlich eventueller umschaltsequenzen. Wenn *Wchar* ist kein gültiges Breitzeichen ist, den Wert (**"size_t"**)(-1) zurückgegeben, **Errno** nastaven NA hodnotu **EILSEQ**, und der Wert der *Zustand* ist nicht angegeben.
+Die Anzahl der im Array Objekt *mbchar*gespeicherten Bytes, einschließlich der Verschiebe Sequenzen. Wenn *WCHAR* kein gültiges breit Zeichen ist, wird der Wert (**size_t**) (-1) zurückgegeben, **errno** ist auf **EILSEQ**festgelegt, und der Wert des *Zustands* ist nicht angegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **c16rtomb** -Funktion konvertiert das UTF-16-Zeichen *Wchar* der Sequenz entspricht multibytesequenz aus halbbreiten Zeichen im aktuellen Gebietsschema. Wenn *Mbchar* ist kein null-Zeiger, speichert die Funktion, die die konvertierte Sequenz im Arrayobjekt verweist *Mbchar*. Bis zu **MB_CUR_MAX** Bytes befinden sich im *Mbchar*, und *Zustand* auf den resultierenden multibyte-UMSCHALT-Status festgelegt ist.    Wenn *Wchar* ist ein null-Breitzeichen, eine Sequenz, die zum Wiederherstellen der ursprünglichen UMSCHALT-Status, gespeichert wird, wenn erforderlich, gefolgt von Null-Zeichen und *Zustand* auf den ursprünglichen Konvertierungsstatus festgelegt ist. Die **c32rtomb** Funktion ist identisch, aber ein UTF-32-Zeichen konvertiert.
+Die **c16rtomb** -Funktion konvertiert das UTF-16-Zeichen *WCHAR* in die entsprechende Multibytezeichen-schmale Zeichen Sequenz im aktuellen Gebiets Schema. Wenn *mbchar* kein NULL-Zeiger ist, speichert die Funktion die konvertierte Sequenz im Array Objekt, auf das von *mbchar*gezeigt wird. Bis zu **MB_CUR_MAX** Bytes werden in *mbchar*gespeichert, und *State* wird auf den resultierenden Multibytezeichen-UMSCHALT Zustand festgelegt.    Wenn *WCHAR* ein NULL-breit Zeichen ist, wird eine Sequenz gespeichert, die zum Wiederherstellen des anfänglichen Verschiebungs Zustands erforderlich ist, wenn erforderlich, gefolgt vom NULL-Zeichen, und *State* wird auf den ursprünglichen Konvertierungs Zustand festgelegt. Die **c32rtomb** -Funktion ist identisch, konvertiert aber ein UTF-32-Zeichen.
 
-Wenn *Mbchar* ein null-Zeiger ist das Verhalten ist gleichbedeutend mit einem Aufruf an die Funktion, die einen internen Puffer ersetzt *Mbchar* und ein Null-Breitzeichen für *Wchar*.
+Wenn *mbchar* ein NULL-Zeiger ist, entspricht das Verhalten einem Aufrufe der Funktion, die einen internen Puffer für *mbchar* und ein breites NULL-Zeichen für *WCHAR*ersetzt.
 
-Die *Zustand* -konvertierungsstatusobjekt ermöglicht Ihnen, aufeinander folgende Aufrufe dieser Funktion und anderer erneut startbaren Funktionen, die die UMSCHALT-Status der multibyteausgabezeichen zu verwalten. Wenn Sie die Verwendung von erneut startbare und nicht startbare Funktionen gemischt oder wenn ein Aufruf von sind die Ergebnisse undefiniert **Setlocale** erfolgt zwischen zwei aufrufen.
+Mit dem State Conversion State-Objekt können Sie nachfolgende Aufrufe dieser Funktion und anderer Neu startbarer Funktionen ausführen *, die den* UMSCHALT Zustand der multibyteausgabezeichen beibehalten. Die Ergebnisse sind nicht definiert, wenn Sie die Verwendung von Neu Start baren und nicht neu startbaren Funktionen kombinieren, oder wenn ein Aufruf von **setlocale** zwischen Neu Start baren Funktionsaufrufen erfolgt.
 
 ## <a name="requirements"></a>Anforderungen
 

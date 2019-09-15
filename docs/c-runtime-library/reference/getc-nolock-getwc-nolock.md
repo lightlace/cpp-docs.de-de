@@ -1,10 +1,10 @@
 ---
 title: _getc_nolock, _getwc_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getc_nolock
 - _getwc_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getc_nolock
 - _gettc_nolock
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - gettc_nolock function
 - _gettc_nolock function
 ms.assetid: eb37b272-e177-41c9-b077-12ce7ffd3b88
-ms.openlocfilehash: 82c7e1f44dc3177985560319067f9114964218bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6c2da5297e07d82fdea96452c3282c19329f24f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287494"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955507"
 ---
-# <a name="getcnolock-getwcnolock"></a>_getc_nolock, _getwc_nolock
+# <a name="_getc_nolock-_getwc_nolock"></a>_getc_nolock, _getwc_nolock
 
 Liest ein Zeichen aus einem Stream.
 
@@ -68,7 +71,7 @@ Siehe [getc, getwc](getc-getwc.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktionen sind identisch mit **Getc** und **Getwc** mit dem Unterschied, dass sie nicht den aufrufenden Thread sperren. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
+Diese Funktionen sind mit **getc** und **getwc** identisch, mit dem Unterschied, dass Sie den aufrufenden Thread nicht sperren. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -121,14 +124,14 @@ int main()
 }
 ```
 
-### <a name="input-crtgetcnolocktxt"></a>Eingabe: crt_getc_nolock.txt
+### <a name="input-crt_getc_nolocktxt"></a>Eingabe: crt_getc_nolock.txt
 
 ```Input
 Line the first.
 Line the second.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 Input was: Line the first.

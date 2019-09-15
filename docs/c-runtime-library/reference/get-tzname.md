@@ -1,9 +1,9 @@
 ---
 title: _get_tzname
 ms.date: 10/22/2018
-apiname:
+api_name:
 - _get_tzname
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _get_tzname
 - get_tzname
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - time zones
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
-ms.openlocfilehash: c173832efb866eed133a908b5f2b72266fd3798a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f86a4997c328e86597e3bad8a7f7a3a5f5f50b6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332039"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955623"
 ---
-# <a name="gettzname"></a>_get_tzname
+# <a name="_get_tzname"></a>_get_tzname
 
 Ruft die Darstellung der Zeichenfolge vom Namen der Zeitzone oder den Name der Standard-Sommerzeitzone (DST) ab.
 
@@ -49,34 +52,34 @@ errno_t _get_tzname(
 ### <a name="parameters"></a>Parameter
 
 *pReturnValue*<br/>
-Länge der Zeichenfolge *TimeZoneName* einschließlich eines null-Terminators.
+Die Zeichen folgen Länge von *timeZoneName* einschließlich eines NULL-Terminator.
 
 *timeZoneName*<br/>
-Die Adresse einer Zeichenfolge für die Darstellung des Namens der Zeitzone oder der Standard Sommerzeitzone (DST), je nach *Index*.
+Die Adresse einer Zeichenfolge für die Darstellung des Zeit Zonen namens oder des standardmäßigen Sommerzeit Zonen namens (DST), abhängig vom *Index*.
 
 *sizeInBytes*<br/>
-Die Größe der *TimeZoneName* -Zeichenfolge in Bytes.
+Die Größe der *timeZoneName* -Zeichenfolge in Bytes.
 
 *index*<br/>
 Der Index eines der zwei abzurufenden Zeitzonen.
 
-|*index*|Inhalt der *TimeZoneName*|*TimeZoneName* Standardwert|
+|*index*|Inhalt von *timeZoneName*|*timeZoneName* (Standardwert)|
 |-|-|-|
 |0|Name der Zeitzone|„PST“|
 |1|Name der Standard-Sommerzeitzone|„PDT“|
-|> 1 oder < 0|**Errno** festgelegt **EINVAL**|nicht geändert|
+|> 1 oder < 0|**errno** ist auf **EINVAL** festgelegt.|nicht geändert|
 
 Werden die Werte nicht ausdrücklich während der Laufzeit geändert, sind die Standardwerte „PST“ und „PDT“.
 
 ## <a name="return-value"></a>Rückgabewert
 
-NULL, wenn erfolgreich, andernfalls ein **Errno** Typwert.
+NULL, wenn erfolgreich, andernfalls ein **errno** -Typwert.
 
-Wenn entweder *TimeZoneName* ist **NULL**, oder *SizeInBytes* ist 0 (null) oder kleiner als 0 (null) (aber nicht beides), Handler für ungültige Parameter aufgerufen, wie in beschrieben [ Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und gibt **EINVAL**.
+Wenn *timeZoneName* **NULL ist, oder**Wenn *sizeInBytes* gleich 0 (null) oder kleiner als NULL (aber nicht beides) ist, wird ein ungültiger Parameter Handler aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, legt diese Funktion " **errno** " auf " **EINVAL** " fest und gibt " **EINVAL**" zurück.
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|*pReturnValue*|*timeZoneName*|*sizeInBytes*|*index*|Rückgabewert|Inhalt der *TimeZoneName*|
+|*pReturnValue*|*timeZoneName*|*sizeInBytes*|*index*|Rückgabewert|Inhalt von *timeZoneName*|
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|
 |Größe des ZZ-Namens|**NULL**|0|0 oder 1|0|nicht geändert|
 |Größe des ZZ-Namens|any|> 0|0 oder 1|0|ZZ-Name|
@@ -86,11 +89,11 @@ Wenn entweder *TimeZoneName* ist **NULL**, oder *SizeInBytes* ist 0 (null) oder 
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_get_tzname** Funktion ruft die Darstellung der Zeichenfolge des Namens der aktuellen Zeitzone oder der Standard Sommerzeitzone (DST) in die Adresse von *TimeZoneName* je die Index-Wert zusammen mit der Größe der Zeichenfolge in *pReturnValue*. Wenn *TimeZoneName* ist **NULL** und *SizeInBytes* ist 0 (null), die Größe der Zeichenfolge erforderlich, um die angegebene Zeitzone aufzunehmen, und ein abschließendes Nullzeichen in Bytes im zurückgegeben*pReturnValue*. Die Indexwerte müssen entweder für Standard-Zeitzonen 0 oder 1 für Standard-Zeitzone Sommerzeit werden; Alle anderen Werte von *Index* haben unbestimmte Ergebnisse.
+Die **_get_tzname** -Funktion Ruft die Zeichen folgen Darstellung des aktuellen Zeit Zonen namens oder des standardmäßigen Sommerzeit Zonen namens (DST) in der Adresse von *timeZoneName* auf, abhängig vom Indexwert, zusammen mit der Größe der Zeichenfolge in *pReturnValue*. Wenn *timeZoneName* **null** und *sizeInBytes* 0 (null) ist, wird die Größe der Zeichenfolge, die zum Speichern der angegebenen Zeitzone erforderlich ist, und das abschließende Null-Zeichen in Bytes in " *pReturnValue*" zurückgegeben. Die Indexwerte müssen für die Standard Zeitzone entweder 0 oder für die Sommer Zeitzone 1 lauten. alle anderen *Index* Werte weisen nicht ermittelte Ergebnisse auf.
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel ruft **_get_tzname** abzurufenden die erforderliche Puffergröße zum Anzeigen der aktuellen Standard Sommerzeitzone, weist Sie einen Puffer dieser Größe, Aufrufe **_get_tzname** erneut aus, um den Namen im Laden der gepuffert, und gibt sie an der Konsole.
+In diesem Beispiel wird **_get_tzname** aufgerufen, um die erforderliche Puffergröße zu erhalten, um den aktuellen Sommerzeit Zonen Namen anzuzeigen, einen Puffer dieser Größe zuzuweisen, **_get_tzname** erneut aufzurufen, um den Namen in den Puffer zu laden und ihn in der Konsole zu drucken.
 
 ```C
 // crt_get_tzname.c
@@ -126,7 +129,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 The current Daylight standard time zone name is PDT.

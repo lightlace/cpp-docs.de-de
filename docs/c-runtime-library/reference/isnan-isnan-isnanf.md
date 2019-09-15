@@ -1,11 +1,11 @@
 ---
 title: isnan, _isnan, _isnanf
 ms.date: 01/31/2019
-apiname:
+api_name:
 - _isnan
 - _isnanf
 - isnan
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _isnan
 - isnan
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - Not a Number (NANs)
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-ms.openlocfilehash: 8a907dd33803cebd7bc5d71789834d115333b6a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0cc60fb80f8d5b78ec2947a87fde82a536b413c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157344"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953761"
 ---
-# <a name="isnan-isnan-isnanf"></a>isnan, _isnan, _isnanf
+# <a name="isnan-_isnan-_isnanf"></a>isnan, _isnan, _isnanf
 
 Testet, ob ein Gleitkommawert keine Zahl ist (NAN).
 
@@ -71,17 +74,17 @@ Der zu testende Gleitkommawert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-In C die **Isnan** Makro und die **_isnan** und **_isnanf** Funktionen geben einen Wert ungleich NULL zurück, wenn das Argument *x* ein NaN ist; andernfalls sie Gibt 0 zurück.
+In C geben das **isNaN** -Makro und die **_isnan** -Funktion und die **_isnanf** -Funktion einen Wert ungleich 0 (null) zurück, wenn das Argument *x* ein NaN ist. Andernfalls wird 0 zurückgegeben.
 
-In C++ die **Isnan** Vorlagenfunktion gibt **"true"** Wenn das Argument *x* ein NaN ist; andernfalls **"false"**.
+In C++gibt die **isNaN** -Vorlagen Funktion **true** zurück, wenn das Argument *x* ein NaN-Wert ist. Andernfalls wird **false**zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Da ein NaN-Wert nicht als übereinstimmend mit anderen NaN-Wert vergleichen, müssen Sie eine der folgenden Funktionen oder Makros verwenden, um eine zu erkennen. Ein NaN-Wert wird generiert, wenn das Ergebnis einer Gleitkommaoperation nicht im IEEE-754 Gleitkommaformat für den angegebenen Typ dargestellt werden kann. Weitere Informationen dazu, wie ein NaN-Wert für die Ausgabe dargestellt wird, finden Sie unter [Printf](printf-printf-l-wprintf-wprintf-l.md).
+Da ein NaN-Wert nicht mit einem anderen NaN-Wert übereinstimmt, müssen Sie eine dieser Funktionen oder Makros verwenden, um eine zu erkennen. Ein NaN-Wert wird generiert, wenn das Ergebnis einer Gleit Komma Operation nicht im IEEE-754-Gleit Komma Format für den angegebenen Typ dargestellt werden kann. Informationen dazu, wie ein NaN für die Ausgabe dargestellt wird, finden Sie unter [printf](printf-printf-l-wprintf-wprintf-l.md).
 
-Wenn als C++ kompiliert die **Isnan** -Makro nicht definiert ist, und ein **Isnan** Vorlagenfunktion stattdessen definiert ist. Verhält sich genauso wie das Makro, sondern gibt einen Wert vom Typ **"bool"** anstelle einer ganzen Zahl.
+Bei der Kompilierung als C++ist das **isNaN** -Makro nicht definiert, und stattdessen wird eine **isNaN** -Vorlagen Funktion definiert. Sie verhält sich genauso wie das Makro, gibt jedoch einen Wert vom Typ **bool** anstelle einer ganzen Zahl zurück.
 
-Die **_isnan** und **_isnanf** Funktionen sind Microsoft-spezifisch. Die **_isnanf** Funktion ist nur verfügbar, wenn für X64 kompiliert.
+Die Funktionen **_isnan** und **_isnanf** sind Microsoft-spezifisch. Die **_isnanf** -Funktion ist nur verfügbar, wenn Sie für x64 kompiliert wird.
 
 ## <a name="requirements"></a>Anforderungen
 

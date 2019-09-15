@@ -1,9 +1,9 @@
 ---
 title: _eof
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _eof
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _eof
 helpviewer_keywords:
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 1da849c3721d4d83ff0b3166bc18f95728ebf124
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b5c27f1de3369369776dd030df21be05cf20b7a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288135"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942006"
 ---
-# <a name="eof"></a>_eof
+# <a name="_eof"></a>_eof
 
 Tests für das Ende der Datei (EOF).
 
@@ -52,11 +55,11 @@ Dateideskriptor, der auf die geöffnete Datei verweist.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_eof** gibt 1 zurück, wenn die aktuelle Position Ende der Datei, oder 0 ist, ist dies nicht. Der Rückgabewert 1 gibt an, ein Fehler; In diesem Fall den Handler für ungültige Parameter aufgerufen wird, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EBADF**, wodurch einen Ungültiger Dateideskriptor.
+**_eof** gibt 1 zurück, wenn die aktuelle Position das Dateiende ist, oder 0, wenn dies nicht der Fall ist. Der Rückgabewert-1 gibt einen Fehler an. in diesem Fall wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird **errno** auf **EBADF**festgelegt, wodurch ein ungültiger Dateideskriptor angegeben wird.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_eof** Funktion bestimmt, ob das Ende der Datei zugeordnet *fd* wurde erreicht.
+Die **_eof** -Funktion bestimmt, ob das Ende der mit *FD* verknüpften Datei erreicht wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -106,13 +109,13 @@ int main( void )
 }
 ```
 
-### <a name="input-crteoftxt"></a>Eingabe: crt_eof.txt
+### <a name="input-crt_eoftxt"></a>Eingabe: crt_eof.txt
 
 ```Input
 This file contains some text.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 Number of bytes read = 29

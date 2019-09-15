@@ -1,9 +1,9 @@
 ---
 title: _get_osfhandle
 ms.date: 05/29/2018
-apiname:
+api_name:
 - _get_osfhandle
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_osfhandle
 - _get_osfhandle
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - _get_osfhandle function
 - file handles [C++], operating system
 ms.assetid: 0bdd728a-4fd8-410b-8c9f-01a121135196
-ms.openlocfilehash: cc3b50e3d3f65bee83b8df83aa0adb5c8694e35a
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 65060689e0a7fc72b67da8fc3bf7ce0af75fd645
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821657"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955772"
 ---
-# <a name="getosfhandle"></a>_get_osfhandle
+# <a name="_get_osfhandle"></a>_get_osfhandle
 
 Holt das Betriebssystem-Dateihandle, das dem angegebenen Dateideskriptor zugeordnet ist.
 
@@ -51,16 +54,16 @@ Eine vorhandener Dateideskriptor.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Betriebssystem-Dateihandle zurück, wenn *fd* gültig ist. Ansonsten wird der ungültige Parameterhandler, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen. Wenn die weitere Ausführung zugelassen wird, gibt es **INVALID_HANDLE_VALUE** (-1). Außerdem wird **Errno** zu **EBADF**, der angibt, eines ungültigen Dateihandles. Um eine Warnung zu vermeiden, wenn das Ergebnis als ein Win32-Dateihandle verwendet wird, wandeln Sie sie in einem **BEHANDELN** Typ.
+Gibt ein Betriebssystem-Datei Handle zurück, wenn *FD* gültig ist. Ansonsten wird der ungültige Parameterhandler, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen. Wenn die weitere Ausführung zugelassen wird, wird **INVALID_HANDLE_VALUE** (-1) zurückgegeben. Außerdem wird **errno** auf **EBADF**festgelegt, was auf ein ungültiges Datei Handle hinweist. Um eine Warnung zu vermeiden, wenn das Ergebnis als Win32-Datei Handle verwendet wird, wandeln Sie es in einen **Handles** -Typ um.
 
 > [!NOTE]
-> Wenn **Stdin**, **"stdout"** , und **"stderr"** werden keinem Stream (z. B. in einer Windows-Anwendung ohne ein Konsolenfenster), die Werte für die Datei Deskriptor zugeordnet Diese Streams werden zurückgegeben, aus [_fileno](fileno.md) als den speziellen Wert-2. Auf ähnliche Weise, wenn Sie als den File-Deskriptor-Parameter, anstatt das Ergebnis eines Aufrufs von 0, 1 oder 2 verwenden **_fileno**, **_get_osfhandle** gibt auch den speziellen Wert-2 zurück, wenn der Dateideskriptor nicht verknüpft ist. mit einem Datenstrom und nicht **Errno**. Aber dies ist nicht der Wert eine gültige Datei Handles, und nachfolgende Aufrufe, die versuchen, die sie verwenden, treten wahrscheinlich Fehler auf.
+> Wenn **stdin**, **stdout**und **stderr** keinem Stream zugeordnet sind (z. b. in einer Windows-Anwendung ohne Konsolenfenster), werden die Datei deskriptorwerte für diese Streams von [_fileno](fileno.md) als spezieller Wert-2 zurückgegeben. Wenn Sie einen 0, 1 oder 2 als Dateideskriptor-Parameter anstelle des Ergebnisses eines **_fileno**-Aufrufes verwenden, gibt **_get_osfhandle** ebenfalls den besonderen Wert-2 zurück, wenn der Dateideskriptor keinem Stream zugeordnet ist, und legt **errno**fest. Dies ist jedoch kein gültiger Datei Handle-Wert, und nachfolgende Aufrufe, bei denen versucht wird, diese zu verwenden, schlagen wahrscheinlich fehl.
 
-Weitere Informationen zu **EBADF** und andere Fehlercodes finden Sie unter [_doserrno, Errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Weitere Informationen zu **EBADF** und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Um eine Datei zu schließen, dessen Betriebssystem (OS)-Datei-Handle, indem abgerufen wird **_get_osfhandle**, rufen Sie [_close](close.md) auf den Dateideskriptor *fd*. Rufen Sie nie **"CloseHandle"** für den Rückgabewert dieser Funktion. Das zugrunde liegende Betriebssystem-Dateihandle ist im Besitz der *fd* Dateideskriptor und wird geschlossen, wenn [_close](close.md) heißt auf *fd*. Wenn der Dateideskriptor Besitz ist eine `FILE *` Stream, rufen Sie dann [Fclose](fclose-fcloseall.md) , `FILE *` Stream geschlossen wird, sowohl der Dateideskriptor und das zugrunde liegende Betriebssystem-Dateihandle. In diesem Fall rufen nicht [_close](close.md) auf den Dateideskriptor.
+Um eine Datei zu schließen, deren Betriebssystem-Datei Handle von **_get_osfhandle**abgerufen wird, nennen Sie [_close](close.md) im Dateideskriptor *FD*. " **CloseHandle** " niemals für den Rückgabewert dieser Funktion aufgerufen werden. Das zugrunde liegende Betriebssystem-Datei Handle befindet sich im Besitz des *FD* -Datei Deskriptors und wird geschlossen, wenn [_close](close.md) für *FD*aufgerufen wird. Wenn der Dateideskriptor einem `FILE *` Stream gehört, schließt der Aufruf von [fclose](fclose-fcloseall.md) für diesen `FILE *` Stream sowohl den Dateideskriptor als auch das zugrunde liegende Betriebssystem-Datei handle. In diesem Fall muss [_close](close.md) nicht für den Dateideskriptor aufgerufen werden.
 
 ## <a name="requirements"></a>Anforderungen
 

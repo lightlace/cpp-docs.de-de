@@ -1,10 +1,10 @@
 ---
 title: memcmp, wmemcmp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memcmp
 - wmemcmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,8 +17,10 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
-topictype: APIRef
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memcmp
 - wmemcmp
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: 228a74ac8cc83bca169779f1afd6936f5be59bee
-ms.sourcegitcommit: 010ecc2bb9a15deea192a34975176ec0426aa3d8
+ms.openlocfilehash: 2fa902c0fa5a4a78f6fd3e46edeb3799aaf92569
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66265629"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951925"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 
@@ -61,13 +63,13 @@ Erster Puffer.
 Zweite Puffer.
 
 *count*<br/>
-Anzahl der zu vergleichenden Zeichen. (Vergleicht Bytes für **Memcmp**, Breitzeichen für **Wmemcmp**).
+Anzahl der zu vergleichenden Zeichen. (Vergleicht Bytes für **memcmp**, breit Zeichen für **wmemcmp**).
 
 ## <a name="return-value"></a>Rückgabewert
 
 Der Rückgabewert gibt die Beziehung zwischen den Puffern an.
 
-|Rückgabewert|Beziehung der ersten *Anzahl* Zeichen von buf1 und buf2|
+|Rückgabewert|Beziehung der ersten *count* -Zeichen von buf1 und buf2|
 |------------------|---------------------------------------------------------------|
 |< 0|*buffer1* kleiner als *buffer2*|
 |0|*buffer1* identisch mit *buffer2*|
@@ -75,7 +77,7 @@ Der Rückgabewert gibt die Beziehung zwischen den Puffern an.
 
 ## <a name="remarks"></a>Hinweise
 
-Vergleicht die ersten *Anzahl* Zeichen *buffer1* und *buffer2* und gibt einen Wert, der ihre Beziehung angibt. Das Zeichen eines Rückgabewerts ungleich Null ist das Zeichen des Unterschieds zwischen dem ersten unterschiedlichen Wertpaar in den Puffern. Die Werte werden als interpretiert **ohne Vorzeichen** **Char** für **Memcmp**, und als **"wchar_t"** für **Wmemcmp**.
+Vergleicht die ersten *count* -Zeichen von *buffer1* und *buffer2* und gibt einen Wert zurück, der Ihre Beziehung angibt. Das Zeichen eines Rückgabewerts ungleich Null ist das Zeichen des Unterschieds zwischen dem ersten unterschiedlichen Wertpaar in den Puffern. Die Werte werden als **unsigniertes** **char** für **memcmp**und als **wchar_t** für **wmemcmp**interpretiert.
 
 ## <a name="requirements"></a>Anforderungen
 

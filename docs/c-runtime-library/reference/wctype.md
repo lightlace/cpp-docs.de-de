@@ -1,9 +1,9 @@
 ---
 title: wctype
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wctype
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,22 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wctype
 helpviewer_keywords:
 - wctype function
 - wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-ms.openlocfilehash: 81caf8e1ab04635d205d7b01af2d4c2896eec01c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f77082bbcc5f3cd9d82fb40993c3ac678e7e7ba2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155315"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957809"
 ---
 # <a name="wctype"></a>wctype
 
@@ -42,12 +45,12 @@ wctype_t wctype(
 
 ### <a name="parameters"></a>Parameter
 
-*Eigenschaft*<br/>
+*property*<br/>
 Eigenschaftszeichenfolge
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die **LC_CTYPE** -Kategorie des aktuellen Gebietsschemas definiert eine Klassifizierungsregel, deren Name der Eigenschaftszeichenfolge entspricht, nicht *Eigenschaft*, gibt die Funktion 0 (null) zurück. Andernfalls wird ein Wert ungleich 0 zurückgegeben, der für die Verwendung als das zweite Argument für einen nachfolgenden Aufruf von [towctrans](towctrans.md) geeignet ist.
+Wenn in der **LC_CTYPE** -Kategorie des aktuellen Gebiets Schemas keine Klassifizierungs Regel definiert ist, deren Name mit der Eigenschaften Zeichenfolgen- *Eigenschaft*übereinstimmt, gibt die Funktion NULL zurück. Andernfalls wird ein Wert ungleich 0 zurückgegeben, der für die Verwendung als das zweite Argument für einen nachfolgenden Aufruf von [towctrans](towctrans.md) geeignet ist.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -56,16 +59,16 @@ Die Funktion bestimmt eine Klassifizierungsregel für Breitzeichencodes. Die fol
 |Funktion|Identisch mit|
 |--------------|-------------|
 |iswalnum(c)|iswctype(c, wctype( "alnum" ) )|
-|iswalpha(c)|iswctype(c, wctype( "alpha" ) )|
+|iswalpha (c)|iswctype(c, wctype( "alpha" ) )|
 |iswcntrl(c)|iswctype(c, wctype( "cntrl" ) )|
-|iswdigit(c)|iswctype(c, wctype( "digit" ) )|
-|iswgraph(c)|iswctype(c, wctype( "graph" ) )|
-|iswlower(c)|iswctype(c, wctype( "lower" ) )|
-|iswprint(c)|iswctype(c, wctype( "print" ) )|
-|iswpunct(c)|iswctype(c, wctype( "punct" ) )|
-|iswspace(c)|iswctype(c, wctype( "space" ) )|
-|iswupper(c)|iswctype(c, wctype( "upper" ) )|
-|iswxdigit(c)|iswctype(c, wctype( "xdigit" ) )|
+|iswdigit (c)|iswctype(c, wctype( "digit" ) )|
+|iswgraph (c)|iswctype(c, wctype( "graph" ) )|
+|iswlower (c)|iswctype(c, wctype( "lower" ) )|
+|iswprint (c)|iswctype(c, wctype( "print" ) )|
+|iswpunct (c)|iswctype(c, wctype( "punct" ) )|
+|iswspace (c)|iswctype(c, wctype( "space" ) )|
+|iswupper (c)|iswctype(c, wctype( "upper" ) )|
+|iswxdigit (c)|iswctype(c, wctype( "xdigit" ) )|
 
 ## <a name="requirements"></a>Anforderungen
 

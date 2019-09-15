@@ -1,11 +1,11 @@
 ---
 title: strcpy, wcscpy, _mbscpy
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strcpy
 - wcscpy
 - _mbscpy
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbscpy
 - _ftcscpy
@@ -38,19 +41,19 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-ms.openlocfilehash: fa6c0122f2e62c5b39b3da7b9b7c25aa8974f768
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b54bdc2f930b805df036a1fa5d5b1595ea738b88
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354106"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958266"
 ---
-# <a name="strcpy-wcscpy-mbscpy"></a>strcpy, wcscpy, _mbscpy
+# <a name="strcpy-wcscpy-_mbscpy"></a>strcpy, wcscpy, _mbscpy
 
 Kopiert eine Zeichenfolge. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
 > [!IMPORTANT]
-> **_mbscpy** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscpy** kann nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -98,12 +101,12 @@ Jede dieser Funktionen gibt die Zielzeichenfolge zurück. Kein Rückgabewert ist
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Strcpy** -Funktion kopiert *StrSource*, einschließlich des abschließenden Zeichens Null mit der angegebenen *StrDestination*. Das Verhalten der **Strcpy** ist undefiniert, wenn die Quell- und Zielzeichenfolgen überlappen.
+Die Funktion " **strincpy** " kopiert " *strinsource*", einschließlich des abschließenden NULL-Zeichens, an den Speicherort, der von " *stredestination*" angegeben wird. Das Verhalten von **strcpy** ist nicht definiert, wenn sich die Quell-und Ziel Zeichenfolgen überlappen.
 
 > [!IMPORTANT]
-> Da **Strcpy** überprüft nicht auf genügend Speicherplatz *StrDestination* bevor kopiert *StrSource*, es ist eine mögliche Ursache von Pufferüberläufen. Deshalb wird empfohlen, stattdessen [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) zu verwenden.
+> Da der Wert von " **strincpy** " in " *stredestination* " nicht vor dem Kopieren von " *rensource*" überprüft wird, ist dies eine mögliche Ursache von Pufferüberläufen. Deshalb wird empfohlen, stattdessen [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) zu verwenden.
 
-**Wcscpy** und **_mbscpy** sind Breitzeichen- und multibytezeichenversionen von Versionen von **Strcpy**. Die Argumente und der Rückgabewert von **Wcscpy** sind Breitzeichen-Zeichenfolgen, die von **_mbscpy** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
+**wcscpy** und **_mbscpy** sind jeweils breit Zeichen-und multibytezeichenversionen von " **strincpy**". Die Argumente und der Rückgabewert von **wcscpy** sind Zeichen folgen mit breit Zeichen. bei den **_mbscpy** handelt es sich um Multibyte-Zeichen folgen. Diese drei Funktionen verhalten sich andernfalls identisch.
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

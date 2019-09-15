@@ -1,9 +1,9 @@
 ---
 title: rewind
 ms.date: 11/04/2016
-apiname:
+api_name:
 - rewind
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rewind
 helpviewer_keywords:
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: d2e50c34d48b5a9570691a8a702cd05c1a48242d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 084a6f3d7e817498bffb510d865f4a32021e4ce8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357563"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949271"
 ---
 # <a name="rewind"></a>rewind
 
@@ -50,15 +53,15 @@ Zeiger auf die **FILE**-Struktur.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **rewind** Funktion automatisch neu positioniert und den zugeordneten Dateizeiger *Stream* an den Anfang der das. Der Aufruf **rewind** ist vergleichbar mit
+Die **Rewind** -Funktion positioniert den mit *Stream* verknüpften Dateizeiger am Anfang der Datei. Der Aufruf **rewind** ist vergleichbar mit
 
-**(void) Fseek (** _Stream_**, 0 L, SEEK_SET);**
+**(void) "f Seek" (** _Stream_ **, 0l, SEEK_SET);**
 
-Anders als bei [Fseek](fseek-fseeki64.md), **rewind** löscht die Fehlerindikatoren für den Stream und den Dateiende-Indikator. Darüber hinaus im Gegensatz zu [Fseek](fseek-fseeki64.md), **rewind** gibt einen Wert aus, um anzugeben, ob der Zeiger erfolgreich verschoben wurde nicht zurück.
+Anders als bei der [Suche](fseek-fseeki64.md)löscht **Rewind** jedoch die Fehlerindikatoren für den Stream und den Dateiende-Indikator. Außerdem gibt **Rewind** im Gegensatz zu [fseek](fseek-fseeki64.md)keinen Wert zurück, um anzugeben, ob der Zeiger erfolgreich verschoben wurde.
 
-Um den Tastaturpuffer zu löschen, verwenden **rewind** mit dem Datenstrom **Stdin**, der Tastatur standardmäßig zugeordnet ist.
+Verwenden Sie zum Löschen des Tastatur Puffers **Rewind** mit dem Stream **stdin**, der standardmäßig mit der Tastatur verknüpft ist.
 
-Wenn der Stream einen **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Diese Funktion gibt zurück, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, und **Errno** nastaven NA hodnotu **EINVAL**.
+Wenn Stream ein **null** -Zeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt diese Funktion zurück, und **errno** ist auf **EINVAL**festgelegt.
 
 Weitere Informationen über diese und andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (_doserrno, errno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -107,7 +110,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 The values written are: 1 and -37

@@ -1,9 +1,9 @@
 ---
 title: wctrans
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wctrans
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wctrans
 helpviewer_keywords:
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - characters, converting
 - wctrans function
 ms.assetid: 215404bf-6d60-489c-9ae9-880e6b586162
-ms.openlocfilehash: 3c7aace7a93160d2e9a4c1523d49bcaf6ae4dc20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a75de3b699d0eb5ec6117d0f627e6a8ba34dbc62
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188454"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944887"
 ---
 # <a name="wctrans"></a>wctrans
 
@@ -45,12 +48,12 @@ wctrans_t wctrans(
 
 ### <a name="parameters"></a>Parameter
 
-*Eigenschaft*<br/>
+*property*<br/>
 Eine Zeichenfolge, die eine der gültigen Transformationen angibt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die **LC_CTYPE** -Kategorie des aktuellen Gebietsschemas definiert eine Zuordnung, deren Name der Eigenschaftszeichenfolge entspricht, nicht *Eigenschaft*, gibt die Funktion 0 (null) zurück. Andernfalls wird ein Wert ungleich 0 zurückgegeben, der für die Verwendung als das zweite Argument für einen nachfolgenden Aufruf von [towctrans](towctrans.md) geeignet ist.
+Wenn die **LC_CTYPE** -Kategorie des aktuellen Gebiets Schemas keine Zuordnung definiert, deren Name der Eigenschafts Zeichenfolgen- *Eigenschaft*entspricht, gibt die Funktion 0 (null) zurück. Andernfalls wird ein Wert ungleich 0 zurückgegeben, der für die Verwendung als das zweite Argument für einen nachfolgenden Aufruf von [towctrans](towctrans.md) geeignet ist.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -60,8 +63,8 @@ Die folgenden Paare von Aufrufen weisen in allen Gebietsschemas das gleiche Verh
 
 |Funktion|Identisch mit|
 |--------------|-------------|
-|ToLower(c)|towctrans(c, wctrans("towlower"))|
-|towupper(c)|towctrans(c, wctrans("toupper"))|
+|ToLower (c)|towctrans (c, wctrans ("towlower"))|
+|towupper (c)|towctrans (c, wctrans ("ToUpper"))|
 
 ## <a name="requirements"></a>Anforderungen
 

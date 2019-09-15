@@ -1,14 +1,14 @@
 ---
 title: ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ctime64_s
 - _wctime32_s
 - ctime_s
 - _wctime64_s
 - _ctime32_s
 - _wctime_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ctime64_s
 - _ctime32_s
@@ -51,14 +54,14 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-ms.openlocfilehash: 0410aeda4bbec33738d01a9514181c19f351e2c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d983ee4219985c7b213812a69f6f83f49dbf389b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288360"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941999"
 ---
-# <a name="ctimes-ctime32s-ctime64s-wctimes-wctime32s-wctime64s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
+# <a name="ctime_s-_ctime32_s-_ctime64_s-_wctime_s-_wctime32_s-_wctime64_s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 
 Konvertieren Sie einen Zeitwert in eine Zeichenfolge, und passen Sie sie an die Zeitzoneneinstellungen an. Dies sind Versionen von [ctime, _ctime64, _wctime, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md) mit Sicherheitserweiterungen, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
@@ -123,15 +126,15 @@ errno_t _wctime64_s(
 ### <a name="parameters"></a>Parameter
 
 *buffer*<br/>
-Muss groß genug für 26 Zeichen sein. Ein Zeiger auf das Zeichenfolgenergebnis oder **NULL** wenn:
+Muss groß genug für 26 Zeichen sein. Ein Zeiger auf das Ergebnis der Zeichenfolge oder **null** , wenn:
 
-- *SourceTime* stellt ein Datum vor Mitternacht, 1. Januar 1970 UTC.
+- *sourcetime* stellt ein Datum vor Mitternacht (1. Januar 1970 UTC) dar.
 
-- Bei Verwendung von **_ctime32_s** oder **_wctime32_s** und *SourceTime* stellt ein Datum nach 23:59:59 am 18. Januar 2038, UTC dar.
+- Wenn Sie **_ctime32_s** oder **_wctime32_s** verwenden und *sourcetime* ein Datum 23:59:59 nach dem 18. Januar 2038 (UTC) darstellt.
 
-- Bei Verwendung von **_ctime64_s** oder **_wctime64_s** und *SourceTime* stellt ein Datum nach 23:59:59, 31. Dezember 3000 UTC dar.
+- Wenn Sie **_ctime64_s** oder **_wctime64_s** verwenden und *sourcetime* ein Datum nach 23:59:59, dem 31. Dezember 3000, UTC darstellt.
 
-- Bei Verwendung von **_ctime_s** oder **_wctime_s**, diese Funktionen sind Wrapper für die vorherigen Funktionen. Weitere Informationen finden Sie im Abschnitt "Hinweise".
+- Wenn Sie **_ctime_s** oder **_wctime_s**verwenden, sind diese Funktionen Wrapper für die vorherigen Funktionen. Weitere Informationen finden Sie im Abschnitt "Hinweise".
 
 *numberOfElements*<br/>
 Die Größe des Puffers.
@@ -145,27 +148,27 @@ Null, wenn erfolgreich. Wenn ein Fehler aufgrund eines ungültigen Parameters au
 
 ## <a name="error-conditions"></a>Fehlerbedingungen
 
-|*buffer*|*numberOfElements*|*sourceTime*|Zurück|Wert in *Puffer*|
+|*buffer*|*numberOfElements*|*sourceTime*|Zurück|Wert im *Puffer*|
 |--------------|------------------------|------------|------------|-----------------------|
 |**NULL**|any|any|**EINVAL**|Nicht geändert|
-|Nicht **NULL** (zeigt auf gültigen Speicher)|0|any|**EINVAL**|Nicht geändert|
-|Nicht **NULL**|0< Größe < 26|any|**EINVAL**|Leere Zeichenfolge|
-|Nicht **NULL**|>= 26|NULL|**EINVAL**|Leere Zeichenfolge|
-|Nicht **NULL**|>= 26|< 0|**EINVAL**|Leere Zeichenfolge|
+|Not **null** (zeigt auf gültigen Speicher)|0|any|**EINVAL**|Nicht geändert|
+|Nicht **null**|0< Größe < 26|any|**EINVAL**|Leere Zeichenfolge|
+|Nicht **null**|>= 26|NULL|**EINVAL**|Leere Zeichenfolge|
+|Nicht **null**|>= 26|< 0|**EINVAL**|Leere Zeichenfolge|
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Ctime_s** -Funktion konvertiert einen Zeitwert, gespeichert als eine [Time_t](../../c-runtime-library/standard-types.md) Struktur in eine Zeichenfolge. Die *SourceTime* Wert wird in der Regel von einem Aufruf abgerufen [Zeit](time-time32-time64.md), gibt die Anzahl der Sekunden seit Mitternacht vergangenen (00: 00:00), 1. Januar 1970, koordinierte Weltzeit (UTC). Der Rückgabewert der Zeichenfolge enthält genau 26 Zeichen und sieht so aus:
+Die **ctime_s** -Funktion konvertiert einen als [time_t](../../c-runtime-library/standard-types.md) -Struktur gespeicherten Zeitwert in eine Zeichenfolge. Der *sourcetime* -Wert wird in der Regel von einem Aufruf an [time](time-time32-time64.md)abgerufen, der die Anzahl der Sekunden zurückgibt, die seit Mitternacht (00:00:00), dem 1. Januar 1970, der koordinierten Weltzeit (UTC) vergangen sind. Der Rückgabewert der Zeichenfolge enthält genau 26 Zeichen und sieht so aus:
 
 `Wed Jan 02 02:03:55 1980\n\0`
 
 Eine 24-Stunden-Uhr wird verwendet. Alle Felder haben eine feste Breite. Das Zeichen für neue Zeile ('\n') und das Nullzeichen ('\0') nehmen die letzten beiden Stellen der Zeichenfolge ein.
 
-Die konvertierte Zeichenfolge wird auch gemäß den lokalen Zeitzoneneinstellungen angepasst. Finden Sie unter den [Zeit](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md), und [localtime32_s](localtime-s-localtime32-s-localtime64-s.md) Funktionen für die Informationen zum Konfigurieren der lokalen Zeit und die [_tzset](tzset.md) die Funktion für Informationen zur Definition der zeitzonenumgebung und globalen Variablen.
+Die konvertierte Zeichenfolge wird auch gemäß den lokalen Zeitzoneneinstellungen angepasst. Informationen zum Konfigurieren der Ortszeit und der [_tzset](tzset.md) -Funktion finden Sie in den Funktionen [time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md)und [localtime32_s](localtime-s-localtime32-s-localtime64-s.md) , um Informationen zur Definition der Zeit Zonen Umgebung und der globalen Variablen zu erhalten.
 
-**_wctime32_s** und **_wctime64_s** stellen die Breitzeichen-Version des **_ctime32_s** und **_ctime64_s**; einen Zeiger auf die Breitzeichen-Zeichenfolge zurückgibt. Andernfalls **_ctime64_s**, **_wctime32_s**, und **_wctime64_s** Verhalten sich genauso wie **_ctime32_s**.
+**_wctime32_s** und **_wctime64_s** sind die breit Zeichen Version von **_ctime32_s** und **_ctime64_s**. Zurückgeben eines Zeigers auf eine breit Zeichen-Zeichenfolge. Andernfalls Verhalten sich **_ctime64_s**, **_wctime32_s**und **_wctime64_s** identisch mit **_ctime32_s**.
 
-**Ctime_s** ist eine Inlinefunktion, die ergibt **_ctime64_s** und **Time_t** entspricht **__time64_t**. Wenn Sie erzwingen, dass den Compiler interpretiert müssen **Time_t** als das alte 32-Bit **Time_t**, können Sie definieren **_USE_32BIT_TIME_T**. Dadurch wird **Ctime_s** ergibt **_ctime32_s**. Dies ist nicht zu empfehlen, weil bei Ihrer Anwendung nach dem 18. Januar 2038 ein Fehler auftreten kann. Die Verwendung dieses Makros ist auf 64-Bit-Plattformen nicht zulässig.
+bei **ctime_s** handelt es sich um eine Inline Funktion, die zu **_ctime64_s** ausgewertet wird und **time_t** Äquivalent zu **__time64_t**ist. Wenn Sie den Compiler zwingen müssen, **time_t** als das alte 32-Bit- **time_t**zu interpretieren, können Sie **_USE_32BIT_TIME_T**definieren. Dies führt dazu, dass **ctime_s** zu **_ctime32_s**ausgewertet wird. Dies ist nicht zu empfehlen, weil bei Ihrer Anwendung nach dem 18. Januar 2038 ein Fehler auftreten kann. Die Verwendung dieses Makros ist auf 64-Bit-Plattformen nicht zulässig.
 
 Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen vorhanden) vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads (Sichere Vorlagenüberladungen)](../../c-runtime-library/secure-template-overloads.md).
 

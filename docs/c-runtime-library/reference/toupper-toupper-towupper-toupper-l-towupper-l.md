@@ -1,13 +1,13 @@
 ---
 title: toupper, _toupper, towupper, _toupper_l, _towupper_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _toupper_l
 - towupper
 - toupper
 - _towupper_l
 - _toupper
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - towupper
 - _toupper
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-ms.openlocfilehash: 6dd564a27ee7f3c2bb095564e5c9423249d6babc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e17f139789b2c37292764f2e4508b59cddd2c03e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155497"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957908"
 ---
-# <a name="toupper-toupper-towupper-toupperl-towupperl"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
+# <a name="toupper-_toupper-towupper-_toupper_l-_towupper_l"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
 
 Zeichen in Großbuchstaben konvertieren.
 
@@ -85,19 +88,19 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Routinen konvertiert eine Kopie von *c*, sofern möglich, und gibt das Ergebnis zurück.
+Jede dieser Routinen konvertiert nach Möglichkeit eine Kopie von *c*und gibt das Ergebnis zurück.
 
-Wenn *c* ein Breitzeichen ist, für die **Iswlower** ungleich NULL ist, und es ist ein entsprechendes Breitzeichen für die [Iswupper](isupper-isupper-l-iswupper-iswupper-l.md) ungleich NULL ist, **Towupper** gibt das entsprechende Breitzeichen; andernfalls **Towupper** gibt *c* unverändert.
+Wenn *c* ein breit Zeichen ist, für das **iswlower** ungleich 0 (null) ist und ein entsprechendes breit Zeichen vorhanden ist, für das [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) ungleich NULL ist, gibt **towupper** das entsprechende breit Zeichen zurück. Andernfalls gibt **towupper** *c* unverändert zurück.
 
 Es ist kein Rückgabewert zur Fehleranzeige reserviert.
 
-In der Reihenfolge für **"ToUpper"** die erwarteten Ergebnisse, [__isascii](isascii-isascii-iswascii.md) und [Islower](islower-iswlower-islower-l-iswlower-l.md) müssen beide ungleich NULL zurückgeben.
+Damit **toupperdie** erwarteten Ergebnisse liefert, müssen [__isascii](isascii-isascii-iswascii.md) und [IsLower](islower-iswlower-islower-l-iswlower-l.md) beide Werte ungleich 0 (null) zurückgeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Routinen konvertiert einen vorhandenen Kleinbuchstaben in einen Großbuchstaben, wenn dies möglich und relevant ist. Die Konvertierung von **Towupper** ist gebietsschemaspezifisch. Es werden nur die für das aktuelle Gebietsschema relevanten Zeichen geändert. Die Funktionen ohne das **_l** Suffix verwenden das aktuelle Gebietsschema. Die Versionen dieser Funktionen mit den **_l** Suffix übernehmen das Gebietsschema als Parameter und verwenden, anstatt des aktuellen Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Jede dieser Routinen konvertiert einen vorhandenen Kleinbuchstaben in einen Großbuchstaben, wenn dies möglich und relevant ist. Die case-Konvertierung von **towupper** ist Gebiets Schema spezifisch. Es werden nur die für das aktuelle Gebietsschema relevanten Zeichen geändert. Die Funktionen ohne das **_l** -Suffix verwenden das aktuell festgelegte Gebiets Schema. Die Versionen dieser Funktionen mit dem **_l** -Suffix übernehmen das Gebiets Schema als Parameter und verwenden dieses anstelle des aktuell festgelegten Gebiets Schemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-In der Reihenfolge für **"ToUpper"** die erwarteten Ergebnisse, [__isascii](isascii-isascii-iswascii.md) und [Isupper](isupper-isupper-l-iswupper-iswupper-l.md) müssen beide ungleich NULL zurückgeben.
+Damit **toupperdie** erwarteten Ergebnisse liefert, müssen [__isascii](isascii-isascii-iswascii.md) und [IsUpper](isupper-isupper-l-iswupper-iswupper-l.md) beide Werte ungleich 0 (null) zurückgeben.
 
 [Datenkonvertierungsroutinen](../../c-runtime-library/data-conversion.md)
 
@@ -109,7 +112,7 @@ In der Reihenfolge für **"ToUpper"** die erwarteten Ergebnisse, [__isascii](isa
 |**_totupper_l**|**_toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 > [!NOTE]
-> **_toupper_l** und **_towupper_l** haben keine gebietsschemaabhängigkeit und sind nicht dafür vorgesehen, direkt aufgerufen werden. Sie dienen zur internen Verwendung durch **_totupper_l**.
+> **_toupper_l** und **_towupper_l** haben keine Gebiets Schema Abhängigkeit und sollen nicht direkt aufgerufen werden. Sie werden für die interne Verwendung durch **_totupper_l**bereitgestellt.
 
 ## <a name="requirements"></a>Anforderungen
 

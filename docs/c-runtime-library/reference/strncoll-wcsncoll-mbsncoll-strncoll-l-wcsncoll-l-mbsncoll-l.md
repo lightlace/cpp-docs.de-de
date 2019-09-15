@@ -1,14 +1,14 @@
 ---
 title: _strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strncoll
 - _mbsncoll_l
 - _wcsncoll
 - _wcsncoll_l
 - _mbsncoll
 - _strncoll_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsncoll_l
 - strncoll
@@ -60,19 +63,19 @@ helpviewer_keywords:
 - ftcsnccoll function
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
-ms.openlocfilehash: fe6c3283c9379b370911cc63184535e813b96d8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5120b37cd06266752194ec826a173474f6902fd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209774"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947264"
 ---
-# <a name="strncoll-wcsncoll-mbsncoll-strncolll-wcsncolll-mbsncolll"></a>_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
+# <a name="_strncoll-_wcsncoll-_mbsncoll-_strncoll_l-_wcsncoll_l-_mbsncoll_l"></a>_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 
 Vergleicht Zeichenfolgen mithilfe gebietsschemaspezifischen Informationen.
 
 > [!IMPORTANT]
-> **_mbsncoll** und **_mbsncoll_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncoll** und **_mbsncoll_l** können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -125,21 +128,21 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt einen Wert, der die Beziehung der Teilzeichenfolgen von angibt *string1* und *Zeichenfolge2*wie folgt.
+Jede dieser Funktionen gibt einen Wert zurück, der die Beziehung der Teil Zeichenfolgen von *Zeichenfolge1* und *Zeichenfolge2*wie folgt angibt.
 
 |Rückgabewert|Verhältnis von string1 zu string2|
 |------------------|----------------------------------------|
 |< 0|*Zeichenfolge1* ist kleiner als *Zeichenfolge2*.|
-|0|*Zeichenfolge1* ist identisch mit *Zeichenfolge2*.|
+|0|*Zeichenfolge1* ist mit *Zeichenfolge2*identisch.|
 |> 0|*Zeichenfolge1* ist größer als *Zeichenfolge2*.|
 
-Jede dieser Funktionen gibt **_NLSCMPERROR**. Verwendung von **_NLSCMPERROR**, fügen Sie STRING.h oder MBSTRING.h ein. **_wcsncoll** kann fehlschlagen, wenn *string1* oder *Zeichenfolge2* Breitzeichen-Codes, die außerhalb der Domäne der Sortierreihenfolge enthält. Wenn ein Fehler auftritt, **_wcsncoll** kann festgelegt **Errno** zu **EINVAL**. Zu prüfen, ein Fehler bei einem Aufruf von **_wcsncoll**legen **Errno** auf 0, und klicken Sie dann überprüfen **Errno** nach dem Aufruf von **_wcsncoll**.
+Jede dieser Funktionen gibt **_NLSCMPERROR**zurück. Um **_NLSCMPERROR**zu verwenden, fügen Sie entweder String. h oder mbstring. h ein. **_wcsncoll** kann fehlschlagen, wenn entweder *Zeichenfolge1* oder *Zeichenfolge2* breit Zeichen Codes enthält, die sich außerhalb der Domäne der Sortierreihenfolge befinden. Wenn ein Fehler auftritt, legt **_wcsncoll** möglicherweise **errno** auf **EINVAL**fest. Wenn Sie einen **_wcsncoll**-Aufrufvorgang überprüfen möchten, legen Sie **errno** auf 0 fest, und überprüfen Sie dann **errno** , nachdem Sie **_wcsncoll**aufgerufen haben.
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen vergleicht Groß-/Kleinschreibung der ersten *Anzahl* Zeichen in *string1* und *Zeichenfolge2*, gemäß der Codepage, die derzeit in Verwenden Sie. Diese Funktionen sollten nur verwendet werden, wenn es in der Codepage einen Unterschied zwischen der Reihenfolge des Zeichensatzes und der lexikografischen Reihenfolge gibt, und dieser Unterschied für den Zeichenfolgenvergleich relevant ist. Die Reihenfolge des Zeichensatzes ist vom Gebietsschema abhängig. Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema, aber die Versionen mit der **_l** -Suffix verwenden das Gebietsschema, das übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Jede dieser Funktionen führt einen Vergleich der ersten *count* -Zeichen in *Zeichenfolge1* und *Zeichenfolge2*entsprechend der derzeit verwendeten Codepage durch. Diese Funktionen sollten nur verwendet werden, wenn es in der Codepage einen Unterschied zwischen der Reihenfolge des Zeichensatzes und der lexikografischen Reihenfolge gibt, und dieser Unterschied für den Zeichenfolgenvergleich relevant ist. Die Reihenfolge des Zeichensatzes ist vom Gebietsschema abhängig. Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebiets Schema, aber die Versionen mit dem **_l** -Suffix verwenden das übergebene Gebiets Schema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Mit allen diesen Funktionen werden ihre Parameter überprüft. Wenn entweder *string1* oder *Zeichenfolge2* ist ein null-Zeiger oder *Anzahl* ist größer als **INT_MAX**, Handler für ungültige Parameter aufgerufen, Siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **_NLSCMPERROR** und **Errno** zu **EINVAL**.
+Mit allen diesen Funktionen werden ihre Parameter überprüft. Wenn entweder *Zeichenfolge1* oder *Zeichenfolge2* ein NULL-Zeiger ist oder *count* größer als **INT_MAX**ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen **_NLSCMPERROR** zurück und legen **errno** auf **EINVAL**fest.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

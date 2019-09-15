@@ -1,11 +1,11 @@
 ---
-title: fmod, fmodf, fmodl
+title: "\"f\", \"f\", \"f\", \"f\""
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fmod
 - fmodf
 - fmodl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmod
 - _fmodl
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: 78677be1a0c9921c35e54d43a00b8956a9d858b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e98432a73df8b872593d4cd610139bdfa72a25c4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333351"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957077"
 ---
-# <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
+# <a name="fmod-fmodf-fmodl"></a>"f", "f", "f", "f"
 
 Berechnet den Gleitkommarest.
 
@@ -72,13 +75,13 @@ Gleitkommawerte.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Fmod** gibt den Gleitkommarest von *x* / *y*. Wenn der Wert des *y* ist 0,0, **Fmod** ein stilles NaN zurückgegeben. Informationen über die Darstellung eines stillen NaN durch die **Printf** -Familie finden Sie unter [Printf](printf-printf-l-wprintf-wprintf-l.md).
+" **f** " gibt den Gleit Komma Rest von *x* / *y*zurück. Wenn der Wert von *y* 0,0 ist, gibt " **f** " einen stillen NaN-Wert zurück. Informationen zur Darstellung eines stillen Nan durch die **printf** -Familie finden Sie unter [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Fmod** -Funktion berechnet den Gleitkommarest *f* von *x* / *y* so, dass *x*  =  *ich* \* *y* + *f*, wobei *ich* ist eine ganze Zahl, *f* hat die gleichen Vorzeichen wie *x*, und der Absolute Wert des *f* ist kleiner als der Absolute Wert des *y*.
+Die **Funktion "** f" berechnet den Gleit Komma Rest *f* von *x* / *y* , sodass *x* = *i* \* *y* + *f*, wo *ich* ist eine ganze Zahl, *f* hat dasselbe Vorzeichen wie *x*, und der absolute Wert von *f* ist kleiner als der absolute Wert von *y*.
 
-Da C++ das Überladen zulässt, können Sie Überladungen von aufrufen können **Fmod** verwenden und zurückgeben **"float"** und **lange** **doppelte** Werte. In einem C-Programm **Fmod** nimmt immer zwei **doppelte** Argumente und gibt eine **doppelte**.
+C++ermöglicht überladen, sodass Sie über Ladungen von **FMOD** abrufen können, die **float** -und **Long** **Double** -Werte verwenden und zurückgeben. In einem C-Programm übernimmt " **f** " immer zwei **doppelte** Argumente und gibt einen **Double**-Wert zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

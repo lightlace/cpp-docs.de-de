@@ -1,11 +1,11 @@
 ---
 title: trunc, truncf, truncl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - trunc
 - truncf
 - truncl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - trunc
 - truncf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-ms.openlocfilehash: 6e023b9d894ea1b40a0e056e73b7c32f1e3cbed7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0c615c91e562fa45f791d8cc20f39a830013aeb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268935"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945997"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc, truncf, truncl
 
@@ -61,7 +64,7 @@ Der abzuschneidende Wert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn erfolgreich, wird einen ganzzahliger Wert, der *x*in Richtung Null gerundet.
+Gibt bei Erfolg einen ganzzahligen Wert von *x*zurück, der auf NULL gerundet wird.
 
 Andernfalls wird möglicherweise einer der folgenden Werte zurückgeben:
 
@@ -69,13 +72,13 @@ Andernfalls wird möglicherweise einer der folgenden Werte zurückgeben:
 |-----------|------------|
 |*x* = ±INFINITY|w|
 |*x* =  ±0|w|
-|*x* = NaN|NaN|
+|*x* = Nan|NaN|
 
 Fehler werden gemäß der Angaben in [_matherr](matherr.md) gemeldet.
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **kürzungs-LSN** verwenden und zurückgeben **"float"** und **lange** **doppelte** Typen. In einem C-Programm **kürzungs-LSN** immer Double und gibt eine **doppelte**.
+Da C++ das überladen zulässt, können Sie über Ladungen von **trunc** aufzurufen, die **float** -und **Long** **Double** -Typen annehmen und zurückgeben. In einem C-Programm nimmt **trunc** immer einen **Double**-Wert an und gibt ihn zurück.
 
 Da die größten Gleitkommawerte exakte ganze Zahlen sind, wird diese Funktion nicht eigenständig überlaufen. Sie können diese Funktion jedoch möglicherweise bei der Rückgabe eines Werts in einen ganzzahligen Typ zum Überlaufen bringen.
 

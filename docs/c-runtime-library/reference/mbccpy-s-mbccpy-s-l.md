@@ -1,10 +1,10 @@
 ---
 title: _mbccpy_s, _mbccpy_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbccpy_s
 - _mbccpy_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbccpy_s_l
 - mbccpy_s_l
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-ms.openlocfilehash: f9a7554630bd3b46196358c01c21b99978c53e53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26fad83c5b7847e0050fe490cad30e0643aefd74
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156849"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952631"
 ---
-# <a name="mbccpys-mbccpysl"></a>_mbccpy_s, _mbccpy_s_l
+# <a name="_mbccpy_s-_mbccpy_s_l"></a>_mbccpy_s, _mbccpy_s_l
 
 Kopiert ein Multibytezeichen von einer Zeichenfolge in eine andere Zeichenfolge. Diese Versionen von [_mbccpy, _mbccpy_l](mbccpy-mbccpy-l.md) enthalten Sicherheitserweiterungen, wie unter [Sicherheitserweiterungen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
@@ -86,7 +89,7 @@ Kopierziel.
 Größe des Zielpuffers.
 
 *pCopied*<br/>
-Wird mit der Anzahl kopierter Bytes gefüllt (bei Erfolg 1 oder 2). Übergeben Sie **NULL** , wenn die Anzahl nicht relevant ist.
+Wird mit der Anzahl kopierter Bytes gefüllt (bei Erfolg 1 oder 2). Übergeben Sie **null** , wenn die Zahl nicht relevant ist.
 
 *src*<br/>
 Zu kopierendes Multibytezeichen.
@@ -96,26 +99,26 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Null, wenn erfolgreich, ein Fehlercode, wenn ein Fehler auftritt. Wenn *Src* oder *Dest* ist **NULL**, oder wenn mehr als **BuffSizeinBytes** Bytes kopiert werden *Dest*, wird der Handler für ungültige Parameter aufgerufen wird, wie in beschrieben, [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktionen geben **EINVAL** und **Errno** nastaven NA hodnotu **EINVAL**.
+Null, wenn erfolgreich, ein Fehlercode, wenn ein Fehler auftritt. Wenn *src* oder *dest* **null**ist oder wenn mehr als **buffsizin Bytes** in das *dest*-Element kopiert werden, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben die Funktionen **EINVAL** zurück, und **errno** ist auf **EINVAL**festgelegt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbccpy_s** Funktion kopiert ein Multibytezeichen von *Src* zu *Dest*. Wenn *Src* verweist nicht auf das führende Byte eines multibytezeichens laut eines impliziten Aufrufs von [_ismbblead](ismbblead-ismbblead-l.md), dann wird das einzelne Byte, *Src* zeigt, kopiert. Wenn *Src* verweist auf ein führendes Byte ist, aber das nächste Byte 0 und somit ungültig ist, dann 0 ist kopiert *Dest*, **Errno** nastaven NA hodnotu **EILSEQ**, und die Funktion gibt **EILSEQ**.
+Die **_mbccpy_s** -Funktion kopiert ein Multibytezeichen von *src* in *dest*. Wenn *src* nicht auf das führende Byte eines multibytezeichens zeigt, wie durch einen impliziten [_ismbblead](ismbblead-ismbblead-l.md)-aufrufungspunkt festgelegt, wird das einzelne Byte, auf das *src* verweist, kopiert. Wenn *src* auf ein führendes Byte zeigt, aber das folgende Byte 0 und somit ungültig ist, wird 0 nach *dest*kopiert, **errno** ist auf **EILSEQ**festgelegt, und die Funktion gibt " **EILSEQ**" zurück.
 
-**_mbccpy_s** fügt keinen null-Abschlusszeichen, aber wenn *Src* verweist auf ein Null-Zeichen, und klicken Sie dann, dass Null in kopiert wird *Dest* (Dies ist nur eine reguläre einzelbytekopie).
+**_mbccpy_s** fügt keinen null-Terminator an; Wenn *src* jedoch auf ein NULL-Zeichen zeigt, wird dieser NULL-Wert in das *dest* -Zeichen kopiert (Dies ist nur eine reguläre Einzel Byte Kopie).
 
-Der Wert in *pCopied* wird mit der Anzahl kopierter Bytes gefüllt. Mögliche Werte sind 1 und 2, wenn der Vorgang erfolgreich ist. Wenn **NULL** übergeben wird, kann dieser Parameter wird ignoriert.
+Der Wert in " *pkopiert* " wird mit der Anzahl der kopierten Bytes aufgefüllt. Mögliche Werte sind 1 und 2, wenn der Vorgang erfolgreich ist. Wenn **null** übergeben wird, wird dieser Parameter ignoriert.
 
-|*src*|kopiert *Dest*|*pCopied*|Rückgabewert|
+|*src*|in *dest* kopiert|*pCopied*|Rückgabewert|
 |-----------|----------------------|---------------|------------------|
 |kein führendes Byte|kein führendes Byte|1|0|
 |0|0|1|0|
 |führendes Byte gefolgt von Nicht-0|führendes Byte gefolgt von Nicht-0|2|0|
 |führendes Byte gefolgt von 0|0|1|**EILSEQ**|
 
-Beachten Sie, dass die zweite Zeile nur ein Sonderfall der ersten ist. Beachten Sie auch die Tabelle setzt *BuffSizeInBytes* >= *pCopied*.
+Beachten Sie, dass die zweite Zeile nur ein Sonderfall der ersten ist. Beachten Sie außerdem, dass in der Tabelle " *buffsizone Bytes* >= " mit "*pkopiert*"
 
-**_mbccpy_s** verwendet das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten. **_mbccpy_s_l** ist identisch mit **_mbccpy_s** mit dem Unterschied, dass **_mbccpy_s_l** verwendet das Gebietsschema für jedes gebietsschemaabhängige Verhalten übergeben wurde.
+**_mbccpy_s** verwendet das aktuelle Gebiets Schema für jedes vom Gebiets Schema abhängige Verhalten. **_mbccpy_s_l** ist mit **_mbccpy_s** identisch, mit der Ausnahme, dass **_mbccpy_s_l** das übergebene Gebiets Schema für jedes vom Gebiets Schema abhängige Verhalten verwendet.
 
 Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen vorhanden) vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads (Sichere Vorlagenüberladungen)](../../c-runtime-library/secure-template-overloads.md).
 

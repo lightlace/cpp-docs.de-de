@@ -1,9 +1,9 @@
 ---
 title: _getdiskfree
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getdiskfree
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getdiskfree
 - _getdiskfree
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-ms.openlocfilehash: 03c39802301406bc4250328983c8cf8bad94497f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0feee21ee76d076263ea3750d00fd0142f26b7d9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331765"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955098"
 ---
-# <a name="getdiskfree"></a>_getdiskfree
+# <a name="_getdiskfree"></a>_getdiskfree
 
-Verwendet die Informationen über ein Laufwerk zum Auffüllen einer **_diskfree_t** Struktur.
+Verwendet Informationen über ein Laufwerk, um eine **_diskfree_t** -Struktur aufzufüllen.
 
 > [!IMPORTANT]
 > Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -51,19 +54,19 @@ unsigned _getdiskfree(
 
 ### <a name="parameters"></a>Parameter
 
-*drive*<br/>
+*Antrie*<br/>
 Das Laufwerk, zu dem Sie Informationen abrufen möchten.
 
 *driveinfo*<br/>
-Ein **_diskfree_t** -Struktur, die mit Informationen über das Laufwerk aufgefüllt wird.
+Eine **_diskfree_t** -Struktur, die mit Informationen über das Laufwerk aufgefüllt wird.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert „0“. Wenn die Funktion fehlerhaft ist, wird der Fehlercode als Rückgabewert ausgegeben. Der Wert **Errno** festgelegt ist, Fehler, die vom Betriebssystem zurückgegeben werden. Weitere Informationen zu fehlerbedingungen, die angegeben wurden **Errno**, finden Sie unter [Errno-Konstanten](../../c-runtime-library/errno-constants.md).
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert „0“. Wenn die Funktion fehlerhaft ist, wird der Fehlercode als Rückgabewert ausgegeben. Der Wert **errno** wird für alle Fehler festgelegt, die vom Betriebssystem zurückgegeben werden. Weitere Informationen zu Fehlerzuständen, die von **errno**angegeben werden, finden Sie unter [Errno-Konstanten](../../c-runtime-library/errno-constants.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_diskfree_t** Struktur wird in "Direct.h" definiert.
+Die **_diskfree_t** -Struktur ist in Direct. h definiert.
 
 ```C
 struct _diskfree_t {
@@ -74,7 +77,7 @@ struct _diskfree_t {
 };
 ```
 
-Diese Funktion überprüft ihre Parameter. Wenn die *Driveinfo* Zeiger **NULL** oder *Laufwerk* ein ungültiges Laufwerk angibt, wie in beschrieben, ruft diese Funktion einen Handler für ungültige Parameter [ Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **EINVAL** und **Errno** zu **EINVAL**. Der gültige Laufwerksbereich liegt zwischen 0 und 26. Ein *Laufwerk* Wert 0 gibt an, das aktuelle Laufwerk werden danach Zahlen Buchstaben des englischen Alphabets, 1 gibt Laufwerk A, 3 Laufwerk C, und So weiter.
+Diese Funktion überprüft ihre Parameter. Wenn der *driveingefo* -Zeiger **null** ist oder ein *Laufwerk* ein ungültiges Laufwerk angibt, ruft diese Funktion einen Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **EINVAL** zurück und legt **errno** auf **EINVAL**fest. Der gültige Laufwerksbereich liegt zwischen 0 und 26. Der *Laufwerks* Wert 0 gibt das aktuelle Laufwerk an. Anschließend werden Zahlen Buchstaben des englischen Alphabets zugeordnet, d. b. 1 gibt Laufwerk a, 3 das Laufwerk C an usw.
 
 ## <a name="requirements"></a>Anforderungen
 

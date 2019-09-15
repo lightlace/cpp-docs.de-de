@@ -1,12 +1,12 @@
 ---
 title: sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _swprintf_s_l
 - _sprintf_s_l
 - swprintf_s
 - sprintf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - swprintf_s
 - sprintf_s
@@ -41,14 +44,14 @@ helpviewer_keywords:
 - _sprintf_s_l function
 - formatted text [C++]
 ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
-ms.openlocfilehash: 4d4bec339caccf9b0843afada4b56b435243dd11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34b3ddce68563479b26abff34e8fa31f6298558a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354946"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958008"
 ---
-# <a name="sprintfs-sprintfsl-swprintfs-swprintfsl"></a>sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
+# <a name="sprintf_s-_sprintf_s_l-swprintf_s-_swprintf_s_l"></a>sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 
 Schreiben Sie formatierte Daten in eine Zeichenfolge. Dies sind Versionen von [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) mit Sicherheitsverbesserungen, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
@@ -116,23 +119,23 @@ Weitere Informationen finden Sie unter [Formatangaben](../../c-runtime-library/f
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Anzahl der geschriebenen Zeichen oder -1, wenn ein Fehler aufgetreten. Wenn *Puffer* oder *Format* ist ein null-Zeiger **Sprintf_s** und **Swprintf_s** geben-1 zurück und legen Sie **Errno**zu **EINVAL**.
+Die Anzahl geschriebener Zeichen oder-1, wenn ein Fehler aufgetreten ist. Wenn der *Puffer* oder das *Format* ein NULL-Zeiger ist, geben **sprintf_s** und **swprintf_s** -1 zurück und legen **errno** auf **EINVAL**fest.
 
-**Sprintf_s** gibt die Anzahl der Bytes in einem *Puffer*, das abschließende Null-Zeichen wird dabei nicht mitgezählt. **Swprintf_s** gibt die Anzahl der gespeicherten Breitzeichen *Puffer*, das beendende null-Breitzeichen wird dabei nicht mitgezählt.
+**sprintf_s** gibt die Anzahl von Bytes zurück, die im *Puffer*gespeichert werden, wobei das abschließende Null-Zeichen nicht gezählt wird. **swprintf_s** gibt die Anzahl der im *Puffer*gespeicherten breit Zeichen zurück, wobei das abschließende Null-breit Zeichen nicht gezählt wird.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Sprintf_s** -Funktion formatiert und speichert eine Reihe von Zeichen und Werten in *Puffer*. Jede *Argument* (sofern vorhanden) konvertiert und ausgegeben wird, entsprechend der jeweiligen Formatangabe in *Format*. Das Format besteht aus normalen Zeichen und hat die gleiche form und Funktion wie der *Format* Argument für [Printf](printf-printf-l-wprintf-wprintf-l.md). Ein NULL-Zeichen wird nach dem letzten geschriebenen Zeichen angefügt. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
+Die **sprintf_s** -Funktion formatiert und speichert eine Reihe von Zeichen und Werten im *Puffer*. Jedes *Argument* (sofern vorhanden) wird entsprechend der entsprechenden Format Spezifikation im- *Format*konvertiert und ausgegeben. Das Format besteht aus normalen Zeichen und hat die gleiche Form und Funktion wie das *Format* -Argument für [printf](printf-printf-l-wprintf-wprintf-l.md). Ein NULL-Zeichen wird nach dem letzten geschriebenen Zeichen angefügt. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
 
-Ein Hauptunterschied zwischen **Sprintf_s** und [Sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) ist, die **Sprintf_s** die Formatzeichenfolge auf gültige Formatierungszeichen überprüft, während [ Sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) überprüft nur, wenn die Formatzeichenfolge oder beim Puffer **NULL** Zeiger. Wenn bei einer der beiden Überprüfungen ein Fehler auftritt, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation](../../c-runtime-library/parameter-validation.md)beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktion gibt-1 zurück und legt **Errno** zu **EINVAL**.
+Ein Hauptunterschied zwischen **sprintf_s** und [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) besteht darin, dass **sprintf_s** die Format Zeichenfolge auf gültige Formatierungszeichen überprüft, während [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) nur überprüft, ob die Format Zeichenfolge oder der Puffer **null** -Zeiger sind. Wenn bei einer der beiden Überprüfungen ein Fehler auftritt, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation](../../c-runtime-library/parameter-validation.md)beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion-1 zurück und legt **errno** auf **EINVAL**fest.
 
-Der wichtigste Unterschied zwischen **Sprintf_s** und [Sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) ist, die **Sprintf_s** nimmt einen Längenparameter an, um die Größe des Ausgabepuffers in Zeichen. Wenn der Puffer zu klein für den formatierten Text einschließlich abschließende Null ist, und klicken Sie dann der Puffer auf eine leere Zeichenfolge festgelegt ist, indem ein Null-Zeichen in *Puffer*[0], und der Handler für ungültige Parameter aufgerufen wird. Im Gegensatz zu **_snprintf**, **Sprintf_s** wird sichergestellt, dass der Puffer mit Null endet werden, wenn die Puffergröße 0 (null) ist.
+Der andere Hauptunterschied zwischen **sprintf_s** und [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) besteht darin, dass **sprintf_s** einen length-Parameter annimmt, der die Größe des Ausgabepuffers in Zeichen angibt. Wenn der Puffer für den formatierten Text zu klein ist, einschließlich des abschließenden NULL-Werts, wird der Puffer auf eine leere Zeichenfolge festgelegt, indem ein NULL-Zeichen im *Puffer*[0] platziert wird, und der Handler für ungültige Parameter wird aufgerufen. Im Gegensatz zu **_snprintf**garantiert **sprintf_s** , dass der Puffer mit NULL endet, es sei denn, die Puffergröße ist 0 (null).
 
-**Swprintf_s** ist eine Breitzeichen-Version von **Sprintf_s**; die Zeigerargumente zu **Swprintf_s** sind Breitzeichen Zeichenfolgen. Erkennung von Codierungsfehlern in **Swprintf_s** möglicherweise nicht auf die in **Sprintf_s**. Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
+**swprintf_s** ist eine breit Zeichen Version von **sprintf_s**. die Zeigerargumente für **swprintf_s** sind Zeichen folgen mit breit Zeichen. Die Erkennung von Codierungs Fehlern in **swprintf_s** kann sich von der in **sprintf_s**unterscheiden. Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebiets Schema Parameter, der anstelle des aktuellen Thread Gebiets Schemas übergeben wurde.
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht. Die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Es gibt Versionen **Sprintf_s** bieten zusätzliche Kontrolle darüber, was geschieht, wenn der Puffer zu klein ist. Weitere Informationen finden Sie unter [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
+Es gibt Versionen von **sprintf_s** , die eine zusätzliche Kontrolle darüber bieten, was geschieht, wenn der Puffer zu klein ist. Weitere Informationen finden Sie unter [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

@@ -1,12 +1,12 @@
 ---
 title: _cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cprintf_p_l
 - _cwprintf_p_l
 - _cwprintf_p
 - _cprintf_p
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cprintf_p
 - cwprintf_p
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - tcprintf_p function
 - cprintf_p function
 ms.assetid: 1f82fd7d-13c8-4c4a-a3e4-db0df3873564
-ms.openlocfilehash: ef4ac6a89749c2784e4935fcf83810e81b61ae11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a02de28a61812147c192495c4794830f85567a10
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348288"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942648"
 ---
-# <a name="cprintfp-cprintfpl-cwprintfp-cwprintfpl"></a>_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l
+# <a name="_cprintf_p-_cprintf_p_l-_cwprintf_p-_cwprintf_p_l"></a>_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l
 
 Formatiert Daten und gibt diese über die Konsole aus und unterstützt positionelle Parameter in der Formatzeichenfolge.
 
@@ -97,16 +100,16 @@ Die Anzahl gedruckter Zeichen oder ein negativer Wert im Falle eines Fehlers.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktionen formatieren und drucken Sie eine Reihe von Zeichen und Werten, die direkt an die Konsole, mit der **_putch** und **_putwch** Funktionen für die Zeichenausgabe. Jede *Argument* (sofern vorhanden) konvertiert und ausgegeben wird, entsprechend der jeweiligen Formatangabe in *Format*. Das Format hat dieselbe form und Funktion wie der *Format* -Parameter für die [Printf_p](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) Funktion. Der Unterschied zwischen **_cprintf_p** und **Cprintf_s** ist, die **_cprintf_p** positionelle Parameter unterstützt, wodurch angeben der Reihenfolge, in denen die Argumente sind, in der Formatzeichenfolge verwendet. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).
+Diese Funktionen formatieren und Drucken eine Reihe von Zeichen und Werten direkt in der Konsole, wobei die **_putch** -Funktion und die **_putwch** -Funktion zum Ausgeben von Zeichen verwendet werden. Jedes *Argument* (sofern vorhanden) wird entsprechend der entsprechenden Format Spezifikation im- *Format*konvertiert und ausgegeben. Das Format hat dieselbe Form und Funktion wie der *Format* -Parameter für die [Printf_p](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) -Funktion. Der Unterschied zwischen **_cprintf_p** und **cprintf_s** besteht darin, dass **_cprintf_p** Positions Parameter unterstützt, wodurch die Reihenfolge angegeben werden kann, in der die Argumente in der Format Zeichenfolge verwendet werden. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).
 
-Im Gegensatz zu den **Fprintf_p**, **Printf_p**, und **Sprintf_p** funktioniert, weder **_cprintf_p** noch **_cwprintf_p** übersetzt Zeilenvorschubzeichen in Carriage Return-Zeilenvorschub (CR-LF) Kombinationen bei der Ausgabe. Ein wichtiger Unterschied ist, die **_cwprintf_p** bei der Verwendung in Windows NT Unicode-Zeichen anzeigt. Im Gegensatz zu **_cprintf_p**, **_cwprintf_p** verwendet die aktuellen Einstellungen des konsolengebietsschemas.
+Im Gegensatz zu den **fprintf_p**-, **Printf_p**-und **sprintf_p** -Funktionen übersetzt weder **_cprintf_p** noch **_cwprintf_p** Zeilenvorschub Zeichen in Wagen Rücklauf-Zeilenvorschub-Kombinationen (CR-LF) bei der Ausgabe. Ein wichtiger Unterschied besteht darin, dass **_cwprintf_p** bei der Verwendung in Windows NT Unicode-Zeichen anzeigt. Im Gegensatz zu **_cprintf_p**verwendet **_cwprintf_p** die aktuellen Einstellungen des Konsolen Gebiets Schemas.
 
-Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den Locale-Parameter übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas verwenden.
+Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebiets Schema Parameter, der anstelle des aktuellen Gebiets Schemas übergeben wurde.
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist.
 
-Ebenso wie **_cprintf_s** und **_cwprintf_s**, sie überprüfen den Eingabezeiger und die Formatzeichenfolge. Wenn *Format* oder *Argument* sind **NULL**, oder das Format Zeichenfolge ungültige Formatierungszeichen enthält, rufen diese Funktionen den Handler für ungültige Parameter als beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
+Ebenso wie **_cprintf_s** und **_cwprintf_s**überprüfen Sie den Eingabe Zeiger und die Format Zeichenfolge. Wenn *Format* oder *Argument* **null**sind oder wenn die Format Zeichenfolge ungültige Formatierungszeichen enthält, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen-1 zurück und legen **errno** auf **EINVAL**fest.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

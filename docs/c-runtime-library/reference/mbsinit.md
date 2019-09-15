@@ -1,9 +1,9 @@
 ---
 title: mbsinit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbsinit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsinit
 helpviewer_keywords:
 - mbsinit function
 ms.assetid: 4618555b-baaa-4d04-93fa-36abae411034
-ms.openlocfilehash: 8b467ae7f705fc2f4b2b38d3f76f3936f30ec15e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3b1eecc252a2bee83997aa6f2f6f47a96d3321a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331544"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952367"
 ---
 # <a name="mbsinit"></a>mbsinit
 
@@ -41,16 +44,16 @@ int mbsinit(
 
 ### <a name="parameters"></a>Parameter
 
-*ps*<br/>
+*Psel*<br/>
 Ein Zeiger auf eine [mbstate_t](../../c-runtime-library/standard-types.md)-Variable.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Einen Wert ungleich NULL *Ps* ist **NULL** oder, wenn nicht in der Mitte einer Konvertierung.
+Ungleich 0 (null), wenn *PS* **null** oder nicht mitten in einer Konvertierung ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Bei Verwendung einer der ANSI-Funktionen, die akzeptiert eine **Mbstate_t** -Zeiger ist, übergeben Sie die Adresse des Ihre **Mbstate_t** Informationen, ob das letzte Byte im Puffer konvertiert wurde zurückgegeben.
+Wenn Sie eine der ANSI-Funktionen verwenden, die einen **mbstate_t** -Zeiger annimmt, gibt die Übergabe der Adresse Ihrer **mbstate_t** Informationen darüber zurück, ob das letzte Byte im Puffer konvertiert wurde.
 
 Die entsprechende Codepage muss installiert werden, um die multibyte-Zeichen zu unterstützen.
 

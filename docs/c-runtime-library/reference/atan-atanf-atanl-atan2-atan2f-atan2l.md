@@ -1,14 +1,14 @@
 ---
 title: atan, atanf, atanl, atan2, atan2f, atan2l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - atan2f
 - atan2l
 - atan2
 - atanf
 - atan
 - atanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - atan
 - atan2l
@@ -38,16 +41,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 59a67b0d213a11630f551fd7582b44aab60e314f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c485dea281d2b754628c9663e38ea10a9b6ab57
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341716"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939608"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
-Berechnet den Arkustangens des **x** (**Atan**, **Atanf**, und **Atanl**) oder den Arkustangens von **y** / **x** (**atan2**, **atan2f**, und **atan2l**).
+Berechnet den Arkus Tangens **von x** (**Atan**, **atanf**und **atanl**) oder den Arkus Tangens **von y**/**x** (**atan2**, **atan2f**und **atan2l**).
 
 ## <a name="syntax"></a>Syntax
 
@@ -76,9 +79,9 @@ Alle Zahlen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**ATAN** gibt den Arkustangens der *x* im Bereich - π/2 auf π/2-Bogenmaßes zurück. **atan2** gibt den Arkustangens der *y*/*x* in den Bereich - π π Bogenmaß. Wenn *x* ist 0 (null) **Atan** gibt 0 zurück. Wenn beide Parameter von **atan2** 0 sind, gibt die Funktion 0 zurück. Alle Ergebnisse sind in Bogenmaß.
+**Atan** gibt den Arkus Tangens von *x* im Bereich von Bereich-/2 zu adressiert/2 zurück. **atan2** gibt den Arkus Tangens von *y*/*x* im Bereich von Bereich zu adressiert zurück. Wenn *x* 0 ist, gibt **Atan** 0 zurück. Wenn beide Parameter von **atan2** 0 sind, gibt die Funktion 0 zurück. Alle Ergebnisse sind in Bogenmaß.
 
-**atan2** verwendet Sie die Zeichen beider Parameter, um den Quadranten des Rückgabewerts zu bestimmen.
+**atan2** verwendet die Zeichen beider Parameter, um den Quadranten des Rückgabewerts zu bestimmen.
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
@@ -86,11 +89,11 @@ Alle Zahlen.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Atan** -Funktion berechnet den Arkustangens (die umgekehrte Tangensfunktion) von *x*. **atan2** berechnet den Arkustangens des *y*/*x* (Wenn *x* gleich 0 ist, **atan2** π/2 zurück, wenn *y* positiv ist, - π/2-If *y* ist negativ oder 0, wenn *y* ist 0.)
+Die **Atan** -Funktion berechnet den Arkus Tangens (die umgekehrte Tangens Funktion) von *x*. **atan2** berechnet den Arkus Tangens von *y*/*x* (wenn *x* gleich 0 ist, gibt **atan2** den Wert 1 zurück, wenn *y* positiv ist, d/2, wenn *y* negativ ist, oder 0, wenn *y* gleich 0 ist.)
 
-**ATAN** verfügt über eine Implementierung, Streaming SIMD Extensions 2 (SSE2) verwendet. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](set-sse2-enable.md).
+**Atan** verfügt über eine Implementierung, die Streaming SIMD Extensions 2 (SSE2) verwendet. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](set-sse2-enable.md).
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Atan** und **atan2** , Take **"float"** oder **lange** **double**  Argumente. In einem C-Programm **Atan** und **atan2** immer **doppelte** Argumenten und Rückgabetypen einer **doppelte**.
+Da C++ das überladen zulässt, können Sie über Ladungen von **Atan** und **atan2** mit **float** -oder **Long** **Double** -Argumenten aufzurufen. In einem C-Programm akzeptieren **Atan** und **atan2** immer **doppelte** Argumente und geben einen **Double**-Wert zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

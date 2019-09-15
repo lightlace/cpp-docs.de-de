@@ -1,12 +1,12 @@
 ---
 title: strtold, _strtold_l, wcstold, _wcstold_l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - wcstold
 - strtold
 - _strtold_l
 - _wcstold_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcstold_l
 - _wcstold_l
@@ -27,14 +30,14 @@ f1_keywords:
 - _strtold_l
 - wcstold
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-ms.openlocfilehash: dcf1eca5b163c8553b43d747d53537ec424a793c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1a8bc385072f110832788447bfa248bc12b3663
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269188"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957699"
 ---
-# <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold, _strtold_l, wcstold, _wcstold_l
+# <a name="strtold-_strtold_l-wcstold-_wcstold_l"></a>strtold, _strtold_l, wcstold, _wcstold_l
 
 Konvertiert eine Zeichenfolge in einen Gleitkommawert mit langer doppelter Genauigkeit.
 
@@ -74,15 +77,15 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Strtold** gibt den Wert der Gleitkommazahl als eine **lange** **doppelte**, außer wenn die Darstellung würde einen Überlauf verursachen — in diesem Fall gibt die Funktion +/-zurück**HUGE_VALL**. Das Vorzeichen des **HUGE_VALL** entspricht dem Zeichen des Werts, der nicht dargestellt werden kann. **Strtold** gibt 0 zurück, wenn keine Konvertierung ausgeführt werden kann oder ein Unterlauf auftritt.
+" **strautold** " gibt den Wert der Gleit Komma Zahl als **Long** **Double**-Wert zurück, außer wenn die Darstellung einen Überlauf verursacht – in diesem Fall gibt die Funktion +/-**HUGE_VALL**zurück. Das Vorzeichen von **HUGE_VALL** stimmt mit dem Vorzeichen des Werts überein, der nicht dargestellt werden kann. " **strautold** " gibt "0" zurück, wenn keine Konvertierung ausgeführt werden kann oder ein Unterlauf auftritt.
 
-**Wcstold** gibt Werte analog zu **Strtold**. Für beide Funktionen **Errno** nastaven NA hodnotu **ERANGE** Überlauf oder Unterlauf auftritt und der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
+**wcstold** gibt Werte analog zu " **Strauch**" zurück. Bei beiden Funktionen wird **errno** auf **ERANGE** festgelegt, wenn ein Überlauf oder ein Unterlauf auftritt, und der Handler für ungültige Parameter wird aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben.
 
 Weitere Informationen zu diesen Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Jede Funktion wandelt die Eingabezeichenfolge *StrSource* zu einem **lange** **doppelte**. Die **Strtold** Funktion stoppt das Lesen der Zeichenfolge *StrSource* mit dem ersten Zeichen, die nicht als Teil einer Zahl erkannt. Dies ist möglicherweise das beendende NULL-Zeichen. Die Breitzeichen-Version des **Strtold** ist **Wcstold**, dessen *StrSource* Argument ist eine Breitzeichen-Zeichenfolge. Ansonsten verhalten sich diese Funktionen identisch.
+Jede Funktion konvertiert die *Eingabe Zeichenfolge* in einen **Long** **Double**-Wert. Die " **strautold** "-Funktion beendet das Lesen der Zeichenfolge " *strinsource* " beim ersten Zeichen, das nicht als Teil einer Zahl erkannt wird. Dies ist möglicherweise das beendende NULL-Zeichen. Die breit Zeichen Version von " **Strauch** " ist " **wcstold**". Das *unsource* -Argument ist eine Zeichenfolge mit breit Zeichen. Ansonsten verhalten sich diese Funktionen identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -91,15 +94,15 @@ Jede Funktion wandelt die Eingabezeichenfolge *StrSource* zu einem **lange** **d
 |**_tcstold**|**strtold**|**strtold**|**wcstold**|
 |**_tcstold_l**|**_strtold_l**|**_strtold_l**|**_wcstold_l**|
 
-Die **LC_NUMERIC** -kategorieeinstellung des aktuellen Gebietsschemas bestimmt das Erkennen des Basiszeichens in *StrSource*. Weitere Informationen finden Sie unter [setlocale, _wsetlocale](setlocale-wsetlocale.md). Die Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema. **_strtold_l** und **_wcstold_l** sind identisch mit **_strtold** und **_wcstold** , sie stattdessen das Gebietsschema verwenden, das übergeben. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die **LC_NUMERIC** -Kategorieeinstellung des aktuellen Gebiets Schemas bestimmt die Erkennung des Basis Zeichens in " *strinsource*". Weitere Informationen finden Sie unter [setlocale, _wsetlocale](setlocale-wsetlocale.md). Die Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebiets Schema. **_strtold_l** und **_wcstold_l** sind mit **_strtold** und **_wcstold** identisch, außer dass Sie stattdessen das übergebene Gebiets Schema verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Wenn *Endptr* nicht **NULL**, ein Zeiger auf das Zeichen, die Überprüfung beendet, wird gespeichert, an dem Speicherort, auf das von *Endptr*. Wenn keine Konvertierung ausgeführt werden kann (keine gültigen Ziffern gefunden oder ungültige Basis angegeben) den Wert der *StrSource* wird an dem Speicherort gespeichert, auf das von *Endptr*.
+Wenn *endptr* nicht **null**ist, wird ein Zeiger auf das Zeichen, das die Überprüfung beendet hat, an dem Speicherort gespeichert, auf den von *endptr*verwiesen wird. Wenn keine Konvertierung ausgeführt werden kann (keine gültigen Ziffern gefunden oder ungültige Basis angegeben), wird der Wert von " *strinsource* " an dem Speicherort gespeichert, auf den von *endptr*verwiesen wird.
 
-**Strtold** erwartet *StrSource* auf eine Zeichenfolge der folgenden Form zeigt:
+" **strautold** " erwartet, dass " *stresource* " auf eine Zeichenfolge der folgenden Form verweist:
 
-[*Leerzeichen*] [*anmelden*] [*Ziffern*] [. *Ziffern*] [{**d** &#124; **D** &#124; **e** &#124; **E**} [*anmelden* ]*Ziffern*]
+[*Leerzeichen*] [*Sign*] [*Ziffern*] [. *Ziffern*] [{**d** &#124; **d** &#124; &#124; **e}** [*Sign*]*Ziffern*]
 
-Ein *Leerzeichen* besteht möglicherweise aus Leerzeichen und Tabulatorzeichen, die ignoriert werden; *anmelden* ist entweder plus (**+**) oder ein Minuszeichens (**-**); und *Ziffern* sind eine oder mehrere Dezimalstellen. Wenn keine Ziffern vor dem Basiszeichen stehen, muss mindestens eine Ziffer nach dem Basiszeichen stehen. Auf die Dezimalstellen kann ein Exponent folgen, der aus einem einführenden Buchstaben (**d**, **D**, **e** oder **E**) und einer ganzen Zahl mit optionalem Vorzeichen besteht. Wenn weder ein Exponententeil noch ein Basiszeichen angezeigt wird, wird davon ausgegangen, dass ein Basiszeichen auf die letzte Ziffer in der Zeichenfolge folgt. Das erste Zeichen, das dieser Form nicht entspricht, beendet die Überprüfung.
+Ein Leerraum kann aus *Leerzeichen und* Tabstopp Zeichen bestehen, die ignoriert werden. *das Vorzeichen* ist entweder Plus **+** Zeichen () oder **-** Minuszeichen (), und *Ziffern* sind eine oder mehrere Dezimalstellen. Wenn keine Ziffern vor dem Basiszeichen stehen, muss mindestens eine Ziffer nach dem Basiszeichen stehen. Auf die Dezimalstellen kann ein Exponent folgen, der aus einem einführenden Buchstaben (**d**, **D**, **e** oder **E**) und einer ganzen Zahl mit optionalem Vorzeichen besteht. Wenn weder ein Exponententeil noch ein Basiszeichen angezeigt wird, wird davon ausgegangen, dass ein Basiszeichen auf die letzte Ziffer in der Zeichenfolge folgt. Das erste Zeichen, das dieser Form nicht entspricht, beendet die Überprüfung.
 
 ## <a name="requirements"></a>Anforderungen
 

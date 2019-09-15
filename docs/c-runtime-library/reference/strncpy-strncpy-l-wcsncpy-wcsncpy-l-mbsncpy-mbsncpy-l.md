@@ -1,14 +1,14 @@
 ---
 title: strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strncpy
 - _strncpy_l
 - _mbsncpy
 - wcsncpy
 - _mbsncpy_l
 - _wcsncpy_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstrncpy
 - strncpy
@@ -62,12 +65,12 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: fac7e052c5c1d5525946bdbc599404ac56d47f5a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 82e88a48752cb96cca5cb636332fa477aef13d50
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499459"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947213"
 ---
 # <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
@@ -173,10 +176,10 @@ Gibt die *schnellste*zurück. Kein Rückgabewert ist zur Fehleranzeige reservier
 
 ## <a name="remarks"></a>Hinweise
 
-Die Funktion " **strinncpy** " kopiert die anfänglichen *Anzahl* Zeichen von "darsource" in " *strandest* " und gibt " *strandest*" zurück Wenn " *count* " kleiner oder gleich der Länge von " *Strauch*" ist, wird ein NULL-Zeichen nicht automatisch an die kopierte Zeichenfolge angefügt. Wenn *count* größer als die Länge von " *darsource*" ist, wird die Ziel Zeichenfolge mit NULL Zeichen bis zur Längen *Anzahl*aufgefüllt. Das Verhalten von **strncpy** ist nicht definiert, wenn sich die Quell-und Ziel Zeichenfolgen überlappen.
+Die Funktion " **strinncpy** " kopiert die anfänglichen *Anzahl* Zeichen von " *darsource* " in " *strandest* " und gibt " *strandest*" zurück Wenn " *count* " kleiner oder gleich der Länge von " *Strauch*" ist, wird ein NULL-Zeichen nicht automatisch an die kopierte Zeichenfolge angefügt. Wenn *count* größer als die Länge von " *darsource*" ist, wird die Ziel Zeichenfolge mit NULL Zeichen bis zur Längen *Anzahl*aufgefüllt. Das Verhalten von **strncpy** ist nicht definiert, wenn sich die Quell-und Ziel Zeichenfolgen überlappen.
 
 > [!IMPORTANT]
-> " **straupie** " prüft nicht, ob ausreichend SpeicherPlatz in der Dadurch wird eine mögliche Ursache von Pufferüberläufen. Das *count* -Argument schränkt die Anzahl der kopierten Zeichen ein. Es handelt sich nicht um eine Begrenzung der Größe von " *strandest*". Weitere Informationen finden Sie im folgenden Beispiel. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).
+> " **straupie** " prüft *nicht, ob*ausreichend Speicherplatz in der Dadurch wird eine mögliche Ursache von Pufferüberläufen. Das *count* -Argument schränkt die Anzahl der kopierten Zeichen ein. Es handelt sich nicht um eine Begrenzung der Größe von " *strandest*". Weitere Informationen finden Sie im folgenden Beispiel. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 Wenn " *strindest* " oder " *strinsource* " ein **null** -Zeiger ist, oder wenn " *count* " kleiner oder gleich NULL ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen-1 zurück und legen **errno** auf **EINVAL**fest.
 
@@ -208,7 +211,7 @@ Weitere Informationen zur Plattformkompatibilität finden Sie unter [Kompatibili
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird die Verwendung von " **straupie** " veranschaulicht und erläutert, wie Sie missbraucht werden kann, um Programmfehler und Sicherheitsprobleme zu verursachen. Der Compiler generiert eine Warnung für jeden-aufruncpy-aufrub, **ähnlich wie crt_strncpy_x86. c (15): Warning C4996: Diese Funktion oder Variable ist möglicherweise unsicher. Verwenden Sie stattdessen „strncpy_s“. Zum Deaktivieren der Veraltungswarnung verwenden Sie „_CRT_SECURE_NO_WARNINGS“. Details finden Sie in der Onlinehilfe.**
+Im folgenden Beispiel wird die Verwendung von " **straupie** " veranschaulicht und erläutert, wie Sie missbraucht werden kann, um Programmfehler und Sicherheitsprobleme zu verursachen. Der Compiler generiert eine Warnung für jeden-  ****aufruncpy** -aufrub, ähnlich wie crt_strncpy_x86. c (15): Warning C4996: Diese Funktion oder Variable ist möglicherweise unsicher. Verwenden Sie stattdessen „strncpy_s“. Zum Deaktivieren der Veraltungswarnung verwenden Sie „_CRT_SECURE_NO_WARNINGS“. Details finden Sie in der Onlinehilfe.**
 
 ```C
 // crt_strncpy_x86.c

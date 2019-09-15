@@ -1,14 +1,14 @@
 ---
 title: _strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strupr_s
 - _strupr_s_l
 - _mbsupr_s
 - _wcsupr_s_l
 - _mbsupr_s_l
 - _wcsupr_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strupr_s
 - mbsupr_s
@@ -60,19 +63,19 @@ helpviewer_keywords:
 - _strupr_s function
 - wcsupr_s function
 ms.assetid: 82d3a273-9f6f-4a26-9560-919d891e4581
-ms.openlocfilehash: fb0c7027ff53408ba981aa85f97c49dba054e21d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4789116854c8975f58336984d03f1d2897851fdc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304630"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957581"
 ---
-# <a name="struprs-struprsl-mbsuprs-mbsuprsl-wcsuprs-wcsuprsl"></a>_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
+# <a name="_strupr_s-_strupr_s_l-_mbsupr_s-_mbsupr_s_l-_wcsupr_s-_wcsupr_s_l"></a>_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
 
 Konvertiert eine Zeichenfolge in Großbuchstaben unter Verwendung des angegebenen Gebietsschemas oder eines Gebietsschemas, das übergeben wird. Diese Versionen von [_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) enthalten Sicherheitsverbesserungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
 > [!IMPORTANT]
-> **_mbsupr_s** und **_mbsupr_s_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsupr_s** und **_mbsupr_s_l** können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -148,13 +151,13 @@ Das zu verwendende Gebietsschema.
 
 Bei Erfolg Null, ein Fehlercode ungleich 0 (null), wenn ein Fehler auftritt.
 
-Diese Funktionen überprüfen ihre Parameter. Wenn *str* ist eine **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktionen geben **EINVAL** und **Errno** zu **EINVAL**. Wenn *NumberOfElements* ist kleiner als die Länge der Zeichenfolge, die Funktionen geben **ERANGE** und **Errno** zu **ERANGE**.
+Diese Funktionen überprüfen ihre Parameter. Wenn *Str* ein **null** -Zeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md) Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben die Funktionen **EINVAL** zurück und legen **errno** auf **EINVAL**fest. Wenn " *numofelements* " kleiner als die Länge der Zeichenfolge ist, geben die Funktionen " **ERANGE** " zurück und setzen " **errno** " auf " **ERANGE**".
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_strupr_s** -Funktion konvertiert an der Stelle, jedem Kleinbuchstaben in *str* in Großbuchstaben. **_wcsupr_s** ist die Breitzeichen-Version von **_strupr_s**. **_mbsupr_s** ist die Multibyte-Zeichensatz-Version von **_strupr_s**.
+Die **_strupr_s** -Funktion konvertiert direkt jeden Kleinbuchstaben in *Str* in Großbuchstaben. **_wcsupr_s** ist die breit Zeichen Version von **_strupr_s**. **_mbsupr_s** ist die multibytezeichenversion von **_strupr_s**.
 
-Die Konvertierung richtet sich nach der **LC_CTYPE** -kategorieeinstellung des Gebietsschemas. Andere Zeichen sind nicht betroffen. Weitere Informationen zu **LC_CTYPE**, finden Sie unter [Setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema; die Versionen mit dem **_l** -Suffix sind beinahe identisch, außer dass sie das übergebene Gebietsschema verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die Konvertierung wird durch die **LC_CTYPE** -Kategorieeinstellung des Gebiets Schemas bestimmt. Andere Zeichen sind nicht betroffen. Weitere Informationen zu **LC_CTYPE**finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebiets Schema. die Visionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch stattdessen das übergebene Gebiets Schema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

@@ -1,11 +1,11 @@
 ---
 title: tanh, tanhf, tanhl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - tanh
 - tanhf
 - tanhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tanh
 - tanhf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 3b9c7269d3c945301106098fc944383bbc364e5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d249768ed26a55e639cced55bae6b923dbf521b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258316"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957533"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh, tanhf, tanhl
 
@@ -61,15 +64,15 @@ Winkel im Bogenmaß.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Tanh** Funktionen geben den hyperbolischen Tangens *x*. Es gibt keine Fehlerrückgabe.
+Die **tanh** -Funktionen geben den hyperbolischen Tangens von *x*zurück. Es gibt keine Fehlerrückgabe.
 
-|Eingabe|SEH-Ausnahme|**Matherr** Ausnahme|
+|Eingabe|SEH-Ausnahme|**Matherr** Distanzieren|
 |-----------|-------------------|-------------------------|
 |± QNAN,IND|none|_DOMAIN|
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Tanh** verwenden und zurückgeben **"float"** oder **lange** **doppelte** Werte. In einem C-Programm **Tanh** immer Double und gibt **doppelte**.
+Da C++ das überladen zulässt, können Sie über Ladungen von **tanh** aufzurufen, die **float** -oder **Long** **Double** -Werte verwenden und zurückgeben. In einem C-Programm übernimmt **tanh** immer Double und gibt **Double**zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

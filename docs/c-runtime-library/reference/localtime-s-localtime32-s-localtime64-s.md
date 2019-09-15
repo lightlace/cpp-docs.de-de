@@ -1,11 +1,11 @@
 ---
 title: localtime_s, _localtime32_s, _localtime64_s
 ms.date: 07/09/2019
-apiname:
+api_name:
 - _localtime64_s
 - _localtime32_s
 - localtime_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _localtime32_s
 - localtime32_s
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 454ab492fbe8a31b9ceeca518fa5e590271dbf06
-ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
+ms.openlocfilehash: c00a5d23441612d0e70bfafd571bcb25250edb09
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67693411"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953337"
 ---
-# <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
+# <a name="localtime_s-_localtime32_s-_localtime64_s"></a>localtime_s, _localtime32_s, _localtime64_s
 
-Konvertiert eine **Time_t** Zeit-Wert, der eine **tm** -Struktur und berichtigt die lokale Zeitzone. Dies sind Versionen von [localtime, _localtime32, _localtime64](localtime-localtime32-localtime64.md) mit Sicherheitsverbesserungen wie in den [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
+Konvertiert einen **time_t** -Zeitwert in eine **TM** -Struktur und korrigiert für die lokale Zeitzone. Dies sind Versionen von [localtime, _localtime32, _localtime64](localtime-localtime32-localtime64.md) mit Sicherheitsverbesserungen wie in den [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -74,48 +77,48 @@ Null, wenn erfolgreich. Der Rückgabewert ist ein Fehlercode, wenn ein Fehler au
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|*tmDest*|*sourceTime*|Rückgabewert|Wert in *TmDest*|Ruft ungültige Parametertyphandler auf|
+|*tmDest*|*sourceTime*|Rückgabewert|Wert in *tmdest*|Ruft ungültige Parametertyphandler auf|
 |-----------|------------|------------------|--------------------|---------------------------------------|
 |**NULL**|any|**EINVAL**|Nicht geändert|Ja|
-|Nicht **NULL** (zeigt auf gültigen Speicher)|**NULL**|**EINVAL**|Alle Felder auf-1 festgelegt|Ja|
-|Nicht **NULL** (zeigt auf gültigen Speicher)|kleiner als 0 oder größer als **_MAX__TIME64_T**|**EINVAL**|Alle Felder auf-1 festgelegt|Nein|
+|Not **null** (zeigt auf gültigen Speicher)|**NULL**|**EINVAL**|Alle Felder auf-1 festgelegt|Ja|
+|Not **null** (zeigt auf gültigen Speicher)|kleiner als 0 (null) oder größer als **_MAX__TIME64_T**|**EINVAL**|Alle Felder auf-1 festgelegt|Nein|
 
-Im Fall der ersten zwei Fehlerbedingungen, wird der ungültige Parameterhandler aufgerufen, wie es unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und zurückgeben **EINVAL**.
+Im Fall der ersten zwei Fehlerbedingungen, wird der ungültige Parameterhandler aufgerufen, wie es unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird. Wenn die weitere Ausführung zugelassen wird, legen diese Funktionen " **errno** " auf " **EINVAL** " fest und geben " **EINVAL**" zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Localtime_s** -Funktion konvertiert eine Zeit, gespeichert als eine [Time_t](../../c-runtime-library/standard-types.md) Wert und speichert das Ergebnis in eine Struktur vom Typ [tm](../../c-runtime-library/standard-types.md). Die **Time_t** Wert *SourceTime* darstellt, die die Sekunden seit Mitternacht vergangenen (00: 00:00), 1. Januar 1970, UTC. Dieser Wert in der Regel aus einer der [Zeit](time-time32-time64.md) Funktion.
+Die **localtime_s** -Funktion konvertiert eine Zeit, die als [time_t](../../c-runtime-library/standard-types.md) -Wert gespeichert ist, und speichert das Ergebnis in einer Struktur vom Typ [TM](../../c-runtime-library/standard-types.md). Der **time_t** -Wert *sourcetime* stellt die Sekunden dar, die seit Mitternacht (00:00:00), dem 1. Januar 1970, UTC, verstrichen sind. Dieser Wert wird normalerweise aus der [time](time-time32-time64.md) -Funktion abgerufen.
 
-**Localtime_s** für die lokale Zeitzone korrigiert werden, wenn der Benutzer zuerst die globalen Umgebungsvariablen **TZ**. Wenn **TZ** festgelegt wird, werden drei andere Umgebungsvariablen ( **_timezone**, **_daylight**, und **_tzname**) werden ebenfalls automatisch festgelegt. Wenn die **TZ** Variable nicht festgelegt ist, **Localtime_s** versucht, die in der Datum/Uhrzeit-Anwendung in der Systemsteuerung festgelegten Zeitzonendaten zu verwenden. Wenn diese Information nicht abgerufen werden kann, wird standardmäßig PST8PDT verwendet, was die Zeitzone Pacific (PTC) darstellt. Unter [_tzset](tzset.md) finden Sie eine Beschreibung dieser Variablen. **RTZ** ist ein Microsoft-Erweiterung und nicht Teil der ANSI-Standarddefinition von **Localtime**.
+**localtime_s** korrigiert für die lokale Zeitzone, wenn der Benutzer zuerst die globale Umgebungsvariable **TZ**festlegt. Wenn **TZ** festgelegt ist, werden auch drei andere Umgebungsvariablen ( **_timezone**, **_daylight**und **_tzname**) automatisch festgelegt. Wenn die **TZ** -Variable nicht festgelegt ist, versucht **localtime_s** , die in der Systemsteuerung in der Datums-/uhrzeitanwendung angegebenen Zeitzoneninformationen zu verwenden. Wenn diese Information nicht abgerufen werden kann, wird standardmäßig PST8PDT verwendet, was die Zeitzone Pacific (PTC) darstellt. Unter [_tzset](tzset.md) finden Sie eine Beschreibung dieser Variablen. **TZ** ist eine Microsoft-Erweiterung, die nicht Teil der ANSI-Standard Definition von **localtime**ist.
 
 > [!NOTE]
 > Die Zielumgebung soll versuchen zu bestimmen, ob die Sommerzeit wirksam ist.
 
-**_localtime64_s**, verwendet der **__time64_t** Struktur, die Datumsangaben bis 23:59:59 am 18. Januar 3001, koordinierte Weltzeit (UTC) ausgedrückt werden können, während **_localtime32_s** Datumsangaben bis 23:59:59 am 18. Januar 2038, UTC darstellt.
+**_localtime64_s**, das die **__time64_t** -Struktur verwendet, ermöglicht das Ausdrücken von Daten bis 23:59:59, 18. Januar 3001, koordinierte Weltzeit (UTC), während **_localtime32_s** Datumsangaben bis 23:59:59 Januar 18 darstellt. 2038, UTC.
 
-**Localtime_s** ist eine Inlinefunktion, die ergibt **_localtime64_s**, und **Time_t** entspricht **__time64_t**. Wenn Sie erzwingen, dass den Compiler interpretiert müssen **Time_t** als das alte 32-Bit **Time_t**, können Sie definieren **_USE_32BIT_TIME_T**. Dadurch wird **Localtime_s** ergibt **_localtime32_s**. Dies ist nicht zu empfehlen, weil bei Ihrer Anwendung nach dem 18. Januar 2038 ein Fehler auftreten kann. Die Verwendung dieses Makros ist auf 64-Bit-Plattformen nicht zulässig.
+**localtime_s** ist eine Inline Funktion, die zu **_localtime64_s**ausgewertet wird, und **time_t** entspricht **__time64_t**. Wenn Sie den Compiler zwingen müssen, **time_t** als das alte 32-Bit- **time_t**zu interpretieren, können Sie **_USE_32BIT_TIME_T**definieren. Dies führt dazu, dass **localtime_s** zu **_localtime32_s**ausgewertet wird. Dies ist nicht zu empfehlen, weil bei Ihrer Anwendung nach dem 18. Januar 2038 ein Fehler auftreten kann. Die Verwendung dieses Makros ist auf 64-Bit-Plattformen nicht zulässig.
 
-Die Felder des Strukturtyps [tm](../../c-runtime-library/standard-types.md) speichern Sie die folgenden Werte ein, von denen jeder eine **Int**.
+Die Felder des Struktur Typs [TM](../../c-runtime-library/standard-types.md) speichern die folgenden Werte, von denen jeder ein **int**ist.
 
 |Feld|Beschreibung|
 |-|-|
-|**tm_sec**|Sekunden nach Minute (0 - 59).|
-|**tm_min**|Minuten nach Stunde (0 - 59).|
-|**tm_hour**|Stunden seit Mitternacht (0 - 23).|
+|**tm_sec**|Sekunden nach Minute (0-59).|
+|**tm_min**|Minuten nach Stunde (0-59).|
+|**tm_hour**|Stunden seit Mitternacht (0-23).|
 |**tm_mday**|Tag des Monats (1-31).|
-|**tm_mon**|Monat (0 - 11; Januar = 0).|
+|**tm_mon**|Monat (0-11; Januar = 0).|
 |**tm_year**|Jahr (aktuelles Jahr minus 1900).|
-|**tm_wday**|Tag der Woche (0 - 6; Sonntag = 0).|
-|**tm_yday**|Tag des Jahres (0 - 365; 1. Januar = 0).|
+|**tm_wday**|Wochentag (0-6; Sonntag = 0).|
+|**tm_yday**|Tag des Jahres (0-365; 1. Januar = 0).|
 |**tm_isdst**|Positiver Wert bei Sommerzeit; 0 bei Winterzeit; negativ bei unbekannter Zeit.|
 
-Wenn die **TZ** -Umgebungsvariable festgelegt ist, wird der C-Laufzeitbibliothek setzt voraus, dass Regeln für die USA für die Implementierung der Berechnung der Sommerzeit (DST).
+Wenn die **TZ** -Umgebungsvariable festgelegt ist, setzt die C-Lauf Zeit Bibliothek voraus, dass die Regeln für die USA für die Implementierung der Berechnung der Sommerzeit (DST) angemessen sind.
 
 ## <a name="requirements"></a>Anforderungen
 
 |-Routine zurückgegebener Wert|Erforderlicher C-Header|Erforderlicher C++-Header|
 |-------------|---------------------|-|
-|**localtime_s**, **_localtime32_s**, **_localtime64_s**|\<time.h>|\<CTime > oder \<time.h >|
+|**localtime_s**, **_localtime32_s**, **_localtime64_s**|\<time.h>|\<CTime-> \<oder Time. h >|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

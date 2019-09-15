@@ -1,12 +1,12 @@
 ---
 title: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbctolower_l
 - _mbctoupper_l
 - _mbctoupper
 - _mbctolower
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbctoupper_l
 - mbctolower_l
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-ms.openlocfilehash: e620af526e5f0af02868bba4ba635e9ed6e34ff6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75b3926ea294fd6fe66b4e6865ac0c7df6d1b596
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156797"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952540"
 ---
-# <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
+# <a name="_mbctolower-_mbctolower_l-_mbctoupper-_mbctoupper_l"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 
 Testet und konvertiert den Groß-/Kleinbuchstaben eines Multibytezeichen.
 
@@ -85,20 +88,20 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt das konvertierte Zeichen *c*, sofern möglich. Andernfalls wird das Zeichen zurückgegeben *c* unverändert.
+Jede dieser Funktionen gibt, sofern möglich, das konvertierte Zeichen *c*zurück. Andernfalls wird das Zeichen *c* unverändert zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Funktionen testen ein Zeichen *c* und, falls möglich, eine der folgenden Konvertierungen.
+Die Funktionen testen ein Zeichen *c* und wenden, wenn möglich, eine der folgenden Konvertierungen an.
 
 |Routinen|Konvertiert|
 |--------------|--------------|
 |**_mbctolower**, **_mbctolower_l**|Großbuchstaben in Kleinbuchstaben.|
 |**_mbctoupper**, **_mbctoupper_l**|Kleinbuchstaben in Großbuchstaben.|
 
-Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Version dieser Funktion ohne die **_l** -Suffix verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Version mit der **_l** -Suffix ist beinahe identisch, außer dass mithilfe den Locale-Parameter Stattdessen übergeben. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Version dieser Funktion ohne das **_l** -Suffix verwendet das aktuelle Gebiets Schema für dieses vom Gebiets Schema abhängige Verhalten. die Version mit dem **_l** -Suffix ist beinahe identisch, verwendet jedoch stattdessen den übergebenen Gebiets Schema Parameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-In früheren Versionen **_mbctolower** hieß **Jtolower**, und **_mbctoupper** hieß **Jtoupper**. Verwenden Sie bei dem neuen Code stattdessen die die neuen Namen.
+In früheren Versionen hieß **_mbctolower** **jtolower**, und **_mbctoupper** wurde als **jtouppername**bezeichnet. Verwenden Sie bei dem neuen Code stattdessen die die neuen Namen.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

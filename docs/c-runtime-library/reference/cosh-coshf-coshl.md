@@ -1,11 +1,11 @@
 ---
 title: cosh, coshf, coshl
 ms.date: 04/11/2018
-apiname:
+api_name:
 - cosh
 - coshf
 - coshl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cosh
 - coshf
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 0f55e084e760cb6d04dbe7ec4fefb5e2ac1d79fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 446988e67ca6e3b4a3839a9336f1ea4e2755c124
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347443"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938997"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh, coshf, coshl
 
@@ -61,16 +64,16 @@ Winkel im Bogenmaß.
 
 Der hyperbolische Kosinus von *x*.
 
-Standardmäßig ist das Ergebnis zu groß, eine **Cosh**, **Coshf**, oder **Coshl** aufrufen, gibt die Funktion zurück **HUGE_VAL** und **Errno** zu **ERANGE**.
+Wenn das Ergebnis in einem **cosh**-, **coshf**-oder **coshl** -Befehl zu groß ist, gibt die Funktion standardmäßig **HUGE_VAL** zurück und legt **errno** auf **ERANGE**fest.
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
 |± **QNAN**, **IND**|none|**_DOMAIN**|
-|*x* ≥ 7.104760e+002|**INEXACT**+**OVERFLOW**|**ÜBERLAUF**|
+|*x* ≥ 7.104760e+002|**UNGENAUER**+**ÜBERLAUF**|**LÄUFEN**|
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Cosh** verwenden und zurückgeben **"float"** oder **lange** **doppelte** Werte. In einem C-Programm **Cosh** immer Double und gibt eine **doppelte**.
+Da C++ das überladen zulässt, können Sie über Ladungen von **cosh** aufzurufen, die **float** -oder **Long** **Double** -Werte verwenden und zurückgeben. In einem C-Programm nimmt **cosh** immer einen **Double**-Wert an und gibt ihn zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,7 +85,7 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 
 ## <a name="example"></a>Beispiel
 
-Siehe das Beispiel in [Sinh, Sinhf, Sinhl](sinh-sinhf-sinhl.md).
+Siehe das Beispiel in [sinh, Sinhf, sinhl](sinh-sinhf-sinhl.md).
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,10 +1,10 @@
 ---
 title: _ismbbblank, _ismbbblank_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbblank_l
 - _ismbbblank
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,16 +16,19 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
-ms.openlocfilehash: c6709d5a5870c44d200b704e4a34043ff9c37226
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21f4c88b00774159f8e6945973641e67718494e6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286944"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954246"
 ---
-# <a name="ismbbblank-ismbbblankl"></a>_ismbbblank, _ismbbblank_l
+# <a name="_ismbbblank-_ismbbblank_l"></a>_ismbbblank, _ismbbblank_l
 
 Bestimmt, ob ein angegebenes Multibytezeichen ein Leerzeichen ist.
 
@@ -54,7 +57,7 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_ismbbblank** gibt einen Wert ungleich NULL zurück, wenn *c* stellt ein Leerzeichen (0 x 20), ein horizontales Tabstoppzeichen (0 x 09) oder ein gebietsschemaspezifisches Zeichen, die verwendet wird, zum Trennen von Wörtern in einer Zeile des Texts für die **Isspace** "true", andernfalls wird 0 zurückgegeben. **_ismbbblank** verwendet das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten. **_ismbbblank_l** ist identisch mit dem Unterschied, dass stattdessen verwendet jedoch den Gebietsschemaparameter, der übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+**_ismbbblank** gibt einen Wert ungleich 0 (null) zurück, wenn *c* ein Leerzeichen (0x20), ein horizontales Tabstopp Zeichen (0x09) oder ein Gebiets Schema spezifisches Zeichen darstellt, das zum Trennen von Wörtern in einer Textzeile verwendet wird, für die **isspace** den Wert true aufweist. Andernfalls wird 0 zurückgegeben. **_ismbbblank** verwendet das aktuelle Gebiets Schema für jedes vom Gebiets Schema abhängige Verhalten. **_ismbbblank_l** ist beinahe identisch, verwendet jedoch stattdessen das übergebene Gebiets Schema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,12 +1,12 @@
 ---
 title: _printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _printf_p
 - _wprintf_p
 - _printf_p_l
 - _wprintf_p_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wprintf_p
 - _wprintf_p
@@ -39,14 +42,14 @@ helpviewer_keywords:
 - tprintf_p_l function
 - _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
-ms.openlocfilehash: c7d798bde3ab68541bdcd64b768275b864694284
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 555739fbcdd3503461d7b831660a94602f244aa3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345183"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950267"
 ---
-# <a name="printfp-printfpl-wprintfp-wprintfpl"></a>_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
+# <a name="_printf_p-_printf_p_l-_wprintf_p-_wprintf_p_l"></a>_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 
 Druckt die formatierte Ausgabe in den Standardausgabestream und ermöglicht die Festlegung der Reihenfolge, in der die Parameter in der Formatzeichenfolge verwendet werden.
 
@@ -90,18 +93,18 @@ Gibt die Anzahl gedruckter Zeichen oder einen negativen Wert zurück, wenn ein F
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_printf_p** -Funktion formatiert und gibt eine Reihe von Zeichen und Werten in den Standardausgabestream **"stdout"**. Wenn Argumente der *Format* Zeichenfolge, die *Format* Zeichenfolge muss Spezifikationen enthalten, die das Ausgabeformat der Argumente festlegen (finden Sie unter [Printf_p-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md)).
+Die **_printf_p** -Funktion formatiert und druckt eine Reihe von Zeichen und Werten für den **Standardausgabestream "stdout**". Wenn Argumente der *Format* Zeichenfolge folgen, muss die *Format* Zeichenfolge Spezifikationen enthalten, die das Ausgabeformat für die Argumente bestimmen (siehe [Printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md)).
 
-Der Unterschied zwischen **_printf_p** und **Printf_s** ist, die **_printf_p** positionelle Parameter unterstützt, wodurch angeben der Reihenfolge, in denen die Argumente sind, in der Formatzeichenfolge verwendet. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).
+Der Unterschied zwischen **_printf_p** und **printf_s** besteht darin, dass **_printf_p** Positions Parameter unterstützt, wodurch die Reihenfolge angegeben werden kann, in der die Argumente in der Format Zeichenfolge verwendet werden. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_wprintf_p** ist die Breitzeichen-Version von **_printf_p**; sie verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **_printf_p** unterstützt derzeit keine Ausgabe in eine UNICODE-Stream.
+**_wprintf_p** ist die breit Zeichen Version von **_printf_p**; Sie Verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **_printf_p** unterstützt derzeit nicht die Ausgabe in einen Unicode-Stream.
 
-Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
+Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebiets Schema Parameter, der anstelle des aktuellen Thread Gebiets Schemas übergeben wurde.
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist.
 
-Wenn *Format* oder *Argument* sind **NULL**, oder die Formatzeichenfolge enthält ungültige Formatierungszeichen **_printf_p** und **_wprintf_p** Funktionen einen Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktion gibt-1 zurück und legt **Errno** zu **EINVAL**.
+Wenn *Format* oder *Argument* **null**sind oder wenn die Format Zeichenfolge ungültige Formatierungszeichen enthält, rufen **_printf_p** -und **_wprintf_p** -Funktionen einen Handler für ungültige Parameter auf, wie unter [Parameter Validierung beschrieben. ](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion-1 zurück und legt **errno** auf **EINVAL**fest.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -117,7 +120,7 @@ Wenn *Format* oder *Argument* sind **NULL**, oder die Formatzeichenfolge enthäl
 |**_printf_p**, **_printf_p_l**|\<stdio.h>|
 |**_wprintf_p**, **_wprintf_p_l**|\<stdio.h> oder \<wchar.h>|
 
-Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Standardstreamhandles, die mit der Konsole verknüpft sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die-Konsole wird in universelle Windows-Plattform-Apps (UWP) nicht unterstützt. Die Standarddaten Strom Handles, die der Konsole, **stdin**, **stdout**und **stderr**zugeordnet sind, müssen umgeleitet werden, bevor Sie von C-Lauf Zeitfunktionen in UWP-Apps verwendet werden können. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

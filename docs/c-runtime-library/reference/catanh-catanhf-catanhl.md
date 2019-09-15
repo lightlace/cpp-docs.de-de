@@ -1,11 +1,11 @@
 ---
 title: catanh, catanhf, catanhl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - catanh
 - catanhf
 - catanhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - catanh
 - catanhf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - catanhf function
 - catanhl function
 ms.assetid: 1b6021cb-647a-41b4-9d7f-919cc8b57b86
-ms.openlocfilehash: 8c71d4e44de72b54fd334fc2464ca221f36855a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b21427eb4ab1a3ec8eab10d52e636bf253bc947
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340962"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943231"
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh, catanhf, catanhl
 
-Ruft den umgekehrten hyperbolischen Tangens einer komplexen Zahl mit achsenabschnitten außerhalb des Intervalls [-1; + 1] auf der reellen Achse ab.
+Ruft den umgekehrten hyperbolischen Tangens einer komplexen Zahl mit Verzweigungs Schnitten außerhalb des Intervalls [-1; + 1] entlang der reellen Achse ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,11 +71,11 @@ Eine komplexe Zahl, die einen Winkel als Bogenmaß darstellt
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der umgekehrte hyperbolische Tangens von *z*, im Bogenmaß zurück. Das Ergebnis ist unbegrenzt, auf der reellen Achse, und klicken Sie im Intervall [-Iπ/2; + Iπ/2] auf der imaginären Achse. Domänenfehler werden auftreten, wenn *z* liegt außerhalb des Intervalls [-1, + 1]. Es wird ein polstellenfehler auftreten, wenn *z* -1 oder + 1.
+Der umgekehrte hyperbolische Tangens von *z*im Bogenmaße. Das Ergebnis wird auf der realen Achse und im Intervall [-ID/2; + iy/2] entlang der imaginären Achse unbegrenzt. Ein Domänen Fehler tritt auf, wenn sich *z* außerhalb des Intervalls [-1, + 1] befindet. Ein Pole-Fehler tritt auf, wenn *z* den Wert-1 oder + 1 hat.
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Catanh** verwenden und zurückgeben **_Fcomplex** und **_Lcomplex** Werte. In einem C-Programm **Catanh** immer Double und gibt eine **_Dcomplex** Wert.
+Da C++ das überladen zulässt, können Sie über Ladungen von " **callanh** " aufzurufen, die **_Fcomplex** -und **_Lcomplex** -Werte verwenden und zurückgeben. In einem C-Programm übernimmt und gibt "_Dcomplex **" immer einen** Wert vom Typ " " zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

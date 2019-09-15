@@ -1,10 +1,10 @@
 ---
 title: _strdate_s, _wstrdate_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strdate_s
 - _wstrdate_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strdate_s
 - wstrdate_s
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _strdate_s function
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
-ms.openlocfilehash: 85c9ab7dcad68f3aa4832236461cd38b07d4ae44
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fadd30ec81cff59d675212e59c8513656c7b2f35
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353988"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940753"
 ---
-# <a name="strdates-wstrdates"></a>_strdate_s, _wstrdate_s
+# <a name="_strdate_s-_wstrdate_s"></a>_strdate_s, _wstrdate_s
 
 Kopieren des aktuellen Systemdatums in einen Puffer. Dies sind Versionen von [_strdate, _wstrdate](strdate-wstrdate.md) mit Sicherheitsverbesserungen wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
@@ -79,26 +82,26 @@ Null, wenn erfolgreich. Der Rückgabewert ist ein Fehlercode, wenn ein Fehler au
 
 ## <a name="error-conditions"></a>Fehlerbedingungen
 
-|*buffer*|*numberOfElements*|Zurück|Inhalt der *Puffer*|
+|*buffer*|*numberOfElements*|Zurück|Inhalt des *Puffers*|
 |--------------|------------------------|------------|--------------------------|
 |**NULL**|(alle)|**EINVAL**|Nicht geändert|
-|Nicht **NULL** (zeigt auf gültigen Puffer)|0|**EINVAL**|Nicht geändert|
-|Nicht **NULL** (zeigt auf gültigen Puffer)|0 < *NumberOfElements* < 9|**EINVAL**|Leere Zeichenfolge|
-|Nicht **NULL** (zeigt auf gültigen Puffer)|*numberOfElements* >= 9|0|Aktuelles Datum, wie es in den Hinweisen angegeben wurde|
+|Not **null** (Verweis auf gültigen Puffer)|0|**EINVAL**|Nicht geändert|
+|Not **null** (Verweis auf gültigen Puffer)|0 < der *Nummerierungen* < 9|**EINVAL**|Leere Zeichenfolge|
+|Not **null** (Verweis auf gültigen Puffer)|*Nummerierungen* > = 9|0|Aktuelles Datum, wie es in den Hinweisen angegeben wurde|
 
 ## <a name="security-issues"></a>Sicherheitsprobleme
 
-Übergabe eines ungültigen nicht **NULL** Wert für der Puffer zu einer zugriffsverletzung führt, wenn die *NumberOfElements* Parameter größer als 9 ist.
+Wenn Sie einen ungültigen nicht- **null** -Wert für den Puffer übergeben, führt dies zu einer Zugriffsverletzung, wenn der Parameter " *numofelements* " größer als 9 ist.
 
-Übergeben von Werten für die Größe, ist größer als die tatsächliche Größe der *Puffer* Pufferüberlauf führt.
+Das übergeben von Werten für die Größe, die größer als die tatsächliche Größe des *Puffers* ist, führt zu einem Pufferüberlauf.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktionen bieten sicherere Versionen **_strdate** und **_wstrdate**. Die **_strdate_s** Funktion kopiert das aktuelle Datum in den Puffer, der auf *Puffer*, im Format **mm**/**TT** / **Yy**, wobei **mm** zwei Ziffern für den Monat **TT** zwei Ziffern für den Tag und **JJ**  ist die letzten zwei Ziffern des Jahres. Z. B. die Zeichenfolge **12/05/99** 5. Dezember 1999 darstellt. Die Zeichenfolge muss mindestens eine Länge von 9 Zeichen aufweisen.
+Diese Funktionen bieten sicherere Versionen von **_strdate** und **_wstrdate**. Die **_strdate_s** -Funktion kopiert das aktuelle Systemdatum in den Puffer, auf den vom *Puffer*, formatiert **mm**/**DD**/**yy**, verwiesen wird, wobei **mm** zwei Ziffern darstellt, die den Monat, dd, darstellen.gibt zwei Ziffern an, die den Tag darstellen, und **yy** ist die letzten zwei Ziffern des Jahres. Die Zeichenfolge **12/05/99** stellt z. b. den 5. Dezember 1999 dar. Die Zeichenfolge muss mindestens eine Länge von 9 Zeichen aufweisen.
 
-**_wstrdate_s** ist eine Breitzeichen-Version von **_strdate_s**; der Wert Argument- und Rückgabetypen der **_wstrdate_s** sind Breitzeichen Zeichenfolgen. Anderenfalls verhalten sich diese Funktionen identisch.
+**_wstrdate_s** ist eine breit Zeichen Version von **_strdate_s**. Das Argument und der Rückgabewert von **_wstrdate_s** sind Zeichen folgen mit breit Zeichen. Anderenfalls verhalten sich diese Funktionen identisch.
 
-Wenn *Puffer* ist eine **NULL** -Zeiger ist, oder wenn *NumberOfElements* ist kleiner als 9 Zeichen lang sein, den Handler für ungültige Parameter aufgerufen, siehe [ Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL** ist der Puffer **NULL** oder, wenn *NumberOfElements*ist kleiner als oder gleich 0, oder legen **Errno** zu **ERANGE** Wenn *NumberOfElements* weniger als 9 ist.
+Wenn der *Puffer* ein **null** -Zeiger ist oder wenn " *suffiofelements* " weniger als 9 Zeichen umfasst, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen "-1" zurück und setzen " **errno** " auf " **EINVAL** ", wenn der Puffer **null** ist, oder wenn " *numofelements* " kleiner oder gleich 0 ist, oder wenn " **errno** " auf " **ERANGE** " festgelegt istist kleiner als 9.
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

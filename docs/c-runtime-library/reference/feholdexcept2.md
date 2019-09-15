@@ -1,9 +1,9 @@
 ---
 title: feholdexcept
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feholdexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - feholdexcept
 - fenv/feholdexcept
 helpviewer_keywords:
 - feholdexcept function
 ms.assetid: 88e512ae-b5d8-452c-afe9-c824cd3ef1d8
-ms.openlocfilehash: 26097398b9f9d498ab4c56690dc9c6cbb950bafb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd55a4ed627d731f7246d589d4b74b4173e31d4e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334384"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941187"
 ---
 # <a name="feholdexcept"></a>feholdexcept
 
@@ -43,18 +46,18 @@ int feholdexcept(
 
 ### <a name="parameters"></a>Parameter
 
-*penv*<br/>
-Zeiger auf ein **Fenv_t** Objekt, das eine Kopie der gleitkommaumgebung enthalten.
+*nach-oben*<br/>
+Zeiger auf ein **fenv_t** -Objekt, das eine Kopie der Gleit Komma Umgebung enthalten soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn die Funktion erfolgreich Behandlung von nicht-Gleitkommaausnahmen aktivieren kann.
+Gibt 0 (null) nur dann zurück, wenn die Funktion eine nicht Ende Gleit Komma Ausnahmebehandlung erfolgreich aktivieren kann.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Feholdexcept** Funktion dient zum Speichern des Zustands des die aktuelle gleitkommaumgebung in das **Fenv_t** Objekt verweist *Penv*, und die Umgebung festgelegt werden soll Unterbrechen Sie die Ausführung von Gleitkommaausnahmen nicht. Dies wird als ununterbrochener Modus bezeichnet.  Dieser Modus wird fortgesetzt, bis die Umgebung mithilfe von [fesetenv](fesetenv1.md) oder [feupdateenv](feupdateenv.md) wiederhergestellt wird.
+Die **feholdexcept** -Funktion wird verwendet, um den Zustand der aktuellen Gleit Komma Umgebung im **fenv_t** -Objekt zu speichern, auf das von *KV*verwiesen wird, und um festzulegen, dass die Umgebung die Ausführung bei Gleit Komma Ausnahmen nicht unterbricht. Dies wird als ununterbrochener Modus bezeichnet.  Dieser Modus wird fortgesetzt, bis die Umgebung mithilfe von [fesetenv](fesetenv1.md) oder [feupdateenv](feupdateenv.md) wiederhergestellt wird.
 
-Sie können diese Funktion am Anfang einer Unterroutine verwenden, die eine oder mehrere Gleitkommaausnahmen vor dem Aufrufer verbergen muss. Wenn eine Ausnahme melden möchten, löschen Sie einfach die unerwünschten Ausnahmen mithilfe von [Feclearexcept](feclearexcept1.md) und beenden Sie dann den ununterbrochenen Modus durch einen Aufruf von **Feupdateenv**.
+Sie können diese Funktion am Anfang einer Unterroutine verwenden, die eine oder mehrere Gleitkommaausnahmen vor dem Aufrufer verbergen muss. Um eine Ausnahme zu melden, können Sie einfach die unerwünschten Ausnahmen löschen, indem Sie " [feclear" außer](feclearexcept1.md) verwenden und dann den nicht-beenden-Modus mit einem Aufrufen von " **feupdateenv**" beenden.
 
 Um diese Funktion zu verwenden, müssen Sie vor dem Aufruf Gleitkommaoptimierungen deaktivieren, die den Zugriff mithilfe der `#pragma fenv_access(on)`-Direktive verhindern könnten. Weitere Informationen finden Sie unter [fenv_access](../../preprocessor/fenv-access.md).
 

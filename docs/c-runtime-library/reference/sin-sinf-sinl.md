@@ -1,11 +1,11 @@
 ---
 title: sin, sinf, sinl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - sinl
 - sinf
 - sin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sinl
 - sinf
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4ef8ac08ada6162932bbf9b872f30e6aa88b79b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356250"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948064"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
-Berechnet den Sinus eines Gleitkommawerts.
+Berechnet den Sinus eines Gleit Komma Werts.
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,18 +65,18 @@ Winkel im Bogenmaß.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **sin** Funktionen geben den Sinus des *x*. Wenn *x* ist größer als oder gleich 263 oder kleiner als oder gleich-263, tritt ein Genauigkeitsverlust in das Ergebnis.
+Die **Sin** -Funktionen geben den Sinus von *x*zurück. Wenn *x* größer oder gleich 263 oder kleiner oder gleich-263 ist, tritt ein Bedeutungsverlust im Ergebnis auf.
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|Keiner|_DOMAIN|
+|± QNAN,IND|None|_DOMAIN|
 |± ∞ (sin, sinf, sinl)|INVALID|_DOMAIN|
 
 Weitere Informationen zu diesen Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **sin** verwenden und zurückgeben **"float"** oder **lange** **doppelte** Werte. In einem C-Programm **sin** immer Double und gibt **doppelte**.
+Da C++ das überladen zulässt, können Sie über Ladungen von **Sin** aufzurufen, die **float** -oder **Long** **Double** -Werte verwenden und zurückgeben. In einem C-Programm übernimmt **Sin** immer Double und gibt **Double**zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

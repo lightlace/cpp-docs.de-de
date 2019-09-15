@@ -1,11 +1,11 @@
 ---
 title: asin, asinf, asinl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - asinf
 - asinl
 - asin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - asin
 - asinl
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 20a2ffc37ea666207b9558cb5c282c414cfd4838
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e70c9b2187b97d3dea589c1757081da8bf2bd10
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347963"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943650"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -60,9 +63,9 @@ Wert, dessen Arkussinus berechnet werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Asin** Funktion gibt den Arkussinus (den Arkussinus-Funktion) *x* im Bereich - π/2 auf π/2-Bogenmaßes zurück.
+Die **ASIN** -Funktion gibt den Arkus Sinus (die umgekehrte Sinusfunktion) von x im Bereich von "Bereich-/2" bis " *x* 2" zurück.
 
-In der Standardeinstellung Wenn *x* ist kleiner als-1 oder größer als 1 ist, **Asin** einen unbestimmten Wert zurück.
+Wenn *x* kleiner als-1 oder größer als 1 ist, gibt **ASIN** standardmäßig einen unbestimmten Wert zurück.
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
@@ -72,7 +75,7 @@ In der Standardeinstellung Wenn *x* ist kleiner als-1 oder größer als 1 ist, *
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Asin** mit **"float"** und **lange** **doppelte** Werte. In einem C-Programm **Asin** immer Double und gibt eine **doppelte**.
+Da C++ das überladen zulässt, können Sie über Ladungen von **ASIN** mit **float** -und **Long** **Double** -Werten aufzurufen. In einem C-Programm nimmt **ASIN** immer einen **Double**-Wert an und gibt ihn zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

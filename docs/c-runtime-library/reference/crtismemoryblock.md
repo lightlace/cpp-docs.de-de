@@ -1,9 +1,9 @@
 ---
 title: _CrtIsMemoryBlock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtIsMemoryBlock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtlsMemoryBlock
 - _CrtIsMemoryBlock
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _CrtIsMemoryBlock function
 - CrtIsMemoryBlock function
 ms.assetid: f7cbbc60-3690-4da0-a07b-68fd7f250273
-ms.openlocfilehash: c4a85ebeb45552c6f5355853de2a45766d6bc984
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f29745acd06f6f5b3fa96367444e800bdc3e8e3a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339896"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938740"
 ---
-# <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
+# <a name="_crtismemoryblock"></a>_CrtIsMemoryBlock
 
 Überprüft, ob sich ein angegebener Speicherblock im lokalen Heap befindet und ob er einen gültigen Debugheap-Blocktypbezeichner hat (nur Debugversion).
 
@@ -54,23 +57,23 @@ Zeiger auf den Anfang des zu überprüfenden Speicherblocks.
 Größe des angegebenen Blocks (in Bytes).
 
 *requestNumber*<br/>
-Zeiger zur Belegungsnummer des Blocks oder **NULL**.
+Ein Zeiger auf die Zuordnungs Nummer des Blocks oder **null**.
 
 *filename*<br/>
-Zeiger auf den Namen der Quelldatei, die den Block angefordert oder **NULL**.
+Zeiger auf den Namen der Quelldatei, die den Block angefordert hat, oder **null**.
 
 *linenumber*<br/>
-Zeiger auf die Nummer der Zeile in der Quelldatei oder **NULL**.
+Ein Zeiger auf die Zeilennummer in der Quelldatei oder **null**.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_CrtIsMemoryBlock** gibt **"true"** , wenn der angegebene Speicherblock im lokalen Heap befindet und eine gültige Debug Heap über blocktypbezeichner verfügt; andernfalls gibt die Funktion **"false"**.
+**_CrtIsMemoryBlock** gibt **true** zurück, wenn sich der angegebene Speicherblock im lokalen Heap befindet und über einen gültigen Debugheap-Blocktyp Bezeichner verfügt. Andernfalls gibt die Funktion **false**zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_CrtIsMemoryBlock** Funktion überprüft, ob ein angegebener Speicherblock im lokalen Heap der Anwendung befindet und sie einen gültigen blocktypbezeichner hat. Diese Funktion kann auch verwendet werden, um die Bestellnummer der Objektzuordnung und den Quelldateinamen/die Zeilennummer abzurufen, wo die Speicherblockbelegung ursprünglich angefordert wurde. Übergeben von nicht -**NULL** Werte für die *RequestNumber*, *Filename*, oder *Linenumber* Parameter bewirkt, dass **_ CrtIsMemoryBlock** für die Werte im debugheader des Speicherblocks, diese Parameter festzulegen, wenn den Block im lokalen Heap gefunden. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtIsMemoryBlock** werden während der vorverarbeitung entfernt.
+Die **_CrtIsMemoryBlock** -Funktion überprüft, ob sich ein angegebener Speicherblock im lokalen Heap der Anwendung befindet und über einen gültigen Blocktyp Bezeichner verfügt. Diese Funktion kann auch verwendet werden, um die Bestellnummer der Objektzuordnung und den Quelldateinamen/die Zeilennummer abzurufen, wo die Speicherblockbelegung ursprünglich angefordert wurde. Das übergeben von Werten ungleich**null** für die Parameter *requestNumber*, *filename*oder *LineNumber* bewirkt, dass **_CrtIsMemoryBlock** diese Parameter auf die Werte im debugheader des Speicherblocks festgelegt, wenn der Block im lokaler Heap. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtIsMemoryBlock** während der Vorverarbeitung entfernt.
 
-Wenn **_CrtIsMemoryBlock** fehlschlägt, wird **"false"** und die Output-Parameter mit Standardwerten initialisiert werden: *RequestNumber* und **LineNumber**  werden auf 0 festgelegt und *Filename* nastaven NA hodnotu **NULL**.
+Wenn **_CrtIsMemoryBlock** fehlschlägt, wird **false** zurückgegeben, und die Ausgabeparameter werden auf die Standardwerte initialisiert: *requestNumber* und **LineNumber** werden auf 0 festgelegt, und *filename* ist auf **null**festgelegt.
 
 Da diese Funktion **TRUE** oder **FALSE** zurückgibt, kann sie an eine der [_ASSERT](assert-asserte-assert-expr-macros.md)-Makros übergeben werden, um einen einfachen Debug-Fehlerbehandlungsmechanismus zu erstellen. Im folgenden Beispiel wird ein Assertionsfehler ausgelöst, wenn sich die angegebene Adresse nicht im lokalen Heap befindet:
 
@@ -79,7 +82,7 @@ _ASSERTE( _CrtIsMemoryBlock( userData, size, &requestNumber,
           &filename, &linenumber ) );
 ```
 
-Weitere Informationen dazu, wie **_CrtIsMemoryBlock** kann mit anderen Debugfunktionen und-Makros verwendet werden, finden Sie unter [Makros für die Berichterstellung](/visualstudio/debugger/macros-for-reporting). Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Weitere Informationen dazu, wie **_CrtIsMemoryBlock** mit anderen Debugfunktionen und-Makros verwendet werden kann, finden Sie unter [Makros für die Bericht](/visualstudio/debugger/macros-for-reporting)Erstellung. Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Anforderungen
 

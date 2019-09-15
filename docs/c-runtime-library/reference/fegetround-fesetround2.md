@@ -1,10 +1,10 @@
 ---
 title: fegetround, fesetround
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fegetround
 - fesetround
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fegetround
 - fesetround
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - fegetround function
 - fesetround function
 ms.assetid: 596af00b-be2f-4f57-b2f5-460485f9ff0b
-ms.openlocfilehash: 061f0c9563d284396e85c6de70a2fe0911218eb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b210dbce3104820f667d4ad0b4421277567b279f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334371"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941207"
 ---
 # <a name="fegetround-fesetround"></a>fegetround, fesetround
 
@@ -54,9 +57,9 @@ Der als eines der Gleitkomma-Rundungsmakros festzulegende Rundungsmodus. Wenn de
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg **Fegetround** gibt den Rundungsmodus als einen der Gleitkomma-rundungsmakrowerte zurück. Ein negativer Wert wird zurückgegeben, wenn der aktuelle Rundungsmodus nicht bestimmt werden kann.
+Bei Erfolg gibt **fegetround** den Rundungs Modus als einen der Gleit Komma-Rundungs Makro Werte zurück. Ein negativer Wert wird zurückgegeben, wenn der aktuelle Rundungsmodus nicht bestimmt werden kann.
 
-Bei Erfolg **Fesetround** gibt 0 zurück. Andernfalls wird ein Wert ungleich null zurückgegeben.
+Bei Erfolg gibt **fesetround** den Wert 0 zurück. Andernfalls wird ein Wert ungleich null zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -77,13 +80,13 @@ Der aktuelle Rundungsmodus wirkt sich auf diese Vorgänge aus:
 
 - Die Ergebnisse der arithmetischen Gleitkommaoperatoren außerhalb konstanter Ausdrücke.
 
-- Die Bibliothek Funktionen, z. B. Rundung **Rint** und **Nearbyint**.
+- Die Rundungs Funktionen der Bibliothek, wie z. **b. rint** und **nearbyint**.
 
 - Rückgabewerte aus mathematischen Funktionen der Standardbibliothek.
 
 Der aktuelle Rundungsmodus wirkt sich auf diese Vorgänge nicht aus:
 
-- Die **kürzungs-LSN**, **ceil**, **Floor**, und **Lround** Bibliotheksfunktionen.
+- Die Funktionen **trunc**, **ceil**, **Floor**und **lround** Library.
 
 - Implizite Umwandlungen und Konvertierungen von Gleitkommazahl in ganze Zahl, bei denen immer in Richtung 0 (null) gerundet wird.
 

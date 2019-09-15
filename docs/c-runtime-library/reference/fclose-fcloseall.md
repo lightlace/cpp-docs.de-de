@@ -1,10 +1,10 @@
 ---
 title: fclose, _fcloseall
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fclose
 - _fcloseall
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fclose
 - _fcloseall
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - streams, closing
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
-ms.openlocfilehash: 4713ffb7ecdf8da73e5f949bbef7be124dfaf28a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 215925fb16f5d51e481ae92cbb45b0270bd5ebd4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334878"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941500"
 ---
-# <a name="fclose-fcloseall"></a>fclose, _fcloseall
+# <a name="fclose-_fcloseall"></a>fclose, _fcloseall
 
-Schließt einen Stream (**Fclose**) oder schließt alle geöffneten Streams (**_fcloseall**).
+Schließt einen Stream (**sClose**) oder schließt alle geöffneten Streams ( **_fcloseall**).
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,19 +55,19 @@ Zeiger auf die **FILE**-Struktur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Fclose** gibt 0 zurück, wenn der Stream erfolgreich geschlossen wird. **_fcloseall** gibt die Gesamtzahl der geschlossenen Streams zurück. Beide Funktionen geben **EOF** einen Fehler an.
+" **f** " gibt 0 zurück, wenn der Stream erfolgreich geschlossen wurde. **_fcloseall** gibt die Gesamtzahl der geschlossenen Streams zurück. Beide Funktionen geben **EOF** zurück, um einen Fehler anzugeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Fclose** -Funktion schließt *Stream*. Wenn *Stream* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Fclose** legt **Errno** zu **EINVAL** und gibt **EOF**. Es wird empfohlen, die *Stream* Zeiger werden immer vor dem Aufrufen dieser Funktion geprüft.
+Die Funktion " **sClose** " schließt den Daten *Strom*. Wenn der Stream **null**ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird **errno** von **fclose** auf **EINVAL** festgelegt und **EOF**zurückgegeben. Es wird empfohlen, den *Streamzeiger* vor dem Aufrufen dieser Funktion immer zu überprüfen.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Die **_fcloseall** -Funktion schließt alle offenen Streams außer **Stdin**, **"stdout"**, **"stderr"** (und in MS-DOS **_stdaux**  und **_stdprn**). Außerdem schließt und löscht alle temporären Dateien, die von erstellten **Tmpfile**. Bei beiden Funktionen werden alle Puffer, die dem Stream zugewiesen sind, vor dem Schließen geleert. Systemseitig angegebene Puffer werden freigegeben, wenn der Stream geschlossen wird. Vom Benutzer mit zugewiesenen Puffer **Setbuf** und **Setvbuf** werden nicht automatisch freigegeben.
+Die **_fcloseall** -Funktion schließt alle geöffneten Streams außer **stdin**, **stdout**, **stderr** (und in MS-DOS, **_stdaux** und **_stdprn**). Außerdem werden alle temporären Dateien, die von **tmpfile**erstellt werden, geschlossen und gelöscht. Bei beiden Funktionen werden alle Puffer, die dem Stream zugewiesen sind, vor dem Schließen geleert. Systemseitig angegebene Puffer werden freigegeben, wenn der Stream geschlossen wird. Puffer, die vom Benutzer mit **setbuf** und **setvbuf** zugewiesen werden, werden nicht automatisch freigegeben.
 
-**Hinweis**: Wenn diese Funktionen verwendet werden, um einen Stream zu schließen, werden die zugrunde liegenden Dateideskriptor und Betriebssystem-Dateihandle (oder Socket), sowie der Stream geschlossen. Daher wird die Datei ursprünglich geöffnet wurde als Dateihandle oder Dateideskriptor und geschlossen wird, mit **Fclose**, sind nicht gleichzeitig Aufruf **_close** auf den Dateideskriptor zu schließen, rufen Sie die Win32-Funktion nicht  **"CloseHandle"** um das Dateihandle zu schließen.
+**Hinweis**: Wenn diese Funktionen verwendet werden, um einen Stream zu schließen, werden der zugrunde liegende Dateideskriptor und das Betriebssystem-Datei Handle (oder der Socket) geschlossen sowie der Stream. Wenn die Datei ursprünglich als Datei Handle oder Dateideskriptor geöffnet wurde und mit **fclose**geschlossen wurde, wird auch **_close** nicht aufgerufen, um den Dateideskriptor zu schließen. die Win32-Funktion **CloseHandle** muss nicht aufgerufen werden, um das Datei Handle zu schließen.
 
-**Fclose** und **_fcloseall** enthält Code, der Schutz vor Störungen durch andere Threads. Für nicht sperrende Version von einem **Fclose**, finden Sie unter **_fclose_nolock**.
+**fclose** und **_fcloseall** enthalten Code zum Schutz vor Störungen durch andere Threads. Informationen zu nicht Sperr enden Versionen von **sClose**finden Sie unter **_fclose_nolock**.
 
 ## <a name="requirements"></a>Anforderungen
 

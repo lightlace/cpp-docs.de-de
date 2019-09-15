@@ -1,10 +1,10 @@
 ---
 title: vscanf_s, vwscanf_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vscanf_s
 - vwscanf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,20 +15,23 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vtscanf_s
 - vscanf_s
 - vwscanf_s
 ms.assetid: 23a1c383-5b01-4887-93ce-534a1e38ed93
-ms.openlocfilehash: 90100a5fbc03371a11f437acc12562d9ccf957f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d08679d08fb5b212306cbaeec200d16803a85ef
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364869"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945399"
 ---
-# <a name="vscanfs-vwscanfs"></a>vscanf_s, vwscanf_s
+# <a name="vscanf_s-vwscanf_s"></a>vscanf_s, vwscanf_s
 
 Liest formatierte Daten aus dem Standardeingabestream. Diese Versionen von [vscanf, vwscanf](vscanf-vwscanf.md) enthalten Sicherheitserweiterungen, wie unter [Security Features in the CRT (Sicherheitserweiterungen in der CRT)](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
@@ -55,22 +58,22 @@ Variablenargumentenliste.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Anzahl von Feldern zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Der Rückgabewert ist **EOF** ein Fehler, oder wenn das EOF Zeichen oder das Ende der Zeichenfolge Zeichen, beim ersten Versuch erreicht ist, ein Zeichen zu lesen. Wenn *Format* ist eine **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Vscanf_s** und **Vwscanf_s** zurückgeben **EOF** und **Errno** zu **EINVAL**.
+Gibt die Anzahl von Feldern zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Der Rückgabewert ist **EOF** für einen Fehler oder, wenn beim ersten Versuch, ein Zeichen zu lesen, das Dateiendezeichen oder das Zeichen foldezeichen gefunden wird. Wenn *Format* ein **null** -Zeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben **vscanf_s** und **vwscanf_s** **EOF** zurück und legen **errno** auf **EINVAL**fest.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (errno, _doserrno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Vscanf_s** -Funktion liest Daten aus dem Standardeingabestream **Stdin** und schreibt die Daten in die Speicherorte, die von erhalten die *Arglist* Argumentliste. Jedes Argument in der Liste muss ein Zeiger auf eine Variable eines Typs, der einem Typspezifizierer in entspricht *Format*. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
+Die **vscanf_s** -Funktion liest Daten aus dem Standardeingabestream **stdin** und schreibt die Daten in die Speicherorte, die von der *Arglist* -Argumentliste angegeben werden. Jedes Argument in der Liste muss ein Zeiger auf eine Variable eines Typs sein, der einem Typspezifizierer im- *Format*entspricht. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
 
-**Vwscanf_s** ist eine Breitzeichen-Version von **Vscanf_s**; die *Format* Argument **Vwscanf_s** ist eine Breitzeichen-Zeichenfolge. **Vwscanf_s** und **Vscanf_s** Verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Vscanf_s** unterstützt keine Eingabe aus einem unicodestream.
+**vwscanf_s** ist eine breit Zeichen Version von **vscanf_s**. Das *Format* Argument für **vwscanf_s** ist eine Zeichenfolge mit breit Zeichen. **vwscanf_s** und **vscanf_s** Verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **vscanf_s** unterstützt keine Eingabe aus einem Unicode-Stream.
 
-Im Gegensatz zu **Vscanf** und **Vwscanf**, **Vscanf_s** und **Vwscanf_s** benötigen Sie die Größe des Puffers angegeben werden, für alle des Typs Eingabeparameter **c**, **C**, **s**, **S**, oder, die in eingeschlossen sind **[]**. Die Puffergröße in Zeichen wird als zusätzlicher Parameter direkt nach dem Zeiger auf den Puffer oder die Variable übergeben. Die Größe des Puffers in Zeichen für eine **"wchar_t"** Zeichenfolge ist nicht identisch mit der Größe in Byte.
+Im Gegensatz zu **vscanf** und **vwscanf**müssen für **vscanf_s** und **vwscanf_s** die Puffergröße für alle Eingabeparameter vom Typ **c**, **c**, **s**, **s**oder Zeichen folgen-Steuerungs Sätzen, die in **[] eingeschlossen sind, angegeben werden.** . Die Puffergröße in Zeichen wird als zusätzlicher Parameter direkt nach dem Zeiger auf den Puffer oder die Variable übergeben. Die Puffergröße in Zeichen für eine **wchar_t** -Zeichenfolge entspricht nicht der Größe in Bytes.
 
 Die Puffergröße enthält das abschließende NULL-Zeichen. Sie können ein Feld für die Breitenangabe verwenden, um sicherzustellen, dass das eingelesene Token in den Puffer passt. Wenn kein Feld für die Breiteangabe verwendet wird und das eingelesen Token zu groß für den Puffer ist, wird nichts in diesen Puffer geschrieben.
 
 > [!NOTE]
-> Die *Größe* Parameter ist vom Typ **ohne Vorzeichen**, nicht **"size_t"**.
+> Der *size* -Parameter ist vom Typ **Ganzzahl ohne Vorzeichen**, nicht **size_t**.
 
 Weitere Informationen finden Sie unter [scanf Width Specification (scanf-Breitenangabe)](../../c-runtime-library/scanf-width-specification.md).
 
@@ -89,7 +92,7 @@ Weitere Informationen finden Sie unter [Format Specification Fields: scanf and w
 |**vscanf_s**|\<stdio.h>|
 |**wscanf_s**|\<stdio.h> oder \<wchar.h>|
 
-Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Standardstreamhandles, die mit der Konsole verknüpft sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die-Konsole wird in universelle Windows-Plattform-Apps (UWP) nicht unterstützt. Die Standarddaten Strom Handles, die der Konsole, **stdin**, **stdout**und **stderr**zugeordnet sind, müssen umgeleitet werden, bevor Sie von C-Lauf Zeitfunktionen in UWP-Apps verwendet werden können. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

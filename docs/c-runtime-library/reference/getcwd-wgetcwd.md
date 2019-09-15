@@ -1,10 +1,10 @@
 ---
 title: _getcwd, _wgetcwd
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wgetcwd
 - _getcwd
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getcwd
 - wgetcwd
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: 4c533f0e716cb9a13c152b9be3c46f60291118d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78b02871aafca85db50df2eea74a2210c578c204
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331791"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955250"
 ---
-# <a name="getcwd-wgetcwd"></a>_getcwd, _wgetcwd
+# <a name="_getcwd-_wgetcwd"></a>_getcwd, _wgetcwd
 
 Ruft das aktuelle Arbeitsverzeichnis ab.
 
@@ -63,23 +66,23 @@ wchar_t *_wgetcwd(
 Speicherort für den Pfad.
 
 *maxlen*<br/>
-Maximale Länge des Pfads in Zeichen: **Char** für **_getcwd** und **"wchar_t"** für **_wgetcwd**.
+Maximale Länge des Pfads in Zeichen: **char** für **_getcwd** und **wchar_t** für **_wgetcwd**.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf *Puffer*. Ein **NULL** Rückgabewert gibt einen Fehler an und **Errno** entweder auf festgelegt ist **ENOMEM**, gibt an, dass nicht genügend Arbeitsspeicher zuordnen *Maxlen* Bytes (Wenn eine **NULL** Argument erhält als *Puffer*), oder **ERANGE**, der angibt, dass der Pfad länger als *Maxlen*  Zeichen. Wenn *Maxlen* ist kleiner als oder gleich 0 (null), ruft diese Funktion einen Handler für ungültige Parameter wie beschrieben in [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
+Gibt einen Zeiger auf den *Puffer*zurück. Ein **null** -Rückgabewert gibt einen Fehler an, und **errno** wird entweder auf **ENOMEM**festgelegt, was darauf hinweist, dass nicht genügend Arbeitsspeicher vorhanden ist, um *maxlen* -Bytes zuzuordnen (wenn ein **null** -Argument als *Puffer*angegeben wird), oder zu **ERANGE.** gibt an, dass der Pfad länger als *maxlen* -Zeichen ist. Wenn *maxlen* kleiner oder gleich 0 (null) ist, ruft diese Funktion einen Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben.
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_getcwd** Funktion ruft den vollständigen Pfad des aktuellen Arbeitsverzeichnisses für das Standardlaufwerk ab und speichert ihn unter *Puffer*. Das ganzzahlige Argument *Maxlen* gibt die maximale Länge für den Pfad. Ein Fehler auftritt, wenn die Länge des Pfads (einschließlich des abschließenden Zeichens Null) überschreitet *Maxlen*. Die *Puffer* -Argument kann es sich **NULL**; einen Puffer mit mindestens der Größe *Maxlen* (mehr nur bei Bedarf) wird automatisch zugeordnet und mit **Malloc**, um den Pfad zu speichern. Dieser Puffer kann später geleert werden, durch den Aufruf **kostenlose** und an Sie übergeben die **_getcwd** Rückgabewert (einen Zeiger auf den zugeordneten Puffer).
+Die **_getcwd** -Funktion Ruft den vollständigen Pfad des aktuellen Arbeitsverzeichnisses für das Standard Laufwerk ab und speichert Sie im *Puffer*. Das ganzzahlige Argument *maxlen* gibt die maximale Länge für den Pfad an. Ein Fehler tritt auf, wenn die Länge des Pfads (einschließlich des abschließenden NULL-Zeichens) *maxlen*überschreitet. Das *buffer* -Argument kann **null**sein. ein Puffer mit einer minimalen Größe von *maxlen* (nur bei Bedarf) wird automatisch mit **malloc**zugeordnet, um den Pfad zu speichern. Dieser Puffer kann später freigegeben werden, indem **Free** aufgerufen und der **_getcwd** -Rückgabewert (ein Zeiger auf den zugeordneten Puffer) übergeben wird.
 
-**_getcwd** gibt eine Zeichenfolge, die den Pfad des aktuellen Arbeitsverzeichnisses repräsentiert. Wenn das aktuelle Arbeitsverzeichnis das Stammverzeichnis ist, endet die Zeichenfolge mit einem umgekehrten Schrägstrich ( **\\** ). Wenn das aktuelle Arbeitsverzeichnis nicht das Stammverzeichnis ist, endet die Zeichenfolge mit dem Verzeichnisnamen und nicht mit einem umgekehrten Schrägstrich.
+**_getcwd** gibt eine Zeichenfolge zurück, die den Pfad des aktuellen Arbeitsverzeichnisses darstellt. Wenn das aktuelle Arbeitsverzeichnis das Stammverzeichnis ist, endet die Zeichenfolge mit einem umgekehrten **\\** Schrägstrich (). Wenn das aktuelle Arbeitsverzeichnis nicht das Stammverzeichnis ist, endet die Zeichenfolge mit dem Verzeichnisnamen und nicht mit einem umgekehrten Schrägstrich.
 
-**_wgetcwd** ist eine Breitzeichen-Version von **_getcwd**; die *Puffer* Argument- und Rückgabetypen Wert **_wgetcwd** sind Breitzeichen Zeichenfolgen. **_wgetcwd** und **_getcwd** Verhalten sich andernfalls identisch.
+**_wgetcwd** ist eine breit Zeichen Version von **_getcwd**. Das *Puffer* Argument und der Rückgabewert von **_wgetcwd** sind Zeichen folgen mit breit Zeichen. **_wgetcwd** und **_getcwd** Verhalten sich andernfalls identisch.
 
-Wenn **_DEBUG** und **_CRTDBG_MAP_ALLOC** definiert sind, werden Aufrufe von **_getcwd** und **_wgetcwd** werden durch Aufrufe von ersetzt **_ Getcwd_dbg** und **_wgetcwd_dbg** zum Debuggen von speicherbelegungen zuzulassen. Weitere Informationen finden Sie unter [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md).
+Wenn **_DEBUG** und **_CRTDBG_MAP_ALLOC** definiert sind, werden Aufrufe von **_getcwd** und **_wgetcwd** durch Aufrufe von **_getcwd_dbg** und **_wgetcwd_dbg** ersetzt, um das Debuggen von Speicher Belegungen zuzulassen. Weitere Informationen finden Sie unter [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

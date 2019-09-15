@@ -1,10 +1,10 @@
 ---
 title: _cgets_s, _cgetws_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cgetws_s
 - _cgets_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cgets_s
 - cgets_s
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: 8341b775df3b9cbaececdfaa1f17e075d7c7416c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2039fc32cecb768c3c3fbc239446abedeb48f188
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340584"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939261"
 ---
-# <a name="cgetss-cgetwss"></a>_cgets_s, _cgetws_s
+# <a name="_cgets_s-_cgetws_s"></a>_cgets_s, _cgetws_s
 
 Ruft eine Zeichenfolge aus der Konsole ab. Diese Versionen von [_cgets und _cgetws](../../c-runtime-library/cgets-cgetws.md) enthalten Sicherheitserweiterungen, wie dies unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.
 
@@ -86,17 +89,17 @@ Der Rückgabewert ist im Erfolgsfall „0“, andernfalls wird ein Fehlercode au
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|*buffer*|*numberOfElements*|*pSizeRead*|Zurück|Inhalt der *Puffer*|
+|*buffer*|*numberOfElements*|*pSizeRead*|Zurück|Inhalt des *Puffers*|
 |--------------|------------------------|-----------------|------------|--------------------------|
 |**NULL**|any|any|**EINVAL**|n/v|
-|Nicht **NULL**|Null|any|**EINVAL**|nicht geändert|
-|Nicht **NULL**|any|**NULL**|**EINVAL**|Zeichenfolge mit der Länge 0|
+|Nicht **null**|Null|any|**EINVAL**|nicht geändert|
+|Nicht **null**|any|**NULL**|**EINVAL**|Zeichenfolge mit der Länge 0|
 
 ## <a name="remarks"></a>Hinweise
 
-**_cgets_s** und **_cgetws_s** lesen eine Zeichenfolge aus der Konsole, und kopieren Sie die Zeichenfolge (mit einem null-Terminator) in *Puffer*. **_cgetws_s** ist die breitzeichenversion der Funktion; andere als die Zeichengröße, das Verhalten dieser zwei Funktionen identisch ist. Die maximale Größe der zu lesenden Zeichenfolge wird als übergeben die *NumberOfElements* Parameter. Diese Größe sollte ein zusätzliches Zeichen für das abschließende Nullzeichen enthalten. Die tatsächliche Anzahl der gelesenen Zeichen befindet sich im *pSizeRead*.
+**_cgets_s** und **_cgetws_s** lesen eine Zeichenfolge aus der Konsole und kopieren die Zeichenfolge (mit einem NULL-Terminator) in den *Puffer*. **_cgetws_s** ist die breit Zeichen Version der Funktion. Abgesehen von der Zeichengröße ist das Verhalten dieser zwei Funktionen identisch. Die maximale Größe der zu lesenden Zeichenfolge wird als der Parameter " *numofelements* " übergeben. Diese Größe sollte ein zusätzliches Zeichen für das abschließende Nullzeichen enthalten. Die tatsächliche Anzahl von gelesenen Zeichen wird in *pSizeRead*platziert.
 
-Wenn während des Vorgangs oder im Zuge der Validierung der Parameter ein Fehler auftritt, wird der Handler für ungültige Parameter aufgerufen, wie dies unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und **EINVAL** zurückgegeben wird.
+Wenn während des Vorgangs oder im Zuge der Validierung der Parameter ein Fehler auftritt, wird der Handler für ungültige Parameter aufgerufen, wie dies unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird. Wenn die weitere Ausführung zugelassen wird, wird **errno** auf **EINVAL** festgelegt, und **EINVAL** wird zurückgegeben.
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht. Die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein „size“-Argument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

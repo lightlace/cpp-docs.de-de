@@ -1,12 +1,12 @@
 ---
 title: _ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbckata
 - _ismbchira_l
 - _ismbchira
 - _ismbckata_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ismbckata_l
 - _ismbckata_l
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - Hiragana
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
-ms.openlocfilehash: d2a5d0336e5ed4ad8bbb19f8a259128ab33d004e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13f66c7450e05240f8bad6034bd56f5da6de20c0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286732"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953883"
 ---
-# <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
+# <a name="_ismbchira-_ismbchira_l-_ismbckata-_ismbckata_l"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 
 **Besondere Funktionen der Codepage 932**
 
@@ -83,18 +86,18 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Routinen gibt einen Wert ungleich 0 zurück, wenn das Zeichen die Testbedingung erfüllt, bzw. 0, wenn es sie nicht erfüllt. Wenn *c* < = 255 und gibt es eine entsprechende **_ismbb** Routine (z. B. **_ismbcalnum** entspricht **_ismbbalnum**), wird die Ergebnis ist der Rückgabewert der entsprechenden **_ismbb** Routine.
+Jede dieser Routinen gibt einen Wert ungleich 0 zurück, wenn das Zeichen die Testbedingung erfüllt, bzw. 0, wenn es sie nicht erfüllt. Wenn *c* < = 255 und es eine entsprechende **_ismbb** -Routine gibt (z. b. **_ismbcalnum** entspricht **_ismbbalnum**), ist das Ergebnis der Rückgabewert der entsprechenden **_ismbb** -Routine.
 
 ## <a name="remarks"></a>Hinweise
 
 Jede dieser Funktionen testet ein angegebenes Mehrbytezeichen auf eine angegebene Bedingung.
 
-Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie das Gebietsschema für den übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch das übergebene Gebiets Schema anstelle des aktuellen Gebiets Schemas für Ihr vom Gebiets Schema abhängiges Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 |-Routine zurückgegebener Wert|Testbedingung (nur Codepage 932)|
 |-------------|-------------------------------------------|
-|**_ismbchira**|Doppelbyte-Hiragana-Zeichen: 0x829F<=*c*<=0x82F1.|
-|**_ismbchira_l**|Doppelbyte-Hiragana-Zeichen: 0x829F<=*c*<=0x82F1.|
+|**_ismbchira**|Doppelbyte-Hiragana-Zeichen: 0x829F < =*c*< = 0x82f 1.|
+|**_ismbchira_l**|Doppelbyte-Hiragana-Zeichen: 0x829F < =*c*< = 0x82f 1.|
 |**_ismbckata**|Doppelbyte-Katakana-Zeichen: 0x8340<=*c*<=0x8396.|
 |**_ismbckata_l**|Doppelbyte-Katakana-Zeichen: 0x8340<=*c*<=0x8396.|
 

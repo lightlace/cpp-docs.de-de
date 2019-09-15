@@ -1,12 +1,12 @@
 ---
 title: strcspn, wcscspn, _mbscspn, _mbscspn_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbscspn_l
 - wcscspn
 - _mbscspn
 - strcspn
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strcspn
 - _mbscspn
@@ -39,19 +42,19 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-ms.openlocfilehash: bcb1699f9a3f3c4d9e5ee040fdcb2e999397ac30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 501732cd4758d14a32aba3bdf503c5d314eee7f9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353975"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940768"
 ---
-# <a name="strcspn-wcscspn-mbscspn-mbscspnl"></a>strcspn, wcscspn, _mbscspn, _mbscspn_l
+# <a name="strcspn-wcscspn-_mbscspn-_mbscspn_l"></a>strcspn, wcscspn, _mbscspn, _mbscspn_l
 
 Gibt den Index des ersten Vorkommens in einer Zeichenfolge eines Zeichens zurück, das zu einem Zeichensatz gehört.
 
 > [!IMPORTANT]
-> **_mbschr** und **_mbschr_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbschr** und **_mbschr_l** können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -88,15 +91,15 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Funktionen geben den Index des ersten Zeichens in *str* , die sich in *StrCharSet*. Wenn keines der Zeichen in *str* befindet sich im *StrCharSet*, lautet der zurückgegebene Wert die Länge des *str*.
+Diese Funktionen geben den Index des ersten Zeichens in *Str* zurück, das in " *strincharset*" ist. Wenn keines der Zeichen in *Str* in " *darcharset*" enthalten ist, ist der Rückgabewert die Länge von *Str*.
 
 Kein Rückgabewert ist zur Fehleranzeige reserviert.
 
 ## <a name="remarks"></a>Hinweise
 
-**Wcscspn** und **_mbscspn** sind Breitzeichen- und multibytezeichenversionen von Versionen von **Strcspn**. Die Argumente des **Wcscspn** sind Breitzeichen-Zeichenfolgen, die von **_mbscspn** sind Multibyte Zeichenfolgen.
+**wcscspn** und **_mbscspn** sind breit Zeichen-und multibytezeichenversionen von " **strincspn**". Die Argumente von **wcscspn** sind Zeichen folgen mit breit Zeichen. bei den **_mbscspn** handelt es sich um Multibyte-Zeichen folgen.
 
-**_mbscspn** überprüft die eigenen Parameter. Wenn entweder *str* oder *StrCharSet* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktion gibt 0 zurück und legt **Errno** zu **EINVAL**. **Strcspn** und **Wcscspn** überprüfen ihre Parameter nicht. Diese drei Funktionen verhalten sich andernfalls identisch.
+**_mbscspn** überprüft seine Parameter. Wenn entweder *Str* oder *Strauch Satz* ein NULL-Zeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion 0 zurück und legt **errno** auf **EINVAL**fest. die Parameter werden von " **straucspn** " und " **wcscspn** " nicht überprüft. Diese drei Funktionen verhalten sich andernfalls identisch.
 
 Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 

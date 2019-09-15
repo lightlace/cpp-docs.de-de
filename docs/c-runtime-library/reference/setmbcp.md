@@ -1,9 +1,9 @@
 ---
 title: _setmbcp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _setmbcp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _setmbcp
 - setmbcp
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-ms.openlocfilehash: c1f4967baa5fda68a7df33bcd08935dca23fab16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1db6a83bd864180d513f61cf255bd862283a6cd0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356458"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948214"
 ---
-# <a name="setmbcp"></a>_setmbcp
+# <a name="_setmbcp"></a>_setmbcp
 
 Legt eine neue Multibyte-Codepage fest.
 
@@ -50,11 +53,11 @@ Neue Codepageeinstellung für gebietsschemaunabhängige Multibyte-Routinen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 zurück, wenn die Codepage erfolgreich festgelegt wurde. Wenn ein ungültige Codepagewert für angegeben wird *Codepage*, gibt – 1 und die codepageeinstellung wird nicht geändert. Legt **Errno** zu **EINVAL** im Falle einer speicherbelegungsfehlers.
+Gibt 0 zurück, wenn die Codepage erfolgreich festgelegt wurde. Wenn für *Codepage*ein ungültiger Codepage-Wert angegeben wird, wird-1 zurückgegeben, und die Codepage-Einstellung ist unverändert. Legt **errno** auf **EINVAL** fest, wenn ein Fehler bei der Speicher Belegung auftritt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_setmbcp** -Funktion gibt eine neue multibyte-Codepage an. Standardmäßig legt das Laufzeitsystem automatisch die Multibyte-Codepage auf die Systemstandard-ANSI-Codepage fest. Die Multibyte-Codepageeinstellung wirkt sich auf alle Multibyteroutinen auf, die nicht vom Gebietsschema abhängig sind. Es ist jedoch möglich, weisen Sie **_setmbcp** für das aktuelle Gebietsschema definierte Codepage zu verwenden (finden Sie unter der folgenden Liste der Manifestkonstanten und zugeordnete verhaltensergebnisse). Eine Liste der Multibyteroutinen, die von der Gebietsschema-Codepage und nicht von der Multibyte-Codepage abhängig sind, finden Sie unter [Interpretation von Multybite-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
+Die **_setmbcp** -Funktion gibt eine neue Multibytezeichen-Codepage an. Standardmäßig legt das Laufzeitsystem automatisch die Multibyte-Codepage auf die Systemstandard-ANSI-Codepage fest. Die Multibyte-Codepageeinstellung wirkt sich auf alle Multibyteroutinen auf, die nicht vom Gebietsschema abhängig sind. Es ist jedoch möglich, **_setmbcp** anzuweisen, die Codepage zu verwenden, die für das aktuelle Gebiets Schema definiert ist (Weitere Informationen finden Sie in der folgenden Liste der Manifest-Konstanten und der zugehörigen verhaltensergebnisse). Eine Liste der Multibyteroutinen, die von der Gebietsschema-Codepage und nicht von der Multibyte-Codepage abhängig sind, finden Sie unter [Interpretation von Multybite-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
 
 Die Multibyte-Codepage hat auch Auswirkungen auf die Multibyteverarbeitung durch die folgenden Routinen der Laufzeitbibliothek:
 
@@ -64,17 +67,17 @@ Die Multibyte-Codepage hat auch Auswirkungen auf die Multibyteverarbeitung durch
 |[_fullpath](fullpath-wfullpath.md)|[_spawn-Funktionen](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 |[_makepath](makepath-wmakepath.md)|[_splitpath](splitpath-wsplitpath.md)|[tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 
-Darüber hinaus alle-Laufzeitbibliotheksroutinen, die Multibyte-Zeichensätze erhalten *Argv* oder *Envp* Programmargumente als Parameter (z. B. die **_exec** und **_spawn** Familien) verarbeiten diese Zeichenfolgen gemäß der Mehrbyte-Codepage. Diese Routinen sind daher ebenfalls betroffen, durch einen Aufruf von **_setmbcp** , die multibyte-Codepage ändert.
+Außerdem verarbeiten alle Lauf Zeit Bibliotheks Routinen, die Multibytezeichen- *argv* -oder *envp* -Programm Argumente als Parameter (z. b. die **_exec** -und **_spawn** -Familien) empfangen, diese Zeichen folgen entsprechend der Multibytezeichen-Codepage. Daher sind diese Routinen auch durch einen **_setmbcp** -aufrufswert betroffen, der die Multibytezeichen-Codepage ändert.
 
-Die *Codepage* Argument kann auf eine der folgenden Werte festgelegt werden:
+Das *Codepage* -Argument kann auf einen der folgenden Werte festgelegt werden:
 
-- **_MB_CP_ANSI** mit ANSI-Codepage, die vom Betriebssystem beim Programmstart abgerufene.
+- **_MB_CP_ANSI** Verwenden Sie die ANSI-Codepage, die vom Betriebssystem beim Programmstart abgerufen wird.
 
-- **_MB_CP_LOCALE** verwenden das aktuelle Gebietsschema-Codepage aus einem vorherigen Aufruf von [Setlocale](setlocale-wsetlocale.md).
+- **_MB_CP_LOCALE** Verwenden Sie die Codepage des aktuellen Gebiets Schemas, die Sie aus einem vorherigen-Befehl von [setlocale](setlocale-wsetlocale.md)abgerufen haben
 
-- **_MB_CP_OEM** verwenden OEM-Codepage, die vom Betriebssystem beim Programmstart abgerufene.
+- **_MB_CP_OEM** OEM-Codepage verwenden, die vom Betriebssystem beim Programmstart abgerufen wird.
 
-- **_MB_CP_SBCS** Einzelbyte-Codepage verwenden. Wenn die Codepage auf festgelegt ist **_MB_CP_SBCS**, eine Routine, wie z. B. [_ismbblead](ismbblead-ismbblead-l.md) gibt immer false zurück.
+- **_MB_CP_SBCS** Einzel Byte-Codepage verwenden. Wenn die Codepage auf **_MB_CP_SBCS**festgelegt ist, gibt eine Routine wie [_ismbblead](ismbblead-ismbblead-l.md) immer false zurück.
 
 - Jeder beliebige andere gültige Codepage-Wert unabhängig davon, ob der Wert eine ANSI-, OEM- oder einem anderen Betriebssystem unterstützte Codepage ist (außer UTF-7 und UTF-8, die nicht unterstützt werden).
 

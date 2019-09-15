@@ -1,10 +1,10 @@
 ---
 title: _putc_nolock, _putwc_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putc_nolock
 - _putwc_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _puttc_nolock
 - puttc_nolock
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _puttc_nolock function
 - _putwc_nolock function
 ms.assetid: 3cfc7f21-c9e8-4b7f-b0fb-af0d4d85e7e1
-ms.openlocfilehash: b2a30b83f0746b1b4f5ab03b4c3dfa0229656bb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fdec6373f79fd711b371014fc58e17c190a26e95
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285127"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950121"
 ---
-# <a name="putcnolock-putwcnolock"></a>_putc_nolock, _putwc_nolock
+# <a name="_putc_nolock-_putwc_nolock"></a>_putc_nolock, _putwc_nolock
 
 Schreibt ein Zeichen in einen Stream, ohne den Thread zu sperren.
 
@@ -72,9 +75,9 @@ Siehe **putc, putwc**.
 
 ## <a name="remarks"></a>Hinweise
 
-**_putc_nolock** und **_putwc_nolock** sind identisch mit den Versionen ohne das **_nolock** suffix mit dem Unterschied, dass sie nicht vor Störungen durch andere Threads geschützt sind. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
+**_putc_nolock** und **_putwc_nolock** sind mit den Versionen ohne das Suffix **_nolock** identisch, mit dem Unterschied, dass Sie nicht vor Störungen durch andere Threads geschützt sind. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
 
-**_putwc_nolock** ist die Breitzeichen-Version von **_putc_nolock**; die zwei Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **_putc_nolock** unterstützt derzeit keine Ausgabe in eine UNICODE-Stream.
+**_putwc_nolock** ist die breit Zeichen Version von **_putc_nolock**; die beiden Funktionen Verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **_putc_nolock** unterstützt derzeit nicht die Ausgabe in einen Unicode-Stream.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -89,7 +92,7 @@ Siehe **putc, putwc**.
 |**_putc_nolock**|\<stdio.h>|
 |**_putwc_nolock**|\<stdio.h> oder \<wchar.h>|
 
-Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Standardstreamhandles, die mit der Konsole verknüpft sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die-Konsole wird in universelle Windows-Plattform-Apps (UWP) nicht unterstützt. Die Standarddaten Strom Handles, die der Konsole, **stdin**, **stdout**und **stderr**zugeordnet sind, müssen umgeleitet werden, bevor Sie von C-Lauf Zeitfunktionen in UWP-Apps verwendet werden können. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotheken
 
@@ -120,7 +123,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 This is the line of output

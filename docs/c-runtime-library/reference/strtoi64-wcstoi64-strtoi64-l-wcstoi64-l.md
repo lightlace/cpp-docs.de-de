@@ -1,12 +1,12 @@
 ---
 title: _strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strtoi64
 - _strtoi64_l
 - _wcstoi64_l
 - _wcstoi64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strtoi64
 - strtoi64
@@ -39,16 +42,16 @@ helpviewer_keywords:
 - strtoi64 function
 - wcstoi64_l function
 ms.assetid: ea2abc50-7bfe-420e-a46b-703c3153593a
-ms.openlocfilehash: b5479448a4e3a3cedba3a62d9b12b0dbe4160f7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93e137d29705201244c8cf9bd86e66cbd40ce4df
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176173"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946485"
 ---
-# <a name="strtoi64-wcstoi64-strtoi64l-wcstoi64l"></a>_strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
+# <a name="_strtoi64-_wcstoi64-_strtoi64_l-_wcstoi64_l"></a>_strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
 
-Konvertieren einer Zeichenfolge in eine **__int64** Wert.
+Konvertiert eine Zeichenfolge in einen **__int64** -Wert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -93,17 +96,17 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_strtoi64** gibt den Wert in der Zeichenfolge dargestellt zurück *StrSource*, außer dass die Darstellung würde einen Überlauf verursachen, in dem gibt Fall **_I64_MAX** oder **_I64 _MIN**. Die Funktion gibt 0 zurück, wenn keine Konvertierung ausgeführt werden kann. **_wcstoi64** gibt Werte analog zu **strtoi64**.
+**_strtoi64** gibt den in der zeichenfolgenzeichenfolge dargestellten Wert zurück, es sei *denn, die*Darstellung würde einen Überlauf verursachen. in diesem Fall wird **_I64_MAX** oder **_I64_MIN**zurückgegeben. Die Funktion gibt 0 zurück, wenn keine Konvertierung ausgeführt werden kann. **_wcstoi64** gibt Werte analog zu **strtoi64**zurück.
 
-**_I64_MAX** und **_I64_MIN** in Grenzen definiert sind. H.
+**_I64_MAX** und **_I64_MIN** sind in Limits definiert. Micha.
 
-Wenn *StrSource* ist **NULL** oder *Basis* ungleich NULL ist und entweder weniger als 2 oder größer als 36, **Errno** nastaven NA hodnotu **EINVAL** .
+Wenn " *strinsource* " **null** ist oder die *Basis* nicht NULL und entweder kleiner als 2 oder größer als 36 ist, wird **errno** auf **EINVAL**festgelegt.
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_strtoi64** -Funktion konvertiert *StrSource* auf eine **__int64**. Beide Funktionen beenden das Lesen der Zeichenfolge *StrSource* mit dem ersten Zeichen, die sie nicht als Teil einer Zahl erkannt. Dies ist möglicherweise das abschließende Nullzeichen, oder es ist das erste numerische Zeichen größer als oder gleich *Basis*. **_wcstoi64** ist eine Breitzeichen-Version von **_strtoi64**, dessen *StrSource* Argument ist eine Breitzeichen-Zeichenfolge. Anderenfalls verhalten sich diese Funktionen identisch.
+Die **_strtoi64** -Funktion konvertiert " *stresource* " in ein " **__int64**". Beide Funktionen enden das Lesen der Zeichenfolge " *Strauch* " beim ersten Zeichen, das nicht als Teil einer Zahl erkannt werden kann. Dies kann das abschließende Null-Zeichen sein, oder es kann das erste numerische Zeichen sein, das größer oder gleich der *Basis*ist. **_wcstoi64** ist eine breit Zeichen Version von **_strtoi64**. Das *unsource* -Argument ist eine Zeichenfolge mit breit Zeichen. Anderenfalls verhalten sich diese Funktionen identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -112,15 +115,15 @@ Die **_strtoi64** -Funktion konvertiert *StrSource* auf eine **__int64**. Beide 
 |**_tcstoi64**|**_strtoi64**|**_strtoi64**|**_wcstoi64**|
 |**_tcstoi64_l**|**_strtoi64_l**|**_strtoi64_l**|**_wcstoi64_l**|
 
-Des Gebietsschemas des **LC_NUMERIC** bestimmt das Erkennen des Basiszeichens in *StrSource*; Weitere Informationen finden Sie unter [Setlocale](setlocale-wsetlocale.md). Die Funktionen ohne das _l-Suffix verwenden das aktuelle Gebietsschema; **_strtoi64_l** und **_wcstoi64_l** sind identisch mit der entsprechenden Funktion ohne die **_l** suffix mit dem Unterschied, dass sie das übergebene Gebietsschema verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die **LC_NUMERIC** -Kategorieeinstellung des Gebiets Schemas bestimmt die Erkennung des Basis Zeichens in " *strinsource*". Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Funktionen ohne das _l-Suffix verwenden das aktuelle Gebiets Schema. **_strtoi64_l** und **_wcstoi64_l** sind mit der entsprechenden Funktion ohne das Suffix **_l** identisch, außer dass Sie stattdessen das übergebene Gebiets Schema verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Wenn *Endptr* nicht **NULL**, ein Zeiger auf das Zeichen, die Überprüfung beendet, wird gespeichert, an der Position zeigt *Endptr*. Wenn keine Konvertierung ausgeführt werden kann (keine gültigen Ziffern gefunden oder ungültige Basis angegeben) den Wert der *StrSource* befindet sich in den Speicherort verweist *Endptr*.
+Wenn *endptr* nicht **null**ist, wird ein Zeiger auf das Zeichen, das die Überprüfung beendet hat, an dem Speicherort gespeichert, auf den von *endptr*verwiesen wird. Wenn keine Konvertierung ausgeführt werden kann (keine gültigen Ziffern gefunden oder ungültige Basis angegeben), wird der Wert von " *strinsource* " an dem Speicherort gespeichert, auf den von *endptr*verwiesen wird.
 
-**_strtoi64** erwartet *StrSource* auf eine Zeichenfolge der folgenden Form zeigt:
+**_strtoi64** erwartet, dass " *stresource* " auf eine Zeichenfolge der folgenden Form verweist:
 
-> [*Leerzeichen*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*Ziffern* &#124; *Buchstaben*]  
+> [*Leerzeichen*] [{ **+** &#124; &#124; &#124; }] [0 [{x x}]] [Ziffern Buchstaben] **-**
 
-Ein *Leerzeichen* besteht möglicherweise aus Leerzeichen und Tabulatorzeichen, die ignoriert werden; *Ziffern* sind eine oder mehrere Dezimalstellen sind; *Buchstaben* können eine oder mehrere der Buchstaben "a" bis "Z" (oder "A" bis "Z").  Das erste Zeichen, das dieser Form nicht entspricht, beendet die Überprüfung. Wenn *Basis* zwischen 2 und 36 liegt, ist er als der Basis der Zahl verwendet wird. Wenn *Basis* ist 0, die ersten Zeichen der Zeichenfolge verweist *StrSource* werden verwendet, um die Basis festzulegen. Wenn das erste Zeichen "0" und das zweite Zeichen nicht "x" oder "X" ist, wird die Zeichenfolge als ganze Oktalzahl interpretiert. Wenn das erste Zeichen "0" und das zweite Zeichen nicht "x" oder "X" ist, wird die Zeichenfolge als hexadezimale ganze Zahl interpretiert. Wenn das erste Zeichen "1" bis "9 " ist, wird die Zeichenfolge als ganze Dezimalzahl interpretiert. Den Buchstaben „a“ bis „z“ (bzw. „A“ bis „Z“) werden die Werten 10 bis 35 zugewiesen. Es sind nur Buchstaben zulässig, deren zugewiesene Werte kleiner als *base* sind. Das erste Zeichen außerhalb des Bereichs der Basis beendet die Überprüfung. Z. B. wenn *Basis* ist 0 und das erste überprüfte Zeichen "0", eine ganze Oktalzahl angenommen und ein "8" oder "9"-Zeichen beendet die Überprüfung.
+Ein Leerraum kann aus *Leerzeichen und* Tabstopp Zeichen bestehen, die ignoriert werden. *Ziffern* sind eine oder mehrere Dezimalstellen. *Buchstaben* sind mindestens einer der Buchstaben "a" bis "z" (oder "a" bis "z").  Das erste Zeichen, das dieser Form nicht entspricht, beendet die Überprüfung. Wenn die *Basis* zwischen 2 und 36 ist, wird Sie als Basis der Zahl verwendet. Wenn *Base* den Wert 0 hat, werden die ersten Zeichen der Zeichenfolge, auf die von " *darsource* " verwiesen wird, zum Bestimmen der Basis verwendet. Wenn das erste Zeichen "0" und das zweite Zeichen nicht "x" oder "X" ist, wird die Zeichenfolge als ganze Oktalzahl interpretiert. Wenn das erste Zeichen "0" und das zweite Zeichen nicht "x" oder "X" ist, wird die Zeichenfolge als hexadezimale ganze Zahl interpretiert. Wenn das erste Zeichen "1" bis "9 " ist, wird die Zeichenfolge als ganze Dezimalzahl interpretiert. Den Buchstaben „a“ bis „z“ (bzw. „A“ bis „Z“) werden die Werten 10 bis 35 zugewiesen. Es sind nur Buchstaben zulässig, deren zugewiesene Werte kleiner als *base* sind. Das erste Zeichen außerhalb des Bereichs der Basis beendet die Überprüfung. Wenn die *Basis* beispielsweise 0 und das erste überprüfte Zeichen "0" ist, wird eine ganze Oktalzahl angenommen und ein "8"-oder "9"-Zeichen beendet die Überprüfung.
 
 ## <a name="requirements"></a>Anforderungen
 

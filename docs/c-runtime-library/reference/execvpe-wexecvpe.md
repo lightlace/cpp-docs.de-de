@@ -1,10 +1,10 @@
 ---
 title: _execvpe, _wexecvpe
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execvpe
 - _wexecvpe
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wexecvpe
 - execvpe
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-ms.openlocfilehash: 064f8b94a9a97795015c09c11cd56e0370dcc60c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eab63cd54d410daf1dd4d09fb3d904feca0a230d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339402"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941736"
 ---
-# <a name="execvpe-wexecvpe"></a>_execvpe, _wexecvpe
+# <a name="_execvpe-_wexecvpe"></a>_execvpe, _wexecvpe
 
 Lädt neue untergeordnete Prozesse und führt sie aus.
 
@@ -70,9 +73,9 @@ Array von Zeigern zu Umgebungseinstellungen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg kehren diese Funktionen nicht zum aufrufenden Prozess zurück. Ein Rückgabewert 1 gibt einen Fehler, in diesem Fall die **Errno** globale Variable festgelegt ist.
+Bei Erfolg kehren diese Funktionen nicht zum aufrufenden Prozess zurück. Der Rückgabewert-1 gibt einen Fehler an. in diesem Fall ist die globale Variable **errno** festgelegt.
 
-|**Errno** Wert|Beschreibung|
+|**errno** -Wert|Beschreibung|
 |-------------------|-----------------|
 |**E2BIG**|Für die Argumente und die Umgebungseinstellungen werden mehr als 32 KB Speicherplatz benötigt.|
 |**EACCES**|Für die angegebene Datei ist eine Sperr- oder Freigabeverletzung aufgetreten.|
@@ -85,9 +88,9 @@ Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [err
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen lädt einen neuen Prozess, führt diesen aus und übergibt ein Array von Zeigern auf Befehlszeilenargumente und ein Array von Zeigern auf Umgebungseinstellungen. Diese Funktionen verwenden die **Pfad** -Umgebungsvariable zum Ermitteln der auszuführenden Datei.
+Jede dieser Funktionen lädt einen neuen Prozess, führt diesen aus und übergibt ein Array von Zeigern auf Befehlszeilenargumente und ein Array von Zeigern auf Umgebungseinstellungen. Diese Funktionen verwenden die **path** -Umgebungsvariable, um die auszuführende Datei zu suchen.
 
-Die **_execvpe** Funktionen überprüfen ihre Parameter. Wenn die *Cmdname* ein null-Zeiger ist oder wenn *Argv* ist ein null-Zeiger, ein Zeiger auf ein leeres Array oder ein Zeiger auf ein Array, das als erstes Argument eine leere Zeichenfolge enthält, rufen diese Funktionen den ungültigen parameterhandler, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und geben-1 zurück. Es wird kein Prozess gestartet.
+Die **_execvpe** -Funktionen überprüfen Ihre Parameter. Wenn der *cmdname* ein NULL-Zeiger ist oder *argv* ein NULL-Zeiger, ein Zeiger auf ein leeres Array oder ein Zeiger auf ein Array ist, das eine leere Zeichenfolge als erstes Argument enthält, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [beschrieben. Parameter Validierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, legen diese Funktionen **errno** auf **EINVAL** fest und geben-1 zurück. Es wird kein Prozess gestartet.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,10 +1,10 @@
 ---
 title: isfinite, _finite, _finitef
 ms.date: 01/31/2019
-apiname:
+api_name:
 - _finite
 - _finitef
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - isfinite
 - finite
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-ms.openlocfilehash: d727839521978be66c3dc9ee173ee2ba0a567445
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2cde4d3a57884413f0c48aa299b171334c5f988
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333715"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957182"
 ---
-# <a name="isfinite-finite-finitef"></a>isfinite, _finite, _finitef
+# <a name="isfinite-_finite-_finitef"></a>isfinite, _finite, _finitef
 
 Bestimmt, ob ein Gleitkommawert endlich ist.
 
@@ -71,11 +74,11 @@ Der zu testende Gleitkommawert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die `isfinite` Makro und die `_finite` und `_finitef` Funktionen geben einen Wert ungleich NULL zurück, wenn *x* entweder mit normaler oder subnormal mit endlicher Wert. Sie geben die 0, wenn das Argument unendlich ist oder ein NaN-Wert zurück. Die C++-Inline-Vorlagenfunktion `isfinite` verhält sich genauso, gibt jedoch **"true"** oder **"false"**.
+Das `isfinite` Makro und die `_finite` - `_finitef` und-Funktionen geben einen Wert ungleich 0 (null) zurück, wenn *x* entweder ein normaler oder ein subnormaler Endwert ist. Sie geben 0 zurück, wenn das Argument unendlich oder ein NaN-Wert ist. Die C++ Inline Vorlagen Funktion `isfinite` verhält sich wie, gibt jedoch **true** oder **false**zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-`isfinite` ist ein Makro, wenn als C, und eine Vorlage Inlinefunktion beim Kompilieren als C++ kompiliert. Die `_finite` und `_finitef` Funktionen sind Microsoft-spezifisch. Die Funktion `_finitef` ist nur verfügbar, wenn sie für x86, ARM- oder ARM64-Plattformen kompiliert wurde.
+`isfinite`ist ein Makro, wenn es als C kompiliert wird, und eine Inline-Vorlagen C++Funktion, wenn Sie als kompiliert werden. Die `_finite` Funktionen `_finitef` und sind Microsoft-spezifisch. Die Funktion `_finitef` ist nur verfügbar, wenn sie für x86, ARM- oder ARM64-Plattformen kompiliert wurde.
 
 ## <a name="requirements"></a>Anforderungen
 

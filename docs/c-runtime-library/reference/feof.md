@@ -1,9 +1,9 @@
 ---
 title: feof
 ms.date: 11/04/2016
-apiname:
+api_name:
 - feof
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - feof
 helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-ms.openlocfilehash: 9c023290df601bfc48f9708af86d32d91cd52dc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf6cfdb63689f5d69cc45dd407ecc6b08a7a7a73
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334397"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941135"
 ---
 # <a name="feof"></a>feof
 
@@ -48,15 +51,15 @@ Zeiger auf die **FILE**-Struktur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Feof** Funktion gibt einen Wert ungleich NULL zurück, wenn es sich bei ein Lesevorgang versucht wurde, nach dem Ende der Datei zu lesen; andernfalls wird 0 zurückgegeben. Wenn der streamzeiger **NULL**, die Funktion ruft der Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und **Feof** gibt 0 zurück.
+Die Funktion " **feof** " gibt einen Wert ungleich 0 (null) zurück, wenn ein Lesevorgang versucht hat, über das Dateiende hinaus zu lesen. Andernfalls wird 0 zurückgegeben. Wenn der Streamzeiger **null**ist, ruft die Funktion den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird **errno** auf **EINVAL** festgelegt, und das **feof** gibt 0 zurück.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Feof** -Routine (die sowohl als Funktion und Makro implementiert werden) bestimmt, ob das Ende des *Stream* übergeben wurde. Wenn das Ende der Datei übergeben wird, lesen Sie Vorgänge geben einen Dateiende-Indikator zurück, bis der Stream geschlossen ist oder bis [rewind](rewind.md), **Fsetpos**, [Fseek](fseek-fseeki64.md), oder  **Clearerr** dagegen aufgerufen wird.
+Die **feof** -Routine (sowohl als Funktion als auch als Makro implementiert) bestimmt, ob das Ende des *Streams* übergeben wurde. Wenn das Dateiende überschritten wird, geben Lesevorgänge einen Dateiende-Indikator zurück, bis der Stream geschlossen ist oder wenn [Rewind](rewind.md), **fsetpos**, [fseek](fseek-fseeki64.md)oder **clearerr** für ihn aufgerufen wird.
 
-Wenn eine Datei 10 Bytes enthält, und Sie 10 Bytes aus der Datei lesen, z. B. **Feof** gibt 0 zurück, da, auch wenn der Dateizeiger am Ende der Datei ist, Sie nicht versucht haben, über das Ende hinaus zu lesen. Nur wenn Sie versuchen, lesen Sie ein 11. Byte **Feof** einen Wert ungleich NULL zurückgegeben.
+Wenn eine Datei z. b. 10 Bytes enthält und Sie 10 Bytes aus der Datei lesen, gibt **feof** 0 zurück, da sich der Dateizeiger am Ende der Datei befindet, weil Sie nicht versucht haben, über das Ende hinaus zu lesen. Erst nachdem Sie versucht haben, ein 11. Byte zu lesen **, wird ein** Wert ungleich 0 (null) zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -106,14 +109,14 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfeoftxt"></a>Eingabe: crt_feof.txt
+## <a name="input-crt_feoftxt"></a>Eingabe: crt_feof.txt
 
 ```Input
 Line one.
 Line two.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 Number of bytes read = 19

@@ -1,11 +1,11 @@
 ---
 title: timespec_get, _timespec32_get, _timespec64_get1
 ms.date: 11/04/2016
-apiname:
+api_name:
 - timespec_get
 - _timespec32_get
 - _timespec64_get
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - timespec_get
 - _timespec32_get
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-ms.openlocfilehash: 1591189ff2db78605c334e72ac3be13876afc81d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0517c974bf58d502133ccd9868149bd178790d6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155549"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957617"
 ---
-# <a name="timespecget-timespec32get-timespec64get"></a>timespec_get, _timespec32_get, _timespec64_get
+# <a name="timespec_get-_timespec32_get-_timespec64_get"></a>timespec_get, _timespec32_get, _timespec64_get
 
 Legt das Intervall, auf das das erste Argument verweist, auf die aktuelle Kalenderzeit fest, basierend auf der angegebenen Zeitbasis.
 
@@ -71,15 +74,15 @@ Ein implementierungsspezifischer Wert ungleich null, der die Zeitbasis angibt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Wert des *Basis* erfolgreich ist, andernfalls 0 (null) zurückgegeben.
+Der Wert von *Base* , wenn erfolgreich, andernfalls wird NULL zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Timespec_get** Funktionen legen die aktuelle Uhrzeit in der Struktur verweist die *Time_spec* Argument. Alle Versionen dieser Struktur besitzen zwei Member, **Tv_sec** und **Tv_nsec**. Die **Tv_sec** Wert wird festgelegt, auf die ganze Zahl von Sekunden und **Tv_nsec** auf ganzzahlige Nanosekunden, gerundet auf die Auflösung der Systemuhr an, seit dem Beginn der Epoche, der anhand des *Basis*.
+Die **timespec_get** -Funktionen legen die aktuelle Zeit in der Struktur fest, auf die durch das *time_spec* -Argument verwiesen wird. Alle Versionen dieser Struktur haben zwei Member, **tv_sec** und **tv_nsec**. Der **tv_sec** -Wert ist auf die ganze Anzahl von Sekunden und **tv_nsec** auf die ganzzahlige Anzahl von Nanosekunden festgelegt, auf die Auflösung der Systemuhr gerundet, seit dem Beginn der Epoche, die durch *Base*angegeben wird.
 
 **Microsoft-spezifisch**
 
-Diese Funktionen unterstützen nur **TIME_UTC** als die *Basis* Wert. Hiermit wird die *Time_spec* Wert, der die Anzahl der Sekunden und Nanosekunden seit dem Beginn der Epoche, Mitternacht, 1. Januar 1970, koordinierte Weltzeit (UTC). In einem **Struktur** **_timespec32**, **Tv_sec** ist eine **__time32_t** Wert. In einem **Struktur** **_timespec64**, **Tv_sec** ist eine **__time64_t** Wert. In einem **Struktur** **Timespec**, **Tv_sec** ist eine **Time_t** Typ, der 32-Bit oder 64 Bit lang, je nachdem, ob der Präprozessor Makro _USE_32BIT_TIME_T definiert ist. Die **Timespec_get** -Funktion ist eine Inlinefunktion, die aufruft **_timespec32_get** Wenn _USE_32BIT_TIME_T definiert ist; andernfalls ruft sie **_timespec64_get**.
+Diese Funktionen unterstützen nur **TIME_UTC** als *Basiswert* . Dadurch wird der *time_spec* -Wert auf die Anzahl der Sekunden und Nanosekunden seit dem Beginn der Epoche, Mitternacht, 1. Januar 1970, koordinierte Weltzeit (UTC) festgelegt. In einer **Struktur** **_timespec32**ist **tv_sec** ein **__time32_t** -Wert. In einer **Struktur** **_timespec64**ist **tv_sec** ein **__time64_t** -Wert. In einer **Struktur** **timespec**ist **tv_sec** ein **time_t** -Typ, bei dem es sich um 32 Bits oder 64 Bits handelt, abhängig davon, ob das Präprozessormakro _USE_32BIT_TIME_T definiert ist. Die **timespec_get** -Funktion ist eine Inline Funktion, die **_timespec32_get** aufruft, wenn _USE_32BIT_TIME_T definiert ist. Andernfalls wird **_timespec64_get**aufgerufen.
 
 **Ende Microsoft-spezifisch**
 

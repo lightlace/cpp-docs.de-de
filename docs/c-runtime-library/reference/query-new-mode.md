@@ -1,9 +1,9 @@
 ---
 title: _query_new_mode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _query_new_mode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - query_new_mode
 - _query_new_mode
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - handler modes
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
-ms.openlocfilehash: 327f22c847793316bd126721b4a66846d7da84dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59724dafdc6488596478d0b44b254c4f498fce99
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358072"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950115"
 ---
-# <a name="querynewmode"></a>_query_new_mode
+# <a name="_query_new_mode"></a>_query_new_mode
 
-Gibt eine ganze Zahl, der angibt, der des neuen handlermodus festlegen, indem **_set_new_mode** für **Malloc**.
+Gibt eine ganze Zahl zurück, die den von **_set_new_mode** für **malloc**festgelegten neuen handlermodus angibt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,11 +48,11 @@ int _query_new_mode(
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den aktuellen neuen handlermodus, nämlich 0 oder 1 für **Malloc**. Ein Rückgabewert 1 gibt an, dass bei einem Fehler bei der speicherbelegung **Malloc** Ruft die neue Handlerroutine; der Rückgabewert 0 gibt an, dass dies nicht der Fall.
+Gibt den aktuellen neuen handlermodus für **malloc**zurück, nämlich 0 oder 1. Der Rückgabewert 1 gibt an, dass **malloc** bei einem Fehler beim Zuordnen von Arbeitsspeicher die neue Handlerroutine aufruft. der Rückgabewert 0 gibt an, dass dies nicht der Fall ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Die C++ **_query_new_mode** Funktionsergebnis ist eine ganze Zahl, die der neue handlermodus gibt an, der festgelegt wird, indem die C++ [_set_new_mode](set-new-mode.md) für Funktion [Malloc](malloc.md). Der neue handlermodus gibt an, ob bei einem Fehler bei der speicherbelegung **Malloc** besteht darin, rufen Sie die neue Handlerroutine mit [_set_new_handler](set-new-handler.md). In der Standardeinstellung **Malloc** wird die neue Handlerroutine nicht bei einem Fehler aufgerufen. Können Sie **_set_new_mode** also dieses Verhalten zu überschreiben, die bei einem Fehler **"malloc"** die neue Handlerroutine aufruft, in der gleichen Weise die **neue** Operator ist, wenn ein Fehler auftritt, Speicher zuordnen. Weitere Informationen finden Sie unter der Erläuterung [new and delete operators (Operatoren new und delete)](../../cpp/new-and-delete-operators.md) in der C++-Sprachreferenz.
+Die C++ **_query_new_mode** -Funktion gibt eine ganze Zahl zurück, die den neuen handlermodus angibt C++ , der von der [_set_new_mode](set-new-mode.md) -Funktion für [malloc](malloc.md)festgelegt wird. Der neue handlermodus gibt an, ob bei einem Fehler beim Zuweisen von Arbeitsspeicher **malloc** die neue Handlerroutine aufrufen soll, wie von [_set_new_handler](set-new-handler.md)festgelegt. Standardmäßig ruft **malloc** die neue Handlerroutine bei einem Fehler nicht auf. Sie können **_set_new_mode** verwenden, um dieses Verhalten zu überschreiben, sodass bei einem Fehler **malloc** die neue Handlerroutine auf die gleiche Weise aufgerufen wird, die der **neue** Operator beim Zuordnen von Arbeitsspeicher vornimmt. Weitere Informationen finden Sie unter der Erläuterung [new and delete operators (Operatoren new und delete)](../../cpp/new-and-delete-operators.md) in der C++-Sprachreferenz.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,10 +1,10 @@
 ---
 title: getc, getwc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - getwc
 - getc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _gettc
 - getwc
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - getwc function
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
-ms.openlocfilehash: bbaee79eac6802959a11f7f1ba30eaf590ecf2f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ceb3ca117271e7074c6cb72c9c1f9e74ebe3bc10
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331869"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955493"
 ---
 # <a name="getc-getwc"></a>getc, getwc
 
@@ -61,13 +64,13 @@ Eingabestream
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das gelesene Zeichen zurück. Zum Angeben eines Lesefehlers oder einer End-of-File-Bedingung, **Getc** gibt **EOF**, und **Getwc** gibt **WEOF**. Für **Getc**, verwenden Sie **Ferror** oder **Feof** für einen Fehler oder Dateiende zu überprüfen. Wenn *Stream* ist **NULL**, **Getc** und **Getwc** der Handler für ungültige Parameter aufgerufen, siehe [Parameter Überprüfung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EOF** (oder **WEOF** für **Getwc**) und legen Sie **Errno** zu  **EINVAL**.
+Gibt das gelesene Zeichen zurück. Um einen Lesefehler oder eine dateiendebedingung anzugeben, gibt **getc** **EOF**zurück, und **getwc** gibt **WEOF**zurück. Verwenden Sie für **getc** **ferror** oder **feof** , um einen Fehler oder ein Dateiende zu überprüfen. Wenn der Stream **null**ist, rufen **getc** und **getwc** den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen **EOF** (oder **WEOF** für **getwc**) zurück und legen **errno** auf **EINVAL**fest.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Jede Routine liest ein einzelnes Zeichen aus einer Datei an der aktuellen Position und erhöht den zugeordneten Dateizeiger (wenn definiert), um auf das nächste Zeichen zu zeigen. Die Datei zugeordnet ist *Stream*.
+Jede Routine liest ein einzelnes Zeichen aus einer Datei an der aktuellen Position und erhöht den zugeordneten Dateizeiger (wenn definiert), um auf das nächste Zeichen zu zeigen. Die Datei ist dem *Stream*zugeordnet.
 
 Diese Funktionen sperren den aufrufenden Thread und sind daher threadsicher. Eine nicht sperrende Version finden Sie unter [_getc_nolock _getwc_nolock](getc-nolock-getwc-nolock.md).
 
@@ -75,8 +78,8 @@ Es folgen routinespezifische Hinweise.
 
 |-Routine zurückgegebener Wert|Hinweise|
 |-------------|-------------|
-|**getc**|Identisch mit **Fgetc**, jedoch implementiert, wie eine Funktion und Makro.|
-|**getwc**|Breitzeichen Version von **Getc**. Liest ein Multibytezeichen oder Breitzeichen, je nachdem, ob *Stream* im Textmodus oder Binärmodus geöffnet ist.|
+|**getc**|Identisch mit " **f**", aber als Funktion und als Makro implementiert.|
+|**getwc**|Breit Zeichen Version von **getc**. Liest ein Multibytezeichen oder breit Zeichen, je nachdem, ob der *Stream* im Textmodus oder im Binärmodus geöffnet ist.|
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -130,14 +133,14 @@ int main()
 }
 ```
 
-### <a name="input-crtgetctxt"></a>Eingabe: crt_getc.txt
+### <a name="input-crt_getctxt"></a>Eingabe: crt_getc.txt
 
 ```Input
 Line one.
 Line two.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 Input was: Line one.

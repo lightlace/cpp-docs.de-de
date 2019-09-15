@@ -1,11 +1,11 @@
 ---
 title: fdim, fdimf, fdiml
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fdim
 - fdimf
 - fdiml
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fdim
 - fdimf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-ms.openlocfilehash: 263635a32b21b01faa84405ab97bd5518f054ba5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74935f724b678b08e39604d9916c7c5de5925aee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334787"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941298"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 
@@ -80,7 +83,7 @@ Der zweite Wert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den positiven Unterschied zwischen *x* und *y*:
+Gibt den positiven Unterschied zwischen *x* und *y*zurück:
 
 |Rückgabewert|Szenario|
 |------------------|--------------|
@@ -93,15 +96,15 @@ Andernfalls wird einer der folgenden Fehler zurückgeben:
 |-----------|------------|
 |Überlaufbereichsfehler|+HUGE_VAL, +HUGE_VALF, oder +HUGE_VALL|
 |Unterlaufbereichsfehler|Richtiger Wert (nach dem Runden)|
-|*X* oder *y* ist NaN|NaN|
+|*x* oder *y* ist NaN|NaN|
 
 Fehler werden gemäß der Angaben in [_matherr](matherr.md) gemeldet.
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Fdim** verwenden und zurückgeben **"float"** und **lange** **doppelte** Typen. In einem C-Programm **Fdim** immer Double und gibt eine **doppelte**.
+Da C++ das überladen zulässt, können Sie über Ladungen von **fdim** aufzurufen, die **float** -und **Long** **Double** -Typen annehmen und zurückgeben. In einem C-Programm nimmt " **f** " immer einen **Double**-Wert an und gibt diesen zurück.
 
-Diese Funktion entspricht, mit Ausnahme der Behandlung von NaN, `fmax(x - y, 0)`.
+Mit Ausnahme der Nan-Behandlung entspricht `fmax(x - y, 0)`diese Funktion.
 
 ## <a name="requirements"></a>Anforderungen
 

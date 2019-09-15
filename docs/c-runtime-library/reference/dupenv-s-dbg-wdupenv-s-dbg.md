@@ -1,10 +1,10 @@
 ---
 title: _dupenv_s_dbg, _wdupenv_s_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tdupenv_s_dbg
 - _dupenv_s_dbg
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-ms.openlocfilehash: 95d8c18a0ebc543304fdb6bf51c4adde589333aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c61986184f93c6cf6e83b33f77dce2bd017cfae
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339220"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937678"
 ---
-# <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
+# <a name="_dupenv_s_dbg-_wdupenv_s_dbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
 
 Ruft einen Wert aus der aktuellen Umgebung ab.  Versionen von [_dupenv_s, _wdupenv_s](dupenv-s-wdupenv-s.md), die Speicher mit [_malloc_dbg](malloc-dbg.md) belegen, um zusätzliche Debuginformationen bereitzustellen.
 
@@ -67,7 +70,7 @@ errno_t _wdupenv_s_dbg(
 Puffer zum Speichern des Variablenwerts.
 
 *numberOfElements*<br/>
-Größe des *Puffer*.
+Größe des *Puffers*.
 
 *varname*<br/>
 Umgebungsvariablenname.
@@ -76,24 +79,24 @@ Umgebungsvariablenname.
 Angeforderter Typ des Speicherblocks: **_CLIENT_BLOCK** oder **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Zeiger auf den Namen der Quelldatei oder **NULL**.
+Zeiger auf den Namen der Quelldatei oder **null**.
 
 *linenumber*<br/>
-Zeilennummer in der Quelldatei oder **NULL**.
+Zeilennummer in der Quelldatei oder **null**.
 
 ## <a name="return-value"></a>Rückgabewert
 
 Null bei Erfolg, ein Fehlercode, wenn ein Fehler auftritt.
 
-Diese Funktionen überprüfen ihre Parameter; Wenn *Puffer* oder *Varname* ist **NULL**, wird der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzen die Funktionen **Errno** zu **EINVAL** und zurückgeben **EINVAL**.
+Diese Funktionen überprüfen Ihre Parameter. Wenn *buffer* oder *varname* **null**ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, legen die Funktionen " **errno** " auf " **EINVAL** " fest und geben " **EINVAL**" zurück.
 
-Wenn diese Funktionen können nicht genügend Arbeitsspeicher zuordnen, die sie festgelegt *Puffer* zu **NULL** und *NumberOfElements* 0, und Rückgabe **ENOMEM**.
+Wenn diese Funktionen nicht genügend Arbeitsspeicher zuordnen können, legen Sie den *Puffer* auf **null** und die *Anzahl* der Werte auf 0 fest und geben **ENOMEM**zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_dupenv_s_dbg** und **_wdupenv_s_dbg** -Funktionen sind identisch mit **_dupenv_s** und **_wdupenv_s** mit dem Unterschied, dass wenn **_DEBUG** wird definiert, verwenden Sie diese Funktionen die Debugversion von [Malloc](malloc.md), [_malloc_dbg](malloc-dbg.md), um Speicher für den Wert der Umgebungsvariable zu belegen. Informationen zu den Debugfunktionen von **_malloc_dbg**, finden Sie unter [_malloc_dbg](malloc-dbg.md).
+Die Funktionen **_dupenv_s_dbg** und **_wdupenv_s_dbg** sind mit **_dupenv_s** und **_wdupenv_s** identisch, außer dass bei Definition von **_DEBUG** die Debugversion von [malloc](malloc.md), [_malloc_dbg](malloc-dbg.md), , um Speicher für den Wert der Umgebungsvariablen zuzuweisen. Weitere Informationen zu den Debuggingfunktionen von **_malloc_dbg**finden Sie unter [_malloc_dbg](malloc-dbg.md).
 
-In den meisten Fällen müssen Sie diese Funktionen nicht explizit aufrufen. Stattdessen definieren Sie das Flag **_CRTDBG_MAP_ALLOC**. Wenn **_CRTDBG_MAP_ALLOC** definiert ist, werden Aufrufe von **_dupenv_s** und **_wdupenv_s** neu zu **_dupenv_s_dbg** und **_wdupenv_s_dbg**, mit der *BlockType* festgelegt **_NORMAL_BLOCK**. Also, Sie müssen nicht dieser Funktionen explizit aufrufen, es sei denn, Sie möchten die Heapblöcke als markieren **_CLIENT_BLOCK**. Weitere Informationen zu den Blocktypen finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details).
+In den meisten Fällen müssen Sie diese Funktionen nicht explizit aufrufen. Stattdessen können Sie das Flag **_CRTDBG_MAP_ALLOC**definieren. Wenn **_CRTDBG_MAP_ALLOC** definiert ist, werden Aufrufe von **_dupenv_s** und **_wdupenv_s** zu **_dupenv_s_dbg** bzw. **_wdupenv_s_dbg**neu zugeordnet, wobei *blockType* auf **_NORMAL_BLOCK**festgelegt ist. Daher müssen Sie diese Funktionen nicht explizit aufzurufen, es sei denn, Sie möchten die Heap Blöcke als **_CLIENT_BLOCK**markieren. Weitere Informationen zu den Blocktypen finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

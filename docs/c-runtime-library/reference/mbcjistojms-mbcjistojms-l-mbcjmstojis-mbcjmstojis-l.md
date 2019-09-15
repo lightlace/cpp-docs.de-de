@@ -1,12 +1,12 @@
 ---
 title: _mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbcjistojms
 - _mbcjmstojis
 - _mbcjistojms_l
 - _mbcjmstojis_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbcjistojms
 - _mbcjistojms
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - mbcjmstojis_l function
 - mbcjistojms_l function
 ms.assetid: dece5127-b337-40a4-aa10-53320a2c9432
-ms.openlocfilehash: 22cf8eeb5f99b6abee624aa3b1d06246d7230652
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6bf1109cfba93042bd00acde4812706c1bbf7a01
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156823"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952593"
 ---
-# <a name="mbcjistojms-mbcjistojmsl-mbcjmstojis-mbcjmstojisl"></a>_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
+# <a name="_mbcjistojms-_mbcjistojms_l-_mbcjmstojis-_mbcjmstojis_l"></a>_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
 
 Konvertiert zwischen Zeichen aus den Zeichensätzen Japan Industry Standard (JIS) und Japan Microsoft (JMS).
 
@@ -85,15 +88,15 @@ Bei einem japanischen Gebietsschema geben diese Funktionen ein konvertiertes Zei
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbcjistojms** -Funktion konvertiert ein Zeichen Japan Industry Standard (JIS) in ein Microsoft Kanji (Shift-JIS) Zeichen. Das Zeichen wird nur konvertiert, wenn die und die nachfolgenden Bytes im Bereich 0 x 21 – 0x7E sind. Wenn das anführende oder das nachfolgende Byte außerhalb dieses Bereichs liegen, ist **Errno** nastaven NA hodnotu **EILSEQ**. Weitere Informationen hierzu und über andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Die **_mbcjistojms** -Funktion konvertiert ein JIS-Zeichen (Japan Industry Standard) in ein Microsoft Kanji-Zeichen (Shift JIS). Das Zeichen wird nur konvertiert, wenn die Leads und die nachfolgenden Bytes im Bereich 0x21-0x7E liegen. Wenn das Lead-oder Test Byte außerhalb dieses Bereichs liegt, wird **errno** auf **EILSEQ**festgelegt. Weitere Informationen hierzu und über andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Die **_mbcjmstojis** Funktion konvertiert ein Shift JIS-Zeichen in ein JIS-Zeichen. Nur, wenn das führende Byte im Bereich 0 x 81 – 0x9F oder 0xE0 - 0xFC liegt liegt und das nachfolgende Byte im Bereich 0 x 40-0x7E oder 0 x 80 – 0xFC liegt liegt, wird das Zeichen konvertiert. Beachten Sie, dass einigen Codepunkten in diesem Bereich kein Zeichen zugewiesen ist und sie daher nicht konvertiert werden können.
+Die **_mbcjmstojis** -Funktion konvertiert ein Shift JIS-Zeichen in ein JIS-Zeichen. Das Zeichen wird nur konvertiert, wenn das führende Byte im Bereich 0x81-0x9F oder 0xE0-0xFC liegt und das nachfolgende Byte im Bereich 0x40-0x7E oder 0x80-0xFC liegt. Beachten Sie, dass einigen Codepunkten in diesem Bereich kein Zeichen zugewiesen ist und sie daher nicht konvertiert werden können.
 
-Der Wert *c* muss ein 16-Bit-Wert, dessen obere 8 Bits das führende Byte der zu konvertierende Zeichen darstellen, und dessen untere 8 Bits das nachfolgende Byte darstellen.
+Der Wert *c* muss ein 16-Bit-Wert sein, dessen obere 8 Bits das führende Byte des zu konvertierenden Zeichens darstellen und dessen untere 8 Bits das nachfolgende Byte darstellen.
 
 Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-In früheren Versionen **_mbcjistojms** und **_mbcjmstojis** aufgerufen wurden **Jistojms** und **Jmstojis**bzw. **_mbcjistojms**, **_mbcjistojms_l**, **_mbcjmstojis** und **_mbcjmstojis_l** sollte stattdessen verwendet werden.
+In früheren Versionen wurden **_mbcjistojms** und **_mbcjmstojis** als **jistojms** bzw. **jmstojis**bezeichnet. Stattdessen sollten **_mbcjistojms**, **_mbcjistojms_l**, **_mbcjmstojis** und **_mbcjmstojis_l** verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 

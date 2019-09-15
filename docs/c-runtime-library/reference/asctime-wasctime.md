@@ -1,10 +1,10 @@
 ---
 title: asctime, _wasctime
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wasctime
 - asctime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tasctime
 - asctime
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-ms.openlocfilehash: bc2d7a50442d9000eaaebf7a06bf336b3317e4df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ca9bbcbfff3d2bef41443ff1744a1b612727c20
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341807"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939676"
 ---
-# <a name="asctime-wasctime"></a>asctime, _wasctime
+# <a name="asctime-_wasctime"></a>asctime, _wasctime
 
-Konvertieren einer **tm** -Zeitstruktur in einer Zeichenfolge. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [asctime_s, _wasctime_s](asctime-s-wasctime-s.md).
+Konvertiert eine **TM** -Zeitstruktur in eine Zeichenfolge. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [asctime_s, _wasctime_s](asctime-s-wasctime-s.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,13 +62,13 @@ Zeit-/Datumsstruktur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Asctime** gibt einen Zeiger auf das Zeichenfolgenergebnis; **_wasctime** gibt einen Zeiger auf das Breitzeichenfolge-Ergebnis zurück. Es gibt keinen Fehlerrückgabewert.
+**Asctime** gibt einen Zeiger auf das Ergebnis der Zeichenfolge zurück. **_wasctime** gibt einen Zeiger auf das Ergebnis der Zeichenfolge mit breit Zeichen zurück. Es gibt keinen Fehlerrückgabewert.
 
 ## <a name="remarks"></a>Hinweise
 
 Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [asctime_s, _wasctime_s](asctime-s-wasctime-s.md).
 
-Die **Asctime** -Funktion konvertiert eine Zeit, die als eine Struktur in eine Zeichenfolge gespeichert. Die *Timeptr* Wert wird in der Regel von einem Aufruf abgerufen **Gmtime** oder **Localtime**, für die Geben Sie einen Zeiger auf eine **tm** -Struktur in der Zeit definiert. H.
+Die **Asctime** -Funktion konvertiert eine als-Struktur gespeicherte Zeit in eine Zeichenfolge. Der *Timeptr* -Wert wird in der Regel aus einem Aufruf von **gmtime** oder **localtime**abgerufen, der beide einen Zeiger auf eine **TM** -Struktur zurückgibt, die zeitlich definiert ist. Micha.
 
 |timeptr.member|Wert|
 |--------------------|-----------|
@@ -73,19 +76,19 @@ Die **Asctime** -Funktion konvertiert eine Zeit, die als eine Struktur in eine Z
 |**tm_isdst**|Positiv bei Sommerzeit; 0 bei Winterzeit; negativ bei unbekannter Zeit. Die C-Laufzeitbibliothek wendet die Regeln der Vereinigten Staaten an, um die Berechnung der Sommerzeit (DST, Daylight Saving Time) zu implementieren.|
 |**tm_mday**|Tag des Monats (1-31)|
 |**tm_min**|Minuten nach Stunde (0-59)|
-|**tm_mon**|Monat (0 – 11; Januar = 0)|
+|**tm_mon**|Monat (0-11; Januar = 0)|
 |**tm_sec**|Sekunden nach Minute (0-59)|
-|**tm_wday**|Tag der Woche (0-6; Sonntag = 0)|
-|**tm_yday**|Tag des Jahres (0 – 365; 1. Januar = 0)|
+|**tm_wday**|Wochentag (0-6; Sonntag = 0)|
+|**tm_yday**|Tag des Jahres (0-365; 1. Januar = 0)|
 |**tm_year**|Jahr (aktuelles Jahr minus 1900)|
 
 Die konvertierte Zeichenfolge wird auch gemäß den lokalen Zeitzoneneinstellungen angepasst. Informationen zur Konfiguration der Zeitzonen finden Sie unter den [time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md) und [localtime](localtime-localtime32-localtime64.md)-Funktionen. Informationen zur Definition der Zeitzonenumgebung und globalen Variablen finden Sie unter der [_tzset](tzset.md)-Funktion.
 
-Das Zeichenfolgenergebnis erzeugten **Asctime** enthält genau 26 Zeichen und weist das Format `Wed Jan 02 02:03:55 1980\n\0`. Eine 24-Stunden-Uhr wird verwendet. Alle Felder haben eine feste Breite. Die Zeilenwechsel- und Nullzeichen nehmen die letzten beiden Stellen der Zeichenfolge ein. **Asctime** verwendet einen einzelnen, statisch zugeordneten Puffer für die zurückgegebene Zeichenfolge. Jeder Aufruf dieser Funktion zerstört das Ergebnis des vorherigen Aufrufs.
+Das von **Asctime** erzeugte Zeichen folgen Ergebnis enthält genau 26 Zeichen und hat das `Wed Jan 02 02:03:55 1980\n\0`Formular. Eine 24-Stunden-Uhr wird verwendet. Alle Felder haben eine feste Breite. Die Zeilenwechsel- und Nullzeichen nehmen die letzten beiden Stellen der Zeichenfolge ein. **Asctime** verwendet einen einzelnen, statisch zugeordneten Puffer, um die Rückgabe Zeichenfolge zu speichern. Jeder Aufruf dieser Funktion zerstört das Ergebnis des vorherigen Aufrufs.
 
-**_wasctime** ist eine Breitzeichen-Version von **Asctime**. **_wasctime** und **Asctime** Verhalten sich andernfalls identisch.
+**_wasctime** ist eine breit Zeichen Version von **Asctime**. **_wasctime** und **Asctime** Verhalten sich andernfalls identisch.
 
-Diese Funktionen überprüfen ihre Parameter. Wenn *Timeptr* ein null-Zeiger ist oder wenn es außerhalb des gültigen Bereichs von Werten enthält, wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **NULL** und **Errno** zu **EINVAL**.
+Diese Funktionen überprüfen ihre Parameter. Wenn *Timeptr* ein NULL-Zeiger ist, oder wenn es Werte außerhalb des gültigen Bereichs enthält, wird der Handler für ungültige Parameter aufgerufen, wie unter [Parameter Validierung](../../c-runtime-library/parameter-validation.md)beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **null** zurück und legt **errno** auf **EINVAL**fest.
 
 ### <a name="generic-text-routine-mapping"></a>Routinemäßige Allgemeintext-Zuordnung
 
@@ -102,7 +105,7 @@ Diese Funktionen überprüfen ihre Parameter. Wenn *Timeptr* ein null-Zeiger ist
 
 ## <a name="example"></a>Beispiel
 
-Dieses Programm platziert die Systemzeit in der lange ganze Zahl **Aclock**, übersetzt sie in der Struktur **Newtime** und dann in Form einer Zeichenfolge für die Ausgabe, indem konvertiert die **Asctime**Funktion.
+Dieses Programm versetzt die Systemzeit in die lange ganzzahlige **aclock**, übersetzt Sie in die Struktur **newTime** und konvertiert Sie dann mithilfe der **Asctime** -Funktion in eine Zeichenfolge Form für die Ausgabe.
 
 ```C
 // crt_asctime.c

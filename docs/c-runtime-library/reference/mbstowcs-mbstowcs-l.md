@@ -1,10 +1,10 @@
 ---
 title: mbstowcs, _mbstowcs_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbstowcs
 - _mbstowcs_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbstowcs
 helpviewer_keywords:
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-ms.openlocfilehash: cae1034d0bcb9789f5cb709399d4992de44cae9d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3df851b08edfa9dfe5bf9b42b9abfd45a8939606
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499783"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952035"
 ---
 # <a name="mbstowcs-_mbstowcs_l"></a>mbstowcs, _mbstowcs_l
 
@@ -85,7 +88,7 @@ Das zu verwendende Gebietsschema.
 Wenn **mbstowcs** die Quell Zeichenfolge erfolgreich konvertiert, wird die Anzahl der konvertierten Multibytezeichen zurückgegeben. Wenn das *wcstr* -Argument **null**ist, gibt die Funktion die erforderliche Größe (in breit Zeichen) der Ziel Zeichenfolge zurück. Wenn **mbstowcs** auf ein ungültiges Multibytezeichen stößt, wird-1 zurückgegeben. Wenn der Rückgabewert " *count*" ist, wird die Zeichenfolge mit breit Zeichen nicht auf Null beendet.
 
 > [!IMPORTANT]
-> Stellen Sie sicher, dass sich *wcstr* und *mbstr* nicht über Lappen und dass die Anzahl der zu konvertierenden Multibytezeichen korrekt widerspiegelt.
+> Stellen Sie sicher, dass sich *wcstr* und *mbstr* nicht überlappen *und dass die* Anzahl der zu konvertierenden Multibytezeichen korrekt widerspiegelt.
 
 ## <a name="remarks"></a>Hinweise
 

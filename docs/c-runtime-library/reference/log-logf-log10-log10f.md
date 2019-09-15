@@ -1,14 +1,14 @@
 ---
 title: log, logf, logl, log10, log10f, log10l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - log10f
 - logf
 - log10
 - log
 - log10l
 - logl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - logf
 - logl
@@ -40,12 +43,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: c8e3f73e61fefa7a39a6d53d63739b094d78c499
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f610ead4d71a877051fdec8df2a1564089141eea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286011"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953228"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf, logl, log10, log10f, log10l
 
@@ -76,7 +79,7 @@ Ein Wert, dessen Logarithmus gesucht wird.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Log** Funktionen geben den natürlichen Logarithmus (Basis *e*) der *x* bei erfolgreicher Ausführung. Die **log10** Funktionen geben den Logarithmus zur Basis-10 zurück. Wenn *x* ist negativ, diese Funktionen ein unbestimmtes (Suchen), geben standardmäßig zurück. Wenn *x* gleich 0 ist, geben sie die unendlich (INF) zurück.
+Die **Log** -Funktionen geben bei Erfolg den natürlichen Logarithmus (Basis *e*) von *x* zurück. Die **log10** -Funktionen geben den Logarithmus zur Basis 10 zurück. Wenn *x* negativ ist, geben diese Funktionen standardmäßig einen unbestimmten Wert (IND) zurück. Wenn *x* 0 ist, wird unendlich (INF) zurückgegeben.
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
@@ -84,11 +87,11 @@ Die **Log** Funktionen geben den natürlichen Logarithmus (Basis *e*) der *x* be
 |± 0|ZERODIVIDE|_SING|
 |*x* < 0|INVALID|_DOMAIN|
 
-**Log** und **log10** eine Implementierung, Streaming SIMD Extensions 2 (SSE2) verwendet, haben. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](set-sse2-enable.md).
+**Log** und **log10** verfügen über eine Implementierung, die Streaming SIMD Extensions 2 (SSE2) verwendet. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von aufrufen können **Log** und **log10** verwenden und zurückgeben **"float"** oder **long double** Werte. In einem C-Programm **Log** und **log10** immer annehmen und Zurückgeben einer **doppelte**.
+C++ermöglicht überladen, sodass Sie über Ladungen von **Log** und **log10** , die **float** -oder **long Double** -Werte verwenden und zurückgeben, aufgerufen werden können. In einem C-Programm verwenden **Log** und **log10** immer einen **Double**-Wert.
 
 ## <a name="requirements"></a>Anforderungen
 

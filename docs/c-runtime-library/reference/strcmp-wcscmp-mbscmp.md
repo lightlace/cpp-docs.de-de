@@ -1,12 +1,12 @@
 ---
 title: strcmp, wcscmp, _mbscmp, _mbscmp_l
 ms.date: 01/22/2019
-apiname:
+api_name:
 - wcscmp
 - _mbscmp
 - _mbscmp_l
 - strcmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbscmp
 - _mbscmp_l
@@ -42,19 +45,19 @@ helpviewer_keywords:
 - _ftcscmp function
 - ftcscmp function
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
-ms.openlocfilehash: dae5e04809ac7312097cb418ab5ffd561fdbd1d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bef0c61122e93bd45bc0d1238030743f1196d9e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354222"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957956"
 ---
-# <a name="strcmp-wcscmp-mbscmp-mbscmpl"></a>strcmp, wcscmp, _mbscmp, _mbscmp_l
+# <a name="strcmp-wcscmp-_mbscmp-_mbscmp_l"></a>strcmp, wcscmp, _mbscmp, _mbscmp_l
 
 Vergleichen von Zeichenfolgen
 
 > [!IMPORTANT]
-> **_mbscmp** und **_mbscmp_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscmp** und **_mbscmp_l** können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -88,19 +91,19 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert für jede dieser Funktionen gibt die ordinalbeziehung von *string1* zu *Zeichenfolge2*.
+Der Rückgabewert für jede dieser Funktionen gibt die ordinalbeziehung von *Zeichenfolge1* zu *Zeichenfolge2*an.
 
 |Wert|Verhältnis von string1 zu string2|
 |-----------|----------------------------------------|
 |< 0|*Zeichenfolge1* ist kleiner als *Zeichenfolge2*|
-|0|*Zeichenfolge1* ist identisch mit *Zeichenfolge2*|
+|0|*Zeichenfolge1* ist mit *Zeichenfolge2* identisch.|
 |> 0|*Zeichenfolge1* ist größer als *Zeichenfolge2*|
 
-Bei einem parametervalidierungsfehler **_mbscmp** und **_mbscmp_l** zurückgeben **_NLSCMPERROR**, definiert in \<string.h > und \< MBSTRING.h >.
+Bei einem Parameter Validierungs Fehler geben **_mbscmp** und **_mbscmp_l** **_NLSCMPERROR**zurück, das in \<String. h > und \<mbstring. h > definiert ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Strcmp** -Funktion führt einen Ordinalvergleich von *string1* und *Zeichenfolge2* und gibt einen Wert, der ihre Beziehung angibt. **Wcscmp** und **_mbscmp** sind Breitzeichen- und multibytezeichenversionen von Versionen von **Strcmp**. **_mbscmp** erkennt multibytezeichensequenzen gemäß der aktuellen multibyte-Codepage und gibt **_NLSCMPERROR** bei einem Fehler. **_mbscmp_l** weist das gleiche Verhalten, aber den Locale-Parameter, die übergeben wird anstelle des aktuellen Gebietsschemas verwendet. Weitere Informationen finden Sie unter [Codepages](../../c-runtime-library/code-pages.md). Auch wenn *string1* oder *Zeichenfolge2* ist ein null-Zeiger **_mbscmp** wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **_mbscmp** und **_mbscmp_l** zurückgeben **_NLSCMPERROR** und **Errno** zu **EINVAL** . **Strcmp** und **Wcscmp** überprüfen ihre Parameter nicht. Anderenfalls verhalten sich diese Funktionen identisch.
+Die Funktion " **straucmp** " führt einen Ordinalvergleich von *Zeichenfolge1* und *Zeichenfolge2* aus und gibt einen Wert zurück, der Ihre Beziehung angibt. **wcscmp** und **_mbscmp** sind jeweils breit Zeichen-und multibytezeichenversionen von " **straucmp**". **_mbscmp** erkennt multibytezeichensequenzen entsprechend der aktuellen Multibytezeichen-Codepage und gibt **_NLSCMPERROR** bei einem Fehler zurück. **_mbscmp_l** weist das gleiche Verhalten auf, verwendet jedoch den Gebiets Schema Parameter, der anstelle des aktuellen Gebiets Schemas übergeben wurde. Weitere Informationen finden Sie unter [Codepages](../../c-runtime-library/code-pages.md). Wenn *Zeichenfolge1* oder *Zeichenfolge2* ein NULL-Zeiger ist, ruft **_mbscmp** den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben **_mbscmp** und **_mbscmp_l** **_NLSCMPERROR** zurück und legen **errno** auf **EINVAL**fest. die Parameter werden von " **straucmp** " und " **wcscmp** " nicht überprüft. Anderenfalls verhalten sich diese Funktionen identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -108,13 +111,13 @@ Die **Strcmp** -Funktion führt einen Ordinalvergleich von *string1* und *Zeiche
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscmp**|**strcmp**|**_mbscmp**|**wcscmp**|
 
-Die **Strcmp** Funktionen unterscheiden sich von der **Strcoll** -Funktionen dahingehend, dass **Strcmp** Vergleiche Ordinalvergleiche darstellen und werden nicht vom Gebietsschema beeinflusst. **Strcoll** vergleicht Zeichenfolgen lexikografisch mithilfe der **LC_COLLATE** -Kategorie des aktuellen Gebietsschemas. Weitere Informationen zu den **LC_COLLATE** Kategorie finden Sie unter [Setlocale, _wsetlocale](setlocale-wsetlocale.md).
+Die Funktionen von " **strecmp** " unterscheiden sich von den Funktionen in **"stringenal** " und "nicht vom Gebiets Schema". **strcoll** vergleicht Zeichen folgen lexikografisch mithilfe der **LC_COLLATE** -Kategorie des aktuellen Gebiets Schemas. Weitere Informationen zur **LC_COLLATE** -Kategorie finden Sie unter [setlocale, _wsetlocale](setlocale-wsetlocale.md).
 
 Im Gebietsschema "C" ist die Reihenfolge der Zeichen im Zeichensatz (ASCII-Zeichensatz) die gleiche wie die lexikografische Zeichenreihenfolge. In anderen Gebietsschemata kann die Reihenfolge der Zeichen im Zeichensatz jedoch von der lexikografischen Reihenfolge abweichen. In bestimmten europäischen Gebietsschemas steht im Zeichensatz das Zeichen "a" (Wert 0x61) vor dem Zeichen "ä" (Wert 0xE4), das Zeichen "ä" steht jedoch lexikografisch gesehen jedoch vor dem Zeichen "a".
 
-In Gebietsschemas, die für die der Zeichensatz und die lexikografische Zeichenreihenfolge unterschiedlich sind, können Sie **Strcoll** anstelle von **Strcmp** für den lexikografischen Vergleich von Zeichenfolgen. Alternativ können Sie **Strxfrm** auf die ursprünglichen Zeichenfolgen und anschließend auf **Strcmp** für die resultierenden Zeichenfolgen.
+In Gebiets Schemas, für die der Zeichensatz und die lexikografische Zeichen Reihenfolge unterschiedlich sind, können Sie **strcoll** anstelle von **strcmp** für den lexikografischen Vergleich von Zeichen folgen verwenden. Alternativ können Sie **strxfrm** für die ursprünglichen Zeichen folgen verwenden und dann **strcmp** für die resultierenden Zeichen folgen verwenden.
 
-Die **Strcmp** Funktionen werden Groß-/Kleinschreibung beachtet. **\_Stricmp**,  **\_Wcsicmp**, und  **\_Mbsicmp** Zeichenfolgen vergleichen, indem Sie sie in Kleinbuchstaben konvertieren. Zwei Zeichenfolgen mit Zeichen, die sich zwischen "Z" befinden und "a" in der ASCII-Tabelle ("[','\\", "]', ' ^', '_', und"\`') unterschiedlich, abhängig von der Großschreibung vergleichen. Z. B. die beiden Zeichenfolgen "ABCDE" und "ABCD ^" eine Richtung verglichen, wenn Kleinschreibung vorliegt ("Abcde" > "Abcd ^") und die andere Möglichkeit ("ABCDE" < "ABCD ^"), wenn Großschreibung vorliegt.
+Bei den Funktionen von " **strecmp** " wird Groß-/Kleinschreibung striCmp **, \_wcsicmp**und  **\_mbsicmp** vergleichen Zeichen folgen, indem Sie Sie zuerst in Ihre Kleinbuchstaben umwandeln.  **\_** Zwei Zeichen folgen, die Zeichen zwischen "Z" und "a" in der ASCII-Tabelle (' [', '\\', '] ', ' ^ ', ' _ ' und '\`') enthalten, vergleichen je nach Groß-/Kleinschreibung anders. Beispielsweise vergleichen die beiden Zeichen folgen "abcde" und "abcd ^" eine Richtung, wenn der Vergleich klein geschrieben ist ("abcde" > "abcd ^") und die andere Methode ("abcde" < "abcd ^"), wenn der Vergleich ein Großbuchstabe ist.
 
 ## <a name="requirements"></a>Anforderungen
 

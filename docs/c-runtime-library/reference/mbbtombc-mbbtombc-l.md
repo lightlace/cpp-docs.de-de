@@ -1,10 +1,10 @@
 ---
 title: _mbbtombc, _mbbtombc_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbbtombc_l
 - _mbbtombc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbbtombc_l
 - _mbbtombc
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _mbbtombc_l function
 - _mbbtombc function
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
-ms.openlocfilehash: 63b5dd33399201cd6ead7dbd1f710c8bebe53c69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 244e603a3234b755d19a1c1d0738e8c22d74b8e2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156903"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952736"
 ---
-# <a name="mbbtombc-mbbtombcl"></a>_mbbtombc, _mbbtombc_l
+# <a name="_mbbtombc-_mbbtombc_l"></a>_mbbtombc, _mbbtombc_l
 
 Konvertiert ein Einzelbyte-Multibytezeichen in ein entsprechendes Doppelbyte-Multibytezeichen.
 
@@ -64,15 +67,15 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn **_mbbtombc** erfolgreich konvertiert *c*, wird ein Multibytezeichen zurückgegeben; andernfalls wird *c*.
+Wenn **_mbbtombc** erfolgreich *c*konvertiert, wird ein Multibytezeichen zurückgegeben. Andernfalls wird *c*zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbbtombc** Funktion konvertiert ein angegebenes Einzelbyte-Multibytezeichen in ein entsprechendes Doppelbyte-Multibytezeichen. Zeichen muss innerhalb des Bereichs 0 x 20 – 0x7E oder 0xA1 – 0xDF, konvertiert werden soll.
+Die **_mbbtombc** -Funktion konvertiert ein angegebenes Einzel Byte-Multibytezeichen in ein entsprechendes Doppelbyte-Multibytezeichen. Zeichen müssen innerhalb des Bereichs 0x20-0x7E oder 0xA1-0xDF liegen, um konvertiert zu werden.
 
-Der Ausgabewert wird von der Einstellung beeinflusst die **LC_CTYPE** -kategorieeinstellung des Gebietsschemas, siehe [Setlocale, _wsetlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktion sind nahezu identisch, außer dass **_mbbtombc** verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängiges Verhalten und **_mbbtombc_l** stattdessen verwendet den Locale-Parameter, die übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert wird von der Einstellung der **LC_CTYPE** -Kategorieeinstellung des Gebiets Schemas beeinflusst. Weitere Informationen finden Sie [unter setlocale, _wsetlocale](setlocale-wsetlocale.md) . Die Versionen dieser Funktion sind identisch, mit der Ausnahme, dass **_mbbtombc** das aktuelle Gebiets Schema für dieses vom Gebiets Schema abhängige Verhalten verwendet und **_mbbtombc_l** stattdessen den übergebenen Gebiets Schema Parameter verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-In früheren Versionen **_mbbtombc** hieß **Hantozen**. Verwenden Sie bei neuem Code **_mbbtombc**.
+In früheren Versionen hieß **_mbbtombc** den Namen **handezen**. Verwenden Sie für neuen Code **_mbbtombc**.
 
 ## <a name="requirements"></a>Anforderungen
 
