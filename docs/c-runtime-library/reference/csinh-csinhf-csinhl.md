@@ -1,11 +1,11 @@
 ---
 title: csinh, csinhf, csinhl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - csinh
 - csinhf
 - csinhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - csinh
 - csinhf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - csinhf function
 - csinhl function
 ms.assetid: cc616e55-d14d-4cd3-91f0-fbee03ce5edf
-ms.openlocfilehash: 2ea6eaedc7eae7256310bf55b06fde0ecb2c64de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b377b34ee1a9f60f502c59b8c4ea1eed19c7500
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289402"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938538"
 ---
 # <a name="csinh-csinhf-csinhl"></a>csinh, csinhf, csinhl
 
@@ -68,11 +71,11 @@ Eine komplexe Zahl, die einen Winkel als Bogenmaß darstellt
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Hyperbelsinus von *z*, im Bogenmaß zurück.
+Der hyperbolische Sinus von *z*im Bogenmaße.
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Csinh** verwenden und zurückgeben **_Fcomplex** und **_Lcomplex** Werte. In einem C-Programm **Csinh** immer Double und gibt eine **_Dcomplex** Wert.
+Da C++ das überladen zulässt, können Sie über Ladungen von **csinh** aufrufen, die **_Fcomplex** -und **_Lcomplex** -Werte verwenden und zurückgeben. In einem C-Programm nimmt **csinh** immer einen **_Dcomplex** -Wert an und gibt diesen zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

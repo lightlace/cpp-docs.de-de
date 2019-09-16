@@ -1,9 +1,9 @@
 ---
 title: __max
 ms.date: 04/05/2018
-apiname:
+api_name:
 - __max
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - max
 - __max
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-ms.openlocfilehash: 32e1207ea4bb030ac5303de32c0566f98e0596a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dac82ecd1c96d1edf9175a29797d93c65bc19c99
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156863"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952750"
 ---
-# <a name="max"></a>__max
+# <a name="__max"></a>__max
 
-Ein Präprozessormakro, die den größeren von zwei Werten zurückgibt.
+Ein Präprozessormakro, das den größeren von zwei Werten zurückgibt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,9 +54,9 @@ Werte von einem numerischen Datentyp, der verglichen werden soll.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **__max** -Makro vergleicht zwei Werte und gibt den Wert eines größeren zurück. Die Argumente können von einen beliebigen Datentyp stammen, signed oder unsigned. Beide Argumente sowie der Rückgabewert müssen demselben Datentyp entsprechen.
+Das **__max** -Makro vergleicht zwei Werte und gibt den Wert der größeren zurück. Die Argumente können von einen beliebigen Datentyp stammen, signed oder unsigned. Beide Argumente sowie der Rückgabewert müssen demselben Datentyp entsprechen.
 
-Das Argument, das zurückgegeben wird durch das Makro zweimal ausgewertet. Dies kann zu unerwarteten Ergebnissen führen, wenn das Argument einen Ausdruck, der seinen Wert ändert, wenn er, wie z. B. ausgewertet wird `*p++`.
+Das zurückgegebene Argument wird zweimal durch das Makro ausgewertet. Dies kann zu unerwarteten Ergebnissen führen, wenn das Argument ein Ausdruck ist, der seinen Wert bei der Auswertung ändert, z `*p++`. b.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,9 +1,9 @@
 ---
 title: _get_pgmptr
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_pgmptr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_pgmptr
 - _get_pgmptr
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - pgmptr global variable
 - _pgmptr global variable
 ms.assetid: 29f16a9f-a685-4721-add3-7fad4f67eece
-ms.openlocfilehash: 2d3959a69d85fca38e4d099d3365553f88fd015f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f9a3b19cc7eb1870b87ec46b7923987ec646e32
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287501"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955763"
 ---
-# <a name="getpgmptr"></a>_get_pgmptr
+# <a name="_get_pgmptr"></a>_get_pgmptr
 
-Ruft den aktuellen Wert des der **_pgmptr** globale Variable.
+Ruft den aktuellen Wert der globalen Variablen " **_pgmptr** " ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,15 +50,15 @@ errno_t _get_pgmptr(
 ### <a name="parameters"></a>Parameter
 
 *pValue*<br/>
-Ein Zeiger auf eine Zeichenfolge, die mit den aktuellen Wert der gefüllt werden die **_pgmptr** Variable.
+Ein Zeiger auf eine Zeichenfolge, die mit dem aktuellen Wert der **_pgmptr** -Variablen aufgefüllt werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn der Vorgang erfolgreich war. Wenn ein Fehler auftritt, erscheint ein Fehlercode. Wenn *pValue* ist **NULL**, wird der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und gibt **EINVAL**.
+Gibt 0 (null) zurück, wenn der Vorgang erfolgreich war. Wenn ein Fehler auftritt, erscheint ein Fehlercode. Wenn *pValue* **null**ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, legt diese Funktion " **errno** " auf " **EINVAL** " fest und gibt " **EINVAL**" zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Rufen Sie nur **_get_pgmptr** Wenn Ihr Programm einen Einstiegspunkt für die schmale verfügt, z.B. **main()** oder **WinMain()**. Die **_pgmptr** globale Variable enthält den vollständigen Pfad der ausführbaren Datei, die dem Prozess zugeordnet. Weitere Informationen finden Sie unter [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).
+**_Get_pgmptr** wird nur aufgerufen, wenn das Programm einen schmalen Einstiegspunkt hat, wie z. b. **Main ()** oder **WinMain ()** . Die globale Variable **_pgmptr** enthält den vollständigen Pfad zu der ausführbaren Datei, die dem Prozess zugeordnet ist. Weitere Informationen finden Sie unter [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).
 
 ## <a name="requirements"></a>Anforderungen
 
