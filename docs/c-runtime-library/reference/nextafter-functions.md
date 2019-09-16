@@ -1,7 +1,7 @@
 ---
 title: nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - nextafterf
 - _nextafterf
 - nextafter
@@ -10,7 +10,7 @@ apiname:
 - nexttoward
 - nexttowardf
 - nexttowardl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - nextafter
 - _nextafter
@@ -48,14 +51,14 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: 0e0a60dc9f7c068d8c18c10f3c6b819b9e06d3b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c56c9f8032c9af2ed4404428abe3b9ee26b4b603
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156186"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951357"
 ---
-# <a name="nextafter-nextafterf-nextafterl-nextafter-nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
+# <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
 Gibt den nächsten darstellbaren Gleitkommawert zurück.
 
@@ -92,15 +95,15 @@ Der Gleitkommawert, der den Zielpunkt markiert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den nächsten darstellbaren Gleitkommawert des Rückgabetyps nach *x* in Richtung der *y*. Wenn *x* und *y* gleich sind, die Funktion gibt *y*, konvertiert in den Rückgabetyp, ohne eine Ausnahme ausgelöst. Wenn *x* ist nicht gleich *y*, und das Ergebnis eine subnormale oder 0 (null), die **FE_UNDERFLOW** und **FE_INEXACT** Gleitkomma-Ausnahmezustände festgelegt sind, und das richtige Ergebnis zurückgegeben wird. Wenn entweder *x* oder *y* ist ein NaN-Wert, dann ist der Rückgabewert eines Eingabe-NaN. Wenn *x* ist begrenzt und das Ergebnis unendlich oder nicht im Typ darstellbar ist, eine ordnungsgemäß signierten Unendlichkeit oder NAN zurückgegeben, die **FE_OVERFLOW** und **FE_INEXACT** Gleitkomma-Ausnahmezustände festgelegt sind, und **Errno** nastaven NA hodnotu **ERANGE**.
+Gibt den nächsten darstellbaren Gleit Komma Wert des Rückgabe Typs nach *x* in der Richtung *y*zurück. Wenn *x* und *y* gleich sind, gibt die Funktion *y*in den Rückgabetyp konvertiert zurück, ohne dass eine Ausnahme ausgelöst wird. Wenn *x* nicht gleich *y*ist und das Ergebnis ein DENORMAL oder NULL ist, werden die Gleit Komma-Ausnahmezustände **FE_UNDERFLOW** und **FE_INEXACT** festgelegt, und das korrekte Ergebnis wird zurückgegeben. Wenn " *x* " oder " *y* " ein NaN-Wert ist, ist der Rückgabewert einer der Eingabe-Nans. Wenn *x* begrenzt ist und das Ergebnis unendlich oder nicht im Typ darstellbar ist, wird eine ordnungsgemäß signierte unendlich oder NaN zurückgegeben, die **FE_OVERFLOW** -und **FE_INEXACT** -Gleit Komma Ausnahmezustände werden festgelegt, und **errno** ist auf ERANGE festgelegt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Nextafter** und **Nexttoward** -funktionsfamilien sind mit Ausnahme der Parametertyp des entsprechenden *y*. Wenn *x* und *y* gleich sind, ist der zurückgegebene Wert *y* in den Rückgabetyp konvertiert.
+Die **nextafter** -und **NexTTo** -Funktions Familien sind äquivalent, außer dem Parametertyp *y*. Wenn *x* und *y* gleich sind, wird der zurückgegebene Wert *y* in den Rückgabetyp konvertiert.
 
-Da C++ das Überladen zulässt, wenn Sie einschließen \<Cmath > können Sie Überladungen von Aufrufen **Nextafter** und **Nexttoward** zurückgegebene **"float"** und **lange** **doppelte** Typen. In einem C-Programm **Nextafter** und **Nexttoward** jederzeit **doppelte**.
+Da C++ das überladen zulässt, können Sie \<, wenn Sie cmath-> einschließen, über Ladungen von **nextafter** und **NexTTo** aufzurufen, die **float** -und **Long** **Double** -Typen zurückgeben. In einem C-Programm geben **nextafter** und **NexTTo** immer **Double**zurück.
 
-Die **_nextafter** und **_nextafterf** Funktionen sind Microsoft-spezifisch. Die **_nextafterf** Funktion ist nur verfügbar, beim Kompilieren für X64.
+Die Funktionen **_nextafter** und **_nextafterf** sind Microsoft-spezifisch. Die **_nextafterf** -Funktion ist nur verfügbar, wenn für x64 kompiliert wird.
 
 ## <a name="requirements"></a>Anforderungen
 
