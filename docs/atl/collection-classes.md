@@ -5,84 +5,84 @@ ms.topic: reference
 helpviewer_keywords:
 - collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-ms.openlocfilehash: 0a91b34dc28ace3a8fc0fe1ac1c59d86b19ece43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09c0a64ff34a86c5581fe552ce2dbf0d12ea8e96
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235224"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739529"
 ---
 # <a name="collection-classes"></a>Auflistungsklassen
 
-Die folgenden Klassen bieten Unterstützung für Arrays, Listen, Zuordnungen und auch "traits"-Methoden für Vergleiche und Elementzugriff unterstützen.
+Die folgenden Klassen bieten Unterstützung für Arrays, Listen, Zuordnungen und Merkmale von Methoden für Vergleiche und den Element Zugriff.
 
-- [CAtlArray](../atl/reference/catlarray-class.md) diese Klasse implementiert, ein Array-Objekt.
+- [CAtlArray](../atl/reference/catlarray-class.md): Diese Klasse implementiert ein Arrayobjekt.
 
-- [CAtlList](../atl/reference/catllist-class.md) diese Klasse stellt Methoden zum Erstellen und verwalten ein List-Objekt.
+- Die [Kategorie](../atl/reference/catllist-class.md) Diese Klasse stellt Methoden zum Erstellen und Verwalten eines Listen Objekts bereit.
 
-- [CAtlMap](../atl/reference/catlmap-class.md) diese Klasse stellt Methoden zum Erstellen und Verwalten von einem Map-Objekt.
+- "| [Map](../atl/reference/catlmap-class.md) " Diese Klasse stellt Methoden zum Erstellen und Verwalten eines Map-Objekts bereit.
 
-- [CAutoPtrArray](../atl/reference/cautoptrarray-class.md) diese Klasse stellt Methoden bereit, wenn Sie ein Array von intelligenten Zeigern zu erstellen.
+- [Cautoptrarray](../atl/reference/cautoptrarray-class.md) Diese Klasse stellt Methoden bereit, die beim Erstellen eines Arrays von intelligenten Zeigern hilfreich sind.
 
-- [CAutoPtrElementTraits](../atl/reference/cautoptrelementtraits-class.md) diese Klasse enthält Methoden, statische Funktionen und Typdefinitionen hilfreich zum Erstellen von Sammlungen von intelligenten Zeigern.
+- [Cautoptrelementtrait](../atl/reference/cautoptrelementtraits-class.md) Diese Klasse stellt Methoden, statische Funktionen und Typedefs bereit, die beim Erstellen von Auflistungen von intelligenten Zeigern hilfreich sind.
 
-- [CAutoPtrList](../atl/reference/cautoptrlist-class.md) diese Klasse stellt Methoden bereit, wenn Sie eine Liste von intelligenten Zeigern zu erstellen.
+- [Cautoptrlist](../atl/reference/cautoptrlist-class.md) Diese Klasse stellt Methoden bereit, die beim Erstellen einer Liste von intelligenten Zeigern hilfreich sind.
 
-- [CAutoVectorPtrElementTraits](../atl/reference/cautovectorptrelementtraits-class.md) diese Klasse bietet Methoden, statische Funktionen und Typdefinitionen hilfreich, wenn Sie zum Erstellen von Sammlungen von intelligenten Zeigern, die mithilfe von vector-new und delete-Operator.
+- [Cautovector ptrelementtrait](../atl/reference/cautovectorptrelementtraits-class.md) Diese Klasse stellt Methoden, statische Funktionen und Typedefs zum Erstellen von Auflistungen von intelligenten Zeigern mithilfe von Vector New-und DELETE-Operatoren bereit.
 
-- [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md) diese Klasse stellt Methoden, statische Funktionen und Typdefinitionen hilfreich, wenn Sie zum Erstellen von Sammlungen von COM-Schnittstellenzeigern.
+- [Ccomqiptrelementmerkmalen](../atl/reference/ccomqiptrelementtraits-class.md) Diese Klasse stellt Methoden, statische Funktionen und Typedefs bereit, die beim Erstellen von Auflistungen von COM-Schnittstellen Zeigern hilfreich sind.
 
-- ["CComSafeArray"](../atl/reference/ccomsafearray-class.md) diese Klasse ist ein Wrapper für die [SAFEARRAY Data Type](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) Struktur.
+- [CComSafeArray](../atl/reference/ccomsafearray-class.md) Diese Klasse ist ein Wrapper für die [SAFEARRAY-Datentyp](/windows/win32/api/oaidl/ns-oaidl-safearray) Struktur.
 
-- [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) diese Klasse ist ein Wrapper für eine [SAFEARRAYBOUND](/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound) Struktur.
+- [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) Diese Klasse ist ein Wrapper für eine [SAFEARRAYBOUND](/windows/win32/api/oaidl/ns-oaidl-safearraybound) -Struktur.
 
-- [CComUnkArray](../atl/reference/ccomunkarray-class.md) diese Klasse speichert **IUnknown** Zeiger als Parameter verwendet werden soll, und die [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) Vorlagenklasse.
+- [Ccomunkarray](../atl/reference/ccomunkarray-class.md) Diese Klasse speichert **IUnknown** -Zeiger und ist für die Verwendung als Parameter für die [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) -Vorlagen Klasse konzipiert.
 
-- [CDefaultCharTraits](../atl/reference/cdefaultchartraits-class.md) diese Klasse bietet zwei statische Funktionen zum Konvertieren von Zeichen zwischen Groß- und Kleinbuchstaben.
+- [Cdefaultcharcharakteristika](../atl/reference/cdefaultchartraits-class.md) Diese Klasse stellt zwei statische Funktionen zum Umwandeln von Zeichen zwischen Groß-und Kleinbuchstaben bereit.
 
-- [CDefaultCompareTraits](../atl/reference/cdefaultcomparetraits-class.md) diese Klasse stellt Element Vergleichsfunktionen.
+- [Cdefaultcomparecharakteristika](../atl/reference/cdefaultcomparetraits-class.md) Diese Klasse stellt standardmäßige Element Vergleichsfunktionen bereit.
 
-- [CDefaultElementTraits](../atl/reference/cdefaultelementtraits-class.md) diese Klasse stellt Standardmethoden und Funktionen bereit, damit eine Auflistungsklasse.
+- [Cdefaultelementmerkmalen](../atl/reference/cdefaultelementtraits-class.md) Diese Klasse stellt Standardmethoden und-Funktionen für eine Auflistungs Klasse bereit.
 
-- [CDefaultHashTraits](../atl/reference/cdefaulthashtraits-class.md) diese Klasse stellt eine statische Funktion zum Berechnen der Hashwerte bereit.
+- [Cdefaulthashmerkmalen](../atl/reference/cdefaulthashtraits-class.md) Diese Klasse stellt eine statische Funktion zum Berechnen von Hash Werten bereit.
 
-- [CElementTraits](../atl/reference/celementtraits-class.md) diese Klasse wird von Auflistungsklassen verwendet, verschieben, kopieren, Vergleich und Hashvorgängen Methoden und Funktionen bereit.
+- [Celementcharakteristika](../atl/reference/celementtraits-class.md) Diese Klasse wird von Auflistungs Klassen verwendet, um Methoden und Funktionen zum Verschieben, kopieren, vergleichen und hashingvorgängen bereitzustellen.
 
-- [CElementTraitsBase](../atl/reference/celementtraitsbase-class.md) diese Klasse stellt kopieren und verschieben Sie Methoden für eine Auflistungsklasse.
+- [Celementtraitsbase](../atl/reference/celementtraitsbase-class.md) Diese Klasse stellt standardmäßige Kopier-und Verschiebungs Methoden für eine Auflistungs Klasse bereit.
 
-- [CHeapPtrElementTraits](../atl/reference/cheapptrelementtraits-class.md) diese Klasse enthält Methoden, statische Funktionen und Typdefinitionen hilfreich zum Erstellen von Sammlungen von Heap-Zeigern.
+- [Cheapptrelementmerkmalen](../atl/reference/cheapptrelementtraits-class.md) Diese Klasse stellt Methoden, statische Funktionen und Typedefs bereit, die beim Erstellen von Auflistungen von Heap Zeigern hilfreich sind.
 
-- [CHeapPtrList](../atl/reference/cheapptrlist-class.md) diese Klasse stellt Methoden bereit, beim Erstellen einer Liste von Heap-Zeigern.
+- [Cheapptrlist](../atl/reference/cheapptrlist-class.md) Diese Klasse stellt Methoden bereit, die beim Erstellen einer Liste von Heap Zeigern hilfreich sind.
 
-- [CInterfaceArray](../atl/reference/cinterfacearray-class.md) diese Klasse stellt Methoden bereit, wenn Sie ein Array von COM-Schnittstellenzeiger zu erstellen.
+- [Cinterfakearray](../atl/reference/cinterfacearray-class.md) Diese Klasse stellt Methoden bereit, die beim Erstellen eines Arrays von COM-Schnittstellen Zeigern hilfreich sind.
 
-- [CInterfaceList](../atl/reference/cinterfacelist-class.md) diese Klasse stellt Methoden bereit, wenn Sie eine Liste der COM-Schnittstellenzeiger zu erstellen.
+- [Cinterfakelist](../atl/reference/cinterfacelist-class.md) Diese Klasse stellt Methoden bereit, die beim Erstellen einer Liste von COM-Schnittstellen Zeigern hilfreich sind.
 
-- [CPrimitiveElementTraits](../atl/reference/cprimitiveelementtraits-class.md) diese Klasse stellt die Standardmethoden und -Funktionen für eine Auflistungsklasse bestehend aus primitiven Datentypen.
+- [Cprimitiveelementmerkmalen](../atl/reference/cprimitiveelementtraits-class.md) Diese Klasse stellt Standardmethoden und-Funktionen für eine Auflistungs Klasse bereit, die aus primitiven Datentypen besteht.
 
-- [CRBMap](../atl/reference/crbmap-class.md) diese Klasse stellt eine Zuordnungsstruktur, indem Sie eine binäre Rot-Schwarz-Baum.
+- [CRBMap](../atl/reference/crbmap-class.md) Diese Klasse stellt eine Mapping-Struktur dar, die eine rotschwarze binäre Struktur verwendet.
 
-- [CRBMultiMap](../atl/reference/crbmultimap-class.md) diese Klasse stellt eine Zuordnungsstruktur, die einzelnen Schlüssel mit mehr als einem Wert, mit einer binären Rot-Schwarz-Struktur verknüpft werden kann.
+- [CRBMultiMap](../atl/reference/crbmultimap-class.md) Diese Klasse stellt eine Zuordnungsstruktur dar, die es dem einzelnen Schlüssel ermöglicht, mit einer roten und schwarzen binär Struktur mehr als einem Wert zugeordnet zu werden.
 
-- [CRBTree](../atl/reference/crbtree-class.md) diese Klasse stellt Methoden zum Erstellen und nutzen ein Rot-Schwarz-Baum.
+- [Crbtree](../atl/reference/crbtree-class.md) Diese Klasse stellt Methoden zum Erstellen und Verwenden eines roten schwarzen Baums bereit.
 
-- [CSimpleArray](../atl/reference/csimplearray-class.md) diese Klasse stellt Methoden für die Verwaltung von einem einfachen Array.
+- [CSimpleArray](../atl/reference/csimplearray-class.md) Diese Klasse stellt Methoden zum Verwalten eines einfachen Arrays bereit.
 
-- [CSimpleArrayEqualHelper](../atl/reference/csimplearrayequalhelper-class.md) diese Klasse ist eine Hilfsklasse für die [CSimpleArray](../atl/reference/csimplearray-class.md) Klasse.
+- [Csimplearrayequalhelper](../atl/reference/csimplearrayequalhelper-class.md) Diese Klasse ist ein Hilfsprogramm für die [CSimpleArray](../atl/reference/csimplearray-class.md) -Klasse.
 
-- [CSimpleArrayEqualHelperFalse](../atl/reference/csimplearrayequalhelperfalse-class.md) diese Klasse ist eine Hilfsklasse für die [CSimpleArray](../atl/reference/csimplearray-class.md) Klasse.
+- [Csimplearrayequalhelperfalse](../atl/reference/csimplearrayequalhelperfalse-class.md) Diese Klasse ist ein Hilfsprogramm für die [CSimpleArray](../atl/reference/csimplearray-class.md) -Klasse.
 
-- [CSimpleMap](../atl/reference/csimplemap-class.md) diese Klasse bietet Unterstützung für eine einfache Zuordnung-Array.
+- [CSimpleMap](../atl/reference/csimplemap-class.md) Diese Klasse bietet Unterstützung für ein einfaches Mapping-Array.
 
-- [CSimpleMapEqualHelper](../atl/reference/csimplemapequalhelper-class.md) diese Klasse ist eine Hilfsklasse für die [CSimpleMap](../atl/reference/csimplemap-class.md) Klasse.
+- [Csimplemapqualhelper](../atl/reference/csimplemapequalhelper-class.md) Diese Klasse ist ein Hilfsprogramm für die [CSimpleMap](../atl/reference/csimplemap-class.md) -Klasse.
 
-- [CSimpleMapEqualHelperFalse](../atl/reference/csimplemapequalhelperfalse-class.md) diese Klasse ist eine Hilfsklasse für die [CSimpleMap](../atl/reference/csimplemap-class.md) Klasse.
+- [Csimplemapeer qualhelperfalse](../atl/reference/csimplemapequalhelperfalse-class.md) Diese Klasse ist ein Hilfsprogramm für die [CSimpleMap](../atl/reference/csimplemap-class.md) -Klasse.
 
-- [CStringElementTraits](../atl/reference/cstringelementtraits-class.md) diese Klasse stellt statische Funktionen, die durch das Speichern von Auflistungsklassen verwendet `CString` Objekte.
+- [Cstringelementmerkmalen](../atl/reference/cstringelementtraits-class.md) Diese Klasse bietet statische Funktionen, die von Auflistungs Klassen `CString` verwendet werden, die-Objekte
 
-- [CStringElementTraitsI](../atl/reference/cstringelementtraitsi-class.md) diese Klasse stellt statische Funktionen, die im Zusammenhang mit Zeichenfolgen, die in der Auflistung von Klassenobjekten gespeichert. Sie ähnelt damit [CStringElementTraits](../atl/reference/cstringelementtraits-class.md), aber die Groß-/Kleinschreibung Vergleiche ausgeführt.
+- [Cstringelementtraitsi](../atl/reference/cstringelementtraitsi-class.md) Diese Klasse stellt statische Funktionen für Zeichen folgen bereit, die in Auflistungs Klassen Objekten gespeichert sind. Sie ähnelt [cstringelementmerkmalen](../atl/reference/cstringelementtraits-class.md), führt jedoch Vergleiche ohne Berücksichtigung der Groß-und Kleinschreibung durch.
 
-- [CStringRefElementTraits](../atl/reference/cstringrefelementtraits-class.md) diese Klasse stellt statische Funktionen, die im Zusammenhang mit Zeichenfolgen, die in der Auflistung von Klassenobjekten gespeichert. Der String-Objekte werden als Verweise behandelt.
+- [Cstrauingrefelementmerkmalen](../atl/reference/cstringrefelementtraits-class.md) Diese Klasse stellt statische Funktionen für Zeichen folgen bereit, die in Auflistungs Klassen Objekten gespeichert sind. Die Zeichen folgen Objekte werden als Verweise behandelt.
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
@@ -90,5 +90,5 @@ Die folgenden Klassen bieten Unterstützung für Arrays, Listen, Zuordnungen und
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über die Klasse](../atl/atl-class-overview.md)<br/>
+[Klassen Übersicht](../atl/atl-class-overview.md)<br/>
 [Auflistungsklassen](../atl/atl-collection-classes.md)

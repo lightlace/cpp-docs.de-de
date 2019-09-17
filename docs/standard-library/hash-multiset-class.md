@@ -93,7 +93,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68448686"
 ---
-# <a name="hashmultiset-class"></a>hash_multiset-Klasse
+# <a name="hash_multiset-class"></a>hash_multiset-Klasse
 
 > [!NOTE]
 > Diese API ist veraltet. Die Alternative ist die [unordered_multiset-Klasse](../standard-library/unordered-multiset-class.md).
@@ -157,7 +157,7 @@ Der von der hash_multiset-Klasse bereitgestellte Iterator ist ein bidirektionale
 |Typname|Beschreibung|
 |-|-|
 |[allocator_type](#allocator_type)|Ein Typ, der die `allocator`-Klassentyp für das `hash_multiset`-Objekt darstellt.|
-|[const_iterator](#const_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt  , mit dem `hash_multiset`ein Konstanten Element im gelesen werden kann.|
+|[const_iterator](#const_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt , mit dem `hash_multiset`ein Konstanten Element im gelesen werden kann.|
 |[const_pointer](#const_pointer)|Ein Typ, der einen Zeiger auf ein **Konstanten** Element in einem `hash_multiset`bereitstellt.|
 |[const_reference](#const_reference)|Ein Typ, der einen Verweis auf ein **Konstanten** Element bereitstellt, das `hash_multiset` in einem zum Lesen und Ausführen von **Konstanten** Vorgängen gespeichert ist.|
 |[const_reverse_iterator](#const_reverse_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit `hash_multiset` **dem jedes Konstante** Element im gelesen werden kann.|
@@ -2376,7 +2376,7 @@ typedef key_compare value_compare;
 
 Weitere Informationen zu *Merkmalen* finden Sie im Thema [Hash_multiset-Klasse](../standard-library/hash-multiset-class.md) .
 
-Beachten Sie, [](#key_compare) dass sowohl `value_compare` key_compare als auch Synonyme für die Vorlagen Parameter *Merkmale*sind. Beide Typen werden für die Klassen „set“ und „multiset“ bereitgestellt, in denen sie identisch sind. Dies geschieht zum Zweck der Kompatibilität mit den Klassen „map“ und „multimap“, in denen sie sich unterscheiden.
+Beachten Sie, dass [key_compare](#key_compare) und `value_compare` Synonyme für den Vorlagenparameter *Traits* sind. Beide Typen werden für die Klassen „set“ und „multiset“ bereitgestellt, in denen sie identisch sind. Dies geschieht zum Zweck der Kompatibilität mit den Klassen „map“ und „multimap“, in denen sie sich unterscheiden.
 
 ### <a name="example"></a>Beispiel
 

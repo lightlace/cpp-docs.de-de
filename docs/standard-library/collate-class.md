@@ -124,7 +124,7 @@ Die möglichen Werte für den Parameter *_Refs* und ihre Bedeutung lauten:
 
 - \> 1: Diese Werte sind nicht definiert.
 
-Der Konstruktor initialisiert sein Basisobjekt mit **locale::** [](../standard-library/locale-class.md#facet_class)Face(`_Refs`).
+Der Konstruktor initialisiert sein Basisobjekt mit **locale::** [Face(](../standard-library/locale-class.md#facet_class)`_Refs`).
 
 ## <a name="compare"></a> collate::compare
 
@@ -383,7 +383,7 @@ Eine Zeichenfolge, die die transformierte Zeichensequenz enthält.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion [](#do_transform)gibt Do_transform`first`( `last`,) zurück.
+Die Member-Funktion gibt [do_transform](#do_transform)(`first`, `last`) zurück.
 
 ### <a name="example"></a>Beispiel
 

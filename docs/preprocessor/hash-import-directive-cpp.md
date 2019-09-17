@@ -1,6 +1,6 @@
 ---
-title: '#Import-Anweisung (C++)'
-ms.date: 03/27/2019
+title: '##import-Anweisung (C++)'
+ms.date: 08/29/2019
 f1_keywords:
 - '#import'
 helpviewer_keywords:
@@ -12,61 +12,59 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: 98a0f9f66fb209bb41215fc1e86a9682a4fed023
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: afd05e7380ec3838fe9763be23ccfae338adb4fb
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407678"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220260"
 ---
-# <a name="import-directive-c"></a>#import-Anweisung (C++)
+# <a name="import-directive-c"></a>#Import-Direktive (C++)
 
-**C++-spezifisch**
+**C++Zugeschnitten**
 
 Wird verwendet, um Informationen aus einer Typbibliothek zu integrieren. Der Inhalt der Typbibliothek wird in C++-Klassen konvertiert, die größtenteils die COM-Schnittstellen beschreiben.
 
 ## <a name="syntax"></a>Syntax
 
-```
-#import "filename" [attributes]
-#import <filename> [attributes]
-```
+> **#Import** "*filename*" \[- *Attribute*] \
+> **#Import** \<filename-> Attribute]\[
 
 ### <a name="parameters"></a>Parameter
 
-*filename*<br/>
-Gibt die zu importierende Typbibliothek an. *FileName* kann einen der folgenden sein:
+*Einfügen*\
+Gibt die zu importierende Typbibliothek an. Der *Dateiname* kann eine der folgenden Arten sein:
 
-- Der Name einer Datei, die eine Typbibliothek enthält, z. B. eine OLB-, TLB- oder DLL-Datei. Das Schlüsselwort **Datei:**, kann die jedem Dateinamen vorangestellt sein.
+- Der Name einer Datei, die eine Typbibliothek enthält, z. B. eine OLB-, TLB- oder DLL-Datei. Das Schlüsselwort `file:`,, kann jedem Dateinamen vorangestellt werden.
 
-- Die ProgID eines Steuerelements in der Typbibliothek. Das Schlüsselwort **progid:**, kann jeder progid vorangestellt sein. Zum Beispiel:
+- Die ProgID eines Steuerelements in der Typbibliothek. Das Schlüsselwort `progid:`,, kann jeder ProgID vorangestellt werden. Beispiel:
 
     ```cpp
     #import "progid:my.prog.id.1.5"
     ```
 
-   Weitere Informationen zu Progids finden Sie unter [angeben der Lokalisierungs-ID und Versionsnummer](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber).
+   Weitere Informationen zu ProgIDs finden Sie unter [angeben der Lokalisierungs-ID und der Versionsnummer](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber).
 
-   Beachten Sie, dass beim Kompilieren mit einem Cross-Compiler auf einem 64-Bit-Betriebssystem der Compiler nur die 32-Bit-Registrierungsstruktur lesen kann. Sie sollten den systemeigenen 64-Bit-Compiler verwenden, um eine 64-Bit-Typbibliothek zu erstellen und zu registrieren.
+   Wenn Sie einen 32-Bit-Cross-Compiler für ein 64-Bit-Betriebssystem verwenden, kann der Compiler nur die 32-Bit-Registrierungs Struktur lesen. Sie sollten den systemeigenen 64-Bit-Compiler verwenden, um eine 64-Bit-Typbibliothek zu erstellen und zu registrieren.
 
-- Die Bibliotheks-ID der Typbibliothek. Das Schlüsselwort **Libid:**, können jede Bibliothek-ID voranstellen Zum Beispiel:
+- Die Bibliotheks-ID der Typbibliothek. Das Schlüsselwort `libid:`,, kann jeder Bibliotheks-ID vorangestellt werden. Beispiel:
 
     ```cpp
     #import "libid:12341234-1234-1234-1234-123412341234" version("4.0") lcid("9")
     ```
 
-   Wenn Sie keine Version oder Lcid angeben der [Regeln](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber) , gelten für **progid:** gelten auch für **Libid:**.
+   Wenn Sie `version` oder `lcid` nicht angeben, werden die auf `progid:` angewendeten [Regeln](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber) auch auf `libid:` angewendet.
 
 - Ein ausführbare Datei (EXE-Datei).
 
-- Eine Bibliotheksdatei (DLL-Datei), die eine Typbibliotheksressource enthält (z. B. OCX-Datei).
+- Eine Bibliotheksdatei (DLL-Datei), die eine Typbibliotheks Ressource (z. b. eine. ocx) enthält.
 
 - Ein Verbunddokument, das eine Typbibliothek enthält.
 
-- Jedes andere Dateiformat, das von erkannt werden kann die **LoadTypeLib** API.
+- Alle anderen Dateiformate, die von der **LoadTypeLib** -API verstanden werden können.
 
-*Attribute*<br/>
-Eine oder mehrere [#import-Attribute](#_predir_the_23import_directive_import_attributes). Trennen Sie Attribute entweder mit einem Komma oder einem Leerzeichen. Zum Beispiel:
+*legt*\
+Ein oder mehrere [#Import Attribute](#_predir_the_23import_directive_import_attributes). Trennen Sie Attribute entweder mit einem Komma oder einem Leerzeichen. Beispiel:
 
 ```cpp
 #import "..\drawctl\drawctl.tlb" no_namespace, raw_interfaces_only
@@ -80,18 +78,18 @@ Eine oder mehrere [#import-Attribute](#_predir_the_23import_directive_import_att
 
 ## <a name="remarks"></a>Hinweise
 
-## <a name="_predir_the_23import_directive_searchorderforfilename"></a> Suchreihenfolge für Dateinamen
+### <a name="_predir_the_23import_directive_searchorderforfilename"></a>Such Reihenfolge für Dateinamen
 
-*FileName* optional eine Verzeichnisangabe vorangestellt ist. Der Dateiname muss eine vorhandene Datei benennen. Der Unterschied zwischen den beiden Syntaxformen liegt in der Reihenfolge, in der der Präprozessor nach den Typbibliotheksdateien sucht, wenn der Pfad unvollständig angegeben wird.
+der *Dateiname* ist optional eine Verzeichnis Spezifikation vorangestellt. Der Dateiname muss eine vorhandene Datei benennen. Der Unterschied zwischen den beiden Syntaxformen liegt in der Reihenfolge, in der der Präprozessor nach den Typbibliotheksdateien sucht, wenn der Pfad unvollständig angegeben wird.
 
 |Syntaxformat|Aktion|
 |-----------------|------------|
-|Format mit Anführungszeichen|Weist den Präprozessor an, nach Typbibliotheksdateien zuerst im Verzeichnis der Datei gesucht werden soll, enthält die **#import** -Anweisung, und klicken Sie dann in den Verzeichnissen beliebiger Dateien, die enthalten (`#include`) die Datei. Der Präprozessor sucht dann in den unten aufgeführten Verzeichnissen.|
-|Format mit spitzer Klammer|Weist den Präprozessor an, nach Typbibliotheksdateien in den folgenden Verzeichnissen zu suchen:<br /><br /> 1.  Die `PATH` Umgebungsvariablen-Pfadliste<br />2.  Die `LIB` Umgebungsvariablen-Pfadliste<br />3.  Durch die/i angegebenen Pfad (Zusätzliche Includeverzeichnisse)-Compileroption verwenden, es sei denn, es der Compiler sucht nach einer Typbibliothek, die von einer anderen Typbibliothek mit verwiesen wurde die [No_registry](../preprocessor/no-registry.md) Attribut.|
+|Format mit Anführungszeichen|Weist den Präprozessor an, nach Typbibliotheks Dateien zuerst im Verzeichnis der Datei zu suchen, die die **#Import** -Anweisung enthält, und dann in den Verzeichnissen aller Dateien, die`#include`() diese Datei enthalten. Der Präprozessor sucht dann in den unten aufgeführten Verzeichnissen.|
+|Format mit spitzer Klammer|Weist den Präprozessor an, nach Typbibliotheksdateien in den folgenden Verzeichnissen zu suchen:<br /><br /> 1.  Die `PATH` Liste der Umgebungsvariablen Pfade<br />2.  Die `LIB` Liste der Umgebungsvariablen Pfade<br />3.  Der von der [/I](../build/reference/i-additional-include-directories.md) -Compileroption angegebene Pfad, mit dem Unterschied, dass der Compiler nach einer Typbibliothek sucht, auf die von einer anderen Typbibliothek mit dem [no_registry](../preprocessor/no-registry.md) -Attribut verwiesen wurde.|
 
-##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a> Angeben der Lokalisierungs-ID und Versionsnummer
+### <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a>Angeben der Lokalisierungs-ID und der Versionsnummer
 
-Wenn Sie eine ProgID angeben, können Sie auch die Lokalisierungs-ID und die Versionsnummer der ProgID angeben. Zum Beispiel:
+Wenn Sie eine ProgID angeben, können Sie auch die Lokalisierungs-ID und die Versionsnummer der ProgID angeben. Beispiel:
 
 ```cpp
 #import "progid:my.prog.id" lcid("0") version("4.0)
@@ -103,34 +101,35 @@ Wenn Sie keine Lokalisierungs-ID angeben, wird eine ProgID gemäß den folgenden
 
 - Wenn mehr als eine Lokalisierungs-ID vorhanden ist, wird die erste mit der Versionsnummer 0, 9 oder 409 verwendet.
 
-- Wenn mehr als eine Lokalisierungs-ID vorhanden ist und keine von ihnen 0, 9 oder 409 ist, wird die letzte verwendet.
+- Wenn mehr als eine Lokalisierungs-ID vorhanden ist und keines der Werte 0, 9 oder 409 ist, wird der letzte verwendet.
 
 - Wenn Sie keine Versionsnummer angeben, wird die neueste Version verwendet.
 
-##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a> Header-Dateien, die durch Importvorgang erstellt werden
+###  <a name="_predir_the_23import_directive_header_files_created_by_import"></a>Durch den Import erstellte Header Dateien
 
-**#import** erstellt zwei Headerdateien, die die den Inhalt der Typbibliothek in C++-Quellcode zu rekonstruieren. Die primäre Headerdatei entspricht der Datei, die vom MIDL-Compiler (Microsoft Interface Definition Language) erstellt wird, sie verfügt jedoch über zusätzlichen vom Compiler generierten Code und Daten. Die [primäre Headerdatei](#_predir_the_primary_type_library_header_file) hat den gleichen Basisnamen wie die Typbibliothek, gefolgt von einem. TLH-Erweiterung. Die sekundäre Headerdatei weist den gleichen Basisnamen wie die Typbibliothek auf, mit einer TLI-Erweiterung. Sie enthält die Implementierungen für vom Compiler generierte Memberfunktionen und wird in die primäre Headerdatei eingefügt (`#include`).
+**#Import** erstellt zwei Header Dateien, die den Inhalt der Typbibliothek C++ im Quellcode rekonstruieren. Die primäre Header Datei ähnelt der Datei, die vom Microsoft Interface Definition Language-Compiler (mittlerer l) erstellt wurde, aber mit zusätzlichem vom Compiler generierten Code und Daten. Die [primäre Header Datei](#_predir_the_primary_type_library_header_file) hat denselben Basis Namen wie die Typbibliothek und eine. TLH-Erweiterung. Die sekundäre Headerdatei weist den gleichen Basisnamen wie die Typbibliothek auf, mit einer TLI-Erweiterung. Sie enthält die Implementierungen für vom Compiler generierte Memberfunktionen und wird in die primäre Headerdatei eingefügt (`#include`).
 
-Beim Importieren einer Dispinterface-Eigenschaft, die Byref-Parameter wird verwendet, generiert #import keine __declspec ([Eigenschaft](../cpp/property-cpp.md))-Anweisung für die Funktion.
+Wenn Sie eine dispinterface-Eigenschaft importieren `byref` , die Parameter verwendet, generiert **#Import** keine [__declspec (Property)](../cpp/property-cpp.md) -Anweisung für die Funktion.
 
-Beide Headerdateien werden in das Ausgabeverzeichnis eingefügt, das durch die /Fo-Option (Name der Objektdatei) festgelegt wird. Sie werden dann vom Compiler gelesen und kompiliert, als wäre die primäre Headerdatei durch eine `#include`-Anweisung benannt.
+Beide Header Dateien werden in das Ausgabeverzeichnis eingefügt, das von der [/FO (Name Object File)](../build/reference/fo-object-file-name.md) -Option angegeben wird. Sie werden dann vom Compiler gelesen und kompiliert, als wäre die primäre Header Datei durch eine `#include` -Direktive benannt.
 
-Die folgenden compileroptimierungen sind in der **#import** Richtlinie:
+Die folgenden Compileroptimierungen sind in der **#Import** -Direktive enthalten:
 
 - Wenn sie erstellt wird, wird der Headerdatei der gleiche Zeitstempel gegeben wie der Typbibliothek.
 
-- Wenn **#import** wird verarbeitet, der Compiler überprüft zuerst, ob der Header vorhanden ist und auf dem neuesten Stand ist. Wenn ja, muss er nicht neu erstellt werden.
+- Wenn **#Import** verarbeitet wird, prüft der Compiler zunächst, ob der Header vorhanden und aktuell ist. Wenn ja, muss es nicht neu erstellt werden.
 
-Die **#import** Richtlinie auch minimalen Neuerstellung beteiligt und in eine vorkompilierte Headerdatei eingefügt werden können. Finden Sie unter [Erstellen vorkompilierter Headerdateien](../build/creating-precompiled-header-files.md) für Weitere Informationen.
+Die **#Import** -Direktive ist auch an minimaler Neuerstellung beteiligt und kann in eine vorkompilierte Header Datei eingefügt werden.  Weitere Informationen finden Sie unter [Erstellen vorkompilierter Header Dateien](../build/creating-precompiled-header-files.md).
 
-###  <a name="_predir_the_primary_type_library_header_file"></a> Primäre Typbibliotheks-Headerdatei
+### <a name="_predir_the_primary_type_library_header_file"></a>Header Datei der primären Typbibliothek
+
 Die primäre Headerdatei der Typbibliothek umfasst sieben Abschnitte:
 
-- Textbaustein für Überschrift: Besteht aus Kommentaren, `#include` -Anweisung für COMDEF. H (der Standardmakros verwendet in der Kopfzeile definiert), und weiteren verschiedenen Setupinformationen.
+- Überschrift Bausteine: Besteht aus Kommentaren, `#include` -Anweisung für comdef. H (das einige Standard Makros definiert, die im-Header verwendet werden) und andere Informationen zum Setup.
 
-- Vorwärtsverweise und Typdefinitionen: Bestehen aus Strukturdeklarationen wie z. B. `struct IMyInterface` Vorlagen und Typdefinitionen.
+- Forward-Verweise und Typedefs: Besteht aus Struktur Deklarationen wie `struct IMyInterface` und Typedefs.
 
-- Intelligenter Zeiger-Deklarationen: Die Vorlagenklasse `_com_ptr_t` ist eine Implementierung des intelligenten Zeigers, die Schnittstellenzeiger kapselt und entfällt die Notwendigkeit, rufen Sie `AddRef`, `Release`, `QueryInterface` Funktionen. Darüber hinaus blendet es den `CoCreateInstance`-Aufruf aus, wenn ein neues COM-Objekt erstellt wird. In diesem Abschnitt wird die makroanweisung `_COM_SMARTPTR_TYPEDEF` herstellen Typdefinitionen von COM-Schnittstellen für die vorlagenspezialisierungen der werden die [_com_ptr_t](../cpp/com-ptr-t-class.md) Vorlagenklasse. Z. B. für Schnittstelle `IMyInterface`,. TLH-Datei enthält Folgendes:
+- Intelligente Zeiger Deklarationen: Die Vorlagen Klasse `_com_ptr_t` ist ein intelligenter Zeiger. Es kapselt Schnittstellen Zeiger und entfällt, dass die-, `AddRef` `Release`-und- `QueryInterface` Funktionen aufgerufen werden müssen. Außerdem wird der `CoCreateInstance` -Befehl ausgeblendet, wenn ein neues COM-Objekt erstellt wird. In diesem Abschnitt wird die Macro `_COM_SMARTPTR_TYPEDEF` -Anweisung verwendet, um Typedefs von COM-Schnittstellen als Vorlagen Spezialisierungs der [_com_ptr_t](../cpp/com-ptr-t-class.md) -Vorlagen Klasse festzulegen. Beispielsweise ist für die `IMyInterface`-Schnittstelle der. Die TLH-Datei enthält Folgendes:
 
     ```TLH
     _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
@@ -142,27 +141,27 @@ Die primäre Headerdatei der Typbibliothek umfasst sieben Abschnitte:
     typedef _com_ptr_t<_com_IIID<IMyInterface, __uuidof(IMyInterface)> > IMyInterfacePtr;
     ```
 
-   Typ `IMyInterfacePtr` kann dann anstelle des nicht formatierten Schnittstellenzeigers `IMyInterface*` verwendet werden. Daher besteht keine Notwendigkeit zum Aufrufen der verschiedenen `IUnknown` Memberfunktionen
+   Typ `IMyInterfacePtr` kann dann anstelle des nicht formatierten Schnittstellenzeigers `IMyInterface*` verwendet werden. Folglich ist es nicht erforderlich, die verschiedenen `IUnknown` Element Funktionen aufzurufen.
 
-- Typinformationsdeklarationen: Bestehen hauptsächlich aus Klassendefinitionen und anderen Elemente verfügbar machen die einzelnen Typeinfo-Elemente, die vom `ITypeLib:GetTypeInfo`. In diesem Abschnitt wird jede Typinformation aus der Typbibliothek im Header in einem Format wiedergegeben, das von den `TYPEKIND`-Informationen abhängt.
+- Typeingabe-Deklarationen: Besteht primär aus Klassendefinitionen und anderen Elementen, die die einzelnen von `ITypeLib:GetTypeInfo`zurückgegebenen typeinzelfo-Elemente verfügbar machen. In diesem Abschnitt wird jede Typinformation aus der Typbibliothek im Header in einem Format wiedergegeben, das von den `TYPEKIND`-Informationen abhängt.
 
-- Optionale alten GUID-Definition: Enthält Initialisierungen der benannten GUID-Konstanten. Hierbei handelt es sich um Namen im Format `CLSID_CoClass` und `IID_Interface`, vergleichbar mit denen vom MIDL-Compiler generiert.
+- Optionale GUID-Definition im alten Stil: Enthält Initialisierungen der benannten GUID-Konstanten. Diese Namen haben das `CLSID_CoClass` Format und, ähnlich wie die, die vom-Mittell- `IID_Interface`Compiler generiert werden.
 
 - `#include`-Anweisung für den sekundären Header der Typbibliothek.
 
-- Textbaustein für Footer: Derzeit enthält `#pragma pack(pop)`.
+- Footer-Bausteine: Umfasst `#pragma pack(pop)`derzeit.
 
-Alle Bereiche, außer den Codebausteinen und Fußzeile Codebausteine Kopfzeilenbereich, in einem Namespace eingeschlossen sind, mit dem Namen gemäß der `library` -Anweisung in der ursprünglichen IDL-Datei. Sie können die Namen des Typbibliotheksheaders entweder über eine explizite Qualifizierung mit dem Namespacenamen verwenden oder indem Sie die Anweisung
+Alle Abschnitte, außer dem Titel der Überschriften und der Fußzeile, sind in einem Namespace mit dem Namen eingeschlossen, der durch die `library` -Anweisung in der ursprünglichen IDL-Datei angegeben wird. Mit dem Namespace Namen können Sie die Namen aus dem Header der Typbibliothek mit einer expliziten Qualifikation verwenden. Oder Sie können die folgende Anweisung einschließen:
 
 ```cpp
 using namespace MyLib;
 ```
 
-unmittelbar nach der **#import** -Anweisung im Quellcode.
+unmittelbar nach der **#Import** -Anweisung im Quellcode.
 
-Der Namespace kann unterdrückt werden, mithilfe der [No_namespace](no-namespace.md)) Attribut der **#import** Richtlinie. Allerdings kann das Unterdrücken des Namespace zu Namenskonflikten führen. Der Namespace kann auch umbenannt werden, durch die [Rename_namespace](rename-namespace.md) Attribut.
+Der Namespace kann mithilfe des [no_namespace](no-namespace.md))-Attributs der **#Import** -Direktive unterdrückt werden. Allerdings kann das Unterdrücken des Namespace zu Namenskonflikten führen. Der Namespace kann auch durch das [rename_namespace](rename-namespace.md) -Attribut umbenannt werden.
 
-Der Compiler stellt den vollständigen Pfad zu einer beliebigen Typbibliotheksabhängigkeit bereit, die von der Typbibliothek benötigt wird, die gerade verarbeitet wird. Der Pfad wird in Form von Kommentaren in den Header der Typbibliothek (.TLH) geschrieben, den der Compiler für jede verarbeitete Typbibliothek erstellt.
+Der Compiler stellt den vollständigen Pfad zu jeder Typbibliotheks Abhängigkeit bereit, die von der zurzeit verarbeiteten Typbibliothek benötigt wird. Der Pfad wird in Form von Kommentaren in den Header der Typbibliothek (.TLH) geschrieben, den der Compiler für jede verarbeitete Typbibliothek erstellt.
 
 Wenn eine Typbibliothek Verweise auf Typen enthält, die in anderen Typbibliotheken definiert sind, dann enthält die TLH-Datei Kommentare folgender Art:
 
@@ -174,24 +173,24 @@ Wenn eine Typbibliothek Verweise auf Typen enthält, die in anderen Typbibliothe
 //
 ```
 
-Der eigentliche Dateiname in der **#import** Kommentar ist der vollständige Pfad der übergreifenden Typbibliothek, wie in der Registrierung gespeichert. Wenn Fehler aufgrund fehlender Typdefinitionen auftreten, überprüfen Sie die Kommentare am Anfang der TLH-Datei, um festzustellen, welche abhängigen Typbibliotheken möglicherweise zuerst importiert werden müssen. Wahrscheinliche Fehler sind Syntaxfehler (z. B. C2143, C2146, C2321), C2501 (fehlende decl-Spezifizierer) oder C2433 ("inline" bei Datendeklaration nicht zulässig) beim Kompilieren der TLI-Datei.
+Der tatsächliche Dateiname im **#Import** Kommentar ist der vollständige Pfad der quer referenzierten Typbibliothek, wie er in der Registrierung gespeichert ist. Wenn Fehler aufgrund fehlender Typdefinitionen auftreten, überprüfen Sie die Kommentare am Anfang von. TLH, um anzuzeigen, welche abhängigen Typbibliotheken möglicherweise zuerst importiert werden müssen. Wahrscheinliche Fehler sind Syntaxfehler (z. B. C2143, C2146, C2321), C2501 (fehlende decl-Spezifizierer) oder C2433 ("inline" bei Datendeklaration nicht zulässig) beim Kompilieren der TLI-Datei.
 
-Müssen Sie bestimmen, welche der Kommentare sind nicht anderweitig bereitgestellt von Systemheadern ist, und geben Sie dann eine **#import** -Direktive an einem Punkt vor der **#import** -Direktive des abhängigen Elements der Typbibliothek die Fehler zu beheben.
+Um Abhängigkeitsfehler zu beheben, bestimmen Sie, welche der Abhängigkeits Kommentare von Systemheadern nicht anderweitig bereitgestellt werden, und stellen Sie dann eine **#Import** -Direktive zu einem bestimmten Zeitpunkt vor der **#Import** -Direktive der abhängigen Typbibliothek bereit.
 
-## <a name="_predir_the_23import_directive_import_attributes"></a> #import-Attribute
+### <a name="_predir_the_23import_directive_import_attributes"></a>#Import Attribute
 
-**#import** kann optional ein oder mehrere Attribute enthalten. Diese Attribute weisen den Compiler an, den Inhalt der Typbibliotheksheader zu ändern. Ein umgekehrter Schrägstrich (**\\**) Symbol kann verwendet werden, um zusätzliche Zeilen in einer einzelnen enthalten **#import** Anweisung. Zum Beispiel:
+**#Import** können optional ein oder mehrere Attribute einschließen. Diese Attribute weisen den Compiler an, den Inhalt der Typbibliotheksheader zu ändern. Ein umgekehrter schräg **\\** Strich () kann verwendet werden, um zusätzliche Zeilen in eine einzelne **#Import** Anweisung aufzunehmen. Beispiel:
 
 ```cpp
 #import "test.lib" no_namespace \
    rename("OldName", "NewName")
 ```
 
-Weitere Informationen finden Sie unter [#import-Attribute](../preprocessor/hash-import-attributes-cpp.md).
+Weitere Informationen finden Sie unter [#Import Attribute](../preprocessor/hash-import-attributes-cpp.md).
 
-**Ende C++-spezifisch**
+**End C++ -Specific**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Präprozessordirektiven](../preprocessor/preprocessor-directives.md)<br/>
-[COM-Unterstützung des Compilers](../cpp/compiler-com-support.md)
+[Präprozessordirektiven](../preprocessor/preprocessor-directives.md)\
+[Compilerunterstützung](../cpp/compiler-com-support.md)

@@ -23,7 +23,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68452509"
 ---
-# <a name="basicofstream-class"></a>basic_ofstream-Klasse
+# <a name="basic_ofstream-class"></a>basic_ofstream-Klasse
 
 Beschreibt ein Objekt, das das Einfügen von Elementen und codierten Objekten in einen Streampuffer der Klasse [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> mit Elementen des Typs `Elem` steuert, dessen Zeichenmerkmale von der Klasse `Tr` bestimmt werden.
 
@@ -135,7 +135,7 @@ Der rvalue-Verweis auf das `basic_ofstream`-Objekt, das benutzt wird, um dieses 
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor initialisiert die Basisklasse durch Aufrufen [](../standard-library/basic-ostream-class.md)von Basic_ostream`sb`(), `sb` wobei das gespeicherte Objekt der Klasse [Basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> ist. Er initialisiert zudem `sb` durch Aufrufen von `basic_filebuf`< `Elem`, `Tr`>.
+Der erste Konstruktor initialisiert die Basisklasse durch Aufrufen von [basic_ostream](../standard-library/basic-ostream-class.md)(`sb`). Hierbei entspricht `sb` dem gespeicherten Objekt der Klasse [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>. Er initialisiert zudem `sb` durch Aufrufen von `basic_filebuf`< `Elem`, `Tr`>.
 
 Der zweite und dritte Konstruktor initialisiert die Basisklasse durch Aufrufen von `basic_ostream`( **sb**). `sb` Er initialisiert außerdem durch Aufrufen `basic_filebuf` <  `sb`von, `Tr`>unddann. `Elem` [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::out`). Wenn die letztere Funktion einen NULL-Zeiger zurückgibt, ruft der Konstruktor [SetState](../standard-library/basic-ios-class.md#setstate)(`failbit`) auf.
 

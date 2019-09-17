@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68457698"
 ---
-# <a name="numput-class"></a>num_put-Klasse
+# <a name="num_put-class"></a>num_put-Klasse
 
 Eine Vorlagenklasse, die ein Objekt beschreibt, das als Gebietsschemafacet dienen kann, um Konvertierungen von numerischen Werten in Sequenzen vom Typ `CharType` zu steuern.
 
@@ -169,9 +169,9 @@ Das ganzzahlige Ausgabefeld wird von denselben Regeln generiert, die von den Dru
 
 Wenn **iosbase**. [width](../standard-library/ios-base-class.md#width) ungleich null ist, wird eine Feldbreite dieses Werts vorangestellt. Die Funktion ruft **iosbase**. **width**(0) auf, um die Feldbreite auf null zurückzusetzen.
 
-Auffüllung erfolgt nur, wenn die minimale Anzahl von Elementen *N*, die zur Angabe des Ausgabefelds erforderlich ist, kleiner als **iosbase**. [width](../standard-library/ios-base-class.md#width) ist. Diese Auffüllung besteht aus einer Sequenz von *N* - -**breiten** Kopien von **Fill**. Das Auffüllen erfolgt folgendermaßen:
+Auffüllung erfolgt nur, wenn die minimale Anzahl von Elementen *N*, die zur Angabe des Ausgabefelds erforderlich ist, kleiner als **iosbase**. [width](../standard-library/ios-base-class.md#width) ist. Diese **Auffüllung**besteht aus einer Sequenz von *N* - -**breiten** Kopien von Fill. Das Auffüllen erfolgt folgendermaßen:
 
-- Wenn **iosbase**. **Flags** & left,[](../standard-library/ios-functions.md#left)das- **Flag-** wird vorangestellt.`ios_base::adjustfield` == `ios_base::` (Abstand tritt nach dem generierten Text auf.)
+- Wenn **iosbase**. **flags** & `ios_base::adjustfield` == `ios_base::`[left](../standard-library/ios-functions.md#left), wird das Flag **-** vorangestellt. (Abstand tritt nach dem generierten Text auf.)
 
 - Wenn **iosbase.flags** & **ios_base::adjustfield** == `ios_base::`[internal](../standard-library/ios-functions.md#internal), dann wird das Flag **0** vorangestellt. (Für ein numerisches Ausgabefeld tritt der Abstand dort auf, wo die Druckfunktionen mit 0 auffüllen.)
 
@@ -215,7 +215,7 @@ verhält sich wie die erste, außer dass sie ein Gleitkommaausgabefeld aus dem W
 
 - Wenn **iosbase**. **Flags** & [korrigiert](../standard-library/ios-functions.md#fixed), die Konvertierungsspezifikation ist`lf`.`ios_base::floatfield` == `ios_base::`
 
-- Wenn **iosbase**. **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific), ist die Konvertierungsspezifikation `le`. Wenn **iosbase**. **Flags**[](../standard-library/ios-functions.md#uppercase) `e` `E`Großbuchstaben ist ungleich 0 (null), wird durch ersetzt. & `ios_base::`
+- Wenn **iosbase**. **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific), ist die Konvertierungsspezifikation `le`. Wenn **iosbase**. **flags** & `ios_base::`[uppercase](../standard-library/ios-functions.md#uppercase) nicht 0 (null) ist, wird `e` durch `E` ersetzt.
 
 - Andernfalls ist die Konvertierungsspezifikation **lg**. Wenn **iosbase**. **Flags** `g` `G`ios_base:: UpperCase ungleich NULL ist, wird durch ersetzt. & 
 

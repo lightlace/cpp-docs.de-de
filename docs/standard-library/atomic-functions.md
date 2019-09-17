@@ -429,7 +429,7 @@ Der Wert, der unmittelbar vor dem Ausführen des Vorgangs im atomischen Objekt e
 
 ### <a name="remarks"></a>Hinweise
 
-Die `atomic_fetch_and` -Funktion führt `read-modify-write` einen  `and` -Vorgangaus,umdengespeichertenWertvonAtomdurcheinenbitweisenWertunddenaktuellenWertzuersetzen,derinAtomgespeichertwird.dabeiwirdmemory_order`memory_order_seq_cst`verwendet.   [ ](../standard-library/atomic-enums.md#memory_order_enum)Einschränkung.
+Mit der `atomic_fetch_and`-Funktion wird ein `read-modify-write`-Vorgang ausgeführt, um den gespeicherten Wert von *Atom* durch ein bitweises `and` von *Value* und den aktuellen in *Atom* gespeicherten Wert unter Verwendung der `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)-Einschränkung zu ersetzen.
 
 ## <a name="atomic_fetch_and_explicit"></a> atomic_fetch_and_explicit
 
@@ -466,7 +466,7 @@ Der Wert, der unmittelbar vor dem Ausführen des Vorgangs im atomischen Objekt e
 
 ### <a name="remarks"></a>Hinweise
 
-Die `atomic_fetch_and_explicit` -Funktion führt `read-modify-write` einen-Vorgang aus, um den  gespeicherten Wert von `and` Atom durch einen bitweisen *Wert* und den aktuellen Wert, der in *Atom*gespeichert ist, innerhalb der angegebenen Speicher Einschränkungen zu ersetzen. nach *Reihenfolge*.
+Die `atomic_fetch_and_explicit` -Funktion führt `read-modify-write` einen-Vorgang aus, um den gespeicherten Wert von `and` Atom durch einen bitweisen *Wert* und den aktuellen Wert, der in *Atom*gespeichert ist, innerhalb der angegebenen Speicher Einschränkungen zu ersetzen. nach *Reihenfolge*.
 
 ## <a name="atomic_fetch_or"></a> atomic_fetch_or
 
@@ -493,7 +493,7 @@ Der Wert, der unmittelbar vor dem Ausführen des Vorgangs im atomischen Objekt e
 
 ### <a name="remarks"></a>Hinweise
 
-Die `atomic_fetch_or` -Funktion führt `read-modify-write` einen  `or` -Vorgangaus,umdengespeichertenWertvonAtomdurcheinenbitweisenWertunddenaktuellenWertzuersetzen,derinAtomgespeichertwird.dabeiwirdmemory_order`memory_order_seq_cst`verwendet.   [ ](../standard-library/atomic-enums.md#memory_order_enum).
+Mit der `atomic_fetch_or`-Funktion wird ein `read-modify-write`-Vorgang ausgeführt, um den gespeicherten Wert von *Atom* durch ein bitweises `or` von *Value* und den aktuellen in *Atom* gespeicherten Wert unter Verwendung von `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) zu ersetzen.
 
 ## <a name="atomic_fetch_or_explicit"></a> atomic_fetch_or_explicit
 
@@ -530,7 +530,7 @@ Der Wert, der unmittelbar vor dem Ausführen des Vorgangs im atomischen Objekt e
 
 ### <a name="remarks"></a>Hinweise
 
-Die `atomic_fetch_or_explicit` -Funktion führt `read-modify-write` einen-Vorgang aus, um den  gespeicherten Wert von `or` Atom durch einen bitweisen *Wert* und den aktuellen Wert, der in *Atom*gespeichert ist, innerhalb der [memory_order](../standard-library/atomic-enums.md#memory_order_enum) -Einschränkungen zu ersetzen. angegeben nach *Reihenfolge*.
+Die `atomic_fetch_or_explicit` -Funktion führt `read-modify-write` einen-Vorgang aus, um den gespeicherten Wert von `or` Atom durch einen bitweisen *Wert* und den aktuellen Wert, der in *Atom*gespeichert ist, innerhalb der [memory_order](../standard-library/atomic-enums.md#memory_order_enum) -Einschränkungen zu ersetzen. angegeben nach *Reihenfolge*.
 
 ## <a name="atomic_fetch_sub"></a> atomic_fetch_sub
 
@@ -604,7 +604,7 @@ Der Wert des unmittelbar vor dem Ausführen des Vorgangs im atomischen Objekt en
 
 ### <a name="remarks"></a>Hinweise
 
-Die `atomic_fetch_sub_explicit` -Funktion führt `read-modify-write` einen-Vorgang aus, um den *Wert* aus dem gespeicherten Wert in *Atom*in den [](../standard-library/atomic-enums.md#memory_order_enum) von `Order`angegebenen memory_order-Einschränkungen atomisch zu subtrahieren.
+Die `atomic_fetch_sub_explicit`-Funktion führt einen `read-modify-write`-Vorgang aus, um *Value* atomisch vom in *Atom* gespeicherten Wert innerhalb der von `Order` angegebenen [memory_order](../standard-library/atomic-enums.md#memory_order_enum)-Einschränkungen zu subtrahieren.
 
 Wenn der atomische Typ `atomic_address`ist, hat *value* den Typ `ptrdiff_t` , und der `char *`Vorgang behandelt den gespeicherten Zeiger als.
 
@@ -648,7 +648,7 @@ Der Wert, der unmittelbar vor dem Ausführen des Vorgangs im atomischen Objekt e
 
 ### <a name="remarks"></a>Hinweise
 
-Die `atomic_fetch_xor` -Funktion führt `read-modify-write` einen  `exclusive or` -Vorgangaus,umdengespeichertenWertvonAtomdurcheinenbitweisenWertunddenaktuellenWertzuersetzen,derinAtomgespeichertwird.dabeiwirdmemory_order`memory_order_seq_cst`verwendet.   [ ](../standard-library/atomic-enums.md#memory_order_enum).
+Mit der `atomic_fetch_xor`-Funktion wird ein `read-modify-write`-Vorgang ausgeführt, um den gespeicherten Wert von *Atom* durch ein bitweises `exclusive or` von *Value* und den aktuellen in *Atom* gespeicherten Wert unter Verwendung von `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) zu ersetzen.
 
 ## <a name="atomic_fetch_xor_explicit"></a> atomic_fetch_xor_explicit
 
@@ -685,7 +685,7 @@ Der Wert, der unmittelbar vor dem Ausführen des Vorgangs im atomischen Objekt e
 
 ### <a name="remarks"></a>Hinweise
 
-Die `atomic_fetch_xor_explicit` -Funktion führt `read-modify-write` einen-Vorgang aus, um den  gespeicherten Wert von `exclusive or` Atom durch einen bitweisen *Wert* und den aktuellen Wert, der in *Atom*gespeichert ist, innerhalb der [memory_order](../standard-library/atomic-enums.md#memory_order_enum) -Einschränkungen zu ersetzen. , die in der *Reihenfolge*angegeben werden.
+Die `atomic_fetch_xor_explicit` -Funktion führt `read-modify-write` einen-Vorgang aus, um den gespeicherten Wert von `exclusive or` Atom durch einen bitweisen *Wert* und den aktuellen Wert, der in *Atom*gespeichert ist, innerhalb der [memory_order](../standard-library/atomic-enums.md#memory_order_enum) -Einschränkungen zu ersetzen. , die in der *Reihenfolge*angegeben werden.
 
 ## <a name="atomic_flag_clear"></a> atomic_flag_clear
 
@@ -720,7 +720,7 @@ Ein [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_flag_test_and_set"></a> atomic_flag_test_and_set
 
-Legt das **bool** -Flag in einem [atomic_flag](../standard-library/atomic-flag-structure.md) - Objekt `memory_order_seq_cst`innerhalb der Einschränkungen von [memory_order](../standard-library/atomic-enums.md#memory_order_enum)auf true fest.
+Legt das **bool** -Flag in einem [atomic_flag](../standard-library/atomic-flag-structure.md) -Objekt `memory_order_seq_cst`innerhalb der Einschränkungen von [memory_order](../standard-library/atomic-enums.md#memory_order_enum)auf true fest.
 
 ```cpp
 inline bool atomic_flag_test_and_set(volatile atomic_flag* Flag,) noexcept;

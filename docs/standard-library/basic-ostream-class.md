@@ -27,7 +27,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68457864"
 ---
-# <a name="basicostream-class"></a>basic_ostream-Klasse
+# <a name="basic_ostream-class"></a>basic_ostream-Klasse
 
 Diese Vorlagen Klasse beschreibt ein Objekt, das das Einfügen von Elementen und codierten Objekten in einen Streampuffer mit Elementen `Elem`des Typs steuert, der auch als [char_type](../standard-library/basic-ios-class.md#char_type)bezeichnet wird, dessen Zeichen Merkmale `Tr`von der Klasse bestimmt werden. wird als [Traits_type](../standard-library/basic-ios-class.md#traits_type)bezeichnet.
 
@@ -270,7 +270,7 @@ Die Funktion
 basic_ostream<Elem, Tr>& operator<<(bool val);
 ```
 
-konvertiert `_Val` in ein boolesches Feld und fügt es durch Aufrufen von [Use_facet](../standard-library/basic-filebuf-class.md#open) **<\<Num_put Elem, outit >** `(`[getloc](../standard-library/ios-base-class.md#getloc)) ein. [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**). Hier ist als [](../standard-library/ostreambuf-iterator-class.md)**ostreambuf_iterator\<Elem, TR > definiert.** `OutIt` Die Funktion gibt **\*this** zurück.
+konvertiert `_Val` in ein boolesches Feld und fügt es durch Aufrufen von [Use_facet](../standard-library/basic-filebuf-class.md#open) **<\<Num_put Elem, outit >** `(`[getloc](../standard-library/ios-base-class.md#getloc)) ein. [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**). In diesem Fall ist `OutIt` als [ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md) **\<Elem, Tr>** definiert. Die Funktion gibt **\*this** zurück.
 
 Die Funktionen
 
@@ -296,7 +296,7 @@ basic_ostream<Elem, Tr>& operator<<(double val);
 basic_ostream<Elem, Tr>& operator<<(long double val);
 ```
 
-jede konvertiert das  **\*** *Val* in ein numerisches Feld und fügt es durch Aufrufen von **Use_facet < Num_put\<Elem, outit >** (`getloc`) **. Put**(`rdbuf`**outit**()) `getloc`ein., **Val**). Hier ist **OutIt** als **ostreambuf_iterator\<Elem, Tr>** definiert. Die Funktion gibt **\*this** zurück.
+Jede  **\*konvertiert das** *Val* in ein numerisches Feld und fügt es durch Aufrufen von **Use_facet\<< Num_put Elem, outit >** (`getloc`) **. Put**(`rdbuf`**outit**()) `getloc`ein., **Val**). Hier ist **OutIt** als **ostreambuf_iterator\<Elem, Tr>** definiert. Die Funktion gibt **\*this** zurück.
 
 ### <a name="example"></a>Beispiel
 

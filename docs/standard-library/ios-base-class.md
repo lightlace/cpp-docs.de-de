@@ -115,7 +115,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68449185"
 ---
-# <a name="iosbase-class"></a>ios_base-Klasse
+# <a name="ios_base-class"></a>ios_base-Klasse
 
 Die Klasse beschreibt die Speicher- und Memberfunktionen, die Eingabe- und Ausgabestreams gemeinsam sind, die nicht von den Vorlagenparametern abhängen. (Die Vorlagenklasse [basic_ios](../standard-library/basic-ios-class.md) beschreibt, welche Funktionen gemeinsam und von Vorlagenparametern abhängig sind.)
 
@@ -982,7 +982,7 @@ Die Flags, die ausgeschaltet werden sollen.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion ruft [](#flags)effektiv Flags`~`( *_Mask* **& Flags**) auf (Löschen ausgewählter Bits).
+Die Memberfunktion ruft effektiv [flags](#flags)(`~` *_Mask* **& flags**) (ausgewählte Bits löschen) auf.
 
 ### <a name="example"></a>Beispiel
 

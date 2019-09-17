@@ -55,7 +55,7 @@ Ein Objekt vom Typ **basic_ostream**.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Manipulator ruft *Ostr*auf. [Put](../standard-library/basic-ostream-class.md#put) (*Ostr*. [erweitern](../standard-library/basic-ios-class.md#widen) ("\n")), und ruft dann *Ostr*auf. [](../standard-library/basic-ostream-class.md#flush)leeren. Sie gibt *Ostr*zurück.
+Der Manipulator ruft *Ostr*.[put](../standard-library/basic-ostream-class.md#put)(*Ostr*.[widen](../standard-library/basic-ios-class.md#widen)('\n')) und dann *Ostr*.[flush](../standard-library/basic-ostream-class.md#flush) auf. Sie gibt *Ostr*zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -151,7 +151,7 @@ Ein Objekt vom Typ `basic_ostream`.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Manipulator ruft *Ostr*auf. [](../standard-library/basic-ostream-class.md#flush)leeren. Sie gibt *Ostr*zurück.
+Der Manipulator ruft *Ostr*.[flush](../standard-library/basic-ostream-class.md#flush) auf. Sie gibt *Ostr*zurück.
 
 ### <a name="example"></a>Beispiel
 
