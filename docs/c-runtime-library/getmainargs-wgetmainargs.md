@@ -1,10 +1,10 @@
 ---
 title: __getmainargs, __wgetmainargs
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __wgetmainargs
 - __getmainargs
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcrt.dll
 - msvcr110_clr0400.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr110.dll
 - msvcr90.dll
 - msvcr120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __wgetmainargs
 - __getmainargs
@@ -20,14 +23,14 @@ helpviewer_keywords:
 - __wgetmainargs
 - __getmainargs
 ms.assetid: f72f54eb-9509-4bdf-8752-40fc49055439
-ms.openlocfilehash: 6e2bf21f2ac50d3486af56f9581ff6c8d0e0c309
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dbf186fa699e8faf85385fd322482a4373b3fd60
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523337"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940348"
 ---
-# <a name="getmainargs-wgetmainargs"></a>__getmainargs, __wgetmainargs
+# <a name="__getmainargs-__wgetmainargs"></a>__getmainargs, __wgetmainargs
 
 Ruft die Befehlszeilenanalyse auf und kopiert die Argumente für `main()` zurück durch die übergebenen Zeiger.
 
@@ -70,11 +73,11 @@ Andere Informationen, die an die CRT-DLL übergeben werden.
 
 0, wenn erfolgreich; ein negativer Wert, wenn fehlgeschlagen.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Verwenden Sie `__getmainargs` für nicht-Breitzeichen-Plattformen und `__wgetmainargs` für Breitzeichen (Unicode)-Plattformen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|

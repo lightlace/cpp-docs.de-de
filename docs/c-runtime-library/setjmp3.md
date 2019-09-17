@@ -1,9 +1,9 @@
 ---
 title: _setjmp3
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _setjmp3
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr90.dll
 - msvcr110.dll
@@ -11,7 +11,10 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcr100.dll
 - msvcr120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - setjmp3
 - _setjmp3
@@ -19,14 +22,14 @@ helpviewer_keywords:
 - _setjmp3 function
 - setjmp3 function
 ms.assetid: 6129c2f3-8bac-4fdb-a827-44e1eebba500
-ms.openlocfilehash: e2c89acf1de88b831d70a0f438cdf14148a48632
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: d7120ddd10322d0b7391608fd388d9f45c1600e8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741801"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957786"
 ---
-# <a name="setjmp3"></a>_setjmp3
+# <a name="_setjmp3"></a>_setjmp3
 
 Interne CRT-Funktion. Eine neue Implementierung der Funktion `setjmp`.
 
@@ -59,7 +62,7 @@ Gibt immer 0 zurück.
 
 Verwenden Sie diese Funktion nicht in einem C++-Programm. Es handelt sich um eine intrinsische Funktion, die C++ nicht unterstützt. Weitere Informationen zum Verwenden von `setjmp` finden Sie unter [Verwenden von „setjmp/longjmp“](../cpp/using-setjmp-longjmp.md).
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,25 +1,28 @@
 ---
 title: scanf-Breitenangabe
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr120.dll
 - msvcr80.dll
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - scanf
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: 1431002a7e7d0054ac20c05c76b05cabc96177c5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 3b00996f3a17ab9298b1edba5a8e60826e19fdcc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743259"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957348"
 ---
 # <a name="scanf-width-specification"></a>scanf-Breitenangabe
 
@@ -79,13 +82,13 @@ Lassen Sie beim Verwenden einer nicht sicheren Funktion in der `scanf`-Reihe den
 
 ## <a name="reading-undelimited-strings"></a>Lesen von nicht durch Trennzeichen getrennten Zeichenfolgen
 
-Zum Lesen von Zeichenfolgen, die nicht durch Trennzeichen getrennt sind, kann ein Zeichensatz in Klammern (**[ ]**) das **s**-Typzeichen (Zeichenfolge) ersetzen. Der Zeichensatz in Klammern wird als Steuerzeichenfolge bezeichnet. Das entsprechende Eingabefeld wird bis zum ersten Zeichen gelesen, das nicht in der Steuerzeichenfolge enthalten ist. Wenn das erste Zeichen im Satz ein Caretzeichen (**^**) ist, wird der Effekt umgekehrt: Das Eingabefeld wird bis zum ersten Zeichen gelesen, das im restlichen Zeichensatz angezeigt wird.
+Zum Lesen von Zeichenfolgen, die nicht durch Trennzeichen getrennt sind, kann ein Zeichensatz in Klammern ( **[ ]** ) das **s**-Typzeichen (Zeichenfolge) ersetzen. Der Zeichensatz in Klammern wird als Steuerzeichenfolge bezeichnet. Das entsprechende Eingabefeld wird bis zum ersten Zeichen gelesen, das nicht in der Steuerzeichenfolge enthalten ist. Wenn das erste Zeichen im Satz ein Caretzeichen ( **^** ) ist, wird der Effekt umgekehrt: Das Eingabefeld wird bis zum ersten Zeichen gelesen, das im restlichen Zeichensatz angezeigt wird.
 
 Beachten Sie, dass **%[a-z]** und **%[z-a]** auf die gleiche Weise wie **%[abcde...z]** interpretiert werden. Dies ist eine häufige `scanf`-Funktionserweiterung, beachten Sie jedoch, dass sie nicht vom ANSI-Standard erfordert wird
 
 ## <a name="reading-unterminated-strings"></a>Lesen von nicht beendeten Zeichenfolgen
 
-Verwenden Sie zum Speichern einer Zeichenfolge ohne ein NULL-Abschlusszeichen („\0“) die Spezifikation **%**<em>n</em>**c**, wobei *n* für eine ganze Dezimalzahl steht. In diesem Fall gibt das **c**-Typzeichen an, dass das Argument ein Zeiger auf ein Zeichenarray ist. Die nächsten *n*-Zeichen werden aus dem Eingabestream in die angegebene Position gelesen und es wird kein NULL-Zeichen („\0“) angefügt. Wenn *n* nicht angegeben ist, lautet der Standardwert 1.
+Verwenden Sie zum Speichern einer Zeichenfolge ohne ein NULL-Abschlusszeichen („\0“) die Spezifikation **%** <em>n</em>**c**, wobei *n* für eine ganze Dezimalzahl steht. In diesem Fall gibt das **c**-Typzeichen an, dass das Argument ein Zeiger auf ein Zeichenarray ist. Die nächsten *n*-Zeichen werden aus dem Eingabestream in die angegebene Position gelesen und es wird kein NULL-Zeichen („\0“) angefügt. Wenn *n* nicht angegeben ist, lautet der Standardwert 1.
 
 ## <a name="when-scanf-stops-reading-a-field"></a>Wenn scanf das Lesen eines Felds beendet
 

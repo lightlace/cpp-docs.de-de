@@ -1,9 +1,9 @@
 ---
 title: _CIsin
 ms.date: 04/10/2018
-apiname:
+api_name:
 - _CIsin
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr100.dll
 - msvcrt.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr90.dll
 - msvcr110_clr0400.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CIsin
 - _CIsin
@@ -20,14 +23,14 @@ helpviewer_keywords:
 - _CIsin intrinsic
 - CIsin intrinsic
 ms.assetid: f215f39a-2341-4f1c-ba8e-cb522451ceb2
-ms.openlocfilehash: a76aa2b0e0438afa5728d26451c2a146ed262cab
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 66f26e9fa4dd08d18b15deca4efa40c236e092c9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702881"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944546"
 ---
-# <a name="cisin"></a>_CIsin
+# <a name="_cisin"></a>_CIsin
 
 Berechnet den Sinus des obersten Werts im Gleitkommastapel.
 
@@ -37,13 +40,13 @@ Berechnet den Sinus des obersten Werts im Gleitkommastapel.
 void __cdecl _CIsin();
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Diese systeminterne Version der [sin](../c-runtime-library/reference/sin-sinf-sinl.md)-Funktion verfügt über eine spezielle Aufrufkonvention, die der Compiler versteht. Sie beschleunigt die Ausführung, da sie das Generieren von Kopien verhindert und bei der Registerzuweisung hilft.
 
 Der resultierende Wert wird oben auf dem Gleitkommastapel abgelegt.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Plattform:** x86
 

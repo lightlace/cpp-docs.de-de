@@ -1,14 +1,17 @@
 ---
 title: to-Funktionen
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr90.dll
 - msvcr110.dll
 - msvcr110_clr0400.dll
 - msvcr80.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - To
 helpviewer_keywords:
@@ -20,12 +23,12 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: 17d80507462b3eb0fdfb5d9e41da6162947bd3de
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f7a898d70e506ed4707ea718faa0ed618682c2c7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742534"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944823"
 ---
 # <a name="to-functions"></a>to-Funktionen
 
@@ -40,15 +43,15 @@ Jede der **to**-Funktionen und ggf. das zugehörige Makro konvertiert ein einzel
 
 Es gibt folgende **to**-Funktionen und Makrokonvertierungen:
 
-|-Routine zurückgegebener Wert|Makro|Beschreibung|
+|-Routine zurückgegebener Wert|Makro|BESCHREIBUNG|
 |-------------|-----------|-----------------|
 |`__toascii`|`__toascii`|Konvertiert `c` in ASCII-Zeichen|
 |`tolower`|`tolower`|Konvertiert `c` gegebenenfalls in Kleinbuchstaben|
 |`_tolower`|`_tolower`|Konvertiert `c` in Kleinbuchstaben|
-|`towlower`|Keiner|Konvertiert `c` in entsprechende Breitzeichen-Kleinbuchstaben|
+|`towlower`|Keine|Konvertiert `c` in entsprechende Breitzeichen-Kleinbuchstaben|
 |`toupper`|`toupper`|Konvertiert `c` gegebenenfalls in Großbuchstaben|
 |`_toupper`|`_toupper`|Konvertiert `c` in Großbuchstaben|
-|`towupper`|Keiner|Konvertiert c in entsprechende Breitzeichen-Kleinbuchstaben|
+|`towupper`|Keine|Konvertiert c in entsprechende Breitzeichen-Kleinbuchstaben|
 
 Um die Funktionsversionen der **to**-Routinen zu nutzen, die auch als Makros definiert sind, entfernen Sie entweder die Makrodefinitionen mit `#undef`-Direktiven, oder schließen Sie nicht CTYPE.H ein. Wenn Sie die Compileroption /Za wählen, verwendet der Compiler die Funktionsversion von `toupper` oder `tolower`. Deklarationen der Funktionen `toupper` und `tolower` sind in STDLIB.H enthalten.
 
@@ -64,7 +67,7 @@ Die Routinen `_tolower` und `_toupper`:
 
 - Sind vom Gebietsschema unabhängige, viel schnellere Versionen von `tolower` und **.**
 
-- Können nur verwendet werden, wenn **isascii(**`c`**)** und entweder **isupper(**`c`**)** oder **islower(**`c`**)** ungleich null sind.
+- Können nur verwendet werden, wenn **isascii(** `c` **)** und entweder **isupper(** `c` **)** oder **islower(** `c` **)** ungleich null sind.
 
 - Haben nicht definierte Ergebnisse, wenn `c` kein ASCII-Buchstabe des entsprechenden zu konvertierenden Falls ist.
 

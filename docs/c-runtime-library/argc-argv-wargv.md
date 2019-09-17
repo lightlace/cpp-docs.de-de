@@ -1,13 +1,16 @@
 ---
 title: __argc, __argv, __wargv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __wargv
 - __argv
 - __argc
-apilocation:
+api_location:
 - msvcrt120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __argv
 - __argc
@@ -17,14 +20,14 @@ helpviewer_keywords:
 - __wargv
 - __argc
 ms.assetid: 17001b0a-04ad-4762-b3a6-c54847f02d7c
-ms.openlocfilehash: f428d81215193361a409473a411eb5c4d91fa997
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 59ab1f5ba52e6dc84d44e8cb5465cfa412d01895
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743296"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940635"
 ---
-# <a name="argc-argv-wargv"></a>__argc, __argv, __wargv
+# <a name="__argc-__argv-__wargv"></a>__argc, __argv, __wargv
 
 Die globale Variable `__argc` zählt die Anzahl von Befehlszeilenargumenten, die an das Programm übergeben werden. `__argv` ist ein Zeiger auf ein Array mit Einzelbytezeichen oder Multibyte-Zeichensätzen, die die Programmargumente enthalten, und `__wargv` ist ein Zeiger auf ein Array mit Breitzeichen-Zeichenfolgen, die die Programmargumente enthalten. Diese globalen Variablen stellen die Argumente für `main` oder `wmain` bereit.
 
@@ -48,7 +51,7 @@ Für portablen Code wird die Verwendung der an `main` übergebenen Argumente emp
 |---------------------|---------------------------|-----------------------|
 |`__targv`|`__argv`|`__wargv`|
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 |Globale Variable|Erforderlicher Header|
 |---------------------|---------------------|
