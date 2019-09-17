@@ -1,21 +1,21 @@
 ---
-title: Importieren Sie (C++-COM-Attribut)
+title: Import (C++ com-Attribut)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.import
 helpviewer_keywords:
 - import attribute
 ms.assetid: ebf07cae-39fb-4047-8b57-54af0a9a83de
-ms.openlocfilehash: d458ce9d938da5f3650eb2478385165de6a140ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9ed80bdcc04302c0dee85935f377c8e3dbfd37f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409372"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514624"
 ---
 # <a name="import"></a>import
 
-Gibt eine andere IDL, Header oder ODL-Datei enthält Definitionen, die Sie von Ihrem wichtigsten IDL verweisen möchten.
+Gibt eine andere IDL-, ODL-oder Header Datei an, die Definitionen enthält, auf die Sie von Ihrer Haupt-IDL verweisen möchten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,13 +28,13 @@ Gibt eine andere IDL, Header oder ODL-Datei enthält Definitionen, die Sie von I
 ### <a name="parameters"></a>Parameter
 
 *idl_file*<br/>
-Der Name einer IDL-Datei, die in der Typbibliothek des aktuellen Projekts importiert werden sollen.
+Der Name einer IDL-Datei, die in die Typbibliothek des aktuellen Projekts importiert werden soll.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **importieren** C++-Attribut bewirkt, dass ein `#import` Anweisung unten platziert werden die `import "docobj.idl"` -Anweisung in der generierten IDL-Datei. Die **importieren** Attribut hat die gleiche Funktionalität wie die [importieren](/windows/desktop/Midl/import) MIDL-Attribut.
+Das **Import** C++ -Attribut bewirkt `#import` , dass eine-Anweisung unterhalb `import "docobj.idl"` der-Anweisung in der generierten IDL-Datei platziert wird. Das **Import** -Attribut verfügt über die gleiche Funktionalität wie das [Import](/windows/win32/Midl/import) -Attribut von "Mittel l".
 
-Die **importieren** Attribut wird nur die angegebene Datei in der IDL-Datei, die von Ihrem Projekt generiert wird die **importieren** Attribut ist nicht möglich, die Konstrukte in der angegebenen Datei aus dem Quellcode aufrufen in Ihrem Projekt.  Um Konstrukte in der angegebenen Datei aus dem Quellcode in Ihrem Projekt aufzurufen, verwenden Sie entweder [#import](../../preprocessor/hash-import-directive-cpp.md) und `embedded_idl` -Attribut, oder Sie können die h-Datei für enthalten die *Idl_file*, wenn eine .h-Datei vorhanden ist.
+Mit dem **Import** -Attribut wird die angegebene Datei nur in die IDL-Datei eingefügt, die vom Projekt generiert wird. mit dem **Import** -Attribut können Sie Konstrukte in der angegebenen Datei nicht aus dem Quellcode in Ihrem Projekt abrufen.  Verwenden Sie [#import](../../preprocessor/hash-import-directive-cpp.md) und das `embedded_idl`-Attribut, oder fügen Sie die H-Datei für *idl_file* (falls vorhanden) ein, um Konstrukte in der angegebenen Datei über den Quellcode in Ihrem Projekt aufzurufen.
 
 ## <a name="example"></a>Beispiel
 
@@ -47,7 +47,7 @@ Der folgende Code
 [import(import.idl)];
 ```
 
-Der folgende Code in der generierten IDL-Datei generiert:
+erzeugt den folgenden Code in der generierten IDL-Datei:
 
 ```
 import "docobj.idl";
@@ -68,8 +68,8 @@ library MyLib {
 |-|-|
 |**Betrifft**|Überall|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

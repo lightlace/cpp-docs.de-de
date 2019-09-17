@@ -293,7 +293,7 @@ Das Ergebnis des bitweisen exklusiven or-Elements.
 
 ### <a name="remarks"></a>Hinweise
 
-Dieser Operator führt einen Lese-/Änderungs-Schreibvorgang aus, um den gespeicherten Wert  **\*dieses** durch einen bitweisen exklusiven or- *Wert* und den aktuellen Wert, der in  **\*diesem**gespeichert ist, innerhalb der Einschränkungen von zu ersetzen. memory_order-Einschränkungen. [](atomic-enums.md) `memory_order_seq_cst`
+Dieser Operator führt einen Lese- und Bearbeitungsvorgang aus, um den gespeicherten Wert von **\*this** durch ein bitweises exklusive ODER von *Value* und den aktuell in **\*this** gespeicherten Wert. Hierfür gelten die durch `memory_order_seq_cst` und [memory_order](atomic-enums.md) festgelegten Einschränkungen.
 
 ## <a name="compare_exchange_strong"></a>Atomic:: compare_exchange_strong
 
@@ -340,11 +340,11 @@ Zweites `memory_order`-Argument.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein  boolescher Wert, der das Ergebnis des Wert Vergleichs angibt.
+Ein **boolescher** Wert, der das Ergebnis des Wert Vergleichs angibt.
 
 ### <a name="remarks"></a>Hinweise
 
-Dieser atomarische Vergleichs-und Austausch Vorgang vergleicht den in  **\*diesem** gespeicherten Wert mit *Exp*. Wenn die Werte gleich sind, ersetzt der Vorgang den in  **\*diesem** gespeicherten *Wert durch einen* Lese-/Änderungs-Schreibvorgang und das Anwenden der durch *order1*angegebenen Einschränkungen für die Speicher Reihenfolge. Wenn die Werte nicht identisch sind, verwendet der Vorgang den in  **\*diesem** gespeicherten Wert, um *Exp* zu ersetzen, und wendet die von *Order2*angegebenen Einschränkungen für die Speicher Reihenfolge an.
+Dieser atomarische Vergleichs-und Austausch Vorgang vergleicht den in  **\*diesem** gespeicherten Wert mit *Exp*. Wenn die Werte gleich sind, ersetzt der Vorgang den in  **\*diesem** gespeicherten Wert durch einen Lese-/Änderungs-Schreibvorgang und das Anwenden der durch *order1*angegebenen *Einschränkungen für die* Speicher Reihenfolge. Wenn die Werte nicht identisch sind, verwendet der Vorgang den in  **\*diesem** gespeicherten Wert, um *Exp* zu ersetzen, und wendet die von *Order2*angegebenen Einschränkungen für die Speicher Reihenfolge an.
 
 Bei über Ladungen, die keine Sekunde `memory_order` aufweisen, wird ein implizites *Order2* verwendet, das auf dem Wert von *order1*basiert. Wenn *order1* `memory_order_acq_rel`den Wert hat, `memory_order_acquire`ist *Order2* . Wenn *order1* `memory_order_release`den Wert hat, `memory_order_relaxed`ist *Order2* . In allen anderen Fällen ist *Order2* gleich *order1*.
 
@@ -395,11 +395,11 @@ Zweites `memory_order`-Argument.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein  boolescher Wert, der das Ergebnis des Wert Vergleichs angibt.
+Ein **boolescher** Wert, der das Ergebnis des Wert Vergleichs angibt.
 
 ### <a name="remarks"></a>Hinweise
 
-Dieser atomarische Vergleichs-und Austausch Vorgang vergleicht den in  **\*diesem** gespeicherten Wert mit *Exp*. Wenn die Werte gleich sind, ersetzt der Vorgang den in  **\*diesem** gespeicherten*Wert durch einen* Lese-/Änderungs-Schreibvorgang und das Anwenden der durch *order1*angegebenen Einschränkungen für die Speicher Reihenfolge. Wenn die Werte nicht identisch sind, verwendet der Vorgang den in  **\*diesem** gespeicherten Wert, um *Exp* zu ersetzen, und wendet die von *Order2*angegebenen Einschränkungen für die Speicher Reihenfolge an.
+Dieser atomarische Vergleichs-und Austausch Vorgang vergleicht den in  **\*diesem** gespeicherten Wert mit *Exp*. Wenn die Werte gleich sind, ersetzt der Vorgang den in  **\*diesem** gespeicherten Wert durch einen Lese-/Änderungs-Schreibvorgang und das Anwenden der durch *order1*angegebenen*Einschränkungen für die* Speicher Reihenfolge. Wenn die Werte nicht identisch sind, verwendet der Vorgang den in  **\*diesem** gespeicherten Wert, um *Exp* zu ersetzen, und wendet die von *Order2*angegebenen Einschränkungen für die Speicher Reihenfolge an.
 
 Ein schwacher Atomischer Vergleichs-und Austausch Vorgang führt einen Austausch aus, wenn die verglichenen Werte gleich sind. Wenn die Werte nicht gleich sind, ist nicht sichergestellt, dass Austausch mit dem Vorgang ausgeführt wird.
 
@@ -436,7 +436,7 @@ Der gespeicherte Wert  **\*dieses** vor dem Austausch.
 
 ### <a name="remarks"></a>Hinweise
 
-Mit diesem Vorgang wird ein Lese-und Schreibvorgang durchführt  , um den Wert, der in  **\*diesem**gespeichert ist, innerhalb der durch die *Reihenfolge*angegebenen Speicher Einschränkungen zu ersetzen.
+Mit diesem Vorgang wird ein Lese-und Schreibvorgang durchführt, um den Wert, der in  **\*diesem**gespeichert ist, innerhalb der durch die *Reihenfolge*angegebenen Speicher *Einschränkungen zu ersetzen* .
 
 ## <a name="fetch_add"></a>Atomic:: fetch_add
 

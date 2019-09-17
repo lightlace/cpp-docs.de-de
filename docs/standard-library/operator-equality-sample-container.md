@@ -38,7 +38,7 @@ bool operator==(
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt `left.`das [](../standard-library/container-class-begin.md)startende[](../standard-library/container-class-end.md) [](../standard-library/container-class-size.md) ` == right.size && equal(left.`derGröße`, left.`zurück.`, right.begin)`
+Gibt `left.`[size](../standard-library/container-class-size.md) ` == right.size && equal(left.`[begin](../standard-library/container-class-begin.md)`, left.`[end](../standard-library/container-class-end.md)`, right.begin)` zurück.
 
 ## <a name="see-also"></a>Siehe auch
 

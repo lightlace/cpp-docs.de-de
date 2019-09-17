@@ -20,7 +20,7 @@ ms.locfileid: "68450335"
 > [!NOTE]
 > Dieses Thema ist in der Microsoft C++ -Dokumentation als nicht funktionales Beispiel für Container, die C++ in der Standard Bibliothek verwendet werden. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).
 
-Führt `left.` [](../standard-library/container-class-swap.md)Swap`(right)`aus.
+Führt `left.`[swap](../standard-library/container-class-swap.md)`(right)` aus.
 
 ## <a name="syntax"></a>Syntax
 

@@ -278,7 +278,7 @@ Ein Zeiger auf das erste Zeichen in einem Bereich, der einer bestimmten Maske en
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte Member-Funktion gibt den kleinsten `ptr` Zeiger im Bereich [ `first`, `last`) zurück, [](#do_is)für den `maskVal`do_is \* (,) den Wert true hat `ptr`.
+Die geschützte Memberfunktion gibt den kleinsten Zeiger `ptr` im Bereich [ `first`, `last`) zurück, für den [do_is](#do_is)( `maskVal`, \* `ptr`) wahr ist.
 
 ### <a name="example"></a>Beispiel
 
@@ -312,7 +312,7 @@ Ein Zeiger auf das erste Zeichen in einem Bereich, der einer bestimmten Maske ni
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte Member-Funktion gibt den kleinsten `ptr` Zeiger im Bereich [ `first`, `last`) zurück, [](#do_is)für den `maskVal`do_is \* (, `ptr`) den Wert false hat.
+Die geschützte Memberfunktion gibt den kleinsten Zeiger `ptr` im Bereich [ `first`, `last`) zurück, für den [do_is](#do_is)( `maskVal`, \* `ptr`) falsch ist.
 
 ### <a name="example"></a>Beispiel
 
@@ -547,7 +547,7 @@ Die zweite Memberfunktion gibt einen Zeiger auf den Zielbereich mit nativen Zeic
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Member-Funktion [](#do_narrow)gibt Do_narrow`ch`( `default`,) zurück. Die zweite Member-Funktion [](#do_narrow) gibt Do_narrow`first`( `last`, `default`, `dest`,) zurück. Nur für die Basisquellzeichen ist sichergestellt, dass ein eindeutiges inverses `CharType`-Bild unter `narrow` vorhanden ist. Für diese Basisquellzeichen gilt folgende Invariante: `narrow` ( [widen](#widen) ( **c** ), 0 ) == **c**.
+Die erste Memberfunktion gibt [do_narrow](#do_narrow)(`ch`, `default`) zurück. Die zweite Memberfunktion gibt [do_narrow](#do_narrow)(`first`, `last`, `default`, `dest`) zurück. Nur für die Basisquellzeichen ist sichergestellt, dass ein eindeutiges inverses `CharType`-Bild unter `narrow` vorhanden ist. Für diese Basisquellzeichen gilt folgende Invariante: `narrow` ( [widen](#widen) ( **c** ), 0 ) == **c**.
 
 ### <a name="example"></a>Beispiel
 
@@ -603,7 +603,7 @@ Ein Zeiger auf das erste Zeichen in einem Bereich, der einer bestimmten Maske en
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion [](#do_scan_is)gibt do_scan_is`maskVal`( `first`, `last`,) zurück.
+Die Memberfunktion gibt [do_scan_is](#do_scan_is)(`maskVal`, `first`, `last`) zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -659,7 +659,7 @@ Ein Zeiger auf das erste Zeichen in einem Bereich, der einer bestimmten Maske ni
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion [](#do_scan_not)gibt Do_scan_not`maskVal`( `first`, `last`,) zurück.
+Die Memberfunktion gibt [do_scan_not](#do_scan_not)(`maskVal`, `first`, `last`) zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -716,7 +716,7 @@ Die zweite Member-Funktion gibt den *letzten*zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Member-Funktion [](#do_tolower)gibt Do_tolower`ch`() zurück. Die zweite Member-Funktion [](#do_tolower)gibt Do_tolower`first`( `last`,) zurück.
+Die erste Memberfunktion gibt [do_tolower](#do_tolower)(`ch`) zurück. Die zweite Memberfunktion gibt [do_tolower](#do_tolower)(`first`, `last`) zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -771,7 +771,7 @@ Die zweite Member-Funktion gibt den *letzten*zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Member-Funktion [](#do_toupper)gibt Do_toupper`ch`() zurück. Die zweite Memberfunktion gibt [do_toupper](#do_toupper)( `first`, `last`) zurück.
+Die erste Memberfunktion gibt [do_toupper](#do_toupper)(`ch`) zurück. Die zweite Memberfunktion gibt [do_toupper](#do_toupper)( `first`, `last`) zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -829,7 +829,7 @@ Die zweite Element Funktion gibt einen Zeiger auf den Zielbereich von Zeichen vo
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Member-Funktion [](#do_widen)gibt Do_widen`byte`() zurück. Die zweite Member-Funktion [](#do_widen)gibt Do_widen`first`( `last`, `dest`,) zurück.
+Die erste Memberfunktion gibt [do_widen](#do_widen)(`byte`) zurück. Die zweite Memberfunktion gibt [do_widen](#do_widen)(`first`, `last`, `dest`) zurück.
 
 ### <a name="example"></a>Beispiel
 

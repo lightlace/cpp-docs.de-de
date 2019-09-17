@@ -23,7 +23,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68459599"
 ---
-# <a name="basicfstream-class"></a>basic_fstream-Klasse
+# <a name="basic_fstream-class"></a>basic_fstream-Klasse
 
 Beschreibt ein Objekt, das das Einfügen und Extrahieren von Elementen und codierten Objekten über einen Streampuffer der Klasse [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> mit Elementen des Typs `Elem` steuert, dessen Zeichenmerkmale von der Klasse `Tr` bestimmt werden.
 
@@ -138,7 +138,7 @@ Der standardmäßige Datei öffnende Schutz, äquivalent zum *shflag* -Parameter
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor initialisiert die Basisklasse durch Aufrufen [](../standard-library/basic-iostream-class.md)von basic_iostream`sb`(), `sb` wobei das gespeicherte Objekt der Klasse [Basic_filebuf](../standard-library/basic-filebuf-class.md) \< **Elem**, **TR**> ist. Er `sb` initialisiert außerdem durch Aufrufen `basic_filebuf` \< von **Elem**, **TR**>.
+Der erste Konstruktor initialisiert die Basisklasse durch Aufrufen von [basic_iostream](../standard-library/basic-iostream-class.md)(`sb`). Hierbei entspricht `sb` dem gespeicherten Objekt der Klasse [basic_filebuf](../standard-library/basic-filebuf-class.md)\< **Elem**, **Tr**>. Er `sb` initialisiert außerdem durch Aufrufen `basic_filebuf` \< von **Elem**, **TR**>.
 
 Der zweite und dritte Konstruktor initialisiert die Basisklasse durch Aufrufen von `basic_iostream`( **sb**). Er initialisiert `sb` außerdem durch Aufrufen `basic_filebuf` \< von **Elem**, **TR**> und dann **SB.** [Open](../standard-library/basic-filebuf-class.md#open)(_ *filename*, `_Mode`). Wenn die letztere Funktion einen NULL-Zeiger zurückgibt, ruft der Konstruktor [SetState](../standard-library/basic-ios-class.md#setstate)(`failbit`) auf.
 

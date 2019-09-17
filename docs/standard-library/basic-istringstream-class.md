@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68452537"
 ---
-# <a name="basicistringstream-class"></a>basic_istringstream-Klasse
+# <a name="basic_istringstream-class"></a>basic_istringstream-Klasse
 
 Beschreibt ein Objekt, das die Extrahierung von Elementen und codierten Objekten aus einem Streampuffer der Klasse [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> steuert.
 
@@ -45,7 +45,7 @@ Die für das grundlegende Element der Zeichenfolge spezialisierten Zeichenmerkma
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagen Klasse beschreibt ein Objekt, das das Extrahieren von Elementen und codierten Objekten aus einem Streampuffer der Klasse [Basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, `Alloc` **TR**, > mit Elementen des Typs *Elem*steuert. , dessen Zeichen Merkmale durch die Klasse *TR*bestimmt sind und deren Elemente durch eine Zuweisung der Klasse Zuordnungs Klasse zugeordnet werden. Das Objekt speichert ein Objekt der Klasse basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
+Die Vorlagen Klasse beschreibt ein Objekt, das das Extrahieren von Elementen und codierten Objekten aus einem Streampuffer der Klasse [Basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, `Alloc` **TR**, > mit Elementen des Typs *Elem*steuert. , dessen Zeichen Merkmale durch die Klasse *TR*bestimmt sind und deren Elemente durch eine Zuweisung der Klasse *Zuordnungs*Klasse zugeordnet werden. Das Objekt speichert ein Objekt der Klasse basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -116,7 +116,7 @@ Ein rvalue-Verweis auf ein `basic_istringstream`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor initialisiert die Basisklasse durch Aufrufen [](../standard-library/basic-istream-class.md)von basic_istream`sb`(), `sb` wobei das gespeicherte Objekt der Klasse [Basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`> . Er initialisiert zudem `sb`sb`basic_stringbuf` durch Aufrufen von <  `Elem``Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`).
+Der erste Konstruktor initialisiert die Basisklasse durch Aufrufen von [basic_istream](../standard-library/basic-istream-class.md)(`sb`). Hierbei entspricht `sb` dem gespeicherten Objekt der Klasse [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>. Er initialisiert zudem `sb`sb`basic_stringbuf` durch Aufrufen von <  `Elem``Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`).
 
 Der zweite Konstruktor initialisiert die Basisklasse durch Aufrufen von `basic_istream(sb)`. Er initialisiert zudem `sb` durch Aufrufen von `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `str`, `_Mode` &#124; `ios_base::in`).
 

@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68455315"
 ---
-# <a name="inputiteratortag-struct"></a>input_iterator_tag-Struktur
+# <a name="input_iterator_tag-struct"></a>input_iterator_tag-Struktur
 
 Eine Klasse, die einen Rückgabetyp für `iterator_category` eine Funktion bereitstellt, die einen eingabeiterator darstellt
 
@@ -30,7 +30,7 @@ Der Typ ist identisch mit **Iterator** \< **ITER**>  **:: Iterator_category** , 
 
 ## <a name="example"></a>Beispiel
 
-Ein Beispiel für [](../standard-library/random-access-iterator-tag-struct.md) die Verwendung `iterator_tag`von s finden Sie unter [Iterator_traits](../standard-library/iterator-traits-struct.md) oder Random_access_iterator_tag.
+Ein Beispiel für die Verwendung von `iterator_tag` finden Sie unter [iterator_traits](../standard-library/iterator-traits-struct.md) oder [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md).
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -2239,7 +2239,7 @@ typedef key_compare value_compare;
 
 `value_compare` ist ein Synonym für den Vorlagenparameter `Compare`.
 
-Beachten Sie, [](#key_compare) dass sowohl `value_compare` key_compare als auch Synonyme für `Compare`den Template-Parameter sind. Beide Typen werden für die Klassen „set“ und „multiset“ bereitgestellt, in denen sie identisch sind. Dies geschieht zum Zweck der Kompatibilität mit den Klassen „map“ und „multimap“, in denen sie sich unterscheiden.
+Beachten Sie, dass [key_compare](#key_compare) und `value_compare` Synonyme für den Vorlagenparameter `Compare` sind. Beide Typen werden für die Klassen „set“ und „multiset“ bereitgestellt, in denen sie identisch sind. Dies geschieht zum Zweck der Kompatibilität mit den Klassen „map“ und „multimap“, in denen sie sich unterscheiden.
 
 Weitere Informationen zu `Compare` finden Sie im Abschnitt „Hinweise“ unter [multiset-Klasse](../standard-library/multiset-class.md).
 
@@ -2259,7 +2259,7 @@ typedef Key value_type;
 
 `value_type` ist ein Synonym für den Vorlagenparameter `Key`.
 
-Beachten Sie, [](#key_type) dass sowohl `value_type` key_type als auch Synonyme für `Key`den Template-Parameter sind. Beide Typen werden für die Klassen „set“ und „multiset“ bereitgestellt, in denen sie identisch sind. Dies geschieht zum Zweck der Kompatibilität mit den Klassen „map“ und „multimap“, in denen sie sich unterscheiden.
+Beachten Sie, dass [key_type](#key_type) und `value_type` Synonyme für den Vorlagenparameter `Key` sind. Beide Typen werden für die Klassen „set“ und „multiset“ bereitgestellt, in denen sie identisch sind. Dies geschieht zum Zweck der Kompatibilität mit den Klassen „map“ und „multimap“, in denen sie sich unterscheiden.
 
 Weitere Informationen zu `Key` finden Sie im Abschnitt „Hinweise“.
 

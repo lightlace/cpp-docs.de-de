@@ -93,7 +93,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68448584"
 ---
-# <a name="hashset-class"></a>hash_set-Klasse
+# <a name="hash_set-class"></a>hash_set-Klasse
 
 > [!NOTE]
 > Diese API ist veraltet. Die Alternative ist [unordered_set-Klasse](../standard-library/unordered-set-class.md).
@@ -807,7 +807,7 @@ emplace(
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die `emplace` Member-Funktion gibt ein paar  zurück, dessen boolesche Komponente **true** zurückgibt, wenn eine Einfügung erfolgt ist, und **false** , wenn das `hash_set` bereits ein Element enthält, dessen Schlüssel einen entsprechenden Wert in der Reihenfolge aufweist und dessen die iteratorkomponente gibt die Adresse zurück, an der ein neues Element eingefügt wurde oder in dem sich das Element bereits befand.
+Die `emplace` Member-Funktion gibt ein paar zurück, dessen **boolesche** Komponente **true** zurückgibt, wenn eine Einfügung erfolgt ist, und **false** , wenn das `hash_set` bereits ein Element enthält, dessen Schlüssel einen entsprechenden Wert in der Reihenfolge aufweist und dessen die iteratorkomponente gibt die Adresse zurück, an der ein neues Element eingefügt wurde oder in dem sich das Element bereits befand.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1482,9 +1482,9 @@ void insert(
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die erste `insert` Member-Funktion gibt ein paar  zurück, dessen boolesche Komponente **true** zurückgibt, wenn eine Einfügung erfolgt ist, und **false** , wenn das `hash_set` bereits ein Element enthält, dessen Schlüssel einen entsprechenden Wert in der Reihenfolge aufweist, und , dessen iteratorkomponente die Adresse zurückgibt, an der ein neues Element eingefügt wurde oder in dem sich das Element bereits befand.
+Die erste `insert` Member-Funktion gibt ein paar zurück, dessen **boolesche** Komponente **true** zurückgibt, wenn eine Einfügung erfolgt ist, und **false** , wenn das `hash_set` bereits ein Element enthält, dessen Schlüssel einen entsprechenden Wert in der Reihenfolge aufweist, und , dessen iteratorkomponente die Adresse zurückgibt, an der ein neues Element eingefügt wurde oder in dem sich das Element bereits befand.
 
-Verwenden Sie `pr.first`, um auf die Iteratorkomponente eines `pr`-Paares zuzugreifen, das von dieser Memberfunktion zurückgegeben wird, und `*(pr.first)`, um es zu dereferenzieren. Um auf die  boolesche Komponente eines von `pr` dieser Element Funktion zurückgegebenen Paars zuzugreifen `pr.second`, verwenden Sie, und verwenden `*(pr.second)`Sie zum Aufheben der Dereferenzierung.
+Verwenden Sie `pr.first`, um auf die Iteratorkomponente eines `pr`-Paares zuzugreifen, das von dieser Memberfunktion zurückgegeben wird, und `*(pr.first)`, um es zu dereferenzieren. Um auf die **boolesche** Komponente eines von `pr` dieser Element Funktion zurückgegebenen Paars zuzugreifen `pr.second`, verwenden Sie, und verwenden `*(pr.second)`Sie zum Aufheben der Dereferenzierung.
 
 Die zweite `insert`-Memberfunktion gibt einen Iterator zurück, der auf den Speicherort zeigt, an dem das neue Element in `hash_set` eingefügt wurde.
 
@@ -2368,7 +2368,7 @@ typedef key_compare value_compare;
 
 Weitere Informationen zu *Merkmalen* finden Sie im Thema [hash_set-Klasse](../standard-library/hash-set-class.md) .
 
-Beachten Sie, [](#key_compare) dass sowohl `value_compare` key_compare als auch Synonyme für die Vorlagen Parameter *Merkmale*sind. Beide Typen werden für die hash_set und hash_multiset-Klassen bereitgestellt, in der sie identisch sind. Sie sind unterschiedlich in der Kompatibilität mit den hash_map und hash_multimap-Klassen.
+Beachten Sie, dass [key_compare](#key_compare) und `value_compare` Synonyme für den Vorlagenparameter *Traits* sind. Beide Typen werden für die hash_set und hash_multiset-Klassen bereitgestellt, in der sie identisch sind. Sie sind unterschiedlich in der Kompatibilität mit den hash_map und hash_multimap-Klassen.
 
 ### <a name="example"></a>Beispiel
 

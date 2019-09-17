@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68459946"
 ---
-# <a name="timeput-class"></a>time_put-Klasse
+# <a name="time_put-class"></a>time_put-Klasse
 
 Die Vorlagenklasse, die ein Objekt beschreibt, das als Gebietsschemafacet dienen kann, um Konvertierungen von Zeitwerten in Sequenzen vom Typ `CharType` zu steuern.
 
@@ -191,7 +191,7 @@ Ein Iterator an die erste Position hinter dem letzten eingefügten Element.
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Member-Funktion [](#do_put)gibt Do_put`next`( `_Iosbase`, `_Fill`, `_Pt`, `_Fmt`, `_Mod`,) zurück. Die zweite Memberfunktion kopiert jedes Element im Intervall [ `first`, `last`) außer Prozentzeichen (%) nach \* `next` ++. Für ein Prozentzeichen gefolgt von einem *C*-Zeichen im Intervall [ `first`, `last`) wertet die Funktion stattdessen `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) und überspringt *C*. Wenn *C* jedoch ein Qualifiziererzeichen aus dem Satz EOQ# gefolgt von einem `C2`-Zeichen im Intervall [ `first`, `last`) ist, wertet die Funktion stattdessen `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) und überspringt `C2`.
+Die erste Member-Funktion gibt [do_put](#do_put)(`next`, `_Iosbase`, `_Fill`, `_Pt`, `_Fmt`, `_Mod`) zurück. Die zweite Memberfunktion kopiert jedes Element im Intervall [ `first`, `last`) außer Prozentzeichen (%) nach \* `next` ++. Für ein Prozentzeichen gefolgt von einem *C*-Zeichen im Intervall [ `first`, `last`) wertet die Funktion stattdessen `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) und überspringt *C*. Wenn *C* jedoch ein Qualifiziererzeichen aus dem Satz EOQ# gefolgt von einem `C2`-Zeichen im Intervall [ `first`, `last`) ist, wertet die Funktion stattdessen `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) und überspringt `C2`.
 
 ### <a name="example"></a>Beispiel
 
@@ -260,7 +260,7 @@ Die möglichen Werte für den Parameter *_Refs* und ihre Bedeutung lauten:
 
 - \> 1: Diese Werte sind nicht definiert.
 
-Der Konstruktor initialisiert sein Basisobjekt mit [locale::](../standard-library/locale-class.md#facet_class)Face( *_Refs*).
+Der Konstruktor initialisiert sein Basisobjekt mit [locale:: Face(](../standard-library/locale-class.md#facet_class) *_Refs*).
 
 ## <a name="see-also"></a>Siehe auch
 

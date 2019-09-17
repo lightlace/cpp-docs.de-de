@@ -45,7 +45,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68460011"
 ---
-# <a name="timeget-class"></a>time_get-Klasse
+# <a name="time_get-class"></a>time_get-Klasse
 
 Die Vorlagenklasse, die ein Objekt beschreibt, das als Gebietsschemafacet dienen kann, um Konvertierungen von Sequenzen des Typs `CharType` in Zeitwerte zu steuern.
 
@@ -590,7 +590,7 @@ Die erste Memberfunktion gibt `do_get(first, last, iosbase, state, ptm, fmt, mod
 
 Die zweite Memberfunktion ruft `do_get` unter der Kontrolle des Formats auf, das durch `[fmt_first, fmt_last)` begrenzt ist. Die Funktion behandelt das Format als Sequenz von Feldern, von denen jedes die Konvertierung von null oder mehr Eingabeelementen bestimmt, die durch `[first, last)` begrenzt sind. Sie gibt einen Iterator zurück, der das erste nicht konvertierte Element festlegt. Es gibt drei Arten von Feldern:
 
-Ein Prozent (%) im-Format, gefolgt von einem optionalen Modifizierer *mod* in der Menge [EOQ #], gefolgt von einem Konvertierungsspezifizierer *,* wird *zuerst* durch den Wert ersetzt `do_get(first, last, iosbase, state, ptm, fmt, mod)`, der von zurückgegeben wird. Bei einem Konvertierungs `ios_base::failbit` Fehler wird der *Zustand fest* gelegt und zurückgegeben.
+Ein Prozent (%) im-Format, gefolgt von einem optionalen Modifizierer *mod* in der Menge [EOQ # *], gefolgt*von einem Konvertierungsspezifizierer, wird *zuerst* durch den Wert ersetzt `do_get(first, last, iosbase, state, ptm, fmt, mod)`, der von zurückgegeben wird. Bei einem Konvertierungs `ios_base::failbit` Fehler wird der *Zustand fest* gelegt und zurückgegeben.
 
 Ein Leerzeichenelement im Format bewirkt ein Überspringen von eingegebenen Leerzeichenelementen.
 
@@ -631,7 +631,7 @@ Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion [](#do_get_date)gibt Do_get_date`first`( `last`, `iosbase`, `state`, `ptm`,) zurück.
+Die Memberfunktion gibt [do_get_date](#do_get_date)(`first`, `last`, `iosbase`, `state`, `ptm`) zurück.
 
 Beachten Sie, dass Monate von 0 bis 11 gezählt werden.
 
@@ -725,7 +725,7 @@ Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion [](#do_get_monthname)gibt Do_get_monthname`first`( `last`, `iosbase`, `state`, `ptm`,) zurück.
+Die Memberfunktion gibt [do_get_monthname](#do_get_monthname)(`first`, `last`, `iosbase`, `state`, `ptm`) zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -817,7 +817,7 @@ Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion [](#do_get_time)gibt Do_get_time`first`( `last`, `iosbase`, `state`, `ptm`,) zurück.
+Die Memberfunktion gibt [do_get_time](#do_get_time)(`first`, `last`, `iosbase`, `state`, `ptm`) zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -898,7 +898,7 @@ Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion [](#do_get_weekday)gibt do_get_weekday`first`( `last`, `iosbase`, `state`, `ptm`,) zurück.
+Die Memberfunktion gibt [do_get_weekday](#do_get_weekday)(`first`, `last`, `iosbase`, `state`, `ptm`) zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -975,7 +975,7 @@ Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion [](#do_get_year)gibt Do_get_year`first`( `last`, `iosbase`, `state`, `ptm`,) zurück.
+Die Memberfunktion gibt [do_get_year](#do_get_year)(`first`, `last`, `iosbase`, `state`, `ptm`) zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -1055,7 +1055,7 @@ Die möglichen Werte für den *Refs* -Parameter und ihre Bedeutung lauten:
 
 Direkte Beispiele hierfür sind nicht möglich, da der Destruktor geschützt ist.
 
-Der Konstruktor initialisiert sein Basisobjekt mit **locale::** [](../standard-library/locale-class.md#facet_class)Face(`refs`).
+Der Konstruktor initialisiert sein Basisobjekt mit **locale::** [Face(](../standard-library/locale-class.md#facet_class)`refs`).
 
 ## <a name="see-also"></a>Siehe auch
 
