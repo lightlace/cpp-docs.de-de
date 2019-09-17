@@ -5,12 +5,12 @@ description: Microsoft C++ in Visual Studio  bewegt sich auf die vollständige 
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: aeaaab704706bee575e3ae44726522cd04c17433
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 8eae104d21de271f11c727262939121c20050092
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222319"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927952"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Verbesserungen der C++-Konformität in Visual Studio
 
@@ -268,7 +268,7 @@ int main() {
 
 ### <a name="binary-expressions-with-different-enum-types"></a>Binäre Ausdrücke mit unterschiedlichen Enumerationstypen
 
-Arithmetischen Konvertierungen für Operanden, bei denen einer ein Enumerationstyp und der andere ein anderer Enumerationstyp oder ein Gleitkommatyp ist, werden in C++20 ([P1120R0](http://wg21.link/p1120r0)) als veraltet eingestuft. In Visual Studio 2019 Version 16.2 und höher erzeugt der folgende Code eine Warnung der Stufe 4, wenn die Compileroption [/std:c++latest](../build/reference/std-specify-language-standard-version.md) aktiviert ist:
+Arithmetischen Konvertierungen für Operanden, bei denen einer ein Enumerationstyp und der andere ein anderer Enumerationstyp oder ein Gleitkommatyp ist, werden in C++20 ([P1120R0](https://wg21.link/p1120r0)) als veraltet eingestuft. In Visual Studio 2019 Version 16.2 und höher erzeugt der folgende Code eine Warnung der Stufe 4, wenn die Compileroption [/std:c++latest](../build/reference/std-specify-language-standard-version.md) aktiviert ist:
 
 ```cpp
 enum E1 { a };
@@ -290,7 +290,7 @@ int main() {
 
 ### <a name="binary-expressions-with-enumeration-and-floating-point-types"></a>Binäre Ausdrücke mit Enumerations- und Gleitkommatypen
 
-Arithmetischen Konvertierungen für Operanden, bei denen einer ein Enumerationstyp und der andere ein anderer Enumerationstyp oder ein Gleitkommatyp ist, werden in C++20 ([P1120R0](http://wg21.link/p1120r0)) als veraltet eingestuft. Das heißt, die Verwendung einer binären Operation zwischen einem Enumerations- und einem Gleitkommatyp löst jetzt eine Warnung aus, wenn die Compileroption [/std:c++latest](../build/reference/std-specify-language-standard-version.md) aktiviert ist:
+Arithmetischen Konvertierungen für Operanden, bei denen einer ein Enumerationstyp und der andere ein anderer Enumerationstyp oder ein Gleitkommatyp ist, werden in C++20 ([P1120R0](https://wg21.link/p1120r0)) als veraltet eingestuft. Das heißt, die Verwendung einer binären Operation zwischen einem Enumerations- und einem Gleitkommatyp löst jetzt eine Warnung aus, wenn die Compileroption [/std:c++latest](../build/reference/std-specify-language-standard-version.md) aktiviert ist:
 
 ```cpp
 enum E1 { a };
@@ -310,7 +310,7 @@ int main() {
 
 ### <a name="equality-and-relational-comparisons-of-arrays"></a>Gleichheitsvergleiche und relationale Vergleiche von Arrays
 
-Gleichheitsvergleiche und relationale Vergleiche zwischen zwei Operanden des Arraytyps werden in C++20 ([P1120R0](http://wg21.link/p1120r0)) als veraltet eingestuft. Das heißt, dass ein Vergleichsvorgang zwischen zwei Arrays (unabhängig vom Rang und Ähnlichkeiten der Erweiterung) jetzt eine Warnung auslöst. Ab Visual Studio 2019 Version 16.2 erzeugt der folgende Code die Meldung *C5056: Operator „==“: für Arraytypen veraltet*, wenn die Compileroption [/std:c++latest](../build/reference/std-specify-language-standard-version.md) aktiviert ist:
+Gleichheitsvergleiche und relationale Vergleiche zwischen zwei Operanden des Arraytyps werden in C++20 ([P1120R0](https://wg21.link/p1120r0)) als veraltet eingestuft. Das heißt, dass ein Vergleichsvorgang zwischen zwei Arrays (unabhängig vom Rang und Ähnlichkeiten der Erweiterung) jetzt eine Warnung auslöst. Ab Visual Studio 2019 Version 16.2 erzeugt der folgende Code die Meldung *C5056: Operator „==“: für Arraytypen veraltet*, wenn die Compileroption [/std:c++latest](../build/reference/std-specify-language-standard-version.md) aktiviert ist:
 
 ```cpp
 int main() {

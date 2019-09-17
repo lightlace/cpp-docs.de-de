@@ -1,9 +1,9 @@
 ---
 title: __RTDynamicCast
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __RTDynamicCast
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcr110.dll
 - msvcr120.dll
@@ -11,20 +11,23 @@ apilocation:
 - msvcr100.dll
 - msvcr80.dll
 - msvcr110_clr0400.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __RTDynamicCast
 helpviewer_keywords:
 - __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
-ms.openlocfilehash: f4bf4895af99b2d5c2d61e739c9d49d59cecb020
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4b0caadf20d6c5494acf47ee5a788b5ee009c47
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485734"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957343"
 ---
-# <a name="rtdynamiccast"></a>__RTDynamicCast
+# <a name="__rtdynamiccast"></a>__RTDynamicCast
 
 Laufzeitimplementierung des [dynamic_cast](../cpp/dynamic-cast-operator.md)-Operators.
 
@@ -65,11 +68,11 @@ Zeiger auf das entsprechende Unterobjekt, wenn erfolgreich; andernfalls **NULL**
 
 `bad_cast()`, wenn die Eingabe für `dynamic_cast<>` ein Verweis ist und die Umwandlung fehlschlägt.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Konvertiert ein Objekt vom Typ `inptr` in Typ `TargetType`. Der `inptr`-Typ muss ein Zeiger sein, wenn `TargetType` ein Zeiger ist, oder ein lvalue, wenn `TargetType` ein Verweis ist. `TargetType` muss ein Zeiger oder ein Verweis auf einen zuvor definierten Klassentyp oder ein Zeiger auf „void“ sein.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|

@@ -1,14 +1,17 @@
 ---
 title: strcoll-Funktionen
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - msvcr80.dll
 - msvcr100.dll
 - msvcr110.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strcoll
 helpviewer_keywords:
@@ -17,12 +20,12 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: c09eeff3-8aba-4cfb-a524-752436d85573
-ms.openlocfilehash: 2acfaafbe15f065dbac924ce72a5ca3a5275537b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: c63a130cee6913006fff2ed5568c41cc4fdeac3c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751387"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944901"
 ---
 # <a name="strcoll-functions"></a>strcoll-Funktionen
 
@@ -30,7 +33,7 @@ Jede der `strcoll`- und `wcscoll`-Funktionen vergleicht zwei Zeichenfolgen gemä
 
 ### <a name="strcoll-functions"></a>strcoll-Funktionen
 
-|SBCS|Unicode|MBCS|Beschreibung|
+|SBCS|Unicode|MBCS|BESCHREIBUNG|
 |----------|-------------|----------|-----------------|
 |[strcoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[wcscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[_mbscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|Sortieren von zwei Zeichenfolgen|
 |[_stricoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_wcsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_mbsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|Sortieren von zwei Zeichenfolgen (ohne Berücksichtigung von Groß-/Kleinschreibung)|

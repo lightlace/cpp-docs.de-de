@@ -1,10 +1,10 @@
 ---
 title: fseek, _fseeki64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fseeki64
 - fseek
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fseek
 - _fseeki64
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-ms.openlocfilehash: 4cfb4bcea4a110cf8a9c9db664c42d6603328cf0
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
-ms.translationtype: HT
+ms.openlocfilehash: e3da603c3c7f1b083ddb7f7f9577adae9be5e4f1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376083"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956575"
 ---
 # <a name="fseek-_fseeki64"></a>fseek, _fseeki64
 
@@ -89,7 +92,7 @@ Für Datenströme, die im Textmodus geöffnet wurden, sind **fseek** und **_fsee
 
 - Suche vom Anfang der Datei mit einem Offsetwert, der von einem Aufruf von [ftell](ftell-ftelli64.md) zurückgegeben wird, wenn Sie **fseek** verwenden, oder von [_ftelli64](ftell-ftelli64.md), wenn Sie **_fseeki64** verwenden.
 
-Im Textmodus wird STRG+Z als ein Dateiendezeichen in der Eingabe interpretiert. In Dateien, die für Lese-/Schreibvorgänge geöffnet sind, überprüfen Sie, ob die Datei mit dem Namen STRG + Z am Ende der Datei ist [, und entfernen](fopen-wfopen.md) Sie Sie, wenn möglich. Dies geschieht, da die Kombination von **fseek** und [ftell](ftell-ftelli64.md) oder **_fseeki64** und [_ftelli64](ftell-ftelli64.md)zum Verschieben innerhalb einer Datei, die mit STRG + Z endet, dazu führen kann, dass **fseek** oder **_fseeki64** sich nicht ordnungsgemäß am Ende der Datei.
+Im Textmodus wird STRG+Z als ein Dateiendezeichen in der Eingabe interpretiert. In [Dateien, die](fopen-wfopen.md) für Lese-/Schreibvorgänge geöffnet sind, überprüfen Sie, ob die Datei mit dem Namen STRG + Z am Ende der Datei ist, und entfernen Sie Sie, wenn möglich. Dies geschieht, da die Kombination von **fseek** und [ftell](ftell-ftelli64.md) oder **_fseeki64** und [_ftelli64](ftell-ftelli64.md)zum Verschieben innerhalb einer Datei, die mit STRG + Z endet, dazu führen kann, dass **fseek** oder **_fseeki64** sich nicht ordnungsgemäß am Ende der Datei.
 
 Wenn CRT eine Datei öffnet, die mit einer Bytereihenfolge-Marke (Byte Order Mark, BOM) beginnt, wird der Dateizeiger nach der BOM positioniert (d.h. am Anfang des tatsächlichen Dateiinhalts). Wenn Sie an den Anfang der Datei **Suchen** müssen, verwenden Sie [ftell](ftell-ftelli64.md) , um die Anfangsposition zu ermitteln, und **Suchen Sie danach** , anstatt die Position 0 zu positionieren.
 

@@ -1,13 +1,16 @@
 ---
 title: _execute_onexit_table, _initialize_onexit_table, _register_onexit_function
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execute_onexit_table
 - _initialize_onexit_table
 - _register_onexit_function
-apilocation:
+api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _execute_onexit_table
 - process/_execute_onexit_table
@@ -20,14 +23,14 @@ helpviewer_keywords:
 - _initialize_onexit_table function
 - _register_onexit_function function
 ms.assetid: ad9e4149-d4ad-4fdf-aaaf-cf786fcb4473
-ms.openlocfilehash: 0090d5d1504f4320c122ae1e811e0af88cccdd2e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: bf8c61e467796c7bfaedff6918bfbf598ada528e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741627"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944372"
 ---
-# <a name="executeonexittable-initializeonexittable-registeronexitfunction"></a>_execute_onexit_table, _initialize_onexit_table, _register_onexit_function
+# <a name="_execute_onexit_table-_initialize_onexit_table-_register_onexit_function"></a>_execute_onexit_table, _initialize_onexit_table, _register_onexit_function
 
 Verwaltet die Routinen, die zum Zeitpunkt der Beendigung aufgerufen werden sollen.
 
@@ -70,7 +73,7 @@ Die `_register_onexit_function` Funktion fügt eine Funktion an das Ende der one
 
 Die Funktion `_execute_onexit_table` führt alle Funktionen in der onexit-Funktion-Tabelle aus, löscht die Tabelle, und gibt dann zurück. Nach Aufruf von `_execute_onexit_table` befindet sich die Tabelle in einem ungültigen Zustand. Sie muss durch einen Aufruf von `_initialize_onexit_table` neu initialisiert werden, bevor sie erneut verwendet wird.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|

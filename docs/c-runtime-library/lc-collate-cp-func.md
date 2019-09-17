@@ -1,9 +1,9 @@
 ---
 title: ___lc_collate_cp_func
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ___lc_collate_cp_func
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcrt.dll
 - msvcr100.dll
@@ -11,20 +11,23 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ___lc_collate_cp_func
 helpviewer_keywords:
 - ___lc_collate_cp_func
 ms.assetid: 46ccc084-7ac9-4e5d-9138-e12cb5845615
-ms.openlocfilehash: fac8b7ba2e9568dd53509e5cccbb96a6b2f1df8d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: d6a857760bf3b76481cc608ef8f015bca207f35f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738880"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940157"
 ---
-# <a name="lccollatecpfunc"></a>___lc_collate_cp_func
+# <a name="___lc_collate_cp_func"></a>___lc_collate_cp_func
 
 Interne CRT-Funktion. Ruft die aktuelle Sortierungscodeseite des Threads ab.
 
@@ -44,7 +47,7 @@ Die aktuelle Sortierungscodeseite des Threads.
 
 Interne CRT-Funktionen sind implementierungsspezifisch und mit jedem neuen Release Änderungen unterworfen. Ihre Verwendung in einem Code wird nicht empfohlen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|

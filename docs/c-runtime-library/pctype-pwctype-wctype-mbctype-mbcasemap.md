@@ -1,13 +1,13 @@
 ---
 title: _pctype, _pwctype, _wctype, _mbctype, _mbcasemap
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _pctype
 - _pwctype
 - _wctype
 - _mbctype
 - _mbcasemap
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - pwctype
 - pctype
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - mbctype function
 - _mbcasemap function
 ms.assetid: 7f5e1107-c43b-4b9b-b387-781e6d2373cb
-ms.openlocfilehash: 7ef2b06aef8314b38ce26872d4a337358ee2dec9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8ffb46dc410bc1397e3d592f68339b4a58dae86c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749164"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939964"
 ---
-# <a name="pctype-pwctype-wctype-mbctype-mbcasemap"></a>_pctype, _pwctype, _wctype, _mbctype, _mbcasemap
+# <a name="_pctype-_pwctype-_wctype-_mbctype-_mbcasemap"></a>_pctype, _pwctype, _wctype, _mbctype, _mbcasemap
 
 Diese globale Variablen enthalten Informationen, die von den Zeichenklassifizierungsfunktionen verwendet werden. Nur zur internen Verwendung.
 
@@ -70,7 +73,7 @@ Die Informationen in `_pctype`, `_pwctype` und `_wctype` werden intern von den F
 
 Die Informationen in `_mbctype` und `_mbcasemap` werden intern von [_ismbbkalnum, _ismbbkalnum_l](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md), [_ismbbkana, _ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md), [_ismbbkpunct, _ismbbkpunct_l](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md), [_ismbbkprint, _ismbbkprint_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md), [_ismbbalpha](reference/ismbbalpha-ismbbalpha-l.md), [_ismbbpunct, _ismbbpunct_l](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md), [_ismbbalnum, _ismbbalnum_l](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md), [_ismbbprint, _ismbbprint_l](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md), [_ismbbgraph, _ismbbgraph_l](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md), [_ismbblead, _ismbblead_l](../c-runtime-library/reference/ismbblead-ismbblead-l.md), [_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md), [_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l](../c-runtime-library/reference/ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md) und [_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l](../c-runtime-library/reference/ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md) verwendet. Verwenden Sie diese Funktionen, anstatt auf die globalen Variablen zuzugreifen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 Nicht für die öffentliche Verwendung.
 
