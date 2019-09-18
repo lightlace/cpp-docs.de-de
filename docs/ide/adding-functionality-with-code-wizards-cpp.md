@@ -4,12 +4,12 @@ ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: efced3be3a0bcc7efe16aef1061c4cd9ec1ed21c
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: 360f206ff4dae0b49650e131ccd86ecf9a0ed87d
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741636"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907491"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Hinzufügen neuer Funktionen mit Code-Assistenten (C++)
 
@@ -29,13 +29,13 @@ Nachdem Sie ein Projekt erstellt haben, sollten Sie Funktionen zum Projekt hinzu
 
 
 > [!NOTE]
->  Sie können nun Meldungshandler und Zuordnungsmeldungen zu diesen hinzufügen und virtuelle MFC-Funktionen mithilfe des [Eigenschaftenfensters](/visualstudio/ide/reference/properties-window) überschreiben.
+>  Sie können Meldungshandler und Zuordnungsmeldungen zu diesen hinzufügen und virtuelle MFC-Funktionen mithilfe des [MFC-Klassen-Assistenten](../mfc/reference/mfc-class-wizard.md) überschreiben.
 
 ## <a name="accessing-c-code-wizards"></a>Zugreifen auf C++-Code-Assistenten
 
 Es gibt drei Stellen, über die Sie auf C++-Code-Assistenten zugreifen können:
 
-- Im Menü **Projekt** ermöglicht der Befehl **Neues Element hinzufügen** das Erstellen des Dialogfelds `Add New Item`. Mit diesem können Sie neue Dateien zu Ihrem Projekt hinzufügen. Durch den Befehl **Klasse hinzufügen** wird das Dialogfeld [Klasse hinzufügen](../ide/add-class-dialog-box.md) angezeigt, das den Assistenten für jeden Klassentyp anzeigt, den Sie zu Ihrem Projekt hinzufügen können. Durch den Befehl **Ressource hinzufügen** wird das Dialogfeld [Ressource hinzufügen](../windows/add-resource-dialog-box.md) angezeigt, in dem Sie eine Ressource erstellen oder eine Ressource auswählen können, die zu Ihrem Projekt hinzugefügt werden soll.
+- Im Menü **Projekt** ermöglicht der Befehl **Neues Element hinzufügen** das Erstellen des Dialogfelds `Add New Item`. Mit diesem können Sie neue Dateien zu Ihrem Projekt hinzufügen. Durch den Befehl **Klasse hinzufügen** wird das Dialogfeld [Klasse hinzufügen](../ide/add-class-dialog-box.md) angezeigt, das den Assistenten für jeden Klassentyp anzeigt, den Sie zu Ihrem Projekt hinzufügen können. Verwenden Sie für MFC-Klassen den [MFC-Klassen-Assistenten](../mfc/reference/mfc-class-wizard.md). Durch den Befehl **Ressource hinzufügen** wird das Dialogfeld [Ressource hinzufügen](../windows/add-resource-dialog-box.md) angezeigt, in dem Sie eine Ressource erstellen oder eine Ressource auswählen können, die zu Ihrem Projekt hinzugefügt werden soll.
 
    Wenn Sie eine Klasse oder eine Schnittstelle in Ihrem Projekt in der Klassenansicht hervorheben, zeigt das Menü **Projekt** ebenfalls folgende Befehle an:
 
@@ -67,7 +67,7 @@ Es gibt drei Stellen, über die Sie auf C++-Code-Assistenten zugreifen können:
 
    Weitere Informationen finden Sie unter [Implementing an Interface (Implementieren einer Schnittstelle)](../ide/implementing-an-interface-visual-cpp.md) und [Adding Objects and Controls to an ATL Project (Hinzufügen von Objekten und Steuerelementen zu einem ATL-Projekt)](../atl/reference/adding-objects-and-controls-to-an-atl-project.md).
 
-   |Zugriff auf den Code-Assistenten über|Beschreibung|
+   |Zugriff auf den Code-Assistenten über|BESCHREIBUNG|
    |-----------------------------|-----------------|
    |Neues Element hinzufügen|Die Code-Assistenten zum Hinzufügen neuer Elemente fügen Quelldateien zu Ihrem Projekt hinzu. Bei Bedarf werden zusätzliche Verzeichnisse erstellt, die die Dateien dort enthalten, wo die Build-Engine des Projekts diese erwartet. Folgende Code-Assistenten sind über das Symbol „Element hinzufügen“ verfügbar:<br /><br />– C++-Quelldateien hinzufügen (.cpp, .h, .idl, .rc, .srf, .def, .rgs)<br />– Webentwicklungsdateien hinzufügen (.html, .asp, .css, .xml)<br />– Hilfsprogrammdateien und Ressourcendateien hinzufügen (.bmp, .cur, .ico, .rct, .sql, .txt)<br /><br />Diese Code-Assistenten fordern in der Regel keine Informationen von Ihnen an, sondern fügen eine Datei zur Entwicklungsstruktur hinzu. Sie können die Datei im Eigenschaftenfenster neu benennen.|
    |Projektmappen-Explorer|Die Code-Assistenten, die über den Projektmappen-Explorer verfügbar sind, hängen davon ab, wo sich der Fokus Ihres Cursors befindet, wenn Sie mit der rechten Maustaste auf ein Element klicken. Wenn die Option **Hinzufügen** nicht angezeigt wird, wenn Sie mit der rechten Maustaste auf ein Element klicken, bewegen Sie Ihren Cursor in der Entwicklungsstruktur eine Ebene nach oben, und wiederholen Sie den Vorgang. Der Code-Assistent fügt zusätzlichen Code unabhängig davon, wo Ihr Cursor sich befindet, immer an der entsprechenden Stelle in der Entwicklungsstruktur ein. Folgende Code-Assistenten sind über den Projektmappen-Explorer verfügbar:<br /><br />– Klasse hinzufügen (öffnet das Dialogfeld **Klasse hinzufügen**, das die neuen Code-Assistenten enthält)<br />– Ressource hinzufügen (Optionen: „Neu“, „Importieren“ oder „Benutzerdefiniert“)<br />– Webverweis hinzufügen|
