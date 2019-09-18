@@ -7,19 +7,19 @@ helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: c15ec782d16aebab85d57de2dea1e91b91620c74
-ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.openlocfilehash: 8a4ea3ae325eb5882c2f8b2524bbc156d12ffcc6
+ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894469"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062054"
 ---
 # <a name="unions"></a>Unions
 
 > [!NOTE]
-> In C ++ 17 und höher die **std::variant** -Klasse ist eine typsichere Alternative für Unions.
+> In c++ 17 und höher ist die **Std:: Variant** -Klasse eine typsichere Alternative für Unions.
 
-Ein **Union** ist ein benutzerdefinierten Typ, in dem alle Member denselben Speicherbereich gemeinsam nutzen. Das heißt, eine Union kann niemals mehr als ein Objekt aus seiner Liste der Member enthalten. Es heißt zudem, unabhängig davon, über wie viele Member eine Union verfügt, sie immer nur so viel Arbeitsspeicher verwendet, um das größte Member zu speichern.
+Eine **Union** ist ein benutzerdefinierter Typ, in dem alle Member denselben Speicherort verwenden. Das heißt, eine Union kann niemals mehr als ein Objekt aus seiner Liste der Member enthalten. Es heißt zudem, unabhängig davon, über wie viele Member eine Union verfügt, sie immer nur so viel Arbeitsspeicher verwendet, um das größte Member zu speichern.
 
 Unions können für das Einsparen von Arbeitsspeicher hilfreich sein, wenn Sie über viele Objekte bzw. begrenzten Arbeitsspeicher verfügen. Für ihre Verwendung ist jedoch besondere Vorsicht geboten, da Sie dafür verantwortlich sind, dass Sie immer auf das letzte Member zugreifen, in das geschrieben wurde. Wenn Membertypen über einen nicht trivialen Konstruktor verfügen, müssen Sie zusätzlichen Code schreiben, um dieses Member explizit zu erstellen und zu zerstören. Ziehen Sie vor dem Verwenden einer Union in Erwägung, ob das zu lösende Problem nicht durch die Verwendung einer Basisklasse und abgeleiteten Klasse ausgedrückt werden könnte.
 
@@ -41,7 +41,7 @@ Elemente, die die Union enthalten kann. Siehe Hinweise.
 
 ## <a name="declaring-a-union"></a>Deklarieren einer Union
 
-Beginnen Sie die Deklaration einer Union mit den **Union** -Schlüsselwort, und schließen Sie die Memberliste in geschweifte Klammern:
+Beginnen Sie mit der Deklaration einer Union mit dem **Union** -Schlüsselwort, und schließen Sie die Elementliste in geschweiften Klammern ein:
 
 ```cpp
 // declaring_a_union.cpp
@@ -58,13 +58,13 @@ int main()
 {
     RecordType t;
     t.i = 5; // t holds an int
-    t.f = 7.25 // t now holds a float
+    t.f = 7.25; // t now holds a float
 }
 ```
 
 ## <a name="using-unions"></a>Verwenden von Unions
 
-Im vorherigen Beispiel muss der Code wissen, der auf die Union zugreift, welches Member welche Daten hält. Die gängigste Lösung für dieses Problem besteht darin, die Union in einer Struktur zusammen mit einem zusätzlichen Enumerationsmember einzuschließen, das den Typ der zurzeit in der Union gespeicherten Daten angibt. Dies wird als bezeichnet ein *Unterscheidungs-Union* und das folgende Beispiel zeigt das grundlegende Muster.
+Im vorherigen Beispiel muss der Code wissen, der auf die Union zugreift, welches Member welche Daten hält. Die gängigste Lösung für dieses Problem besteht darin, die Union in einer Struktur zusammen mit einem zusätzlichen Enumerationsmember einzuschließen, das den Typ der zurzeit in der Union gespeicherten Daten angibt. Dies wird als Unterscheidungs- *Union* bezeichnet, und im folgenden Beispiel wird das grundlegende Muster veranschaulicht.
 
 ```cpp
 #include <queue>
@@ -633,12 +633,12 @@ int main()
 
 Die `NumericType`-Union ist im Arbeitsspeicher angeordnet (konzeptionell), wie in der folgenden Abbildung dargestellt.
 
-![Speicherung von Daten in einer Union numerischer Typen](../cpp/media/vc38ul1.png "Speicherung von Daten in eine einer Union numerischer Typen") <br/>
+![Speicherung von Daten in einer Union für einen numerischen Typ](../cpp/media/vc38ul1.png "Speicherung von Daten in einer numerictype-Union") <br/>
 Speicherung von Daten in einer Union numerischer Typen
 
-## <a name="anonymous_unions"></a> Anonyme unions
+## <a name="anonymous_unions"></a>Anonyme Unions
 
-Anonyme Unions sind Unions, die ohne deklariert sind eine *Klassennamen* oder *Declarator-List*.
+Anonyme Unions sind Unions, die ohne einen *Klassennamen* oder eine *Deklaratorliste*deklariert werden.
 
 ```cpp
 union  {  member-list  }
@@ -646,11 +646,11 @@ union  {  member-list  }
 
 Die in einer anonymen Union deklarierten Namen werden, wie Nichtmembervariablen, direkt verwendet. Daher müssen die in der anonymen Union deklarierten Namen eindeutig im umgebenden Bereich sein.
 
-Zusätzlich zu den Einschränkungen für benannte Unions unterliegen diesen zusätzlichen Einschränkungen anonyme Unions:
+Zusätzlich zu den Einschränkungen für benannte Unions unterliegen anonyme Unions den folgenden zusätzlichen Einschränkungen:
 
-- Sie müssen auch als deklariert werden **statische** Wenn Sie im Datei- oder Namespacebereich deklariert.
+- Sie müssen auch als **statisch** deklariert werden, wenn Sie im Datei-oder Namespace-Gültigkeitsbereich deklariert werden.
 
-- Sie können nur verfügen **öffentliche** Member. **private** und **geschützt** Member in anonymen Unions generieren Fehler.
+- Sie können nur **öffentliche** Member haben. **private** und **geschützte** Member in anonymen Unions generieren Fehler.
 
 - Sie können keine Memberfunktionen aufweisen.
 
