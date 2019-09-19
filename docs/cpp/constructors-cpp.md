@@ -1,17 +1,17 @@
 ---
 title: Konstruktoren (C++)
-ms.date: 07/02/2019
+ms.date: 09/05/2019
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: a2afa605fe110f7dc84d528330417ef3a1fc47e7
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 0e2e3536c8eb0a5b111ff18e43044783ea684f1f
+ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926263"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062029"
 ---
 # <a name="constructors-c"></a>Konstruktoren (C++)
 
@@ -518,47 +518,6 @@ BaseClass1 ctor
 BaseClass2 ctor
 BaseClass3 ctor
 DerivedClass ctor
-```
-
-## <a name="virtual_functions_in_constructors"></a>Virtuelle Funktionen in Konstruktoren
-
-Beim Aufrufen von virtuellen Funktionen in Konstruktoren wird zur Vorsicht geraten. Da der Basisklassenkonstruktor immer vor dem abgeleiteten Klassenkonstruktor aufgerufen wird, ist die im Basiskonstruktor aufgerufene Funktion die Basisklassenversion und nicht die Version der abgeleiteten Klasse. Im folgenden Beispiel bewirkt die Erstellung von `DerivedClass`, dass die `BaseClass`-Implementierung von `print_it()` ausgeführt wird, bevor der `DerivedClass`-Konstruktor veranlasst, dass die `DerivedClass`-Implementierung von `print_it()` ausgeführt wird:
-
-```cpp
-#include <iostream>
-using namespace std;
-
-class BaseClass{
-public:
-    BaseClass(){
-        print_it();
-    }
-    virtual void print_it() {
-        cout << "BaseClass print_it" << endl;
-    }
-};
-
-class DerivedClass : public BaseClass {
-public:
-    DerivedClass() {
-        print_it();
-    }
-    virtual void print_it(){
-        cout << "Derived Class print_it" << endl;
-    }
-};
-
-int main() {
-
-    DerivedClass dc;
-}
-```
-
-Die Ausgabe ist wiefolgt:
-
-```Output
-BaseClass print_it
-Derived Class print_it
 ```
 
 ## <a name="delegating_constructors"></a>Delegieren von Konstruktoren
