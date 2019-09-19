@@ -1,29 +1,29 @@
 ---
 title: Allgemeine MFC-Themen
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 helpviewer_keywords:
 - MFC
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: 71cdda0abea8cec29c3b6e17ddfb584e32a931c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f4c75e3f8bd8f7d32109cf92465dfa6e5aba6ed
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219729"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095859"
 ---
 # <a name="general-mfc-topics"></a>Allgemeine MFC-Themen
 
 Diese Artikelreihe enthält technische Details zur Microsoft Foundation Class (MFC)-Bibliothek und gibt einen Überblick über das MFC-Framework und seine Hauptkomponenten und Subsysteme.
 
-Die Microsoft Foundation Class-Bibliothek ist ein Anwendungsframework für die Programmierung in Microsoft Windows. Die MFC wurde in C++ geschrieben und stellt einen Großteil des Codes bereit, der zum Verwalten von Fenstern, Menüs und Dialogfeldern, zum Ausführen grundlegender Ein-/Ausgabe, zum Speichern von Datenobjektauflistungen usw. benötigt wird. Sie müssen nur den anwendungsspezifischen Code in dieses Framework einfügen. Angesichts die Art der Programmierung für C++-Klasse, es ist einfach zu erweitern oder zu überschreiben die grundlegende Funktionalität, die [MFC-Framework](../mfc/framework-mfc.md) bereitstellt.
+Die Microsoft Foundation Class-Bibliothek ist ein Anwendungsframework für die Programmierung in Microsoft Windows. Die MFC wurde in C++ geschrieben und stellt einen Großteil des Codes bereit, der zum Verwalten von Fenstern, Menüs und Dialogfeldern, zum Ausführen grundlegender Ein-/Ausgabe, zum Speichern von Datenobjektauflistungen usw. benötigt wird. Sie müssen nur den anwendungsspezifischen Code in dieses Framework einfügen. Aufgrund der Art der C++ Klassen Programmierung ist es einfach, die Grundfunktionen, die [das MFC-Framework](../mfc/framework-mfc.md) bereitstellt, zu erweitern oder zu überschreiben.
 
-Das MFC-Framework ist ein leistungsfähiger Ansatz, mit dem Sie auf der Arbeit von Windows-Programmierexperten aufbauen können. MFC verkürzt die Entwicklungszeit, erhöht die Portierbarkeit von Code, bietet ein erhebliches Maß an Unterstützung, ohne die Freiheit und Flexibilität der Programmierung einzuschränken, und ermöglicht einen einfachen Zugang zu schwierig zu programmierenden Benutzeroberflächenelementen und -technologien, z. B. der Active-Technologie, OLE und der Internetprogrammierung. Darüber hinaus vereinfacht MFC die Datenbankprogrammierung über Data Access Objects (DAO, Datenzugriffsobjekte) und Open Database Connectivity (ODBC) sowie die Netzwerkprogrammierung über Windows Sockets. Mit MFC ist das Programmieren von Funktionen wie Eigenschaftenblättern (Registerkarten-Dialogfeldern), Seitenansichten und unverankerten, benutzerdefinierbaren Symbolleisten ganz einfach.
+Das MFC-Framework ist ein leistungsfähiger Ansatz, mit dem Sie auf der Arbeit von Windows-Programmierexperten aufbauen können. MFC verkürzt die Entwicklungszeit, erhöht die Portierbarkeit von Code, bietet ein erhebliches Maß an Unterstützung, ohne die Freiheit und Flexibilität der Programmierung einzuschränken, und ermöglicht einen einfachen Zugang zu schwierig zu programmierenden Benutzeroberflächenelementen und -technologien, z. B. der Active-Technologie, OLE und der Internetprogrammierung. Darüber hinaus vereinfacht MFC die Datenbankprogrammierung durch Data Access Objects (DAO) (mittlerweile veraltet) und Open Database Connectivity (ODBC) sowie die Netzwerk Programmierung über Windows Sockets. Mit MFC ist das Programmieren von Funktionen wie Eigenschaftenblättern (Registerkarten-Dialogfeldern), Seitenansichten und unverankerten, benutzerdefinierbaren Symbolleisten ganz einfach.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-`MFC Samples`, die bereitgestellt werden, [Visual C++-Beispiele](../overview/visual-cpp-samples.md)
+`MFC Samples`, die in [visuellen C++ Beispielen](../overview/visual-cpp-samples.md) bereitgestellt werden
 
 [Verwenden der MFC-Quelldateien](../mfc/using-the-mfc-source-files.md)
 
@@ -35,7 +35,7 @@ Das MFC-Framework ist ein leistungsfähiger Ansatz, mit dem Sie auf der Arbeit v
 
 [CWinApp: Die Anwendungsklasse](../mfc/cwinapp-the-application-class.md)
 
-[Dokumentvorlagen und der Erstellungsvorgang für Dokumente und Ansichten](../mfc/document-templates-and-the-document-view-creation-process.md)
+[Dokumentvorlagen und der Erstellungs Vorgang für Dokumente/Sichten](../mfc/document-templates-and-the-document-view-creation-process.md)
 
 [Verwalten der Statusdaten von MFC-Modulen](../mfc/managing-the-state-data-of-mfc-modules.md)
 
@@ -51,9 +51,9 @@ Das MFC-Framework ist ein leistungsfähiger Ansatz, mit dem Sie auf der Arbeit v
 
 [Dynamisches Layout](../mfc/dynamic-layout.md)
 
-Einen Überblick über die MFC-Referenzdokumentation finden Sie unter [Microsoft Foundation Class-Bibliothek](../mfc/mfc-desktop-applications.md).
+Eine Übersicht über die MFC-Referenz Dokumentation finden Sie unter [Microsoft Foundation Class-Bibliothek](../mfc/mfc-desktop-applications.md).
 
-Weitere Informationen über ATL finden Sie unter [Active Template Library Reference](../atl/atl-class-overview.md).
+Weitere Informationen zu ATL finden Sie unter [Active Template Library Referenz](../atl/atl-class-overview.md).
 
 ## <a name="see-also"></a>Siehe auch
 

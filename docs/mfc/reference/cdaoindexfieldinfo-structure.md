@@ -1,22 +1,24 @@
 ---
 title: CDaoIndexFieldInfo-Struktur
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - CDaoIndexFieldInfo
 helpviewer_keywords:
 - CDaoIndexFieldInfo structure [MFC]
 - DAO (Data Access Objects), Index Fields collection
 ms.assetid: 097ee8a6-83b1-4db7-8f05-d62a2deefe19
-ms.openlocfilehash: d03a6f6eadd4cf6ccb5279edf18675605d0b1485
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8b0ff991b8cc4988192b89d7f70309af9b9112a
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399758"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096093"
 ---
 # <a name="cdaoindexfieldinfo-structure"></a>CDaoIndexFieldInfo-Struktur
 
-Die `CDaoIndexFieldInfo` Struktur enthält Informationen zu einem Index-Feld-Objekt für Datenzugriffsobjekte (DAO) definiert.
+Die `CDaoIndexFieldInfo` Struktur enthält Informationen über ein für Data Access Objects (DAO) definiertes Index Feld Objekt.
+
+DAO wird über Office 2013 unterstützt. DAO 3,6 ist die endgültige Version und wird als veraltet eingestuft.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,18 +33,18 @@ struct CDaoIndexFieldInfo
 #### <a name="parameters"></a>Parameter
 
 *m_strName*<br/>
-Eindeutig bezeichnet die Index-Field-Objekt. Informationen finden Sie im Thema "Name-Eigenschaft" in-DAO-Hilfe.
+Benennt das Indexfeld Objekt eindeutig. Weitere Informationen finden Sie im Thema "Name Property" in der DAO-Hilfe.
 
 *m_bDescending*<br/>
-Gibt an, die Index-Sortierung definiert, die vom Index-Objekt. TRUE, wenn die Reihenfolge absteigender ist.
+Gibt die durch das Index Objekt definierte Index Reihenfolge an. TRUE, wenn die Reihenfolge absteigend ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Ein Indexobjekt haben eine Reihe von Feldern, der angibt, welche Felder auf eine Tabledef (oder ein Recordset basierend auf einer Tabelle) indiziert wird. Die Verweise auf die oben genannten primären anzugeben, wie die Informationen zurückgegeben werden, in der `m_pFieldInfos` Mitglied einer [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) Objekt durch den Aufruf der `GetIndexInfo` Memberfunktion der Klasse [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getindexinfo) oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo).
+Ein Index Objekt kann über eine Reihe von Feldern verfügen, die angeben, in welchen Feldern eine Tabledef (oder ein Recordset, das auf einer Tabelle basiert) indiziert ist. Die Verweise auf das primäre Replikat geben an, wie die `m_pFieldInfos` Informationen im Member eines [cdaoindexinfo](../../mfc/reference/cdaoindexinfo-structure.md) -Objekts zurückgegeben `GetIndexInfo` werden, das durch Aufrufen der Member-Funktion der Klasse [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getindexinfo) oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo)abgerufen wird.
 
-Index und Index-Feld-Objekte werden nicht durch eine MFC-Klasse dargestellt. Stattdessen Objekte zum DAO zugrunde liegenden MFC-Objekte der Klasse [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) enthalten eine Auflistung von indexobjekten, die der Indexsammlung aufgerufen. Jedes Indexobjekt enthält wiederum eine Auflistung von Feld-Objekten. Diese Klassen geben Member-Funktionen für den Zugriff auf einzelne Elemente der Informationen zu Indizes an, oder darauf gleichzeitig mit zugreifen eine `CDaoIndexInfo` -Objekt durch Aufrufen der `GetIndexInfo` Memberfunktion Rand des enthaltenden Objekts. Die `CDaoIndexInfo` Objekt hat dann einen Datenmember `m_pFieldInfos`, verweist auf ein Array von `CDaoIndexFieldInfo` Objekte.
+Index Objekte und Index Feld Objekte werden nicht durch eine MFC-Klasse dargestellt. Stattdessen enthalten die DAO-Objekte, die den MFC-Objekten der Klasse [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) zugrunde liegen, eine Auflistung von Index Objekten, die als Index Auflistung bezeichnet werden. Jedes Index Objekt enthält wiederum eine Auflistung von Feld Objekten. Diese Klassen stellen Element Funktionen bereit, um auf einzelne Elemente von Indexinformationen zuzugreifen, oder Sie können alle auf einmal mit `CDaoIndexInfo` einem-Objekt aufrufen `GetIndexInfo` , indem Sie die-Member-Funktion des enthaltenden Objekts aufrufen. Das `CDaoIndexInfo` -Objekt hat dann einen `m_pFieldInfos`Datenmember,, der auf ein Array von `CDaoIndexFieldInfo` -Objekten zeigt.
 
-Rufen Sie die `GetIndexInfo` Memberfunktion Rand des enthaltenden Tabledef oder ein Recordset-Objekts, in deren Indizes Auflistung wird, gespeichert, die Index-Objekt, das Sie interessiert sind. Öffnen Sie dann die `m_pFieldInfos` Mitglied der [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) Objekt. Die Länge der `m_pFieldInfos` Array befindet sich in `m_nFields`. `CDaoIndexFieldInfo` definiert auch eine `Dump` -Memberfunktion im Debug-builds. Können Sie `Dump` zum Sichern den Inhalt einer `CDaoIndexFieldInfo` Objekt.
+Nennen Sie `GetIndexInfo` die Member-Funktion des enthaltenden TableDef-oder Recordset-Objekts, in dessen Index Auflistung das Index Objekt gespeichert ist, an dem Sie interessiert sind. Greifen Sie dann `m_pFieldInfos` auf den Member des [cdaoindexinfo](../../mfc/reference/cdaoindexinfo-structure.md) -Objekts zu. Die Länge des `m_pFieldInfos` Arrays wird in `m_nFields`gespeichert. `CDaoIndexFieldInfo`definiert auch eine `Dump` Member-Funktion in Debugbuilds. Sie können verwenden `Dump` , um den Inhalt `CDaoIndexFieldInfo` eines-Objekts zu speichern.
 
 ## <a name="requirements"></a>Anforderungen
 

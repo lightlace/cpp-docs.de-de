@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-ms.openlocfilehash: cf46c4f388c4607dbb8fb0e7f439603e5964ea03
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 1287c8166e02c3aa7696a3a0d79ecc1a240e3032
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907662"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095870"
 ---
 # <a name="adding-an-mfc-message-handler"></a>Hinzufügen eines MFC-Meldungshandlers
 
-Mit dem Klassen- [Assistenten](mfc-class-wizard.md) oder dem **Eigenschaften** Fenster in der **Klassen Ansicht** können Sie einer Klasse einen Meldungs Handler (eine Member-Funktion, die Windows-Meldungen verarbeitet) hinzufügen und Windows-Meldungen dem Nachrichten Handler zuordnen. Sie können auch [einen Ereignishandler für ein beliebiges Dialogfeld-Steuer](../../windows/adding-event-handlers-for-dialog-box-controls.md)Element hinzufügen. 
+Mit dem Klassen- [Assistenten](mfc-class-wizard.md) oder dem **Eigenschaften** Fenster in der **Klassen Ansicht** können Sie einer Klasse einen Meldungs Handler (eine Member-Funktion, die Windows-Meldungen verarbeitet) hinzufügen und Windows-Meldungen dem Nachrichten Handler zuordnen. Sie können auch [einen Ereignishandler für ein beliebiges Dialogfeld-Steuer](../../windows/adding-event-handlers-for-dialog-box-controls.md)Element hinzufügen.
 
 Wenn Sie den **Klassen-Assistenten** oder das **Eigenschaften** Fenster (in **Klassenansicht**) zum Definieren von Funktionen zum Verarbeiten von Nachrichten und Ereignissen verwenden, können Sie die Nachrichten-Dispatch-Tabelle (oder Meldungs Zuordnung) und die Klassen Header Datei automatisch aktualisieren.
 

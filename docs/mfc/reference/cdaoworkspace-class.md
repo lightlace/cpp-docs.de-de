@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: 6aa404c5eb543db198043dba68d55a4b925739c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e4ded466b673bff3c0630e798877b69d1ca384d
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253713"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096064"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace-Klasse
 
@@ -166,8 +166,7 @@ Explizit öffnen die Standard-Arbeitsbereich, oder öffnen einen vorhandenen Arb
 Eine Arbeitsbereich-Sitzung beenden durch Schließen des Arbeitsbereichs mit der [schließen](#close) Member-Funktion. `Close` Schließt alle Datenbanken, die Sie nicht zuvor geschlossen haben Rollback für Transaktionen ohne Commit ausgeführt.
 
 ## <a name="transactions"></a>Transaktionen
-
-DAO verwaltet Transaktionen auf der arbeitsbereichsebene. Transaktionen in einem Arbeitsbereich mit mehreren open-Datenbanken, daher gelten für alle Datenbanken. Z. B. wenn zwei Datenbanken haben ohne ausgeführten Commit Updates, und Sie rufen [CommitTrans](#committrans), alle Updates wird ein Commit ausgeführt. Wenn Sie Transaktionen auf eine einzelne Datenbank beschränken möchten, benötigen Sie ein eigenes Workspace-Objekt für sie.
+DAO 3,6 ist die endgültige Version und wird als veraltet eingestuft. verwaltet Transaktionen auf der Arbeitsbereichs Ebene. Daher gelten Transaktionen in einem Arbeitsbereich mit mehreren geöffneten Datenbanken für alle Datenbanken. Z. B. wenn zwei Datenbanken haben ohne ausgeführten Commit Updates, und Sie rufen [CommitTrans](#committrans), alle Updates wird ein Commit ausgeführt. Wenn Sie Transaktionen auf eine einzelne Datenbank beschränken möchten, benötigen Sie ein eigenes Workspace-Objekt für sie.
 
 ## <a name="implicit-use-of-the-default-workspace"></a>Implizite Verwendung von Standard-Arbeitsbereich
 
@@ -462,9 +461,9 @@ Optionen, die angeben, welche Informationen über die Datenbank abgerufen. Die v
 
 - AFX_DAO_PRIMARY_INFO (Standard) Namen aktualisiert werden kann, Transaktionen
 
-- Primäre AFX_DAO_SECONDARY_INFO Informationen plus: Version, die Sortierreihenfolge, Abfragetimeout
+- AFX_DAO_SECONDARY_INFO primäre Informationen Plus: Version, Sortierreihenfolge, Abfrage Timeout
 
-- AFX_DAO_ALL_INFO primären und sekundären Informationen plus: Verbinden
+- AFX_DAO_ALL_INFO primäre und sekundäre Informationen Plus: Verbinden
 
 *Wert*<br/>
 Der Name des Datenbankobjekts, für die Suche anhand des Namens. Der Name ist eine Zeichenfolge mit bis zu 14 Zeichen, die der neue Arbeitsbereich-Objekt eindeutig bezeichnet.
@@ -632,9 +631,9 @@ Optionen, die angeben, welche Informationen über den Arbeitsbereich abrufen. Di
 
 - Name der AFX_DAO_PRIMARY_INFO (Standard)
 
-- Primäre AFX_DAO_SECONDARY_INFO Informationen plus: Benutzername
+- AFX_DAO_SECONDARY_INFO primäre Informationen Plus: Benutzername
 
-- AFX_DAO_ALL_INFO primären und sekundären Informationen plus: Isolieren Sie ODBCTrans
+- AFX_DAO_ALL_INFO primäre und sekundäre Informationen Plus: Isolieren von odbctrans
 
 *Wert*<br/>
 Der Name des Workspace-Objekts, für die Suche anhand des Namens. Der Name ist eine Zeichenfolge mit bis zu 14 Zeichen, die der neue Arbeitsbereich-Objekt eindeutig bezeichnet.

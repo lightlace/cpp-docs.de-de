@@ -1,6 +1,6 @@
 ---
 title: Funktionen für den Datensatzfeldaustausch
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - AFXDB/RFX_Binary
 - AFXDB/RFX_Bool
@@ -45,28 +45,28 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-ms.openlocfilehash: 865c67b88c37e32ef33fa410ef178b81b7a6ecac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 491b00fe65634acf7c8805dd471fa6e3cc62acf0
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310161"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095834"
 ---
 # <a name="record-field-exchange-functions"></a>Funktionen für den Datensatzfeldaustausch
 
-Dieses Thema enthält die Datensatzfeldaustausch (RFX, Bulk-RFX und DFX) verwendet, um die Übertragung von Daten zwischen einem Recordset-Objekt und dessen Datenquelle automatisiert und andere Vorgänge auf die Daten aus Funktionen.
+In diesem Thema werden die Funktionen für den Daten Satz Feld Austausch (RFX, Bulk RFX und DFX) aufgelistet, die verwendet werden, um die Übertragung von Daten zwischen einem Recordset-Objekt und der zugehörigen Datenquelle zu automatisieren und andere Vorgänge für die Daten auszuführen.
 
 Wenn Sie die ODBC-basierten Klassen verwenden und einen Massenzeilenabruf implementiert haben, müssen Sie die `DoBulkFieldExchange` -Memberfunktion des `CRecordset` manuell überschreiben, indem Sie die Bulk-RFX-Funktionen für jedes Datenelement aufrufen, das einer Datenquellspalte entspricht.
 
-Wenn Sie den Massenzeilenabruf in den ODBC-basierten Klassen implementiert haben oder die DAO-basierten Klassen verwenden, dann überschreibt der ClassWizard die `DoFieldExchange` -Memberfunktion von `CRecordset` oder `CDaoRecordset` durch Aufrufen der RFX-Funktionen (für ODBC-Klassen) oder der DFX-Funktionen (für DAO-Klassen) für jedes Felddatenelement im Recordset.
+Wenn Sie das Massen Abrufen von Zeilen in den ODBC-basierten Klassen nicht implementiert haben oder wenn Sie die DAO-basierten Klassen (veraltet) verwenden, überschreibt der Klassen-Assistent die `DoFieldExchange` Member-Funktion `CRecordset` von `CDaoRecordset` oder durch Aufrufen der RFX-Funktionen (für ODBC-Klassen) oder die DFX-Funktionen (für DAO-Klassen) für jedes Felddatenmember in Ihrem Recordset.
 
 Die Datensatzfeldaustausch-Funktionen übertragen jedes Mal Daten, wenn das Framework `DoFieldExchange` oder `DoBulkFieldExchange`aufruft. Jede Funktion überträgt einen bestimmten Datentyp.
 
-Weitere Informationen zur Verwendung dieser Funktionen finden Sie in den Artikeln [Record Field Exchange: Funktionsweise von RFX (ODBC)](../../data/odbc/record-field-exchange-how-rfx-works.md). Weitere Informationen zu gesammelten Abrufens von Zeilen, finden Sie im Artikel [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Weitere Informationen zur Verwendung dieser Funktionen finden Sie in den Artikeln [Daten Satz Feld Austausch: Funktionsweise von RFX (ODBC](../../data/odbc/record-field-exchange-how-rfx-works.md)). Weitere Informationen zum Abrufen von Massen Zeilen finden Sie im Artikel [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Für Datenspalten, die Sie dynamisch binden, können Sie auch die RFX- oder DFX-Funktionen selbst aufrufen, wie in den Artikeln erläutert [Recordset: Dynamisches Binden von Datenspalten (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). Darüber hinaus können Sie Ihre eigenen benutzerdefinierten RFX- oder DFX-Routinen schreiben, wie im technischen Hinweis [43](../../mfc/tn043-rfx-routines.md) (für ODBC) und im technischen Hinweis [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) (für DAO) erläutert.
+Für Datenspalten, die Sie dynamisch binden, können Sie auch die RFX-oder DFX-Funktionen selbst aufzurufen, wie in [den Artikeln Recordset erläutert: Dynamisches Binden von Datenspalten (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). Darüber hinaus können Sie Ihre eigenen benutzerdefinierten RFX- oder DFX-Routinen schreiben, wie im technischen Hinweis [43](../../mfc/tn043-rfx-routines.md) (für ODBC) und im technischen Hinweis [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) (für DAO) erläutert.
 
-Für ein Beispiel für RFX und Bulk-RFX-Funktionen wie in der `DoFieldExchange` und `DoBulkFieldExchange` -Funktionen finden Sie unter [RFX_Text](#rfx_text) und die #Rfx_text_bulk [RFX_Text_Bulk]). DFX-Funktionen sind den RFX-Funktionen sehr ähnlich.
+Ein Beispiel für RFX und Bulk-RFX-Funktionen, wie Sie in `DoFieldExchange` den `DoBulkFieldExchange` Funktionen und auftreten, finden Sie unter [RFX_Text](#rfx_text) und [RFX_Text_Bulk] #rfx_text_bulk). DFX-Funktionen sind den RFX-Funktionen sehr ähnlich.
 
 ### <a name="rfx-functions-odbc"></a>RFX-Funktionen (ODBC)
 
@@ -75,7 +75,7 @@ Für ein Beispiel für RFX und Bulk-RFX-Funktionen wie in der `DoFieldExchange` 
 |[RFX_Binary](#rfx_binary)|Überträgt Byte-Arrays vom Typ [CByteArray](cbytearray-class.md).|
 |[RFX_Bool](#rfx_bool)|Überträgt boolesche Daten.|
 |[RFX_Byte](#rfx_byte)|Überträgt ein einzelnes Byte an Daten.|
-|[RFX_Date](#rfx_date)|Überträgt Uhrzeit- und Datumsdaten mit [CTime](../../atl-mfc-shared/reference/ctime-class.md) oder TIMESTAMP_STRUCT.|
+|[RFX_Date](#rfx_date)|Überträgt Zeit-und Datumsdaten mit [ctime](../../atl-mfc-shared/reference/ctime-class.md) oder TIMESTAMP_STRUCT.|
 |[RFX_Double](#rfx_double)|Überträgt Gleitkommazahl mit doppelter Genauigkeit.|
 |[RFX_Int](#rfx_int)|Überträgt Ganzzahldaten.|
 |[RFX_Long](#rfx_long)|Überträgt lange Ganzzahldaten.|
@@ -90,12 +90,12 @@ Für ein Beispiel für RFX und Bulk-RFX-Funktionen wie in der `DoFieldExchange` 
 |[RFX_Binary_Bulk](#rfx_binary_bulk)|Überträgt Arrays von Bytedaten.|
 |[RFX_Bool_Bulk](#rfx_bool_bulk)|Überträgt Arrays von booleschen Daten.|
 |[RFX_Byte_Bulk](#rfx_byte_bulk)|Überträgt Arrays von Einzelbytes.|
-|[RFX_Date_Bulk](#rfx_date_bulk)|Überträgt Arrays von Daten des Typs TIMESTAMP_STRUCT.|
+|[RFX_Date_Bulk](#rfx_date_bulk)|Überträgt Arrays von Daten vom Typ TIMESTAMP_STRUCT.|
 |[RFX_Double_Bulk](#rfx_double_bulk)|Überträgt Arrays von Gleitkommadaten mit doppelter Genauigkeit.|
 |[RFX_Int_Bulk](#rfx_int_bulk)|Überträgt Arrays von Ganzzahldaten.|
 |[RFX_Long_Bulk](#rfx_long_bulk)|Überträgt Arrays von langen Ganzzahldaten.|
 |[RFX_Single_Bulk](#rfx_single_bulk)|Überträgt Arrays von Gleitkommadaten.|
-|[RFX_Text_Bulk](#rfx_text_bulk)|Überträgt Arrays von Daten des Typs LPSTR.|
+|[RFX_Text_Bulk](#rfx_text_bulk)|Überträgt Arrays von Daten des Typs LPStr.|
 
 ### <a name="dfx-functions-dao"></a>DFX-Funktionen (DAO)
 
@@ -117,7 +117,7 @@ Für ein Beispiel für RFX und Bulk-RFX-Funktionen wie in der `DoFieldExchange` 
 
 ## <a name="rfx_binary"></a>  RFX_Binary
 
-Überträgt Arrays von Bytes zwischen den Felddatenmembern eine `CRecordset` -Objekt und die Spalten eines Datensatzes für die Datenquelle des ODBC-Typ SQL_BINARY, SQL_VARBINARY oder SQL_LONGVARBINARY.
+Überträgt Arrays von Bytes zwischen den Felddatenmembern eines `CRecordset` -Objekts und den Spalten eines Datensatzes in der Datenquelle des ODBC-Typs SQL_BINARY, SQL_VARBINARY oder SQL_LONGVARBINARY.
 
 ### <a name="syntax"></a>Syntax
 
@@ -132,32 +132,32 @@ void RFX_Binary(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren. Weitere Informationen zu den Vorgängen, `CFieldExchange` die ein-Objekt angeben kann, [finden Sie im Artikeldaten Satz Feld Austausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *value*<br/>
-Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs [CByteArray](cbytearray-class.md), stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
+Der im angegebener Datenmember gespeicherte Wert – der Wert, der übertragen werden soll. Bei einer Übertragung von Recordset an eine Datenquelle wird der Wert des Typs [CByteArray](cbytearray-class.md)aus dem angegebenen Datenmember entnommen. Bei einer Übertragung von einer Datenquelle zu einem Recordset wird der Wert im angegebenen Datenmember gespeichert.
 
 *nMaxLength*<br/>
-Die maximal zulässige Länge der Zeichenfolge oder Array übertragen werden. Der Standardwert von *nMaxLength* ist 255. Zulässige Werte sind 1 bis INT_MAX. Das Framework ordnet diese Menge an Speicherplatz für die Daten an. Übergeben Sie einen Wert, der groß genug für das größte Datenelement, die, das Sie erwarten, für eine optimale Leistung.
+Die maximal zulässige Länge der übertragenen Zeichenfolge oder des Arrays. Der Standardwert von *nMaxLength* ist 255. Zulässige Werte sind 1 bis INT_MAX. Das Framework ordnet diese Menge an Speicherplatz für die Daten zu. Um die optimale Leistung zu erzielen, übergeben Sie einen Wert, der groß genug ist, um das größte erwartete Datenelement zu verarbeiten
 
 ### <a name="remarks"></a>Hinweise
 
-Daten in die Datenquelle dieser Typen zugeordnet ist, und vom Typ `CByteArray` im Recordset.
+Daten in der Datenquelle dieser Typen werden dem Typ und vom Typ `CByteArray` im Recordset zugeordnet.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [RFX_Text](#rfx_text).
+Siehe [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxdb.h
+**Header:** AFXDB. h
 
 ## <a name="rfx_bool"></a>  RFX_Bool
 
-Überträgt boolesche Daten zwischen den Felddatenmembern eine `CRecordset` -Objekt und die Spalten eines Datensatzes für die Datenquelle des ODBC-Typ SQL_BIT.
+Überträgt boolesche Daten zwischen den Felddatenmembern eines `CRecordset` -Objekts und den Spalten eines Datensatzes in der Datenquelle des ODBC-Typs SQL_BIT.
 
 ### <a name="syntax"></a>Syntax
 
@@ -171,25 +171,25 @@ void RFX_Bool(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren. Weitere Informationen zu den Vorgängen, `CFieldExchange` die ein-Objekt angeben kann, [finden Sie im Artikeldaten Satz Feld Austausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *value*<br/>
-Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für eine Übertragung vom Recordset die Datenquelle wird der Wert vom Typ "bool", den angegebenen Datenmember entnommen. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
+Der im angegebener Datenmember gespeicherte Wert – der Wert, der übertragen werden soll. Bei einer Übertragung von Recordset in die Datenquelle wird der Wert des Typs bool vom angegebenen Datenmember entnommen. Bei einer Übertragung von einer Datenquelle zu einem Recordset wird der Wert im angegebenen Datenmember gespeichert.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [RFX_Text](#rfx_text).
+Siehe [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxdb.h
+**Header:** AFXDB. h
 
 ## <a name="rfx_byte"></a>  RFX_Byte
 
-Übertragungen einmaliges Bytes zwischen den Felddatenmembern eine `CRecordset` -Objekt und die Spalten eines Datensatzes für die Datenquelle des ODBC-Typ SQL_TINYINT.
+Überträgt einzelne Bytes zwischen den Felddatenmembern eines `CRecordset` -Objekts und den Spalten eines Datensatzes in der Datenquelle des ODBC-Typs SQL_TINYINT.
 
 ### <a name="syntax"></a>Syntax
 
@@ -203,25 +203,25 @@ void RFX_Byte(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren. Weitere Informationen zu den Vorgängen, `CFieldExchange` die ein-Objekt angeben kann, [finden Sie im Artikeldaten Satz Feld Austausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *value*<br/>
-Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für eine Übertragung vom Recordset die Datenquelle wird der Wert, der Typ "BYTE", den angegebenen Datenmember entnommen. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
+Der im angegebener Datenmember gespeicherte Wert – der Wert, der übertragen werden soll. Bei einer Übertragung von Recordset an eine Datenquelle wird der Wert des Typs Byte vom angegebenen Datenmember entnommen. Bei einer Übertragung von einer Datenquelle zu einem Recordset wird der Wert im angegebenen Datenmember gespeichert.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [RFX_Text](#rfx_text).
+Siehe [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxdb.h
+**Header:** AFXDB. h
 
 ## <a name="rfx_date"></a>  RFX_Date
 
-Übertragungen `CTime` oder TIMESTAMP_STRUCT Daten zwischen den Felddatenmembern eine `CRecordset` -Objekt und die Spalten eines Datensatzes für die Datenquelle von ODBC zu geben, SQL_DATE, SQL_TIME oder SQL_TIMESTAMP.
+Überträgt `CTime` oder TIMESTAMP_STRUCT Daten zwischen den Felddatenmembern `CRecordset` eines-Objekts und den Spalten eines Datensatzes in der Datenquelle des ODBC-Typs SQL_DATE, SQL_TIME oder SQL_TIMESTAMP.
 
 ### <a name="syntax"></a>Syntax
 
@@ -245,33 +245,33 @@ void RFX_Date(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren. Weitere Informationen zu den Vorgängen, `CFieldExchange` die ein-Objekt angeben kann, [finden Sie im Artikeldaten Satz Feld Austausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *value*<br/>
-Der Wert, der in den angegebenen Datenmember gespeichert; der Wert, der übertragen werden. Die verschiedenen Versionen der Funktion führen Sie unterschiedliche Datentypen für Wert:
+Der im angegebener Datenmember gespeicherte Wert. der Wert, der übertragen werden soll. Die verschiedenen Versionen der-Funktion nehmen unterschiedliche Datentypen für den Wert auf:
 
-Die erste Version der Funktion akzeptiert einen Verweis auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt. Für eine Übertragung vom Recordset die Datenquelle wird der Wert aus den angegebenen Datenmember verwendet. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
+Die erste Version der Funktion nimmt einen Verweis auf ein [ctime](../../atl-mfc-shared/reference/ctime-class.md) -Objekt an. Bei einer Übertragung von Recordset in die Datenquelle wird dieser Wert vom angegebenen Datenmember entnommen. Bei einer Übertragung von einer Datenquelle zu einem Recordset wird der Wert im angegebenen Datenmember gespeichert.
 
-Die zweite Version der Funktion akzeptiert einen Verweis auf eine `TIMESTAMP_STRUCT` Struktur. Sie müssen diese Struktur selbst vor dem Aufruf einrichten. Unterstützt weder Dialogdatenaustausch (DDX) und Code-Assistenten-Unterstützung ist für diese Version verfügbar. Die dritte Version der Funktion funktioniert ähnlich wie auf die erste Version, außer dass es sich um einen Verweis auf verwendet eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) Objekt.
+Die zweite Version der Funktion nimmt einen Verweis auf eine `TIMESTAMP_STRUCT` -Struktur auf. Sie müssen diese Struktur selbst vor dem-Befehl einrichten. Für diese Version ist weder die Unterstützung für den Dialog Datenaustausch (DDX) noch die Unterstützung des Code-Assistenten verfügbar. Die dritte Version der-Funktion funktioniert ähnlich wie die erste Version, mit dem Unterschied, dass Sie einen Verweis auf ein [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt annimmt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die `CTime` Version der Funktion erzwingt den Aufwand für fortgeschrittene verarbeitet und umfasst maximal begrenzt. Wenn Sie eine der folgenden Faktoren ab, zu beschränken finden, verwenden Sie die zweite Version der Funktion. Beachten Sie jedoch das Fehlen des Code-Assistenten und DDX-Unterstützung und die Anforderung, die Sie der Struktur selbst eingerichtet.
+Die `CTime` -Version der-Funktion erzwingt den mehr Aufwand für einige zwischen Verarbeitung und hat einen etwas begrenzten Bereich. Wenn Sie einen dieser Faktoren zu eingeschränkt finden, verwenden Sie die zweite Version der Funktion. Beachten Sie jedoch den fehlenden Code-Assistenten und die DDX-Unterstützung sowie die Anforderung, dass Sie die Struktur selbst einrichten.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [RFX_Text](#rfx_text).
+Siehe [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxdb.h
+**Header:** AFXDB. h
 
 ## <a name="rfx_double"></a>  RFX_Double
 
-Übertragungen **vom Typ double Float** Daten zwischen den Felddatenmembern eine `CRecordset` Geben Sie-Objekt und die Spalten eines Datensatzes für die Datenquelle des ODBC SQL_DOUBLE.
+Überträgt **doppelte float** -Daten zwischen den Felddatenmembern `CRecordset` eines-Objekts und den Spalten eines Datensatzes in der Datenquelle des ODBC-Typs SQL_DOUBLE.
 
 ### <a name="syntax"></a>Syntax
 
@@ -285,25 +285,25 @@ void RFX_Double(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren. Weitere Informationen zu den Vorgängen, `CFieldExchange` die ein-Objekt angeben kann, [finden Sie im Artikeldaten Satz Feld Austausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *value*<br/>
-Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs **doppelte**, stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
+Der im angegebener Datenmember gespeicherte Wert – der Wert, der übertragen werden soll. Bei einer Übertragung von Recordset an eine Datenquelle wird der Wert vom Typ **Double**aus dem angegebenen Datenmember entnommen. Bei einer Übertragung von einer Datenquelle zu einem Recordset wird der Wert im angegebenen Datenmember gespeichert.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [RFX_Text](#rfx_text).
+Siehe [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxdb.h
+**Header:** AFXDB. h
 
 ## <a name="rfx_int"></a>  RFX_Int
 
-Überträgt Ganzzahldaten zwischen den Felddatenmembern eine `CRecordset` -Objekt und die Spalten eines Datensatzes für die Datenquelle des ODBC-Typ SQL_SMALLINT.
+Überträgt ganzzahlige Daten zwischen den Felddatenmembern eines `CRecordset` -Objekts und den Spalten eines Datensatzes in der Datenquelle des ODBC-Typs SQL_SMALLINT.
 
 ### <a name="syntax"></a>Syntax
 
@@ -317,25 +317,25 @@ void RFX_Int(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren. Weitere Informationen zu den Vorgängen, `CFieldExchange` die ein-Objekt angeben kann, [finden Sie im Artikeldaten Satz Feld Austausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *value*<br/>
-Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs **Int**, stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
+Der im angegebener Datenmember gespeicherte Wert – der Wert, der übertragen werden soll. Bei einer Übertragung von Recordset an eine Datenquelle wird der Wert vom Typ " **int**" aus dem angegebenen Datenmember entnommen. Bei einer Übertragung von einer Datenquelle zu einem Recordset wird der Wert im angegebenen Datenmember gespeichert.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [RFX_Text](#rfx_text).
+Siehe [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxdb.h
+**Header:** AFXDB. h
 
 ## <a name="rfx_long"></a>  RFX_Long
 
-Überträgt long integer-Wert-Daten zwischen den Felddatenmembern eine `CRecordset` -Objekt und die Spalten eines Datensatzes für die Datenquelle des ODBC-Typ SQL_INTEGER.
+Überträgt lange ganzzahlige Daten zwischen den Felddatenmembern eines `CRecordset` -Objekts und den Spalten eines Datensatzes in der Datenquelle des ODBC-Typs SQL_INTEGER.
 
 ### <a name="syntax"></a>Syntax
 
@@ -350,25 +350,25 @@ value );
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren. Weitere Informationen zu den Vorgängen, `CFieldExchange` die ein-Objekt angeben kann, [finden Sie im Artikeldaten Satz Feld Austausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *value*<br/>
-Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs **lange**, stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
+Der im angegebener Datenmember gespeicherte Wert – der Wert, der übertragen werden soll. Bei einer Übertragung von Recordset an eine Datenquelle wird der Wert des Typs **Long**aus dem angegebenen Datenmember entnommen. Bei einer Übertragung von einer Datenquelle zu einem Recordset wird der Wert im angegebenen Datenmember gespeichert.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [RFX_Text](#rfx_text).
+Siehe [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxdb.h
+**Header:** AFXDB. h
 
 ## <a name="rfx_longbinary"></a>  RFX_LongBinary
 
-Überträgt Daten binary large Object (BLOB), die mit Klasse [CLongBinary](clongbinary-class.md) zwischen den Felddatenmembern eine `CRecordset` -Objekt und die Spalten eines Datensatzes für die Datenquelle von ODBC, geben Sie SQL_LONGVARBINARY oder SQL_LONGVARCHAR.
+Überträgt Binary Large Object (BLOB)-Daten mithilfe der [CLongBinary](clongbinary-class.md) -Klasse zwischen den Felddatenmembern eines `CRecordset` -Objekts und den Spalten eines Datensatzes in der Datenquelle des ODBC-Typs SQL_LONGVARBINARY oder SQL_LONGVARCHAR.
 
 ### <a name="syntax"></a>Syntax
 
@@ -382,25 +382,25 @@ void RFX_LongBinary(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren. Weitere Informationen zu den Vorgängen, `CFieldExchange` die ein-Objekt angeben kann, [finden Sie im Artikeldaten Satz Feld Austausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *value*<br/>
-Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs `CLongBinary`, stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
+Der im angegebener Datenmember gespeicherte Wert – der Wert, der übertragen werden soll. Bei einer Übertragung von Recordset an eine Datenquelle wird der Wert des `CLongBinary`Typs aus dem angegebenen Datenmember entnommen. Bei einer Übertragung von einer Datenquelle zu einem Recordset wird der Wert im angegebenen Datenmember gespeichert.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [RFX_Text](#rfx_text).
+Siehe [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxdb.h
+**Header:** AFXDB. h
 
 ## <a name="rfx_single"></a>  RFX_Single
 
-Überträgt Gleitkommadaten zwischen den Felddatenmembern eine `CRecordset` -Objekt und die Spalten eines Datensatzes für die Datenquelle des ODBC-Typ SQL_REAL.
+Überträgt Gleit Komma Daten zwischen den Felddatenmembern eines `CRecordset` -Objekts und den Spalten eines Datensatzes in der Datenquelle des ODBC-Typs SQL_REAL.
 
 ### <a name="syntax"></a>Syntax
 
@@ -414,25 +414,25 @@ void RFX_Single(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren. Weitere Informationen zu den Vorgängen, `CFieldExchange` die ein-Objekt angeben kann, [finden Sie im Artikeldaten Satz Feld Austausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *value*<br/>
-Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs **"float"**, stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
+Der im angegebener Datenmember gespeicherte Wert – der Wert, der übertragen werden soll. Bei einer Übertragung von Recordset an eine Datenquelle wird der Wert des Typs **float**aus dem angegebenen Datenmember entnommen. Bei einer Übertragung von einer Datenquelle zu einem Recordset wird der Wert im angegebenen Datenmember gespeichert.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [RFX_Text](#rfx_text).
+Siehe [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxdb.h
+**Header:** AFXDB. h
 
 ## <a name="rfx_text"></a>  RFX_Text
 
-Übertragungen `CString` Daten zwischen den Felddatenmembern eine `CRecordset` -Objekt und Spalten eines Datensatzes für die Datenquelle von ODBC zu geben, SQL_LONGVARCHAR SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL oder SQL_NUMERIC.
+Überträgt `CString` Daten zwischen den Felddatenmembern `CRecordset` eines-Objekts und den Spalten eines Datensatzes in der Datenquelle des ODBC-Typs SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL oder SQL_NUMERIC.
 
 ### <a name="syntax"></a>Syntax
 
@@ -449,30 +449,30 @@ void RFX_Text(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse `CFieldExchange`. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein Objekt der Klasse `CFieldExchange`. Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren. Weitere Informationen zu den Vorgängen, `CFieldExchange` die ein-Objekt angeben kann, [finden Sie im Artikeldaten Satz Feld Austausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *value*<br/>
-Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs `CString`, stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
+Der im angegebener Datenmember gespeicherte Wert – der Wert, der übertragen werden soll. Bei einer Übertragung von Recordset an eine Datenquelle wird der Wert des `CString`Typs aus dem angegebenen Datenmember entnommen. Bei einer Übertragung von einer Datenquelle zu einem Recordset wird der Wert im angegebenen Datenmember gespeichert.
 
 *nMaxLength*<br/>
-Die maximal zulässige Länge der Zeichenfolge oder Array übertragen werden. Der Standardwert von *nMaxLength* ist 255. Zulässige Werte sind 1 bis INT_MAX). Das Framework ordnet diese Menge an Speicherplatz für die Daten an. Übergeben Sie einen Wert, der groß genug für das größte Datenelement, die, das Sie erwarten, für eine optimale Leistung.
+Die maximal zulässige Länge der übertragenen Zeichenfolge oder des Arrays. Der Standardwert von *nMaxLength* ist 255. Zulässige Werte sind 1 bis INT_MAX). Das Framework ordnet diese Menge an Speicherplatz für die Daten zu. Um die optimale Leistung zu erzielen, übergeben Sie einen Wert, der groß genug ist, um das größte erwartete Datenelement zu verarbeiten
 
 *nColumnType*<br/>
-Wird hauptsächlich für Parameter verwendet. Eine ganze Zahl, die den Datentyp des Parameters angibt. Der Typ ist ein ODBC-Datentyp des Formulars **SQL_XXX**.
+Wird hauptsächlich für Parameter verwendet. Eine ganze Zahl, die den Datentyp des Parameters angibt. Der Typ ist ein ODBC-Datentyp der Form **SQL_XXX**.
 
-*nScale*<br/>
-Gibt die Dezimalstellen für Werte vom ODBC-Typ SQL_DECIMAL oder SQL_NUMERIC an. *nScale* ist nur nützlich, wenn Parameterwerte festlegen. Weitere Informationen finden Sie im Thema "Genauigkeit, Dezimalstellen, Länge und Größe" in Anhang D des der *ODBC SDK-Programmierreferenz*.
+*nskala*<br/>
+Gibt die Skala für Werte des ODBC-Typs "SQL_DECIMAL" oder "SQL_NUMERIC" an. *nscale* ist nur nützlich, wenn Parameterwerte festgelegt werden. Weitere Informationen finden Sie im Thema "Genauigkeit, Skalierung, Länge und Anzeige Größe" in Anhang D der *ODBC SDK-Programmier Referenz*.
 
 ### <a name="remarks"></a>Hinweise
 
-Daten in der Datenquelle für alle diese Typen zugeordnet ist, in und aus `CString` im Recordset.
+Die Daten in der Datenquelle aller dieser Typen werden dem Recordset zugeordnet und `CString` werden aus diesem zugeordnet.
 
 ### <a name="example"></a>Beispiel
 
-Dieses Beispiel zeigt mehrere Aufrufe `RFX_Text`. Beachten Sie auch die beiden Aufrufe von `CFieldExchange::SetFieldType`. Für Parameter müssen Sie den Aufruf schreiben `SetFieldType` und den RFX-Aufruf abgeschlossen. Der Aufruf der Ausgabe-Spalte und die zugehörigen RFX-Aufrufe werden normalerweise von einem Code-Assistenten geschrieben.
+In diesem Beispiel werden mehrere Aufrufe `RFX_Text`von gezeigt. Beachten Sie auch die beiden Aufrufe `CFieldExchange::SetFieldType`von. Für Parameter müssen Sie den `SetFieldType` -und den zugehörigen RFX-Aufrufvorgang schreiben. Der Aufruf der Ausgabe Spalte und die zugehörigen RFX-Aufrufe werden normalerweise von einem Code-Assistenten geschrieben.
 
 ```cpp
 void CCustomer::DoFieldExchange(CFieldExchange* pFX)
@@ -494,11 +494,11 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxdb.h
+**Header:** AFXDB. h
 
 ## <a name="rfx_binary_bulk"></a>  RFX_Binary_Bulk
 
-Überträgt Sie mehrere Zeilen mit Byte-Daten aus einer Spalte mit einer ODBC-Datenquelle an einen entsprechenden Array in eine `CRecordset`-abgeleitetes Objekt.
+Überträgt mehrere Zeilen von Byte Daten aus einer Spalte einer ODBC-Datenquelle an ein entsprechendes Array in einem `CRecordset`von abgeleiteten Objekt.
 
 ### <a name="syntax"></a>Syntax
 
@@ -514,42 +514,42 @@ void RFX_Binary_Bulk(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein [CFieldExchange](cfieldexchange-class.md) -Objekt. Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren. Weitere Informationen finden Sie im Artikel [Daten Satz Feld Austausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *prgByteVals*<br/>
-Ein Zeiger auf ein Array von Bytewerten. Dieses Array speichert die Daten aus der Datenquelle, die auf das Recordset übertragen werden sollen.
+Ein Zeiger auf ein Array von Byte Werten. Dieses Array speichert die Daten, die aus der Datenquelle in das Recordset übertragen werden sollen.
 
 *prgLengths*<br/>
-Ein Zeiger auf ein Array von langen ganzen Zahlen. Dieses Array speichert die Länge in Bytes der jeden Wert in das Array verweist *PrgByteVals*. Beachten Sie, dass der Wert SQL_NULL_DATA gespeichert, wenn das entsprechende Datenelement einen Nullwert enthält. Weitere Informationen finden Sie unter der ODBC-API-Funktion `SQLBindCol` in die *ODBC SDK-Programmierreferenz*.
+Ein Zeiger auf ein Array von langen ganzen Zahlen. Dieses Array speichert die Länge der einzelnen Werte im Array, auf die von *prgbytevals*verwiesen wird, in Byte. Beachten Sie, dass der Wert SQL_NULL_DATA gespeichert wird, wenn das entsprechende Datenelement einen NULL-Wert enthält. Weitere Informationen finden Sie in der ODBC-API `SQLBindCol` -Funktion in der *ODBC SDK-Programmier Referenz*.
 
 *nMaxLength*<br/>
-Die maximal zulässige Länge der Werte im Array verweist gespeicherten *PrgByteVals*. Übergeben Sie einen Wert, der groß genug für das größte Datenelement, die, das Sie erwarten, um sicherzustellen dass Daten nicht abgeschnitten werden.
+Die maximal zulässige Länge der im Array gespeicherten Werte, auf die durch *prgbytevals*verwiesen wird. Um sicherzustellen, dass die Daten nicht abgeschnitten werden, übergeben Sie einen Wert, der groß genug ist, um das größte erwartete Datenelement zu verarbeiten.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Datenquellenspalte haben einen ODBC-Typ SQL_BINARY, SQL_VARBINARY oder SQL_LONGVARBINARY. Das Recordset muss einen Feld-Datenmember des Typs Zeiger auf BYTE definieren.
+Die Datenquellen Spalte kann den ODBC-Typ "SQL_BINARY", "SQL_VARBINARY" oder "SQL_LONGVARBINARY" aufweisen. Das Recordset muss einen Felddatenmember vom Typ "Zeiger auf Byte" definieren.
 
-Wenn Sie initialisieren *PrgByteVals* und *PrgLengths* auf NULL, und klicken Sie dann die Arrays, die beide zeigen auf Größen entspricht der Rowsetgröße automatisch zugeordnet werden.
+Wenn Sie *prgbytevals* und *prglengths* auf Null initialisieren, werden die Arrays, auf die Sie zeigen, automatisch zugeordnet, wobei die Größe der Rowsetgröße entspricht.
 
 > [!NOTE]
->  Massenaustausch überträgt Daten aus der Datenquelle nur zum Recordset-Objekt. Um das Recordset aktualisierbar zu machen, müssen Sie mithilfe der ODBC-API-Funktion `SQLSetPos`.
+>  Der Massendaten Satz Feld Austausch überträgt nur Daten aus der Datenquelle an das Recordset-Objekt. Um das Recordset aktualisierbar zu machen, müssen Sie die ODBC-API- `SQLSetPos`Funktion verwenden.
 
-Weitere Informationen finden Sie in den Artikeln [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) und [Datensatzfeldaustausch (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Weitere Informationen finden Sie in den Artikeln [Recordset: Abrufen von Datensätzen in einem Massen Vorgang (](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) ODBC) und Daten [Satz Feld Austausch (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [RFX_Text_Bulk](#rfx_text_bulk).
+Siehe [RFX_Text_Bulk](#rfx_text_bulk).
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxdb.h
+**Header:** AFXDB. h
 
 ## <a name="rfx_bool_bulk"></a>  RFX_Bool_Bulk
 
-Mehrere Zeilen von booleschen Daten aus einer Spalte mit einer ODBC-Datenquelle übertragen, um einen entsprechenden Array in eine `CRecordset`-abgeleitetes Objekt.
+Überträgt mehrere Zeilen von booleschen Daten aus einer Spalte einer ODBC-Datenquelle an ein entsprechendes Array in einem `CRecordset`von abgeleiteten Objekt.
 
 ### <a name="syntax"></a>Syntax
 
@@ -564,39 +564,39 @@ void RFX_Bool_Bulk(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein [CFieldExchange](cfieldexchange-class.md) -Objekt. Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren. Weitere Informationen finden Sie im Artikel [Daten Satz Feld Austausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *prgBoolVals*<br/>
-Ein Zeiger auf ein Array von Werten für "bool". Dieses Array speichert die Daten aus der Datenquelle, die auf das Recordset übertragen werden sollen.
+Ein Zeiger auf ein Array von booleschen Werten. Dieses Array speichert die Daten, die aus der Datenquelle in das Recordset übertragen werden sollen.
 
 *prgLengths*<br/>
-Ein Zeiger auf ein Array von langen ganzen Zahlen. Dieses Array speichert die Länge in Bytes der jeden Wert in das Array verweist *PrgBoolVals*. Beachten Sie, dass der Wert SQL_NULL_DATA gespeichert, wenn das entsprechende Datenelement einen Nullwert enthält. Weitere Informationen finden Sie unter der ODBC-API-Funktion `SQLBindCol` in die *ODBC SDK-Programmierreferenz*.
+Ein Zeiger auf ein Array von langen ganzen Zahlen. Dieses Array speichert die Länge der einzelnen Werte im Array in Bytes, auf die durch *prgboolvals*verwiesen wird. Beachten Sie, dass der Wert SQL_NULL_DATA gespeichert wird, wenn das entsprechende Datenelement einen NULL-Wert enthält. Weitere Informationen finden Sie in der ODBC-API `SQLBindCol` -Funktion in der *ODBC SDK-Programmier Referenz*.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Datenquellenspalte muss einen ODBC-Typ SQL_BIT haben. Das Recordset muss einen Feld-Datenmember des Typs Zeiger in einen booleschen Wert definieren.
+Die Datenquellen Spalte muss den ODBC-Typ SQL_BIT aufweisen. Das Recordset muss einen Felddatenmember vom Typ Zeiger auf bool definieren.
 
-Wenn Sie initialisieren *PrgBoolVals* und *PrgLengths* auf NULL, und klicken Sie dann die Arrays, die beide zeigen auf Größen entspricht der Rowsetgröße automatisch zugeordnet werden.
+Wenn Sie *prgboolvals* und *prglengths* auf Null initialisieren, werden die Arrays, auf die Sie zeigen, automatisch zugeordnet, wobei die Größe der Rowsetgröße entspricht.
 
 > [!NOTE]
->  Massenaustausch überträgt Daten aus der Datenquelle nur zum Recordset-Objekt. Um das Recordset aktualisierbar zu machen, müssen Sie mithilfe der ODBC-API-Funktion `SQLSetPos`.
+>  Der Massendaten Satz Feld Austausch überträgt nur Daten aus der Datenquelle an das Recordset-Objekt. Um das Recordset aktualisierbar zu machen, müssen Sie die ODBC- `SQLSetPos`API-Funktion verwenden.
 
-Weitere Informationen finden Sie in den Artikeln [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) und [Datensatzfeldaustausch (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Weitere Informationen finden Sie in den Artikeln [Recordset: Abrufen von Datensätzen in einem Massen Vorgang (](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) ODBC) und Daten [Satz Feld Austausch (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [RFX_Text_Bulk](#rfx_text_bulk).
+Siehe [RFX_Text_Bulk](#rfx_text_bulk).
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxdb.h
+**Header:** AFXDB. h
 
 ## <a name="rfx_byte_bulk"></a>  RFX_Byte_Bulk
 
-Mehrere Zeilen von einzelbytes aus einer Spalte mit einer ODBC-Datenquelle übertragen, um einen entsprechenden Array in eine `CRecordset`-abgeleitetes Objekt.
+Überträgt mehrere Zeilen von einzelnen Bytes aus einer Spalte einer ODBC-Datenquelle an ein entsprechendes Array in einem `CRecordset`von abgeleiteten Objekt.
 
 ### <a name="syntax"></a>Syntax
 
@@ -611,39 +611,39 @@ void RFX_Byte_Bulk(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein [CFieldExchange](cfieldexchange-class.md) -Objekt. Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren. Weitere Informationen finden Sie im Artikel [Daten Satz Feld Austausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *prgByteVals*<br/>
-Ein Zeiger auf ein Array von Bytewerten. Dieses Array speichert die Daten aus der Datenquelle, die auf das Recordset übertragen werden sollen.
+Ein Zeiger auf ein Array von Byte Werten. Dieses Array speichert die Daten, die aus der Datenquelle in das Recordset übertragen werden sollen.
 
 *prgLengths*<br/>
-Ein Zeiger auf ein Array von langen ganzen Zahlen. Dieses Array speichert die Länge in Bytes der jeden Wert in das Array verweist *PrgByteVals*. Beachten Sie, dass der Wert SQL_NULL_DATA gespeichert, wenn das entsprechende Datenelement einen Nullwert enthält. Weitere Informationen finden Sie unter der ODBC-API-Funktion `SQLBindCol` in die *ODBC SDK-Programmierreferenz*.
+Ein Zeiger auf ein Array von langen ganzen Zahlen. Dieses Array speichert die Länge der einzelnen Werte im Array, auf die von *prgbytevals*verwiesen wird, in Byte. Beachten Sie, dass der Wert SQL_NULL_DATA gespeichert wird, wenn das entsprechende Datenelement einen NULL-Wert enthält. Weitere Informationen finden Sie in der ODBC-API `SQLBindCol` -Funktion in der *ODBC SDK-Programmier Referenz*.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Datenquellenspalte muss einen ODBC-Typ SQL_TINYINT haben. Das Recordset muss einen Feld-Datenmember des Typs Zeiger auf BYTE definieren.
+Die Datenquellen Spalte muss den ODBC-Typ SQL_TINYINT aufweisen. Das Recordset muss einen Felddatenmember vom Typ "Zeiger auf Byte" definieren.
 
-Wenn Sie initialisieren *PrgByteVals* und *PrgLengths* auf NULL, und klicken Sie dann die Arrays, die beide zeigen auf Größen entspricht der Rowsetgröße automatisch zugeordnet werden.
+Wenn Sie *prgbytevals* und *prglengths* auf Null initialisieren, werden die Arrays, auf die Sie zeigen, automatisch zugeordnet, wobei die Größe der Rowsetgröße entspricht.
 
 > [!NOTE]
->  Massenaustausch überträgt Daten aus der Datenquelle nur zum Recordset-Objekt. Um das Recordset aktualisierbar zu machen, müssen Sie mithilfe der ODBC-API-Funktion `SQLSetPos`.
+>  Der Massendaten Satz Feld Austausch überträgt nur Daten aus der Datenquelle an das Recordset-Objekt. Um das Recordset aktualisierbar zu machen, müssen Sie die ODBC- `SQLSetPos`API-Funktion verwenden.
 
-Weitere Informationen finden Sie in den Artikeln [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) und [Datensatzfeldaustausch (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Weitere Informationen finden Sie in den Artikeln [Recordset: Abrufen von Datensätzen in einem Massen Vorgang (](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) ODBC) und Daten [Satz Feld Austausch (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [RFX_Text_Bulk](#rfx_text_bulk).
+Siehe [RFX_Text_Bulk](#rfx_text_bulk).
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxdb.h
+**Header:** AFXDB. h
 
 ## <a name="rfx_date_bulk"></a>  RFX_Date_Bulk
 
-Übertragen mehrerer TIMESTAMP_STRUCT Datenzeilen aus einer Spalte mit einer ODBC-Datenquelle in einen entsprechenden Array in eine `CRecordset`-abgeleitetes Objekt.
+Überträgt mehrere Zeilen von TIMESTAMP_STRUCT-Daten aus einer Spalte einer ODBC-Datenquelle an ein entsprechendes Array in `CRecordset`einem von abgeleiteten Objekt.
 
 ### <a name="syntax"></a>Syntax
 
@@ -658,39 +658,39 @@ void RFX_Date_Bulk(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein [CFieldExchange](cfieldexchange-class.md) -Objekt. Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren. Weitere Informationen finden Sie im Artikel [Daten Satz Feld Austausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *prgTSVals*<br/>
-Ein Zeiger auf ein Array von TIMESTAMP_STRUCT-Werten. Dieses Array speichert die Daten aus der Datenquelle, die auf das Recordset übertragen werden sollen. Weitere Informationen zu den TIMESTAMP_STRUCT-Datentyp, finden Sie im Thema "C-Datentypen" in Anhang D des der *ODBC SDK-Programmierreferenz*.
+Ein Zeiger auf ein Array von TIMESTAMP_STRUCT-Werten. Dieses Array speichert die Daten, die aus der Datenquelle in das Recordset übertragen werden sollen. Weitere Informationen zum TIMESTAMP_STRUCT-Datentyp finden Sie im Thema "C-Datentypen" in Anhang D der *ODBC SDK-Programmier Referenz*.
 
 *prgLengths*<br/>
-Ein Zeiger auf ein Array von langen ganzen Zahlen. Dieses Array speichert die Länge in Bytes der jeden Wert in das Array verweist *PrgTSVals*. Beachten Sie, dass der Wert SQL_NULL_DATA gespeichert, wenn das entsprechende Datenelement einen Nullwert enthält. Weitere Informationen finden Sie unter der ODBC-API-Funktion `SQLBindCol` in die *ODBC SDK-Programmierreferenz*.
+Ein Zeiger auf ein Array von langen ganzen Zahlen. Dieses Array speichert die Länge der einzelnen Werte im Array in Bytes, auf die durch *prgtvals*verwiesen wird. Beachten Sie, dass der Wert SQL_NULL_DATA gespeichert wird, wenn das entsprechende Datenelement einen NULL-Wert enthält. Weitere Informationen finden Sie in der ODBC-API `SQLBindCol` -Funktion in der *ODBC SDK-Programmier Referenz*.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Datenquellenspalte haben einen ODBC-Datentyp, SQL_DATE, SQL_TIME oder SQL_TIMESTAMP. Das Recordset muss einen Feld-Datenmember des Typs Zeiger zu TIMESTAMP_STRUCT definieren.
+Die Datenquellen Spalte kann den ODBC-Typ "SQL_DATE", "SQL_TIME" oder "SQL_TIMESTAMP" aufweisen. Das Recordset muss einen Felddatenmember vom Typ "Zeiger auf TIMESTAMP_STRUCT" definieren.
 
-Wenn Sie initialisieren *PrgTSVals* und *PrgLengths* auf NULL, und klicken Sie dann die Arrays, die beide zeigen auf Größen entspricht der Rowsetgröße automatisch zugeordnet werden.
+Wenn Sie *prgzvals* und *prglengths* auf Null initialisieren, werden die Arrays, auf die Sie zeigen, automatisch zugeordnet, wobei die Größe der Rowsetgröße entspricht.
 
 > [!NOTE]
->  Massenaustausch überträgt Daten aus der Datenquelle nur zum Recordset-Objekt. Um das Recordset aktualisierbar zu machen, müssen Sie mithilfe der ODBC-API-Funktion `SQLSetPos`.
+>  Der Massendaten Satz Feld Austausch überträgt nur Daten aus der Datenquelle an das Recordset-Objekt. Um das Recordset aktualisierbar zu machen, müssen Sie die ODBC- `SQLSetPos`API-Funktion verwenden.
 
-Weitere Informationen finden Sie in den Artikeln [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) und [Datensatzfeldaustausch (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Weitere Informationen finden Sie in den Artikeln [Recordset: Abrufen von Datensätzen in einem Massen Vorgang (](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) ODBC) und Daten [Satz Feld Austausch (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [RFX_Text_Bulk](#rfx_text_bulk).
+Siehe [RFX_Text_Bulk](#rfx_text_bulk).
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxdb.h
+**Header:** AFXDB. h
 
 ## <a name="rfx_double_bulk"></a>  RFX_Double_Bulk
 
-Übertragen mehrerer Datenzeilen mit doppelter Genauigkeit, Gleitkomma aus einer Spalte mit einer ODBC-Datenquelle in einen entsprechenden Array in eine `CRecordset`-abgeleitetes Objekt.
+Überträgt mehrere Zeilen mit Gleit Komma Daten mit doppelter Genauigkeit aus einer Spalte einer ODBC-Datenquelle in ein entsprechendes Array in einem `CRecordset`von abgeleiteten Objekt.
 
 ### <a name="syntax"></a>Syntax
 
@@ -705,39 +705,39 @@ void RFX_Double_Bulk(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein [CFieldExchange](cfieldexchange-class.md) -Objekt. Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren. Weitere Informationen finden Sie im Artikel [Daten Satz Feld Austausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *prgDblVals*<br/>
-Ein Zeiger auf ein Array von **doppelte** Werte. Dieses Array speichert die Daten aus der Datenquelle, die auf das Recordset übertragen werden sollen.
+Ein Zeiger auf ein Array von **Double** -Werten. Dieses Array speichert die Daten, die aus der Datenquelle in das Recordset übertragen werden sollen.
 
 *prgLengths*<br/>
-Ein Zeiger auf ein Array von langen ganzen Zahlen. Dieses Array speichert die Länge in Bytes der jeden Wert in das Array verweist *PrgDblVals*. Beachten Sie, dass der Wert SQL_NULL_DATA gespeichert, wenn das entsprechende Datenelement einen Nullwert enthält. Weitere Informationen finden Sie unter der ODBC-API-Funktion `SQLBindCol` in die *ODBC SDK-Programmierreferenz*.
+Ein Zeiger auf ein Array von langen ganzen Zahlen. Dieses Array speichert die Länge der einzelnen Werte im Array in Bytes, auf die durch *prdsblvals*verwiesen wird. Beachten Sie, dass der Wert SQL_NULL_DATA gespeichert wird, wenn das entsprechende Datenelement einen NULL-Wert enthält. Weitere Informationen finden Sie in der ODBC-API `SQLBindCol` -Funktion in der *ODBC SDK-Programmier Referenz*.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Datenquellenspalte muss einen Typ ODBC SQL_DOUBLE haben. Das Recordset muss einen Feld-Datenmember des Typs Zeiger zu definieren **doppelte**.
+Die Datenquellen Spalte muss den ODBC-Typ SQL_DOUBLE aufweisen. Das Recordset muss einen Felddatenmember vom Typ Zeiger auf **Double**definieren.
 
-Wenn Sie initialisieren *PrgDblVals* und *PrgLengths* auf NULL, und klicken Sie dann die Arrays, die beide zeigen auf Größen entspricht der Rowsetgröße automatisch zugeordnet werden.
+Wenn Sie *prdsblvals* und *prglengths* auf Null initialisieren, werden die Arrays, auf die Sie zeigen, automatisch zugeordnet, wobei die Größe der Rowsetgröße entspricht.
 
 > [!NOTE]
->  Massenaustausch überträgt Daten aus der Datenquelle nur zum Recordset-Objekt. Um das Recordset aktualisierbar zu machen, müssen Sie mithilfe der ODBC-API-Funktion `SQLSetPos`.
+>  Der Massendaten Satz Feld Austausch überträgt nur Daten aus der Datenquelle an das Recordset-Objekt. Um das Recordset aktualisierbar zu machen, müssen Sie die ODBC- `SQLSetPos`API-Funktion verwenden.
 
-Weitere Informationen finden Sie in den Artikeln [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) und [Datensatzfeldaustausch (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Weitere Informationen finden Sie in den Artikeln [Recordset: Abrufen von Datensätzen in einem Massen Vorgang (](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) ODBC) und Daten [Satz Feld Austausch (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [RFX_Text_Bulk](#rfx_text_bulk).
+Siehe [RFX_Text_Bulk](#rfx_text_bulk).
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxdb.h
+**Header:** AFXDB. h
 
 ## <a name="rfx_int_bulk"></a>  RFX_Int_Bulk
 
-Überträgt Ganzzahldaten zwischen den Felddatenmembern eine `CRecordset` -Objekt und die Spalten eines Datensatzes für die Datenquelle des ODBC-Typ SQL_SMALLINT.
+Überträgt ganzzahlige Daten zwischen den Felddatenmembern eines `CRecordset` -Objekts und den Spalten eines Datensatzes in der Datenquelle des ODBC-Typs SQL_SMALLINT.
 
 ### <a name="syntax"></a>Syntax
 
@@ -751,25 +751,25 @@ void RFX_Int(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren. Weitere Informationen zu den Vorgängen, `CFieldExchange` die ein-Objekt angeben kann, [finden Sie im Artikeldaten Satz Feld Austausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *value*<br/>
-Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs **Int**, stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
+Der im angegebener Datenmember gespeicherte Wert – der Wert, der übertragen werden soll. Bei einer Übertragung von Recordset an eine Datenquelle wird der Wert vom Typ " **int**" aus dem angegebenen Datenmember entnommen. Bei einer Übertragung von einer Datenquelle zu einem Recordset wird der Wert im angegebenen Datenmember gespeichert.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [RFX_Text](#rfx_text).
+Siehe [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxdb.h
+**Header:** AFXDB. h
 
 ## <a name="rfx_long_bulk"></a>  RFX_Long_Bulk
 
-Übertragen mehrerer Datenzeilen long integer-Wert aus einer Spalte mit einer ODBC-Datenquelle in einen entsprechenden Array in eine `CRecordset`-abgeleitetes Objekt.
+Überträgt mehrere Zeilen mit langen ganzzahligen Daten aus einer Spalte einer ODBC-Datenquelle an ein entsprechendes Array `CRecordset`in einem von abgeleiteten Objekt.
 
 ### <a name="syntax"></a>Syntax
 
@@ -784,39 +784,39 @@ void RFX_Long_Bulk(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein [CFieldExchange](cfieldexchange-class.md) -Objekt. Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren. Weitere Informationen finden Sie im Artikel [Daten Satz Feld Austausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *prgLongVals*<br/>
-Ein Zeiger auf ein Array von langen ganzen Zahlen. Dieses Array speichert die Daten aus der Datenquelle, die auf das Recordset übertragen werden sollen.
+Ein Zeiger auf ein Array von langen ganzen Zahlen. Dieses Array speichert die Daten, die aus der Datenquelle in das Recordset übertragen werden sollen.
 
 *prgLengths*<br/>
-Ein Zeiger auf ein Array von langen ganzen Zahlen. Dieses Array speichert die Länge in Bytes der jeden Wert in das Array verweist *PrgLongVals*. Beachten Sie, dass der Wert SQL_NULL_DATA gespeichert, wenn das entsprechende Datenelement einen Nullwert enthält. Weitere Informationen finden Sie unter der ODBC-API-Funktion `SQLBindCol` in die *ODBC SDK-Programmierreferenz*.
+Ein Zeiger auf ein Array von langen ganzen Zahlen. Dieses Array speichert die Länge der einzelnen Werte im Array in Bytes, auf die von *prglongvals*verwiesen wird. Beachten Sie, dass der Wert SQL_NULL_DATA gespeichert wird, wenn das entsprechende Datenelement einen NULL-Wert enthält. Weitere Informationen finden Sie in der ODBC-API `SQLBindCol` -Funktion in der *ODBC SDK-Programmier Referenz*.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Datenquellenspalte muss einen ODBC-Typ SQL_INTEGER haben. Das Recordset muss einen Feld-Datenmember des Typs Zeiger zu definieren **lange**.
+Die Datenquellen Spalte muss den ODBC-Typ SQL_INTEGER aufweisen. Das Recordset muss einen Felddatenmember vom Typ "Zeiger auf **Long**" definieren.
 
-Wenn Sie initialisieren *PrgLongVals* und *PrgLengths* auf NULL, und klicken Sie dann die Arrays, die beide zeigen auf Größen entspricht der Rowsetgröße automatisch zugeordnet werden.
+Wenn Sie *prglongvals* und *prglengths* auf Null initialisieren, werden die Arrays, auf die Sie zeigen, automatisch zugeordnet, wobei die Größe der Rowsetgröße entspricht.
 
 > [!NOTE]
->  Massenaustausch überträgt Daten aus der Datenquelle nur zum Recordset-Objekt. Um das Recordset aktualisierbar zu machen, müssen Sie mithilfe der ODBC-API-Funktion `SQLSetPos`.
+>  Der Massendaten Satz Feld Austausch überträgt nur Daten aus der Datenquelle an das Recordset-Objekt. Um das Recordset aktualisierbar zu machen, müssen Sie die ODBC- `SQLSetPos`API-Funktion verwenden.
 
-Weitere Informationen finden Sie in den Artikeln [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) und [Datensatzfeldaustausch (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Weitere Informationen finden Sie in den Artikeln [Recordset: Abrufen von Datensätzen in einem Massen Vorgang (](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) ODBC) und Daten [Satz Feld Austausch (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [RFX_Text_Bulk](#rfx_text_bulk).
+Siehe [RFX_Text_Bulk](#rfx_text_bulk).
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxdb.h
+**Header:** AFXDB. h
 
 ## <a name="rfx_single_bulk"></a>  RFX_Single_Bulk
 
-Übertragen mehrerer Gleitkomma Datenzeilen aus einer Spalte mit einer ODBC-Datenquelle in einen entsprechenden Array in eine `CRecordset`-abgeleitetes Objekt.
+Überträgt mehrere Zeilen von Gleit Komma Daten aus einer Spalte einer ODBC-Datenquelle in ein entsprechendes Array in einem `CRecordset`von abgeleiteten Objekt.
 
 ### <a name="syntax"></a>Syntax
 
@@ -831,39 +831,39 @@ void RFX_Single_Bulk(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein [CFieldExchange](cfieldexchange-class.md) -Objekt. Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren. Weitere Informationen finden Sie im Artikel [Daten Satz Feld Austausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *prgFltVals*<br/>
-Ein Zeiger auf ein Array von **"float"** Werte. Dieses Array speichert die Daten aus der Datenquelle, die auf das Recordset übertragen werden sollen.
+Ein Zeiger auf ein Array von **float** -Werten. Dieses Array speichert die Daten, die aus der Datenquelle in das Recordset übertragen werden sollen.
 
 *prgLengths*<br/>
-Ein Zeiger auf ein Array von langen ganzen Zahlen. Dieses Array speichert die Länge in Bytes der jeden Wert in das Array verweist *PrgFltVals*. Beachten Sie, dass der Wert SQL_NULL_DATA gespeichert, wenn das entsprechende Datenelement einen Nullwert enthält. Weitere Informationen finden Sie unter der ODBC-API-Funktion `SQLBindCol` in die *ODBC SDK-Programmierreferenz*.
+Ein Zeiger auf ein Array von langen ganzen Zahlen. Dieses Array speichert die Länge der einzelnen Werte im Array in Bytes, auf die von *prgfltvals*verwiesen wird. Beachten Sie, dass der Wert SQL_NULL_DATA gespeichert wird, wenn das entsprechende Datenelement einen NULL-Wert enthält. Weitere Informationen finden Sie in der ODBC-API `SQLBindCol` -Funktion in der *ODBC SDK-Programmier Referenz*.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Datenquellenspalte muss einen ODBC-Typ SQL_REAL haben. Das Recordset muss einen Feld-Datenmember des Typs Zeiger zu definieren **"float"**.
+Die Datenquellen Spalte muss den ODBC-Typ SQL_REAL aufweisen. Das Recordset muss einen Felddatenmember vom Typ Zeiger auf **float**definieren.
 
-Wenn Sie initialisieren *PrgFltVals* und *PrgLengths* auf NULL, und klicken Sie dann die Arrays, die beide zeigen auf Größen entspricht der Rowsetgröße automatisch zugeordnet werden.
+Wenn Sie *prgfltvals* und *prglengths* auf Null initialisieren, werden die Arrays, auf die Sie zeigen, automatisch zugeordnet, wobei die Größe der Rowsetgröße entspricht.
 
 > [!NOTE]
->  Massenaustausch überträgt Daten aus der Datenquelle nur zum Recordset-Objekt. Um das Recordset aktualisierbar zu machen, müssen Sie mithilfe der ODBC-API-Funktion `SQLSetPos`.
+>  Der Massendaten Satz Feld Austausch überträgt nur Daten aus der Datenquelle an das Recordset-Objekt. Um das Recordset aktualisierbar zu machen, müssen Sie die ODBC- `SQLSetPos`API-Funktion verwenden.
 
-Weitere Informationen finden Sie in den Artikeln [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) und [Datensatzfeldaustausch (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Weitere Informationen finden Sie in den Artikeln [Recordset: Abrufen von Datensätzen in einem Massen Vorgang (](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) ODBC) und Daten [Satz Feld Austausch (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [RFX_Text_Bulk](#rfx_text_bulk).
+Siehe [RFX_Text_Bulk](#rfx_text_bulk).
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxdb.h
+**Header:** AFXDB. h
 
 ## <a name="rfx_text_bulk"></a>  RFX_Text_Bulk
 
-Überträgt Sie mehrere Zeilen mit Daten aus einer Spalte mit einer ODBC-Datenquelle an einen entsprechenden Array in eine `CRecordset`-abgeleitetes Objekt.
+Überträgt mehrere Zeilen von Zeichendaten aus einer Spalte einer ODBC-Datenquelle an ein entsprechendes Array in einem `CRecordset`von abgeleiteten Objekt.
 
 ### <a name="syntax"></a>Syntax
 
@@ -879,34 +879,34 @@ void RFX_Text_Bulk(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein [CFieldExchange](cfieldexchange-class.md) -Objekt. Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren. Weitere Informationen finden Sie im Artikel [Daten Satz Feld Austausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *prgStrVals*<br/>
-Ein Zeiger auf ein Array von LPSTR-Werten. Dieses Array speichert die Daten aus der Datenquelle, die auf das Recordset übertragen werden sollen. Beachten Sie, dass mit der aktuellen Version von ODBC, diese Werte nicht Unicode.
+Ein Zeiger auf ein Array von LPSTR-Werten. Dieses Array speichert die Daten, die aus der Datenquelle in das Recordset übertragen werden sollen. Beachten Sie, dass diese Werte mit der aktuellen Version von ODBC nicht Unicode sein können.
 
 *prgLengths*<br/>
-Ein Zeiger auf ein Array von langen ganzen Zahlen. Dieses Array speichert die Länge in Bytes der jeden Wert in das Array verweist *PrgStrVals*. Diese Länge schließt abschließendes null-Zeichen. Beachten Sie, dass der Wert SQL_NULL_DATA gespeichert, wenn das entsprechende Datenelement einen Nullwert enthält. Weitere Informationen finden Sie unter der ODBC-API-Funktion `SQLBindCol` in die *ODBC SDK-Programmierreferenz*.
+Ein Zeiger auf ein Array von langen ganzen Zahlen. Dieses Array speichert die Länge der einzelnen Werte im Array in Bytes, auf die durch *prgstrauvals*verwiesen wird. Diese Länge schließt das NULL-Beendigungs Zeichen aus. Beachten Sie, dass der Wert SQL_NULL_DATA gespeichert wird, wenn das entsprechende Datenelement einen NULL-Wert enthält. Weitere Informationen finden Sie in der ODBC-API `SQLBindCol` -Funktion in der *ODBC SDK-Programmier Referenz*.
 
 *nMaxLength*<br/>
-Die maximal zulässige Länge der Werte im Array verweist gespeicherten *PrgStrVals*, einschließlich des Zeichens null-Terminierung. Übergeben Sie einen Wert, der groß genug für das größte Datenelement, die, das Sie erwarten, um sicherzustellen dass Daten nicht abgeschnitten werden.
+Die maximal zulässige Länge der im Array gespeicherten Werte, auf die durch *prgstranvals*verwiesen wird, einschließlich des NULL-Beendigungs Zeichens. Um sicherzustellen, dass die Daten nicht abgeschnitten werden, übergeben Sie einen Wert, der groß genug ist, um das größte erwartete Datenelement zu verarbeiten.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Datenquellenspalte haben einen ODBC-Datentyp SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL oder SQL_NUMERIC. Das Recordset muss es sich um ein Feld-Datenmember vom Typ LPSTR definieren.
+Die Datenquellen Spalte kann den ODBC-Typ SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL oder SQL_NUMERIC aufweisen. Das Recordset muss einen Felddatenmember des Typs LPSTR definieren.
 
-Wenn Sie initialisieren *PrgStrVals* und *PrgLengths* auf NULL, und klicken Sie dann die Arrays, die beide zeigen auf Größen entspricht der Rowsetgröße automatisch zugeordnet werden.
+Wenn Sie *prgstrauvals* und *prglengths* auf Null initialisieren, werden die Arrays, auf die Sie zeigen, automatisch zugeordnet, wobei die Größe der Rowsetgröße entspricht.
 
 > [!NOTE]
->  Massenaustausch überträgt Daten aus der Datenquelle nur zum Recordset-Objekt. Um das Recordset aktualisierbar zu machen, müssen Sie mithilfe der ODBC-API-Funktion `SQLSetPos`.
+>  Der Massendaten Satz Feld Austausch überträgt nur Daten aus der Datenquelle an das Recordset-Objekt. Um das Recordset aktualisierbar zu machen, müssen Sie die ODBC- `SQLSetPos`API-Funktion verwenden.
 
-Weitere Informationen finden Sie in den Artikeln [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) und [Datensatzfeldaustausch (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Weitere Informationen finden Sie in den Artikeln [Recordset: Abrufen von Datensätzen in einem Massen Vorgang (](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) ODBC) und Daten [Satz Feld Austausch (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Beispiel
 
-Sie müssen manuell Aufrufe schreiben, Ihre `DoBulkFieldExchange` außer Kraft setzen. Dieses Beispiel zeigt einen Aufruf von `RFX_Text_Bulk`, sowie der Aufruf von `RFX_Long_Bulk`, für die Datenübertragung. Diese Aufrufe werden durch einen Aufruf von vorangestellt [CFieldExchange::](CFieldExchange::SetFieldType.md). Beachten Sie, dass für Parameter, die RFX-Funktionen, anstatt die Bulk-RFX-Funktionen aufgerufen werden muss.
+Sie müssen Anrufe manuell in Ihre `DoBulkFieldExchange` außer Kraft Setzung schreiben. In diesem Beispiel wird ein- `RFX_Text_Bulk`und ein- `RFX_Long_Bulk`Rückruf für die Datenübertragung gezeigt. Diesen aufrufen wird ein Aufruf von [CFieldExchange:: SetFieldType](CFieldExchange::SetFieldType.md)vorangestellt. Beachten Sie, dass Sie für Parameter die RFX-Funktionen anstelle der Bulk-RFX-Funktionen aufzurufen müssen.
 
 ```cpp
 void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
@@ -925,11 +925,11 @@ void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxdb.h
+**Header:** AFXDB. h
 
 ## <a name="dfx_binary"></a>  DFX_Binary
 
-Überträgt Arrays von Bytes zwischen den Felddatenmembern eine [CDaoRecordset](cdaorecordset-class.md) -Objekt und die Spalten eines Datensatzes in der Datenquelle.
+Überträgt Byte Arrays zwischen den Felddatenmembern eines [CDaoRecordset](cdaorecordset-class.md) -Objekts und den Spalten eines Datensatzes in der Datenquelle.
 
 ### <a name="syntax"></a>Syntax
 
@@ -945,30 +945,30 @@ void AFXAPI DFX_Binary(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren.
+Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class.md). Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren.
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *value*<br/>
-Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs [CByteArray](cbytearray-class.md), stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
+Der im angegebener Datenmember gespeicherte Wert – der Wert, der übertragen werden soll. Bei einer Übertragung von Recordset an eine Datenquelle wird der Wert des Typs [CByteArray](cbytearray-class.md)aus dem angegebenen Datenmember entnommen. Bei einer Übertragung von einer Datenquelle zu einem Recordset wird der Wert im angegebenen Datenmember gespeichert.
 
 *nPreAllocSize*<br/>
-Das Framework belegt Systemspeicher. Wenn Ihre Daten größer ist, wird das Framework mit dem mehr Speicherplatz nach Bedarf zugeordnet. Legen Sie diese Größe auf einen Wert, der groß genug, um zu verhindern, dass neuzuordnungen, zur Verbesserung der Leistung. Die Standardgröße ist in der AFXDAO definiert. H-Datei als AFX_DAO_BINARY_DEFAULT_SIZE.
+Das Framework ordnet diese Menge an Arbeitsspeicher zu. Wenn Ihre Daten größer sind, weist das Framework nach Bedarf mehr Speicherplatz zu. Legen Sie für eine bessere Leistung diese Größe auf einen Wert fest, der groß genug ist, um erneute Zuordnungen zu verhindern Die Standardgröße wird in afxdao definiert. H-Datei als AFX_DAO_BINARY_DEFAULT_SIZE.
 
 *dwBindOptions*<br/>
-Eine Option, mit der Sie profitieren Sie von MFC doppelte Pufferung Mechanismus zum Erkennen von Recordset-Feldern, die geändert wurden. Die Standardeinstellung AFX_DAO_DISABLE_FIELD_CACHE, verwendet nicht die doppelte Pufferung, und rufen Sie [SetFieldDirty](cdaorecordset-class.md#setfielddirty) und [SetFieldNull](cdaorecordset-class.md#setfieldnull) selbst. Der andere mögliche Wert, AFX_DAO_ENABLE_FIELD_CACHE, verwendet die doppelte Pufferung, und Sie müssen keine zusätzliche Arbeit, um Felder zu kennzeichnen sind geändert oder "Null". Vermeiden Sie für Gründen der Leistung und Arbeitsspeicher diesen Wert, es sei denn, Ihre binäre Daten relativ klein ist.
+Eine Option, mit der Sie den doppelten Puffer Puffer Mechanismus von MFC zum Erkennen von Recordsetfeldern nutzen können, die geändert wurden. Der Standardwert, AFX_DAO_DISABLE_FIELD_CACHE, verwendet keine doppelte Pufferung, und Sie müssen [SetFieldDirty](cdaorecordset-class.md#setfielddirty) und [SetFieldNull](cdaorecordset-class.md#setfieldnull) selbst aufrufen. Der andere mögliche Wert, AFX_DAO_ENABLE_FIELD_CACHE, verwendet die doppelte Pufferung, und Sie müssen keine zusätzlichen Schritte durchführen, um die Felder "Dirty" oder "Null" zu markieren. Vermeiden Sie aus Leistungs-und Arbeitsspeicher Gründen diesen Wert, es sei denn, die Binärdaten sind relativ klein.
 
 > [!NOTE]
->  Sie können steuern, ob Daten doppelte wird durch die Einstellung für alle Felder standardmäßig gepuffert [CDaoRecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Durch Festlegen von [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)können Sie steuern, ob Daten für alle Felder standardmäßig doppelt gepuffert werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Daten werden zwischen DAO_BYTES über DAO und Typ zugeordnet [CByteArray](cbytearray-class.md) im Recordset.
+Daten werden zwischen dem Typ DAO_BYTES im DAO zugeordnet und geben [CByteArray](cbytearray-class.md) in das Recordset ein.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [DFX_Text](#dfx_text).
+Siehe [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -976,7 +976,7 @@ Finden Sie unter [DFX_Text](#dfx_text).
 
 ## <a name="dfx_bool"></a>  DFX_Bool
 
-Überträgt boolesche Daten zwischen den Felddatenmembern eine [CDaoRecordset](cdaorecordset-class.md) -Objekt und die Spalten eines Datensatzes in der Datenquelle.
+Überträgt boolesche Daten zwischen den Felddatenmembern eines [CDaoRecordset](cdaorecordset-class.md) -Objekts und den Spalten eines Datensatzes in der Datenquelle.
 
 ### <a name="syntax"></a>Syntax
 
@@ -991,27 +991,27 @@ void AFXAPI DFX_Bool(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren.
+Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class.md). Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren.
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *value*<br/>
-Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für eine Übertragung vom Recordset die Datenquelle wird der Wert vom Typ "bool", den angegebenen Datenmember entnommen. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
+Der im angegebener Datenmember gespeicherte Wert – der Wert, der übertragen werden soll. Bei einer Übertragung von Recordset in die Datenquelle wird der Wert des Typs bool vom angegebenen Datenmember entnommen. Bei einer Übertragung von einer Datenquelle zu einem Recordset wird der Wert im angegebenen Datenmember gespeichert.
 
 *dwBindOptions*<br/>
-Eine Option, mit der Sie profitieren Sie von MFC doppelte Pufferung Mechanismus zum Erkennen von Recordset-Feldern, die geändert wurden. Standard, AFX_DAO_ENABLE_FIELD_CACHE, wird die doppelte Pufferung verwendet. Der andere mögliche Wert ist AFX_DAO_DISABLE_FIELD_CACHE. Wenn Sie diesen Wert angeben, wird MFC keine Überprüfung für dieses Feld. Rufen Sie `SetFieldDirty` und `SetFieldNull` selbst.
+Eine Option, mit der Sie den doppelten Puffer Puffer Mechanismus von MFC zum Erkennen von Recordsetfeldern nutzen können, die geändert wurden. Der Standardwert, AFX_DAO_ENABLE_FIELD_CACHE, verwendet die doppelte Pufferung. Der andere mögliche Wert ist AFX_DAO_DISABLE_FIELD_CACHE. Wenn Sie diesen Wert angeben, überprüft MFC dieses Feld nicht. Sie müssen und `SetFieldDirty` `SetFieldNull` selbst anrufen.
 
 > [!NOTE]
->  Sie können steuern, ob Daten doppelte standardmäßig gepuffert werden wird, durch Festlegen von [CDaoRecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Sie können steuern, ob Datenstandard mäßig durch Festlegen von [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)doppelt gepuffert werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Daten werden zwischen DAO_BOOL über DAO und Typ "bool" im Recordset zugeordnet.
+Daten werden zwischen dem Typ DAO_BOOL in DAO und dem Typ bool im Recordset zugeordnet.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [DFX_Text](#dfx_text).
+Siehe [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -1019,7 +1019,7 @@ Finden Sie unter [DFX_Text](#dfx_text).
 
 ## <a name="dfx_byte"></a>  DFX_Byte
 
-Übertragungen einmaliges Bytes zwischen den Felddatenmembern eine [CDaoRecordset](cdaorecordset-class.md) -Objekt und die Spalten eines Datensatzes in der Datenquelle.
+Überträgt einzelne Bytes zwischen den Felddatenmembern eines [CDaoRecordset](cdaorecordset-class.md) -Objekts und den Spalten eines Datensatzes in der Datenquelle.
 
 ### <a name="syntax"></a>Syntax
 
@@ -1034,27 +1034,27 @@ void AFXAPI DFX_Byte(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren.
+Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class.md). Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren.
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *value*<br/>
-Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für eine Übertragung vom Recordset die Datenquelle wird der Wert, der Typ "BYTE", den angegebenen Datenmember entnommen. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
+Der im angegebener Datenmember gespeicherte Wert – der Wert, der übertragen werden soll. Bei einer Übertragung von Recordset an eine Datenquelle wird der Wert des Typs Byte vom angegebenen Datenmember entnommen. Bei einer Übertragung von einer Datenquelle zu einem Recordset wird der Wert im angegebenen Datenmember gespeichert.
 
 *dwBindOptions*<br/>
-Eine Option, mit der Sie profitieren Sie von MFC doppelte Pufferung Mechanismus zum Erkennen von Recordset-Feldern, die geändert wurden. Standard, AFX_DAO_ENABLE_FIELD_CACHE, wird die doppelte Pufferung verwendet. Der andere mögliche Wert ist AFX_DAO_DISABLE_FIELD_CACHE. Wenn Sie diesen Wert angeben, wird MFC keine Überprüfung für dieses Feld. Rufen Sie `SetFieldDirty` und `SetFieldNull` selbst.
+Eine Option, mit der Sie den doppelten Puffer Puffer Mechanismus von MFC zum Erkennen von Recordsetfeldern nutzen können, die geändert wurden. Der Standardwert, AFX_DAO_ENABLE_FIELD_CACHE, verwendet die doppelte Pufferung. Der andere mögliche Wert ist AFX_DAO_DISABLE_FIELD_CACHE. Wenn Sie diesen Wert angeben, überprüft MFC dieses Feld nicht. Sie müssen und `SetFieldDirty` `SetFieldNull` selbst anrufen.
 
 > [!NOTE]
->  Sie können steuern, ob Daten doppelte standardmäßig gepuffert werden wird, durch Festlegen von [CDaoRecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Sie können steuern, ob Datenstandard mäßig durch Festlegen von [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)doppelt gepuffert werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Daten werden zwischen DAO_BYTES über DAO und Typ BYTE im Recordset zugeordnet.
+Daten werden zwischen dem Typ "DAO_BYTES" in DAO und dem Typ "Byte" im Recordset zugeordnet.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [DFX_Text](#dfx_text).
+Siehe [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -1062,7 +1062,7 @@ Finden Sie unter [DFX_Text](#dfx_text).
 
 ## <a name="dfx_currency"></a>  DFX_Currency
 
-Überträgt Währungsdaten zwischen den Felddatenmembern eine [CDaoRecordset](cdaorecordset-class.md) -Objekt und die Spalten eines Datensatzes in der Datenquelle.
+Überträgt Währungs Daten zwischen den Felddatenmembern eines [CDaoRecordset](cdaorecordset-class.md) -Objekts und den Spalten eines Datensatzes in der Datenquelle.
 
 ### <a name="syntax"></a>Syntax
 
@@ -1077,27 +1077,27 @@ void AFXAPI DFX_Currency(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren.
+Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class.md). Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren.
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *value*<br/>
-Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Dieser Wert stammt für eine Übertragung vom Recordset die Datenquelle, aus den angegebenen Datenmember vom Typ [COleCurrency](colecurrency-class.md). Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
+Der im angegebener Datenmember gespeicherte Wert – der Wert, der übertragen werden soll. Bei einer Übertragung von Recordset in die Datenquelle wird dieser Wert vom angegebenen Datenmember des Typs [COleCurrency](colecurrency-class.md)entnommen. Bei einer Übertragung von einer Datenquelle zu einem Recordset wird der Wert im angegebenen Datenmember gespeichert.
 
 *dwBindOptions*<br/>
-Eine Option, mit der Sie profitieren Sie von MFC doppelte Pufferung Mechanismus zum Erkennen von Recordset-Feldern, die geändert wurden. Standard, AFX_DAO_ENABLE_FIELD_CACHE, wird die doppelte Pufferung verwendet. Der andere mögliche Wert ist AFX_DAO_DISABLE_FIELD_CACHE. Wenn Sie diesen Wert angeben, wird MFC keine Überprüfung für dieses Feld. Rufen Sie `SetFieldDirty` und `SetFieldNull` selbst.
+Eine Option, mit der Sie den doppelten Puffer Puffer Mechanismus von MFC zum Erkennen von Recordsetfeldern nutzen können, die geändert wurden. Der Standardwert, AFX_DAO_ENABLE_FIELD_CACHE, verwendet die doppelte Pufferung. Der andere mögliche Wert ist AFX_DAO_DISABLE_FIELD_CACHE. Wenn Sie diesen Wert angeben, überprüft MFC dieses Feld nicht. Sie müssen und `SetFieldDirty` `SetFieldNull` selbst anrufen.
 
 > [!NOTE]
->  Sie können steuern, ob Daten doppelte standardmäßig gepuffert werden wird, durch Festlegen von [CDaoRecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Sie können steuern, ob Datenstandard mäßig durch Festlegen von [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)doppelt gepuffert werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Daten werden zwischen DAO_CURRENCY über DAO und Typ zugeordnet [COleCurrency](colecurrency-class.md) im Recordset.
+Daten werden zwischen dem Typ DAO_CURRENCY im DAO und dem Typ [COleCurrency](colecurrency-class.md) im Recordset zugeordnet.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [DFX_Text](#dfx_text).
+Siehe [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -1105,7 +1105,7 @@ Finden Sie unter [DFX_Text](#dfx_text).
 
 ## <a name="dfx_datetime"></a>  DFX_DateTime
 
-Überträgt Datums- und Uhrzeitdaten zwischen den Felddatenmembern eine [CDaoRecordset](cdaorecordset-class.md) -Objekt und die Spalten eines Datensatzes in der Datenquelle.
+Überträgt Zeit-und Datumsdaten zwischen den Felddatenmembern eines [CDaoRecordset](cdaorecordset-class.md) -Objekts und den Spalten eines Datensatzes in der Datenquelle.
 
 ### <a name="syntax"></a>Syntax
 
@@ -1120,30 +1120,30 @@ void AFXAPI DFX_DateTime(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren.
+Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class.md). Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren.
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *value*<br/>
-Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Die Funktion akzeptiert einen Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) Objekt. Für eine Übertragung vom Recordset die Datenquelle wird der Wert aus den angegebenen Datenmember verwendet. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
+Der im angegebener Datenmember gespeicherte Wert – der Wert, der übertragen werden soll. Die Funktion nimmt einen Verweis auf ein [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt an. Bei einer Übertragung von Recordset in die Datenquelle wird dieser Wert vom angegebenen Datenmember entnommen. Bei einer Übertragung von einer Datenquelle zu einem Recordset wird der Wert im angegebenen Datenmember gespeichert.
 
 *dwBindOptions*<br/>
-Eine Option, mit der Sie profitieren Sie von MFC doppelte Pufferung Mechanismus zum Erkennen von Recordset-Feldern, die geändert wurden. Standard, AFX_DAO_ENABLE_FIELD_CACHE, wird die doppelte Pufferung verwendet. Der andere mögliche Wert ist AFX_DAO_DISABLE_FIELD_CACHE. Wenn Sie diesen Wert angeben, wird MFC keine Überprüfung für dieses Feld. Rufen Sie `SetFieldDirty` und `SetFieldNull` selbst.
+Eine Option, mit der Sie den doppelten Puffer Puffer Mechanismus von MFC zum Erkennen von Recordsetfeldern nutzen können, die geändert wurden. Der Standardwert, AFX_DAO_ENABLE_FIELD_CACHE, verwendet die doppelte Pufferung. Der andere mögliche Wert ist AFX_DAO_DISABLE_FIELD_CACHE. Wenn Sie diesen Wert angeben, überprüft MFC dieses Feld nicht. Sie müssen und `SetFieldDirty` `SetFieldNull` selbst anrufen.
 
 > [!NOTE]
->  Sie können steuern, ob Daten doppelte standardmäßig gepuffert werden wird, durch Festlegen von [CDaoRecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Sie können steuern, ob Datenstandard mäßig durch Festlegen von [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)doppelt gepuffert werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Daten werden zwischen DAO_DATE über DAO und Typ zugeordnet [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) im Recordset.
+Daten werden zwischen dem Typ DAO_DATE im DAO und dem Typ [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) im Recordset zugeordnet.
 
 > [!NOTE]
->  `COleDateTime` ersetzt [CTime](../../atl-mfc-shared/reference/ctime-class.md) und TIMESTAMP_STRUCT zu diesem Zweck in den DAO-Klassen. `CTime` und TIMESTAMP_STRUCT weiterhin für die ODBC-basierten Data Access-Klassen verwendet werden.
+>  `COleDateTime`ersetzt [ctime](../../atl-mfc-shared/reference/ctime-class.md) und TIMESTAMP_STRUCT zu diesem Zweck in den DAO-Klassen. `CTime`und TIMESTAMP_STRUCT werden weiterhin für die ODBC-basierten Datenzugriffsklassen verwendet.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [DFX_Text](#dfx_text).
+Siehe [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -1151,7 +1151,7 @@ Finden Sie unter [DFX_Text](#dfx_text).
 
 ## <a name="dfx_double"></a>  DFX_Double
 
-Übertragungen **vom Typ double Float** Daten zwischen den Felddatenmembern eine [CDaoRecordset](cdaorecordset-class.md) -Objekt und die Spalten eines Datensatzes in der Datenquelle.
+Überträgt **doppelte float** -Daten zwischen den Felddatenmembern eines [CDaoRecordset](cdaorecordset-class.md) -Objekts und den Spalten eines Datensatzes in der Datenquelle.
 
 ### <a name="syntax"></a>Syntax
 
@@ -1166,27 +1166,27 @@ void AFXAPI DFX_Double(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren.
+Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class.md). Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren.
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *value*<br/>
-Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs **doppelte**, stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
+Der im angegebener Datenmember gespeicherte Wert – der Wert, der übertragen werden soll. Bei einer Übertragung von Recordset an eine Datenquelle wird der Wert vom Typ **Double**aus dem angegebenen Datenmember entnommen. Bei einer Übertragung von einer Datenquelle zu einem Recordset wird der Wert im angegebenen Datenmember gespeichert.
 
 *dwBindOptions*<br/>
-Eine Option, mit der Sie profitieren Sie von MFC doppelte Pufferung Mechanismus zum Erkennen von Recordset-Feldern, die geändert wurden. Standard, AFX_DAO_ENABLE_FIELD_CACHE, wird die doppelte Pufferung verwendet. Der andere mögliche Wert ist AFX_DAO_DISABLE_FIELD_CACHE. Wenn Sie diesen Wert angeben, wird MFC keine Überprüfung für dieses Feld. Rufen Sie `SetFieldDirty` und `SetFieldNull` selbst.
+Eine Option, mit der Sie den doppelten Puffer Puffer Mechanismus von MFC zum Erkennen von Recordsetfeldern nutzen können, die geändert wurden. Der Standardwert, AFX_DAO_ENABLE_FIELD_CACHE, verwendet die doppelte Pufferung. Der andere mögliche Wert ist AFX_DAO_DISABLE_FIELD_CACHE. Wenn Sie diesen Wert angeben, überprüft MFC dieses Feld nicht. Sie müssen und `SetFieldDirty` `SetFieldNull` selbst anrufen.
 
 > [!NOTE]
->  Sie können steuern, ob Daten doppelte standardmäßig gepuffert werden wird, durch Festlegen von [CDaoRecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Sie können steuern, ob Datenstandard mäßig durch Festlegen von [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)doppelt gepuffert werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Daten werden zwischen DAO_R8 über DAO und Typ zugeordnet **vom Typ double Float** im Recordset.
+Daten werden zwischen dem Typ DAO_R8 im DAO und dem Typ **Double Float** im Recordset zugeordnet.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [DFX_Text](#dfx_text).
+Siehe [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -1194,7 +1194,7 @@ Finden Sie unter [DFX_Text](#dfx_text).
 
 ## <a name="dfx_long"></a>  DFX_Long
 
-Überträgt long integer-Wert-Daten zwischen den Felddatenmembern eine [CDaoRecordset](cdaorecordset-class.md) -Objekt und die Spalten eines Datensatzes in der Datenquelle.
+Überträgt lange ganzzahlige Daten zwischen den Felddatenmembern eines [CDaoRecordset](cdaorecordset-class.md) -Objekts und den Spalten eines Datensatzes in der Datenquelle.
 
 ### <a name="syntax"></a>Syntax
 
@@ -1209,27 +1209,27 @@ void AFXAPI DFX_Long(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren.
+Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class.md). Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren.
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *value*<br/>
-Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs **lange**, stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
+Der im angegebener Datenmember gespeicherte Wert – der Wert, der übertragen werden soll. Bei einer Übertragung von Recordset an eine Datenquelle wird der Wert des Typs **Long**aus dem angegebenen Datenmember entnommen. Bei einer Übertragung von einer Datenquelle zu einem Recordset wird der Wert im angegebenen Datenmember gespeichert.
 
 *dwBindOptions*<br/>
-Eine Option, mit der Sie profitieren Sie von MFC doppelte Pufferung Mechanismus zum Erkennen von Recordset-Feldern, die geändert wurden. Standard, AFX_DAO_ENABLE_FIELD_CACHE, wird die doppelte Pufferung verwendet. Der andere mögliche Wert ist AFX_DAO_DISABLE_FIELD_CACHE. Wenn Sie diesen Wert angeben, wird MFC keine Überprüfung für dieses Feld. Rufen Sie `SetFieldDirty` und `SetFieldNull` selbst.
+Eine Option, mit der Sie den doppelten Puffer Puffer Mechanismus von MFC zum Erkennen von Recordsetfeldern nutzen können, die geändert wurden. Der Standardwert, AFX_DAO_ENABLE_FIELD_CACHE, verwendet die doppelte Pufferung. Der andere mögliche Wert ist AFX_DAO_DISABLE_FIELD_CACHE. Wenn Sie diesen Wert angeben, überprüft MFC dieses Feld nicht. Sie müssen und `SetFieldDirty` `SetFieldNull` selbst anrufen.
 
 > [!NOTE]
->  Sie können steuern, ob Daten doppelte standardmäßig gepuffert werden wird, durch Festlegen von [CDaoRecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Sie können steuern, ob Datenstandard mäßig durch Festlegen von [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)doppelt gepuffert werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Daten werden zwischen DAO_I4 über DAO und Typ zugeordnet **lange** im Recordset.
+Daten werden zwischen dem Typ DAO_I4 im DAO und dem Typ **Long** im Recordset zugeordnet.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [DFX_Text](#dfx_text).
+Siehe [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -1237,7 +1237,7 @@ Finden Sie unter [DFX_Text](#dfx_text).
 
 ## <a name="dfx_longbinary"></a>  DFX_LongBinary
 
-**Wichtige** es wird empfohlen, die Verwendung von [DFX_Binary](#dfx_binary) anstatt dieser Funktion.
+**Wichtig** Es wird empfohlen, [DFX_Binary](#dfx_binary) anstelle dieser Funktion zu verwenden.
 
 ### <a name="syntax"></a>Syntax
 
@@ -1253,30 +1253,30 @@ void AFXAPI DFX_LongBinary(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren.
+Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class.md). Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren.
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *value*<br/>
-Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs [CLongBinary](clongbinary-class.md), stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
+Der im angegebener Datenmember gespeicherte Wert – der Wert, der übertragen werden soll. Bei einer Übertragung von Recordset in die Datenquelle wird der Wert des Typs [CLongBinary](clongbinary-class.md)aus dem angegebenen Datenmember entnommen. Bei einer Übertragung von einer Datenquelle zu einem Recordset wird der Wert im angegebenen Datenmember gespeichert.
 
 *dwPreAllocSize*<br/>
-Das Framework belegt Systemspeicher. Wenn Ihre Daten größer ist, wird das Framework mit dem mehr Speicherplatz nach Bedarf zugeordnet. Legen Sie diese Größe auf einen Wert, der groß genug, um zu verhindern, dass neuzuordnungen, zur Verbesserung der Leistung.
+Das Framework ordnet diese Menge an Arbeitsspeicher zu. Wenn Ihre Daten größer sind, weist das Framework nach Bedarf mehr Speicherplatz zu. Legen Sie für eine bessere Leistung diese Größe auf einen Wert fest, der groß genug ist, um erneute Zuordnungen zu verhindern
 
 *dwBindOptions*<br/>
-Eine Option, mit der Sie profitieren Sie von MFC doppelte Pufferung Mechanismus zum Erkennen von Recordset-Feldern, die geändert wurden. Der Standardwert, AFX_DISABLE_FIELD_CACHE, die doppelte Pufferung wird nicht verwendet werden. Der andere mögliche Wert ist AFX_DAO_ENABLE_FIELD_CACHE. Verwendet doppelte Pufferung, und Sie müssen keine ist zusätzlichen Schritte, um Felder kennzeichnen, geändert oder "Null". Vermeiden Sie für Gründen der Leistung und Arbeitsspeicher diesen Wert, es sei denn, Ihre binäre Daten relativ klein ist.
+Eine Option, mit der Sie den doppelten Puffer Puffer Mechanismus von MFC zum Erkennen von Recordsetfeldern nutzen können, die geändert wurden. Der Standardwert, AFX_DISABLE_FIELD_CACHE, verwendet keine doppelte Pufferung. Der andere mögliche Wert ist AFX_DAO_ENABLE_FIELD_CACHE. Verwendet die doppelte Pufferung, und Sie müssen keine zusätzlichen Schritte durchführen, um die Felder "Dirty" oder "Null" zu markieren. Vermeiden Sie aus Leistungs-und Arbeitsspeicher Gründen diesen Wert, es sei denn, die Binärdaten sind relativ klein.
 
 > [!NOTE]
->  Sie können steuern, ob Daten doppelte standardmäßig gepuffert werden wird, durch Festlegen von [CDaoRecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Sie können steuern, ob Datenstandard mäßig durch Festlegen von [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)doppelt gepuffert werden.
 
 ### <a name="remarks"></a>Hinweise
 
-`DFX_LongBinary` wird für die Kompatibilität mit den MFC-ODBC-Klassen bereitgestellt werden. Die `DFX_LongBinary` Funktion überträgt, binary large-Object (BLOB)-Daten mithilfe der Klasse `CLongBinary` zwischen den Felddatenmembern eine [CDaoRecordset](cdaorecordset-class.md) -Objekt und die Spalten eines Datensatzes in der Datenquelle. Daten werden zwischen DAO_BYTES über DAO und Typ zugeordnet [CLongBinary](clongbinary-class.md) im Recordset.
+`DFX_LongBinary`wird aus Gründen der Kompatibilität mit den MFC-ODBC-Klassen bereitgestellt. Die `DFX_LongBinary` -Funktion überträgt binäre Large-Object (BLOB)-Daten `CLongBinary` mithilfe der-Klasse zwischen den Felddatenmembern eines [CDaoRecordset](cdaorecordset-class.md) -Objekts und den Spalten eines Datensatzes in der Datenquelle. Daten werden zwischen dem Typ "DAO_BYTES" in DAO zugeordnet und geben " [CLongBinary](clongbinary-class.md) " in das Recordset ein.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [DFX_Text](#dfx_text).
+Siehe [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -1284,7 +1284,7 @@ Finden Sie unter [DFX_Text](#dfx_text).
 
 ## <a name="dfx_short"></a>  DFX_Short
 
-Überträgt kurze Ganzzahldaten zwischen den Felddatenmembern eine [CDaoRecordset](cdaorecordset-class.md) -Objekt und die Spalten eines Datensatzes in der Datenquelle.
+Überträgt kurze ganzzahlige Daten zwischen den Felddatenmembern eines [CDaoRecordset](cdaorecordset-class.md) -Objekts und den Spalten eines Datensatzes in der Datenquelle.
 
 ### <a name="syntax"></a>Syntax
 
@@ -1299,30 +1299,30 @@ void AFXAPI DFX_Short(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren.
+Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class.md). Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren.
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *value*<br/>
-Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs **kurze**, stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
+Der im angegebener Datenmember gespeicherte Wert – der Wert, der übertragen werden soll. Bei einer Übertragung von Recordset an eine Datenquelle wird der Wert vom Typ **Short**aus dem angegebenen Datenmember entnommen. Bei einer Übertragung von einer Datenquelle zu einem Recordset wird der Wert im angegebenen Datenmember gespeichert.
 
 *dwBindOptions*<br/>
-Eine Option, mit der Sie profitieren Sie von MFC doppelte Pufferung Mechanismus zum Erkennen von Recordset-Feldern, die geändert wurden. Standard, AFX_DAO_ENABLE_FIELD_CACHE, wird die doppelte Pufferung verwendet. Der andere mögliche Wert ist AFX_DAO_DISABLE_FIELD_CACHE. Wenn Sie diesen Wert angeben, wird MFC keine Überprüfung für dieses Feld. Rufen Sie `SetFieldDirty` und `SetFieldNull` selbst.
+Eine Option, mit der Sie den doppelten Puffer Puffer Mechanismus von MFC zum Erkennen von Recordsetfeldern nutzen können, die geändert wurden. Der Standardwert, AFX_DAO_ENABLE_FIELD_CACHE, verwendet die doppelte Pufferung. Der andere mögliche Wert ist AFX_DAO_DISABLE_FIELD_CACHE. Wenn Sie diesen Wert angeben, überprüft MFC dieses Feld nicht. Sie müssen und `SetFieldDirty` `SetFieldNull` selbst anrufen.
 
 > [!NOTE]
->  Sie können steuern, ob Daten doppelte standardmäßig gepuffert werden wird, durch Festlegen von [CDaoRecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Sie können steuern, ob Datenstandard mäßig durch Festlegen von [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)doppelt gepuffert werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Daten werden zwischen DAO_I2 über DAO und Typ zugeordnet **kurze** im Recordset.
+Daten werden zwischen dem Typ DAO_I2 in DAO und dem Typ **Short** im Recordset zugeordnet.
 
 > [!NOTE]
->  `DFX_Short` entspricht dem [RFX_Int](#rfx_int) für die ODBC-basierten Klassen.
+>  `DFX_Short`entspricht [RFX_Int](#rfx_int) für die ODBC-basierten Klassen.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [DFX_Text](#dfx_text).
+Siehe [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -1330,7 +1330,7 @@ Finden Sie unter [DFX_Text](#dfx_text).
 
 ## <a name="dfx_single"></a>  DFX_Single
 
-Überträgt Gleitkommadaten zwischen den Felddatenmembern eine [CDaoRecordset](cdaorecordset-class.md) -Objekt und die Spalten eines Datensatzes in der Datenquelle.
+Überträgt Gleit Komma Daten zwischen den Felddatenmembern eines [CDaoRecordset](cdaorecordset-class.md) -Objekts und den Spalten eines Datensatzes in der Datenquelle.
 
 ### <a name="syntax"></a>Syntax
 
@@ -1345,27 +1345,27 @@ void AFXAPI DFX_Single(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren.
+Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class.md). Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren.
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *value*<br/>
-Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs **"float"**, stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
+Der im angegebener Datenmember gespeicherte Wert – der Wert, der übertragen werden soll. Bei einer Übertragung von Recordset an eine Datenquelle wird der Wert des Typs **float**aus dem angegebenen Datenmember entnommen. Bei einer Übertragung von einer Datenquelle zu einem Recordset wird der Wert im angegebenen Datenmember gespeichert.
 
 *dwBindOptions*<br/>
-Eine Option, mit der Sie profitieren Sie von MFC doppelte Pufferung Mechanismus zum Erkennen von Recordset-Feldern, die geändert wurden. Standard, AFX_DAO_ENABLE_FIELD_CACHE, wird die doppelte Pufferung verwendet. Der andere mögliche Wert ist AFX_DAO_DISABLE_FIELD_CACHE. Wenn Sie diesen Wert angeben, wird MFC keine Überprüfung für dieses Feld. Rufen Sie `SetFieldDirty` und `SetFieldNull` selbst.
+Eine Option, mit der Sie den doppelten Puffer Puffer Mechanismus von MFC zum Erkennen von Recordsetfeldern nutzen können, die geändert wurden. Der Standardwert, AFX_DAO_ENABLE_FIELD_CACHE, verwendet die doppelte Pufferung. Der andere mögliche Wert ist AFX_DAO_DISABLE_FIELD_CACHE. Wenn Sie diesen Wert angeben, überprüft MFC dieses Feld nicht. Sie müssen und `SetFieldDirty` `SetFieldNull` selbst anrufen.
 
 > [!NOTE]
->  Sie können steuern, ob Daten doppelte standardmäßig gepuffert werden wird, durch Festlegen von [CDaoRecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Sie können steuern, ob Datenstandard mäßig durch Festlegen von [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)doppelt gepuffert werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Daten werden zwischen DAO_R4 über DAO und Typ zugeordnet **"float"** im Recordset.
+Daten werden zwischen dem Typ DAO_R4 im DAO und dem Typ **float** im Recordset zugeordnet.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [DFX_Text](#dfx_text).
+Siehe [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -1373,7 +1373,7 @@ Finden Sie unter [DFX_Text](#dfx_text).
 
 ## <a name="dfx_text"></a>  DFX_Text
 
-Übertragungen `CString` Daten zwischen den Felddatenmembern eine [CDaoRecordset](cdaorecordset-class.md) -Objekt und Spalten eines Datensatzes in der Datenquelle.
+Überträgt `CString` Daten zwischen den Felddatenmembern eines [CDaoRecordset](cdaorecordset-class.md) -Objekts und den Spalten eines Datensatzes in der Datenquelle.
 
 ### <a name="syntax"></a>Syntax
 
@@ -1389,30 +1389,30 @@ void AFXAPI DFX_Text(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren.
+Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class.md). Dieses Objekt enthält Informationen, um den Kontext für die einzelnen Aufrufe der Funktion zu definieren.
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
 *value*<br/>
-Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs [CString](../../atl-mfc-shared/reference/cstringt-class.md), stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
+Der im angegebener Datenmember gespeicherte Wert – der Wert, der übertragen werden soll. Bei einer Übertragung von Recordset in die Datenquelle wird der Wert des Typs [CString](../../atl-mfc-shared/reference/cstringt-class.md)aus dem angegebenen Datenmember entnommen. Bei einer Übertragung von einer Datenquelle zu einem Recordset wird der Wert im angegebenen Datenmember gespeichert.
 
 *nPreAllocSize*<br/>
-Das Framework belegt Systemspeicher. Wenn Ihre Daten größer ist, wird das Framework mit dem mehr Speicherplatz nach Bedarf zugeordnet. Legen Sie diese Größe auf einen Wert, der groß genug, um zu verhindern, dass neuzuordnungen, zur Verbesserung der Leistung.
+Das Framework ordnet diese Menge an Arbeitsspeicher zu. Wenn Ihre Daten größer sind, weist das Framework nach Bedarf mehr Speicherplatz zu. Legen Sie für eine bessere Leistung diese Größe auf einen Wert fest, der groß genug ist, um erneute Zuordnungen zu verhindern
 
 *dwBindOptions*<br/>
-Eine Option, mit der Sie profitieren Sie von MFC doppelte Pufferung Mechanismus zum Erkennen von Recordset-Feldern, die geändert wurden. Standard, AFX_DAO_ENABLE_FIELD_CACHE, wird die doppelte Pufferung verwendet. Der andere mögliche Wert ist AFX_DAO_DISABLE_FIELD_CACHE. Wenn Sie diesen Wert angeben, wird MFC keine Überprüfung für dieses Feld. Rufen Sie [SetFieldDirty](cdaorecordset-class.md#setfielddirty) und [SetFieldNull](cdaorecordset-class.md#setfieldnull) selbst.
+Eine Option, mit der Sie den doppelten Puffer Puffer Mechanismus von MFC zum Erkennen von Recordsetfeldern nutzen können, die geändert wurden. Der Standardwert, AFX_DAO_ENABLE_FIELD_CACHE, verwendet die doppelte Pufferung. Der andere mögliche Wert ist AFX_DAO_DISABLE_FIELD_CACHE. Wenn Sie diesen Wert angeben, überprüft MFC dieses Feld nicht. Sie müssen [SetFieldDirty](cdaorecordset-class.md#setfielddirty) und [SetFieldNull](cdaorecordset-class.md#setfieldnull) selbst aufrufen.
 
 > [!NOTE]
->  Sie können steuern, ob Daten doppelte standardmäßig gepuffert werden wird, durch Festlegen von [CDaoRecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Sie können steuern, ob Datenstandard mäßig durch Festlegen von [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)doppelt gepuffert werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Daten werden zwischen den DAO_CHAR in-DAO-zugeordnet (oder, wenn _UNICODE definiert wird, DAO_WCHAR aus), und geben [CString](../../atl-mfc-shared/reference/cstringt-class.md) im Recordset.  n
+Daten werden zwischen dem Typ DAO_CHAR in DAO zugeordnet (oder, wenn das Symbol _UNICODE definiert ist, DAO_WCHAR) und geben [CString](../../atl-mfc-shared/reference/cstringt-class.md) in das Recordset ein.  n
 
 ### <a name="example"></a>Beispiel
 
-Dieses Beispiel zeigt mehrere Aufrufe `DFX_Text`. Beachten Sie auch die beiden Aufrufe von [CDaoFieldExchange:: SetFieldType](cdaofieldexchange-class.md#setfieldtype). Sie müssen der erste Aufruf schreiben `SetFieldType` und die zugehörige **DFX** aufrufen. Der zweite Aufruf und die zugehörigen **DFX** Aufrufe werden normalerweise durch den Code-Assistenten, die die Klasse generiert geschrieben.
+In diesem Beispiel werden mehrere Aufrufe `DFX_Text`von gezeigt. Beachten Sie auch die beiden Aufrufe von [CDaoFieldExchange:: SetFieldType](cdaofieldexchange-class.md#setfieldtype). Sie müssen den ersten `SetFieldType` -und den **DFX** -Aufrufvorgang schreiben. Der zweite Aufruf und die zugehörigen **DFX** -Aufrufe werden normalerweise vom Code-Assistenten geschrieben, der die-Klasse generiert hat.
 
 ```cpp
 void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
@@ -1436,7 +1436,7 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 
 ## <a name="see-also"></a>Siehe auch
 
-[Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
+[Makros und Globals](mfc-macros-and-globals.md)<br/>
 [CRecordset::DoFieldExchange](crecordset-class.md#dofieldexchange)<br/>
 [CRecordset::DoBulkFieldExchange](crecordset-class.md#dobulkfieldexchange)<br/>
 [CDaoRecordset::DoFieldExchange](cdaorecordset-class.md#dofieldexchange)
