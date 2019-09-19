@@ -1,6 +1,6 @@
 ---
 title: CDaoDatabase-Klasse
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - CDaoDatabase
 - AFXDAO/CDaoDatabase
@@ -58,16 +58,16 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: d1e9db1ddebe05d42cbb8c4ba242938d6d86cc81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 683f3f9ebb09d69461e4f9026841363c452f4793
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399837"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096171"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase-Klasse
 
-Stellt eine Verbindung zu einer Datenbank dar, über welche die Daten bearbeitet werden können.
+Stellt eine Verbindung mit einer Access-Datenbank mithilfe von Data Access Objects (DAO) dar. DAO wird über Office 2013 unterstützt. DAO 3,6 ist die endgültige Version und wird als veraltet eingestuft.
 
 ## <a name="syntax"></a>Syntax
 
@@ -121,9 +121,6 @@ class CDaoDatabase : public CObject
 ## <a name="remarks"></a>Hinweise
 
 Informationen zu den Datenbankformaten unterstützt, finden Sie unter den [GetName](../../mfc/reference/cdaoworkspace-class.md#getname) Member-Funktion. Sie haben eine oder mehrere `CDaoDatabase` Objekte, die Sie in einem bestimmten "Arbeitsbereich" durch dargestellt aktiv eine [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) Objekt. Der Arbeitsbereich verwaltet eine Auflistung von geöffneten Datenbankobjekten, die aus der datenbankauflistung aufgerufen.
-
-> [!NOTE]
->  Die MFC-DAO-Datenbankklassen unterscheiden sich von den MFC-Datenbankklassen-ODBC-basierten. Alle DAO-Datenbank-Klassennamen haben das Präfix "CDao". Klasse `CDaoDatabase` stellt eine Schnittstelle, die der ODBC-Klasse ähnelt [CDatabase](../../mfc/reference/cdatabase-class.md). Der Hauptunterschied besteht darin, die `CDatabase` greift auf das DBMS über Open Database Connectivity (ODBC) und einem ODBC-Treiber für dieses DBMS verwaltet. `CDaoDatabase` greift auf Daten über ein Data Access Object (DAO) basierend auf der Microsoft Jet-Datenbank-Engine. Im Allgemeinen sind die MFC-Klassen basierend auf DAO leistungsfähiger als die MFC-Klassen basierend auf ODBC; die DAO-basierten Klassen können Daten, einschließlich über ODBC-Treiber, über eigene Datenbank-Engine zugreifen. Die DAO-basierten Klassen unterstützen auch Vorgänge wie das Hinzufügen von Tabellen über die Klassen, ohne direkt aufrufen von DAO (Data Definition Language, Datendefinitionssprache).
 
 ## <a name="usage"></a>Verwendung
 
@@ -342,7 +339,7 @@ Der Name der primären Tabelle in der Beziehung. Wenn die Tabelle nicht vorhande
 Der Name der foreign-Tabelle in der Beziehung. Wenn die Tabelle nicht vorhanden ist, löst MFC eine Ausnahme vom Typ `CDaoException`.
 
 *lAttributes*<br/>
-Ein long-Wert, der Informationen über den Beziehungstyp enthält. Sie können diesen Wert verwenden, um unter anderem mit referenzieller Integrität zu erzwingen. Können Sie den bitweisen OR-Operator ( **&#124;**) eines der folgenden Werte kombinieren (solange die Kombination aus sinnvoll ist):
+Ein long-Wert, der Informationen über den Beziehungstyp enthält. Sie können diesen Wert verwenden, um unter anderem mit referenzieller Integrität zu erzwingen. Können Sie den bitweisen OR-Operator ( **&#124;** ) eines der folgenden Werte kombinieren (solange die Kombination aus sinnvoll ist):
 
 - `dbRelationUnique` Besteht eine 1: 1-Beziehung.
 
@@ -455,7 +452,7 @@ void Execute(
 Zeiger auf eine Null-terminierte Zeichenfolge, die mit einem gültigen SQL‑Befehl ausgeführt.
 
 *nOptions*<br/>
-Eine ganze Zahl, die Optionen in Bezug auf die Integrität der Abfrage angibt. Können Sie den bitweisen OR-Operator ( **&#124;**) eine der folgenden Konstanten kombiniert (sofern sinnvoll ist die Kombination aus – beispielsweise würden Sie nicht kombinieren `dbInconsistent` mit `dbConsistent`):
+Eine ganze Zahl, die Optionen in Bezug auf die Integrität der Abfrage angibt. Können Sie den bitweisen OR-Operator ( **&#124;** ) eine der folgenden Konstanten kombiniert (sofern sinnvoll ist die Kombination aus – beispielsweise würden Sie nicht kombinieren `dbInconsistent` mit `dbConsistent`):
 
 - `dbDenyWrite` Schreibberechtigung auf anderen Benutzern verweigert.
 
@@ -587,9 +584,9 @@ Optionen, die angeben, welche Informationen das Recordset abrufen. Die verfügba
 
 - AFX_DAO_PRIMARY_INFO (Standard)-Namen, Typ
 
-- Primäre AFX_DAO_SECONDARY_INFO Informationen plus: Erstellungsdatum, Datum der letzten Aktualisierung Gibt Datensätze zurück, aktualisierbar
+- AFX_DAO_SECONDARY_INFO primäre Informationen Plus: Erstellungsdatum, Datum des letzten Updates, zurückgegebene Datensätze, aktualisierbar
 
-- AFX_DAO_ALL_INFO primären und sekundären Informationen plus: SQL, eine Verbindung herstellen, Timeoutfehlers warten soll
+- AFX_DAO_ALL_INFO primäre und sekundäre Informationen Plus: SQL, Connect, ODBCTimeout
 
 *Wert*<br/>
 Eine Zeichenfolge, die mit dem Namen einer Abfrage, die in der Datenbank, für die Suche nach dem Namen definiert.
@@ -744,9 +741,9 @@ Optionen, die angeben, welche Informationen in der Tabelle abgerufen. Die verfü
 
 - AFX_DAO_PRIMARY_INFO (Standard) ein, die aktualisiert werden kann, Attribute
 
-- Primäre AFX_DAO_SECONDARY_INFO Informationen plus: Erstellungsdatum, Datum zuletzt aktualisiert: Name der Quelltabelle, eine Verbindung herstellen
+- AFX_DAO_SECONDARY_INFO primäre Informationen Plus: Erstellungsdatum, Datum der letzten Aktualisierung, Name der Quell Tabelle, verbinden
 
-- AFX_DAO_ALL_INFO primären und sekundären Informationen plus: Anzahl der Überprüfung in der Regel Validierung von Text, Datensätze
+- AFX_DAO_ALL_INFO primäre und sekundäre Informationen Plus: Validierungs Regel, Validierungs Text, Anzahl der Datensätze
 
 *Wert*<br/>
 Der Name des Objekts Tabledef, für die Suche anhand des Namens.

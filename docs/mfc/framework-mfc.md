@@ -1,6 +1,6 @@
 ---
 title: Framework (MFC)
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 helpviewer_keywords:
 - encapsulation [MFC], Win32 API
 - MFC, application framework
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: 933fcf97c24ed0903395e2c718f8c89d42473494
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d93d2d50bab4b63258a3e0fe4cd2f24c2fcde4f3
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219768"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095786"
 ---
 # <a name="framework-mfc"></a>Framework (MFC)
 
-Die Arbeit mit dem Framework für die Microsoft Foundation Class (MFC)-Bibliothek basiert größtenteils auf einige wichtige Klassen und verschiedene Tools für Visual C++. Einige Klassen kapseln einen großen Teil der Win32-Anwendungsprogrammierschnittstelle (API). Andere Klassen kapseln Anwendungskonzepte wie z. B. Dokumente, Ansichten und die Anwendung selbst. Weiterhin kapseln andere OLE-Features und Funktionen von ODBC und DAO-Datenzugriff.
+Ihre Arbeit mit dem MFC-Bibliotheks Framework (Microsoft Foundation Class) basiert größtenteils auf einigen Hauptklassen und mehreren visuellen C++ Tools. Einige Klassen Kapseln einen großen Teil der Win32-API (Application Programming Interface). Andere Klassen Kapseln Anwendungskonzepte, z. b. Dokumente, Ansichten und die Anwendung selbst. Andere kapseln OLE-Features und ODBC-und DAO-Datenzugriffs Funktionen.  (DAO wird durch Office 2013 unterstützt. DAO 3,6 ist die endgültige Version, die als veraltet eingestuft wird.)
 
-Win32 Konzept der Fenster ist z. B. von MFC-Klasse gekapselt `CWnd`. Das heißt, eine C++-Klasse aufgerufen `CWnd` kapselt, oder "umschließt" die `HWND` Handle, das ein Windows-Fenster darstellt. Ebenso Klasse `CDialog` Win32-Dialogfelder kapselt.
+Beispielsweise wird das Win32's-Konzept von Window von der MFC `CWnd`-Klasse gekapselt. Dies bedeutet, dass C++ eine Klasse `CWnd` mit dem Namen das `HWND` handle kapselt oder umschließt, das ein Windows-Fenster darstellt. Ebenso kapselt `CDialog` die Klasse Win32-Dialogfelder.
 
-Kapselung bedeutet, dass die C++-Klasse `CWnd`, enthält z. B. eine Membervariable des Typs `HWND`, und Memberfunktionen der Klasse gekapselt werden Aufrufe von Win32-Funktionen, die akzeptieren ein `HWND` als Parameter. Klassenmemberfunktionen haben in der Regel den gleichen Namen wie die Win32-Funktion, die sie kapseln.
+Kapselung bedeutet, C++ dass `CWnd`die Klasse z. b. eine Member-Variable `HWND`vom Typ enthält, und die Member-Funktionen der Klasse Kapseln Aufrufe von Win32- `HWND` Funktionen, die einen als Parameter annehmen. Die Klassenmember-Funktionen haben normalerweise denselben Namen wie die Win32-Funktion, die Sie kapseln.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -33,9 +33,9 @@ Kapselung bedeutet, dass die C++-Klasse `CWnd`, enthält z. B. eine Membervariab
 
 [Dokumente, Ansichten und das Framework](../mfc/documents-views-and-the-framework.md)
 
-[Assistenten und die Ressourcen-Editoren](../mfc/wizards-and-the-resource-editors.md)
+[Assistenten und Ressourcen-Editoren](../mfc/wizards-and-the-resource-editors.md)
 
-## <a name="in-related-sections"></a>In verwandten Abschnitten
+## <a name="in-related-sections"></a>Verwandte Abschnitte
 
 [Erstellen im Framework](../mfc/building-on-the-framework.md)
 
@@ -43,7 +43,7 @@ Kapselung bedeutet, dass die C++-Klasse `CWnd`, enthält z. B. eine Membervariab
 
 [CWinApp: Die Anwendungsklasse](../mfc/cwinapp-the-application-class.md)
 
-[Dokumentvorlagen und der Erstellungsvorgang für Dokumente und Ansichten](../mfc/document-templates-and-the-document-view-creation-process.md)
+[Dokumentvorlagen und der Erstellungs Vorgang für Dokumente/Sichten](../mfc/document-templates-and-the-document-view-creation-process.md)
 
 [Meldungsbehandlung und Zuordnung](../mfc/message-handling-and-mapping.md)
 

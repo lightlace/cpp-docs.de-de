@@ -4,12 +4,12 @@ ms.date: 04/25/2019
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-ms.openlocfilehash: cf0a6bd230364b48c78c72b8e453e7e641fb2d0e
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: e371368d4e588de5f94f6a252c6db291ec851e0a
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907405"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096016"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Exemplarische Vorgehensweise: Verwenden der neuen MFC-shellsteuerelemente
 
@@ -31,14 +31,14 @@ Diese Schritte variieren abhängig von der verwendeten Version von Visual Studio
 
 1. Klicken Sie im Hauptmenü auf **Datei** > **Neu** > **Projekt**, um das Dialogfeld **Neues Projekt erstellen** zu öffnen.
 
-1. Geben Sie im Suchfeld am oberen Rand **MFC** ein, und wählen Sie dann in der Ergebnisliste die Option **MFC-App** aus. 
+1. Geben Sie im Suchfeld am oberen Rand **MFC** ein, und wählen Sie dann in der Ergebnisliste die Option **MFC-App** aus.
 
 1. Klicken Sie auf **Weiter**. Geben Sie auf der nächsten Seite einen Namen für das Projekt ein, und geben Sie den Speicherort des Projekts an, wenn dies gewünscht ist.
 
 1. Klicken Sie auf die Schaltfläche **Erstellen**, um das Projekt zu erstellen.
 
    Nachdem der **MFC-Anwendungs-Assistent** angezeigt wird, verwenden Sie die folgenden Optionen:
- 
+
    1. Wählen Sie auf der linken Seite **Anwendungstyp** aus. Wählen Sie dann **einzelnes Dokument** aus, und wählen Sie **Unterstützung für Dokument-/sichtarchitektur** Wählen Sie unter **Projekt Stil**die Option **Visual Studio**aus, und wählen Sie in der Dropdown Liste **visueller Stil und Farben** die Option **Office 2007 (blaues Design)** aus.
 
    1. Wählen Sie im Bereich **Verbund Dokument Unterstützung** die Option **keine**aus.
@@ -59,7 +59,7 @@ Diese Schritte variieren abhängig von der verwendeten Version von Visual Studio
 
 1. Verwenden Sie den **MFC-Anwendungs-Assistenten** , um eine neue MFC-Anwendung zu erstellen. Um den Assistenten auszuführen, wählen Sie im Menü **Datei** die Option **neu**aus, und wählen Sie dann **Projekt**aus. Das Dialogfeld **Neues Projekt** wird angezeigt.
 
-1. Erweitern Sie im Dialogfeld **Neues Projekt** den Knoten **Visual C++**  im Bereich **Projekttypen** , und wählen Sie **MFC**aus. Wählen Sie dann im Bereich **Vorlagen** die Option **MFC-Anwendung**aus. Geben Sie einen Namen für das Projekt ein, `MFCShellControls` z.b., und klicken Sie auf **OK**. 
+1. Erweitern Sie im Dialogfeld **Neues Projekt** den Knoten **Visual C++**  im Bereich **Projekttypen** , und wählen Sie **MFC**aus. Wählen Sie dann im Bereich **Vorlagen** die Option **MFC-Anwendung**aus. Geben Sie einen Namen für das Projekt ein, `MFCShellControls` z.b., und klicken Sie auf **OK**.
 
    Nachdem der **MFC-Anwendungs-Assistent** angezeigt wird, verwenden Sie die folgenden Optionen:
 

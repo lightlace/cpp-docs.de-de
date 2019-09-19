@@ -1,6 +1,6 @@
 ---
 title: Übersicht über die Klassenbibliothek
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - vc.classes.mfc
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - class libraries, MFC
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
-ms.openlocfilehash: aec295ea93868ff1fe6e0d3d1d2370a344e47c73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23097c0bf3399a4dced6640f41c0d46dba101b26
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327313"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095942"
 ---
 # <a name="class-library-overview"></a>Übersicht über die Klassenbibliothek
 
@@ -71,7 +71,7 @@ Die Klassen der Bibliothek werden hier in den folgenden Kategorien aufgeführt:
 
 - [Klassen für Dateien und Datenbanken](../mfc/file-and-database-classes.md)
 
-   - [E/a-Klassen](../mfc/file-i-o-classes.md)
+   - [Datei-e/a-Klassen](../mfc/file-i-o-classes.md)
 
    - [DAO-Klassen](../mfc/dao-classes.md)
 
@@ -109,13 +109,13 @@ Die Klassen der Bibliothek werden hier in den folgenden Kategorien aufgeführt:
 
    - [Ausnahmeklassen](../mfc/exception-classes.md)
 
-Der Abschnitt [allgemeine Klassenentwurfs](../mfc/general-class-design-philosophy.md) wird erläutert, wie die MFC-Bibliothek entwickelt wurde.
+Im Abschnitt [allgemeine Klassen Entwurfs Philosophie](../mfc/general-class-design-philosophy.md) wird erläutert, wie die MFC-Bibliothek entworfen wurde.
 
-Eine Übersicht über das Framework, finden Sie unter [verwenden der Klassen zum Schreiben von Anwendungen für Windows](../mfc/using-the-classes-to-write-applications-for-windows.md). Einige der oben aufgelisteten Klassen sind Allzweckklassen, die außerhalb des Frameworks verwendet werden können und nützliche Abstraktionen wie Auflistungen, Ausnahmen, Dateien und Zeichenfolgen bereitstellen.
+Eine Übersicht über das Framework finden Sie unter [Verwenden der Klassen zum Schreiben von Anwendungen für Windows](../mfc/using-the-classes-to-write-applications-for-windows.md). Einige der oben aufgelisteten Klassen sind Allzweckklassen, die außerhalb des Frameworks verwendet werden können und nützliche Abstraktionen wie Auflistungen, Ausnahmen, Dateien und Zeichenfolgen bereitstellen.
 
-Um die Vererbung von einer Klasse anzuzeigen, verwenden die [Klassenhierarchiediagramm](../mfc/hierarchy-chart.md).
+Verwenden Sie das [Klassen Hierarchie Diagramm](../mfc/hierarchy-chart.md), um die Vererbung einer Klasse anzuzeigen.
 
-Zusätzlich zu den Klassen, die in dieser Übersicht aufgeführt sind, enthält die MFC-Bibliothek mehrere globale Funktionen, globale Variablen und Makros. Es gibt eine Übersicht und ausführliche Auflistung dazu im Thema [MFC-Makros und Globals](../mfc/reference/mfc-macros-and-globals.md), das die alphabetische Referenz für die MFC-Klassen folgt.
+Zusätzlich zu den Klassen, die in dieser Übersicht aufgeführt sind, enthält die MFC-Bibliothek mehrere globale Funktionen, globale Variablen und Makros. Im Thema [MFC-Makros und Globals](../mfc/reference/mfc-macros-and-globals.md)finden Sie eine Übersicht und eine ausführliche Auflistung, die auf den alphabetischen Verweis auf die MFC-Klassen folgt.
 
 ## <a name="see-also"></a>Siehe auch
 

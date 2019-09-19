@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: c35cc01b352285402885587f6d0b91e2c2bdd4ae
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: e65ad8b5d8b14ff747adc55b517d9e695d9cbb66
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741241"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095749"
 ---
 # <a name="cwinapp-class"></a>CWinApp-Klasse
 
@@ -1036,7 +1036,7 @@ virtual void HtmlHelp(
 Gibt zusätzliche Daten an. Der verwendete Wert hängt vom Wert des *ncmd* -Parameters ab. Der Standardwert ist [HH_HELP_CONTEXT.](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command) `0x000F`
 
 *nCmd*<br/>
-Gibt den Typ der angeforderten Hilfe an. Eine Liste möglicher Werte und deren Auswirkung auf den *dwdata* -Parameter finden Sie unter der *ucommand* -Parameter, der in den Funktionen [htmlhelpw](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpw) oder [htmlhelpa](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpa) API in der Windows SDK beschrieben wird.  
+Gibt den Typ der angeforderten Hilfe an. Eine Liste möglicher Werte und deren Auswirkung auf den *dwdata* -Parameter finden Sie unter der *ucommand* -Parameter, der in den Funktionen [htmlhelpw](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpw) oder [htmlhelpa](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpa) API in der Windows SDK beschrieben wird. 
 
 ### <a name="remarks"></a>Hinweise
 
