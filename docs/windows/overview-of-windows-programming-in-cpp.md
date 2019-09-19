@@ -1,13 +1,13 @@
 ---
 title: Übersicht über Windows-Programmierung in C++
-ms.date: 07/28/2019
+ms.date: 09/17/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 10ef9698e27099d5856c1ed5f8ed2f21cea72c24
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 96a03194059f59f57780bfd70cab3065d6a1aff0
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514798"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127196"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Übersicht über Windows-Programmierung in C++
 
@@ -17,7 +17,7 @@ In diesem Abschnitt wird erläutert, wie Visual Studio und die MFC/ATL-Wrapper B
 
 ## <a name="command-line-console-applications"></a>Befehlszeilen Anwendungen (Konsolen Anwendungen)
 
-C++Konsolen Anwendungen werden über die Befehlszeile in einem Konsolenfenster ausgeführt und können nur Textausgaben anzeigen. Weitere Informationen finden Sie unter [Konsolen Anwendungen](console-applications-in-visual-cpp.md).
+C++Konsolen Anwendungen werden über die Befehlszeile in einem Konsolenfenster ausgeführt und können nur Textausgaben anzeigen. Weitere Informationen finden Sie unter [Erstellen eines C++ Konsolen-App-Projekts](../get-started/tutorial-console-cpp.md).
 
 ## <a name="native-desktop-client-applications"></a>Native Desktop-Client Anwendungen
 

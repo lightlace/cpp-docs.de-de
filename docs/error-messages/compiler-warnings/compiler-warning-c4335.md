@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4335
 ms.assetid: e66467ad-a10b-4438-8c7c-e8e8d11d39bb
-ms.openlocfilehash: 43c2f5d9092cdbad14e429349bd7d04e236b75e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d44a1ae5354e8d22e41694f4d6df42ad22c3986d
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151850"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127167"
 ---
 # <a name="compiler-warning-c4335"></a>Compilerwarnung C4335
 
-Mac-Dateiformat ermittelt: Konvertieren Sie die Quelldatei in DOS- oder UNIX-Format
+Mac-Dateiformat erkannt: konvertieren Sie die Quelldatei in das DOS-oder UNIX-Format.
 
-Das abschließende Zeichen der ersten Zeile einer Quelldatei ist Macintosh-Systeme ('\r') im Gegensatz zu UNIX ('\n') oder DOS ("\r\n").
+Das Zeilen Beendigungs Zeichen der ersten Zeile einer Quelldatei ist der Macintosh-Stil ("\r") im Gegensatz zu UNIX ("\n") oder DOS ("\r\n").
 
-Diese Warnung wird immer als Fehler ausgegeben.  Finden Sie unter [Warnung](../../preprocessor/warning.md) Pragma Informationen dazu, wie Sie diese Warnung zu deaktivieren.  Darüber hinaus wird diese Warnung nur einmal pro Kompiliereinheit ausgegeben. Aus diesem Grund gibt es sind mehrere `#include` Anweisungen, die Dateien im Macintosh-Format angeben, C4335 wird nur einmal ausgegeben.
+Diese Warnmeldung wird immer als Fehler ausgegeben.  Informationen dazu, wie Sie diese Warnung deaktivieren, finden Sie unter [Warning](../../preprocessor/warning.md) -Pragma.  Diese Warnung wird auch nur einmal pro Kompilierungen ausgegeben. Wenn also mehrere `#include` -Anweisungen vorhanden sind, die Dateien im Macintosh-Format angeben, wird C4335 nur einmal ausgegeben.
 
-Eine Möglichkeit zum Generieren von Dateien im Macintosh-Format ist die Verwendung der **Erweiterte Speicheroptionen** (auf der **Datei** Menü) in Visual Studio.
+Eine Möglichkeit zum Generieren von Dateien im Macintosh-Format ist die Verwendung der **erweiterten Speicheroptionen** (im Menü **Datei** ) in Visual Studio.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4335 generiert.
+Im folgenden Beispiel wird C4335 generiert.
 
 ```
 // C4335 expected
