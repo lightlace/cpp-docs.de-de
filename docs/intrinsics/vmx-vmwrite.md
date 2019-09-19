@@ -39,13 +39,13 @@ in Der Wert, der in das Feld VMCS geschrieben werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-1,0
+0\
 Der Vorgang wurde erfolgreich ausgeführt.
 
-1
+1\
 Bei dem Vorgang ist ein Fehler mit erweitertem Status aufgetreten, der im `VM-instruction error field` der aktuellen VMCS verfügbar ist.
 
-2,2
+2\
 Bei dem Vorgang ist ein Fehler ohne verfügbaren Status aufgetreten.
 
 ## <a name="remarks"></a>Hinweise
