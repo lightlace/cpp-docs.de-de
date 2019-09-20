@@ -1,6 +1,6 @@
 ---
 title: _getdrive
-ms.date: 11/04/2016
+ms.date: 09/19/2019
 api_name:
 - _getdrive
 api_location:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-ms.openlocfilehash: eb79d18c4ad177d7dc4da140e047ff3071ea3542
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 94d6c15270827cf61ec6086de8fa11251b435e2c
+ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955087"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71158767"
 ---
 # <a name="_getdrive"></a>_getdrive
 
@@ -50,7 +50,7 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das aktuelle (Standard-)Laufwerk zurück (1 = A, 2 = B usw.). Es gibt keine Fehlerrückgabe.
+Gibt das aktuelle (Standard-)Laufwerk zurück (1 = A, 2 = B usw.). Der Rückgabewert 0 (null) bedeutet, dass der aktuelle Pfad nicht mit dem Namen eines Buch Laufwerks, z. b. einem UNC-Pfad, beginnt. Oder es bedeutet, dass eine interne Puffer Zuordnung fehlgeschlagen ist. Wenn eine interne Zuordnung fehlschlägt `errno` , wird auf ENOMEM festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
