@@ -134,12 +134,12 @@ helpviewer_keywords:
 - C4594
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
-ms.openlocfilehash: 9f7886a88ebd98d5d7ab1848ea7a788967362ad7
-ms.sourcegitcommit: d3829ae0c3db909f96057755a80665f5ea4896ea
+ms.openlocfilehash: d1a4da3d5e721c85879441a53ef4bc00549b587d
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550443"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71230483"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>Compilerwarnungen C4400 bis C4599
 
@@ -218,7 +218,7 @@ In den Artikeln in diesem Abschnitt der Dokumentation wird eine Teilmenge der Wa
 |Compilerwarnung (Stufe 1) c4472 generiert|'*Identifier*' ist eine systemeigene Enumeration: Fügen Sie einen Zugriffsspezifizierer (privat/öffentlich) hinzu&#124;, um eine WinRT-verwaltete Enumeration zu deklarieren.|
 |[Compilerwarnung (Stufe 1) C4473](c4473.md)|"*Funktion*": nicht genügend Argumente für Format Zeichenfolge.|
 |Compilerwarnung (Stufe 3) C4474|"*Function*": zu viele Argumente für Format Zeichenfolge wurden übermittelt.|
-|Compilerwarnung (Stufe 3) C4475|"*Function*": der Längenmodifizierer "Modifizierer" kann nicht mit dem typandzeichen "*Character*" im Format Bezeichner verwendet werden.|
+|Compilerwarnung (Stufe 3) C4475|"*Function*": der Längenmodifizierer "*Modifizierer*" kann nicht mit dem typandzeichen "*Character*" im Format Bezeichner verwendet werden.|
 |Compilerwarnung (Stufe 3) C4476|"*Function*": Unbekanntes tyfeldzeichen '*Character*' in Format Bezeichner|
 |[Compilerwarnung (Stufe 1) C4477](c4477.md)|"*Function*": die Format Zeichenfolge "*String*" erfordert ein Argument vom Typ "*Type*", aber das Variadic-Argument " *Number* " weist den Typ "*Type*" auf.|
 |Compilerwarnung (Stufe 1) C4478|"*Function*": Positions-und nicht positionelle Platzhalter können nicht in der gleichen Format Zeichenfolge gemischt werden.|
@@ -268,7 +268,7 @@ In den Artikeln in diesem Abschnitt der Dokumentation wird eine Teilmenge der Wa
 |[Compilerwarnung (Stufe 1) C4533](../../error-messages/compiler-warnings/compiler-warning-level-1-c4533.md)|die Initialisierung von "*Variable*" wird von "*goto Label*" übersprungen.|
 |[Compilerwarnung (Stufe 3) C4534](../../error-messages/compiler-warnings/compiler-warning-level-3-c4534.md)|"*Konstruktor*" ist aufgrund des Standard Arguments kein Standardkonstruktor für "class/struct" "*Identifier*".|
 |[Compilerwarnung (Stufe 3) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)|calling _set_se_translator() requires /EHa|
-|[Compilerwarnung (Stufe 4) C4536](../../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md)|"Typname": der Typname überschreitet das Metadatenlimit von "*character_limit*"-Zeichen.|
+|[Compilerwarnung (Stufe 4) C4536](../../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md)|"*Typname"* : der Typname überschreitet das Metadatenlimit von "*character_limit*"-Zeichen.|
 |[Compilerwarnung (Stufe 1) C4537](../../error-messages/compiler-warnings/compiler-warning-level-1-c4537.md)|"*Objekt*": "." angewendet auf nicht-UDT-Typ|
 |[Compilerwarnung (Stufe 3) C4538](../../error-messages/compiler-warnings/compiler-warning-level-3-c4538.md)|"*Typ*": Konstante/volatile-Qualifizierer für diesen Typ werden nicht unterstützt.|
 |[Compilerwarnung (Stufe 1) C4540](../../error-messages/compiler-warnings/compiler-warning-level-1-c4540.md)|dynamic_cast wird für die Konvertierung in eine nicht zugängliche oder mehrdeutige Basis verwendet; der Lauf Zeit Test schlägt fehl ("*Typ1*" zu "*Typ2*").|
@@ -305,7 +305,7 @@ In den Artikeln in diesem Abschnitt der Dokumentation wird eine Teilmenge der Wa
 |Compilerwarnung (Stufe 4) C4574|"*Identifier*" ist als "0" definiert: wollten Sie "#if Identifier" verwenden?|
 |Compilerwarnung (Stufe 1) C4575|"__vectorcall" ist nicht kompatibel mit der Option "/CLR": wird in "__stdcall" umgerechnet.|
 |Compilerwarnung (Stufe 1, Fehler) C4576|ein in Klammern gefasster Typ, auf den eine Initialisiererliste folgt, ist eine nicht standardmäßige explizite Typkonvertierungs Syntax.|
-|Compilerwarnung (Stufe 1, Off) C4577|"noaußer" wird verwendet, ohne dass der Ausnahme Behandlungs Modus angegeben wurde. Beendigung bei Ausnahme ist nicht gewährleistet. /EHsc angeben|
+|[Compilerwarnung (Stufe 1, Off) C4577](../../error-messages/compiler-warnings/compiler-warning-level-1-c4577.md)|"noaußer" wird verwendet, ohne dass der Ausnahme Behandlungs Modus angegeben wurde. Beendigung bei Ausnahme ist nicht gewährleistet. /EHsc angeben|
 |Compilerwarnung (Stufe 1, Fehler) C4578|"ABS": Konvertierung von "*Typ1*" in "*Typ2*", möglicher Datenverlust (meinten Sie "*Function*" oder #include \<cmath->?)|
 |[Compilerwarnung (Stufe 3) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[attribute] ist veraltet; geben Sie stattdessen System::Attribute oder Platform::Metadata als Basisklasse an.|
 |[Compilerwarnung (Stufe 1) C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|veraltes Verhalten: "" die*Zeichenfolge*"" wurde durch "*String*" in das Attribut "Process" ersetzt.|
@@ -323,8 +323,8 @@ In den Artikeln in diesem Abschnitt der Dokumentation wird eine Teilmenge der Wa
 |Compilerwarnung (Stufe 1) c4595 aus|"*Type*": Behavior Change: der Dekonstruktor wird nicht mehr implizit aufgerufen, wenn eine Ausnahme ausgelöst wird.|
 |[Compilerwarnung (Stufe 4) C4596](../../error-messages/compiler-warnings/c4596.md)|"*Bezeichner*": Unzulässiger qualifizierter Name in Element Deklaration|
 |Compilerwarnung (Fehler) C4597|nicht definiertes Verhalten: OffsetOf auf ein Mitglied einer virtuellen Basis angewendet|
-|Compilerwarnung (Ebene 1 und Ebene 3) C4598|' #include '-*Header*' ': die Header Nummer in der vorkompilierten Kopfzeile stimmt nicht mit der aktuellen Kompilierung an dieser Position.|
-|Compilerwarnung (Stufe 3) C4599|'*flagpfad*': die Nummer der Befehls Zeilen Argument-Nummer stimmt nicht mit dem vorkompilierten Header überein.|
+|Compilerwarnung (Ebene 1 und Ebene 3) C4598|' #include '-*Header*' ': die Header Nummer in der vorkompilierten Kopfzeile stimmt *nicht mit der* aktuellen Kompilierung an dieser Position.|
+|Compilerwarnung (Stufe 3) C4599|'*flagpfad*': die Nummer der Befehlszeilenargument- *Nummer stimmt nicht* mit dem vorkompilierten Header überein.|
 
 ## <a name="see-also"></a>Siehe auch
 

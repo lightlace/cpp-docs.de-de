@@ -63,8 +63,6 @@ f1_keywords:
 - C5042
 - C5043
 - C5044
-- C5045
-- C5046
 - C5047
 - C5048
 - C5049
@@ -74,7 +72,6 @@ f1_keywords:
 - C5102
 - C5103
 - C5104
-- C5105
 - C5106
 - C5107
 helpviewer_keywords:
@@ -139,8 +136,6 @@ helpviewer_keywords:
 - C5042
 - C5043
 - C5044
-- C5045
-- C5046
 - C5047
 - C5048
 - C5049
@@ -150,15 +145,14 @@ helpviewer_keywords:
 - C5102
 - C5103
 - C5104
-- C5105
 - C5106
 - C5107
-ms.openlocfilehash: ae73d4ba503dfbbc27f91040c31beb91da3b7e54
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 7e715dcbac9dc59fe09ee1f917c02a23b3c4db14
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631539"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71230480"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Compilerwarnungen C4800 bis C5999
 
@@ -176,7 +170,7 @@ In den Artikeln in diesem Abschnitt der Dokumentation wird eine Teilmenge der Wa
 |[Compilerwarnung (Stufe 1) C4805](compiler-warning-level-1-c4805.md)|'*Operation*': unsichere Mischung aus Typ '*Typ1*' und Typ '*Typ2*' in Vorgang|
 |[Compilerwarnung (Stufe 1) C4806](compiler-warning-level-1-c4806.md)|"*Operation*": unsichere Operation: kein Wert vom Typ "*Typ1*", der auf den Typ "*Typ2*" herauf gestuft wurde, kann der angegebenen Konstante entsprechen.|
 |[Compilerwarnung (Stufe 1) C4807](compiler-warning-level-1-c4807.md)|"*Operation*": unsichere Mischung aus Typ "*Typ1*" und signiertem Bitfeld vom Typ "*Typ2*"|
-|Compilerwarnung (Stufe 1) C4808|der Case-Wert ist kein gültiger Wert für eine Switch-Bedingung vom Typ "bool".|
+|Compilerwarnung (Stufe 1) C4808|der Case *-Wert ist*kein gültiger Wert für eine Switch-Bedingung vom Typ "bool".|
 |Compilerwarnung (Stufe 1) C4809|Switch-Anweisung hat redundante "Default"-Bezeichnung; alle möglichen Case-Bezeichnungen werden angegeben.|
 |[Compilerwarnung (Stufe 1) C4810](compiler-warning-level-1-c4810.md)|Wert von pragma pack(show) == n|
 |[Compilerwarnung (Stufe 1) C4811](compiler-warning-level-1-c4811.md)|Wert von 'pragma conform(forScope, show) == Wert'|
@@ -185,7 +179,7 @@ In den Artikeln in diesem Abschnitt der Dokumentation wird eine Teilmenge der Wa
 |[Compilerwarnung (Stufe 4) C4816](compiler-warning-level-4-c4816.md)|'*param*': Parameter hat ein Array der Größenangabe, das abgeschnitten wird (sofern das Objekt nicht als Verweis übergeben wird).|
 |[Compilerwarnung (Stufe 1) C4817](compiler-warning-level-1-c4817.md)|"*Member*": Unzulässige Verwendung von "." für den Zugriff auf diesen Member. der Compiler wurde durch "->" ersetzt.|
 |[Compilerwarnung (Stufe 1) C4819](compiler-warning-level-1-c4819.md)|Die Datei enthält ein Zeichen, das in der aktuellen Codepage (Nummer) nicht dargestellt werden kann. Speichern Sie die Datei im Unicode-Format, um Datenverluste zu verhindern.|
-|[Compilerwarnung (Stufe 4) C4820](compiler-warning-level-4-c4820.md)|Byte-Auffüll Zeichen werden nach dem Konstrukt "*MEMBER_NAME*" hinzugefügt.|
+|[Compilerwarnung (Stufe 4) C4820](compiler-warning-level-4-c4820.md)|Byte *-* Auffüll Zeichen werden nach dem Konstrukt "*MEMBER_NAME*" hinzugefügt.|
 |[Compilerwarnung (Stufe 1) C4821](compiler-warning-level-1-c4821.md)|Der Unicode-Codierungstyp kann nicht bestimmt werden. speichern Sie die Datei mit der Signatur (BOM).|
 |[Compilerwarnung (Stufe 1) C4822](compiler-warning-level-1-c4822.md)|' Member-Funktion ': die Member-Funktion der lokalen Klasse weist keinen Text auf.|
 |[Compilerwarnung (Stufe 3) C4823](compiler-warning-level-3-c4823.md)|"*Function*": verwendet anheften-Zeiger, aber die Entlade Semantik ist nicht aktiviert. Verwenden Sie/EHA.|
@@ -230,7 +224,7 @@ In den Artikeln in diesem Abschnitt der Dokumentation wird eine Teilmenge der Wa
 |[Compilerwarnung (Stufe 1) C4929](compiler-warning-level-1-c4929.md)|"*File*": Typbibliothek enthält eine Union. der Qualifizierer "embedded_idl" wird ignoriert.|
 |[Compilerwarnung (Stufe 1) C4930](compiler-warning-level-1-c4930.md)|"*Prototyp*": eine prototypisierte Funktion wird nicht aufgerufen (war eine Variablen Definition beabsichtigt?)|
 |[Compilerwarnung (Stufe 4) C4931](compiler-warning-level-4-c4931.md)|Es wird angenommen, dass die Typbibliothek für Anzahl-Bit-Pointer erstellt wurde|
-|[Compilerwarnung (Stufe 4) C4932](compiler-warning-level-4-c4932.md)|__identifier (*Bezeichner*) \_und _identifier (Bezeichner) sind nicht unterscheidbar.|
+|[Compilerwarnung (Stufe 4) C4932](compiler-warning-level-4-c4932.md)|__identifier (*Bezeichner*) \_und _identifier (*Bezeichner*) sind nicht unterscheidbar.|
 |Compilerwarnung (Stufe 1) C4934|' __delegate (Multicast) ' ist veraltet, verwenden Sie stattdessen\_' _Delegate '.|
 |[Compilerwarnung (Stufe 1) C4935](compiler-warning-level-1-c4935.md)|Assemblyzugriffsspezifizierer geändert von "*Access*"|
 |[Compilerwarnung (Stufe 1, Fehler) C4936](compiler-warning-c4936.md)|__declspec wird nur bei einer Kompilierung mit /clr oder /clr:pure unterstützt.|
@@ -292,7 +286,7 @@ In den Artikeln in diesem Abschnitt der Dokumentation wird eine Teilmenge der Wa
 |Compilerwarnung (Stufe 4) C5031|#pragma Warnung (Pop): wahrscheinliche fehl Übereinstimmung, pping-Warn Status in anderer Datei übermittelt|
 |Compilerwarnung (Stufe 4) C5032|#pragma Warnung (Push) ohne entsprechende #pragma Warnung (Pop) erkannt.|
 |Compilerwarnung (Stufe 1) C5033|"*Storage-Class*" ist keine unterstützte Speicher Klasse mehr.|
-|Compilerwarnung C5034|die Verwendung der Systeminternen ' intrinsischen ' bewirkt, dass die Funktions *Funktion* als gastcode kompiliert wird.|
+|Compilerwarnung C5034|die Verwendung der systeminternen '*intrinsischen*' bewirkt, dass die Funktions *Funktion* als gastcode kompiliert wird.|
 |Compilerwarnung C5035|die Verwendung der Funktion "*Feature*" bewirkt, dass die Funktions *Funktion* als gastcode kompiliert wird.|
 |Compilerwarnung (Stufe 1) C5036|VarArgs-Funktionszeiger Konvertierung beim Kompilieren mit/Hybrid: x86arm64 '*Typ1*' in '*Typ2*'|
 |Compilerwarnung (Fehler) C5037|"*Member-Function*": eine Out-of-Line-Definition eines Members einer Klassen Vorlage kann keine Standardargumente aufweisen.|
@@ -302,9 +296,9 @@ In den Artikeln in diesem Abschnitt der Dokumentation wird eine Teilmenge der Wa
 |Compilerwarnung (Stufe 1) C5041|"*Definition*": Out-of-Line-Definition für statisches constexpr-Datenmember ist nicht erforderlich und ist in c++ 17 veraltet.|
 |Compilerwarnung (Stufe 3) C5042|'*Deklaration*': Funktions Deklarationen im Block Bereich können nicht ' Inline ' in C++Standard angegeben werden; Inline-Spezifizierer entfernen|
 |Compilerwarnung (Stufe 2) C5043|"*Specification*": die Ausnahme Spezifikation stimmt nicht mit der vorherigen Deklaration.|
-|Compilerwarnung (Stufe 4) C5044|Ein Argument für die Befehlszeilenoption -Option verweist auf einen Pfad, der nicht vorhanden ist.|
-|[Compilerwarnung C5045](c5045.md)|Der Compiler fügt eine Spectre-Entschärfung für die Speicherauslastung ein, wenn/Qspectre Switch angegeben|
-|[Compilerwarnung (Stufe 2) C5046](c5046.md)|"*Funktion*": Symbol mit Typ mit interner Verknüpfung nicht definiert|
+|Compilerwarnung (Stufe 4) C5044|Ein Argument für die Befehls *Zeilen Option-Option verweist auf* *einen Pfad,* der nicht vorhanden ist.|
+| [Compilerwarnung C5045](c5045.md) | Der Compiler fügt eine Spectre-Entschärfung für die Speicherauslastung ein, wenn/Qspectre Switch angegeben |
+| [Compilerwarnung (Stufe 2) C5046](c5046.md) | "*Funktion*": Symbol mit Typ mit interner Verknüpfung nicht definiert |
 | Compilerwarnung (Stufe 1) C5047 | Verwendung von nicht Standard \_ \_,\_wenn mit Modulen vorhanden ist, wird nicht unterstützt. |
 | Compilerwarnung (Stufe 1) C5048 | Die Verwendung des Makros "*macroname*" kann eine nicht deterministische Ausgabe zur Folge haben. |
 | Compilerwarnung (Stufe 1) C5049 | "*Zeichenfolge*": Das Einbetten eines vollständigen Pfads kann zu einer Computer abhängigen Ausgabe führen. |
@@ -314,7 +308,7 @@ In den Artikeln in diesem Abschnitt der Dokumentation wird eine Teilmenge der Wa
 | Compilerwarnung (Stufe 1) C5102 | Ungültige Befehlszeilen-Makro Definition '*Wert*' wird ignoriert. |
 | Compilerwarnung (Stufe 1) C5103 | das Einfügen von "*ttoken1*" und "*Token2*" führt nicht zu einem gültigen Vorverarbeitungs Token. |
 | Compilerwarnung (Stufe 1) C5104 | "*Zeichenfolge1*#*Zeichenfolge2*" in der Liste "Makro Ersetzung" gefunden, meinten Sie "*Zeichenfolge1*" "#*Zeichenfolge2*"? |
-| Compilerwarnung (Stufe 1) C5105 | Makro Erweiterung beim Erzeugen von "Defined" hat ein nicht definiertes Verhalten |
+| [Compilerwarnung (Stufe 1) C5105](c5105.md) | Makro Erweiterung beim Erzeugen von "Defined" hat ein nicht definiertes Verhalten |
 | Compilerwarnung (Stufe 1) C5106 | Makro neu definiert mit unterschiedlichen Parameternamen |
 | Compilerwarnung (Stufe 1) C5107 | Fehlendes abschließende Zeichen "*char*" |
 
