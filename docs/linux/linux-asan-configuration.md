@@ -2,12 +2,12 @@
 title: Konfigurieren von Linux-Projekten zum Verwenden von AddressSanitizer
 description: In diesem Artikel wird beschrieben, wie Sie C++-Linux-Projekte in Visual Studio konfigurieren, um AddressSanitizer verwenden zu können.
 ms.date: 06/07/2019
-ms.openlocfilehash: 2415e8971614de35f046b699ce99c3822faf9372
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: da7197981a431becfc1231dae96f7542062de675
+ms.sourcegitcommit: b3d19b5f59f3a5d90c24f9f16c73bad4c5eb6944
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66824185"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71195876"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>Konfigurieren von Linux-Projekten zum Verwenden von AddressSanitizer
 
@@ -32,7 +32,10 @@ Sie können sich im Debugbereich des Ausgabefensters auch die vollständige ASan
 
 ## <a name="enable-asan-for-msbuild-based-linux-projects"></a>Aktivieren von ASan für MSBuild-basierte Linux-Projekte
 
-Klicken Sie mit der rechten Maustaste auf das Projekt im **Projektmappen-Explorer**, und wählen Sie **Eigenschaften** aus, um ASan für MSBuild-basierte Linux-Projekte zu aktivieren. Navigieren Sie dann zu **Konfigurationseigenschaften** > **C/C++** > **Sanitizer**. ASan ist über Compiler und Linker-Flags aktiviert und erfordert, dass Ihr Projekt noch mal kompiliert wird, um zu funktionieren.
+> [!NOTE]
+> Ab Visual Studio 2019, Version 16.4 wird AddressSanitizer für Linux-Projekte über **Konfigurationseigenschaften** > **C/C++**  > **Address Sanitizer aktivieren** aktiviert.
+
+Klicken Sie mit der rechten Maustaste auf das Projekt im **Projektmappen-Explorer**, und wählen Sie **Eigenschaften** aus, um ASan für MSBuild-basierte Linux-Projekte zu aktivieren. Navigieren Sie dann zu **Konfigurationseigenschaften** > **C/C++**  > **Sanitizer**. ASan ist über Compiler und Linker-Flags aktiviert und erfordert, dass Ihr Projekt noch mal kompiliert wird, um zu funktionieren.
 
 ![Aktivieren von ASan für ein MSBuild-Projekt](media/msbuild-asan-prop-page.png)
 
