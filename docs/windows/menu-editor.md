@@ -40,10 +40,10 @@ helpviewer_keywords:
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
 ms.openlocfilehash: f2a5f1ac63007bf44dc331e2104c6e9e5cac23da
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69514828"
 ---
 # <a name="menu-editor-c"></a>Menü-EditorC++()
@@ -164,7 +164,7 @@ Nachdem Sie die Menü Ressource erstellt haben, muss der Anwendungscode die Men�
 > [!NOTE]
 > Verwenden Sie für MFC-Bibliotheksprogramme (Microsoft Foundation Class) und ATL-Programme **Code-Assistenten** , um Menübefehle mit Code zu verbinden. Weitere Informationen finden Sie unter [Hinzufügen eines Ereignisses](../ide/adding-an-event-visual-cpp.md) und Zuordnen von [Nachrichten zu Funktionen](../mfc/reference/mapping-messages-to-functions.md).
 
-- Erstellen Sie ein Menü mit einem leeren Titel, und geben Sie keine *Beschriftung*an, um ein Popupmenü zu erstellen. Fügen Sie dann dem Menü "neu" einen Menübefehl hinzu. wechseln Sie zum ersten Menübefehl unter dem leeren Menütitel, und geben Sie dann eine *Beschriftung* und weitere Informationen ein.
+- Erstellen Sie ein Menü mit einem leeren Titel, und geben Sie keine *Beschriftung*an, um ein Popupmenü zu erstellen. Fügen Sie dann dem Menü "neu" einen Menübefehl hinzu. wechseln Sie zum ersten Menübefehl unter dem leeren Menütitel *, und geben* Sie dann eine *Beschriftung* und weitere Informationen ein.
 
    Wiederholen Sie diesen Vorgang für alle anderen Menübefehle im Popupmenü, und speichern Sie die Menü Ressource.
 

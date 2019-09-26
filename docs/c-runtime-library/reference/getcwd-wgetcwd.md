@@ -1,6 +1,7 @@
 ---
 title: _getcwd, _wgetcwd
-ms.date: 11/04/2016
+description: C-Lauf Zeit Bibliotheksfunktionen _getcwd, _wgetcwd erhalten das aktuelle Arbeitsverzeichnis.
+ms.date: 09/24/2019
 api_name:
 - _wgetcwd
 - _getcwd
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: 78b02871aafca85db50df2eea74a2210c578c204
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 27cfdc1eb59c2de788bbe5963a6fccffcb62cba0
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955250"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274635"
 ---
 # <a name="_getcwd-_wgetcwd"></a>_getcwd, _wgetcwd
 
@@ -62,10 +63,10 @@ wchar_t *_wgetcwd(
 
 ### <a name="parameters"></a>Parameter
 
-*buffer*<br/>
+*ert*\
 Speicherort für den Pfad.
 
-*maxlen*<br/>
+*maxlen*\
 Maximale Länge des Pfads in Zeichen: **char** für **_getcwd** und **wchar_t** für **_wgetcwd**.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -78,7 +79,7 @@ Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_do
 
 Die **_getcwd** -Funktion Ruft den vollständigen Pfad des aktuellen Arbeitsverzeichnisses für das Standard Laufwerk ab und speichert Sie im *Puffer*. Das ganzzahlige Argument *maxlen* gibt die maximale Länge für den Pfad an. Ein Fehler tritt auf, wenn die Länge des Pfads (einschließlich des abschließenden NULL-Zeichens) *maxlen*überschreitet. Das *buffer* -Argument kann **null**sein. ein Puffer mit einer minimalen Größe von *maxlen* (nur bei Bedarf) wird automatisch mit **malloc**zugeordnet, um den Pfad zu speichern. Dieser Puffer kann später freigegeben werden, indem **Free** aufgerufen und der **_getcwd** -Rückgabewert (ein Zeiger auf den zugeordneten Puffer) übergeben wird.
 
-**_getcwd** gibt eine Zeichenfolge zurück, die den Pfad des aktuellen Arbeitsverzeichnisses darstellt. Wenn das aktuelle Arbeitsverzeichnis das Stammverzeichnis ist, endet die Zeichenfolge mit einem umgekehrten **\\** Schrägstrich (). Wenn das aktuelle Arbeitsverzeichnis nicht das Stammverzeichnis ist, endet die Zeichenfolge mit dem Verzeichnisnamen und nicht mit einem umgekehrten Schrägstrich.
+**_getcwd** gibt eine Zeichenfolge zurück, die den Pfad des aktuellen Arbeitsverzeichnisses darstellt. Wenn das aktuelle Arbeitsverzeichnis das Stammverzeichnis ist, endet die Zeichenfolge mit einem umgekehrten`\`Schrägstrich (). Wenn das aktuelle Arbeitsverzeichnis nicht das Stammverzeichnis ist, endet die Zeichenfolge mit dem Verzeichnisnamen und nicht mit einem umgekehrten Schrägstrich.
 
 **_wgetcwd** ist eine breit Zeichen Version von **_getcwd**. Das *Puffer* Argument und der Rückgabewert von **_wgetcwd** sind Zeichen folgen mit breit Zeichen. **_wgetcwd** und **_getcwd** Verhalten sich andernfalls identisch.
 
@@ -103,26 +104,28 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 
 ```C
 // crt_getcwd.c
+// Compile with: cl /W4 crt_getcwd.c
 // This program places the name of the current directory in the
 // buffer array, then displays the name of the current directory
 // on the screen. Passing NULL as the buffer forces getcwd to allocate
 // memory for the path, which allows the code to support file paths
 // longer than _MAX_PATH, which are supported by NTFS.
 
-#include <direct.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include <direct.h> // _getcwd
+#include <stdlib.h> // free, perror
+#include <stdio.h>  // printf
+#include <string.h> // strlen
 
 int main( void )
 {
    char* buffer;
 
    // Get the current working directory:
-   if( (buffer = _getcwd( NULL, 0 )) == NULL )
+   if ( (buffer = _getcwd( NULL, 0 )) == NULL )
       perror( "_getcwd error" );
    else
    {
-      printf( "%s \nLength: %d\n", buffer, strnlen(buffer) );
+      printf( "%s \nLength: %zu\n", buffer, strlen(buffer) );
       free(buffer);
    }
 }
@@ -134,7 +137,7 @@ C:\Code
 
 ## <a name="see-also"></a>Siehe auch
 
-[Verzeichnissteuerung](../../c-runtime-library/directory-control.md)<br/>
-[_chdir, _wchdir](chdir-wchdir.md)<br/>
-[_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>
-[_rmdir, _wrmdir](rmdir-wrmdir.md)<br/>
+[Directory Control (Verzeichnissteuerung)](../../c-runtime-library/directory-control.md)\
+[_chdir, _wchdir](chdir-wchdir.md)\
+[_mkdir, _wmkdir](mkdir-wmkdir.md)\
+[_rmdir, _wrmdir](rmdir-wrmdir.md)

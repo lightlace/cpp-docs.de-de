@@ -10,10 +10,10 @@ helpviewer_keywords:
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
 ms.openlocfilehash: 3a7f9c5720c4bd6a43a1a95f9bc19680ba0a9c1e
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69631723"
 ---
 # <a name="cancellation-in-the-ppl"></a>Abbruch in der PPL
@@ -29,13 +29,13 @@ In diesem Dokument wird die Rolle des Abbruchs in der Parallel Patterns Library 
 
 - Verwenden Sie wenn möglich Abbruchtoken, um Arbeitsvorgänge abzubrechen. Die Klasse " [parallelcurrency:: cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) " definiert ein Abbruch Token.
 
-- Wenn Sie Abbruch Token verwenden, verwenden Sie die [parallelcurrency:: cancellation_token_source:: Cancel](reference/cancellation-token-source-class.md#cancel) -Methode, um den Abbruch zu initiieren, und die Funktion "parallelcurrency [:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) ", um auf den Abbruch zu reagieren. Verwenden Sie die Methode " [parallelcurrency:: cancellation_token:: is_canceled](reference/cancellation-token-class.md#is_canceled) ", um zu überprüfen, ob ein anderer Task einen Abbruch angefordert hat.
+- Wenn Sie Abbruch Token verwenden, verwenden Sie die [parallelcurrency:: cancellation_token_source:: Cancel](reference/cancellation-token-source-class.md#cancel) -Methode, um den Abbruch zu initiieren, und die Funktion " [parallelcurrency:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) ", um auf den Abbruch zu reagieren. Verwenden Sie die Methode " [parallelcurrency:: cancellation_token:: is_canceled](reference/cancellation-token-class.md#is_canceled) ", um zu überprüfen, ob ein anderer Task einen Abbruch angefordert hat.
 
 - Der Abbruch erfolgt nicht unmittelbar. Obwohl neue Arbeit nicht gestartet wird, wenn eine Aufgabe oder eine Aufgaben Gruppe abgebrochen wird, muss die aktive Arbeit nach einem Abbruch suchen und darauf reagieren.
 
 - Eine wertbasierte Fortsetzung erbt das Abbruchtoken ihrer Vorgängeraufgabe. Eine aufgabenbasierte Fortsetzung erbt das Token der Vorgängeraufgabe dagegen nicht.
 
-- Verwenden Sie die Methode "parallelcurrency [:: cancellation_token:: None](reference/cancellation-token-class.md#none) ", wenn Sie einen Konstruktor oder eine `cancellation_token` Funktion mit einem-Objekt aufzurufen, der Vorgang jedoch nicht abgebrochen werden soll. Wenn Sie kein Abbruch Token an den [parallelcurrency:: Task](../../parallel/concrt/reference/task-class.md) -Konstruktor oder an die Funktion "parallelcurrency [:: create_task](reference/concurrency-namespace-functions.md#create_task) " übergeben, kann diese Aufgabe nicht abgebrochen werden.
+- Verwenden Sie die Methode " [parallelcurrency:: cancellation_token:: None](reference/cancellation-token-class.md#none) ", wenn Sie einen Konstruktor oder eine `cancellation_token` Funktion mit einem-Objekt aufzurufen, der Vorgang jedoch nicht abgebrochen werden soll. Wenn Sie kein Abbruch Token an den [parallelcurrency:: Task](../../parallel/concrt/reference/task-class.md) -Konstruktor oder an die Funktion " [parallelcurrency:: create_task](reference/concurrency-namespace-functions.md#create_task) " übergeben, kann diese Aufgabe nicht abgebrochen werden.
 
 ##  <a name="top"></a>In diesem Dokument
 
@@ -55,7 +55,7 @@ In diesem Dokument wird die Rolle des Abbruchs in der Parallel Patterns Library 
 
 ##  <a name="trees"></a>Parallele Arbeitsstrukturen
 
-Differenzierte Aufgaben und Berechnungen werden in der PPL mithilfe von Aufgaben und Aufgabengruppen verwaltet. Sie können Aufgaben Gruppen schachteln, um Strukturen paralleler Arbeitsvorgänge zu bilden. Die folgende Abbildung zeigt eine parallele Arbeitsstruktur. In dieser Abbildung stellen `tg1` und `tg2` Aufgabengruppen dar; `t1`, `t2`, `t3`, `t4` und `t5` stellen die Arbeitsvorgänge dar, die von den Aufgabengruppen durchgeführt wird.
+Differenzierte Aufgaben und Berechnungen werden in der PPL mithilfe von Aufgaben und Aufgabengruppen verwaltet. Sie können Aufgaben Gruppen schachteln, um Strukturen paralleler Arbeitsvorgänge *zu bilden.* Die folgende Abbildung zeigt eine parallele Arbeitsstruktur. In dieser Abbildung stellen `tg1` und `tg2` Aufgabengruppen dar; `t1`, `t2`, `t3`, `t4` und `t5` stellen die Arbeitsvorgänge dar, die von den Aufgabengruppen durchgeführt wird.
 
 ![Eine parallele Arbeits] Struktur (../../parallel/concrt/media/parallelwork_trees.png "Eine parallele Arbeits") Struktur
 
@@ -69,17 +69,17 @@ Sie können auch die Klasse " [parallelcurrency:: task_group](reference/task-gro
 
 ##  <a name="tasks"></a>Abbrechen paralleler Aufgaben
 
-Es gibt verschiedene Möglichkeiten, parallele Arbeitsvorgänge abzubrechen. Die bevorzugte Methode ist, ein Abbruchtoken zu verwenden. Aufgaben Gruppen unterstützen auch die Methode " [parallelcurrency:: task_group:: Cancel](reference/task-group-class.md#cancel) " und die Methode "parallelcurrency [:: structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) ". Eine letzte Möglichkeit ist, im Text einer Arbeitsfunktion einer Aufgabe eine Ausnahme auszulösen. Unabhängig von der gewählten Methode sollten Sie bedenken, dass der Abbruch nicht sofort auftritt. Obwohl neue Arbeit nicht gestartet wird, wenn eine Aufgabe oder eine Aufgaben Gruppe abgebrochen wird, muss die aktive Arbeit nach einem Abbruch suchen und darauf reagieren.
+Es gibt verschiedene Möglichkeiten, parallele Arbeitsvorgänge abzubrechen. Die bevorzugte Methode ist, ein Abbruchtoken zu verwenden. Aufgaben Gruppen unterstützen auch die Methode " [parallelcurrency:: task_group:: Cancel](reference/task-group-class.md#cancel) " und die Methode " [parallelcurrency:: structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) ". Eine letzte Möglichkeit ist, im Text einer Arbeitsfunktion einer Aufgabe eine Ausnahme auszulösen. Unabhängig von der gewählten Methode sollten Sie bedenken, dass der Abbruch nicht sofort auftritt. Obwohl neue Arbeit nicht gestartet wird, wenn eine Aufgabe oder eine Aufgaben Gruppe abgebrochen wird, muss die aktive Arbeit nach einem Abbruch suchen und darauf reagieren.
 
 Weitere Beispiele zum Abbrechen paralleler Aufgaben finden [Sie unter Exemplarische Vorgehensweise: Herstellen einer Verbindung mithilfe von Aufgaben und](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)XML [-HTTP-Anforderungen, Vorgehensweise: Verwenden Sie den Abbruch, um von einer](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)parallelen Schleife [zu unterbrechen, und Gewusst wie: Verwenden Sie die Ausnahmebehandlung, um von einer](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)parallelen Schleife zu unterbrechen.
 
 ###  <a name="tokens"></a>Verwenden eines Abbruch Tokens zum Abbrechen paralleler Aufgaben
 
-Die Klassen `task`, `task_group` und `structured_task_group` unterstützen Abbruchvorgänge durch die Verwendung von Abbruchtoken. Die ppl definiert zu diesem Zweck die Klassen " [parallelcurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) " und "parallelcurrency [:: cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) ". Wenn Sie Arbeit mithilfe eines Abbruchtokens abbrechen, wird von der Runtime keine neue Verarbeitung gestartet, die dieses Token abonniert. Bereits aktive arbeiten können die [is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled) -Member-Funktion verwenden, um das Abbruch Token zu überwachen und zu beenden, wenn dies möglich ist.
+Die Klassen `task`, `task_group` und `structured_task_group` unterstützen Abbruchvorgänge durch die Verwendung von Abbruchtoken. Die ppl definiert zu diesem Zweck die Klassen " [parallelcurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) " und " [parallelcurrency:: cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) ". Wenn Sie Arbeit mithilfe eines Abbruchtokens abbrechen, wird von der Runtime keine neue Verarbeitung gestartet, die dieses Token abonniert. Bereits aktive arbeiten können die [is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled) -Member-Funktion verwenden, um das Abbruch Token zu überwachen und zu beenden, wenn dies möglich ist.
 
 Rufen Sie die Methode " [parallelcurrency:: cancellation_token_source:: Cancel](reference/cancellation-token-source-class.md#cancel) " auf, um den Abbruch zu initiieren. Auf Abbrüche reagieren Sie folgendermaßen:
 
-- Verwenden `task` Sie für-Objekte die parallelcurrency [:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) -Funktion. `cancel_current_task` bricht die aktuelle Aufgabe und alle wertbasierten Fortsetzungen ab. (Das Abbruch *Token* , das der Aufgabe oder den Fortsetzungen zugeordnet ist, wird nicht abgebrochen.)
+- Verwenden `task` Sie für-Objekte die [parallelcurrency:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) -Funktion. `cancel_current_task` bricht die aktuelle Aufgabe und alle wertbasierten Fortsetzungen ab. (Das Abbruch *Token* , das der Aufgabe oder den Fortsetzungen zugeordnet ist, wird nicht abgebrochen.)
 
 - Verwenden Sie für Aufgaben Gruppen und parallele Algorithmen die Funktion " [parallelcurrency:: Is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) ", um den Abbruch zu erkennen und so bald wie möglich vom Aufgaben Text zurückzugeben, wenn diese Funktion " **true**" zurückgibt. (Verwenden Sie bei Aufgabengruppen nicht `cancel_current_task`.)
 
@@ -106,7 +106,7 @@ Da wertbasierte Fortsetzungen das Token der Vorgängeraufgabe erben, wenn sie ni
 [!code-cpp[concrt-task-canceled#2](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_4.cpp)]
 
 > [!CAUTION]
-> Wenn Sie kein Abbruch Token an den `task` Konstruktor oder an die Funktion "parallelcurrency [:: create_task](reference/concurrency-namespace-functions.md#create_task) " übergeben, kann diese Aufgabe nicht abgebrochen werden. Außerdem müssen Sie an den Konstruktor geschachtelter Aufgaben – Aufgaben, die im Text einer anderen Aufgabe erstellt werden – das Abbruchtoken dieser Aufgabe übergeben, um alle Aufgaben gleichzeitig abzubrechen.
+> Wenn Sie kein Abbruch Token an den `task` Konstruktor oder an die Funktion " [parallelcurrency:: create_task](reference/concurrency-namespace-functions.md#create_task) " übergeben, kann diese Aufgabe nicht abgebrochen werden. Außerdem müssen Sie an den Konstruktor geschachtelter Aufgaben – Aufgaben, die im Text einer anderen Aufgabe erstellt werden – das Abbruchtoken dieser Aufgabe übergeben, um alle Aufgaben gleichzeitig abzubrechen.
 
 Sie haben die Möglichkeit, beliebigen Code auszuführen, wenn ein Abbruchtoken abgebrochen wird. Wenn der Benutzer z. b. auf der Benutzeroberfläche eine Schaltfläche **Abbrechen** auswählt, um den Vorgang abzubrechen, können Sie diese Schaltfläche deaktivieren, bis der Benutzer einen anderen Vorgang startet. Im folgenden Beispiel wird gezeigt, wie Sie die Methode " [parallelcurrency:: cancellation_token:: Register_callback](reference/cancellation-token-class.md#register_callback) " verwenden, um eine Rückruffunktion zu registrieren, die ausgeführt wird, wenn ein Abbruch Token abgebrochen wird.
 
@@ -124,7 +124,7 @@ Diese Verhalten werden nicht durch eine fehlerhafte Aufgabe beeinträchtigt (das
 > Eine Aufgabe, die in einer anderen Aufgabe erstellt wird (das heißt, eine geschachtelte Aufgabe) erbt nicht das Abbruchtoken der übergeordneten Aufgabe. Nur wertbasierte Fortsetzungen erben das Abbruchtoken ihrer Vorgängeraufgabe.
 
 > [!TIP]
-> Verwenden Sie die Methode "parallelcurrency [:: cancellation_token:: None](reference/cancellation-token-class.md#none) ", wenn Sie einen Konstruktor oder eine `cancellation_token` Funktion aufzurufen, die ein-Objekt annimmt und Sie nicht möchten, dass der Vorgang abgebrochen werden kann.
+> Verwenden Sie die Methode " [parallelcurrency:: cancellation_token:: None](reference/cancellation-token-class.md#none) ", wenn Sie einen Konstruktor oder eine `cancellation_token` Funktion aufzurufen, die ein-Objekt annimmt und Sie nicht möchten, dass der Vorgang abgebrochen werden kann.
 
 Sie können auch ein Abbruchtoken für den Konstruktor eines `task_group`- oder `structured_task_group`-Objekts angeben. Ein wichtiger Aspekt hierfür ist, dass die untergeordneten Aufgabengruppen dieses Abbruchtoken erben. Ein Beispiel zur Veranschaulichung dieses Konzepts mithilfe der Funktion "Parallelität [:: run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token) ", um aufzurufen `parallel_for`, finden Sie unter [Abbrechen paralleler Algorithmen](#algorithms) weiter unten in diesem Dokument.
 
@@ -132,7 +132,7 @@ Sie können auch ein Abbruchtoken für den Konstruktor eines `task_group`- oder 
 
 #### <a name="cancellation-tokens-and-task-composition"></a>Abbruchtoken und Aufgabenkomposition
 
-Die Funktionen " [parallelcurrency:: when_all](reference/concurrency-namespace-functions.md#when_all) " und "parallelcurrency [:: when_any](reference/concurrency-namespace-functions.md#when_all) " können Ihnen beim Verfassen mehrerer Aufgaben helfen, um allgemeine Muster zu implementieren. In diesem Abschnitt wird beschrieben, wie diese Funktionen mit Abbruchtoken verwendet werden können.
+Die Funktionen " [parallelcurrency:: when_all](reference/concurrency-namespace-functions.md#when_all) " und " [parallelcurrency:: when_any](reference/concurrency-namespace-functions.md#when_all) " können Ihnen beim Verfassen mehrerer Aufgaben helfen, um allgemeine Muster zu implementieren. In diesem Abschnitt wird beschrieben, wie diese Funktionen mit Abbruchtoken verwendet werden können.
 
 Wenn Sie ein Abbruch Token für die-Funktion `when_all` und `when_any` die-Funktion angeben, wird diese Funktion nur abgebrochen, wenn das Abbruch Token abgebrochen wird, oder wenn eine der Teilnehmer Aufgaben in einem abgebrochenen Zustand endet oder eine Ausnahme auslöst.
 
@@ -144,7 +144,7 @@ Die Runtime wählt das Abbruchtoken für die Aufgabe aus, das von der Funktion `
 
 ###  <a name="cancel"></a>Abbrechen paralleler Aufgaben mithilfe der Cancel-Methode
 
-Mit den Methoden " [parallelcurrency:: task_group:: Cancel](reference/task-group-class.md#cancel) " und "parallelcurrency [:: structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) " wird eine Aufgaben Gruppe auf den Zustand "abgebrochen" festgelegt. Nach dem Aufruf der `cancel`-Methode startet die Aufgabengruppe keine neuen Aufgaben mehr. Die `cancel`-Methoden können von mehreren untergeordneten Aufgaben aufgerufen werden. Eine abgebrochene Aufgabe bewirkt, dass die Methoden "parallelcurrency:: [task_group:: Wait](reference/task-group-class.md#wait) " und "parallelcurrency [:: structured_task_group:: Wait](reference/structured-task-group-class.md#wait) " "parallelcurrency: [: abgebrochen](reference/concurrency-namespace-enums.md#task_group_status)" zurückgeben.
+Mit den Methoden " [parallelcurrency:: task_group:: Cancel](reference/task-group-class.md#cancel) " und " [parallelcurrency:: structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) " wird eine Aufgaben Gruppe auf den Zustand "abgebrochen" festgelegt. Nach dem Aufruf der `cancel`-Methode startet die Aufgabengruppe keine neuen Aufgaben mehr. Die `cancel`-Methoden können von mehreren untergeordneten Aufgaben aufgerufen werden. Eine abgebrochene Aufgabe bewirkt, dass die Methoden "parallelcurrency:: [task_group:: Wait](reference/task-group-class.md#wait) " und " [parallelcurrency:: structured_task_group:: Wait](reference/structured-task-group-class.md#wait) " " [parallelcurrency:: abgebrochen](reference/concurrency-namespace-enums.md#task_group_status)" zurückgeben.
 
 Wenn eine Aufgaben Gruppe abgebrochen wird, können Aufrufe von den einzelnen untergeordneten Aufgaben in der Laufzeit einen *Unterbrechungs Punkt*auslösen, der bewirkt, dass die Laufzeit einen internen Ausnahmetyp auslöst und abfängt, um aktive Aufgaben abzubrechen. Die Concurrency Runtime definiert keine bestimmten Unterbrechungspunkte. Diese können in jedem Aufruf der Runtime auftreten. Die Runtime muss die ausgelösten Ausnahmen behandeln, um den Abbruch durchzuführen. Behandeln Sie daher keine unbekannten Ausnahmen im Text einer Aufgabe.
 
@@ -168,7 +168,7 @@ Dieses zweite Beispiel ähnelt dem ersten, mit dem Unterschied, dass die Aufgabe
 
 [!code-cpp[concrt-task-tree#3](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_8.cpp)]
 
-Die `structured_task_group`-Klasse ist nicht threadsicher. Daher erzeugt eine untergeordnete Aufgabe, die eine Methode des übergeordneten `structured_task_group`-Objekts aufruft, ein nicht spezifiziertes Verhalten. Die Ausnahmen für diese Regel sind die `structured_task_group::cancel` -Methode und die-Methode der parallelcurrency [:: structured_task_group:: is_canceling](reference/structured-task-group-class.md#is_canceling) -Methode. Eine untergeordnete Aufgabe kann diese Methoden aufrufen, um die übergeordnete Aufgabengruppe abzubrechen und auf einen Abbruch zu prüfen.
+Die `structured_task_group`-Klasse ist nicht threadsicher. Daher erzeugt eine untergeordnete Aufgabe, die eine Methode des übergeordneten `structured_task_group`-Objekts aufruft, ein nicht spezifiziertes Verhalten. Die Ausnahmen für diese Regel sind die `structured_task_group::cancel` -Methode und die-Methode der [parallelcurrency:: structured_task_group:: is_canceling](reference/structured-task-group-class.md#is_canceling) -Methode. Eine untergeordnete Aufgabe kann diese Methoden aufrufen, um die übergeordnete Aufgabengruppe abzubrechen und auf einen Abbruch zu prüfen.
 
 > [!CAUTION]
 >  Sie können zwar ein Abbruchtoken verwenden, um Arbeitsvorgänge einer Aufgabengruppe abzubrechen, die als untergeordnetes Objekt eines `task`-Objekts ausgeführt werden, Sie können jedoch nicht die Methoden `task_group::cancel` oder `structured_task_group::cancel` verwenden, um `task`-Objekte abzubrechen, die in einer Aufgabengruppe ausgeführt werden.

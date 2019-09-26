@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Desktop applications [C++]
 - Windows API [C++]
 ms.openlocfilehash: 8bc2a42c5a9006065e2f0f4ecb70911e0055823e
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "71062071"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Exemplarische Vorgehensweise: Erstellen einer herkömmlichen Windows-Desktop AnwendungC++()
@@ -22,7 +22,7 @@ Die Windows-API (auch als Win32-API, Windows-Desktop-API und Windows-Classic API
 > [!IMPORTANT]
 > Aus Gründen der Übersichtlichkeit werden einige Code Anweisungen im Text ausgelassen. Der Abschnitt [Build the Code](#build-the-code) am Ende dieses Dokuments zeigt den gesamten Code.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - Ein Computer, auf dem Microsoft Windows 7 oder eine höhere Version ausgeführt wird. Für ein optimales Entwicklungserlebnis empfehlen wir Windows 10.
 

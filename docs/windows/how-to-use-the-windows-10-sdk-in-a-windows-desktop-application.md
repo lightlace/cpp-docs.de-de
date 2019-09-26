@@ -4,10 +4,10 @@ ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
 ms.openlocfilehash: 8dbf18d24c0369507743c3c1da624838f9ab4703
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69513819"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Vorgehensweise: Verwenden des Windows 10 SDK in einer Windows-Desktop Anwendung
@@ -42,7 +42,7 @@ Beginnend mit Visual Studio 2015 und dem Windows 10-SDK wurde die CRT-Bibliothek
 
    ![Version der Zielplattform](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")
 
-   Diese Aktion ändert die Werte der Projektmakros, die Pfade zu den Headerdateien und Bibliotheksdateien enthalten. Um zu sehen, was sich geändert hat, wählen Sie im Abschnitt " **visuelle C++ Verzeichnisse** " des Dialog Felds " **Projekteigenschaften** "eine der Eigenschaften aus, z. b. Includeverzeichnisse, \<öffnen Sie die Dropdown Liste, und wählen Sie > Bearbeiten aus. Das Dialogfeld **Includeverzeichnisse** wird angezeigt.
+   Diese Aktion ändert die Werte der Projektmakros, die Pfade zu den Headerdateien und Bibliotheksdateien enthalten. Um zu sehen, was sich geändert hat, wählen Sie im Abschnitt "  **C++ visuelle Verzeichnisse** " des Dialog Felds " **Projekteigenschaften** " eine der Eigenschaften aus, z. b. Includeverzeichnisse, \<öffnen Sie die Dropdown Liste, und wählen Sie > Bearbeiten aus. Das Dialogfeld **Includeverzeichnisse** wird angezeigt.
 
    ![Dialogfeld ' Verzeichnisse einschließen] ' (../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")
 
