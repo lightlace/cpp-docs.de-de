@@ -8,10 +8,10 @@ helpviewer_keywords:
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
 ms.openlocfilehash: 273d8cf996c2717339dd20dcbc7512f9c62afa8d
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69630494"
 ---
 # <a name="precompiled-header-files"></a>Vorkompilierte Headerdateien
@@ -116,7 +116,7 @@ Wenn Sie einen vorkompilierten Header verwenden, der mit/Yc oder/Yu erstellt wur
 
 In dieser Tabelle sind Compileroptionen aufgeführt, die bei Verwendung eines vorkompilierten Headers möglicherweise eine Inkonsistenz Warnung auslöst:
 
-|Option|Name|Regel|
+|Option|name|Regel|
 |------------|----------|----------|
 |/D|Definieren von Konstanten und Makros|Muss zwischen der Kompilierung, die den vorkompilierten Header erstellt hat, und der aktuellen Kompilierung identisch sein. Der Zustand der definierten Konstanten ist nicht aktiviert, aber unvorhersehbare Ergebnisse können auftreten, wenn die Dateien von den Werten der geänderten Konstanten abhängig sind.|
 |/E oder/EP|Präprozessorausgabe in Standardausgabe kopieren|Vorkompilierte Header können nicht mit der/E-Option oder der/EP-Option verwendet werden.|
@@ -204,7 +204,7 @@ stable.pch : $(STABLEHDRS)
     $(CPP) $(CLFLAGS) /Yc$(BOUNDRY)    applib.cpp myapp.cpp
 ```
 
-Abgesehen von den Makros STABLEHDRS, BOUNDRY und UNSTABLEHDRS, die in der Abbildung "Struktur eines Makefile, das eine vorkompilierte Header Datei verwendet" in [PCH-Dateien im](#pch-files-in-the-build-process)Buildprozess verwendet, stellt dieses Makefile ein CLFLAGS-Makro und ein LINKFLAGS-Makro bereit. Sie müssen diese Makros verwenden, um Compiler-und Linkeroptionen aufzulisten, die unabhängig davon gelten, ob Sie eine Debugversion oder eine endgültige Version der ausführbaren Datei der Anwendung erstellen. Es gibt auch ein lisb-Makro, in dem Sie die Bibliotheken auflisten, die für das Projekt erforderlich sind.
+Abgesehen von den Makros STABLEHDRS, BOUNDRY und UNSTABLEHDRS, die in der Abbildung "Struktur eines Makefile, das eine vorkompilierte Header Datei verwendet" in [PCH-Dateien im Buildprozess](#pch-files-in-the-build-process)verwendet, stellt dieses Makefile ein CLFLAGS-Makro und ein LINKFLAGS-Makro bereit. Sie müssen diese Makros verwenden, um Compiler-und Linkeroptionen aufzulisten, die unabhängig davon gelten, ob Sie eine Debugversion oder eine endgültige Version der ausführbaren Datei der Anwendung erstellen. Es gibt auch ein lisb-Makro, in dem Sie die Bibliotheken auflisten, die für das Projekt erforderlich sind.
 
 Das Makefile verwendet auch! Wenn,! Andernfalls! EndIf, um zu erkennen, ob Sie ein Debugsymbol in der NMAKE-Befehlszeile definieren:
 
@@ -219,11 +219,11 @@ NMAKE
 NMAKE DEBUG=0
 ```
 
-Weitere Informationen zu Makefiles finden Sie unter [NMAKE Reference](reference/nmake-reference.md). Weitere Informationen finden Sie auch unter [MSVC-Compileroptionen](reference/compiler-options.md) und [MSVC](reference/linker-options.md)-Linkeroptionen.
+Weitere Informationen zu Makefiles finden Sie unter [NMAKE Reference](reference/nmake-reference.md). Weitere Informationen finden Sie auch unter [MSVC-Compileroptionen](reference/compiler-options.md) und [MSVC-Linkeroptionen](reference/linker-options.md).
 
 ## <a name="example-code-for-pch"></a>Beispielcode für PCH
 
-Die folgenden Quelldateien werden im Makefile verwendet, das in [PCH-Dateien im](#pch-files-in-the-build-process) Buildprozess und im [Beispiel Makefile für PCH](#sample-makefile-for-pch)beschrieben wird. Beachten Sie, dass die Kommentare wichtige Informationen enthalten.
+Die folgenden Quelldateien werden im Makefile verwendet, das in [PCH-Dateien im Buildprozess](#pch-files-in-the-build-process) und im [Beispiel Makefile für PCH](#sample-makefile-for-pch)beschrieben wird. Beachten Sie, dass die Kommentare wichtige Informationen enthalten.
 
 ```cpp
 // ANOTHER.H : Contains the interface to code that is not

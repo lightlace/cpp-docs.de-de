@@ -8,10 +8,10 @@ helpviewer_keywords:
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
 ms.openlocfilehash: 7bc0cb58cbbe995aa9d74e3ccb627ddc442bd4fb
-ms.sourcegitcommit: ec524d1f87bcce2b26b02e6d297f42c94b3db36e
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70026032"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Exemplarische Vorgehensweise: Erstellen und Verwenden Ihrer eigenen Dynamic Link Library (C++)
@@ -40,7 +40,7 @@ In dieser exemplarischen Vorgehensweise werden einige gängige Situationen nicht
 
 Links mit weiteren Informationen zu DLLs finden Sie im Artikel [Erstellen von C/C++-DLLs in Visual Studio](dlls-in-visual-cpp.md). Weitere Informationen über implizites verknüpfen und explizites Verknüpfen finden [Sie unter Bestimmen der zu verwendenden Verknüpfungs Methode](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Weitere Informationen zum Erstellen C++ von DLLs für Programmiersprachen, in denen Verknüpfungs Konventionen in c-Sprache verwendet werden, finden Sie unter [exportieren C++ von Funktionen zur Verwendung in ausführbaren c-](exporting-cpp-functions-for-use-in-c-language-executables.md)Dateien. Informationen zum Erstellen von DLLs zur Verwendung mit .NET-Sprachen finden Sie unter [Aufrufen von DLL-Funktionen aus Visual Basic-Anwendungen heraus](calling-dll-functions-from-visual-basic-applications.md).
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - Ein Computer, auf dem Microsoft Windows 7 oder eine höhere Version ausgeführt wird. Für ein optimales Entwicklungserlebnis empfehlen wir Windows 10.
 
@@ -85,7 +85,7 @@ Mit den folgenden Aufgaben erstellen Sie ein Projekt für Ihre DLL, fügen Code 
 
 1. Wählen Sie in der gefilterten Liste der Projekttypen die Option **Dynamic-Link Library (dll)** aus, und wählen Sie dann **weiter**aus.
 
-1. Geben Sie auf der Seite **Neues Projekt konfigurieren** im Feld **Projektname** den Namen *MathLibrary* ein, um einen Namen für das Projekt anzugeben. Belassen Sie die Standardwerte für **Speicherort** und Projektmappenname. Legen Sie Projekt Mappe zum **Erstellen einer neuen**Projekt Mappe fest. Deaktivieren Sie **Projekt Mappe und Projekt im gleichen Verzeichnis** , wenn es aktiviert ist.
+1. Geben Sie auf der Seite **Neues Projekt konfigurieren** im Feld **Projektname** den Namen *MathLibrary* ein, um einen Namen für das Projekt anzugeben. Belassen Sie die Standardwerte für **Speicherort** und Projektmappenname. Legen **Sie Projekt** Mappe zum **Erstellen einer neuen**Projekt Mappe fest. Deaktivieren Sie **Projekt Mappe und Projekt im gleichen Verzeichnis** , wenn es aktiviert ist.
 
 1. Klicken Sie auf die Schaltfläche **Erstellen**, um das Projekt zu erstellen.
 
@@ -101,7 +101,7 @@ Wenn die Projekt Mappe erstellt wird, können Sie die generierten Projekt-und Qu
 
 1. Klicken Sie in der Menüleiste auf **Datei** > **Neu** > **Projekt**, um das Dialogfeld **Neues Projekt** zu öffnen.
 
-1. Wählen Sie im linken Bereich des Dialog Felds **Neues Projekt** die Option **installierter** >   > **Visual C++**  **Windows-Desktop**aus. Wählen Sie im mittleren Bereich die Option **Dynamic-Link Library (dll)** aus. Geben Sie im Feld **Name** den Namen *MathLibrary* ein, um einen Namen für das Projekt anzugeben. Belassen Sie die Standardwerte für **Speicherort** und Projektmappenname. Legen Sie Projekt Mappe zum **Erstellen einer neuen**Projekt Mappe fest. Aktivieren Sie das Kontrollkästchen Projektmappenverzeichnis **Erstellen** .
+1. Wählen Sie im linken Bereich des Dialog Felds **Neues Projekt** die Option **installierter** >   > **Visual C++**  **Windows-Desktop**aus. Wählen Sie im mittleren Bereich die Option **Dynamic-Link Library (dll)** aus. Geben Sie im Feld **Name** den Namen *MathLibrary* ein, um einen Namen für das Projekt anzugeben. Belassen Sie die Standardwerte für **Speicherort** und Projektmappenname. Legen **Sie Projekt** Mappe zum **Erstellen einer neuen**Projekt Mappe fest. Aktivieren Sie das Kontrollkästchen **Projektmappenverzeichnis erstellen** .
 
    ![Benennen des MathLibrary-Projekts](media/mathlibrary-new-project-name-159.png "Benennen des MathLibrary-Projekts")
 
@@ -119,7 +119,7 @@ Wenn die Projekt Mappe erstellt wird, können Sie die generierten Projekt-und Qu
 
 1. Wählen Sie auf der Menüleiste **Datei** > **Neu** > **Projekt** aus.
 
-1. Erweitern Sie im linken Bereich des Dialogfelds **Neues Projekt** den Eintrag **Installiert** > **Vorlagen**, und wählen Sie **Visual C++** aus. Klicken Sie dann im mittleren Bereich auf **Win32-Konsolenanwendung**. Geben Sie im Bearbeitungsfeld **Name** den Namen *MathLibrary* ein, um einen Namen für das Projekt anzugeben. Belassen Sie die Standardwerte für **Speicherort** und Projektmappenname. Legen Sie Projekt Mappe zum **Erstellen einer neuen**Projekt Mappe fest. Aktivieren Sie das Kontrollkästchen Projektmappenverzeichnis **Erstellen** .
+1. Erweitern Sie im linken Bereich des Dialogfelds **Neues Projekt** den Eintrag **Installiert** > **Vorlagen**, und wählen Sie **Visual C++** aus. Klicken Sie dann im mittleren Bereich auf **Win32-Konsolenanwendung**. Geben Sie im Bearbeitungsfeld **Name** den Namen *MathLibrary* ein, um einen Namen für das Projekt anzugeben. Belassen Sie die Standardwerte für **Speicherort** und Projektmappenname. Legen **Sie Projekt** Mappe zum **Erstellen einer neuen**Projekt Mappe fest. Aktivieren Sie das Kontrollkästchen **Projektmappenverzeichnis erstellen** .
 
    ![Benennen des MathLibrary-Projekts](media/mathlibrary-project-name.png "Benennen des MathLibrary-Projekts")
 
@@ -403,7 +403,7 @@ Um Code, der nicht synchron ist, zu vermeiden, empfiehlt es sich, den Includepfa
 
 1. Wählen Sie aus der gefilterten Projekttypliste **Konsolen-App** aus, und klicken Sie auf **Weiter**.
 
-1. Geben Sie auf der Seite **Neues Projekt konfigurieren** im Feld **Projektname** den Namen *mathclient* ein, um einen Namen für das Projekt anzugeben. Belassen Sie die Standardwerte für **Speicherort** und Projektmappenname. Legen Sie Projekt Mappe zum **Erstellen einer neuen**Projekt Mappe fest. Deaktivieren Sie **Projekt Mappe und Projekt im gleichen Verzeichnis** , wenn es aktiviert ist.
+1. Geben Sie auf der Seite **Neues Projekt konfigurieren** im Feld **Projektname** den Namen *mathclient* ein, um einen Namen für das Projekt anzugeben. Belassen Sie die Standardwerte für **Speicherort** und Projektmappenname. Legen **Sie Projekt** Mappe zum **Erstellen einer neuen**Projekt Mappe fest. Deaktivieren Sie **Projekt Mappe und Projekt im gleichen Verzeichnis** , wenn es aktiviert ist.
 
    ![Benennen des Clientprojekts](media/mathclient-project-name-2019.png "Benennen des Clientprojekts")
 
@@ -419,7 +419,7 @@ Ein minimales Konsolen Anwendungsprojekt wird für Sie erstellt. Der Name der Ha
 
 1. Um eine C++-App zu erstellen, die die erstellte DLL verwendet, wählen Sie auf der Menüleiste **Datei** > **Neu** > **Projekt** aus.
 
-1. Wählen Sie im linken Bereich des Dialogfelds **Neues Projekt** unter **Installiert** > **Visual C++** den Eintrag **Windows Desktop** aus. Wählen Sie im mittleren Bereich die Option **Windows-Konsolenanwendung**aus. Geben Sie im Bearbeitungsfeld **Name** den Namen für das Projekt *mathclient*an.  Belassen Sie die Standardwerte für **Speicherort** und Projektmappenname. Legen Sie Projekt Mappe zum **Erstellen einer neuen**Projekt Mappe fest. Aktivieren Sie das Kontrollkästchen Projektmappenverzeichnis **Erstellen** .
+1. Wählen Sie im linken Bereich des Dialogfelds **Neues Projekt** unter **Installiert** > **Visual C++** den Eintrag **Windows Desktop** aus. Wählen Sie im mittleren Bereich die Option **Windows-Konsolenanwendung**aus. Geben Sie im Bearbeitungsfeld **Name** den Namen für das Projekt *mathclient*an.  Belassen Sie die Standardwerte für **Speicherort** und Projektmappenname. Legen **Sie Projekt** Mappe zum **Erstellen einer neuen**Projekt Mappe fest. Aktivieren Sie das Kontrollkästchen **Projektmappenverzeichnis erstellen** .
 
    ![Benennen des Clientprojekts](media/mathclient-new-project-name-159.png "Benennen des Clientprojekts")
 
@@ -435,7 +435,7 @@ Ein minimales Konsolen Anwendungsprojekt wird für Sie erstellt. Der Name der Ha
 
 1. Um eine C++-App zu erstellen, die die erstellte DLL verwendet, wählen Sie auf der Menüleiste **Datei** > **Neu** > **Projekt** aus.
 
-1. Wählen Sie im linken Bereich des Dialogfelds **Neues Projekt** unter **Installiert** > **Vorlagen** > **Visual C++** den Eintrag **Win32** aus. Wählen Sie im mittleren Bereich **Win32-Konsolenanwendung**aus. Geben Sie im Bearbeitungsfeld **Name** den Namen für das Projekt *mathclient*an. Belassen Sie die Standardwerte für **Speicherort** und Projektmappenname. Legen Sie Projekt Mappe zum **Erstellen einer neuen**Projekt Mappe fest. Aktivieren Sie das Kontrollkästchen Projektmappenverzeichnis **Erstellen** .
+1. Wählen Sie im linken Bereich des Dialogfelds **Neues Projekt** unter **Installiert** > **Vorlagen** > **Visual C++** den Eintrag **Win32** aus. Wählen Sie im mittleren Bereich **Win32-Konsolenanwendung**aus. Geben Sie im Bearbeitungsfeld **Name** den Namen für das Projekt *mathclient*an. Belassen Sie die Standardwerte für **Speicherort** und Projektmappenname. Legen **Sie Projekt** Mappe zum **Erstellen einer neuen**Projekt Mappe fest. Aktivieren Sie das Kontrollkästchen **Projektmappenverzeichnis erstellen** .
 
    ![Benennen des Clientprojekts](media/mathclient-project-name.png "Benennen des Clientprojekts")
 
@@ -449,7 +449,7 @@ Nach Abschluss des Assistenten wurde ein minimales Konsolenanwendungsprojekt fü
 
 ::: moniker-end
 
-Um die MathLibrary-Funktionen im Quellcode aufzurufen, muss das Projekt die Datei *MathLibrary. h* enthalten. Sie könnten diese Headerdatei in Ihr Client-App-Projekt kopieren und dann als vorhandenes Element zum Projekt hinzufügen. Diese Methode ist für Drittanbieterbibliotheken möglicherweise eine gute Wahl. Wenn Sie jedoch gleichzeitig mit dem Code für die dll und den Client arbeiten, sind die Header Dateien möglicherweise nicht mehr synchron. Um dieses Problem zu vermeiden, legen Sie den Pfad der **zusätzlichen** Includeverzeichnisse in Ihrem Projekt so fest, dass er den Pfad zum ursprünglichen Header einschließt.
+Um die MathLibrary-Funktionen im Quellcode aufzurufen, muss das Projekt die Datei *MathLibrary. h* enthalten. Sie könnten diese Headerdatei in Ihr Client-App-Projekt kopieren und dann als vorhandenes Element zum Projekt hinzufügen. Diese Methode ist für Drittanbieterbibliotheken möglicherweise eine gute Wahl. Wenn Sie jedoch gleichzeitig mit dem Code für die dll und den Client arbeiten, sind die Header Dateien möglicherweise nicht mehr synchron. Um dieses Problem zu vermeiden, legen Sie den Pfad der **zusätzlichen Includeverzeichnisse** in Ihrem Projekt so fest, dass er den Pfad zum ursprünglichen Header einschließt.
 
 ### <a name="to-add-the-dll-header-to-your-include-path"></a>So fügen Sie den DLL-Header zum Includepfad hinzu
 
@@ -479,7 +479,7 @@ Um die MathLibrary-Funktionen im Quellcode aufzurufen, muss das Projekt die Date
 
    ![Hinzufügen des Headerspeicherorts zur Eigenschaft „Zusätzliche Includeverzeichnisse“](media/mathclient-additional-include-directories.png "Hinzufügen des Headerspeicherorts zur Eigenschaft „Zusätzliche Includeverzeichnisse“")
 
-1. Nachdem Sie den Pfad zur Header Datei im Dialogfeld **zusätzliche** Includeverzeichnisse eingegeben haben, klicken Sie auf die Schaltfläche **OK** . Wählen Sie im Dialogfeld **Eigenschaften Seiten** die Schaltfläche **OK** aus, um die Änderungen zu speichern.
+1. Nachdem Sie den Pfad zur Header Datei im Dialogfeld **Zusätzliche Includeverzeichnisse** eingegeben haben, klicken Sie auf die Schaltfläche **OK** . Wählen Sie im Dialogfeld **Eigenschaften Seiten** die Schaltfläche **OK** aus, um die Änderungen zu speichern.
 
 Jetzt können Sie die Datei **MathLibrary.h** einschließen und die von dieser Datei deklarierten Funktionen in Ihrer Clientanwendung verwenden. Ersetzen Sie den Inhalt von **MathClient.cpp** durch diesen Code:
 
@@ -553,7 +553,7 @@ Eine Möglichkeit zum Vermeiden dieses Problems besteht darin, die DLL in das Ve
 
 1. Wählen Sie im Dropdownfeld **Konfiguration** den Eintrag **Alle Konfigurationen** aus, falls dieser nicht bereits ausgewählt ist.
 
-1. Wählen Sie im linken Bereich **Konfigurations Eigenschaften** > Buildereignisse > **Postbuildereignis**aus.
+1. Wählen Sie im linken Bereich **Konfigurations Eigenschaften** > **Buildereignisse** > **Postbuildereignis**aus.
 
 1. Wählen Sie im Eigenschaften Bereich im Feld **Befehlszeile** das Bearbeitungs Steuerelement aus. Wenn Sie die Anweisungen befolgt haben, um das Client Projekt in einer separaten Projekt Mappe aus dem DLL-Projekt zu platzieren, geben Sie den folgenden Befehl ein:
 

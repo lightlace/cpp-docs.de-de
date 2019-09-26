@@ -21,10 +21,10 @@ helpviewer_keywords:
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
 ms.openlocfilehash: c26b72f7c675a4130f38c515cf71ecc290328ccc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69498607"
 ---
 # <a name="try-finally-statement"></a>try-finally-Anweisung
@@ -86,7 +86,7 @@ Eine **goto** -Anweisung kann auch aus dem abgesicherten Abschnitt herausspringe
 
 Das Beenden einer **try-endlich-** Anweisung mit der [longjmp](../c-runtime-library/reference/longjmp.md) -Lauf Zeitfunktion wird als nicht ordnungsgemäße Beendigung angesehen. Es ist nicht zulässig, in eine **__try** -Anweisung zu springen, aber es ist zulässig, von einem zu springen. Alle **__finally** -Anweisungen, die zwischen dem Punkt der Abfahrt (normale Beendigung des **__try** -Blocks) und dem Ziel (der **__except** -Block, der die Ausnahme behandelt) aktiv sind, müssen ausgeführt werden. Dies wird als "lokale Entladung" bezeichnet.
 
-Wenn ein **try** -Block aus irgendeinem Grund vorzeitig beendet wird, einschließlich eines Ausschnitts aus dem-Block, führt das System die zugeordnete Block Ende-Sperre im Rahmen des Entsperrens des Stapels aus. In solchen Fällen gibt die [abnormalbeendigungs](/windows/win32/Debug/abnormaltermination) Funktion " **true** " zurück, wenn Sie von innerhalb des letzten Blocks aufgerufen wird. Andernfalls wird **false**zurückgegeben.
+Wenn ein **try** -Block aus irgendeinem Grund vorzeitig beendet wird, einschließlich eines Ausschnitts aus dem **-Block,** führt das System die zugeordnete Block Ende-Sperre im Rahmen des Entsperrens des Stapels aus. In solchen Fällen gibt die [abnormalbeendigungs](/windows/win32/Debug/abnormaltermination) Funktion " **true** " zurück, wenn Sie von **innerhalb des letzten** Blocks aufgerufen wird. Andernfalls wird **false**zurückgegeben.
 
 Der Beendigungs Handler wird nicht aufgerufen, wenn ein Prozess in der Mitte der Ausführung einer **try-schließlich-** Anweisung abgebrochen wird.
 

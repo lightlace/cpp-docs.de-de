@@ -4,10 +4,10 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
 ms.openlocfilehash: b947bd6955a80e051d1dab81061b4b2bf2ab19c8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69498627"
 ---
 # <a name="c-type-system-modern-c"></a>C++- Typsystem (Modern C++)
@@ -65,7 +65,7 @@ In der folgenden Tabelle werden die am häufigsten verwendeten grundlegenden Typ
 
 |Typ|Größe|Kommentar|
 |----------|----------|-------------|
-|ssNoversion|4 Bytes|Die Standardauswahl für ganzzahlige Werte.|
+|int|4 Bytes|Die Standardauswahl für ganzzahlige Werte.|
 |double|8 Bytes|Die Standardauswahl für Gleitkommawerte.|
 |bool|1 Byte|Stellt Werte dar, die entweder wahr oder falsch sein können.|
 |char|1 Byte|Verwenden Sie sie für ASCII-Zeichen in Zeichenfolgen im älteren C-Format oder in std::string Objekten, die nie in den UNICODE konvertiert werden müssen.|

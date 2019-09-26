@@ -41,10 +41,10 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
 ms.openlocfilehash: f7c9d2b472a443d8bf556d0b12dfe202ea8607a1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69505046"
 ---
 # <a name="cmfcpropertysheet-class"></a>Cmfcpropertysheet-Klasse
@@ -242,7 +242,7 @@ CMFCPropertySheet(
 ### <a name="parameters"></a>Parameter
 
 *pszCaption*<br/>
-in Eine Zeichenfolge, die die Beschriftung des Eigenschaften Blatts enthält. Lässt keine NULL-Werte zu.
+in Eine Zeichenfolge, die die Beschriftung des Eigenschaften Blatts enthält. Darf nicht NULL sein.
 
 *nIDCaption*<br/>
 in Eine Ressourcen-ID, die die Beschriftung des Eigenschaften Blatts enthält.
@@ -439,7 +439,7 @@ void RemovePage(int nPage);
 ### <a name="parameters"></a>Parameter
 
 *pPage*<br/>
-in Ein Zeiger auf ein Eigenschaften Seiten Objekt, das die zu entfern gende Eigenschaften Seite darstellt. Lässt keine NULL-Werte zu.
+in Ein Zeiger auf ein Eigenschaften Seiten Objekt, das die zu entfern gende Eigenschaften Seite darstellt. Darf nicht NULL sein.
 
 *nPage*<br/>
 in Der null basierte Index der zu entfernenden Seite.

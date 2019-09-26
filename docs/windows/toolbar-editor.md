@@ -51,10 +51,10 @@ helpviewer_keywords:
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
 ms.openlocfilehash: 72c42a06da8276d118c6c204f838ed4b31d142b9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69514690"
 ---
 # <a name="toolbar-editor-c"></a>Symbolleisten-C++Editor ()
@@ -93,7 +93,7 @@ Eine Symbolleisten-Schaltfläche verfügt über die folgenden Eigenschaften:
 |**ID**|Definiert die ID für die Schaltfläche. Die Dropdown Liste enthält allgemeine **ID** -Namen.|
 |**Width**|Legt die Breite der Schaltfläche fest. Es werden 16 Pixel empfohlen.|
 |**Height**|Legt die Höhe der Schaltfläche fest. Durch die Höhe einer Schaltfläche wird die Höhe aller Schaltflächen auf der Symbolleiste geändert. Es wird 15 Pixel empfohlen.|
-|**Eingabeaufforderung**|Definiert die in der Statusleiste angezeigte Meldung. Durch das Hinzufügen von *\n* und eines Namens wird der Symbolleisten Schaltfläche eine QuickInfo Weitere Informationen finden Sie unter [Erstellen einer](../windows/creating-a-tool-tip-for-a-toolbar-button.md)QuickInfo.|
+|**Eingabeaufforderung**|Definiert die in der Statusleiste angezeigte Meldung. Durch das hinzu **fügen von** *\n* und eines Namens wird der Symbolleisten Schaltfläche eine QuickInfo Weitere Informationen finden Sie unter [Erstellen einer](../windows/creating-a-tool-tip-for-a-toolbar-button.md)QuickInfo.|
 
 **Breite** und **Höhe** gelten für alle Schaltflächen. Eine Bitmap, die zum Erstellen einer Symbolleiste verwendet wird, hat eine maximale Breite von 2048. Wenn Sie also die Schaltflächen breite auf *512*festlegen, können Sie nur vier Schaltflächen haben. Wenn Sie die Breite auf *513*festlegen, können Sie nur drei Schaltflächen verwenden.
 
@@ -145,11 +145,11 @@ Der **Symbol** leisten-Editor ermöglicht Ihnen Folgendes:
    > [!NOTE]
    > Wenn Sie das Bild in Visual Studio öffnen, wird es im Bild- **Editor**geöffnet. Sie können das Bild auch in anderen Grafikprogrammen öffnen.
 
-1. Wechseln Sie zum > Menü "**Kopieren**".
+1. Wechseln Sie zum **Menü** > "**Kopieren**".
 
 1. Wechseln Sie zu Ihrer Symbolleiste, indem Sie die zugehörige Registerkarte am oberen Rand des Quell Fensters auswählen.
 
-1. Wechseln Sie zum > Menü "**Einfügen**".
+1. Wechseln Sie zum **Menü** > "**Einfügen**".
 
    Das Bild wird auf der Symbolleiste als neue Schaltfläche angezeigt.
 

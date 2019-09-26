@@ -43,10 +43,10 @@ helpviewer_keywords:
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
 ms.openlocfilehash: 0f8fe228b804538b6a0d0377f05d79c34e787587
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69514219"
 ---
 # <a name="image-editor-for-icons-c"></a>Bildbearbeitung für Symbole (C++)
@@ -89,7 +89,7 @@ Das Menü **Bild** , das nur angezeigt wird, wenn der **Bild-Editor** aktiv ist,
 |**Neuer Bildtyp**|Öffnet das [Dialog \<Feld neuer Geräte > Bildtyp](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Eine einzelne Symbol Ressource kann mehrere Bilder verschiedener Größen enthalten, und Windows kann abhängig davon, wie Sie angezeigt wird, die entsprechende Symbolgröße verwenden. Ein neuer Gerätetyp ändert nicht die Größe des Symbols, sondern erstellt stattdessen ein neues Bild innerhalb des Symbols. Gilt nur für Symbole und Cursor.|
 |**Aktuelles Symbol/Cursor Bildtyp**|Öffnet ein Untermenü, in dem die ersten neun verfügbaren Cursor-oder Symbolbilder aufgelistet sind. Mit dem letzten Befehl im Untermenü ( **mehr**) wird das [Dialog \<Feld Gerät > Abbild Öffnen geöffnet](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
 |**Bildtyp löschen**|Löscht das ausgewählte Geräte Image.|
-|**Tools**|Öffnet ein Untermenü, das alle Tools enthält, die auf der **Bild-Editor** -Symbolleiste verfügbar sind.|
+|**Extras**|Öffnet ein Untermenü, das alle Tools enthält, die auf der **Bild-Editor** -Symbolleiste verfügbar sind.|
 
 Im Dialogfeld **Raster Einstellungen** können Sie die Raster Einstellungen für das Bild angeben und Rasterlinien über dem bearbeiteten Bild anzeigen. Die Zeilen sind nützlich für die Bearbeitung des Bilds, werden jedoch nicht als Teil des Bilds gespeichert.
 
@@ -143,7 +143,7 @@ Um auf dieses Dialogfeld zuzugreifen, wählen Sie die Schaltfläche **Schriftart
 |---|---|
 |**Schriftart**|Listet die verfügbaren Schriftarten auf.|
 |**Schriftschnitt**|Listet die verfügbaren Stile für die angegebene Schriftart auf.|
-|**Größe**|Listet die verfügbaren Punktgrößen für die angegebene Schriftart auf.|
+|**Size**|Listet die verfügbaren Punktgrößen für die angegebene Schriftart auf.|
 |**Beispiel**|Zeigt ein Beispiel dazu, wie Text mit den angegebenen Schriftart Einstellungen angezeigt wird.|
 |**Skript**|Listet die verfügbaren sprach Skripts für die angegebene Schriftart auf.<br/><br/>Wenn Sie ein anderes sprach Skript auswählen, steht der Zeichensatz für diese Sprache zum Erstellen von mehrsprachigen Dokumenten zur Verfügung.|
 
@@ -215,7 +215,7 @@ Für alle **Bild Bearbeitungs** Bereiche mit einem Vergrößerungsfaktor von 4 o
 
 ## <a name="requirements"></a>Anforderungen
 
-None
+Keine
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
 ms.openlocfilehash: 0c9fb5588cfd44c83d8fe72c7c4aede0fedab672
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69631587"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Exemplarische Vorgehensweise: Debuggen einer C++ amp-Anwendung
@@ -30,7 +30,7 @@ In diesem Thema wird veranschaulicht, wie Sie eine Anwendung C++ Debuggen, dieC+
 
 - Ausführen aller Threads einer Kachel an einem bestimmten Speicherort im Code.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Bevor Sie mit dieser exemplarischen Vorgehensweise beginnen:
 
@@ -82,7 +82,7 @@ Die Anweisungen zum Erstellen eines Projekts variieren abhängig von der verwend
 
 ::: moniker-end
 
-Weiter
+Weiter:
 
 8. Öffnen Sie "ampmapreduce. cpp", und ersetzen Sie den Inhalt durch den folgenden Code.
 
@@ -232,7 +232,7 @@ In diesem Verfahren verwenden Sie den lokalen Windows-Debugger, um sicherzustell
 
 5. Klicken Sie in der Menüleiste auf **Debuggen** > **Debuggen starten**.
 
-6. Beobachten Sie im Fenster Lokal den Wert für `stride_size` , bis der Breakpoint in Zeile 70 erreicht ist.
+6. Beobachten Sie **im Fenster Lokal den Wert** für `stride_size` , bis der Breakpoint in Zeile 70 erreicht ist.
 
 7. Klicken Sie in der Menüleiste auf **Debuggen** > **Debuggen beenden** aus.
 
@@ -248,7 +248,7 @@ In diesem Abschnitt wird gezeigt, wie Sie den GPU-Code Debuggen, d `sum_kernel_t
 
 3. Wählen Sie in der Liste **Zu startender Debugger** die Option **Lokaler Windows-Debugger** aus.
 
-4. Überprüfen Sie in der Liste Debuggertyp, ob **automatisch** ausgewählt ist.
+4. Überprüfen Sie in der Liste **Debuggertyp** , ob **automatisch** ausgewählt ist.
 
     Der Standardwert ist **Auto** . Vor Windows 10 ist **GPU nur** der erforderliche Wert anstelle von " **Auto**".
 
@@ -306,7 +306,7 @@ In diesem Abschnitt wird gezeigt, wie Sie den GPU-Code Debuggen, d `sum_kernel_t
 
 ### <a name="to-use-the-parallel-watch-window"></a>So verwenden Sie die parallele Überwachungsfenster
 
-1. Um das Fenster **parallele Überwachung** zu öffnen, wählen Sie in der Menü **Leiste Debuggen** > **Windows** > **parallel** > Watch**parallel Watch 1**aus.
+1. Um das Fenster **parallele Überwachung** zu öffnen, wählen Sie in der Menüleiste **Debuggen** > **Windows** > **parallel** > Watch**parallel Watch 1**aus.
 
    Sie können das Fenster **parallele Überwachung** verwenden, um die Werte eines Ausdrucks über mehrere Threads hinweg zu untersuchen.
 

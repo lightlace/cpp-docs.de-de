@@ -7,10 +7,10 @@ helpviewer_keywords:
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
 ms.openlocfilehash: b11b56578cadc4b3bd037acf84014a718f9fad84
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69512134"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Exemplarische Vorgehensweise: Herstellen einer Verbindung mithilfe von Aufgaben und XML-HTTP-Anforderungen
@@ -94,7 +94,7 @@ In diesem Abschnitt wird veranschaulicht, wie `HttpRequest` die-Klasse in einer 
    [!code-cpp[concrt-using-ixhr2#A6](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_9.cpp)]
 
    > [!TIP]
-   > Wenn Ihre APP keine Unterstützung für den Abbruch benötigt, übergeben Sie "parallelcurrency [:: cancellation_token:: None](reference/cancellation-token-class.md#none) " an die-Methode und die `HttpRequest::GetAsync` - `HttpRequest::PostAsync` Methode.
+   > Wenn Ihre APP keine Unterstützung für den Abbruch benötigt, übergeben Sie " [parallelcurrency:: cancellation_token:: None](reference/cancellation-token-class.md#none) " an die-Methode und die `HttpRequest::GetAsync` - `HttpRequest::PostAsync` Methode.
 
 1. Implementieren Sie die `MainPage::ProcessHttpRequest`-Methode in "MainPage.xaml.cpp".
 
