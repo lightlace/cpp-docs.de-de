@@ -5,16 +5,16 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: d497886b22c7a90ab7cda47e46dc13daf297b192
-ms.sourcegitcommit: b4572ffcc71e6bdb0ca23221f9476cfaf4528406
+ms.openlocfilehash: ac6ad3b5bbe5f3a738dc0019a43ff08a17cf27ca
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314461"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685717"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Standardmäßig deaktivierte Compilerwarnungen
 
-Der Compiler unterstützt Warnungen, die standardmäßig deaktiviert sind, da die meisten Entwickler diese nicht als nützlich finden. In einigen Fällen warnen Sie über eine stilwahl oder über allgemeine Ausdrücke in älteren Code. Andere Warnungen sind die Verwendung einer Microsoft-Erweiterung in der Sprache. In anderen Fällen geben Sie einen Bereich an, in dem Programmierer häufig falsche Annahmen treffen, was zu unerwartetem oder undefiniertem Verhalten führen kann. Wenn diese Option aktiviert ist, werden möglicherweise einige dieser Warnungen in Bibliotheks Headern mehrmals angezeigt. Die C-Laufzeitbibliotheken C++ und die Standardbibliotheken sind darauf ausgerichtet, keine Warnungen nur auf Warnstufe [/W4](../build/reference/compiler-option-warning-level.md)auszugeben.
+Der Compiler unterstützt Warnungen, die standardmäßig deaktiviert sind, da die meisten Entwickler diese nicht als nützlich finden. In einigen Fällen warnen Sie über eine stilwahl oder über allgemeine Ausdrücke in älteren Code. Andere Warnungen sind die Verwendung einer Microsoft-Erweiterung in der Sprache. Einige Warnungen geben einen Bereich an, in dem Programmierer häufig falsche Annahmen treffen, was zu unerwartetem oder undefiniertem Verhalten führen kann. Wenn alle diese Warnungen aktiviert sind, können einige davon in Bibliotheks Headern mehrmals vorkommen. Die C-Laufzeitbibliotheken C++ und die Standardbibliotheken sind darauf ausgerichtet, keine Warnungen nur auf Warnstufe [/W4](../build/reference/compiler-option-warning-level.md)auszugeben.
 
 ## <a name="enable-warnings-that-are-off-by-default"></a>Standardmäßig deaktivierte Warnungen aktivieren
 
@@ -89,7 +89,7 @@ Die folgenden Warnungen sind in Visual Studio 2015 und höheren Versionen standa
 |C4587 (Stufe 1)|"*anonymous_structure*": Behavior Change: der Konstruktor wird nicht mehr implizit aufgerufen.|
 |C4588 (Stufe 1)|"*anonymous_structure*": Behavior Change: der Dekonstruktor wird nicht mehr implizit aufgerufen.|
 |[C4596](../error-messages/compiler-warnings/c4596.md) (Stufe 4)|'*Identifier*': Ungültiger qualifizierter Name in der Mitglieds Deklaration <sup>14,3</sup> <sup>Perm</sup>|
-|C4598 (Ebene 1 und Ebene 3)|' #include '-*Header*' ': die Header *Nummer in der* vorkompilierten Kopfzeile stimmt nicht mit der aktuellen Kompilierung an dieser Position <sup>14,3</sup>|
+|C4598 (Ebene 1 und Ebene 3)|' #include '-*Header*' ': Header Nummer *-Header-Nummer* im vorkompilierten Header stimmt nicht mit der aktuellen Kompilierung an dieser Position <sup>14,3</sup>|
 |C4599 (Stufe 3)|'*options* *Pfad*': die Nummer der Befehlszeilenargument- *Nummer stimmt nicht* mit dem vorkompilierten Header <sup>14,3</sup> überein.|
 |C4605 (Stufe 1)|"/D*Macro*" wurde in der aktuellen Befehlszeile angegeben, wurde jedoch beim Erstellen des vorkompilierten Headers nicht angegeben.|
 |[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) (Stufe 3)|"*union_member*" wurde bereits von einem anderen Union-Member in der Initialisiererliste initialisiert, "*union_member*" <sup>Perm</sup>|
@@ -108,7 +108,7 @@ Die folgenden Warnungen sind in Visual Studio 2015 und höheren Versionen standa
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (Stufe 1)|"*Function*": die Signatur des nicht privaten Members enthält den privaten Assemblytyp "*NATIVE_TYPE*".|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) (Stufe 4)|"*Function*": Funktion nicht Inline|
 |[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md) (Stufe 3)|Das 32-Bit-Gleitkommaergebnis wird im Speicher gespeichert. Möglicherweise kommt es zu einem Leistungsverlust|
-|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|der flüchtige Zugriff von "*Expression*" unterliegt/volatile:\<ISO&#124;MS > Einstellung. verwenden Sie ggf. die intrinsischen __iso_volatile_load/Store-Funktionen.|
+|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|der flüchtige Zugriff von "*Expression*" unterliegt/volatile: \<ISO&#124;MS > Einstellung; Verwenden Sie die intrinsischen __iso_volatile_load/Store-Funktionen.|
 |C4749 (Stufe 4)|bedingt unterstützt: OffsetOf angewendet auf den Typ "*Typ*", der nicht dem Standardlayout entspricht.|
 |C4767 (Stufe 4)|der Abschnitts Name '*Symbol*' ist länger als 8 Zeichen und wird vom Linker abgeschnitten.|
 |C4768 (Stufe 3)|__declspec-Attribute vor der Verknüpfungs Spezifikation werden ignoriert.|
@@ -142,15 +142,22 @@ Die folgenden Warnungen sind in Visual Studio 2015 und höheren Versionen standa
 |C5029 (Stufe 4)|nicht dem Standard entsprechende Erweiterung: Ausrichtungs C++ Attribute in gelten nur für Variablen, Datenmember und Tagtypen.|
 |C5031 (Stufe 4)|#pragma Warnung (Pop): wahrscheinliche fehl Übereinstimmung, pping-Warn Status in anderer Datei <sup>14,1</sup>|
 |C5032 (Stufe 4)|#pragma Warnung (Push) ohne entsprechende #pragma Warnung (Pop) <sup>14,1</sup> erkannt|
-|C5034|die Verwendung der systeminternen '*intrinsischen*' bewirkt, dass die Funktions *Funktion* als gastcode <sup>15,3</sup> kompiliert wird.|
-|C5035|die Verwendung der Funktion "*Feature*" bewirkt, dass die Funktions *Funktion* als gastcode <sup>15,3</sup> kompiliert wird.|
+|C5034|die Verwendung der systeminternen '*intrinsischen*' bewirkt, dass Funktions *Funktionsname* als gastcode <sup>15,3</sup> kompiliert wird.|
+|C5035|die Verwendung der Funktion "*Feature*" bewirkt, dass Funktions *Funktionsname* als gastcode <sup>15,3</sup> kompiliert wird.|
 |C5036 (Stufe 1)|VarArgs-Funktionszeiger Konvertierung bei der Kompilierung mit/Hybrid: x86arm64 '*Typ1*' in '*Typ2*' <sup>15,3</sup>|
 |[C5038](../error-messages/compiler-warnings/c5038.md) (Stufe 4)|der Datenmember "*Member1*" wird nach dem Datenmember "*member2* <sup>15,3</sup> " initialisiert.|
 |C5039 (Stufe 4)|"*Function*": ein Zeiger oder Verweis auf eine potenziell auslösende Funktion, die an die externe C-Funktion unter "-EHC" Ein nicht definiertes Verhalten kann auftreten, wenn diese Funktion eine Ausnahme auslöst. <sup>15.5</sup>|
 |C5042 (Stufe 3)|"*Function*": Funktions Deklarationen im Block Bereich können in Standard C++nicht "Inline" angegeben werden; Inline-Spezifizierer <sup>15,5</sup> entfernen|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|Der Compiler fügt eine Spectre-Entschärfung für die Speicherauslastung ein, wenn/Qspectre Switch <sup>15,7</sup>|
 
-<sup>14,1</sup> diese Warnung ist ab Visual Studio 2015 Update 1 verfügbar.\\ <sup>14,3</sup> diese Warnung ist ab Visual Studio 2015 Update 3 verfügbar.\\ <sup>15,3</sup> diese Warnung ist ab Visual Studio 2017 Version 15,3 verfügbar.\\ <sup>15,5</sup> diese Warnung ist ab Visual Studio 2017 Version 15,5 verfügbar.\\ <sup>15,7</sup> diese Warnung ist ab Visual Studio 2017 Version 15,7 verfügbar.\\ <sup>15,8</sup> diese Warnung ist ab Visual Studio 2017 Version 15,8 verfügbar.\\ <sup>16,0</sup> diese Warnung ist ab Visual Studio 2019 RTM verfügbar.\\ <sup>Perm</sup> Diese Warnung ist deaktiviert, sofern die [/permissive-](../build/reference/permissive-standards-conformance.md) -Compileroption nicht festgelegt ist.
+<sup>14,1</sup> diese Warnung ist ab Visual Studio 2015 Update 1 verfügbar. <br/>
+<sup>14,3</sup> diese Warnung ist ab Visual Studio 2015 Update 3 verfügbar. <br/>
+<sup>15,3</sup> diese Warnung ist ab Visual Studio 2017 Version 15,3 verfügbar. <br/>
+<sup>15,5</sup> diese Warnung ist ab Visual Studio 2017 Version 15,5 verfügbar. <br/>
+<sup>15,7</sup> diese Warnung ist ab Visual Studio 2017 Version 15,7 verfügbar. <br/>
+<sup>15,8</sup> diese Warnung ist ab Visual Studio 2017 Version 15,8 verfügbar. <br/>
+<sup>16,0</sup> diese Warnung ist ab Visual Studio 2019 RTM verfügbar. <br/>
+<sup>Perm</sup> Diese Warnung ist deaktiviert, sofern die [/permissive-](../build/reference/permissive-standards-conformance.md) -Compileroption nicht festgelegt ist.
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Warnungen werden in früheren Versionen standardmäßig deaktiviert.
 

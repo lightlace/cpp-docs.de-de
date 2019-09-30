@@ -1,6 +1,7 @@
 ---
 title: calloc
-ms.date: 11/04/2016
+description: Die C-Lauf Zeit Bibliotheksfunktion "cbelegc" ordnet NULL initialisierten Arbeitsspeicher zu.
+ms.date: 09/27/2019
 api_name:
 - calloc
 api_location:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - memory allocation, arrays
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
-ms.openlocfilehash: ba498b35106f9ff1636bb1bc0764088a434b5b01
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 228ec6d01a6f57ff98a9030f5a6d82e4c57388cd
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939328"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685361"
 ---
 # <a name="calloc"></a>calloc
 
@@ -40,7 +41,7 @@ Ordnet ein Array im Arbeitsspeicher mit Elementen an, die auf 0 initialisiert si
 
 ```C
 void *calloc(
-   size_t num,
+   size_t number,
    size_t size
 );
 ```
@@ -63,17 +64,19 @@ Die **czuzuordnungsfunktion** ordnet Speicherplatz für ein Array von *Zahlen* E
 
 **calloc** legt **errno** auf " **endomem** " fest, wenn eine Speicher Belegung fehlschlägt oder wenn der angeforderte Arbeitsspeicher den Wert von **_HEAP_MAXREQ**überschreitet. Informationen hierzu und über andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**czuzuordnungs** ruft **malloc** auf, C++ um die [_set_new_mode](set-new-mode.md) -Funktion zum Festlegen des neuen handlermodus zu verwenden. Der neue handlermodus gibt an, ob **malloc** bei einem Fehler die neue Handlerroutine aufrufen soll, wie von [_set_new_handler](set-new-handler.md)festgelegt. Standardmäßig ruft **malloc** die neue Handlerroutine nicht bei einem Fehler auf, um Arbeitsspeicher zuzuweisen. Sie können dieses Standardverhalten außer Kraft setzen, sodass, wenn **calloc** keinen Arbeitsspeicher zuordnen kann, die neue Handlerroutine von **malloc** auf die gleiche Weise aufgerufen wird, wie der **neue** Operator aus demselben Grund fehlschlägt. Um den Standardwert zu überschreiben, rufen Sie
+Wenn die *Anzahl* oder *Größe* in der Microsoft-Implementierung NULL ist, gibt **czuzuordc** einen Zeiger auf einen zugeordneten Block ungleich 0 (null) zurück. Der Versuch, den zurückgegebenen Zeiger zu lesen oder zu schreiben, führt zu nicht definiertem Verhalten.
+
+**czuzuordnungs** verwendet C++ die [_set_new_mode](set-new-mode.md) -Funktion, um den *neuen handlermodus*festzulegen. Der neue handlermodus gibt an, ob **czuzubei** einem Fehler die neue Handlerroutine aufrufen soll, wie von [_set_new_handler](set-new-handler.md)festgelegt. Standardmäßig ruft **calloc** die neue Handlerroutine bei einem Fehler bei der Speicherzuweisung nicht auf. Sie können dieses Standardverhalten außer Kraft setzen, sodass, wenn **calloc** keinen Arbeitsspeicher zuordnen kann, die neue Handlerroutine genauso aufruft wie der **neue** Operator, wenn dieser aus demselben Grund fehlschlägt. Um den Standardwert zu überschreiben, rufen Sie
 
 ```C
 _set_new_mode(1);
 ```
 
-rechtzeitig im Programm auf oder stellen eine Verknüpfung mit NEWMODE.OBJ her (siehe [Link Options (Linkoptionen)](../../c-runtime-library/link-options.md)).
+frühzeitig in Ihrem Programm oder mit *NEWMODE verknüpfen. Obj* (siehe [Link Optionen](../../c-runtime-library/link-options.md)).
 
 Wenn die Anwendung mit einer Debugversion der C-Laufzeitbibliotheken verknüpft ist, wird **czuzuordc** in [_calloc_dbg](calloc-dbg.md)aufgelöst. Weitere Informationen dazu, wie der Heap während des Debugprozesses verwaltet wird, finden Sie unter [CRT-Debugheap](/visualstudio/debugger/crt-debug-heap-details).
 
-**czuweisung** ist als und `__declspec(noalias)` `__declspec(restrict)`gekennzeichnet, was bedeutet, dass die Funktion keine globalen Variablen ändert und dass der zurückgegebene Zeiger keinen Alias hat. Weitere Informationen finden Sie unter [noalias](../../cpp/noalias.md) und [restrict](../../cpp/restrict.md).
+**czuweisung** ist als `__declspec(noalias)` und `__declspec(restrict)` gekennzeichnet, was bedeutet, dass die Funktion keine globalen Variablen ändert und dass der zurückgegebene Zeiger keinen Alias hat. Weitere Informationen finden Sie unter [noalias](../../cpp/noalias.md) und [restrict](../../cpp/restrict.md).
 
 ## <a name="requirements"></a>Anforderungen
 

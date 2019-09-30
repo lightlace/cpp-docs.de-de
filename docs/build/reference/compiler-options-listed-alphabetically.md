@@ -3,12 +3,12 @@ title: Compileroptionen alphabetisch sortiert
 ms.date: 08/08/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 90c7ee5637a5d1e0f9d48c0f128364ee0df73dab
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 39dd11245ef88d1d59d3eda8cbeaa5fc4494b9a8
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273636"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685330"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Compileroptionen alphabetisch sortiert
 
@@ -99,7 +99,7 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/Od](od-disable-debug.md)|Deaktiviert Optimierung.|
 |[/Og](og-global-optimizations.md)|Veraltet. Verwendet globale Optimierung.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Erstellt systeminterne Funktionen.|
-|[/openmp](openmp-enable-openmp-2-0-support.md)|Aktiviert die [`#pragma omp`](../../preprocessor/omp.md) -Direktive im Quellcode.|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|Aktiviert die [`#pragma omp`-](../../preprocessor/omp.md) Direktive im Quellcode.|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|Bevorzugt kompakten Code.|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Bevorzugt schnellen Code.|
 |[/Ox](ox-full-optimization.md)|Eine Teilmenge von/O2, die/GF oder/Gy. nicht enthält.|
@@ -157,6 +157,7 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/Ze](za-ze-disable-language-extensions.md)|Veraltet. Aktiviert Spracherweiterungen.|
 |[/Zf](zf.md)|Verbessert die PDB-Generierungs Zeit in parallelen Builds.|
 |[/Zg](zg-generate-function-prototypes.md)|In Visual Studio 2015 entfernt. Erzeugt Funktionsprototypen.|
+|[/ZH](zh.md)|Gibt MD5, SHA-1 oder SHA-256 für Prüfsummen in Debuginformationen an.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Fügt Debuginformationen in eine Programmdatenbank ein, die mit Bearbeiten und Fortfahren kompatibel ist.|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Erzeugt vollständige Debuginformationen.|
 |[/Zl](zl-omit-default-library-name.md)|Entfernt Standard-Bibliotheksnamen aus der OBJ-Datei (nur x86).|

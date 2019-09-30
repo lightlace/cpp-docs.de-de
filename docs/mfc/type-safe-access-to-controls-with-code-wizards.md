@@ -7,34 +7,34 @@ helpviewer_keywords:
 - dialog boxes [MFC], access to controls
 - dialog box controls [MFC], accessing
 ms.assetid: b8874393-ee48-4124-8d78-e3648a7e29b9
-ms.openlocfilehash: bf3ecf3016fcc15bd4ada7a15208acd9a04ca0a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fefa722209d37e2612201c4471e5764f9d71f27a
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180862"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685039"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>Typsicherer Zugriff auf Steuerelemente mit Code-Assistenten
 
-Wenn Sie mit DDX-Funktionen vertraut sind, können Sie die Eigenschaft des Steuerelements in der [Assistenten zum Hinzufügen von Membervariablen](../ide/add-member-variable-wizard.md) Typsicherer Zugriff zu erstellen. Dieser Ansatz ist einfacher als das Erstellen von Steuerelementen ohne Code-Assistenten.
+Wenn Sie mit DDX-Funktionen vertraut sind, können Sie die Control-Eigenschaft im [Assistenten zum Hinzufügen](../ide/add-member-variable-wizard.md) von Element Variablen verwenden, um typsicheren Zugriff zu erstellen. Diese Vorgehensweise ist einfacher als das Erstellen von Steuerelementen ohne Code-Assistenten.
 
-Wenn Sie einfach den Zugriff auf den Wert eines Steuerelements möchten, bietet DDX es. Wenn Sie mehr als den Wert eines Steuerelements zugreifen möchten, verwenden Sie den Assistent zum Hinzufügen von Membervariablen eigener Dialogfeldklassen eine Membervariable der entsprechenden Klasse hinzu. Fügen Sie diese Membervariable, an der Eigenschaft des Steuerelements.
+Wenn Sie einfach auf den Wert eines Steuer Elements zugreifen möchten, stellt DDX es bereit. Wenn Sie mehr als auf den Wert eines Steuer Elements zugreifen möchten, verwenden Sie den Assistenten zum Hinzufügen von Element Variablen, um der Dialogfeld Klasse eine Member-Variable der entsprechenden Klasse hinzuzufügen. Fügen Sie diese Element Variable an die Steuerelement Eigenschaft an.
 
-Membervariablen haben eine Steuerelementeigenschaft, anstatt eine Value-Eigenschaft. Die Value-Eigenschaft bezieht sich auf den Typ der Daten, die aus dem Steuerelement, zurückgegeben werden, z. B. `CString` oder **Int**. Die Eigenschaft des Steuerelements ermöglicht den direkten Zugriff auf das Steuerelement über ein Datenelement, dessen Typ eine der Steuerelementklassen in MFC, z. B. ist `CButton` oder `CEdit`.
+Element Variablen können eine Steuerelement Eigenschaft anstelle einer Value-Eigenschaft aufweisen. Die Value-Eigenschaft bezieht sich auf den Datentyp, der vom Steuerelement zurückgegeben wird, z. b. `CString` oder **int**. Die Control-Eigenschaft ermöglicht den direkten Zugriff auf das Steuerelement über einen Datenmember, dessen Typ eine der Steuerelement Klassen in MFC ist, z. b. `CButton` oder `CEdit`.
 
 > [!NOTE]
->  Für ein bestimmtes Steuerelement an können, Sie Wenn Sie möchten, mehrere Membervariablen mit dem Value-Eigenschaft und höchstens eine Membervariable mit der Eigenschaft des Steuerelements verwenden. Sie haben nur eine MFC-Objekt zu einem Steuerelement zugeordnet werden, da mehrere Objekte, die angefügt werden, ein Steuerelement oder einem anderen Fenster zu einer Mehrdeutigkeit in der meldungszuordnung führen würde.
+>  Für ein bestimmtes Steuerelement können Sie, wenn gewünscht, über mehrere Element Variablen mit der Value-Eigenschaft und höchstens eine Element Variable mit der Control-Eigenschaft verfügen. Einem Steuerelement kann nur ein MFC-Objekt zugeordnet werden, da mehrere Objekte, die an ein Steuerelement angefügt sind, oder ein beliebiges anderes Fenster in der Meldungs Zuordnung zu einer Mehrdeutigkeit führen würde.
 
-Sie können dieses Objekt verwenden, um einen beliebigen Member-Funktionen für das Steuerelementobjekt aufrufen. Solche Aufrufe wirken sich auf das Steuerelement im Dialogfeld. Zum Beispiel für ein Kontrollkästchen-Steuerelement dargestellt, durch eine Variable *M_Checkbox*, des Typs `CButton`, rufen Sie:
+Mit diesem Objekt können Sie beliebige Element Funktionen für das Steuerelement Objekt aufzurufen. Solche Aufrufe wirken sich auf das Steuerelement im Dialogfeld aus. Beispielsweise könnten Sie für ein Kontrollkästchen-Steuerelement, das durch eine Variable *m_Checkbox*vom Typ `CButton` dargestellt wird, Folgendes aufzurufen:
 
 [!code-cpp[NVC_MFCControlLadenDialog#52](../mfc/codesnippet/cpp/type-safe-access-to-controls-with-code-wizards_1.cpp)]
 
-Hier die Membervariable *M_Checkbox* dient demselben Zweck wie die Member-Funktion `GetMyCheckbox` Siehe [Typsicherer Zugriff auf Steuerelemente ohne Code-Assistenten](../mfc/type-safe-access-to-controls-without-code-wizards.md). Ist dieses Kontrollkästchen nicht das Kontrollkästchen für eine automatische, immer noch müssten Sie einen Handler in der Dialogfeldklasse für den BN_CLICKED Steuerelement-Benachrichtigung, wenn die Schaltfläche geklickt wird.
+Hier erfüllt die Member-Variable *m_Checkbox* denselben Zweck wie die Element Funktion `GetMyCheckbox` unter [typsicherer Zugriff auf Steuerelemente ohne Code-Assistenten](../mfc/type-safe-access-to-controls-without-code-wizards.md). Wenn das Kontrollkästchen kein automatisches Kontrollkästchen ist, benötigen Sie für die BN_CLICKED-Steuerelement-Benachrichtigungs Meldung, wenn auf die Schaltfläche geklickt wird, trotzdem einen Handler in der Dialogfeld Klasse.
 
-Weitere Informationen zu Steuerelementen, finden Sie unter [Steuerelemente](../mfc/controls-mfc.md).
+Weitere Informationen zu-Steuerelementen finden Sie unter Steuer [Elemente](../mfc/controls-mfc.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 [Typsicherer Zugriff auf die Steuerelemente in einem Dialogfeld](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)<br/>
-[Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[Arbeiten mit Dialog Feldern in MFC](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [Typsicherer Zugriff auf Steuerelemente ohne Code-Assistenten](../mfc/type-safe-access-to-controls-without-code-wizards.md)

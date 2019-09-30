@@ -1,6 +1,7 @@
 ---
-title: MSVC-Linkeroptionen
-ms.date: 08/20/2018
+title: MSVC (Linkeroptionen)
+description: Eine Liste der Optionen, die vom Microsoft Link Linker unterstützt werden.
+ms.date: 09/24/2019
 f1_keywords:
 - link
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 7ff8ecd6a607aac59fca6d32fa2784e7e3e4268f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23cd1c3ce767cf8046e3439432db795f032dc370
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301759"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685580"
 ---
 # <a name="linker-options"></a>Linkeroptionen
 
@@ -30,9 +31,11 @@ In der folgenden Tabelle sind die Optionen für "LINK.exe" aufgelistet. Weitere 
 
 - [Reservierte Wörter](reserved-words.md)
 
-In der Befehlszeile beachtet Optionen des Linkers nicht; z. B./base und/Base dieselbe Bedeutung. Anweisungen zum Angeben der einzelnen Optionen in der Befehlszeile oder in Visual Studio finden Sie in der Dokumentation zur entsprechenden Option.
+In der Befehlszeile wird bei den Linkeroptionen die Groß-/Kleinschreibung nicht beachtet. beispielsweise bedeuten/Base und/Base dasselbe. Anweisungen zum Angeben der einzelnen Optionen in der Befehlszeile oder in Visual Studio finden Sie in der Dokumentation zur entsprechenden Option.
 
 Einige Linkeroptionen können Sie auch mit dem [comment](../../preprocessor/comment-c-cpp.md) -Pragma festlegen.
+
+## <a name="linker-options-listed-alphabetically"></a>Linkeroptionen alphabetisch aufgelistet
 
 |Option|Zweck|
 |------------|-------------|
@@ -58,14 +61,14 @@ Einige Linkeroptionen können Sie auch mit dem [comment](../../preprocessor/comm
 |[/DELAY](delay-delay-load-import-settings.md)|Steuert das verzögerte Laden von DLLs.|
 |[/DELAYLOAD](delayload-delay-load-import.md)|Löst das verzögerte Laden der angegebenen DLL aus.|
 |[/DELAYSIGN](delaysign-partially-sign-an-assembly.md)|Eine Assembly wird teilweise signiert.|
-|[/DEPENDENTLOADFLAG](dependentloadflag.md)|Legt den Standardflags auf abhängige DLL lädt fest.|
+|[/DEPENDENTLOADFLAG](dependentloadflag.md)|Legt Standardflags für abhängige DLL-Ladungen fest.|
 |[/DLL](dll-build-a-dll.md)|Erstellt eine DLL.|
 |[/DRIVER](driver-windows-nt-kernel-mode-driver.md)|Erstellt einen Kernelmodustreiber.|
 |[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)|Gibt an, ob ein ausführbares Image generiert werden soll, für das zur Ladezeit mit der ASLR (Address Space Layout Randomization)-Funktion nach dem Zufallsprinzip ein Rebase-Vorgang ausgeführt werden kann.|
 |[/ENTRY](entry-entry-point-symbol.md)|Legt die Startadresse fest.|
 |[/errorReport](errorreport-report-internal-linker-errors.md)|Gibt interne Linkerfehler an Microsoft weiter.|
 |[/EXPORT](export-exports-a-function.md)|Exportiert eine Funktion.|
-|[/FILEALIGN](filealign.md)|Richtet die Abschnitte in der Ausgabedatei auf einem Vielfachen eines angegebenen Werts.|
+|[/FILEALIGN](filealign.md)|Richtet Abschnitte in der Ausgabedatei an Vielfachen eines angegebenen Werts aus.|
 |[/FIXED](fixed-fixed-base-address.md)|Erstellt ein Programm, das nur an seiner bevorzugten Basisadresse geladen werden kann.|
 |[/FORCE](force-force-file-output.md)|Erzwingt die Fertigstellung des Links, auch wenn nicht aufgelöste oder mehrfach definierte Symbole vorliegen.|
 |[/FUNCTIONPADMIN](functionpadmin-create-hotpatchable-image.md)|Erstellt ein Hotpatch-fähiges Image.|
@@ -84,10 +87,12 @@ Einige Linkeroptionen können Sie auch mit dem [comment](../../preprocessor/comm
 |[/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)|Gibt einen Schlüssel oder ein Schlüsselpaar zum Signieren einer Assembly an.|
 |[/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)|Teilt dem Compiler mit, dass die Anwendung Adressen unterstützt, die mehr als zwei Gigabytes umfassen|
 |[/LIBPATH](libpath-additional-libpath.md)|Gibt einen Suchpfad vor dem Umgebungsbibliothekspfads an.|
+|[/LINKREPRO](linkrepro.md)|Gibt einen Pfad zum Generieren von Link Reproduktions Artefakten in an.|
+|[/LINKREPROTARGET](linkreprotarget.md)|Generiert eine Link Reproduktion nur, wenn das angegebene Ziel erstellt wird.|
 |[/LTCG](ltcg-link-time-code-generation.md)|Gibt Link-Zeitcodegenerierung an.|
 |[/MACHINE](machine-specify-target-platform.md)|Legt die Zielplattform fest.|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|Erstellt eine parallele Manifestdatei und bettet sie optional in der Binärdatei ein.|
-|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|Gibt an, eine \<DependentAssembly > Abschnitt in der Manifestdatei.|
+|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|Gibt einen \<dependentassembly-> Abschnitt in der Manifest-Datei an.|
 |[/MANIFESTFILE](manifestfile-name-manifest-file.md)|Ändert den Standardnamen der Manifestdatei.|
 |[/MANIFESTINPUT](manifestinput-specify-manifest-input.md)|Gibt eine Manifesteingabedatei an, die der Linker verarbeitet und in der Binärdatei einbettet. Sie können diese Option mehrmals verwenden, um mehr als eine Manifesteingabedatei anzugeben.|
 |[/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md)|Gibt an, ob Informationen zur Benutzerkontensteuerung (UAC) in das Programmmanifest eingebettet werden.|
@@ -95,7 +100,7 @@ Einige Linkeroptionen können Sie auch mit dem [comment](../../preprocessor/comm
 |[/MAPINFO](mapinfo-include-information-in-mapfile.md)|Fügt die angegebenen Informationen in die Zuordnungsdatei ein.|
 |[/MERGE](merge-combine-sections.md)|Kombiniert Abschnitte miteinander.|
 |[/MIDL](midl-specify-midl-command-line-options.md)|Gibt die MIDL-Befehlszeilenoptionen an.|
-|[/NATVIS](natvis-add-natvis-to-pdb.md)|Die PDB-Datei hinzugefügt Debuggerschnellansichten aus einer Natvis-Datei.|
+|[/NATVIS](natvis-add-natvis-to-pdb.md)|Fügt Debugger-Visualisierungen aus einer natvis-Datei in die PDB-Datei ein.|
 |[/NOASSEMBLY](noassembly-create-a-msil-module.md)|Unterdrückt die Erstellung einer .NET Framework-Assembly.|
 |[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)|Ignoriert alle (angegebenen) Standardbibliotheken bei der Auflösung von externen Verweisen.|
 |[/NOENTRY](noentry-no-entry-point.md)|Erstellt eine DLL, die nur als Ressource dient.|
@@ -108,12 +113,12 @@ Einige Linkeroptionen können Sie auch mit dem [comment](../../preprocessor/comm
 |[/PDBALTPATH](pdbaltpath-use-alternate-pdb-path.md)|Verwendet einen alternativen Speicherort zum Speichern einer PDB-Datei.|
 |[/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)|Erstellt eine Programmdatenbankdatei (PDB-Datei) ohne eigene Symbole.|
 |[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|Gibt die PGD-Datei für profilgesteuerte Optimierungen an.|
-|[/POGOSAFEMODE](pogosafemode-linker-option.md)|**Veraltete** erstellt einen threadsicheren instrumentiert PGO-Build.|
+|[/POGOSAFEMODE](pogosafemode-linker-option.md)|**Veraltet** Erstellt einen Thread sicheren, instrumentierten PGO-Build.|
 |[/PROFILE](profile-performance-tools-profiler.md)|Erstellt eine Ausgabedatei, die mit dem Leistungstoolprofiler verwendet werden kann.|
 |[/RELEASE](release-set-the-checksum.md)|Legt die Prüfsumme im Header der EXE-Datei fest.|
 |[/SAFESEH](safeseh-image-has-safe-exception-handlers.md)|Legt fest, dass das Image eine Tabelle mit sicheren Ausnahmehandlern enthält.|
 |[/SECTION](section-specify-section-attributes.md)|Überschreibt die Attribute eines Abschnitts.|
-|[/SOURCELINK](sourcelink.md)|Gibt eine SourceLink-Datei, die PDB-Datei hinzu.|
+|["/SOURCELINK"](sourcelink.md)|Gibt eine sourcelink-Datei an, die der PDB hinzugefügt werden soll.|
 |[/STACK](stack-stack-allocations.md)|Legt die Stapelgröße in Bytes fest.|
 |[/STUB](stub-ms-dos-stub-file-name.md)|Fügt ein MS-DOS-Stubprogramm an ein Win32-Programm an.|
 |[/SUBSYSTEM](subsystem-specify-subsystem.md)|Teilt dem Betriebssystem mit, wie die EXE-Datei auszuführen ist.|
@@ -121,10 +126,10 @@ Einige Linkeroptionen können Sie auch mit dem [comment](../../preprocessor/comm
 |[/TLBID](tlbid-specify-resource-id-for-typelib.md)|Gibt Ressourcen-ID der vom Linker generierten Typbibliothek an.|
 |[/TLBOUT](tlbout-name-dot-tlb-file.md)|Legt den Namen der TLB-Datei und anderer MIDL-Ausgabedateien fest.|
 |[/TSAWARE](tsaware-create-terminal-server-aware-application.md)|Erstellt eine Anwendung, die auf dem Terminalserver ausgeführt werden soll.|
-|[/USEPROFILE](useprofile.md)|Verwendet, die profilgesteuerte Optimierung Trainingsdaten zum Erstellen eines optimierten Images.|
+|[/USEPROFILE](useprofile.md)|Verwendet die Trainingsdaten für die Profil gesteuerte Optimierung, um ein optimiertes Image zu erstellen.|
 |[/VERBOSE](verbose-print-progress-messages.md)|Druckt Linkerstatusmeldungen aus.|
 |[/VERSION](version-version-information.md)|Weist eine Versionsnummer zu.|
-|[/ WHOLEARCHIVE](wholearchive-include-all-library-object-files.md)|Enthält alle Objektdatei aus der angegebenen statischen Bibliotheken.|
+|[/WHOLEARCHIVE](wholearchive-include-all-library-object-files.md)|Schließt jede Objektdatei aus angegebenen statischen Bibliotheken ein.|
 |[/WINMD](winmd-generate-windows-metadata.md)|Aktiviert die Generierung einer Windows-Runtime-Metadatendatei.|
 |[/WINMDFILE](winmdfile-specify-winmd-file.md)|Gibt den Dateinamen für die Ausgabedatei der Windows-Runtime-Metadaten (winmd) an, die von der [/WINMD](winmd-generate-windows-metadata.md) - Linkeroption generiert wird.|
 |[/WINMDKEYFILE](winmdkeyfile-specify-winmd-key-file.md)|Gibt einen Schlüssel oder ein Schlüsselpaar an, um eine Windows-Runtime-Metadatendatei zu signieren.|
@@ -136,5 +141,5 @@ Weitere Informationen finden Sie unter [Compiler-Controlled LINK Options](compil
 
 ## <a name="see-also"></a>Siehe auch
 
-[Referenz zur C/C++-Erstellung](c-cpp-building-reference.md)<br/>
+[Referenz zur C/C++-Erstellung](c-cpp-building-reference.md)\
 [MSVC-Linkerreferenz](linking.md)

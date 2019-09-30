@@ -1,6 +1,7 @@
 ---
 title: Ausführen von LIB
-ms.date: 09/28/2018
+description: Beschreibt die Befehlszeilenoptionen, die Sie mit "lib. exe" verwenden können.
+ms.date: 09/25/2019
 f1_keywords:
 - VC.Project.VCLibrarianTool.TargetMachine
 - Lib
@@ -26,73 +27,75 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: e95427b571cd14ad39a7ba4f368b90e806f13862
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d65c8d8b3b0cd28c7cccda25bfd9512321172f9
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318692"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685541"
 ---
 # <a name="running-lib"></a>Ausführen von LIB
 
-Zur Steuerung von LIB können verschiedene Befehlszeilenoptionen verwendet werden.
+Zum Steuern von lib können verschiedene Befehlszeilenoptionen verwendet werden.
 
 ## <a name="lib-command-line"></a>LIB-Befehlszeile
 
-Geben Sie den Befehl zum Ausführen von LIB `lib` gefolgt von der Optionen und Dateinamen für die Aufgabe Sie mithilfe der LIB ausführen. LIB akzeptiert auch Befehlszeileneingaben in Befehlsdateien, die im folgenden Abschnitt beschrieben werden. Eine Umgebungsvariable verwendet LIB nicht.
+Um lib auszuführen, geben Sie den Befehl `lib` gefolgt von den Optionen und Dateinamen für die Aufgabe ein, die Sie für die Ausführung von lib verwenden. LIB akzeptiert auch Befehlszeilen Eingaben in Befehls Dateien, die im folgenden Abschnitt beschrieben werden. LIB verwendet keine Umgebungsvariable.
 
-> [!NOTE]
-> Wenn Sie gewohnt, die LINK32.exe sind und tools mit der Microsoft Win32-Software Development Kit für Windows NT, Sie den Befehl verwendet haben möglicherweise LIB32.exe `link32 -lib` oder mit dem Befehl `lib32` zum Erstellen und Verwalten von Bibliotheken Importieren Sie die Bibliotheken. Achten Sie darauf, dass Sie so ändern Sie Ihre Makefiles und Batch-Dateien mit der `lib` stattdessen den Befehl.
+## <a name="lib-command-files"></a>LIB-Befehls Dateien
 
-## <a name="lib-command-files"></a>LIB-Befehlsdateien
+Sie können Befehlszeilenargumente an lib in einer Befehlsdatei übergeben, indem Sie die folgende Syntax verwenden:
 
-Sie können Befehlszeilenargumente an LIB in einer Befehlsdatei, die mit der folgenden Syntax übergeben:
+> **Lib-\@-** <em>Befehlsdatei</em>
 
-> **LIB \@**  <em>Commandfile</em>
+Die Datei *Befehlsdatei* ist eine Textdatei. Zwischen dem @-Zeichen ( **\@** ) und dem Dateinamen sind keine Leerzeichen oder Tabstopps zulässig. Der Name der *Befehlsdatei* hat keine Standard Erweiterung. Sie müssen den vollständigen Dateinamen angeben, einschließlich einer beliebigen Erweiterung. Platzhalter können nicht verwendet werden. Sie können einen absoluten oder relativen Pfad mit dem Dateinamen angeben.
 
-Die Datei *Commandfile* ist eine Textdatei. Keine Leerzeichen oder Tabstopp kann zwischen den at-Zeichen (**\@**) und den Dateinamen. Es gibt keine standardmäßige Erweiterung. Sie müssen den vollständigen Namen, Einbinden von Erweiterungen angeben. Platzhalter können verwendet werden. Sie können einen absoluten oder relativen Pfad mit dem Dateinamen angeben.
+In der Befehlsdatei können Argumente durch Leerzeichen oder Tabstopps getrennt werden, wie Sie in der Befehlszeile angezeigt werden können. Argumente können auch durch Zeilen vorzeichenzeichen getrennt werden. Verwenden Sie ein Semikolon ( **;** ), um einen Kommentar zu markieren. LIB ignoriert den gesamten Text vom Semikolon bis zum Ende der Zeile.
 
-In der Befehlsdatei können Argumente durch Leerzeichen oder Tabulatorzeichen, getrennt werden, wie sie in der Befehlszeile können; Sie können auch durch Zeilenumbruchzeichen getrennt werden. Verwenden Sie ein Semikolon (**;**) um einen Kommentar zu markieren. LIB ignoriert den gesamten Text aus dem Semikolon am Ende der Zeile.
+Sie können entweder die gesamte Befehlszeile oder einen Teil der Befehlszeile in einer Befehlsdatei angeben, und Sie können mehr als eine Befehlsdatei in einem LIB-Befehl verwenden. LIB akzeptiert die Befehlsdatei Eingabe so, als ob Sie an dieser Stelle in der Befehlszeile angegeben wird. Befehls Dateien können nicht eingefügt werden. LIB gibt den Inhalt von Befehls Dateien an, es sei denn, die Option **/nologo** wird verwendet.
 
-Sie können entweder vollständig oder teilweise von der Befehlszeile angeben, in einer Befehlsdatei aus, und Sie können mehr als eine Befehlsdatei in eine LIB-Befehl verwenden. LIB akzeptiert die Befehlsdatei-Eingaben, als ob es an diesem Speicherort in der Befehlszeile angegeben wurden. Befehlsdateien werden nicht geschachtelt. LIB gibt den Inhalt der Befehlsdateien, es sei denn, die/nologo-Option verwendet wird.
+## <a name="using-lib-options"></a>Verwenden von lib-Optionen
 
-## <a name="using-lib-options"></a>Verwenden die LIB-Optionen
+Eine Option besteht aus einem optionsspezifizierer, bei dem es sich entweder um einen Bindestrich ( **-** ) oder um einen Schrägstrich ( **/** ) handelt, gefolgt vom Namen der Option. Optionsnamen können nicht abgekürzt werden. Einige Optionen akzeptieren ein Argument, das nach einem Doppelpunkt ( **:** ) angegeben wird. Innerhalb einer Optionsangabe sind keine Leerzeichen oder Tabstopps zulässig. Verwenden Sie eines oder mehrere Leerzeichen bzw. Tabstopps, um Optionsangaben in der Befehlszeile voneinander zu trennen. Bei Optionsnamen und Schlüsselwörtern oder Dateinamen Argumenten wird die Groß-/Kleinschreibung nicht beachtet LIB verarbeitet Optionen in der Reihenfolge, die in der Befehlszeile und in den Befehls Dateien angegeben ist. Wenn eine Option mit unterschiedlichen Argumenten wiederholt wird, hat die letzte zu verarbeitende Priorität Vorrang.
 
-Eine Option besteht aus einem Optionsbezeichner, handelt es sich entweder einem Bindestrich (**-**) oder einem Schrägstrich (**/**), gefolgt vom Namen der Option. Optionsnamen können nicht abgekürzt werden. Einige Optionen haben ein Argument, das nach einem Doppelpunkt angegeben (**:**). Innerhalb einer Optionsangabe sind keine Leerzeichen oder Tabstopps zulässig. Verwenden Sie eines oder mehrere Leerzeichen bzw. Tabstopps, um Optionsangaben in der Befehlszeile voneinander zu trennen. Optionsnamen und ihren Schlüsselwörtern oder Dateinamen bestehenden Argumenten sind nicht Groß-/Kleinschreibung beachtet, aber Bezeichner, die als Argumente verwendet werden Groß-/Kleinschreibung beachtet. LIB verarbeitet die Optionen in der Reihenfolge, in der Befehlszeile angegeben und in Befehlsdateien. Wenn Sie eine Option mit verschiedenen Argumenten wiederholt wird, hat der letzte Suchvorgang zu verarbeitenden Vorrang vor.
+Die folgenden Optionen gelten für alle Modi von lib:
 
-Die folgenden Optionen gelten für alle LIB-Modi:
+> **/ERRORREPORT** \[**KEINE** &#124; **PROMPT** &#124; - **WARTESCHLANGE** &#124; **SENDEN**]
 
-> **/ERRORREPORT** [**NONE** &#124; **PROMPT** &#124; **QUEUE** &#124; **SEND**]
+Wenn lib. exe zur Laufzeit fehlschlägt, können Sie **/errorreport** verwenden, um Informationen zu diesen internen Fehlern an Microsoft zu senden.
 
-Wenn lib.exe zur Laufzeit ein Fehler auftritt, können Sie **/errorreport** Informationen zu diesen internen Fehlern an Microsoft zu senden.
+Weitere Informationen zu **/errorreport**finden Sie unter [/errorreport (interne Compilerfehler melden)](errorreport-report-internal-compiler-errors.md).
 
-Weitere Informationen zu **/errorreport**, finden Sie unter [/errorreport (interne Compilerfehler Bericht)](errorreport-report-internal-compiler-errors.md).
+> **/LINKREPRO:** _Verzeichnispfad_ \
+> **/LINKREPROTARGET:** _Dateiname_
+
+Sie können die [/LINKREPRO](linkrepro.md) -Option verwenden, um Microsoft bei der Diagnose von lib. exe-abstürzen und internen Fehlern zu unterstützen. Es generiert eine Verknüpfungs *Reproduktion, eine*Gruppe von buildartefakte, die Microsoft das reproduzieren eines Problems ermöglichen, das bei Bibliotheks Vorgängen auftritt. Die [/LINKREPROTARGET](linkreprotarget.md) -Option kann mit der **/LINKREPRO** -Option verwendet werden. Es werden nur Verknüpfungs Reproduktions Artefakte generiert, wenn "lib. exe" die angegebene Datei erzeugt. Weitere Informationen finden Sie unter [melden eines Problems mit dem Microsoft C++ -Toolset](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
 
 > **/LTCG**
 
-"LTCG" steht für *Link-zeitcodegenerierung*. Dieses Feature erfordert die Zusammenarbeit zwischen den Compiler ([cl.exe](compiler-options.md)), LIB und der Linker ([LINK](linker-options.md)) um die Code über eine beliebige Komponente selbst Möglichkeiten zu optimieren.
+"LTCG" steht für die *Link-Zeit Codegenerierung*. Diese Funktion erfordert eine Zusammenarbeit zwischen dem Compiler ([cl. exe](compiler-options.md)), lib und dem Linker ([Link](linker-options.md)), um Code zu optimieren, der über die Funktionen von Komponenten hinausgeht.
 
-Für LIB die **"/ LTCG"** Option gibt an, dass die Eingaben von cl.exe Objektdateien, die mithilfe von generiert wurden die ["/ GL"](gl-whole-program-optimization.md) -Compileroption. Wenn LIB derartige Eingaben auftreten und **"/ LTCG"** nicht angegeben ist, er wird neu gestartet, mit "/ LTCG" aktiviert, nachdem die Meldung dient zu Informationszwecken angezeigt. Das heißt, es ist nicht erforderlich, diese Option explizit festzulegen, aber beschleunigt Buildleistung, da LIB nicht unbedingt selbst neu.
+Bei lib gibt die Option **/LTCG** an, dass die Eingaben aus cl. exe Objektdateien enthalten, die mit der [/GL](gl-whole-program-optimization.md) -Compileroption generiert wurden. Wenn lib solche Eingaben findet und **/LTCG** nicht angegeben ist, wird nach dem Anzeigen einer Informations Meldung mit/LTCG aktiviert. Anders ausgedrückt: Es ist nicht erforderlich, diese Option explizit festzulegen, aber die Buildleistung wird dadurch beschleunigt, da LIB nicht selbst neu gestartet werden muss.
 
-Im Buildprozess wird die Ausgabe von LIB Link gesendet. LINK verfügt über einen eigenen separaten **"/ LTCG"** Option aus, die zum Ausführen von verschiedenen Optimierungen, einschließlich der Optimierung des ganzen Programms und Profilgesteuerte Optimierung (PGO)-Instrumentation verwendet wird. Weitere Informationen über die LINK-Option finden Sie unter ["/ LTCG"](ltcg-link-time-code-generation.md).
+Im Buildprozess wird die Ausgabe von lib an Link gesendet. Link hat eine eigene separate **/LTCG** -Option. Sie wird verwendet, um verschiedene Optimierungen auszuführen, einschließlich der Optimierung des gesamten Programms und der PGO-Instrumentation (Profil gesteuerte Optimierung). Weitere Informationen zur Link-Option finden Sie unter [/LTCG](ltcg-link-time-code-generation.md).
 
 > **/MACHINE**
 
-Gibt die Zielplattform für das Programm an. In der Regel müssen Sie nicht/Machine angeben. LIB leitet den Computertyp aus den OBJ-Dateien ab. Allerdings wird in einigen Fällen ein LIB den Computertyp kann nicht bestimmt werden kann und eine Fehlermeldung ausgegeben. Geben Sie "/MACHINE" an, wenn ein solcher Fehler auftritt. Im/EXTRACT-Modus wird diese Option nur zur Überprüfung. Verwendung `lib /?` in der Befehlszeile, um die verfügbaren Computertypen finden Sie unter.
+Gibt die Zielplattform für das Programm an. Normalerweise müssen Sie **/Machine**nicht angeben. LIB leitet den Computertyp aus den OBJ-Dateien ab. In einigen Fällen kann lib den Computertyp jedoch nicht ermitteln und eine Fehlermeldung ausgegeben. Wenn ein solcher Fehler auftritt, geben Sie **/Machine**an. Im **/extract** -Modus dient diese Option nur zur Überprüfung. Verwenden Sie `lib /?` an der Befehlszeile, um die verfügbaren Computertypen anzuzeigen.
 
 > **/NOLOGO**
 
-Unterdrückt die Anzeige der LIB Copyrightmeldung und der Versionsnummer, und verhindert die Anzeige von Befehlsdateien aus.
+Unterdrückt die Anzeige der lib-Copyright Meldung und der Versionsnummer und verhindert das Wiederholen von Befehls Dateien.
 
 > **/VERBOSE**
 
-Zeigt Details zu den Status der Sitzung, einschließlich Namen OBJ-Dateien hinzugefügt wird. Die Informationen werden an die Standardausgabe gesendet und können in eine Datei umgeleitet werden.
+Zeigt Details zum Fortschritt der Sitzung an, einschließlich der Namen der OBJ-Dateien, die hinzugefügt werden. Die Informationen werden an die Standardausgabe gesendet und können in eine Datei umgeleitet werden.
 
-> **/WX**[**:NO**]
+> **/WX**[ **:NO**]
 
-Behandeln Sie Warnungen als Fehler. Finden Sie unter [/WX (Linkerwarnungen als Fehler behandeln)](wx-treat-linker-warnings-as-errors.md) für Weitere Informationen.
+Behandeln Sie Warnungen als Fehler. Weitere Informationen finden Sie unter [/WX (Linkerwarnungen als Fehler behandeln)](wx-treat-linker-warnings-as-errors.md).
 
-Andere Optionen gelten nur für bestimmte LIB-Modi. Diese Optionen werden in den Abschnitten, die Beschreibung der einzelnen Modi erläutert.
+Andere Optionen gelten nur für bestimmte Modi von lib. Diese Optionen werden in den Abschnitten erläutert, in denen die einzelnen Modi beschrieben werden.
 
 ## <a name="see-also"></a>Siehe auch
 

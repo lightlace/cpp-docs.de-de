@@ -1,6 +1,6 @@
 ---
-title: Lebenszyklus eines Dialogfelds
-ms.date: 11/04/2016
+title: Arbeiten mit Dialog Feldern in MFC
+ms.date: 09/27/2019
 helpviewer_keywords:
 - dialog boxes [MFC], life cycle
 - modal dialog boxes [MFC], life cycle
@@ -8,46 +8,46 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], life cycle
 - life cycle of dialog boxes [MFC]
 ms.assetid: e16fd78e-238d-4f31-8c9d-8564f3953bd9
-ms.openlocfilehash: a3772a180e35a57c997446fcf2268d84bec2daa5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad15250cf9a8dd663072cf9423263260bbb40a0e
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365331"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685730"
 ---
-# <a name="life-cycle-of-a-dialog-box"></a>Lebenszyklus eines Dialogfelds
+# <a name="working-with-dialog-boxes-in-mfc"></a>Arbeiten mit Dialog Feldern in MFC
 
-Während des Lebenszyklus eines Dialogfelds der Benutzer ruft das Dialogfeld, in der Regel in einem Befehlshandler, der erstellt und initialisiert das Dialogfeldobjekt, der Benutzer interagiert mit dem Dialogfeld und das Dialogfeld geschlossen wird.
+Während des Lebenszyklus eines Dialog Felds ruft der Benutzer das Dialogfeld auf, in der Regel innerhalb eines Befehls Handlers, der das Dialogfeld Objekt erstellt und initialisiert, der Benutzer mit dem Dialogfeld interagiert und dann das Dialogfeld geschlossen wird.
 
-Für modale Dialogfelder sammelt der Handler keine Daten vom Benutzer eingegeben wird, sobald das Dialogfeld geschlossen wird. Da das Dialogfeldobjekt vorhanden ist, nachdem das Dialogfeld-Fenster geschlossen wurde, können Sie einfach die Membervariablen der Dialogfeldklasse verwenden, um Daten zu extrahieren.
+Für modale Dialogfelder sammelt der Handler alle Daten, die der Benutzer eingegeben hat, nachdem das Dialogfeld geschlossen wurde. Da das Dialogfeld Objekt vorhanden ist, nachdem das Dialogfeld geschlossen wurde, können Sie die Daten einfach mithilfe der Element Variablen der Dialogfeld Klasse extrahieren.
 
-Nicht modale Dialogfelder möglicherweise häufig extrahieren Sie Daten aus dem Dialogfeldobjekt während das Dialogfeld immer noch sichtbar ist. An einem bestimmten Punkt wird das Dialogfeldobjekt zerstört. Wenn dies geschieht, hängt von Ihrem Code ab.
+Bei nicht modalem Dialogfeldern können Sie häufig Daten aus dem Dialogfeld Objekt extrahieren, während das Dialogfeld noch sichtbar ist. An einem bestimmten Punkt wird das Dialog Objekt zerstört. Wenn dies der Fall ist, hängt von Ihrem Code ab.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren?
 
 - [Erstellen und Anzeigen von Dialogfeldern](../mfc/creating-and-displaying-dialog-boxes.md)
 
 - [Erstellen von modalen Dialogfeldern](../mfc/creating-modal-dialog-boxes.md)
 
-- [Erstellen von nicht modalen Dialogfeldern](../mfc/creating-modeless-dialog-boxes.md)
+- [Erstellen von nicht modalem Dialogfeldern](../mfc/creating-modeless-dialog-boxes.md)
 
-- [Verwenden einer Dialogvorlage im Speicher](../mfc/using-a-dialog-template-in-memory.md)
+- [Verwenden einer Dialogfeld Vorlage im Speicher](../mfc/using-a-dialog-template-in-memory.md)
 
-- [Festlegen der Hintergrundfarbe des Dialogfelds](../mfc/setting-the-dialog-boxs-background-color.md)
+- [Festlegen der Hintergrundfarbe für das Dialogfeld](../mfc/setting-the-dialog-boxs-background-color.md)
 
-- [Initialisieren des Dialogfelds](../mfc/initializing-the-dialog-box.md)
+- [Initialisieren des Dialog Felds](../mfc/initializing-the-dialog-box.md)
 
-- [Verarbeiten von Windows-Meldungen in einem Dialogfeld](../mfc/handling-windows-messages-in-your-dialog-box.md)
+- [Verarbeiten von Windows-Meldungen in Ihrem Dialogfeld](../mfc/handling-windows-messages-in-your-dialog-box.md)
 
-- [Abrufen von Daten aus dem Dialogfeldobjekt](../mfc/retrieving-data-from-the-dialog-object.md)
+- [Abrufen von Daten aus dem Dialogfeld Objekt](../mfc/retrieving-data-from-the-dialog-object.md)
 
-- [Schließen des Dialogfelds](../mfc/closing-the-dialog-box.md)
+- [Schließen des Dialog Felds](../mfc/closing-the-dialog-box.md)
 
-- [Zerstören des Dialogfelds](../mfc/destroying-the-dialog-box.md)
+- [Zerstören des Dialog Felds](../mfc/destroying-the-dialog-box.md)
 
-- [Dialogdatenaustausch (DDX) und Überprüfung (DDV)](../mfc/dialog-data-exchange-and-validation.md)
+- [Dialog Datenaustausch (DDX) und Validierung (DDV)](../mfc/dialog-data-exchange-and-validation.md)
 
-- [Blatt Dialogfelder](../mfc/property-sheets-and-property-pages-mfc.md)
+- [Dialogfelder für Eigenschaften Blätter](../mfc/property-sheets-and-property-pages-mfc.md)
 
 ## <a name="see-also"></a>Siehe auch
 

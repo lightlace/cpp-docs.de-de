@@ -8,19 +8,19 @@ helpviewer_keywords:
 - modeless dialog boxes [MFC], initializing
 - MFC dialog boxes [MFC], initializing
 ms.assetid: 968142f5-19f9-4b34-a1d4-8e6412d4379b
-ms.openlocfilehash: 87b3405f1441e730cf5c9ce7fc03d2c7372e55db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14cdf94bef79f254b4aaa2c1c0dfba6c88b7498b
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297098"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685627"
 ---
 # <a name="initializing-the-dialog-box"></a>Initialisieren des Dialogfelds
 
-Nachdem das Dialogfeld Feld und alle Steuerelemente werden erstellt, aber noch bevor das Dialogfeld wird das (unabhängig vom Typ) des Screens, dem Dialogfeldobjekt [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) Memberfunktion aufgerufen wird. Für ein modales Dialogfeld, dies geschieht bei der `DoModal` aufrufen. Für ein nicht modales Dialogfeld `OnInitDialog` wird aufgerufen, wenn `Create` aufgerufen wird. Überschreiben Sie i. d. r. `OnInitDialog` um das Dialogfeld-Steuerelemente, z. B. das Festlegen von des ursprünglichen Texts des ein Bearbeitungsfeld zu initialisieren. Rufen Sie die `OnInitDialog` Member-Funktion der Basisklasse, `CDialog`, aus Ihrem `OnInitDialog` außer Kraft setzen.
+Nachdem das Dialogfeld und alle zugehörigen Steuerelemente erstellt wurden, aber kurz bevor das Dialogfeld (eines der beiden Typen) auf dem Bildschirm angezeigt wird, wird die [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) -Member-Funktion des Dialog Objekts aufgerufen. Bei einem modalen Dialogfeld erfolgt dies während des `DoModal`-Aufrufes. Bei einem nicht modalem Dialogfeld wird `OnInitDialog` aufgerufen, wenn `Create` aufgerufen wird. In der Regel überschreiben Sie `OnInitDialog`, um die Steuerelemente des Dialog Felds zu initialisieren, z. b. das Festlegen des Anfangs Texts eines Bearbeitungs Felds. Sie müssen die `OnInitDialog`-Member-Funktion der Basisklasse, `CDialog`, von der `OnInitDialog`-außer Kraft Setzung aus abrufen.
 
-Wenn Sie die Hintergrundfarbe des Dialogfelds (und mit der alle anderen Dialogfelder in Ihrer Anwendung) festlegen möchten, finden Sie unter [Festlegen der Hintergrundfarbe des Dialogfelds](../mfc/setting-the-dialog-boxs-background-color.md).
+Wenn Sie die Hintergrundfarbe des Dialog Felds (und die aller anderen Dialogfelder in der Anwendung) festlegen möchten, finden Sie weitere Informationen unter [Festlegen der Hintergrundfarbe für das Dialogfeld](../mfc/setting-the-dialog-boxs-background-color.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)
+[Arbeiten mit Dialog Feldern in MFC](../mfc/life-cycle-of-a-dialog-box.md)
