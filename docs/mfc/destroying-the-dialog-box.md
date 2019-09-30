@@ -10,19 +10,19 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], destroying
 - modal dialog boxes [MFC], destroying
 ms.assetid: dabceee7-3639-4d85-bf34-73515441b3d0
-ms.openlocfilehash: 84ae5b336bb8eeac4f8ab7b6e5b9f00246f9ca15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b407c6e832dde7a5865146e7cc12d1840d3234a
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254305"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685849"
 ---
 # <a name="destroying-the-dialog-box"></a>Zerstören des Dialogfelds
 
-Modale Dialogfelder werden normalerweise auf den Stapelrahmen erstellt und zerstört, wenn die Beendigung der Funktion, die sie erstellt wurden. Des Destruktors des Dialogfeldobjekts wird immer dann aufgerufen, wenn das Objekt den Gültigkeitsbereich verlässt.
+Modale Dialogfelder werden normalerweise auf dem Stapel Rahmen erstellt und zerstört, wenn die Funktion, die Sie erstellt hat, endet. Der Dekonstruktor des Dialog Objekts wird aufgerufen, wenn das Objekt den Gültigkeitsbereich verlässt.
 
-Nicht modale Dialogfelder werden normalerweise erstellt und im Besitz von einem übergeordneten Ansicht oder der Zielframe, Fenster – Hauptrahmenfenster der Anwendung oder einem Dokumentrahmenfenster. Der Standardwert [OnClose](../mfc/reference/cwnd-class.md#onclose) handleraufrufen [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow), die zerstört das Fenster "im Dialogfeld". Wenn das Dialogfeld allein, keine Zeiger oder andere spezielle Besitzsemantik steht, sollten Sie überschreiben [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) das C++-Dialog-Objekt zu zerstören. Sie sollten auch überschreiben, [OnCancel](../mfc/reference/cdialog-class.md#oncancel) , und rufen Sie `DestroyWindow` aus darin. Wenn dies nicht der Fall ist, wird der Besitzer des Dialogfelds sollte die C++-Objekt zu zerstören, wenn es nicht mehr erforderlich ist.
+Dialogfelder ohne Modus werden normalerweise erstellt und im Besitz einer übergeordneten Ansicht oder eines Rahmen Fensters, – das Hauptrahmen Fenster der Anwendung oder ein Dokument Rahmen Fenster. Der standardmäßige [OnClose](../mfc/reference/cwnd-class.md#onclose) -Handler ruft [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow)auf, wodurch das Dialogfeld Fenster zerstört wird. Wenn das Dialogfeld allein und ohne Zeiger darauf oder eine andere besondere Besitz Semantik steht, sollten Sie [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) außer Kraft setzen, um C++ das Dialog Objekt zu zerstören. Sie sollten auch [OnCancel](../mfc/reference/cdialog-class.md#oncancel) überschreiben und `DestroyWindow` darin abrufen. Wenn dies nicht der Fall ist, sollte der Besitzer des Dialog C++ Felds das Objekt zerstören, wenn es nicht mehr benötigt wird.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)
+[Arbeiten mit Dialog Feldern in MFC](../mfc/life-cycle-of-a-dialog-box.md)

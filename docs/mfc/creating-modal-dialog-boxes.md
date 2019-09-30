@@ -6,17 +6,17 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], creating
 - MFC dialog boxes [MFC], modal
 ms.assetid: 26c7a68c-79f6-4862-a5a8-6024984644d2
-ms.openlocfilehash: 5de6eeb616f32c7b8829d827988a972e41658530
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed0fe3b7ef8aeddea01f573bfe8e1c01a6b5b443
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174093"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685670"
 ---
 # <a name="creating-modal-dialog-boxes"></a>Erstellen von modalen Dialogfeldern
 
-Rufen Sie zum Erstellen eines modalen Dialogfelds eine der zwei öffentliche Konstruktoren, deklariert im [CDialog](../mfc/reference/cdialog-class.md). Rufen Sie als Nächstes des Dialogfeldobjekts [DoModal](../mfc/reference/cdialog-class.md#domodal) Memberfunktion, um das Dialogfeld anzuzeigen und Interaktion mit der Anwendung verwalten, bis der Benutzer, OK auswählt oder Abbrechen. Diese Verwaltung durch `DoModal` ist, was die modales Dialogfeld. Für modale Dialogfelder `DoModal` lädt die Ressource.
+Um ein modales Dialogfeld zu erstellen, rufen Sie einen der beiden öffentlichen Konstruktoren auf, die in [CDialog](../mfc/reference/cdialog-class.md)deklariert wurden. Rufen Sie als nächstes die [DoModal](../mfc/reference/cdialog-class.md#domodal) -Member-Funktion des Dialog Felds auf, um das Dialogfeld anzuzeigen, und verwalten Sie die Interaktion damit, bis der Benutzer OK oder Abbrechen auswählt. Durch diese Verwaltung von `DoModal` wird das Dialogfeld modal. Für modale Dialogfelder lädt `DoModal` die Dialogfeld Ressource.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)
+[Arbeiten mit Dialog Feldern in MFC](../mfc/life-cycle-of-a-dialog-box.md)

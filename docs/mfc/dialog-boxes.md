@@ -8,60 +8,60 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-ms.openlocfilehash: 32a8f8784459338131d4893f25d8798f8031b68b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18b4c4d1386716a0a3282b88d6fdf5a701abce08
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262631"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685796"
 ---
 # <a name="dialog-boxes"></a>Dialogfelder
 
-Anwendungen für Windows an, die häufig mit dem Benutzer in Dialogfeldern kommuniziert. Klasse [CDialog](../mfc/reference/cdialog-class.md) stellt eine Schnittstelle bereit, verwalten die Dialogfelder, die Visual C++-Dialog-Editor erleichtert Dialogfelder zu entwerfen und erstellen Sie die Dialogfeld-Vorlagenressourcen und Code-Assistenten vereinfachen den Prozess für die Initialisierung und Überprüfen die Steuerelemente in einem Dialogfeld und der vom Benutzer eingegebenen Werte zu sammeln.
+Anwendungen für Windows kommunizieren häufig über Dialogfelder mit dem Benutzer. [CDialog](../mfc/reference/cdialog-class.md) -Klasse stellt eine Schnittstelle zum Verwalten von Dialogfeldern C++ bereit. der visuelle Dialog-Editor vereinfacht das Entwerfen von Dialogfeldern und das Erstellen von Dialogfeldern, und die Code-Assistenten vereinfachen den Prozess der Initialisierung und Überprüfung der steuert in einem Dialogfeld und zum Sammeln der vom Benutzer eingegebenen Werte.
 
-Dialogfelder enthält Steuerelemente, einschließlich:
+Dialog Felder enthalten Steuerelemente, einschließlich:
 
-- Windows-Standardsteuerelemente bearbeiten wie z. B. Textfelder, Druckknöpfe, Listenfelder, Kombinationsfelder, Struktur-Steuerelemente, Listensteuerelementen und Statusanzeigen.
+- Allgemeine Windows-Steuerelemente, wie z. b. Bearbeitungsfelder, Pushbuttons, Listenfelder, Kombinations Felder, Struktur Steuerelemente, Listen Steuerelemente und Status Indikatoren.
 
 - ActiveX-Steuerelemente.
 
-- Ownerdrawn-Schaltflächen: Steuerelemente, die Sie für das Zeichnen im Dialogfeld verantwortlich sind.
+- Vom Besitzer gezeichnete Steuerelemente: Steuerelemente, die für das Zeichnen im Dialogfeld verantwortlich sind.
 
-Die meisten Dialogfelder sind modal, die erfordern, dass des Benutzers das Dialogfeld zu schließen, bevor Sie mit anderen Teilen des Programms. Aber es ist möglich, das nicht modale Dialogfelder zu erstellen, die Benutzer an andere Fenster zu arbeiten, während das Dialogfeld geöffnet ist. MFC unterstützt beide Arten von Dialogfeld mit der Klasse `CDialog`. Die Steuerelemente angeordnet werden und mit einer Dialogfeldvorlagen-Ressource, die mit erstellt verwaltet die [Dialog-Editor](../windows/dialog-editor.md).
+Die meisten Dialogfelder sind modal, die erfordern, dass der Benutzer das Dialogfeld schließt, bevor ein anderer Teil des Programms verwendet wird. Es ist jedoch möglich, Dialogfelder ohne Modus zu erstellen, mit denen Benutzer mit anderen Fenstern arbeiten können, während das Dialogfeld geöffnet ist. MFC unterstützt beide Arten von Dialogfeldern mit der Klasse `CDialog`. Die Steuerelemente werden mithilfe einer Dialogfeld Vorlagen-Ressource angeordnet und verwaltet, die mit dem [Dialog-Editor](../windows/dialog-editor.md)erstellt wurde.
 
-[Eigenschaftenblätter](../mfc/property-sheets-mfc.md), auch bekannt als Registerkarte angezeigten Dialogfelder und Dialogfelder, die "Seiten" von unterschiedlichen Dialogfeld-Steuerelemente enthalten sind. Jede Seite verfügt über einen Dateiordner "Register" oben. Klicken Sie auf einer Registerkarte öffnet dieser Seite im Vordergrund des Dialogfelds.
+[Eigenschaften Blätter](../mfc/property-sheets-mfc.md), auch als Registerkarten Dialogfelder bezeichnet, sind Dialogfelder, die "Seiten" unterschiedlicher Dialogfeld-Steuerelemente enthalten. Jede Seite enthält den Datei Ordner "Registerkarte" oben. Wenn Sie auf eine Registerkarte klicken, wird diese Seite am Anfang des Dialog Felds angezeigt.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren?
 
 - [Anpassen von mit VSTU Anzeigen eines Dialogfelds mit einem Menübefehl](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
 
-- [Dialogfeld-Steuerelemente im framework](../mfc/dialog-box-components-in-the-framework.md)
+- [Dialog Feld Komponenten im Framework](../mfc/dialog-box-components-in-the-framework.md)
 
 - [Modale und nicht modale Dialogfelder](../mfc/modal-and-modeless-dialog-boxes.md)
 
-- [Eigenschaftenblätter und Eigenschaftenseiten](../mfc/property-sheets-and-property-pages-mfc.md) in einem Dialogfeld
+- [Eigenschaften Blätter und Eigenschaften Seiten](../mfc/property-sheets-and-property-pages-mfc.md) in einem Dialogfeld
 
-- [Erstellen der Dialogfeldressource](../mfc/creating-the-dialog-resource.md)
+- [Erstellen der Dialogfeld Ressource](../mfc/creating-the-dialog-resource.md)
 
-- [Erstellen einer Dialogfeldklasse mit Code-Assistenten](../mfc/creating-a-dialog-class-with-code-wizards.md)
+- [Erstellen einer Dialogfeld Klasse mit Code-Assistenten](../mfc/creating-a-dialog-class-with-code-wizards.md)
 
-- [Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)
+- [Arbeiten mit Dialog Feldern in MFC](../mfc/life-cycle-of-a-dialog-box.md)
 
-- [Dialogdatenaustausch (DDX) und Überprüfung (DDV)](../mfc/dialog-data-exchange-and-validation.md)
+- [Dialog Datenaustausch (DDX) und Validierung (DDV)](../mfc/dialog-data-exchange-and-validation.md)
 
 - [Typsicherer Zugriff auf Steuerelemente in einem Dialogfeld](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)
 
-- [Zuordnen von Windows-Meldungen zu einer Klasse](../mfc/mapping-windows-messages-to-your-class.md)
+- [Zuordnung von Windows-Meldungen zu ihrer Klasse](../mfc/mapping-windows-messages-to-your-class.md)
 
 - [Häufig überschreibbare Memberfunktionen](../mfc/commonly-overridden-member-functions.md)
 
 - [Häufig hinzugefügte Memberfunktionen](../mfc/commonly-added-member-functions.md)
 
-- [Allgemeine Dialogfeldklassen](../mfc/common-dialog-classes.md)
+- [Allgemeine Dialogfeld Klassen](../mfc/common-dialog-classes.md)
 
-- [Dialogfelder in OLE](../mfc/dialog-boxes-in-ole.md)
+- [Dialog Felder in OLE](../mfc/dialog-boxes-in-ole.md)
 
-- Erstellen Sie eine Anwendung, deren Benutzeroberfläche ein Dialogfeld ist: finden Sie unter den [CMNCTRL1](../overview/visual-cpp-samples.md) oder [CMNCTRL2](../overview/visual-cpp-samples.md) Beispielprogramme. Der Anwendungs-Assistent bietet diese Option ebenfalls.
+- Erstellen Sie eine Anwendung, deren Benutzeroberfläche ein Dialogfeld ist: siehe [CMNCTRL1](../overview/visual-cpp-samples.md) -oder [CMNCTRL2](../overview/visual-cpp-samples.md) -Beispiel Programme. Der Anwendungs-Assistent bietet auch diese Option.
 
 - [Beispiele](../mfc/dialog-sample-list.md)
 

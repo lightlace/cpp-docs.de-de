@@ -8,26 +8,26 @@ helpviewer_keywords:
 - dialog templates [MFC], MFC framework
 - MFC dialog boxes [MFC], dialog resource
 ms.assetid: 592db160-0a8a-49be-ac72-ead278aca53f
-ms.openlocfilehash: 88027df7433267925e91db2d368b744cee8a9e75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15d01924be811a9c9ec8ea333870f444bf9aa61a
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182292"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685830"
 ---
 # <a name="dialog-box-components-in-the-framework"></a>Dialogfeld-Steuerelemente im Framework
 
-In der MFC-Framework besteht ein Dialogfeld, das aus zwei Komponenten:
+Im MFC-Framework verfügt ein Dialogfeld über zwei Komponenten:
 
-- Eine Dialogfeldvorlagen-Ressource, die das Dialogfeld-Steuerelemente und die Position angibt.
+- Eine Dialogfeld Vorlagen-Ressource, die die Steuerelemente des Dialog Felds und deren Platzierung angibt.
 
-   Die Ressource speichert eine Dialogfeldvorlage aus der Windows das Dialogfeld erstellt werden soll, und zeigt ihn an. Die Vorlage gibt das Dialogfeld Eigenschaften, einschließlich, seine Größe, Position, Stil, und die Typen und Positionen der Steuerelemente für das Dialogfeld. Verwenden Sie in der Regel eine Dialogfeldvorlage als Ressource gespeichert, aber Sie können auch Ihre eigene Vorlage erstellen, im Arbeitsspeicher.
+   Die Dialogfeld Ressource speichert eine Dialogfeld Vorlage, in der Windows das Dialogfenster erstellt und anzeigt. Die Vorlage gibt die Merkmale des Dialog Felds an, einschließlich der Größe, Position, Art und der Typen und Positionen der Steuerelemente des Dialog Felds. Normalerweise verwenden Sie eine Dialogfeld Vorlage, die als Ressource gespeichert wird, aber Sie können auch eine eigene Vorlage im Arbeitsspeicher erstellen.
 
-- Eine Dialogfeldklasse, aus abgeleiteten [CDialog](../mfc/reference/cdialog-class.md), um eine programmgesteuerte Schnittstelle für die Verwaltung das Dialogfeld zu gewähren.
+- Eine aus [CDialog](../mfc/reference/cdialog-class.md)abgeleitete Dialogfeld Klasse, die eine programmgesteuerte Schnittstelle zum Verwalten des Dialog Felds bereitstellt.
 
-   Ein Dialogfeld, das ist ein Fenster, und es wird in einem Windows-Fenster, wenn es sichtbar angefügt werden. Wenn das Dialogfeld erstellt wird, wird der Dialogfeldvorlagen-Ressource als Vorlage zum Erstellen von untergeordneten Fenstersteuerelemente für das Dialogfeld.
+   Ein Dialogfeld ist ein Fenster, das an ein Windows-Fenster angefügt wird, wenn es sichtbar ist. Wenn das Dialogfeld erstellt wird, wird die Ressource "Dialogfeld Vorlage" als Vorlage zum Erstellen von Steuerelementen für untergeordnete Fenster für das Dialogfeld verwendet.
 
 ## <a name="see-also"></a>Siehe auch
 
 [Dialogfelder](../mfc/dialog-boxes.md)<br/>
-[Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)
+[Arbeiten mit Dialog Feldern in MFC](../mfc/life-cycle-of-a-dialog-box.md)

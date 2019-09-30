@@ -4,12 +4,12 @@ ms.date: 08/08/2019
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: bfc9bb17100a3ee5c662062963c71ee532487239
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 8c99b2dd60e6c2266d5095a477ee4a5b2e0c8bd0
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273720"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685200"
 ---
 # <a name="compiler-options-listed-by-category"></a>Compileroptionen (nach Kategorie sortiert)
 
@@ -122,6 +122,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/Zc](zc-conformance.md)|Legt Standardverhalten unter [/Ze](za-ze-disable-language-extensions.md)fest.|
 |[/Ze](za-ze-disable-language-extensions.md)|Veraltet. Aktiviert die C89-Spracherweiterungen.|
 |[/Zf](zf.md)|Verbessert die PDB-Generierungs Zeit in parallelen Builds.|
+|[/ZH](zh.md)|Gibt MD5, SHA-1 oder SHA-256 für Prüfsummen in Debuginformationen an.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Fügt Debuginformationen in eine Programmdatenbank ein, die mit Bearbeiten und Fortfahren kompatibel ist. (nur x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Erzeugt vollständige Debuginformationen.|
 |[/Zl](zl-omit-default-library-name.md)|Entfernt den Standardbibliotheksnamen aus der OBJ-Datei.|
@@ -143,7 +144,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/MT](md-mt-ld-use-run-time-library.md)|Kompiliert, um mit LIBCMT.LIB eine ausführbare Multithreaddatei zu erstellen.|
 |[/MTd](md-mt-ld-use-run-time-library.md)|Kompiliert, um mit LIBCMTD.LIB eine ausführbare Multithreaddatei für den Debugger zu erstellen.|
 
-## <a name="miscellaneous"></a>Sonstiges
+## <a name="miscellaneous"></a>Verschiedenes
 
 |Option|Zweck|
 |------------|-------------|

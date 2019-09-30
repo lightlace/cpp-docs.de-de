@@ -9,30 +9,30 @@ helpviewer_keywords:
 - resources [MFC], creating dialog boxes
 - MFC dialog boxes [MFC], dialog resource
 ms.assetid: 0b83bd33-14d3-4611-8129-fccdae18053e
-ms.openlocfilehash: d0df76c506d4e6f2267e3a7628825e7b47a56c8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b1e6c81a0f4bd6983c2a76baf6148941a4fa21d
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242327"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685643"
 ---
 # <a name="creating-the-dialog-resource"></a>Erstellen der Dialogfeldressource
 
-Entwurf der [Dialogfeld](../mfc/dialog-boxes.md) und Erstellen der Dialogfeldressource möchten, verwenden Sie die [Dialog-Editor](../windows/dialog-editor.md). Der Dialog-Editor können Sie folgende Aktionen ausführen:
+Um das [Dialogfeld](../mfc/dialog-boxes.md) zu entwerfen und die Dialogfeld Ressource zu erstellen, verwenden Sie den [Dialog-Editor](../windows/dialog-editor.md). Im Dialog-Editor können Sie folgende Aktionen ausführen:
 
-- Passen Sie die Größe und Position, die das Dialogfeld hat, wenn es angezeigt wird.
+- Passen Sie die Größe und den Speicherort des Dialog Felds an, wenn es angezeigt wird.
 
-- Ziehen Sie verschiedene Arten von Steuerelementen aus einer Steuerelementpalette und legen Sie ab, wo möchten Sie sie im Dialogfeld.
+- Ziehen Sie verschiedene Arten von Steuerelementen aus einer Palette von Steuerelementen, und legen Sie Sie dort ab, wo Sie Sie im Dialogfeld möchten.
 
-- Positionieren Sie die Steuerelemente mit von Ausrichtungsschaltflächen auf der Symbolleiste.
+- Positionieren Sie die Steuerelemente auf der Symbolleiste mit den Schaltflächen Ausrichtung.
 
-- Testen Sie das Dialogfeld wird simuliert, das Aussehen und Verhalten, die sie in Ihrem Programm hat. Sie können im Testmodus bearbeiten das Dialogfeld-Steuerelemente durch Eingabe von Text in Textfeldern auf Schaltflächen geklickt und so weiter.
+- Testen Sie das Dialogfeld, indem Sie die Darstellung und das Verhalten des Programms simulieren. Im Testmodus können Sie die Steuerelemente des Dialog Felds bearbeiten, indem Sie Text in Textfelder eingeben, auf Pushbuttons klicken usw.
 
-Wenn Sie fertig sind, wird die Dialogfeldvorlagen-Ressource in Ihrer Anwendung Ressourcenskriptdatei gespeichert. Sie können diese später bei Bedarf bearbeiten. Eine vollständige Beschreibung zum Erstellen und Bearbeiten von Ressourcen finden Sie unter den [Dialog-Editor](../windows/dialog-editor.md) Themen. Diese Technik wird auch zum Erstellen der Dialogfeld-Vorlagenressourcen für [CFormView](../mfc/reference/cformview-class.md) und [CRecordView](../mfc/reference/crecordview-class.md) Klassen.
+Wenn Sie fertig sind, wird Ihre Dialogfeld Vorlagen-Ressource in der Ressourcen Skriptdatei Ihrer Anwendung gespeichert. Sie können Sie später bei Bedarf bearbeiten. Eine vollständige Beschreibung der Erstellung und Bearbeitung von Dialogfeld Ressourcen finden Sie in den Themen des [Dialog-Editors](../windows/dialog-editor.md) . Diese Technik wird auch zum Erstellen der Dialogfeld Vorlagen-Ressourcen für [CFormView](../mfc/reference/cformview-class.md) -und [CRecordView](../mfc/reference/crecordview-class.md) -Klassen verwendet.
 
-Wenn Sie das Dialogfeld Darstellung geeignet ist, erstellen eine Dialogfeldklasse, und ordnen Sie die Nachrichten, wie unter [Erstellen einer Dialogfeldklasse mit Code-Assistenten](../mfc/creating-a-dialog-class-with-code-wizards.md).
+Wenn die Darstellung des Dialog Felds für Sie geeignet ist, erstellen Sie eine Dialogfeld Klasse, und ordnen Sie Ihre Nachrichten zu, wie unter [Erstellen einer Dialogfeld Klasse mit Code-Assistenten](../mfc/creating-a-dialog-class-with-code-wizards.md)erläutert.
 
 ## <a name="see-also"></a>Siehe auch
 
 [Dialogfelder](../mfc/dialog-boxes.md)<br/>
-[Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)
+[Arbeiten mit Dialog Feldern in MFC](../mfc/life-cycle-of-a-dialog-box.md)

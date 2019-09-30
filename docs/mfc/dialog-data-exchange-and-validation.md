@@ -15,24 +15,24 @@ helpviewer_keywords:
 - dialog boxes [MFC], retrieving data
 - retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
-ms.openlocfilehash: a52af898c844cce05a138b8bc0e608681d13a491
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 651ec5779e3fe1190ff1a3f0f807fb0187e348f8
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302097"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685750"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>Dialogdatenaustausch und -validierung
 
-Dialogdatenaustausch (DDX) ist eine einfache Möglichkeit, die Steuerelemente in einem Dialogfeld zu initialisieren und die Dateneingabe durch den Benutzer zu sammeln. Validieren von Dialogfelddaten (DDV) ist eine einfache Möglichkeit zum Überprüfen der Eingabe von Daten in einem Dialogfeld an. Verwenden Sie zur Nutzung von DDX- und DDV in den Dialogfeldern der [Assistenten zum Hinzufügen von Membervariablen](../ide/add-member-variable-wizard.md) Datenmember zu erstellen, legen Sie deren Datentypen und Validierungsregeln angeben.
+Dialog Datenaustausch (DDX) ist eine einfache Möglichkeit, die Steuerelemente in Ihrem Dialogfeld zu initialisieren und Dateneingaben durch den Benutzer zu erfassen. Die Überprüfung der Dialogfeld Daten (DDV) ist eine einfache Möglichkeit zum Überprüfen der Dateneingabe in einem Dialogfeld. Um DDX und DDV in den Dialogfeldern zu nutzen, verwenden Sie den [Assistenten zum Hinzufügen](../ide/add-member-variable-wizard.md) von Element Variablen, um die Datenmember zu erstellen und ihre Datentypen festzulegen und Validierungsregeln festzulegen.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren?
 
-- [Dialogdatenaustausch](../mfc/dialog-data-exchange.md)
+- [Dialog Datenaustausch](../mfc/dialog-data-exchange.md)
 
-- [Validieren von Dialogfelddaten](../mfc/dialog-data-validation.md)
+- [Überprüfung von Dialog Daten](../mfc/dialog-data-validation.md)
 
 ## <a name="see-also"></a>Siehe auch
 
 [Dialogfelder](../mfc/dialog-boxes.md)<br/>
-[Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)
+[Arbeiten mit Dialog Feldern in MFC](../mfc/life-cycle-of-a-dialog-box.md)

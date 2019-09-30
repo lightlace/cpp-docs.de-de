@@ -5,19 +5,19 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], closing
 - dialog boxes [MFC], closing
 ms.assetid: 946f5675-c482-46a4-a5dd-34fe138ffae5
-ms.openlocfilehash: 07e4159eccde1fab89d4a5ffadee4e6d11fc20f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48ea954552b3ea9aa7193a47fc2a66d731312d77
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326845"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685377"
 ---
 # <a name="closing-the-dialog-box"></a>Schließen des Dialogfelds
 
-Ein modales Dialogfeld wird geschlossen, wenn der Benutzer die Schaltflächen, in der Regel auf die Schaltfläche "OK" oder "Abbrechen"-Schaltfläche auswählt. Wählen die Schaltfläche "OK" oder "Abbrechen" bewirkt, dass Windows, um das Dialogfeldobjekt senden eine **BN_CLICKED** Steuerelement-Benachrichtigung mit der Schaltfläche-ID des, entweder **IDOK** oder **IDCANCEL**. `CDialog` Handlerfunktionen für diese Nachrichten stellt: `OnOK` und `OnCancel`. Der Standard-Handler-Aufruf die `EndDialog` Member-Funktion, um das Dialogfeld zu schließen. Sie können auch aufrufen `EndDialog` über Ihren eigenen Code. Weitere Informationen finden Sie unter den [EndDialog](../mfc/reference/cdialog-class.md#enddialog) Memberfunktion der Klasse `CDialog` in die *MFC-Referenz*.
+Ein modales Dialogfeld wird geschlossen, wenn der Benutzer eine seiner Schaltflächen auswählt, in der Regel die Schaltfläche OK oder die Schaltfläche Abbrechen. Wenn Sie die Schaltfläche OK oder Abbrechen auswählen, sendet Windows das Dialog Objekt eine **BN_CLICKED** -Steuerelement Benachrichtigungs Meldung mit der ID der Schaltfläche ( **IDOK** oder **IDCANCEL**). `CDialog` stellt standardhandlerfunktionen für diese Nachrichten bereit: `OnOK` und `OnCancel`. Mit den Standard Handlern wird die `EndDialog`-Member-Funktion aufgerufen, um das Dialogfenster zu schließen. Sie können auch `EndDialog` aus Ihrem eigenen Code abrufen. Weitere Informationen finden Sie in der " [EndDialog](../mfc/reference/cdialog-class.md#enddialog) "-Member-Funktion der Klasse "`CDialog`" in der *MFC-Referenz*.
 
-Ordnen Sie zum Schließen und das Löschen eines nicht modalen Dialogfelds, außer Kraft setzen `PostNcDestroy` und Aufrufen der **löschen** Operators für die **dies** Zeiger. [Zerstören des Dialogfelds](../mfc/destroying-the-dialog-box.md) wird erläutert, was als Nächstes geschieht.
+Wenn Sie das Schließen und Löschen eines nicht modaldialog Felds anordnen möchten, überschreiben Sie `PostNcDestroy`, und rufen Sie den **Delete** -Operator für **diesen** Zeiger auf. Durch [das zerstören des Dialog](../mfc/destroying-the-dialog-box.md) Felds wird erläutert, was als nächstes geschieht.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)
+[Arbeiten mit Dialog Feldern in MFC](../mfc/life-cycle-of-a-dialog-box.md)

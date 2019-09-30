@@ -7,17 +7,17 @@ helpviewer_keywords:
 - dialog templates [MFC], in memory
 - MFC dialog boxes [MFC], dialog templates
 ms.assetid: edb443bb-e614-4f77-8a3b-74d93871e9bd
-ms.openlocfilehash: de694f6561dfe1423c7758ae572ccf6be1c8fd17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7250ea628f371cac16e0a34e81d8bab0828db73e
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180556"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685022"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>Verwenden einer Dialogvorlage im Speicher
 
-Anstatt die Methoden, die im angegebenen die [Dialogfeld Erstellung Tabelle](../mfc/creating-a-dialog-class-with-code-wizards.md), Sie können beide Arten von Dialogfeld indirekt aus einer Dialogfeldvorlage im Speicher erstellen. Weitere Informationen finden Sie in der Klasse [CDialog](../mfc/reference/cdialog-class.md) in die *MFC-Referenz*.
+Anstatt die Methoden zu verwenden, die in der Tabelle für die [Dialog Erstellung](../mfc/creating-a-dialog-class-with-code-wizards.md)angegeben sind, können Sie beide Arten von Dialogfeldern indirekt aus einer Dialogfeld Vorlage im Arbeitsspeicher erstellen. Weitere Informationen finden Sie unter Class [CDialog](../mfc/reference/cdialog-class.md) in der *MFC-Referenz*.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)
+[Arbeiten mit Dialog Feldern in MFC](../mfc/life-cycle-of-a-dialog-box.md)
