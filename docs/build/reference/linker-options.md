@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 23cd1c3ce767cf8046e3439432db795f032dc370
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: c7a44be5bb21bf83d621bd57c45713bd01e22cb6
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685580"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712699"
 ---
 # <a name="linker-options"></a>Linkeroptionen
 
@@ -88,7 +88,7 @@ Einige Linkeroptionen können Sie auch mit dem [comment](../../preprocessor/comm
 |[/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)|Teilt dem Compiler mit, dass die Anwendung Adressen unterstützt, die mehr als zwei Gigabytes umfassen|
 |[/LIBPATH](libpath-additional-libpath.md)|Gibt einen Suchpfad vor dem Umgebungsbibliothekspfads an.|
 |[/LINKREPRO](linkrepro.md)|Gibt einen Pfad zum Generieren von Link Reproduktions Artefakten in an.|
-|[/LINKREPROTARGET](linkreprotarget.md)|Generiert eine Link Reproduktion nur, wenn das angegebene Ziel erstellt wird.|
+|[/LINKREPROTARGET](linkreprotarget.md)|Generiert eine Link Reproduktion nur, wenn das angegebene Ziel erstellt wird. <sup>16,1</sup>|
 |[/LTCG](ltcg-link-time-code-generation.md)|Gibt Link-Zeitcodegenerierung an.|
 |[/MACHINE](machine-specify-target-platform.md)|Legt die Zielplattform fest.|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|Erstellt eine parallele Manifestdatei und bettet sie optional in der Binärdatei ein.|
@@ -137,7 +137,7 @@ Einige Linkeroptionen können Sie auch mit dem [comment](../../preprocessor/comm
 |[/WINMDDELAYSIGN](winmddelaysign-partially-sign-a-winmd.md)|Signiert teilweise eine Windows-Runtime-Metadatendatei (.winmd), indem der öffentliche Schlüssels in die winmd-Datei eingefügt wird.|
 |[/WX](wx-treat-linker-warnings-as-errors.md)|Behandelt Linkerwarnungen als Fehler.|
 
-Weitere Informationen finden Sie unter [Compiler-Controlled LINK Options](compiler-controlled-link-options.md).
+<sup>16,1</sup> diese Option ist ab Visual Studio 2019 Version 16,1 verfügbar.
 
 ## <a name="see-also"></a>Siehe auch
 
