@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: e1b02da9914263017d637cb07b0f3b9f56cd6aa9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 583b685295bf77910ef134776c1c4fa39baf93ad
+ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507711"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816338"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget-Klasse
 
@@ -99,7 +99,7 @@ class CCmdTarget : public CObject
 
 Eine Meldungs Zuordnung leitet Befehle oder Meldungen an die Element Funktionen weiter, die Sie schreiben, um Sie zu behandeln. (Ein Befehl ist eine Meldung von einem Menü Element, einer Befehls Schaltfläche oder einer Zugriffstaste.)
 
-`CCmdTarget` Zu den von abgeleiteten Schlüssel Framework-Klassen gehören [CView](../../mfc/reference/cview-class.md), [CWinApp](../../mfc/reference/cwinapp-class.md), [CDocument](../../mfc/reference/cdocument-class.md), [CWnd](../../mfc/reference/cwnd-class.md)und [CFrameWnd](../../mfc/reference/cframewnd-class.md). Wenn Sie beabsichtigen, eine neue Klasse für die Verarbeitung von Nachrichten zu verarbeiten, leiten Sie `CCmdTarget`die Klasse von einer dieser abgeleiteten Klassen ab. Sie werden nur selten eine Klasse von `CCmdTarget` direkt ableiten.
+Zu den von `CCmdTarget` abgeleiteten Schlüssel Framework-Klassen gehören [CView](../../mfc/reference/cview-class.md), [CWinApp](../../mfc/reference/cwinapp-class.md), [CDocument](../../mfc/reference/cdocument-class.md), [CWnd](../../mfc/reference/cwnd-class.md)und [CFrameWnd](../../mfc/reference/cframewnd-class.md). Wenn Sie beabsichtigen, eine neue Klasse für die Verarbeitung von Nachrichten zu verarbeiten, leiten Sie `CCmdTarget`die Klasse von einer dieser abgeleiteten Klassen ab. Sie werden nur selten eine Klasse von `CCmdTarget` direkt ableiten.
 
 Eine Übersicht über die Befehlsziele und das `OnCmdMsg`-Routing finden Sie unter [Befehlsziele](../../mfc/command-targets.md), [Befehlsrouting](../../mfc/command-routing.md) und [Zuordnen von Meldungen](../../mfc/mapping-messages.md).
 
@@ -246,7 +246,7 @@ Ein Zeiger auf einen Zeiger auf eine [IEnumOLEVERB](/windows/win32/api/oleidl/nn
 
 ### <a name="return-value"></a>Rückgabewert
 
-TRUE, wenn das Objekt mindestens ein OLE-Verb unterstützt (in \* diesem Fall zeigt " *ppumoleverb* " auf eine `IEnumOLEVERB` Enumeratorschnittstelle), andernfalls "false".
+TRUE, wenn das Objekt mindestens ein OLE-Verb unterstützt (in diesem Fall \* " *ppumoleverb* " auf eine `IEnumOLEVERB`-Enumeratorschnittstelle verweist), andernfalls "false".
 
 ### <a name="remarks"></a>Hinweise
 
@@ -267,7 +267,7 @@ Ein Zeiger auf ein `IDispatch` -Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf das `CCmdTarget` -Objekt, das mit *lpdispatch*verknüpft ist. Diese Funktion gibt NULL zurück, `IDispatch` wenn das Objekt nicht als Microsoft Foundation Class `IDispatch` -Objekt erkannt wird.
+Ein Zeiger auf das `CCmdTarget`-Objekt, das mit *lpdispatch*verknüpft ist. Diese Funktion gibt NULL zurück, `IDispatch` wenn das Objekt nicht als Microsoft Foundation Class `IDispatch` -Objekt erkannt wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -284,11 +284,11 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="parameters"></a>Parameter
 
 *pIID*<br/>
-Ein Zeiger auf eine Schnittstellen-ID (eine [GUID](/previous-versions/aa373931\(v=vs.80\))).
+Ein Zeiger auf eine Schnittstellen-ID (eine [GUID](/previous-versions/cc317743(v%3dmsdn.10)).
 
 ### <a name="return-value"></a>Rückgabewert
 
-TRUE, wenn erfolgreich, andernfalls false. Bei erfolgreicher \* Ausführung wird *piid* auf die primäre Dispatch-Schnittstellen-ID festgelegt.
+TRUE, wenn erfolgreich, andernfalls false. Bei erfolgreicher Ausführung wird \*- *piid* auf die primäre Dispatch-Schnittstellen-ID festgelegt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -331,7 +331,7 @@ Die Anzahl der Schnittstellen für die Typinformationen.
 
 Diese Member-Funktion implementiert im Grunde [IDispatch:: gettypeingefocount](/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfocount).
 
-Abgeleitete Klassen sollten diese Funktion überschreiben, um die angegebene Anzahl von Schnittstellen für Typinformationen zurückzugeben (entweder 0 oder 1). Wenn Sie nicht überschrieben `GetTypeInfoCount` wird, wird 0 zurückgegeben. Verwenden Sie zum Überschreiben das [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) -Makro, das `GetTypeLib` auch `GetTypeLibCache`und implementiert.
+Abgeleitete Klassen sollten diese Funktion überschreiben, um die angegebene Anzahl von Schnittstellen für Typinformationen zurückzugeben (entweder 0 oder 1). Wenn Sie nicht überschrieben `GetTypeInfoCount` wird, wird 0 zurückgegeben. Verwenden Sie zum Überschreiben das [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) -Makro, das auch `GetTypeLib` und `GetTypeLibCache` implementiert.
 
 ##  <a name="gettypeinfoofguid"></a>CCmdTarget:: gettypeingefoof-ID
 
@@ -350,14 +350,14 @@ HRESULT GetTypeInfoOfGuid(
 Ein Gebiets Schema Bezeichner ( `LCID`).
 
 *guid*<br/>
-Der [GUID](/previous-versions/aa373931\(v=vs.80\)) der Typbeschreibung.
+Der [GUID](/previous-versions/cc317743(v%3dmsdn.10)) der Typbeschreibung.
 
 *ppTypeInfo*<br/>
 Zeiger auf einen Zeiger auf die `ITypeInfo` -Schnittstelle.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein HRESULT, das den Erfolg oder Misserfolg des Aufrufes angibt. Bei erfolgreicher \* Ausführung zeigt *pptypeinfo* auf die Schnittstelle für die Typinformation.
+Ein HRESULT, das den Erfolg oder Misserfolg des Aufrufes angibt. Bei erfolgreicher Ausführung zeigt \* *pptypeinfo* auf die Schnittstelle für die Typinformation.
 
 ##  <a name="gettypelib"></a>CCmdTarget:: gettypelib
 
@@ -379,11 +379,11 @@ Ein Zeiger auf einen Zeiger auf die `ITypeLib` -Schnittstelle.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein HRESULT, das den Erfolg oder Misserfolg des Aufrufes angibt. Bei erfolgreicher \* Ausführung zeigt *pptypelib* auf die Schnittstelle der Typbibliothek.
+Ein HRESULT, das den Erfolg oder Misserfolg des Aufrufes angibt. Bei erfolgreicher Ausführung verweist \* *pptypelib* auf die Schnittstelle der Typbibliothek.
 
 ### <a name="remarks"></a>Hinweise
 
-Abgeleitete Klassen sollten diese Member-Funktion überschreiben (wenn Sie `GetTypeLib` nicht überschrieben wird, gibt TYPE_E_CANTLOADLIBRARY zurück). Verwenden Sie das [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) -Makro, das `GetTypeInfoCount` auch `GetTypeLibCache`und implementiert.
+Abgeleitete Klassen sollten diese Member-Funktion überschreiben (wenn Sie nicht überschrieben wird, gibt `GetTypeLib` TYPE_E_CANTLOADLIBRARY zurück). Verwenden Sie das [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) -Makro, das auch `GetTypeInfoCount` und `GetTypeLibCache` implementiert.
 
 ##  <a name="gettypelibcache"></a>CCmdTarget:: gettypelibcache
 
@@ -399,11 +399,11 @@ Ein Zeiger auf ein `CTypeLibCache` -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Abgeleitete Klassen sollten diese Member-Funktion überschreiben (wenn Sie `GetTypeLibCache` nicht überschrieben wird, gibt NULL zurück). Verwenden Sie das [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) -Makro, das `GetTypeInfoCount` auch `GetTypeLib`und implementiert.
+Abgeleitete Klassen sollten diese Member-Funktion überschreiben (wenn Sie `GetTypeLibCache` nicht überschrieben wird, gibt NULL zurück). Verwenden Sie das [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) -Makro, das auch `GetTypeInfoCount` und `GetTypeLib` implementiert.
 
 ##  <a name="isinvokeallowed"></a>CCmdTarget:: isinvokeallowed
 
-Diese Funktion wird von der MFC-Implementierung von `IDispatch::Invoke` aufgerufen, um zu bestimmen, ob eine angegebene Automatisierungs Methode (durch *DISPID*gekennzeichnet) aufgerufen werden kann.
+Diese Funktion wird von der MFC-Implementierung von `IDispatch::Invoke` aufgerufen, um zu bestimmen, ob eine bestimmte Automatisierungs Methode (durch *DISPID*gekennzeichnet) aufgerufen werden kann.
 
 ```
 virtual BOOL IsInvokeAllowed(DISPID dispid);
@@ -420,7 +420,7 @@ TRUE, wenn die Methode aufgerufen werden kann, andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn `IsInvokeAllowed` true zurückgibt `Invoke` , `Invoke` wird mit der-Methode aufgerufen. andernfalls schlägt fehl und gibt E_UNEXPECTED zurück.
+Wenn `IsInvokeAllowed` true zurückgibt, ruft `Invoke` die-Methode auf. Andernfalls schlägt `Invoke` fehl, und es wird E_UNEXPECTED zurückgegeben.
 
 Abgeleitete Klassen können diese Funktion überschreiben, um geeignete Werte zurückzugeben (wenn `IsInvokeAllowed` Sie nicht überschrieben werden, gibt true zurück). Siehe insbesondere [COleControl:: isinvokeallowed](../../mfc/reference/colecontrol-class.md#isinvokeallowed).
 
@@ -468,7 +468,7 @@ Identifiziert den Befehls Benachrichtigungs Code. Weitere Informationen zu den W
 Wird gemäß dem Wert von *nCode*verwendet. Weitere Informationen zu *pextra*finden Sie unter " **Hinweise** ".
 
 *pHandlerInfo*<br/>
-Wenn not NULL ist `OnCmdMsg` , füllt die *pTARGET* -und *PMF* -Member der *phandlerinfo* -Struktur auf, anstatt den Befehl zu verteilen. In der Regel sollte dieser Parameter NULL sein.
+Wenn nicht NULL, füllt `OnCmdMsg` die *pTARGET* -und *PMF* -Elemente der *phandlerinfo* -Struktur aus, anstatt den Befehl zu verteilen. In der Regel sollte dieser Parameter NULL sein.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -482,12 +482,12 @@ Zur Laufzeit `OnCmdMsg` sendet einen Befehl an andere Objekte oder verarbeitet d
 
 In seltenen Fällen können Sie diese Element Funktion überschreiben, um das Standard Befehls Routing des Frameworks zu erweitern. Ausführliche Informationen zur Befehls Routing Architektur finden Sie in der [technischen Notiz 21](../../mfc/tn021-command-and-message-routing.md) .
 
-Wenn Sie über `OnCmdMsg`schreiben, müssen Sie den entsprechenden Wert für *nCode*, den Befehls Benachrichtigungs Code und *pextra*angeben, die vom Wert von *nCode*abhängig sind. In der folgenden Tabelle sind die entsprechenden Werte aufgeführt:
+Wenn Sie `OnCmdMsg` überschreiben, müssen Sie den entsprechenden Wert für *nCode*, den Befehls Benachrichtigungs Code und *pextra*angeben, die vom Wert von *nCode*abhängig sind. In der folgenden Tabelle sind die entsprechenden Werte aufgeführt:
 
 |*ncodewert*|*pextra* -Wert|
 |-------------------|--------------------|
 |CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)\*|
-|CN_EVENT|AFX_EVENT\*|
+|CN_EVENT|AFX_EVENT @ NO__T-0|
 |CN_UPDATE_COMMAND_UI|CCmdUI\*|
 |CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)\*|
 |CN_OLE_UNREGISTER|NULL|
