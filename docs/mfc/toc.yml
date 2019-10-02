@@ -103,7 +103,7 @@
               href: build-requirements-for-windows-vista-common-controls.md
             - name: Veraltete ANSI-APIs
               href: deprecated-ansi-apis.md
-        - name: 'Vorgehensweise: Hinzufügen von Unterstützung für den Neustart-Manager'
+        - name: 'Gewusst wie: Hinzufügen von Unterstützung für den Neustart-Manager'
           href: how-to-add-restart-manager-support.md
         - name: Dynamisches Layout
           href: dynamic-layout.md
@@ -1023,7 +1023,7 @@
             - name: Lebenszyklus eines Dialogfelds
               expanded: false
               items:
-                - name: Lebenszyklus eines Dialogfelds
+                - name: Arbeiten mit Dialogfeldern in MFC
                   href: life-cycle-of-a-dialog-box.md
                 - name: Erstellen und Anzeigen von Dialogfeldern
                   href: creating-and-displaying-dialog-boxes.md
@@ -2774,7 +2774,7 @@
               href: reference/message-map-macros-mfc.md
             - name: Zuordnungsmakros von Delegaten und Schnittstellen
               href: reference/delegate-and-interface-maps.md
-            - name: 'Vorgehensweise: Verwenden des Querverweises zur Meldungszuordnung'
+            - name: 'Gewusst wie: Verwenden des Querverweises zur Meldungszuordnung'
               href: reference/how-to-use-the-message-map-cross-reference.md
             - name: Meldungshandler für Benachrichtigungen von untergeordneten Fenstern
               href: reference/child-window-notification-message-handlers.md
