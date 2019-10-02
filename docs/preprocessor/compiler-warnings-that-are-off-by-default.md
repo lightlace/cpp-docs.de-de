@@ -150,13 +150,13 @@ Die folgenden Warnungen sind in Visual Studio 2015 und höheren Versionen standa
 |C5042 (Stufe 3)|"*Function*": Funktions Deklarationen im Block Bereich können in Standard C++nicht "Inline" angegeben werden; Inline-Spezifizierer <sup>15,5</sup> entfernen|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|Der Compiler fügt eine Spectre-Entschärfung für die Speicherauslastung ein, wenn/Qspectre Switch <sup>15,7</sup>|
 
-<sup>14,1</sup> diese Warnung ist ab Visual Studio 2015 Update 1 verfügbar. \
-<sup>14,3</sup> diese Warnung ist ab Visual Studio 2015 Update 3 verfügbar.
-<sup>15,3</sup> diese Warnung ist ab Visual Studio 2017 Version 15,3 verfügbar.
-<sup>15,5</sup> diese Warnung ist ab Visual Studio 2017 Version 15,5 verfügbar.
-<sup>15,7</sup> diese Warnung ist ab Visual Studio 2017 Version 15,7 verfügbar.
-<sup>15,8</sup> diese Warnung ist ab Visual Studio 2017 Version 15,8 verfügbar.
-<sup>16,0</sup> diese Warnung ist ab Visual Studio 2019 RTM verfügbar. \
+<sup>14,1</sup> diese Warnung ist ab Visual Studio 2015 Update 1 verfügbar.\
+<sup>14,3</sup> diese Warnung ist ab Visual Studio 2015 Update 3 verfügbar.\
+<sup>15,3</sup> diese Warnung ist ab Visual Studio 2017 Version 15,3 verfügbar.\
+<sup>15,5</sup> diese Warnung ist ab Visual Studio 2017 Version 15,5 verfügbar.\
+<sup>15,7</sup> diese Warnung ist ab Visual Studio 2017 Version 15,7 verfügbar.\
+<sup>15,8</sup> diese Warnung ist ab Visual Studio 2017 Version 15,8 verfügbar.\
+<sup>16,0</sup> diese Warnung ist ab Visual Studio 2019 RTM verfügbar.\
 <sup>Perm</sup> Diese Warnung ist deaktiviert, sofern die [/permissive-](../build/reference/permissive-standards-conformance.md) -Compileroption nicht festgelegt ist.
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Warnungen werden in früheren Versionen standardmäßig deaktiviert.
