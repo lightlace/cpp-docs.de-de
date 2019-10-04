@@ -4,12 +4,12 @@ description: In diesem Tutorial lernen Sie, wie Sie ein Open Source-CMake-Projek
 author: mikeblome
 ms.topic: tutorial
 ms.date: 03/05/2019
-ms.openlocfilehash: f184cc2ce3eaf3adcc936bd723019956b5b23dc9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: cd01d5e389bda46fbb05d297ece8e68ef2265725
+ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220861"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71960725"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Tutorial: Erstellen plattformübergreifender C++-Projekte in Visual Studio 
 
@@ -24,16 +24,16 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > * Hinzufügen einer Verbindung zu einem Linux-Computer
 > * Erstellen und Debuggen des gleichen Ziels unter Linux
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - Einrichten von Visual Studio für die plattformübergreifende C++-Entwicklung
     - Zunächst müssen Sie [Visual Studio installieren](https://visualstudio.microsoft.com/vs/). Überprüfen Sie als Nächstes, dass die Workloads **Desktopentwicklung mit C++** und **Linux Entwicklung mit C++** installiert sind. Diese Installation mit den wichtigsten Komponenten ist nur 3 GB groß. Je nach Downloadgeschwindigkeit Ihres Internetanschlusses sollte die Installation also nicht länger als zehn Minuten dauern.
 - Einrichten eines Linux-Computers für die plattformübergreifende C++-Entwicklung
     - Visual Studio erfordert keine bestimmte Linux-Distribution. Das Betriebssystem kann auf einem physischen Computer, einer VM und auf dem Windows-Subsystem für Linux (WSL) ausgeführt werden. Für dieses Tutorial benötigen Sie eine grafische Umgebung. Aus diesem Grund wird von der Verwendung des WSL abgeraten, da dieses hauptsächlich für Befehlszeilenvorgänge ausgelegt ist.
-    - Visual Studio erfordert die folgenden Tools auf dem Linux-Computer: einen C++-Compiler, gdb, SSH und ZIP. Unter auf Debian basierten Systemen können Sie diese Abhängigkeiten folgendermaßen installieren.
+    - Visual Studio erfordert die folgenden Tools auf dem Linux-Computer: C++Compiler, gdb, SSH, rsync und zip. Unter auf Debian basierten Systemen können Sie diese Abhängigkeiten folgendermaßen installieren.
     
     ```cmd
-        sudo apt install -y openssh-server build-essential gdb zip
+        sudo apt install -y openssh-server build-essential gdb rsync zip
     ```
     - Visual Studio erfordert eine aktuelle Version von CMake auf dem Linux-Computer, in der der Servermodus aktiviert ist (mindestens 3.8). Microsoft gibt einen universellen CMake-Build heraus, den Sie auf allen Linux-Distributionen veröffentlichen können. Es wird empfohlen, dass Sie diesen Build verwenden, damit Sie die neuesten Funktionen verwenden können. Sie können die CMake-Binärdateien aus dem [Microsoft-Fork des CMake-Repositorys](https://github.com/Microsoft/CMake/releases) auf GitHub herunterladen. Navigieren Sie dorthin, und laden Sie die Version herunter, die der Systemarchitektur Ihres Linux-Computers entspricht. Markieren Sie sie anschließend als ausführbare Datei:
     
@@ -95,7 +95,21 @@ Wenn Sie einen Ordner öffnen, der CMake verwendet, generiert Visual Studio auto
 
 3. Erweitern Sie einen Knoten in der CMake-Zielansicht, um die Quellcodedateien anzuzeigen, egal wo sich diese auf dem Datenträger befinden.
 
-## <a name="set-a-breakpoint-build-and-run"></a>Festlegen eines Breakpoints, Erstellen und Ausführen
+## <a name="add-an-explicit-windows-x64-debug-configuration"></a>Hinzufügen einer expliziten Windows x64-Debug-Konfiguration
+
+Visual Studio erstellt eine standardmäßige **x64-Debug-** Konfiguration für Windows. Durch Konfigurationen wird festgelegt, welche Plattformziele von Visual Studio für CMake verwendet werden sollen. Die Standardkonfiguration ist standardmäßig nicht auf dem Datenträger vorhanden. Wenn Sie eine Konfiguration explizit hinzufügen, erstellt Visual Studio eine Datei mit dem Namen „CMakeSettings.json“, die mit Einstellungen für alle angegebenen Konfigurationen aufgefüllt wird. 
+
+1. Klicken Sie zum Hinzufügen einer neuen Konfiguration in der Symbolleiste auf die Konfigurationsdropdownmenü, und wählen Sie **Konfigurationen verwalten...** aus.
+
+    ![Dropdownmenü „Konfigurationen verwalten“](media/cmake-bullet3-manage-configurations.png)
+
+    Dadurch wird der Editor für die [cmake-Einstellungen](customize-cmake-settings.md)geöffnet. Wählen Sie auf der linken Seite des Editors das grüne Pluszeichen aus, um eine neue Konfiguration hinzuzufügen. Das Dialogfeld **Konfiguration zu CMakeSettings hinzufügen** wird angezeigt.
+
+    ![Dialogfeld „Konfiguration zu CMakeSettings hinzufügen“](media/cmake-bullet3-add-configuration-x64-debug.png)
+
+    In diesem Dialogfeld werden alle Konfigurationen angezeigt, die in Visual Studio enthalten sind, sowie alle benutzerdefinierten Konfigurationen, die Sie erstellt haben. Wenn Sie weiterhin eine **x64-Debug-** Konfiguration verwenden möchten, sollten Sie diese zuerst hinzufügen. Klicken Sie auf **x64-Debug** und dann auch **Auswählen**. Dadurch wird die Datei "cmakesettings. JSON" mit einer Konfiguration für **x64-Debug** erstellt und auf dem Datenträger gespeichert. Sie können Ihre Konfigurationen beliebig benennen, indem Sie den Namensparameter direkt in „CMakeSettings.json“ ändern.
+
+## <a name="set-a-breakpoint-build-and-run-on-windows"></a>Festlegen eines halte Punkts, erstellen und Ausführen unter Windows 
 
 In diesem Schritt debuggen wir ein Beispielprogramm, das die Bullet Physics-Bibliothek veranschaulicht.
   
@@ -121,23 +135,9 @@ In diesem Schritt debuggen wir ein Beispielprogramm, das die Bullet Physics-Bibl
 
 6. Bewegen Sie den Mauszeiger in das Anwendungsfenster, und drücken Sie anschließend eine Taste, um den Breakpoint auszulösen. Dadurch wird Visual Studio wieder im Vordergrund angezeigt, und der Editor zeigt die Zeile an, bei der die Ausführung angehalten wurde. Sie können sich die Variablen, Objekte und Threads der Anwendung ansehen. Sie können den Code zudem schrittweise interaktiv ausführen. Sie können auf **Weiter** klicken, um die Ausführung der Anwendung normal fortzusetzen und zu beenden, oder Sie können die Ausführung mit der Stoppschaltfläche abbrechen.
 
-## <a name="add-an-explicit-windows-x64-debug-configuration"></a>Hinzufügen einer expliziten Windows x64-Debug-Konfiguration
-
-Bis jetzt haben Sie die **x64-Debug**-Standardkonfiguration für Windows verwendet. Durch Konfigurationen wird festgelegt, welche Plattformziele von Visual Studio für CMake verwendet werden sollen. Die Standardkonfiguration ist standardmäßig nicht auf dem Datenträger vorhanden. Wenn Sie eine Konfiguration explizit hinzufügen, erstellt Visual Studio eine Datei mit dem Namen „CMakeSettings.json“, die mit Einstellungen für alle angegebenen Konfigurationen aufgefüllt wird. 
-
-1. Klicken Sie zum Hinzufügen einer neuen Konfiguration in der Symbolleiste auf die Konfigurationsdropdownmenü, und wählen Sie **Konfigurationen verwalten...** aus.
-
-    ![Dropdownmenü „Konfigurationen verwalten“](media/cmake-bullet3-manage-configurations.png)
-
-    Das Dialogfeld **Konfiguration zu CMakeSettings hinzufügen** wird angezeigt.
-
-    ![Dialogfeld „Konfiguration zu CMakeSettings hinzufügen“](media/cmake-bullet3-add-configuration-x64-debug.png)
-
-    In diesem Dialogfeld werden alle Konfigurationen angezeigt, die in Visual Studio enthalten sind, sowie alle benutzerdefinierten Konfigurationen, die Sie erstellt haben. Wenn Sie weiterhin die Standardkonfiguration **x64-Debug** verwenden möchten, sollten Sie diese als Erstes hinzufügen. Wenn Sie diese Konfiguration hinzufügen, können Sie zwischen den Windows- und Linux-Konfigurationen hin und her wechseln. Klicken Sie auf **x64-Debug** und dann auch **Auswählen**. Dadurch wird eine CMakeSettings.json-Datei mit einer **x64-Debug**-Konfiguration erstellt, und Visual Studio verwendet diese anstatt der Standardkonfiguration. Sie werden bemerken, dass im Konfigurationsdropdownmenü nicht mehr „(Standard)“ als Teil des Namens angezeigt wird. Sie können Ihre Konfigurationen beliebig benennen, indem Sie den Namensparameter direkt in „CMakeSettings.json“ ändern.
-
 ##  <a name="add-a-linux-configuration-and-connect-to-the-remote-machine"></a>Hinzufügen einer Linux-Konfiguration und Verbinden mit dem Remotecomputer
 
-1. Fügen Sie als Nächstes eine Linux-Konfiguration hinzu. Klicken Sie mit der rechten Maustaste im **Projektmappen-Explorer** auf die Datei „CMakeSettings.json“, und wählen Sie **Konfiguration hinzufügen** aus. Das Dialogfeld „Konfiguration zu CMakeSettings hinzufügen“ wird geöffnet, das Sie schon aus dem vorherigen Schritt kennen. Wählen Sie dieses Mal **Linux-Debug** aus, und speichern Sie „CMakeSettings.json“. 
+1. Fügen Sie als Nächstes eine Linux-Konfiguration hinzu. Klicken Sie mit der rechten Maustaste im **Projektmappen-Explorer** auf die Datei „CMakeSettings.json“, und wählen Sie **Konfiguration hinzufügen** aus. Das Dialogfeld „Konfiguration zu CMakeSettings hinzufügen“ wird geöffnet, das Sie schon aus dem vorherigen Schritt kennen. Wählen Sie **Linux-Debuggen** Sie dieses Mal aus, und speichern Sie dann die Datei cmakesettings. JSON (Strg + s). 
 2. Wählen Sie anschließend **Linux-Debug** aus dem Dropdownmenü aus.
 
     ![Konfigurationsdropdownmenü mit den Optionen x64-Debug und Linux-Debug](media/cmake-bullet3-linux-configuration-item.png)
@@ -148,7 +148,7 @@ Bis jetzt haben Sie die **x64-Debug**-Standardkonfiguration für Windows verwend
 
     Wenn Sie bereits eine Remoteverbindung hinzugefügt haben, können Sie das Fenster über **Extras > Optionen > Plattformübergreifend > Verbindungs-Manager > Hinzufügen** öffnen.
  
-3. Geben Sie die Verbindungsinformationen Ihres Linux-Computers ein, und klicken Sie anschließend auf **Verbinden**. Visual Studio fügt diesen Computer in „CMakeSettings.json“ als Standard für **Linux-Debug** hinzu. Außerdem pullt es die Header von Ihrem Remotecomputer, damit IntelliSense speziell für diesen Computer ausgeführt wird, wenn Sie es verwenden. Dann sendet Ihnen Visual Studio Ihre Dateien an den Remotecomputer und generiert dort einen CMake-Cache. Wenn dieser Vorgang abgeschlossen ist, ist Visual Studio so konfiguriert, dass es dieselbe Quellbasis für den Linux-Remotecomputer verwendet. Diese Schritte können abhängig von der Netzwerkgeschwindigkeit und der Leistung Ihres Remotecomputers einige Zeit in Anspruch nehmen. Der Vorgang ist abgeschlossen, wenn im CMake-Ausgabefenster „Target info extraction done“ (Extrahieren der Zielinformationen abgeschlossen) angezeigt wird.
+3. Geben Sie die [Verbindungsinformationen für Ihren Linux-Computer] (Connect-to-your-Remote-Linux-Computer.MD] an, und klicken Sie auf **verbinden**. Dieser Computer wird von Visual Studio als Standardverbindung für **Linux-Debug**als "cmakesettings. JSON" hinzugefügt. Außerdem werden die Header vom Remote Computer abgerufen, sodass Sie [IntelliSense speziell für diese Remote Verbindung](https://docs.microsoft.com/en-us/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense)erhalten. Nun werden Ihre Dateien von Visual Studio an den Remote Computer gesendet, und der cmake-Cache wird auf dem Remote System generiert. Diese Schritte können abhängig von der Netzwerkgeschwindigkeit und der Leistung Ihres Remotecomputers einige Zeit in Anspruch nehmen. Der Vorgang ist abgeschlossen, wenn im CMake-Ausgabefenster „Target info extraction done“ (Extrahieren der Zielinformationen abgeschlossen) angezeigt wird.
 
 ## <a name="set-a-breakpoint-build-and-run-on-linux"></a>Festlegen eines Breakpoints, Erstellen und Ausführen unter Linux
 
