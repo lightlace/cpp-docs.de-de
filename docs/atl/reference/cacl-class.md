@@ -367,7 +367,7 @@ bool RemoveAces(const CSid& rSid) throw(...)
 *rSid*<br/>
 Ein Verweis auf ein `CSid`-Objekt.
 
-##  <a name="setempty"></a>CaCl:: * tempty
+##  <a name="setempty"></a>CAcl::SetEmpty
 
 Markiert das `CAcl` -Objekt als leer.
 

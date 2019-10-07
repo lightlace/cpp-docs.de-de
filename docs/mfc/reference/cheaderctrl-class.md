@@ -847,7 +847,7 @@ Im folgenden Codebeispiel werden die `SetFocusedItem` - `GetFocusedItem` Methode
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]
 
-##  <a name="sethotdivider"></a>CHeaderCtrl:: * Host Host
+##  <a name="sethotdivider"></a>  CHeaderCtrl::SetHotDivider
 
 Ändert den unter Teiler zwischen Header Elementen, um einen manuellen Drag & Drop eines Header Elements anzugeben.
 

@@ -548,7 +548,7 @@ Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Dies ist eine mehrdimensionale Version von [CComSafeArray::](#setat)*.
+Dies ist eine mehrdimensionale Version von [CComSafeArray::](#setat).
 
 ##  <a name="operator_at"></a>CComSafeArray::-Operator\[\]
 

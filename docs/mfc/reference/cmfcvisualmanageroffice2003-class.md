@@ -686,7 +686,7 @@ Gibt true zurück, wenn die Symbolleiste Round ist, oder false, wenn es sich um 
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="isuseglobaltheme"></a>CMFCVisualManagerOffice2003:: ISU* globaltheme
+##  <a name="isuseglobaltheme"></a> CMFCVisualManagerOffice2003::IsUseGlobalTheme
 
 Gibt an, ob Ihre Anwendung ein Windows XP-Design verwendet.
 
