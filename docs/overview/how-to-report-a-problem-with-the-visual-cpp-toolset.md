@@ -1,15 +1,16 @@
 ---
 title: Melden eines Problems mit dem Microsoft C++-Toolset
-ms.date: 06/21/2019
+description: So erstellen Sie einen nützlichen Problembericht und Informationen zur Reproduktion für das Microsoft C++-Toolset
+ms.date: 09/24/2019
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 13826349836e4c58b7d6a7ce8936186930bc7100
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: 350e902501aca5cbe2b4022ec1f977719844644b
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344385"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685708"
 ---
 # <a name="how-to-report-a-problem-with-the-microsoft-c-toolset-or-documentation"></a>Melden eines Problems mit dem Microsoft C++-Toolset oder der -Dokumentation
 
@@ -317,9 +318,9 @@ Fügen Sie die vorverarbeiteten Reproduktionsdateien (*Dateiname*.i und *Modulna
 
 ### <a name="link-repros"></a>Linkreproduktionen
 
-Bei einer *Linkreproduktion* handelt es sich um die vom Linker generierten Inhalte eines Verzeichnisses, das von der Umgebungsvariable **link\_repro** angegeben wird. Sie enthält Buildartefakte, die zusammen ein Problem veranschaulichen, das zur Verknüpfungszeit auftritt. Beispiele hierfür sind Back-End-Abstürze, bei denen die Link-Zeitcodegenerierung involviert ist, oder Linkerabstürze. Diese Buildartefakte sind als Linkereingabe erforderlich, damit das Problem reproduziert werden kann. Mit dieser Umgebungsvariable lässt sich eine Linkreproduktion ganz einfach erstellen. Sie aktiviert die integrierte Funktion des Linkers zum Generieren einer Reproduktion.
+Bei einer *Linkreproduktion* handelt es sich um die vom Linker generierten Inhalte eines Verzeichnisses, die entweder von der Umgebungsvariable **link\_repro** oder als Argument für die Linkeroption [/LINKREPRO](../build/reference/linkrepro.md) angegeben werden. Sie enthält Buildartefakte, die zusammen ein Problem veranschaulichen, das zur Verknüpfungszeit auftritt. Beispiele hierfür sind Back-End-Abstürze, bei denen die Link-Zeitcodegenerierung involviert ist, oder Linkerabstürze. Diese Buildartefakte werden in Form von Linkereingaben benötigt, damit das Problem reproduziert werden kann. Mit dieser Umgebungsvariable lässt sich eine Linkreproduktion ganz einfach erstellen. Sie aktiviert die integrierte Funktion des Linkers zum Generieren einer Reproduktion.
 
-#### <a name="to-generate-a-link-repro"></a>So generieren Sie eine Linkreproduktion
+#### <a name="to-generate-a-link-repro-using-the-link_repro-environment-variable"></a>So generieren Sie eine Linkreproduktion mithilfe der Umgebungsvariablen „link_repro“
 
 1. Erfassen Sie die Befehlszeilenargumente, die zum Erstellen Ihrer Reproduktion verwendet wurden, wie unter [So melden Sie den Inhalt der Befehlszeile](#to-report-the-contents-of-the-command-line) beschrieben.
 
@@ -327,9 +328,9 @@ Bei einer *Linkreproduktion* handelt es sich um die vom Linker generierten Inhal
 
 1. Wechseln Sie im Konsolenfenster der Developer-Eingabeaufforderung zu dem Verzeichnis, das die Reproduktion Ihres Projekts enthält.
 
-1. Geben Sie **mkdir linkrepro** ein, um ein Verzeichnis für die Linkreproduktion zu erstellen.
+1. Geben Sie **mkdir linkrepro** ein, um ein Verzeichnis mit dem Namen *linkrepro* für die Linkreproduktion zu erstellen. Sie können auch einen anderen Namen verwenden, um eine andere Linkreproduktion zu erfassen.
 
-1. Geben Sie den Befehl **set link\_repro=linkrepro** ein, um die Umgebungsvariable **link\_repro** auf das Verzeichnis festzulegen, das Sie erstellt haben. Wenn Ihr Build von einem anderen Verzeichnis aus ausgeführt wird, was bei komplexeren Projekten häufig der Fall ist, legen Sie für **link\_repro** stattdessen den vollständigen Pfad zu Ihrem linkrepro-Verzeichnis fest.
+1. Geben Sie den Befehl **set link\_repro=linkrepro** ein, um die Umgebungsvariable **link\_repro** auf das Verzeichnis festzulegen, das Sie erstellt haben. Wenn Ihr Build von einem anderen Verzeichnis aus ausgeführt wird, was bei komplexeren Projekten häufig der Fall ist, sollten Sie für **link\_repro** stattdessen den vollständigen Pfad zu Ihrem Verzeichnis für die Linkreproduktion festlegen.
 
 1. Geben Sie im Konsolenfenster der Developer-Eingabeaufforderung den Befehl **devenv** ein, um das reproduzierte Projekt in Visual Studio zu erstellen. So wird sichergestellt, dass der Wert der Umgebungsvariablen **link\_repro** für Visual Studio sichtbar ist. Verwenden Sie zum Erstellen des Projekts über die Befehlszeile die oben erfassten Befehlszeilenargumente, um den reproduzierten Build zu duplizieren.
 
@@ -339,7 +340,19 @@ Bei einer *Linkreproduktion* handelt es sich um die vom Linker generierten Inhal
 
 1. Geben Sie im Konsolenfenster der Developer-Eingabeaufforderung den Befehl **set link\_repro=** ein, um die Umgebungsvariable **link\_repro** zu löschen.
 
-Packen Sie abschließend die Reproduktion, indem Sie das gesamte Verzeichnis der Linkreproduktion in einer ZIP-Datei o.ä. komprimieren, und fügen Sie diese an Ihren Bericht an.
+Packen Sie abschließend die Reproduktion, indem Sie das gesamte Verzeichnis für die Linkreproduktion in eine ZIP-Datei o.ä. komprimieren, und fügen Sie diese an Ihren Bericht an.
+
+Die Linkeroption **/LINKREPRO** hat dieselbe Auswirkung wie die Umgebungsvariable **link\_repro**. Sie können die Option [/LINKREPROTARGET](../build/reference/linkreprotarget.md) verwenden, um den Namen anzugeben, nach dem für die generierte Linkreproduktion gefiltert werden soll. Damit Sie die Option **/LINKREPROTARGET** verwenden können, müssen Sie außerdem die Linkeroption **/OUT** angeben.
+
+#### <a name="to-generate-a-link-repro-using-the-linkrepro-option"></a>So generieren Sie eine Linkreproduktion mithilfe der Option /LINKREPRO
+
+1. Erstellen Sie ein Verzeichnis für die Linkreproduktion. Im Folgenden wird der von Ihnen erstellte vollständige Verzeichnispfad als _directory-path_ bezeichnet. Setzen Sie den Pfad in doppelte Anführungszeichen, wenn er Leerzeichen enthält.
+
+1. Fügen Sie der Linkerbefehlszeile den Befehl **/LINKREPRO:** _directory-path_ hinzu. Öffnen Sie in Visual Studio das Dialogfeld **Eigenschaftenseiten** für Ihr Projekt. Klicken Sie auf der Eigenschaftenseite auf **Konfigurationseigenschaften** > **Linker** > **Befehlszeile**. Geben Sie anschließend in das Feld **Zusätzliche Optionen** die Option **/LINKREPRO:** _directory-path_ ein. Klicken Sie auf **OK**, um die Änderungen zu speichern.
+
+1. Erstellen Sie das reproduzierte Projekt, und vergewissern Sie sich, dass das erwartete Problem aufgetreten ist.
+
+Packen Sie abschließend die Reproduktion, indem Sie das gesamte Verzeichnis der Linkreproduktion (_directory-path_) in eine ZIP-Datei o.ä. komprimieren, und fügen Sie diese an Ihren Bericht an.
 
 ### <a name="other-repros"></a>Andere Reproduktionen
 
