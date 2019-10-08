@@ -2,12 +2,12 @@
 title: Konfigurieren eines C++ Projekts unter Linux in Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: a4e20222cc0b04f496989bf2d51fc12c85f5d162
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 1cfaeb6611a27af498325739271d4dba38581dd6
+ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042633"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71960661"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurieren eines Linux-Projekts
 
@@ -93,12 +93,6 @@ Da die gesamte Kompilierung auf einem Remotecomputer (oder WSL) erfolgt, wurden 
 ![Buildereignisse](media/settings_buildevents.png)
 
 ## <a name="remote_intellisense"></a> IntelliSense für Header auf Remotesystemen
-
-::: moniker range="vs-2019"
-
-Dieser Abschnitt gilt nicht, wenn auf WSL abgezielt wird.
-
-::: moniker-end
 
 Beim Hinzufügen einer neuen Verbindung im **Verbindungs-Manager** erkennt Visual Studio automatisch die Includeverzeichnisse für den Compiler auf dem Remotesystem. Visual Studio komprimiert diese Dateien dann und kopiert sie in ein Verzeichnis auf dem lokalen Windows-Computer. Wenn Sie anschließend diese Verbindung in Visual Studio oder CMake nutzen, wird mithilfe der Header in diesen Verzeichnissen IntelliSense bereitgestellt.
 

@@ -1,21 +1,21 @@
 ---
 title: Standardkonvertierungen
-ms.date: 11/19/2018
+ms.date: 10/02/2019
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-ms.openlocfilehash: aee100bdc7e8ba6dd7d06c6bca9ed39c09cf2d97
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c51a5ea5aaabb27babb9e4cd355721742088d31e
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267276"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998897"
 ---
 # <a name="standard-conversions"></a>Standardkonvertierungen
 
-Die Programmiersprache C++ definiert Konvertierungen zwischen ihren grundlegenden Typen. Sie definiert auch Konvertierungen für Zeiger- und Verweistypen sowie und für abgeleitete "pointer-to-member"-Typen. Diese Konvertierungen werden als bezeichnet *standardkonvertierungen*.
+Die Programmiersprache C++ definiert Konvertierungen zwischen ihren grundlegenden Typen. Sie definiert auch Konvertierungen für Zeiger- und Verweistypen sowie und für abgeleitete "pointer-to-member"-Typen. Diese Konvertierungen werden als *Standard Konvertierungen*bezeichnet.
 
 In diesem Abschnitt werden die folgenden Standardkonvertierungen erläutert:
 
@@ -35,8 +35,8 @@ In diesem Abschnitt werden die folgenden Standardkonvertierungen erläutert:
 
 - Konvertierungen von Zeiger in Member
 
-    > [!NOTE]
-    >  Benutzerdefinierte Typen können eigene Konvertierungen festlegen. Konvertierung von benutzerdefinierten Typen finden Sie im [Konstruktoren](../cpp/constructors-cpp.md) und [Konvertierungen](../cpp/user-defined-type-conversions-cpp.md).
+  > [!NOTE]
+  > Benutzerdefinierte Typen können eigene Konvertierungen festlegen. Die Konvertierung von benutzerdefinierten Typen wird in [Konstruktoren](../cpp/constructors-cpp.md) und [Konvertierungen](../cpp/user-defined-type-conversions-cpp.md)behandelt.
 
 Der folgende Code bewirkt Konvertierungen (in diesen Beispiel ganzzahlige Erweiterungen):
 
@@ -51,41 +51,41 @@ long_num1 = int_num;
 long_num2 = int_num * long_num2;
 ```
 
-Das Ergebnis einer Konvertierung ist nur dann ein l-Wert, wenn hierdurch ein Verweistyp erstellt wird. Zum Beispiel eine benutzerdefinierte Konvertierung deklariert als `operator int&()` einen Verweis zurück und ist ein l-Wert. Allerdings eine Konvertierung deklariert als `operator int()`gibt ein Objekt zurück und ist kein l-Wert.
+Das Ergebnis einer Konvertierung ist nur dann ein l-Wert, wenn hierdurch ein Verweistyp erstellt wird. Beispielsweise gibt eine benutzerdefinierte Konvertierung, die als `operator int&()` deklariert ist, einen Verweis zurück und ist ein l-Wert. Eine als `operator int()` deklarierte Konvertierung gibt jedoch ein-Objekt zurück, das kein l-Wert ist.
 
 ## <a name="integral-promotions"></a>Ganzzahlige Erweiterungen
 
-Objekte eines ganzzahligen Typs können in einen anderen größeren ganzzahligen Typ (d. h. einen Typ, der einen größeren Satz von Werten darstellen kann) konvertiert werden. Dieser Typ der Erweiterungskonvertierung wird als "ganzzahlige Erweiterung" bezeichnet. Mit der ganzzahligen Erweiterung können Sie immer dann Folgendes in einem Ausdruck verwenden, wenn ein anderer ganzzahliger Typ verwendet werden kann:
+Objekte eines ganzzahligen Typs können in einen anderen umfassenderen ganzzahligen Typ, d. h. einen Typ, der einen größeren Satz von Werten darstellen kann, konvertiert werden. Diese erweiternde Art der Konvertierung wird *als*ganzzahlige herauf Stufung bezeichnet. Mit der ganzzahligen herauf Stufung können Sie die folgenden Typen in einem Ausdruck verwenden, wenn ein anderer ganzzahliger Typ verwendet werden kann:
 
-- Objekte, Literale und Konstanten Typs **Char** und **short Int**
+- Objekte, Literale und Konstanten vom Typ " **char** " und " **short int** "
 
 - Enumerationstypen
 
-- **Int** -Bitfelder
+- **int** -Bitfelder
 
 - Enumeratoren
 
-C++-Erweiterungen sind "wertneutral". Das heißt, es ist gewährleistet, dass der Wert nach der Erweiterung derselbe ist wie der Wert vor der Erweiterung. In wertneutralen, Objekte kürzerer ganzzahliger Typen (wie Bitfelder oder Objekte des Typs **Char**) Typ heraufgestuft werden **Int** Wenn **Int** können die vollständige darstellen der Bereich des ursprünglichen Typs. Wenn **Int** nicht das gesamte Spektrum Werte darstellen, und klicken Sie dann das Objekt Typ heraufgestuft wird **ganze Zahl ohne Vorzeichen**. Obwohl diese Strategie dieselbe ist, wie die von ANSI C verwendete, behalten wertneutrale Konvertierungen nicht die Vorzeichenneutralität des Objekts bei.
+C++herauf stufungen sind "Wert Beibehaltung", da der Wert nach der herauf Stufung garantiert mit dem Wert vor der herauf Stufung übereinstimmt. In Wert Beibehaltungs Aktionen werden Objekte von kürzeren ganzzahligen Typen (z. b. Bitfelder oder Objekte des Typs **char**) zum Typ **int** herauf gestuft, wenn **int** den vollständigen Bereich des ursprünglichen Typs darstellen kann. Wenn **int** nicht den vollständigen Wertebereich darstellen kann, wird das Objekt in den Typ **Ganzzahl ohne Vorzeichen int**herauf gestuft.  Obwohl diese Strategie mit der von Standard C verwendeten Strategie identisch ist, behalten Werte erhaltende Konvertierungen die "Signatur" des Objekts nicht bei.
 
-Wertneutrale Erweiterungen und vorzeichenneutrale Erweiterungen erzeugen normalerweise dieselben Ergebnisse. Allerdings können sie zu unterschiedlichen Ergebnissen führen, wenn das erweiterte Objekt eines der folgenden ist:
+Wertneutrale Erweiterungen und vorzeichenneutrale Erweiterungen erzeugen normalerweise dieselben Ergebnisse. Sie können jedoch unterschiedliche Ergebnisse erzielen, wenn das herauf gestufte Objekt wie folgt aussieht:
 
-- Ein Operand vom **/**, `%`, `/=`, `%=`, **<**, **\< =**, **>**, oder **>=**
+- Ein Operand von `/`, `%`, `/=`, `%=`, `<`, `<=`, `>` oder `>=`
 
-   Diese Operatoren benötigen Vorzeichen zum Bestimmen des Ergebnisses. Daher ergeben wert- und vorzeichenneutrale Erweiterungen andere Ergebnisse, wenn sie auf diese Operanden angewendet werden.
+   Diese Operatoren benötigen Vorzeichen zum Bestimmen des Ergebnisses. Bei der Anwendung auf diese Operanden ergeben sich Werterhaltende und Signier enden Aktionen.
 
-- Der linke Operand des **>>** oder **>>=**
+- Der linke Operand von `>>` oder `>>=`
 
-   Diese Operatoren behandeln Mengen mit Vorzeichen und Mengen ohne Vorzeichen unterschiedlich, wenn eine Verschiebeoperation ausgeführt wird. Für Mengen mit Vorzeichen wird das Vorzeichenbit beim Verschieben einer Menge nach rechts in die frei werdenden Bitpositionen übertragen. Bei Mengen ohne Vorzeichen werden die frei werdenden Bitpositionen mit Nullen gefüllt.
+   Diese Operatoren behandeln die Mengen mit und ohne Vorzeichen bei einem Verschiebungs Vorgang unterschiedlich. Bei signierten Mengen gibt ein Right Shift-Vorgang das Signier Bit an die frei gewordenen Bitpositionen weiter, während die frei gewordenen Bitpositionen in einer nicht signierten Menge mit 0 gefüllt sind.
 
-- Ein Argument zu einer überladenen Funktion oder zum Operand eines überladenen Operators, das vom Vorzeichen des Typs des Operanden für die Argumentübereinstimmung abhängt. (Finden Sie unter [überladene Operatoren](../cpp/operator-overloading.md) für Weitere Informationen zum Definieren von überladenen Operatoren.)
+- Ein Argument für eine überladene Funktion oder der Operand eines überladenen Operators, der von der Signatur des Operanden Typs für die Argument Übereinstimmung abhängig ist. Weitere Informationen zum Definieren überladener Operatoren finden Sie unter [überladene Operatoren](../cpp/operator-overloading.md).
 
 ## <a name="integral-conversions"></a>Integrale Konvertierungen
 
-Ganzzahlige Konvertierungen werden zwischen Ganzzahltypen ausgeführt. Die ganzzahligen Typen sind **Char**, **Int**, und **lange** (und die **kurze**, **signiert**, und **ohne Vorzeichen** Versionen dieser Typen).
+*Integral Konvertierungen* sind Konvertierungen zwischen ganzzahligen Typen. Die ganzzahligen Typen sind **char**, **Short** (oder **short int**), **int**, **Long**und **Long Long**. Diese Typen können mit " **Signed** " oder " **Ganzzahl ohne Vorzeichen**" gekennzeichnet werden, und " **Ganzzahl ohne Vorzeichen** " kann als Kurzform für " **Ganzzahl ohne Vorzeichen int**" verwendet werden.
 
-**Signiert, um ohne Vorzeichen**
+### <a name="signed-to-unsigned"></a>Mit Vorzeichen zu ohne Vorzeichen
 
-Objekte aus Ganzzahltypen mit Vorzeichen können in entsprechende Typen ohne Vorzeichen konvertiert werden. Wenn diese Konvertierungen erfolgen, ändert sich das eigentliche Bitmuster nicht. Die Daten werden jedoch anders interpretiert. Codebeispiel:
+Objekte aus Ganzzahltypen mit Vorzeichen können in entsprechende Typen ohne Vorzeichen konvertiert werden. Wenn diese Konvertierungen auftreten, ändert sich das tatsächliche Bitmuster nicht. Die Interpretation der Daten wird jedoch geändert. Codebeispiel:
 
 ```cpp
 #include <iostream>
@@ -101,11 +101,11 @@ int main()
 // Output: 65533
 ```
 
-Im vorherigen Beispiel eine **kurz signiert**, `i`definiert und mit einer negativen Zahl initialisiert. Der Ausdruck `(u = i)` bewirkt, dass `i` zu konvertierenden ein **unsigned short** vor der Zuweisung zu `u`.
+Im vorangehenden Beispiel wird ein **signiertes kurzes**`i` definiert und mit einer negativen Zahl initialisiert. Der Ausdruck `(u = i)` bewirkt, dass `i` vor der Zuweisung zu `u` in einen **Ganzzahl ohne Vorzeichen Short** -Wert konvertiert wird.
 
-**Ohne Vorzeichen mit Vorzeichen**
+### <a name="unsigned-to-signed"></a>Ohne Vorzeichen zu mit Vorzeichen
 
-Objekte aus Ganzzahltypen ohne Vorzeichen können in entsprechende Typen mit Vorzeichen konvertiert werden. Allerdings kann eine solche Konvertierung zur Fehlinterpretation von Daten führen, wenn der Wert des vorzeichenlosen Objekts außerhalb des Bereichs liegt, der vom Typ mit Vorzeichen darstellbar ist, wie im folgenden Beispiel veranschaulicht:
+Objekte aus Ganzzahltypen ohne Vorzeichen können in entsprechende Typen mit Vorzeichen konvertiert werden. Liegt der Wert ohne Vorzeichen jedoch außerhalb des darstellbaren Bereichs des signierten Typs, weist das Ergebnis nicht den richtigen Wert auf, wie im folgenden Beispiel gezeigt:
 
 ```cpp
 #include <iostream>
@@ -121,38 +121,38 @@ cout << (i = u) << "\n";
 //Output: -3
 ```
 
-Im vorherigen Beispiel `u` ist ein **unsigned short** ganzzahliges Objekt, das in eine Menge mit Vorzeichen zum Auswerten des Ausdrucks konvertiert werden muss `(i = u)`. Weil der Wert ordnungsgemäß kann, können Sie in dargestellt werden eine **kurz signiert**, die Daten wie gezeigt fehlinterpretiert.
+Im vorherigen Beispiel ist `u` ein **kurzes ganzzahliges Objekt ohne** Vorzeichen, das in eine signierte Menge konvertiert werden muss, um den Ausdruck `(i = u)` auszuwerten. Da der Wert nicht ordnungsgemäß in einem **signierten Kurzform**dargestellt werden kann, werden die Daten wie gezeigt falsch interpretiert.
 
 ## <a name="floating-point-conversions"></a>Gleitkommakonvertierungen
 
-Ein Objekt vom Gleitkommatyp kann gefahrlos in einen genaueren Gleitkommatyp konvertiert werden, d. h. die Konvertierung verursacht keinen Signifikanzverlust. Beispielsweise sind Konvertierungen aus **"float"** zu **doppelte** oder **doppelte** zu **long double** unproblematisch, und der Wert bleibt unverändert.
+Ein Objekt vom Gleitkommatyp kann gefahrlos in einen genaueren Gleitkommatyp konvertiert werden, d. h. die Konvertierung verursacht keinen Signifikanzverlust. Beispielsweise sind Konvertierungen von **float** in **Double** oder von **Double** in **long Double** sicher, und der Wert ist unverändert.
 
-Ein Objekt vom Gleitkommatyp kann auch in einen weniger genauer Typ konvertiert werden, wenn es in einem Bereich ist, der von diesem Typ darstellbar ist. (Finden Sie unter [Grenzwerte für Gleitkommakonstanten](../cpp/floating-limits.md) für die Bereiche von Gleitkommatypen.) Wenn der ursprüngliche Wert nicht exakt darstellbar ist, kann er in den nächsten höheren oder niedrigeren darstellbaren Wert konvertiert werden. Wenn kein solcher Wert vorhanden ist, ist das Ergebnis nicht definiert. Betrachten Sie das folgende Beispiel:
+Ein Objekt eines Gleit Komma Typs kann auch in einen weniger präzisen Typ konvertiert werden, wenn es sich in einem Bereich befindet, der durch diesen Typ dargestellt werden kann. (Weitere Informationen finden Sie unter [Floating Limits](../cpp/floating-limits.md) für die Bereiche von Gleit Komma Typen.) Wenn der ursprüngliche Wert nicht exakt darstellbar ist, kann er in den nächsthöheren oder den nächst niedrigeren darstellbaren Wert konvertiert werden. Das Ergebnis ist nicht definiert, wenn kein solcher Wert vorhanden ist. Betrachten Sie das folgende Beispiel:
 
 ```cpp
 cout << (float)1E300 << endl;
 ```
 
-Der maximale Wert vom Typ darstellbar **"float"** ist 3.402823466E38 – eine Zahl wesentlich kleiner als 1E300. Aus diesem Grund wird die Zahl in unendlich konvertiert wird, und das Ergebnis ist "inf".
+Der maximale Wert, der vom Typ **float** dargestellt werden kann, ist 3.402823466 E38 – eine wesentlich geringere Zahl als 1e300. Daher wird die Zahl in unendlich konvertiert, und das Ergebnis ist "inf".
 
 ## <a name="conversions-between-integral-and-floating-point-types"></a>Konvertierungen zwischen ganzzahligem Typ und Gleitkommatyp
 
-Bestimmte Ausdrücke können bewirken, dass Objekte vom Typ "float" in Ganzzahltypen konvertiert werden oder umgekehrt. Wenn ein Objekt eines ganzzahligen Typs in einen Gleitkommatyp konvertiert wird und der ursprüngliche Wert nicht exakt dargestellt werden kann, ist das Ergebnis der nächsthöhere oder nächstniedrigere darstellbare Wert.
+Bestimmte Ausdrücke können bewirken, dass Objekte vom Typ "float" in Ganzzahltypen konvertiert werden oder umgekehrt. Wenn ein Objekt des ganzzahligen Typs in einen Gleit kommatyp konvertiert wird und der ursprüngliche Wert nicht exakt darstellbar ist, ist das Ergebnis entweder der nächste höhere oder der nächste niedrigere darstellbare Wert.
 
-Wenn ein Objekt vom Gleitkommatyp in einen ganzzahligen Typ konvertiert wird, werden die Nachkommastellen abgeschnitten. Im Konvertierungsprozess erfolgt keine Rundung. Abschneiden bedeutet, dass eine Zahl wie 1,3 in 1 und-1.3 konvertiert wird auf-1 konvertiert wird.
+Wenn ein Objekt vom Gleit kommatyp in einen ganzzahligen Typ konvertiert wird, wird der Teil Bruchteil *abgeschnitten*oder in Richtung NULL gerundet. Eine Zahl wie 1,3 wird in 1 konvertiert, und-1,3 wird in-1 konvertiert. Wenn der abgeschnittene Wert höher als der höchste darstellbare Wert oder kleiner als der niedrigste darstellbare Wert ist, ist das Ergebnis nicht definiert.
 
 ## <a name="arithmetic-conversions"></a>Arithmetische Konvertierungen
 
-Viele binäre Operatoren (ausführlicher [Ausdrücke mit Binäroperatoren](../cpp/expressions-with-binary-operators.md)) führen zu Konvertierungen von Operanden und zu Ergebnissen führen, die gleiche Weise. Die Art und Weise der Konvertierung durch diese Operatoren wird als "übliche arithmetische Konvertierungen" bezeichnet. Arithmetische Konvertierungen von Operanden unterschiedlicher systemeigener Typen werden entsprechend der Darstellung in der folgenden Tabelle ausgeführt. Typedef-Typen verhalten sich entsprechend ihren zugrunde liegenden systemeigenen Typen.
+Viele binäre Operatoren (unter [Ausdrücke mit binären Operatoren](../cpp/expressions-with-binary-operators.md)erläutert) verursachen Konvertierungen von Operanden und erzielen die Ergebnisse auf die gleiche Weise. Die Konvertierungen dieser Operatoren werden als *übliche arithmetische Konvertierungen*bezeichnet. Arithmetische Konvertierungen von Operanden, die unterschiedliche systemeigene Typen aufweisen, werden wie in der folgenden Tabelle dargestellt. Typedef-Typen verhalten sich entsprechend ihren zugrunde liegenden systemeigenen Typen.
 
 ### <a name="conditions-for-type-conversion"></a>Bedingungen für die Typkonvertierung
 
 |Bedingungen erfüllt|Umwandeln|
 |--------------------|----------------|
-|Einer der Operanden ist vom Typ **long double**.|Anderer Operand wird in den Typ konvertiert **long double**.|
-|Vorangehende Bedingung nicht erfüllt und jeder Operand ist vom Typ **doppelte**.|Anderer Operand wird in den Typ konvertiert **doppelte**.|
-|Vorangehende Bedingungen nicht erfüllt und jeder Operand ist vom Typ **"float"**.|Anderer Operand wird in den Typ konvertiert **"float"**.|
-|Vorausgehende Bedingungen nicht erfüllt (keiner der Operanden ist vom Typ „floating“).|Ganzzahlige Erweiterungen werden bei den Operanden wie folgt ausgeführt:<br /><br />– Wenn ein Operand vom Typ **unsigned long**, der andere Operand wird in den Typ konvertiert **unsigned long**.<br />– Wenn vorherige Bedingung nicht erfüllt, und wenn ein Operand vom Typ **lange** und der andere vom Typ **ganze Zahl ohne Vorzeichen**, beide Operanden sind in den Typ konvertiert **unsigned long**.<br />– Wenn die oben genannten zwei Bedingungen nicht erfüllt sind, und wenn ein Operand vom Typ **lange**, der andere Operand wird in den Typ konvertiert **lange**.<br />– Wenn die oben genannten drei Bedingungen nicht erfüllt sind, und wenn ein Operand vom Typ **ganze Zahl ohne Vorzeichen**, der andere Operand wird in den Typ konvertiert **ganze Zahl ohne Vorzeichen**.<br />– Wenn keines der oben genannten Bedingungen erfüllt sind, werden beide Operanden Typ konvertiert **Int**.|
+|Jeder Operand ist vom Typ **long Double**.|Ein anderer Operand wird in den Typ **long Double**konvertiert.|
+|Vorangehende Bedingung nicht erfüllt, und der Operand ist vom Typ " **Double**".|Ein anderer Operand wird in den Typ **Double**konvertiert.|
+|Vorangehende Bedingungen nicht erfüllt, und der Operand ist vom Typ " **float**".|Ein anderer Operand wird in den Typ **float**konvertiert.|
+|Vorausgehende Bedingungen nicht erfüllt (keiner der Operanden ist vom Typ „floating“).|Operanden erhalten ganzzahlige herauf stufungen wie folgt:<br /><br />-Wenn einer der beiden Operanden vom Typ **Ganzzahl ohne Vorzeichen long**ist, wird der andere Operand in den Typ **Ganzzahl ohne Vorzeichen long**konvertiert.<br />-Wenn die vorangehende Bedingung nicht erfüllt ist und einer der beiden Operanden vom Typ **Long** und der andere vom Typ **Ganzzahl ohne Vorzeichen int**ist, werden beide Operanden in den Typ **Ganzzahl ohne Vorzeichen long**konvertiert.<br />: Wenn die beiden vorangehenden Bedingungen nicht erfüllt werden und ein Operand vom Typ **Long**ist, wird der andere Operand in den Typ **Long**konvertiert.<br />-Wenn die vorangehenden drei Bedingungen nicht erfüllt werden und einer der beiden Operanden vom Typ **Ganzzahl ohne Vorzeichen int**ist, wird der andere Operand in den Typ **Ganzzahl ohne Vorzeichen int**konvertiert.<br />Wenn keine der vorangehenden Bedingungen erfüllt ist, werden beide Operanden in den Typ " **int**" konvertiert.|
 
 Das folgende Codebeispiel veranschaulicht die Konvertierungsregeln, die in der Tabelle beschrieben werden:
 
@@ -173,9 +173,9 @@ int main() {
 }
 ```
 
-Die erste Anweisung im vorangehenden Beispiel zeigt die Multiplikation von zwei ganzzahligen Typen, nämlich `iVal` und `ulVal`. Die Bedingung erfüllt ist, dass keiner der Operanden unverankert ist und ein Operand vom Typ **ganze Zahl ohne Vorzeichen**. Aus diesem Grund der andere Operand, `iVal`, ist in den Typ konvertiert **ganze Zahl ohne Vorzeichen**. Das Ergebnis wird `dVal` zugewiesen. Die Bedingung erfüllt ist, ein Operand ist vom Typ **doppelte**daher die **ganze Zahl ohne Vorzeichen** Ergebnis der Multiplikation ist in den Typ konvertiert **doppelte**.
+Die erste Anweisung im vorangehenden Beispiel zeigt die Multiplikation von zwei ganzzahligen Typen, nämlich `iVal` und `ulVal`. Die Bedingung erfüllt ist, dass keiner der Operanden vom Typ "Floating" ist und ein Operand vom Typ " **Ganzzahl ohne Vorzeichen int**" ist. Daher wird der andere Operand `iVal` in den Typ " **Ganzzahl ohne Vorzeichen int**" konvertiert. Das Ergebnis wird dann `dVal` zugewiesen. Die hier eingegebene Bedingung ist, dass ein Operand vom Typ " **Double**" ist, sodass das **Ganzzahl ohne Vorzeichen int** -Ergebnis der Multiplikation in den Typ " **Double**" konvertiert wird.
 
-Die zweite Anweisung im vorherigen Beispiel wird gezeigt, Hinzufügen einer **"float"** und ein ganzzahliger Typ, `fVal` und `ulVal`. Die `ulVal` Variable ist in den Typ konvertiert **"float"** (dritte Bedingung in der Tabelle). Das Ergebnis der Addition wird in den Typ konvertiert **doppelte** (zweite Bedingungen in der Tabelle) und zugewiesen `dVal`.
+Die zweite Anweisung im vorangehenden Beispiel zeigt das Hinzufügen **eines Gleit Komma-und eines** ganzzahligen Typs: `fVal` und `ulVal`. Die Variable "`ulVal`" wird in den Typ " **float** " konvertiert (dritte Bedingung in der Tabelle). Das Ergebnis der Addition wird in den Typ **Double** (zweite Bedingung in der Tabelle) konvertiert und `dVal` zugewiesen.
 
 ## <a name="pointer-conversions"></a>Zeigerkonvertierungen
 
@@ -185,18 +185,16 @@ Zeiger können bei der Zuweisung, Initialisierung, beim Vergleich und bei andere
 
 Es gibt zwei Fälle, in denen ein Zeiger auf eine Klasse in einen Zeiger auf eine Basisklasse konvertiert werden kann.
 
-Der erste Fall tritt auf, wenn auf die bezeichnete Basisklasse zugegriffen werden kann und die Konvertierung eindeutig ist. (Finden Sie unter [mehrere Basisklassen](../cpp/multiple-base-classes.md) für Weitere Informationen zu mehrdeutige Basisklasse verweisen.)
+Der erste Fall tritt auf, wenn auf die bezeichnete Basisklasse zugegriffen werden kann und die Konvertierung eindeutig ist. Weitere Informationen zu mehrdeutigen Basisklassen verweisen finden Sie unter [mehrere Basisklassen](../cpp/multiple-base-classes.md).
 
 Ob auf eine Basisklasse zugegriffen werden kann, hängt von der Art der Vererbung bei der Ableitung ab. Betrachten Sie die Vererbung, wie in der folgenden Abbildung veranschaulicht.
 
-![Vererbungsdiagramm mit Basis&#45;Klasse Barrierefreiheit](../cpp/media/vc38xa1.gif "Vererbungsdiagramm mit Basis&#45;Klasse Barrierefreiheit") <br/>
+![Vererbungs Diagramm&#45;]mit grundlegenden Barrierefreiheits(../cpp/media/vc38xa1.gif "Vererbungs&#45;Diagramm mit basisklassenbarrierefreiheit") <br/>
 Vererbungsdiagramm für Abbildung der Basisklasse-Barrierefreiheit
 
 Die folgende Tabelle zeigt die Zugriffsmöglichkeiten auf die Basisklassen bei der Situation, die in der Abbildung veranschaulicht wird.
 
-### <a name="base-class-accessibility"></a>Zugriff auf Basisklassen
-
-|Typ der Funktion|Ableitung|Konvertierung von<br /><br /> B * a\* zulässig?|
+|Typ der Funktion|Ableitung|Konvertierung von<br /><br /> B * zu @ no__t-0 legal?|
 |----------------------|----------------|-------------------------------------------|
 |Externe (nicht im Klassenumfang enthaltene) Funktion|Private|Nein|
 ||Protected|Nein|
@@ -208,11 +206,11 @@ Die folgende Tabelle zeigt die Zugriffsmöglichkeiten auf die Basisklassen bei d
 ||Protected|Ja|
 ||Public|Ja|
 
-Im zweiten Fall, in dem ein Zeiger auf eine Klasse in einen Zeiger auf eine Basisklasse konvertiert werden kann, wird eine explizite Typkonvertierung verwendet. (Finden Sie unter [expliziter Typkonvertierungsoperator](explicit-type-conversion-operator-parens.md) für Weitere Informationen zu expliziten typkonvertierungen.)
+Im zweiten Fall, in dem ein Zeiger auf eine Klasse in einen Zeiger auf eine Basisklasse konvertiert werden kann, wird eine explizite Typkonvertierung verwendet. Weitere Informationen zu expliziten Typkonvertierungen finden Sie unter [Operator für explizite Typkonvertierung](explicit-type-conversion-operator-parens.md).
 
-Das Ergebnis einer solchen Konvertierung ist ein Zeiger auf das "Unterobjekt", den Teil des Objekts, der vollständig von der Basisklasse beschrieben wird.
+Das Ergebnis einer solchen Konvertierung ist ein Zeiger auf das unter *geordnete*Objekt, der Teil des Objekts, der von der Basisklasse vollständig beschrieben wird.
 
-Der folgende Code definiert zwei Klassen, `A` und `B`, wobei `B` von `A` abgeleitet ist. (Weitere Informationen zu Vererbung, finden Sie unter [abgeleitete Klassen](../cpp/inheritance-cpp.md).) Zudem definiert der Code `bObject`, ein Objekt vom Typ `B`, und zwei Zeiger (`pA` und `pB`), die auf das Objekt zeigen.
+Der folgende Code definiert zwei Klassen, `A` und `B`, wobei `B` von `A` abgeleitet ist. (Weitere Informationen zur Vererbung finden Sie unter [abgeleitete Klassen](../cpp/inheritance-cpp.md).) Zudem definiert der Code `bObject`, ein Objekt vom Typ `B`, und zwei Zeiger (`pA` und `pB`), die auf das Objekt zeigen.
 
 ```cpp
 // C2039 expected
@@ -241,30 +239,30 @@ int main()
 }
 ```
 
-Der Zeiger `pA` ist vom Typ `A *`, der als "Zeiger auf ein Objekt vom Typ `A`" interpretiert werden kann. Mitglieder der `bObject` `(`wie z. B. `BComponent` und `BMemberFunc`) gelten nur für geben `B` und sind daher nicht zugegriffen werden kann, über `pA`. Der `pA`-Zeiger erlaubt nur Zugriff auf die Eigenschaften (Memberfunktionen und Daten) des Objekts, die in der Klasse `A` definiert sind.
+Der Zeiger `pA` ist vom Typ `A *`, der als "Zeiger auf ein Objekt vom Typ `A`" interpretiert werden kann. Member von `bObject` (z. b. `BComponent` und `BMemberFunc`) sind für den Typ `B` eindeutig und daher über `pA` nicht zugänglich. Der `pA`-Zeiger erlaubt nur Zugriff auf die Eigenschaften (Memberfunktionen und Daten) des Objekts, die in der Klasse `A` definiert sind.
 
 ### <a name="pointer-to-function"></a>Zeiger auf Funktion
 
-Ein Zeiger auf eine Funktion konvertiert werden kann, Typ `void *`, wenn Typ `void *` ist groß genug, um diesen Zeiger aufzunehmen.
+Ein Zeiger auf eine Funktion kann in den Typ `void *` konvertiert werden, wenn der Typ `void *` groß genug ist, um diesen Zeiger zu speichern.
 
 ### <a name="pointer-to-void"></a>Zeiger auf void
 
-Zeiger vom Typ **"void"** konvertiert werden kann, auf die Zeiger in einen anderen Typ, aber nur mit einer expliziten Typumwandlung (im Gegensatz zu c). Ein Zeiger auf einen beliebigen Typ kann implizit konvertiert werden, um einen Zeiger auf den Typ **"void"**. Ein Zeiger auf ein unvollständiges Objekt eines Typs konvertiert werden kann, auf einen Zeiger auf **"void"** (implizit) und zurück (explizit). Das Ergebnis einer solchen Konvertierung entspricht dem Wert des ursprünglichen Zeigers. Ein Objekt gilt als unvollständig, wenn es zwar deklariert ist, die Informationen zur Bestimmung seiner Größe oder Basisklasse jedoch unzureichend sind.
+Zeiger auf den Typ " **void** " können in Zeiger auf einen beliebigen anderen Typ konvertiert werden, jedoch nur mit einer expliziten Typumwandlung (im Gegensatz zu C). Ein Zeiger auf einen beliebigen Typ kann implizit in einen Zeiger auf den Typ " **void**" konvertiert werden. Ein Zeiger auf ein unvollständiges Objekt eines Typs kann in einen Zeiger auf **void** (implizit) und zurück (explizit) konvertiert werden. Das Ergebnis einer solchen Konvertierung entspricht dem Wert des ursprünglichen Zeigers. Ein Objekt wird als unvollständig betrachtet, wenn es deklariert ist, aber es sind nicht genügend Informationen verfügbar, um seine Größe oder Basisklasse zu bestimmen.
 
-Ein Zeiger auf ein Objekt, das nicht ist **const** oder **flüchtige** implizit in einen Zeiger vom Typ konvertiert werden kann `void *`.
+Ein Zeiger auf ein Objekt, das nicht **konstant** oder **flüchtig** ist, kann implizit in einen Zeiger vom Typ `void *` konvertiert werden.
 
 ### <a name="const-and-volatile-pointers"></a>const- und volatile-Zeiger
 
-C++ stellt keine standardkonvertierung von einem **const** oder **flüchtige** Typ in einen Typ, der nicht **const** oder **flüchtige**. Allerdings kann jede Art der Konvertierung mithilfe expliziter Typumwandlungen festgelegt werden (einschließlich unsicherer Konvertierungen).
+C++stellt keine Standard Konvertierung von einem **Konstanten** oder **flüchtigen** Typ in einen Typ bereit, der nicht **konstant** oder **flüchtig**ist. Allerdings kann jede Art der Konvertierung mithilfe expliziter Typumwandlungen festgelegt werden (einschließlich unsicherer Konvertierungen).
 
 > [!NOTE]
->  C++-Zeiger auf Member, außer Zeiger auf statische Member, unterscheiden sich von normalen Zeigern und haben nicht die gleichen Standardkonvertierungen. Zeiger auf statische Member sind normale Zeiger und haben die gleichen Konvertierungen wie normale Zeiger.
+> C++Zeiger auf Member, außer Zeiger auf statische Member, unterscheiden sich von normalen Zeigern und weisen nicht dieselben Standard Konvertierungen auf. Zeiger auf statische Member sind normale Zeiger und haben die gleichen Konvertierungen wie normale Zeiger.
 
 ### <a name="null-pointer-conversions"></a>NULL-Zeigerkonvertierungen
 
-Ein ganzzahliger konstanter Ausdruck, der mit Null ausgewertet wird, oder ein solcher Ausdruck, der in einen Zeigertyp umgewandelt wird, wird in einen Zeiger mit der Bezeichnung "NULL-Zeiger" umgewandelt. Für diesen Zeiger wird sichergestellt, dass er ungleich einem Zeiger auf ein gültiges Objekt oder eine Funktion ist (abgesehen von Zeigern auf basierte Objekte, die den gleichen Offset haben können und dennoch auf verschiedene Objekte zeigen können).
+Ein ganzzahliger konstanter Ausdruck, der NULL ergibt, oder ein solcher Ausdruck, der in einen Zeigertyp umgewandelt wird, wird in einen Zeiger konvertiert, der als *null-Zeiger*bezeichnet wird. Dieser Zeiger vergleicht immer ungleich mit einem Zeiger auf ein beliebiges gültiges Objekt oder eine gültige Funktion. Eine Ausnahme sind Zeiger auf-basierte-Objekte, die den gleichen Offset aufweisen können und weiterhin auf andere Objekte verweisen können.
 
-In C ++ 11 die ["nullptr"](../cpp/nullptr.md) Typ soll der C-Stil-null-Zeiger bevorzugt werden.
+In c++ 11 sollte der [nullptr](../cpp/nullptr.md) -Typ dem NULL-Zeiger im C-Stil bevorzugt werden.
 
 ### <a name="pointer-expression-conversions"></a>Zeiger-Ausdruck-Konvertierungen
 
@@ -277,17 +275,17 @@ char *pszPath = szPath; // Equals &szPath[0].
 
 Ein Ausdruck, der eine Funktion ergibt, die einen bestimmten Typ zurückgibt, wird in einen Zeiger auf eine Funktion konvertiert, die diesen Typ zurückgibt, ausgenommen unter folgenden Bedingungen:
 
-- Der Ausdruck wird als Operand für Address-of-Operators verwendet (**&**).
+- Der Ausdruck wird als Operand für den Address-of-Operator ( **&** ) verwendet.
 
 - Der Ausdruck wird als Operand des Funktionsaufrufoperators verwendet.
 
 ## <a name="reference-conversions"></a>Verweiskonvertierungen
 
-Ein Verweis auf eine Klasse kann in den folgenden Fällen in einen Verweis auf eine Basisklasse konvertiert werden:
+In diesen Fällen kann ein Verweis auf eine Klasse in einen Verweis auf eine Basisklasse konvertiert werden:
 
-- Die angegebene Basisklasse kann zugegriffen werden.
+- Auf die angegebene Basisklasse kann zugegriffen werden.
 
-- Die Konvertierung ist eindeutig. (Finden Sie unter [mehrere Basisklassen](../cpp/multiple-base-classes.md) für Weitere Informationen zu mehrdeutige Basisklasse verweisen.)
+- Die Konvertierung ist eindeutig. (Weitere Informationen zu mehrdeutigen Basisklassen verweisen finden Sie unter [mehrere Basisklassen](../cpp/multiple-base-classes.md).)
 
 Das Ergebnis der Konvertierung ist ein Zeiger auf das Unterobjekt, das die Basisklasse darstellt.
 
@@ -295,7 +293,7 @@ Das Ergebnis der Konvertierung ist ein Zeiger auf das Unterobjekt, das die Basis
 
 Zeiger auf Klassenmember können bei der Zuweisung, Initialisierung, beim Vergleich und bei anderen Ausdrücken konvertiert werden. In diesem Abschnitt werden die folgenden Konvertierungen von Zeigern in Elemente beschrieben:
 
-## <a name="pointer-to-base-class-member"></a>Zeiger auf Basisklassenmember
+### <a name="pointer-to-base-class-member"></a>Zeiger auf Basisklassenmember
 
 Ein Zeiger auf den Member einer Basisklasse kann in einen Zeiger auf den Member einer Klasse konvertiert werden, die davon abgeleitet ist, wenn die folgenden Bedingungen erfüllt sind:
 
@@ -309,9 +307,9 @@ Wenn der linke Operand ein Zeiger auf einen Member ist, muss der rechte Operand 
 
 - Der linke Operand ist ein Zeiger auf den Member einer Klasse, die öffentlich und eindeutig von der Klasse des rechten Operanden abgeleitet wird.
 
-## <a name="integral-constant-conversions"></a>Konvertierungen von ganzzahligen Konstanten
+### <a name="null-pointer-to-member-conversions"></a>NULL-Zeiger auf Element Konvertierungen
 
-Ein ganzzahliger konstanter Ausdruck, der mit Null ausgewertet wird, wird in einen Zeiger mit der Bezeichnung "NULL-Zeiger" konvertiert. Für diesen Zeiger wird sichergestellt, dass er ungleich einem Zeiger auf ein gültiges Objekt oder eine Funktion ist (abgesehen von Zeigern auf basierte Objekte, die den gleichen Offset haben können und dennoch auf verschiedene Objekte zeigen können).
+Ein ganzzahliger konstanter Ausdruck, der NULL ergibt, wird in einen NULL-Zeiger konvertiert. Dieser Zeiger vergleicht immer ungleich mit einem Zeiger auf ein beliebiges gültiges Objekt oder eine gültige Funktion. Eine Ausnahme sind Zeiger auf-basierte-Objekte, die den gleichen Offset aufweisen können und weiterhin auf andere Objekte verweisen können.
 
 Der folgende Code veranschaulicht die Definition eines Zeigers auf einen Member `i` in Klasse `A`. Der Zeiger `pai` wird mit 0 initialisiert. Das ist der NULL-Zeiger.
 
@@ -331,4 +329,4 @@ int main()
 
 ## <a name="see-also"></a>Siehe auch
 
-[C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)
+[C++Sprachreferenz](../cpp/cpp-language-reference.md)
