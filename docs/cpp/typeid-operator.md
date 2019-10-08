@@ -1,15 +1,15 @@
 ---
 title: typeid-Operator
-ms.date: 11/04/2016
+ms.date: 10/04/2019
 helpviewer_keywords:
 - typeid operator
 ms.assetid: 8871cee6-d6b9-4301-a5cb-bf3dc9798d61
-ms.openlocfilehash: b1185f48df4a941eb2a5d81bfa67d07cdf4387d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93a2d3c494cd5aadafedcaaae9ec72809d633a4a
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404662"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998745"
 ---
 # <a name="typeid-operator"></a>typeid-Operator
 
@@ -22,27 +22,27 @@ typeid(expression)
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Typeid** Operator ermöglicht, den Typ eines Objekts zur Laufzeit bestimmt werden.
+Der **typeid** -Operator ermöglicht, dass der Typ eines Objekts zur Laufzeit bestimmt wird.
 
-Das Ergebnis des **Typeid** ist eine `const type_info&`. Der Wert ist ein Verweis auf eine `type_info` Objekt, das entweder darstellt der *Typ-Id* oder den Typ des der *Ausdruck*, je nachdem, für welche Form der **Typeid** wird verwendet. Finden Sie unter [Type_info-Klasse](../cpp/type-info-class.md) für Weitere Informationen.
+Das Ergebnis von **typeid** ist ein `const type_info&`. Der Wert ist ein Verweis auf ein `type_info`-Objekt, das entweder die *Type-ID* oder den Typ des *Ausdrucks*darstellt, je nachdem, welche Art von **typeid** verwendet wird. Weitere Informationen finden Sie unter [Type_info-Klasse](../cpp/type-info-class.md).
 
-Die **Typeid** Operator funktioniert nicht mit verwalteten Typen (abstrakten Deklaratoren oder Instanzen), finden Sie unter [Typeid](../extensions/typeid-cpp-component-extensions.md) Informationen zum Abrufen der <xref:System.Type> eines angegebenen Typs.
+Der **typeid** -Operator funktioniert nicht mit verwalteten Typen (abstrakte Deklaratoren oder Instanzen). Weitere Informationen zum <xref:System.Type> eines angegebenen Typs finden Sie unter [typeid](../extensions/typeid-cpp-component-extensions.md).
 
-Die **Typeid** Operator wird eine laufzeitüberprüfung aus, wenn auf ein l-Wert eines polymorphen Klassentyps angewendet, in dem der tatsächliche Typ des Objekts kann nicht von der statischen Informationen bestimmt werden. Zu solchen Fällen zählen folgende:
+Der **typeid** -Operator führt eine Lauf Zeit Überprüfung durch, wenn er auf einen l-Wert eines polymorphen Klassen Typs angewendet wird, wobei der tatsächliche Objekttyp nicht durch die bereitgestellten statischen Informationen bestimmt werden kann. Zu solchen Fällen zählen folgende:
 
 - Ein Verweis auf eine Klasse
 
-- Ein Zeiger ist, mit dereferenziert \*
+- Ein Zeiger, der mit `*` dereferenziert wird.
 
-- Ein indizierter Zeiger (d. h. [ ]). (Beachten Sie, dass es im Allgemeinen nicht sicher ist, einen Index mit einem Zeiger auf einen polymorphen Typ zu verwenden.)
+- Ein Index (`[ ]`). (Es ist nicht sicher, einen Index mit einem Zeiger auf einen polymorphen Typ zu verwenden.)
 
-Wenn die *Ausdruck* auf einen Basisklassentyp verweist, aber das Objekt tatsächlich ein von dieser Basisklasse abgeleiteter Typ ist ein `type_info` Verweis auf die abgeleitete Klasse das Ergebnis ist. Die *Ausdruck* muss auf einen polymorphen Typ (eine Klasse mit virtuellen Funktionen) verweisen. Das Ergebnis, andernfalls ist der `type_info` für die statische Klasse, die gemäß der *Ausdruck*. Darüber hinaus muss der Zeiger dereferenziert werden, sodass das Objekt, auf das er zeigt, verwendet wird. Ohne Dereferenzierung des Zeigers ist das Ergebnis wird die `type_info` für den Zeiger, der nicht dessen Ziel auf. Zum Beispiel:
+Wenn der *Ausdruck* auf einen Basis Klassentyp zeigt, aber das Objekt tatsächlich von einem Typ ist, der von dieser Basisklasse abgeleitet ist, ist ein `type_info`-Verweis für die abgeleitete Klasse das Ergebnis. Der *Ausdruck* muss auf einen polymorphen Typ (eine Klasse mit virtuellen Funktionen) zeigen. Andernfalls ist das Ergebnis das `type_info` für die statische-Klasse, auf die im *Ausdruck*verwiesen wird. Außerdem muss der Zeiger dereferenziert werden, damit das verwendete Objekt das Objekt ist, auf das es verweist. Wenn Sie den Zeiger nicht dereferenzieren, ist das Ergebnis das `type_info` für den Zeiger, nicht das, auf das er verweist. Zum Beispiel:
 
 ```cpp
 // expre_typeid_Operator.cpp
 // compile with: /GR /EHsc
 #include <iostream>
-#include <typeinfo.h>
+#include <typeinfo>
 
 class Base {
 public:
@@ -63,9 +63,9 @@ int main() {
 }
 ```
 
-Wenn die *Ausdruck* wird einen Zeiger dereferenziert und der Zeigerwert 0 (null), ist **Typeid** löst eine [Bad_typeid-Ausnahme](../cpp/bad-typeid-exception.md). Wenn der Zeiger nicht auf ein gültiges Objekt verweist eine `__non_rtti_object` Ausnahme ausgelöst wird, wird, der angibt, auf die RTTI zu analysieren, die einen Fehler ausgelöst hat (z.B. zugriffsverletzungen), da das Objekt aus irgendeinem Grund ungültig ist (ungültiger Zeiger oder der Code wurde nicht kompiliert mit [/Gr](../build/reference/gr-enable-run-time-type-information.md)).
+Wenn der *Ausdruck* einen Zeiger dereferenzieren und der Wert dieses Zeigers NULL ist, löst **typeid** eine [bad_typeid-Ausnahme](../cpp/bad-typeid-exception.md)aus. Wenn der Zeiger nicht auf ein gültiges Objekt zeigt, wird eine Ausnahme vom Typ "`__non_rtti_object`" ausgelöst. Es zeigt an, dass versucht wurde, die rtti zu analysieren, die einen Fehler ausgelöst hat, da das Objekt irgendwie ungültig ist. (Z. b. ist dies ein fehlerhafter Zeiger, oder der Code wurde nicht mit [/gr](../build/reference/gr-enable-run-time-type-information.md)kompiliert).
 
-Wenn die *Ausdruck* ist weder ein Zeiger noch ein Verweis auf eine Basisklasse des Objekts, das Ergebnis ist eine `type_info` Verweis, der den statischen Typ des darstellt der *Ausdruck*. Die *statischen Typ* eines Ausdrucks verweist auf den Typ eines Ausdrucks, wie zum Zeitpunkt der Kompilierung bekannt ist. Die Ausführungssemantik wird ignoriert, wenn der statische Typ eines Ausdrucks bewertet wird. Außerdem werden wenn möglich Verweise ignoriert, wenn der statische Typ eines Ausdrucks bestimmt wird:
+Wenn der *Ausdruck* kein Zeiger und kein Verweis auf eine Basisklasse des Objekts ist, ist das Ergebnis ein `type_info`-Verweis, der den statischen Typ des *Ausdrucks*darstellt. Der *statische Typ* eines Ausdrucks verweist auf den Typ eines Ausdrucks, der zum Zeitpunkt der Kompilierung bekannt ist. Die Ausführungssemantik wird ignoriert, wenn der statische Typ eines Ausdrucks bewertet wird. Außerdem werden wenn möglich Verweise ignoriert, wenn der statische Typ eines Ausdrucks bestimmt wird:
 
 ```cpp
 // expre_typeid_Operator_2.cpp
@@ -77,7 +77,7 @@ int main()
 }
 ```
 
-**Typeid** kann auch in den Vorlagen um den Typ eines Vorlagenparameters zu bestimmen, verwendet werden:
+**typeid** kann auch in Vorlagen verwendet werden, um den Typ eines Vorlagen Parameters zu bestimmen:
 
 ```cpp
 // expre_typeid_Operator_3.cpp
@@ -92,5 +92,5 @@ T max( T arg1, T arg2 ) {
 
 ## <a name="see-also"></a>Siehe auch
 
-[Laufzeit-Typinformationen](../cpp/run-time-type-information.md)<br/>
+[Laufzeit-Typinformationen](../cpp/run-time-type-information.md)\
 [Schlüsselwörter](../cpp/keywords-cpp.md)

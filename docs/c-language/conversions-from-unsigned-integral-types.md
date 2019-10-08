@@ -1,6 +1,6 @@
 ---
-title: Konvertierungen von ganzzahligen Typen ohne Vorzeichen
-ms.date: 03/27/2019
+title: Konvertierungen von integralen Typen ohne Vorzeichen
+ms.date: 10/02/2019
 helpviewer_keywords:
 - integers, converting
 - type casts, involving integers
@@ -8,68 +8,84 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: 3f6136a721f84332451184baa648ebc7c909d5d7
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
-ms.translationtype: HT
+ms.openlocfilehash: 3099f0113103223e392dc20560899b4a6e3ebf20
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565021"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998788"
 ---
-# <a name="conversions-from-unsigned-integral-types"></a>Konvertierungen von ganzzahligen Typen ohne Vorzeichen
+# <a name="conversions-from-unsigned-integral-types"></a>Konvertierungen von integralen Typen ohne Vorzeichen
 
-Eine ganze Zahl ohne Vorzeichen wird durch Abschneiden der höherwertigen Bits zu einer kürzeren Zahl ohne oder mit Vorzeichen konvertiert, oder sie wird durch Nullerweiterung in eine längere Zahl ohne oder mit Vorzeichen konvertiert. Weitere Informationen finden Sie in der [Tabelle der Konvertierungen von integralen Typen ohne Vorzeichen](#conversions-from-unsigned-integral-types-table).
+Wenn eine ganze Zahl ohne Vorzeichen in eine Ganzzahl oder einen Gleit kommatyp konvertiert wird, wird der Wert unverändert geändert, wenn der ursprüngliche Wert im Ergebnistyp dargestellt werden kann.
 
-Wenn der Ganzzahlwert in eine ganze Zahl mit Vorzeichen mit geringerer Größe tiefer gestuft wird, oder eine ganze Zahl ohne Vorzeichen in ihre entsprechende ganze Zahl mit Vorzeichen konvertiert wird, bleibt der Wert unverändert, wenn er im neuen Typ dargestellt werden kann. Der dargestellte Wert ändert sich jedoch, wenn wie im folgenden Beispiel das Vorzeichenbit festgelegt wird.
+Beim Umrechnen einer Ganzzahl ohne Vorzeichen in eine Ganzzahl mit größerer Größe wird der Wert mit 0 (null) erweitert. Bei der Umstellung auf eine Ganzzahl kleiner, werden die höherwertigen Bits abgeschnitten. Das Ergebnis wird mit dem Ergebnistyp interpretiert, wie in diesem Beispiel gezeigt.
 
 ```C
-int j;
-unsigned short k = 65533;
+unsigned k = 65533;
+short j;
 
 j = k;
 printf_s( "%hd\n", j );   // Prints -3
 ```
 
-Wenn er nicht dargestellt werden kann, wird das Ergebnis durch die Implementierung definiert. Weitere Informationen zur Verarbeitung von tiefer gestuften Ganzzahlen durch den C-Compiler von Microsoft erhalten Sie unter [Typumwandlungskonvertierungen](../c-language/type-cast-conversions.md). Eine ganzzahlige Konvertierung oder eine Typumwandlung der ganzen Zahl führen zum selben Verhalten.
+Beim Umrechnen einer Ganzzahl ohne Vorzeichen in einen Gleit kommatyp ist das Ergebnis der nächsthöhere oder niedrigere darstellbare Wert, wenn der ursprüngliche Wert nicht exakt im Ergebnistyp dargestellt werden kann.
 
-Werte ohne Vorzeichen werden so konvertiert, dass sie ihren Wert beibehalten und nicht direkt in C darstellbar sind. Die einzige Ausnahme stellt eine Konvertierung von **unsigned long** in **float** dar, bei der höchstens die niederwertigen Bits verloren gehen. Andernfalls wird der Wert beibehalten, mit oder ohne Vorzeichen. Wenn ein Wert des ganzzahligen Typs in einen Gleitkommawert konvertiert wird, und der Wert außerhalb des darstellbaren Bereichs liegt, ist das Ergebnis nicht definiert. (Informationen über den Bereich für ganzzahlige Typen und Gleitkommatypen finden Sie unter [Speicherung von einfachen Typen](../c-language/storage-of-basic-types.md).)
+Informationen zu den Größen von ganzzahligen und Gleit Komma Typen finden Sie unter [Speicherung von einfachen Typen](../c-language/storage-of-basic-types.md) .
+
+**Microsoft-spezifisch**
+
+Im Microsoft-Compiler sind **Ganzzahl ohne Vorzeichen** (oder **Ganzzahl ohne Vorzeichen int**) und **Ganzzahl ohne Vorzeichen long** eindeutig, aber äquivalente Typen. Die Konvertierung eines **unsigned int**-Werts wird auf dieselbe Weise wie die Konvertierung eines **unsigned long**-Werts ausgeführt.
+
+**Ende Microsoft-spezifisch**
 
 In der folgenden Tabelle werden die Konvertierungen von ganzzahligen Typen ohne Vorzeichen zusammengefasst.
 
-## <a name="conversions-from-unsigned-integral-types-table"></a>Tabelle der Konvertierungen von integralen Typen ohne Vorzeichen
+## <a name="table-of-conversions-from-unsigned-integral-types"></a>Tabelle mit Konvertierungen von ganzzahligen Typen ohne Vorzeichen
 
 |Von|Beschreibung|Methode|
 |----------|--------|------------|
 |**unsigned char**|**char**|Bitmuster wird beibehalten; oberes Bit wird Vorzeichenbit|
 |**unsigned char**|**short**|Nullerweiterung|
 |**unsigned char**|**long**|Nullerweiterung|
+|**unsigned char**|**langes long**|Nullerweiterung|
 |**unsigned char**|**unsigned short**|Nullerweiterung|
 |**unsigned char**|**unsigned long**|Nullerweiterung|
+|**unsigned char**|**Ganzzahl ohne Vorzeichen long long**|Nullerweiterung|
 |**unsigned char**|**float**|Konvertieren in **long**; Konvertieren von **long** in **float**|
 |**unsigned char**|**double**|Konvertieren in **long**; Konvertieren von **long** in **double**|
 |**unsigned char**|**long double**|Konvertieren in **long**; Konvertieren von **long** in **double**|
 |**unsigned short**|**char**|Niederwertiges Byte beibehalten|
 |**unsigned short**|**short**|Bitmuster wird beibehalten; oberes Bit wird Vorzeichenbit|
 |**unsigned short**|**long**|Nullerweiterung|
+|**unsigned short**|**langes long**|Nullerweiterung|
 |**unsigned short**|**unsigned char**|Niederwertiges Byte beibehalten|
 |**unsigned short**|**unsigned long**|Nullerweiterung|
+|**unsigned short**|**Ganzzahl ohne Vorzeichen long long**|Nullerweiterung|
 |**unsigned short**|**float**|Konvertieren in **long**; Konvertieren von **long** in **float**|
 |**unsigned short**|**double**|Konvertieren in **long**; Konvertieren von **long** in **double**|
 |**unsigned short**|**long double**|Konvertieren in **long**; Konvertieren von **long** in **double**|
 |**unsigned long**|**char**|Niederwertiges Byte beibehalten|
 |**unsigned long**|**short**|Niederwertiges Wort beibehalten|
 |**unsigned long**|**long**|Bitmuster wird beibehalten; oberes Bit wird Vorzeichenbit|
+|**unsigned long**|**langes long**|Nullerweiterung|
 |**unsigned long**|**unsigned char**|Niederwertiges Byte beibehalten|
 |**unsigned long**|**unsigned short**|Niederwertiges Wort beibehalten|
+|**unsigned long**|**Ganzzahl ohne Vorzeichen long long**|Nullerweiterung|
 |**unsigned long**|**float**|Konvertieren in **long**; Konvertieren von **long** in **float**|
 |**unsigned long**|**double**|Direktes Konvertieren in **double**|
 |**unsigned long**|**long double**|Konvertieren in **long**; Konvertieren von **long** in **double**|
-
-**Microsoft-spezifisch**
-
-Der **unsigned int**-Typ entspricht für den Microsoft C-Compiler dem **unsigned long**-Typ. Die Konvertierung eines **unsigned int**-Werts wird auf dieselbe Weise wie die Konvertierung eines **unsigned long**-Werts ausgeführt. Konvertierungen von **unsigned long**-Werten in **float**-Werte sind nicht genau, wenn der Wert, der konvertiert wird, größer als der maximale positive **long**-Wert mit Vorzeichen ist.
-
-**Ende Microsoft-spezifisch**
+|**Ganzzahl ohne Vorzeichen long long**|**char**|Niederwertiges Byte beibehalten|
+|**Ganzzahl ohne Vorzeichen long long**|**short**|Niederwertiges Wort beibehalten|
+|**Ganzzahl ohne Vorzeichen long long**|**long**|DWORD mit niedriger Reihenfolge beibehalten|
+|**Ganzzahl ohne Vorzeichen long long**|**langes long**|Bitmuster wird beibehalten; oberes Bit wird Vorzeichenbit|
+|**Ganzzahl ohne Vorzeichen long long**|**unsigned char**|Niederwertiges Byte beibehalten|
+|**Ganzzahl ohne Vorzeichen long long**|**unsigned short**|Niederwertiges Wort beibehalten|
+|**Ganzzahl ohne Vorzeichen long long**|**unsigned long**|DWORD mit niedriger Reihenfolge beibehalten|
+|**Ganzzahl ohne Vorzeichen long long**|**float**|Konvertieren in **long**; Konvertieren von **long** in **float**|
+|**Ganzzahl ohne Vorzeichen long long**|**double**|Direktes Konvertieren in **double**|
+|**Ganzzahl ohne Vorzeichen long long**|**long double**|Konvertieren in **long**; Konvertieren von **long** in **double**|
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zuweisungskonvertierungen](../c-language/assignment-conversions.md)
+[Zuweisungs Konvertierungen](../c-language/assignment-conversions.md)

@@ -1,6 +1,6 @@
 ---
 title: Speicherung von einfachen Typen
-ms.date: 11/04/2016
+ms.date: 10/02/2019
 helpviewer_keywords:
 - specifiers [C++], type
 - integral types, storage
@@ -21,30 +21,31 @@ helpviewer_keywords:
 - unsigned types [C++], storage
 - data types [C], storage
 ms.assetid: bd1f33c1-c6b9-4558-8a72-afb21aef3318
-ms.openlocfilehash: 51b67b375cf7a4608d3080e5922cabbf3135ddfe
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 64c642df4dd85e4aa09f90a143b8aa67c28b7dc2
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152247"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998761"
 ---
 # <a name="storage-of-basic-types"></a>Speicherung von einfachen Typen
 
 In der folgenden Tabelle wird der Speicher zusammengefasst, welcher jedem Basistyp zugeordnet ist.
 
-### <a name="sizes-of-fundamental-types"></a>Größen von grundlegenden Typen
+## <a name="sizes-of-fundamental-types"></a>Größen von grundlegenden Typen
 
 |Typ|Speicher|
 |----------|-------------|
-|`char`, `unsigned char`, **char mit Vorzeichen**|1 Byte|
+|**char**, **Ganzzahl ohne Vorzeichen char**, **signed char**|1 Byte|
 |**short**, **unsigned short**|2 Bytes|
-|`int`, `unsigned int`|4 Bytes|
-|**long**, `unsigned long`|4 Bytes|
+|**int**, **unsigned int**|4 Bytes|
+|**long**, **unsigned long**|4 Bytes|
+|**Long Long**, **Ganzzahl ohne Vorzeichen long long**|8 Bytes|
 |**float**|4 Bytes|
 |**double**|8 Bytes|
-|`long double`|8 Bytes|
+|**long double**|8 Bytes|
 
-Die C-Datentypen fallen in allgemeine Kategorien. Die „ganzzahligen Typen“ enthalten `char`, `int`, **short**, **long**, **signed**, `unsigned` und `enum`. Die „Gleitkommatypen“ enthalten **float**, **double** und `long double`. Die "arithmetischen Typen" umfassen alle Gleitkomma- und Ganzzahltypen.
+Die C-Datentypen fallen in allgemeine Kategorien. Zu den ganzzahligen *Typen* zählen **int**, **char**, **Short**, **Long**und **Long Long**. Diese Typen können mit " **Signed** " oder " **Ganzzahl ohne Vorzeichen**" gekennzeichnet werden, und " **Ganzzahl ohne Vorzeichen** by" kann als Kurzform für " **Ganzzahl ohne Vorzeichen int**" verwendet werden. Enumerationstypen **(** Enumeration) werden für die meisten Zwecke auch als ganzzahlige Typen behandelt. Zu den Gleit *Komma Typen* zählen **float**, **Double**und **long Double**. Die *arithmetischen Typen* umfassen alle Gleit Komma-und ganzzahligen Typen.
 
 ## <a name="see-also"></a>Siehe auch
 
