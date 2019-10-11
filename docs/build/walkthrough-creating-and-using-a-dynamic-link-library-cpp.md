@@ -194,7 +194,7 @@ Im Moment ist diese DLL noch nicht besonders nützlich. Als Nächstes erstellen 
 
 Diese Headerdatei deklariert einige Funktionen, um mit zwei Anfangswerten eine generalisierte Fibonacci-Folge zu erstellen. Ein Aufruf von `fibonacci_init(1, 1)` generiert die bekannte Fibonacci-Zahlenfolge.
 
-Beachten Sie die Präprozessoranweisungen am Anfang der Datei. Die neue Projektvorlage für ein DLL-Projekt fügt den definierten Präprozessormakros ** _ProjectName_&#95;-Exporte hinzu. In diesem Beispiel definiert Visual Studio **MATHLIBRARY&#95;EXPORTS**, wenn Ihr MathLibrary-DLL-Projekt erstellt wird.
+Beachten Sie die Präprozessoranweisungen am Anfang der Datei. Die neue Projektvorlage für ein DLL-Projekt fügt den definierten Präprozessormakros  **_ProjectName_&#95;-Exporte** hinzu. In diesem Beispiel definiert Visual Studio **MATHLIBRARY&#95;EXPORTS**, wenn Ihr MathLibrary-DLL-Projekt erstellt wird.
 
 Wenn das **MATHLIBRARY&#95;EXPORTS**-Makro definiert ist, legt das **MATHLIBRARY&#95;API**-Makro den Modifizierer `__declspec(dllexport)` in den Funktionsdeklarationen fest. Dieser Modifizierer weist den Compiler und den Linker an, eine Funktion oder Variable aus der dll zu exportieren, die von anderen Anwendungen verwendet werden soll. Wenn **MATHLIBRARY&#95;EXPORTS** nicht definiert ist, weil beispielsweise die Headerdatei in einer Clientanwendung enthalten ist, wendet **MATHLIBRARY&#95;API** den Modifizierer `__declspec(dllimport)` auf die Deklarationen an. Dieser Modifizierer optimiert den Import der Funktion oder Variablen in eine Anwendung. Weitere Informationen finden Sie unter [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 

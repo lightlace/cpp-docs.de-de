@@ -3,13 +3,13 @@ title: Bearbeiten und Umgestalten von C++-Code in Visual Studio
 description: Verwenden Sie den C++-Code-Editor in Visual Studio, um Ihren Code zu formatieren, in ihm zu navigieren, ihn zu verstehen und umzugestalten.
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-ms.topic: landing-page
-ms.openlocfilehash: 255576bfc4a7eb78a660e5bfb05b0a97a7eb4c34
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
-ms.translationtype: HT
+ms.topic: overview
+ms.openlocfilehash: 2da1b38d2f5bb61edb473e5909b76225f214a116
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221552"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274774"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>Bearbeiten und Umgestalten von C++-Code in Visual Studio
 

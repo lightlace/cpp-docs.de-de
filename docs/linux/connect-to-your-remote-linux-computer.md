@@ -3,12 +3,12 @@ title: Herstellen einer Verbindung mit dem Linux-Zielsystem in Visual Studio
 description: Hier finden Sie Informationen zum Herstellen einer Verbindung mit einem Linux-Remotecomputer oder mit WSL über ein C++-Projekt in Visual Studio.
 ms.date: 09/04/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 75d8b3db64d9b1f3562d6730685b7c29fe4982f4
-ms.sourcegitcommit: a42d3b0408f02138dcd6fabcb98d50b0cb159191
+ms.openlocfilehash: 2f4e6311493f2b29ba6911ec1b76225b6c7abe6d
+ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383404"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71925555"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Herstellen einer Verbindung mit dem Linux-Zielsystem in Visual Studio
 
@@ -94,11 +94,12 @@ In Visual Studio 2017 stellen Sie eine Verbindung mit WSL her, indem Sie die gle
 
 In Version 16.1 von Visual Studio 2019 wurde native Unterstützung für die Verwendung von C++ mit dem [Windows-Subsystem für Linux (WSL)](https://docs.microsoft.com/windows/wsl/about) hinzugefügt.  Das bedeutet, dass Sie keine Remoteverbindung mehr herstellen oder SSH konfigurieren müssen, um auf Ihrer lokalen WSL-Installation Projekte zu erstellen und zu debuggen. Weitere Informationen zur [Installation von WSL](https://docs.microsoft.com/windows/wsl/install-win10) finden Sie hier.
 
-Sie müssen die Tools gcc, gdb, make, rsync und zip installieren, um die WSL-Installation so zu konfigurieren, dass sie mit Visual Studio verwendet werden kann. Diese können Sie auf Distributionen installieren, die „apt“ mit folgendem Befehl verwenden: 
+Sie müssen die Tools gcc oder clang, gdb, make, rsync und zip installieren, um die WSL-Installation so zu konfigurieren, dass sie mit Visual Studio verwendet werden kann. Sie können sie für Distributionen installieren, die apt verwenden, indem Sie diesen Befehl verwenden, der auch den g++-Compiler installiert: 
 
 ```bash
 sudo apt install g++ gdb make rsync zip
 ```
+Weitere Informationen finden Sie unter [Herunterladen, Installieren und Einrichten der Linux-Workload](download-install-and-setup-the-linux-development-workload.md).
 
 Informationen zum Konfigurieren Ihres Projekts für WSL finden Sie unter [Konfigurieren eines Linux-Projekts](configure-a-linux-project.md) oder [Konfigurieren eines Linux CMake-Projekts](cmake-linux-project.md), je nachdem, mit welcher Art von Projekt Sie arbeiten. Eine ausführliche Anleitung für das Erstellen einer einfachen Konsolenanwendung mit WSL finden Sie in diesem Blogbeitrag zur Einführung in [C++ mit Visual Studio 2019 und dem Windows-Subsystem für Linux (WSL)](https://devblogs.microsoft.com/cppblog/c-with-visual-studio-2019-and-windows-subsystem-for-linux-wsl/).
 

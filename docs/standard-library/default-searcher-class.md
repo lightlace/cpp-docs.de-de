@@ -106,7 +106,7 @@ Gibt ein Paar von Iteratoren zurück. Der anfängliche Iterator *i* ist das effe
 
 `std::search( first, last, pat_first, pat_last, pred )`
 
-Der zweite Iterator des Paars ist " *Last* ", wenn " *i**" der *Letzte*Wert ist. Andernfalls ist dies das effektive Ergebnis von:
+Der zweite Iterator des Paars ist " *Last* ", wenn " *i* *" der *Letzte*Wert ist. Andernfalls ist dies das effektive Ergebnis von:
 
 `std::next( i, std::distance( pat_first, pat_last ))`
 
