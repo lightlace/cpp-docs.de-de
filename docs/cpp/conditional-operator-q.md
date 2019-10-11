@@ -1,5 +1,5 @@
 ---
-title: 'Bedingter Operator:? :'
+title: 'Bedingter Operator: &quest;:'
 ms.date: 11/04/2016
 f1_keywords:
 - '?:'
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - conditional operators [C++]
 - '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
-ms.openlocfilehash: 8744ca8546d48e9283cc0dfa9d80babf5076f8b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a66b82682f90345518a2d520945e3aff1f78f89
+ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399147"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72276810"
 ---
-# <a name="conditional-operator--"></a>Bedingter Operator:? :
+# <a name="conditional-operator-quest-"></a>Bedingter Operator: &quest;:
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,13 +25,13 @@ expression ? expression : expression
 
 ## <a name="remarks"></a>Hinweise
 
-Der bedingte Operator (**?:**) ist ein dreifacher Operator (er übernimmt drei Operanden). Der bedingte Operator funktioniert wie folgt:
+Der bedingte Operator ( **?:** ) ist ein ternärer Operator (er benötigt drei Operanden). Der bedingte Operator funktioniert wie folgt:
 
-- Der erste Operand wird implizit in konvertiert **"bool"**. Er wird ausgewertet, und alle Nebeneffekte werden vor dem nächsten Schritt abgeschlossen.
+- Der erste Operand wird implizit in einen **booleschen**Wert konvertiert. Er wird ausgewertet, und alle Nebeneffekte werden vor dem nächsten Schritt abgeschlossen.
 
-- Wenn der erste Operand als **"true"** (1), der zweite Operand ausgewertet wird.
+- Wenn der erste Operand als **true** (1) ausgewertet wird, wird der zweite Operand ausgewertet.
 
-- Wenn der erste Operand als **"false"** (0), der dritte Operanden ausgewertet wird.
+- Wenn der erste Operand als **false** (0) ausgewertet wird, wird der dritte Operand ausgewertet.
 
 Das Ergebnis des bedingten Operators ist das Ergebnis des ausgewerteten Operanden – der zweite oder dritte. Nur einer der letzten zwei Operanden wird in einem bedingten Ausdruck ausgewertet.
 
@@ -39,7 +39,7 @@ Bedingte Ausdrücke besitzen Assoziativität von rechts nach links. Der erste Op
 
 - Wenn beide Operanden vom selben Typ sind, ist das Ergebnis von diesem Typ.
 
-- Wenn beide Operanden arithmetische oder Enumerationstypen Typen, die üblichen arithmetischen Konvertierungen (finden Sie im [Standardkonvertierungen](standard-conversions.md)) werden ausgeführt, um sie in einen gemeinsamen Typ zu konvertieren.
+- Wenn beide Operanden arithmetische oder Enumerationstypen sind, werden die üblichen arithmetischen Konvertierungen (in [Standard Konvertierungen](standard-conversions.md)abgedeckt) ausgeführt, um Sie in einen gemeinsamen Typ zu konvertieren.
 
 - Wenn beide Operanden Zeigertypen sind, oder wenn einer ein Zeigertyp und der andere ein konstanter Ausdruck ist, der 0 ergibt, werden Zeigerkonvertierungen ausgeführt, um sie in einen gemeinsamen Typ zu konvertieren.
 
