@@ -1,16 +1,16 @@
 ---
 title: Verbesserungen an C++ bei der Übereinstimmung mit Standards
-ms.date: 09/25/2019
+ms.date: 10/04/2019
 description: Microsoft C++ in Visual Studio  bewegt sich auf die vollständige Konformität mit dem Sprachstandard C++20 zu.
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 4825317b07535d98b1b5db4442f935e9b2cfb632
-ms.sourcegitcommit: b4572ffcc71e6bdb0ca23221f9476cfaf4528406
+ms.openlocfilehash: d313a9a1f9f2bc1aa091935658ca1214f929c048
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314471"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998887"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Verbesserungen der C++-Konformität in Visual Studio
 
@@ -392,7 +392,7 @@ bool neq(const S& lhs, const S& rhs) {
 
 ### <a name="stream-extraction-operators-for-char-removed"></a>Streamextraktionsoperatoren für char* entfernt
 
-Die Streamextraktionsoperatoren für Zeiger auf Zeichen wurden entfernt und durch Extraktionsoperatoren für Arrayzeichen ersetzt (vgl. [P0487R1](http://http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html)). WG21 betrachtet die entfernten Überladungen als unsicher. Im Modus [/std:c++latest](../build/reference/std-specify-language-standard-version.md) löst das folgende Beispiel nun den Fehler *C2679: binary '>>': no operator found which takes a right-hand operand of type 'char\*' (or there is no acceptable conversion)* (C2679: Binär „>>“ kein Operator gefunden, der rechte Operanden vom Typ „char“ akzeptiert (oder es ist keine zulässige Konvertierung vorhanden)) aus:
+Die Streamextraktionsoperatoren für Zeiger auf Zeichen wurden entfernt und durch Extraktionsoperatoren für Arrayzeichen ersetzt (vgl. [P0487R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html)). WG21 betrachtet die entfernten Überladungen als unsicher. Im Modus [/std:c++latest](../build/reference/std-specify-language-standard-version.md) löst das folgende Beispiel nun den Fehler *C2679: binary '>>': no operator found which takes a right-hand operand of type 'char\*' (or there is no acceptable conversion)* (C2679: Binär „>>“ kein Operator gefunden, der rechte Operanden vom Typ „char“ akzeptiert (oder es ist keine zulässige Konvertierung vorhanden)) aus:
 
 ```cpp
    char x[42];
@@ -456,6 +456,10 @@ extern "C" void f(int, int, int, BOOL){}
 ```
 
 Sie können die Fehler im vorherigen Beispiel vermeiden, indem Sie konsistent **bool** anstelle von **BOOL** in beiden Deklarationen von `f` verwenden.
+
+### <a name="standard-library-improvements"></a>Verbesserungen der Standardbibliothek
+
+Die nicht standardmäßigen Header \<stdexcpt.h> und \<typeinfo.h> wurden entfernt. Code, der diese enthält, sollte stattdessen die standardmäßigen Header \<exception> und \<typeinfo> enthalten.
 
 ## <a name="update_160"></a> Fehlerbehebungen und Verhaltensänderungen in Visual Studio 2019
 
@@ -722,7 +726,7 @@ Die `reserve`-Funktion für ungeordnete Container reserviert N-Elemente nun tats
 
 - Zuvor führten einige Zeitwerte, die an die Parallelitätsbibliothek übergeben wurden, zu einem Überlauf, z. B. `condition_variable::wait_for(seconds::max())`. Diese mittlerweile behobenen Überläufe haben das Verhalten in einem scheinbar willkürlichen 29-tägigen Zyklus geändert (wenn von den zugrundeliegenden Win32-APIs akzeptierte uint32_t Millisekunden zu einem Überlauf führten).
 
-- Der <ctime>-Header deklariert `timespec` und `timespec_get` im Namespace `std` jetzt ordnungsgemäß und im globalen Namespace.
+- Der \<ctime>-Header deklariert `timespec` und `timespec_get` im Namespace `std` jetzt ordnungsgemäß und im globalen Namespace.
 
 ### <a name="various-fixes-for-containers"></a>Verschiedene Fehlerbehebungen für Container
 

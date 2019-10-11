@@ -1,62 +1,63 @@
 ---
 title: ARM64-Ausnahmebehandlung
+description: Beschreibt die Ausnahme Behandlungs Konventionen und-Daten, die von Windows auf ARM64 verwendet werden.
 ms.date: 11/19/2018
-ms.openlocfilehash: 55476119499a3216f6801877dba692b2a0d1d9ee
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 1ed147a27cfeb545e2a5fe265df8113a5befac73
+ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342300"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72276833"
 ---
 # <a name="arm64-exception-handling"></a>ARM64-Ausnahmebehandlung
 
-Windows auf ARM64 verwendet das gleiche strukturierte Ausnahmebehandlung Mechanismus für die asynchrone Hardware generierten – Ausnahmen als auch synchrone Software generierte Ausnahmen. Sprachspezifische Ausnahmehandler werden auf von Windows strukturierter Ausnahmebehandlung mithilfe von Sprachhilfsfunktionen erstellt. Dieses Dokument beschreibt die Behandlung von Ausnahmen in Windows auf ARM64 und die sprachhilfen, die von Code, der von der Microsoft-ARM-Assembler und der MSVC-Compiler generiert wird verwendet.
+Windows on ARM64 verwendet den gleichen Mechanismus für die strukturierte Ausnahmebehandlung für asynchrone, von der Hardware generierte Ausnahmen und synchrone Software generierte Ausnahmen. Sprachspezifische Ausnahmehandler werden auf von Windows strukturierter Ausnahmebehandlung mithilfe von Sprachhilfsfunktionen erstellt. In diesem Dokument wird die Ausnahmebehandlung in Windows auf ARM64 und die sprach Hilfsprogramme beschrieben, die von Code verwendet werden, der vom Microsoft-Arm-Assembler und dem MSVC-Compiler generiert wird.
 
-## <a name="goals-and-motivation"></a>Ziele und motivation
+## <a name="goals-and-motivation"></a>Ziele und Motivation
 
-Die Ausnahme entladen Daten Konventionen und diese Beschreibung, dienen zum:
+Die Ausnahme bei der Entwickelung von Daten Konventionen und diese Beschreibung sind folgende:
 
-1. Geben Sie genügend Beschreibung, um zuzulassen, ohne Code, Tests in allen Fällen entladen.
+1. Stellen Sie eine ausreichende Beschreibung bereit, um das entwickeln ohne Code Tests in allen Fällen zuzulassen.
 
-   - Analyse des Codes muss der Code in ausgelagert werden. Dies verhindert, dass Sie entladen, in einigen Fällen, in denen es empfiehlt sich (Ablaufverfolgung, Erstellen von Stichproben, Debuggen).
+   - Um den Code zu analysieren, muss der Code in das Pager eingefügt werden. Dies verhindert, dass es in einigen Fällen sinnvoll ist (Ablauf Verfolgung, Sampling, Debuggen).
 
-   - Analyse des Codes ist komplexer. der Compiler muss sorgfältig nur Anweisungen zu generieren, der Entlader decodieren kann.
+   - Das Analysieren des Codes ist komplex. der Compiler muss darauf achten, nur Anweisungen zu generieren, die der Entlader decodieren kann.
 
-   - Wenn entladen nicht durch die Verwendung von entladungscodes ausführlich erläutert werden, müssen Sie dann in einigen Fällen zum Decodieren der Anweisung zurückgegriffen. Dies erhöht die Komplexität und im Idealfall würden vermieden werden kann.
+   - Wenn das Entladen nicht durch die Verwendung von Entladungs Codes vollständig beschrieben werden kann, muss es in einigen Fällen auf die Anweisungs Decodierung zurückgreifen. Dies erhöht die Gesamtkomplexität und wird idealerweise vermieden.
 
-1. Unterstützung, die Entladung im Prolog der Mid "und" Mid Epilog.
+1. Unterstützung der Entwickelung in Mid-Prolog und Mid-Epilog.
 
-   - Entladen von mehr als die Ausnahmebehandlung in Windows verwendet wird, daher ist es wichtig, dass wir ausführen kann eine exakte entladen, selbst wenn in der Mitte eine Codesequenz Prolog- oder Epilogcode.
+   - Die Entwickelung wird in Windows für mehr als Ausnahmebehandlung verwendet. Es ist wichtig, dass der Code auch dann korrekt entladen werden kann, wenn er sich in der Mitte einer Prolog-oder epilogcodefolge befindet.
 
-1. Dauern Sie, bis eine minimale Menge an Speicherplatz.
+1. Nehmen Sie eine minimale Menge an Speicherplatz in Anspruch.
 
-   - Die entladungscodes müssen nicht aggregieren, um die binäre Größe erheblich zu erhöhen.
+   - Die Entladungs Codes dürfen nicht aggregiert werden, um die binäre Größe erheblich zu erhöhen.
 
-   - Da die entladungscodes voraussichtlich im Arbeitsspeicher gesperrt werden, gewährleistet ein geringen Ressourcenbedarf einen minimalen Mehraufwand für jede Binärdatei geladen.
+   - Da die Entladungs Codes wahrscheinlich im Speicher gesperrt sind, stellt ein kleiner Speicherbedarf einen minimalen mehr Aufwand für jede geladene Binärdatei sicher.
 
 ## <a name="assumptions"></a>Annahmen
 
-Hierbei handelt es sich um die Annahmen, die in der Beschreibung für die Ausnahmebehandlung:
+Diese Annahmen werden in der Ausnahme Behandlungs Beschreibung vorgenommen:
 
-1. Prologe und Epiloge neigen dazu, um entweder andere zu spiegeln. Von der Nutzung der dieses Merkmal "common" kann die Größe der Metadaten erforderlich, um die Beschreibung der Entladung erheblich reduziert werden. Im Text der Funktion spielt es keine Rolle, ob der Prolog-Vorgänge rückgängig gemacht werden werden, oder der Epilog-in einem nach vorn gerichtete Weise Vorgänge. Beides sollte zum gleichen Ergebnis führen.
+1. Prologs und Epilogs spiegeln tendenziell beides wider. Durch die Nutzung dieses allgemeinen Merkmals kann die Größe der Metadaten, die zum Beschreiben der Entwickelung erforderlich sind, erheblich reduziert werden. Im Hauptteil der Funktion ist es unerheblich, ob die Vorgänge des Prologs rückgängig gemacht werden, oder die Vorgänge des epiprotokolls werden vorwärts ausgeführt. Beides sollte zum gleichen Ergebnis führen.
 
-1. Funktionen sind für das gesamte eher relativ klein sein. Verschiedene Optimierungen für Speicherplatz nutzen diese um die effizienteste Packen von Daten zu erzielen.
+1. Die Funktionen sind tendenziell relativ klein. Mehrere Optimierungen für den Speicherplatz basieren auf dieser Tatsache, um das effizienteste Verpacken von Daten zu erreichen.
 
-1. Es ist keine bedingter Code in epilogen.
+1. Es gibt keinen bedingten Code in Epilogs.
 
-1. Dedizierte Framezeigerregister: Wenn die sp gespeichert wird, in einem anderen Register (x29) im Prolog, die registriert bleibt unverändert, während die Funktion, damit der ursprüngliche sp jederzeit wiederhergestellt werden kann.
+1. Dediziertes Frame Zeiger Register: Wenn der SP in einem anderen Register (x29) im Prolog gespeichert wird, bleibt dieses Register in der gesamten Funktion unverändert. Dies bedeutet, dass der ursprüngliche SP jederzeit wieder hergestellt werden kann.
 
-1. Es sei denn, der gespeicherten Prozedur in einem anderen Register gespeichert wird, tritt ein, alle Manipulation des Stapelzeigers ausschließlich innerhalb der Prolog und Epilog.
+1. Wenn der SP nicht in einem anderen Register gespeichert wird, erfolgt die gesamte Bearbeitung des Stapel Zeigers nur im Prolog und Epilog.
 
-1. Die stapelrahmenlayout werden organisiert, wie im nächsten Abschnitt beschrieben.
+1. Das Stapel Rahmen Layout ist so organisiert, wie im nächsten Abschnitt beschrieben.
 
-## <a name="arm64-stack-frame-layout"></a>Stapelrahmenlayout bei ARM64
+## <a name="arm64-stack-frame-layout"></a>ARM64 Stapel Rahmen Layout
 
-![stapelrahmenlayout](media/arm64-exception-handling-stack-frame.png "stapelrahmenlayout")
+Stapel Rahmen(media/arm64-exception-handling-stack-frame.png "Layout") für ![Stapel Rahmen Layout]
 
-Für Funktionen der Frame verkettet kann das fp-Lr-Paar an beliebiger Position in der lokalen Variablen Bereich je nach der Optimierung Überlegungen gespeichert werden. Das Ziel ist, um die Anzahl der lokalen Variablen zu maximieren, die von einer einzelnen Anweisung, die basierend auf Frame-Pointer (x29) oder Stapelzeiger (sp) erreicht werden kann. Jedoch für `alloca` Funktionen, er verkettet werden muss und X29 muss am Ende Stack verweisen. Um eine bessere Abdeckung von Register-Paar-Adressierung-Modus zu ermöglichen, werden nicht flüchtiges Register Speichern der Bereiche am oberen Rand der LAN-Stack positioniert. Hier sind Beispiele, die einige der am effizientesten Prolog Sequenzen zu veranschaulichen. Aus Gründen der Übersichtlichkeit und besseren Ort des Caches aufweist die Reihenfolge der aufgerufenen gespeicherten Register speichern, in dem alle kanonischen Prologe "immer größer werdenden einrichten" Reihenfolge. `#framesz` unten können Sie die Größe des gesamten Stapels (außer ' Alloca-Bereich) darstellt. `#localsz` und `#outsz` LAN-Größe zu kennzeichnen (einschließlich des Speichervorgangs Bereich für die \<X29, Lr > Paar) und der Parametergröße bzw. ausgehende.
+Bei Frame verketteten Funktionen können das FP-und LR-Paar in Abhängigkeit von Optimierungs Überlegungen an jeder beliebigen Position im lokalen Variablen Bereich gespeichert werden. Das Ziel besteht darin, die Anzahl der lokalen Variablen zu maximieren, die durch eine einzelne Anweisung erreicht werden können, die auf dem Frame Zeiger (x29) oder dem Stapelzeiger (SP) basiert. Für `alloca`-Funktionen muss Sie jedoch verkettet werden, und x29 muss auf den unteren Rand des Stapels zeigen. Um eine bessere Abdeckung im Register-paar-Adressierungs Modus zu ermöglichen, werden nicht flüchtige Registrierungs Speicherbereiche am oberen Rand des lokalen Stapel Bereichs positioniert. Im folgenden finden Sie Beispiele, die einige der effizientesten Prolog Sequenzen veranschaulichen. Um Klarheit und eine bessere Cache Lokalität zu erzielen, wird die Reihenfolge der Speicherung gespeicherter Register in allen kanonischen Prologe in der Reihenfolge "wächst" angezeigt. `#framesz` unten steht für die Größe des gesamten Stapels (mit Ausnahme des Bereichs "Zuweisung"). `#localsz` und `#outsz` kennzeichnen die Größe des lokalen Bereichs (einschließlich des Speicherbereichs für das \<x29, LR > Paar) bzw. die ausgehende Parameter Größe.
 
-1. Chained, #localsz \<= 512
+1. Verkettet, #localsz \< = 512
 
     ```asm
         stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -84,7 +85,7 @@ Für Funktionen der Frame verkettet kann das fp-Lr-Paar an beliebiger Position i
         add    x29,sp,#outsz            // setup x29 points to bottom of local area
     ```
 
-1. Nicht verkettete, Funktionen (Lr nicht gespeichert)
+1. Nicht verkettete Blatt Funktionen (LR nicht gespeichert)
 
     ```asm
         stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
@@ -95,9 +96,9 @@ Für Funktionen der Frame verkettet kann das fp-Lr-Paar an beliebiger Position i
         sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   Alle lokalen erfolgt basierend auf SP. \<X29, Lr > verweist auf den vorherigen Frame. Für die Größe des Quellframes \<= 512, die "sub sp,..." können wegoptimiert werden, wenn der Bereich Regs gespeichert am unteren Rand der Stapel verschoben wird. Der Nachteil dieser ist, dass es ist nicht konsistent mit anderer Layouts, die oben genannten, gespeicherten Regs nehmen Sie Teil des Bereichs für das Paar-Regs und vor und nach dem indizierten Offset Adressierung.
+   Der Zugriff auf alle lokalen Variablen erfolgt basierend auf SP. \<x29, LR > auf den vorherigen Frame zeigt. Für Frame Size \< = 512, "Sub SP,..." kann optimiert werden, wenn der gespeicherte regs-Bereich an den unteren Rand des Stapels verschoben wird. Der Nachteil ist, dass er nicht mit anderen Layouts übereinstimmt, und gespeicherte Umleitungen nehmen einen Teil des Bereichs für paar Umleitungen und den vorab-und Post indizierten Offset-Adressierungs Modus.
 
-1. Nicht verkettete nichtblatt-Funktionen (Int, gespeichert im Bereich wird Lr gespeichert)
+1. Nicht verkettete, nicht Blatt Funktionen (LR wird im Bereich "int-gespeichert" gespeichert)
 
     ```asm
         stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
@@ -108,7 +109,7 @@ Für Funktionen der Frame verkettet kann das fp-Lr-Paar an beliebiger Position i
         sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   Oder mit einer geraden Anzahl gespeichert Int-Register,
+   Oder bei einer geraden Anzahl gespeicherter int-Register
 
     ```asm
         stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
@@ -119,7 +120,7 @@ Für Funktionen der Frame verkettet kann das fp-Lr-Paar an beliebiger Position i
         sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   Nur X19 gespeichert:
+   Nur x19 gespeichert:
 
     ```asm
         sub    sp,sp,#16                // reg save area allocation*
@@ -127,11 +128,11 @@ Für Funktionen der Frame verkettet kann das fp-Lr-Paar an beliebiger Position i
         sub    sp,sp,#(framesz-16)      // allocate the remaining local area
     ```
 
-   \* Das Reg speichern Bereich Zuordnung ist nicht in die stp reduziert, da eine stp bereits indizierten Reg-Lr nicht mit den entladungscodes dargestellt werden kann.
+   \*: die Zuordnung des reg-Speicherbereichs wird nicht in die STP-Datenbank gefaltet, weil eine vorindizierte reg-LR-STP nicht mit den Entladungs Codes dargestellt werden kann.
 
-   Alle lokalen erfolgt basierend auf SP. \<X29 > verweist auf den vorherigen Frame.
+   Der Zugriff auf alle lokalen Variablen erfolgt basierend auf SP. \<x29 > verweist auf den vorherigen Frame.
 
-1. Chained, #framesz \<= 512, #outsz = 0
+1. Verkettet, #framesz \< = 512, #outsz = 0
 
     ```asm
         stp    x29,lr,[sp,#-framesz]!       // pre-indexed, save <x29,lr>
@@ -140,9 +141,9 @@ Für Funktionen der Frame verkettet kann das fp-Lr-Paar an beliebiger Position i
         stp    d8,d9,[sp,#(framesz-16)]     // save FP pair
     ```
 
-   Mit der oben genannten #1-Prolog verglichen, liegt der Vorteil, dass alle Register speichern Anweisungen werden direkt nach dem Zuordnen von Anweisung nur einen Stapel ausgeführt werden können. Es besteht daher keine Anti-Abhängigkeit auf sp, die von der Anweisung auf Parallelität verhindert.
+   Im Vergleich zum ersten obigen Prolog-Beispiel besteht der Vorteil darin, dass alle Register-Speicher Anweisungen für die Ausführung nach nur einer Stapel Zuordnungs Anweisung zur Ausführung bereit sind. Dies bedeutet, dass keine Abhängigkeit von SP vorliegt, die eine Parallelität auf Anweisungs Ebene verhindert.
 
-1. Verkettet, frame-Größe > 512 (optional für die Funktionen ohne Alloca)
+1. Verkettete Frame Größe > 512 (optional für Funktionen ohne Zuweisung)
 
     ```asm
         stp    x29,lr,[sp,#-80]!            // pre-indexed, save <x29,lr>
@@ -154,9 +155,9 @@ Für Funktionen der Frame verkettet kann das fp-Lr-Paar an beliebiger Position i
         sub    sp,sp,#(framesz-80)          // allocate the remaining local area
     ```
 
-   Für die Optimierung Zweck können X29 an einer beliebigen Position in der Nähe zu der eine bessere Abdeckung vor/nach-indexed Offset Adressierungsmodus für "Reg-Paar" platziert werden. "Lokal", unter der Frame-Pointer können zugegriffen werden basierend auf SP.
+   Für Optimierungszwecke kann x29 an jeder beliebigen Position im lokalen Bereich abgelegt werden, um eine bessere Abdeckung für den "reg-Pair"-und den Pre-/Post-Indexed Offset-Adressierungs Modus bereitzustellen. Auf lokale Variablen unterhalb von Frame Zeigern kann basierend auf SP zugegriffen werden.
 
-1. Verkettet, Rahmengröße > 4K, mit oder ohne alloca(),
+1. Verkettet, Rahmengröße > 4K mit oder ohne Zuweisung (),
 
     ```asm
         stp    x29,lr,[sp,#-80]!            // pre-indexed, save <x29,lr>
@@ -179,67 +180,67 @@ Für Funktionen der Frame verkettet kann das fp-Lr-Paar an beliebiger Position i
         ldp    x29,lr,[sp],#80              // post-indexed, reload <x29,lr>
     ```
 
-## <a name="arm64-exception-handling-information"></a>Informationen zur Behandlung von ARM64 Ausnahme
+## <a name="arm64-exception-handling-information"></a>ARM64-Ausnahme Behandlungsinformationen
 
-### <a name="pdata-records"></a>.pdata-Datensätze
+### <a name="pdata-records"></a>. pdata-Datensätze
 
-Die .pdata-Datensätze sind ein geordnetes Array von Elementen mit fester Länge die in einer PE-Binärdatei jede stapelbearbeitungsfunktion beschreiben. Beachten Sie sorgfältig, den Ausdruck "Stack-bearbeiten": Leaf-Funktionen, die aber keine lokalen Speicher und keine benötigen, können Sie nicht flüchtigen Register gespeichert/wiederhergestellt, erfordern keine .pdata-Datensatz; Diese sollten explizit ausgelassen werden, um Platz zu sparen. Eine Entladung aus einer dieser Funktionen erhalten einfach die Rückgabeadresse aus LR, an den Aufrufer nach oben zu verschieben.
+Bei den pData-Datensätzen handelt es sich um ein geordnetes Array von Elementen fester Länge, die jede Stapel Manipulations Funktion in einer PE-Binärdatei beschreiben. Der Ausdruck "Stapel Bearbeitung" ist von Bedeutung: Blatt Funktionen, die keinen lokalen Speicher erfordern und keine nicht flüchtigen Register speichern/wiederherstellen müssen, benötigen keinen pData-Datensatz. Diese Datensätze sollten explizit weggelassen werden, um Speicherplatz zu sparen. Eine Entladung von einer dieser Funktionen kann die Rückgabeadresse direkt von LR erhalten, um zum Aufrufer zu wechseln.
 
-Jeder .pdata-Datensatz für ARM64 ist 8 Byte lang. Das allgemeine Format für jeden Datensatz stellen die 32-Bit-RVA der Funktion zu starten, in das erste Wort, gefolgt von einer Sekunde, enthält entweder einen Zeiger auf eine Variable Länge .xdata-Block oder ein gepacktes Wort, das eine Funktion (kanonisch) entladen Sequenz zu beschreiben.
+Jeder pData-Datensatz für ARM64 hat eine Länge von 8 Bytes. Im allgemeinen Format jedes Datensatzes wird die 32-Bit-RVA der Funktion im ersten Wort gestartet, gefolgt von einem zweiten Wort, das entweder einen Zeiger auf einen. XData-Block mit variabler Länge enthält, oder ein gepacktes Wort, das eine Sequenz für die Entwickelung einer kanonischen Funktion beschreibt.
 
-![.pdata-Datensatzlayout](media/arm64-exception-handling-pdata-record.png ".pdata-Datensatz-Layout")
+![pData]-Daten Satz Layout(media/arm64-exception-handling-pdata-record.png ". pdata-Daten Satz Layout")
 
-Die Felder sind wie folgt aus:
+Die Felder lauten wie folgt:
 
-- **Funktion RVA starten** ist die 32-Bit-RVA des Starts der Funktion.
+- **RVA für Funktions Start** ist die 32-Bit-RVA des Starts der Funktion.
 
-- **Flag** ist ein 2-Bit-Feld, wie Sie die verbleibenden 30 Bit des zweiten .pdata-Worts zu interpretieren angibt. Wenn **Flag** 0 ist, dann bilden die verbleibenden bits eine **Ausnahme Informationen RVA** (mit der die beiden niedrigsten Bitwerte implizit 0). Wenn **Flag** ungleich NULL ist, ist, dann bilden die verbleibenden bits eine **gepackte Entladedaten Daten** Struktur.
+- **Flag** ist ein 2-Bit-Feld, das angibt, wie die verbleibenden 30 Bits des zweiten. pdata-Worts interpretiert werden. Wenn **Flag** gleich 0 ist, bilden die übrigen Bits eine **RVA der Ausnahme Informationen** (mit den zwei niedrigsten Bits implizit 0). Wenn das **Flag** ungleich 0 (null) ist, bilden die übrigen Bits eine **gepackte Entladedaten** Struktur.
 
-- **Ausnahme Informationen RVA** ist die Adresse der variabler Länge, die Struktur für Ausnahmeinformationen, im Abschnitt .xdata gespeichert. Diese Daten müssen 4-Bytes ausgerichtet sein.
+- **Ausnahme Informationen RVA** ist die Adresse der Struktur der Ausnahme Informationen mit variabler Länge, die im Abschnitt. XData gespeichert ist. Diese Daten müssen 4-Bytes ausgerichtet sein.
 
-- **Gepackte Entladedaten Daten** ist eine komprimierte Beschreibung der Vorgänge zum Entladen von einer Funktion, wenn eine kanonische Form. In diesem Fall ist kein .xdata-Datensatz erforderlich.
+- **Gepackte Entladedaten** sind eine komprimierte Beschreibung der Vorgänge, die zum Entladen von einer Funktion erforderlich sind, vorausgesetzt, eine kanonische Form. In diesem Fall ist kein .xdata-Datensatz erforderlich.
 
-### <a name="xdata-records"></a>.XData-Datensätze
+### <a name="xdata-records"></a>. XData-Datensätze
 
-Wenn das gepackte Entladeformat nicht zur Beschreibung der Entladung einer Funktion ausreicht, muss ein .xdata-Datensatz mit variabler Länge erstellt werden. Die Adresse dieses Datensatzes wird im zweiten Wort des .pdata-Datensatzes gespeichert. Das Format von .xdata ist eine gepackte variabler Länge, die Gruppe von Wörtern an:
+Wenn das gepackte Entladeformat nicht zur Beschreibung der Entladung einer Funktion ausreicht, muss ein .xdata-Datensatz mit variabler Länge erstellt werden. Die Adresse dieses Datensatzes wird im zweiten Wort des .pdata-Datensatzes gespeichert. Das Format von XData ist ein gepackter Satz von Wörtern mit variabler Länge:
 
-![.XData-Datensatzlayout](media/arm64-exception-handling-xdata-record.png ".xdata-Datensatz-Layout")
+![. XData]-Daten Satz Layout(media/arm64-exception-handling-xdata-record.png ". XData-Daten Satz Layout")
 
-Diese Daten ist in vier Abschnitte unterteilt:
+Diese Daten sind in vier Abschnitte unterteilt:
 
-1. Eine 1 oder 2-Wort-Header, der die Gesamtgröße der Struktur beschreibt und wichtige Funktionsdaten bereitstellen. Das zweite Worte ist nur vorhanden, wenn sowohl die **Epilog Anzahl** und **Code Wörter** Felder werden auf 0 festgelegt. Dies sind die Bitfelder im Header:
+1. Ein 1-oder 2-Wort-Header, der die Gesamtgröße der Struktur und die Bereitstellung von Schlüssel Funktionsdaten beschreibt. Das zweite Wort ist nur vorhanden, wenn die Felder **epilogcount** und **Code Words** auf 0 festgelegt sind. Der Header weist diese Bitfelder auf:
 
-   a. **Länge-Funktion** ist ein 18-Bit-Feld, der angibt, der der Gesamtlänge der Funktion in Bytes geteilt durch 4. Wenn eine Funktion größer als 1 Million ist, müssen mehrere Pdata und Xdata-Einträge verwendet werden, um die Funktion zu beschreiben. Finden Sie unter den [umfangreiche Funktionen](#large-functions) finden Sie weitere Details.
+   a. Die **Funktions Länge** ist ein 18-Bit-Feld. Gibt die Gesamtlänge der Funktion in Bytes geteilt durch 4 an. Wenn eine Funktion größer als 1 m ist, müssen mehrere. pdata-und. XData-Datensätze verwendet werden, um die Funktion zu beschreiben. Weitere Informationen finden Sie im Abschnitt zu [großen Funktionen](#large-functions) .
 
-   b. **Vers** ist ein 2-Bit-Feld, das die Version der verbleibenden Xdata. Während ich dies schreibe, nur Version 0 definiert ist, und Werte von 1 bis 3 sind daher nicht zulässig.
+   b. **Vers** ist ein 2-Bit-Feld. Es beschreibt die Version der restlichen. XData. Derzeit ist nur Version 0 definiert, sodass die Werte von 1-3 nicht zulässig sind.
 
-   c. **X** ist ein 1-Bit-Feld, der angibt, das Vorhandensein (1) oder fehlen (0) von Ausnahmedaten.
+   c. **X** ist ein 1-Bit-Feld. Gibt das vorhanden sein (1) oder das Fehlen (0) von Ausnahme Daten an.
 
-   d. **E** ist ein Bitfeld gibt an, dass die Informationen, die einen einzelnen Epilog in den Header (1 steckt) statt, erfordern zusätzliche Bereich beschreibt höher (0) Wörter.
+   d. **E** ist ein 1-Bit-Feld. Er gibt an, dass Informationen, die ein einzelnes Epilogcode beschreiben, in den Header (1) verpackt werden, anstatt zusätzliche Bereichs Wörter später (0) zu erfordern.
 
-   e. **Anzahl der Epilog** ist ein 5-Bit-Feld mit zwei Bedeutungen, abhängig vom Zustand **E** Bit:
+   e. Die **epilogcount** ist ein 5-Bit-Feld, das je nach Status des **E** -Bit zwei Bedeutungen hat:
 
-      1. Wenn **E** auf 0 festgelegt ist: Es gibt die Anzahl der Gesamtzahl der Epilog-Bereiche, die in Abschnitt 2 beschriebene an. Wenn mehr als 31 Bereiche in der Funktion vorhanden sind und dann die **Code Wörter** Feld muss auf 0 festgelegt werden, um anzugeben, dass ein ausnahmewort erforderlich ist.
+      1. Wenn **E** 0 ist, wird die Anzahl der in Abschnitt 2 beschriebenen epilogbereiche angegeben. Wenn in der Funktion mehr als 31 Bereiche vorhanden sind, muss das Feld " **Code Wörter** " auf 0 festgelegt werden, um anzugeben, dass ein Erweiterungs Wort erforderlich ist.
 
-      2. Wenn **E** auf 1 festgelegt ist, und klicken Sie dann dieses Feld gibt den Index des ersten entladungscodes an, die die und nur Epilog beschreibt.
+      2. Wenn **E** 1 ist, gibt dieses Feld den Index des ersten Entladungs Codes an, der das einzige Epilog beschreibt.
 
-   f. **Code Wörter** ist ein 5-Bit-Feld, der angibt, die Anzahl der 32-Bit-Wörter, die erforderlich sind, die alle entladungscodes in Abschnitt 3 enthält. Wenn mehr als 31 Wörter erforderlich sind (d. h. maximal 124 entladen Codebytes), und klicken Sie dann dieses Feld auf 0 festgelegt werden muss, um anzugeben, dass ein ausnahmewort erforderlich ist.
+   f. **Code Wörter** sind ein 5-Bit-Feld, das die Anzahl der 32-Bit-Wörter angibt, die erforderlich sind, um alle Entladungs Codes in Abschnitt 3 zu enthalten. Wenn mehr als 31 Wörter erforderlich sind (d. h., wenn mehr als 124 Entladungs Code Bytes vorhanden sind), muss dieses Feld den Wert 0 aufweisen, um anzugeben, dass ein Erweiterungs Wort erforderlich ist.
 
-   g. **Erweitert die Anzahl der Epilog** und **erweiterte Code Wörter** sind Felder 16-Bit- und 8-Bit-bzw., mehr Speicherplatz für die Codierung einer ungewöhnlich großen Anzahl von epilogen bereitstellen oder eine ungewöhnlich große Anzahl von entladen Code Wörter. Das erweiterungswort, enthält dieser Felder ist nur vorhanden, wenn beide die **Epilog Anzahl** und **Code Wörter** Felder im ersten headerwort werden auf 0 festgelegt.
+   g. **Erweiterte epilogcount** -und **Erweiterte Code Wörter** sind jeweils 16-Bit-und 8-Bit-Felder. Sie stellen mehr Speicherplatz für die Codierung einer ungewöhnlich großen Anzahl von Epilogs oder eine ungewöhnlich große Anzahl von Entladungs Codewörtern bereit. Das Erweiterungs Wort, das diese Felder enthält, ist nur vorhanden, wenn die Felder " **Epilog count** " und " **Code Words** " im ersten Header Wort den Wert "0" haben.
 
-1. Nach dem Header und optional erweiterte-Header, wenn oben beschriebenen **Epilog Anzahl** ist nicht 0 (null), ist eine Liste mit Informationen über Bereiche des Epilogs, um ein Wort gepackt und in der Reihenfolge zunehmender startoffsets gespeichert. Jeder Bereich enthält die folgenden Bits:
+1. Wenn **epilogcount** nicht 0 ist, wird eine Liste mit Informationen zu epilogbereichen, die in ein Wort gepackt sind, nach dem Header und dem optionalen erweiterten Header gesendet. Sie werden in der Reihenfolge gespeichert, in der Sie den Start Offset erhöhen Jeder Bereich enthält die folgenden Bits:
 
-   a. **Epilog starten Offset** ist ein 18-Bit-Feld, die den Offset in Bytes geteilt durch 4, der relativ zum Start der Funktion Epilog beschreibt.
+   a. Der **Epilogcode-Start Offset** ist ein 18-Bit-Feld, das den Offset in Bytes (dividiert durch 4) des Epilogcode relativ zum Anfang der Funktion aufweist.
 
-   b. **Res** ist ein 4-Bit-Feld, das für zukünftige Erweiterungen reserviert. Sein Wert muss 0 sein.
+   b. **Res** ist ein 4-Bit-Feld, das für zukünftige Erweiterungen reserviert ist. Sein Wert muss 0 sein.
 
-   c. **StartIndex Epilog** ein 10-Bit (2 Weitere Bits als **erweiterte Code Wörter**), der angibt, des Byte-Indexes des ersten Felds entladungscode, der diesen Epilog beschreibt.
+   c. Der **Epilog-Start Index** ist ein 10-Bit-Feld (2 mehr Bits als **Erweiterte Code Wörter**). Gibt den Byte Index des ersten Entladungs Codes an, der dieses Epilog beschreibt.
 
-1. Nachdem die Liste der Epilog Bereiche ein Array von Bytes, die entladungscodes enthalten wird, werden in einem späteren Abschnitt ausführlich beschrieben. Dieses Array ist am Ende aufgefüllt bis zur nächsten vollen Wortgrenze. Entladedaten-Codes in diesem Array, beginnend mit dem nächstgelegenen in den Hauptteil der Funktion, verschieben auf den Rändern der Funktion geschrieben werden. Die Bytes für jeden Code entladen werden in big-Endian-Reihenfolge, damit sie direkt abgerufen werden können beginnend mit dem höchstwertigen Byte zuerst gespeichert, die den Vorgang und die Länge der Rest des Codes identifiziert.
+1. Die Liste der epilogbereiche enthält ein Bytearray, das Entladungs Codes enthält, die in einem späteren Abschnitt ausführlich beschrieben werden. Dieses Array ist am Ende aufgefüllt bis zur nächsten vollen Wortgrenze. Entladungs Codes werden in dieses Array geschrieben. Sie beginnen mit dem, der dem Hauptteil der Funktion am nächsten ist, und bewegen sich an die Ränder der Funktion. Die Bytes für jeden Entladungs Code werden in Big-Endian-Reihenfolge gespeichert, sodass Sie direkt abgerufen werden können, beginnend mit dem signifikantesten ersten Byte, das den Vorgang und die Länge des restlichen Codes identifiziert.
 
-1. Nach den entladungscodebytes Wenn die **X** -Bit im Header wurde auf 1 festgelegt, wird die ausnahmehandlerinformationen. Dies besteht aus einer einzelnen **Ausnahme-Handler RVA** die Adresse des ausnahmehandlers selbst bereitstellen und unmittelbar danach ein variabler Länge, die Menge der Daten, die vom Ausnahmehandler erforderlich.
+1. Wenn das **X** -Bit in der Kopfzeile auf 1 festgelegt wurde, wird nach dem Entladungs Code Bytes die Ausnahmehandler-Informationen angezeigt. Sie besteht aus einem einzelnen **Ausnahmehandler-RVA** , der die Adresse des Ausnahme Handlers selbst bereitstellt. Es folgt sofort eine Menge an Daten variabler Länge, die vom Ausnahmehandler benötigt wird.
 
-Die oben genannten .xdata-Datensatz ist so entworfen, dass es möglich ist, den ersten 8 Bytes abzurufen, und berechnen aus, die die volle Größe des Datensatzes (abzüglich der Länge von die Ausnahmedaten mit variabler Größe, die folgt). Der folgende Codeausschnitt berechnet die Datensatzgröße:
+Der. XData-Datensatz ist so konzipiert, dass es möglich ist, die ersten 8 Bytes abzurufen und diese zur Berechnung der vollständigen Größe des Datensatzes zu verwenden, abzüglich der Länge der folgenden Ausnahme Daten mit variabler Größe. Der folgende Code Ausschnitt berechnet die Größe des Datensatzes:
 
 ```cpp
 ULONG ComputeXdataSize(PULONG *Xdata)
@@ -267,134 +268,135 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 }
 ```
 
-Beachten Sie, dass obwohl der Prolog und jeder Epilog hat einen eigenen Index in den entladungscodes, in der Tabelle genutzt gemeinsam und es ist durchaus möglich, dass (und nicht ganz selten), die sie die gleichen Codes gemeinsam verwenden können (siehe Beispiel 2 in den Beispielen im Abschnitt Bel zulassen). Compiler-Autoren sollten für diesen Fall insbesondere optimieren, da der größte Index, der angegeben werden können, 255, ist daher beschränken die Gesamtzahl der entladungscodes für eine bestimmte Funktion.
+Obwohl der Prolog und jedes Epilogcode über einen eigenen Index in die Entladungs Codes verfügen, wird die Tabelle zwischen Ihnen gemeinsam genutzt. Es ist durchaus möglich (und nicht ganz ungewöhnlich), dass Sie alle dieselben Codes gemeinsam nutzen können. (Ein Beispiel finden Sie in Beispiel 2 im Abschnitt " [Beispiele](#examples) ".) Compilerwriter sollten in diesem Fall optimiert werden, da der größte Index, der angegeben werden kann, 255 ist, was die Gesamtzahl der Entladungs Codes für eine bestimmte Funktion einschränkt.
 
-### <a name="unwind-codes"></a>Entladungscodes
+### <a name="unwind-codes"></a>Entladungs Codes
 
-Das Array an entladungscodes ist sequenzenpool, der genau, wie die Auswirkungen der Prolog, in der Reihenfolge rückgängig machen beschreibt, in denen die Vorgänge rückgängig gemacht werden müssen. Die entladungscodes können als ein Satz von minianweisungen, als eine Zeichenfolge von Bytes codiert betrachtet werden. Wenn die Ausführung abgeschlossen ist, an die aufrufende Funktion die Rückgabeadresse im Lr-Register ist, und alle nicht flüchtigen Register werden auf die Werte zurückgesetzt, zu dem Zeitpunkt, der die Funktion aufgerufen wurde.
+Das Array von Entladungs Codes ist ein Pool von Sequenzen, die genau beschreiben, wie die Auswirkungen des Prologs rückgängig gemacht werden, und in derselben Reihenfolge gespeichert werden, in der die Vorgänge rückgängig gemacht werden müssen. Die Entladungs Codes können als ein kleiner Anweisungs Satz angesehen werden, der als eine Zeichenfolge von Bytes codiert ist. Wenn die Ausführung beendet ist, befindet sich die Rückgabeadresse der aufrufenden Funktion im LR-Register. Und alle nicht flüchtigen Register werden zu dem Zeitpunkt wieder hergestellt, an dem die Funktion aufgerufen wurde.
 
-Wenn Ausnahmen garantiert immer nur innerhalb einer Funktion (und nicht mit einem Prolog oder jeder Epilog) ausgeführt wurden, klicken Sie dann wäre nur eine einzigen Sequenz erforderlich. Windows-entlademodell erfordert jedoch, dass es innerhalb eines teilweise ausgeführten Prologs oder Epilogs aus zu entladen werden. Um diese Anforderungen zu erfüllen, wurden die entladungscodes sorgfältig entworfen, dass sie eindeutig 1:1 zu jedem relevanten Opcode im Prolog und Epilog zugeordnet. Das hat eine Reihe von Auswirkungen:
+Wenn Ausnahmen immer nur innerhalb eines Funktions Texts und nie innerhalb eines Prologs oder Epilogs auftreten, ist nur eine einzige Sequenz erforderlich. Das Windows-Entladungs Modell erfordert jedoch, dass der Code innerhalb eines teilweise ausgeführten Prologs oder Epilogs entladen werden kann. Um diese Anforderung zu erfüllen, wurden die Entladungs Codes sorgfältig entworfen, sodass Sie 1:1 allen relevanten Opcodes im Prolog und Epilog eindeutig zuordnen. Dieser Entwurf hat mehrere Auswirkungen:
 
-1. Durch zählen der Anzahl von entladungscodes, ist es möglich, die die Länge der Prolog und Epilog zu berechnen.
+1. Durch zählen der Anzahl von Entladungs Codes ist es möglich, die Länge von Prolog und Epilog zu berechnen.
 
-1. Durch zählen der Anzahl von Anweisungen nach dem Start eines Bereichs Epilog, es ist möglich, die gleiche Anzahl von entladungscodes zu überspringen, und führen den Rest einer Sequenz in die teilweise ausgeführte abgeschlossen entladen wird, dass der Epilog durchgeführt wurde.
+1. Wenn Sie die Anzahl der Anweisungen über den Anfang eines epilogesscope hinweg zählen, ist es möglich, die entsprechende Anzahl von Entladungs Codes zu überspringen. Anschließend können wir den Rest einer Sequenz ausführen, um die teilweise ausgeführte Entladung durch das Epilog abzuschließen.
 
-1. Durch zählen der Anzahl von Anweisungen vor dem Ende der Prolog, ist es möglich, die gleiche Anzahl von entladungscodes zu überspringen, und führen den Rest der Sequenz, die nur die Teile des Prologs rückgängig zu machen, die Ausführung abgeschlossen ist.
+1. Wenn Sie die Anzahl der Anweisungen vor dem Ende des Prologs zählen, ist es möglich, die entsprechende Anzahl von Entladungs Codes zu überspringen. Anschließend können wir den Rest der Sequenz ausführen, um nur die Teile des Prologs rückgängig zu machen, deren Ausführung abgeschlossen ist.
 
-Gemäß der folgenden Tabelle werden die entladungscodes codiert wird. Alle entladungscodes sind eine einzelne/Doppelbyte, mit Ausnahme der, die einen großen Stapel zuordnet. Es sind völlig 21 entladungscode. Jede Entladung Code Maps genau eine Anweisung in die Prolog-und Epilogcode um für die Entladung teilweise ausgeführter Prologe und Epiloge zu ermöglichen.
+Die Entladungs Codes werden gemäß der folgenden Tabelle codiert. Alle Entlade Codes sind ein einzelnes/doppeltes Byte, mit Ausnahme derjenigen, die einen riesigen Stapel zuordnet. Vollständig ist 21 Entladungs Code vorhanden. Jeder Entladungs Code ordnet genau eine Anweisung im Prolog/Epilog zu, um das Entladen teilweise ausgeführter Prologe und Epilogs zu ermöglichen.
 
-|Entladungscode|Bits und interpretation|
+|Entladungs Code|Bits und Interpretation|
 |-|-|
-|`alloc_s`|000xxxxx: Zuordnen von kleinen Stapel mit einer Größe \< 512 (2 ^ 5 * 16).|
-|`save_r19r20_x`|    001zzzzz: Speichern \<X19, X20 > an [sp-#Z * 8]!, vorab indizierte Offset > =-248 |
-|`save_fplr`|        01zzzzzz: Speichern \<X29, Lr > gekoppelt werden am [sp + #Z * 8], Offset \<= 504. |
-|`save_fplr_x`|        10zzzzzz: Speichern \<X29, Lr > gekoppelt werden am [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-512 |
-|`alloc_m`|        bis jetzt 11000xxx'Xxxxxxxx: Zuordnen von besetzen mit einer Größe \< 16 KB (2 ^ 11 * 16). |
-|`save_regp`|        110010xx "Xxzzzzzz: Speichern von x(19+#X)-Paar an [sp + #Z * 8], Offset \<= 504 |
-|`save_regp_x`|        110011xx "Xxzzzzzz: Speichern von Paar x(19+#X) an [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-512 |
-|`save_reg`|        110100xx "Xxzzzzzz: Speichern Sie die Reg-x(19+#X) am [sp + #Z * 8], Offset \<= 504 |
-|`save_reg_x`|        1101010 X "Xxxzzzzz: Speichern Sie die Reg-x(19+#X) auf [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-256 |
-|`save_lrpair`|         1101011 X'Xxzzzzzz: Speichern von Paar \<X (19 + 2 *#X), Lr > am [sp + #Z*8], Offset \<= 504 |
-|`save_fregp`|        1101100 X'Xxzzzzzz: Speichern von Paar d(8+#X) am [sp + #Z * 8], Offset \<= 504 |
-|`save_fregp_x`|        1101101 X'Xxzzzzzz: Speichern Sie Paar d(8+#X), [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-512 |
-|`save_freg`|        1101110 X'Xxzzzzzz: Speichern Sie die Reg-d(8+#X) am [sp + #Z * 8], Offset \<= 504 |
-|`save_freg_x`|        11011110' Xxxzzzzz: Speichern Sie die Reg-d(8+#X) auf [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-256 |
-|`alloc_l`|         11100000' Xxxxxxxx 'Xxxxxxxx' Xxxxxxxx: Zuordnen von besetzen mit einer Größe \< 256 MB (2 ^ 24 * 16) |
-|`set_fp`|        11100001: Richten Sie X29: mit: Mov X29, sp |
-|`add_fp`|        11100010' Xxxxxxxx: X29 mit einrichten: Hinzufügen von X29, sp, #x * 8 |
-|`nop`|            11100011: keine Entladung Vorgang erforderlich ist. |
-|`end`|            11100100: Ende der entladungscodes. Impliziert ret im Epilog. |
-|`end_c`|        11100101: Ende entladungscode im aktuellen verketteten Bereich. |
-|`save_next`|        11100110: Speichern des nächsten nicht flüchtigen Int oder FP registrieren Paar. |
-|`arithmetic(add)`|    11100111' 000zxxxx: Lr Cookie reg(z) hinzugefügt (0 = X28, 1 = sp); Hinzufügen von Lr, Lr, reg(z) |
-|`arithmetic(sub)`|    11100111'001zxxxx: sub cookie reg(z) from lr (0=x28, 1=sp); sub lr, lr, reg(z) |
-|`arithmetic(eor)`|    11100111' 010zxxxx: Eor Lr mit Cookie reg(z) (0 = X28, 1 = sp); Eor Lr, Lr, reg(z) |
-|`arithmetic(rol)`|    11100111' 0110xxxx: simulierten Rol von Lr mit Cookie Reg (x28); xip0 = Neg X28; Ror Lr, xip0 |
-|`arithmetic(ror)`|    11100111' 100zxxxx: Ror Lr mit Cookie reg(z) (0 = X28, 1 = sp); Ror Lr, Lr, reg(z) |
-| |            11100111: Xxxz---: – reserviert |
-| |              11101xxx: reserviert für benutzerdefinierte Stack folgenden Anwendungsfälle generiert nur für Asm-Routinen |
-| |              11101001: Benutzerdefinierte Stapel für MSFT_OP_TRAP_FRAME |
-| |              11101010: Benutzerdefinierte Stapel für MSFT_OP_MACHINE_FRAME |
-| |              11101011: Benutzerdefinierte Stapel für MSFT_OP_CONTEXT |
-| |              1111xxxx: reservierte |
+|`alloc_s`|000XXXXX: Zuordnen eines kleinen Stapels mit der Größe \< 512 (2 ^ 5 * 16).|
+|`save_r19r20_x`|    001zzzzz: speichert \<x19, x20 > Paar bei `[sp-#Z*8]!`, vorindizierter Offset > =-248 |
+|`save_fplr`|        01zzzzzz: speichert \<x29, LR > Pair bei `[sp+#Z*8]`, Offset \< = 504. |
+|`save_fplr_x`|        10zzzzzz: speichert \<x29, LR > Paar bei `[sp-(#Z+1)*8]!`, vorindizierter Offset > =-512 |
+|`alloc_m`|        11000xxx' xxxxxxxx: großen Stapel mit Größe \< 16K (2 ^ 11 * 16) zuordnen. |
+|`save_regp`|        110010xx' xxzzzzzz: Save x (19 + #X) Pair bei `[sp+#Z*8]`, Offset \< = 504 |
+|`save_regp_x`|        110011xx' xxzzzzzz: Save Pair x (19 + #X) bei `[sp-(#Z+1)*8]!`, vorindizierter Offset > =-512 |
+|`save_reg`|        110100xx' xxzzzzzz: Save reg x (19 + #X) bei `[sp+#Z*8]`, Offset \< = 504 |
+|`save_reg_x`|        1101010x' xxxzzzzz: Save reg x (19 + #X) bei `[sp-(#Z+1)*8]!`, vorindizierter Offset > =-256 |
+|`save_lrpair`|         1101011x' xxzzzzzz: Save Pair \<x (19 + 2 * #X), LR > bei `[sp+#Z*8]`, Offset \< = 504 |
+|`save_fregp`|        1101100x' xxzzzzzz: Save Pair d (8 + #X) bei `[sp+#Z*8]`, Offset \< = 504 |
+|`save_fregp_x`|        1101101x' xxzzzzzz: Save Pair d (8 + #X), at `[sp-(#Z+1)*8]!`, vorindizierter Offset > =-512 |
+|`save_freg`|        1101110x' xxzzzzzz: Save reg d (8 + #X) bei `[sp+#Z*8]`, Offset \< = 504 |
+|`save_freg_x`|        11011110 "xxxzzzzz: Save reg d (8 + #X) bei `[sp-(#Z+1)*8]!`, vorindizierter Offset > =-256 |
+|`alloc_l`|         11100000 ' xxxxxxxxxxxxxxxxxxxxxxxxxx ' xxxxxxxx: Zuordnen eines großen Stapels mit der Größe \< 256M (2 ^ 24 * 16) |
+|`set_fp`|        11100001: x29 einrichten: mit: `mov x29,sp` |
+|`add_fp`|        11100010 ' xxxxxxxx: Set up x29 with: `add x29,sp,#x*8` |
+|`nop`|            11100011: Es ist kein Entladevorgang erforderlich. |
+|`end`|            11100100: Ende des Entladungs Codes. Impliziert ret in Epilog. |
+|`end_c`|        11100101: Ende des Entladungs Codes im aktuellen verketteten Bereich. |
+|`save_next`|        11100110: das nächste nicht flüchtige int-oder FP-Registrierungs paar speichern. |
+|`arithmetic(add)`|    11100111 "000zxxxx: Hinzufügen von Cookie reg (z) zu LR (0 = x28, 1 = SP); `add lr, lr, reg(z)` |
+|`arithmetic(sub)`|    11100111 ' 001zxxxx: Sub Cookie reg (z) from LR (0 = x28, 1 = SP); `sub lr, lr, reg(z)` |
+|`arithmetic(eor)`|    11100111 ' 010zxxxx: EOR LR with Cookie reg (z) (0 = x28, 1 = SP); `eor lr, lr, reg(z)` |
+|`arithmetic(rol)`|    11100111 ' 0110xxxx: simulierte Anmeldung von LR mit Cookie reg (x28); xip0 = NETg x28; `ror lr, xip0` |
+|`arithmetic(ror)`|    11100111 ' 100zxxxx: ROR LR with Cookie reg (z) (0 = x28, 1 = SP); `ror lr, lr, reg(z)` |
+| |            11100111: xxxz-----: reserviert---- |
+| |              11101xxx: reserviert für benutzerdefinierte Stapel Fälle unten nur für ASM-Routinen generiert |
+| |              11101000: Benutzerdefinierter Stapel für MSFT_OP_TRAP_FRAME |
+| |              11101001: Benutzerdefinierter Stapel für MSFT_OP_MACHINE_FRAME |
+| |              11101010: Benutzerdefinierter Stapel für MSFT_OP_CONTEXT |
+| |              11101100: Benutzerdefinierter Stapel für MSFT_OP_CLEAR_UNWOUND_TO_CALL |
+| |              1111xxxx: reserviert |
 
-In Anweisungen mit großen Werten umfassen mehrere Bytes werden die höchstwertigen Bits zuerst gespeichert werden. Die oben genannten entladungscodes sind so entworfen, dass durch das erste Byte des Codes einfach überprüfen, kennen die Gesamtgröße in Bytes des entladungscodes möglich ist. Angesichts der Tatsache, dass jede entladungscode genau eine Anweisung in Prolog-und Epilogcode zugeordnet ist, um die Größe der Prolog oder Epilog berechnen muss erfolgen lediglich, ab dem Anfang der Sequenz durchlaufen, bis zum Ende, eine Nachschlagetabelle oder ähnliches Gerät verwenden, um zu bestimmen, wie lange der cor reagiert Opcode ist.
+In Anweisungen mit großen Werten, die mehrere Bytes abdecken, werden die wichtigsten Bits zuerst gespeichert. Mit diesem Entwurf können Sie die Gesamtgröße des Entladungs Codes in Bytes ermitteln, indem Sie nur das erste Byte des Codes suchen. Da jeder Entladungs Code genau einer Anweisung in einem Prolog oder Epilog zugeordnet ist, können Sie die Größe des Prologs oder Epilogs berechnen. Sie können vom Anfang der Sequenz bis zum Ende gehen und eine Nachschlage Tabelle oder ein ähnliches Gerät verwenden, um zu bestimmen, wie lange der entsprechende Opcode ist.
 
-Beachten Sie, dass nach dem indizierten Offset Adressierung im Prolog nicht zulässig ist. Alle Offset Bereiche (#Z) entsprechen, die Codierung der STP/STR-Adressierung, mit Ausnahme von `save_r19r20_x` in welche 248 ausreichend ist für alle Bereiche (10 Int-Register + 8 FP-Register + 8 Eingabe Register) zu speichern.
+Die nach indizierte Offset Adressierung ist in einem Prolog nicht zulässig. Alle Offset Bereiche (#Z) entsprechen der Codierung der STP/Str-Adressierung mit Ausnahme von `save_r19r20_x`, wobei 248 für alle Speicherbereiche ausreichend ist (10 int-Register + 8 FP-Register + 8 Eingabe Register).
 
-`save_next` Führen Sie einen Speichervorgang für Int oder FP Volatile registrieren Paar müssen: `save_regp`, `save_regp_x`, `save_fregp`, `save_fregp_x`, `save_r19r20_x`, oder einen anderen `save_next`. Nächste Register-Paar an die nächste 16-Byte-Slot in der Reihenfolge "wachsende einrichten" gespeichert. `save-next` nach einem `save_next` , das das letzte Int-Register-Paar bezieht sich auf die ersten Paar der FP-Register bezeichnet.
+`save_next` muss einem Save for int-oder FP volatile-Registrierungs paar folgen: `save_regp`, `save_regp_x`, `save_fregp`, `save_fregp_x`, `save_r19r20_x` oder einer anderen `save_next`. Dabei wird das nächste Registerpaar beim nächsten 16-Byte-Slot in der Reihenfolge "wächst" gespeichert. Ein `save_next` verweist auf das erste FP-Registerpaar, wenn es auf den `save-next` folgt, der das letzte int-Registerpaar angibt.
 
-Da die Größe der regulären zurückkehren und springen Anweisungen identisch sind, besteht keine Notwendigkeit, der eine getrennte `end` entladungscode Endeaufruf-Szenarien.
+Da die Größe der regulären Rückgabe-und Sprung Anweisungen gleich ist, besteht keine Notwendigkeit, dass ein getrennter `end`-Entladungs Code für Endaufruf Szenarios erforderlich ist.
 
-`end_c` Dient zum Behandeln von nicht zusammenhängenden funktionsfragmente zu Optimierungszwecken. Ein `end_c` gibt an das Ende des entladungscodes im aktuellen Bereich muss durch eine andere Reihe von entladungscodes endete mit einem echten folgen `end`. Die entladungscodes zwischen `end_c` und `end` Prolog Vorgänge im übergeordneten Bereich ("phantom" Prolog) darstellen.  Weitere Informationen und Beispiele werden im Abschnitt unten beschrieben.
+`end_c` ist so konzipiert, dass nicht zusammenhängende Funktions Fragmente zu Optimierungszwecken verarbeitet werden. Ein `end_c`, das das Ende der Entladungs Codes im aktuellen Bereich anzeigt, muss von einer anderen Reihe von Entladungs Codes gefolgt werden, die mit einem echten `end` beendet wurden. Die Entladungs Codes zwischen `end_c` und `end` stellen die Prolog-Vorgänge in der übergeordneten Region ("Phantom"-Prolog) dar.  Weitere Details und Beispiele werden im folgenden Abschnitt beschrieben.
 
-### <a name="packed-unwind-data"></a>Gepackte Entladedaten
+### <a name="packed-unwind-data"></a>Entpackte Entladedaten
 
-Für Funktionen, deren prologen und epilogen folgen, die die kanonische Form im folgenden beschrieben gepackt, entladen Daten verwendet werden können, entfällt ein .xdata-Datensatz vollständig und erheblich reduzieren die Kosten der Bereitstellung Entladung der Daten. Den kanonischen prologen und epilogen sollen die Anforderungen der allgemeinen einer einfachen Funktion, die einen Ausnahmehandler nicht erfordert, und die Setup- und Beendigungsfunktionen Vorgänge in der standardmäßigen Reihenfolge ausführt.
+Für Funktionen, deren Prologe und Epilogs der unten beschriebenen kanonischen Form folgen, können gepackte Entladedaten verwendet werden. Es entfällt, dass ein. XData-Datensatz vollständig benötigt wird, und reduziert die Kosten für die Bereitstellung von Entladedaten erheblich. Die kanonischen Prologe und Epilogs sind so konzipiert, dass Sie die allgemeinen Anforderungen einer einfachen Funktion erfüllen: Eine, die keinen Ausnahmehandler benötigt und deren Setup-und Beendigungs-Vorgänge in einer Standard Reihenfolge durchführt.
 
-Das Format eines .pdata-Datensatzes mit gepackte Entladedaten Daten sieht wie folgt aus:
+Das Format eines pData-Datensatzes mit gepackten Entladedaten sieht wie folgt aus:
 
-![.pdata-Datensatz mit gepackte Entladedaten](media/arm64-exception-handling-packed-unwind-data.png ".pdata-Datensatz mit gepackte Entladedaten")
+![pData-Datensatz mit gepackten Entladungs Daten](media/arm64-exception-handling-packed-unwind-data.png ". pdata-Datensatz mit gepackten Entladedaten")
 
-Die Felder sind wie folgt aus:
+Die Felder lauten wie folgt:
 
-- **Funktion RVA starten** ist die 32-Bit-RVA des Starts der Funktion.
-- **Flag** ist ein 2-Bit-Feld, wie oben beschrieben, die folgende Bedeutung:
-  - 00 = gepackte Entladedaten nicht verwendet. Zeigen Sie die verbleibenden Bits auf kein .xdata-Datensatz
-  - 01 = gepackte Entladedaten verwendet werden, wie unten beschrieben, mit einzelnen Prolog und Epilog am Anfang und Ende des Bereichs
-  - 10 = gepackte Entladedaten verwendet werden, wie unten beschrieben, für Code ohne Prolog- und Epilog; Dies ist nützlich, wenn getrennte Funktion Segmente.
+- **RVA für Funktions Start** ist die 32-Bit-RVA des Starts der Funktion.
+- **Flag** ist ein 2-Bit-Feld, wie oben beschrieben, mit der folgenden Bedeutung:
+  - 00 = gepackte Entladedaten werden nicht verwendet. verbleibende Bits zeigen auf einen. XData-Datensatz
+  - 01 = gepackte Entladedaten, die mit einem einzelnen Prolog und Epilogcode am Anfang und Ende des Bereichs verwendet werden
+  - 10 = gepackte Entladedaten, die für Code ohne Prolog und Epilog verwendet werden. Nützlich zum beschreiben getrennter Funktions Segmente
   - 11 = reserviert.
-- **Länge-Funktion** ist ein 11-Bit-Feld, das die Länge der gesamten Funktion in Bytes geteilt durch 4 bereitstellt. Wenn die Funktion größer als 8 KB ist, muss stattdessen ein voller .xdata-Datensatz verwendet werden.
-- **Frame-Größe** ist ein 9-Bit-Feld, der angibt, der Anzahl der Bytes vom Stapel, der für diese Funktion, geteilt durch 16 zugeordnet ist. Funktionen, die größer als (8 KB – 16) Bytes an Stapelspeicher reservieren müssen einen vollständiger .xdata-Datensatz verwenden. Dies schließt die lokale Variable Bereich ausgehende Eingabeaufforderungsbereich für Parameter vom aufgerufenen gespeicherten Int und FP-Bereich und home Parameterbereich aus, jedoch ohne die dynamische Zuordnung Bereich.
-- **CR** ist ein 2-Bit-Flag gibt an, ob die Funktion zusätzliche Anweisungen zum Einrichten einer rahmenkette und die return-Link schließt:
-  - 00 = nicht verkettete Funktion \<X29, Lr > Paar nicht im Stapel gespeichert.
-  - 01 = nicht verkettete Funktion \<Lr > wird im Stapel gespeichert
-  - 10 = reserviert.
-  - 11 = verketteten-Funktion eine Store/Load-Paar-Anweisung wird verwendet, in die Prolog-und Epilogcode \<X29, Lr >
-- **H** ist ein 1-Bit-Flag gibt an, ob die Funktion der herausgreift registriert (X0-X7), indem sie am Anfang der Funktion zu speichern. (0 = Register nicht heraus, 1 = greift Register).
-- **RegI** ist ein 4-Bit-Feld, der angibt, der Anzahl der nicht flüchtigen INT-Register (X19-X28) in den kanonischen Stapelspeicherort gespeichert.
-- **RegF** ist ein 3-Bit-Feld, der angibt, der Anzahl der nicht flüchtigen FP-Register (d8-d15) in den kanonischen Stapelspeicherort gespeichert. (RegF = 0: kein FP-Register gespeichert; RegF > 0: RegF + 1 FP-Register gespeichert). Gepackte Entladedaten-Daten können nicht verwendet werden, für die Funktion, bei denen nur ein FP-Register gespeichert.
+- Die **Funktions Länge** ist ein 11-Bit-Feld, das die Länge der gesamten Funktion in Bytes, dividiert durch 4, bereitstellt. Wenn die Funktion größer als 8K ist, muss stattdessen ein vollständiger XData-Datensatz verwendet werden.
+- Die **Frame Größe** ist ein 9-Bit-Feld, das die Anzahl der für diese Funktion zugeordneten Stapel Stapel dividiert durch 16 angibt. Funktionen, die mehr als (8K-16) Bytes an Stapel zuordnen, müssen einen vollständigen. XData-Datensatz verwenden. Sie enthält den Bereich lokale Variable, den Bereich für ausgehende Parameter, den aufgerufenen, den Bereich für int und FP und den Bereich für den Startparameter, aber den dynamischen Zuordnungs Bereich.
+- **CR** ist ein 2-Bit-Flag, das angibt, ob die Funktion zusätzliche Anweisungen zum Einrichten einer Frame Kette und Zurückgeben von Links enthält:
+  - 00 = nicht verkettete Funktion, \<x29, LR > Paar nicht im Stapel gespeichert wird.
+  - 01 = nicht verkettete Funktion, \<LR > im Stapel gespeichert
+  - 10 = reserviert;
+  - 11 = verkettete Funktion, eine Store-/Auslastungs-paar-Anweisung wird im Prolog-/Epilog-\<x29, LR verwendet >
+- **H** ist ein 1-Bit-Flag, das angibt, ob die Funktion die ganzzahligen Parameter Register (X0-x7) untersucht, indem Sie am Anfang der Funktion gespeichert werden. (0 = registriert keine Start Register, 1 = Häuser Register).
+- **RegI** ist ein 4-Bit-Feld, das die Anzahl der nicht flüchtigen int-Register (x19-x28) angibt, die am kanonischen Stapel Speicherort gespeichert sind.
+- **Regf** ist ein 3-Bit-Feld, das die Anzahl der nicht flüchtigen FP-Register (D8-D15) angibt, die am kanonischen Stapel Speicherort gespeichert sind. (Regf = 0: Es wird kein FP-Register gespeichert. Regf > 0: "Regf + 1 FP-Register" werden gespeichert). Gepackte Entladedaten können nicht für Funktionen verwendet werden, bei denen nur ein FP-Register gespeichert wird.
 
-Kanonischen Prologe, die in Kategorien 1, 2 (ohne ausgehenden Eingabeaufforderungsbereich für Parameter), 3 und 4 im obigen Abschnitt fallen können durch gepackte entladeformat dargestellt werden.  Mit Ausnahme von der epilogen für kanonische Funktionen sehr ähnlichen Form, führen Sie **H** hat keine Auswirkungen, die `set_fp` Anweisung ausgelassen wird, und die Reihenfolge der Schritte sowie Anweisungen in den einzelnen Schritten im Epilog umgekehrt werden. Der Algorithmus für gepackte Xdata: Diese Schritte aus, in der folgenden Tabelle beschrieben
+Kanonische Prologe, die in die Kategorien 1, 2 (ohne ausgehenden Parameter Bereich), 3 und 4 im obigen Abschnitt fallen, können durch das gepackte Entlade Format dargestellt werden.  Die Epilogs für kanonische Funktionen folgen einem ähnlichen Formular, außer **H** hat keine Auswirkung, die `set_fp`-Anweisung wird ausgelassen, und die Reihenfolge der Schritte und die Anweisungen in jedem Schritt werden im Epilog umgekehrt. Der-Algorithmus für "gepackt. XData" folgt den folgenden Schritten, die in der folgenden Tabelle beschrieben werden:
 
-Schritt 0: Führen Sie die erforderliche Berechnung der Größe der einzelnen Bereiche.
+Schritt 0: Berechnen Sie die Größe der einzelnen Bereiche vorab.
 
-Schritt 1: Int aufgerufenen gespeicherten Register zu speichern.
+Schritt 1: Speichern Sie die in int aufgerufenen gespeicherten Register.
 
-Schritt 2: Dieser Schritt ist für Typ 4 in den frühen Abschnitten. LR wird am Ende der Int-Bereich gespeichert.
+Schritt 2: Dieser Schritt ist für Typ 4 in den frühen Abschnitten spezifisch. LR wird am Ende des int-Bereichs gespeichert.
 
-Schritt 3: FP aufgerufenen gespeicherten Register zu speichern.
+Schritt 3: Speichert die vom FP aufgerufenen gespeicherten Register.
 
-Schritt 4: Speichern Sie im Bereich home input-Argumente.
+Schritt 4: Speichern Sie die Eingabeargumente im Startparameter Bereich.
 
-Schritt 5: Ordnen Sie die verbleibenden Stapel, einschließlich LAN, \<X29, Lr > Kopplung und der ausgehende Eingabeaufforderungsbereich für Parameter. 5a entspricht kanonischen Typs 1. 5 und 5c sind für kanonische Typ 2. 5D und 5e für beide Typ 3 und 4 geben.
+Schritt 5: Weisen Sie den verbleibenden Stapel zu, einschließlich lokaler Bereiche, \<x29, LR > Pair und Bereich für ausgehende Parameter. 5a entspricht dem kanonischen Typ 1. 5B und 5C sind für den kanonischen Typ 2. 5D und 5E sind für Typ 3 und Typ 4.
 
-Schritt #|Flagwerte|Anzahl von Anweisungen|Opcode|Entladungscode
+Schritt #|Flagwerte|Anzahl von Anweisungen|Opcode|Entladungs Code
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **RegI** <= 10|RegI / 2 + **RegI** % 2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+1|0 < **RegI** < = 10|REGI/2 + **RegI** %2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
 2|**CR**==01*|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
-3|0 < **RegF** <=7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2).|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
+3|0 < **regf** < = 7|(Regf + 1)/2 +<br/>(Regf + 1) %2)|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
 4|**H** == 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**CR** == 11 && #locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+5a|**CR** == 11 && #locsz<br/> < = 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
 5 b|**CR** == 11 &&<br/>512 < #locsz <= 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5c|**CR** == 11 && #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5C|**CR** == 11 && #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
 5D|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
 5e|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
-\* Wenn **CR** == 01 und **RegI** eine ungerade Zahl ist, Schritt2 und letzten Save_rep in Schritt 1 in einem Save_regp zusammengeführt werden.
+\*, wenn **CR** = = 01 und **RegI** eine ungerade Zahl ist, werden Schritt 2 und Last save_rep in Schritt 1 zu einem save_regp zusammengeführt.
 
-\*\* Wenn **RegI** == **CR** == 0 (null) und **RegF** ! = 0 ist, das erste stp aus, für die Gleitkommazahlen der prädekrement ist.
+\* @ no__t-1 Wenn **RegI** == **CR** = = 0 und **regf** ! = 0, führt die erste STP für den Gleit Komma Wert für die prädekrement.
 
-\*\*\* Keine Anweisung entspricht `mov x29,sp` im Epilog vorhanden ist. Gepackt entladen Daten können nicht verwendet werden, wenn eine Funktion Wiederherstellung sp aus X29 erforderlich ist.
+\* @ no__t-1 @ no__t-2 im Epilog ist keine Anweisung vorhanden, die `mov x29,sp` entspricht. Gepackte Entladedaten können nicht verwendet werden, wenn eine Funktion eine Wiederherstellung von SP von x29 erfordert.
 
-### <a name="unwinding-partial-prologs-and-epilogs"></a>Entladung teilweise prologen und epilogen
+### <a name="unwinding-partial-prologs-and-epilogs"></a>Entwickeln von partiellen Prologe und Epilogs
 
-Die am häufigsten verwendete Entladung Situation ist eine aufgetreten ist, in dem die Ausnahme oder der Aufruf im Hauptteil der Funktion von Prolog und allen epilogen. In diesem Fall entladen ist unkompliziert: der Entlader einfach beginnt mit der Ausführung von Codes in der Entladung-Array, beginnend bei Index 0 und fortsetzen, bis ein endopcode festgestellt wird.
+Die häufigste entlockende Situation ist eine, bei der die Ausnahme oder der Rückruf im Hauptteil der Funktion aufgetreten ist, und nicht im Prolog und allen Epilogs. In dieser Situation ist das Entladen ganz einfach: der Entlader beginnt einfach mit dem Ausführen der Codes im Entlade Array, beginnend bei Index 0 und wird fortgesetzt, bis ein endopcode erkannt wird.
 
-Es ist schwieriger, in dem Fall ordnungsgemäß entladen, in dem eine Ausnahme oder ein Interrupt tritt auf, während der Ausführung von einem Prolog oder Epilog. Klicken Sie in diesen Fällen der Stapelrahmen nur teilweise erstellt wird, und der Trick besteht darin zu bestimmen, genau ausgeführt wurden um korrekt rückgängig machen.
+Es ist schwieriger, in dem Fall, in dem eine Ausnahme oder ein Interrupt auftritt, beim Ausführen eines Prologs oder Epilogs ordnungsgemäß entladen zu werden. In diesen Fällen wird der Stapel Rahmen nur teilweise konstruiert. Das Problem besteht darin, genau zu bestimmen, was geschehen ist, um es ordnungsgemäß rückgängig zu machen.
 
-Führen Sie beispielsweise diese Prolog und Epilog-Sequenz:
+Nehmen Sie z. b. diese Prolog-und Epilogsequenz an:
 
 ```asm
 0000:    stp    x29,lr,[sp,#-256]!          // save_fplr_x  256 (pre-indexed store)
@@ -409,37 +411,37 @@ Führen Sie beispielsweise diese Prolog und Epilog-Sequenz:
 0110:    ret    lr                          // end
 ```
 
-Neben jedem Opcode befindet sich der entsprechende entladungscode, der diesen Vorgang beschreibt. Die erste, was zu beachten ist, dass die Reihe von entladungscodes für den Prolog eine genaue Gegenstück, der die entladungscodes für den Epilog (ohne Berücksichtigung der letzten Anweisung des Epilogs). Dies ist eine gängige Situation, und aus diesem Grund die Entladung Codes für den Prolog sind immer davon ausgegangen, dass von Ausführungsreihenfolge für den Prolog in umgekehrter Reihenfolge gespeichert werden.
+Neben jedem Opcode ist der passende Entlade Code, der diesen Vorgang beschreibt. Sie können sehen, wie die Reihe von Entladungs Codes für den Prolog ein genaues Spiegelbild der Entladungs Codes für das Epilogcode ist (ohne die abschließende Anweisung des Epilogcode). Es ist eine gängige Situation, weshalb wir immer annehmen, dass die Entladungs Codes für den Prolog in umgekehrter Reihenfolge in der Ausführungsreihenfolge des Proxys gespeichert werden.
 
-Daher sind für den Prolog und Epilog, einen gemeinsamen Satz an entladungscodes bleibt:
+Für Prolog und Epilog haben wir also einen gemeinsamen Satz von Entladungs Codes:
 
 `set_fp`, `save_regp 0,240`, `save_fregp,0,224`, `save_fplr_x_256`, `end`
 
-Ab der Epilog-Fall (Weitere einfache unverändert in der normalen Reihenfolge), bei Offset 0 im Epilog (die am Offset 0 x 100 in der Funktion startet), würden wir erwarten, dass führen Sie die volle entladesequenz aus, da noch keine Bereinigung vorgenommen wurde. Wenn wir uns einer Anweisung (am Offset 2 im Epilog) finden, können wir erfolgreich entladen, durch den ersten entladungscodes zu überspringen. Diese Situation zu verallgemeinern, vorausgesetzt eine 1:1-Zuordnung von Opcodes und entladungscodes, wir können angeben, wenn wir von n der Anweisung im Epilog entladen werden, wir sollten die ersten n entladungscodes zu überspringen und von dort ausführen.
+Der Epilogcode-Fall ist einfach, da er in normaler Reihenfolge ist. Beginnend bei Offset 0 innerhalb des Epilogcode (der bei Offset 0x100 in der Funktion beginnt), wird erwartet, dass die vollständige Entlade Sequenz ausgeführt wird, da noch kein Bereinigung durchgeführt wurde. Wenn wir uns eine Anweisung in (am Offset 2 im Epilog) befinden, können wir den ersten Entladungs Code überspringen. Wir können diese Situation generalisieren und annehmen, dass eine 1:1-Zuordnung zwischen Opcodes und Entladungs Codes vorliegt. Um mit der Entladung von Anweisung *n* im Epilog zu beginnen, sollten die ersten *n* Entladungs Codes übersprungen und die Ausführung von dort aus begonnen werden.
 
-Es stellt sich heraus, dass für die funktioniert mit einer ähnlichen Logik für den Prolog, außer in umgekehrter Reihenfolge. Wenn wir die Entladung von Offset 0 im Prolog sind, möchten wir nichts ausgeführt. Wenn wir bei Offset 2, Entladen der einer Anweisung ist, dann sollten wir Starten der Ausführung der Entladung Sequenz einen entladungscode vom Ende (Beachten Sie, dass die Codes in umgekehrter Reihenfolge gespeichert werden). Und hier auch wir können generalisieren, wenn wir die Entladung von Anweisung n im Prolog sind, wir beginnen sollten, n entladungscodes vom Ende der Liste der Codes ausführen.
+Es stellt sich heraus, dass eine ähnliche Logik für den Prolog funktioniert, außer in umgekehrter Reihenfolge. Wenn wir mit der Auflösung von Offset 0 im Prolog beginnen, möchten wir nichts ausführen. Wenn wir von Offset 2 entladen, bei dem es sich um eine Anweisung in handelt, möchten wir mit der Ausführung der Entlade Sequenz beginnen. (Beachten Sie, dass die Codes in umgekehrter Reihenfolge gespeichert werden.) Und auch hier können wir generalisieren: Wenn wir mit der Entladung von Anweisung n im Prolog beginnen, sollten Sie mit der Ausführung von n Entladungs Codes am Ende der Liste der Codes beginnen.
 
-Jetzt ist es nicht immer der Fall, den der Prolog und Epilog Codes exakt übereinstimmen. Aus diesem Grund müssen die Entladung Array Reihe von Codesequenzen enthalten. Um den Offset, an dem Beginn der Verarbeitungscodes zu bestimmen, verwenden Sie die folgende Logik:
+Es ist nicht immer der Fall, dass die Prolog-und epilogcodes exakt übereinstimmen. Aus diesem Grund muss das Entlade Array möglicherweise mehrere Codesequenzen enthalten. Verwenden Sie die folgende Logik, um den Offset für den Beginn der Verarbeitung von Codes zu ermitteln:
 
-1. Wenn die Entladung wird der Text der Funktion, einfach beginnt die Ausführung der entladungscodes bei Index 0, und weiterhin bis zum Erreichen eines "End"-OpCodes.
+1. Wenn das Entladen aus dem Hauptteil der Funktion ausgeführt wird, beginnen Sie mit dem Ausführen von Entladungs Codes bei Index 0, und fahren Sie fort, bis Sie den Opcode "End" erreichen.
 
-1. Wenn innerhalb eines Epilogs aus zu entladen, verwenden Sie den Startindex Epilog-spezifische, durch den Bereich der Epilog als Ausgangspunkt bereitgestellt. Berechnen Sie, wie viele Bytes sich der betreffende PC vom Beginn des Epilogs ist. Klicken Sie dann fahren fort, um vorwärts durch die entladungscodes, entladungscodes überspringen, bis alle bereits ausgeführten Anweisungen einbezogen sind. Führen Sie dann die zu diesem Zeitpunkt gestartet.
+1. Wenn Sie in einem Epilogcode entwickeln, verwenden Sie den epilogspezifischen Start Index, der mit dem epilogbereich bereitgestellt wird, als Ausgangspunkt. Berechnen Sie, wie viele Bytes der betreffende PC vom Anfang des Epilog ist. Fahren Sie dann mit den Entladungs Codes fort, und überspringen Sie Entladungs Codes, bis alle bereits ausgeführten Anweisungen berücksichtigt werden. Führen Sie ab diesem Punkt den Befehl aus.
 
-1. Wenn der Prolog Entladung, verwenden Sie Index 0, als Ausgangspunkt. Berechnen Sie die Länge der Prolog-Code aus der Sequenz zu, und klicken Sie dann zu berechnen Sie, wie viele Bytes sich der betreffende PC am Ende der Prolog ist. Klicken Sie dann fahren fort, um vorwärts durch die entladungscodes, entladungscodes überspringen, bis alle noch nicht ausgeführten Anweisungen einbezogen sind. Führen Sie dann die zu diesem Zeitpunkt gestartet.
+1. Wenn Sie im Prolog eine Entwickelung durchführen, verwenden Sie Index 0 als Ausgangspunkt. Berechnen Sie die Länge des Prolog-Codes aus der Sequenz, und berechnen Sie dann, wie viele Bytes der betreffende PC am Ende des Prologs liegt. Fahren Sie dann mit den Entladungs Codes fort, und überspringen Sie Entladungs Codes, bis alle noch nicht ausgeführten Anweisungen berücksichtigt werden. Führen Sie ab diesem Punkt den Befehl aus.
 
-Regeln, die entladungscodes für den Prolog müssen immer sein kann, die zuerst im Array, und sie sind auch in der allgemeinen Groß-/Kleinschreibung entladen aus im Text entladen verwendeten Codes. Sequenzen Epilog-spezifischen Code sollte unmittelbar folgen.
+Diese Regeln bedeuten, dass die Entladungs Codes für den Prolog immer der erste im Array sein müssen. Und Sie sind auch die Codes, die verwendet werden, um beim Entladen innerhalb des Texts zu entladen. Alle epilogspezifischen Codesequenzen sollten unmittelbar nach befolgt werden.
 
-### <a name="function-fragments"></a>Funktionsfragmente
+### <a name="function-fragments"></a>Funktions Fragmente
 
-Optimierungszwecken Code und anderer Gründe kann es besser, eine Funktion in getrennten Fragmente (auch als "Regionen" bezeichnet) aufgeteilt sein. Wenn dies abgeschlossen ist, erfordert jedes resultierende funktionsfragment einen eigenen .pdata-Datensatz (und möglicherweise xdata) Datensatz.
+Aus Gründen der Codeoptimierung und anderen Gründen ist es möglicherweise besser, eine Funktion in getrennte Fragmente aufzuteilen (auch als "Regionen" bezeichnet). Wenn Split, erfordert jedes resultierende Funktions Fragment einen eigenen, separaten pData-Datensatz (und möglicherweise. XData).
 
-Für getrennten sekundären Fragment, das über eine eigene Prolog verfügt, wird davon ausgegangen, dass keine stapelanpassungen gibt in der Prolog durchgeführt wird. Alle stack Speicherplatz vom sekundären Regionen müssen vorab von dessen übergeordneter Bereich (oder aufgerufenen Host-Region) zugeordnet werden. Auf diese Weise Zeiger stapelbearbeitung ausschließlich im ursprünglichen Prolog der Funktion.
+Für jedes getrennte sekundäre Fragment, das über einen eigenen Prolog verfügt, wird erwartet, dass keine Stapel Anpassung im Prolog erfolgt. Sämtlicher Stapel Speicher, der für eine sekundäre Region erforderlich ist, muss von der übergeordneten Region (oder dem sogenannten Host Bereich) vorab zugeordnet werden. Dies sorgt dafür, dass die Stapelzeiger Bearbeitung strikt im ursprünglichen Prolog der Funktion durchführt.
 
-Ein typischer Fall von funktionsfragmenten ist "Trennung von code" mit die der Compiler möglicherweise einen Codebereich aus der Host-Funktion verschoben. Es gibt drei ungewöhnliche Fälle, die durch die codetrennung geführt werden konnte.
+Ein typischer Fall von Funktions Fragmenten ist "Code Trennung" mit diesem Compiler kann einen Code Bereich aus seiner Host Funktion verschieben. Es gibt drei ungewöhnliche Fälle, die durch die Trennung von Code verursacht werden könnten.
 
-#### <a name="example"></a>Beispiel:
+#### <a name="example"></a>Beispiel
 
-- (die Region 1: Starten)
+- (Region 1: Anfang)
 
     ```asm
         stp     x29,lr,[sp,#-256]!      // save_fplr_x  256 (pre-indexed store)
@@ -448,45 +450,47 @@ Ein typischer Fall von funktionsfragmenten ist "Trennung von code" mit die der C
         ...
     ```
 
-- (die Region 1: End)
-- (die Region 3: Starten)
+- (Region 1: Ende)
+
+- (Region 3: Anfang)
 
     ```asm
         ...
     ```
 
-- (die Region 3: End)
-- (die Region 2: Starten)
+- (Region 3: Ende)
+
+- (Region 2: Anfang)
 
     ```asm
-    ...
+        ...
         mov     sp,x29                  // set_fp
         ldp     x19,x20,[sp,#240]       // save_regp 0, 240
         ldp     x29,lr,[sp],#256        // save_fplr_x  256 (post-indexed load)
         ret     lr                      // end
     ```
 
-- (die Region 2: End)
+- (Region 2: Ende)
 
-1. Nur Prolog (Region 1: alle epilogen befinden sich in getrennten Regionen):
+1. Nur Prolog (Region 1: alle Epilogs befinden sich in getrennten Regionen):
 
-   Es muss nur der Prolog beschrieben werden. Dies kann durch kompakten .pdata-Format dargestellt werden. Bei voller .xdata kann dies durch Festlegen der Anzahl der Epilog dargestellt werden = 0. Finden Sie in Region 1 im obigen Beispiel.
+   Nur der Prolog muss beschrieben werden. Dies kann nicht im Compact. pdata-Format dargestellt werden. Im vollständigen. XData-Fall kann der Wert durch Festlegen von Epilog count = 0 dargestellt werden. Siehe Region 1 im obigen Beispiel.
 
-   Entladungscodes: `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
+   Entladungs Codes: `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
 
-1. Nur epilogen (Region-2: Prolog im Host-Bereich ist)
+1. Nur Epilogs (Region 2: Prolog befindet sich in der Host Region)
 
-   Es wird vorausgesetzt, das Time-Steuerelement, das in dieser Region, alle Prolog-Codes ausgeführt wurden. Teilweise Entladung kann die gleiche Weise wie eine normale Funktion im epilogen auftreten. Diese Art von Region kann nicht durch kompakten .pdata dargestellt werden. Im vollständigen Xdata-Datensatz, können Sie mit einer "phantom" Prolog, die in Klammern durch codiert eine `end_c` und `end` Entladen von Code-Paar.  Das führende `end_c` gibt an, die Größe der Prolog ist 0 (null). Epilog Startindex des einzelnen Epilog verweist auf die `set_fp`.
+   Es wird davon ausgegangen, dass beim springen in diesen Bereich alle Prolog Codes ausgeführt wurden. Eine Teilentladung kann in Epilogs auf dieselbe Weise erfolgen wie in einer normalen Funktion. Diese Art von Region kann nicht durch Compact. pdata dargestellt werden. Im vollständigen. XData-Datensatz kann er mit einem "Phantom"-Prolog codiert werden, der durch ein Entladungs Code paar von `end_c` und `end` in Klammern eingeschlossen wird.  Der führende `end_c` gibt an, dass die Größe des Prologs NULL ist. Der Epilogcode-Start Index des einzelnen Epilogcode verweist auf `set_fp`.
 
-   Entladungscode für die Region 2: `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
+   Entladungs Code für Region 2: `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
 
-1. Kein prologen und epilogen (Region 3: prologen und epilogen mit allen befinden sich in anderen Fragmenten):
+1. Es sind keine Prologe oder Epilogs (Region 3: Prologe und alle Epilogs in anderen Fragmenten):
 
-   Kompakten .pdata-Format angewendet werden kann, über das Festlegen von Kennzeichen = 10. Mit voller .xdata-Datensatz, Epilog Count = 1. Entladedaten-Code ist identisch mit denen für die Region 2 oben, jedoch Epilog startIndex verweist auch auf `end_c`. Teilweise Entladung wird in dieser Region des Codes nicht passieren dürfen.
+   Das Compact. pdata-Format kann über das Setting-Flag = 10 angewendet werden. Mit vollständigem. XData-Datensatz, epilogcount = 1. Der Entladungs Code ist mit dem oben aufgeführten Code für Region 2 identisch, aber der Epilog-Start Index verweist auch auf `end_c`. Eine Teilentladung erfolgt in diesem Bereich des Codes nie.
 
-Ein weiterer komplizierter Fall von funktionsfragmenten ist "Verkleinern von Wrapping" mit die der Compiler möglicherweise verzögert Speicherung vom aufgerufenen gespeicherten Register bis außerhalb des Funktionsprologs-Eintrag.
+Ein weiterer komplizierterer Fall von Funktions Fragmenten ist "Verkleinerung verkleinern". Der Compiler kann das Speichern von aufgerufenen gespeicherten Registern bis außerhalb des Prologs der Funktions Einträge verzögern.
 
-- (die Region 1: Starten)
+- (Region 1: Anfang)
 
     ```asm
         stp     x29,lr,[sp,#-256]!      // save_fplr_x  256 (pre-indexed store)
@@ -495,7 +499,7 @@ Ein weiterer komplizierter Fall von funktionsfragmenten ist "Verkleinern von Wra
         ...
     ```
 
-- (die Region 2: Starten)
+- (Region 2: Anfang)
 
     ```asm
         stp     x21,x22,[sp,#224]       // save_regp 2, 224
@@ -503,7 +507,7 @@ Ein weiterer komplizierter Fall von funktionsfragmenten ist "Verkleinern von Wra
         ldp     x21,x22,[sp,#224]       // save_regp 2, 224
     ```
 
-- (die Region 2: End)
+- (Region 2: Ende)
 
     ```asm
         ...
@@ -513,25 +517,25 @@ Ein weiterer komplizierter Fall von funktionsfragmenten ist "Verkleinern von Wra
         ret     lr                      // end
     ```
 
-- (die Region 1: End)
+- (Region 1: Ende)
 
-Im Prolog der Region 1 wird Stapelspeicher vorab zugeordnet. Beachten Sie, dass diese Region 2 den gleichen Code für die Entladung aufweisen, die, den auch sie aus der Host-Funktion verschoben wird.
+Im Prolog von Region 1 wird der Stapel Speicher vorab zugeordnet. Sie sehen, dass Region 2 denselben Entlade Code hat, auch wenn Sie aus der Host Funktion heraus verschoben wird.
 
-Region 1: `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end` mit Epilog startIndex zeigt auf `set_fp` wie gewohnt.
+Region 1: `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end` mit dem Epilog-Start Index zeigt auf `set_fp` wie üblich.
 
-Region-2: `save_regp 2, 224`, `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`. StartIndex Epilog verweist, um den Code zunächst entladen `save_regp 2, 224`.
+Region 2: `save_regp 2, 224`, `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`. Epilog Start Index zeigt auf den ersten Entladungs Code `save_regp 2, 224`.
 
-### <a name="large-functions"></a>Umfangreiche Funktionen
+### <a name="large-functions"></a>Große Funktionen
 
-Fragmente können genutzt werden, um Funktionen, die größer als die 1 Million-Grenze von den Bit-Feldern im .xdata-Header zu beschreiben. Um eine sehr große Funktion wie folgt zu beschreiben, muss sie einfach in Fragmente kleiner als 1 Million unterteilt werden. Jedes Fragment sollte angepasst werden, so dass es einen Epilog nicht in mehrere Stücke aufgeteilt wird.
+Fragmente können verwendet werden, um Funktionen zu beschreiben, die größer sind als der von den Bitfeldern im. XData-Header festgelegten Grenzwert von 1 m. Um eine sehr große Funktion wie diese zu beschreiben, muss Sie in Fragmente unterteilt werden, die kleiner als 1 Mio. sind. Jedes Fragment sollte so angepasst werden, dass es kein Epilogcode in mehrere Teile unterteilt.
 
-Nur das erste Fragment der Funktion enthält einen Prolog. Alle anderen Fragmente werden als müssen keinen Prolog markiert. Abhängig von der Anzahl von epilogen vorhanden kann jedes Fragment NULL oder mehr epilogen enthalten. Bedenken Sie, dass jeder Epilog-Bereich in einem Fragment dessen Startoffset relativ zum Start des Fragments und nicht dem Start der Funktion angibt.
+Nur das erste Fragment der Funktion enthält einen Prolog. alle anderen Fragmente sind so gekennzeichnet, dass Sie keinen Prolog haben. Abhängig von der Anzahl der vorhandenen Epilogs kann jedes Fragment 0 (null) oder mehr Epilogs enthalten. Beachten Sie, dass jeder epilogbereich in einem Fragment seinen Start Offset relativ zum Anfang des Fragments angibt, nicht den Anfang der Funktion.
 
-Wenn ein Fragment keinen Prolog und keine Epilog hat, erfordert er dennoch einen eigenen .pdata-Datensatz (und möglicherweise xdata) Datensatz zum Entladen von innerhalb des Texts der Funktion beschrieben.
+Wenn ein Fragment keinen Prolog und kein Epilog hat, erfordert es weiterhin einen eigenen. pdata-Datensatz (und möglicherweise. XData), um zu beschreiben, wie der Vorgang innerhalb des Funktions Texts entladen werden soll.
 
 ## <a name="examples"></a>Beispiele
 
-### <a name="example-1-frame-chained-compact-form"></a>Beispiel 1: Frame-verkettet, Compact-Formular
+### <a name="example-1-frame-chained-compact-form"></a>Beispiel 1: Frame verkettet, Compact-Form
 
 ```asm
 |Foo|     PROC
@@ -549,7 +553,7 @@ Wenn ein Fragment keinen Prolog und keine Epilog hat, erfordert er dennoch einen
     ;Flags[SingleProEpi] functionLength[492] RegF[0] RegI[1] H[0] frameChainReturn[Chained] frameSize[2080]
 ```
 
-### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>Beispiel 2: Frame-verkettet, Full Form mit Spiegelung Prolog und Epilog
+### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>Beispiel 2: Frame verkettetes, vollständiges Formular mit Spiegel Prolog & Epilog
 
 ```asm
 |Bar|     PROC
@@ -581,9 +585,9 @@ Wenn ein Fragment keinen Prolog und keine Epilog hat, erfordert er dennoch einen
     ;end
 ```
 
-Beachten Sie, dass die gleiche Sequenz von Prolog-entladungscodes EpilogStart Index [0] verweist.
+Der Epilog-Start Index [0] verweist auf dieselbe Sequenz von Prolog-Entlade Code.
 
-### <a name="example-3-variadic-unchained-function"></a>Beispiel 3: Variadic nicht Funktion verkettet.
+### <a name="example-3-variadic-unchained-function"></a>Beispiel 3: Nicht verkettete Variadic-Funktion
 
 ```asm
 |Delegate| PROC
@@ -622,9 +626,9 @@ Beachten Sie, dass die gleiche Sequenz von Prolog-entladungscodes EpilogStart In
     ;end
 ```
 
-Hinweis: EpilogStart Index [4] verweist auf die Mitte der Prolog-entladungscodes (teilweise Wiederverwendung Entladung Array).
+Der Epilog-Start Index [4] verweist auf die Mitte des Prolog-Entlade Codes (teilweise wieder verwenden des Entlade Arrays).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über die ARM64-ABI-Konventionen](arm64-windows-abi-conventions.md)<br/>
+[Übersicht über ARM64 ABI-Konventionen](arm64-windows-abi-conventions.md)<br/>
 [ARM-Ausnahmebehandlung](arm-exception-handling.md)
