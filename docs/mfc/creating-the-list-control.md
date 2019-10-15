@@ -5,32 +5,32 @@ helpviewer_keywords:
 - CListCtrl class [MFC], creating control
 - list controls [MFC]
 ms.assetid: a4cb1729-31b6-4d2b-a44b-367474848a39
-ms.openlocfilehash: 7b2cb47699339dd413dc1bfae7623069da56e7a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1c5d8db93421e1d3ae0e39aec82bdf0f5529f1f
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242249"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907926"
 ---
 # <a name="creating-the-list-control"></a>Erstellen des Listensteuerelements
 
-Wie das Listensteuerelement ([CListCtrl](../mfc/reference/clistctrl-class.md)) erstellt wird, ob Sie das Steuerelement direkt verwenden oder Klasse hängt [CListView](../mfc/reference/clistview-class.md) stattdessen. Bei Verwendung von `CListView`, das Framework erstellt die Sicht als Teil der Reihenfolge der Dokumente und Ansichten. Erstellen die Listenansicht erstellt das Listensteuerelement auch (beide sind identisch). Das Steuerelement wird erstellt, in der Ansicht [OnCreate](../mfc/reference/cwnd-class.md#oncreate) Handler-Funktion. In diesem Fall wird das Steuerelement anschließend bereit für das Hinzufügen von Elementen, die über einen Aufruf an [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl).
+Die Art und Weise, wie das Listen Steuerelement ([CListCtrl](../mfc/reference/clistctrl-class.md)) erstellt wird, hängt davon ab, ob Sie das Steuerelement direkt verwenden oder stattdessen die Klasse [CListView](../mfc/reference/clistview-class.md) verwenden. Wenn Sie verwenden `CListView`, erstellt das Framework die Sicht als Teil der Dokument-/Ansicht-Erstellungs-Sequenz. Wenn Sie die Listenansicht erstellen, wird auch das Listen Steuerelement erstellt (beide sind identisch). Das-Steuerelement wird in der [OnCreate](../mfc/reference/cwnd-class.md#oncreate) -Handlerfunktion der Sicht erstellt. In diesem Fall kann das Steuerelement mithilfe eines Aufrufens von [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl)Elemente hinzufügen.
 
-### <a name="to-use-clistctrl-directly-in-a-dialog-box"></a>Verwenden von CListCtrl direkt in einem Dialogfeld
+### <a name="to-use-clistctrl-directly-in-a-dialog-box"></a>So verwenden Sie CListCtrl direkt in einem Dialogfeld
 
-1. Der Dialog-Editor fügen Sie ein Listensteuerelement hinzu, um der Dialogfeldvorlagen-Ressource. Geben Sie die Steuerelement-ID.
+1. Fügen Sie im Dialog-Editor der Dialogfeld Vorlagen Ressource ein Listen Steuerelement hinzu. Gibt die Steuerelement-ID an.
 
-1. Verwenden der [Assistent zum Hinzufügen von Membervariablen](../ide/adding-a-member-variable-visual-cpp.md) zum Hinzufügen einer Membervariablen des Typs `CListCtrl` mit der Eigenschaft des Steuerelements. Sie können diesen Member Aufrufen `CListCtrl` Memberfunktionen.
+1. Verwenden Sie den [Assistenten zum Hinzufügen](../ide/adding-a-member-variable-visual-cpp.md) von Element Variablen, um eine `CListCtrl` Element Variable vom Typ mit der Control-Eigenschaft hinzuzufügen. Sie können diesen Member verwenden, um `CListCtrl` Member-Funktionen aufzurufen.
 
-1. Eigenschaftenfenster Handlerfunktionen in die Dialogfeldklasse zuordnen, bei jeder Liste steuerelementebenachrichtigung Sie Nachrichten verarbeiten müssen verwenden (finden Sie unter [Zuordnen von Meldungen zu Funktionen](../mfc/reference/mapping-messages-to-functions.md)).
+1. Verwenden Sie den [Klassen-Assistenten](reference/mfc-class-wizard.md) , um Handlerfunktionen in der Dialogfeld Klasse für beliebige Benachrichtigungs Meldungen für das Listen Steuerelement zuzuordnen, die Sie behandeln müssen. (siehe [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md))
 
-1. In [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), legen Sie die Formate für die `CListCtrl`. Finden Sie unter [Ändern der Stile von Listensteuerelementen](../mfc/changing-list-control-styles.md). Dies bestimmt die Art von "View" erhalten Sie in das Steuerelement, auch wenn Sie die Ansicht später ändern können.
+1. Legen Sie in [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)die Stile für das `CListCtrl`fest. Siehe [Ändern von Listen Steuerelement Stilen](../mfc/changing-list-control-styles.md). Dies bestimmt die Art der "Ansicht", die Sie im Steuerelement erhalten, obwohl Sie die Ansicht später ändern können.
 
-### <a name="to-use-clistctrl-in-a-nondialog-window"></a>Zum Verwenden von CListCtrl in einem nicht-Dialogfenster
+### <a name="to-use-clistctrl-in-a-nondialog-window"></a>So verwenden Sie CListCtrl in einem nicht Dialogfeld Fenster
 
-1. Definieren Sie das Steuerelement in der Ansicht oder Fenster-Klasse.
+1. Definieren Sie das Steuerelement in der Ansicht oder in der Fenster Klasse.
 
-1. Aufrufen des Steuerelements [erstellen](../mfc/reference/clistctrl-class.md#create) Memberfunktion, möglicherweise in [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), möglicherweise so frühzeitig wie des übergeordnete Fensters [OnCreate](../mfc/reference/cwnd-class.md#oncreate) Handler-Funktion (Wenn Sie sind Erstellen von Unterklassen für das Steuerelement). Legen Sie die Formate für das Steuerelement.
+1. Rufen Sie die [Create](../mfc/reference/clistctrl-class.md#create) Member-Funktion des Steuer Elements (möglicherweise in [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate)) auf, möglicherweise so früh wie die [OnCreate](../mfc/reference/cwnd-class.md#oncreate) -Handlerfunktion des übergeordneten Fensters (wenn Sie das Steuerelement Unterklassen). Legen Sie die Stile für das-Steuerelement fest.
 
 ## <a name="see-also"></a>Siehe auch
 

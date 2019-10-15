@@ -1,10 +1,10 @@
 ---
 title: _fseek_nolock, _fseeki64_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fseek_nolock
 - _fseeki64_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fseek_nolock
 - _fseeki64_nolock
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _fseeki64_nolock function
 - seek file pointers
 ms.assetid: 2dd4022e-b715-462b-b935-837561605a02
-ms.openlocfilehash: 57e9a57223d6af620f4f9160923675b4873ab3ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c72f44b214893a6702f5da5594db7725a2f02136
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287699"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956529"
 ---
-# <a name="fseeknolock-fseeki64nolock"></a>_fseek_nolock, _fseeki64_nolock
+# <a name="_fseek_nolock-_fseeki64_nolock"></a>_fseek_nolock, _fseeki64_nolock
 
 Verschiebt den Dateizeiger an einen bestimmten Speicherort
 
@@ -69,11 +72,11 @@ Ursprüngliche Position.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Identisch mit [Fseek](fseek-fseeki64.md) und [_fseeki64](fseek-fseeki64.md)bzw.
+Identisch mit [fseek](fseek-fseeki64.md) bzw. [_fseeki64](fseek-fseeki64.md)
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktionen sind, die nicht sperrende Versionen von [Fseek](fseek-fseeki64.md) und [_fseeki64](fseek-fseeki64.md)bzw. Diese sind identisch mit [Fseek](fseek-fseeki64.md) und [_fseeki64](fseek-fseeki64.md) mit dem Unterschied, dass sie nicht vor Störungen durch andere Threads geschützt sind. Diese Funktionen sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
+Bei diesen Funktionen handelt es sich um die nicht sperrenden Versionen von " [f Seek](fseek-fseeki64.md) " bzw. " [_fseeki64](fseek-fseeki64.md)". Diese sind mit [fseek](fseek-fseeki64.md) und [_fseeki64](fseek-fseeki64.md) identisch, mit dem Unterschied, dass Sie nicht vor Störungen durch andere Threads geschützt sind. Diese Funktionen sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
 
 ## <a name="requirements"></a>Anforderungen
 
