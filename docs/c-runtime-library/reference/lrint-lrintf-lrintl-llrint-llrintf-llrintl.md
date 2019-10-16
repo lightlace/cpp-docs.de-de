@@ -111,7 +111,7 @@ Wenn erfolgreich, wird der abgerundete ganzzahlige Wert von *x*zurückgegeben.
 
 |Problem|Zurück|
 |-----------|------------|
-|*x* liegt außerhalb des Bereichs des Rückgabe Typs.<br /><br /> *x* = ± \<br /><br /> *x* = Nan|Löst **FE_INVALID** aus und gibt NULL (0) zurück.|
+|*x* liegt außerhalb des Bereichs des Rückgabe Typs.<br /><br /> *x* = ±<br /><br /> *x* = Nan|Löst **FE_INVALID** aus und gibt NULL (0) zurück.|
 
 ## <a name="remarks"></a>Hinweise
 
