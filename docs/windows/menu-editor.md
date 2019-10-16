@@ -39,12 +39,12 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: f2a5f1ac63007bf44dc331e2104c6e9e5cac23da
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: a21ff3ba736bd345e4b8399a761b5a8d9db531ac
+ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69514828"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444986"
 ---
 # <a name="menu-editor-c"></a>Menü-EditorC++()
 
@@ -59,11 +59,11 @@ Der **Menü-Editor** ermöglicht Ihnen Folgendes:
 
 ### <a name="to-create-a-standard-menu"></a>So erstellen Sie ein Standardmenü
 
-1. Wechseln Sie zur Menü **Ansicht** > **Ressourcenansicht** und klicken Sie mit der rechten Maustaste auf die **Menü** Überschrift. Wählen Sie **Ressource hinzufügen**und dann **Menü**aus.
+1. Wechseln Sie zur Menü **Ansicht** > **Weitere Fenster** > **Ressourcenansicht** und klicken Sie mit der rechten Maustaste auf die **Menü** Überschrift. Wählen Sie **Ressource hinzufügen**und dann **Menü**aus.
 
 1. Wählen Sie in der Menüleiste das Feld **Neues Element** (das Rechteck, das den *Typ hier*enthält) aus.
 
-   ![Feld "Neues Element" im Menü-Editor](../windows/media/vcmenueditornewitembox.gif "vcmenueditor") -Element<br/>
+   ![Feld "Neues Element" im Menü-Editor](../windows/media/vcmenueditornewitembox.gif "vcmenueditor-Element")<br/>
    Feld " **Neues Element** "
 
 1. Geben Sie einen Namen für das neue Menü ein, z. b. *File*.
@@ -72,7 +72,7 @@ Der **Menü-Editor** ermöglicht Ihnen Folgendes:
 
    Nachdem Sie das neue Menü in der Menüleiste benannt haben, rückt das Feld für das neue Menüelement nach rechts (damit ein weiteres Menü eingefügt werden kann). Unter dem ersten Menü wird ein weiteres Feld geöffnet, dem Sie Menübefehle hinzufügen können.
 
-   ![Erweitertes Feld "Neues Element] " (../windows/media/vcmenueditornewitemboxexpanded.gif "vcmenueditor") -Element<br/>
+   ![Erweitertes Feld "Neues Element"](../windows/media/vcmenueditornewitemboxexpanded.gif "vcmenueditor-Element")<br/>
    Feld " **Neues Element** " mit Fokus nach dem Eingeben des Menü namens
 
    > [!NOTE]
@@ -104,7 +104,7 @@ Wählen Sie einen vorhandenen Menünamen aus, und drücken Sie die **Eingabe** T
    > Der von Ihnen angezeigte Text wird sowohl im **Menü-Editor** als auch im Feld **Beschriftung** im [Eigenschaften Fenster](/visualstudio/ide/reference/properties-window)angezeigt. Die Eigenschaften des neuen Menüs können an einer der beiden Stellen bearbeitet werden.
 
    > [!TIP]
-   > Sie können eine mnemonische Taste (Zugriffstaste) definieren, die dem Benutzer ermöglicht, den Menübefehl auszuwählen. Geben Sie vor einem Buchstaben`&`ein kaufmännisches und-Zeichen () ein, um es als mnetmonisches anzugeben. Der Benutzer kann den Menübefehl auswählen, indem er diesen Buchstaben eingibt.
+   > Sie können eine mnemonische Taste (Zugriffstaste) definieren, die dem Benutzer ermöglicht, den Menübefehl auszuwählen. Geben Sie ein kaufmännisches und-Zeichen (`&`) vor einem Buchstaben ein, um es als mnetmonisches anzugeben. Der Benutzer kann den Menübefehl auswählen, indem er diesen Buchstaben eingibt.
 
 1. Wählen Sie im **Eigenschaften** Fenster die Menübefehls Eigenschaften aus, die angewendet werden sollen. Weitere Informationen finden Sie unter [Menübefehls Eigenschaften](../windows/menu-command-properties.md).
 

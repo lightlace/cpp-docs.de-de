@@ -1,45 +1,45 @@
 ---
-title: 'Vorgehensweise: Hinzufügen eines benutzerdefinierten Buildschritts zu MSBuild-Projekten'
-ms.date: 11/04/2016
+title: 'Gewusst wie: Hinzufügen eines benutzerdefinierten Buildschritts zu MSBuild-Projekten'
+ms.date: 10/16/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: add a custom build step'
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
-ms.openlocfilehash: d70f145a9d43463266a9c0bbff68e8e7f36ef2c6
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 78d40a5b4a02fe9b065bbbdde33afc6180d75381
+ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220731"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444917"
 ---
-# <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Vorgehensweise: Hinzufügen eines benutzerdefinierten Buildschritts zu MSBuild-Projekten
+# <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Gewusst wie: Hinzufügen eines benutzerdefinierten Buildschritts zu MSBuild-Projekten
 
-Ein benutzerdefinierter Buildschritt wird einen benutzerdefinierten Schritt in einem Build an. Ein benutzerdefinierter Buildschritt verhält sich wie jede andere *-Befehlstool* Schritt, wie z. B. der standard Kompilier- oder Tool Schritt.
+Ein benutzerdefinierter Buildschritt ist ein benutzerdefinierter Schritt in einem Build. Ein benutzerdefinierter Buildschritt verhält sich wie jeder andere *Befehls Tool* Schritt, z. b. der Standard Schritt Kompilierungs-oder Link Tool.
 
-Geben Sie einen benutzerdefinierten Buildschritt in der Projektdatei (.vcxproj). Der Schritt kann eine Befehlszeile ausgeführt werden, eine zusätzliche Eingabe oder Ausgabedateien und eine anzuzeigende Meldung angeben. Wenn **MSBuild** feststellt, dass Ihre Ausgabedateien in Bezug auf Ihre Eingabedateien veraltet sind, wird die Meldung angezeigt und führt den Befehl.
+Geben Sie einen benutzerdefinierten Buildschritt in der Projektdatei (. vcxproj) an. Mit diesem Schritt können Sie eine auszuführende Befehlszeile, zusätzliche Eingabe-oder Ausgabedateien und eine anzuzeigende Meldung angeben. Wenn **MSBuild** feststellt, dass Ihre Ausgabedateien hinsichtlich der Eingabedateien veraltet sind, wird die Meldung angezeigt, und der Befehl wird ausgeführt.
 
-Um anzugeben, der Speicherort der benutzerdefinierten Buildschritts Schritt in der Reihenfolge der Buildzielen, verwenden Sie eine oder beide der der `CustomBuildAfterTargets` und `CustomBuildBeforeTargets` XML-Elemente in der Projektdatei. Sie können z. B. angeben, dass der benutzerdefinierte Buildschritt ausgeführt, nach dem Link-Tool-Ziel und vor dem Manifesttool-Ziel wird. Der eigentliche Satz von verfügbaren Ziele hängt vom jeweiligen Build ab.
+Um den Speicherort des benutzerdefinierten Buildschritts in der Sequenz von Buildzielen anzugeben, verwenden Sie eines oder beide der XML-Elemente `CustomBuildAfterTargets` und `CustomBuildBeforeTargets` in der Projektdatei. Beispielsweise können Sie angeben, dass der benutzerdefinierte Buildschritt nach dem Ziel des Verknüpfungs Tools und vor dem Manifest-Tool Ziel ausgeführt wird. Der tatsächliche Satz verfügbarer Ziele hängt von Ihrem speziellen Build ab.
 
-Geben Sie die `CustomBuildBeforeTargets` Element, das der benutzerdefinierte Buildschritt ausgeführt werden, bevor ein bestimmtes Ziel ausgeführt wird, die `CustomBuildAfterTargets` Element den Schritt ausführen, nachdem ein bestimmtes Ziel ausgeführt oder beide Elemente, um den Schritt zwischen zwei benachbarten Zielen ausführen. Wenn keines der Elemente angegeben wird, führt das benutzerdefinierte Buildtool an seinem Standardspeicherort, also nach der **Link** Ziel.
+Geben Sie das `CustomBuildBeforeTargets`-Element an, um den benutzerdefinierten Buildschritt auszuführen, bevor ein bestimmtes Ziel ausgeführt wird, das `CustomBuildAfterTargets`-Element, um den Schritt nach dem Ausführen eines bestimmten Ziels auszuführen, oder beide Elemente, um den Schritt zwischen zwei angrenzenden Zielen auszuführen. Wenn keines der Elemente angegeben ist, wird das benutzerdefinierte Buildtool an seinem Standard Speicherort ausgeführt **, der sich** nach dem Verknüpfungs Ziel befindet.
 
-Benutzerdefinierte Buildschritte und benutzerdefinierte Tools freigeben in angegebene Informationen die `CustomBuildBeforeTargets` und `CustomBuildAfterTargets` XML-Elemente. Diese Ziele werden daher nur einmal in der Projektdatei angeben.
+Benutzerdefinierte Buildschritte und benutzerdefinierte Buildtools verwenden die in den XML-Elementen `CustomBuildBeforeTargets` und `CustomBuildAfterTargets` angegebenen Informationen gemeinsam. Geben Sie diese Ziele daher nur einmal in der Projektdatei an.
 
-### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>Zum definieren, was von der benutzerdefinierte Buildschritt ausgeführt wird
+### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>So definieren Sie, was durch den benutzerdefinierten Buildschritt ausgeführt wird
 
-1. Fügen Sie eine Eigenschaftengruppe zur Projektdatei hinzu. Geben Sie in dieser Eigenschaftengruppe den Befehl, der Eingaben und Ausgaben und eine Nachricht, wie im folgenden Beispiel gezeigt. In diesem Beispiel erstellt eine CAB-Datei aus der "Main.cpp"-Datei, die Sie erstellt, im haben [Exemplarische Vorgehensweise: Verwenden von MSBuild zum Erstellen einer C++ Projekt](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
+1. Fügen Sie der Projektdatei eine Eigenschaften Gruppe hinzu. Geben Sie in dieser Eigenschaften Gruppe den Befehl, seine Eingaben und Ausgaben sowie eine Meldung an, wie im folgenden Beispiel gezeigt. In diesem Beispiel wird eine CAB-Datei aus der Datei "Main. cpp" erstellt, die Sie in Exemplarische Vorgehensweise [: Verwenden von MSBuild zum Erstellen C++ eines Projekts](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)erstellt haben.
 
     ```
     <ItemDefinitionGroup>
       <CustomBuildStep>
         <Command>makecab.exe $(ProjectDir)main.cpp $(TargetName).cab</Command>
         <Outputs>$(TargetName).cab</Outputs>
-        <Inputs>$(TargetFileName)</Inputs>
+        <Inputs>$(ProjectDir)main.cpp</Inputs>
       </CustomBuildStep>
     </ItemDefinitionGroup>
     ```
 
-### <a name="to-define-where-in-the-build-the-custom-build-step-will-execute"></a>Um zu definieren, in dem in den Build der benutzerdefinierte Buildschritt ausgeführt wird.
+### <a name="to-define-where-in-the-build-the-custom-build-step-will-execute"></a>So definieren Sie, wo der benutzerdefinierte Buildschritt im Build ausgeführt wird
 
-1. Fügen Sie die folgende Eigenschaftengruppe zur Projektdatei hinzu. Sie können beide Ziele angeben, oder können Sie eine weglassen, wenn Sie lediglich die benutzerdefinierten Schritt zum Ausführen vor oder nach einem bestimmten Ziel möchten. In diesem Beispiel weist **MSBuild** , die benutzerdefinierten Schritt nach dem Kompilieren, jedoch vor dem Linkschritt auszuführen.
+1. Fügen Sie der Projektdatei die folgende Eigenschaften Gruppe hinzu. Sie können beide Ziele angeben, oder Sie können einen Wert weglassen, wenn Sie nur den benutzerdefinierten Schritt vor oder nach einem bestimmten Ziel ausführen möchten. Dieses Beispiel weist **MSBuild** an, den benutzerdefinierten Schritt nach dem Kompilierungs Schritt, jedoch vor dem Link Schritt auszuführen.
 
     ```
     <PropertyGroup>
@@ -50,6 +50,6 @@ Benutzerdefinierte Buildschritte und benutzerdefinierte Tools freigeben in angeg
 
 ## <a name="see-also"></a>Siehe auch
 
-[Exemplarische Vorgehensweise: Verwenden von MSBuild zum Erstellen eines C++-Projekts](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[Exemplarische Vorgehensweise: Verwenden von MSBuild C++ zum Erstellen eines Projekts](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
 [Vorgehensweise: Verwenden von Buildereignissen in MSBuild-Projekten](how-to-use-build-events-in-msbuild-projects.md)<br/>
 [Vorgehensweise: Hinzufügen von benutzerdefinierten Buildtools zu MSBuild-Projekten](how-to-add-custom-build-tools-to-msbuild-projects.md)
