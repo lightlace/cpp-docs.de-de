@@ -1,17 +1,17 @@
 ---
 title: Compilerwarnung (Stufe 4) C4127
-ms.date: 09/13/2018
+ms.date: 10/16/2019
 f1_keywords:
 - C4127
 helpviewer_keywords:
 - C4127
 ms.assetid: f59ded9e-5227-45bd-ac43-2aa861581363
-ms.openlocfilehash: 7f1e23d15d8daa126987278611cb5a85a5a36fc9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bef825f546573b878c415c385e1a2a2286e08db4
+ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401310"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444902"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>Compilerwarnung (Stufe 4) C4127
 
@@ -19,13 +19,13 @@ ms.locfileid: "62401310"
 
 ## <a name="remarks"></a>Hinweise
 
-Der steuernde Ausdruck einer **Wenn** Anweisung oder **während** Schleife, die mit einer Konstante ausgewertet wird. Aufgrund ihrer allgemeinen idiomatische Verwendung, ab Visual Studio 2015 Update 3, trivialen Konstanten wie z. B. 1 oder **"true"** lösen keine Warnung aus, es sei denn, sie sind, dass das Ergebnis eines Vorgangs in einem Ausdruck.
+Der steuernde Ausdruck einer **if** -Anweisung oder **while** -Schleife wird zu einer Konstanten ausgewertet. Aufgrund ihrer allgemeinen idiomatischen Verwendung, beginnend mit Visual Studio 2015 Update 3, wird die Warnung durch triviale Konstanten wie 1 oder **true** nicht auslöst, es sei denn, Sie sind das Ergebnis eines Vorgangs in einem Ausdruck.
 
-Wenn der steuernde Ausdruck einer **während** Schleife ist eine Konstante, da die Schleife in der Mitte beendet wird, ersetzen Sie die **während** -Schleife mit einem **für** Schleife. Lassen Sie die Initialisierung, den Beendigungstest und die schleifenerhöhung einer **für** -Schleife, die bewirkt, die Schleife dass zu einer unendlichen, genau wie `while(1)`, und Sie beenden die Schleife, aus dem Text der der **für** -Anweisung.
+Wenn der steuernde Ausdruck einer **while** -Schleife eine Konstante ist, weil die Schleife in der Mitte beendet wird, empfiehlt es sich, die **while** -Schleife durch eine **for** -Schleife zu ersetzen. Sie können die Initialisierung, den Beendigungs Test und das Schleifen Inkrement einer for-Schleife weglassen, was bewirkt, **dass** die Schleife wie `while(1)` unendlich ist, und Sie können die Schleife aus dem Text der **for** -Anweisung beenden.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt zwei Möglichkeiten, C4127 generiert und gezeigt, wie, eine for-Schleife, um die Warnung zu vermeiden:
+Das folgende Beispiel zeigt zwei Möglichkeiten, wie C4127 generiert wird, und zeigt, wie eine for-Schleife verwendet wird, um die Warnung zu vermeiden:
 
 ```cpp
 // C4127.cpp
@@ -41,5 +41,34 @@ int main() {
       printf("test\n");
       break;
    }
+}
+```
+
+Diese Warnung kann auch generiert werden, wenn eine Kompilierzeit Konstante in einem bedingten Ausdruck verwendet wird:
+
+
+```cpp
+#include <string>
+
+using namespace std;
+
+template<size_t S, class T>
+void MyFunc()
+{
+   if (sizeof(T) >= S) // C4127. "Consider using 'if constexpr' statement instead"
+   {
+   }
+}
+
+class Foo
+{
+   int i;
+   string s;
+};
+
+int main()
+{
+   Foo f;
+   MyFunc<4, Foo>();
 }
 ```
