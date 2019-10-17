@@ -74,7 +74,7 @@ Da C++ das überladen zulässt, können Sie über Ladungen von der-Funktion **au
 
 |-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
-|"|" **, "** **kreal**", " **alle** "|\<complex.h>|\<ccomplex>|
+|**creal**, **crealf**, **creall**|\<complex.h>|\<ccomplex>|
 
 Die Typen **_Fcomplex**, **_Dcomplex**und **_Lcomplex** sind Microsoft-spezifische Entsprechungen der nicht implementierten nativen C99-Typen **float _Complex**, **Double _Complex**und **long Double _Complex**. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
