@@ -3566,7 +3566,7 @@ Gibt bei Erfolg TRUE zurück, false bei einem Fehler.
 
 Diese Member-Funktion emuliert die Funktionalität der [LVM_SETINFOTIP](/windows/win32/Controls/lvm-setinfotip) -Nachricht, wie im Windows SDK beschrieben.
 
-## <a name="setinsertmark"></a>CListCtrl:: "*"
+## <a name="setinsertmark"></a>CListCtrl:: 
 
 Legt die Einfügemarke auf die definierte Position fest.
 

@@ -468,7 +468,7 @@ Der Puffer Arbeitsspeicher wird automatisch freigegeben `CSimpleStringT` , wenn 
 
 Wenn Sie die Zeichen folgen Länge selbst nachverfolgen, sollten Sie das abschließende Null-Zeichen nicht anfügen. Sie müssen jedoch die endgültige Zeichen folgen Länge angeben, wenn Sie den Puffer mit `ReleaseBuffer`freigeben. Wenn Sie ein abschließendes NULL-Zeichen anfügen, sollten Sie-1 (Standard) für die Länge übergeben. `ReleaseBuffer`bestimmt dann die Pufferlänge.
 
-Wenn nicht genügend Arbeitsspeicher vorhanden ist, `GetBuffer` um die Anforderung zu erfüllen, löst diese Methode eine cmemoryexception * aus.
+Wenn nicht genügend Arbeitsspeicher vorhanden ist, `GetBuffer` um die Anforderung zu erfüllen, löst diese Methode eine cmemoryexception aus.
 
 ### <a name="example"></a>Beispiel
 
@@ -991,7 +991,7 @@ Die Länge der Zeichenfolge, die freigegeben wird.
 
 Diese Funktion ähnelt dem [ReleaseBuffer](#releasebuffer) , mit dem Unterschied, dass eine gültige Länge für das Zeichen folgen Objekt bestehen muss.
 
-##  <a name="setat"></a>CSimpleStringT:: *
+##  <a name="setat"></a>CSimpleStringT::
 
 Legt ein einzelnes Zeichen aus einem `CSimpleStringT` -Objekt fest.
 

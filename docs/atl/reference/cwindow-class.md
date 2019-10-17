@@ -362,7 +362,7 @@ class CWindow
 
 - Rufen Sie `CWindow::Attach` auf.
 
-- Verwenden `CWindow`Sie den **Operator =** .
+- Verwenden `CWindow`Sie den **Operator =**.
 
 - Erstellen oder unterteilen Sie ein Fenster mit einer der folgenden Klassen, die `CWindow`von abgeleitet sind:
 
@@ -2375,7 +2375,7 @@ in Das Handle für die neue Schriftart.
 *bRedraw*<br/>
 in Wenn true (der Standardwert), wird das Fenster neu gezeichnet. Andernfalls ist dies nicht der Fall.
 
-##  <a name="sethotkey"></a>CWindow:: * Host Key
+##  <a name="sethotkey"></a>CWindow:: Host Key
 
 Ordnet dem Fenster einen Hot-Taste zu, indem eine WM_SETHOTKEY-Nachricht gesendet wird.
 
