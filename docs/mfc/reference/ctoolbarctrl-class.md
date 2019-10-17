@@ -655,7 +655,7 @@ Optional können Sie eine Kombination von [allgemeinen Steuerelement Stilen](/wi
 
 Sie können eine Kombination von Symbolleisten Formaten entweder auf das Steuerelement oder auf die Schaltflächen selbst anwenden. Die Stile werden im Thema Symbolleisten [-Steuerelement und Schaltflächen Stile](/windows/win32/Controls/toolbar-control-and-button-styles) in der Windows SDK beschrieben.
 
-Wenn Sie erweiterte Symbolleisten Stile verwenden möchten, müssen Sie nach dem Aufrufen `Create`von "* [textendedstyle](#setextendedstyle) " aufrufen Rufen Sie zum Erstellen einer Symbolleiste mit erweiterten Fenster Stilen [CToolBarCtrl::](#createex) up-Ex anstelle `Create`von auf.
+Wenn Sie erweiterte Symbolleisten Stile verwenden möchten, müssen Sie nach dem Aufrufen `Create`von [textendedstyle](#setextendedstyle) " aufrufen Rufen Sie zum Erstellen einer Symbolleiste mit erweiterten Fenster Stilen [CToolBarCtrl::](#createex) up-Ex anstelle `Create`von auf.
 
 Das Symbolleisten-Steuerelement legt die Größe und Position des Symbolleisten Fensters automatisch fest. Die Höhe basiert auf der Höhe der Schaltflächen auf der Symbolleiste. Die Breite ist mit der Breite des Client Bereichs des übergeordneten Fensters identisch. Die Stile CCS_TOP und CCS_BOTTOM bestimmen, ob die Symbolleiste am oberen oder unteren Rand des Client Bereichs positioniert ist. Standardmäßig hat eine Symbolleiste den CCS_TOP-Stil.
 

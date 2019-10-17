@@ -21,9 +21,9 @@ Gibt die Verpackungs Ausrichtung für Struktur-, Union-und Klassenmember an.
 
 ## <a name="syntax"></a>Syntax
 
-> **#Pragma Pack (anzeigen)** \
-> **#pragma pack (Push** [ **,** *Bezeichner* ] [ **,** *n* ] **)** \
-> **#pragma pack (Pop** [ **,** { *Identifier* | *n* }] **)** \
+> **#Pragma Pack (anzeigen)**\
+> **#pragma pack (Push** [ **,** *Bezeichner* ] [ **,** *n* ] **)**\
+> **#pragma pack (Pop** [ **,** { *Identifier* | *n* }] **)**\
 > **#pragma pack (** [ *n* ] **)**
 
 ### <a name="parameters"></a>Parameter
@@ -47,9 +47,9 @@ Optionale Gibt den Wert in Bytes an, der für das Packen verwendet werden soll. 
 
 ## <a name="remarks"></a>Hinweise
 
-Um eine Klasse zu *Verpacken* , müssen Sie die zugehörigen Member direkt im Arbeitsspeicher platzieren. Dies kann bedeuten, dass einige oder alle Elemente an einer Grenze ausgerichtet werden können, die kleiner als die Standardausrichtung der Zielarchitektur ist. **Pack** übergibt die Steuerung auf der Ebene der Daten Deklaration. Dies unterscheidet sich von der Compileroption [/ZP](../build/reference/zp-struct-member-alignment.md), die nur Steuerelemente auf Modulebene bereitstellt. Das **Paket** tritt in **Kraft, nachdem**das Pragma **angezeigt wird.** **Pack** hat keine Auswirkung auf Definitionen. Durch das Aufrufen von **Pack** ohne Argumente wird *n* auf den in der Compileroption `/Zp`festgelegten Wert festgelegt. Wenn die-Compileroption nicht festgelegt ist, ist der Standardwert 8.
+Um eine Klasse zu *Verpacken* , müssen Sie die zugehörigen Member direkt im Arbeitsspeicher platzieren. Dies kann bedeuten, dass einige oder alle Elemente an einer Grenze ausgerichtet werden können, die kleiner als die Standardausrichtung der Zielarchitektur ist. **Pack** übergibt die Steuerung auf der Ebene der Daten Deklaration. Dies unterscheidet sich von der Compileroption [/ZP](../build/reference/zp-struct-member-alignment.md), die nur Steuerelemente auf Modulebene bereitstellt. **pack** wird bei der ersten **Struktur**-, **Vereinigungs**- oder **Klassendeklaration** wirksam, nachdem das Pragma angezeigt wurde. **Pack** hat keine Auswirkung auf Definitionen. Durch das Aufrufen von **Pack** ohne Argumente wird *n* auf den in der Compileroption `/Zp`festgelegten Wert festgelegt. Wenn die-Compileroption nicht festgelegt ist, ist der Standardwert 8.
 
-Wenn Sie die Ausrichtung einer Struktur ändern, belegt sie vielleicht nicht so viel Platz im Arbeitsspeicher, aber Sie werden eine Abnahme der Leistung feststellen oder sogar eine von der Hardware generierte Ausnahme für einen nicht ausgerichteten Zugriff erhalten.  Sie können dieses Ausnahme Verhalten ändern, indem Sie "* [" verwenden.](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode)
+Wenn Sie die Ausrichtung einer Struktur ändern, belegt sie vielleicht nicht so viel Platz im Arbeitsspeicher, aber Sie werden eine Abnahme der Leistung feststellen oder sogar eine von der Hardware generierte Ausnahme für einen nicht ausgerichteten Zugriff erhalten.  Sie können dieses Ausnahme Verhalten ändern, indem Sie [" verwenden.](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode)
 
 Weitere Informationen zum Ändern der Ausrichtung finden Sie in den folgenden Artikeln:
 
