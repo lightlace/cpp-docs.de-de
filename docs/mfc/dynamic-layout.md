@@ -3,10 +3,10 @@ title: Dynamisches Layout
 ms.date: 09/09/2019
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
 ms.openlocfilehash: 1b0d035d3c551fd309d515ccb8b22159218c1b0a
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70907550"
 ---
 # <a name="dynamic-layout"></a>Dynamisches Layout
@@ -17,13 +17,13 @@ Mit MFC in Visual Studio 2015 können Sie Dialogfelder erstellen, in denen der B
 
 Wenn der Benutzer die Größe eines Dialogfelds ändert, können die Steuerelemente im Dialogfeld in der Größe verändert oder in X- und Y-Richtung verschoben werden. Die Änderung in der Größe oder Position eines Steuerelements, wenn der Benutzer die Größe eines Dialogfelds ändert, wird als dynamisches Layout bezeichnet. Folgendes ist z. B. ein Dialogfeld vor dem Ändern der Größe:
 
-![Dialog Feld, bevor die Größe geändert wird.](../mfc/media/mfcdynamiclayout4.png "Dialog Feld, bevor die Größe geändert wird.")
+![Dialog Feld, bevor die Größe geändert wird.](../mfc/media/mfcdynamiclayout4.png "Dialogfeld vor dem Ändern der Größe.")
 
 Nach dem Ändern der Größe ist der Listenfeldbereich vergrößert, um weitere Elemente anzuzeigen, und die Schaltflächen wurden entlang der rechten unteren Ecke verschoben:
 
-![Dialog Feld nach der Größenänderung.](../mfc/media/mfcdynamiclayout5.png "Dialog Feld nach der Größenänderung.")
+![Dialog Feld nach der Größenänderung.](../mfc/media/mfcdynamiclayout5.png "Dialogfeld nach dem Ändern der Größe.")
 
-Sie können das dynamische Layout steuern, indem Sie die Details für jedes Steuerelement im Ressourcen-Editor in der IDE angeben, oder Sie können dies Programm gesteuert `CMFCDynamicLayout` durchführen, indem Sie auf das-Objekt für ein bestimmtes Steuerelement zugreifen und die Eigenschaften festlegen.
+Sie können das dynamische Layout steuern, indem Sie die Details für jedes Steuerelement im Ressourcen-Editor in der IDE angeben, oder Sie können dies Programm gesteuert durchführen, indem Sie auf das `CMFCDynamicLayout` Objekt für ein bestimmtes Steuerelement zugreifen und die Eigenschaften festlegen.
 
 ### <a name="setting-dynamic-layout-properties-in-the-resource-editor"></a>Festlegen der Eigenschaften für das dynamische Layout im Ressourcen-Editor
 
@@ -43,7 +43,7 @@ Sie können das dynamische Layoutverhalten für ein Dialogfeld festlegen, ohne C
 
 1. Angenommen, Sie haben auch ein Steuerelement, das erweitert werden soll, wenn das Dialogfeld erweitert wird. In der Regel kann ein Benutzer ein Dialogfeld erweitern, um ein mehrzeiliges Bearbeitungsfeld zu erweitern und die Größe des Textbereichs zu erhöhen, oder er erweitert möglicherweise ein Listensteuerelement, um mehr Daten anzuzeigen. Legen Sie in diesem Fall den **Typ der Größe** auf beide fest, und legen Sie den Verschiebungstyp auf keine fest. Legen Sie anschließend die Werte für **Größe X** und **Größen** Anpassung auf 100 fest.
 
-   ![Einstellungen für dynamisches Layout](../mfc/media/mfcdynamiclayout2.png "Einstellungen für dynamisches Layout")
+   ![Einstellungen für dynamisches Layout](../mfc/media/mfcdynamiclayout2.png "Dynamische Layouteinstellungen")
 
 1. Experimentieren Sie mit anderen Werten, die möglicherweise für Ihre Steuerelemente sinnvoll sind. Für ein Dialogfeld mit einem einzeiligen Textfeld kann der **Größentyp** beispielsweise auf **Horizontal** festgelegt werden.
 
@@ -55,13 +55,13 @@ Das vorherige Verfahren eignet sich für das Angeben der Einstellungen für das 
 
 1. Suchen oder erstellen Sie eine Position im Implementierungscode der Dialogfeldklasse, an dem Sie das dynamische Layout für den Dialog angeben möchten. Sie können z. B. eine Methode wie `AdjustLayout` im Dialogfeld hinzufügen und von Positionen aus aufrufen, an denen das Layout geändert werden muss. Sie können dies zuerst vom Konstruktor aus oder nach dem Vornehmen von Änderungen am Dialog aufrufen.
 
-1. Aufrufen Sie für das Dialogfeld [getdynamiclayout](../mfc/reference/cwnd-class.md#getdynamiclayout), eine Methode der `CWnd` -Klasse. `GetDynamicLayout` gibt einen Zeiger auf ein `CMFCDynamicLayout` -Objekt zurück.
+1. Aufrufen Sie für das Dialogfeld [getdynamiclayout](../mfc/reference/cwnd-class.md#getdynamiclayout), eine Methode der `CWnd`-Klasse. `GetDynamicLayout` gibt einen Zeiger auf ein `CMFCDynamicLayout` -Objekt zurück.
 
     ```cpp
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
     ```
 
-1. Verwenden Sie für das erste Steuerelement, zu dem Sie dynamisches Verhalten hinzufügen möchten, die statischen Methoden der dynamischen Layoutklasse, um [die Struktur zu erstellen, die die](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) Art der Anpassung des Steuer Elements codiert. Wählen Sie dazu zuerst die entsprechende statische Methode aus: [Cmfcdynamiclayout:: "muvehorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal)", " [cmfcdynamiclayout:: muvevertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical)", " [cmfcdynamiclayout:: muvenone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)" oder " [cmfcdynamiclayout:: muvehorizontalandvertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical)". Sie übergeben eine Prozentzahl für die horizontalen bzw. vertikalen Aspekte der Verschiebung. Diese statischen Methoden geben alle ein neu erstelltes „MoveSettings“-Objekt zurück, mit dem Sie das Verschiebeverhalten eines Steuerelements angeben können.
+1. Verwenden Sie für das erste Steuerelement, zu dem Sie dynamisches Verhalten hinzufügen möchten, die statischen Methoden der dynamischen Layoutklasse, um [die Struktur zu erstellen, die die](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) Art der Anpassung des Steuer Elements codiert. Wählen Sie dazu zuerst die entsprechende statische Methode aus: [cmfcdynamiclayout:: muvehorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [cmfcdynamiclayout:: muvevertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [cmfcdynamiclayout:: muvenone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)oder [cmfcdynamiclayout:: muvehorizontalandvertical ](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Sie übergeben eine Prozentzahl für die horizontalen bzw. vertikalen Aspekte der Verschiebung. Diese statischen Methoden geben alle ein neu erstelltes „MoveSettings“-Objekt zurück, mit dem Sie das Verschiebeverhalten eines Steuerelements angeben können.
 
    Beachten Sie, dass 100 eine exakte Verschiebung gemäß der Größenänderung des Dialogs bedeutet, wodurch der Rand eines Steuerelement in einem festen Abstand zum neuen Rahmen bleibt.
 

@@ -40,10 +40,10 @@ helpviewer_keywords:
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
 ms.openlocfilehash: df724ed056c02d79b5b51f97ae4aaf8ae267fde5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70937619"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
@@ -98,7 +98,7 @@ Die **ERF** -Funktionen geben die Gauß-Fehlerfunktion von *x*zurück. Die **erf
 
 Die **ERF** -Funktionen berechnen die Gauß-Fehlerfunktion von *x*, die wie folgt definiert ist:
 
-![Die Fehlerfunktion von x] . (media/crt_erf_formula.PNG "Die Fehlerfunktion von x") .
+![Die Fehlerfunktion von x.](media/crt_erf_formula.PNG "Die Fehlerfunktion von x")
 
 Die komplementäre Gauß-Fehlerfunktion ist als 1-ERF (x) definiert. Die **ERF** -Funktionen geben einen Wert im Bereich von-1,0 bis 1,0 zurück. Es gibt keine Fehlerrückgabe. Die **erfc** -Funktionen geben einen Wert im Bereich 0 bis 2 zurück. Wenn *x* für **erfc**zu groß ist, wird die **errno** -Variable auf **ERANGE**festgelegt.
 
@@ -108,9 +108,9 @@ Da C++ das überladen zulässt, können Sie über Ladungen von **ERF** und **erf
 
 |Funktion|Erforderlicher Header|
 |--------------|---------------------|
-|**erf**, **erff**, **erfl**, **erfc**, **erfcf**, **erfcl**|\<math.h>|
+|**ERF**, **erff**, **erfl**, **erfc**, **erfcf**, **erfcl**|\<math.h>|
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Zusätzliche Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Siehe auch
 
