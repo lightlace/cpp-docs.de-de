@@ -1,15 +1,15 @@
 ---
 title: Kompatibilität von C++-Binärdateien zwischen Visual Studio 2015 und Visual Studio 2019
-ms.date: 05/03/2019
+ms.date: 10/17/2019
 helpviewer_keywords:
 - binary compatibility, Visual C++
 ms.assetid: 591580f6-3181-4bbe-8ac3-f4fbaca949e6
-ms.openlocfilehash: 052874eb9273ee9a9ce1695ffdadedd9911673e1
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 6365ded349ad08a167b76ca9f6ab43e6e7752987
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449046"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587900"
 ---
 # <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2019"></a>Kompatibilität von C++-Binärdateien zwischen Visual Studio 2015 und Visual Studio 2019
 
@@ -21,6 +21,19 @@ Die einzige Ausnahme dieser Regel sind mit dem `/GL`-Compilerschalter kompiliert
 
 Wenn Sie Binärdateien kombinieren, die mit verschiedenen unterstützten Versionen des MSVC-Toolsets erstellt wurden, kann das Visual C++ Redistributable-Paket, auf dem Ihre Anwendung ausgeführt wird, nicht älter als die Toolsetversionen sein, die zum Erstellen Ihrer App oder der verarbeiteten Bibliotheken verwendet werden. 
 
+## <a name="upgrade-microsoft-visual-c-redistributable-from-visual-studio-2015-or-2017-to-visual-studio-2019"></a>Upgrade von Microsoft C++ Visual Redistributable von Visual Studio 2015 oder 2017 auf Visual Studio 2019
+
+Da wir die binäre Kompatibilität beibehalten und die Hauptversion (14) für die Visual C++ Redistributable für Visual Studio 2015, 2017 und 2019 beibehalten haben, kann jeweils nur eine Version der Visual C++ Redistributable installiert werden. Eine neuere Version überschreibt ein älteres, das installiert ist. Wenn Sie über die Visual C++ Redistributable-Komponente von Visual Studio 2015 oder 2017 verfügen und später 2019 installieren, überschreibt die Version 2019 eine ältere Version. Da wir sicherstellen, dass die neueste Version alle neuesten Features und Fehlerbehebungen enthält, einschließlich Sicherheitskorrekturen, wird empfohlen, ein Upgrade auf die neueste verfügbare Version durchzuführen.
+
+Ebenso ist es nicht zulässig, eine ältere Version von Visual C++ Redistributable auf einem Computer zu installieren, auf dem bereits eine neuere Version vorhanden ist. Wenn Sie das C++ Visual Redistributable-Element von Visual Studio 2015 oder 2017 auf einem Computer installieren, auf dem bereits 2019 vorhanden ist, führt dies zu einem Installationsfehler. Der Fehler sieht in etwa wie folgt aus:
+
+```
+*0x80070666 - Another version of this product is already installed. Installation of this version cannot continue. To configure or remove the existing version of this product, use Add/Remove Programs on the Control Panel.*.
+```
+
+Dieser Fehler ist Entwurfs bedingt. Es wird empfohlen, die neueste Installation beizubehalten.
+
 ## <a name="see-also"></a>Siehe auch
 
-[Änderungsverlauf von Visual C++](../porting/visual-cpp-change-history-2003-2015.md)
+* [Änderungsverlauf von Visual C++](../porting/visual-cpp-change-history-2003-2015.md)
+* [Die neuesten unterstützten C++ visuellen verteilbaren Downloads](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) 

@@ -20,34 +20,34 @@ helpviewer_keywords:
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
 ms.openlocfilehash: 9a0199577ea46520c2eadc308812de8a1ce4b514
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "71685807"
 ---
 # <a name="dialog-data-exchange"></a>Dialogdatenaustausch
 
-Wenn Sie den DDX-Mechanismus verwenden, legen Sie die Anfangswerte der Element Variablen des Dialog Objekts fest, in der Regel im `OnInitDialog`-Handler oder im Dialog-Konstruktor. Unmittelbar vor dem Anzeigen des Dialog Felds überträgt der DDX-Mechanismus des Frameworks die Werte der Element Variablen an die Steuerelemente im Dialogfeld, wo Sie angezeigt werden, wenn das Dialogfeld selbst als Antwort auf `DoModal` oder `Create` angezeigt wird. Die Standard Implementierung von `OnInitDialog` in `CDialog` ruft die `UpdateData`-Member-Funktion der-Klasse `CWnd` auf, um die Steuerelemente im Dialogfeld zu initialisieren.
+Wenn Sie den DDX-Mechanismus verwenden, legen Sie die Anfangswerte der Element Variablen des Dialog Objekts fest, in der Regel in Ihrem `OnInitDialog` Handler oder im Dialog-Konstruktor. Unmittelbar bevor das Dialogfeld angezeigt wird, überträgt der DDX-Mechanismus des Frameworks die Werte der Element Variablen an die Steuerelemente im Dialogfeld, wo Sie angezeigt werden, wenn das Dialogfeld selbst als Reaktion auf `DoModal` oder `Create` angezeigt wird. Die Standard Implementierung von `OnInitDialog` in `CDialog` die `UpdateData` Member-Funktion der-Klasse `CWnd` aufruft, um die Steuerelemente im Dialogfeld zu initialisieren.
 
-Derselbe Mechanismus überträgt Werte aus den Steuerelementen an die Element Variablen, wenn der Benutzer auf die Schaltfläche OK klickt (oder wenn Sie die `UpdateData`-Member-Funktion mit dem Argument **true**aufrufen). Der Mechanismus für die Validierung von Dialog Daten überprüft alle Datenelemente, für die Sie Validierungsregeln angegeben haben.
+Derselbe Mechanismus überträgt Werte aus den Steuerelementen an die Element Variablen, wenn der Benutzer auf die Schaltfläche OK klickt (oder wenn Sie die `UpdateData` Member-Funktion mit dem Argument **true**aufrufen). Der Mechanismus für die Validierung von Dialog Daten überprüft alle Datenelemente, für die Sie Validierungsregeln angegeben haben.
 
 In der folgenden Abbildung wird der Dialog Datenaustausch veranschaulicht.
 
-Dialogfeld-(../mfc/media/vc379d1.gif "Datenaustausch im") ![Dialogfeld "Datenaustausch]" <br/>
+![Dialog Feld-Datenaustausch](../mfc/media/vc379d1.gif "Dialogfeld-Datenaustausch") <br/>
 Dialogdatenaustausch
 
-`UpdateData` funktioniert in beiden Richtungen, wie durch den **bool** -Parameter angegeben, der an ihn übergeben wird. Um den Austausch auszuführen, richtet `UpdateData` ein `CDataExchange`-Objekt ein und ruft die außer Kraft setzung der Dialogfeld Klasse der `DoDataExchange`-Member-Funktion von `CDialog` auf. `DoDataExchange` nimmt ein Argument vom Typ "`CDataExchange`" an. Das an `UpdateData` übergebenen `CDataExchange`-Objekt stellt den Kontext des Austauschs dar, der solche Informationen als Richtung des Austauschs definiert.
+`UpdateData` funktioniert in beiden Richtungen, wie durch den **bool** -Parameter angegeben, der an ihn übergeben wird. Um den Austausch auszuführen, richtet `UpdateData` ein `CDataExchange`-Objekt ein und ruft die außer Kraft setzung der Dialogfeld Klasse der `DoDataExchange` Member-Funktion von `CDialog` auf. `DoDataExchange` ein Argument vom Typ "`CDataExchange`" annimmt. Das `CDataExchange`-Objekt, das an `UpdateData` übergebenen wird, stellt den Kontext des Austauschs dar und definiert solche Informationen als Richtung des Austauschs.
 
-Wenn Sie (oder ein Code-Assistent) `DoDataExchange` überschreiben, geben Sie einen Rückruf für eine DDX-Funktion pro Datenmember (-Steuerelement) an. Jede DDX-Funktion weiß, wie Daten in beiden Richtungen ausgetauscht werden, basierend auf dem Kontext, der vom `CDataExchange`-Argument bereitgestellt wird, das von `UpdateData` an `DoDataExchange` übergeben wird.
+Wenn Sie (oder einen Code-Assistenten) `DoDataExchange` überschreiben, geben Sie einen Rückruf für eine DDX-Funktion pro Datenmember (-Steuerelement) an. Jede DDX-Funktion weiß, wie Sie Daten in beiden Richtungen austauschen können, basierend auf dem Kontext, der durch das `CDataExchange` Argument, das von `UpdateData` an Ihre `DoDataExchange` übergeben wird
 
-MFC bietet viele DDX-Funktionen für verschiedene Arten von Exchange. Das folgende Beispiel zeigt eine `DoDataExchange`-außer Kraft setzung, bei der zwei DDX-Funktionen und eine DDV-Funktion aufgerufen werden:
+MFC bietet viele DDX-Funktionen für verschiedene Arten von Exchange. Das folgende Beispiel zeigt eine `DoDataExchange` Überschreibung, bei der zwei DDX-Funktionen und eine DDV-Funktion aufgerufen werden:
 
 [!code-cpp[NVC_MFCControlLadenDialog#49](../mfc/codesnippet/cpp/dialog-data-exchange_1.cpp)]
 
-Die Zeilen "`DDX_`" und "`DDV_`" sind eine Datenzuordnung. Die gezeigten DDX-und DDV-Beispiel Funktionen sind für ein Kontrollkästchen-Steuerelement und ein Bearbeitungsfeld-Steuerelement vorgesehen.
+Die `DDX_`-und `DDV_` Zeilen sind eine Datenzuordnung. Die gezeigten DDX-und DDV-Beispiel Funktionen sind für ein Kontrollkästchen-Steuerelement und ein Bearbeitungsfeld-Steuerelement vorgesehen.
 
-Wenn der Benutzer ein modales Dialogfeld abbricht, wird das Dialogfeld von der `OnCancel`-Member-Funktion beendet, und `DoModal` gibt den Wert **IDCANCEL**zurück. In diesem Fall werden keine Daten zwischen dem Dialogfeld und dem Dialogfeld Objekt ausgetauscht.
+Wenn der Benutzer ein modales Dialogfeld abbricht, wird das Dialogfeld von der `OnCancel` Member-Funktion beendet, und `DoModal` gibt den Wert **IDCANCEL**zurück. In diesem Fall werden keine Daten zwischen dem Dialogfeld und dem Dialogfeld Objekt ausgetauscht.
 
 ## <a name="see-also"></a>Siehe auch
 
