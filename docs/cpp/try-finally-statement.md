@@ -21,10 +21,10 @@ helpviewer_keywords:
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
 ms.openlocfilehash: c26b72f7c675a4130f38c515cf71ecc290328ccc
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "69498607"
 ---
 # <a name="try-finally-statement"></a>try-finally-Anweisung
@@ -33,19 +33,19 @@ ms.locfileid: "69498607"
 
 Die folgende Syntax beschreibt die **try-endlich-** Anweisung:
 
-> **\_\_versu**<br/>
+> **\_ \_try**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;geschützter Code<br/>
+> &nbsp; &nbsp; &nbsp; &nbsp;//überwachten Code<br/>
 > }<br/>
-> **\_\_endlich**<br/>
+> **\_ \_finally**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;Beendigungs Code<br/>
+> &nbsp; &nbsp; &nbsp; &nbsp;//Beendigungs Code<br/>
 > }
 
 ## <a name="grammar"></a>Grammatik
 
 *try-finally-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Try- Verbund Anweisung  **\_ schließlichVerbund\_** Anweisung  **\_ \_**
+&nbsp; &nbsp; &nbsp; &nbsp; **\_** **\_try Verbund** Anweisung \_ 0finally *Verbund Anweisung*
 
 Bei der **Try-End-** Anweisung handelt es sich um eine Microsoft C++ -Erweiterung für C und Sprachen, die es Zielanwendungen ermöglichen, die Ausführung von Bereinigungs Code zu gewährleisten, wenn die Ausführung eines Code Blocks unterbrochen wird. Die Bereinigung besteht aus Aufgaben wie z. B. Neuzuweisung von Arbeitsspeicher, Schließen von Dateien und Freigeben von Dateihandles. Die **try-schließlich-** Anweisung ist besonders nützlich für Routinen mit mehreren Stellen, an denen eine Überprüfung auf einen Fehler erfolgt, der eine vorzeitige Rückgabe von der Routine verursachen könnte.
 
@@ -66,15 +66,15 @@ Das Steuerelement erreicht eine **__try** -Anweisung durch einfache sequenzielle
 
 Wenn eine Ausnahme im **__try** -Block auftritt, muss das Betriebssystem einen Handler für die Ausnahme finden, oder das Programm schlägt fehl. Wenn ein Handler gefunden wird, werden alle **__finally** -Blöcke ausgeführt, und die Ausführung wird im Handler fortgesetzt.
 
-Nehmen Sie z. B. an, eine Reihe von Funktionsaufrufen verbindet Funktion A mit Funktion D, wie in der folgenden Abbildung dargestellt. Jede Funktion verfügt über einen Beendigungshandler. Wenn eine Ausnahme in der Funktion D ausgelöst und in einem behandelt wird, werden die Beendigungs Handler in dieser Reihenfolge aufgerufen, wenn das System den Stapel entlädt: D, C, B.
+Nehmen Sie z. B. an, eine Reihe von Funktionsaufrufen verbindet Funktion A mit Funktion D, wie in der folgenden Abbildung dargestellt. Jede Funktion verfügt über einen Beendigungshandler. Wenn eine Ausnahme in Funktion D ausgelöst und in A behandelt wird, werden die Beendigungshandler in folgender Reihenfolge aufgerufen, während das System den Stapel abwickelt: D, C, B.
 
-![Reihenfolge der&#45;]Beendigungs handlerausführung der Beendigungs(../cpp/media/vc38cx1.gif "&#45;Handler-Ausführung") <br/>
+![Reihenfolge der&#45;Beendigungs Handler-Ausführung](../cpp/media/vc38cx1.gif "Reihenfolge der&#45;Beendigungs Handler-Ausführung") <br/>
 Reihenfolge für das Beenden bei Handlerausführung
 
 > [!NOTE]
 > Das Verhalten von try-endlich unterscheidet sich von einigen anderen Sprachen, die die Verwendung von **schließlich**unterstützen C#, z. b.  Ein einzelner **__try** kann, aber nicht beides, von **__finally** und **__except**.  Wenn beide zusammen verwendet werden sollen, muss eine äußere try-except-Anweisung die innere try-finally-Anweisung einschließen.  Es gelten andere Regeln für die Angabe, wann ein einzelner Block ausgeführt wird.
 
-Aus Kompatibilitätsgründen mit früheren Versionen sind **_try**, **_finally**und **_leave** Synonyme für **__try**, **__finally**und **__leave** , es sei denn, die Compileroption [/Za \(Spracherweiterungen deaktivieren) ](../build/reference/za-ze-disable-language-extensions.md)ist angegeben.
+Aus Kompatibilitätsgründen mit früheren Versionen sind **_try**, **_finally**und **_leave** Synonyme für **__try**, **__finally**und **__leave** , es sei denn, die Compileroption [/Za \(Disable Spracherweiterungen)](../build/reference/za-ze-disable-language-extensions.md) ist beschrieben.
 
 ## <a name="the-__leave-keyword"></a>Das __leave-Schlüsselwort
 
@@ -96,5 +96,5 @@ Der Beendigungs Handler wird nicht aufgerufen, wenn ein Prozess in der Mitte der
 
 [Schreiben eines Beendigungshandlers](../cpp/writing-a-termination-handler.md)<br/>
 [Strukturierte Ausnahmebehandlung (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
-[Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
+[Stichwörter](../cpp/keywords-cpp.md)<br/>
 [Beendigungs HandlerSyntax](/windows/win32/Debug/termination-handler-syntax)
