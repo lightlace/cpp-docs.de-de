@@ -37,7 +37,7 @@ Allgemeine Informationen zur Unterstützung von CMake in Visual Studio finden Si
 
 ## <a name="before-you-begin"></a>Vorbereitungen
 
-Stellen Sie zuerst sicher, dass die Workload **Linux-Entwicklung mit C++** mit CMake-Komponente installiert ist. Weitere Informationen finden Sie unter [Install the C++ Linux workload in Visual Studio (Installieren der C++-Workload unter Linux in Visual Studio)](download-install-and-setup-the-linux-development-workload.md). 
+Stellen Sie zuerst sicher, dass die Workload **Linux-Entwicklung mit C++** mit der CMake-Komponente installiert ist. Weitere Informationen finden Sie unter [Install the C++ Linux workload in Visual Studio (Installieren der C++-Workload unter Linux in Visual Studio)](download-install-and-setup-the-linux-development-workload.md). 
 
 Stellen Sie sicher, dass Folgendes auf dem Linux-System installiert ist: 
 
@@ -64,7 +64,7 @@ Die Binärdateien werden in `~/.vs/cmake` installiert. Nach dem Bereitstellen de
 
 ## <a name="open-a-folder"></a>Öffnen eines Ordners
 
-Um zu beginnen, wählen Sie **Datei** > **Öffnen** > **Ordner** aus dem Hauptmenü aus, oder geben Sie `devenv.exe <foldername>` in der Befehlszeile ein. Der Ordner, den Sie öffnen, sollte eine Datei „CMakeLists.txt“ sowie Ihren Quellcode enthalten.
+Um zu beginnen, wählen Sie **Datei**  >  **Öffnen**  >  **Ordner** aus dem Hauptmenü aus, oder geben Sie `devenv.exe <foldername>` in der Befehlszeile ein. Der Ordner, den Sie öffnen, sollte eine Datei „CMakeLists.txt“ sowie Ihren Quellcode enthalten.
 Das folgende Beispiel zeigt eine einfache Datei „CMakeLists.txt“ und CPP-Datei:
 
 ```cpp
@@ -131,7 +131,7 @@ Eine „CMakeSettings.json“-Datei in einem CMake-Projekt unter Linux kann alle
 
 ::: moniker range="vs-2019"
 
-Öffnen Sie die Dropdownliste **Konfiguration**, und wählen Sie die Option **Konfigurationen verwalten** aus, um die Standardeinstellungen von CMake in Visual Studio 2019 zu ändern. 
+Öffnen Sie über Hauptsymbolleiste die Dropdownliste **Konfiguration**, und wählen Sie die Option **Konfigurationen verwalten** aus, um die Standardeinstellungen von CMake in Visual Studio 2019 zu ändern. 
 
 ![CMake-Konfigurationen verwalten](../build/media/vs2019-cmake-manage-configurations.png "Dropdownliste für CMake-Konfigurationen")
 
