@@ -55,7 +55,7 @@ Es gibt mehrere Möglichkeiten für den Umgang mit dem Linux-Projekt sowie zum D
 
    - Im **gdbserver**-Modus wird GDB lokal ausgeführt und stellt eine Verbindung mit gdbserver auf dem Remotesystem aus.  Dies ist der einzige Modus, der vom Linux-Konsolenfenster unterstützt wird.
 
-   - Im **GDB**-Modus steuert der Visual Studio-Debugger GDB auf dem Remotesystem. Diese Option eignet sich besser, wenn die lokale Version von GDB nicht mit der Version kompatibel ist, die auf dem Zielcomputer installiert ist. |
+   - Im **gdb**-Modus steuert der Visual Studio-Debugger GDB auf dem Remotesystem. Diese Option eignet sich besser, wenn die lokale Version von GDB nicht mit der Version kompatibel ist, die auf dem Zielcomputer installiert ist. |
 
    > [!NOTE]
    > Wenn Sie im gdbserver-Debugmodus keine Haltepunkte treffen können, versuchen Sie es im gdb-Modus. GDB muss zunächst auf dem Remoteziel [installiert](download-install-and-setup-the-linux-development-workload.md) werden.
@@ -172,7 +172,7 @@ Für CMake-Projekte, die einen Linux-Remotecomputer als Ziel haben, können Sie 
 
 ![CMake-Remotedebugcomputer](media/cmake-remote-debug-machine.png)
 
-IntelliSense schlägt eine Liste aller eingerichteten Remoteverbindungen vor. Sie können eine neue Remoteverbindung hinzufügen, indem Sie zu **Tools** > **Optionen** > **Plattformübergreifend** > **Verbindungs-Manager** navigieren oder suchen in **Schnellstart** nach „Verbindungs-Manager“ suchen.
+IntelliSense schlägt eine Liste aller eingerichteten Remoteverbindungen vor. Sie können eine neue Remoteverbindung hinzufügen, indem Sie zu **Tools**  >  **Optionen**  >  **Plattformübergreifend**  >  **Verbindungs-Manager** navigieren oder in **Schnellstart** nach „Verbindungs-Manager“ suchen.
 
 Wenn Sie die vollständige Kontrolle über Ihre Bereitstellung wünschen, können Sie die folgenden Codeblöcke an die Datei „launch.vs.json“ anfügen. Denken Sie daran, die Platzhalterwerte durch reale Werte zu ersetzen:
 
