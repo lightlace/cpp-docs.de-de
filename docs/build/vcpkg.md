@@ -149,7 +149,7 @@ Standardmäßig listet der **upgrade**-Befehl nur die Bibliotheken auf, die vera
 - **--no-dry-run**: Durchführen des Upgrades. Ist diese Option nicht angegeben, listet der Befehl nur die veralteten Pakete auf.
 - **--keep-going**: Die Installation der Pakete wird fortgeführt, auch wenn die Installation eines Pakets fehlschlägt.
 - **--triplet \<t>** : Festlegen der Standarddreiergruppe für nicht qualifizierte Pakete
-- **--vcpkg-root \<path>** : Angeben des zu verwendenden vcpkg-Verzeichnisses statt des aktuellen Verzeichnisse oder des Toolverzeichnisses
+- **--vcpkg-root \<pfad>** : Gibt den zu verwendenden vcpkg-Verzeichnisses anstelle des aktuellen Verzeichnisses oder Toolverzeichnisses an.
 
 ### <a name="upgrade-example"></a>Beispiel für ein Upgrade
 
@@ -170,7 +170,7 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 ## <a name="contribute-new-libraries"></a>Beisteuern neuer Bibliotheken
 
-Sie können jede beliebige Bibliothek in Ihre private Ports-Sammlung aufnehmen. Um einen neue Bibliothek für den öffentlichen Katalog vorzuschlagen, öffnen Sie ein Problem auf der [GitHub-Seite zu vcpkg-Problemen](https://github.com/Microsoft/vcpkg/issues).
+Sie können jede beliebige Bibliothek in Ihre private Ports-Sammlung aufnehmen. Um eine neue Bibliothek für den öffentlichen Katalog vorzuschlagen, öffnen Sie ein Issue auf der [GitHub-Seite zu vcpkg-Issues](https://github.com/Microsoft/vcpkg/issues).
 
 ## <a name="remove-a-library"></a>Entfernen einer Bibliothek
 
