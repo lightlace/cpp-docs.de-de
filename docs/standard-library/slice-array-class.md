@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - slice_array class
 ms.assetid: a182d5f7-f35c-4e76-86f2-b5ac64ddc846
-ms.openlocfilehash: cf33c5f627a88698c84947f9b803edaebccf5566
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 358348a57b823fcea82cd296967c83778819361d
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450403"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688965"
 ---
-# <a name="slicearray-class"></a>slice_array-Klasse
+# <a name="slice_array-class"></a>slice_array-Klasse
 
-Eine interne zusätzliche Vorlagenklasse, die slice-Objekte (Segmente) unterstützt, indem sie Vorgänge zwischen Teilmengenarrays bereitstellt, die durch das Segment eines valarray-Objekts definiert sind.
+Eine interne Hilfsklassen Vorlage, die Slice-Objekte unterstützt, indem Vorgänge zwischen Teilmengen Arrays bereitgestellt werden, die durch das Slice eines Valarray-Objekts definiert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,11 +44,11 @@ public:
 
 Die Klasse beschreibt ein Objekt, das einen Verweis auf ein Objekt der Klasse [valarray](../standard-library/valarray-class.md) **\<Type>** zusammen mit einem Objekt der Klasse [slice](../standard-library/slice-class.md) speichert, das die Reihenfolge der Elemente beschreibt, die im **valarray\<Type>** -Objekt ausgewählt werden sollen.
 
-Die Vorlagenklasse wird indirekt durch bestimmte valarray-Operationen erstellt und kann nicht direkt in der Anwendung verwendet werden. Eine interne auxiliary-Vorlagenklasse, die von dem Segment-Indexoperator verwendet wird:
+Die Klassen Vorlage wird indirekt von bestimmten Valarray-Vorgängen erstellt und kann nicht direkt im Programm verwendet werden. Eine interne, zusätzliche Klassen Vorlage, die von dem Slice-Index Operator verwendet wird:
 
 `slice_array`\<**Type**> `valarray`< **Type**:: `operator[]` ( `slice`).
 
-Sie erstellen ein `slice_array<Type>` -Objekt nur, indem Sie einen Ausdruck der Form " [VA&#91;SL&#93;](../standard-library/valarray-class.md#op_at)" für `sl` einen Slice eines `va`Valarray-Objekts schreiben. Die Member-Funktionen der-Klasse Slice_array Verhalten sich dann wie die entsprechenden Funktions `valarray<Type>`Signaturen, die für definiert sind, mit dem Unterschied, dass nur die Sequenz ausgewählter Elemente betroffen ist. Die Sequenz, die vom slice_array gesteuert wird, wird durch die drei Parameter des Segmentkonstruktors, den Index des ersten Elements im Segment und die Anzahl von Elementen und den Abstand zwischen den Elementen definiert. Ein aus dem ' **VA**[ `va` `slice`(2, 5, 3) ' deklarierter Slice_array aus dem Valarray-Element wählt Elemente mit den Indizes 2, 5, 8 `va`, 11 und 14 aus aus. Die Indizes müssen für die Prozedur gültig sein, um gültig zu sein.
+Sie erstellen ein `slice_array<Type>` Objekt nur, indem Sie einen Ausdruck in der [Form&#91;"&#93;VA SL](../standard-library/valarray-class.md#op_at)" für einen Slice `sl` der Valarray-`va` schreiben. Die Element Funktionen der Klasse Slice_array Verhalten sich dann wie die entsprechenden Funktions Signaturen, die für `valarray<Type>` definiert sind, mit dem Unterschied, dass nur die Reihenfolge der ausgewählten Elemente betroffen ist. Die Sequenz, die vom slice_array gesteuert wird, wird durch die drei Parameter des Segmentkonstruktors, den Index des ersten Elements im Segment und die Anzahl von Elementen und den Abstand zwischen den Elementen definiert. Ein aus der von **VA**[`slice` (2, 5, 3) [(2, 5, 3)) ausgeschnittener Wert aus Valarray-`va` wählt Elemente mit den Indizes 2, 5, 8, 11 und 14 aus `va` Die Indizes müssen für die Prozedur gültig sein, um gültig zu sein.
 
 ## <a name="example"></a>Beispiel
 
@@ -62,4 +62,4 @@ Im Beispiel für [slice::slice](../standard-library/slice-class.md#slice) wird v
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)
