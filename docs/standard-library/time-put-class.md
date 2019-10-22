@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::time_put [C++], do_put
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
-ms.openlocfilehash: 73f4cdd0028164ce5f8215258c517c2e59eb7538
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2c0ae501693a8abffc72a23be9c427f31bad65b6
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459946"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685418"
 ---
 # <a name="time_put-class"></a>time_put-Klasse
 
-Die Vorlagenklasse, die ein Objekt beschreibt, das als Gebietsschemafacet dienen kann, um Konvertierungen von Zeitwerten in Sequenzen vom Typ `CharType` zu steuern.
+Die Klassen Vorlage beschreibt ein Objekt, das als Gebiets Schema Aspekt fungieren kann, um Konvertierungen von Uhrzeitwerten in Sequenzen vom Typ `CharType` zu steuern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -35,15 +35,15 @@ class time_put : public locale::facet;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType*\
+*CharType* -\
 Der Typ, der innerhalb eines Programms verwendet wird, um Zeichen zu codieren.
 
-*OutputIterator*\
+*OutputIterator* -\
 Der Typ des Iterators, in den die Time-Put-Funktionen ihre Ausgabe schreiben.
 
 ## <a name="remarks"></a>Hinweise
 
-Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen gespeicherten Wert von NULL. Beim ersten Versuch, auf den gespeicherten Wert zuzugreifen, wird ein eindeutiger positiver Wert in **id** gespeichert.
+Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen gespeicherten Wert von NULL. Beim ersten Versuch, auf den gespeicherten Wert zuzugreifen, wird in **id** ein eindeutiger positiver Wert gespeichert.
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -98,19 +98,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parameter
 
-*weiter*\
+*nächste* \
 Ein Ausgabeiterator, in den die Zeichensequenz für Zeit und Datum eingefügt werden soll.
 
-*_Iosbase*\
+*_Iosbase* \
 Nicht verwendet.
 
-*_Pt*\
+*_Pt* \
 Die Zeit- und Datumsinformationen, die ausgegeben werden.
 
-*_Fmt*\
+*_Fmt* \
 Das Format der Ausgabe. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
 
-*_Mod*\
+*_Mod* \
 Ein Modifizierer für das Format. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -119,9 +119,9 @@ Ein Iterator an die erste Position hinter dem letzten eingefügten Element.
 
 ### <a name="remarks"></a>Hinweise
 
-Die virtuelle geschützte Member-Funktion generiert sequenzielle Elemente `next` , beginnend bei im-Objekt \* `_Pt`gespeicherten Zeitwerten vom `tm`Typ. Die Funktion gibt einen Iterator zurück, der die nächste Stelle zum Einfügen eines Elements nach der generierten Ausgabe festlegt.
+Die virtuelle geschützte Member-Funktion generiert sequenzielle Elemente, beginnend bei `next` aus Zeitwerten, die im-Objekt gespeichert sind, \* `_Pt` vom Typ `tm`. Die Funktion gibt einen Iterator zurück, der die nächste Stelle zum Einfügen eines Elements nach der generierten Ausgabe festlegt.
 
-Die Ausgabe wird von denselben Regeln generiert, die von `strftime`verwendet werden, mit einem letzten Argument von *_Pt*, um eine Reihe von **char** -Elementen in einem Array zu generieren. Bei jedem solchen **char** -Element wird davon ausgegangen, dass es einem entsprechenden `CharType` Element vom Typ durch eine einfache 1-zu-Eins-Zuordnung zugeordnet wird. Wenn *_mod* gleich 0 (null) ist, ist das effektive Format "% F", wobei "F" durch " *_Fmt*" ersetzt wird. Andernfalls ist das effektive Format "% MF", wobei "M" durch " *_mod*" ersetzt wird.
+Die Ausgabe wird von denselben Regeln generiert, die von `strftime` verwendet werden, mit einem letzten Argument von *_Pt*, um eine Reihe von **char** -Elementen in einem Array zu generieren. Es wird davon ausgegangen, dass jedes solche **char** -Element einem äquivalenten Element vom Typ `CharType` durch eine einfache 1-zu-Eins-Zuordnung zugeordnet wird. Wenn *_mod* gleich 0 (null) ist, ist das effektive Format "% F", wobei "F" durch " *_Fmt*" ersetzt wird. Andernfalls ist das effektive Format "% MF", wobei "M" durch " *_mod*" ersetzt wird.
 
 ### <a name="example"></a>Beispiel
 
@@ -161,28 +161,28 @@ iter_type put(iter_type next,
 
 ### <a name="parameters"></a>Parameter
 
-*weiter*\
+*nächste* \
 Ein Ausgabeiterator, in den die Zeichensequenz für Zeit und Datum eingefügt werden soll.
 
-*_Iosbase*\
+*_Iosbase* \
 Nicht verwendet.
 
-*_Fill*\
-Das Zeichen vom Typ `CharType` , das für den Abstand verwendet wird.
+*_Fill* \
+Das Zeichen vom Typ, das für den Abstand verwendet `CharType`.
 
-*_Pt*\
+*_Pt* \
 Die Zeit- und Datumsinformationen, die ausgegeben werden.
 
-*_Fmt*\
+*_Fmt* \
 Das Format der Ausgabe. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
 
-*_Mod*\
+*_Mod* \
 Ein Modifizierer für das Format. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
 
-*erstes*\
+*erste* \
 Der Anfang der Formatierungszeichenfolge für die Ausgabe. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
 
-*letzten*\
+*Letzter* \
 Das Ende der Formatierungszeichenfolge für die Ausgabe. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -191,7 +191,7 @@ Ein Iterator an die erste Position hinter dem letzten eingefügten Element.
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Member-Funktion gibt [do_put](#do_put)(`next`, `_Iosbase`, `_Fill`, `_Pt`, `_Fmt`, `_Mod`) zurück. Die zweite Memberfunktion kopiert jedes Element im Intervall [ `first`, `last`) außer Prozentzeichen (%) nach \* `next` ++. Für ein Prozentzeichen gefolgt von einem *C*-Zeichen im Intervall [ `first`, `last`) wertet die Funktion stattdessen `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) und überspringt *C*. Wenn *C* jedoch ein Qualifiziererzeichen aus dem Satz EOQ# gefolgt von einem `C2`-Zeichen im Intervall [ `first`, `last`) ist, wertet die Funktion stattdessen `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) und überspringt `C2`.
+Die erste Member-Funktion gibt [Do_put](#do_put)(`next`, `_Iosbase`, `_Fill`, `_Pt`, `_Fmt`, `_Mod`) zurück. Die zweite Memberfunktion kopiert jedes Element im Intervall [ `first`, `last`) außer Prozentzeichen (%) nach \* `next` ++. Für einen Prozentwert, auf den das Zeichen *C* im Intervall [`first` `last`) folgt, wertet die Funktion stattdessen `next`  =  `do_put` (`next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) aus und überspringt in der Vergangenheit *C*. Wenn *C* jedoch ein Qualifiziererzeichen aus dem Satz EOQ # ist, gefolgt von einem Zeichen 3 im Intervall [4 5), wertet die Funktion stattdessen 6 7 8 (9 0 , 1, 2, 3, *C*) und überspringt 5.
 
 ### <a name="example"></a>Beispiel
 
@@ -247,18 +247,18 @@ explicit time_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*_Refs*\
+*_Refs* \
 Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
 Die möglichen Werte für den Parameter *_Refs* und ihre Bedeutung lauten:
 
-- 0: Die Lebensdauer des Objekts wird von den Gebiets Schemas verwaltet, in denen es enthalten ist.
+- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.
 
 - 1: Die Lebensdauer des Objekts muss manuell verwaltet werden.
 
-- \> 1: Diese Werte sind nicht definiert.
+- \> 1: diese Werte sind nicht definiert.
 
 Der Konstruktor initialisiert sein Basisobjekt mit [locale:: Face(](../standard-library/locale-class.md#facet_class) *_Refs*).
 
@@ -266,4 +266,4 @@ Der Konstruktor initialisiert sein Basisobjekt mit [locale:: Face(](../standard-
 
 [\<locale>](../standard-library/locale.md)\
 [time_base-Klasse](../standard-library/time-base-class.md)\
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

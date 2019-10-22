@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-ms.openlocfilehash: 3c3c7fc34e75772c10ba39ecc51f6d2ac59d7ad5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2e861d2250585fbcdf3e1ef63d92f18185fc7f1c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456292"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687779"
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
 
-Definiert die Containervorlagenklassen "map" und "multimap" und deren unterstützende Vorlagen.
+Definiert die Containerklassen Vorlagen Map und Multimap und deren unterstützende Vorlagen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -24,7 +24,7 @@ Definiert die Containervorlagenklassen "map" und "multimap" und deren unterstüt
 **Namespace:** std
 
 > [!NOTE]
-> Die \<Map-> Bibliothek verwendet auch `#include <initializer_list>` die-Anweisung.
+> Die \<map > Bibliothek verwendet auch die `#include <initializer_list>`-Anweisung.
 
 ## <a name="members"></a>Member
 

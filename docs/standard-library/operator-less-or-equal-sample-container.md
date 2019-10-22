@@ -14,19 +14,19 @@ helpviewer_keywords:
 - <= operator, with specific objects
 - <= operator
 ms.assetid: 338577dd-dc88-4a2b-9e12-0379c54fc8a2
-ms.openlocfilehash: c559838f66c483f7c1a76fd17f6a4c07b8aa1fec
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fff370d595afaf4b4692b4166f248b56a72efcb8
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456601"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689177"
 ---
 # <a name="operatorlt-ltsample-containergt"></a>operator&lt;= (&lt;Sample Container&gt;)
 
 > [!NOTE]
-> Dieses Thema ist in der Microsoft C++ -Dokumentation als nicht funktionales Beispiel für Container, die C++ in der Standard Bibliothek verwendet werden. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).
+> Dieses Thema ist in der Microsoft C++ -Dokumentation als nicht funktionales Beispiel für Container, die C++ in der Standard Bibliothek verwendet werden. Weitere Informationen finden Sie unter [C++-Standardbibliothekscontainer](../standard-library/stl-containers.md).
 
-Überlädt **operator<=** , um zwei Objekte der Vorlagenklasse [Container](../standard-library/sample-container-class.md) zu vergleichen.
+Über lädt den **Operator < =** , um zwei Objekte des Klassen Vorlagen [Containers](../standard-library/sample-container-class.md)zu vergleichen.
 
 ## <a name="syntax"></a>Syntax
 

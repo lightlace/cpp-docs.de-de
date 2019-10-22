@@ -16,14 +16,14 @@ helpviewer_keywords:
 - std::regex_iterator::operator->
 - std::regex_iterator::operator++
 ms.assetid: 0cfd8fd0-5a95-4f3c-bf8e-6ef028c423d3
-ms.openlocfilehash: ccf806a7918100c58e04ab403f3a8b895e8dc256
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fb609df2bf52873dac3cddaa6b12f82ea1b53237
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451557"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689088"
 ---
-# <a name="regexiterator-class"></a>regex_iterator-Klasse
+# <a name="regex_iterator-class"></a>regex_iterator-Klasse
 
 Iteratorklasse für Übereinstimmungen.
 
@@ -38,18 +38,18 @@ class regex_iterator
 
 ## <a name="parameters"></a>Parameter
 
-*Bidit*\
+*Bidit* -\
 Der Itertatortyp für Teilübereinstimmungen.
 
-*Elem*\
+*Elem* -\
 Der zu entsprechende Elementtyp.
 
-*Rxcharakteristika*\
+*Rxcharakteristika* -\
 Merkmalklasse für Elemente.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt ein Objekt mit einem konstanten Forward-Iterator. Anschließend extrahiert sie Objekte des Typs `match_results<BidIt>` durch wiederholtes Anwenden seines regulären Ausdrucksobjekts `*pregex` auf die vom Iteratorbereich `[begin, end)`definierte Zeichenfolge.
+Die Klassen Vorlage beschreibt ein konstantes Forward-Iteratorobjekt. Anschließend extrahiert sie Objekte des Typs `match_results<BidIt>` durch wiederholtes Anwenden seines regulären Ausdrucksobjekts `*pregex` auf die vom Iteratorbereich `[begin, end)`definierte Zeichenfolge.
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -64,7 +64,7 @@ Die Vorlagenklasse beschreibt ein Objekt mit einem konstanten Forward-Iterator. 
 |[difference_type](#difference_type)|Der Typ einer Iteratordifferenz.|
 |[iterator_category](#iterator_category)|Der Typ der Iteratorkategorie.|
 |[Zeiger](#pointer)|Der Typ eines Zeigers auf eine Übereinstimmung.|
-|[Verweis](#reference)|Der Typ eines Verweises auf eine Übereinstimmung.|
+|[reference](#reference)|Der Typ eines Verweises auf eine Übereinstimmung.|
 |[regex_type](#regex_type)|Der Typ des regulären Ausdrucks, der übereinstimmen soll.|
 |[value_type](#value_type)|Der Typ einer Übereinstimmung.|
 
@@ -171,7 +171,7 @@ bool operator!=(const regex_iterator& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Richting*\
+*Rechte* \
 Der Iterator für den Vergleich.
 
 ### <a name="remarks"></a>Hinweise
@@ -215,12 +215,12 @@ bool operator==(const regex_iterator& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Richting*\
+*Rechte* \
 Der Iterator für den Vergleich.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion gibt true `*this` zurück, wenn und *right* beide Sequenz Ende-Iteratoren sind, oder wenn keines von einem Sequenz Ende-Iterator und `begin == right.begin`, `end == right.end`, `pregex == right.pregex`und `flags == right.flags`ist. Andernfalls wird „false“ zurückgegeben.
+Die Member-Funktion gibt true zurück, wenn `*this` und *right gleich* zeitig Iteratoren am Ende sind, oder wenn keines von einem Sequenz Ende-Iterator und `begin == right.begin`, `end == right.end`, `pregex == right.pregex` und `flags == right.flags` ist. Andernfalls wird „false“ zurückgegeben.
 
 ## <a name="op_arrow"></a> regex_iterator::operator-&gt;
 
@@ -273,21 +273,21 @@ regex_iterator(BidIt first,
 
 ### <a name="parameters"></a>Parameter
 
-*erstes*\
+*erste* \
 Anfang der Sequenz, die übereinstimmen soll.
 
-*letzten*\
+*Letzter* \
 Ende der Sequenz, die übereinstimmen soll.
 
-*Turm*\
+*erneut* \
 Regulärer Ausdruck für Übereinstimmungen.
 
-*c*\
+*f* -\
 Flags für Übereinstimmungen.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor erstellt einen Sequenzende-Iterator. Der zweite Konstruktor initialisiert den gespeicherten Wert `begin` mit *First*, den gespeicherten Wert `end` mit *Last*, den gespeicherten Wert `pregex` mit `&re`und den gespeicherten Wert `flags` mit *f*. Anschließend wird `regex_search(begin, end, match, *pregex, flags)`aufgerufen. Wenn bei der Suche ein Fehler auftritt, legt der Konstruktor für das Objekt einen Sequenzende-Iterator fest.
+Der erste Konstruktor erstellt einen Sequenzende-Iterator. Der zweite Konstruktor initialisiert den gespeicherten Wert `begin` mit *First*, den gespeicherten Wert `end` mit dem *letzten*, den mit `&re` `pregex` gespeicherten Wert und den gespeicherten Wert, der mit *f*`flags` wird. Anschließend wird `regex_search(begin, end, match, *pregex, flags)`aufgerufen. Wenn bei der Suche ein Fehler auftritt, legt der Konstruktor für das Objekt einen Sequenzende-Iterator fest.
 
 ## <a name="regex_type"></a> regex_iterator::regex_type
 
@@ -316,11 +316,11 @@ Der Typ ist ein Synonym für `match_results<BidIt>`, wobei `BidIt` der Vorlagenp
 ## <a name="see-also"></a>Siehe auch
 
 [\<regex>](../standard-library/regex.md)\
-[regex_constants-Klasse](../standard-library/regex-constants-class.md)\
-[regex_error-Klasse](../standard-library/regex-error-class.md)\
-[\<Regex-> Funktionen](../standard-library/regex-functions.md)\
-[regex_iterator-Klasse](../standard-library/regex-iterator-class.md)\
-[\<Regex-> Operatoren](../standard-library/regex-operators.md)\
-[regex_token_iterator-Klasse](../standard-library/regex-token-iterator-class.md)\
-[regex_traits-Klasse](../standard-library/regex-traits-class.md)\
+[regex_constants-Klasse](../standard-library/regex-constants-class.md) \
+[regex_error-Klasse](../standard-library/regex-error-class.md) \
+[\<regex > Funktionen](../standard-library/regex-functions.md) \
+[regex_iterator-Klasse](../standard-library/regex-iterator-class.md) \
+[\<regex > Operatoren](../standard-library/regex-operators.md) \
+[regex_token_iterator-Klasse](../standard-library/regex-token-iterator-class.md) \
+[regex_traits-Klasse](../standard-library/regex-traits-class.md) \
 [\<regex>-Typdefinitionen](../standard-library/regex-typedefs.md)

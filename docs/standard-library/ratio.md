@@ -31,12 +31,12 @@ f1_keywords:
 - ratio/std::deci
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-ms.openlocfilehash: f84bea2e3f4a01bb9428eddde3efbf53b73bc2f3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 5f6919c84c3fb125e149ba6bcd69b6b7f996d17f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458168"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687061"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
@@ -60,7 +60,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 }
 ```
 
-Die Vorlage `ratio` definiert die statischen Konstanten `num` und `den` damit `num`  /  ==`num` Zähler/Nenner und`den` hat keine allgemeinen Faktoren. `den` `num` / `den`der Wert, der von der Vorlagen Klasse dargestellt wird. Daher wird `type` die Instanziierung `ratio<num, den>`von festgelegt.
+In der Vorlagen `ratio` werden die statischen Konstanten `num` und `den` definiert, sodass `num`  /  `den` = = Zähler/Nenner und `num` und `den` keine allgemeinen Faktoren aufweisen. `num`  /  `den` ist der Wert, der durch die Klassen Vorlage dargestellt wird. Daher `type` die Instanziierung `ratio<num, den>` bezeichnet.
 
 ### <a name="specializations"></a>Spezialisierungen
 
@@ -70,7 +70,7 @@ Die Vorlage `ratio` definiert die statischen Konstanten `num` und `den` damit `n
 
 Jede Spezialisierung nimmt zwei Vorlagenparameter, die auch `ratio`-Spezialisierungen sein müssen. Der `type`-Wert wird durch einen zugeordneten logischen Vorgang bestimmt.
 
-|Name|`type`-Wert|
+|-Name|`type`-Wert|
 |----------|------------------|
 |`ratio_add`|`R1 + R2`|
 |`ratio_divide`|`R1 / R2`|

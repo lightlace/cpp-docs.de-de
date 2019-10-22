@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: 11e705629675903803f7230d540417846417cc77
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d8e71b351d88a1c4dee61f88c18aec513d776cd3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456959"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689256"
 ---
-# <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution-Klasse
+# <a name="negative_binomial_distribution-class"></a>negative_binomial_distribution-Klasse
 
 Generiert eine negative binomiale Verteilung.
 
@@ -71,19 +71,19 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*Inttype*\
-Der ganzzahlige Ergebnistyp, der Standardwert ist **int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*Inttype* -\
+Der ganzzahlige Ergebnistyp, der Standardwert ist **int**. Informationen zu möglichen Typen finden Sie unter [\<random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagen Klasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten ganzzahligen Typs produziert. Wenn kein entsprechend der diskreten Wahrscheinlichkeitsfunktion zur negativen binomialen Verteilung verteilter Wert ausgegeben wird, geben Sie **int** ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Klassen Vorlage beschreibt eine Verteilung, die Werte eines benutzerdefinierten ganzzahligen Typs produziert. Wenn kein entsprechend der diskreten Wahrscheinlichkeitsfunktion zur negativen binomialen Verteilung verteilter Wert ausgegeben wird, geben Sie **int** ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-Die Eigenschaftenmember `k()` und `p()` geben die aktuell gespeicherten Verteilungsparameter Werte *k* bzw. *p* zurück.
+Die Eigenschaftenmember `k()` und `p()` die derzeit gespeicherten Verteilungsparameter Werte *k* bzw. *p* zurückgeben.
 
 Das Eigenschaftsmember `param()` gibt das aktuell gespeicherte Verteilungspaket `param_type` zurück oder legt es fest.
 
@@ -232,13 +232,13 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*km*\
+*k* \
 Der `k`-Verteilungsparameter.
 
-*cker*\
+*p* -\
 Der `p`-Verteilungsparameter.
 
-*parm*\
+*\ für* den
 Die für die Erstellung der Verteilung verwendete Parameterstruktur.
 
 ### <a name="remarks"></a>Hinweise
@@ -253,19 +253,19 @@ Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parame
 
 Speichert die Parameter der Verteilung.
 
-struct param_type {typedef negative_binomial_distribution`<`result_type > distribution_type; param_type (result_type k = 1, Double p = 0,5); result_type k () Konstanten; Double p () Konstanten;
+struct param_type {typedef negative_binomial_distribution `<`result_type > distribution_type; param_type (result_type k = 1, Double p = 0,5); result_type k () Konstanten; Double p () Konstanten;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>Parameter
 
-*km*\
+*k* \
 Der `k`-Verteilungsparameter.
 
-*cker*\
+*p* -\
 Der `p`-Verteilungsparameter.
 
-*Richting*\
+*Rechte* \
 Die `param_type`-Struktur, mit der verglichen wird.
 
 ### <a name="remarks"></a>Hinweise

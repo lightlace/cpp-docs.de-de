@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - numpunct_byname class
 ms.assetid: 18412924-e085-4771-b5e9-7a200cbdd7c0
-ms.openlocfilehash: 0c9eb565c2dbf54da449411aa11a4c5661debf1d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: da9259df8c527e44a4adea3a53be31b3c3ffc10b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452318"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687611"
 ---
-# <a name="numpunctbyname-class"></a>numpunct_byname-Klasse
+# <a name="numpunct_byname-class"></a>numpunct_byname-Klasse
 
-Die abgeleitete Vorlagenklasse beschreibt ein Objekt, das als `numpunct`-Facet eines angegebenen Gebietsschemas dienen kann und die Formatierung und Interpunktion von numerischen und booleschen Ausdrücken ermöglicht.
+Die abgeleitete Klassen Vorlage beschreibt ein Objekt, das als `numpunct` Facette eines bestimmten Gebiets Schemas dienen kann und die Formatierung und Interpunktions Zeichen von numerischen und booleschen Ausdrücken ermöglicht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,4 +49,4 @@ Das Verhalten wird durch das [named](../standard-library/locale-class.md#name)-G
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

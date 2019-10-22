@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - messages_byname class
 ms.assetid: c6c64841-3e80-43c8-b54c-fed41833ad6b
-ms.openlocfilehash: b8fe1ab2db792819831f5c50aa99a02559f71cdd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 56d8931cb404d9c0f3f5113f8b2ca0f1158209f2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451804"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689328"
 ---
-# <a name="messagesbyname-class"></a>messages_byname-Klasse
+# <a name="messages_byname-class"></a>messages_byname-Klasse
 
-Die abgeleitete Vorlagenklasse beschreibt ein Objekt, das als Meldungsfacet eines angegebenen Gebietsschemas dienen kann und das Abrufen von lokalisierten Meldungen ermöglicht.
+In der abgeleiteten Klassen Vorlage wird ein Objekt beschrieben, das als Nachrichten Facette eines bestimmten Gebiets Schemas dienen kann und das Abrufen lokalisierter Nachrichten ermöglicht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,10 +39,10 @@ protected:
 
 ### <a name="parameters"></a>Parameter
 
-*_Locname*\
+*_Locname* \
 Ein benanntes Gebietsschema.
 
-*_Refs*\
+*_Refs* \
 Eine initiale Verweisanzahl.
 
 ## <a name="remarks"></a>Hinweise
@@ -57,4 +57,4 @@ Das Verhalten wird durch das benannte Gebiets Schema *_Locname*festgelegt. Jeder
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

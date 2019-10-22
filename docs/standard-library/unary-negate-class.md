@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: 2a7ce9a8593b0dd93b1c3cfe58f2d87fe10ea997
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 2d9f0bedd9e541e65f04ac20375f16f41413cf03
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240543"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684433"
 ---
-# <a name="unarynegate-class"></a>unary_negate-Klasse
+# <a name="unary_negate-class"></a>unary_negate-Klasse
 
-Eine Klasse, mit der eine Memberfunktion bereitgestellt wird, die den Rückgabewert einer angegebenen unären Funktion negiert. Veraltet in C ++ 17 zugunsten des [Not_fn](functional-functions.md#not_fn).
+Eine Klassen Vorlage, die eine Member-Funktion bereitstellt, die den Rückgabewert einer angegebenen unären Funktion negiert. Veraltet in c++ 17, zugunsten von [not_fn](functional-functions.md#not_fn).
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,10 +31,10 @@ class unary_negate
 
 ### <a name="parameters"></a>Parameter
 
-*Func*\
+*Func* -\
 Die unäre Funktion, die negiert werden soll.
 
-*Links*\
+*Linker* \
 Der Operand der unären Funktion, die negiert werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -43,7 +43,7 @@ Die Negation der unären Funktion.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse speichert eine Kopie eines unären Funktionsobjekts  *\_Func*. Sie definiert ihre Memberfunktion `operator()` als Rückgabewert `!_Func(left)`.
+In der Klassen Vorlage wird eine Kopie eines unären Funktions Objekts *\_Func*gespeichert. Er definiert seine Member-Funktion `operator()` als Rückgabe `!_Func(left)`.
 
 Der Konstruktor von `unary_negate` wird nur selten direkt verwendet. Die Hilfsfunktion [not1](../standard-library/functional-functions.md#not1) bietet einen einfacheren Weg, um das Adapterprädikat **unary_negator** zu deklarieren und zu verwenden.
 

@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: ead6382e61066a72f97eacea91bba5b38aa00677
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 66af7aba99d1510b6d4416543e54890a9e891f7e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453924"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688005"
 ---
-# <a name="geometricdistribution-class"></a>geometric_distribution-Klasse
+# <a name="geometric_distribution-class"></a>geometric_distribution-Klasse
 
 Generiert eine geometrische Verteilung.
 
@@ -66,15 +66,15 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*Inttype*\
-Der ganzzahlige Ergebnistyp, der Standardwert ist **int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*Inttype* -\
+Der ganzzahlige Ergebnistyp, der Standardwert ist **int**. Informationen zu möglichen Typen finden Sie unter [\<random >](../standard-library/random.md).
 
-*URNG*\
-Die einheitliche Zufallszahlengenerator-Engine. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*URNG* \
+Die einheitliche Zufallszahlengenerator-Engine. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Vorlagenklasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten Ganzzahltyps mit einer geometrischen Verteilung produziert. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Klassen Vorlage beschreibt eine Verteilung, die Werte eines benutzerdefinierten ganzzahligen Typs mit einer geometrischen Verteilung produziert. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
@@ -220,10 +220,10 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*cker*\
+*p* -\
 Der `p`-Verteilungsparameter.
 
-*parm*\
+*\ für* den
 Die für die Erstellung der Verteilung verwendete Parameterstruktur.
 
 ### <a name="remarks"></a>Hinweise
@@ -251,10 +251,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*cker*\
+*p* -\
 Der `p`-Verteilungsparameter.
 
-*Richting*\
+*Rechte* \
 Die `param_type`-Instanz, mit der verglichen wird.
 
 ### <a name="remarks"></a>Hinweise

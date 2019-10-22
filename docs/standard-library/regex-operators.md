@@ -10,12 +10,12 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: 829b4cf50b02db0a88d61a8801c1e21ddb470344
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8795d0f1c387fb87c44f2d68c45aa27d1edbfb79
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460132"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689072"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt;-Operatoren
 
@@ -66,19 +66,19 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parameter
 
-*Bidit*\
+*Bidit* -\
 Der Iteratortyp.
 
-*Iocharakteristika*\
+*Iomerkmalen* -\
 Die Trait-Klasse der Zeichenfolge.
 
-*Zuordnungseinheits*\
+*Zuordnung* \
 Die Zuweisungsklasse.
 
-*linken*\
+*Linker* \
 Das linke zu vergleichende Objekt.
 
-*Richting*\
+*Rechte* \
 Das rechte zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -181,19 +181,19 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parameter
 
-*Bidit*\
+*Bidit* -\
 Der Iteratortyp.
 
-*Iocharakteristika*\
+*Iomerkmalen* -\
 Die Trait-Klasse der Zeichenfolge.
 
-*Zuordnungseinheits*\
+*Zuordnung* \
 Die Zuweisungsklasse.
 
-*linken*\
+*Linker* \
 Das linke zu vergleichende Objekt.
 
-*Richting*\
+*Rechte* \
 Das rechte zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -254,7 +254,7 @@ sub < "aab" == true
 sub < 'a' == false
 ```
 
-## <a name="op_lt_lt"></a> operator&lt;&lt;
+## <a name="op_lt_lt"></a> Operator&lt;&lt;
 
 Fügt eine sub_match in einen Stream ein.
 
@@ -266,22 +266,22 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>Parameter
 
-*Elem*\
+*Elem* -\
 Der Elementtyp.
 
-*Iocharakteristika*\
+*Iomerkmalen* -\
 Die Trait-Klasse der Zeichenfolge.
 
-*Zuordnungseinheits*\
+*Zuordnung* \
 Die Zuweisungsklasse.
 
-*Bidit*\
+*Bidit* -\
 Der Iteratortyp.
 
-*Vulkane*\
+*Betriebssystem* \
 Der Ausgabestream.
 
-*Richting*\
+*Rechte* \
 Das einzufügende Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -314,7 +314,7 @@ int main()
 whole match: caaa
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a> Operator&lt;=
 
 „Weniger-als“- oder „Gleich-wie“-Vergleich von verschiedenen Objekten.
 
@@ -351,19 +351,19 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parameter
 
-*Bidit*\
+*Bidit* -\
 Der Iteratortyp.
 
-*Iocharakteristika*\
+*Iomerkmalen* -\
 Die Trait-Klasse der Zeichenfolge.
 
-*Zuordnungseinheits*\
+*Zuordnung* \
 Die Zuweisungsklasse.
 
-*linken*\
+*Linker* \
 Das linke zu vergleichende Objekt.
 
-*Richting*\
+*Rechte* \
 Das rechte zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -465,19 +465,19 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parameter
 
-*Bidit*\
+*Bidit* -\
 Der Iteratortyp.
 
-*Iocharakteristika*\
+*Iomerkmalen* -\
 Die Trait-Klasse der Zeichenfolge.
 
-*Zuordnungseinheits*\
+*Zuordnung* \
 Die Zuweisungsklasse.
 
-*linken*\
+*Linker* \
 Das linke zu vergleichende Objekt.
 
-*Richting*\
+*Rechte* \
 Das rechte zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -486,11 +486,11 @@ Jede Operatorvorlage konvertiert alle Argumente in einen Zeichenfolgentyp und gi
 
 Wenn eine Operatorvorlage Argumente in einen Zeichenfolgentyp konvertiert, verwendet sie die erste der folgenden Transformationen, die angewendet wird:
 
-Argumente, deren Typen eine Spezialisierung der Vorlagenklasse `match_results` oder `sub_match` darstellen werden konvertiert, indem die `str`-Memberfunktion aufgerufen wird;
+Argumente, deren Typen eine Spezialisierung einer Klassen Vorlage sind `match_results` oder `sub_match` werden durch Aufrufen der `str` Member-Funktion konvertiert.
 
-Argumente, deren Typen eine Spezialisierung der Vorlagenklasse `basic_string` darstellen werden nicht geändert;
+Argumente, deren Typen eine Spezialisierung der Klassen Vorlage sind `basic_string` unverändert sind;
 
-alle anderen Argumenttypen werden konvertiert, indem Sie den Argumentwert an den Konstruktor übergeben, für eine entsprechende Spezialisierung der Vorlagenklasse `basic_string`.
+alle anderen Argument Typen werden konvertiert, indem der Argument Wert an den Konstruktor für eine entsprechende Spezialisierung der Klassen Vorlage `basic_string` übergeben wird.
 
 ### <a name="example"></a>Beispiel
 
@@ -588,19 +588,19 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parameter
 
-*Bidit*\
+*Bidit* -\
 Der Iteratortyp.
 
-*Iocharakteristika*\
+*Iomerkmalen* -\
 Die Trait-Klasse der Zeichenfolge.
 
-*Zuordnungseinheits*\
+*Zuordnung* \
 Die Zuweisungsklasse.
 
-*linken*\
+*Linker* \
 Das linke zu vergleichende Objekt.
 
-*Richting*\
+*Rechte* \
 Das rechte zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -661,7 +661,7 @@ sub > "aab" == false
 sub > 'a' == true
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a> Operator&gt;=
 
 „Größer-als“- oder „Gleich-wie“-Vergleich von verschiedenen Objekten.
 
@@ -698,19 +698,19 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parameter
 
-*Bidit*\
+*Bidit* -\
 Der Iteratortyp.
 
-*Iocharakteristika*\
+*Iomerkmalen* -\
 Die Trait-Klasse der Zeichenfolge.
 
-*Zuordnungseinheits*\
+*Zuordnung* \
 Die Zuweisungsklasse.
 
-*linken*\
+*Linker* \
 Das linke zu vergleichende Objekt.
 
-*Richting*\
+*Rechte* \
 Das rechte zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -774,10 +774,10 @@ sub >= 'a' == true
 ## <a name="see-also"></a>Siehe auch
 
 [\<regex>](../standard-library/regex.md)\
-[regex_constants-Klasse](../standard-library/regex-constants-class.md)\
-[regex_error-Klasse](../standard-library/regex-error-class.md)\
-[\<Regex-> Funktionen](../standard-library/regex-functions.md)\
-[regex_iterator-Klasse](../standard-library/regex-iterator-class.md)\
-[regex_token_iterator-Klasse](../standard-library/regex-token-iterator-class.md)\
-[regex_traits-Klasse](../standard-library/regex-traits-class.md)\
+[regex_constants-Klasse](../standard-library/regex-constants-class.md) \
+[regex_error-Klasse](../standard-library/regex-error-class.md) \
+[\<regex > Funktionen](../standard-library/regex-functions.md) \
+[regex_iterator-Klasse](../standard-library/regex-iterator-class.md) \
+[regex_token_iterator-Klasse](../standard-library/regex-token-iterator-class.md) \
+[regex_traits-Klasse](../standard-library/regex-traits-class.md) \
 [\<regex>-Typdefinitionen](../standard-library/regex-typedefs.md)

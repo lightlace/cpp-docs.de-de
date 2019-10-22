@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<double> function
 ms.assetid: 0d0b9d2a-9b9b-410b-82a0-86b6df127e47
-ms.openlocfilehash: 565a2e6b5ee4eb495cb4cc3241bb8ce72de538a2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8955669f4bc6fd7b3b373751e0e5134205dd1657
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453150"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689795"
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
 
@@ -30,19 +30,19 @@ public:
 constexpr complex(const complex<double>& complexNum);
 
 constexpr explicit complex(const complex<long double>& complexNum);
-// rest same as template class complex
+// rest same as class template complex
 };
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*RealVal*\
+*RealVal* -\
 Der Wert vom Typ **double** für den Realteil der zu erstellenden komplexen Zahl.
 
-*ImagVal*\
+*Imagval* -\
 Der Wert vom Typ **double** für den Imaginärteil der zu erstellenden komplexen Zahl.
 
-*complexnum*\
+*complexnum* -\
 Die komplexe Zahl vom Typ **float** oder vom Typ **long Double** , deren reelle und imaginäre Teile verwendet werden, um eine komplexe Zahl vom Typ **Double** zu initialisieren, die erstellt wird.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -51,9 +51,9 @@ Eine komplexe Zahl vom Typ **double**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die explizite Spezialisierung der complex-Vorlagenklasse in eine komplexe Klasse des Typs **double** unterscheidet sich von der Vorlagenklasse nur in den Konstruktoren, die sie definiert. Die Konvertierung von **float** in **Double** darf implizit erfolgen, aber die Konvertierung von **long Double** in **Double** muss **explizit**erfolgen. Die Verwendung einer **expliziten** Konvertierung schließt die Initiierung mit Typkonvertierung über die Zuweisungssyntax aus.
+Die explizite Spezialisierung der Klassen Vorlage, die Komplex für eine komplexe Klasse des Typs **Double** ist, unterscheidet sich von der Klassen Vorlage nur in den Konstruktoren, die Sie definiert. Die Konvertierung von **float** in **Double** darf implizit erfolgen, aber die Konvertierung von **long Double** in **Double** muss **explizit**erfolgen. Die Verwendung einer **expliziten** Konvertierung schließt die Initiierung mit Typkonvertierung über die Zuweisungssyntax aus.
 
-Weitere Informationen zur Vorlagenklasse `complex` finden Sie unter [complex-Klasse](../standard-library/complex-class.md). Eine Liste der Member der `complex`-Vorlagenklasse finden Sie unter .
+Weitere Informationen zu den Klassen Vorlagen `complex` finden Sie unter [Complex-Klasse](../standard-library/complex-class.md). Eine Liste der Elemente der Klassen Vorlage `complex` finden Sie unter.
 
 ## <a name="example"></a>Beispiel
 
@@ -119,4 +119,4 @@ arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.
 ## <a name="see-also"></a>Siehe auch
 
 [complex-Klasse](../standard-library/complex-class.md)\
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - std::shuffle_order_engine [C++], base_type
 - std::shuffle_order_engine [C++], seed
 ms.assetid: 0bcd1fb0-44d7-4e59-bb1b-4a9b673a960d
-ms.openlocfilehash: 972ba83afb5478cd89314817ba823b8d5657c9c8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d72cfaae2e7f6768a68439fbc30aa5ab0d38f270
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450413"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686418"
 ---
-# <a name="shuffleorderengine-class"></a>shuffle_order_engine-Klasse
+# <a name="shuffle_order_engine-class"></a>shuffle_order_engine-Klasse
 
 Generiert eine zufällige Sequenz durch Neupositionieren der Werte, die von ihrer Basis-Engine zurückgegeben werden.
 
@@ -35,10 +35,10 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>Parameter
 
-*Ge*\
+*Engine* -\
 Der Typ der Basis-Engine.
 
-*KM*\
+*K* \
 **Tabellengröße**. Anzahl der Elemente im Puffer (Tabelle). **Vorbedingung**:`0 < K`
 
 ## <a name="members"></a>Member
@@ -52,7 +52,7 @@ Weitere Informationen über Engine-Member finden Sie unter [\<random&gt;](../sta
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Vorlagenklasse beschreibt einen *Engine-Adapter*, der Werte produziert, indem er die von seiner Basis-Engine zurückgegebenen Werte neu sortiert. Jeder Konstruktor füllt die interne Tabelle mit *K* -Werten, die von der Basis-Engine zurückgegeben werden, und ein zufälliges Element wird aus der Tabelle ausgewählt, wenn ein Wert angefordert wird.
+Diese Klassen Vorlage beschreibt einen *Engine-Adapter* , der Werte erzeugt, indem er die von seiner Basis-Engine zurückgegebenen Werte neu anordnet. Jeder Konstruktor füllt die interne Tabelle mit *K* -Werten, die von der Basis-Engine zurückgegeben werden, und ein zufälliges Element wird aus der Tabelle ausgewählt, wenn ein Wert angefordert wird.
 
 ## <a name="requirements"></a>Anforderungen
 

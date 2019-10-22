@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_element
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
-ms.openlocfilehash: 0836ed683b398981e95e401a73ded6367c7ab472
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 21efed39fdaabe0f95f83e9dc5cdfcc508a147c5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241810"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684460"
 ---
-# <a name="tupleelement-class"></a>tuple_element-Klasse
+# <a name="tuple_element-class"></a>tuple_element-Klasse
 
 Umschließt ein `tuple` -Element. Spezialisierungen umschließen `array`-Elemente und `pair`-Elemente.
 
@@ -56,35 +56,35 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>Parameter
 
-*Index*\
+*Index* \
 Der Index des angegebenen Elements.
 
-*Tupel*\
+*Tupel* -\
 Der Typ des Tupels.
 
-*Elem*\
+*Elem* -\
 Der Typ eines Arrayelements.
 
-*Größe*\
+*Größen* \
 Die Größe des Arrays.
 
-*T1*\
+*T1* \
 Der Typ des ersten Elements in einem Paar.
 
-*T2*\
+*T2* -\
 Der Typ des zweiten Elements in einem Paar.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse `tuple_element` verfügt über ein geschachteltes Typedef `type` , ein Synonym für den Typ am Index *Index* des Tupeltyps *Tupel*.
+Die Klassen Vorlagen `tuple_element` verfügt über eine `type` typedef, die ein Synonym für den Typ am Index *Index* des tupeltype- *Tupels*ist.
 
 Das Typedef `tuple_element_t` ist ein zweckmäßiger Alias für `tuple_element<Index, Tuple>::type`.
 
-Die Vorlagenklassenspezialisierung für Arrays bietet eine Schnittstelle zu einem `array` als Tupel von `Size`-Elementen mit demselben Typ. Jede Spezialisierung verfügt über ein geschachteltes Typedef `type` , das ein Synonym für den Typ des der *Index* Element der `array`, wobei alle Const-Volatile-Qualifikationen beibehalten.
+Die Klassen Vorlagen Spezialisierung für Arrays stellt eine Schnittstelle für eine `array` als Tupel von `Size` Elementen bereit, die jeweils denselben Typ haben. Jede Spezialisierung verfügt über eine geduckte typedef-`type`, bei der es sich um ein Synonym für den Typ des *Index* Elements der `array` handelt, bei dem alle Konstanten konstant bleiben.
 
 Die Vorlagenspezialisierungen für `pair`-Typen bieten eine einzelne Member-Typedef `type` an, die ein Synonym für den Typ des Elements an der angegebenen Position im Paar ist, wobei alle const- und/oder volatile-Qualifikationen beibehalten werden. Das Typedef `tuple_element_t` ist ein zweckmäßiger Alias für `tuple_element<N, pair<T1, T2>>::type`.
 
-Verwenden der [get-Funktion &lt;Hilfsprogramm&gt; ](../standard-library/utility-functions.md#get) das Element an einer angegebenen Position oder eines angegebenen Typs zurückgeben.
+Verwenden [Sie die Get-Funktion &lt;utility &gt;](../standard-library/utility-functions.md#get) , um das Element an einer angegebenen Position oder einem angegebenen Typ zurückzugeben.
 
 ## <a name="example"></a>Beispiel
 
@@ -178,6 +178,6 @@ int main() {
 
 **Header:** \<array> (für Arrayspezialisierung)
 
-**Header:** \<Utility > (für paarspezialisierungen)
+**Header:** \<utility > (für paar Spezialisierung)
 
 **Namespace:** std

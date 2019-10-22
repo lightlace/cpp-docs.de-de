@@ -11,20 +11,20 @@ helpviewer_keywords:
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-ms.openlocfilehash: 60d7d00e6b9426df9b3086d9b82deaf1fdd1463c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: cdca7b961d9aedad841692160c8313f8a306dec2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454148"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689674"
 ---
 # <a name="fpos-class"></a>fpos-Klasse
 
-Die Vorlagenklasse beschreibt ein Objekt, das alle Informationen, die zum Wiederherstellen eines beliebigen Dateipositionsindikators innerhalb eines Streams erforderlich sind, speichern kann. Ein Objekt der Klasse fpos\< **St**> speichert effektiv mindestens zwei Memberobjekte:
+Die Klassen Vorlage beschreibt ein Objekt, das alle Informationen speichern kann, die zum Wiederherstellen eines beliebigen Datei Positions Indikators innerhalb eines Streams benötigt werden. Ein Objekt der Klasse fpos\< **St**> speichert effektiv mindestens zwei Memberobjekte:
 
 - Ein Byteoffset vom Typ [streamoff](../standard-library/ios-typedefs.md#streamoff)
 
-- Ein Konvertierungs Zustand, der von einem Objekt der Klasse Basic_filebuf vom Typ `St`verwendet wird, in der Regel. `mbstate_t`
+- Ein Konvertierungs Zustand, der von einem Objekt der Klasse "Basic_filebuf" vom Typ "`St`" verwendet wird, in der Regel `mbstate_t`.
 
 Es kann auch eine beliebige Dateiposition speichern, die von einem Objekt der Klasse [basic_filebuf](../standard-library/basic-filebuf-class.md) und vom Typ `fpos_t` verwendet werden kann. In einer Umgebung mit begrenzter Dateigröße werden `streamoff` und `fpos_t` jedoch manchmal synonym verwendet. In einer Umgebung ohne Streams, mit zustandsabhängiger Codierung, wird `mbstate_t` möglicherweise nicht verwendet. Daher kann die Anzahl der gespeicherten Memberobjekte variieren.
 
@@ -37,7 +37,7 @@ class fpos
 
 ### <a name="parameters"></a>Parameter
 
-*Statetype*\
+@No__t_1 von " *Status Type* "
 Zustandsinformationen.
 
 ### <a name="constructors"></a>Konstruktoren
@@ -83,13 +83,13 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>Parameter
 
-*_Off*\
+*_Off* \
 Der Offset in den Stream
 
-*_State*\
+*_State* \
 Der Startzustand des `fpos`-Objekts
 
-*_Filepos*\
+*_Filepos* \
 Der Offset in den Stream
 
 ### <a name="remarks"></a>Hinweise
@@ -108,7 +108,7 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Richting*\
+*Rechte* \
 Der Dateipositionsindikator, gegen den verglichen werden soll
 
 ### <a name="return-value"></a>Rückgabewert
@@ -181,7 +181,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Off*\
+*_Off* \
 Der Offset, um den der Dateipositionsindikator erhöht werden soll
 
 ### <a name="return-value"></a>Rückgabewert
@@ -206,7 +206,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>Parameter
 
-*_Off*\
+*_Off* \
 Der Offset, um den der Dateipositionsindikator erhöht werden soll
 
 ### <a name="return-value"></a>Rückgabewert
@@ -215,7 +215,7 @@ Die Position in der Datei
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion fügt dem gespeicherten Offset-Member-Objekt *_Off* hinzu und gibt  **\*dieses**zurück. Für die Positionierung innerhalb einer Datei ist das Ergebnis in der Regel nur für binäre Datenströme gültig, die über keine zustandsabhängige Codierung verfügen.
+Die Member-Funktion fügt dem gespeicherten Offset-Member-Objekt *_Off* hinzu und gibt dann **\*this**zurück. Für die Positionierung innerhalb einer Datei ist das Ergebnis in der Regel nur für binäre Datenströme gültig, die über keine zustandsabhängige Codierung verfügen.
 
 ### <a name="example"></a>Beispiel
 
@@ -233,10 +233,10 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Richting*\
+*Rechte* \
 Dateiposition
 
-*_Off*\
+*_Off* \
 Streamoffset
 
 ### <a name="return-value"></a>Rückgabewert
@@ -257,7 +257,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>Parameter
 
-*_Off*\
+*_Off* \
 Streamoffset
 
 ### <a name="return-value"></a>Rückgabewert
@@ -282,7 +282,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Richting*\
+*Rechte* \
 Der Dateipositionsindikator, gegen den verglichen werden soll
 
 ### <a name="return-value"></a>Rückgabewert
@@ -356,7 +356,7 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>Parameter
 
-*_State*\
+*_State* \
 Der neue Konvertierungsstatus
 
 ### <a name="return-value"></a>Rückgabewert

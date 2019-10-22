@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_multiset::upper_bound
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
-ms.openlocfilehash: 984e53a4662b8e3bc18cf06f9fc71d5a614b86ea
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6b3a57d110f2416f5539399ed087e0acbb156991
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448686"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689588"
 ---
 # <a name="hash_multiset-class"></a>hash_multiset-Klasse
 
@@ -109,13 +109,13 @@ class hash_multiset
 
 ### <a name="parameters"></a>Parameter
 
-*Wichtigen*\
+*Schlüssel* \
 Der im hash_multiset-Objekt zu speichernde Elementdatentyp.
 
-*Aufweisen*\
+*Merkmale* \
 Der Typ, der zwei Funktions Objekte enthält, einer der Klassen Vergleiche, bei dem es sich um ein binäres Prädikat handelt, das zwei Element Werte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge zu bestimmen, und eine Hash Funktion, bei der es sich um eine Zuordnung von unären Prädikats für die Elemente handelt ganze Zahlen vom Typ `size_t`. Das Argument ist optional und `hash_compare<Key, less<Key> >` ist der Standardwert.
 
-*Allocator*\
+*Zuordner\*
 Der Typ, der das gespeicherte Zuweisungsobjekt darstellt, mit dem Details zur Belegung und Freigabe von Arbeitsspeicher für das hash_multiset-Objekt gekapselt werden. Dieses Argument ist optional, und der Standardwert ist `allocator<Key>`.
 
 ## <a name="remarks"></a>Hinweise
@@ -130,7 +130,7 @@ Ein hash_multiset-Objekt ist:
 
 - Insofern eindeutig, da jedes der Elemente einen eindeutigen Schlüssel aufweisen muss. Da ein hash_multiset-Objekt auch ein einfacher assoziativer Container ist, sind seine Elemente ebenfalls eindeutig.
 
-- Eine Vorlagenklasse, da die von ihr bereitgestellte Funktionalität generisch und daher unabhängig vom jeweiligen Typ der Daten ist, die als Elemente oder Schlüssel enthalten sind. Die für Elemente und Schlüssel zu verwendenden Datentypen werden stattdessen in der Klassenvorlage zusammen mit der Vergleichsfunktion und der Zuweisung als Parameter angegeben.
+- Eine Klassen Vorlage, da die von ihr bereitgestellte Funktionalität generisch und daher unabhängig vom jeweiligen Typ der Daten ist, die als Elemente oder Schlüssel enthalten sind. Die für Elemente und Schlüssel zu verwendenden Datentypen werden stattdessen in der Klassenvorlage zusammen mit der Vergleichsfunktion und der Zuweisung als Parameter angegeben.
 
 Der Hauptvorteil des Hashverfahrens gegenüber der Sortierung ist die größere Effizienz: Bei einem erfolgreichen Hashverfahren werden Einfüge-, Lösch- und Suchvorgänge in einer konstanten Durchschnittszeit durchgeführt, während die Zeit bei Sortiertechniken proportional zum Logarithmus der Anzahl von Elementen im Container ist. Der Schlüsselwert eines Elements in einem Satz darf nicht direkt geändert werden. Stattdessen müssen Sie alte Werte löschen und Elemente mit neuen Werten einfügen.
 
@@ -138,9 +138,9 @@ Die Auswahl des Containertyps sollte im Allgemeinen auf Grundlage des für die A
 
 Ein hash_multiset-Objekt sollte der assoziative Container der Wahl sein, wenn die Bedingungen, mit denen die Werte den Schlüsseln zugeordnet werden, von der Anwendung erfüllt werden. Die Elemente eines hash_multiset-Objekts können Mehrfache sein und als eigene Sortierschlüssel dienen, sodass Schlüssel nicht eindeutig sind. Ein Modell für diesen Typ der Struktur ist eine geordnete Liste von z. B. Wörtern, in denen die Wörter möglicherweise mehrmals auftreten. Wenn mehrfaches Vorkommen der Wörter nicht zugelassen wurde, ist ein hash_set-Objekt die geeignete Containerstruktur. Wenn eindeutige Definitionen als Werte an die Liste von eindeutigen Schlüsselwörtern angefügt wurden, ist ein hash_map-Objekt eine äquivalente Struktur, um diese Daten zu enthalten. Wenn die Definitionen dagegen nicht eindeutig sind, ist ein hash_multimap-Objekt der geeignete Container.
 
-Das hash_multiset-Objekt sortiert die gesteuerte Sequenz, indem ein gespeichertes Hashmerkmalsobjekt vom Typ [value_compare](#value_compare) aufgerufen wird. Auf das gespeicherte Objekt wird möglicherweise zugegriffen, indem die Memberfunktion [key_comp](#key_comp) aufgerufen wird. Ein solches Funktions Objekt muss sich wie ein Objekt der Klasse `hash_compare<Key, less<Key> >`Verhalten. Insbesondere für alle Values- *Schlüssel* des Typs `Key` `Trait(Key)` ergibt der-Befehl eine Verteilung der Werte vom Typ `size_t`.
+Das hash_multiset-Objekt sortiert die gesteuerte Sequenz, indem ein gespeichertes Hashmerkmalsobjekt vom Typ [value_compare](#value_compare) aufgerufen wird. Auf das gespeicherte Objekt kann zugegriffen werden, indem die Memberfunktion [key_comp](#key_comp) aufrufen wird. Ein solches Funktions Objekt muss sich wie ein Objekt der Klasse `hash_compare<Key, less<Key> >` Verhalten. Insbesondere für alle Values- *Schlüssel* vom Typ `Key` führt der-Aufruf`Trait(Key)` eine Verteilung der Werte vom Typ `size_t` aus.
 
-Im Allgemeinen müssen die Elemente der Vorwärtsiteratoren etwas weniger als vergleichbar sein, um diese Sortierung zu erstellen, sodass beliebige zwei Elemente möglicherweise als gleichwertig bestimmt werden (in dem Sinne, dass keins geringer als das Andere ist), oder dass eins geringer als das Andere ist. Dies führt zu einer Sortierung zwischen den nicht gleichwertigen Elementen. Etwas technischer betrachtet ist die Vergleichsfunktion ein binäres Prädikat, das eine strenge schwache Sortierung im mathematischen Sinn verursacht. Bei einem binären *f*(.*x*,*y*)-Prädikat handelt es sich um ein Funktionsobjekt, das die zwei Argumentobjekte x und y aufweist sowie einen Rückgabewert von TRUE oder FALSE. Eine Sortierung, die auf ein hash_multiset-Objekt angewendet wird, ist eine strenge schwache Sortierung, wenn das binäre Prädikat irreflexiv, antisymmetrisch und transitiv und wenn die Äquivalenz transitiv ist, wobei die beiden Objekte x und y als äquivalent definiert sind, wenn sowohl *f*( *x*,*y*) als auch *f*( *y*, *x*) gleich FALSE sind. Wenn der stärkere Gleichheitszustand zwischen Schlüsseln die Äquivalenz ersetzt, erfolgt die Sortierung total (d. h., alle Elemente werden zueinander sortiert), und die verglichenen Schlüssel sind von den einander nicht mehr zu unterscheiden.
+Im Allgemeinen müssen die Elemente der Vorwärtsiteratoren etwas weniger als vergleichbar sein, um diese Sortierung zu erstellen, sodass beliebige zwei Elemente möglicherweise als gleichwertig bestimmt werden (in dem Sinne, dass keins geringer als das Andere ist), oder dass eins geringer als das Andere ist. Dies führt zu einer Sortierung zwischen den nicht gleichwertigen Elementen. Etwas technischer betrachtet ist die Vergleichsfunktion ein binäres Prädikat, das eine strenge schwache Sortierung im mathematischen Sinn verursacht. Bei einem binären *f*(*x*,*y*)-Prädikat handelt es sich um ein Funktionsobjekt, das die zwei Argumentobjekte x und y aufweist sowie einen Rückgabewert von TRUE oder FALSE. Eine Sortierung, die auf ein hash_multiset-Objekt angewendet wird, ist eine strenge schwache Sortierung, wenn das binäre Prädikat irreflexiv, antisymmetrisch und transitiv und wenn die Äquivalenz transitiv ist, wobei die beiden Objekte x und y als äquivalent definiert sind, wenn sowohl *f*( *x*,*y*) als auch *f*( *y*, *x*) gleich FALSE sind. Wenn der stärkere Gleichheitszustand zwischen Schlüsseln die Äquivalenz ersetzt, erfolgt die Sortierung total (d. h., alle Elemente werden zueinander sortiert), und die verglichenen Schlüssel sind von den einander nicht mehr zu unterscheiden.
 
 Die tatsächliche Reihenfolge der Elemente in der gesteuerten Sequenz hängt von der Hashfunktion, der Sortierfunktion und der aktuellen Größe der Hashtabelle ab, die im Containerobjekt gespeichert wird. Die aktuelle Größe der Hashtabelle kann nicht bestimmt werden. Deshalb kann die Reihenfolge der Elemente in der gesteuerten Sequenz im Allgemeinen nicht vorhergesagt werden. Das Einfügen von Elementen führt nicht dazu, dass Iteratoren ungültig werden, und durch das Entfernen von Elementen werden nur solche Iteratoren ungültig, die speziell auf die entfernten Elemente gezeigt haben.
 
@@ -157,10 +157,10 @@ Der von der hash_multiset-Klasse bereitgestellte Iterator ist ein bidirektionale
 |Typname|Beschreibung|
 |-|-|
 |[allocator_type](#allocator_type)|Ein Typ, der die `allocator`-Klassentyp für das `hash_multiset`-Objekt darstellt.|
-|[const_iterator](#const_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt , mit dem `hash_multiset`ein Konstanten Element im gelesen werden kann.|
-|[const_pointer](#const_pointer)|Ein Typ, der einen Zeiger auf ein **Konstanten** Element in einem `hash_multiset`bereitstellt.|
-|[const_reference](#const_reference)|Ein Typ, der einen Verweis auf ein **Konstanten** Element bereitstellt, das `hash_multiset` in einem zum Lesen und Ausführen von **Konstanten** Vorgängen gespeichert ist.|
-|[const_reverse_iterator](#const_reverse_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit `hash_multiset` **dem jedes Konstante** Element im gelesen werden kann.|
+|[const_iterator](#const_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem ein **Konstanten** Element in der `hash_multiset` gelesen werden kann.|
+|[const_pointer](#const_pointer)|Ein Typ, der einen Zeiger auf ein **Konstanten** Element in einer `hash_multiset` bereitstellt.|
+|[const_reference](#const_reference)|Ein Typ, der einen Verweis auf ein **Konstanten** Element bereitstellt, das in einem `hash_multiset` zum Lesen und Ausführen von **Konstanten** Vorgängen gespeichert ist.|
+|[const_reverse_iterator](#const_reverse_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit **dem jedes Konstante** Element in der `hash_multiset` gelesen werden kann.|
 |[difference_type](#difference_type)|Ein ganzzahliger Typ mit Vorzeichen, der den Unterschied zwischen zwei Iteratoren bereitstellt, die auf Elemente im selben `hash_multiset`-Objekt verweisen.|
 |[Iterator](#iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem jedes Element in einer `hash_multiset` gelesen oder geändert werden kann.|
 |[key_compare](#key_compare)|Eine Typ, der ein Funktionsobjekt bereitstellt, das zwei Sortierschlüssel vergleichen kann, um die relative Position von zwei Elementen im `hash_multiset`-Element zu bestimmen.|
@@ -185,7 +185,7 @@ Der von der hash_multiset-Klasse bereitgestellte Iterator ist ein bidirektionale
 |[crend](#crend)|Gibt einen konstanten Iterator zurück, der den Speicherort adressiert, der dem letzten Element eines umgekehrten `hash_multiset`-Elements nachfolgt.|
 |[emplace](#emplace)|Fügt ein Element ein, das vor Ort in ein `hash_multiset`-Element erstellt wird.|
 |[emplace_hint](#emplace_hint)|Fügt ein Element ein, das vor Ort mit einem Platzierungshinweis in ein `hash_multiset`-Element erstellt wird.|
-|[empty](#empty)|Testet, ob ein `hash_multiset`-Element leer ist.|
+|[leer](#empty)|Testet, ob ein `hash_multiset`-Element leer ist.|
 |[end](#end)|Gibt einen Iterator zurück, der den Speicherort adressiert, der dem letzten Element einem `hash_multiset`-Element nachfolgt.|
 |[equal_range](#equal_range)|Gibt ein Iteratorpaar jeweils bezogen auf das erste Element in einem `hash_multiset`-Objekt mit einem Schlüssel zurück, der größer als ein bestimmter Schlüssel ist, bzw. bezogen auf das erste Element im `hash_multiset`-Objekt mit einem Schlüssel, der größer oder gleich dem Schlüssel ist.|
 |[erase](#erase)|Es wird ein Element oder ein Bereich von Elementen in einem `hash_multiset` von angegebenen Speicherorten entfernt, oder es werden die einem angegebenen Schlüssel entsprechenden Elemente entfernt.|
@@ -248,7 +248,7 @@ Ein bidirektionaler Iterator, der das erste Element im hash_multiset adressiert 
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der Rückgabewert von `begin` einem `const_iterator`zugewiesen wird, können die Elemente im Hash_multiset-Objekt nicht geändert werden. Wenn der Rückgabewert von `begin` einem `iterator`zugewiesen wird, können die Elemente im Hash_multiset-Objekt geändert werden.
+Wenn der Rückgabewert von `begin` einem `const_iterator` zugewiesen wird, können die Elemente im Hash_multiset-Objekt nicht geändert werden. Wenn der Rückgabewert von `begin` einem `iterator` zugewiesen wird, können die Elemente im Hash_multiset-Objekt geändert werden.
 
 ### <a name="example"></a>Beispiel
 
@@ -350,7 +350,7 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein bidirektionaler const-Iterator, der den Speicherort adressiert, der dem letzten Element einer [hash_multiset](../standard-library/hash-multiset-class.md) nachfolgt. Wenn `hash_multiset` leer ist, gilt anschließend `hash_multiset::cend == hash_multiset::begin`.
+Ein bidirektionaler const-Iterator, der den Speicherort adressiert, der dem letzten Element einer [hash_multiset](../standard-library/hash-multiset-class.md) nachfolgt. Wenn `hash_multiset` leer ist, dann gilt `hash_multiset::cend == hash_multiset::begin`.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -446,7 +446,7 @@ Ein `const_iterator`-Typ kann nicht zum Ändern des Werts eines Elements verwend
 
 ### <a name="example"></a>Beispiel
 
-In dem Beispiel für [begin](#begin) finden Sie ein Beispiel, das `const_iterator` verwendet.
+Im Beispiel für [begin](#begin) finden Sie ein Beispiel, das `const_iterator` verwendet.
 
 ## <a name="const_pointer"></a> hash_multiset::const_pointer
 
@@ -529,7 +529,7 @@ Ein `const_reverse_iterator`-Typ kann nicht den Wert eines Elements ändern und 
 
 ### <a name="example"></a>Beispiel
 
-Im Beispiel für [rend](#rend) wird verdeutlicht, wie ein `const_reverse_iterator` deklariert und verwendet wird.
+Im Beispiel für [rend](#rend) wird verdeutlicht, wie `const_reverse_iterator` deklariert und verwendet wird.
 
 ## <a name="count"></a> hash_multiset::count
 
@@ -544,7 +544,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*wichtigen*\
+*Schlüssel* \
 Der Schlüssel des Elements mit einem übereinstimmenden Schlüssel aus der hash_multiset-Klasse.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -555,7 +555,7 @@ Die Anzahl der Elemente im hash_multiset mit dem von einem Parameter angegebenen
 
 Die Memberfunktion gibt die Anzahl der Elemente im folgenden Bereich zurück:
 
-\[lower_bound (*Key*), upper_bound (*Schlüssel*)).
+\[ lower_bound (*Key*), upper_bound (*Key*)).
 
 ### <a name="example"></a>Beispiel
 
@@ -712,7 +712,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::di
 
 ### <a name="remarks"></a>Hinweise
 
-`difference_type` ist der Typ, der beim Subtrahieren oder Inkrementieren über Iteratoren des Containers zurückgegeben wird. `difference_type` wird normalerweise verwendet, um die Anzahl von Elementen im Bereich [`first`, `last`) zwischen den Iteratoren `first` und `last` darzustellen. Dazu gehört das Element, auf das durch `first` gezeigt wird und der Bereich von Elementen bis zu (aber nicht einschließlich) dem Element, auf das durch `last` gezeigt wird.
+`difference_type` ist der Typ, der beim Subtrahieren oder Inkrementieren über Iteratoren des Containers zurückgegeben wird. `difference_type` wird normalerweise verwendet, um die Anzahl von Elementen im Bereich [ `first`, `last`) zwischen den Iteratoren `first` und `last` darzustellen. Dazu gehört das Element, auf das durch `first` gezeigt wird sowie der Bereich von Elementen bis zu (aber nicht einschließlich) dem Element, auf das durch `last` gezeigt wird.
 
 Beachten Sie, dass, obwohl `difference_type` für alle Iteratoren verfügbar ist, die die Anforderungen für einen Eingabeiterator erfüllen, einschließlich der Klasse bidirektionaler Iteratoren, die von umkehrbaren Containern wie Satz unterstützt werden. Subtraktion zwischen Iteratoren wird nur von Iteratoren mit wahlfreiem Zugriff unterstützt, die von einem Container mit wahlfreiem Zugriff, z.B. Vektor oder Deque bereitgestellt werden.
 
@@ -952,7 +952,7 @@ Ein bidirektionaler Iterator, der den Speicherort adressiert, der dem letzten El
 
 ### <a name="remarks"></a>Hinweise
 
-`end`wird verwendet, um zu testen, ob ein Iterator das Ende seines Hash_multiset erreicht hat. Der von `end` zurückgegebene Wert darf nicht dereferenziert werden.
+`end` wird verwendet, um zu testen, ob ein Iterator das Ende seines Hash_multiset erreicht hat. Der von `end` zurückgegebene Wert darf nicht dereferenziert werden.
 
 ### <a name="example"></a>Beispiel
 
@@ -1011,12 +1011,12 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parameter
 
-*wichtigen*\
+*Schlüssel* \
 Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus dem zu durchsuchenden hash_multiset verglichen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Iteratorenpaar, bei der das erste der [lower_bound](#lower_bound) des Schlüssels und das zweite Paar der [upper_bound](#upper_bound) des Schlüssels ist.
+Ein Iteratorenpaar, bei der das Erste der [lower_bound](#lower_bound) des Schlüssels und das zweite Paar der [upper_bound](#upper_bound) des Schlüssels ist.
 
 Sie können auf den ersten Iterator eines von einer Memberfunktion zurückgegebenen Paars `pr` zugreifen, indem Sie `pr`. **first** verwenden, und Sie können einen lower_bound-Iterator dereferenzieren, indem Sie \*( `pr`. **first**) verwenden. Sie können auf den zweiten Iterator eines von einer Memberfunktion zurückgegebenen Paars `pr` zugreifen, indem Sie `pr`. **second** verwenden, und Sie können einen upper_bound-Iterator dereferenzieren, indem Sie \*( `pr`. **second**) verwenden.
 
@@ -1100,16 +1100,16 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parameter
 
-*_Where*\
+*_Where* \
 Die Position des aus der hash_multiset zu entfernenden Elements.
 
-*erstes*\
+*erste* \
 Die Position des ersten Elements, das aus der hash_multiset entfernt werden soll.
 
-*letzten*\
+*Letzter* \
 Die Position direkt hinter dem letzten aus der hash_multiset entfernten Element.
 
-*wichtigen*\
+*Schlüssel* \
 Der Schlüssel des aus der hash_multiset zu entfernenden Elements.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1221,7 +1221,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*wichtigen*\
+*Schlüssel* \
 Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus dem zu durchsuchenden hash_multiset übereinstimmt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1230,9 +1230,9 @@ Ein [Iterator](#iterator) oder [const_iterator](#const_iterator), der den ersten
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion gibt einen Iterator zurück, der ein Element in der Hash_multiset adressiert `equivalent` , dessen Sortierschlüssel dem Argument Schlüssel unter einem binären Prädikat entspricht, das eine Sortierung basierend auf einer kleiner-als-Kompatibilitäts Beziehung auslöst.
+Die Member-Funktion gibt einen Iterator zurück, der ein Element in der Hash_multiset adressiert, dessen Sortierschlüssel dem Argument Schlüssel unter einem binären Prädikat `equivalent` wird, das eine Sortierung basierend auf einer kleiner-als-Kompatibilitäts Beziehung auslöst.
 
-Wenn der Rückgabewert von `find` einem `const_iterator`zugewiesen wird, kann das Hash_multiset-Objekt nicht geändert werden. Wenn der Rückgabewert von `find` einem `iterator`zugewiesen wird, kann das Hash_multiset-Objekt geändert werden.
+Wenn der Rückgabewert von `find` einem `const_iterator` zugewiesen wird, kann das Hash_multiset-Objekt nicht geändert werden. Wenn der Rückgabewert von `find` einem `iterator` zugewiesen wird, kann das Hash_multiset-Objekt geändert werden.
 
 ### <a name="example"></a>Beispiel
 
@@ -1303,7 +1303,7 @@ Weitere Informationen zu `Allocator` finden Sie im Abschnitt „Hinweise“ des 
 
 ### <a name="remarks"></a>Hinweise
 
-Zuweisungen für das hash_multiset geben an, wie die Klasse einen Speicher verwaltet. Für die meisten Programmieranforderungen reichen die standardmäßigen allocator-Objekte mit Container-Klassen der C++-Standardbibliothek aus. Schreiben und Verwenden Ihrer eigener Zuweisungsklasse ist ein C++ -Thema für Fortgeschrittene.
+Zuweisungen für das hash_multiset geben an, wie die Klasse einen Speicher verwaltet. Für die meisten Programmieranforderungen reichen die Standardzuweisungen mit C++-Standardbibliothek-Container-Klassen aus. Schreiben und Verwenden Ihrer eigener Zuweisungsklasse ist ein C++ -Thema für Fortgeschrittene.
 
 ### <a name="example"></a>Beispiel
 
@@ -1363,7 +1363,7 @@ int main( )
 ## <a name="hash_multiset"></a> hash_multiset::hash_multiset
 
 > [!NOTE]
-> Diese API ist veraltet. Die Alternative ist die [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
+> Diese API ist veraltet. Die Alternative ist die [unordered_multiset-Klasse](../standard-library/unordered-multiset-class.md).
 
 Erstellt ein `hash_multiset`-Element, das leer oder die Kopie eines ganzen anderen `hash_multiset`-Elements oder eines Teils davon ist.
 
@@ -1428,9 +1428,9 @@ Alle Konstruktoren initialisieren ihrer hash_multisets-Elemente.
 
 In allen Konstruktoren wird ein Funktionsobjekt vom Typ `Traits` gespeichert, der verwendet wird, um unter den Schlüsseln des `hash_multiset` eine Sortierung vorzunehmen, und das später zurückgegeben werden kann, indem [hash_multiset::key_comp](#key_comp) aufgerufen wird. Weitere Informationen zu `Traits` finden Sie im Thema [hash_multiset-Klasse](../standard-library/hash-multiset-class.md).
 
-Die ersten drei Konstruktoren geben einen leeren Ausgangs `hash_multiset`Wert an, der zweite gibt den Typ der Vergleichsfunktion (*Comp*) an, die zum Festlegen der Reihenfolge der Elemente verwendet werden soll, und der dritte gibt explizit den zuordnertyp an (*Al*). die zu verwendende. Mit dem Schlüsselwort **explicit** werden bestimmte Arten automatischer Typumwandlungen unterdrückt.
+Die ersten drei Konstruktoren geben eine leere anfängliche `hash_multiset` an, wobei die zweite den Typ der Vergleichsfunktion (*Comp*) angibt, die zum Festlegen der Reihenfolge der Elemente verwendet werden soll, und der dritte explizit den zuordnertyp (*Al*) angibt, der daran. Mit dem Schlüsselwort **explicit** werden bestimmte Arten automatischer Typumwandlung unterdrückt.
 
-Der vierte Konstruktor verschiebt das `hash_multiset` `Right`-Element.
+Der vierte Konstruktor verschiebt den `hash_multiset` `Right`.
 
 Die fünften, sechsten und siebten Konstruktoren verwenden ein initializer_list-Element.
 
@@ -1513,11 +1513,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>Hinweise
 
-Ein- `iterator` Typ kann zum Ändern des Werts eines Elements verwendet werden.
+Ein Type-`iterator` kann verwendet werden, um den Wert eines Elements zu ändern.
 
 ### <a name="example"></a>Beispiel
 
-Im Beispiel für [Begin](#begin) finden Sie ein Beispiel für das Deklarieren und `iterator`Verwenden von.
+Ein Beispiel für das Deklarieren und Verwenden von `iterator` finden Sie unter Beispiel für [Begin](#begin) .
 
 ## <a name="key_comp"></a> hash_multiset::key_comp
 
@@ -1608,7 +1608,7 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>Hinweise
 
-`key_compare`ist ein Synonym für die Vorlagen Parameter *Merkmale*.
+`key_compare` ist ein Synonym für die Vorlagen Parameter *Merkmale*.
 
 Weitere Informationen zu *Merkmalen* finden Sie im Thema [Hash_multiset-Klasse](../standard-library/hash-multiset-class.md) .
 
@@ -1616,7 +1616,7 @@ Beachten Sie, dass sowohl `key_compare` als auch value_compare Synonyme für den
 
 ### <a name="example"></a>Beispiel
 
-Im Beispiel für [key_comp](#key_comp) wird verdeutlicht, wie `key_compare` deklariert und verwendet wird.
+Im Beispiel für [key_comp](#key_comp) wird verdeutlicht, wie ein `key_compare` deklariert und verwendet wird.
 
 ## <a name="key_type"></a> hash_multiset::key_type
 
@@ -1631,9 +1631,9 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Hinweise
 
-`key_type`ist ein Synonym für den Vorlagen Parameter *Schlüssel*.
+`key_type` ist ein Synonym für den Vorlagen Parameter *Schlüssel*.
 
-Beachten Sie, dass sowohl `key_type` als auch [value_type](../standard-library/hash-set-class.md#value_type) Synonyme für den Vorlagenparameter *Key* sind. Beide Typen werden für die set- und die multiset-Klasse bereitgestellt, wo sie identisch sind. Sie unterscheiden sich in Bezug auf die Kompatibilität mit der map- und der multimap-Klasse.
+Beachten Sie, dass sowohl `key_type` als auch [value_compare](../standard-library/hash-set-class.md#value_type) Synonyme für den Vorlagenparameter *Traits* sind. Beide Typen werden für den Satz und multiset-Klassen bereitgestellt, in der sie identisch sind. Sie sind unterschiedlich in der Kompatibilität mit den Zuordnungs- und multimap-Klassen.
 
 Weitere Informationen zu *Key*finden Sie im Abschnitt "Hinweise" des Themas [Hash_multiset-Klasse](../standard-library/hash-multiset-class.md) .
 
@@ -1656,7 +1656,7 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>Parameter
 
-*wichtigen*\
+*Schlüssel* \
 Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus dem zu durchsuchenden hash_multiset verglichen wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1767,7 +1767,7 @@ hash_multiset& operator=(hash_multiset&& right);
 
 ### <a name="remarks"></a>Hinweise
 
-Nachdem `hash_multiset`ein vorhandenes Element in einem gelöscht wurde, `operator=` kopiert oder verschiebt den Inhalt von *direkt* in den `hash_multiset`.
+Nachdem alle vorhandenen Elemente in einem `hash_multiset` gelöscht wurden, `operator=` entweder kopiert oder verschiebt den Inhalt von *right* in den `hash_multiset`.
 
 ### <a name="example"></a>Beispiel
 
@@ -1820,7 +1820,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 
 ### <a name="remarks"></a>Hinweise
 
-Ein- `pointer` Typ kann zum Ändern des Werts eines Elements verwendet werden.
+Ein Type-`pointer` kann verwendet werden, um den Wert eines Elements zu ändern.
 
 In den meisten Fällen sollte ein [iterator](#iterator)-Typ für den Zugriff auf Elemente in einem Multiset-Objekt verwendet werden.
 
@@ -2139,7 +2139,7 @@ void swap(hash_multiset& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Richting*\
+*Rechte* \
 Das hash_multiset-Argument, das die Elemente bereitstellt mit der das Ziel-hash_multiset getauscht werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -2215,7 +2215,7 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>Parameter
 
-*wichtigen*\
+*Schlüssel* \
 Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus dem zu durchsuchenden hash_multiset verglichen wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2372,11 +2372,11 @@ typedef key_compare value_compare;
 
 ### <a name="remarks"></a>Hinweise
 
-`value_compare`ist ein Synonym für die Vorlagen Parameter *Merkmale*.
+`value_compare` ist ein Synonym für die Vorlagen Parameter *Merkmale*.
 
 Weitere Informationen zu *Merkmalen* finden Sie im Thema [Hash_multiset-Klasse](../standard-library/hash-multiset-class.md) .
 
-Beachten Sie, dass [key_compare](#key_compare) und `value_compare` Synonyme für den Vorlagenparameter *Traits* sind. Beide Typen werden für die Klassen „set“ und „multiset“ bereitgestellt, in denen sie identisch sind. Dies geschieht zum Zweck der Kompatibilität mit den Klassen „map“ und „multimap“, in denen sie sich unterscheiden.
+Beachten Sie, dass sowohl [key_compare](#key_compare) als auch `value_compare` Synonyme für die Vorlagen Parameter *Merkmale*sind. Beide Typen werden für die Klassen „set“ und „multiset“ bereitgestellt, in denen sie identisch sind. Dies geschieht zum Zweck der Kompatibilität mit den Klassen „map“ und „multimap“, in denen sie sich unterscheiden.
 
 ### <a name="example"></a>Beispiel
 

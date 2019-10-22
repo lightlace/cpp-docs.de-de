@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: 8fd47b6acd4d991741f7ae45332d6cacc1903977
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7418c0316f98f633d229b3bb544bd34d2ac0fb07
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457886"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688091"
 ---
-# <a name="exponentialdistribution-class"></a>exponential_distribution-Klasse
+# <a name="exponential_distribution-class"></a>exponential_distribution-Klasse
 
 Generiert eine exponentielle Verteilung.
 
@@ -67,15 +67,15 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*RealType*\
-Der Gleit Komma Ergebnistyp, der Standardwert ist **Double**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType* -\
+Der Gleit Komma Ergebnistyp, der Standardwert ist **Double**. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).
 
-*URNG*\
-Die Zufallszahlengenerator-Engine. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*URNG* \
+Die Zufallszahlengenerator-Engine. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagen Klasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten ganzzahligen Typs produziert. Wenn kein entsprechend der exponentiellen Verteilung verteilter Wert vorhanden ist, geben Sie **Double** ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Klassen Vorlage beschreibt eine Verteilung, die Werte eines benutzerdefinierten ganzzahligen Typs produziert. Wenn kein entsprechend der exponentiellen Verteilung verteilter Wert vorhanden ist, geben Sie **Double** ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
@@ -182,10 +182,10 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*Lambda*\
+*Lambda* -\
 Der `lambda`-Verteilungsparameter.
 
-*parm*\
+*\ für* den
 Das für die Erstellung der Verteilung verwendete Parameterpaket.
 
 ### <a name="remarks"></a>Hinweise
@@ -213,10 +213,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*Lambda*\
+*Lambda* -\
 Der `lambda`-Verteilungsparameter.
 
-*Richting*\
+*Rechte* \
 Das mit diesem `param_type`-Objekt zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - decay class
 ms.assetid: 96baa2fd-c8e0-49af-be91-ba375ba7f9dc
-ms.openlocfilehash: 73b9e2d8ef9a14830c13ee3f6566137bb51e939d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3b22dfecb1162ce67a0d648197465115acb044ba
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450640"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688112"
 ---
 # <a name="decay-class"></a>decay-Klasse
 
@@ -29,12 +29,12 @@ using decay_t = typename decay<T>::type;
 
 ### <a name="parameters"></a>Parameter
 
-*BUND*\
+*T* \
 Der zu ändernde Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die decay-Vorlage, um den resultierenden Typ so zu erstellen, als würde er durch einen Wert als Argument übergeben. Der Vorlagenklassenmember typedef `type` enthält einen geänderten Typ, der in den folgenden Phasen definiert wird:
+Verwenden Sie die decay-Vorlage, um den resultierenden Typ so zu erstellen, als würde er durch einen Wert als Argument übergeben. Die typedef-`type` der klassenvorlagenmember enthält einen geänderten Typ, der in den folgenden Phasen definiert wird:
 
 - Der Typ `U` ist als `remove_reference<T>::type` definiert.
 

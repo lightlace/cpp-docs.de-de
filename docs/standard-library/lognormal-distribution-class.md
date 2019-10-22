@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: 20967204d1df40d2b8dbb21c499e45404f44a4ae
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: bcf587c5029fdf0b61da45dbd4ee9250f4c3a43b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453806"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687785"
 ---
-# <a name="lognormaldistribution-class"></a>lognormal_distribution-Klasse
+# <a name="lognormal_distribution-class"></a>lognormal_distribution-Klasse
 
 Generiert eine Lognormalverteilung.
 
@@ -68,12 +68,12 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*RealType*\
-Der Gleit Komma Ergebnistyp, der Standardwert ist **Double**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType* -\
+Der Gleit Komma Ergebnistyp, der Standardwert ist **Double**. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagen Klasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten ganzzahligen Typs produziert. Wenn kein entsprechend der Protokoll normal Verteilung verteilter Wert vorhanden ist, geben Sie **Double** ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Klassen Vorlage beschreibt eine Verteilung, die Werte eines benutzerdefinierten ganzzahligen Typs produziert. Wenn kein entsprechend der Protokoll normal Verteilung verteilter Wert vorhanden ist, geben Sie **Double** ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
@@ -195,13 +195,13 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*800*\
+*m* \
 Der `m`-Verteilungsparameter.
 
-*Hymnen*\
+*s* \
 Der `s`-Verteilungsparameter.
 
-*parm*\
+*\ für* den
 Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.
 
 ### <a name="remarks"></a>Hinweise
@@ -230,13 +230,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*800*\
+*m* \
 Der `m`-Verteilungsparameter.
 
-*Hymnen*\
+*s* \
 Der `s`-Verteilungsparameter.
 
-*Richting*\
+*Rechte* \
 Die `param_type`-Struktur, mit der verglichen wird.
 
 ### <a name="remarks"></a>Hinweise

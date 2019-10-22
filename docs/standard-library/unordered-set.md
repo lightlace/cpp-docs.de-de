@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_set header
 ms.assetid: a3364d54-147d-4796-8728-9e62a2e4c226
-ms.openlocfilehash: e03fc2f1c541caedfa9ac83bb9500e50a4b513b1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 71acab214d891c6139f21685e9368399b99e1657
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454688"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688787"
 ---
-# <a name="ltunorderedsetgt"></a>&lt;unordered_set&gt;
+# <a name="ltunordered_setgt"></a>&lt;unordered_set&gt;
 
-Definiert die Containervorlagenklassen [unordered_multiset](../standard-library/unordered-multiset-class.md) und [unordered_set](../standard-library/unordered-set-class.md) und deren unterstützenden Vorlagen.
+Definiert die Containerklassen Vorlagen [unordered_multiset](../standard-library/unordered-multiset-class.md) und [unordered_set](../standard-library/unordered-set-class.md) sowie deren unterstützende Vorlagen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -24,7 +24,7 @@ Definiert die Containervorlagenklassen [unordered_multiset](../standard-library/
 **Namespace:** std
 
 > [!NOTE]
-> Die \<unordered_set-> Bibliothek verwendet auch `#include <initializer_list>` die-Anweisung.
+> Die \<unordered_set > Bibliothek verwendet auch die `#include <initializer_list>`-Anweisung.
 
 ## <a name="members"></a>Member
 

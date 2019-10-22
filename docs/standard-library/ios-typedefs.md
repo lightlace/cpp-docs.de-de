@@ -9,16 +9,16 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: a0fd73cc53c5d538469cb957b7b4c4ec56783ade
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 20bffbeb7720274302633c5dda9e6364c06d5b54
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245281"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687875"
 ---
 # <a name="ltiosgt-typedefs"></a>&lt;ios&gt;-Typedefs
 
-## <a name="ios"></a> IOS
+## <a name="ios"></a>erhältlich
 
 Unterstützt die ios-Klasse aus der alten iostream-Bibliothek.
 
@@ -28,9 +28,9 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist ein Synonym für die Vorlagenklasse [Basic_ios](../standard-library/basic-ios-class.md), die auf Elemente des Typs **Char** mit Standard-Zeichenmerkmale.
+Der Typ ist ein Synonym für die Klassen Vorlage [basic_ios](../standard-library/basic-ios-class.md), die auf Elemente des Typs **char** mit Standard Zeichen Merkmalen spezialisiert ist.
 
-## <a name="streamoff"></a> streamoff
+## <a name="streamoff"></a>streamoff
 
 Unterstützt interne Vorgänge.
 
@@ -44,9 +44,9 @@ Unterstützt interne Vorgänge.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist eine Ganzzahl mit Vorzeichen, die ein Objekt beschreibt, das einen Byte-Offset speichern kann, der an verschiedenen Streampositionierungsvorgängen beteiligt ist. Seine Repräsentation hat mindestens 32 Wertbits. Er ist nicht unbedingt groß genug, um eine willkürliche Byte-Position innerhalb eines Streams repräsentieren zu können. Der Wert `streamoff(-1)` bedeutet im Allgemeinen, einen fehlerhaften Offset.
+Der Typ ist eine ganze Zahl mit Vorzeichen, die ein Objekt beschreibt, das einen Byte-Offset speichern kann, der an verschiedenen Streampositionierungsvorgängen beteiligt ist. Seine Repräsentation hat mindestens 32 Wertbits. Er ist nicht unbedingt groß genug, um eine willkürliche Byte-Position innerhalb eines Streams repräsentieren zu können. Der Wert `streamoff(-1)` der in der Regel einen fehlerhaften Offset angibt.
 
-## <a name="streampos"></a> streampos
+## <a name="streampos"></a>streampos
 
 Enthält die aktuelle Position des Pufferzeigers oder Dateizeigers.
 
@@ -127,9 +127,9 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist ein Synonym für die Vorlagenklasse [Basic_ios](../standard-library/basic-ios-class.md), die auf Elemente des Typs **"wchar_t"** mit Standard-Zeichenmerkmale.
+Der Typ ist ein Synonym für die Klassen Vorlage [basic_ios](../standard-library/basic-ios-class.md), die auf Elemente vom Typ **wchar_t** mit Standard Zeichen Merkmalen spezialisiert ist.
 
-## <a name="wstreampos"></a> wstreampos
+## <a name="wstreampos"></a>wstreampos
 
 Enthält die aktuelle Position des Pufferzeigers oder Dateizeigers.
 

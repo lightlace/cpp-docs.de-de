@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
-ms.openlocfilehash: 7fe1eef32741d63e7b2e2c2320d18f445784c44f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 08bf2c5c814eaed7b409295fcf50c66577f6a5d9
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455468"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688149"
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt;-Klasse
 
-Die-Klasse ist eine explizite Spezialisierung der Vorlagen `ctype\<CharType>` Klasse für Type **char**, die ein Objekt beschreibt, das als Gebiets Schema Aspekt dienen kann, um verschiedene Eigenschaften eines Zeichens vom Typ **char**zu bezeichnen.
+Bei der-Klasse handelt es sich um eine explizite Spezialisierung der Klassen Vorlagen `ctype\<CharType>` für den Typ **char**, der ein Objekt beschreibt, das als Gebiets Schema Aspekt dienen kann, um verschiedene Eigenschaften eines Zeichens vom Typ **char**zu charakterisieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -106,17 +106,17 @@ protected:
 
 ## <a name="remarks"></a>Hinweise
 
-Die explizite Spezialisierung unterscheidet sich von der Vorlagenklasse in verschiedenen Punkten:
+Die explizite Spezialisierung unterscheidet sich auf verschiedene Arten von der Klassen Vorlage:
 
-- Ein Objekt der CType-Klasse `char`< > speichert einen Zeiger auf das erste Element einer CType Mask-Tabelle, ein Array von UCHAR_MAX + 1-Elementen `ctype_base::mask`vom Typ. Darüber hinaus speichert es ein boolesches Objekt, das angibt, ob das Array (mit `operator delete[]`) gelöscht werden soll, wenn das ctype\< **Elem**>-Objekt zerstört wird.
+- Ein Objekt der Klasse CType < `char` > einen Zeiger auf das erste Element einer CType Mask-Tabelle speichert, ein Array von UCHAR_MAX + 1-Elementen vom Typ `ctype_base::mask`. Darüber hinaus speichert es ein boolesches Objekt, das angibt, ob das Array (mit `operator delete[]`) gelöscht werden soll, wenn das ctype\< **Elem**>-Objekt zerstört wird.
 
-- Mit dem einzigen öffentlichen Konstruktor können Sie `tab`, die CType-Masken Tabelle und `del`das boolesche Objekt angeben, das true ist, wenn das Array gelöscht werden soll, wenn der `char`CType-< > Objekt zerstört wird, sowie der Verweis Zähler. Parameter Verweise.
+- Der einzige öffentliche Konstruktor ermöglicht das Angeben von `tab`, der CType Mask-Tabelle und `del`, das boolesche Objekt, das true ist, wenn das Array gelöscht werden soll, wenn der CType < `char` > Objekt zerstört wird, sowie der Verweis Zähler Parameter refs.
 
-- Die geschützte Member- `table` Funktion gibt die gespeicherte CType Mask-Tabelle zurück.
+- Die geschützte Member-Funktion `table` gibt die gespeicherte CType Mask-Tabelle zurück.
 
-- Das statische Member- `table_size` Objekt gibt die Mindestanzahl von Elementen in einer CType Mask-Tabelle an.
+- Das statische Member-Objekt `table_size` das die Mindestanzahl von Elementen in einer CType-Masken Tabelle angibt.
 
-- Die geschützte statische Member- `classic_table`Funktion (gibt die CType-Masken Tabelle zurück, die für das Gebiets Schema "C" geeignet ist.
+- Die geschützte statische Member-Funktion `classic_table` (gibt die CType-Masken Tabelle zurück, die für das Gebiets Schema "C" geeignet ist.
 
 - Die geschützten virtuellen Memberfunktionen [do_is](../standard-library/ctype-class.md#do_is), [do_scan_is](../standard-library/ctype-class.md#do_scan_is) bzw. [do_scan_not](../standard-library/ctype-class.md#do_scan_not) werden nicht verwendet. Die entsprechenden öffentlichen Memberfunktionen führen die jeweiligen Vorgänge selbst aus.
 
@@ -132,4 +132,4 @@ Die Memberfunktionen [do_narrow](../standard-library/ctype-class.md#do_narrow) u
 
 [facet-Klasse](locale-class.md#facet_class)\
 [ctype_base-Klasse](../standard-library/ctype-base-class.md)\
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

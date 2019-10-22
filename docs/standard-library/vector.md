@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 59424a9f6a9434b5d7d3f4298cbb0bc03926621c
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 19068de41cfdcb17ae624858c137bf624851479f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957066"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684068"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
-Definiert den Containervorlagenklassenvektor und einige unterstützende Vorlagen.
+Definiert den Containerklassen Vorlagen Vektor und mehrere unterstützende Vorlagen.
 
 Der `vector` ist ein Container, der Elemente eines bestimmten Typs in einer linearen Sequenz organisiert. Er ermöglicht schnellen zufälligen Zugriff auf alle Elemente sowie dynamische Hinzufügungen und Entfernungen zu und aus der Sequenz. Der `vector` ist der bevorzugte Container für eine Sequenz, wenn die Leistung mit wahlfreiem Zugriff ein wichtiger Faktor ist.
 
 > [!NOTE]
-> Die \<Vektor > Bibliothek verwendet auch die `#include <initializer_list>` -Anweisung.
+> Die \<vector > Bibliothek verwendet auch die `#include <initializer_list>`-Anweisung.
 
 Weitere Informationen zur `vector`-Klasse finden Sie unter [vector-Klasse](../standard-library/vector-class.md). Weitere Informationen zu der Spezialisierung `vector<bool>` finden Sie unter [vector\<bool>-Klasse](../standard-library/vector-bool-class.md).
 
@@ -77,16 +77,16 @@ void swap (
 
 ### <a name="parameters"></a>Parameter
 
-*Sorte*\
+@No__t_1 *eingeben*
 Der Vorlagenparameter für den Typ der Daten, die im Vektor gespeichert sind.
 
-*Allocator*\
+*Zuordner\*
 Der Vorlagenparameter für das gespeicherte Zuweisungsobjekt, das für die Speicherbelegung und -freigabe verantwortlich ist.
 
-*linken*\
+*Linker* \
 Der erste (linke) Vektor in einem Vergleichsvorgang.
 
-*Richting*\
+*Rechte* \
 Der zweite (rechte) Vektor in einem Vergleichsvorgang.
 
 ## <a name="members"></a>Member
@@ -106,14 +106,14 @@ Der zweite (rechte) Vektor in einem Vergleichsvorgang.
 
 |||
 |-|-|
-|[vector-Klasse](../standard-library/vector-class.md)|Eine Vorlagenklasse von Sequenzcontainern, die Elemente eines bestimmten Typs in einer linearen Anordnung anordnen und schnellen zufälligen Zugriff auf ein Element ermöglichen.|
+|[vector-Klasse](../standard-library/vector-class.md)|Eine Klassenvorlage von Sequenzcontainern, die Elemente eines bestimmten Typs in einer linearen Anordnung anordnen und schnellen zufälligen Zugriff auf ein Element ermöglichen.|
 
 ### <a name="specializations"></a>Spezialisierungen
 
 |||
 |-|-|
-|Hashindizes|Gibt einen Hashwert des Vektors zurück.|
-|[vector\<bool>-Klasse](../standard-library/vector-bool-class.md)|Eine vollständige Spezialisierung des Vorlagenklassenvektors für Elemente des Typs `bool` mit einer Zuweisung für den zugrunde liegenden Typ, der von der Spezialisierung verwendet wird.|
+|hash|Gibt einen Hashwert des Vektors zurück.|
+|[vector\<bool>-Klasse](../standard-library/vector-bool-class.md)|Eine vollständige Spezialisierung des Klassen Vorlagen Vektors für Elemente des Typs `bool` mit einer Zuweisung für den zugrunde liegenden Typ, der von der Spezialisierung verwendet wird.|
 
 ## <a name="requirements"></a>Anforderungen
 

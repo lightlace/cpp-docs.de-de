@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: f3c5a2a3d8e4b5f2c8a13ef7525b29683b94acc4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2c1e53c529be8c589f51b9011cee42e5f6f1165b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459617"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688509"
 ---
-# <a name="weibulldistribution-class"></a>weibull_distribution-Klasse
+# <a name="weibull_distribution-class"></a>weibull_distribution-Klasse
 
 Generiert eine Weibull-Verteilung.
 
@@ -70,12 +70,12 @@ class weibull_distribution
 
 ### <a name="parameters"></a>Parameter
 
-*RealType*\
-Der Gleit Komma Ergebnistyp, der Standardwert ist **Double**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType* -\
+Der Gleit Komma Ergebnistyp, der Standardwert ist **Double**. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagen Klasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten Gleit Komma Typs produziert. Wenn kein entsprechend der Weibull-Verteilung verteilter Wert vorhanden ist, geben Sie **Double** ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Klassen Vorlage beschreibt eine Verteilung, die Werte eines benutzerdefinierten Gleit Komma Typs produziert. Wenn kein entsprechend der Weibull-Verteilung verteilter Wert vorhanden ist, geben Sie **Double** ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
@@ -155,7 +155,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Ausgabe
+## <a name="output"></a>Output
 
 Erste Ausführung:
 
@@ -222,13 +222,13 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*ein*\
+*eine* \
 Der `a`-Verteilungsparameter.
 
-*b*\
+*b* \
 Der `b`-Verteilungsparameter.
 
-*parm*\
+*\ für* den
 Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.
 
 ### <a name="remarks"></a>Hinweise
@@ -257,13 +257,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*ein*\
+*eine* \
 Der `a`-Verteilungsparameter.
 
-*b*\
+*b* \
 Der `b`-Verteilungsparameter.
 
-*Richting*\
+*Rechte* \
 Das mit diesem `param_type`-Objekt zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise

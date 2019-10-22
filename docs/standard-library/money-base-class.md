@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - money_base class
 ms.assetid: 1a303c15-9272-4f26-ae16-dcf43a0fd38a
-ms.openlocfilehash: 5b19635cf4d2cce58ec50226c463a075cfac5b0f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c614832b0cbb1cc23e42ecb3a939ccf1334a5cea
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455565"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689326"
 ---
-# <a name="moneybase-class"></a>money_base-Klasse
+# <a name="money_base-class"></a>money_base-Klasse
 
-Die Klasse beschreibt eine Enumeration und eine Struktur, die für alle Spezialisierungen der Vorlagenklasse [moneypunct](../standard-library/moneypunct-class.md) gebräuchlich ist.
+Die Klasse beschreibt eine Enumeration und eine Struktur, die für alle Spezialisierungs Klassen der Klassen Vorlage [Moneypunct](../standard-library/moneypunct-class.md)gemeinsam ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,13 +28,13 @@ struct pattern
 
 ## <a name="remarks"></a>Hinweise
 
-In der- `part` Enumeration werden die möglichen Werte in Elementen des Arrayfelds im Struktur Muster beschrieben. Die Werte von `part` lauten:
+Das-Enumerations`part` beschreibt die möglichen Werte in Elementen des Array Felds im Struktur Muster. Die Werte `part` lauten wie folgt:
 
-- `none`, wenn NULL oder mehr Leerzeichen abgeglichen werden sollen
+- `none`, um NULL oder mehr Leerzeichen abzugleichen oder nichts zu generieren.
 
 - `sign`, um ein positives oder negatives Vorzeichen abzugleichen oder zu generieren.
 
-- `space`, wenn NULL oder mehr Leerzeichen gefunden werden oder ein Leerzeichen generiert werden soll
+- `space`, um NULL oder mehr Leerzeichen abzugleichen oder ein Leerzeichen zu generieren.
 
 - `symbol`, um ein Währungssymbol abzugleichen oder zu generieren.
 
@@ -48,4 +48,4 @@ In der- `part` Enumeration werden die möglichen Werte in Elementen des Arrayfel
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

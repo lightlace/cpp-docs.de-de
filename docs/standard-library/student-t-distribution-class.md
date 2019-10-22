@@ -21,14 +21,14 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: 42e7337a2a0803af51e7dd11f53c482dbfc2aa0f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ebf9324d478a12476b548dc62455e205b9261430
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459004"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685870"
 ---
-# <a name="studenttdistribution-class"></a>student_t_distribution-Klasse
+# <a name="student_t_distribution-class"></a>student_t_distribution-Klasse
 
 Generiert eine Student-*t*-Verteilung.
 
@@ -64,12 +64,12 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*RealType*\
-Der Gleit Komma Ergebnistyp, der Standardwert ist **Double**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType* -\
+Der Gleit Komma Ergebnistyp, der Standardwert ist **Double**. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagen Klasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten ganzzahligen Typs produziert **. Wenn kein** Wert angegeben wird, wird dieser entsprechend der Student- *t*-Verteilung verteilt. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Klassen Vorlage beschreibt eine Verteilung, die Werte eines benutzerdefinierten ganzzahligen Typs produziert. Wenn kein Wert angegeben wird **, wird dieser** entsprechend der Student- *t*-Verteilung verteilt. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
@@ -177,7 +177,7 @@ explicit student_t_distribution(const param_type& parm);
 *n*\
 Der `n`-Verteilungsparameter.
 
-*parm*\
+*\ für* den
 Das für die Erstellung der Verteilung verwendete Parameterpaket.
 
 ### <a name="remarks"></a>Hinweise
@@ -208,7 +208,7 @@ struct param_type {
 *n*\
 Der `n`-Verteilungsparameter.
 
-*Richting*\
+*Rechte* \
 Das mit diesem `param_type`-Objekt zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise

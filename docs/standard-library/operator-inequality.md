@@ -13,19 +13,19 @@ helpviewer_keywords:
 - operator!=
 - operator !=
 ms.assetid: ef2be7f0-1c94-4edc-b65c-731fddd519f4
-ms.openlocfilehash: 1214dd7d5034b80b14f8dd1422aa1a3b8a253023
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 89d41d099d151f77d91cd94b22047824779dcf54
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447652"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687353"
 ---
 # <a name="operator"></a>Operator!=
 
 > [!NOTE]
-> Dieses Thema ist in der Microsoft C++ -Dokumentation als nicht funktionales Beispiel für Container, die C++ in der Standard Bibliothek verwendet werden. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).
+> Dieses Thema ist in der Microsoft C++ -Dokumentation als nicht funktionales Beispiel für Container, die C++ in der Standard Bibliothek verwendet werden. Weitere Informationen finden Sie unter [C++-Standardbibliothekscontainer](../standard-library/stl-containers.md).
 
-Überlädt `operator!=`, um zwei Objekte der Vorlagenklasse [Container](../standard-library/sample-container-class.md) zu vergleichen.
+Über lädt `operator!=`, um zwei Objekte des Klassen Vorlagen [Containers](../standard-library/sample-container-class.md)zu vergleichen.
 
 ## <a name="syntax"></a>Syntax
 

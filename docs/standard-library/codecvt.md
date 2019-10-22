@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-ms.openlocfilehash: fc711b14a2d30041b4585a9515a95e42280f5306
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 972672e80ce4f82402296317c75e35dcd10c9e93
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458610"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688282"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
-Definiert mehrere Vorlagenklassen, die Objekte anhand der Vorlagenklasse [codecvt](../standard-library/codecvt-class.md) beschreiben. Diese Objekte können als Gebiets Schema [Facetten](../standard-library/locale-class.md#facet_class) fungieren, die Konvertierungen zwischen einer Sequenz von Werten `Elem` des Typs und einer Sequenz von Werten des Typs **char**steuern.
+Definiert mehrere Klassen Vorlagen, die Objekte basierend auf der Klassen Vorlage [Codecvt](../standard-library/codecvt-class.md)beschreiben. Diese Objekte können als Gebiets Schema [Facetten](../standard-library/locale-class.md#facet_class) fungieren, die Konvertierungen zwischen einer Sequenz von Werten des Typs `Elem` und einer Sequenz von Werten des Typs **char**steuern.
 
 ## <a name="syntax"></a>Syntax
 

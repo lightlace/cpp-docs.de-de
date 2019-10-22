@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: b947d9ba268c9b4028415216e4ad0813f2d71947
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fed6219c483bdade0132d5faae8b6597bcc5d732
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450525"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686459"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
-Definiert die Containervorlagenklassen "set" und "multiset" und deren unterstützende Vorlagen.
+Definiert die Containerklassen Vorlagen und die Multimenge und deren unterstützende Vorlagen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -24,7 +24,7 @@ Definiert die Containervorlagenklassen "set" und "multiset" und deren unterstüt
 **Namespace:** std
 
 > [!NOTE]
-> Die \<Set > Library verwendet auch die `#include <initializer_list>` -Anweisung.
+> Die \<set > Bibliothek verwendet auch die `#include <initializer_list>`-Anweisung.
 
 ## <a name="members"></a>Member
 

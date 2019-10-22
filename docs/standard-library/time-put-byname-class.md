@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_put_byname class
 ms.assetid: e08c2348-64d2-4ace-98b1-1496e14c7b1a
-ms.openlocfilehash: 2da2bf4ea1c709b820c1a82dc20e288634139a83
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4471c0df352a4d40d863ac36f0245cf8194f588c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460003"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685468"
 ---
-# <a name="timeputbyname-class"></a>time_put_byname-Klasse
+# <a name="time_put_byname-class"></a>time_put_byname-Klasse
 
-Diese abgeleitete Vorlagenklasse beschreibt ein Objekt, das als Gebietsschemafacet vom Typ `time_put`\< CharType, OutputIterator > dienen kann.
+In der abgeleiteten Klassen Vorlage wird ein Objekt beschrieben, das als Gebiets Schema-Facette vom Typ `time_put` \< CharType, OutputIterator > fungieren kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,15 +40,15 @@ protected:
 
 ### <a name="parameters"></a>Parameter
 
-*_Locname*\
+*_Locname* \
 Name eines Gebietsschemas.
 
-*_Refs*\
+*_Refs* \
 Eine initiale Verweisanzahl.
 
 ## <a name="remarks"></a>Hinweise
 
-Das Verhalten wird durch das [benannte](../standard-library/locale-class.md#name) Gebiets Schema *_Locname*festgelegt. Jeder Konstruktor initialisiert sein Basisobjekt mit [Time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator > (`_Refs`).
+Das Verhalten wird durch das [benannte](../standard-library/locale-class.md#name) Gebiets Schema *_Locname*festgelegt. Jeder Konstruktor initialisiert sein Basisobjekt mit [Time_put](../standard-library/time-put-class.md#time_put) \<CharType, OutputIterator > (`_Refs`).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,4 +58,4 @@ Das Verhalten wird durch das [benannte](../standard-library/locale-class.md#name
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - basic_iostream class
 ms.assetid: 294b680b-eb49-4066-8db2-6d52dac9d6e3
-ms.openlocfilehash: 052271e2e2cc929875489e27abde2147bc5c070a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 190c9aa23493cea67bae44be93fd3fdbdecc4447
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460086"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690008"
 ---
-# <a name="basiciostream-class"></a>basic_iostream-Klasse
+# <a name="basic_iostream-class"></a>basic_iostream-Klasse
 
 Eine Streamklasse für Ein- und Ausgabe.
 
@@ -35,7 +35,7 @@ public:
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt ein Objekt, das Einfügevorgänge über seine Basisklasse [basic_ostream](../standard-library/basic-ostream-class.md)< `Elem`, `Tr`>, und Extraktionen über seine Basisklasse [basic_istream](../standard-library/basic-istream-class.md)< `Elem`, `Tr`> steuert. Die beiden Objekte nutzen gemeinsam die virtuelle Basisklasse [basic_ios](../standard-library/basic-ios-class.md)< `Elem``Tr`>. Außerdem verwalten sie einen gemeinsamen Streampuffer mit Elementen des Typs `Elem`, deren Zeichenmerkmale durch die `Tr`-Klasse bestimmt sind. Der Konstruktor initialisiert seine Basisklassen über `basic_istream`( **strbuf**) und `basic_ostream`( **strbuf**).
+In der Klassen Vorlage wird ein Objekt beschrieben, das Einfügevorgänge über seine Basisklasse [basic_ostream](../standard-library/basic-ostream-class.md) <  `Elem`, `Tr` > und Extraktionen über seine Basisklasse [basic_istream](../standard-library/basic-istream-class.md) <  `Elem` `Tr` >. Die beiden Objekte nutzen gemeinsam die virtuelle Basisklasse [basic_ios](../standard-library/basic-ios-class.md)< `Elem``Tr`>. Außerdem verwalten sie einen gemeinsamen Streampuffer mit Elementen des Typs `Elem`, deren Zeichenmerkmale durch die `Tr`-Klasse bestimmt sind. Der Konstruktor initialisiert seine Basisklassen über `basic_istream`( **strbuf**) und `basic_ostream`( **strbuf**).
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -75,17 +75,17 @@ basic_iostream();
 
 ### <a name="parameters"></a>Parameter
 
-*strbuf*\
+*\ "*
 Ein vorhandenes `basic_streambuf`-Objekt.
 
-*Richting*\
+*Rechte* \
 Ein vorhandenes `basic_iostream`-Objekt, das verwendet wird, um ein neues `basic_iostream`-Objekt zu erstellen.
 
 ### <a name="remarks"></a>Hinweise
 
 Der erste Konstruktor initialisiert die Basisobjekte über `basic_istream(strbuf)` und `basic_ostream(strbuf)`.
 
-Der zweite Konstruktor initialisiert die Basisobjekte durch Aufrufen `move(right)`von.
+Der zweite Konstruktor initialisiert die Basisobjekte durch Aufrufen von `move(right)`.
 
 ## <a name="op_eq"></a> basic_iostream::operator=
 
@@ -97,12 +97,12 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Richting*\
+*Rechte* \
 Ein `rvalue`-Verweis auf ein `basic_iostream`-Objekt, aus dem zugewiesen werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Member-Operator `swap(right)`Ruft auf.
+Der Member-Operator ruft `swap(right)` auf.
 
 ## <a name="swap"></a> basic_iostream::swap
 
@@ -114,12 +114,12 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Richting*\
+*Rechte* \
 Das auszutauschende `basic_iostream`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion `swap(right)`Ruft auf.
+Die Member-Funktion ruft `swap(right)` auf.
 
 ## <a name="see-also"></a>Siehe auch
 

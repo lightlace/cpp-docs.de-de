@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::money_get [C++], do_get
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
-ms.openlocfilehash: eb5e1a7b83db561687f83be96c79add8b54589e8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d882edd5ce55b15d03512ca9a55a49bc3424ee7a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455554"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687671"
 ---
 # <a name="money_get-class"></a>money_get-Klasse
 
-Die Vorlagenklasse, die ein Objekt beschreibt, das als Gebietsschemafacet dienen kann, um Konvertierungen von Sequenzen des Typs `CharType` in monetäre Werte zu steuern.
+Die Klassen Vorlage beschreibt ein Objekt, das als Gebiets Schema Aspekt fungieren kann, um Konvertierungen von Sequenzen vom Typ `CharType` in monetäre Werte zu steuern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,15 +36,15 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType*\
+*CharType* -\
 Der Typ, der innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet wird.
 
-*InputIterator*\
+*InputIterator* -\
 Der Typ des Iterators, von dem die get-Funktionen ihre Eingabe lesen.
 
 ## <a name="remarks"></a>Hinweise
 
-Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen gespeicherten Wert von NULL. Beim ersten Versuch, auf den gespeicherten Wert zuzugreifen, wird ein eindeutiger positiver Wert in **id** gespeichert.
+Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen gespeicherten Wert von NULL. Beim ersten Versuch, auf den gespeicherten Wert zuzugreifen, wird in **id** ein eindeutiger positiver Wert gespeichert.
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -105,22 +105,22 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*erstes*\
+*erste* \
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*letzten*\
+*Letzter* \
 Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*Intl*\
+*Intl* -\
 Ein boolescher Wert, der den Typ des in der Sequenz vorgesehenen Währungssymbols angibt (**TRUE**, wenn international; **FALSE**, wenn national).
 
-*Iosbase*\
+*Iosbase* -\
 Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
-*Land*\
+*Status* \
 Je nachdem, ob die Vorgänge erfolgreich waren, legt dieses Element die entsprechenden Bitmaskenelemente für den Streamstatus fest.
 
-*ster*\
+*Val* -\
 Eine Zeichenfolge zum Speichern der konvertierten Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -129,7 +129,7 @@ Ein Eingabeiterator,der das erste Element nach dem Eingabefeld für den monetär
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente zuzuordnen. Sie beginnt zuerst in der Sequenz [ `first`, `last`), bis sie ein vollständiges, nicht leeres Eingabefeld für monetäre Werte erkannt hat. Wenn erfolgreich, konvertiert Sie dieses Feld in eine Sequenz von einer oder mehreren Dezimalziffern, wobei optional ein Minuszeichen ( `-`) vorangestellt wird, um den Betrag darzustellen, und speichert das Ergebnis im [string_type](#string_type) -Objekt *Val*. Sie gibt einen Iterator zurück, der das erste Element nach dem Eingabefeld für monetäre Werte festlegt. Andernfalls speichert die Funktion eine leere Sequenz in *Val* und legt `ios_base::failbit` den *Status fest*. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Eingabefelds für monetäre Werte festlegt. In beiden Fällen legt die Funktion `State` für `ios_base::eofbit` fest, wenn der Rückgabewert `last` entspricht.
+Die erste virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente zuzuordnen. Sie beginnt zuerst in der Sequenz [ `first`, `last`), bis sie ein vollständiges, nicht leeres Eingabefeld für monetäre Werte erkannt hat. Bei Erfolg konvertiert Sie dieses Feld in eine Sequenz von einer oder mehreren Dezimalziffern, wobei optional ein Minuszeichen (`-`) vorangestellt wird, um den Betrag darzustellen, und speichert das Ergebnis im [string_type](#string_type) -Objekt *Val*. Sie gibt einen Iterator zurück, der das erste Element nach dem Eingabefeld für monetäre Werte festlegt. Andernfalls speichert die Funktion eine leere Sequenz in *Val* und legt `ios_base::failbit` im *Zustand fest*. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Eingabefelds für monetäre Werte festlegt. In beiden Fällen legt die Funktion `State` für `ios_base::eofbit` fest, wenn der Rückgabewert `last` entspricht.
 
 Die zweite virtuelle geschützte Member-Funktion verhält sich wie die erste, mit der Ausnahme, dass bei erfolgreicher Ausführung die optional signierte Ziffern Sequenz in einen Wert vom Typ **long Double** konvertiert und dieser Wert in *Val*gespeichert wird.
 
@@ -187,22 +187,22 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*erstes*\
+*erste* \
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*letzten*\
+*Letzter* \
 Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*Intl*\
+*Intl* -\
 Ein boolescher Wert, der den Typ des in der Sequenz vorgesehenen Währungssymbols angibt (**TRUE**, wenn international; **FALSE**, wenn national).
 
-*Iosbase*\
+*Iosbase* -\
 Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
-*Land*\
-Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
+*Status* \
+Je nachdem, ob die Vorgänge erfolgreich waren, legt dieses Element die entsprechenden Bitmaskenelemente für den Streamstatus fest.
 
-*ster*\
+*Val* -\
 Eine Zeichenfolge zum Speichern der konvertierten Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -211,7 +211,7 @@ Ein Eingabeiterator,der das erste Element nach dem Eingabefeld für den monetär
 
 ### <a name="remarks"></a>Hinweise
 
-Beide Member-Funktionen geben [do_get](#do_get)`(first, last, Intl, Iosbase, State, val)`zurück.
+Beide Member-Funktionen geben [do_get](#do_get) -`(first, last, Intl, Iosbase, State, val)` zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -284,20 +284,20 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*_Refs*\
+*_Refs* \
 Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
 Die möglichen Werte für den Parameter *_Refs* und ihre Bedeutung lauten:
 
-- 0: Die Lebensdauer des Objekts wird von den Gebiets Schemas verwaltet, in denen es enthalten ist.
+- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.
 
 - 1: Die Lebensdauer des Objekts muss manuell verwaltet werden.
 
-- \> 1: Diese Werte sind nicht definiert.
+- \> 1: diese Werte sind nicht definiert.
 
-Direkte Beispiele hierfür sind nicht möglich, da der Destruktor geschützt ist.
+Direkte Beispiele sind nicht möglich, da der Destruktor geschützt ist.
 
 Der Konstruktor initialisiert sein Basisobjekt mit **locale::** [Face(](../standard-library/locale-class.md#facet_class) *_Refs*).
 
@@ -311,10 +311,10 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ beschreibt eine Spezialisierung der Vorlagenklasse [basic_string](../standard-library/basic-string-class.md).
+Der Typ beschreibt eine Spezialisierung der Klassen Vorlage [basic_string](../standard-library/basic-string-class.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 [\<locale>](../standard-library/locale.md)\
 [facet-Klasse](../standard-library/locale-class.md#facet_class)\
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

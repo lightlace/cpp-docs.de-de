@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - moneypunct_byname class
 ms.assetid: e8a544d2-6aee-420d-b513-deb385c9b416
-ms.openlocfilehash: 47c9d2281973cb57288bfdcf865926fb6dd9ed0e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c687bc870e4d78cfe9174eb04ea09c34d6a9c955
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460208"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687654"
 ---
-# <a name="moneypunctbyname-class"></a>moneypunct_byname-Klasse
+# <a name="moneypunct_byname-class"></a>moneypunct_byname-Klasse
 
-Eine abgeleitete Vorlagenklasse, die ein Objekt beschreibt, das als `moneypunct`-Facet eines bestimmten Gebietsschemas dienen kann und die Formatierung von monetären Ein- und Ausgabefeldern ermöglicht.
+Eine abgeleitete Klassen Vorlage, die ein Objekt beschreibt, das als `moneypunct` Facette eines bestimmten Gebiets Schemas fungieren kann und das Formatieren eines monetären Eingabe Felds oder der monetären Ausgabefelder ermöglicht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,4 +50,4 @@ Das Verhalten wird durch das benannte Gebietsschema `_Locname` bestimmt. Alle Ko
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

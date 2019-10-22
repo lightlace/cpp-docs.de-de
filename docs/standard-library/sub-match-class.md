@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: 07ec6f0dc9daaec19fa97a6220da4d4ea93b254b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 776dfe67367b932435f76af94880111cad61341d
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447430"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685835"
 ---
-# <a name="submatch-class"></a>sub_match-Klasse
+# <a name="sub_match-class"></a>sub_match-Klasse
 
 Beschreibt eine Teilübereinstimmung.
 
@@ -41,12 +41,12 @@ class sub_match
 
 ## <a name="parameters"></a>Parameter
 
-*Bidit*\
+*Bidit* -\
 Der Itertatortyp für Teilübereinstimmungen.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt ein Objekt, das eine Folge von Zeichen kennzeichnet, die mit einer Erfassungsgruppe in einem Aufruf von [regex_match](../standard-library/regex-functions.md#regex_match) oder [regex_search](../standard-library/regex-functions.md#regex_search)übereinstimmten. Objekte des Typs [match_results Class](../standard-library/match-results-class.md) enthalten ein Array dieser Objekte, eines für jede Erfassungsgruppe im regulären Ausdruck, der in der Suche verwendet wurde.
+In der Klassen Vorlage wird ein Objekt beschrieben, das eine Sequenz von Zeichen festlegt, die mit einer Erfassungs Gruppe in einem [regex_match](../standard-library/regex-functions.md#regex_match) -oder [regex_search](../standard-library/regex-functions.md#regex_search)-aufrufszeichen übereinstimmen. Objekte des Typs [match_results Class](../standard-library/match-results-class.md) enthalten ein Array dieser Objekte, eines für jede Erfassungsgruppe im regulären Ausdruck, der in der Suche verwendet wurde.
 
 Gab es keine Übereinstimmung mit der Erfassungsgruppe, ist das `matched` -Datenmember des Objekts gleich „false“, und die beiden Iteratoren `first` und `second` (geerbt von der Basisklasse `std::pair`) gleich sind. Gab es eine Übereinstimmung mit der Erfassungsgruppe, ist `matched` gleich „true“, der Iterator `first` zeigt auf das erste Zeichen in der Zielsequenz, die mit der Erfassungsgruppe übereinstimmte, und der Iterator `second` zeigt auf die erste Position hinter dem letzten Zeichen in der Zielsequenz, die mit der Erfassungsgruppe übereinstimmte. Für eine Übereinstimmung der Länge 0 (null) gilt Folgendes: Der Member `matched` enthält „true“, die beiden Iteratoren sind gleich, und beide zeigen auf die Position der Übereinstimmung.
 
@@ -149,13 +149,13 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Richting*\
+*Rechte* \
 Die Teilübereinstimmung, mit der verglichen werden soll.
 
-*SRT*\
+*Str* \
 Die Zeichenfolge, mit der verglichen wird.
 
-*PTR*\
+*ptr* -\
 Die mit NULL endende Sequenz, mit der verglichen werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -216,7 +216,7 @@ bool matched;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Member ist nur **dann true** , wenn die zugeordnete `*this` Erfassungs Gruppe Teil der regulären Ausdrucks Übereinstimmung war.
+Der Member ist nur **dann true** , wenn die mit `*this` verknüpfte Erfassungs Gruppe Teil der regulären Ausdrucks Übereinstimmung war.
 
 ## <a name="op_basic_string_lt_value_type_gt"></a> sub_match::operator basic_string&lt;value_type&gt;
 
@@ -228,7 +228,7 @@ operator basic_string<value_type>() const;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Memberoperator gibt `str()`zurück.
+Der Memberoperator gibt `str()` zurück.
 
 ## <a name="str"></a> sub_match::str
 

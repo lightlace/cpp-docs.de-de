@@ -108,16 +108,16 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 056b7e47c474c64bf357523e2995ef49d456a9cd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e269028ff28b00586fd8d8dcef728f11037dfbc8
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449185"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687891"
 ---
 # <a name="ios_base-class"></a>ios_base-Klasse
 
-Die Klasse beschreibt die Speicher- und Memberfunktionen, die Eingabe- und Ausgabestreams gemeinsam sind, die nicht von den Vorlagenparametern abhängen. (Die Vorlagenklasse [basic_ios](../standard-library/basic-ios-class.md) beschreibt, welche Funktionen gemeinsam und von Vorlagenparametern abhängig sind.)
+Die Klasse beschreibt die Speicher- und Memberfunktionen, die Eingabe- und Ausgabestreams gemeinsam sind, die nicht von den Vorlagenparametern abhängen. (In der Klassen Vorlage [basic_ios](../standard-library/basic-ios-class.md) wird beschrieben, was üblich ist und von Vorlagen Parametern abhängig ist.)
 
 Ein Objekt der ios_base-Klasse speichert Formatierungsinformationen, die aus Folgendem bestehen:
 
@@ -129,7 +129,7 @@ Ein Objekt der ios_base-Klasse speichert Formatierungsinformationen, die aus Fol
 
 - Eine Anzeige Genauigkeit in einem Objekt vom Typ **int**.
 
-- Ein Gebiets Schema Objekt in einem Objekt vom `locale`Typ.
+- Ein Gebiets Schema Objekt in einem Objekt vom Typ `locale`.
 
 - Zwei erweiterbare Arrays mit Elementen vom Typ **Long** und **void** -Zeiger.
 
@@ -199,7 +199,7 @@ Ein Objekt der ios_base-Klasse speichert auch Streamzustandsinformationen in ein
 
 |||
 |-|-|
-|[failure](#failure)|Die Memberklasse dient als Basisklasse für alle Ausnahmen, die von der Memberfunktion [clear](../standard-library/basic-ios-class.md#clear) in der Vorlagenklasse [basic_ios](../standard-library/basic-ios-class.md) ausgelöst werden.|
+|[failure](#failure)|Die Member-Klasse dient als Basisklasse für alle Ausnahmen, die von der Member-Funktion [Clear](../standard-library/basic-ios-class.md#clear) in class template [basic_ios](../standard-library/basic-ios-class.md)ausgelöst werden.|
 |[flags](#flags)|Legt die aktuellen Flageinstellungen fest oder gibt sie zurück.|
 |[getloc](#getloc)|Gibt das gespeicherte Gebietsschemaobjekt zurück.|
 |[imbue](#imbue)|Ändert das Gebietsschema.|
@@ -241,9 +241,9 @@ enum event {
 
 Der Typ ist ein Aufzählungstyp, der ein Objekt beschreibt, das ein Rückrufereignis speichern kann, das als Argument für eine Funktion verwendet wird, die mit [register_callback](#register_callback) registriert wurde. Die unterschiedlichen Ereigniswerte lauten:
 
-- `copyfmt_event`zum Identifizieren eines Rückrufs, der am Ende eines Aufrufs von [Copyfmt](../standard-library/basic-ios-class.md#copyfmt)auftritt, kurz bevor die [Ausnahme Maske](../standard-library/ios-base-class.md) kopiert wird.
+- `copyfmt_event`, um einen Rückruf zu identifizieren, der am Ende eines Aufrufs von [Copyfmt](../standard-library/basic-ios-class.md#copyfmt)auftritt, kurz bevor die [Ausnahme Maske](../standard-library/ios-base-class.md) kopiert wird.
 
-- `erase_event`, um einen Rückruf zu identifizieren, der am Anfang eines Aufrufs von [Copyfmt](../standard-library/basic-ios-class.md#copyfmt)oder am Anfang eines Aufrufs des Dekonstruktors für  **\*dieses**auftritt.
+- `erase_event`, um einen Rückruf zu identifizieren, der am Anfang eines Aufrufs von [Copyfmt](../standard-library/basic-ios-class.md#copyfmt)oder am Anfang eines Aufrufs des Dekonstruktors für **\*this**auftritt.
 
 - `imbue_event`, um einen Rückruf zu identifizieren, der am Ende eines Aufrufs von [imbue](#imbue)auftritt, kurz bevor die Funktion zurückgegeben wird.
 
@@ -264,13 +264,13 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="parameters"></a>Parameter
 
-*_E*\
+*_E* \
 Das [event (Ereignis)](#event).
 
-*_Base*\
+*_Base* \
 Der Stream, in dem das Ereignis aufgerufen wurde.
 
-*_I*\
+*_I* \
 Eine benutzerdefinierte Nummer.
 
 ### <a name="remarks"></a>Hinweise
@@ -344,7 +344,7 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>Parameter
 
-*"f"* \
+*\ für* die
 Die neue Einstellung `fmtflags`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -495,7 +495,7 @@ locale imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parameter
 
-*_Loc*\
+*_Loc* \
 Die neue Benutzergebietsschema-Einstellung.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -504,7 +504,7 @@ Das vorherige Gebietsschema.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion speichert *_Loc* im locale-Objekt und meldet dann das Rückruf Ereignis `imbue_event`und. Es gibt den zuletzt gespeicherten Wert zurück.
+Die Member-Funktion speichert *_Loc* im locale-Objekt und meldet dann das Rückruf Ereignis und `imbue_event`. Es gibt den zuletzt gespeicherten Wert zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -532,7 +532,7 @@ ios_base();
 
 ### <a name="remarks"></a>Hinweise
 
-Der (geschützte) Konstruktor führt keine Aktion aus. Ein späterer Aufruf an **basic_ios::** [init](../standard-library/basic-ios-class.md#init) muss das Objekt initialisieren, bevor es sicher zerstört werden kann. Deshalb ist der einzige sichere Gebrauch für die ios_base-Klasse der Gebrauch als Basisklasse für die Vorlagenklassen [basic_ios](../standard-library/basic-ios-class.md).
+Der (geschützte) Konstruktor führt keine Aktion aus. Ein späterer Aufruf an **basic_ios::** [init](../standard-library/basic-ios-class.md#init) muss das Objekt initialisieren, bevor es sicher zerstört werden kann. Daher ist die einzige sichere Verwendung für Class ios_base die Basisklasse für die Klassen Vorlage [basic_ios](../standard-library/basic-ios-class.md).
 
 ## <a name="iostate"></a>iostate
 
@@ -560,7 +560,7 @@ Der Typ ist ein Bitmaskentyp, der ein Objekt beschreibt, das Informationen zum S
 
 - `failbit` zur Protokollierung eines Fehlers beim Extrahieren eines gültigen Felds aus einem Stream.
 
-Außerdem ist ein nützlicher Wert, bei `goodbit`dem keine der zuvor erwähnten Bits festgelegt ist (`goodbit` garantiert NULL ist).
+Außerdem ist ein nützlicher Wert `goodbit`, bei dem keine der zuvor erwähnten Bits festgelegt ist (`goodbit` ist garantiert null).
 
 ## <a name="iword"></a>iword
 
@@ -572,7 +572,7 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>Parameter
 
-*idx*\
+*IDX* -\
 Der Index des als `iword` zu speichernden Werts.
 
 ### <a name="remarks"></a>Hinweise
@@ -611,13 +611,13 @@ Der Typ ist ein `bitmask type`, der ein Objekt beschreibt, das den Öffnungsmodu
 
 - `ate`, um das Ende eines Streams zu suchen, wenn das steuernde Objekt erstmalig erstellt wird.
 
-- `binary`, wenn eine Datei als binärer Stream und nicht als Textstream gelesen werden soll.
+- `binary`, um eine Datei als binären Stream und nicht als Textstream zu lesen.
 
 - `in`, um die Extraktion aus einem Stream zuzulassen.
 
 - `out`, um das Einfügen in einen Stream zuzulassen.
 
-- `trunc`, wenn der Inhalt einer vorhandenen Datei gelöscht werden soll, wenn das steuernde Objekt erstellt wird.
+- `trunc`, um den Inhalt einer vorhandenen Datei zu löschen, wenn das steuernde Objekt erstellt wird.
 
 ### <a name="example"></a>Beispiel
 
@@ -647,7 +647,7 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Richting*\
+*Rechte* \
 Ein Objekt vom Typ `ios_base`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -671,7 +671,7 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="parameters"></a>Parameter
 
-*_Prec*\
+*_Prec* \
 Die Anzahl der anzuzeigenden signifikanten Stellen, oder die Anzahl der Stellen nach dem Komma bei fester Schreibweise.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -716,7 +716,7 @@ void *& pword(int _Idx);
 
 ### <a name="parameters"></a>Parameter
 
-*_Idx*\
+*_Idx* \
 Der Index des als `pword` zu speichernden Werts.
 
 ### <a name="remarks"></a>Hinweise
@@ -731,7 +731,7 @@ Um einen eindeutigen Index für einen Gebrauch für alle Objekte des Typ `ios_ba
 
 Unter [xcalloc](#xalloc) finden Sie ein Beispiel für die Verwendung von `pword`.
 
-## <a name="register_callback"></a> register_callback
+## <a name="register_callback"></a>register_callback
 
 Gibt eine Rückruffunktion an.
 
@@ -742,15 +742,15 @@ void register_callback(
 
 ### <a name="parameters"></a>Parameter
 
-*PFN*\
+*PFN* -\
 Ein Zeiger auf die Rückruffunktion.
 
-*idx*\
+*IDX* -\
 Eine benutzerdefinierte Nummer.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion schiebt das `{pfn, idx}` paar auf den gespeicherten Rückruf Stapel- [Rückruf Stapel](../standard-library/ios-base-class.md). Wenn ein Rückruf Ereignis ( **EV** ) gemeldet wird, werden die Funktionen durch den Ausdruck `(*pfn)(ev, *this, idx)`in umgekehrter Reihenfolge der Registrierung aufgerufen.
+Die Member-Funktion schiebt das Paar `{pfn, idx}` auf den gespeicherten Rückruf Stapel- [Rückruf Stapel](../standard-library/ios-base-class.md). Wenn ein Rückruf Ereignis ( **EV** ) gemeldet wird, werden die Funktionen von der Ausdrucks `(*pfn)(ev, *this, idx)` in umgekehrter Reihenfolge der Registrierung aufgerufen.
 
 ### <a name="example"></a>Beispiel
 
@@ -860,11 +860,11 @@ namespace std {
 
 Der Typ ist ein enumerierter Typ, der ein Objekt beschreibt, das den Suchmodus speichern kann, der als Argument für die Element Funktionen mehrerer iostream-Klassen verwendet wird. Die unterschiedlichen Flagwerte sind:
 
-- `beg`zum Suchen (Ändern der aktuellen Lese-oder Schreibposition) relativ zum Anfang einer Sequenz (Array, Stream oder Datei).
+- `beg`, um zu suchen (ändern Sie die aktuelle Lese-oder Schreibposition) relativ zum Anfang einer Sequenz (Array, Stream oder Datei).
 
 - `cur`, um relativ zur aktuellen Position innerhalb einer Sequenz zu suchen.
 
-- `end`, wenn relativ zum Ende einer Sequenz gesucht werden soll.
+- `end`, um relativ zum Ende einer Sequenz zu suchen.
 
 ### <a name="example"></a>Beispiel
 
@@ -904,10 +904,10 @@ fmtflags setf(
 
 ### <a name="parameters"></a>Parameter
 
-*_Mask*\
+*_Mask* \
 Die Flags, die eingeschaltet werden sollen.
 
-*_Unset*\
+*_Unset* \
 Die Flags, die deaktiviert werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -916,7 +916,7 @@ Die vorherigen Formatflags
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Member-Funktion Ruft die [Flags](#flags)(  *\_Masken* &#124;  *\_-Flags*) effektiv auf (legen Sie ausgewählte Bits fest) und gibt dann die vorherigen Formatflags zurück. Die zweite Member-Funktion ruft `flags(_Mask & fmtfl, flags & ~_Mask)` effektiv (ersetzen Sie die ausgewählten Bits unter einer Maske ab) und gibt dann die vorherigen Formatflags zurück.
+Die erste Member-Funktion ruft [Flags](#flags)( *\_Mask* &#124; *\_Flags*) auf (legen Sie ausgewählte Bits fest) und gibt dann die vorherigen Formatflags zurück. Die zweite Member-Funktion ruft `flags(_Mask & fmtfl, flags & ~_Mask)` effektiv auf (ersetzen Sie die ausgewählten Bits unter einer Maske) und gibt dann die vorherigen Formatflags zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -954,8 +954,8 @@ static bool sync_with_stdio(
 
 ### <a name="parameters"></a>Parameter
 
-*_Sync*\
-Gibt an, ob alle Streams mit `stdio`synchronisiert sind.
+*_Sync* \
+Gibt an, ob alle Streams mit `stdio` synchronisiert sind.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -963,7 +963,7 @@ Vorherige Einstellung für diese Funktion.
 
 ### <a name="remarks"></a>Hinweise
 
-Die statische Member-Funktion speichert `stdio` ein synchronisierungsflag, das anfänglich **true**ist. Wenn **true**, stellt dieses Flag sicher, dass Vorgänge in derselben Datei zwischen den [Iostreams](../standard-library/iostreams-conventions.md) -Funktionen und denjenigen, die in der C++ Standard Bibliothek definiert sind, ordnungsgemäß synchronisiert werden. Andernfalls ist die Synchronisierung möglicherweise nicht gewährleistet, aber die Leistung kann verbessert werden. Die Funktion speichert *_Sync* im `stdio` synchronisierungsflag und gibt ihren vorherigen gespeicherten Wert zurück. Sie können Sie nur zuverlässig anrufen, bevor Sie Vorgänge für die Standardstreams durchführen.
+Die statische Member-Funktion speichert ein `stdio` Sync-Flag, das anfänglich **true**ist. Wenn **true**, stellt dieses Flag sicher, dass Vorgänge in derselben Datei zwischen den [Iostreams](../standard-library/iostreams-conventions.md) -Funktionen und denjenigen, die in der C++ Standard Bibliothek definiert sind, ordnungsgemäß synchronisiert werden. Andernfalls ist die Synchronisierung möglicherweise nicht gewährleistet, aber die Leistung kann verbessert werden. Die Funktion speichert *_Sync* im `stdio` Sync-Flag und gibt ihren vorherigen gespeicherten Wert zurück. Sie können Sie nur zuverlässig anrufen, bevor Sie Vorgänge für die Standardstreams durchführen.
 
 ## <a name="unsetf"></a>Unsetf
 
@@ -977,16 +977,16 @@ void unsetf(
 
 ### <a name="parameters"></a>Parameter
 
-*_Mask*\
+*_Mask* \
 Die Flags, die ausgeschaltet werden sollen.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion ruft effektiv [flags](#flags)(`~` *_Mask* **& flags**) (ausgewählte Bits löschen) auf.
+Die Member-Funktion ruft effektiv [Flags](#flags)(`~` *_Mask* **& Flags**) auf (Löschen Sie ausgewählte Bits).
 
 ### <a name="example"></a>Beispiel
 
-Ein Beispiel für die Verwendung von finden Sie `unsetf`unter [ios_base:: setf](#setf) .
+Ein Beispiel für die Verwendung von `unsetf` finden Sie unter [ios_base:: setf](#setf) .
 
 ## <a name="width"></a>Breite
 
@@ -1001,7 +1001,7 @@ streamsize width(
 
 ### <a name="parameters"></a>Parameter
 
-*_Wide*\
+*_Wide* \
 Die gewünschte Größe des Ausgabestreams.
 
 ### <a name="return-value"></a>Rückgabewert

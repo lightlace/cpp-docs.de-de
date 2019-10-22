@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: c5e45af5d350ba9c3f1e4e240dec2c13366318c3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: eb72c3abbe87bc975dbc3c99ffab9e77635c9df5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457037"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689709"
 ---
-# <a name="fisherfdistribution-class"></a>fisher_f_distribution-Klasse
+# <a name="fisher_f_distribution-class"></a>fisher_f_distribution-Klasse
 
 Generiert eine Fisher-F-Verteilung.
 
@@ -69,15 +69,15 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*RealType*\
-Der Gleit Komma Ergebnistyp, der Standardwert ist **Double**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType* -\
+Der Gleit Komma Ergebnistyp, der Standardwert ist **Double**. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).
 
-*URNG*\
-Die einheitliche Zufallszahlengenerator-Engine. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*URNG* \
+Die einheitliche Zufallszahlengenerator-Engine. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagen Klasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten Gleit Komma Typs produziert, oder den Typ **Double** , wenn kein Wert bereitgestellt wird, der nach der-F-Distribution von Fisher verteilt wird. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Klassen Vorlage beschreibt eine Verteilung, die Werte eines benutzerdefinierten Gleit Komma Typs produziert, oder den Typ **Double** , wenn kein Wert bereitgestellt wird, der nach der-F-Distribution von Fisher verteilt wird. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
@@ -157,7 +157,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Ausgabe
+## <a name="output"></a>Output
 
 Erste Ausführung:
 
@@ -248,18 +248,18 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*800*\
+*m* \
 Der `m`-Verteilungsparameter.
 
 *n*\
 Der `n`-Verteilungsparameter.
 
-*parm*\
+*\ für* den
 Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.
 
 ### <a name="remarks"></a>Hinweise
 
-**Voraussetzung:** `0.0 < m` und `0.0 < n`
+**Vorbedingung:** `0.0 < m` und `0.0 < n`
 
 Mit dem ersten Konstruktor wird ein Objekt erstellt, in dessen gespeichertem `m`-Wert der Wert *m* enthalten ist und dessen gespeicherter `n`-Wert den Wert *n* enthält.
 
@@ -283,13 +283,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*800*\
+*m* \
 Der `m`-Verteilungsparameter.
 
 *n*\
 Der `n`-Verteilungsparameter.
 
-*Richting*\
+*Rechte* \
 Das mit diesem `param_type`-Objekt zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise

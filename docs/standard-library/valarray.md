@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: c18b72017e4999e377bf8575f624f8fdda5b0caf
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ed90273fe293ae2e08c3c91762c12c42bb368c16
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448338"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688765"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
-Definiert die valarray-Vorlagenklasse sowie zahlreiche unterstützende Vorlagenklassen und Funktionen.
+Definiert das Valarray-Klassen Vorlagen-und zahlreiche unterstützende Klassen Vorlagen und-Funktionen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -24,11 +24,11 @@ Definiert die valarray-Vorlagenklasse sowie zahlreiche unterstützende Vorlagenk
 **Namespace:** std
 
 > [!NOTE]
-> Die \<Valarray-> Bibliothek verwendet die #include < initializer_list > "-Anweisung.
+> Die \<valarray > Bibliothek verwendet die Anweisung "#include < initializer_list >".
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Vorlagenklassen und Funktionen haben im Interesse einer verbesserten Leistung ungewöhnliche Freiheiten. Insbesondere kann jede Funktion, die `valarray<T1>` den Typ zurückgibt, ein Objekt eines anderen Typs T2 zurückgeben. In diesem Fall muss jede Funktion, die ein oder mehrere Argumente des Typs `valarray<T2>` akzeptiert, über Ladungen haben, die beliebige Kombinationen dieser Argumente akzeptieren, die jeweils durch ein Argument des Typs T2 ersetzt werden.
+Diese Klassen Vorlagen und-Funktionen sind im Interesse einer verbesserten Leistung ungewöhnliche Breitengrade. Insbesondere kann jede Funktion, die den Typ `valarray<T1>` zurückgibt, ein Objekt eines anderen Typs T2 zurückgeben. In diesem Fall muss jede Funktion, die ein oder mehrere Argumente des Typs `valarray<T2>` akzeptiert, über Ladungen haben, die beliebige Kombinationen dieser Argumente akzeptieren, die jeweils durch ein Argument des Typs T2 ersetzt werden.
 
 ## <a name="members"></a>Member
 
@@ -84,20 +84,20 @@ Diese Vorlagenklassen und Funktionen haben im Interesse einer verbesserten Leist
 |||
 |-|-|
 |[gslice-Klasse](../standard-library/gslice-class.md)|Eine Hilfsklasse der valarray-Klasse, die zum Definieren von mehrdimensionalen Segmenten eines valarray-Objekts verwendet wird.|
-|[gslice_array-Klasse](../standard-library/gslice-array-class.md)|Eine interne zusätzliche Vorlagenklasse, die allgemeine slice-Objekte (Segmente) unterstützt, indem sie Vorgänge zwischen Teilmengenarrays bereitstellt, die durch das allgemeine Segment eines valarray-Objekts definiert sind.|
-|[indirect_array-Klasse](../standard-library/indirect-array-class.md)|Eine interne zusätzliche Vorlagenklasse, die allgemeine Objekte, die Teilmengen von valarray-Objekten sind, unterstützt, indem sie Vorgänge zwischen Teilmengenarrays bereitstellt, die durch Angeben einer Teilmenge von Indizes eines übergeordneten valarray-Objekts definiert sind.|
-|[mask_array-Klasse](../standard-library/mask-array-class.md)|Eine interne zusätzliche Vorlagenklasse, die Objekte, die Teilmengen von übergeordneten valarray-Objekten und mit einem booleschen Ausdruck angegeben sind, dadurch unterstützt, dass sie Vorgänge zwischen den Teilmengenarrays bereitstellt.|
+|[gslice_array-Klasse](../standard-library/gslice-array-class.md)|Eine interne, zusätzliche Klassen Vorlage, die allgemeine Slice-Objekte unterstützt, indem Vorgänge zwischen Teilmengen Arrays bereitgestellt werden, die durch das allgemeine Slice eines Valarray-Objekts definiert werden.|
+|[indirect_array-Klasse](../standard-library/indirect-array-class.md)|Eine interne, zusätzliche Klassen Vorlage, die Objekte unterstützt, die Teilmengen von Valarray sind, indem Vorgänge zwischen Teilmengen Arrays bereitgestellt werden, die durch Angeben einer Teilmenge von Indizes eines übergeordneten Valarray-Objekts definiert werden.|
+|[mask_array-Klasse](../standard-library/mask-array-class.md)|Eine interne, zusätzliche Klassen Vorlage, die Objekte unterstützt, die Teilmengen von übergeordneten Valarray-Objekten sind, die mit einem booleschen Ausdruck angegeben werden, indem Vorgänge zwischen den Teilmengen Arrays bereitgestellt werden.|
 |[slice-Klasse](../standard-library/slice-class.md)|Eine Hilfsklasse für die valarray-Klasse, die dazu verwendet wird, eindimensionale vektorähnliche Teilmengen eines valarray-Objekts zu definieren.|
-|[slice_array-Klasse](../standard-library/slice-array-class.md)|Eine interne zusätzliche Vorlagenklasse, die slice-Objekte (Segmente) unterstützt, indem sie Vorgänge zwischen Teilmengenarrays bereitstellt, die durch das Segment eines valarray-Objekts definiert sind.|
-|[valarray-Klasse](../standard-library/valarray-class.md)|Die Vorlagen Klasse beschreibt ein Objekt, das eine Sequenz von Elementen des Typs `Type` steuert, die als Array gespeichert werden und für die Ausführung von hoch Geschwindigkeits mathematischen Operationen entworfen wurden, die für die Rechenleistung optimiert sind.|
+|[slice_array-Klasse](../standard-library/slice-array-class.md)|Eine interne Hilfsklassen Vorlage, die Slice-Objekte unterstützt, indem Vorgänge zwischen Teilmengen Arrays bereitgestellt werden, die durch das Slice eines Valarray-Objekts definiert werden.|
+|[valarray-Klasse](../standard-library/valarray-class.md)|In der Klassen Vorlage wird ein Objekt beschrieben, das eine Sequenz von Elementen des Typs `Type` steuert, die als Array gespeichert sind und zum Ausführen von hoch Geschwindigkeits mathematischen Operationen entworfen wurden, die für die Rechenleistung optimiert sind.|
 
 ### <a name="specializations"></a>Spezialisierungen
 
 |||
 |-|-|
-|[valarray\<bool>-Klasse](../standard-library/valarray-bool-class.md)|Eine spezialisierte Version der Vorlagen Klasse Valarray\<**Type**> auf Elemente des Typs **bool**.|
+|[valarray\<bool>-Klasse](../standard-library/valarray-bool-class.md)|Eine spezialisierte Version des Valarray-Klassen Vorlagen \<**Typ**> für Elemente des Typs **bool**.|
 
 ## <a name="see-also"></a>Siehe auch
 
 [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

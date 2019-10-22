@@ -10,22 +10,22 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: b3352110c2074b325ac345c05dbf899c0bdbd0ab
-ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
+ms.openlocfilehash: e27ff146c75da6e90e6336106beba714dbe7c8a8
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69975905"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689877"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
 Schließen Sie den Standardheader \<chrono> zum Definieren von Klassen und Funktionen ein, die die Zeitdauer und Zeitangaben darstellen und bearbeiten.
 
-Ab Visual Studio 2015 hat sich die Implementierung von `steady_clock` so geändert, dass die C++ Standard Anforderungen für Zuverlässigkeits und monotonizität erfüllt werden. `steady_clock` basiert nun auf QueryPerformanceCounter(), und `high_resolution_clock` ist jetzt ein typedef-Element für `steady_clock`. Folglich ist im Microsoft C++ -Compiler `steady_clock::time_point` nun eine typedef für `chrono::time_point<steady_clock>`. diese Regel ist jedoch nicht unbedingt der Fall für andere Implementierungen.
+Ab Visual Studio 2015 hat sich die Implementierung von `steady_clock` geändert, um die Standard C++ Anforderungen für die steadität und monoton zu erfüllen. `steady_clock` basiert nun auf QueryPerformanceCounter(), und `high_resolution_clock` ist jetzt ein typedef-Element für `steady_clock`. Daher ist `steady_clock::time_point` im Microsoft C++ -Compiler nun eine typedef für `chrono::time_point<steady_clock>`. Diese Regel gilt jedoch nicht unbedingt für andere Implementierungen.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<chrono>
+**Header:** \<chrono >
 
 **Namespace:** std
 
@@ -42,7 +42,7 @@ Ab Visual Studio 2015 hat sich die Implementierung von `steady_clock` so geände
 
 |||
 |-|-|
-|[common_type-Struktur](../standard-library/common-type-structure.md)|Beschreibt Spezialisierungen der Vorlagenklasse [common_type](../standard-library/common-type-class.md) für Instanziierungen von `duration` und `time_point`.|
+|[common_type-Struktur](../standard-library/common-type-structure.md)|Beschreibt Spezialisierungs Klassen Vorlagen [common_type](../standard-library/common-type-class.md) für Instanziierungen von `duration` und `time_point`.|
 |[duration_values-Struktur](../standard-library/duration-values-structure.md)|Stellt bestimmte Werte für den `duration`-Vorlagenparameter `Rep` bereit.|
 |[high_resolution_clock-Struktur](../standard-library/high-resolution-clock-struct.md)||
 |[steady_clock-Struktur](../standard-library/steady-clock-struct.md)|Stellt eine `steady` Uhr dar.|
@@ -87,22 +87,22 @@ Weitere Informationen zu Verhältnistypen, die in den folgenden typedefs-Element
 
 ### <a name="literals"></a>Literale
 
-**(C++ 11)** Der \<Chrono-> Header definiert die folgenden [benutzerdefinierten Literale](../cpp/user-defined-literals-cpp.md) , die Sie für größere Benutzerfreundlichkeit, Typsicherheit und Verwaltbarkeit des Codes verwenden können. Diese Literale werden im `literals::chrono_literals`-Inlinenamespace definiert und sind im Bereich enthalten, wenn std::chrono innerhalb des Bereichs liegt.
+**(C++ 11)** Der \<chrono >-Header definiert die folgenden [benutzerdefinierten Literale](../cpp/user-defined-literals-cpp.md) , die Sie für größere Benutzerfreundlichkeit, Typsicherheit und Verwaltbarkeit des Codes verwenden können. Diese Literale werden im `literals::chrono_literals`-Inlinenamespace definiert und sind im Bereich enthalten, wenn std::chrono innerhalb des Bereichs liegt.
 
 |||
 |-|-|
 |Stunden Operator "" h (unsigned long long Val)|Gibt die Stunden als Integralwert an.|
-|Dauer\<Double, Verhältnis\<3600 > > Operator "" h (long Double Val)|Gibt die Stunden als Gleitkommawert an.|
+|Dauer \<double, Verhältnis \<3600 > > Operator "" h (long Double Val)|Gibt die Stunden als Gleitkommawert an.|
 |Minuten (Operator "" min.) (unsigned long long Val)|Gibt die Minuten als Integralwert an.|
-|Dauer\<Double, Verhältnis\<60 > > (Operator "" min.) (long Double Val)|Gibt die Minuten als Gleitkommawert an.|
+|Dauer \<double, Verhältnis \<60 > > (Operator "" min.) (long Double Val)|Gibt die Minuten als Gleitkommawert an.|
 |Sekunden Operator "" s (unsigned long long Val)|Gibt die Minuten als Integralwert an.|
-|Duration\<Double > Operator "" s (long Double Val)|Gibt die Sekunden als Gleitkommawert an.|
+|Dauer \<double > Operator "" s (long Double Val)|Gibt die Sekunden als Gleitkommawert an.|
 |Millisekunden-Operator "" MS (unsigned long long Val)|Gibt die Millisekunden als Integralwert an.|
-|Duration\<Double, Milli > Operator "" MS (long Double Val)|Gibt die Millisekunden als Gleitkommawert an.|
+|Dauer \<double, Milli > Operator "" MS (long Double Val)|Gibt die Millisekunden als Gleitkommawert an.|
 |Mikrosekunden-Operator "" US (unsigned long long Val)|Gibt die Mikrosekunden als Integralwert an.|
-|Duration\<Double, Micro > Operator "" US (long Double Val)|Gibt die Mikrosekunden als Gleitkommawert an.|
+|Dauer \<double, Micro > Operator "" US (long Double Val)|Gibt die Mikrosekunden als Gleitkommawert an.|
 |Nanosekunden-Operator "" NS (unsigned long long Val)|Gibt die Nanosekunden als Integralwert an.|
-|Duration\<Double, nano > Operator "" NS (long Double Val)|Gibt die Nanosekunden als Gleitkommawert an.|
+|Dauer \<double, nano > Operator "" NS (long Double Val)|Gibt die Nanosekunden als Gleitkommawert an.|
 
 In den folgenden Beispielen wird die Verwendung von chrono-Literalen veranschaulicht.
 

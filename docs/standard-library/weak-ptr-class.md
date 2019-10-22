@@ -28,14 +28,14 @@ helpviewer_keywords:
 - std::weak_ptr [C++], swap
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
-ms.openlocfilehash: d4ba30f737bc570a4ee700b3a317b5feebe8a50a
-ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
+ms.openlocfilehash: 2591c4cd124f83085235828d3eb29ab1a90d894a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682408"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684084"
 ---
-# <a name="weakptr-class"></a>weak_ptr-Klasse
+# <a name="weak_ptr-class"></a>weak_ptr-Klasse
 
 Umschließt einen schwach verknüpften Zeiger.
 
@@ -47,18 +47,18 @@ template<class T> class weak_ptr;
 
 ### <a name="parameters"></a>Parameter
 
-*BUND*\
+*T* \
 Der vom schwachen Zeiger gesteuerte Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagen Klasse beschreibt ein Objekt, das auf eine Ressource verweist, die von einem oder mehreren [shared_ptr](shared-ptr-class.md) -Objekten verwaltet wird. Die `weak_ptr` Objekte, die auf eine Ressource verweisen, wirken sich nicht auf den Verweis Zähler der Ressource aus. Wenn das letzte `shared_ptr` Objekt, das diese Ressource verwaltet, zerstört wird, wird die Ressource freigegeben, auch wenn `weak_ptr` Objekte vorhanden sind, die auf diese Ressource verweisen. Dieses Verhalten ist für die Vermeidung von Zyklen in Datenstrukturen von entscheidender Bedeutung.
+In der Klassen Vorlage wird ein Objekt beschrieben, das auf eine Ressource verweist, die von einem oder mehreren [shared_ptr](shared-ptr-class.md) -Objekten verwaltet wird. Die `weak_ptr`-Objekte, die auf eine Ressource verweisen, wirken sich nicht auf den Verweis Zähler der Ressource aus. Wenn das letzte `shared_ptr` Objekt, das diese Ressource verwaltet, zerstört wird, wird die Ressource freigegeben, auch wenn `weak_ptr` Objekte auf diese Ressource verweisen. Dieses Verhalten ist für die Vermeidung von Zyklen in Datenstrukturen von entscheidender Bedeutung.
 
-Ein `weak_ptr`-Objekt verweist auf eine Ressource, wenn es aus einem `shared_ptr`-Objekt erstellt wurde, das diese Ressource besitzt, wenn es aus einem `weak_ptr`-Objekt erstellt wurde, das auf diese Ressource verweist, oder wenn ihm diese Ressource mit [operator=](#op_eq) zugewiesen wurde. Ein `weak_ptr` -Objekt stellt keinen direkten Zugriff auf die Ressource bereit, auf die es verweist. Code, der auf die Ressource zugreifen muss, erledigt dies über ein `shared_ptr`-Objekt, das diese Ressource besitzt, die durch Aufrufen der Memberfunktion [lock](#lock) erstellt wurde. Ein `weak_ptr` -Objekt ist abgelaufen, wenn die Ressource, auf die es verweist, freigegeben wurde `shared_ptr` , weil alle Objekte, die die Ressource besitzen, zerstört wurden. Ein Aufrufen von `lock` für ein `weak_ptr`-Objekt, das abgelaufen ist, erstellt ein leeres shared_ptr-Objekt.
+Ein `weak_ptr`-Objekt verweist auf eine Ressource, wenn es aus einem `shared_ptr`-Objekt erstellt wurde, das diese Ressource besitzt, wenn es aus einem `weak_ptr`-Objekt erstellt wurde, das auf diese Ressource verweist, oder wenn ihm diese Ressource mit [operator=](#op_eq) zugewiesen wurde. Ein `weak_ptr`-Objekt stellt keinen direkten Zugriff auf die Ressource bereit, auf die es verweist. Code, der auf die Ressource zugreifen muss, erledigt dies über ein `shared_ptr`-Objekt, das diese Ressource besitzt, die durch Aufrufen der Memberfunktion [lock](#lock) erstellt wurde. Ein `weak_ptr` Objekt ist abgelaufen, wenn die Ressource, auf die es verweist, freigegeben wurde, weil alle `shared_ptr` Objekte, die die Ressource besitzen, zerstört wurden. Ein Aufrufen von `lock` für ein `weak_ptr`-Objekt, das abgelaufen ist, erstellt ein leeres shared_ptr-Objekt.
 
 Ein leeres weak_ptr-Objekt verweist nicht auf Ressourcen und verfügt über keinen Kontroll Block. Ihre Memberfunktion `lock` gibt ein leeres shared_ptr-Objekt zurück.
 
-Ein Zyklus tritt auf, wenn es für zwei oder mehr Ressourcen, die von `shared_ptr`-Objekten gesteuert werden, `shared_ptr`-Objekte gibt, die gegenseitig auf sich verweisen. Angenommen, eine kreisförmig verknüpfte Liste mit drei Elementen hat den Kopfknoten `N0`; dieser Knoten enthält ein `shared_ptr`-Objekt, das den nächsten Knoten, `N1`, besitzt; dieser Knoten enthält ein `shared_ptr`-Objekt, das den nächsten Knoten, `N2`, besitzt; dieser Knoten wiederum enthält ein `shared_ptr`-Objekt, das den Kopfknoten `N0` besitzt, wodurch der Zyklus geschlossen wird. In dieser Situation wird der Verweis Zähler niemals auf NULL gesetzt, und die Knoten im-Schleifen werden nie freigegeben. Um den Zyklus zu vermeiden, sollte der letzte Knoten, `N2`, anstelle eines `shared_ptr`-Objekts ein `weak_ptr`-Objekt enthalten, das auf `N0` verweist. Da das `weak_ptr` Objekt `N0` nicht Besitzer ist, wirkt `N0`sich dies nicht auf den Verweis Zähler aus, und wenn der letzte Verweis des Programms auf den Haupt Knoten zerstört wurde, werden auch die Knoten in der Liste zerstört.
+Ein Zyklus tritt auf, wenn es für zwei oder mehr Ressourcen, die von `shared_ptr`-Objekten gesteuert werden, `shared_ptr`-Objekte gibt, die gegenseitig auf sich verweisen. Angenommen, eine kreisförmig verknüpfte Liste mit drei Elementen hat den Kopfknoten `N0`; dieser Knoten enthält ein `shared_ptr`-Objekt, das den nächsten Knoten, `N1`, besitzt; dieser Knoten enthält ein `shared_ptr`-Objekt, das den nächsten Knoten, `N2`, besitzt; dieser Knoten wiederum enthält ein `shared_ptr`-Objekt, das den Kopfknoten `N0` besitzt, wodurch der Zyklus geschlossen wird. In dieser Situation wird der Verweis Zähler niemals auf NULL gesetzt, und die Knoten im-Schleifen werden nie freigegeben. Um den Zyklus zu vermeiden, sollte der letzte Knoten, `N2`, anstelle eines `shared_ptr`-Objekts ein `weak_ptr`-Objekt enthalten, das auf `N0` verweist. Da das `weak_ptr` Objekt nicht Besitzer `N0` ist, wirkt sich dies nicht auf den Verweis Zähler `N0` aus, und wenn der letzte Verweis des Programms auf den Haupt Knoten zerstört wird, werden auch die Knoten in der Liste zerstört.
 
 ## <a name="members"></a>Member
 
@@ -73,10 +73,10 @@ Ein Zyklus tritt auf, wenn es für zwei oder mehr Ressourcen, die von `shared_pt
 | **Member-Funktionen** | |
 |[expired](#expired)|Überprüft, ob der Besitz abgelaufen ist.|
 |[lock](#lock)|Bedingt exklusiven Besitz einer Ressource.|
-|[owner_before](#owner_before)|Gibt **true** zurück, `weak_ptr` wenn der angegebene Zeiger vor (oder kleiner als) geordnet ist.|
+|[owner_before](#owner_before)|Gibt **true** zurück, wenn dieser `weak_ptr` vor (oder kleiner als) dem bereitgestellten Zeiger angeordnet ist.|
 |[reset](#reset)|Gibt eine in Besitz befindliche Ressource frei.|
 |[swap](#swap)|Tauscht zwei `weak_ptr`-Objekte.|
-|[use_count](#use_count)|Zählt die Anzahl `shared_ptr` der Objekte.|
+|[use_count](#use_count)|Zählt die Anzahl der `shared_ptr` Objekte.|
 | **Operatoren** | |
 |[operator=](#op_eq)|Ersetzt eine in Besitz befindliche Ressource.|
 
@@ -127,7 +127,7 @@ bool expired() const noexcept;
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion gibt true `*this` zurück, wenn abgelaufen ist; andernfalls **false**.
+Die Member-Funktion gibt **true** zurück, wenn `*this` abgelaufen ist; andernfalls **false**.
 
 ### <a name="example"></a>Beispiel
 
@@ -176,7 +176,7 @@ shared_ptr<T> lock() const noexcept;
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion gibt ein leeres [shared_ptr](shared-ptr-class.md) - `*this` Objekt zurück, wenn abgelaufen ist. `shared_ptr<T>` andernfalls wird ein-Objekt zurück `*this` gegeben, das die Ressource besitzt, auf die verweist. Gibt einen Wert zurück, der der atomaren Ausführung `expired() ? shared_ptr<T>() : shared_ptr<T>(*this)`von entspricht.
+Die Member-Funktion gibt ein leeres [shared_ptr](shared-ptr-class.md) -Objekt zurück, wenn `*this` abgelaufen ist. Andernfalls wird ein `shared_ptr<T>` Objekt zurückgegeben, das die Ressource besitzt, auf die `*this` verweist. Gibt einen Wert zurück, der der atomaren Ausführung von `expired() ? shared_ptr<T>() : shared_ptr<T>(*this)` entspricht.
 
 ### <a name="example"></a>Beispiel
 
@@ -231,15 +231,15 @@ weak_ptr& operator=(const shared_ptr<Other>& ptr) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*Außer*\
+*Andere* \
 Der Typ, der vom freigegebenen Argument oder schwachen Zeiger gesteuert wird.
 
-*PTR*\
+*ptr* -\
 Der schwache Zeiger oder freigegebene Zeiger, der kopiert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Operatoren geben alle die Ressource frei, auf `*this` die derzeit von verwiesen wird, und weisen den Besitz der `*this`Ressource, die von *ptr* benannt wird, Wenn ein Operator fehlschlägt, bleibt `*this` er unverändert. Jeder Operator hat einen Effekt, `weak_ptr(ptr).swap(*this)`der entspricht.
+Die Operatoren geben alle die Ressource frei, auf die zurzeit `*this` verweist, und weisen den Besitz der Ressource, die von *ptr* benannt wird, `*this` zu. Wenn ein Operator fehlschlägt, bleibt `*this` unverändert. Jeder Operator hat einen Effekt, der `weak_ptr(ptr).swap(*this)` entspricht.
 
 ### <a name="example"></a>Beispiel
 
@@ -275,7 +275,7 @@ int main()
 
 ## <a name="owner_before"></a>owner_before
 
-Gibt **true** zurück, `weak_ptr` wenn der angegebene Zeiger vor (oder kleiner als) geordnet ist.
+Gibt **true** zurück, wenn dieser `weak_ptr` vor (oder kleiner als) dem bereitgestellten Zeiger angeordnet ist.
 
 ```cpp
 template <class Other>
@@ -287,12 +287,12 @@ bool owner_before(const weak_ptr<Other>& ptr) const noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*PTR*\
-Ein Lvalue-Verweis auf ein `shared_ptr` oder ein `weak_ptr`.
+*ptr* -\
+Ein Lvalue-Verweis auf eine `shared_ptr` oder eine `weak_ptr`.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Template-Member- Funktion gibt `*this` true zurück, wenn vor *ptr*geordnet ist.
+Die Template-Member-Funktion gibt **true** zurück, wenn `*this` vor *ptr*geordnet ist.
 
 ## <a name="reset"></a>Festlegen
 
@@ -304,7 +304,7 @@ void reset() noexcept;
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion gibt die Ressource frei, `*this` auf die `*this` von verwiesen wird `weak_ptr` , und konvertiert in ein leeres-Objekt.
+Die Member-Funktion gibt die Ressource frei, auf die von `*this` verwiesen wird, und konvertiert `*this` in ein leeres `weak_ptr` Objekt.
 
 ### <a name="example"></a>Beispiel
 
@@ -353,12 +353,12 @@ void swap(weak_ptr<T>& a, weak_ptr<T>& b) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*UA*\
+*WP* -\
 Der schwache Zeiger, mit dem getauscht werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Nach einem `swap`verweist auf die Ressource, auf die `*this` ursprünglich von verwiesen wurde, durch *WP*, und auf die Ressource, auf die von *WP* ursprünglich `*this`verwiesen wird, wird von verwiesen. Die Funktion ändert nicht die Verweis Zähler für die beiden Ressourcen und löst keine Ausnahmen aus. Die Auswirkung der Vorlagen Spezialisierung ist die Entsprechung von `a.swap(b)`.
+Nach einem `swap` zeigt die Ressource, auf die ursprünglich `*this` verwiesen wird, von *WP*, und auf die Ressource, auf die von *WP* ursprünglich verwiesen wurde, wird von `*this` verwiesen. Die Funktion ändert nicht die Verweis Zähler für die beiden Ressourcen und löst keine Ausnahmen aus. Die Auswirkungen der Vorlagen Spezialisierung entsprechen `a.swap(b)`.
 
 ### <a name="example"></a>Beispiel
 
@@ -407,7 +407,7 @@ int main()
 
 ## <a name="use_count"></a>use_count
 
-Zählt die Anzahl der `shared_ptr` Objekte, die die freigegebene Ressource besitzen.
+Zählt die Anzahl der `shared_ptr`-Objekte, die die freigegebene Ressource besitzen.
 
 ```cpp
 long use_count() const noexcept;
@@ -468,18 +468,18 @@ weak_ptr(const shared_ptr<Other>& sp) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*Außer*\
-Der Typ, der vom Argument für den gemeinsamen/schwachen Zeiger gesteuert wird. Diese Konstruktoren sind nicht an der Überladungs Auflösung beteiligt, es `element_type*`sei denn, _andere\*_  ist mit kompatibel
+*Andere* \
+Der Typ, der vom Argument für den gemeinsamen/schwachen Zeiger gesteuert wird. Diese Konstruktoren sind nicht an der Überladungs Auflösung beteiligt, es sei denn, _andere \*_ sind mit `element_type*` kompatibel.
 
-*UA*\
+*WP* -\
 Der zu kopierende schwache Zeiger.
 
-*El*\
+*SP* -\
 Der zu kopierende gemeinsame Zeiger
 
 ### <a name="remarks"></a>Hinweise
 
-Der Standardkonstruktor erstellt ein `weak_ptr` leeres-Objekt. Die Konstruktoren, die ein Argument annehmen, erstellen ein `weak_ptr` leeres Objekt, wenn der Argument Zeiger leer ist. Andernfalls erstellen Sie ein `weak_ptr` -Objekt, das auf die Ressource verweist, die durch das-Argument benannt wird. Der Verweis Zähler des freigegebenen Objekts wird nicht geändert.
+Der Standardkonstruktor erstellt ein leeres `weak_ptr`-Objekt. Die Konstruktoren, die ein Argument annehmen, erstellen ein leeres `weak_ptr` Objekt, wenn der Argument Zeiger leer ist. Andernfalls erstellen Sie ein `weak_ptr` Objekt, das auf die Ressource verweist, die durch das-Argument benannt wird. Der Verweis Zähler des freigegebenen Objekts wird nicht geändert.
 
 ### <a name="example"></a>Beispiel
 
@@ -524,7 +524,7 @@ Beschädigt ein Objekt vom Typ `weak_ptr`.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Dekonstruktor zerstört `weak_ptr` dies, aber hat keine Auswirkung auf den Verweis Zähler des Objekts, auf dessen gespeicherter Zeiger zeigt.
+Der Dekonstruktor zerstört diese `weak_ptr` aber hat keine Auswirkung auf den Verweis Zähler des Objekts, auf dessen gespeicherter Zeiger zeigt.
 
 ## <a name="see-also"></a>Siehe auch
 

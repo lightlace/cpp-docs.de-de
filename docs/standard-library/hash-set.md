@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - hash_set header
 ms.assetid: 6b556967-c808-4869-9b4d-f9e030864435
-ms.openlocfilehash: 559bbff00b8e5204dd4f381abaf9987b4752db48
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 00ca476816213d38b3c50c64e0978e65ac1a5ea1
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452019"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687947"
 ---
-# <a name="lthashsetgt"></a>&lt;hash_set&gt;
+# <a name="lthash_setgt"></a>&lt;hash_set&gt;
 
 > [!NOTE]
 > Dieser Header ist veraltet. Die Alternative ist [unordered_map-Klasse](../standard-library/unordered-set.md).
 
-Definiert die Containervorlagenklassen „hash_set“ und „hash_multiset“ und deren unterstützende Vorlagen.
+Definiert die Containerklassen Vorlagen hash_set und hash_multiset sowie deren unterstützende Vorlagen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ Definiert die Containervorlagenklassen „hash_set“ und „hash_multiset“ un
 
 |Klasse|Beschreibung|
 |-|-|
-|[hash_compare-Klasse](../standard-library/hash-compare-class.md)|Beschreibt ein Objekt, das von jedem Hash assoziativen Container – hash_map, hash_multimap, hash_set oder Hash_multiset – als Standard `Traits` Parameter Objekt verwendet werden kann, um die darin enthaltenen Elemente zu sortieren und zu hashen.|
+|[hash_compare-Klasse](../standard-library/hash-compare-class.md)|Beschreibt ein Objekt, das von jedem Hash assoziativen Container – hash_map, hash_multimap, hash_set oder Hash_multiset – als standardmäßiges `Traits` Parameter Objekt verwendet werden kann, um die darin enthaltenen Elemente zu sortieren und zu hashen.|
 |[hash_set-Klasse](../standard-library/hash-set-class.md)|Wird zum Speichern und schnellen Abrufen von Daten aus einer Auflistung verwendet, in der die Werte der enthaltenen Elemente eindeutig sind und als Schlüsselwerte dienen.|
 |[hash_multiset-Klasse](../standard-library/hash-multiset-class.md)|Wird zum Speichern und schnellen Abrufen von Daten aus einer Auflistung verwendet, in der die Werte der enthaltenen Elemente eindeutig sind und als Schlüsselwerte dienen.|
 

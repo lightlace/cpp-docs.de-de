@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_base class
 ms.assetid: 7e95c083-91b4-4b3f-8918-0d4ea244a040
-ms.openlocfilehash: 1a32ba5e583fdb20118a3397f1ddb326302f2de1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6fca9b2130407b165a7a7bfb1fb2a9ec81774e20
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459390"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689889"
 ---
-# <a name="codecvtbase-class"></a>codecvt_base-Klasse
+# <a name="codecvt_base-class"></a>codecvt_base-Klasse
 
-Eine Basisklasse für die Codecvt-Klasse, die verwendet wird, um einen Enumerationstyp `result`zu definieren, der als bezeichnet wird, der als Rückgabetyp für die facetmember-Funktionen verwendet wird, um das Ergebnis einer Konvertierung anzugeben.
+Eine Basisklasse für die Codecvt-Klasse, die verwendet wird, um einen Enumerationstyp zu definieren, der als `result` bezeichnet wird, der als Rückgabetyp für die facetmember-Funktionen verwendet wird, um das Ergebnis einer Konvertierung anzugeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,7 +38,7 @@ protected:
 
 ## <a name="remarks"></a>Hinweise
 
-Die Klasse beschreibt eine Enumeration, die allen Spezialisierungen der Vorlagenklasse [codecvt](../standard-library/codecvt-class.md) gemein ist. Das Enumerationsergebnis beschreibt die möglichen Rückgabewerte [do_in](../standard-library/codecvt-class.md#do_in) oder [do_out](../standard-library/codecvt-class.md#do_out):
+Die Klasse beschreibt eine Enumeration, die für alle Spezialisierungs Klassen Vorlagen [Codecvt](../standard-library/codecvt-class.md)gemeinsam ist. Das Enumerationsergebnis beschreibt die möglichen Rückgabewerte [do_in](../standard-library/codecvt-class.md#do_in) oder [do_out](../standard-library/codecvt-class.md#do_out):
 
 - `ok`, wenn die Konvertierung zwischen internen und externen Zeichen Codierungen erfolgreich ist.
 
@@ -56,4 +56,4 @@ Die Klasse beschreibt eine Enumeration, die allen Spezialisierungen der Vorlagen
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

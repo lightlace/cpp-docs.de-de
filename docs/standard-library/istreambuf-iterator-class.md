@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::istreambuf_iterator [C++], traits_type
 - std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
-ms.openlocfilehash: 0a2bbc69d4f2d3af0ee6e00a2672436a5f15ab67
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3b839126b7b5541c3a9dd033fcbbc8221bde7c22
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448129"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689470"
 ---
-# <a name="istreambufiterator-class"></a>istreambuf_iterator-Klasse
+# <a name="istreambuf_iterator-class"></a>istreambuf_iterator-Klasse
 
-Die Vorlagenklasse „istreambuf_iterator“ beschreibt ein Eingabeiteratorobjekt, das Zeichenelemente aus einem Eingabestreampuffer extrahiert, auf den es durch ein gespeichertes Objekt zugreift, des Zeigers auf `basic_streambuf`\< **CharType**, **Traits**>.
+Die Klassen Vorlage istreambuf_iterator beschreibt ein eingabeiteratorobjekt, das Zeichen Elemente aus einem Eingabestreampuffer extrahiert, auf den es durch ein gespeicheres Objekt zugreift, vom Typ Zeiger auf `basic_streambuf` \< **CharType**, **Merkmale**> .
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,10 +39,10 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>Parameter
 
-*CharType*\
+*CharType* -\
 Der Typ, der den Zeichentyp für das istreambuf_iterator-Objekt darstellt.
 
-*Aufweisen*\
+*Merkmale* \
 Der Typ, der den Zeichentyp für das istreambuf_iterator-Objekt darstellt. Dieses Argument ist optional, und der Standardwert ist `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Hinweise
@@ -142,7 +142,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Richting*\
+*Rechte* \
 Der Iterator für die Durchführung von Gleichheitsüberprüfungen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -151,7 +151,7 @@ Der Iterator für die Durchführung von Gleichheitsüberprüfungen.
 
 ### <a name="remarks"></a>Hinweise
 
-Ein Bereich wird von der `istreambuf_iterator` bis zur aktuellen Position und dem End-of-Stream-Iterator definiert, aber da alle nicht-End-of-Stream-Iteratoren unter der `equal` Member-Funktion äquivalent sind, ist es nicht möglich, Unterbereiche `istreambuf_iterator`mit s zu definieren. Die `==`- und `!=`-Operatoren weisen die gleiche Semantik auf.
+Ein Bereich wird durch das `istreambuf_iterator` an der aktuellen Position und dem End-of-Stream-Iterator definiert, aber da alle nicht-End-of-Stream-Iteratoren unter der `equal` Member-Funktion äquivalent sind, ist es nicht möglich, Unterbereiche mit `istreambuf_iterator`s zu definieren. Die `==`- und `!=`-Operatoren weisen die gleiche Semantik auf.
 
 ### <a name="example"></a>Beispiel
 
@@ -239,15 +239,15 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*strbuf*\
+*\ "*
 Der Eingabestreampuffer, dem der `istreambuf_iterator` angefügt wird.
 
-*_Istr*\
+*_Istr* \
 Der Eingabestream, dem der `istreambuf_iterator` angefügt wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor initialisiert den Eingabestream-Puffer Zeiger mit " *strinbuf*". Der zweite Konstruktor initialisiert den Eingabestream-Puffer Zeiger mit *_Istr*. `rdbuf`, und schließlich wird versucht, ein Objekt vom Typ `CharType`zu extrahieren und zu speichern.
+Der erste Konstruktor initialisiert den Eingabestream-Puffer Zeiger mit " *strinbuf*". Der zweite Konstruktor initialisiert den Eingabestream-Puffer Zeiger mit *_Istr*. `rdbuf` und schließlich versucht, ein Objekt vom Typ `CharType` zu extrahieren und zu speichern.
 
 ### <a name="example"></a>Beispiel
 

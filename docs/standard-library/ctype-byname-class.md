@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_byname class
 ms.assetid: a5cec021-a1f8-425f-8757-08e6f064b604
-ms.openlocfilehash: 0b0f33781cc9f1f54661a44a5434c94316432a45
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: dcaaff45fb33155710f788af4ceb657eff97464e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457899"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689732"
 ---
-# <a name="ctypebyname-class"></a>ctype_byname-Klasse
+# <a name="ctype_byname-class"></a>ctype_byname-Klasse
 
-Die abgeleitete Vorlagenklasse beschreibt ein Objekt, das als ctype-Facet eines angegebenen Gebietsschemas dienen kann und die Klassifizierung von Zeichen sowie die Konvertierung von Zeichen zwischen Groß-/Kleinschreibung und zwischen nativen und gebietsschemaspezifischen Zeichensätzen ermöglicht.
+In der abgeleiteten Klassen Vorlage wird ein Objekt beschrieben, das als CType-Facette eines bestimmten Gebiets Schemas fungieren kann und die Klassifizierung von Zeichen und die Konvertierung von Zeichen zwischen Groß-/Kleinschreibung und systemeigenen und Gebiets Schema spezifischen Zeichensätzen ermöglicht
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,4 +50,4 @@ Das Verhalten wird durch das benannte Gebietsschema `_Locname` bestimmt. Jeder K
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

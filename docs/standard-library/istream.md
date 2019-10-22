@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 0ad27bf849e8d4b9188868b9a29bf423b4cafafa
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8e9675a673462c8eaab94d29a3ae36a4786737b7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458733"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687853"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
-Definiert die Vorlagenklasse basic_istream, die Extraktionen für die Iostreams vermittelt, und die Vorlagenklasse basic_iostream, die Einfügungen und Extraktionen vermittelt. Der Header definiert auch einen verknüpften Manipulator. Diese Headerdatei wird in der Regel von einem anderen Iostreams-Header eingeschlossen. Sie müssen sie nur selten direkt einschließen.
+Definiert die Klassen Vorlage Basic_istream, die Extraktionen für die Iostreams vermittelt, und die Klassen Vorlage Basic_iostream, die Einfügungen und Extraktionen vermittelt. Der Header definiert auch einen verknüpften Manipulator. Diese Headerdatei wird in der Regel von einem anderen Iostreams-Header eingeschlossen. Sie müssen sie nur selten direkt einschließen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,8 +29,8 @@ Definiert die Vorlagenklasse basic_istream, die Extraktionen für die Iostreams 
 
 |Typname|Beschreibung|
 |-|-|
-|[iostream](../standard-library/istream-typedefs.md#iostream)|Ein Typ `basic_iostream` , der auf **char**spezialisiert ist.|
-|[istream](../standard-library/istream-typedefs.md#istream)|Ein Typ `basic_istream` , der auf **char**spezialisiert ist.|
+|[iostream](../standard-library/istream-typedefs.md#iostream)|Ein Typ `basic_iostream` spezialisiert auf **char**.|
+|[istream](../standard-library/istream-typedefs.md#istream)|Ein Typ `basic_istream` spezialisiert auf **char**.|
 |[wiostream](../standard-library/istream-typedefs.md#wiostream)|Ein `basic_iostream`-Typ, der auf **wchar** spezialisiert ist.|
 |[wistream](../standard-library/istream-typedefs.md#wistream)|Ein `basic_istream`-Typ, der auf **wchar** spezialisiert ist.|
 
@@ -52,7 +52,7 @@ Definiert die Vorlagenklasse basic_istream, die Extraktionen für die Iostreams 
 |Klasse|Beschreibung|
 |-|-|
 |[basic_iostream](../standard-library/basic-iostream-class.md)|Eine Streamklasse für Ein- und Ausgabe.|
-|[basic_istream](../standard-library/basic-istream-class.md)|Die Vorlagen Klasse beschreibt ein Objekt, das das Extrahieren von Elementen und codierten Objekten aus einem Streampuffer mit Elementen `Elem`des Typs steuert, der auch als [char_type](../standard-library/basic-ios-class.md#char_type)bezeichnet wird, dessen Zeichen Merkmale `Tr`von der Klasse bestimmt werden. wird als [Traits_type](../standard-library/basic-ios-class.md#traits_type)bezeichnet.|
+|[basic_istream](../standard-library/basic-istream-class.md)|Die Klassen Vorlage beschreibt ein Objekt, das das Extrahieren von Elementen und codierten Objekten aus einem Streampuffer mit Elementen des Typs `Elem` steuert, auch bekannt als [char_type](../standard-library/basic-ios-class.md#char_type), dessen Zeichen Merkmale von der Klasse `Tr` bestimmt werden, auch bekannt als [ Traits_type](../standard-library/basic-ios-class.md#traits_type).|
 
 ## <a name="see-also"></a>Siehe auch
 

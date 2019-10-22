@@ -86,14 +86,14 @@ helpviewer_keywords:
 - stdext::hash_multimap::upper_bound
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
-ms.openlocfilehash: 2022031a52efbc8e8064ae23e14ae19e4aefb77c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b42dd5ba4aa3df12e3ef1aba930b2214dde19756
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448671"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687971"
 ---
-# <a name="hashmultimap-class"></a>hash_multimap-Klasse
+# <a name="hash_multimap-class"></a>hash_multimap-Klasse
 
 > [!NOTE]
 > Diese API ist veraltet. Die Alternative ist die [unordered_multimap-Klasse](../standard-library/unordered-multimap-class.md).
@@ -112,16 +112,16 @@ class hash_multimap
 
 ### <a name="parameters"></a>Parameter
 
-*Wichtigen*\
+*Schlüssel* \
 Der im hash_multimap-Element zu speichernde Schlüsseldatentyp.
 
-*Sorte*\
+@No__t_1 *eingeben*
 Der im hash_multimap-Element zu speichernde Elementdatentyp.
 
-*Aufweisen*\
-Der Typ, der zwei Funktions Objekte enthält, einer der Klassen *Merkmale* , der zwei Element Werte als Sortierschlüssel vergleichen kann, um ihre relative Position zu bestimmen, und eine Hash Funktion, bei der es sich um ein unäres Prädikat für die Zuordnung der Elemente ohne Vorzeichen von handelt. geben `size_t`Sie ein. Das Argument ist optional und `hash_compare<Key, less<Key>>` ist der Standardwert.
+*Merkmale* \
+Der Typ, der zwei Funktions Objekte enthält, einer der Klassen *Merkmale* , der zwei Element Werte als Sortierschlüssel vergleichen kann, um ihre relative Position zu bestimmen, und eine Hash Funktion, bei der es sich um ein unäres Prädikat für die Zuordnung der Elemente ohne Vorzeichen von handelt. Geben Sie `size_t` ein. Das Argument ist optional und `hash_compare<Key, less<Key>>` ist der Standardwert.
 
-*Allocator*\
+*Zuordner\*
 Der Typ, mit dem das gespeicherte Zuordnungsobjekt darstellt wird, mit dem Details zum Belegen und Freigeben des Arbeitsspeichers des hash_multimap-Elements gekapselt werden. Dieses Argument ist optional, und der Standardwert ist `allocator<pair <const Key, Type>>`.
 
 ## <a name="remarks"></a>Hinweise
@@ -138,7 +138,7 @@ Das hash_multimap-Element ist:
 
 - Ein Paar assoziativer Container, da sich die Elementwerte von den Schlüsselwerten unterscheiden.
 
-- Eine Vorlagenklasse, da die bereitgestellten Funktionen generisch ist und daher unabhängig vom angegebenen Datentyp, der als Elemente oder Schlüssel enthalten ist. Die für Elemente und Schlüssel zu verwendenden Datentypen werden stattdessen in der Klassenvorlage zusammen mit der Vergleichsfunktion und der Zuweisung als Parameter angegeben.
+- Eine Klassen Vorlage, da die von ihr bereitgestellte Funktionalität generisch und daher unabhängig vom jeweiligen Typ der Daten ist, die als Elemente oder Schlüssel enthalten sind. Die für Elemente und Schlüssel zu verwendenden Datentypen werden stattdessen in der Klassenvorlage zusammen mit der Vergleichsfunktion und der Zuweisung als Parameter angegeben.
 
 Der Hauptvorteil des Hashverfahrens gegenüber der Sortierung ist die größere Effizienz. Bei einem erfolgreichen Hashverfahren werden Einfüge-, Lösch- und Suchvorgänge, verglichen mit einer Zeit, die zum Logarithmus der Anzahl von Elementen im Container für Sortiertechniken proportional ist, in einer konstanten Durchschnittszeit durchgeführt. Der Wert eines Elements in einem hash_multimap-Element, aber nicht der zugehörige Schlüsselwert, werden möglicherweise direkt geändert. Stattdessen müssen die Schlüsselwerte, die alten Elementen zugeordnet sind, gelöscht, und stattdessen neuen Schlüsselwerten für neue Elemente zugeordnet werden.
 
@@ -146,9 +146,9 @@ Die Auswahl des Containertyps sollte im Allgemeinen auf Grundlage des für die A
 
 Das hash_multimap-Element sollte der ausgewählte assoziative Container sein, wenn die Bedingungen, mit denen die Werte von der Anwendung den Schlüsseln zugeordnet werden, erfüllt werden. Ein Modell für diesen Strukturtyp ist eine sortierte Liste von Schlüsselwörtern mit zugeordneten Zeichenfolgewerten, die, sagen wir, Definitionen bereitstellen, in denen die Wörter nicht immer eindeutig definiert wurden. Wenn die Schlüsselwörter stattdessen eindeutig definiert werden, damit die Schlüssel eindeutig sind, ist ein hash_map-Element der gewählte Container. Wenn hingegen nur die Wortliste gespeichert wurden, ist ein hash_set-Element der richtige Container. Wenn mehrfaches Vorkommen der Wörter zugelassen wird, ist ein hash_multiset-Element die geeignete Containerstruktur.
 
-Das hash_multimap-Element sortiert die gesteuerte Sequenz, indem ein gespeichertes `Traits`-Hashobjekt des Objekts [value_compare](../standard-library/value-compare-class.md) aufgerufen wird. Auf das gespeicherte Objekt wird möglicherweise zugegriffen, indem die Memberfunktion [key_comp](../standard-library/hash-map-class.md#key_comp) aufgerufen wird. Ein solches Funktionsobjekt muss dasselbe Verhalten haben wie ein aus der Klasse [hash_compare](../standard-library/hash-compare-class.md)`<Key, less<Key>>` abgeleitetes Objekt. Insbesondere für alle `Key`-Werte des Typs `Key`, erreicht der `Traits (Key)`-Aufruf eine Verteilung der Werte vom Typ `size_t`.
+Das hash_multimap-Element sortiert die gesteuerte Sequenz, indem ein gespeichertes `Traits`-Hashobjekt des Objekts [value_compare](../standard-library/value-compare-class.md) aufgerufen wird. Auf das gespeicherte Objekt kann zugegriffen werden, indem die Memberfunktion [key_comp](../standard-library/hash-map-class.md#key_comp) aufrufen wird. Ein solches Funktionsobjekt muss dasselbe Verhalten haben wie ein aus der Klasse [hash_compare](../standard-library/hash-compare-class.md)`<Key, less<Key>>` abgeleitetes Objekt. Insbesondere für alle `Key`-Werte des Typs `Key`, erreicht der `Traits (Key)`-Aufruf eine Verteilung der Werte vom Typ `size_t`.
 
-Im Allgemeinen müssen die Elemente der Vorwärtsiteratoren etwas weniger als vergleichbar sein, um diese Sortierung zu erstellen, sodass beliebige zwei Elemente möglicherweise als gleichwertig bestimmt werden (in dem Sinne, dass keins geringer als das Andere ist), oder dass eins geringer als das Andere ist. Dies führt zu einer Sortierung zwischen den nicht gleichwertigen Elementen. Etwas technischer betrachtet ist die Vergleichsfunktion ein binäres Prädikat, das eine strenge schwache Sortierung im mathematischen Sinn verursacht. Bei einem binären f (x, y)-Prädikat handelt es sich um ein Funktions Objekt `x` , `y` das zwei Argument Objekte und einen Rückgabewert von " **true** " oder " **false**" aufweist. Eine für Hash_multimap vorgegebene Reihenfolge ist eine strikte schwache Reihenfolge, wenn das binäre Prädikat unreflexiv, antisymmetrisch und transitiv ist und wenn die Äquivalenz transitiv ist, `x` wobei `y` zwei Objekte und als Äquivalent definiert werden, wenn sowohl f (x , y) und f (y, x) sind **false**. Wenn der stärkere Gleichheitszustand zwischen Schlüsseln die Äquivalenz ersetzt, erfolgt die Sortierung total (d. h., alle Elemente werden zueinander sortiert), und die verglichenen Schlüssel sind von den einander nicht mehr zu unterscheiden.
+Im Allgemeinen müssen die Elemente der Vorwärtsiteratoren etwas weniger als vergleichbar sein, um diese Sortierung zu erstellen, sodass beliebige zwei Elemente möglicherweise als gleichwertig bestimmt werden (in dem Sinne, dass keins geringer als das Andere ist), oder dass eins geringer als das Andere ist. Dies führt zu einer Sortierung zwischen den nicht gleichwertigen Elementen. Etwas technischer betrachtet ist die Vergleichsfunktion ein binäres Prädikat, das eine strenge schwache Sortierung im mathematischen Sinn verursacht. Bei einem binären f (x, y)-Prädikat handelt es sich um ein Funktions Objekt, das zwei Argument Objekte `x` und `y` sowie einen Rückgabewert von " **true** " oder " **false**" aufweist. Eine für eine Hash_multimap vorgegebene Reihenfolge ist eine strikte schwache Reihenfolge, wenn das binäre Prädikat unreflexiv, antisymmetrisch und transitiv ist und wenn die Äquivalenz transitiv ist, wobei zwei Objekte `x` und `y` als Äquivalent definiert werden, wenn sowohl f (x, y) als auch f (y , x) ist **false**. Wenn der stärkere Gleichheitszustand zwischen Schlüsseln die Äquivalenz ersetzt, erfolgt die Sortierung total (d. h., alle Elemente werden zueinander sortiert), und die verglichenen Schlüssel sind von den einander nicht mehr zu unterscheiden.
 
 Die tatsächliche Reihenfolge der Elemente in der gesteuerten Sequenz hängt von der Hashfunktion, der Sortierfunktion und der aktuellen Größe der Hashtabelle ab, die im Containerobjekt gespeichert wird. Die aktuelle Größe der Hashtabelle kann nicht bestimmt werden. Deshalb kann die Reihenfolge der Elemente in der gesteuerten Sequenz im Allgemeinen nicht vorhergesagt werden. Das Einfügen von Elementen führt nicht dazu, dass Iteratoren ungültig werden, und durch das Entfernen von Elementen werden nur solche Iteratoren ungültig, die speziell auf die entfernten Elemente gezeigt haben.
 
@@ -166,9 +166,9 @@ Der von einer hash_multimap-Klasse bereitgestellte Iterator ist ein bidirektiona
 |-|-|
 |[allocator_type](#allocator_type)|Ein Typ, der die `allocator`-Klassentyp für das `hash_multimap`-Objekt darstellt.|
 |[const_iterator](#const_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, der im `const`-Element ein `hash_multimap`-Element lesen kann.|
-|[const_pointer](#const_pointer)|Ein Typ, der einen Zeiger auf ein **Konstanten** Element in einem `hash_multimap`bereitstellt.|
-|[const_reference](#const_reference)|Ein Typ, der einen Verweis auf ein **Konstanten** Element bereitstellt, das `hash_multimap` in einem zum Lesen und Ausführen von **Konstanten** Vorgängen gespeichert ist.|
-|[const_reverse_iterator](#const_reverse_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit `hash_multimap` **dem jedes Konstante** Element im gelesen werden kann.|
+|[const_pointer](#const_pointer)|Ein Typ, der einen Zeiger auf ein **Konstanten** Element in einer `hash_multimap` bereitstellt.|
+|[const_reference](#const_reference)|Ein Typ, der einen Verweis auf ein **Konstanten** Element bereitstellt, das in einem `hash_multimap` zum Lesen und Ausführen von **Konstanten** Vorgängen gespeichert ist.|
+|[const_reverse_iterator](#const_reverse_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit **dem jedes Konstante** Element in der `hash_multimap` gelesen werden kann.|
 |[difference_type](#difference_type)|Ein Ganzzahltyp mit Vorzeichen, der dazu verwendet werden kann, die Anzahl von Elementen eines `hash_multimap`-Elements in einen Bereich zwischen Elementen darzustellen, auf die von Iteratoren gezeigt wird.|
 |[Iterator](#iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem jedes Element in einer `hash_multimap` gelesen oder geändert werden kann.|
 |[key_compare](#key_compare)|Eine Typ, der ein Funktionsobjekt bereitstellt, das zwei Sortierschlüssel vergleichen kann, um die relative Position von zwei Elementen im `hash_multimap`-Element zu bestimmen.|
@@ -193,7 +193,7 @@ Der von einer hash_multimap-Klasse bereitgestellte Iterator ist ein bidirektiona
 |[crend](#crend)|Gibt einen konstanten Iterator zurück, der den Speicherort adressiert, der dem letzten Element eines umgekehrten `hash_multimap`-Elements nachfolgt.|
 |[emplace](#emplace)|Fügt ein Element ein, das vor Ort in ein `hash_multimap`-Element erstellt wird.|
 |[emplace_hint](#emplace_hint)|Fügt ein Element ein, das vor Ort mit einem Platzierungshinweis in ein `hash_multimap`-Element erstellt wird.|
-|[empty](#empty)|Testet, ob ein `hash_multimap`-Element leer ist.|
+|[leer](#empty)|Testet, ob ein `hash_multimap`-Element leer ist.|
 |[end](#end)|Gibt einen Iterator zurück, der den Speicherort adressiert, der dem letzten Element einem `hash_multimap`-Element nachfolgt.|
 |[equal_range](#equal_range)|Gibt einen Iterator zurück, der den Speicherort adressiert, der dem letzten Element einem `hash_multimap`-Element nachfolgt.|
 |[erase](#erase)|Entfernt ein Element oder eine Reihe von Elementen in einer `hash_multimap` aus angegebenen Speicherorten.|
@@ -262,7 +262,7 @@ Ein bidirektionaler Iterator, der das erste Element in der hash_multimap adressi
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der Rückgabewert von `begin` einem `const_iterator`zugewiesen wird, können die Elemente im Hash_multimap-Objekt nicht geändert werden. Wenn der Rückgabewert von `begin` einem `iterator`zugewiesen wird, können die Elemente im Hash_multimap-Objekt geändert werden.
+Wenn der Rückgabewert von `begin` einem `const_iterator` zugewiesen wird, können die Elemente im Hash_multimap-Objekt nicht geändert werden. Wenn der Rückgabewert von `begin` einem `iterator` zugewiesen wird, können die Elemente im Hash_multimap-Objekt geändert werden.
 
 ### <a name="example"></a>Beispiel
 
@@ -365,7 +365,7 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein bidirektionaler const-Iterator, der den Speicherort adressiert, der auf das letzte Element einer [hash_multimap](../standard-library/hash-multimap-class.md) folgt. Wenn die `hash_multimap` leer ist, gilt anschließend `hash_multimap::cend == hash_multimap::begin`.
+Ein bidirektionaler const-Iterator, der den Speicherort adressiert, der auf das letzte Element einer [hash_multimap](../standard-library/hash-multimap-class.md) folgt. Wenn `hash_multimap` leer ist, dann gilt `hash_multimap::cend == hash_multimap::begin`.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -468,15 +468,15 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 Ein `const_iterator`-Typ kann nicht zum Ändern des Werts eines Elements verwendet werden.
 
-Der `const_iterator` von Hash_multimap definierte verweist auf Objekte von [value_type](#value_type), die vom Typ `pair<const Key, Type>`sind. Der Wert des Schlüssels ist durch das erste Memberpaar verfügbar, und der Wert des zugeordneten Elements ist durch das zweite Memberpaar verfügbar.
+Der von Hash_multimap definierte `const_iterator` verweist auf Objekte von [value_type](#value_type), die den Typ `pair<const Key, Type>` haben. Der Wert des Schlüssels ist durch das erste Memberpaar verfügbar, und der Wert des zugeordneten Elements ist durch das zweite Memberpaar verfügbar.
 
-Um einen `const_iterator` `cIter` zu dereferenzieren, der auf ein Element in einem Hash_multimap `->` zeigt, verwenden Sie den-Operator.
+Verwenden Sie den `->`-Operator, um einen `const_iterator` zu dereferenzieren `cIter` der auf ein Element in einem Hash_multimap verweist.
 
-Um auf den Wert des Schlüssels für das Element zuzugreifen, verwenden `cIter->first`Sie, das `(*cIter).first`entspricht. Um auf den Wert des zugeordneten Datums für das Element zuzugreifen, `cIter->second`verwenden Sie, das `(*cIter).second`entspricht.
+Um auf den Wert des Schlüssels für das Element zuzugreifen, verwenden Sie `cIter->first`, das `(*cIter).first` entspricht. Um auf den Wert des zugeordneten Datums für das Element zuzugreifen, verwenden Sie `cIter->second`, das `(*cIter).second` entspricht.
 
 ### <a name="example"></a>Beispiel
 
-Im Beispiel für [begin](#begin) finden Sie ein Beispiel, das `const_iterator` verwendet.
+Im Beispiel für [begin](#begin) finden Sie ein Beispiel mit `const_iterator`.
 
 ## <a name="const_pointer"></a> hash_multimap::const_pointer
 
@@ -566,11 +566,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 Ein `const_reverse_iterator`-Typ kann nicht den Wert eines Elements ändern und wird verwendet, um die hash_multimap in umgekehrter Reihenfolge zu durchlaufen.
 
-Der `const_reverse_iterator` von Hash_multimap definierte verweist auf Objekte von [value_type](#value_type), die vom Typ `pair<const Key, Type>`sind, dessen erster Member der Schlüssel zum Element und dessen zweiter Member das zugeordnete Datum ist, das vom Element gehalten wird.
+Der durch Hash_multimap definierte `const_reverse_iterator` verweist auf Objekte von [value_type](#value_type), die den Typ `pair<const Key, Type>` haben, dessen erster Member der Schlüssel zum Element und dessen zweiter Member das zugeordnete Datum ist, das vom Element gehalten wird.
 
-Um einen `const_reverse_iterator` `crIter` zu dereferenzieren, der auf ein Element in einem Hash_multimap `->` zeigt, verwenden Sie den-Operator.
+Verwenden Sie den `->`-Operator, um einen `const_reverse_iterator` zu dereferenzieren `crIter` der auf ein Element in einem Hash_multimap verweist.
 
-Um auf den Wert des Schlüssels für das Element zuzugreifen, verwenden `crIter->first`Sie, das `(*crIter).first`entspricht. Um auf den Wert des zugeordneten Datums für das Element zuzugreifen, `crIter->second`verwenden Sie, das `(*crIter).second`entspricht.
+Um auf den Wert des Schlüssels für das Element zuzugreifen, verwenden Sie `crIter->first`, das `(*crIter).first` entspricht. Um auf den Wert des zugeordneten Datums für das Element zuzugreifen, verwenden Sie `crIter->second`, das `(*crIter).second` entspricht.
 
 ### <a name="example"></a>Beispiel
 
@@ -589,7 +589,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*wichtigen*\
+*Schlüssel* \
 Der Schlüssel des Elements mit einem übereinstimmenden Schlüssel aus der hash_multimap-Klasse.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -771,7 +771,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::di
 
 `difference_type` ist der Typ, der beim Subtrahieren oder Inkrementieren über Iteratoren des Containers zurückgegeben wird. `difference_type` wird normalerweise verwendet, um die Anzahl von Elementen im Bereich *(first, last)* zwischen den Iteratoren `first` und `last` darzustellen. Dazu gehört das Element, auf das durch `first` gezeigt wird und der Bereich von Elementen bis zu (aber nicht einschließlich) dem Element, auf das durch `last` gezeigt wird.
 
-Beachten Sie, dass die Subtraktion zwischen Iteratoren nur von Iteratoren mit zufälligem Zugriff, die über einen Container mit zufälligem Zugriff bereitgestellt werden, beispielsweise „vector“, unterstützt wird, obwohl `difference_type` für alle Iteratoren verfügbar ist, die die Anforderungen für einen Eingabeiterator erfüllen, wozu auch die Klasse bidirektionaler Iteratoren gehört, die von umkehrbaren Containern wie Menge unterstützt wird.
+Bitte beachten Sie, dass die Substraktion zwischen Iteratoren nur von Iteratoren mit zufälligem Zugriff, die über einen Container mit zufälligem Zugriff bereitgestellt werden, beispielsweise „vector“, unterstützt wird, obwohl `difference_type` für alle Iteratoren verfügbar ist, die die Anforderungen für einen Eingabeiterator erfüllen, wozu auch die Klasse bidirektionaler Iteratoren gehört, die von umkehrbaren Containern wie Satz unterstützt wird.
 
 ### <a name="example"></a>Beispiel
 
@@ -1085,7 +1085,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parameter
 
-*wichtigen*\
+*Schlüssel* \
 Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden hash_multimap verglichen wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1176,16 +1176,16 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parameter
 
-*_Where*\
+*_Where* \
 Die Position des aus der hash_multimap zu entfernenden Elements.
 
-*erstes*\
+*erste* \
 Die Position des ersten Elements, das aus der hash_multimap entfernt werden soll.
 
-*letzten*\
+*Letzter* \
 Die Position direkt hinter dem letzten aus der hash_multimap entfernten Element.
 
-*wichtigen*\
+*Schlüssel* \
 Der Schlüssel des aus der hash_multimap zu entfernenden Elements.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1300,7 +1300,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*wichtigen*\
+*Schlüssel* \
 Der Schlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden hash_multimap übereinstimmt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1309,9 +1309,9 @@ Ein Iterator, der den ersten Speicherort eines Elements mit einem angegebenen Sc
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion gibt einen Iterator zurück, der ein Element im Hash_multimap-Element adressiert, dessen Sortierschlüssel `equivalent` dem Argument Schlüssel unter einem binären Prädikat entspricht, das eine Sortierung basierend auf einer kleiner-als-Kompatibilitäts Beziehung auslöst.
+Die Member-Funktion gibt einen Iterator zurück, der ein Element in der Hash_multimap adressiert, dessen Sortierschlüssel dem Argument Schlüssel unter einem binären Prädikat `equivalent` wird, das eine Sortierung basierend auf einer kleiner-als-Kompatibilitäts Beziehung auslöst.
 
-Wenn der Rückgabewert `find` einem `const_iterator` zugewiesen wird, kann das hash_multimap-Objekt nicht geändert werden. Wenn der Rückgabewert von `find` einem `iterator`zugewiesen wird, kann das Hash_multimap-Objekt geändert werden.
+Wenn der Rückgabewert `find` einem `const_iterator` zugewiesen wird, kann das hash_multimap-Objekt nicht geändert werden. Wenn der Rückgabewert von `find` einem `iterator` zugewiesen wird, kann das Hash_multimap-Objekt geändert werden.
 
 ### <a name="example"></a>Beispiel
 
@@ -1398,7 +1398,7 @@ Die von der hash_multimap verwendete Zuweisung.
 
 ### <a name="remarks"></a>Hinweise
 
-Zuweisungen für die hash_multimap-Klasse geben an, wie die Klasse einen Speicher verwaltet. Für die meisten Programmieranforderungen reichen die Standard-Zuweisungen aus C++-Standardbibliothek-Containerklassen aus. Schreiben und Verwenden Ihrer eigener Zuweisungsklasse ist ein C++ -Thema für Fortgeschrittene.
+Zuweisungen für die hash_multimap-Klasse geben an, wie die Klasse einen Speicher verwaltet. Für die meisten Programmieranforderungen reichen die Standardzuweisungen mit C++-Standardbibliothek-Container-Klassen aus. Schreiben und Verwenden Ihrer eigener Zuweisungsklasse ist ein C++ -Thema für Fortgeschrittene.
 
 ### <a name="example"></a>Beispiel
 
@@ -1530,7 +1530,7 @@ Alle Konstruktoren initialisieren ihrer hash_multimap-Elemente.
 
 In allen Konstruktoren wird ein Funktionsobjekt vom Typ `Traits` gespeichert, der verwendet wird, um unter den Schlüsseln des hash_multimap-Elements eine Sortierung vorzunehmen, und das später zurückgegeben werden kann, indem [key_comp](#key_comp) aufgerufen wird.
 
-Die ersten drei Konstruktoren geben ein leeres ursprüngliches Hash_multimap an; der zweite gibt den Typ der Vergleichsfunktion (*Comp*) an, die zum Festlegen der Reihenfolge der Elemente verwendet werden soll, und der dritte gibt explizit den`_Al`zu verwendenden zuordnertyp () an. Mit dem Schlüsselwort `explicit` werden bestimmte Arten automatischer Typumwandlung unterdrückt.
+Die ersten drei Konstruktoren geben ein leeres ursprüngliches Hash_multimap an; der zweite gibt den Typ der Vergleichsfunktion (*Comp*) an, die zum Festlegen der Reihenfolge der Elemente verwendet werden soll, und der dritte gibt explizit den zu verwendenden zuordnertyp (`_Al`) an. Mit dem Schlüsselwort `explicit` werden bestimmte Arten automatischer Typumwandlung unterdrückt.
 
 Der vierte Konstruktor gibt eine Kopie des `Right`-hash_multimap-Elements an.
 
@@ -1543,7 +1543,7 @@ Die letzten drei Konstruktoren verwenden ein initializer_list-Element.
 ## <a name="insert"></a> hash_multimap::insert
 
 > [!NOTE]
-> Diese API ist veraltet. Die Alternative ist [unordered_multimap Class](../standard-library/unordered-multimap-class.md).
+> Diese API ist veraltet. Die Alternative ist die [unordered_multimap-Klasse](../standard-library/unordered-multimap-class.md).
 
 Fügt ein Element oder einen Elementbereich in ein hash_multimap-Element ein.
 
@@ -1594,7 +1594,7 @@ Die letzten zwei `insert` -Memberfunktionen verhalten sich identisch zu den erst
 
 Der [value_type](#value_type) eines Elements wird paarweise angegeben, sodass der Wert eines Elements ein sortiertes Paar ist, in dem die erste Komponente gleich dem Schlüsselwert und die zweite Komponente gleich dem Datenwert des Elements ist.
 
-Die Einfügung kann in amortisierter konstanter Zeit für die Hinweis `insert`Version von statt logarithmischer Zeit erfolgen, wenn die Einfügemarke direkt auf *Where*folgt.
+Die Einfügung kann in amortisierter konstanter Zeit für die Hinweis Version von `insert` statt der logarithmischen Zeit erfolgen, wenn die Einfügemarke direkt auf *Where*folgt.
 
 ## <a name="iterator"></a> hash_multimap::iterator
 
@@ -1609,13 +1609,13 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>Hinweise
 
-Der `iterator` von Hash_multimap definierte verweist auf Objekte von [value_type](#value_type), die vom Typ `pair` \< "Konstanten Schlüssel" sind **. geben**Sie > ein, dessen erster Member der Schlüssel zum Element und dessen zweiter Member das zugeordnete Datum ist, das von gespeichert wird. das Element.
+Der `iterator`, der durch Hash_multimap definiert wird, zeigt auf Objekte von [value_type](#value_type), die vom Typ `pair` \< **Konstanten Schlüssels**sind. Geben Sie > ein, dessen erster Member der Schlüssel zum Element und dessen zweiter Member das zugeordnete Datum ist, das vom Element gehalten wird.
 
-Verwenden Sie den-Operator, um einen **Iterator** `Iter` , der `->` auf ein Element in einer Hash_multimap zeigt, zu dereferenzieren.
+Verwenden Sie den `->`-Operator, um einen **ITER`Iter` Ator** , der auf ein Element in einer Hash_multimap zeigt, zu dereferenzieren.
 
-Verwenden Sie `Iter` -> **first**, das (\* `Iter`). **first** entspricht, um auf den Wert des Schlüssels für das Element zuzugreifen. Verwenden Sie `Iter` -> **second**, das (\* `Iter`). **first** entspricht, um auf den Wert des zugeordneten Datums für das Element zuzugreifen.
+Verwenden Sie `Iter` -> **first**, das (\* `Iter`). **first** entspricht, um auf den Wert des zugeordneten Datums für das Element zuzugreifen. Verwenden Sie `Iter` -> **second**, das (\* `Iter`). **first** entspricht, um auf den Wert des zugeordneten Datums für das Element zuzugreifen.
 
-Ein- `iterator` Typ kann zum Ändern des Werts eines Elements verwendet werden.
+Ein Type-`iterator` kann verwendet werden, um den Wert eines Elements zu ändern.
 
 ### <a name="example"></a>Beispiel
 
@@ -1706,13 +1706,13 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>Hinweise
 
-`key_compare`ist ein Synonym für die Vorlagen Parameter *Merkmale*.
+`key_compare` ist ein Synonym für die Vorlagen Parameter *Merkmale*.
 
 Weitere Informationen zu *Merkmalen* finden Sie im Thema [Hash_multimap-Klasse](../standard-library/hash-multimap-class.md) .
 
 ### <a name="example"></a>Beispiel
 
-Im Beispiel für [key_comp](#key_comp) wird verdeutlicht, wie `key_compare` deklariert und verwendet wird.
+Im Beispiel für [key_comp](#key_comp) wird verdeutlicht, wie ein `key_compare` deklariert und verwendet wird.
 
 ## <a name="key_type"></a> hash_multimap::key_type
 
@@ -1727,7 +1727,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Hinweise
 
-`key_type`ist ein Synonym für den Vorlagen Parameter *Schlüssel*.
+`key_type` ist ein Synonym für den Vorlagen Parameter *Schlüssel*.
 
 Weitere Informationen zu *Key*finden Sie im Abschnitt "Hinweise" des Themas [Hash_multimap-Klasse](../standard-library/hash-multimap-class.md) .
 
@@ -1750,14 +1750,14 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*wichtigen*\
+*Schlüssel* \
 Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden hash_multimap verglichen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Ein [Iterator](#iterator) oder [const_iterator](#const_iterator), der den Speicherort eines Elements in einer hash_multimap mit einem Schlüssel adressiert, der gleich oder größer als der Argumentschlüssel ist, oder der den Speicherort des nachfolgenden letzten Elements in der hash_multimap adressiert, wenn kein Treffer für den Schlüssel gefunden wird.
 
-Wenn der Rückgabewert `lower_bound` einem `const_iterator` zugewiesen wird, kann das hash_multimap-Objekt nicht geändert werden. Wenn der Rückgabewert von `lower_bound` einem `iterator`zugewiesen wird, kann das Hash_multimap-Objekt geändert werden.
+Wenn der Rückgabewert `lower_bound` einem `const_iterator` zugewiesen wird, kann das hash_multimap-Objekt nicht geändert werden. Wenn der Rückgabewert von `lower_bound` einem `iterator` zugewiesen wird, kann das Hash_multimap-Objekt geändert werden.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1910,7 +1910,7 @@ hash_multimap& operator=(hash_multimap&& right);
 
 ### <a name="remarks"></a>Hinweise
 
-Nachdem `hash_multimap`ein vorhandenes Element in einem gelöscht wurde, `operator=` kopiert oder verschiebt den Inhalt von *direkt* in den `hash_multimap`.
+Nachdem alle vorhandenen Elemente in einem `hash_multimap` gelöscht wurden, `operator=` entweder kopiert oder verschiebt den Inhalt von *right* in den `hash_multimap`.
 
 ### <a name="example"></a>Beispiel
 
@@ -1963,7 +1963,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 
 ### <a name="remarks"></a>Hinweise
 
-Ein- `pointer` Typ kann zum Ändern des Werts eines Elements verwendet werden.
+Ein Type-`pointer` kann verwendet werden, um den Wert eines Elements zu ändern.
 
 In den meisten Fällen sollte ein [Iterator](#iterator) für den Zugriff auf Elemente in einem hash_multimap-Objekt verwendet werden.
 
@@ -2218,11 +2218,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 
 Ein `reverse_iterator`-Typ wird verwendet, um die multi_map in umgekehrter Reihenfolge zu durchlaufen.
 
-`reverse_iterator`, das durch hash_multimap auf Objekte des [value_type](#value_type) zeigt, die vom Typ `pair`\< **const Key, Type** sind. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.
+`reverse_iterator`, das durch hash_multimap auf Objekte des [value_type](#value_type) zeigt, die vom Typ `pair`\< **const Key, Type** sind. Der Wert des Schlüssels ist durch das erste Memberpaar verfügbar, und der Wert des zugeordneten Elements durch das zweite Memberpaar.
 
 ### <a name="example"></a>Beispiel
 
-Im Beispiel für [rbegin](#rbegin) wird verdeutlicht, wie `reverse_iterator` deklariert und verwendet wird.
+Im Beispiel für [rbegin](#rbegin) wird verdeutlicht, wie ein `reverse_iterator` deklariert und verwendet wird.
 
 ## <a name="size"></a> hash_multimap::size
 
@@ -2289,7 +2289,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
 
 ### <a name="example"></a>Beispiel
 
-Im Beispiel für [size](#size) wird verdeutlicht, wie ein `size_type` deklariert und verwendet wird
+Im Beispiel für [size](#size) wird verdeutlicht, wie ein `size_type` deklariert und verwendet wird.
 
 ## <a name="swap"></a> hash_multimap::swap
 
@@ -2304,7 +2304,7 @@ void swap(hash_multimap& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Richting*\
+*Rechte* \
 Die hash_multimap, in der die auszutauschenden Elemente bereitgestellt werden, oder die hash_multimap, deren Elemente mit denen der hash_multimap ausgetauscht werden sollen.
 
 ### <a name="remarks"></a>Hinweise
@@ -2378,14 +2378,14 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*wichtigen*\
+*Schlüssel* \
 Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden hash_multimap verglichen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Ein [Iterator](#iterator) oder [const_iterator](#const_iterator), der den Speicherort eines Elements in einer hash_multimap mit einem Schlüssel adressiert, der größer als der Argumentschlüssel ist, oder der den Speicherort des nachfolgenden letzten Elements in der hash_multimap adressiert, wenn kein Treffer für den Schlüssel gefunden wird.
 
-Wenn der Rückgabewert `upper_bound` einem `const_iterator` zugewiesen wird, kann das hash_multimap-Objekt nicht geändert werden. Wenn der Rückgabewert von `upper_bound` einem `iterator`zugewiesen wird, kann das Hash_multimap-Objekt geändert werden.
+Wenn der Rückgabewert `upper_bound` einem `const_iterator` zugewiesen wird, kann das hash_multimap-Objekt nicht geändert werden. Wenn der Rückgabewert von `upper_bound` einem `iterator` zugewiesen wird, kann das Hash_multimap-Objekt geändert werden.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2466,11 +2466,11 @@ Gibt das Vergleichsfunktionsobjekt zurück, das ein hash_multimap-Element zum So
 
 ### <a name="remarks"></a>Hinweise
 
-Bei einem Hash_multimap *m*, wenn zwei Elemente *E1* (*K1*, *D1*) und *E2*(*K2*, *D2*) Objekte vom Typ [value_type](#value_type)sind, wobei *K1* und *K2* Ihre Schlüssel vom Typ [key_type](#key_type) sind. *D1* und *D2* sind Ihre Daten vom Typ [mapped_type](#mapped_type) `m.key_comp()(k1, k2)`, dann `m.value_comp()(e1, e2)` entspricht. Ein gespeichertes Objekt definiert die Memberfunktion
+Bei einem Hash_multimap *m*, wenn zwei Elemente *E1* (*K1*, *D1*) und *E2*(*K2*, *D2*) Objekte vom Typ [value_type](#value_type)sind, wobei *K1* und *K2* Ihre Schlüssel vom Typ [key_type](#key_type) sind. *D1* und *D2* sind Ihre Daten vom Typ [mapped_type](#mapped_type)und 4 gleich 5. Ein gespeichertes Objekt definiert die Memberfunktion
 
 `bool operator( value_type& left, value_type& right);`
 
-die **TRUE** zurückgibt, wenn der Schlüsselwert von `left` vorangestellt ist und nicht dem Schüsselwert von `right` in der Sortierreihenfolge entspricht.
+die **TRUE** zurückgibt, wenn der Schlüsselwert von `left` vorangestellt ist und nicht dem Schlüsselwert von `right` in der Sortierreihenfolge entspricht.
 
 ### <a name="example"></a>Beispiel
 
@@ -2532,7 +2532,7 @@ typedef pair<const Key, Type> value_type;
 
 ### <a name="remarks"></a>Hinweise
 
-`value_type`wird als pair\<Konstanten Konstanten [key_type](#key_type), [mapped_type](#mapped_type)> und nicht als pair\<key_type, mapped_type > deklariert, weil die Schlüssel eines assoziativen Containers nicht mit einem nicht konstanten Iterator oder Verweis geändert werden dürfen.
+`value_type` als Paar \<const [key_type](#key_type), [mapped_type](#mapped_type)> und nicht als Paar \<key_type deklariert, mapped_type >, weil die Schlüssel eines assoziativen Containers nicht mit einem nicht konstanten Iterator oder Verweis geändert werden dürfen.
 
 ### <a name="example"></a>Beispiel
 

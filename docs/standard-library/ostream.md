@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
-ms.openlocfilehash: 8de66718dab10b5c95e8c1ab7fd0bd17e9b4ee5e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3838e215ffac42ec6902ab6a9837f638153cf184
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448174"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689169"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
-Definiert die Vorlagenklasse [basic_ostream](../standard-library/basic-ostream-class.md), die Einfügungen für die iostreams vermittelt. Der Header definiert auch mehrere verwandte Manipulatoren. Dieser Header wird in der Regel von einem der anderen iostreams-Header für Sie eingefügt. Sie müssen ihn nur selten direkt einfügen.)
+Definiert die Klassen Vorlage [basic_ostream](../standard-library/basic-ostream-class.md), die Einfügungen für die Iostreams vermittelt. Der Header definiert auch mehrere verwandte Manipulatoren. Dieser Header wird in der Regel von einem der anderen iostreams-Header für Sie eingefügt. Sie müssen ihn nur selten direkt einfügen.)
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,8 +29,8 @@ Definiert die Vorlagenklasse [basic_ostream](../standard-library/basic-ostream-c
 
 |Typname|Beschreibung|
 |-|-|
-|[ostream](../standard-library/ostream-typedefs.md#ostream)|Erstellt einen Typ aus `basic_ostream` , der auf **char** spezialisiert und `char_traits` auf **char**spezialisiert ist.|
-|[wostream](../standard-library/ostream-typedefs.md#wostream)|Erstellt einen Typ aus `basic_ostream` , der auf **wchar_t** spezialisiert ist `char_traits` und auf **wchar_t**spezialisiert ist.|
+|[ostream](../standard-library/ostream-typedefs.md#ostream)|Erstellt einen Typ aus `basic_ostream`, der auf **char** spezialisiert ist, und `char_traits` spezialisiert auf **char**.|
+|[wostream](../standard-library/ostream-typedefs.md#wostream)|Erstellt einen Typ aus `basic_ostream`, der auf **wchar_t** spezialisiert ist, und `char_traits` spezialisiert auf **wchar_t**.|
 
 ### <a name="manipulators"></a>Manipulatoren
 
@@ -51,7 +51,7 @@ Definiert die Vorlagenklasse [basic_ostream](../standard-library/basic-ostream-c
 
 |Klasse|Beschreibung|
 |-|-|
-|[basic_ostream](../standard-library/basic-ostream-class.md)|Die Vorlagenklasse beschreibt ein Objekt, das das Einfügen von Elementen und codierten Objekten in einen Streampuffer steuert.|
+|[basic_ostream](../standard-library/basic-ostream-class.md)|Die Klassen Vorlage beschreibt ein Objekt, das das Einfügen von Elementen und codierten Objekten in einen Streampuffer steuert.|
 
 ## <a name="see-also"></a>Siehe auch
 

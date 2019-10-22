@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
-ms.openlocfilehash: de8f815cd59b84a1e63c231e18e4882d0b5d6f09
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3ad740975cfff4f65f9e1c800a709cfaca3367db
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447569"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687812"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
-Definiert die Vorlagenklasse `numeric_limits` und zwei Enumerationen zu Gleitkommadarstellungen und zur Rundung.
+Definiert die Klassen Vorlagen `numeric_limits` und zwei Enumerationen zu Gleit Komma Darstellungen und-Rundungen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -26,7 +26,7 @@ Definiert die Vorlagenklasse `numeric_limits` und zwei Enumerationen zu Gleitkom
 
 ## <a name="remarks"></a>Hinweise
 
-Explizite Spezialisierungs spezizierungen `numeric_limits` der-Klasse beschreiben viele Eigenschaften der grundlegenden Typen, einschließlich der Zeichen-, ganzzahligen und Gleit Komma Typen sowie boolescher Wert, die implementiert werden, anstatt durch die Regeln des  C++Sprache. In \<limits> beschriebene Eigenschaften umfassen Genauigkeit, Darstellungen minimaler und maximaler Größe, Rundung und Fehler des Signalisierungstyps.
+Explizite Spezialisierungs Eigenschaften der `numeric_limits`-Klasse beschreiben viele Eigenschaften der grundlegenden Typen, einschließlich der Zeichen-, ganzzahligen und Gleit Komma Typen sowie **boolescher** Wert, die implementiert werden, anstatt durch die C++ Regeln des Kurse. In \<limits> beschriebene Eigenschaften umfassen Genauigkeit, Darstellungen minimaler und maximaler Größe, Rundung und Fehler des Signalisierungstyps.
 
 ## <a name="members"></a>Member
 
@@ -41,9 +41,9 @@ Explizite Spezialisierungs spezizierungen `numeric_limits` der-Klasse beschreibe
 
 |||
 |-|-|
-|[numeric_limits-Klasse](../standard-library/numeric-limits-class.md)|Die Vorlagenklasse beschreibt arithmetische Eigenschaften der integrierten numerischen Typen.|
+|[numeric_limits-Klasse](../standard-library/numeric-limits-class.md)|Die Klassen Vorlage beschreibt arithmetische Eigenschaften integrierter numerischer Typen.|
 
 ## <a name="see-also"></a>Siehe auch
 
 [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

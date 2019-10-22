@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-ms.openlocfilehash: d33b67ed17a95b6717878aaca2f61682b1807c15
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c852b3040a94035f6a84b1f717c3583fababbb2c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454006"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688017"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
-Schließen Sie den Standardheader \<future> ein, um Vorlagenklassen und unterstützende Vorlagen zu definieren, die das Ausführen einer Funktion – möglicherweise in einem separaten Thread – und das Abrufen des Ergebnisses vereinfachen. Das Ergebnis zeigt entweder den Wert, der von der Funktion zurückgegeben wird oder eine Ausnahme, die von der Funktion ausgegeben, aber nicht in der Funktion abgefangen wird.
+Schließen Sie den Standard Header \<future > ein, um Klassen Vorlagen und unterstützende Vorlagen zu definieren, die das Ausführen einer Funktion – möglicherweise in einem separaten Thread – und das Abrufen des Ergebnisses vereinfachen. Das Ergebnis zeigt entweder den Wert, der von der Funktion zurückgegeben wird oder eine Ausnahme, die von der Funktion ausgegeben, aber nicht in der Funktion abgefangen wird.
 
 Für diesen Header wird "Concurrency Runtime (ConcRT)" verwendet, sodass er zusammen mit anderen ConcRT-Mechanismen verwendet werden kann. Weitere Informationen finden Sie unter [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).
 
@@ -36,17 +36,17 @@ Ein asynchroner Anbieter oder ein asynchrones Rückgabeobjekt, das keinen verkn�
 
 Ein zugeordneter asynchroner Zustand ist nur dann *bereit*, wenn sein asynchroner Anbieter einen Rückgabewert oder eine Ausnahme gespeichert hat.
 
-Die Vorlagenfunktion `async` und die Vorlagenklassen `promise` sowie `packaged_task` sind asynchrone Anbieter. Mit den Vorlagenklassen `future` und `shared_future` werden asynchrone Rückgabeobjekte beschrieben.
+Die Vorlagen Funktion `async` und die Klassen Vorlagen `promise` und `packaged_task` sind asynchrone Anbieter. In den Klassen Vorlagen `future` und `shared_future` werden asynchrone Rückgabe Objekte beschrieben.
 
-Jede der Vorlagen `promise`Klassen, `future`und `shared_future` verfügt über eine Spezialisierung für den Typ **void** und eine partielle Spezialisierung zum Speichern und Abrufen eines Werts als Verweis. Diese Spezialisierungen unterscheiden sich von der primären Vorlage nur durch die Signaturen und die Semantik der Funktionen, die den zurückgegebenen Wert speichern und abrufen.
+Jede der Klassen Vorlagen `promise`, `future` und `shared_future` verfügt über eine Spezialisierung für den Typ " **void** " und eine partielle Spezialisierung zum Speichern und Abrufen eines Werts als Verweis. Diese Spezialisierungen unterscheiden sich von der primären Vorlage nur durch die Signaturen und die Semantik der Funktionen, die den zurückgegebenen Wert speichern und abrufen.
 
-Die Vorlagen Klassen `future` und `shared_future` blockieren nie in ihren debilitoren, außer in einem Fall, der aus Gründen der Abwärtskompatibilität beibehalten wird: Im Gegensatz zu allen anderen Futures, `future`bei einem – oder `shared_future`dem letzten –, das an eine Aufgabe angefügt ist, die mit `std::async`gestartet wurde, blockiert der Dekonstruktor, wenn die Aufgabe nicht abgeschlossen wurde. das heißt, `.get()` es wird blockiert, wenn der Thread noch nicht aufgerufen `.wait()`wurde.und die Aufgabe wird noch ausgeführt. Der Beschreibung von `std::async` im Entwurfs Standard wurde die folgende Verwendbarkeits Notiz hinzugefügt: "[Hinweis: Wenn eine aus Std:: Async abzurufende Zukunft außerhalb des lokalen Bereichs verschoben wird, muss anderer Code, der die Zukunft verwendet, beachten, dass der Dekonstruktor der Zukunft blockieren kann, damit der freigegebene Status bereit ist. – End Note `future` ] `shared_future` "in allen anderen Fällen und dededektoren sind erforderlich und werden garantiert nie blockiert.
+Die Klassen Vorlagen `future` und `shared_future` nie in ihren Dekonstruktoren blockiert, außer in einem Fall, der aus Gründen der Abwärtskompatibilität beibehalten wird: anders als bei allen anderen Futures, bei einem `future` – oder der letzten `shared_future` –, die mit einer Aufgabe verbunden ist, die mit gestartet wurde `std::async` , der Dekonstruktor wird blockiert, wenn die Aufgabe nicht abgeschlossen wurde. Das heißt, es wird blockiert, wenn dieser Thread noch nicht `.get()` oder `.wait()` aufgerufen hat und die Aufgabe noch ausgeführt wird. Der folgende Hinweis zur Nutzbarkeit wurde der Beschreibung von `std::async` im Normenentwurf hinzugefügt: "[Hinweis: Wenn eine von "std::async" erhaltene Zukunft außerhalb des lokalen Bereichs verschoben wird, muss beim Schreiben von anderem Code, bei dem die Zukunft verwendet wird, beachtet werden, dass der Destruktor de Zukunft möglicherweise blockiert, sodass der Freigabezustand in den Bereitschaftszustand wechseln kann – Ende des Hinweises]". In allen anderen Fällen sind `future` und `shared_future`-Destruktoren erforderlich und blockieren garantiert nie.
 
 ## <a name="members"></a>Member
 
 ### <a name="classes"></a>Klassen
 
-|Name|Beschreibung|
+|-Name|Beschreibung|
 |----------|-----------------|
 |[future-Klasse](../standard-library/future-class.md)|Beschreibt ein asynchrones Rückgabeobjekt.|
 |[future_error-Klasse](../standard-library/future-error-class.md)|Beschreibt ein Ausnahmeobjekt, das von Methoden des `future`-Objekte verwaltenden Typs ausgelöst werden.|
@@ -56,14 +56,14 @@ Die Vorlagen Klassen `future` und `shared_future` blockieren nie in ihren debili
 
 ### <a name="structures"></a>Strukturen
 
-|Name|Beschreibung|
+|-Name|Beschreibung|
 |----------|-----------------|
 |[is_error_code_enum-Struktur](../standard-library/is-error-code-enum-structure.md)|Spezialisierungen, die angeben, dass `future_errc` für das Speichern von `error_code` geeignet ist.|
 |[uses_allocator-Struktur](../standard-library/uses-allocator-structure.md)|Spezialisierung, die immer "True" ist.|
 
 ### <a name="functions"></a>Funktionen
 
-|Name|Beschreibung|
+|-Name|Beschreibung|
 |----------|-----------------|
 |[async](../standard-library/future-functions.md#async)|Stellt einen asynchronen Anbieter dar.|
 |[future_category](../standard-library/future-functions.md#future_category)|Gibt einen Verweis auf das `error_category`-Objekt zurück, das Fehler bestimmt, die `future`-Objekten zugeordnet werden.|
@@ -73,11 +73,11 @@ Die Vorlagen Klassen `future` und `shared_future` blockieren nie in ihren debili
 
 ### <a name="enumerations"></a>Enumerationen
 
-|Name|Beschreibung|
+|-Name|Beschreibung|
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|Liefert symbolische Namen für die von der `future_error`-Klasse ausgegeben Fehler.|
 |[future_status](../standard-library/future-enums.md#future_status)|Liefert symbolische Namen für die Gründe, aus denen eine zeitgesteuerte Wartefunktion eine Rückgabe ausführen kann.|
-|[launch](../standard-library/future-enums.md#launch)|Stellt einen Bitmaskentyp dar, mit dem die möglichen Modi für die Vorlagenfunktion `async` beschrieben werden.|
+|[gestartet](../standard-library/future-enums.md#launch)|Stellt einen Bitmaskentyp dar, mit dem die möglichen Modi für die Vorlagenfunktion `async` beschrieben werden.|
 
 ## <a name="see-also"></a>Siehe auch
 

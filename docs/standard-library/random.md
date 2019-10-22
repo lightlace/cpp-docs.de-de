@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 5738a1ea5ab950466f347090649e72471edf5608
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fbff6123c810251109dd48d74a5bd4632793be6f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458293"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689102"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -19,16 +19,16 @@ Definiert Funktionen zum Generieren von Zufallszahlen und erlaubt die Erstellung
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header**: \<zufälliger >
+**Header**: \<random >
 
 **Namespace:** std
 
 > [!NOTE]
-> Die \<Random > Library verwendet die #include < initializer_list > "-Anweisung.
+> Die \<random > Bibliothek verwendet die Anweisung "#include < initializer_list >".
 
 ## <a name="summary"></a>Zusammenfassung
 
-Ein *Zufallszahlengenerator* ist ein Objekt, bei dem eine Sequenz von Pseudo-Zufallswerten erzeugt wird. Ein Generator, der Werte produziert, die in einem bestimmten Bereich gleichförmig verteilt sind, ist ein *Uniform Random Number Generator* (URNG, einheitlicher Zufallszahlengenerator). Auf eine Vorlagenklasse, die als URNG funktionieren soll, wird als *Engine* verwiesen, wenn die Klasse bestimmte gemeinsame Merkmale aufweist, die später in diesem Artikel diskutiert werden. Ein URNG kann mit einer *Verteilung* kombiniert werden – was im Normalfall auch geschieht –, indem der URNG als Argument an den `operator()` des Verteilers übergeben wird, um Werte zu produzieren, die in einer von der Verteilung definierten Art und Weise verteilt werden.
+Ein *Zufallszahlengenerator* ist ein Objekt, bei dem eine Sequenz von Pseudo-Zufallswerten erzeugt wird. Ein Generator, der Werte produziert, die in einem bestimmten Bereich gleichförmig verteilt sind, ist ein *Uniform Random Number Generator* (URNG, einheitlicher Zufallszahlengenerator). Eine Klassen Vorlage, die als URNG fungiert, wird als *Engine* bezeichnet, wenn diese Klasse bestimmte gemeinsame Merkmale aufweist, die später in diesem Artikel erläutert werden. Ein URNG kann mit einer *Verteilung* kombiniert werden – was im Normalfall auch geschieht –, indem der URNG als Argument an den `operator()` des Verteilers übergeben wird, um Werte zu produzieren, die in einer von der Verteilung definierten Art und Weise verteilt werden.
 
 Diese Links führen zu den Hauptabschnitten dieses Artikels:
 
@@ -42,7 +42,7 @@ Diese Links führen zu den Hauptabschnitten dieses Artikels:
 
 ### <a name="quick-tips"></a>Einfache Tipps
 
-Im folgenden finden Sie einige Tipps, die Sie beachten \<sollten, wenn Sie Random > verwenden:
+Im folgenden finden Sie einige Tipps, die Sie beachten sollten, wenn Sie \<random > verwenden:
 
 - Für die meisten Zwecke produzieren URNGs Rohbits, die durch Verteilungen geformt werden müssen. (Eine wichtige Ausnahme ist [std::shuffle()](../standard-library/algorithm-functions.md#shuffle), da es einen URNG direkt verwendet.)
 
@@ -52,7 +52,7 @@ Im folgenden finden Sie einige Tipps, die Sie beachten \<sollten, wenn Sie Rando
 
 - Die hilfreichste Paarung für die meisten Anwendungen ist die `mt19937`-Engine mit `uniform_int_distribution`, wie später in diesem Artikel im [Codebeispiel](#code) gezeigt.
 
-Im \<Random >-Header stehen viele Optionen zur Auswahl, und jede dieser Optionen ist der veralteten C-Lauf Zeitfunktion `rand()`vorzuziehen. Informationen zu den Fehlern bei und wie `rand()` \<zufällige > diese Mängel beheben, finden Sie in [diesem Video](https://go.microsoft.com/fwlink/p/?linkid=397615).
+Es stehen zahlreiche Optionen für die Auswahl im \<random >-Header zur Auswahl, und jede dieser Optionen ist der veralteten C-Lauf Zeitfunktion `rand()` vorzuziehen. Informationen dazu, was bei `rand()` falsch ist und wie \<random > diese Mängel behandelt, finden Sie in [diesem Video](https://go.microsoft.com/fwlink/p/?linkid=397615).
 
 ## <a name="code"></a> Beispiele
 
@@ -215,13 +215,13 @@ Dieser Code zeigt zwei verschiedene Randomisierungen – Randomisierungen eines 
 
 URNGs werden oft anhand folgender Eigenschaften beschrieben:
 
-1. **Länge des Zeitraums**: Gibt an, wie viele Iterationen es dauert, um die Sequenz der generierten Zahlen zu wiederholen. Je länger, desto besser.
+1. **Periodenlänge**: Anzahl von Iterationen, die für eine Wiederholung der generierten Zahlensequenz erforderlich sind. Je länger, desto besser.
 
-2. **Leistung**: Gibt an, wie schnell Zahlen generiert und wie viel Arbeitsspeicher benötigt wird. Je kürzer, desto besser.
+2. **Leistung**: Geschwindigkeit und Speicherplatzbedarf der Generierung von Zahlen. Je kürzer, desto besser.
 
-3. **Qualität**: Gibt an, wie nahe bei echten Zufallszahlen die generierte Sequenz ist. Dies wird häufig als „*Zufallscharakter*“ bezeichnet.
+3. **Qualität**: Ähnlichkeit der generierten Sequenz mit wirklich zufälligen Zahlen. Dies wird häufig als „*Zufallscharakter*“ bezeichnet.
 
-In den folgenden Abschnitten werden die Uniform Random Number Generatoren (urngs) aufgelistet, \<die im Random >-Header bereitgestellt werden.
+In den folgenden Abschnitten werden die Uniform Random Number Generatoren (urngs) aufgelistet, die im \<random >-Header bereitgestellt werden.
 
 ####  <a name="rd"></a> Nicht-deterministischen Generator
 
@@ -329,7 +329,7 @@ Engine-Adapter sind Vorlagen, die andere (Basis-)Engines anpassen. Diese werden 
 
 ###  <a name="distributions"></a> Zufallszahlverteilungen
 
-In den folgenden Abschnitten werden die Verteilungen aufgelistet \<, die im Random >-Header bereitgestellt werden Verteilungen sind ein Nachverarbeitungsmechanismus, der normalerweise URNS-Ausgaben als Eingaben verwendet und die Ausgabe mithilfe einer Funktion mit definierter statistischer Wahrscheinlichkeitsdichte verteilt. Weitere Informationen erhalten Sie im Abschnitt [Engines und Verteilungen](#engdist).
+In den folgenden Abschnitten werden die Verteilungen aufgelistet, die im Header der \<random > bereitgestellt werden Verteilungen sind ein Nachverarbeitungsmechanismus, der normalerweise URNS-Ausgaben als Eingaben verwendet und die Ausgabe mithilfe einer Funktion mit definierter statistischer Wahrscheinlichkeitsdichte verteilt. Weitere Informationen erhalten Sie im Abschnitt [Engines und Verteilungen](#engdist).
 
 #### <a name="uniform-distributions"></a>Gleichförmige Verteilungen.
 
@@ -345,7 +345,7 @@ In den folgenden Abschnitten werden die Verteilungen aufgelistet \<, die im Rand
 
 |||
 |-|-|
-|[bernoulli_distribution-Klasse](../standard-library/bernoulli-distribution-class.md)|Erzeugt eine Bernoulli-Verteilung  von booleschen Werten.|
+|[bernoulli_distribution-Klasse](../standard-library/bernoulli-distribution-class.md)|Erzeugt eine Bernoulli-Verteilung von **booleschen** Werten.|
 |[binomial_distribution-Klasse](../standard-library/binomial-distribution-class.md)|Produziert eine binomiale Verteilung von Ganzzahlwerten.|
 |[geometric_distribution-Klasse](../standard-library/geometric-distribution-class.md)|Produziert eine geometrische Verteilung von Ganzzahlwerten.|
 |[negative_binomial_distribution-Klasse](../standard-library/negative-binomial-distribution-class.md)|Produziert eine negative binomiale Verteilung von Ganzzahlwerten.|
@@ -389,7 +389,7 @@ In den folgenden Abschnitten werden die Verteilungen aufgelistet \<, die im Rand
 
 ### <a name="utility-functions"></a>Hilfsfunktionen
 
-In diesem Abschnitt werden die allgemeinen Hilfsfunktionen aufgelistet, \<die im Random >-Header bereitgestellt werden.
+In diesem Abschnitt werden die allgemeinen Hilfsfunktionen aufgelistet, die im \<random >-Header bereitgestellt werden.
 
 |||
 |-|-|
@@ -397,7 +397,7 @@ In diesem Abschnitt werden die allgemeinen Hilfsfunktionen aufgelistet, \<die im
 
 ### <a name="operators"></a>Operatoren
 
-In diesem Abschnitt werden die im \<Random >-Header bereitgestellten Operatoren aufgelistet.
+In diesem Abschnitt werden die Operatoren aufgelistet, die im \<random >-Header bereitgestellt werden
 
 |||
 |-|-|
@@ -408,19 +408,19 @@ In diesem Abschnitt werden die im \<Random >-Header bereitgestellten Operatoren 
 
 ## <a name="engdist"></a> Module und Verteilungen
 
-In den folgenden Abschnitten finden Sie Informationen zu jeder dieser Vorlagen Klassen Kategorien, die in \<Random > definiert sind. Beide dieser Vorlagenklassenkategorien akzeptieren einen Typ als Argument und verwenden allgemeine Namen eines Vorlagenparameters, um die Eigenschaften des Typs, die als tatsächlicher Argumenttyp zulässig sind, wie folgt zu beschreiben:
+In den folgenden Abschnitten finden Sie Informationen zu den einzelnen Klassen Vorlagen Kategorien, die in \<random > definiert sind. Beide Klassen Vorlagen Kategorien akzeptieren einen Typ als Argument und verwenden freigegebene Vorlagen Parameternamen, um die Eigenschaften des Typs, die als tatsächlicher Argumenttyp zulässig sind, wie folgt zu beschreiben:
 
-- `IntType`Gibt einen **Short**- **, int**-, **Long**-, **Long Long**-, **Ganzzahl ohne Vorzeichen Short**-, Ganzzahl ohne Vorzeichen **int**-, **Ganzzahl ohne Vorzeichen long**-oder **Ganzzahl ohne Vorzeichen long long**-Zeitraum an.
+- `IntType` gibt ein **kurzes**, **int**, **Long**, **Long Long**, **Ganzzahl ohne Vorzeichen Short**, Ganzzahl ohne Vorzeichen **int**, **Ganzzahl ohne Vorzeichen long**oder **Ganzzahl ohne Vorzeichen long long**an.
 
-- `UIntType`gibt eine **unsignierte Short**-, **Ganzzahl ohne Vorzeichen int**-, **Ganzzahl ohne Vorzeichen long**-oder **Ganzzahl ohne Vorzeichen long long**-Zahl an.
+- `UIntType` gibt eine **unsignierte Short**-, **Ganzzahl ohne Vorzeichen int**-, **Ganzzahl ohne Vorzeichen long**-oder **Ganzzahl ohne Vorzeichen long long**-Zahl an.
 
-- `RealType`Gibt einen **float**-, **Double**-oder **long Double**-Wert an.
+- `RealType` gibt einen **float**-, **Double**-oder **long Double**-Wert an.
 
 ### <a name="engines"></a>Engines
 
 [Engine-Vorlagen](#eng) und [Engine-Adaptervorlagen](#engadapt) sind Vorlagen, mit deren Parametern der erstellte Generator angepasst wird.
 
-Eine *Engine* ist eine Klasse oder Vorlagenklasse, deren Instanzen (Generatoren) als Quelle von Zufallszahlen fungieren, die gleichmäßig zwischen einem Mindest- und einen Höchstwert verteilt werden. Ein *Engine-Adapter* gibt eine Sequenz von Werten aus, die verschiedene Zufallscharaktereigenschaften haben, indem er von einer anderen Zufallswerte-Engine produzierte Werte übernimmt und einen bestimmtem Algorithmus für diese Werte anwendet.
+Eine *Engine* ist eine Klassen-oder Klassen Vorlage, deren Instanzen (Generatoren) als Quelle von Zufallszahlen fungieren, die gleichmäßig zwischen einem Mindest-und Maximalwert verteilt werden. Ein *Engine-Adapter* gibt eine Sequenz von Werten aus, die verschiedene Zufallscharaktereigenschaften haben, indem er von einer anderen Zufallswerte-Engine produzierte Werte übernimmt und einen bestimmtem Algorithmus für diese Werte anwendet.
 
 Jede Engine und jeder Engine-Adapter haben die folgenden Member:
 
@@ -458,7 +458,7 @@ Jede Engine besitzt einen *Zustand*, mit dem die Sequenz der Werte bestimmt wird
 
 ### <a name="distributions"></a>Verteilungen
 
-Die [Zufallszahlenverteilung](#distributions) ist eine Klasse oder eine Vorlagenklasse, deren Instanzen einen Stream gleichmäßig verteilter Zufallszahlen transformieren, die aus einer Engine in einen Stream von Zufallszahlen mit einer bestimmten Verteilung bezogen werden. Jede Verteilung verfügt über die folgenden Member:
+Eine [Zufallszahl Verteilungen](#distributions) ist eine Klassen-oder Klassen Vorlage, deren Instanzen einen Stream gleichmäßig verteilter Zufallszahlen transformieren, die aus einem Modul in einen Stream von Zufallszahlen mit einer bestimmten Verteilung abgerufen werden. Jede Verteilung verfügt über die folgenden Member:
 
 - `typedef` `numeric-type` `result_type` ist der vom `operator()` der Verteilung zurückgegebene Typ. Der `numeric-type` wird als Vorlagenparameter bei der Instanzierung übergeben.
 
@@ -503,7 +503,7 @@ Dies sind zwei höchst hilfereiche URNGs in Visual Studio – `mt19937` und `ran
 
 <sup>* Wenn mit einem bekannten Startwert ausgestattet.</sup>
 
-Obwohl der ISO C++-Standard nicht erfordert, dass `random_device` kryptografisch sicher ist, wird es in Visual Studio implementiert, um kryptografische Sicherheit herzustellen. (Der Begriff „kryptografisch sicher“ drückt keine Garantie aus, sondern bezeichnet ein Mindest-Entropieniveau – und damit ein Vorhersagbarkeitsniveau –, das ein bestimmter Randomisierungsalgorithmus aufweist. Weitere Informationen finden Sie im Wikipedia-Artikel [Cryptographically secure pseudorandom number generator (Kryptographisch sicherer Zufallszahlengenerator, in englischer Sprache)](https://go.microsoft.com/fwlink/p/?linkid=398017).) Da der ISO C++-Standard dies nicht erfordert, können andere Plattformen `random_device` als einfachen Zufallszahlengenerator (kryptografisch nicht sicher) implementieren, der nur als Stammwertequelle für einen anderen Generator geeignet ist. Lesen Sie die Dokumentation für diese Plattformen, wenn Sie `random_device` plattformübergreifend verwenden.
+Obwohl der ISO C++-Standard nicht erfordert, dass `random_device` kryptografisch sicher ist, wird es in Visual Studio implementiert, um kryptografische Sicherheit herzustellen. (Der Begriff „kryptografisch sicher“ drückt keine Garantie aus, sondern bezeichnet ein Mindest-Entropieniveau – und damit ein Vorhersagbarkeitsniveau –, das ein bestimmter Randomisierungsalgorithmus aufweist. Weitere Informationen finden Sie im Wikipedia-Artikel [cryptografisch Secure Pseudo Zufalls Number Generator](https://go.microsoft.com/fwlink/p/?linkid=398017).) Da der ISO C++ -Standard dies nicht erfordert, können andere Plattformen `random_device` als einfachen Pseudozufallszahlen-Generator implementieren (nicht kryptografisch sicher) und können nur als Ausgangswert für einen anderen Generator verwendet werden. Lesen Sie die Dokumentation für diese Plattformen, wenn Sie `random_device` plattformübergreifend verwenden.
 
 `random_device`-Ergebnisse sind per Definition nicht reproduzierbar, und ein Nebeneffekt ist, dass er eventuell deutlich langsamer läuft als andere URNGs. Die meisten Anwendungen, für die keine kryptografische Sicherheit erforderlich sind, verwenden `mt19937` oder eine ähnliche Engine, obwohl Sie sie vielleicht mit einem Aufruf von `random_device` starten möchten, wie im [Codebeispiel](#code) gezeigt.
 

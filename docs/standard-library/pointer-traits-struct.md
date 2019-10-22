@@ -14,16 +14,16 @@ f1_keywords:
 - xmemory0/std::pointer_traits::rebind
 - memory/std::pointer_traits::pointer_to
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
-ms.openlocfilehash: 109e51ad9eba54f31b90da9b8b85bec105c7dce6
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6d89348867982bfb86c0bf2404a017f6a448d1a1
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240424"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687139"
 ---
-# <a name="pointertraits-struct"></a>pointer_traits-Struktur
+# <a name="pointer_traits-struct"></a>pointer_traits-Struktur
 
-Stellt Informationen bereit, die für ein Objekt der Vorlagenklasse `allocator_traits` erforderlich sind, um eine Zuweisung mit Zeigertyp `Ptr` zu beschreiben.
+Stellt Informationen bereit, die für ein Objekt des Typs `allocator_traits` erforderlich sind, um eine Zuweisung mit Zeigertyp `Ptr` zu beschreiben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,11 +66,11 @@ struct Ptr
 
 ### <a name="methods"></a>Methoden
 
-|Name|Beschreibung|
+|-Name|Beschreibung|
 |----------|-----------------|
 |[pointer_to](#pointer_to)|Konvertiert einen beliebigen Verweis auf ein Objekt der Klasse `Ptr`.|
 
-### <a name="pointer_to"></a> pointer_to
+### <a name="pointer_to"></a>pointer_to
 
 Statische Methode, die `Ptr::pointer_to(obj)` zurückgibt, wenn diese Funktion vorhanden ist. Andernfalls ist es nicht möglich einen beliebigen Verweis auf ein Objekt der Klasse `Ptr` zu konvertieren. Wenn `Ptr` ein unformatierter Zeiger ist, gibt diese Methode `addressof(obj)` zurück.
 

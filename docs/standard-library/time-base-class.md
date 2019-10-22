@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_base class
 ms.assetid: 9ae37f0b-9a42-496e-9870-3d9b71bab8fb
-ms.openlocfilehash: 85565dc0c0ec904551eb8dd981cfacc9a2e1f256
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ddaf9905e859c062031940d35adfa2a3393dbb5a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460040"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685787"
 ---
-# <a name="timebase-class"></a>time_base-Klasse
+# <a name="time_base-class"></a>time_base-Klasse
 
-Die-Klasse fungiert als Basisklasse für Facetten der Vorlagen Klasse Time_get, die nur den enumerierten `dateorder` Typ und mehrere Konstanten dieses Typs definiert.
+Die-Klasse fungiert als Basisklasse für Facetten der Klassen Vorlagen Time_get, die nur den enumerierten Typ `dateorder` und mehrere Konstanten dieses Typs definiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,15 +38,15 @@ public:
 
 Jede Konstante kennzeichnet eine andere Möglichkeit, die Komponenten eines Datums zu ordnen. Es gibt folgende Konstanten:
 
-- `no_order`gibt keine bestimmte Reihenfolge an.
+- `no_order` gibt keine bestimmte Reihenfolge an.
 
-- `dmy`Gibt den Bestell Tag, den Monat und das Jahr an, wie im 2. Dezember 1979.
+- `dmy` gibt den Order Day, month, year, wie in 2. Dezember 1979 an.
 
-- `mdy`Gibt den Bestell Monat, den Tag und das Jahr an, wie im 2. Dezember 1979.
+- `mdy` gibt den Bestell Monat, den Tag und das Jahr an, wie im 2. Dezember 1979.
 
-- `ymd`Gibt das Bestell Jahr, den Monat, den Tag, wie in 1979/12/2 an.
+- `ymd` gibt das Bestell Jahr, den Monat, den Tag, wie in 1979/12/2 an.
 
-- `ydm`Gibt das Bestell Jahr, den Tag, den Monat, wie in 1979 an: 2. Dez.
+- `ydm` gibt das Bestell Jahr, den Tag, den Monat, wie in 1979:2 Dec an.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,4 +56,4 @@ Jede Konstante kennzeichnet eine andere Möglichkeit, die Komponenten eines Datu
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

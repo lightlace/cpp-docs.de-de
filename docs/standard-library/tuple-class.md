@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: aca5cc90566fb1fa602b96568d4cda9dd5ab26b9
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1727d3a12b7186d3cc868ef6bb78711774057407
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241822"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688863"
 ---
 # <a name="tuple-class"></a>Tupelklasse
 
@@ -41,12 +41,12 @@ class tuple {
 
 ### <a name="parameters"></a>Parameter
 
-*TN*\
+*TN* -\
 Der Typ des N-ten Tupelelements.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt ein Objekt, das N-Objekte des Typs speichert `T1`, `T2`,..., `TN`, wobei `0 <= N <= Nmax`. Das Ausmaß der eine tupelinstanz `tuple<T1, T2, ..., TN>` ist die Anzahl `N` der dazugehörigen Vorlagenargumente. Der Index des dem Vorlagenargument `Ti` und des entsprechenden gespeicherten Werts des betreffenden Typs ist `i - 1`. Während wir die Typen von 1 bis N in dieser Dokumentation Zahl ist, Werte der entsprechende Index folglich reichen von 0 bis N - 1.
+In der Klassen Vorlage wird ein Objekt beschrieben, das N-Objekte vom Typ `T1` speichert, `T2`,..., `TN`, wobei `0 <= N <= Nmax`. Der Umfang einer tupelinstanz `tuple<T1, T2, ..., TN>` die Anzahl `N` der Vorlagen Argumente. Der Index des Vorlagen Arguments `Ti` und des entsprechenden gespeicherten Werts dieses Typs ist `i - 1`. Wenn wir also die Typen von 1 bis n in dieser Dokumentation Zahlen, liegen die entsprechenden Indexwerte zwischen 0 und n-1.
 
 ## <a name="example"></a>Beispiel
 
@@ -116,7 +116,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="op_eq"></a> Operator =
+## <a name="op_eq"></a>Operator =
 
 Weist ein `tuple`-Objekt zu.
 
@@ -137,15 +137,15 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parameter
 
-*AUFHEBEN*\
+Nicht *-* \
 Der Typ des N-ten kopierten Tupelelements.
 
-*Richting*\
+*Rechte* \
 Das Tupel, aus dem kopiert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Die ersten beiden memberoperatoren weisen die Elemente von *rechten* zu den entsprechenden Elementen von `*this`. Der dritte Memberoperator weist dem Element am Index 0 von `*this` `right.first` zu und dem Element am Index 1 `right.second`. Alle drei Memberoperatoren geben `*this` zurück.
+Die ersten beiden Member-Operatoren weisen die Elemente von *right* den entsprechenden Elementen `*this` zu. Der dritte Memberoperator weist dem Element am Index 0 von `*this` `right.first` zu und dem Element am Index 1 `right.second`. Alle drei Memberoperatoren geben `*this` zurück.
 
 Die restlichen Memberoperatoren sind analog zu früheren, aber mit [Rvalue Reference Declarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
@@ -198,7 +198,7 @@ int main()
 x 4
 ```
 
-## <a name="tuple_swap"></a> Swap
+## <a name="tuple_swap"></a>Wechsel
 
 Tauscht die Elemente zweier Tupel aus.
 
@@ -209,17 +209,17 @@ template <class... Types>
 
 ### <a name="parameters"></a>Parameter
 
-*Links*\
-Ein Tupel, dessen Elemente mit denen des Tupels ausgetauscht werden *rechten*.
+*Linker* \
+Ein Tupel, dessen Elemente mit den Elementen des Tupels *Rechts*ausgetauscht werden sollen.
 
-*Richting*\
-Ein Tupel, dessen Elemente mit denen des Tupels ausgetauscht werden *linken*.
+*Rechte* \
+Ein *Tupel,* dessen Elemente mit denen des Tupels ausgetauscht werden sollen.
 
 ### <a name="remarks"></a>Hinweise
 
 Die Funktion führt `left.swap(right)` aus.
 
-## <a name="tuple"></a> Tupel
+## <a name="tuple"></a>Tupel
 
 Erstellt ein `tuple`-Objekt.
 
@@ -246,10 +246,10 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parameter
 
-*AUFHEBEN*\
+Nicht *-* \
 Der Typ des N-ten kopierten Tupelelements.
 
-*Richting*\
+*Rechte* \
 Das Tupel, aus dem kopiert werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -258,7 +258,7 @@ Der erste Konstruktor erstellt ein Objekt, dessen Elemente standardmäßig erste
 
 Der zweite Konstruktor erstellt ein Objekt, dessen Elemente durch Kopieren aus den Argumenten `P1`, `P2`, ..., `PN` erstellt werden, wobei jedes `Pi` das Element initialisiert, das den Index `i - 1` hat.
 
-Die dritten und vierten-Konstruktoren erstellen ein Objekt, dessen Elemente kopieren, die aus dem entsprechenden Element des erstellt *rechten*.
+Der dritte und vierte Konstruktor konstruiert ein Objekt, dessen Elemente aus dem entsprechenden Element von *right*kopiert werden.
 
 Der fünfte Konstruktor erstellt ein Objekt, dessen Element bei Index 0 durch Kopieren aus `right.first` und dessen Element bei Index 1 durch Kopieren aus `right.second` erstellt wird.
 

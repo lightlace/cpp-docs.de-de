@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf16 class
 ms.assetid: a9897f98-f84d-4db6-90ad-858b2727570c
-ms.openlocfilehash: ca66a3273567a8d30a982211a6e977c129b00f5f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a84ca6da22825ca3fa7ab43e43a574fb05caa1a8
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459713"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689826"
 ---
-# <a name="codecvtutf16"></a>codecvt_utf16
+# <a name="codecvt_utf16"></a>codecvt_utf16
 
 Stellt ein [Gebietsschemafacet](../standard-library/locale-class.md) dar, das eine Konvertierung durchführt zwischen Breitzeichen, die als UCS-2 oder UCS-4 codiert sind, und einem Bytestream, der als UTF-16LE oder UTF-16BE codiert ist.
 
@@ -24,23 +24,23 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>Parameter
 
-*Elem*\
+*Elem* -\
 Der Breitzeichen-Elementtyp.
 
-*Maxcode*\
+*Maxcode* -\
 Die maximale Anzahl der Zeichen für das Gebietsschemafacet.
 
-*Spar*\
+*Modus* \
 Konfigurationsinformationen für das Gebietsschemafacet.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Vorlagenklasse führt eine Konvertierung durch zwischen Breitzeichen, die als UCS-2 oder UCS-4 codiert sind, und einem Bytestream, der als UTF-16LE (im Modus „& little_endian“) oder UTF-16BE codiert ist.
+Diese Klassen Vorlage konvertiert zwischen breit Zeichen, die als UCS-2 oder UCS-4 codiert sind, und einem Byte Datenstrom, der als UTF-16LE codiert ist, wenn Mode & LITTLE_ENDIAN, oder UTF-16BE andernfalls.
 
 Der Bytestream muss in eine binäre Datei geschrieben werden. Er kann beschädigt werden, wenn er in eine Textdatei geschrieben wird.
 
 ## <a name="requirements"></a>Anforderungen
 
-Header: \<Codecvt >
+Header: \<codecvt >
 
 Namespace: Std
