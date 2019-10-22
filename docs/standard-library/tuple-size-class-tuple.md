@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_size
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
-ms.openlocfilehash: 1c03c02dde3178a257a83720ff437f7981f5f7ed
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 361545bee020d6c3624d1d45743abcb9c2b4ac85
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241551"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688856"
 ---
-# <a name="tuplesize-class"></a>tuple_size-Klasse;
+# <a name="tuple_size-class"></a>tuple_size-Klasse;
 
 Ruft die Anzahl der Elemente in einem `tuple` ab.
 
@@ -60,19 +60,19 @@ template <class T> inline constexpr size_t tuple_size_v = tuple_size<T>::value;
 
 ### <a name="parameters"></a>Parameter
 
-*Tupel*\
+*Tupel* -\
 Der Typ des Tupels.
 
-*Elem*\
+*Elem* -\
 Der Typ der Arrayelemente.
 
-*Größe*\
+*Größen* \
 Die Größe des Arrays.
 
-*T1*\
+*T1* \
 Der Typ des ersten Members des Paares.
 
-*T2*\
+*T2* -\
 Der Typ des zweiten Members des Paares.
 
 *Typen*\
@@ -80,9 +80,9 @@ Die Typen der Elemente des Tupels.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse verfügt über einen Member `value` , ein ganzzahliger konstanter Ausdruck, dessen Wert dem Wertebereich des Tupeltyps *Tupel*.
+Die Klassen Vorlage verfügt über einen Member `value`, der ein ganzzahliger konstanter Ausdruck ist, dessen Wert dem Wertebereich des *tupeltyptupels*entspricht.
 
-Der vorlagenspezialisierung für Arrays verfügt über einen Member `value` , ein ganzzahliger konstanter Ausdruck, dessen Wert *Größe*, d.h. die Größe des Arrays.
+Die Vorlagen Spezialisierung für Arrays verfügt über einen Member `value` der ein ganzzahliger konstanter Ausdruck ist, dessen Wert *size*ist, d. h. die Größe des Arrays.
 
 Die Vorlagenspezialisierung für Paare verfügt über einen Member `value`, der ein ganzzahliger konstanter Ausdruck ist, dessen Wert 2 ist.
 

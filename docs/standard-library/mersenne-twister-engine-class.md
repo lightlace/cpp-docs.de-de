@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
-ms.openlocfilehash: ed5380e36e71d7366d2b4b84528bbd35b87cc775
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 79613c76b3ea6dc15643e83a15d5bd6d90b60c6a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451863"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687699"
 ---
-# <a name="mersennetwisterengine-class"></a>mersenne_twister_engine-Klasse
+# <a name="mersenne_twister_engine-class"></a>mersenne_twister_engine-Klasse
 
 Generiert mithilfe des Mersenne-Twisteralgorithmus eine qualitativ hochwertige Zufallssequenz aus Ganzzahlen.
 
@@ -29,31 +29,31 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>Parameter
 
-*Uinttype*\
-Der unsigned integer-Ergebnistyp. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*Uinttype* -\
+Der unsigned integer-Ergebnistyp. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).
 
-*LÖW*\
+*W* \
 **Wortgröße**. Größe jedes einzelnen Wortes der Zustandssequenz in Bits. **Vorbedingung**:`2u < W ≤ numeric_limits<UIntType>::digits`
 
-*NR*\
+*N* \
 **Zustandsgröße**. Die Anzahl von Elementen (Werten) in der Zustandssequenz.
 
-*800*\
+*M* \
 **Verschiebungsgröße**. Die Anzahl von Elementen, die während jeder Verzerrung übersprungen werden sollen. **Vorbedingung**:`0 < M ≤ N`
 
 *R*\
 **Maskenbits**. **Vorbedingung**:`R ≤ W`
 
-*EIN*\
+*Eine* \
 **XOR-Maske**. **Vorbedingung**:`A ≤ (1u<<W) - 1u`
 
-*U*, *S*, *T*, *L*\
+*U*, *S*, *T*, *L* \
 **Tempering der Verschiebungsparameter**. Werden während der Verschlüsselung (Tempering) als Verschiebungswerte verwendet. Vorbedingung: `U,S,T,L ≤ W`
 
-*D*, *B*, *C*\
+*D*, *B*, *C* \
 **Tempering von Bitmaskenparametern**. Werden während der Verschlüsselung (Tempering) als Maskenwerte verwendet. Vorbedingung: `D,B,C ≤ (1u<<W) - 1u`
 
-*C*\
+*F* -\
 **Initialisierungsmultiplikator**. Wird verwendet, um die Initialisierung der Sequenz zu unterstützen. Vorbedingung: `F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Member
@@ -69,7 +69,7 @@ Weitere Informationen über Engine-Member finden Sie unter [\<random&gt;](../sta
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Vorlagenklasse beschreibt eine Zufallszahlen-Engine und gibt Werte zum geschlossenen Intervall [`0`, `2`<sup>W</sup> - `1`] zurück. Sie enthält einen großen Integralwert mit `W * (N - 1) + R` Bits. Es extrahiert gleichzeitig den großen Wert aus dem gesamten Wert von " *W* ", und wenn alle Bits verwendet wurden, wird der große Wert verzerrt, indem die Bits verschoben und gemischt werden, sodass Sie über einen neuen Satz von Bits verfügen, aus denen extrahiert werden soll. Der Zustand der Engine ist die Last `N` `W`-Bit-Werte, `operator()` die verwendet werden, wenn mindestens *N* -Mal aufgerufen `M` wurde, andernfalls die `W`verwendeten-Bitwerte und die `N - M` letzten Werte des säen.
+Diese Klassen Vorlage beschreibt eine Zufallszahlen-Engine, die Werte für das geschlossene Intervall [`0` `2`<sup>W</sup>  -  `1`] zurückgibt. Sie enthält einen großen Integralwert mit `W * (N - 1) + R` Bits. Es extrahiert gleichzeitig den großen Wert aus dem gesamten Wert von " *W* ", und wenn alle Bits verwendet wurden, wird der große Wert verzerrt, indem die Bits verschoben und gemischt werden, sodass Sie über einen neuen Satz von Bits verfügen, aus denen extrahiert werden soll. Der Zustand der Engine ist der letzte `N` `W`-Bit-Wert, der verwendet wird, wenn `operator()` mindestens *N* -Mal aufgerufen wurde, andernfalls die `M` `W`-Bitwerte, die verwendet wurden, und die letzten `N - M` Werte des Ausgangs Werts.
 
 Der Generator verzerrt den großen Wert, den er enthält, indem er ein Verdrehtes generalisiertes, von Shift-Werten *N* und *M*, einen drehwert *R*und eine bedingte XOR-mask *a*definierte UMSCHALT Register verwendet. Darüber hinaus werden die Bits des rohverschiebungs Registers entsprechend einer bitrührenden Matrix, die durch die Werte *U*, *D*, *S*, *B*, *T*, *C*und *L*definiert ist, Durcheinander gesetzt (gemildert).
 

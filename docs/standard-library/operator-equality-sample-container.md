@@ -13,19 +13,19 @@ helpviewer_keywords:
 - operator==, containers
 - == operator, with specific standard C++ objects
 ms.assetid: d3d8754e-5157-4b8b-bf9c-da41856f5eed
-ms.openlocfilehash: 168785abb09ca198435c301040d7628a6dd12b26
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3f84e8e5f7d0c09a865fe47d7493daecf68cf60c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460154"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689206"
 ---
 # <a name="operator-ltsample-containergt"></a>operator== (&lt;Sample Container&gt;)
 
 > [!NOTE]
-> Dieses Thema ist in der Microsoft C++ -Dokumentation als nicht funktionales Beispiel für Container, die C++ in der Standard Bibliothek verwendet werden. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).
+> Dieses Thema ist in der Microsoft C++ -Dokumentation als nicht funktionales Beispiel für Container, die C++ in der Standard Bibliothek verwendet werden. Weitere Informationen finden Sie unter [C++-Standardbibliothekscontainer](../standard-library/stl-containers.md).
 
-Überlädt `operator==`, um zwei Objekte der Vorlagenklasse [Container](../standard-library/sample-container-class.md) zu vergleichen.
+Über lädt `operator==`, um zwei Objekte des Klassen Vorlagen [Containers](../standard-library/sample-container-class.md)zu vergleichen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,7 +38,7 @@ bool operator==(
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt `left.`[size](../standard-library/container-class-size.md) ` == right.size && equal(left.`[begin](../standard-library/container-class-begin.md)`, left.`[end](../standard-library/container-class-end.md)`, right.begin)` zurück.
+Gibt `left.`[Größe](../standard-library/container-class-size.md) zurück, ` == right.size && equal(left.` `, left.`[Ende](../standard-library/container-class-end.md) `, right.begin)`[beginnen](../standard-library/container-class-begin.md) .
 
 ## <a name="see-also"></a>Siehe auch
 

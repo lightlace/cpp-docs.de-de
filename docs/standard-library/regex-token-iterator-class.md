@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::regex_token_iterator [C++], pointer
 - std::regex_token_iterator [C++], reference
 ms.assetid: a213ba48-8e4e-4b6b-871a-2637acf05f15
-ms.openlocfilehash: 78d01ed8606e65e55af7e0c8dc24c02b51c53a39
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 57fac1d9d5c73c2644a679402809933290dd3fc3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451547"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689055"
 ---
-# <a name="regextokeniterator-class"></a>regex_token_iterator-Klasse
+# <a name="regex_token_iterator-class"></a>regex_token_iterator-Klasse
 
 Iteratorklasse für Teilübereinstimmungen.
 
@@ -45,18 +45,18 @@ class regex_token_iterator
 
 ## <a name="parameters"></a>Parameter
 
-*Bidit*\
+*Bidit* -\
 Der Itertatortyp für Teilübereinstimmungen.
 
-*Elem*\
+*Elem* -\
 Der zu entsprechende Elementtyp.
 
-*Rxcharakteristika*\
+*Rxcharakteristika* -\
 Merkmalklasse für Elemente.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt ein Objekt mit einem konstanten Forward-Iterator. Vom Konzept her enthält sie ein `regex_iterator` -Objekt, das in der Klasse verwendet wird, um in einer Zeichenfolge nach Übereinstimmungen eines regulären Ausdrucks zu suchen. In der Klasse werden Objekte des Typs `sub_match<BidIt>` extrahiert, die den Teilübereinstimmungen entsprechen, die durch die Indexwerte im gespeicherten Vektor `subs` für jede Übereinstimmung des regulären Ausdrucks gekennzeichnet sind.
+Die Klassen Vorlage beschreibt ein konstantes Forward-Iteratorobjekt. Vom Konzept her enthält sie ein `regex_iterator` -Objekt, das in der Klasse verwendet wird, um in einer Zeichenfolge nach Übereinstimmungen eines regulären Ausdrucks zu suchen. In der Klasse werden Objekte des Typs `sub_match<BidIt>` extrahiert, die den Teilübereinstimmungen entsprechen, die durch die Indexwerte im gespeicherten Vektor `subs` für jede Übereinstimmung des regulären Ausdrucks gekennzeichnet sind.
 
 Der Indexwert -1 kennzeichnet die Zeichenfolge, die unmittelbar nach dem Ende der vorherigen Übereinstimmung des regulären Ausdrucks oder, wenn es keine vorherige Übereinstimmung eines regulären Ausdrucks gab, am Anfang der Zeichenfolge beginnt und sich, ohne es zu enthalten, bis zum ersten Zeichen der aktuellen Übereinstimmung des regulären Ausdrucks oder bis zum Ende der Zeichenfolge erstreckt, wenn es keine aktuelle Übereinstimmung gibt. Jeder andere Indexwert `idx` kennzeichnet die Inhalte der Erfassungsgruppe, die in `it.match[idx]`enthalten ist.
 
@@ -81,7 +81,7 @@ Der Indexwert -1 kennzeichnet die Zeichenfolge, die unmittelbar nach dem Ende de
 |[difference_type](#difference_type)|Der Typ einer Iteratordifferenz.|
 |[iterator_category](#iterator_category)|Der Typ der Iteratorkategorie.|
 |[Zeiger](#pointer)|Der Typ eines Zeigers auf eine Übereinstimmung.|
-|[Verweis](#reference)|Der Typ eines Verweises auf eine Teilübereinstimmung.|
+|[reference](#reference)|Der Typ eines Verweises auf eine Teilübereinstimmung.|
 |[regex_type](#regex_type)|Der Typ des regulären Ausdrucks, der übereinstimmen soll.|
 |[value_type](#value_type)|Der Typ einer Teilübereinstimmung.|
 
@@ -231,7 +231,7 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Richting*\
+*Rechte* \
 Der Iterator für den Vergleich.
 
 ### <a name="remarks"></a>Hinweise
@@ -276,7 +276,7 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Richting*\
+*Rechte* \
 Der Iterator für den Vergleich.
 
 ### <a name="remarks"></a>Hinweise
@@ -342,16 +342,16 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>Parameter
 
-*erstes*\
+*erste* \
 Anfang der Sequenz, die übereinstimmen soll.
 
-*letzten*\
+*Letzter* \
 Ende der Sequenz, die übereinstimmen soll.
 
-*Turm*\
+*erneut* \
 Regulärer Ausdruck für Übereinstimmungen.
 
-*c*\
+*f* -\
 Flags für Übereinstimmungen.
 
 ### <a name="remarks"></a>Hinweise
@@ -391,10 +391,10 @@ Der Typ ist ein Synonym für `sub_match<BidIt>`, wobei `BidIt` der Vorlagenparam
 ## <a name="see-also"></a>Siehe auch
 
 [\<regex>](../standard-library/regex.md)\
-[regex_constants-Klasse](../standard-library/regex-constants-class.md)\
-[regex_error-Klasse](../standard-library/regex-error-class.md)\
-[\<Regex-> Funktionen](../standard-library/regex-functions.md)\
-[regex_iterator-Klasse](../standard-library/regex-iterator-class.md)\
-[\<Regex-> Operatoren](../standard-library/regex-operators.md)\
-[regex_traits-Klasse](../standard-library/regex-traits-class.md)\
+[regex_constants-Klasse](../standard-library/regex-constants-class.md) \
+[regex_error-Klasse](../standard-library/regex-error-class.md) \
+[\<regex > Funktionen](../standard-library/regex-functions.md) \
+[regex_iterator-Klasse](../standard-library/regex-iterator-class.md) \
+[\<regex > Operatoren](../standard-library/regex-operators.md) \
+[regex_traits-Klasse](../standard-library/regex-traits-class.md) \
 [\<regex>-Typdefinitionen](../standard-library/regex-typedefs.md)

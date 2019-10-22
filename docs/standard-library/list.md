@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - list header
 ms.assetid: 2345823b-5612-44d8-95d3-aa96ed076d17
-ms.openlocfilehash: 8eb497e6a4380affd0f13f41c7b55990c562b7d3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c81990f14c6f9dc2400362015b838df5aed86429
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453658"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689426"
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 
-Definiert die Containervorlagenklasseliste und einige unterstützende Vorlagen.
+Definiert die Containerklassen-Vorlagenliste und mehrere unterstützende Vorlagen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,7 +25,7 @@ Definiert die Containervorlagenklasseliste und einige unterstützende Vorlagen.
 ```
 
 > [!NOTE]
-> Die \<Liste > Bibliothek verwendet auch die `#include <initializer_list>` -Anweisung.
+> Die \<list > Bibliothek verwendet auch die `#include <initializer_list>`-Anweisung.
 
 ## <a name="members"></a>Member
 
@@ -50,7 +50,7 @@ Definiert die Containervorlagenklasseliste und einige unterstützende Vorlagen.
 
 |||
 |-|-|
-|[list-Klasse](../standard-library/list-class.md)|Eine Vorlagenklasse von Sequenzcontainern, die ihre Elemente in einer linearen Anordnung wahren und das effiziente Einfügen und Löschen an einem beliebigen Speicherort innerhalb der Sequenz ermöglichen.|
+|[list-Klasse](../standard-library/list-class.md)|Eine Klassen Vorlage von Sequenz Containern, die ihre Elemente in einer linearen Anordnung verwalten und effiziente Einfügungen und Löschungen an einer beliebigen Position innerhalb der Sequenz ermöglichen.|
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], max
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
-ms.openlocfilehash: 17091e33c504df60c0b6b8e346d2a6fd3893679c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 63cbbb3a1a508b41c1e0632eda3eeabe4fda6696
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447414"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685819"
 ---
-# <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine-Klasse
+# <a name="subtract_with_carry_engine-class"></a>subtract_with_carry_engine-Klasse
 
 Generiert eine zufällige Sequenz mithilfe des (verzögerten Fibonacci-)Algorithmus "subtract with carry".
 
@@ -36,13 +36,13 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Parameter
 
-*Uinttype*\
-Der unsigned integer-Ergebnistyp. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*Uinttype* -\
+Der unsigned integer-Ergebnistyp. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).
 
-*LÖW*\
+*W* \
 **Wortgröße**. Größe jedes einzelnen Wortes der Zustandssequenz in Bits. **Vorbedingung**:`0 < W ≤ numeric_limits<UIntType>::digits`
 
-*HYMNEN*\
+*S* \
 **Kurze Verzögerung**. Anzahl der Ganzzahlwerte. **Vorbedingung**:`0 < S < R`
 
 *R*\
@@ -60,9 +60,9 @@ Weitere Informationen über Engine-Member finden Sie unter [\<random&gt;](../sta
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse `substract_with_carry_engine` stellt eine Verbesserung gegenüber dem [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md) dar. Keines dieser Module ist so schnell oder gibt so hochqualitative Ergebnisse zurück wie das [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
+Die `substract_with_carry_engine`-Klassen Vorlage ist eine Verbesserung gegenüber der [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Keines dieser Module ist so schnell oder gibt so hochqualitative Ergebnisse zurück wie das [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
 
-Die Engine produziert Werte eines benutzerspezifischen unsignierten Ganzzahltyps mithilfe der Wiederholungsrelation ( *period*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, wobei `cy(i)` den Wert `1` hat, wenn `x(i - S) - x(i - R) - cy(i - 1) < 0`, andernfalls `0`, und `M` den Wert `2`<sup>W</sup> hat. Der Zustand der Engine ist ein Carry-Indikator Plus *R* -Werte. Diese Werte bestehen aus den letzten *r* -Werten, `operator()` die zurückgegeben werden, wenn mindestens *r* -Mal `N` aufgerufen wurde, andernfalls den Werten, die `R - N` zurückgegeben wurden, und den letzten Werten des Start Werts.
+Diese Engine erzeugt Werte eines benutzerdefinierten ganzzahligen Typs ohne Vorzeichen mithilfe der Wiederholungs Beziehung ( *Period*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, wobei `cy(i)` den Wert `1`, wenn `x(i - S) - x(i - R) - cy(i - 1) < 0` ist, andernfalls `0` und `M` den Wert `2`<sup>W</sup>hat. Der Zustand der Engine ist ein Carry-Indikator Plus *R* -Werte. Diese Werte bestehen aus den letzten *r* -Werten, die zurückgegeben werden, wenn `operator()` mindestens *r* -Mal aufgerufen wurde, andernfalls die `N` Werte, die zurückgegeben wurden, und die letzten `R - N` Werte des Start Werts.
 
 Das Vorlagenargument `UIntType` muss groß genug sein, um Werte bis zu `M - 1` zu enthalten.
 

@@ -45,24 +45,24 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: 7dd72550bc8658158b399e88573526269202f8f4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: bd5df2917d377e7bc119d1aa85a32c4d5149c305
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450437"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686436"
 ---
-# <a name="ltsharedmutex"></a>&lt;shared_mutex>
+# <a name="ltshared_mutex"></a>&lt;shared_mutex >
 
 Der &lt;shared_mutex >-Header stellt Synchronisierungs primitiven zum Schutz von freigegebenen Daten bereit, auf die von mehreren Threads zugegriffen werden kann. Zusätzlich zu der exklusiven Zugriffssteuerung, die von Mutex-Klassen bereitgestellt wird, ermöglichen die gemeinsamen Mutex-Klassen auch den gemeinsamen Besitz durch mehrere Threads für den nicht exklusiven Zugriff. Gemeinsame Mutexe können verwendet werden, um Ressourcen zu steuern, die von mehreren Threads gelesen werden können, ohne dass eine Racebedingung verursacht wird, aber ausschließlich von einem einzelnen Thread geschrieben werden müssen.
 
-Der Header &lt;shared_mutex > definiert die Klassen `shared_mutex` und `shared_timed_mutex`, die Vorlagen Klasse `shared_lock`und die Vorlagen Funktion `swap` für die gemeinsame Mutex-Unterstützung.
+Der Header &lt;shared_mutex > definiert die Klassen `shared_mutex` und `shared_timed_mutex`, die Klassen Vorlage `shared_lock` und die Vorlagen Funktion `swap` für die gemeinsame Mutex-Unterstützung.
 
 |Klassen|Beschreibung|
 |-------------|-----------------|
 |[shared_mutex-Klasse](#class_shared_mutex)|Einen gemeinsamer Mutex-Typ, der von einem Agent exklusiv gesperrt oder nicht exklusiv von mehreren Agents gemeinsam verwendet werden kann.|
 |[shared_timed_mutex-Klasse](#class_shared_timed_mutex)|Einen gemeinsamer zeitgesteuerter Mutex-Typ, der von einem Agent exklusiv gesperrt oder nicht exklusiv von mehreren Agents gemeinsam verwendet werden kann.|
-|[shared_lock-Klasse](#class_shared_lock)|Eine Vorlagenklasse, die einen gemeinsamen Mutex zur Unterstützung von zeitgesteuerten Lock-Vorgängen und die nicht exklusive gemeinsame Verwendung von mehreren Agents umschließt.|
+|[shared_lock-Klasse](#class_shared_lock)|Eine Klassen Vorlage, die einen gemeinsamen Mutex umschließt, um zeitgesteuerte Sperr Vorgänge und nicht exklusive Freigabe durch mehrere Agents zu unterstützen.|
 
 |Funktionen|Beschreibung|
 |---------------|-----------------|
@@ -91,7 +91,7 @@ Ein gemeinsamer Mutex unterstützt die zusätzlichen Methoden `lock_shared`, `un
 
 - Die `unlock_shared`-Methode gibt den Besitz des Mutex frei, in dem der aufrufende Thread steht.
 
-- Die `try_lock_shared`-Methode versucht, ohne Blockierung in den Besitz des Mutex zu gelangen. Der Rückgabetyp kann  in den booleschen Wert konvertiert werden und ist **true** , wenn die Methode den Besitz erhält, aber andernfalls **false**.
+- Die `try_lock_shared`-Methode versucht, ohne Blockierung in den Besitz des Mutex zu gelangen. Der Rückgabetyp kann in den **booleschen** Wert konvertiert werden und ist **true** , wenn die Methode den Besitz erhält, aber andernfalls **false**.
 
 Die Klasse `shared_timed_mutex` ist ein *gemeinsamer zeitgesteuerter Mutex-Typ*, ein Typ, der die Anforderungen eines gemeinsamen Mutex-Typs und eines zeitgesteuerten Mutex-Typs erfüllt.
 
@@ -101,10 +101,10 @@ Ein gemeinsamer zeitgesteuerter Mutex-Typ unterstützt die zusätzlichen Methode
 
 - Die `try_lock_shared_until` Methode versucht, den gemeinsamen Besitz des Mutex abrufen, bis die angegebene absolute Zeit abgelaufen ist. Wenn die angegebene Zeit bereits verstrichen ist, entspricht die Methode `try_lock_shared`. Die Methode gibt nicht vor der angegebenen Zeit zurück, wenn der gemeinsame Besitz nicht abgerufen wird. Der Rückgabewert ist **true** , wenn die Methode den Besitz erhält, aber andernfalls **false**.
 
-Die `shared_lock`-Vorlagenklasse erweitert die Unterstützung für das zeitgesteuerte Sperren und Übertragen des Besitzes an einen gemeinsamen Mutex. Der Besitz des Mutex kann bei oder nach der Erstellung abgerufen und an ein anderes `shared_lock`-Objekt übertragen werden. Objekte vom Typ `shared_lock` können verschoben, aber nicht kopiert werden.
+Die `shared_lock`-Klassen Vorlage erweitert die Unterstützung für das zeitlich gesteuerte Sperren und übertragen des Besitzes an einen gemeinsam genutzten Mutex. Der Besitz des Mutex kann bei oder nach der Erstellung abgerufen und an ein anderes `shared_lock`-Objekt übertragen werden. Objekte vom Typ `shared_lock` können verschoben, aber nicht kopiert werden.
 
 > [!WARNING]
-> Ab Visual Studio 2015 basieren die Synchronisierungs Typen der C++ Standard Bibliothek auf Windows-Synchronisierungs primitiven und verwenden ConcRT nicht mehr (außer wenn die Zielplattform Windows XP ist). Die in &lt;shared_mutex-> definierten Typen dürfen nicht mit ConcRT-Typen oder-Funktionen verwendet werden.
+> Ab Visual Studio 2015 basieren die Synchronisierungs Typen der C++ Standard Bibliothek auf Windows-Synchronisierungs primitiven und verwenden ConcRT nicht mehr (außer wenn die Zielplattform Windows XP ist). Die in &lt;shared_mutex > definierten Typen dürfen nicht mit ConcRT-Typen oder-Funktionen verwendet werden.
 
 ## <a name="classes"></a>Klassen
 
@@ -169,7 +169,7 @@ public:
 
 ###  <a name="class_shared_lock"></a> shared_lock-Klasse
 
-Vorlagenklasse `shared_lock` steuert den gemeinsamen Besitz eines gemeinsamen Mutex-Objekts innerhalb eines Bereichs. Bei dem Vorlagenparameter muss es sich um einen gemeinsamen Mutex-Typ handeln.
+Klassen Vorlagen `shared_lock` steuert den gemeinsamen Besitz eines gemeinsam genutzten Mutex-Objekts innerhalb eines Bereichs. Bei dem Vorlagenparameter muss es sich um einen gemeinsamen Mutex-Typ handeln.
 
 ```cpp
 class shared_lock {

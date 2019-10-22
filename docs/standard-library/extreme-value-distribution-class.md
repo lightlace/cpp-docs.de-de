@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: 810a02e620e6b38732daf611d3b44a4a277322a5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a9d83bee5a9186ba35a7cce81600947dd1cf4141
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457761"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688077"
 ---
-# <a name="extremevaluedistribution-class"></a>extreme_value_distribution-Klasse
+# <a name="extreme_value_distribution-class"></a>extreme_value_distribution-Klasse
 
 Generiert eine Extremwertverteilung.
 
@@ -71,15 +71,15 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*RealType*\
-Der Gleit Komma Ergebnistyp, der Standardwert ist **Double**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType* -\
+Der Gleit Komma Ergebnistyp, der Standardwert ist **Double**. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).
 
-*URNG*\
-Die Zufallszahlengenerator-Engine. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*URNG* \
+Die Zufallszahlengenerator-Engine. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagen Klasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten Gleit Komma Typs produziert. Wenn kein entsprechend der Extremwert Verteilung verteilter Wert vorhanden ist, geben Sie **Double** ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Klassen Vorlage beschreibt eine Verteilung, die Werte eines benutzerdefinierten Gleit Komma Typs produziert. Wenn kein entsprechend der Extremwert Verteilung verteilter Wert vorhanden ist, geben Sie **Double** ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
@@ -192,13 +192,13 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*a_value*\
+*a_value* \
 Der `a`-Verteilungsparameter.
 
-*b_value*\
+*b_value* \
 Der `b`-Verteilungsparameter.
 
-*parm*\
+*\ für* den
 Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.
 
 ### <a name="remarks"></a>Hinweise
@@ -227,13 +227,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*a_value*\
+*a_value* \
 Der `a`-Verteilungsparameter.
 
-*b_value*\
+*b_value* \
 Der `b`-Verteilungsparameter.
 
-*Richting*\
+*Rechte* \
 Das mit diesem `param_type`-Objekt zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise

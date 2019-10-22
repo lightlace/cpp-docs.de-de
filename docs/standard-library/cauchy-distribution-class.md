@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: 628d79c8026c11c7583448ce021a6aaee4ace6d9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6a2bbdc9cc5ef8b633842bca3d94e0d8073c9abb
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449864"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688334"
 ---
-# <a name="cauchydistribution-class"></a>cauchy_distribution-Klasse
+# <a name="cauchy_distribution-class"></a>cauchy_distribution-Klasse
 
 Generiert eine Cauchy-Verteilung.
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*RealType*\
-Der Gleit Komma Ergebnistyp, der Standardwert ist **Double**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType* -\
+Der Gleit Komma Ergebnistyp, der Standardwert ist **Double**. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).
 
-*URNG*\
-Die einheitliche Zufallszahlengenerator-Engine. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*URNG* \
+Die einheitliche Zufallszahlengenerator-Engine. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagen Klasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten Gleit Komma Typs produziert **. Wenn kein** Wert angegeben wird, wird dieser entsprechend der caukie-Verteilung verteilt. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Klassen Vorlage beschreibt eine Verteilung, die Werte eines benutzerdefinierten Gleit Komma Typs produziert. Wenn kein Wert angegeben wird **, wird dieser** entsprechend der caukie-Verteilung verteilt. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
@@ -251,13 +251,13 @@ explicit cauchy_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*ein*\
+*eine* \
 Der `a`-Verteilungsparameter.
 
-*b*\
+*b* \
 Der `b`-Verteilungsparameter.
 
-*parm*\
+*\ für* den
 Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.
 
 ### <a name="remarks"></a>Hinweise
@@ -286,13 +286,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*ein*\
+*eine* \
 Der `a`-Verteilungsparameter.
 
-*b*\
+*b* \
 Der `b`-Verteilungsparameter.
 
-*Richting*\
+*Rechte* \
 Das mit diesem `param_type`-Objekt zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise

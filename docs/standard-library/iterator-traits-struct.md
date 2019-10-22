@@ -7,14 +7,14 @@ helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-ms.openlocfilehash: 9d2f9d79d200579f539f7d9edc49d4a907e6cdb2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 924ca5ae1d32753bbe315252d942425712962639
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455579"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689452"
 ---
-# <a name="iteratortraits-struct"></a>iterator_traits-Struktur
+# <a name="iterator_traits-struct"></a>iterator_traits-Struktur
 
 Eine Vorlagenhilfsstruktur wird verwendet, um alle wichtigen Typdefinitionen anzugeben, die ein Iterator haben sollte.
 
@@ -41,13 +41,13 @@ Die Vorlagenstruktur definiert die Membertypen.
 
 - `difference_type`: ein Synonym für `Iterator::difference_type`.
 
-- `distance_type`: ein Synonym für`Iterator::difference_type.`
+- `distance_type`: ein Synonym für `Iterator::difference_type.`
 
 - `pointer`: ein Synonym für `Iterator::pointer`.
 
 - `reference`: ein Synonym für `Iterator::reference`.
 
-Die partiellen Spezialisierungs Typen bestimmen die kritischen Typen, die einem Objekt Zeiger vom Typ <strong>\*</strong> **Type oder dem** **Konstanten Typ** <strong>\*</strong>zugeordnet sind.
+Die partiellen spezialisierer bestimmen die kritischen Typen, die einem Objekt Zeiger **vom Typ Type** <strong>\*</strong> oder dem **Konstanten Typ** <strong>\*</strong>zugeordnet sind.
 
 In dieser Implementierung können Sie auch mehrere Vorlagenfunktionen verwenden, die keine Teilspezialisierung benutzen:
 
@@ -71,7 +71,7 @@ template <class Ty>
 ptrdiff_t *_Dist_type(const Ty *);
 ```
 
-welche mehrere der gleichen Typen indirekter bestimmen. Sie verwenden diese Funktionen als Argumente in einem Funktionsaufruf. Ihr einziger Zweck ist es, einen hilfreichen Vorlagenklassenparameter an die aufgerufene Funktion anzugeben.
+welche mehrere der gleichen Typen indirekter bestimmen. Sie verwenden diese Funktionen als Argumente in einem Funktionsaufruf. Der einzige Zweck besteht darin, einen nützlichen Klassen Vorlagen Parameter für die aufgerufene Funktion bereitzustellen.
 
 ## <a name="example"></a>Beispiel
 

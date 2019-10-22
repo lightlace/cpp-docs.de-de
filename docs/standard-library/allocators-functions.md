@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: 10cd1d51c2cd6053dcbaa0f5bf1548f80ed01659
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 5355661e370daf8826541c036f7301e5c25788d7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448236"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690055"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt;-Makros
 
@@ -30,7 +30,7 @@ ms.locfileid: "68448236"
 
 ## <a name="allocator_decl"></a> ALLOCATOR_DECL
 
-Gibt eine Allocatorvorlagenklasse aus.
+Ergibt eine zuordnerklassenvorlage.
 
 ```cpp
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
@@ -38,7 +38,7 @@ Gibt eine Allocatorvorlagenklasse aus.
 
 ### <a name="remarks"></a>Hinweise
 
-Das Makro gibt eine Vorlagendefinition `template <class Type> class name {.....}` und eine Spezialisierung `template <> class name<void> {.....}` aus, die zusammen eine Allocatorvorlagenklasse definieren, die den Synchonisierungsfilter `sync` und einen Cache des Typs `cache` verwendet.
+Das-Makro ergibt eine Vorlagen Definition `template <class Type> class name {.....}` und eine Spezialisierung `template <> class name<void> {.....}` die eine zuordnerklassenvorlage definieren, die den Synchronisierungs Filter verwendet `sync` und einen Cache vom Typ `cache`.
 
 Für Compiler, die Neubindungen kompilieren können, sieht die resultierende Vorlagendefinition wie folgt aus:
 

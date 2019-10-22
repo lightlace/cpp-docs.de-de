@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: 19fab66c3ffca428114e4586c4ad6d6de3fdbf83
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 180b84c6ac7bef94a93f73c0bdefc6a6f95164f0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458463"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689131"
 ---
-# <a name="poissondistribution-class"></a>poisson_distribution-Klasse
+# <a name="poisson_distribution-class"></a>poisson_distribution-Klasse
 
 Generiert eine Poisson-Verteilung.
 
@@ -67,12 +67,12 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*Inttype*\
-Der ganzzahlige Ergebnistyp, der Standardwert ist **int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*Inttype* -\
+Der ganzzahlige Ergebnistyp, der Standardwert ist **int**. Informationen zu möglichen Typen finden Sie unter [\<random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Vorlagenklasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten Ganzzahltyps mit einer Poisson-Verteilung produziert. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Klassen Vorlage beschreibt eine Verteilung, die Werte eines benutzerdefinierten ganzzahligen Typs mit einer Poisson-Verteilung produziert. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
@@ -207,10 +207,10 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*bedeutete*\
+*Mittelwert* \
 Der `mean`-Verteilungsparameter.
 
-*parm*\
+*\ für* den
 Die für die Erstellung der Verteilung verwendete Parameterstruktur.
 
 ### <a name="remarks"></a>Hinweise

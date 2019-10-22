@@ -48,16 +48,16 @@ f1_keywords:
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-ms.openlocfilehash: 4c46eb2b9bea30bf37800b33ce0dcf44c0d807f0
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b33ec1e7fdc7f93062248a9ad42c78c3b30801fe
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456727"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688450"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
-Definiert Klassen und Vorlagenklassen zum Erstellen von Typen, die atomische Vorgänge unterstützen.
+Definiert Klassen und Klassen Vorlagen, die zum Erstellen von Typen verwendet werden, die atomarische Vorgänge unterstützen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -78,11 +78,11 @@ Ein atomischer Vorgang hat zwei Schlüsseleigenschaften, die dabei helfen, mehre
 
 Auf manchen Plattformen ist es möglicherweise nicht möglich, atomische Vorgänge für bestimme Typen effizient zu implementieren, ohne `mutex`-Sperren zu verwenden. Ein atomischer Typ ist *sperrfrei*, wenn für keine der atomischen Vorgänge auf diesem Typ Sperren verwendet werden.
 
-**C++11**: In Signal Handlern können Sie atomarische Vorgänge für ein Objekt `obj` durchführen, wenn `obj.is_lock_free()` oder `atomic_is_lock_free(x)` true sind.
+**C ++ 11**: In Signalhandlern können Sie atomische Vorgänge für ein `obj`-Objekt ausführen, wenn `obj.is_lock_free()` oder `atomic_is_lock_free(x)` TRUE sind.
 
-Die [atomic_flag](../standard-library/atomic-flag-structure.md) -Klasse stellt einen minimalen atomaren Typ bereit,  der ein boolesches Flag enthält. Die Vorgänge sind immer sperrfrei.
+Die [atomic_flag](../standard-library/atomic-flag-structure.md) -Klasse stellt einen minimalen atomaren Typ bereit, der ein **Boolesches** Flag enthält. Die Vorgänge sind immer sperrfrei.
 
-Die Vorlagenklasse `atomic<T>` speichert ein Objekt des Argumenttyps `T` und bietet atomischen Zugriff auf den gespeicherten Wert. Sie können das Objekt durch Verwendung jedes Typs instanziieren, der mithilfe von [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) kopiert und mithilfe von [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) auf Gleichheit getestet werden kann. Sie können es insbesondere mit benutzerdefinierten Typen, die diese Anforderungen erfüllen, und oftmals auch mit Gleitkommatypen verwenden.
+Die Klassen Vorlage `atomic<T>` speichert ein Objekt seines Argument Typs `T` und ermöglicht atomarischen Zugriff auf den gespeicherten Wert. Sie können das Objekt durch Verwendung jedes Typs instanziieren, der mithilfe von [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) kopiert und mithilfe von [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) auf Gleichheit getestet werden kann. Sie können es insbesondere mit benutzerdefinierten Typen, die diese Anforderungen erfüllen, und oftmals auch mit Gleitkommatypen verwenden.
 
 Die Vorlage verfügt über eine Reihe von Spezialisierungen für integrale Typen und eine Teilspezialisierung für Zeiger. Diese Spezialisierungen stellen zusätzliche Vorgänge bereit, die über die primäre Vorlage nicht verfügbar sind.
 
@@ -152,14 +152,14 @@ Typedef-Namen bestehen für Spezialisierungen der atomischen Vorlage für einige
 
 ## <a name="structs"></a>Strukturen
 
-|Name|Beschreibung|
+|-Name|Beschreibung|
 |----------|-----------------|
 |[atomic-Struktur](../standard-library/atomic-structure.md)|Beschreibt ein Objekt, das auf einem gespeicherten Wert atomische Vorgänge ausführt.|
 |[atomic_flag-Struktur](../standard-library/atomic-flag-structure.md)|Beschreibt ein Objekt, das ein **bool** -Flag atomisch festlegt und löscht.|
 
 ## <a name="enums"></a>Enumerationen
 
-|Name|Beschreibung|
+|-Name|Beschreibung|
 |----------|-----------------|
 |[memory_order-Enumeration](../standard-library/atomic-enums.md#memory_order_enum)|Stellt symbolische Namen für Synchronisierungsvorgänge auf Speicheradressen bereit. Diese Vorgänge wirken sich auf das Sichtbarwerden der Zuweisung eines Thread in einem anderen aus.|
 
@@ -167,7 +167,7 @@ Typedef-Namen bestehen für Spezialisierungen der atomischen Vorlage für einige
 
 In der folgenden Liste haben die Funktionen, die nicht auf `_explicit` enden, die Semantik des entsprechenden `_explicit`, abgesehen von den Funktionen, die über die impliziten [memory_order](../standard-library/atomic-enums.md#memory_order_enum)-Argumente von `memory_order_seq_cst` verfügen.
 
-|Name|Beschreibung|
+|-Name|Beschreibung|
 |----------|-----------------|
 |[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Führt einen *atomischen Vergleichs- und Austauschvorgang* aus.|
 |[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Führt einen *atomischen Vergleichs- und Austauschvorgang* aus.|
@@ -185,10 +185,10 @@ In der folgenden Liste haben die Funktionen, die nicht auf `_explicit` enden, di
 |[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|Subtrahiert einen angegebenen Wert von einem vorhandenen gespeicherten Wert.|
 |[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|Führt ein bitweises `exclusive or` auf einem angegebenen Wert und einem vorhandenen gespeicherten Wert aus.|
 |[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|Führt ein bitweises `exclusive or` auf einem angegebenen Wert und einem vorhandenen gespeicherten Wert aus.|
-|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Legt das-Flag in `atomic_flag` einem-Objekt auf **false**fest.|
-|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Legt das-Flag in `atomic_flag` einem-Objekt auf **false**fest.|
-|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Legt das-Flag in `atomic_flag` einem-Objekt auf **true**fest.|
-|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Legt das-Flag in `atomic_flag` einem-Objekt auf **true**fest.|
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Legt das-Flag in einem `atomic_flag`-Objekt auf **false**fest.|
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Legt das-Flag in einem `atomic_flag`-Objekt auf **false**fest.|
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Legt das-Flag in einem `atomic_flag`-Objekt auf **true**fest.|
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Legt das-Flag in einem `atomic_flag`-Objekt auf **true**fest.|
 |[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Legt den gespeicherten Wert in einem `atomic`-Objekt fest.|
 |[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|Gibt an, ob die atomischen Vorgänge auf einem bestimmten Objekt sperrfrei sind.|
 |[atomic_load](../standard-library/atomic-functions.md#atomic_load)|Ruft atomisch einen Wert ab.|

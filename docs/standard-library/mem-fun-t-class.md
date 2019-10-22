@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun_t class
 ms.assetid: 242566d4-750c-4c87-9d63-2e2c9d19ca2a
-ms.openlocfilehash: 19ccd4835c4257a7f409bcf0f7bda1a898567458
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3c6606fe4d2df3b6068c3bb8194dc380344f7d97
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245086"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689379"
 ---
-# <a name="memfunt-class"></a>mem_fun_t-Klasse
+# <a name="mem_fun_t-class"></a>mem_fun_t-Klasse
 
-Eine Adapterklasse, die ermöglicht eine `non_const` Memberfunktion, die keine Argumente als wenn Sie mit einem Zeigerargument Initialisiert ein unäres Funktionsobjekt aufgerufen zu werden. Veraltet in C ++ 11, C ++ 17 entfernt.
+Eine Adapter Klasse, die es ermöglicht, dass eine `non_const` Member-Funktion, die keine Argumente annimmt, als unäres Funktions Objekt aufgerufen wird, wenn Sie mit einem Zeigerargument initialisiert wird. In c++ 11 veraltet, entfernt in c++ 17.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,11 +30,11 @@ class mem_fun_t : public unary_function<Type *, Result> {
 
 ### <a name="parameters"></a>Parameter
 
-*_Pm*\
+*_Pm* \
 Ein Zeiger auf die Memberfunktion der Klasse `Type`, die in ein Funktionsobjekt konvertiert werden soll.
 
-*_Pleft*\
-Das Objekt, das die *_Pm* auf Memberfunktion aufgerufen wird.
+*_Pleft* \
+Das-Objekt, für das die *_Pm* -Member-Funktion aufgerufen wird.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -42,7 +42,7 @@ Eine anpassungsfähige unäre Funktion.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse speichert eine Kopie des *_Pm*, die einen Zeiger auf eine Memberfunktion der Klasse sein muss `Type`, in einem privaten Memberobjekt. Sie definiert ihre Memberfunktion `operator()` als Rückgabewert (`_Pleft`->* `_Pm`) ().
+In der Klassen Vorlage wird eine Kopie von *_Pm*gespeichert, die ein Zeiger auf eine Member-Funktion der Klasse `Type` in einem privaten Member-Objekt sein muss. Er definiert seine Member-Funktion `operator()` als Rückgabe (`_Pleft` ->*  `_Pm`) ().
 
 ## <a name="example"></a>Beispiel
 

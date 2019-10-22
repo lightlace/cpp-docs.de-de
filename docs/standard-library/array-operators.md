@@ -9,16 +9,16 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 88244879be9ab27c826c0b051b724fa1c3ed4784
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456768"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688468"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt;-Operatoren
 
-Der \<Array >-Header schließt diese **Array** Funktionen für Vergleichs Vorlagen aus, die nicht Mitglied sind.
+Der \<array >-Header enthält diese **Array** Funktionen für Vergleichs Vorlagen, die nicht Mitglied sind.
 
 ||||
 |-|-|-|
@@ -38,16 +38,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-*Genossenschaft*\
+*Ty* -\
 Der Typ eines Elements.
 
-*NR*\
+*N* \
 Die Größe des Arrays.
 
-*linken*\
+*Linker* \
 Linker zu vergleichender Container.
 
-*Richting*\
+*Rechte* \
 Rechter zu vergleichender Container.
 
 ### <a name="remarks"></a>Hinweise
@@ -111,21 +111,21 @@ bool operator<(
 
 ### <a name="parameters"></a>Parameter
 
-*Genossenschaft*\
+*Ty* -\
 Der Typ eines Elements.
 
-*NR*\
+*N* \
 Die Größe des Arrays.
 
-*linken*\
+*Linker* \
 Linker zu vergleichender Container.
 
-*Richting*\
+*Rechte* \
 Rechter zu vergleichender Container.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion überlädt `operator<`, um zwei Objekte der Vorlagenklasse [Array-Klasse](../standard-library/array-class-stl.md) zu vergleichen. Die Funktion gibt `lexicographical_compare(left.begin(), left.end(), right.begin())` zurück.
+Die Vorlagen Funktion überlädt `operator<`, um zwei Objekte der Klassen Vorlagen- [Array Klasse](../standard-library/array-class-stl.md)zu vergleichen. Die Funktion gibt `lexicographical_compare(left.begin(), left.end(), right.begin())`zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -171,7 +171,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a> Operator&lt;=
 
 Array-Vergleich, kleiner als oder gleich.
 
@@ -184,16 +184,16 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parameter
 
-*Genossenschaft*\
+*Ty* -\
 Der Typ eines Elements.
 
-*NR*\
+*N* \
 Die Größe des Arrays.
 
-*linken*\
+*Linker* \
 Linker zu vergleichender Container.
 
-*Richting*\
+*Rechte* \
 Rechter zu vergleichender Container.
 
 ### <a name="remarks"></a>Hinweise
@@ -257,21 +257,21 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-*Genossenschaft*\
+*Ty* -\
 Der Typ eines Elements.
 
-*NR*\
+*N* \
 Die Größe des Arrays.
 
-*linken*\
+*Linker* \
 Linker zu vergleichender Container.
 
-*Richting*\
+*Rechte* \
 Rechter zu vergleichender Container.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion überlädt `operator==`, um zwei Objekte der Vorlagenklasse [Array-Klasse](../standard-library/array-class-stl.md) zu vergleichen. Die Funktion gibt `equal(left.begin(), left.end(), right.begin())` zurück.
+Die Vorlagen Funktion überlädt `operator==`, um zwei Objekte der Klassen Vorlagen- [Array Klasse](../standard-library/array-class-stl.md)zu vergleichen. Die Funktion gibt `equal(left.begin(), left.end(), right.begin())`zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -330,16 +330,16 @@ bool operator>(
 
 ### <a name="parameters"></a>Parameter
 
-*Genossenschaft*\
+*Ty* -\
 Der Typ eines Elements.
 
-*NR*\
+*N* \
 Die Größe des Arrays.
 
-*linken*\
+*Linker* \
 Linker zu vergleichender Container.
 
-*Richting*\
+*Rechte* \
 Rechter zu vergleichender Container.
 
 ### <a name="remarks"></a>Hinweise
@@ -390,7 +390,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a> Operator&gt;=
 
 Array-Vergleich, größer als oder gleich.
 
@@ -403,16 +403,16 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parameter
 
-*Genossenschaft*\
+*Ty* -\
 Der Typ eines Elements.
 
-*NR*\
+*N* \
 Die Größe des Arrays.
 
-*linken*\
+*Linker* \
 Linker zu vergleichender Container.
 
-*Richting*\
+*Rechte* \
 Rechter zu vergleichender Container.
 
 ### <a name="remarks"></a>Hinweise

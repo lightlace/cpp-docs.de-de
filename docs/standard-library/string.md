@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 80d5d297cc28cfb019dae99e9e9736e4b2eb654f
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 0b8ca5744418860cc6b4868dda9174ae2eb68a98
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957140"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685890"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
-Definiert die Containervorlagenklasse `basic_string` und verschiedene unterstützende Vorlagen.
+Definiert die Containerklassen Vorlage `basic_string` und verschiedene unterstützende Vorlagen.
 
 Weitere Informationen zu `basic_string` finden Sie unter [basic_string-Klasse](../standard-library/basic-string-class.md).
 
@@ -32,16 +32,16 @@ Die Programmiersprache C++ und die C++-Standardbibliothek unterstützen zwei Art
 
 - Auf NULL endende Zeichenarrays werden häufig als C-Zeichenfolgen bezeichnet.
 
-- Vorlagen Klassen Objekte des Typs `basic_string`, die alle **char**-like-Vorlagen Argumente verarbeiten.
+- Klassen Vorlagen Objekte vom Typ `basic_string`, die alle **char**-like-Vorlagen Argumente verarbeiten.
 
 ### <a name="typedefs"></a>Typedefs
 
 |Typname|Beschreibung|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Ein Typ, der eine Spezialisierung der Vorlagen Klasse `basic_string` mit Elementen des Typs `string`char als beschreibt.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Ein Typ, der eine Spezialisierung der Vorlagen Klasse `basic_string` mit Elementen des Typs `wstring`wchar_t als beschreibt.|
-|[u16string](../standard-library/string-typedefs.md#u16string)|Ein Typ, der eine Spezialisierung der Vorlagenklasse `basic_string` basierend auf Elementen des Typs `char16_t` beschreibt.|
-|[u32string](../standard-library/string-typedefs.md#u32string)|Ein Typ, der eine Spezialisierung der Vorlagenklasse `basic_string` basierend auf Elementen des Typs `char32_t` beschreibt.|
+|[string](../standard-library/string-typedefs.md#string)|Ein Typ, der eine Spezialisierung der Klassen Vorlage beschreibt `basic_string` mit Elementen des Typs **char** als `string`.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Ein Typ, der eine Spezialisierung der Klassen Vorlage beschreibt `basic_string` mit Elementen des Typs **wchar_t** als `wstring`.|
+|[u16string](../standard-library/string-typedefs.md#u16string)|Ein Typ, der eine Spezialisierung der Klassen Vorlage `basic_string` basierend auf Elementen des Typs `char16_t` beschreibt.|
+|[u32string](../standard-library/string-typedefs.md#u32string)|Ein Typ, der eine Spezialisierung der Klassen Vorlage `basic_string` basierend auf Elementen des Typs `char32_t` beschreibt.|
 
 ### <a name="operators"></a>Operatoren
 
@@ -61,7 +61,7 @@ Die Programmiersprache C++ und die C++-Standardbibliothek unterstützen zwei Art
 
 |||
 |-|-|
-|Hashindizes|Erzeugt einen Hashwert einer Zeichenfolge.|
+|hash|Erzeugt einen Hashwert einer Zeichenfolge.|
 |[swap](../standard-library/string-functions.md#swap)|Tauscht die Arrays von Zeichen für zwei Zeichenfolgen aus.|
 |[stod](../standard-library/string-functions.md#stod)|Konvertiert eine Zeichen Sequenz in einen **Double**-Typ.|
 |[stof](../standard-library/string-functions.md#stof)|Konvertiert eine Zeichenfolge in einen **float**-Wert.|
@@ -83,8 +83,8 @@ Die Programmiersprache C++ und die C++-Standardbibliothek unterstützen zwei Art
 
 |Klasse|Beschreibung|
 |-|-|
-|[basic_string-Klasse](../standard-library/basic-string-class.md)|Eine Vorlagenklasse, die Objekte beschreibt, die eine Sequenz von beliebigen zeichenartigen Objekten speichern können.|
-|[char_traits-Struktur](../standard-library/char-traits-struct.md)|Eine Vorlagenklasse, die Attribute beschreibt, die mit einem Zeichen des Typs "CharType" zugeordnet sind.|
+|[basic_string-Klasse](../standard-library/basic-string-class.md)|Eine Klassen Vorlage, die Objekte beschreibt, die eine Sequenz beliebiger Zeichen ähnlicher Objekte speichern können.|
+|[char_traits-Struktur](../standard-library/char-traits-struct.md)|Eine Klassen Vorlage, die Attribute beschreibt, die einem Zeichen vom Typ "CharType" zugeordnet sind.|
 
 ### <a name="specializations"></a>Spezialisierungen
 
@@ -104,4 +104,4 @@ Die Programmiersprache C++ und die C++-Standardbibliothek unterstützen zwei Art
 ## <a name="see-also"></a>Siehe auch
 
 [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

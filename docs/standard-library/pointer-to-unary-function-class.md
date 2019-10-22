@@ -7,16 +7,16 @@ helpviewer_keywords:
 - pointer_to_unary_function function
 - pointer_to_unary_function class
 ms.assetid: 05600207-b916-4759-beca-6b6facd2d6f6
-ms.openlocfilehash: cff84f1f15eea34c60162f702dfe05350d1383d1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 2b6bf82faa39e22c5af584a9fc3ebf68f5851463
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240471"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689143"
 ---
-# <a name="pointertounaryfunction-class"></a>pointer_to_unary_function-Klasse
+# <a name="pointer_to_unary_function-class"></a>pointer_to_unary_function-Klasse
 
-Konvertiert einen unären Funktionszeiger in eine anwendbare unäre Funktion. Veraltet in C ++ 11, C ++ 17 entfernt.
+Konvertiert einen unären Funktionszeiger in eine anwendbare unäre Funktion. In c++ 11 veraltet, entfernt in c++ 17.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,19 +32,19 @@ class pointer_to_unary_function
 
 ### <a name="parameters"></a>Parameter
 
-*pfunc*\
+*pFunc* -\
 Die binäre Funktion, die konvertiert werden soll.
 
-*Links*\
+*Linker* \
 Das Objekt, auf dem *\*pfunc* aufgerufen wird.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Vorlagenklasse speichert eine Kopie des `pfunc`. Sie definiert ihre Memberfunktion `operator()` als Rückgabewert (\* **pfunc**)(_ *Left*).
+In der-Klassen Vorlage wird eine Kopie von `pfunc` gespeichert. Sie definiert ihre Memberfunktion `operator()` als Rückgabewert (\* **pfunc**)(_ *Left*).
 
 ## <a name="remarks"></a>Hinweise
 
-Ein binärer Funktionszeiger ist ein Funktionsobjekt und kann an alle C++-Standardbibliotheksalgorithmen übergeben werden, die eine unäre Funktion als Parameter erwarten, aber er kann nicht angepasst werden. Für die Verwendung mit einem Adapter, z.B. einen Wert zuzuordnen oder ihn mit einer Negator zu verwenden müssen sie die geschachtelten Typen angegeben werden `argument_type` und `result_type` , die solche Anpassung möglich machen. Die Konvertierung durch `pointer_to_unary_function` ermöglicht den Funktionsadaptern mit binären Funktionszeigern zusammenzuarbeiten.
+Ein binärer Funktionszeiger ist ein Funktionsobjekt und kann an alle C++-Standardbibliotheksalgorithmen übergeben werden, die eine unäre Funktion als Parameter erwarten, aber er kann nicht angepasst werden. Um ihn mit einem Adapter zu verwenden, z. b. das Binden eines Werts an ihn oder dessen Verwendung mit einem Negator, muss er mit den geschachtelte Types `argument_type` und `result_type` bereitgestellt werden, die eine solche Anpassung ermöglichen. Die Konvertierung durch `pointer_to_unary_function` ermöglicht den Funktionsadaptern mit binären Funktionszeigern zusammenzuarbeiten.
 
 ## <a name="example"></a>Beispiel
 

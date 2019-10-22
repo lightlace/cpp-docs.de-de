@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: d775af68b8238093c794a0f78d7e24f2a515ee56
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 432b61c7bc5b7f0e6f82e5bfeca7758c70785774
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243791"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689636"
 ---
 # <a name="function-class"></a>function-Klasse
 
@@ -79,15 +79,15 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*Fty*\
+*Raffinierte* \
 Der zu umschließende Funktionstyp.
 
-*AX*\
+*AX* -\
 Die Zuweisungsfunktion.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse ist ein Aufrufwrapper, dessen Aufrufsignatur `Ret(T1, T2, ..., TN)` ist. Sie können sie dazu verwenden, eine Vielzahl von aufrufbaren Objekten von einem einheitlichen Wrapper umschließen zu lassen.
+Die Klassen Vorlage ist ein Aufrufwrapper, dessen Telefon Signatur `Ret(T1, T2, ..., TN)` ist. Sie können sie dazu verwenden, eine Vielzahl von aufrufbaren Objekten von einem einheitlichen Wrapper umschließen zu lassen.
 
 Einige Memberfunktionen akzeptieren einen Operanden, der das gewünschte Zielobjekt benennt. Sie können einen solchen Operanden wie folgt festlegen:
 
@@ -130,11 +130,11 @@ Ein leeres `function`-Objekt enthält kein aufrufbaren Objekt bzw. einen Verweis
 
 |||
 |-|-|
-|[Operator unspecified](#op_unspecified)|Prüft, ob ein gespeichertes aufrufbares Objekt existiert.|
+|[Operator nicht angegeben](#op_unspecified)|Prüft, ob ein gespeichertes aufrufbares Objekt existiert.|
 |[Operator()](#op_call)|Ruf ein aufrufbares Objekt auf.|
 |[operator=](#op_eq)|Ersetzt das gespeicherte aufrufbare Objekt.|
 
-## <a name="assign"></a> Weisen Sie
+## <a name="assign"></a>einräumen
 
 Weist ein aufrufbares Objekt diesem Funktionsobjekt zu.
 
@@ -152,20 +152,20 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parameter
 
-*_Func*\
+*_Func* \
 Ein aufrufbares Objekt.
 
-*_Fnref*\
+*_Fnref* \
 Ein Verweiswrapper, der ein aufrufbares Objekt enthält.
 
-*AX*\
+*AX* -\
 Ein Zuweisungsobjekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktionen ersetzen jeweils das von `*this` gehaltene `callable object` durch ein aufrufbares Objekt, das als `operand` übergeben wurde. Beide weisen Speicher mit dem Zuweisungsobjekt *Ax*.
+Die Memberfunktionen ersetzen jeweils das von `*this` gehaltene `callable object` durch ein aufrufbares Objekt, das als `operand` übergeben wurde. Beide weisen Speicher mit dem allocator-Objekt *AX*zu.
 
-## <a name="function"></a> Funktion
+## <a name="function"></a>Funktion
 
 Konstruiert einen Wrapper, der entweder leer ist oder ein aufrufbares Objekt eines willkürlichen Typs mit einer festen Signatur speichert.
 
@@ -190,22 +190,22 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parameter
 
-*Richting*\
+*Rechte* \
 Das zu kopierende Funktionsobjekt.
 
-*FX*\
+*FX* -\
 Der Typ des aufrufbaren Objekts.
 
-*_Func*\
+*_Func* \
 Das zu umschließende Objekt.
 
-*Alloc*\
+*Zuordnung* \
 Der Zuweisungstyp.
 
-*AX*\
+*AX* -\
 Die Zuweisung.
 
-*_Fnref*\
+*_Fnref* \
 Der zu umschließende aufrufbare Objektverweis.
 
 ### <a name="remarks"></a>Hinweise
@@ -282,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="op_unspecified"></a> Operator unspecified
+## <a name="op_unspecified"></a>Operator nicht angegeben
 
 Prüft, ob ein gespeichertes aufrufbares Objekt existiert.
 
@@ -292,7 +292,7 @@ operator unspecified();
 
 ### <a name="remarks"></a>Hinweise
 
-Der Operator gibt einen Wert, der konvertiert werden kann, **"bool"** mit einem wahren Wert nur dann, wenn das Objekt nicht leer ist. Damit können Sie prüfen, ob das Objekt leer ist.
+Der-Operator gibt einen Wert zurück, der nur dann in den **booleschen** Wert konvertiert werden kann, wenn das Objekt leer ist. Damit können Sie prüfen, ob das Objekt leer ist.
 
 ### <a name="example"></a>Beispiel
 
@@ -324,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="op_call"></a> Operator()
+## <a name="op_call"></a>Operator ()
 
 Ruf ein aufrufbares Objekt auf.
 
@@ -337,10 +337,10 @@ result_type operator()(
 
 ### <a name="parameters"></a>Parameter
 
-*TN*\
+*TN* -\
 Der Typ des n-ten Aufrufarguments.
 
-*TN*\
+*tN* -\
 Das n-te Aufrufargument.
 
 ### <a name="remarks"></a>Hinweise
@@ -375,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="op_eq"></a> Operator =
+## <a name="op_eq"></a>Operator =
 
 Ersetzt das gespeicherte aufrufbare Objekt.
 
@@ -390,16 +390,16 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parameter
 
-*%npc*\
+\ für den *NPC*
 Eine NULL-Zeiger-Konstante.
 
-*Richting*\
+*Rechte* \
 Das zu kopierende Funktionsobjekt.
 
-*fn*\
+*FN* -\
 Das zu umschließende Objekt.
 
-*fnref*\
+*fnref* -\
 Der zu umschließende aufrufbare Objektverweis.
 
 ### <a name="remarks"></a>Hinweise
@@ -457,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a> RESULT_TYPE
+## <a name="result_type"></a>result_type
 
 Der Rückgabetyp des gespeicherten aufrufbaren Objekts.
 
@@ -499,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a> Swap
+## <a name="swap"></a>Wechsel
 
 Tauscht zwei aufrufbare Objekte miteinander.
 
@@ -509,12 +509,12 @@ void swap(function& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Richting*\
+*Rechte* \
 Das Funktionsobjekt, mit dem getauscht werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion tauscht die Zielobjekte von `*this` und *rechten*. Die Funktion führt dies in konstanter Zeit aus und löst keine Ausnahmen aus.
+Die Member-Funktion tauscht die Zielobjekte zwischen `*this` und *Rechts*aus. Die Funktion führt dies in konstanter Zeit aus und löst keine Ausnahmen aus.
 
 ### <a name="example"></a>Beispiel
 
@@ -558,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a> Ziel
+## <a name="target"></a>Spar
 
 Prüft, ob das gespeicherte aufrufbare Objekt wie festgelegt aufrufbar ist.
 
@@ -571,14 +571,14 @@ template <class Fty2>
 
 ### <a name="parameters"></a>Parameter
 
-*Fty2*\
+*Fty2* \
 Der zu überprüfende Typ des aufrufbaren Zielobjekts.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ *Fty2* muss für die Argumenttypen aufrufbar sein `T1, T2, ..., TN` sowie des Rückgabetyps `Ret`. Wenn `target_type() == typeid(Fty2)`, dann gibt die Membervorlagenfunktion die Adresse des Zielobjekts zurück; andernfalls gibt sie 0 zurück.
+Der Typ *Fty2* muss für die Argument Typen `T1, T2, ..., TN` und den Rückgabetyp `Ret` aufgerufen werden können. Wenn `target_type() == typeid(Fty2)`, dann gibt die Membervorlagenfunktion die Adresse des Zielobjekts zurück; andernfalls gibt sie 0 zurück.
 
-Ein Typ *Fty2* wird aufgerufen, für die Argumenttypen `T1, T2, ..., TN` sowie des Rückgabetyps `Ret` If, für die Lvalues `fn, t1, t2, ..., tN` Typen `Fty2, T1, T2, ..., TN`, `INVOKE(fn, t1, t2, ..., tN)` wohlgeformt ist und, falls `Ret`nicht **"void"** , konvertierbar `Ret`.
+Ein Typ *Fty2* kann für die Argument Typen `T1, T2, ..., TN` aufgerufen werden, und der Rückgabetyp `Ret` if, für Lvalues `fn, t1, t2, ..., tN` der Typen `Fty2, T1, T2, ..., TN` sind `INVOKE(fn, t1, t2, ..., tN)` wohl geformt, und wenn `Ret` nicht **void**ist, kann in `Ret` konvertiert werden.
 
 ### <a name="example"></a>Beispiel
 
@@ -619,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a> target_type
+## <a name="target_type"></a>target_type
 
 Ruft Typinformationen für das aufrufbare Objekt ab.
 

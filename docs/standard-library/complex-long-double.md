@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: 280fb4c15219b11d2325ff37a296e133810bf2b5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: afd85321ee443359f17850384b06b854dfe89985
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449477"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688233"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
-Diese explizit spezialisierte Vorlagen Klasse beschreibt ein Objekt, das ein geordnetes Paar von Objekten speichert, die beide den Typ **long Double**haben, wobei das erste Objekt den reellen Teil einer komplexen Zahl und das zweite Objekt den imaginären Teil darstellt.
+Diese explizit spezialisierte Klassen Vorlage beschreibt ein Objekt, das ein geordnetes Paar von Objekten speichert, die beide den Typ **long Double**haben, wobei das erste Objekt den reellen Teil einer komplexen Zahl und das zweite Objekt den imaginären Teil darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,19 +32,19 @@ public:
 complex(
     constexpr complex<long double>& complexNum);
 
-// rest same as template class complex
+// rest same as class template complex
 };
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*_RealVal*\
+*_RealVal* \
 Der Wert des Typs **long double** für den Realteil der komplexen Zahl, die erstellt wird
 
-*_ImagVal*\
+*_ImagVal* \
 Der Wert des Typs **long Double** für den imaginären Teil der komplexen Zahl, die erstellt wird.
 
-*complexnum*\
+*complexnum* -\
 Die komplexe Zahl vom Typ **Double** oder vom Typ **float** , deren reelle und imaginäre Teile verwendet werden, um eine komplexe Zahl vom Typ **long Double** zu initialisieren, der erstellt wird.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -53,11 +53,11 @@ Eine komplexe Zahl vom Typ **long Double**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die explizite Spezialisierung der Vorlagen Klasse `complex` auf eine komplexe Klasse des Typs **long Double** unterscheidet sich von der Vorlagen Klasse nur in den Konstruktoren, die Sie definiert. Die Konvertierung von **long Double** in **float** darf implizit erfolgen, aber die Konvertierung von **Double** in **long Double** muss **explizit**erfolgen. Die Verwendung einer **expliziten** Konvertierung schließt die Initiierung mit Typkonvertierung über die Zuweisungssyntax aus.
+Die explizite Spezialisierung der Klassen Vorlage `complex` auf eine komplexe Klasse des Typs **long Double** unterscheidet sich von der Klassen Vorlage nur in den Konstruktoren, die Sie definiert. Die Konvertierung von **long Double** in **float** darf implizit erfolgen, aber die Konvertierung von **Double** in **long Double** muss **explizit**erfolgen. Die Verwendung einer **expliziten** Konvertierung schließt die Initiierung mit Typkonvertierung über die Zuweisungssyntax aus.
 
-Weitere Informationen zur Vorlagen Klasse `complex` und ihren Membern finden Sie unter [Complex-Klasse](../standard-library/complex-class.md).
+Weitere Informationen zu den Klassen Vorlagen `complex` und ihren Membern finden Sie unter [Complex-Klasse](../standard-library/complex-class.md).
 
-**Microsoft-spezifisch**: Der **long Double** -Typ und der **Double** -Typ verfügen über die gleiche Darstellung, sind jedoch unterschiedliche Typen. Weitere Informationen finden Sie unter [grundlegende Typen](../cpp/fundamental-types-cpp.md).
+**Microsoft-spezifisch**: die **long Double** -und **Double** -Typen weisen die gleiche Darstellung auf, sind jedoch unterschiedliche Typen. Weitere Informationen finden Sie unter [grundlegende Typen](../cpp/fundamental-types-cpp.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -124,4 +124,4 @@ arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 ## <a name="see-also"></a>Siehe auch
 
 [complex-Klasse](../standard-library/complex-class.md)\
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

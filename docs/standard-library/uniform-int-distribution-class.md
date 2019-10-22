@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 1307f64fb5f92b59337665d108d950b28c6ff63e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7e24c320e909bb2d0471acdd275f89c43d3e44de
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454957"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684515"
 ---
-# <a name="uniformintdistribution-class"></a>uniform_int_distribution-Klasse
+# <a name="uniform_int_distribution-class"></a>uniform_int_distribution-Klasse
 
 Generiert eine einheitliche (jeder Wert ist gleichermaßen wahrscheinlich) Ganzzahlverteilung innerhalb eines Ausgabebereiches, der inklusive-inklusive ist.
 
@@ -71,12 +71,12 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*Inttype*\
-Der ganzzahlige Ergebnistyp, der Standardwert ist **int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*Inttype* -\
+Der ganzzahlige Ergebnistyp, der Standardwert ist **int**. Informationen zu möglichen Typen finden Sie unter [\<random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt eine inklusive-inklusive Verteilung, die Werte eines vom Benutzer angegebenen Ganzzahltyps mit einer Verteilung erzeugt, damit jeder Wert gleichermaßen wahrscheinlich ist. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Klassen Vorlage beschreibt eine inklusivverteilung, die Werte eines benutzerdefinierten ganzzahligen Typs mit einer Verteilung erzeugt, damit jeder Wert gleichermaßen wahrscheinlich ist. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
@@ -191,20 +191,20 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*ein*\
+*eine* \
 Die Untergrenze (einschließend) für Zufallswerte.
 
-*b*\
+*b* \
 Die Obergrenze (ausschließend) für Zufallswerte.
 
-*parm*\
+*\ für* den
 Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.
 
 ### <a name="remarks"></a>Hinweise
 
 **Vorbedingung:** `a ≤ b`
 
-Der erste Konstruktor konstruiert ein Objekt, dessen *gespeicherter* -Wert den Wert *a* enthält und dessen gespeicherter *b* -Wert den Wert *b*enthält.
+Der erste Konstruktor konstruiert ein Objekt, dessen *gespeicherter-Wert den* Wert *a* enthält und dessen gespeicherter *b* -Wert den Wert *b*enthält.
 
 Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter aus *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.
 
@@ -227,13 +227,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*ein*\
+*eine* \
 Die Untergrenze (einschließend) für Zufallswerte.
 
-*b*\
+*b* \
 Die Obergrenze (ausschließend) für Zufallswerte.
 
-*Richting*\
+*Rechte* \
 Das mit diesem `param_type`-Objekt zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise

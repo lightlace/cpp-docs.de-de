@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_map header
 ms.assetid: eb90ecb2-250a-4be1-83d2-f66b2917edde
-ms.openlocfilehash: 1ac1bf2772e7eb6b2f61aa7b4f79de21fb675afe
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e77fd79375fa7f636f551c1246be4f0d8f309ffd
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454762"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688831"
 ---
-# <a name="ltunorderedmapgt"></a>&lt;unordered_map&gt;
+# <a name="ltunordered_mapgt"></a>&lt;unordered_map&gt;
 
-Definiert die Containervorlagenklassen [unordered_map](../standard-library/unordered-map-class.md) und [unordered_multimap](../standard-library/unordered-multimap-class.md) und deren unterstützenden Vorlagen.
+Definiert die Containerklassen Vorlagen [unordered_map](../standard-library/unordered-map-class.md) und [unordered_multimap](../standard-library/unordered-multimap-class.md) sowie deren unterstützende Vorlagen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -24,7 +24,7 @@ Definiert die Containervorlagenklassen [unordered_map](../standard-library/unord
 ```
 
 > [!NOTE]
-> Die \<unordered_map-> Bibliothek verwendet auch `#include <initializer_list>` die-Anweisung.
+> Die \<unordered_map > Bibliothek verwendet auch die `#include <initializer_list>`-Anweisung.
 
 ### <a name="classes"></a>Klassen
 

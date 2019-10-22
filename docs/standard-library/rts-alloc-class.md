@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: 065c0eaf936a438f48dbb8aa28704e0f53926a03
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b0ec7d4d3dbe5ef1334bf3c394819a4f5235c28c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451135"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688981"
 ---
-# <a name="rtsalloc-class"></a>rts_alloc-Klasse
+# <a name="rts_alloc-class"></a>rts_alloc-Klasse
 
-Die rts_alloc-Vorlagenklasse beschreibt einen [Filter](../standard-library/allocators-header.md), der ein Array von Cache-Instanzen enthält, und ermittelt, welche Instanz für die Belegung und Freigabe zur Laufzeit und nicht zur Kompilierzeit zu verwenden ist.
+Die Rts_alloc-Klassen Vorlage beschreibt einen [Filter](../standard-library/allocators-header.md) , der ein Array von Cache Instanzen enthält und bestimmt, welche Instanz für die Zuordnung und Aufhebung der Zuordnung zur Laufzeit anstatt zur Kompilierzeit verwendet werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,7 +38,7 @@ class rts_alloc
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Vorlagenklasse enthält mehrere Blockbelegungsinstanzen und ermittelt zur Laufzeit, nicht zur Kompilierzeit, welche Instanz für die Belegung oder Freigabe von Speicher zu verwenden ist. Sie wird mit Compilern verwendet, die keine Neubindungen kompilieren können.
+Diese Klassen Vorlage enthält mehrere Block Belegungs Instanzen und bestimmt, welche Instanz zur Laufzeit anstelle der Kompilierzeit für die Zuordnung oder Aufhebung der Zuordnung verwendet werden soll. Sie wird mit Compilern verwendet, die keine Neubindungen kompilieren können.
 
 ### <a name="member-functions"></a>Memberfunktionen
 
@@ -74,7 +74,7 @@ Zeiger auf das zugewiesene Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion `caches[_IDX].allocate(count)`gibt zurück, wobei `_IDX` der Index durch die angeforderte Block *Größe bestimmt*wird, oder wenn *count* zu groß ist, wird `operator new(count)`zurückgegeben. `cache`, das das Cache-Objekt darstellt.
+Die Member-Funktion gibt `caches[_IDX].allocate(count)` zurück, wobei der Index `_IDX` von der angeforderten Blockgrößen *Anzahl*bestimmt wird. wenn die *Anzahl* zu groß ist, wird `operator new(count)` zurückgegeben. `cache`, das das Cache-Objekt darstellt.
 
 ## <a name="deallocate"></a> rts_alloc::deallocate
 
@@ -93,7 +93,7 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion `caches[_IDX].deallocate(ptr, count)`Ruft auf, wobei `_IDX` der Index durch die angeforderte Block *Größe bestimmt*wird, oder wenn *count* zu groß ist, wird `operator delete(ptr)`zurückgegeben.
+Die Member-Funktion ruft `caches[_IDX].deallocate(ptr, count)` auf, bei dem der Index `_IDX` von der angeforderten Blockgrößen *Anzahl*bestimmt wird, oder wenn die *Anzahl* zu groß ist, wird `operator delete(ptr)` zurückgegeben.
 
 ## <a name="equals"></a> rts_alloc::equals
 
@@ -112,7 +112,7 @@ bool equals(const sync<_Cache>& _Other) const;
 
 ### <a name="remarks"></a>Hinweise
 
-**true** , wenn das Ergebnis `caches[0].equals(other.caches[0])`von ist, andernfalls **false**. `caches` stellt das Array von Cache-Objekten dar.
+**true** , wenn das Ergebnis von `caches[0].equals(other.caches[0])`; andernfalls **false**. `caches` stellt das Array von Cache-Objekten dar.
 
 ## <a name="see-also"></a>Siehe auch
 

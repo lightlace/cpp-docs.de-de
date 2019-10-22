@@ -30,16 +30,16 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: c23f23172894ce0b5adcbff1d2db58c78caf7a03
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454187"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689220"
 ---
 # <a name="numpunct-class"></a>numpunct-Klasse
 
-Eine Vorlagenklasse, die ein Objekt beschreibt, das als lokales Facet dienen kann, um die Sequenzen vom Typ `CharType` zu beschreiben, mit denen Informationen zur Formatierung und Interpunktion von numerischen und booleschen Ausdrücken dargestellt werden.
+Eine Klassen Vorlage, die ein Objekt beschreibt, das als lokaler Aspekt dienen kann, um die Sequenzen vom `CharType` Typ zu beschreiben, die zum Darstellen von Informationen über die Formatierung und Interpunktions Zeichen von numerischen und booleschen Ausdrücken verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,12 +50,12 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType*\
+*CharType* -\
 Der Typ, der innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet wird.
 
 ## <a name="remarks"></a>Hinweise
 
-Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen gespeicherten Wert von NULL. Beim ersten Versuch, auf den gespeicherten Wert zuzugreifen, wird ein eindeutiger positiver Wert in **id** gespeichert.
+Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen gespeicherten Wert von NULL. Beim ersten Versuch, auf den gespeicherten Wert zuzugreifen, wird in **id** ein eindeutiger positiver Wert gespeichert.
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -200,7 +200,7 @@ Die geschützte virtuelle Memberfunktion gibt eine gebietsschemaspezifische Rege
 
 ### <a name="example"></a>Beispiel
 
-Siehe das Beispiel für die [Gruppierung](#grouping), bei der die Funktion des virtuellen Members `grouping`von aufgerufen wird.
+Siehe das Beispiel für die [Gruppierung](#grouping), bei der die Funktion des virtuellen Members von `grouping` aufgerufen wird.
 
 ## <a name="do_thousands_sep"></a> numpunct::do_thousands_sep
 
@@ -216,7 +216,7 @@ Gibt ein gebietsschemaspezifisches Element zurück, das als Tausendertrennzeiche
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte virtuelle Member-Funktion gibt ein Gebiets Schema spezifisches Element vom `CharType` Typ zurück, das auf der linken Seite eines Dezimal Trennzeichens als Gruppen Trennzeichen verwendet werden soll.
+Die geschützte virtuelle Member-Funktion gibt ein Gebiets Schema spezifisches Element vom Typ zurück `CharType` das als Gruppen Trennzeichen auf der linken Seite eines Dezimal Trennzeichens verwendet werden soll.
 
 ### <a name="example"></a>Beispiel
 
@@ -250,7 +250,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Eine Zeichenfolge mit einer Sequenz `CharType`von s, die als Textdarstellung des Werts **false**verwendet werden soll.
+Eine Zeichenfolge, die eine Sequenz von `CharType`s enthält, die als Textdarstellung des Werts **false**verwendet werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -345,22 +345,22 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*_Refs*\
+*_Refs* \
 Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
 Die möglichen Werte für den Parameter *_Refs* und ihre Bedeutung lauten:
 
-- 0: Die Lebensdauer des Objekts wird von den Gebiets Schemas verwaltet, in denen es enthalten ist.
+- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.
 
 - 1: Die Lebensdauer des Objekts muss manuell verwaltet werden.
 
-- \> 1: Diese Werte sind nicht definiert.
+- \> 1: diese Werte sind nicht definiert.
 
-Direkte Beispiele hierfür sind nicht möglich, da der Destruktor geschützt ist.
+Direkte Beispiele sind nicht möglich, da der Destruktor geschützt ist.
 
-Der Konstruktor initialisiert sein Basisobjekt mit **locale::**[Face(](../standard-library/locale-class.md#facet_class)`_Refs`).
+Der Konstruktor initialisiert sein Basisobjekt mit **locale::** [Face(](../standard-library/locale-class.md#facet_class)`_Refs`).
 
 ## <a name="string_type"></a> numpunct::string_type
 
@@ -372,7 +372,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ beschreibt eine Spezialisierung der Vorlagenklasse [basic_string](../standard-library/basic-string-class.md), deren Objekte Kopien der Interpunktionssequenzen speichern können.
+Der Typ beschreibt eine Spezialisierung der Klassen Vorlage [basic_string](../standard-library/basic-string-class.md) , deren Objekte Kopien der Interpunktions Sequenzen speichern können.
 
 ## <a name="thousands_sep"></a> numpunct::thousands_sep
 
@@ -470,4 +470,4 @@ French_France.1252 falsename false
 
 [\<locale>](../standard-library/locale.md)\
 [facet-Klasse](../standard-library/locale-class.md#facet_class)\
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

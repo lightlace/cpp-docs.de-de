@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: 384a870a10c9f806684443d8c67647e924b6b2aa
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 15b704134d47b7bf7d8857bf380c756b0b03a1b0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243383"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688385"
 ---
 # <a name="binder1st-class"></a>binder1st-Klasse
 
-Eine Vorlagenklasse, mit der ein Konstruktor bereitgestellt wird, der ein binäres Funktionsobjekt in ein unäres Funktionsobjekt konvertiert, indem das erste Argument der binären Funktion an einen angegebenen Wert gebunden wird. Veraltet in C ++ 11 zugunsten des [binden](functional-functions.md#bind), und klicken Sie in C ++ 17 entfernt.
+Eine Klassen Vorlage, die einen Konstruktor bereitstellt, der ein binäres Funktions Objekt in ein unäres Funktions Objekt konvertiert, indem das erste Argument der binären Funktion an einen angegebenen Wert gebunden wird. In c++ 11 als veraltet [markiert und in](functional-functions.md#bind)c++ 17 entfernt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,24 +43,24 @@ protected:
 
 ### <a name="parameters"></a>Parameter
 
-*binary_fn*\
+*binary_fn* \
 Das binäre Funktionsobjekt, das in ein unäres Funktionsobjekt konvertiert werden soll.
 
-*Links*\
+*Linker* \
 Der Wert, an den das erste Argument des binären Funktionsobjekts gebunden werden soll.
 
-*Richting*\
+*Rechte* \
 Der Wert des Arguments, den das angepasste binäre Objekt mit dem festen Wert des zweiten Arguments vergleicht.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Das unäre Funktionsobjekt, das Binden des ersten Arguments des binären Funktionsobjekts an den Wert ergibt *linken*.
+Das unäre Funktions Objekt, das sich aus der Bindung des ersten Arguments des binären Funktions Objekts an den *linken*Wert ergibt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse speichert eine Kopie eines binären Funktionsobjekts *Binary_fn* in `op`, sowie eine Kopie der *linken* in `value`. Sie definiert ihre Memberfunktion `operator()` als Rückgabewert `op(value, right)`.
+Die Klassen Vorlage speichert eine Kopie eines binären Funktions Objekts *binary_fn* in `op` und eine Kopie von *left* in `value`. Er definiert seine Member-Funktion `operator()` als Rückgabe `op(value, right)`.
 
-Wenn *Binary_fn* ist ein Objekt des Typs `Operation` und `c` ist eine Konstante ist, dann `bind1st(binary_fn, c)` entspricht ein praktischer `binder1st<Operation>(binary_fn, c)`. Weitere Informationen finden Sie unter [bind1st](../standard-library/functional-functions.md#bind1st).
+Wenn *binary_fn* ein Objekt vom Typ `Operation` und `c` eine Konstante ist, ist `bind1st(binary_fn, c)` eine bequemere Entsprechung zu `binder1st<Operation>(binary_fn, c)`. Weitere Informationen finden Sie unter [bind1st](../standard-library/functional-functions.md#bind1st).
 
 ## <a name="example"></a>Beispiel
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-ms.openlocfilehash: f23b9528cf9a921e1d005756aa82751f3fdb745e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4fac75d90c4e40a22e8ceae974c3f49c3d50a1d3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449360"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688195"
 ---
-# <a name="ctypebase-class"></a>ctype_base-Klasse
+# <a name="ctype_base-class"></a>ctype_base-Klasse
 
-Die Klasse dient als Basisklasse für Facets der Vorlagenklasse [ctype](../standard-library/ctype-class.md). Eine Basisklasse für die ctype-Klasse, die verwendet wird, um die Enumerationstypen zu definieren, mit denen Zeichen entweder einzeln oder innerhalb eines gesamten Bereichs klassifiziert oder getestet werden.
+Die-Klasse fungiert als Basisklasse für Facetten der Klassen Vorlagen- [CType](../standard-library/ctype-class.md). Eine Basisklasse für die ctype-Klasse, die verwendet wird, um die Enumerationstypen zu definieren, mit denen Zeichen entweder einzeln oder innerhalb eines gesamten Bereichs klassifiziert oder getestet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ struct ctype_base : public locale::facet
 
 ## <a name="remarks"></a>Hinweise
 
-Definiert eine Enumerationsmaske. Jede Enumerationskonstante kennzeichnet eine andere Möglichkeit zum Klassifizieren von Zeichen, wie durch die im Header \<ctype.h> deklarierten Funktionen mit ähnlichen Namen definiert. Folgende Konstanten können verwendet werden:
+Definiert eine Enumerationsmaske. Jede Enumerationskonstante kennzeichnet eine andere Möglichkeit zum Klassifizieren von Zeichen, wie durch die im Header \<ctype.h> deklarierten Funktionen mit ähnlichen Namen definiert. Es gibt folgende Konstanten:
 
 - **space** ([isspace](../standard-library/locale-functions.md#isspace)-Funktion)
 
@@ -69,7 +69,7 @@ Definiert eine Enumerationsmaske. Jede Enumerationskonstante kennzeichnet eine a
 
 - **graph** ([isgraph](../standard-library/locale-functions.md#isgraph)-Funktion)
 
-Eine Kombination von Klassifikationen kann durch Verknüpfen dieser Konstanten mit OR beschrieben werden. Insbesondere ist es immer true, dass **"alnum"** = = ( **Alpha** &#124; **Digit** \) und **Graph** \= \= \( **"alnum"** &#124; **punct**).
+Eine Kombination von Klassifikationen kann durch Verknüpfen dieser Konstanten mit OR beschrieben werden. Insbesondere ist es immer true, dass **"alnum"** = = ( **Alpha** &#124; **numerische** \) und **Graph** \= \= \( **"alnum"** &#124; **punct**).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,4 +79,4 @@ Eine Kombination von Klassifikationen kann durch Verknüpfen dieser Konstanten m
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

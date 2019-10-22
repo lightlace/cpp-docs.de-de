@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: 5f59887e6c9d2965a6c8680f17a40c5bd93869c0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 46c8bb2ae450b3ef56f2729717fb9b5563a7c139
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243353"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689933"
 ---
 # <a name="binder2nd-class"></a>binder2nd-Klasse
 
-Eine Vorlagenklasse, mit der ein Konstruktor bereitgestellt wird, der ein binäres Funktionsobjekt in ein unäres Funktionsobjekt konvertiert, indem das zweite Argument der binären Funktion an einen angegebenen Wert gebunden wird. Veraltet in C ++ 11, C ++ 17 entfernt.
+Eine Klassen Vorlage, die einen Konstruktor bereitstellt, der ein binäres Funktions Objekt in ein unäres Funktions Objekt konvertiert, indem das zweite Argument der binären Funktion an einen angegebenen Wert gebunden wird. In c++ 11 veraltet, entfernt in c++ 17.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,24 +38,24 @@ class binder2nd
 
 ### <a name="parameters"></a>Parameter
 
-*Func*\
+*Func* -\
 Das binäre Funktionsobjekt, das in ein unäres Funktionsobjekt konvertiert werden soll.
 
-*Richting*\
+*Rechte* \
 Der Wert, an den das zweite Argument des binären Funktionsobjekts gebunden werden soll.
 
-*Links*\
+*Linker* \
 Der Wert des Arguments, den das angepasste binäre Objekt mit dem festen Wert des zweiten Arguments vergleicht.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Das unäre Funktionsobjekt, das Binden des zweiten Arguments des binären Funktionsobjekts an den Wert ergibt *rechten*.
+Das unäre Funktions Objekt, das sich ergibt, wenn das zweite Argument des binären Funktions Objekts an den Wert *right*gebunden wird.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse speichert eine Kopie eines binären Funktionsobjekts _ *Func* in `op`, sowie eine Kopie der *rechten* in `value`. Sie definiert ihre Memberfunktion `operator()` als Rückgabewert **Op**(`left`, **Wert**).
+Die Klassen Vorlage speichert eine Kopie eines binären Funktions Objekts _ *Func* in `op` und eine Kopie von *right* in `value`. Er definiert seine Member-Funktion `operator()` als Rückgabe von **op**(`left`, **Wert**).
 
-Wenn `Func` ist ein Objekt des Typs `Operation` und c eine Konstante ist, klicken Sie dann [bind2nd](../standard-library/functional-functions.md#bind2nd) (`Func`, `c`) entspricht der `binder2nd` Klassenkonstruktor `binder2nd` \<  **Vorgang**> (`Func`, `c`) und Benutzerfreundlicher.
+Wenn `Func` ein Objekt vom Typ `Operation` und c eine Konstante ist, entspricht [bind2nd](../standard-library/functional-functions.md#bind2nd) (`Func`, `c`) dem `binder2nd`-Klassenkonstruktor `binder2nd` \< > **Vorgangs**`Func` (0,) und bequemer ist.
 
 ## <a name="example"></a>Beispiel
 

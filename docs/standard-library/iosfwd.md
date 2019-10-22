@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
-ms.openlocfilehash: e66c3e869f01775512419c877cd52c7f0e0fa2c4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8d257a57100615e592f6ebd62b5c91c6c59df408
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449082"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687869"
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
 
-Deklariert Vorwärtsverweise auf mehrere Vorlagenklassen, die innerhalb von iostreams verwendet werden. Alle derartigen Vorlagenklassen sind in anderen Standardheaders definiert. Schließen Sie diesen Header nur mit ein, wenn Sie eine seiner Deklarationen, aber nicht seine Definition brauchen.
+Deklariert Forward-Verweise auf mehrere Klassen Vorlagen, die in Iostreams verwendet werden. Alle Klassen Vorlagen sind in anderen Standard Headern definiert. Schließen Sie diesen Header nur mit ein, wenn Sie eine seiner Deklarationen, aber nicht seine Definition brauchen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,7 +62,7 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 };
 ```
 
-## <a name="forward-declarationstemplate-classes"></a>Vorwärtsdeklarationen/Vorlagenklassen
+## <a name="forward-declarations-and-class-templates"></a>Vorwärts Deklarationen und Klassen Vorlagen
 
 ```cpp
 template <class _Statetype>

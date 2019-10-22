@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-ms.openlocfilehash: f417c33d5502f8e5bd247936c8a0f93007239924
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 704ee2ce40b4026cc066213181c96cf0f744d152
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449937"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687688"
 ---
 # <a name="messages-class"></a>messages-Klasse
 
-Die Vorlagenklasse beschreibt ein Objekt, das als Gebietsschemafacet dienen kann, um lokalisierte Meldungen aus einem Katalog von internationalisierten Meldungen für ein bestimmtes Gebietsschema abzurufen.
+Die Klassen Vorlage beschreibt ein Objekt, das als Gebiets Schema Aspekt dienen kann, um lokalisierte Nachrichten aus einem Katalog mit internationalisierten Nachrichten für ein bestimmtes Gebiets Schema abzurufen.
 
 Während die Nachrichtenklasse implementiert wird, sind derzeit keine Meldungen vorhanden.
 
@@ -44,12 +44,12 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType*\
+*CharType* -\
 Der Typ, der innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet wird.
 
 ## <a name="remarks"></a>Hinweise
 
-Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen gespeicherten Wert von NULL. Beim ersten Versuch, auf den gespeicherten Wert zuzugreifen, wird ein eindeutiger positiver Wert in **id** gespeichert.
+Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen gespeicherten Wert von NULL. Beim ersten Versuch, auf den gespeicherten Wert zuzugreifen, wird in **id** ein eindeutiger positiver Wert gespeichert.
 
 Dieses Facet öffnet im Grunde einen Katalog von Meldungen, die in der messages_base-Basisklasse definiert sind, ruft die erforderlichen Informationen ab und schließt den Katalog.
 
@@ -105,7 +105,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Catval*\
+*_Catval* \
 Der zu schließende Katalog.
 
 ### <a name="remarks"></a>Hinweise
@@ -122,7 +122,7 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Catval*\
+*_Catval* \
 Der zu schließende Katalog.
 
 ### <a name="remarks"></a>Hinweise
@@ -149,16 +149,16 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parameter
 
-*_Catval*\
+*_Catval* \
 Der Identifikationswert, der den zu suchenden Katalog angibt.
 
-*_Set*\
+*_Set* \
 Der erste identifizierte, der zum Finden einer Meldung in einem Meldungskatalog verwendet wird.
 
-*_Message*\
+*_Message* \
 Der zweite identifizierte, der zum Finden einer Meldung in einem Meldungskatalog verwendet wird.
 
-*_Dfault*\
+*_Dfault* \
 Die Zeichenfolge, die zurückgegeben werden soll, wenn ein Fehler auftritt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -171,7 +171,7 @@ Die geschützte Member-Funktion versucht, eine Nachrichten Sequenz aus dem Messa
 
 ### <a name="example"></a>Beispiel
 
-Siehe das Beispiel für [get](#get), mit dem `do_get` aufgerufen wird.
+Informationen hierzu finden Sie im Beispiel für [get](#get), das `do_get` aufruft.
 
 ## <a name="do_open"></a> messages::do_open
 
@@ -185,10 +185,10 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Parameter
 
-*_Catname*\
+*_Catname* \
 Der Name des zu suchenden Katalogs.
 
-*_Loc*\
+*_Loc* \
 Das Gebietsschema, nach dem im Katalog gesucht werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -219,16 +219,16 @@ string_type get(
 
 ### <a name="parameters"></a>Parameter
 
-*_Catval*\
+*_Catval* \
 Der Identifikationswert, der den zu suchenden Katalog angibt.
 
-*_Set*\
+*_Set* \
 Der erste identifizierte, der zum Finden einer Meldung in einem Meldungskatalog verwendet wird.
 
-*_Message*\
+*_Message* \
 Der zweite identifizierte, der zum Finden einer Meldung in einem Meldungskatalog verwendet wird.
 
-*_Dfault*\
+*_Dfault* \
 Die Zeichenfolge, die zurückgegeben werden soll, wenn ein Fehler auftritt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -254,25 +254,25 @@ protected: messages(
 
 ### <a name="parameters"></a>Parameter
 
-*_Refs*\
+*_Refs* \
 Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
-*_Locname*\
+*_Locname* \
 Der Name des Gebietsschemas.
 
 ### <a name="remarks"></a>Hinweise
 
 Die möglichen Werte für den Parameter *_Refs* und ihre Bedeutung lauten:
 
-- 0: Die Lebensdauer des Objekts wird von den Gebiets Schemas verwaltet, in denen es enthalten ist.
+- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.
 
 - 1: Die Lebensdauer des Objekts muss manuell verwaltet werden.
 
-- \> 1: Diese Werte sind nicht definiert.
+- \> 1: diese Werte sind nicht definiert.
 
-Direkte Beispiele hierfür sind nicht möglich, da der Destruktor geschützt ist.
+Direkte Beispiele sind nicht möglich, da der Destruktor geschützt ist.
 
-Der Konstruktor initialisiert sein Basisobjekt mit **locale::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Der Konstruktor initialisiert sein Basisobjekt mit **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
 
 ## <a name="open"></a> messages::open
 
@@ -286,10 +286,10 @@ catalog open(
 
 ### <a name="parameters"></a>Parameter
 
-*_Catname*\
+*_Catname* \
 Der Name des zu suchenden Katalogs.
 
-*_Loc*\
+*_Loc* \
 Das Gebietsschema, nach dem im Katalog gesucht werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -310,10 +310,10 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ beschreibt eine Spezialisierung der Vorlagenklasse [basic_string](../standard-library/basic-string-class.md), deren Objekte Kopien der Meldungssequenzen speichern können.
+Der Typ beschreibt eine Spezialisierung der Klassen Vorlage [basic_string](../standard-library/basic-string-class.md) , deren Objekte Kopien der Nachrichten Sequenzen speichern können.
 
 ## <a name="see-also"></a>Siehe auch
 
 [\<locale>](../standard-library/locale.md)\
 [messages_base-Klasse](../standard-library/messages-base-class.md)\
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

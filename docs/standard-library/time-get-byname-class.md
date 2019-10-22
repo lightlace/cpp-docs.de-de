@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_get_byname class
 ms.assetid: 6e54153e-da40-4bb9-a942-1a6ce57b30c9
-ms.openlocfilehash: b466f8a893a14f7a94ee7b9e54b72e43aa6cf6e3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 9df3831e085f1dea1df45ff9368479fa516b944e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460027"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685757"
 ---
-# <a name="timegetbyname-class"></a>time_get_byname-Klasse
+# <a name="time_get_byname-class"></a>time_get_byname-Klasse
 
-Die abgeleitete Vorlagenklasse beschreibt ein Objekt, das als Gebietsschemafacet vom Typ `time_get`\<CharType, InputIterator> dienen kann.
+In der abgeleiteten Klassen Vorlage wird ein Objekt beschrieben, das als Gebiets Schema-Facette vom Typ `time_get` \<CharType, InputIterator > fungieren kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,10 +40,10 @@ protected:
 
 ### <a name="parameters"></a>Parameter
 
-*_Locname*\
+*_Locname* \
 Ein benanntes Gebietsschema.
 
-*_Refs*\
+*_Refs* \
 Eine initiale Verweisanzahl.
 
 ## <a name="requirements"></a>Anforderungen
@@ -58,4 +58,4 @@ Das Verhalten wird durch das benannte Gebiets Schema *_Locname*festgelegt. Alle 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

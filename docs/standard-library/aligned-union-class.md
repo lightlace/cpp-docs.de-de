@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - aligned_union
 ms.assetid: 9931a44d-3a67-4f29-a0f6-d47a7cf560ac
-ms.openlocfilehash: b9ffb4aff4d4d5667ab8d626ea13a21da94ca0c1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ae03802549f7791e51dccf1ea98a7b18929a4a4b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456468"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690110"
 ---
-# <a name="alignedunion-class"></a>aligned_union-Klasse
+# <a name="aligned_union-class"></a>aligned_union-Klasse
 
 Stellt einen POD-Typ bereit, der groß genug ist und passend ausgerichtet ist, um einen Union-Typ zu speichern. Außerdem bietet er die benötigte Größe.
 
@@ -29,7 +29,7 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>Parameter
 
-*Nest*\
+*Len* -\
 Der Ausrichtungswert für den größten Typ in der Union.
 
 *Typen*\
@@ -37,7 +37,7 @@ Die unterschiedlichen Typen in der zugrunde liegenden Union.
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die Vorlagenklasse, um eine Ausrichtung und die benötigte Größe zu schaffen, die für das Speichern einer Union in einem nicht initialisierten Speicherplatz erforderlich sind. Der TypeDef `type` -Member benennt einen POD-Typ, der für die Speicherung eines beliebigen Typs geeignet ist, der in *Typen*aufgeführt ist. die Mindestgröße ist *len*. Der statische Member `alignment_value` vom Typ `std::size_t` enthält die strengste Ausrichtung, die für alle Typen erforderlich ist, die unter *Typen*aufgeführt sind.
+Verwenden Sie die Klassen Vorlage, um die Ausrichtung und Größe zu erhalten, die zum Speichern einer Union in nicht initialisiertem Speicher erforderlich sind. Der typedef-Member `type` benennt einen POD-Typ, der für die Speicherung eines beliebigen Typs geeignet ist, der in *Typen*aufgeführt ist die minimale Größe beträgt *len*. Der statische Member `alignment_value` vom Typ `std::size_t` enthält die strengste Ausrichtung, die für alle unter *Typen*aufgeführten Typen erforderlich ist.
 
 ## <a name="example"></a>Beispiel
 

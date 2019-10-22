@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-ms.openlocfilehash: 72a948c7f8422b36b94a16cdb2c815bca92d20c7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c282791fb0ff85c0c8818c6905c51703614f4675
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456386"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689386"
 ---
-# <a name="matchresults-class"></a>match_results-Klasse
+# <a name="match_results-class"></a>match_results-Klasse
 
 Enthält eine Sequenz von Teilübereinstimmungen.
 
@@ -26,15 +26,15 @@ class match_results
 
 ## <a name="parameters"></a>Parameter
 
-*Bidit*\
+*Bidit* -\
 Der Itertatortyp für Teilübereinstimmungen.
 
-*Zuordnungseinheits*\
+*Zuordnung* \
 Der Typ einer Zuweisung für die Speicherverwaltung.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt ein Objekt, das eine nicht änderbare Sequenz von Elementen vom Typ `sub_match<BidIt>` steuert, die durch eine reguläre Ausdruckssuche generiert wurde. Jedes Element verweist auf die Untersequenz, die mit der Erfassungsgruppe übereinstimmt, die diesem Element entspricht.
+In der Klassen Vorlage wird ein Objekt beschrieben, das eine nicht änderbare Sequenz von Elementen vom Typ `sub_match<BidIt>` steuert, die durch eine Suche mit regulären Ausdrücken generiert wurde. Jedes Element verweist auf die Untersequenz, die mit der Erfassungsgruppe übereinstimmt, die diesem Element entspricht.
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -52,7 +52,7 @@ Die Vorlagenklasse beschreibt ein Objekt, das eine nicht änderbare Sequenz von 
 |[const_reference](#const_reference)|Der Typ eines Konstantenverweises auf ein Element.|
 |[difference_type](#difference_type)|Der Typ einer Iteratordifferenz.|
 |[Iterator](#iterator)|Der Itertatortyp für Teilübereinstimmungen.|
-|[Verweis](#reference)|Der Typ eines Elementverweises.|
+|[reference](#reference)|Der Typ eines Elementverweises.|
 |[size_type](#size_type)|Der Typ einer Teilübereinstimmungszählers.|
 |[string_type](#string_type)|Der Typ einer Zeichenfolge.|
 |[value_type](#value_type)|Der Typ einer Teilübereinstimmung.|
@@ -62,17 +62,17 @@ Die Vorlagenklasse beschreibt ein Objekt, das eine nicht änderbare Sequenz von 
 |Member-Funktion|Beschreibung|
 |-|-|
 |[begin](#begin)|Kennzeichnet den Anfang einer Teilübereinstimmungssequenz.|
-|[empty](#empty)|Testet, ob keine Teilübereinstimmungen vorliegen.|
+|[leer](#empty)|Testet, ob keine Teilübereinstimmungen vorliegen.|
 |[end](#end)|Designates end of submatch sequence.|
 |[format](#format)|Formatiert Teilübereinstimmungen.|
 |[get_allocator](#get_allocator)|Gibt die gespeicherte Zuweisung zurück.|
 |[length](#length)|Gibt die Länge einer Teilübereinstimmung zurück.|
 |[max_size](#max_size)|Ruft die größte Anzahl von Teilübereinstimmungen ab.|
-|[position](#position)|Ruft das Startoffset einer Untergruppe ab.|
-|[prefix](#prefix)|Ruft die Sequenz vor der ersten Teilübereinstimmung ab.|
+|[gebracht](#position)|Ruft das Startoffset einer Untergruppe ab.|
+|[Vorsatz](#prefix)|Ruft die Sequenz vor der ersten Teilübereinstimmung ab.|
 |[size](#size)|Zählt, wie viele Teilübereinstimmungen es gibt.|
 |[str](#str)|Gibt eine Teilübereinstimmung zurück.|
-|[suffix](#suffix)|Ruft die Sequenz nach der letzten Teilübereinstimmung ab.|
+|[einzufügen](#suffix)|Ruft die Sequenz nach der letzten Teilübereinstimmung ab.|
 |[swap](#swap)|Tauscht zwei match_results-Objekte.|
 
 ### <a name="operators"></a>Operatoren
@@ -298,21 +298,21 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>Parameter
 
-*OutIt*\
+*Outit* -\
 Der Ausgabeiteratortyp.
 
 *out*\
 Der Ausgabestream, in den geschrieben werden soll.
 
-*fmt*\
+*\ für* die
 Die Formatzeichenfolge.
 
-*fahren*\
+*Flags* \
 Die Formatflags.
 
 ### <a name="remarks"></a>Hinweise
 
-Jede Member-Funktion generiert formatierten Text unter der Steuerung des Formats *fmt*. Die erste Member-Funktion schreibt den formatierten Text in die Sequenz, die durch das Argument *out* definiert ist, *und gibt zurück*. Die zweite Memberfunktion gibt ein Zeichenfolgenobjekt zurück, das eine Kopie des formatierten Text enthält.
+Jede Member-Funktion generiert formatierten Text unter der Steuerung des Formats *fmt*. Die erste Member-Funktion schreibt den formatierten Text in die Sequenz, die durch das Argument *out* definiert *ist, und gibt zurück*. Die zweite Member-Funktion gibt ein Zeichen folgen Objekt zurück, das eine Kopie des formatierten Texts enthält.
 
 Um formatierten Text zu generieren, wird Literaltext in der Formatzeichenfolge einfach in die Zielsequenz kopiert. Jede Escapesequenz in der Formatzeichenfolge wird vom Text ersetzt, den sie darstellt. Die Details des Kopierens und Ersetzens werden durch die Formatflags gesteuert, die an die Funktion übergeben werden.
 
@@ -350,7 +350,7 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parameter
 
-*nationale*\
+*Sub* \
 Der Index der Teilübereinstimmung.
 
 ### <a name="remarks"></a>Hinweise
@@ -369,15 +369,15 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Zuordnungseinheits*\
+*Zuordnung* \
 Das zu speichernde Zuweisungsobjekt.
 
-*Richting*\
+*Rechte* \
 Das zu kopierende match_results-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor erstellt ein `match_results`-Objekt, das keine Teilübereinstimmungen enthält. Mit dem zweiten Konstruktor wird `match_results` ein-Objekt erstellt, das eine Kopie von *right*ist.
+Der erste Konstruktor erstellt ein `match_results`-Objekt, das keine Teilübereinstimmungen enthält. Der zweite Konstruktor erstellt ein `match_results` Objekt, das eine Kopie von *right*ist.
 
 ## <a name="max_size"></a> match_results::max_size
 
@@ -401,7 +401,7 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Richting*\
+*Rechte* \
 Das zu kopierende match_results-Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -423,7 +423,7 @@ Der Index der Teilübereinstimmung.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion gibt einen Verweis auf das Element *n* der kontrollierten Sequenz oder einen Verweis auf ein leeres `sub_match` Objekt zurück `size() <= n` , wenn oder, wenn die Erfassungs Gruppe *n* nicht Teil der Entsprechung war.
+Die Member-Funktion gibt einen Verweis auf das Element *n* der kontrollierten Sequenz oder einen Verweis auf ein leeres `sub_match` Objekt zurück, wenn `size() <= n` oder wenn die Erfassungs Gruppe *n* nicht Teil der Entsprechung war.
 
 ## <a name="position"></a> match_results::position
 
@@ -435,7 +435,7 @@ difference_type position(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parameter
 
-*nationale*\
+*Sub* \
 Der Index der Teilübereinstimmung.
 
 ### <a name="remarks"></a>Hinweise
@@ -500,7 +500,7 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parameter
 
-*nationale*\
+*Sub* \
 Der Index der Teilübereinstimmung.
 
 ### <a name="remarks"></a>Hinweise
@@ -541,12 +541,12 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Richting*\
+*Rechte* \
 Das match_results-Objekt, mit dem getauscht werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion vertauscht den `*this` Inhalt von und *Recht* in konstanter Zeit und löst keine Ausnahmen aus.
+Die Member-Funktion vertauscht den Inhalt von `*this` und *Recht* in konstanter Zeit und löst keine Ausnahmen aus.
 
 ## <a name="value_type"></a> match_results::value_type
 

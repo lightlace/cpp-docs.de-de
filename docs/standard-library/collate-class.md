@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-ms.openlocfilehash: c506a6a2e1e2c0610f8a6129d2bfb42f762e998a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 88b04ad4f14faf4d152c0ce2b9c3477928263c52
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458605"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689810"
 ---
 # <a name="collate-class"></a>collate-Klasse
 
-Eine Vorlagenklasse, die ein Objekt beschreibt, das als Gebietsschemafacet dienen kann, um die Reihenfolge und Gruppierung der Zeichen in einer Zeichenfolge, Vergleiche zwischen ihnen und das Hashing von Zeichenfolgen zu steuern.
+Eine Klassen Vorlage, die ein Objekt beschreibt, das als Gebiets Schema Aspekt dienen kann, um die Reihenfolge und Gruppierung von Zeichen innerhalb einer Zeichenfolge zu steuern, Vergleiche zwischen Ihnen und dem Hashwert von Zeichen folgen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType*\
+*CharType* -\
 Der Typ, der innerhalb eines Programms verwendet wird, um Zeichen zu codieren.
 
 ## <a name="remarks"></a>Hinweise
@@ -108,21 +108,21 @@ const char* _Locname,
 
 ### <a name="parameters"></a>Parameter
 
-*_Refs*\
+*_Refs* \
 Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
-*_Locname*\
+*_Locname* \
 Der Name des Gebietsschemas.
 
 ### <a name="remarks"></a>Hinweise
 
 Die möglichen Werte für den Parameter *_Refs* und ihre Bedeutung lauten:
 
-- 0: Die Lebensdauer des Objekts wird von den Gebiets Schemas verwaltet, in denen es enthalten ist.
+- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.
 
 - 1: Die Lebensdauer des Objekts muss manuell verwaltet werden.
 
-- \> 1: Diese Werte sind nicht definiert.
+- \> 1: diese Werte sind nicht definiert.
 
 Der Konstruktor initialisiert sein Basisobjekt mit **locale::** [Face(](../standard-library/locale-class.md#facet_class)`_Refs`).
 
@@ -139,16 +139,16 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parameter
 
-*First1*\
+*First1* \
 Zeiger auf das erste Element in der ersten zu vergleichenden Sequenz.
 
-*Last1*\
+*Last1* \
 Zeiger auf das letzte Element in der ersten zu vergleichenden Sequenz.
 
-*First2*\
+*First2* \
 Zeiger auf das erste Element in der zweiten zu vergleichenden Sequenz.
 
-*Last2*\
+*Last2* \
 Zeiger auf das letzte Element in der zweiten zu vergleichenden Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -157,7 +157,7 @@ Die Memberfunktion gibt Folgendes zurück:
 
 - -1, wenn die erste Sequenz im Vergleich kleiner ist als die zweite Sequenz.
 
-- +1, wenn die zweite Sequenz im Vergleich kleiner ist als die erste Sequenz.
+- +1, wenn die zweite Sequenz kleiner als die erste Sequenz ist.
 
 - 0, wenn die Sequenzen gleichwertig sind.
 
@@ -205,16 +205,16 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parameter
 
-*First1*\
+*First1* \
 Zeiger auf das erste Element in der ersten zu vergleichenden Sequenz.
 
-*Last1*\
+*Last1* \
 Zeiger auf das letzte Element in der ersten zu vergleichenden Sequenz.
 
-*First2*\
+*First2* \
 Zeiger auf das erste Element in der zweiten zu vergleichenden Sequenz.
 
-*Last2*\
+*Last2* \
 Zeiger auf das letzte Element in der zweiten zu vergleichenden Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -223,13 +223,13 @@ Die Memberfunktion gibt Folgendes zurück:
 
 - -1, wenn die erste Sequenz im Vergleich kleiner ist als die zweite Sequenz.
 
-- +1, wenn die zweite Sequenz im Vergleich kleiner ist als die erste Sequenz.
+- +1, wenn die zweite Sequenz kleiner als die erste Sequenz ist.
 
 - 0, wenn die Sequenzen gleichwertig sind.
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte virtuelle Member-Funktion vergleicht die Sequenz bei [* First1, Last1) * mit der Sequenz bei *[First2, Last2*). Er vergleicht Werte, indem `operator<` er zwischen Paaren entsprechender Elemente vom Typ `CharType`anwendet. Die erste Sequenz ist im Vergleich kleiner, wenn sie im frühesten ungleichen Paar in den Sequenzen das kleinere Element enthält oder wenn zwar keine ungleichen Paare vorhanden sind, die erste Sequenz aber kürzer ist.
+Die geschützte virtuelle Member-Funktion vergleicht die Sequenz bei [* First1, Last1) * mit der Sequenz bei *[First2, Last2*). Sie vergleicht Werte, indem `operator<` zwischen Paaren entsprechender Elemente vom Typ `CharType` angewendet wird. Die erste Sequenz ist im Vergleich kleiner, wenn sie im frühesten ungleichen Paar in den Sequenzen das kleinere Element enthält oder wenn zwar keine ungleichen Paare vorhanden sind, die erste Sequenz aber kürzer ist.
 
 ### <a name="example"></a>Beispiel
 
@@ -245,10 +245,10 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*erstes*\
+*erste* \
 Ein Zeiger auf das erste Zeichen in der Sequenz, dessen Hashwert bestimmt werden soll.
 
-*letzten*\
+*Letzter* \
 Ein Zeiger auf das letzte Zeichen in der Sequenz, dessen Hashwert bestimmt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -273,10 +273,10 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Parameter
 
-*erstes*\
+*erste* \
 Ein Zeiger auf das erste Zeichen in der zu konvertierenden Sequenz.
 
-*letzten*\
+*Letzter* \
 Ein Zeiger auf das letzte Zeichen in der zu konvertierenden Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -301,10 +301,10 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*erstes*\
+*erste* \
 Ein Zeiger auf das erste Zeichen in der Sequenz, dessen Hashwert bestimmt werden soll.
 
-*letzten*\
+*Letzter* \
 Ein Zeiger auf das letzte Zeichen in der Sequenz, dessen Hashwert bestimmt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -355,7 +355,7 @@ typedef basic_string<CharType> string_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ beschreibt eine Spezialisierung der Vorlagenklasse [basic_string](../standard-library/basic-string-class.md), deren Objekte Kopien der Quellsequenz speichern können.
+Der Typ beschreibt eine Spezialisierung der Klassen Vorlage [basic_string](../standard-library/basic-string-class.md) , deren Objekte Kopien der Quell Sequenz speichern können.
 
 ### <a name="example"></a>Beispiel
 
@@ -371,10 +371,10 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*erstes*\
+*erste* \
 Ein Zeiger auf das erste Zeichen in der zu konvertierenden Sequenz.
 
-*letzten*\
+*Letzter* \
 Ein Zeiger auf das letzte Zeichen in der zu konvertierenden Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -383,7 +383,7 @@ Eine Zeichenfolge, die die transformierte Zeichensequenz enthält.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion gibt [do_transform](#do_transform)(`first`, `last`) zurück.
+Die Member-Funktion gibt [Do_transform](#do_transform)(`first` `last`) zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -430,4 +430,4 @@ int main( )
 ## <a name="see-also"></a>Siehe auch
 
 [\<locale>](../standard-library/locale.md)\
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

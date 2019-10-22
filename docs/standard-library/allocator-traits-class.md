@@ -40,16 +40,16 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: 795fd17c2c5b3c7fa92e62088b8f2fd126094df9
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 470b3086b4bdfa776558122eda9e496fa6c4bcdc
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245890"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690064"
 ---
-# <a name="allocatortraits-class"></a>allocator_traits-Klasse
+# <a name="allocator_traits-class"></a>allocator_traits-Klasse
 
-Die Vorlagenklasse beschreibt ein Objekt, das einen *Allocatortyp* ergänzt. Ein Allocatortyp ist jeder Typ, der ein Zuweisungsobjekt beschreibt, das zum Verwalten von zugewiesenem Speicherplatz verwendet wird. Sie können insbesondere für jeden Allocator des Typs `Alloc` `allocator_traits<Alloc>` verwenden, um alle Informationen zu erhalten, die für einen zuweisungsfähigen Container erforderlich sind. Weitere Informationen finden Sie unter der Standard-[Allocator-Klasse](../standard-library/allocator-class.md).
+Die Klassen Vorlage beschreibt ein Objekt, das einen *zuordnertyp*ergänzt. Ein Allocatortyp ist jeder Typ, der ein Zuweisungsobjekt beschreibt, das zum Verwalten von zugewiesenem Speicherplatz verwendet wird. Sie können insbesondere für jeden Allocator des Typs `Alloc` `allocator_traits<Alloc>` verwenden, um alle Informationen zu erhalten, die für einen zuweisungsfähigen Container erforderlich sind. Weitere Informationen finden Sie unter der Standard-[Allocator-Klasse](../standard-library/allocator-class.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -89,7 +89,7 @@ Folgende statische Methoden rufen die entsprechenden Methoden auf einem vorhande
 |[max_size](#max_size)|Eine statische Methode, die mithilfe eines angegebenen Allocators die maximale Anzahl von zuweisbaren Objekten ermittelt.|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|Eine statische Methode, die `select_on_container_copy_construction` in einem angegebenen Allocator aufruft.|
 
-### <a name="allocate"></a> zuordnen
+### <a name="allocate"></a>Jugend
 
 Eine statische Methode, die mithilfe des vorhandenen Allocator-Parameters Arbeitsspeicher zuweist.
 
@@ -102,13 +102,13 @@ static pointer allocate(Alloc& al, size_type count,
 
 #### <a name="parameters"></a>Parameter
 
-*Al*\
+*Al* -\
 Ein Zuweisungsobjekt.
 
-*Anzahl*\
+*Anzahl* \
 Die Anzahl der zuzuweisenden Elemente.
 
-*Hinweis*\
+*Hinweis* \
 Ein `const_pointer`, der dem Zuweisungsobjekt möglicherweise dabei hilft, die Anforderung von Speicherplatz zu erfüllen. Dazu sucht er die Adresse eines vor der Anforderung zugewiesenen Objekts. Ein NULL-Zeiger wird nicht als Hinweis behandelt.
 
 #### <a name="return-value"></a>Rückgabewert
@@ -119,7 +119,7 @@ Die erste statische Methode gibt `al.allocate(count)` zurück.
 
 Die zweite Methode gibt dann `al.allocate(count, hint)` zurück, wenn der Ausdruck wohlgeformt ist; andernfalls `al.allocate(count)`.
 
-### <a name="construct"></a> Erstellen
+### <a name="construct"></a>Erstellen
 
 Eine statische Methode, die mithilfe eines angegebenen Allocators ein Objekt erstellt.
 
@@ -130,20 +130,20 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 #### <a name="parameters"></a>Parameter
 
-*Al*\
+*Al* -\
 Ein Zuweisungsobjekt.
 
-*PTR*\
+*ptr* -\
 Ein Zeiger auf den Speicherort, in dem das Objekt erstellt werden soll.
 
-*args*\
+*args* \
 Eine Liste von Argumenten, die an den Objektkonstruktor übergeben wird.
 
 #### <a name="remarks"></a>Hinweise
 
 Die statische Memberfunktion ruft `al.construct(ptr, args...)` auf, wenn der Ausdruck wohlgeformt ist; andernfalls wertet es `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)` aus.
 
-### <a name="deallocate"></a> Aufheben der Zuordnung
+### <a name="deallocate"></a>DEALLOCATE
 
 Eine statische Methode, die mithilfe eines angegebenen Allocators eine angegebene Anzahl von Objekten freigibt.
 
@@ -155,13 +155,13 @@ static void deallocate(Alloc al,
 
 #### <a name="parameters"></a>Parameter
 
-*Al*\
+*Al* -\
 Ein Zuweisungsobjekt.
 
-*PTR*\
+*ptr* -\
 Ein Zeiger auf den Anfangsort des Objekts, dessen Zuweisung aufzuheben ist.
 
-*Anzahl*\
+*Anzahl* \
 Die Anzahl von Objekten, deren Zuweisung aufzuheben ist.
 
 #### <a name="remarks"></a>Hinweise
@@ -170,7 +170,7 @@ Diese Methode ruft `al.deallocate(ptr, count)` auf.
 
 Diese Methode löst keine Aktion aus.
 
-### <a name="destroy"></a> Zerstören
+### <a name="destroy"></a>zerstören
 
 Eine statische Methode, die mithilfe eines angegebenen Allocators den Destruktor in einem Objekt aufruft, ohne dass dessen Arbeitsspeicher freigegeben wird.
 
@@ -181,17 +181,17 @@ template <class Uty>
 
 #### <a name="parameters"></a>Parameter
 
-*Al*\
+*Al* -\
 Ein Zuweisungsobjekt.
 
-*PTR*\
+*ptr* -\
 Ein Zeiger auf den Speicherort des Objekts.
 
 #### <a name="remarks"></a>Hinweise
 
 Diese Methode ruft `al.destroy(ptr)` auf, wenn der Ausdruck wohlgeformt ist; andernfalls wertet es `ptr->~Uty()` aus.
 
-### <a name="max_size"></a> max_size
+### <a name="max_size"></a>max_size
 
 Eine statische Methode, die mithilfe eines angegebenen Allocators die maximale Anzahl von zuweisbaren Objekten ermittelt.
 
@@ -201,14 +201,14 @@ static size_type max_size(const Alloc& al);
 
 #### <a name="parameters"></a>Parameter
 
-*Al*\
+*Al* -\
 Ein Zuweisungsobjekt.
 
 #### <a name="remarks"></a>Hinweise
 
 Diese Methode gibt dann `al.max_size()` zurück, wenn der Ausdruck wohlgeformt ist; andernfalls `numeric_limits<size_type>::max()`.
 
-### <a name="select_on_container_copy_construction"></a> select_on_container_copy_construction
+### <a name="select_on_container_copy_construction"></a>select_on_container_copy_construction
 
 Eine statische Methode, die `select_on_container_copy_construction` in einem angegebenen Allocator aufruft.
 
@@ -218,12 +218,12 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 #### <a name="parameters"></a>Parameter
 
-*Al*\
+*Al* -\
 Ein Zuweisungsobjekt.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt `al.select_on_container_copy_construction()`, wenn der wohlgeformt Typ ist; andernfalls *al*.
+Diese Methode gibt `al.select_on_container_copy_construction()` zurück, wenn dieser Typ wohl geformt ist. Andernfalls wird *Al*zurückgegeben.
 
 #### <a name="remarks"></a>Hinweise
 

@@ -70,16 +70,16 @@ helpviewer_keywords:
 - std::numeric_limits [C++], tinyness_before
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
-ms.openlocfilehash: bc9f9bd1157af96ced3c901309f19dcaa5dadab3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5373bd6a99605f5a63fb6aa2ed6de50c12b1c8f1
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246706"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687620"
 ---
-# <a name="numericlimits-class"></a>numeric_limits-Klasse
+# <a name="numeric_limits-class"></a>numeric_limits-Klasse
 
-Die Vorlagenklasse beschreibt arithmetische Eigenschaften der integrierten numerischen Typen.
+Die Klassen Vorlage beschreibt arithmetische Eigenschaften integrierter numerischer Typen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -90,14 +90,14 @@ template <class Type>
 
 ### <a name="parameters"></a>Parameter
 
-*Typ*\
-Der grundlegende Elementdatentyp, dessen Eigenschaften getestet, abgefragt oder festgelegt werden. *Typ* können ebenfalls deklariert werden **const**, **flüchtige**, oder **const Volatile**.
+@No__t_1 *eingeben*
+Der grundlegende Elementdatentyp, dessen Eigenschaften getestet, abgefragt oder festgelegt werden. Der *Typ* kann auch als **konstant**, **flüchtig**oder **konstant (konstant**) deklariert werden.
 
 ## <a name="remarks"></a>Hinweise
 
-Der Header definiert explizite spezialisierungen für die Typen **"wchar_t"** , **"bool"** , **Char**, **signiert Char**, **ohne Vorzeichen Char**, **kurze**, **unsigned short**, **Int**, **ganze Zahl ohne Vorzeichen**, **lang**, **unsigned long**, **"float"** , **doppelte**, **long double**, **long Long**, **long long ohne Vorzeichen**, **char16_t**, und **char32_t**. Für diese expliziten spezialisierungen ist der Member [numeric_limits:: is_specialized](#is_specialized) ist **"true"** , und alle relevanten Elemente haben sinnvolle Werte. Das Programm kann zusätzliche explizite Spezialisierungen bereitstellen. Die meisten Memberfunktionen der Klasse beschreiben oder testen mögliche Implementierungen von **"float"** .
+Der Header definiert explizite Spezialisierungs Typen für die **Typen wchar_t**, **bool**, **char**, **signed char**, **Ganzzahl ohne Vorzeichen char**, **Short**, **Ganzzahl ohne Vorzeichen Short**, **int**, **Ganzzahl ohne Vorzeichen int**, **Long**, **Ganzzahl ohne Vorzeichen long**, **float**, **Double**, **long Double**, **Long Long**, **Ganzzahl ohne Vorzeichen long long**, **char16_t**und **char32_t**. Für diese expliziten Spezialisierungs Elemente ist der Member [Numeric_limits:: is_specialized](#is_specialized) auf **true**und alle relevanten Member haben sinnvolle Werte. Das Programm kann zusätzliche explizite Spezialisierungen bereitstellen. Die meisten Member-Funktionen der-Klasse beschreiben oder testen mögliche Implementierungen von **float**.
 
-Für eine beliebige Spezialisierung gibt es keine Member, die sinnvolle Werte haben. Ein Memberobjekt, das keinen sinnvollen Wert speichert 0 (null) (oder **"false"** ) und gibt eine Memberfunktion, die keinen sinnvollen Wert zurückgibt `Type(0)`.
+Für eine beliebige Spezialisierung gibt es keine Member, die sinnvolle Werte haben. Ein Member-Objekt, das keinen sinnvollen Wert hat, speichert NULL (oder **false**), und eine Member-Funktion, die keinen sinnvollen Wert zurückgibt, gibt `Type(0)` zurück.
 
 ## <a name="static-functions-and-constants"></a>Statische Funktionen und Konstanten
 
@@ -110,7 +110,7 @@ Für eine beliebige Spezialisierung gibt es keine Member, die sinnvolle Werte ha
 |[has_denorm](#has_denorm)|Testet, ob ein Typ denormalisierte Werte unterstützt.|
 |[has_denorm_loss](#has_denorm_loss)|Testet, ob ein Genauigkeitsverlust nicht als ungenaues Ergebnis, sondern als Denormalisierungsverlust erkannt wird.|
 |[has_infinity](#has_infinity)|Testet, ob ein Typ eine Darstellung für positive Unendlichkeit hat.|
-|[has_quiet_NaN](#has_quiet_nan)|Testet, ob ein Typ eine Darstellung einer stillen keine Zahl (NAN) ist, hat das nicht-signalisiert wird.|
+|[has_quiet_NaN](#has_quiet_nan)|Testet, ob ein Typ eine Darstellung für eine quiet not a Number (NaN) aufweist, die nicht signalisiert.|
 |[has_signaling_NaN](#has_signaling_nan)|Testet, ob ein Typ eine Darstellung für eine anzeigenden NaN (Not a Number) hat.|
 |[infinity](#infinity)|Die Darstellung für positive Unendlichkeit für einen Typ, sofern verfügbar.|
 |[is_bounded](#is_bounded)|Testet, ob die Menge von Werten, die ein Typ darstellen kann, endlich ist.|
@@ -119,7 +119,7 @@ Für eine beliebige Spezialisierung gibt es keine Member, die sinnvolle Werte ha
 |[is_integer](#is_integer)|Testet, ob ein Typ eine Ganzzahldarstellung hat.|
 |[is_modulo](#is_modulo)|Testet, ob ein Typ eine Modulodarstellung hat.|
 |[is_signed](#is_signed)|Testet, ob ein Typ eine vorzeichenbehaftete Darstellung hat.|
-|[is_specialized](#is_specialized)|Testet, ob ein Typ eine explizite Spezialisierung hat, die in der Vorlagenklasse `numeric_limits`definiert ist.|
+|[is_specialized](#is_specialized)|Testet, ob ein Typ eine explizite Spezialisierung hat, die in der Klassen Vorlage `numeric_limits` definiert ist.|
 |[lowest](#lowest)|Gibt den kleinsten negativen begrenzten Wert zurück.|
 |[max](#max)|Gibt den größten endlichen Wert für einen Typ zurück.|
 |[max_digits10](#max_digits10)|Gibt die Anzahl von Dezimalstellen zurück, die dazu erforderlich ist sicherzustellen, dass zwei unterschiedliche Werte des Typs unterschiedliche Dezimaldarstellungen haben.|
@@ -136,7 +136,7 @@ Für eine beliebige Spezialisierung gibt es keine Member, die sinnvolle Werte ha
 |[tinyness_before](#tinyness_before)|Testet, ob ein Typ für einen Wert vor dessen Rundung ermitteln kann, ob der Wert zu klein ist, um als normalisierter Wert dargestellt zu werden.|
 |[traps](#traps)|Testet, ob für einen Typ Auffangen, bei dem arithmetischen Ausnahmen gemeldet werden, implementiert ist.|
 
-### <a name="denorm_min"></a> denorm_min
+### <a name="denorm_min"></a>denorm_min
 
 Gibt den kleinsten denormalisierten Wert ungleich 0 zurück.
 
@@ -150,9 +150,9 @@ Der kleinste denormalisierte Wert ungleich 0.
 
 #### <a name="remarks"></a>Hinweise
 
-**long double** ist identisch mit **doppelte** für die C++-Compiler.
+**long Double** ist identisch mit **Double** für den C++ Compiler.
 
-Die Funktion gibt den kleinsten Wert für den Typ an, die die gleiche ist als [min](#min) Wenn [Has_denorm](#has_denorm) ist nicht gleich `denorm_present`.
+Die-Funktion gibt den minimalen Wert für den-Typ zurück, der mit " [Min](#min) " identisch ist, wenn [has_denorm](#has_denorm) nicht gleich `denorm_present` ist.
 
 #### <a name="example"></a>Beispiel
 
@@ -195,7 +195,7 @@ for long double objects is: 4.94066e-324
 0
 ```
 
-### <a name="digits"></a> Ziffern
+### <a name="digits"></a>Treffern
 
 Gibt die Anzahl von Basisziffern zurück, die der Typ ohne Genauigkeitsverlust darstellen kann.
 
@@ -239,7 +239,7 @@ int main( )
 63
 ```
 
-### <a name="digits10"></a> digits10
+### <a name="digits10"></a>digits10
 
 Gibt die Anzahl von Dezimalziffern zurück, die der Typ ohne Genauigkeitsverlust darstellen kann.
 
@@ -283,7 +283,7 @@ int main( )
 The float is; 100000000
 ```
 
-### <a name="epsilon"></a> Epsilon
+### <a name="epsilon"></a>Epsilon
 
 Die Funktion gibt die Differenz zwischen 1 und dem kleinsten Wert größer als 1 zurück, die der Datentyp darstellen kann.
 
@@ -335,7 +335,7 @@ The difference between 1 and the smallest value greater than 1
 for long double objects is: 2.22045e-016
 ```
 
-### <a name="has_denorm"></a> has_denorm
+### <a name="has_denorm"></a>has_denorm
 
 Testet, ob ein Typ denormalisierte Werte unterstützt.
 
@@ -349,7 +349,7 @@ Ein Enumerationswert des Typs **const**`float_denorm_style`, wodurch angegeben w
 
 #### <a name="remarks"></a>Hinweise
 
-Der Member speichert `denorm_present` für ein Gleitkommatyp, der denormalisierte hat Werte effektiv eine Variable Anzahl von Exponentenbits.
+Der Member speichert `denorm_present` für einen Gleit kommatyp, der denormalisierte Werte aufweist, tatsächlich eine Variable Anzahl von Exponentenbits.
 
 #### <a name="example"></a>Beispiel
 
@@ -381,7 +381,7 @@ Whether double objects allow denormalized values: 1
 Whether long int objects allow denormalized values: 0
 ```
 
-### <a name="has_denorm_loss"></a> has_denorm_loss
+### <a name="has_denorm_loss"></a>has_denorm_loss
 
 Testet, ob ein Genauigkeitsverlust nicht als ungenaues Ergebnis, sondern als Denormalisierungsverlust erkannt wird.
 
@@ -427,7 +427,7 @@ Whether double objects can detect denormalized loss: 1
 Whether long int objects can detect denormalized loss: 0
 ```
 
-### <a name="has_infinity"></a> has_infinity
+### <a name="has_infinity"></a>has_infinity
 
 Testet, ob ein Typ eine Darstellung für positive Unendlichkeit hat.
 
@@ -473,7 +473,7 @@ Whether double objects have infinity: 1
 Whether long int objects have infinity: 0
 ```
 
-### <a name="has_quiet_nan"></a> has_quiet_NaN
+### <a name="has_quiet_nan"></a>has_quiet_NaN
 
 Testet, ob ein Typ eine Darstellung für eine stille NaN (Not a Number) hat, also eine nicht anzeigende NaN.
 
@@ -519,7 +519,7 @@ Whether double objects have quiet_NaN: 1
 Whether long int objects have quiet_NaN: 0
 ```
 
-### <a name="has_signaling_nan"></a> has_signaling_NaN
+### <a name="has_signaling_nan"></a>has_signaling_NaN
 
 Testet, ob ein Typ eine Darstellung für eine anzeigenden NaN (Not a Number) hat.
 
@@ -565,7 +565,7 @@ Whether double objects have a signaling_NaN: 1
 Whether long int objects have a signaling_NaN: 0
 ```
 
-### <a name="infinity"></a> unendlich
+### <a name="infinity"></a>unendliche
 
 Die Darstellung für positive Unendlichkeit für einen Typ, sofern verfügbar.
 
@@ -619,7 +619,7 @@ The representation of infinity for type double is: inf
 The representation of infinity for type long double is: inf
 ```
 
-### <a name="is_bounded"></a> is_bounded
+### <a name="is_bounded"></a>is_bounded
 
 Testet, ob die Menge von Werten, die ein Typ darstellen kann, endlich ist.
 
@@ -673,7 +673,7 @@ Whether long int objects have bounded set of representable values: 1
 Whether unsigned char objects have bounded set of representable values: 1
 ```
 
-### <a name="is_exact"></a> is_exact
+### <a name="is_exact"></a>is_exact
 
 Testet, ob die für einen Typ ausgeführten Berechnungen keine Rundungsfehler haben.
 
@@ -727,7 +727,7 @@ Whether long int objects have calculations free of rounding errors: 1
 Whether unsigned char objects have calculations free of rounding errors: 1
 ```
 
-### <a name="is_iec559"></a> is_iec559
+### <a name="is_iec559"></a>is_iec559
 
 Testet, ob ein Typ den IEC 559-Standards entspricht.
 
@@ -777,7 +777,7 @@ Whether int objects conform to iec559 standards: 0
 Whether unsigned char objects conform to iec559 standards: 0
 ```
 
-### <a name="is_integer"></a> is_integer
+### <a name="is_integer"></a>is_integer
 
 Testet, ob ein Typ eine Ganzzahldarstellung hat.
 
@@ -827,7 +827,7 @@ Whether int objects have an integral representation: 1
 Whether unsigned char objects have an integral representation: 1
 ```
 
-### <a name="is_modulo"></a> is_modulo
+### <a name="is_modulo"></a>is_modulo
 
 Testet, ob ein **Typ** eine Modulodarstellung hat.
 
@@ -877,7 +877,7 @@ Whether signed char objects have a modulo representation: 1
 Whether unsigned char objects have a modulo representation: 1
 ```
 
-### <a name="is_signed"></a> is_signed
+### <a name="is_signed"></a>is_signed
 
 Testet, ob ein Typ eine vorzeichenbehaftete Darstellung hat.
 
@@ -927,9 +927,9 @@ Whether signed char objects have a signed representation: 1
 Whether unsigned char objects have a signed representation: 0
 ```
 
-### <a name="is_specialized"></a> is_specialized
+### <a name="is_specialized"></a>is_specialized
 
-Testet, ob ein Typ eine explizite Spezialisierung hat, die in der Vorlagenklasse `numeric_limits`definiert ist.
+Testet, ob ein Typ eine explizite Spezialisierung hat, die in der Klassen Vorlage `numeric_limits` definiert ist.
 
 ```cpp
 static constexpr bool is_specialized = false;
@@ -937,11 +937,11 @@ static constexpr bool is_specialized = false;
 
 #### <a name="return-value"></a>Rückgabewert
 
-**TRUE**, wenn der Typ eine explizite Spezialisierung hat, die in der Vorlagenklasse definiert ist; **FALSE**, wenn nicht.
+**true** , wenn für den Typ eine explizite Spezialisierung in der Klassen Vorlage definiert ist. **false** , wenn nicht.
 
 #### <a name="remarks"></a>Hinweise
 
-Alle skalaren Typen außer Zeiger haben eine explizite Spezialisierung für Vorlagenklasse `numeric_limits`.
+Alle skalaren Typen außer Zeiger verfügen über eine explizite Spezialisierung, die für Klassen Vorlagen `numeric_limits` definiert ist.
 
 #### <a name="example"></a>Beispiel
 
@@ -981,7 +981,7 @@ Whether int objects have an explicit specialization in the class: 1
 Whether int* objects have an explicit specialization in the class: 0
 ```
 
-### <a name="lowest"></a> Niedrigste
+### <a name="lowest"></a>gering
 
 Gibt den kleinsten negativen begrenzten Wert zurück.
 
@@ -995,9 +995,9 @@ Gibt den kleinsten negativen begrenzten Wert zurück.
 
 #### <a name="remarks"></a>Hinweise
 
-Gibt den kleinsten negativen begrenzten Wert für den Typ (Dies ist in der Regel `min()` für ganzzahlige Typen und `-max()` für Gleitkomma-Datentypen). Der Rückgabewert ist aussagekräftig Wenn `is_bounded` ist **"true"** .
+Gibt den negativen endlichen Wert für den Typ zurück (der normalerweise `min()` für ganzzahlige Typen und `-max()` für Gleit Komma Typen ist). Der Rückgabewert ist sinnvoll, wenn `is_bounded` **true**ist.
 
-### <a name="max"></a> Max.
+### <a name="max"></a>Max
 
 Gibt den größten endlichen Wert für einen Typ zurück.
 
@@ -1011,7 +1011,7 @@ Der größte endliche Wert für einen Typ.
 
 #### <a name="remarks"></a>Hinweise
 
-Der endliche Höchstwert ist INT_MAX für Typ **Int** und FLT_MAX für Typ **"float"** . Der Rückgabewert ist aussagekräftig, wenn [is_bounded](#is_bounded) **wahr** ist.
+Der maximale Endwert ist INT_MAX für den Typ " **int** " und "FLT_MAX" für Typ " **float**". Der Rückgabewert ist aussagekräftig, wenn [is_bounded](#is_bounded) **wahr** ist.
 
 #### <a name="example"></a>Beispiel
 
@@ -1039,7 +1039,7 @@ int main() {
 }
 ```
 
-### <a name="max_digits10"></a> max_digits10
+### <a name="max_digits10"></a>max_digits10
 
 Gibt die Anzahl von Dezimalstellen zurück, die dazu erforderlich ist sicherzustellen, dass zwei unterschiedliche Werte des Typs unterschiedliche Dezimaldarstellungen haben.
 
@@ -1055,7 +1055,7 @@ Gibt die Anzahl von Dezimalstellen zurück, die dazu erforderlich ist sicherzust
 
 Der Member speichert die Anzahl von Dezimalstellen, die dazu erforderlich ist sicherzustellen, dass zwei unterschiedliche Werte des Typs unterschiedliche Dezimaldarstellungen haben.
 
-### <a name="max_exponent"></a> max_exponent
+### <a name="max_exponent"></a>max_exponent
 
 Gibt den größten positiven ganzzahligen Exponenten zurück, den der Gleitkommatyp als einen endlichen Wert darstellen kann, wenn eine Basis mit diesem Exponenten potenziert wird.
 
@@ -1101,7 +1101,7 @@ The maximum radix-based exponent for type double is:  1024
 The maximum radix-based exponent for type long double is:  1024
 ```
 
-### <a name="max_exponent10"></a> max_exponent10
+### <a name="max_exponent10"></a>max_exponent10
 
 Gibt den größten positiven ganzzahligen Exponenten zurück, den der Gleitkommatyp als einen endlichen Wert darstellen kann, wenn eine Basis von zehn mit diesem Exponenten potenziert wird.
 
@@ -1147,7 +1147,7 @@ The maximum base 10 exponent for type double is:  308
 The maximum base 10 exponent for type long double is:  308
 ```
 
-### <a name="min"></a> Min.
+### <a name="min"></a>man
 
 Gibt den kleinsten normalisierten Wert für einen Typ zurück.
 
@@ -1161,7 +1161,7 @@ Der kleinste normalisierte Wert für einen Typ.
 
 #### <a name="remarks"></a>Hinweise
 
-Der normalisierte Mindestwert ist INT_MIN für Typ **Int** und FLT_MIN für Typ **"float"** . Der Rückgabewert ist aussagekräftig Wenn [Is_bounded](#is_bounded) ist **"true"** oder, wenn [Is_signed](#is_signed) ist **"false"** .
+Der minimale normalisierte Wert ist INT_MIN für den Typ **int** und FLT_MIN für den Typ **float**. Der Rückgabewert ist aussagekräftig, wenn [is_bounded](#is_bounded) den Wert **true** hat oder wenn [is_signed](#is_signed) **false**ist.
 
 #### <a name="example"></a>Beispiel
 
@@ -1197,7 +1197,7 @@ The minimum value for type int is:  -2147483648
 The minimum value for type short int is:  -32768
 ```
 
-### <a name="min_exponent"></a> min_exponent
+### <a name="min_exponent"></a>min_exponent
 
 Gibt den größten negativen ganzzahligen Exponenten zurück, den der Gleitkommatyp als einen endlichen Wert darstellen kann, wenn eine Basis mit diesem Exponenten potenziert wird.
 
@@ -1243,7 +1243,7 @@ The minimum radix-based exponent for type double is:  -1021
 The minimum radix-based exponent for type long double is:  -1021
 ```
 
-### <a name="min_exponent10"></a> min_exponent10
+### <a name="min_exponent10"></a>min_exponent10
 
 Gibt den größten negativen ganzzahligen Exponenten zurück, den der Gleitkommatyp als einen endlichen Wert darstellen kann, wenn eine Basis von zehn mit diesem Exponenten potenziert wird.
 
@@ -1289,7 +1289,7 @@ The minimum base 10 exponent for type double is:  -307
 The minimum base 10 exponent for type long double is:  -307
 ```
 
-### <a name="quiet_nan"></a> quiet_NaN
+### <a name="quiet_nan"></a>quiet_NaN
 
 Gibt die Darstellung einer stillen NaN (Not a Number) für den Typ zurück.
 
@@ -1335,7 +1335,7 @@ The quiet NaN for type int is:  0
 The quiet NaN for type long double is:  1.#QNAN
 ```
 
-### <a name="radix"></a> Basis
+### <a name="radix"></a>Basis
 
 Gibt die ganzzahlige Basis (als Radix bezeichnet) zurück, die für die Darstellung eines Typs verwendet wird.
 
@@ -1381,7 +1381,7 @@ The base for type int is:  2
 The base for type long double is:  2
 ```
 
-### <a name="round_error"></a> round_error
+### <a name="round_error"></a>round_error
 
 Gibt den größten Rundungsfehler für den Typ zurück.
 
@@ -1423,7 +1423,7 @@ The maximum rounding error for type int is:  0
 The maximum rounding error for type long double is:  0.5
 ```
 
-### <a name="round_style"></a> round_style
+### <a name="round_style"></a>round_style
 
 Gibt einen Wert zurück, der die verschiedenen Methoden beschreibt, die eine Implementierung für die Rundung eines Gleitkommawerts auf einen ganzzahligen Wert auswählen kann.
 
@@ -1470,7 +1470,7 @@ The rounding style for a double type is now: 1
 The rounding style for an int type is: 0
 ```
 
-### <a name="signaling_nan"></a> signaling_NaN
+### <a name="signaling_nan"></a>signaling_NaN
 
 Gibt die Darstellung einer anzeigenden NaN (Not a Number) für den Typ zurück.
 
@@ -1510,7 +1510,7 @@ int main( )
 }
 ```
 
-### <a name="tinyness_before"></a> tinyness_before
+### <a name="tinyness_before"></a>tinyness_before
 
 Testet, ob ein Typ für einen Wert vor dessen Rundung ermitteln kann, ob der Wert zu klein ist, um als normalisierter Wert dargestellt zu werden.
 
@@ -1520,7 +1520,7 @@ static constexpr bool tinyness_before = false;
 
 #### <a name="return-value"></a>Rückgabewert
 
-**"true"** Wenn der Typ kleine Werte vor dessen Rundung; erkennen kann **"false"** Wenn dies nicht möglich.
+**true** , wenn der Typ vor dem runden kleine Werte erkennen kann. **false** , wenn dies nicht möglich ist.
 
 #### <a name="remarks"></a>Hinweise
 
@@ -1560,7 +1560,7 @@ Whether long int types can detect tinyness before rounding: 0
 Whether unsigned char types can detect tinyness before rounding: 0
 ```
 
-### <a name="traps"></a> Traps
+### <a name="traps"></a>Speichern
 
 Testet, ob für einen Typ Auffangen, bei dem arithmetischen Ausnahmen gemeldet werden, implementiert ist.
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 96e8588e72e864d5324e406859e5a39053a46ccf
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a322e517a4adb51879fc2a60f6c08f6561276de9
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449131"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689506"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -20,16 +20,16 @@ Definiert verschiedene Typen und Funktionen, die grundlegend für den Umgang mit
 
 ## <a name="requirements"></a>Anforderungen
 
-**Kopfzeile**: \<IOS->
+**Header**: \<ios >
 
 **Namespace:** std
 
 > [!NOTE]
-> Die \<IOS-> Bibliothek verwendet `#include <iosfwd>` die-Anweisung.
+> Die \<ios > Bibliothek verwendet die `#include <iosfwd>`-Anweisung.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine große Gruppe von Funktionen sind Manipulatoren. Ein in \<ios> deklarierter Manipulator ändert die Werte, die im Argumentobjekt der Klasse [ios_base](../standard-library/ios-base-class.md) gespeichert sind. Andere Manipulatoren führen Aktionen für Streams aus, die von Objekten eines Typs gesteuert werden, der von dieser Klasse abgeleitet wurde, z.B. eine Spezialisierung einer der Vorlagenklassen [basic_istream](../standard-library/basic-istream-class.md) oder [basic_ostream](../standard-library/basic-ostream-class.md). Beispielsweise löscht [noskipws](../standard-library/ios-functions.md#noskipws)(**Str**) das formatflag `ios_base::skipws` im-Objekt `str`, das einen dieser Typen aufweisen kann.
+Eine große Gruppe von Funktionen sind Manipulatoren. Ein in \<ios> deklarierter Manipulator ändert die Werte, die im Argumentobjekt der Klasse [ios_base](../standard-library/ios-base-class.md) gespeichert sind. Andere Manipulatoren führen Aktionen für Streams aus, die von Objekten eines Typs gesteuert werden, der von dieser Klasse abgeleitet wird, z. b. eine Spezialisierung einer der Klassen Vorlagen [basic_istream](../standard-library/basic-istream-class.md) oder [basic_ostream](../standard-library/basic-ostream-class.md). [Noskipws](../standard-library/ios-functions.md#noskipws)(**Str**) löscht z. b. das formatflag `ios_base::skipws` im Objekt `str`, das von einem dieser Typen sein kann.
 
 Aufgrund von speziellen Einfüge- und Extraktionsvorgängen für die aus `ios_base` abgeleiteten Klassen können Sie einen Manipulator auch aufrufen, indem Sie ihn in einen Ausgabestream einfügen oder ihn aus einem Eingabestream extrahieren. Beispiel:
 
@@ -95,8 +95,8 @@ Ruft [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**) auf.
 
 |||
 |-|-|
-|[basic_ios](../standard-library/basic-ios-class.md)|Die Vorlagenklasse beschreibt die Speicher- und Memberfunktionen, die Eingabestreams (der Vorlagenklasse [basic_istream](../standard-library/basic-istream-class.md)) und Ausgabestreams (der Vorlagenklasse[ basic_ostream](../standard-library/basic-ostream-class.md)) gemeinsam sind, die von den Vorlagenparametern abhängen.|
-|[fpos](../standard-library/fpos-class.md)|Die Vorlagenklasse beschreibt ein Objekt, das alle Informationen, die zum Wiederherstellen eines beliebigen Dateipositionsindikators innerhalb eines Streams erforderlich sind, speichern kann.|
+|[basic_ios](../standard-library/basic-ios-class.md)|Die Klassen Vorlage beschreibt die Speicher-und Element Funktionen, die sowohl für die Eingabedaten Ströme (der Klassen Vorlage [basic_istream](../standard-library/basic-istream-class.md)) als auch für die Ausgabestreams (der Klassen Vorlage [basic_ostream](../standard-library/basic-ostream-class.md)), die von den Vorlagen Parametern abhängen, gemeinsam|
+|[fpos](../standard-library/fpos-class.md)|Die Klassen Vorlage beschreibt ein Objekt, das alle Informationen speichern kann, die zum Wiederherstellen eines beliebigen Datei Positions Indikators innerhalb eines Streams benötigt werden.|
 |[ios_base](../standard-library/ios-base-class.md)|Die Klasse beschreibt die Speicher- und Memberfunktionen, die Eingabe- und Ausgabestreams gemeinsam sind, die nicht von den Vorlagenparametern abhängen.|
 
 ## <a name="see-also"></a>Siehe auch

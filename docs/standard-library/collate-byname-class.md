@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - collate_byname class
 ms.assetid: 3dc380df-867c-4763-b60e-ba62a8e63ca7
-ms.openlocfilehash: b8ed428da05e706796a981b8ca9d601033156c6f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3e9a256ac7bdb5f6d077746fe2a08990ed41e931
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458621"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688273"
 ---
-# <a name="collatebyname-class"></a>collate_byname-Klasse
+# <a name="collate_byname-class"></a>collate_byname-Klasse
 
-Eine abgeleitete Vorlagenklasse, die ein Objekt beschreibt, das als Sortierungsfacet eines angegebenen Gebietsschemas dienen kann, sodass für einen kulturellen Bereich spezifische Informationen über Konventionen zum Sortieren von Zeichenfolgen abgerufen werden können.
+Eine abgeleitete Klassen Vorlage, die ein Objekt beschreibt, das als COLLATE-Facette eines bestimmten Gebiets Schemas fungieren kann. Dies ermöglicht das Abrufen von Informationen, die für einen Kulturbereich in Bezug auf Zeichen folgen Sortier Konventionen gelten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,15 +39,15 @@ protected:
 
 ### <a name="parameters"></a>Parameter
 
-*_Locname*\
+*_Locname* \
 Ein benanntes Gebietsschema.
 
-*_Refs*\
+*_Refs* \
 Eine initiale Verweisanzahl.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt ein Objekt, das als [Gebietsschemafacet](../standard-library/locale-class.md#facet_class) des Typs [collate](../standard-library/collate-class.md#collate)\<CharType> dienen kann. Das Verhalten wird durch das [benannte](../standard-library/locale-class.md#name) Gebiets Schema *_Locname*festgelegt. Jeder Konstruktor initialisiert sein Basisobjekt mit [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`).
+In der Klassen Vorlage [wird ein Objekt](../standard-library/locale-class.md#facet_class) beschrieben, das als Gebiets Schema des Typs [COLLATE](../standard-library/collate-class.md#collate) \<CharType > fungieren kann. Das Verhalten wird durch das [benannte](../standard-library/locale-class.md#name) Gebiets Schema *_Locname*festgelegt. Jeder Konstruktor initialisiert sein Basisobjekt mit [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,4 +57,4 @@ Die Vorlagenklasse beschreibt ein Objekt, das als [Gebietsschemafacet](../standa
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

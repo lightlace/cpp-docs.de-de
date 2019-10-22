@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-ms.openlocfilehash: 73730e0a4a22e7f5e63809cc2c1603cbda1ab596
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 035e5153b4e4c84743a64bcc9cec24920a6a0336
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449663"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688361"
 ---
-# <a name="cachechunklist-class"></a>cache_chunklist-Klasse
+# <a name="cache_chunklist-class"></a>cache_chunklist-Klasse
 
 Definiert eine [Blockzuweisung](../standard-library/allocators-header.md), die Speicherblöcke einheitlicher Größe zuweist und freigibt.
 
@@ -32,11 +32,11 @@ class cache_chunklist
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*Sz*|Die Anzahl der zuzuordnenden Elemente des Arrays.|
+|*RT*|Die Anzahl der zuzuordnenden Elemente des Arrays.|
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Vorlagen Klasse verwendet den **New-Operator** , um Segmente von unformatierten Arbeitsspeicher zuzuordnen, und subzuordnende Blöcke, um bei Bedarf Speicher für einen Speicherblock zuzuweisen. Er speichert frei zugeordnete Speicherblöcke in einer separaten freien Liste für jeden Block und verwendet den **Operator Delete** zum Aufheben der Zuordnung eines Segments, wenn kein Arbeitsspeicher Block verwendet wird.
+Diese Klassen Vorlage verwendet den **New-Operator** , um Segmente von unformatierten Arbeitsspeicher zuzuordnen, und subzuordnende Blöcke, um bei Bedarf Speicher für einen Speicherblock zuzuweisen. Er speichert frei zugeordnete Speicherblöcke in einer separaten freien Liste für jeden Block und verwendet den **Operator Delete** zum Aufheben der Zuordnung eines Segments, wenn kein Arbeitsspeicher Block verwendet wird.
 
 Jeder Speicherblock enthält *SZ* -Bytes des verwendbaren Speichers und einen Zeiger auf den Block, zu dem er gehört. Jeder Block enthält `Nelts` Speicherblöcke, drei Zeiger, einen int-Wert und die Daten, die **Operator new** und **Operator Delete** erfordern.
 
