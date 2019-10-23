@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::wstring_convert [C++], converted
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
-ms.openlocfilehash: 35689f79f8987cb55c4578869369f35d8656faec
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ce03510bec05f3e5e770e930759648c9add0387f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450901"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684052"
 ---
-# <a name="wstringconvert-class"></a>wstring_convert-Klasse
+# <a name="wstring_convert-class"></a>wstring_convert-Klasse
 
-Die Vorlagenklasse `wstring_convert` führt Konvertierungen zwischen einer breiten Zeichenfolge und einer Bytezeichenfolge durch.
+Die Klassen Vorlagen `wstring_convert` führt Konvertierungen zwischen einer breiten Zeichenfolge und einer Byte Zeichenfolge aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,17 +42,17 @@ class wstring_convert
 
 ### <a name="parameters"></a>Parameter
 
-*Codecvt*\
+*Codecvt* -\
 Das Facet [locale](../standard-library/locale-class.md), das das Konvertierungsobjekt darstellt.
 
-*Elem*\
+*Elem* -\
 Der Breitzeichen-Elementtyp.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt ein Objekt, das Konvertierungen zwischen breiten Zeichenfolgenobjekten der Klasse `std::basic_string<Elem>` und Bytezeichenfolgenobjekten der `std::basic_string<char>` (auch bekannt als `std::string`) steuert. Die Vorlagenklasse definiert die Typen `wide_string` und `byte_string` als Synonyme für diese beiden Typen. Konvertierung zwischen einer Sequenz von `Elem`-Werten (in einem `wide_string`-Objekt gespeichert) und Multibytesequenzen (in einem `byte_string`-Objekt gespeichert) erfolgt durch ein Objekt der Klasse `Codecvt<Elem, char, std::mbstate_t>`, das die Anforderungen des Facets `std::codecvt<Elem, char, std::mbstate_t>` für die Standardcodekonvertierung erfüllt.
+In der Klassen Vorlage wird ein Objekt beschrieben, das Konvertierungen zwischen breiten Zeichen folgen Objekten der Klasse `std::basic_string<Elem>` und Byte Zeichen folgen Objekten der Klasse `std::basic_string<char>` (auch als `std::string` bezeichnet) steuert. Die Klassen Vorlage definiert die Typen `wide_string` und `byte_string` als Synonyme für diese beiden Typen. Konvertierung zwischen einer Sequenz von `Elem`-Werten (in einem `wide_string`-Objekt gespeichert) und Multibytesequenzen (in einem `byte_string`-Objekt gespeichert) erfolgt durch ein Objekt der Klasse `Codecvt<Elem, char, std::mbstate_t>`, das die Anforderungen des Facets `std::codecvt<Elem, char, std::mbstate_t>` für die Standardcodekonvertierung erfüllt.
 
-Ein Objekt dieser Vorlagenklasse speichert:
+Ein Objekt dieser Klassen Vorlagen Speicher:
 
 - Eine bei Fehlern anzuzeigende Bytezeichenfolge
 
@@ -141,7 +141,7 @@ wide_string from_bytes(const char* first, const char* last);
 |*ptr*|Die auf NULL endende Zeichenfolge im C-Stil der zu konvertierenden Zeichen.|
 |*BSTR*|Der zu konvertierende [byte_string](#byte_string).|
 |*erstes*|Das erste Zeichen in einem Bereich von zu konvertierenden Zeichen.|
-|*last*|Das letzte Zeichen in einem Bereich von zu konvertierenden Zeichen.|
+|*letzten*|Das letzte Zeichen in einem Bereich von zu konvertierenden Zeichen.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -210,7 +210,7 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 |*Wptr*|Die auf NULL endende Sequenz im C-Stil, die bei `wptr`beginnt und konvertiert werden soll.|
 |*WSTR*|Die zu konvertierende Zeichenfolge vom Typ [wide_string](#wide_string).|
 |*erstes*|Das erste Element in dem zu konvertierenden Elementbereich.|
-|*last*|Das letzte Element in dem zu konvertierenden Elementbereich.|
+|*letzten*|Das letzte Element in dem zu konvertierenden Elementbereich.|
 
 ### <a name="remarks"></a>Hinweise
 

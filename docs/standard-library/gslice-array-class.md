@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - gslice_array class
 ms.assetid: ad1b4514-b14a-4baf-a293-d5a8e8674c75
-ms.openlocfilehash: 37c54d09fdfe920c832c4baa7984fee4e090d04a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 68ce774128395e941ff80580a02c4ee28a74a4e4
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448917"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689595"
 ---
-# <a name="gslicearray-class"></a>gslice_array-Klasse
+# <a name="gslice_array-class"></a>gslice_array-Klasse
 
-Eine interne zusätzliche Vorlagenklasse, die allgemeine slice-Objekte (Segmente) unterstützt, indem sie Vorgänge zwischen Teilmengenarrays bereitstellt, die durch das allgemeine Segment eines valarray-Objekts definiert sind.
+Eine interne, zusätzliche Klassen Vorlage, die allgemeine Slice-Objekte unterstützt, indem Vorgänge zwischen Teilmengen Arrays bereitgestellt werden, die durch das allgemeine Slice eines Valarray-Objekts definiert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,15 +54,15 @@ public:
 
 ## <a name="remarks"></a>Hinweise
 
-Die Klasse beschreibt ein Objekt, das einen Verweis auf ein Objekt `va` der Klasse [Valarray](../standard-library/valarray-class.md) **\<Type >** speichert, zusammen mit einem `gs` Objekt der Klasse [gslice](../standard-library/gslice-class.md) , das die Reihenfolge der Elemente beschreibt, aus denen Sie auswählen können. Das `valarray<Type>` -Objekt.
+Die Klasse beschreibt ein Objekt, das einen Verweis auf ein Objekt `va` der Klasse [Valarray](../standard-library/valarray-class.md)  **\<Type >** zusammen mit einem Objekt `gs` der Klasse [gslice](../standard-library/gslice-class.md) speichert, das die Reihenfolge der Elemente beschreibt, die aus dem `valarray<Type>` Objekt ausgewählt werden sollen.
 
-Sie erstellen ein `gslice_array<Type>` -Objekt nur, indem Sie einen Ausdruck der [Form&#91;VA&#93;GS](../standard-library/valarray-class.md#op_at)schreiben. Die Member-Funktionen der-Klasse Gslice_array Verhalten sich dann wie die entsprechenden Funktions `valarray<Type>`Signaturen, die für definiert sind, mit dem Unterschied, dass nur die Sequenz ausgewählter Elemente betroffen ist.
+Sie erstellen nur dann ein `gslice_array<Type>` Objekt, indem Sie einen Ausdruck der [Form&#91;VA&#93;GS](../standard-library/valarray-class.md#op_at)schreiben. Die Element Funktionen der Klasse Gslice_array Verhalten sich dann wie die entsprechenden Funktions Signaturen, die für `valarray<Type>` definiert sind, mit dem Unterschied, dass nur die Reihenfolge der ausgewählten Elemente betroffen ist.
 
-Die Vorlagenklasse wird indirekt durch bestimmte valarray-Operationen erstellt und kann nicht direkt in der Anwendung verwendet werden. Eine interne auxiliary-Vorlagenklasse wird stattdessen von dem Segment-Indexoperator verwendet:
+Die Klassen Vorlage wird indirekt von bestimmten Valarray-Vorgängen erstellt und kann nicht direkt im Programm verwendet werden. Stattdessen wird eine interne Erweiterungs Klassen Vorlage vom Operator "Slice" verwendet:
 
 `gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` (**constgslice&** ).
 
-Sie erstellen ein `gslice_array<Type>` -Objekt nur, indem Sie einen Ausdruck des `va[gsl]`Formulars für einen Slice `gsl` eines Valarray `va`-Objekts schreiben. Die Member-Funktionen der-Klasse Gslice_array Verhalten sich dann wie die entsprechenden Funktions `valarray<Type>`Signaturen, die für definiert sind, mit dem Unterschied, dass nur die Sequenz ausgewählter Elemente betroffen ist. Die Sequenz, die vom gslice_array gesteuert wird, wird durch die drei Parameter des Segmentkonstruktors, den Index des ersten Elements im ersten Segment und die Anzahl der Elemente in jedem Segment und den Abstand zwischen den Elementen in jedem Segment definiert.
+Sie erstellen nur dann ein `gslice_array<Type>` Objekt, indem Sie einen Ausdruck der Form `va[gsl]` schreiben, für einen Slice `gsl` von Valarray-`va`. Die Element Funktionen der Klasse Gslice_array Verhalten sich dann wie die entsprechenden Funktions Signaturen, die für `valarray<Type>` definiert sind, mit dem Unterschied, dass nur die Reihenfolge der ausgewählten Elemente betroffen ist. Die Sequenz, die vom gslice_array gesteuert wird, wird durch die drei Parameter des Segmentkonstruktors, den Index des ersten Elements im ersten Segment und die Anzahl der Elemente in jedem Segment und den Abstand zwischen den Elementen in jedem Segment definiert.
 
 Im folgenden Beispiel:
 
@@ -89,4 +89,4 @@ Im Beispiel für [gslice::gslice](../standard-library/gslice-class.md#gslice) wi
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

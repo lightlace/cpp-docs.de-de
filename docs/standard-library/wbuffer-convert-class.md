@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - wbuffer_convert class
 ms.assetid: 4a56f9bf-4138-4612-b516-525fea401358
-ms.openlocfilehash: d19abf74bd9f794bc39ce04e5ed22e360cde75b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8de0091af93120290105ce7603fae5acff257b76
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410888"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688540"
 ---
-# <a name="wbufferconvert-class"></a>wbuffer_convert-Klasse
+# <a name="wbuffer_convert-class"></a>wbuffer_convert-Klasse
 
 Beschreibt einen Streampuffer, der die Übertragung von Elementen in einen bzw. aus einem Streampuffer steuert.
 
@@ -35,11 +35,11 @@ class wbuffer_convert
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt einen Streampuffer, der die Übertragung der Elemente des Typs `_Elem` beschreibt, dessen Zeichenmerkmale durch die Klasse `Traits` beschrieben werden, und zwar zu und von einem Bytestreampuffer des Typs `std::streambuf`.
+Diese Klassen Vorlage beschreibt einen Streampuffer, der die Übertragung von Elementen des Typs `_Elem` steuert, dessen Zeichen Merkmale durch die-Klasse `Traits` und von einem bytestreampuffer des Typs `std::streambuf` beschrieben werden.
 
 Konvertierung zwischen einer Sequenz von `Elem`-Werten und Multibytesequenzen erfolgt durch ein Objekt der Klasse `Codecvt<Elem, char, std::mbstate_t>`, das die Anforderungen des Facets `std::codecvt<Elem, char, std::mbstate_t>` für die Standardcodekonvertierung erfüllt.
 
-Ein Objekt dieser Vorlagenklasse speichert:
+Ein Objekt dieser Klassen Vorlagen Speicher:
 
 - Ein Zeiger auf den entsprechenden zugrunde liegenden Bytestreampuffer
 

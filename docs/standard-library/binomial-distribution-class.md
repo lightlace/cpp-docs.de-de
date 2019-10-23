@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: 525e448a130f33df478627f7ae7ca682ff4a556d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e3d2d02bc6781ed447d7583ce15a60e983251350
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448046"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688370"
 ---
-# <a name="binomialdistribution-class"></a>binomial_distribution-Klasse
+# <a name="binomial_distribution-class"></a>binomial_distribution-Klasse
 
 Generiert eine binomiale Verteilung.
 
@@ -71,22 +71,22 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*Inttype*\
-Der ganzzahlige Ergebnistyp, der Standardwert ist **int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*Inttype* -\
+Der ganzzahlige Ergebnistyp, der Standardwert ist **int**. Informationen zu möglichen Typen finden Sie unter [\<random >](../standard-library/random.md).
 
-*URNG*\
-Die einheitliche Zufallszahlengenerator-Engine. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*URNG* \
+Die einheitliche Zufallszahlengenerator-Engine. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagen Klasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten ganzzahligen Typs produziert. Wenn kein entsprechend der diskreten Wahrscheinlichkeitsfunktion der binomialen Verteilung verteilter Wert bereitgestellt wird, geben Sie **int** ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Klassen Vorlage beschreibt eine Verteilung, die Werte eines benutzerdefinierten ganzzahligen Typs produziert. Wenn kein entsprechend der diskreten Wahrscheinlichkeitsfunktion der binomialen Verteilung verteilter Wert bereitgestellt wird, geben Sie **int** ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
 
-Die Eigenschaftenmember `t()` und `p()` geben die aktuell gespeicherten Verteilungsparameter Werte *t* bzw. *p* zurück.
+Die Eigenschaftenmember `t()` und `p()` die aktuell gespeicherten Verteilungsparameter Werte *t* bzw. *p* zurückgeben.
 
 Das Eigenschaftsmember `param()` gibt das aktuell gespeicherte Verteilungspaket `param_type` zurück oder legt es fest.
 
@@ -242,13 +242,13 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*Bund*\
+*t* \
 Der `t`-Verteilungsparameter.
 
-*cker*\
+*p* -\
 Der `p`-Verteilungsparameter.
 
-*parm*\
+*\ für* den
 Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.
 
 ### <a name="remarks"></a>Hinweise
@@ -277,13 +277,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*Bund*\
+*t* \
 Der `t`-Verteilungsparameter.
 
-*cker*\
+*p* -\
 Der `p`-Verteilungsparameter.
 
-*Richting*\
+*Rechte* \
 Das mit diesem `param_type`-Objekt zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise

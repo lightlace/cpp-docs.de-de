@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_byname class
 ms.assetid: b63b6c04-f60c-47b9-8e30-a933f24a8ffb
-ms.openlocfilehash: 62781d575d6b9dda3f3c1e2a744091221c6f9584
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b48f01126eba7082230fc5e19150d42d1dfad2f3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459854"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688292"
 ---
-# <a name="codecvtbyname-class"></a>codecvt_byname-Klasse
+# <a name="codecvt_byname-class"></a>codecvt_byname-Klasse
 
-Eine abgeleitete Vorlagenklasse, die ein Objekt beschreibt, das als Sortierungsfacet eines angegebenen Gebietsschemas dienen kann, sodass für einen kulturellen Bereich spezifische Informationen über Konvertierungen abgerufen werden können.
+Eine abgeleitete Klassen Vorlage, die ein Objekt beschreibt, das als COLLATE-Facette eines bestimmten Gebiets Schemas fungieren kann. Dies ermöglicht das Abrufen von Informationen, die für einen kulturellen Bereich in Bezug auf Konvertierungen spezifisch sind
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,10 +43,10 @@ protected:
 
 ### <a name="parameters"></a>Parameter
 
-*_Locname*\
+*_Locname* \
 Ein benanntes Gebietsschema.
 
-*_Refs*\
+*_Refs* \
 Eine initiale Verweisanzahl.
 
 ## <a name="remarks"></a>Hinweise
@@ -63,4 +63,4 @@ Das Verhalten wird durch das benannte Gebiets Schema *_Locname*festgelegt. Jeder
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)
