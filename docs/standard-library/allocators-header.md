@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-ms.openlocfilehash: 5de872080bc02f4654f53d94928b5e44dbc36816
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3619f3810f167fef291ad3def4a2b94f9a6b9b1a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453695"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688480"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -33,7 +33,7 @@ Knotenbasierte Container in der C++-Standardbibliothek (std::list, std::set, std
 
 Die Allocatorvorlagen funktionieren korrekt, wenn sie mit nicht knotenbasierten Containern (wie z.B. die C++-Standardbibliothekcontainer std::vector std::deque und std::basic_string) verwendet werden. Diese führen aber nicht zu einer Leistungsverbesserung im Vergleich zum Standardallocator.
 
-Ein Allocator ist eine Vorlagenklasse, die ein Objekt beschreibt, das Speicherbelegung und -freigaben von Objekten und Arrays von Objekten eines angegeben Typs verwaltet. Zuweisungsobjekte werden in mehreren Containervorlagenklassen in der C++-Standardbibliothek verwendet.
+Ein Allocator ist eine Klassen Vorlage, die ein Objekt beschreibt, das die Speicher Belegung und-Freigabe für Objekte und Arrays von Objekten eines bestimmten Typs verwaltet. Zuordnerobjekte werden von mehreren Containerklassen Vorlagen in der C++ Standard Bibliothek verwendet.
 
 Allocators sind alle Vorlagen folgenden Typs:
 
@@ -42,7 +42,7 @@ template<class Type>
 class allocator;
 ```
 
-in denen das Vorlagenargument `Type` der von der Allocatorinstanz verwaltete Typ ist. Die C++-Standardbibliothek stellt einen Standardallocator, Vorlagenklasse [allocator](../standard-library/allocator-class.md), bereit, der in [\<memory>](../standard-library/memory.md) definiert ist. Der Header \<allocators> stellt folgende Allocators bereit:
+in denen das Vorlagenargument `Type` der von der Allocatorinstanz verwaltete Typ ist. Die C++ Standardbibliothek stellt eine Standard Zuweisung, Klassen Vorlagen [Zuweisung](../standard-library/allocator-class.md), bereit, die in [\<memory >](../standard-library/memory.md)definiert ist. Der Header \<allocators> stellt folgende Allocators bereit:
 
 - [allocator_newdel](../standard-library/allocator-newdel-class.md)
 
@@ -77,7 +77,7 @@ std::list<int, alloc<int> > _List1;
 
 „_Lst1“ weist Knoten mit `allocator_chunklist` und dem Synchronisierungsfilter [sync_per_thread](../standard-library/sync-per-thread-class.md) zu.
 
-Eine Blockzuweisung ist ein Cache oder ein Filter. Ein Cache ist eine Vorlagenklasse, die ein Argument des Typs std::size_t akzeptiert. Er definiert eine Blockzuweisung, die Speicherblöcke einheitlicher Größe zuweist und freigibt. Er muss mithilfe des **New**-Operators Speicher abrufen, er muss jedoch keinen separaten Operator **New** für jeden Block erstellen. Möglicherweise stellt er Unterzuordnungen aus einem größeren Block her, oder er zwischenspeichert möglicherweise freigegebene Blöcke für eine darauffolgende Freigabe.
+Eine Blockzuweisung ist ein Cache oder ein Filter. Ein Cache ist eine Klassen Vorlage, die ein Argument vom Typ Std:: size_t annimmt. Er definiert eine Blockzuweisung, die Speicherblöcke einheitlicher Größe zuweist und freigibt. Er muss mithilfe des **New**-Operators Speicher abrufen, er muss jedoch keinen separaten Operator **New** für jeden Block erstellen. Möglicherweise stellt er Unterzuordnungen aus einem größeren Block her, oder er zwischenspeichert möglicherweise freigegebene Blöcke für eine darauffolgende Freigabe.
 
 Bei einem Compiler, der keine Neubindungen kompilieren kann, ist der Wert des Arguments std::size_t, das verwendet wurde, als die Vorlage instanziieert wurde, nicht unbedingt der Wert des Arguments _Sz, das an die Memberfunktionen „allocate“ und „deallocate“ eines Caches übergeben wurde.
 
@@ -121,7 +121,7 @@ Die Cachevorlage `cache_freelist` akzeptiert ein Argument der max-Klasse, das di
 
 |Makro|Beschreibung|
 |-|-|
-|[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)|Gibt eine Allocatorvorlagenklasse aus.|
+|[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)|Ergibt eine zuordnerklassenvorlage.|
 |[CACHE_CHUNKLIST](../standard-library/allocators-functions.md#cache_chunklist)|Gibt `stdext::allocators::cache_chunklist<sizeof(Type)>` aus.|
 |[CACHE_FREELIST](../standard-library/allocators-functions.md#cache_freelist)|Gibt `stdext::allocators::cache_freelist<sizeof(Type), max>` aus.|
 |[CACHE_SUBALLOC](../standard-library/allocators-functions.md#cache_suballoc)|Gibt `stdext::allocators::cache_suballoc<sizeof(Type)>` aus.|
@@ -153,7 +153,7 @@ Die Cachevorlage `cache_freelist` akzeptiert ein Argument der max-Klasse, das di
 |[max_none](../standard-library/max-none-class.md)|Beschreibt ein Objekt der max-Klasse, das ein [freelist](../standard-library/freelist-class.md)-Objekt auf eine maximale Länge von null begrenzt.|
 |[max_unbounded](../standard-library/max-unbounded-class.md)|Beschreibt ein Objekt der max-Klasse, das die maximale Länge eines [freelist](../standard-library/freelist-class.md)-Objekts nicht einschränkt.|
 |[max_variable_size](../standard-library/max-variable-size-class.md)|Beschreibt ein Objekt der max-Klasse, das die maximale Länge eines [freelist](../standard-library/freelist-class.md)-Objekts auf eine maximale Länge einschränkt, die annähernd proportional zur Anzahl von zugewiesenen Speicherblöcken ist.|
-|[rts_alloc](../standard-library/rts-alloc-class.md)|Die rts_alloc-Vorlagenklasse beschreibt einen [Filter](../standard-library/allocators-header.md), der ein Array von Cache-Instanzen enthält, und ermittelt zur Laufzeit, nicht zur Kompilierzeit, welche Instanz für die Belegung und Freigabe von Speicher zu verwenden ist.|
+|[rts_alloc](../standard-library/rts-alloc-class.md)|Die Rts_alloc-Klassen Vorlage beschreibt einen [Filter](../standard-library/allocators-header.md) , der ein Array von Cache Instanzen enthält und bestimmt, welche Instanz für die Zuordnung und Aufhebung der Zuordnung zur Laufzeit anstatt zur Kompilierzeit verwendet werden soll.|
 |[sync_none](../standard-library/sync-none-class.md)|Beschreibt einen Synchronisierungsfilter, der keine Synchronisierung bietet.|
 |[sync_per_container](../standard-library/sync-per-container-class.md)|Beschreibt einen Synchronisierungsfilter, der für jedes Zuweisungsobjekt ein getrenntes Cacheobjekt bereitstellt.|
 |[sync_per_thread](../standard-library/sync-per-thread-class.md)|Beschreibt einen Synchronisierungsfilter, der für jeden Thread ein getrenntes Cacheobjekt bereitstellt.|

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::basic_istringstream [C++], str
 - std::basic_istringstream [C++], swap
 ms.assetid: 1d5bb4b5-793d-4833-98e5-14676c451915
-ms.openlocfilehash: 685195b13960c325076f1a38461394ada374d4b1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b88411316ae247499100a044a0a2dfb3c53bc84f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452537"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689994"
 ---
 # <a name="basic_istringstream-class"></a>basic_istringstream-Klasse
 
@@ -34,18 +34,18 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>Parameter
 
-*Zuordnungseinheits*\
+*Zuordnung* \
 Die Zuweisungsklasse.
 
-*Elem*\
+*Elem* -\
 Der Typ des grundlegenden Elements der Zeichenfolge.
 
-*Stadtrat*\
+*TR* -\
 Die für das grundlegende Element der Zeichenfolge spezialisierten Zeichenmerkmale.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagen Klasse beschreibt ein Objekt, das das Extrahieren von Elementen und codierten Objekten aus einem Streampuffer der Klasse [Basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, `Alloc` **TR**, > mit Elementen des Typs *Elem*steuert. , dessen Zeichen Merkmale durch die Klasse *TR*bestimmt sind und deren Elemente durch eine Zuweisung der Klasse *Zuordnungs*Klasse zugeordnet werden. Das Objekt speichert ein Objekt der Klasse basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
+Die Klassen Vorlage beschreibt ein Objekt, das das Extrahieren von Elementen und codierten Objekten aus einem Streampuffer der Klasse [Basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**, **TR**, `Alloc` > mit Elementen des Typs *Elem*steuert, dessen Zeichen Merkmale werden durch die Klasse *TR*bestimmt, und deren Elemente werden durch eine Zuweisung der Klasse *Zuordnungs*Klasse zugeordnet. Das Objekt speichert ein Objekt der Klasse basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -105,18 +105,18 @@ basic_istringstream(
 
 ### <a name="parameters"></a>Parameter
 
-*_Mode*\
+*_Mode* \
 Eine der Enumerationen in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*SRT*\
+*Str* \
 Ein Objekt vom Typ `basic_string`.
 
-*Richting*\
+*Rechte* \
 Ein rvalue-Verweis auf ein `basic_istringstream`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor initialisiert die Basisklasse durch Aufrufen von [basic_istream](../standard-library/basic-istream-class.md)(`sb`). Hierbei entspricht `sb` dem gespeicherten Objekt der Klasse [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>. Er initialisiert zudem `sb`sb`basic_stringbuf` durch Aufrufen von <  `Elem``Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`).
+Der erste Konstruktor initialisiert die Basisklasse durch Aufrufen von [basic_istream](../standard-library/basic-istream-class.md)(`sb`), wobei `sb` das gespeicherte Objekt der Klasse [Basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  `Elem`, `Tr` `Alloc` > ist. Er initialisiert zudem `sb`sb`basic_stringbuf` durch Aufrufen von <  `Elem``Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`).
 
 Der zweite Konstruktor initialisiert die Basisklasse durch Aufrufen von `basic_istream(sb)`. Er initialisiert zudem `sb` durch Aufrufen von `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `str`, `_Mode` &#124; `ios_base::in`).
 
@@ -132,7 +132,7 @@ basic_istringstream& operator=(basic_istringstream&& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Richting*\
+*Rechte* \
 Ein rvalue-Verweis auf ein `basic_istringstream`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -141,7 +141,7 @@ Der Member-Operator ersetzt den Inhalt des Objekts durch den Inhalt von *right*,
 
 ## <a name="rdbuf"></a> basic_istringstream::rdbuf
 
-Gibt die Adresse des gespeicherten Streampuffers des Typs `pointer` an [Basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **TR**, `Alloc`> zurück.
+Gibt die Adresse des gespeicherten Streampuffers des Typs `pointer` an [Basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**, **TR**`Alloc` > zurück.
 
 ```cpp
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
@@ -149,7 +149,7 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Adresse des gespeicherten Streampuffers des Typs `pointer` in Basic_stringbuf < **Elem**, **TR** `Alloc`>.
+Die Adresse des gespeicherten Streampuffers des Typs `pointer` an Basic_stringbuf < **Elem**, **TR**`Alloc` >.
 
 ### <a name="example"></a>Beispiel
 
@@ -168,7 +168,7 @@ void str(
 
 ### <a name="parameters"></a>Parameter
 
-*_Newstr*\
+*_Newstr* \
 Die neue Zeichenfolge.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -181,7 +181,7 @@ Die erste Memberfunktion gibt [rdbuf](#rdbuf) -> [str](../standard-library/basic
 
 ### <a name="example"></a>Beispiel
 
-Ein Beispiel für die Verwendung `str`von finden Sie unter [Basic_stringbuf:: Str](../standard-library/basic-stringbuf-class.md#str) .
+Ein Beispiel für die Verwendung von `str` finden Sie unter [Basic_stringbuf:: Str](../standard-library/basic-stringbuf-class.md#str) .
 
 ## <a name="swap"></a> basic_istringstream::swap
 

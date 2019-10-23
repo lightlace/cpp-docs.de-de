@@ -7,14 +7,14 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: 703038ed435de36d60fcf97aa5100197602e7130
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a0d7f57d13b4387dd5ba39048adf65d9ec7ca3f5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455051"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684423"
 ---
-# <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
+# <a name="lttype_traitsgt"></a>&lt;type_traits&gt;
 
 Definiert Vorlagen für Kompilierzeit Konstanten, die Informationen über die Eigenschaften ihrer Typargumente oder transformierte Typen liefern.
 
@@ -26,22 +26,22 @@ Definiert Vorlagen für Kompilierzeit Konstanten, die Informationen über die Ei
 
 ## <a name="remarks"></a>Hinweise
 
-Die Klassen und Vorlagen in \<type_traits-> werden zur Unterstützung des Typrückschlusses, der Klassifizierung und der Transformation zum Zeitpunkt der Kompilierung verwendet. Sie werden auch zum Erkennen von typbezogenen Fehlern und zur Optimierung des generischen Codes verwendet. Unäre Typmerkmale beschreiben eine Eigenschaft eines Typs, binäre Typmerkmale beschreiben eine Beziehung zwischen Typen, und Transformations Merkmale ändern eine Eigenschaft eines Typs.
+Die Klassen und Vorlagen in \<type_traits > werden verwendet, um den Typrückschluss, die Klassifizierung und die Transformation zur Kompilierzeit zu unterstützen. Sie werden auch zum Erkennen von typbezogenen Fehlern und zur Optimierung des generischen Codes verwendet. Unäre Typmerkmale beschreiben eine Eigenschaft eines Typs, binäre Typmerkmale beschreiben eine Beziehung zwischen Typen, und Transformations Merkmale ändern eine Eigenschaft eines Typs.
 
-Die Hilfsklasse `integral_constant` und deren Vorlagen Spezialisierungs `true_type` - `false_type` und-bilden die Basisklassen für typprädikate. Ein *Typprädikat* ist eine Vorlage, die ein oder mehrere Typargumente entgegennimmt. Wenn ein typprädikat *true*ist, wird es öffentlich, direkt oder indirekt von [true_type](../standard-library/type-traits-typedefs.md#true_type)abgeleitet. Wenn ein typprädikat *false enthält*, wird es direkt oder indirekt von [false_type](../standard-library/type-traits-typedefs.md#false_type)öffentlich abgeleitet.
+Die Hilfsklasse `integral_constant` und deren Vorlagen Spezialisierungs `true_type` und `false_type` bilden die Basisklassen für typprädikate. Ein *Typprädikat* ist eine Vorlage, die ein oder mehrere Typargumente entgegennimmt. Wenn ein typprädikat *true*ist, wird es öffentlich, direkt oder indirekt von [true_type](../standard-library/type-traits-typedefs.md#true_type)abgeleitet. Wenn ein typprädikat *false enthält*, wird es direkt oder indirekt von [false_type](../standard-library/type-traits-typedefs.md#false_type)öffentlich abgeleitet.
 
 Ein *Typmodifizierer* oder *Transformationsmerkmal* ist eine Vorlage, die ein oder mehrere Vorlagenargumente entgegennimmt und über einen Member `type` verfügt, der ein Synonym für den geänderten Typ ist.
 
 ### <a name="alias-templates"></a>Alias-Vorlagen
 
-Zum Vereinfachen von Ausdrücken von typmerkmalen werden [Alias Vorlagen](../cpp/aliases-and-typedefs-cpp.md) für `typename some_trait<T>::type` bereitgestellt, wobei *some_trait* der Vorlagen Klassenname ist. Zum Beispiel verfügt [add_const](../standard-library/add-const-class.md) über eine Aliasvorlage für seinen Typ `add_const_t`, definiert als:
+Zum Vereinfachen von Ausdrücken von typmerkmalen werden [Alias Vorlagen](../cpp/aliases-and-typedefs-cpp.md) für `typename some_trait<T>::type` bereitgestellt, wobei *some_trait* der Klassen Vorlagen Name ist. Zum Beispiel verfügt [add_const](../standard-library/add-const-class.md) über eine Aliasvorlage für seinen Typ `add_const_t`, definiert als:
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-Dies sind die bereitgestellten Aliase für `type` die Member:
+Dies sind die bereitgestellten Aliase für die `type` Mitglieder:
 
 ||||
 |-|-|-|
@@ -116,7 +116,7 @@ Typeigenschaften
 |[is_constructible](../standard-library/is-constructible-class.md)|Testet, ob der Typ konstruiert werden kann, wenn die angegebenen Argumenttypen verwendet werden.|
 |[is_default_constructible](../standard-library/type-traits-functions.md#is_default_constructible)|Testet, ob der Typ über einen Standardkonstruktor verfügt.|
 |[is_copy_constructible](../standard-library/type-traits-functions.md#is_copy_constructible)|Testet, ob der Typ über einen Kopierkonstruktor verfügt.|
-|[is_move_constructible](../standard-library/type-traits-functions.md#is_move_constructible)|Testet, ob der Typ über einen Bewegungskonstruktor verfügt.|
+|[is_move_constructible](../standard-library/type-traits-functions.md#is_move_constructible)|Testet, ob der Typ über einen Verschiebekonstruktor verfügt.|
 |[is_assignable](../standard-library/type-traits-functions.md#is_assignable)|Testet, ob dem ersten Typ ein Wert des zweiten Typs zugewiesen werden kann.|
 |[is_copy_assignable](../standard-library/type-traits-functions.md#is_copy_assignable)|Testet, ob einem Typ ein konstanter Verweiswert des Typs zugewiesen werden kann.|
 |[is_move_assignable](../standard-library/type-traits-functions.md#is_move_assignable)|Testet, ob einem Typ ein rvalue-Verweis des Typs zugewiesen werden kann.|

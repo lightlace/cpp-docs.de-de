@@ -38,14 +38,14 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: 115f5ad4461b98f24e3aa6756e501b91ae3a1566
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: cbc1a9eb9432a454ca5dc04205b9d0c7b631a430
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456432"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690089"
 ---
-# <a name="allocatorbase-class"></a>allocator_base-Klasse
+# <a name="allocator_base-class"></a>allocator_base-Klasse
 
 Definiert die Basisklasse und allgemeine Funktionen, die zum Erstellen einer benutzerdefinierten Zuweisung von einem Synchronisierungsfilter erforderlich sind.
 
@@ -60,8 +60,8 @@ class allocator_base
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*Typ*|Der Elementtyp, die durch die Zuweisung zugeordnet wird.|
-|*Sync*|Die Synchronisierungsrichtlinie für die Zuweisung: [sync_none-Klasse](../standard-library/sync-none-class.md), [sync_per_container-Klasse](../standard-library/sync-per-container-class.md), [sync_per_thread-Klasse](../standard-library/sync-per-thread-class.md) oder [sync_shared-Klasse](../standard-library/sync-shared-class.md).|
+|*Type*|Der Elementtyp, die durch die Zuweisung zugeordnet wird.|
+|*PPEN*|Die Synchronisierungsrichtlinie für die Zuweisung: [sync_none-Klasse](../standard-library/sync-none-class.md), [sync_per_container-Klasse](../standard-library/sync-per-container-class.md), [sync_per_thread-Klasse](../standard-library/sync-per-thread-class.md) oder [sync_shared-Klasse](../standard-library/sync-shared-class.md).|
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -77,8 +77,8 @@ class allocator_base
 |[const_reference](#const_reference)|Ein Typ, der einen konstanten Verweis auf den Typ des Objekts bereitstellt, das von der Zuweisung verwaltet wird.|
 |[difference_type](#difference_type)|Ein ganzzahliger Typ mit Vorzeichen, der die Differenz zwischen Werten von Zeigern und dem Typ des Objekts, das von der Zuweisung verwaltet wird, darstellen kann.|
 |[Zeiger](#pointer)|Ein Typ, der einen Zeiger auf den Typ des Objekts bereitstellt, das von der Zuweisung verwaltet wird.|
-|[Verweis](#reference)|Ein Typ, der einen Verweis auf den Typ des Objekts bereitstellt, das von der Zuweisung verwaltet wird.|
-|[size_type](#size_type)|Ein ganzzahliger Typ ohne Vorzeichen, der die Länge einer beliebigen Sequenz darstellen kann, die ein Objekt der Vorlagenklasse `allocator_base` zuordnen kann.|
+|[reference](#reference)|Ein Typ, der einen Verweis auf den Typ des Objekts bereitstellt, das von der Zuweisung verwaltet wird.|
+|[size_type](#size_type)|Ein ganzzahliger Typ ohne Vorzeichen, der die Länge einer beliebigen Sequenz darstellen kann, die ein Objekt vom Typ `allocator_base` zuordnen kann.|
 |[value_type](#value_type)|Ein Typ, der von der Zuweisung verwaltet wird.|
 
 ### <a name="member-functions"></a>Memberfunktionen
@@ -153,7 +153,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>Parameter
 
-*ster*\
+*Val* -\
 Der konstante oder nicht konstante Wert des Objekts, nach dessen Adresse gesucht wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -325,7 +325,7 @@ typedef Type& reference;
 
 ## <a name="size_type"></a> allocator_base::size_type
 
-Ein ganzzahliger Typ ohne Vorzeichen, der die Länge einer beliebigen Sequenz darstellen kann, die ein Objekt der Vorlagenklasse `allocator_base` zuordnen kann.
+Ein ganzzahliger Typ ohne Vorzeichen, der die Länge einer beliebigen Sequenz darstellen kann, die ein Objekt vom Typ `allocator_base` zuordnen kann.
 
 ```cpp
 typedef std::size_t size_type;

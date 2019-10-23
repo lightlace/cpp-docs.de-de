@@ -9,14 +9,14 @@ helpviewer_keywords:
 - std::invoke_result
 - std::invoke_result_t
 - std::invoke_result::type
-ms.openlocfilehash: 2b2051b0c854151cff9b439f5ec0a951c25a6387
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8cd72e62fcb65209482fd9677afcc2ec83356feb
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447638"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689516"
 ---
-# <a name="invokeresult-class"></a>invoke_result-Klasse
+# <a name="invoke_result-class"></a>invoke_result-Klasse
 
 Bestimmt den Rückgabetyp des Aufruf baren Typs, der die angegebenen Argument Typen zur Kompilierzeit annimmt. Hinzugefügt in c++ 17.
 
@@ -33,15 +33,15 @@ template<lass Callable, class... Args>
 
 ### <a name="parameters"></a>Parameter
 
-*Callable*\
+*Aufruf Bare* \
 Der abzufragende, aufgerufene Typ.
 
-*Args*\
+*Args* \
 Die Typen der Argumentliste für den aufrufbaren, abzufragenden Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Vorlage, um den Ergebnistyp der *Aufruf baren*(*args*...) zur Kompilierzeit zu bestimmen, wobei *Callable* und alle Typen in *args* ein beliebiger vollständiger Typ, ein Array mit unbekannter Grenze `void`oder eine möglicherweise CV qualifizierte sind. Der `type` Member der Vorlagen Klasse benennt den Rückgabetyp von *Callable* , wenn er mithilfe *der Argumente Argumente*... aufgerufen wird. Der `type` Member wird nur definiert, wenn *Callable* aufgerufen werden kann, wenn er mithilfe *der Argumente Argumente*... in einem nicht ausgewerteten Kontext. Andernfalls hat die Vorlagen Klasse keinen Member `type`, der sfinae-Tests für einen bestimmten Satz von Argument Typen zur Kompilierzeit zulässt.
+Verwenden Sie diese Vorlage, um den Ergebnistyp der *Aufruf baren*(*args*...) zur Kompilierzeit zu bestimmen, wobei *Callable* und alle Typen in *args* ein beliebiger vollständiger Typ, ein Array mit unbekannter Grenze oder eine möglicherweise CV qualifizierte `void` sind. Der `type` Member der Klassen Vorlage benennt den Rückgabetyp von *Callable* , wenn er mit den Argumenten *args*... aufgerufen wird. Der `type` Member wird nur definiert, wenn *Callable* aufgerufen werden kann, wenn aufgerufen wird, wenn er mithilfe *der Argumente Argumente...* in einem nicht ausgewerteten Kontext. Andernfalls hat die Klassen Vorlage keinen Member `type`, der sfinae-Tests für einen bestimmten Satz von Argument Typen zur Kompilierzeit zulässt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,4 +52,4 @@ Verwenden Sie diese Vorlage, um den Ergebnistyp der *Aufruf baren*(*args*...) zu
 ## <a name="see-also"></a>Siehe auch
 
 [<type_traits>](../standard-library/type-traits.md)\
-[invoke](functional-functions.md#invoke)
+[Blaze](functional-functions.md#invoke)

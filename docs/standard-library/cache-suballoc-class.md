@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: aa0ceda69fc169593719c3a4f81d308bb6cde284
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7a21f0c4f81277200ff069baf751fa013a3c0cea
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449657"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688342"
 ---
-# <a name="cachesuballoc-class"></a>cache_suballoc-Klasse
+# <a name="cache_suballoc-class"></a>cache_suballoc-Klasse
 
 Definiert eine [Blockzuweisung](../standard-library/allocators-header.md), die Speicherblöcke einheitlicher Größe zuweist und freigibt.
 
@@ -32,13 +32,13 @@ class cache_suballoc
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*Sz*|Die Anzahl der zuzuordnenden Elemente des Arrays.|
+|*RT*|Die Anzahl der zuzuordnenden Elemente des Arrays.|
 
 ## <a name="remarks"></a>Hinweise
 
-Die Cache_suballoc-Vorlagen Klasse speichert frei zugeordnete Speicherblöcke in einer frei Liste mit begrenzter Länge, `freelist<sizeof(Type), max_unbounded>`unter Verwendung von und unterordnet Speicherblöcke von einem größeren Block, der mit **Operator new** zugeordnet wird, wenn die Freiliste leer ist.
+Die Cache_suballoc-Klassen Vorlage speichert frei zugeordnete Speicherblöcke in einer freien Liste mit unbegrenzter Länge, unter Verwendung `freelist<sizeof(Type), max_unbounded>` und unterordnet Speicherblöcke von einem größeren Block, der mit **Operator new** zugeordnet wird, wenn die Freiliste leer ist.
 
-Jeder Block enthält `Sz * Nelts` Bytes des verwendbaren Speichers und die Daten, die der **Operator new** und der **Operator Delete** erfordern. Zugeordnete Blöcke werden niemals freigegeben.
+Jeder Block enthält `Sz * Nelts` Bytes verwendbaren Speichers und die Daten, die der **Operator new** und der **Operator Delete** erfordern. Zugeordnete Blöcke werden niemals freigegeben.
 
 ### <a name="constructors"></a>Konstruktoren
 

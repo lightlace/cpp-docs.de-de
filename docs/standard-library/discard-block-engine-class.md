@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - discard_block_engine class
 ms.assetid: aa84808e-38fe-4fa0-9f73-d5b9a653345b
-ms.openlocfilehash: 76a78a2f47bd160c6b2b981b1ccdda2ef3a90575
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: eb00945084affb2be9299953e5ca9352c56d3b32
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454398"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688107"
 ---
-# <a name="discardblockengine-class"></a>discard_block_engine-Klasse
+# <a name="discard_block_engine-class"></a>discard_block_engine-Klasse
 
 Generiert eine zufällige Sequenz, indem die von der Basis-Engine zurückgegebenen Werte verworfen werden.
 
@@ -26,14 +26,14 @@ class discard_block_engine;
 
 ### <a name="parameters"></a>Parameter
 
-*Ge*\
+*Engine* -\
 Der Typ der Basis-Engine.
 
-*CKER*\
+*P* -\
 **Blockgröße**. Die Anzahl von Werten in jedem Block.
 
 *R*\
-**Verwendeter Block**. Die Anzahl von Werten in jedem Block, die verwendet werden. Der Rest wird verworfen (`P` - `R`). **Vorbedingung**:`0 < R ≤ P`
+**Verwendeter Block**. Die Anzahl von Werten in jedem Block, die verwendet werden. Der Rest wird verworfen (`P`  -  `R`). **Vorbedingung**:`0 < R ≤ P`
 
 ## <a name="members"></a>Member
 
@@ -46,7 +46,7 @@ Weitere Informationen über Engine-Member finden Sie unter [\<random&gt;](../sta
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Vorlagenklasse beschreibt einen Engine-Adapter, der Werte produziert, indem er die von seiner Basis-Engine zurückgegebenen Werte neu sortiert.
+Diese Klassen Vorlage beschreibt einen Engine-Adapter, der Werte erzeugt, indem einige der von der Basis-Engine zurückgegebenen Werte verworfen werden.
 
 ## <a name="requirements"></a>Anforderungen
 
