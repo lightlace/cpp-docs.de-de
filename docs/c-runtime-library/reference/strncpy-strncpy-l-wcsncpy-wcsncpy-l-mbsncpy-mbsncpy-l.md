@@ -211,7 +211,7 @@ Weitere Informationen zur Plattformkompatibilität finden Sie unter [Kompatibili
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird die Verwendung von " **straupie** " veranschaulicht und erläutert, wie Sie missbraucht werden kann, um Programmfehler und Sicherheitsprobleme zu verursachen. Der Compiler generiert eine Warnung für jeden-  ****aufruncpy** -aufrub, ähnlich wie crt_strncpy_x86. c (15): Warning C4996: Diese Funktion oder Variable ist möglicherweise unsicher. Verwenden Sie stattdessen „strncpy_s“. Zum Deaktivieren der Veraltungswarnung verwenden Sie „_CRT_SECURE_NO_WARNINGS“. Details finden Sie in der Onlinehilfe.**
+Im folgenden Beispiel wird die Verwendung von " **straupie** " veranschaulicht und erläutert, wie Sie missbraucht werden kann, um Programmfehler und Sicherheitsprobleme zu verursachen. Der Compiler generiert eine Warnung für jeden- **aufruncpy** -aufrub, ähnlich wie **crt_strncpy_x86. c (15): Warning C4996: Diese Funktion oder Variable ist möglicherweise unsicher. Verwenden Sie stattdessen „strncpy_s“. Zum Deaktivieren der Veraltungswarnung verwenden Sie „_CRT_SECURE_NO_WARNINGS“. Details finden Sie in der Onlinehilfe.**
 
 ```C
 // crt_strncpy_x86.c

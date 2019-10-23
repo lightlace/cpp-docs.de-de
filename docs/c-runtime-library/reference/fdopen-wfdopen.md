@@ -97,7 +97,7 @@ Die Zeichenfolge im *Modus* gibt den Typ des Datei Zugriffs an, der für die Dat
 | **„w+“** | Öffnet eine leere Datei zum Lesen und Schreiben. Wenn die Datei vorhanden ist, wird ihr Inhalt zerstört. |
 | **„a+“** | Öffnet sich zum Lesen und Anfügen. Erstellt die Datei, wenn sie nicht vorhanden ist. |
 
-Wenn eine Datei mit dem Zugriffstyp **"a"** oder **"a +"** geöffnet wird, erfolgen alle Schreibvorgänge am Ende der Datei. Der Dateizeiger kann mithilfe von [fseek](fseek-fseeki64.md) oder [Rewind](rewind.md)neu positioniert werden. er wird jedoch immer wieder zurück an das Ende der Datei verschoben, bevor ein Schreibvorgang durchgeführt wird. Folglich können vorhandene Daten nicht überschrieben werden. Wenn der Zugriffstyp **"r +"**, **"w +"** oder **"a +** " angegeben wird, sind sowohl Lese-als auch Schreibvorgänge zulässig (die Datei ist zum Aktualisieren geöffnet). Wenn Sie jedoch zwischen lesen und schreiben wechseln, muss ein dazwischenliegende [fflush](fflush.md)-, [fsetpos](fsetpos.md)-, [fseek](fseek-fseeki64.md)-oder [Rewind](rewind.md) -Vorgang vorhanden sein. Wenn Sie möchten, können Sie die aktuelle Position für den [fsetpos](fsetpos.md) -oder [fseek](fseek-fseeki64.md) -Vorgang angeben.
+Wenn eine Datei mit dem Zugriffstyp **"a"** oder **"a +"** geöffnet wird, erfolgen alle Schreibvorgänge am Ende der Datei. Der Dateizeiger kann mithilfe von [fseek](fseek-fseeki64.md) oder [Rewind](rewind.md)neu positioniert werden. er wird jedoch immer wieder zurück an das Ende der Datei verschoben, bevor ein Schreibvorgang durchgeführt wird. Folglich können vorhandene Daten nicht überschrieben werden. Wenn der Zugriffstyp **"r +"** , **"w +"** oder **"a +** " angegeben wird, sind sowohl Lese-als auch Schreibvorgänge zulässig (die Datei ist zum Aktualisieren geöffnet). Wenn Sie jedoch zwischen lesen und schreiben wechseln, muss ein dazwischenliegende [fflush](fflush.md)-, [fsetpos](fsetpos.md)-, [fseek](fseek-fseeki64.md)-oder [Rewind](rewind.md) -Vorgang vorhanden sein. Wenn Sie möchten, können Sie die aktuelle Position für den [fsetpos](fsetpos.md) -oder [fseek](fseek-fseeki64.md) -Vorgang angeben.
 
 Zusätzlich zu den obigen Werten können die folgenden Zeichen auch im- *Modus* enthalten sein, um den Übersetzungsmodus für Zeilen Umleitungs Zeichen anzugeben:
 
@@ -116,12 +116,12 @@ Gültige Zeichen für die in **fopen** und **_fdopen** verwendete *modus*zeichen
 
 |Zeichen in der *Mode* -Zeichenfolge|Entsprechender *Oflag* -Wert für **_open** und **_sopen**|
 |---------------------------------|---------------------------------------------------|
-|**a**|**\_&#124; O wronly\_oAppend\_(normalerweise o wronly o |\_** **\_ &#124; \_\_\_ &#124; \_\_ Anfügen**)|
-|**a+**|**\_&#124; O\_ rdwr\_o\_Append** (Normal ** \_erweiseo\_rdwr &#124; \_ &#124; o Append\_oup\_\_ ** )|
+|**a**|**\_O\_ wronly &#124; \_oAppend\_(normalerweise o wronly o** **\_ &#124; \_\_\_ &#124; \_\_ Anfügen**)|
+|**a+**|**\_&#124; O\_ rdwr\_o\_Append** (Normal **\_erweiseo\_rdwr &#124; \_ &#124; o Append\_oup\_\_** )|
 |**r**|**\_O\_RDONLY**|
 |**r +**|**\_O\_RDWR**|
 |**w**|**\_O\_wronly** ( **\_ &#124; \_\_i.d. a. &#124; " \_ owronly\_o" o trunc)\_**|
-|**w +**|**\_O\_rdwr** ** \_ &#124; \_ &#124; \_\_(i. d. r. o\_rdwr o up o trunc)\_**|
+|**w +**|**\_O\_rdwr** **\_ &#124; \_ &#124; \_\_(i. d. r. o\_rdwr o up o trunc)\_**|
 |**b**|**\_O\_-BINÄRDATEI**|
 |**t**|**\_O\_TEXT**|
 |**c**|None|
