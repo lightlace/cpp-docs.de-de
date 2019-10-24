@@ -3,26 +3,26 @@ title: Desktop Anwendungen (Visual C++)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.topic: overview
-ms.openlocfilehash: 91fcc596a4c30e3fa74043c846eda6f06b666f2c
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 98909097cf791d55f5971a89643839e07b0c60d1
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274723"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778506"
 ---
 # <a name="desktop-applications-visual-c"></a>Desktop Anwendungen (Visual C++)
 
-Eine *Desktop Anwendung* in C++ ist eine native Anwendung, die auf den vollständigen Satz von Windows-APIs zugreifen kann und entweder in einem Fenster oder in der Systemkonsole ausgeführt wird. Desktop Anwendungen in C++ können unter Windows XP bis Windows 10 ausgeführt werden (obwohl Windows XP nicht mehr offiziell unterstützt wird und seitdem viele Windows-APIs eingeführt wurden). 
+Eine *Desktop Anwendung* in C++ ist eine native Anwendung, die auf den vollständigen Satz von Windows-APIs zugreifen kann und entweder in einem Fenster oder in der Systemkonsole ausgeführt wird. Desktop Anwendungen in C++ können unter Windows XP bis Windows 10 ausgeführt werden (obwohl Windows XP nicht mehr offiziell unterstützt wird und seitdem viele Windows-APIs eingeführt wurden).
 
-Eine Desktop Anwendung unterscheidet sich von einer universelle Windows-Plattform-app (UWP), die auf PCs unter Windows 10 und auch auf Xbox, Windows Phone, Surface Hub und anderen Geräten ausgeführt werden kann. Weitere Informationen zu Desktop im Vergleich zu UWP-Anwendungen finden [Sie unter Wählen Sie Ihre Technologie](/windows/win32/choose-your-technology).
+Eine Desktop Anwendung unterscheidet sich von einer universelle Windows-Plattform-app (UWP), die auf PCs unter Windows 10 und auch auf Xbox, Windows Phone, Surface Hub und anderen Geräten ausgeführt werden kann. Weitere Informationen zu Desktop-und UWP-Anwendungen finden [Sie unter Wählen Sie Ihre Technologie](/windows/win32/choose-your-technology).
 
-### <a name="desktop-bridge"></a>Desktop Bridge
+## <a name="desktop-bridge"></a>Desktop Bridge
 
 In Windows 10 können Sie die vorhandene Desktop Anwendung oder das COM-Objekt als UWP-App Verpacken und UWP-Features wie Finger Eingaben hinzufügen oder APIs aus dem modernen Windows-API-Satz aufzurufen. Sie können eine UWP-APP auch einer Desktop Projekt Mappe in Visual Studio hinzufügen und Sie in einem einzelnen Paket Verpacken und Windows-APIs für die Kommunikation zwischen Ihnen verwenden.
 
 In Visual Studio 2017, Version 15,4 und höher, können Sie ein Windows-Anwendungspaket Projekt erstellen, um die Arbeit beim Verpacken Ihrer vorhandenen Desktop Anwendung erheblich zu vereinfachen. Es gelten einige Einschränkungen hinsichtlich der Registrierungs Aufrufe oder APIs, die von der Desktop Anwendung verwendet werden. in vielen Fällen können Sie jedoch alternative Codepfade erstellen, um eine ähnliche Funktionalität zu erzielen, während Sie in einem App-Paket ausgeführt werden. Weitere Informationen finden Sie unter [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root).
 
-### <a name="terminology"></a>Terminologie
+## <a name="terminology"></a>Terminologie
 
 - Eine *Win32* -Anwendung ist eine Windows-Desktop C++ Anwendung in, die native [Windows C-APIs und/oder COM-APIs](/windows/win32/apiindex/windows-api-list) CRT und Standard Bibliotheks-APIs sowie Bibliotheken von Drittanbietern verwenden kann. Eine Win32-Anwendung, die in einem-Fenster ausgeführt wird, erfordert, dass der Entwickler explizit mit Windows-Meldungen innerhalb einer Windows-Prozedur Funktion arbeitet. Trotz des Namens kann eine Win32-Anwendung als 32-Bit-(x86) oder 64-Bit-Binärdatei (x64) kompiliert werden. In der Visual Studio-IDE sind die Begriffe x86 und Win32 Synonym.
 
@@ -45,14 +45,14 @@ Jede Desktop Anwendung in C++ kann Klassen und Funktionen der C-Laufzeit (CRT) u
 |[Arbeiten mit Ressourcendateien](working-with-resource-files.md)|Hinzufügen von Bildern, Symbolen, Zeichen folgen Tabellen und anderen Ressourcen zu einer Desktop Anwendung.|
 |[Ressourcen zum Erstellen eines Spiels mit DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Links zu Inhalten zum Erstellen von spielen C++in.|
 |[Exemplarische Vorgehensweise: Erstellen und Verwenden einer statischen Bibliothek](walkthrough-creating-and-using-a-static-library-cpp.md)|So erstellen Sie eine lib-Binärdatei.|
-|[Vorgehensweise: Verwenden des Windows 10 SDK in einer Windows-Desktopanwendung](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Enthält Schritte zum Einrichten Ihres Projekts für das Erstellen mit dem Windows 10-SDK.|
+|[Gewusst wie: Verwenden des Windows 10-SDKs in einer Windows-Desktopanwendung](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Enthält Schritte zum Einrichten Ihres Projekts für das Erstellen mit dem Windows 10-SDK.|
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
 |Titel|Beschreibung|
 |-----------|-----------------|
 |[Windows-Entwicklung](/windows/win32/index)|Enthält Informationen zur Windows-API und COM. (Einige Windows-APIs und Drittanbieter-DLLs werden als COM-Objekte implementiert).|
-|[Hilo Entwickeln C++ von Anwendungen für Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Beschreibt, wie Sie eine vielseitige Windows-Desktopanwendung erstellen, die Windows-Animationen und Direct2D verwendet, um eine karussellbasierte Benutzeroberfläche zu erstellen.  Dieses Tutorial wurde seit Windows 7 nicht aktualisiert, bietet aber eine gründliche Einführung in die Win32-Programmierung.|
+|[Hilo: Entwickeln von C++-Anwendungen für Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Beschreibt, wie Sie eine vielseitige Windows-Desktopanwendung erstellen, die Windows-Animationen und Direct2D verwendet, um eine karussellbasierte Benutzeroberfläche zu erstellen.  Dieses Tutorial wurde seit Windows 7 nicht aktualisiert, bietet aber eine gründliche Einführung in die Win32-Programmierung.|
 |[Übersicht über Windows-Programmierung in C++](overview-of-windows-programming-in-cpp.md)|Beschreibt die wichtigsten Features der Windows-Desktop C++Programmierung in.|
 
 ## <a name="see-also"></a>Siehe auch
