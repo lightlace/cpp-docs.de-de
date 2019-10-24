@@ -1,15 +1,15 @@
 ---
 title: Änderungsverlauf von Visual C++ von 2003 bis 2015
-ms.date: 08/30/2017
+ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 9597f04781c9009cf6f8f284348f0831c347201d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 6d994ca3af1386d9c2f94dbf6b9f972ee139613f
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510355"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778525"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Änderungsverlauf von Visual C++ von 2003 bis 2015
 
@@ -106,7 +106,7 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
    Beim Kompilieren von C++-Code prüft [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) nun zur Kompilierzeit, dass das übergebene Argument kein Verweistyp ist. Verweistyp-Argumente sind gemäß dem C++-Standard nicht zulässig.
 
-#### <a name="stdioh-and-conioh"></a>\<stdio.h> und \<conio.h>
+#### <a name="stdio_and_conio"></a>\<stdio. h > und \<conio. h >
 
 - **Die printf- und scanf-Funktionsreihen werden nun inline definiert.**
 
@@ -139,11 +139,11 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
   - Unendlich: 1.#INF
 
-  - Stiller NaN: 1.#QNAN
+  - Stiller NaN: 1. #QNAN
 
-  - Signalisierender NaN: 1.#SNAN
+  - Signaling-NaN: 1.#SNAN
 
-  - Unbestimmter NaN: 1.#IND
+  - Unbestimmter NaN: 1. #IND
 
   All diesen Formaten konnte ein Vorzeichen vorangestellt werden und sie wurden möglicherweise je nach Feldbreite und Genauigkeit unterschiedlich formatiert (in einigen Fällen führte dies zu ungewöhnlichen Auswirkungen, beispielsweise würde `printf("%.2f\n", INFINITY)` „1.#J“ zurückgeben, weil „#INF“ auf zwei Stellen gerundet werden würde). In C99 wurden neue Anforderungen an die Formatierung von unendlichen und NaN-Werten eingeführt. Die MSVC-Implementierung entspricht nun diesen Anforderungen. Die neuen Zeichenfolgen lauten wie folgt:
 
@@ -305,7 +305,7 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
 ####  <a name="BK_STL"></a> C++-Standardbibliothek
 
-Um neue Optimierungen und Debuggingüberprüfungen zu aktivieren, unterbricht die Visual Studio-Implementierung der C++-Standardbibliothek absichtlich die Binärkompatibilität von einer Version zur nächsten. Wenn die C++-Standardbibliothek verwendet wird, können Objektdateien und statische Bibliotheken, die unter Verwendung von verschiedenen Versionen kompiliert werden, nicht in einer Binärdatei (EXE oder DLL) vermischt werden, und C++-Standardbibliotheksobjekte können nicht zwischen Binärdateien übergeben werden, die mit verschiedenen Versionen kompiliert werden. Eine solche Kombination gibt Linkerfehler über _MSC_VER-Konflikte aus. (_MSC_VER ist das Makro, das die Hauptversion des Compilers enthält – z. B. 1800 für Visual Studio 2013.) Diese Überprüfung kann weder eine gemischte DLL-Verwendung noch eine gemischte Verwendung erkennen, die Visual Studio 2008 oder früher betrifft.
+Um neue Optimierungen und Debuggingüberprüfungen zu aktivieren, unterbricht die Visual Studio-Implementierung der C++-Standardbibliothek absichtlich die Binärkompatibilität von einer Version zur nächsten. Wenn die C++-Standardbibliothek verwendet wird, können Objektdateien und statische Bibliotheken, die unter Verwendung von verschiedenen Versionen kompiliert werden, nicht in einer Binärdatei (EXE oder DLL) vermischt werden, und C++-Standardbibliotheksobjekte können nicht zwischen Binärdateien übergeben werden, die mit verschiedenen Versionen kompiliert werden. Eine solche Kombination gibt Linkerfehler über _MSC_VER-Konflikte aus. (_MSC_VER ist das Makro, das die Hauptversion des Compilers enthält – z. b. 1800 für Visual Studio 2013.) Diese Überprüfung kann keine DLL-Mischung erkennen und keine Vermischung erkennen, die Visual Studio 2008 oder früher betrifft.
 
 - **Includedateien der C++-Standardbibliothek**
 
@@ -431,7 +431,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     Command line warning  D9035: option 'Zc:forScope-' has been deprecated and will be removed in a future release
     ```
 
-   Diese Option wurde in der Regel für nicht dem Standard entsprechenden Code verwendet, der Schleifenvariablen gemäß dem Standard nach dem Punkt verwendet, an dem diese den Gültigkeitsbereich verlassen sollten. Dies war nur erforderlich, wenn Sie die `/Za`-Option zum Kompilieren verwendet haben, da die Verwendung einer Schleifenvariable ohne `/Za` nach dem Ende der Schleife immer zulässig ist. Wenn die Einhaltung von Standards keine Rolle spielt (z.B. wenn der Code nicht auf andere Compiler übertragbar ist), können Sie die Option `/Za` deaktivieren (oder die Eigenschaft **Spracherweiterungen deaktivieren** auf **Nein** festlegen). Wenn Sie übertragbaren Code schreiben möchten, der den Standards entspricht, sollten Sie den Code umschreiben, indem Sie die Deklaration der Variablen an eine Stelle außerhalb der Schleifen verschieben.
+   Diese Option wurde in der Regel für nicht dem Standard entsprechenden Code verwendet, der Schleifenvariablen gemäß dem Standard nach dem Punkt verwendet, an dem diese den Gültigkeitsbereich verlassen sollten. Dies war nur erforderlich, wenn Sie die `/Za`-Option zum Kompilieren verwendet haben, da die Verwendung einer Schleifenvariable ohne `/Za` nach dem Ende der Schleife immer zulässig ist. Wenn die Einhaltung von Standards keine Rolle spielt (z.B. wenn der Code nicht auf andere Compiler übertragbar ist), können Sie die `/Za`-Option deaktivieren (oder die Eigenschaft **Spracherweiterungen deaktivieren** auf **Nein** festlegen). Wenn Sie übertragbaren Code schreiben möchten, der den Standards entspricht, sollten Sie den Code umschreiben, indem Sie die Deklaration der Variablen an eine Stelle außerhalb der Schleifen verschieben.
 
     ```cpp
     // C2065 expected
@@ -451,7 +451,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 - **mutable (Schlüsselwort)**
 
-   Der **mutable**-Speicherklassenspezifizierer ist an Positionen nicht mehr zulässig, an denen zuvor beim Kompilieren ein Fehler aufgetreten ist. Der Compiler generiert nun den Fehler C2071 (Ungültige Speicherklasse). Gemäß dem Standard kann der **mutable**-Spezifizierer nur auf Namen von Klassendatenmembern angewendet werden und kann nicht auf als konstant oder statisch deklarierte Namen sowie nicht auf Verweismember angewendet werden.
+   Der **mutable**-Speicherklassenspezifizierer ist nicht mehr an Positionen zulässig, an denen beim Kompilieren zuvor ein Fehler aufgetreten ist. Der Compiler generiert nun den Fehler C2071 (Ungültige Speicherklasse). Gemäß dem Standard kann der **mutable**-Spezifizierer nur auf Namen von Klassendatenmembern angewendet werden und kann nicht auf als konstant oder statisch deklarierte Namen sowie nicht auf Verweismember angewendet werden.
 
    Beachten Sie z. B. folgenden Code:
 
@@ -627,7 +627,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 - **Angrenzende Zeichenfolgenliterale**
 
-   Auf ähnliche Weise wurden angrenzende Zeichenfolgenliterale ohne Leerzeichen aufgrund von zugehörigen Änderungen in der Zeichenfolgenanalyse als eine verkettete Zeichenfolge in den vorherigen Versionen von Visual C++ interpretiert. In Visual Studio 2015 müssen Sie zwischen den beiden Zeichenfolgen ein Leerzeichen hinzufügen. Der folgende Code muss z. B. geändert werden:
+   Auf ähnliche Weise wurden angrenzende Zeichenfolgenliterale ohne Leerzeichen aufgrund von zugehörigen Änderungen in der Zeichenfolgenanalyse als eine verkettete Zeichenfolge in den vorherigen Versionen von Visual C++ interpretiert. In Visual Studio 2015 müssen Sie ein Leerzeichen zwischen den beiden Zeichenfolgen hinzufügen. Der folgende Code muss z. B. geändert werden:
 
     ```cpp
     char * str = "abc""def";
@@ -645,14 +645,14 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
    Bei der Funktion `void operator delete(void *, size_t)` hat es sich um einen **delete**-Platzierungsoperator gehandelt, der der Funktion `void * operator new(size_t, size_t)` des Platzierungsoperators **new** in C++11 entspricht. Durch die Aufhebung der Zuordnung mit C++14-Größeninformationen ist diese Funktion „delete“ nun eine *gewöhnliche Funktion zum Aufheben der Zuordnung* (globaler **delete**-Operator). Der Standard erfordert es, dass das Programm bei Verwendung eines Platzierungsoperators „new“, der eine entsprechenden delete-Funktion sucht und eine gewöhnliche Funktion zum Aufheben der Zuordnung ermittelt, nicht ordnungsgemäß formatiert ist.
 
-   Angenommen Ihr Code definiert einen **new**- und einen **delete**-Platzierungsoperator:
+   Angenommen, der Code definiert sowohl einen **Platzierungsoperator „new“** als auch einen **Platzierungsoperator „delete“** :
 
     ```cpp
     void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
     ```
 
-   Das Problem tritt aufgrund der Übereinstimmung zwischen den Funktionssignaturen im definierten Platzierungsoperator **delete** und im neuen globalen Operator **delete** auf. Überlegen Sie, ob Sie einen anderen Typ als `size_t` für alle **new**- und **delete**-Platzierungsoperatoren verwenden können. Der Typ von `size_t` **typedef** ist vom Compiler abhängig. In MSVC handelt es sich um **typedef** für **unsigned int**. Eine gute Lösung hierfür stellt die Verwendung eines enumerierten Typs wie die des folgenden dar:
+   Das Problem tritt aufgrund der Übereinstimmung zwischen den Funktionssignaturen im definierten Platzierungsoperator **delete** und im neuen globalen Operator **delete** auf. Überlegen Sie, ob Sie einen anderen Typ als `size_t` für alle Platzierungsoperatoren **new** und **delete** verwenden können. Der Typ von `size_t` **typedef** ist vom Compiler abhängig. In MSVC handelt es sich um **typedef** für **unsigned int**. Eine gute Lösung hierfür stellt die Verwendung eines enumerierten Typs wie die des folgenden dar:
 
     ```cpp
     enum class my_type : size_t {};
@@ -666,7 +666,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 - **Union-Datenmember**
 
-   Union-Datenmember dürfen über keine Verweistypen verfügen. Der folgende Code wurde zwar erfolgreich in Visual Studio 2013 kompiliert, erzeugt jedoch in Visual Studio 2015 einen Fehler.
+   Union-Datenmember dürfen über keine Verweistypen verfügen. Der folgende Code kompiliert zwar in Visual Studio 2013 erfolgreich, aber erzeugt in Visual Studio 2015 einen Fehler.
 
     ```cpp
     union U1
@@ -1004,7 +1004,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     //other partial specializations here
     ```
 
-- **Regeln für Vorwärtsdeklarationen erzwungen. (Gilt nur für C.)**
+- **Regeln, die für vorwärts Deklarationen erzwungen werden. (Gilt nur für C.)**
 
    Mit dem folgenden Code wird nun C2065 generiert:
 
@@ -1046,7 +1046,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 - **Mehrdeutige Aufrufe überladener Funktionen**
 
-   Mit dem folgenden Code wird nun C266 generiert: 'N::bind': Mehrdeutiger Aufruf einer überladenen Funktion
+   Der folgende Code erzeugt nun C266: „N::bind“: Mehrdeutiger Aufruf einer überladenen Funktion
 
     ```cpp
     template<typename R, typename T, typename T1, typename A1>
@@ -1189,7 +1189,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 - **MFC-Ausnahmen können nicht nach Wert abgefangen werden, da sie nicht kopierbar sind**
 
-   Der folgende Code in einer MFC-Anwendung verursacht nun den Fehler C2316: 'D': cannot be caught as the destructor and/or copy constructor are inaccessible or deleted („D“: Kann nicht aufgefangen werden, da auf den Destruktor und/oder den Kopierkonstruktor nicht zugegriffen werden kann oder diese gelöscht wurden).
+   Der folgende Code in einer MFC-Anwendung verursacht jetzt Fehler C2316: „D“: Kann nicht aufgefangen werden, da Destruktor und/oder copy-Konstruktor nicht verfügbar sind oder gelöscht wurden
 
     ```cpp
     struct B {
@@ -1335,7 +1335,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 - **Korrigieren ungültiger Kopierinitialisierung in nicht statischer Datenmemberinitialisierung**
 
-   Mit dem folgenden Code wird nun Fehler C2664 generiert: 'S1::S1(S1 &&)': Argument 1 kann nicht von „bool“ in „const S1 &“ konvertiert werden:
+   Der folgende Code erzeugt nun den Fehler C2664: „S1::S1(S1 &&)“: Konvertierung von Argument 1 von „bool“ zu „const S1 &“ nicht möglich:
 
     ```cpp
     struct S1 {
@@ -1357,7 +1357,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 - **Zugreifen auf Konstruktoren in „decltype“-Anweisungen**
 
-   Mit dem folgenden Code wird nun C2248 generiert: 'S::S': Kein Zugriff auf die in der Klasse „S“ deklarierten privaten Member möglich:
+   Der folgende Code erzeugt nun C2248: „S::S“: Zugriff auf in der Klasse „S“ deklarierten privaten Member nicht möglich:
 
     ```cpp
     class S {
@@ -1479,7 +1479,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 - **Geschützter Basiskonstruktor kann nicht im Text eines abgeleiteten Konstruktors aufgerufen werden**
 
-   Mit dem folgenden Code wird nun Fehler C2248 generiert: 'S1::S1': Kein Zugriff auf das geschützte Member möglich, das in der Klasse „S1“ deklariert ist
+   Der folgende Code erzeugt nun den Fehler C2248: „S1::S1“: Zugriff auf in der Klasse „S1“ deklarierten geschützten Member nicht möglich
 
     ```cpp
     struct S1 {
@@ -1739,7 +1739,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     }
     ```
 
-   \- oder –
+   \- oder -
 
     ```cpp
     class base;  // as above
@@ -1755,7 +1755,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 - **Überladener Operator „new“ und „delete“**
 
-   In früheren Versionen des Compilers konnte ein **new**-Platzierungsoperator, der kein Member war, und ein **delete**-Platzierungsoperator, der kein Member war, statisch deklariert werden und in anderen Namespaces als dem globalen deklariert werden.  Durch dieses alte Verhalten entstand das Risiko, dass das Programm die Operatoren **new** oder **delete** nicht in der vom Programmierer beabsichtigten Implementierung aufruft, was zu einem schlechten Laufzeitverhalten ohne Rückmeldung führte. Der Compiler akzeptiert in dieser Weise erstellten Code nicht mehr und gibt den Compilerfehler C2323 als Ergebnis aus.
+   In früheren Versionen des Compilers konnte ein **new**-Platzierungsoperator, der kein Member war, und ein **delete**-Platzierungsoperator, der kein Member war, statisch deklariert werden und in anderen Namespaces als dem globalen deklariert werden.  Durch dieses alte Verhalten entstand das Risiko, dass das Programm die Operatoren **new** oder **delete** nicht in der vom Programmierer beabsichtigten Implementierung aufrief, was zu einem schlechten Laufzeitverhalten ohne Rückmeldung führte. Der Compiler akzeptiert in dieser Weise erstellten Code nicht mehr und gibt den Compilerfehler C2323 als Ergebnis aus.
 
     ```Output
     error C2323: 'operator new': non-member operator new or delete functions may not be declared static or in a namespace other than the global namespace.
@@ -2009,7 +2009,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
    Beispiele für die anderen wiederhergestellten Warnungen stehen in deren Dokumentation zur Verfügung.
 
-- **#include: Verwendung des Bezeichners „..“ für das übergeordnete Verzeichnis im Pfadnamen** (betrifft nur `/Wall` `/WX`)
+- **#include: Verwendung des Bezeichners '..' für das übergeordnete Verzeichnis im Pfadnamen** (betrifft nur `/Wall` `/WX`)
 
    Frühere Versionen des Compilers haben die Verwendung des Bezeichners '..' für das übergeordnete Verzeichnis im Pfadnamen von `#include`-Anweisungen nicht erkannt. Bei in dieser Weise erstelltem Code wird normalerweise die Absicht verfolgt, Header einzuschließen, die sich außerhalb des Projekts befinden, und dazu werden fälschlicherweise projektrelative Pfade verwendet. Bei diesem alten Verhalten ergab sich die Gefahr, dass das Programm möglicherweise mit Einschluss einer anderen als der vom Programmierer beabsichtigten Quelldatei compiliert wurde oder dass diese relativen Pfade nicht auf andere Buildumgebungen portiert werden konnten. Der Compiler erkennt jetzt in dieser Weise erstellten Code und benachrichtigt den Programmierer mit der optionalen Compilerwarnung C4464, sofern diese aktiviert ist.
 
@@ -2491,7 +2491,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     static_assert(std::is_convertible<X1&, X1>::value, "BOOM");static_assert(std::is_convertible<X2&, X2>::value, "BOOM");
     ```
 
-   In früheren Versionen des Compilers wurden die statischen Assertionen unten in diesem Beispiel übergeben, da `std::is_convertable<>::value` fälschlicherweise auf **TRUE** festgelegt war. Jetzt ist `std::is_convertable<>::value` richtig auf **FALSE** festgelegt, wodurch ein Fehler in den statischen Assertionen verursacht wird.
+   In früheren Versionen des Compilers wurden die statischen Assertionen unten in diesem Beispiel übergeben, da `std::is_convertable<>::value` fälschlicherweise auf **TRUE** festgelegt war. Jetzt ist `std::is_convertable<>::value` richtig auf **FALSE** festgelegt, was einen Fehler der statischen Assertionen verursacht.
 
 - **Als Standard festgelegte und gelöschte triviale Kopier- und Verschiebekonstruktoren beachten Zugriffsspezifizierer**
 
@@ -2804,7 +2804,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     int y = x;
     ```
 
-   Dieser Code löst nun `x` in den Typ `std::initializer_list<int>` auf und verursacht einen Fehler in der nächsten Zeile, wobei versucht wird, `x` dem Typ **int** zuzuweisen. (Es gibt keine standardmäßige Konvertierung.) Zum Korrigieren dieses Codes müssen Sie **int** verwenden, um **auto** zu ersetzen:
+   Dieser Code löst nun `x` in einen Typ `std::initializer_list<int>` auf und verursacht einen Fehler in der nächsten Zeile, die versucht, `x` dem Typ " **int**" zuzuweisen. (Standardmäßig ist keine Konvertierung vorhanden.) Um diesen Code zu korrigieren, verwenden Sie **int** , um **Auto**zu ersetzen:
 
     ```cpp
     int x = {0};
@@ -2898,7 +2898,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     };
     ```
 
-   Vor Visual Studio 2013 gab dieser Code diese Meldung aus: „warning C4370: 'S2' : layout of class has changed from a previous version of the compiler due to better packing“ (Warnung C4370: ‚S2‘: Durch bessere Verpackung wurde das Klassenlayout geändert, das vorher eine andere Compilerversion hatte).
+   Vor Visual Studio 2013 gab dieser Code diese Meldung aus: Warnung C4370: 'S2' : Durch bessere Verpackung wurde das Klassenlayout geändert, das vorher eine andere Compilerversion hatte.
 
    Der x86-Compiler weist in allen Versionen des Compilers dasselbe Problem aufgrund eines nicht optimalen Layouts auf. Wenn dieser Code beispielsweise für x86 kompiliert wird:
 
@@ -2962,7 +2962,7 @@ Der C++-Compiler in Visual Studio 2013 erkennt Konflikte im _ITERATOR_DEBUG_LEVE
 
 ### <a name="mfc-and-atl"></a>MFC und ATL
 
-- **Nur Visual Studio 2013**: Die MFC MBCS-Bibliothek ist nicht in Visual Studio enthalten, da Unicode gängig ist und die Verwendung von MBCS erheblich abgenommen hat. Durch diese Änderung orientiert sich MFC näher am Windows SDK, da viele der neuen Steuerelemente und der Meldungen ausschließlich in Unicode vorliegen. Wenn Sie die MFC-Bibliothek für MBCS jedoch weiterhin verwenden müssen, können Sie sie unter [Multibyte-MFC-Bibliothek für Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770) aus dem MSDN Download Center herunterladen. Diese Bibliothek ist weiterhin im Visual C++ Redistributable Package enthalten.  (Hinweis: Die MBCS-DLL ist in den C++-Setupkomponenten in Visual Studio 2015 und höher enthalten).
+- **Nur Visual Studio 2013**: die MFC MBCS-Bibliothek ist nicht in Visual Studio enthalten, da Unicode so beliebt ist und die Verwendung von MBCS erheblich abgelehnt wurde. Durch diese Änderung orientiert sich MFC näher am Windows SDK, da viele der neuen Steuerelemente und der Meldungen ausschließlich in Unicode vorliegen. Wenn Sie die MFC-Bibliothek für MBCS jedoch weiterhin verwenden müssen, können Sie sie unter [Multibyte-MFC-Bibliothek für Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770) aus dem MSDN Download Center herunterladen. Diese Bibliothek ist weiterhin im Visual C++ Redistributable Package enthalten.  (Hinweis: Die MBCS-DLL ist in den C++-Setupkomponenten in Visual Studio 2015 und höher enthalten).
 
 - Zugriff auf das MFC-Menüband wurde geändert.  Anstelle einer Architektur mit einer Ebene gibt es jetzt eine hierarchische Architektur. Sie können das alte Verhalten weiterhin verwenden, indem Sie `CRibbonBar::EnableSingleLevelAccessibilityMode()` aufrufen.
 
@@ -3026,7 +3026,7 @@ Der C++-Compiler in Visual Studio 2013 erkennt Konflikte im _ITERATOR_DEBUG_LEVE
 
 - Der Compiler gibt möglicherweise die [Compilerwarnungen (Level 4) C4703](../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md) und C4701 aus, was zuvor nicht der Fall war. Der Compiler überprüft strenger die Nutzung nicht initialisierter lokaler Variablen des Typs „Zeiger“.
 
-- Wenn das neue Linkerflag `/HIGHENTROPYVA` angegeben ist, verursacht Windows 8 Speicherzuordnungen, um eine 64-Bit-Adresse zurückzugeben. (Vor Windows 8 gaben solche Zuordnungen häufiger Adressen zurück, die kleiner als 2 GB waren.) Durch diese Änderungen können Fehler durch das Abschneiden von Zeigern in vorhandenem Code auftreten. Dieser Schalter ist standardmäßig aktiviert. Geben Sie `/HIGHENTROPYVA:NO` an, um dieses Verhalten zu deaktivieren.
+- Wenn das neue Linkerflag `/HIGHENTROPYVA` angegeben ist, verursacht Windows 8 Speicherzuordnungen, um eine 64-Bit-Adresse zurückzugeben. (Vor Windows 8 haben solche Zuordnungen häufiger Adressen zurückgegeben, die kleiner als 2 GB waren.) Diese Änderung kann Fehler beim Abschneiden von Zeigern in vorhandenem Code verfügbar machen. Dieser Schalter ist standardmäßig aktiviert. Geben Sie `/HIGHENTROPYVA:NO` an, um dieses Verhalten zu deaktivieren.
 
 - Der verwaltete Compiler (Visual Basic/C#) unterstützt auch `/HIGHENTROPYVA` für verwaltete Builds.  In diesem Fall ist `/HIGHENTROPYVAswitch` jedoch standardmäßig deaktiviert.
 
@@ -3042,11 +3042,11 @@ Die `SchedulerType`-Enumeration von `UmsThreadDefault` ist veraltet. Bei Angabe 
 
 - Als Folge eines Breaking Change zwischen den Standards C++98/03 und C++11 erfolgt bei Verwendung expliziter Vorlagenargumente zum Aufrufen von `make_pair()`, z. B. `make_pair<int, int>(x, y)`, in Visual C++ in Visual Studio 2012 in der Regel keine Kompilierung. Die Lösung besteht darin, `make_pair() ` stets ohne explizite Vorlagenargumente aufzurufen, wie z.B. in `make_pair(x, y)`. Bei Angeben expliziter Vorlagenargumente wird der Zweck der Funktion verfehlt. Wenn eine präzise Steuerung des resultierenden Typs erforderlich ist, verwenden Sie `pair` anstelle von `make_pair`, wie in `pair<short, short>(int1, int2)`.
 
-- Eine weitere wichtige Änderung zwischen den Standards C++98/03 und C++11: Wenn A implizit in B und B implizit in C konvertierbar ist, aber A nicht implizit in C konvertierbar ist, erlaubten C++98/03 und Visual Studio 2010 die (implizite oder explizite) Konvertierung von `pair<A, X>` in `pair<C, X>`. (Der andere Typ, X, ist hier nicht von Interesse und nicht spezifisch für den ersten Typ im Paar.) In Visual Studio 2012 erkennt der C++-Compiler, dass A nicht implizit in C konvertierbar ist, und entfernt die Paarkonvertierung aus der Überladungsauflösung. Diese Änderung wirkt sich auf viele Szenarios positiv aus. Durch das Überladen von `func(const pair<int, int>&)` und `func(const pair<string, string>&)` und das Aufrufen von `func()` mit `pair<const char *, const char *>` erfolgt die Kompilierung beispielsweise mit dieser Änderung. Diese Änderung unterbricht jedoch Code, der auf aggressiven Paarkonvertierungen beruhte. Solcher Code kann normalerweise korrigiert werden, wenn ein Teil der Konvertierung explizit erfolgt, z.B. indem `make_pair(static_cast<B>(a), x)` an eine Funktion übergeben wird, die `pair<C, X>` erwartet.
+- Eine weitere Breaking Change zwischen den Standards c++ 98/03 und c++ 11: Wenn eine implizit in B konvertiert und b implizit in c konvertierbar ist, aber nicht implizit in c konvertiert werden kann, c++ 98/03 und Visual Studio 2010 das Konvertieren `pair<A, X>` (implizit oder explizit) zum `pair<C, X>`. (Der andere Typ, "X", ist hier nicht von Interesse und nicht spezifisch für den ersten Typ im Paar.) Der C++ Compiler in Visual Studio 2012 erkennt, dass ein nicht implizit in C konvertierbar ist, und entfernt die paar Konvertierung aus der Überladungs Auflösung. Diese Änderung wirkt sich auf viele Szenarios positiv aus. Durch das Überladen von `func(const pair<int, int>&)` und `func(const pair<string, string>&)` und das Aufrufen von `func()` mit `pair<const char *, const char *>` erfolgt die Kompilierung beispielsweise mit dieser Änderung. Diese Änderung unterbricht jedoch Code, der auf aggressiven Paarkonvertierungen beruhte. Solcher Code kann normalerweise korrigiert werden, wenn ein Teil der Konvertierung explizit erfolgt, z.B. indem `make_pair(static_cast<B>(a), x)` an eine Funktion übergeben wird, die `pair<C, X>` erwartet.
 
 - Visual Studio 2010 simulierte variadic-Vorlagen, wie z. B. `make_shared<T>(arg1, arg2, argN)`, bis zu einem Grenzwert von 10 Argumenten, um Überladungen und Spezialisierungen mithilfe von Präprozessormechanismen zu entfernen. In Visual Studio 2012 wurde dieser Grenzwert auf fünf Argumente verringert, um Kompilierzeiten und die Nutzung des Compilerspeichers für die Mehrheit der Benutzer zu verbessern. Allerdings können Sie den vorherigen Grenzwert festlegen, indem Sie _VARIADIC_MAX projektweit explizit auf 10 festlegen.
 
-- C++11 17.6.4.3.1 [macro.names]/2 verbietet die Makroersetzung von Schlüsselwörtern, wenn Header der C++-Standardbibliothek enthalten sind. Die Header geben jetzt Compilerfehler aus, wenn sie Schlüsselwörter erkennen, die durch Makros ersetzt wurden. (Das Festlegen von _ALLOW_KEYWORD_MACROS erlaubt das Kompilieren solchen Codes, wovon wir allerdings dringend abraten.) `new` ist als Ausnahme standardmäßig in Form eines Makros zulässig, da die Header sich mit `#pragma push_macro("new")`/`#undef new`/`#pragma pop_macro("new")` umfassend schützen. Bei Festlegung von _ENFORCE_BAN_OF_MACRO_NEW erfolgt genau das, was der Name schon sagt.
+- C++11 17.6.4.3.1 [macro.names]/2 verbietet die Makroersetzung von Schlüsselwörtern, wenn Header der C++-Standardbibliothek enthalten sind. Die Header geben jetzt Compilerfehler aus, wenn sie Schlüsselwörter erkennen, die durch Makros ersetzt wurden. (Durch Definieren von _ALLOW_KEYWORD_MACROS kann dieser Code kompiliert werden, aber wir raten dringend davon ab.) Als Ausnahme ist die Makro Form von `new` standardmäßig zulässig, da die Header sich mithilfe `#pragma push_macro("new")` / `#undef new` / `#pragma pop_macro("new")` umfassend verteidigen. Bei Festlegung von _ENFORCE_BAN_OF_MACRO_NEW erfolgt genau das, was der Name schon sagt.
 
 - Um verschiedene Optimierungen und Debugüberprüfungen zu implementieren, unterbricht die Visual Studio-Implementierung der C++-Standardbibliothek absichtlich die binäre Kompatibilität zwischen Versionen von Visual Studio (2005, 2008, 2010, 2012). Wenn die C++-Standardbibliothek verwendet wird, dürfen Objektdateien und statische Bibliotheken, die unter Verwendung verschiedener Versionen kompiliert werden, nicht in einer Binärdatei (EXE oder DLL) gemischt werden, und C++-Standardbibliotheksobjekte dürfen nicht zwischen Binärdateien übergeben werden, die mit verschiedenen Versionen kompiliert werden. Das Mischen von Objektdateien und statischen Bibliotheken (unter Verwendung der C++-Standardbibliothek), die mit Visual Studio 2010 kompiliert wurden, mit denjenigen, die mit dem C++-Compiler in Visual Studio 2012 kompiliert wurden, löst Linkerfehler aufgrund des Konflikts von _MSC_VER aus. _MSC_VER ist das Makro, das die Hauptversion des Compilers (1700 für _MSC_VER Visual C++ in Visual Studio 2012) enthält. Diese Überprüfung kann weder eine gemischte DLL-Verwendung noch eine gemischte Verwendung erkennen, die Visual Studio 2008 oder früher betrifft.
 
@@ -3090,7 +3090,7 @@ Die `SchedulerType`-Enumeration von `UmsThreadDefault` ist veraltet. Bei Angabe 
 
 - Es wurde ein Parameter zu dem `CFolderPickerDialog`-Konstruktor hinzugefügt. (Dies ist ein Standardparameter, weshalb kein Eingriff in den Quellcode erforderlich ist.)
 
-- Die Größe der Struktur `CFileStatus` wurde geändert: Der `m_attribute`-Member wurde von BYTE in DWORD geändert (entsprechend dem Wert, der von `GetFileAttributes` zurückgegeben wird).
+- Die Größe der `CFileStatus`-Struktur wurde geändert: Der `m_attribute`-Member wurde von BYTE in DWORD geändert (entsprechend dem Wert, der von `GetFileAttributes` zurückgegeben wird).
 
 - `CRichEditCtrl` und `CRichEditView` nutzen in Unicode-Builds MSFTEDIT_CLASS (RichEdit 4.1-Steuerelement) anstelle von RICHEDIT_CLASS (RichEdit 3.0-Steuerelement).
 
@@ -3264,7 +3264,7 @@ Die `SchedulerType`-Enumeration von `UmsThreadDefault` ist veraltet. Bei Angabe 
 
 ### <a name="ide"></a>IDE
 
-- Das Dialogfeld zum Beenden von Anwendungen beendet eine Anwendung nicht mehr. Wenn in früheren Versionen die Funktion `abort()` oder `terminate()` die Verkaufsversion einer Anwendung geschlossen hat, zeigte die C-Laufzeitbibliothek im Konsolenfenster oder Dialogfeld eine Meldung zur Beendigung der Anwendung an. Ein Teil der Meldung lautet ungefähr so: „Diese Anwendung hat ein nicht ordnungsgemäßes Beenden der Runtime angefordert. Weitere Informationen erhalten Sie von dem für die Anwendung zuständigen Supportteam.“ Die Meldung zum Beenden der Anwendung war redundant, da Windows anschließend den aktuellen Beendigungshandler anzeigte, bei dem es sich meist um das Dialogfeld „Windows-Fehlerberichterstellung“ (Dr. Watson) oder den Visual Studio-Debugger handelte. Ab Visual Studio 2010 zeigt die C-Laufzeitbibliothek die Meldung nicht mehr an. Darüber hinaus hindert die Laufzeit die Anwendung am Beenden, bevor ein Debugger gestartet wird. Dies ist nur dann eine bedeutende Änderung, wenn Sie vom früheren Verhalten der Meldung zum Beenden der Anwendung abhängig sind.
+- Das Dialogfeld zum Beenden von Anwendungen beendet eine Anwendung nicht mehr. Wenn in früheren Versionen die Funktion `abort()` oder `terminate()` die Verkaufsversion einer Anwendung geschlossen hat, zeigte die C-Laufzeitbibliothek im Konsolenfenster oder Dialogfeld eine Meldung zur Beendigung der Anwendung an. Ein Teil der Meldung lautet ungefähr so: „Diese Anwendung hat ein nicht ordnungsgemäßes Beenden der Runtime angefordert. Weitere Informationen erhalten Sie von dem für die Anwendung zuständigen Supportteam.“ Die Meldung zum Beenden der Anwendung war redundant, da Windows daraufhin den aktuellen Beendigungs Handler angezeigt hat, der normalerweise das Dialogfeld Windows-Fehlerberichterstattung (Dr. Watson) oder den Visual Studio-Debugger war. Ab Visual Studio 2010 zeigt die C-Laufzeitbibliothek die Meldung nicht mehr an. Darüber hinaus hindert die Laufzeit die Anwendung am Beenden, bevor ein Debugger gestartet wird. Dies ist nur dann eine bedeutende Änderung, wenn Sie vom früheren Verhalten der Meldung zum Beenden der Anwendung abhängig sind.
 
 - Insbesondere in Visual Studio 2010 funktioniert IntelliSense nicht bei C++-/CLI-Code oder Attributen, **Alle Verweise suchen** funktioniert nicht bei lokalen Variablen, und „Codemodell“ ruft keine Typnamen aus importierten Assemblys ab und löst Typen nicht in ihre vollqualifizierten Namen auf.
 
@@ -3408,15 +3408,15 @@ Die `SchedulerType`-Enumeration von `UmsThreadDefault` ist veraltet. Bei Angabe 
 
 - Aktivierreihenfolge von Steuerelementen in MFC-Dialogfeldern: Die richtige Aktivierreihenfolge mehrerer Steuerelemente in einem MFC-Dialogfeld ist gestört, wenn ein MFC-ActiveX-Steuerelement in die Aktivierreihenfolge eingefügt wird. Diese Änderung behebt dieses Problem.
 
-   Erstellen Sie beispielsweise eine MFC-Dialogfeldanwendung, die über ein ActiveX-Steuerelement und mehrere Bearbeitungssteuerelemente verfügt. Positionieren Sie das ActiveX-Steuerelement in der Mitte der Aktivierreihenfolge der Bearbeitungssteuerelemente. Starten Sie die Anwendung, klicken Sie auf ein Bearbeitungssteuerelement, dessen Aktivierreihenfolge auf das ActiveX-Steuerelement folgt, und drücken Sie dann die TAB-TASTE. Vor dieser Änderung wechselte der Fokus zum Bearbeitungssteuerelement, das auf das ActiveX-Steuerelement folgte, anstatt zum nächsten Steuerelement in der Aktivierreihenfolge.
+   Erstellen Sie beispielsweise eine MFC-Dialogfeldanwendung, die über ein ActiveX-Steuerelement und mehrere Bearbeitungssteuerelemente verfügt. Positionieren Sie das ActiveX-Steuerelement in der Mitte der Aktivierreihenfolge der Bearbeitungssteuerelemente. Starten Sie die Anwendung, klicken Sie auf ein Bearbeitungs Steuerelement, dessen Aktivier Reihenfolge nach dem ActiveX-Steuerelement und dann auf Tab. vor dieser Änderung ging der Fokus auf das Bearbeitungs Steuerelement, das dem ActiveX-Steuerelement folgt, anstatt auf das nächste Bearbeitungs Steuerelement in der aktivi
 
-- `CFileDialog`-Klasse: Benutzerdefinierte Vorlagen für die `CFileDialog`-Klasse können nicht automatisch zu Windows Vista portiert werden. Sie sind immer noch verwendbar ist, verfügen jedoch nicht über die zusätzliche Funktionalität oder das Aussehen von Dialogfeldern im Windows Vista-Stil.
+- `CFileDialog`-Klasse: benutzerdefinierte Vorlagen für die `CFileDialog`-Klasse können nicht automatisch zu Windows Vista portiert werden. Sie sind immer noch verwendbar ist, verfügen jedoch nicht über die zusätzliche Funktionalität oder das Aussehen von Dialogfeldern im Windows Vista-Stil.
 
-- `CWnd`-Klasse und `CFrameWnd`-Klasse: Die `CWnd::GetMenuBarInfo`-Methode wurde entfernt.
+- `CWnd`-Klasse und `CFrameWnd`-Klasse: Die Methode `CWnd::GetMenuBarInfo` wurde entfernt.
 
    Die Methode `CFrameWnd::GetMenuBarInfo` ist jetzt eine nicht virtuelle Methode. Weitere Informationen finden Sie unter **Funktion „GetMenuBarInfo“** im Windows SDK.
 
-- MFC-ISAPI-Unterstützung: MFC unterstützt das Erstellen von Anwendungen mit der ISAPI (Internet Server Application Programming Interface) nicht mehr. Wenn Sie eine ISAPI-Anwendung erstellen möchten, rufen Sie die ISAPI-Erweiterungen direkt auf.
+- MFC ISAPI-Unterstützung: MFC unterstützt das Erstellen von Anwendungen mit der ISAPI (Internet Server Application Programming Interface) nicht mehr. Wenn Sie eine ISAPI-Anwendung erstellen möchten, rufen Sie die ISAPI-Erweiterungen direkt auf.
 
 - Veraltete ANSI-APIs: Die ANSI-Versionen mehrerer MFC-Methoden sind veraltet. Verwenden Sie in Ihren künftigen Anwendungen die Unicode-Versionen dieser Methoden. Weitere Informationen finden Sie unter **Anforderungen für die Erstellung von Windows Vista-Standardsteuerelementen**.
 

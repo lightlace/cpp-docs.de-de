@@ -1,6 +1,6 @@
 ---
 title: 'Syntax der Formatangabe: printf- und wprintf-Funktionen'
-ms.date: 07/30/2019
+ms.date: 10/21/2019
 helpviewer_keywords:
 - format specification fields for printf function
 - printf function format specification fields
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: db144703a89fe1a6a76ed15f1cf77395c4565fab
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: e4def787dc5792921298999eb643ff56dd2c9f3d
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500091"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778390"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntax der Formatangabe: printf- und wprintf-Funktionen
 
-Die verschiedenen `printf`- und `wprintf`-Funktionen nehmen eine Formatzeichenfolge sowie optionale Argumente an und generieren eine formatierte Zeichenfolgensequenz für die Ausgabe. Die Formatzeichenfolge enthält 0 oder mehr *Anweisungen*, die entweder literale Zeichen für die Ausgabe oder codierte *Konvertierungsangaben* sind, die beschreiben, wie ein Argument in der Ausgabe formatiert wird. Dieser Artikel beschreibt die Syntax, die zum Codieren von Konvertierungsangaben in der Formatzeichenfolge verwendet wird. Eine Auflistung dieser Funktionen finden Sie unter [Stream E/A](../c-runtime-library/stream-i-o.md).
+Die verschiedenen `printf`- und `wprintf`-Funktionen nehmen eine Formatzeichenfolge sowie optionale Argumente an und generieren eine formatierte Zeichenfolgensequenz für die Ausgabe. Die Formatzeichenfolge enthält 0 oder mehr *Anweisungen*, die entweder literale Zeichen für die Ausgabe oder codierte *Konvertierungsangaben* sind, die beschreiben, wie ein Argument in der Ausgabe formatiert wird. Dieser Artikel beschreibt die Syntax, die zum Codieren von Konvertierungsangaben in der Formatzeichenfolge verwendet wird. Eine Auflistung dieser Funktionen finden Sie unter [Stream E/A](../c-runtime-library/stream-i-o.md). 
 
 Eine Konvertierungsangabe besteht aus optionalen Feldern und Pflichtfeldern in folgender Form:
 
@@ -39,13 +39,16 @@ Eine grundlegende Formatspezifikation enthält nur das Prozentzeichen und ein *T
 
 <a name="type"></a>
 
+> [!NOTE] 
+> In Visual Studio 2015 wurden die `printf`-und `scanf`-Funktions Familie als **Inline** deklariert und in die Header `<stdio.h>` und `<conio.h>` verschoben. Wenn Sie älteren Code migrieren, kann *LNK2019* in Verbindung mit diesen Funktionen angezeigt werden. Weitere Informationen finden Sie unter [visueller C++ Änderungs Verlauf 2003-2015](../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
+
 ## <a name="type-conversion-specifier"></a>Typkonvertierungsspezifizierer
 
 Das *Typ*-Konvertierungsspezifiziererzeichen gibt an, ob das entsprechende Argument als Zeichen, Zeichenfolge, Zeiger, ganze Zahl oder Gleitkommazahl interpretiert werden soll. Das *Typ*zeichen ist das einzige erforderliche Konvertierungsangabenfeld und erscheint nach allen optionalen Feldern.
 
 Die Argumente, die der Formatzeichenfolge folgen, werden nach dem entsprechenden *Typ*zeichen und dem optionalen [Größen](#size)präfix interpretiert. Konvertierungen für die Zeichentypen `char` und `wchar_t` werden durch **c** oder **C** angegeben, und Einzelbyte- und Multibyte- oder Breitzeichen-Zeichenfolgen werden je nach benötigter Formatierungsfunktion durch **s** oder **S** angegeben. Zeichen und Zeichenfolgenargumente, die durch **c** und **s** angegeben werden, werden von den `printf`-Familienfunktionen als `char` und `char*` oder von den `wprintf`-Familienfunktionen als `wchar_t` und `wchar_t*` interpretiert. Zeichen und Zeichenfolgenargumente, die durch **C** und **S** angegeben werden, werden von den `printf`-Familienfunktionen als `wchar_t` und `wchar_t*` oder von den `wprintf`-Familienfunktionen als `char` und `char*` interpretiert. Dieses Verhalten ist Microsoft-spezifisch.
 
-Ganzzahlige Typen wie `short`, `int`, `long`, `long long` und ihre `unsigned`-Varianten werden durch **d**, **i**, **o**, **u**, **x** und **X** angegeben. Gleitkommatypen wie `float`, `double` und `long double`, werden durch **a**, **A**, **e**, **E**, **f**, **F**, **g** und **G** angegeben. Sofern Sie nicht durch ein *Größen*präfix geändert werden, werden ganzzahlige Argumente standardmäßig in den `int`-Typ umgewandelt. Gleitkommaargumente werden in `double` umgewandelt. Bei 64-Bit-Systemen ist `int` ein 32-Bit-Wert. Daher werden ganze 64-Bit-Zahlen verkürzt, wenn sie für Ausgabe formatiert werden, sofern nicht ein *Größen*präfix von **ll** oder **I64** verwendet wird. Durch **p** angegebene Zeigertypen verwenden die Standardzeigergröße für die Plattform.
+Ganzzahlige Typen wie `short`, `int`, `long`, `long long` und deren `unsigned` Varianten werden mithilfe von **d**, **i**, **o**, **u**, **x**und **x**angegeben. Gleit Komma Typen wie 1, 2 und 3 **werden mithilfe von**, **a**, **e**, **e**, **f**, **f**, **g**und **g**angegeben. Wenn Sie nicht durch ein *Größen* Präfix geändert werden, werden ganzzahlige Argumente standardmäßig in 3 Typ umgewandelt, und Gleit Komma Argumente werden in 4 umgewandelt. Bei 64-Bit-Systemen ist `int` ein 32-Bit-Wert. Daher werden ganze 64-Bit-Zahlen verkürzt, wenn sie für Ausgabe formatiert werden, sofern nicht ein *Größen*präfix von **ll** oder **I64** verwendet wird. Durch **p** angegebene Zeigertypen verwenden die Standardzeigergröße für die Plattform.
 
 > [!NOTE]
 > **Microsoft-spezifisch**: Das **Z**-Typzeichen sowie das Verhalten der **c**-, **C**-, **s**- und **S**-Typzeichen stellen bei Verwendung mit `printf`- und `wprintf`-Funktionen Microsoft-Erweiterungen dar. Der ISO C-Standard verwendet konsistent **c** und **s** für schmale Zeichen und Zeichenfolgen sowie **C** und **S** für Breitzeichen und Zeichenfolgen in allen Formatierungsfunktionen.
@@ -115,7 +118,7 @@ Das erste optionale Feld in einer Konvertierungsangabe enthält *Flag-Anweisunge
 
 ### <a name="flag-characters"></a>Flag-Zeichen
 
-|Flag|Bedeutung|Standard|
+|Flag|Bedeutung|Default|
 |----------|-------------|-------------|
 |**-**|Das Ergebnis mit der angegebenen Feldweite ist linksbündig.|Rechtsbündig.|
 |**+**|Verwenden Sie ein Zeichen (+ der -), um dem Ausgabewert ein Präfix hinzuzufügen, wenn dieser einem signed-Typ entspricht.|Das Vorzeichen taucht nur für negative Werte mit Vorzeichen (-) auf.|
@@ -157,7 +160,7 @@ Das *Typ*zeichen bestimmt entweder die Interpretation von *precision* oder die S
 
 ### <a name="how-precision-values-affect-type"></a>Wie sich Genauigkeitswerte auf den Typ auswirken
 
-|Typ|Bedeutung|Standard|
+|Geben Sie Folgendes ein:|Bedeutung|Default|
 |----------|-------------|-------------|
 |**a**, **A**|Die Genauigkeit gibt die Anzahl der Ziffern nach dem Punkt an.|Die Standardgenauigkeit beträgt 13. Wenn die Genauigkeit 0 beträgt, wird kein Dezimaltrennzeichen gedruckt, es sei denn, das **#** -Flag wird verwendet.|
 |**c**, **C**|Die Genauigkeit hat keine Auswirkung.|Zeichen wird gedruckt.|
