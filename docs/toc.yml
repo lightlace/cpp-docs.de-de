@@ -167,7 +167,7 @@
                   href: build/pgomgr.md
                 - name: pgosweep
                   href: build/pgosweep.md
-                - name: 'Gewusst wie: Zusammenführen mehrerer PGO-Profile in einem einzigen Profil'
+                - name: 'Vorgehensweise: Zusammenführen mehrerer PGO-Profile in einem einzigen Profil'
                   href: build/how-to-merge-multiple-pgo-profiles-into-a-single-profile.md
     - name: Verwenden des MSVC-Toolsets auf der Befehlszeile
       expanded: false
@@ -191,15 +191,15 @@
           href: build/msbuild-visual-cpp.md
         - name: 'Exemplarische Vorgehensweise: Verwenden von MSBuild zum Erstellen eines C++-Projekts'
           href: build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md
-        - name: 'Gewusst wie: Verwenden von Buildereignissen in MSBuild-Projekten'
+        - name: 'Vorgehensweise: Verwenden von Buildereignissen in MSBuild-Projekten'
           href: build/how-to-use-build-events-in-msbuild-projects.md
-        - name: 'Gewusst wie: Hinzufügen eines benutzerdefinierten Buildschritts zu MSBuild-Projekten'
+        - name: 'Vorgehensweise: Hinzufügen eines benutzerdefinierten Buildschritts zu MSBuild-Projekten'
           href: build/how-to-add-a-custom-build-step-to-msbuild-projects.md
         - name: 'Vorgehensweise: Hinzufügen von benutzerdefinierten Buildtools zu MSBuild-Projekten'
           href: build/how-to-add-custom-build-tools-to-msbuild-projects.md
-        - name: 'Gewusst wie: Integrieren von benutzerdefinierten Tools in die Projekteigenschaften'
+        - name: 'Vorgehensweise: Integrieren von benutzerdefinierten Tools in die Projekteigenschaften'
           href: build/how-to-integrate-custom-tools-into-the-project-properties.md
-        - name: 'Gewusst wie: Modify the target framework and platform toolset (Vorgehensweise: Ändern des Zielframeworks und des Plattformtoolsets)'
+        - name: 'Vorgehensweise: Modify the target framework and platform toolset (Vorgehensweise: Ändern des Zielframeworks und des Plattformtoolsets)'
           href: build/how-to-modify-the-target-framework-and-platform-toolset.md
     - name: 'Exemplarische Vorgehensweise: Erstellen und Verwenden einer statischen Bibliothek (C++)'
       href: build/walkthrough-creating-and-using-a-static-library-cpp.md
@@ -308,7 +308,7 @@
           href: build/building-c-cpp-side-by-side-assemblies.md
         - name: 'Vorgehensweise: Erstellen von COM-Komponenten ohne Registrierung'
           href: build/how-to-build-registration-free-com-components.md
-        - name: 'Gewusst wie: Erstellen von isolierten Anwendungen zur Verwendung von COM-Komponenten'
+        - name: 'Vorgehensweise: Erstellen von isolierten Anwendungen zur Verwendung von COM-Komponenten'
           href: build/how-to-build-isolated-applications-to-consume-com-components.md
         - name: Manifestgenerierung für C/C++-Programme
           expanded: false
@@ -319,7 +319,7 @@
               href: build/manifest-generation-in-visual-studio.md
             - name: Manifestgenerierung über die Befehlszeile
               href: build/manifest-generation-at-the-command-line.md
-            - name: 'Gewusst wie: Einbetten eines Manifests in eine C- bzw. C++-Anwendung'
+            - name: 'Vorgehensweise: Einbetten eines Manifests in eine C- bzw. C++-Anwendung'
               href: build/how-to-embed-a-manifest-inside-a-c-cpp-application.md
         - name: Problembehandlung bei isolierten Anwendungen und parallelen Assemblys (C/C++)
           href: build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md
@@ -1792,7 +1792,7 @@
               href: windows/how-to-create-a-resource-script-file.md
             - name: 'Vorgehensweise: Verwalten von Ressourcen'
               href: windows/how-to-copy-resources.md
-            - name: 'Gewusst wie: Einfügen von Ressourcen zur Kompilierungszeit'
+            - name: 'Vorgehensweise: Einfügen von Ressourcen zur Kompilierungszeit'
               href: windows/how-to-include-resources-at-compile-time.md
         - name: Ressourcenbezeichner (Symbole)
           expanded: false
@@ -1801,7 +1801,7 @@
               href: windows/symbols-resource-identifiers.md
             - name: 'Vorgehensweise: Erstellen von Symbolen'
               href: windows/creating-new-symbols.md
-            - name: 'Gewusst wie: Verwalten von Symbolen'
+            - name: 'Vorgehensweise: Verwalten von Symbolen'
               href: windows/changing-a-symbol-or-symbol-name-id.md
             - name: Vordefinierte Symbol-IDs
               expanded: false
@@ -1840,7 +1840,7 @@
                   items:
                     - name: Dialogfeldsteuerelemente
                       href: windows/controls-in-dialog-boxes.md
-                    - name: 'Gewusst wie: Hinzufügen, Bearbeiten oder Löschen eines Steuerelements'
+                    - name: 'Vorgehensweise: Hinzufügen, Bearbeiten oder Löschen eines Steuerelements'
                       href: windows/adding-editing-or-deleting-controls.md
                     - name: 'Vorgehensweise: Layout-Steuerelemente'
                       href: windows/arrangement-of-controls-on-dialog-boxes.md
@@ -2204,17 +2204,17 @@
           href: cppcx/wrl/windows-runtime-cpp-template-library-wrl.md
         - name: 'Vorgehensweise: Aktivieren und Verwenden einer Windows-Runtime-Komponente mit WRL'
           href: cppcx/wrl/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md
-        - name: 'Gewusst wie: Abschließen asynchroner Vorgänge mit WRL'
+        - name: 'Vorgehensweise: Abschließen asynchroner Vorgänge mit WRL'
           href: cppcx/wrl/how-to-complete-asynchronous-operations-using-wrl.md
         - name: 'Vorgehensweise: Behandeln von Ereignissen mit WRL'
           href: cppcx/wrl/how-to-handle-events-using-wrl.md
         - name: 'Exemplarische Vorgehensweise: Erstellen einer UWP-App mithilfe von WRL und Media Foundation'
           href: cppcx/wrl/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md
-        - name: 'Gewusst wie: Erstellen einer klassischen COM-Komponente mit WRL'
+        - name: 'Vorgehensweise: Erstellen einer klassischen COM-Komponente mit WRL'
           href: cppcx/wrl/how-to-create-a-classic-com-component-using-wrl.md
         - name: 'Vorgehensweise: Direktes Instanziieren von WRL-Komponenten'
           href: cppcx/wrl/how-to-instantiate-wrl-components-directly.md
-        - name: 'Gewusst wie: Verwenden von „winmdidl.exe“ und „midlrt.exe“ zum Erstellen von H-Dateien aus Windows-Metadaten'
+        - name: 'Vorgehensweise: Verwenden von „winmdidl.exe“ und „midlrt.exe“ zum Erstellen von H-Dateien aus Windows-Metadaten'
           href: cppcx/wrl/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md
         - name: Schlüssel-WRL-APIs nach Kategorie
           href: cppcx/wrl/key-wrl-apis-by-category.md
@@ -2474,15 +2474,15 @@
       items:
         - name: C++/CLI-Aufgaben
           href: dotnet/cpp-cli-tasks.md
-        - name: 'Gewusst wie: Erstellen von leeren CLR-Projekten'
+        - name: 'Vorgehensweise: Erstellen von leeren CLR-Projekten'
           href: dotnet/how-to-create-clr-empty-projects.md
         - name: 'Vorgehensweise: Erstellen von CLR-Konsolenanwendungen'
           href: dotnet/how-to-create-clr-console-applications-cpp-cli.md
-        - name: 'Gewusst wie: Verwenden von Nachverfolgungsverweisen in C++/CLI'
+        - name: 'Vorgehensweise: Verwenden von Nachverfolgungsverweisen in C++/CLI'
           href: dotnet/how-to-use-tracking-references-in-cpp-cli.md
         - name: 'Vorgehensweise: Verwenden von Arrays in C++/CLI'
           href: dotnet/how-to-use-arrays-in-cpp-cli.md
-        - name: 'Gewusst wie: Definieren und Verarbeiten von Klassen und Strukturen'
+        - name: 'Vorgehensweise: Definieren und Verarbeiten von Klassen und Strukturen'
           href: dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md
         - name: C++-Stapelsemantik für Verweistypen
           href: dotnet/cpp-stack-semantics-for-reference-types.md
@@ -2492,7 +2492,7 @@
           href: dotnet/user-defined-conversions-cpp-cli.md
         - name: initonly
           href: dotnet/initonly-cpp-cli.md
-        - name: 'Gewusst wie: Definieren und Verwenden von Delegaten'
+        - name: 'Vorgehensweise: Definieren und Verwenden von Delegaten'
           href: dotnet/how-to-define-and-use-delegates-cpp-cli.md
         - name: 'Vorgehensweise: Definieren und Verarbeiten von Enumerationen in C++/CLI'
           href: dotnet/how-to-define-and-consume-enums-in-cpp-cli.md
@@ -2500,7 +2500,7 @@
           href: dotnet/how-to-use-events-in-cpp-cli.md
         - name: 'Vorgehensweise: Definieren eines statischen Schnittstellenkonstruktors'
           href: dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md
-        - name: 'Gewusst wie: Deklarieren von Überschreibungsspezifizierern in nativen Kompilierungen'
+        - name: 'Vorgehensweise: Deklarieren von Überschreibungsspezifizierern in nativen Kompilierungen'
           href: dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md
         - name: 'Vorgehensweise: Verwenden von Eigenschaften in C++/CLI'
           href: dotnet/how-to-use-properties-in-cpp-cli.md
@@ -2562,7 +2562,7 @@
                   href: dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md
                 - name: 'Vorgehensweise: DDX-/DDV-Datenbindung mit Windows Forms'
                   href: dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md
-                - name: 'Gewusst wie: Auffangen von Windows Forms-Ereignissen aus nativen C++-Klassen'
+                - name: 'Vorgehensweise: Auffangen von Windows Forms-Ereignissen aus nativen C++-Klassen'
                   href: dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md
             - name: Hosten eines Windows Forms-Benutzersteuerelements als MFC-Ansicht
               expanded: false
@@ -2571,7 +2571,7 @@
                   href: dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md
                 - name: 'Vorgehensweise: Erstellen des Benutzersteuerelements und Hosten der MDI-Ansicht'
                   href: dotnet/how-to-create-the-user-control-and-host-mdi-view.md
-                - name: 'Gewusst wie: Hinzufügen von Befehlsrouting zum Windows Forms-Steuerelement'
+                - name: 'Vorgehensweise: Hinzufügen von Befehlsrouting zum Windows Forms-Steuerelement'
                   href: dotnet/how-to-add-command-routing-to-the-windows-forms-control.md
                 - name: 'Vorgehensweise: Aufrufen von Ereignissen und Methoden des Windows Forms-Steuerelements'
                   href: dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md
@@ -2587,9 +2587,9 @@
               items:
                 - name: Verwenden von explizitem PInvoke in C++ (DllImport-Attribut)
                   href: dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md
-                - name: 'Gewusst wie: Aufrufen von nativen DLLs in verwaltetem Code mithilfe von PInvoke'
+                - name: 'Vorgehensweise: Aufrufen von nativen DLLs in verwaltetem Code mithilfe von PInvoke'
                   href: dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md
-                - name: 'Gewusst wie: Marshallen von Zeichenfolgen mit PInvoke'
+                - name: 'Vorgehensweise: Marshallen von Zeichenfolgen mit PInvoke'
                   href: dotnet/how-to-marshal-strings-using-pinvoke.md
                 - name: 'Vorgehensweise: Marshallen von Strukturen mit PInvoke'
                   href: dotnet/how-to-marshal-structures-using-pinvoke.md
@@ -2606,7 +2606,7 @@
                   href: dotnet/using-cpp-interop-implicit-pinvoke.md
                 - name: 'Vorgehensweise: Marshallen von ANSI-Zeichenfolgen mit C++-Interop'
                   href: dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md
-                - name: 'Gewusst wie: Marshallen von Unicode-Zeichenfolgen mit C++-Interop'
+                - name: 'Vorgehensweise: Marshallen von Unicode-Zeichenfolgen mit C++-Interop'
                   href: dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md
                 - name: 'Vorgehensweise: Marshallen von COM-Zeichenfolgen mit C++-Interop'
                   href: dotnet/how-to-marshal-com-strings-using-cpp-interop.md
@@ -2614,7 +2614,7 @@
                   href: dotnet/how-to-marshal-structures-using-cpp-interop.md
                 - name: 'Vorgehensweise: Marshallen von Arrays mit C++-Interop'
                   href: dotnet/how-to-marshal-arrays-using-cpp-interop.md
-                - name: 'Gewusst wie: Marshallen von Rückrufen und Delegaten mit C++-Interop'
+                - name: 'Vorgehensweise: Marshallen von Rückrufen und Delegaten mit C++-Interop'
                   href: dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md
                 - name: 'Vorgehensweise: Marshallen von eingebetteten Zeigern mit C++-Interop'
                   href: dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md
@@ -2622,23 +2622,23 @@
                   href: dotnet/how-to-extend-the-marshaling-library.md
                 - name: 'Vorgehensweise: Zugriff auf Zeichen in System::String'
                   href: dotnet/how-to-access-characters-in-a-system-string.md
-                - name: "Gewusst wie: Umwandeln von char\_*-Zeichenfolgen in System::Byte-Arrays"
+                - name: "Vorgehensweise: Umwandeln von char\_*-Zeichenfolgen in System::Byte-Arrays"
                   href: dotnet/how-to-convert-char-star-string-to-system-byte-array.md
                 - name: 'Vorgehensweise: Konvertieren von System::String in wchar_t* oder char*'
                   href: dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md
-                - name: 'Gewusst wie: Konvertieren von System::String in Standardzeichenfolgen'
+                - name: 'Vorgehensweise: Konvertieren von System::String in Standardzeichenfolgen'
                   href: dotnet/how-to-convert-system-string-to-standard-string.md
                 - name: 'Vorgehensweise: Konvertieren einer Standardzeichenfolge in System::String'
                   href: dotnet/how-to-convert-standard-string-to-system-string.md
                 - name: 'Vorgehensweise: Abrufen eines Zeigers auf ein Bytearray'
                   href: dotnet/how-to-obtain-a-pointer-to-byte-array.md
-                - name: 'Gewusst wie: Laden von nicht verwalteten Ressourcen in ein Bytearray'
+                - name: 'Vorgehensweise: Laden von nicht verwalteten Ressourcen in ein Bytearray'
                   href: dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md
                 - name: 'Vorgehensweise: Ändern der Verweisklasse in einer nativen Funktion'
                   href: dotnet/how-to-modify-reference-class-in-a-native-function.md
-                - name: 'Gewusst wie: Bestimmen, ob es sich um ein natives oder ein CLR-Image handelt'
+                - name: 'Vorgehensweise: Bestimmen, ob es sich um ein natives oder ein CLR-Image handelt'
                   href: dotnet/how-to-determine-if-an-image-is-native-or-clr.md
-                - name: 'Gewusst wie: Hinzufügen einer nativen DLL zum globalen Assemblycache'
+                - name: 'Vorgehensweise: Hinzufügen einer nativen DLL zum globalen Assemblycache'
                   href: dotnet/how-to-add-native-dll-to-global-assembly-cache.md
                 - name: 'Vorgehensweise: Verweis auf Werttyp in nativem Typ'
                   href: dotnet/how-to-hold-reference-to-value-type-in-native-type.md
@@ -2646,15 +2646,15 @@
                   href: dotnet/how-to-hold-object-reference-in-unmanaged-memory.md
                 - name: 'Vorgehensweise: Erkennen der -clr-Kompilierung'
                   href: dotnet/how-to-detect-clr-compilation.md
-                - name: 'Gewusst wie: Konvertieren zwischen System::Guid und _GUID'
+                - name: 'Vorgehensweise: Konvertieren zwischen System::Guid und _GUID'
                   href: dotnet/how-to-convert-between-system-guid-and-guid.md
-                - name: 'Gewusst wie: Angeben eines out-Parameters'
+                - name: 'Vorgehensweise: Angeben eines out-Parameters'
                   href: dotnet/how-to-specify-an-out-parameter.md
                 - name: 'Vorgehensweise: Verwenden eines nativen Typs in einer -clr-Kompilierung'
                   href: dotnet/how-to-use-a-native-type-in-a-clr-compilation.md
                 - name: 'Vorgehensweise: Deklarieren von Handles in nativen Typen'
                   href: dotnet/how-to-declare-handles-in-native-types.md
-                - name: 'Gewusst wie: Umschließen einer nativen Klasse zur Verwendung in C#'
+                - name: 'Vorgehensweise: Umschließen einer nativen Klasse zur Verwendung in C#'
                   href: dotnet/how-to-wrap-native-class-for-use-by-csharp.md
     - name: Reiner und überprüfbarer Code
       expanded: false
@@ -2690,9 +2690,9 @@
           href: dotnet/stl-clr-containers.md
         - name: Anforderungen für STL/CLR-Containerelemente
           href: dotnet/requirements-for-stl-clr-container-elements.md
-        - name: 'Gewusst wie: Umwandeln einer .NET-Sammlung in einen STL/CLR-Container'
+        - name: 'Vorgehensweise: Umwandeln einer .NET-Sammlung in einen STL/CLR-Container'
           href: dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md
-        - name: 'Gewusst wie: Umwandeln eines STL/CLR-Containers in eine .NET-Sammlung'
+        - name: 'Vorgehensweise: Umwandeln eines STL/CLR-Containers in eine .NET-Sammlung'
           href: dotnet/how-to-convert-from-a-stl-clr-container-to-a-dotnet-collection.md
         - name: 'Vorgehensweise: Verfügbarmachen eines STL/CLR-Containers einer Assembly'
           href: dotnet/how-to-expose-an-stl-clr-container-from-an-assembly.md
@@ -2823,9 +2823,9 @@
       items:
         - name: Boxing
           href: dotnet/boxing-cpp-cli.md
-        - name: 'Gewusst wie: Explizites Anfordern von Boxing'
+        - name: 'Vorgehensweise: Explizites Anfordern von Boxing'
           href: dotnet/how-to-explicitly-request-boxing.md
-        - name: 'Gewusst wie: Verwenden von gcnew zum Erstellen von Werttypen und Verwenden von implizitem Boxing'
+        - name: 'Vorgehensweise: Verwenden von gcnew zum Erstellen von Werttypen und Verwenden von implizitem Boxing'
           href: dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md
         - name: 'Vorgehensweise: Unboxing'
           href: dotnet/how-to-unbox.md
@@ -2969,7 +2969,7 @@
                           href: c-language/c-integer-constants.md
                         - name: Ganzzahltypen
                           href: c-language/integer-types.md
-                        - name: Ganzzahlige Grenzen in C++
+                        - name: Ganzzahlige Grenzwerte in C und C++
                           href: c-language/cpp-integer-limits.md
                     - name: C-Zeichenkonstanten
                       expanded: false
@@ -3705,9 +3705,9 @@
                   items:
                     - name: Behandeln von Fehlern und Ausnahmen (Modern C++)
                       href: cpp/errors-and-exception-handling-modern-cpp.md
-                    - name: 'Gewusst wie: Entwurfsrichtlinien für sichere Ausnahmebehandlung'
+                    - name: 'Vorgehensweise: Entwurfsrichtlinien für sichere Ausnahmebehandlung'
                       href: cpp/how-to-design-for-exception-safety.md
-                    - name: 'Gewusst wie: Verbinden von Code, der Ausnahmen zulässt, mit Code ohne Ausnahmen'
+                    - name: 'Vorgehensweise: Verbinden von Code, der Ausnahmen zulässt, mit Code ohne Ausnahmen'
                       href: cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
                 - name: Portabilität bei ABI-Grenzen (Modern C++)
                   href: cpp/portability-at-abi-boundaries-modern-cpp.md
@@ -6088,9 +6088,9 @@
                       href: extensions/interior-ptr-cpp-cli.md
                     - name: 'Vorgehensweise: Deklarieren und Verwenden innerer Zeiger und verwalteter Arrays'
                       href: extensions/how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md
-                    - name: 'Gewusst wie: Deklarieren von Werttypen mit dem interior_ptr-Schlüsselwort'
+                    - name: 'Vorgehensweise: Deklarieren von Werttypen mit dem interior_ptr-Schlüsselwort'
                       href: extensions/how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md
-                    - name: 'Gewusst wie: Überladen von Funktionen mit inneren und nativen Zeigern'
+                    - name: 'Vorgehensweise: Überladen von Funktionen mit inneren und nativen Zeigern'
                       href: extensions/how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md
                     - name: 'Vorgehensweise: Deklarieren innerer Zeiger mit dem const-Schlüsselwort'
                       href: extensions/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md
@@ -6099,7 +6099,7 @@
                   items:
                     - name: pin_ptr
                       href: extensions/pin-ptr-cpp-cli.md
-                    - name: 'Gewusst wie: Anheften von Zeigern und Arrays'
+                    - name: 'Vorgehensweise: Anheften von Zeigern und Arrays'
                       href: extensions/how-to-pin-pointers-and-arrays.md
                     - name: 'Vorgehensweise: Deklarieren von festen Zeigern und Werttypen'
                       href: extensions/how-to-declare-pinning-pointers-and-value-types.md
@@ -10092,7 +10092,7 @@
                           href: parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md
                         - name: 'Vorgehensweise: Konvertieren einer parallelen for-Schleife in OpenMP zur Verwendung der Concurrency Runtime'
                           href: parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md
-                        - name: 'Gewusst wie: Konvertieren einer OpenMP-Schleife mit Abbruch zur Verwendung der Concurrency Runtime'
+                        - name: 'Vorgehensweise: Konvertieren einer OpenMP-Schleife mit Abbruch zur Verwendung der Concurrency Runtime'
                           href: parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md
                         - name: 'Vorgehensweise: Konvertieren einer OpenMP-Schleife mit Ausnahmebehandlung zur Verwendung der Concurrency Runtime'
                           href: parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md
@@ -10123,7 +10123,7 @@
                           href: parallel/concrt/how-to-write-a-parallel-for-loop.md
                         - name: 'Vorgehensweise: Schreiben einer parallel_for_each-Schleife'
                           href: parallel/concrt/how-to-write-a-parallel-for-each-loop.md
-                        - name: 'Gewusst wie: Paralleles Ausführen von Zuordnungs- und Reduzierungsvorgängen'
+                        - name: 'Vorgehensweise: Paralleles Ausführen von Zuordnungs- und Reduzierungsvorgängen'
                           href: parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md
                     - name: Parallele Container und Objekte
                       expanded: false
@@ -10132,9 +10132,9 @@
                           href: parallel/concrt/parallel-containers-and-objects.md
                         - name: 'Vorgehensweise: Erhöhen der Effizienz mithilfe von parallelen Containern'
                           href: parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md
-                        - name: 'Gewusst wie: Verbessern der Leistung mithilfe von combinable'
+                        - name: 'Vorgehensweise: Verbessern der Leistung mithilfe von combinable'
                           href: parallel/concrt/how-to-use-combinable-to-improve-performance.md
-                        - name: 'Gewusst wie: Kombinieren von Gruppen mithilfe von combinable'
+                        - name: 'Vorgehensweise: Kombinieren von Gruppen mithilfe von combinable'
                           href: parallel/concrt/how-to-use-combinable-to-combine-sets.md
                     - name: Abbruch in der PPL
                       expanded: false
@@ -10160,9 +10160,9 @@
                       href: parallel/concrt/how-to-implement-various-producer-consumer-patterns.md
                     - name: 'Vorgehensweise: Bereitstellen von Arbeitsfunktionen für die call- und transformer-Klassen'
                       href: parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md
-                    - name: 'Gewusst wie: Verwenden von transformer in einer Datenpipeline'
+                    - name: 'Vorgehensweise: Verwenden von transformer in einer Datenpipeline'
                       href: parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md
-                    - name: 'Gewusst wie: Auswählen von abgeschlossenen Tasks'
+                    - name: 'Vorgehensweise: Auswählen von abgeschlossenen Tasks'
                       href: parallel/concrt/how-to-select-among-completed-tasks.md
                     - name: 'Vorgehensweise: Ausgeben einer Meldung in regelmäßigen Intervallen'
                       href: parallel/concrt/how-to-send-a-message-at-a-regular-interval.md
@@ -10185,7 +10185,7 @@
                       items:
                         - name: Planerinstanzen
                           href: parallel/concrt/scheduler-instances.md
-                        - name: 'Gewusst wie: Verwalten einer Planerinstanz'
+                        - name: 'Vorgehensweise: Verwalten einer Planerinstanz'
                           href: parallel/concrt/how-to-manage-a-scheduler-instance.md
                     - name: Planerrichtlinien
                       expanded: false
@@ -10194,7 +10194,7 @@
                           href: parallel/concrt/scheduler-policies.md
                         - name: 'Vorgehensweise: Angeben von bestimmten Planerrichtlinien'
                           href: parallel/concrt/how-to-specify-specific-scheduler-policies.md
-                        - name: 'Gewusst wie: Erstellen von Agents, die bestimmte Planerrichtlinien verwenden'
+                        - name: 'Vorgehensweise: Erstellen von Agents, die bestimmte Planerrichtlinien verwenden'
                           href: parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md
                     - name: Planungsgruppen
                       expanded: false
@@ -10210,7 +10210,7 @@
                       items:
                         - name: Kontexte
                           href: parallel/concrt/contexts.md
-                        - name: 'Gewusst wie: Implementieren eines kooperativen Semaphors mithilfe der Context-Klasse'
+                        - name: 'Vorgehensweise: Implementieren eines kooperativen Semaphors mithilfe der Context-Klasse'
                           href: parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md
                         - name: 'Vorgehensweise: Verwenden der Überzeichnung zum Ausgleichen der Latenz'
                           href: parallel/concrt/how-to-use-oversubscription-to-offset-latency.md
