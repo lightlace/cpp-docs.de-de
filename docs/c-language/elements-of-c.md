@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lexical conventions
 - conventions, lexical
 ms.assetid: 20668a49-cab7-4153-a6d9-7439aac3ff3b
-ms.openlocfilehash: af220854f71a84902d9ad417242b6d037d4ba0f2
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 52b20c5a8eccbf9e8a87cfa7e8fb01da846153d8
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148074"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778450"
 ---
 # <a name="elements-of-c"></a>C-Elemente
 
@@ -20,13 +20,13 @@ In diesem Abschnitt wird beschrieben, wie Token definiert und vom Compiler ausge
 
 Die folgenden Themen werden erörtert:
 
-- [Token](../c-language/c-tokens.md)
+- [Tokens (Tokens)](../c-language/c-tokens.md)
 
 - [Kommentare](../c-language/c-comments.md)
 
-- [Schlüsselwörter](../c-language/c-keywords.md)
+- [Stichwörter](../c-language/c-keywords.md)
 
-- [Bezeichner](../c-language/c-identifiers.md)
+- [Identifiers (Bezeichner)](../c-language/c-identifiers.md)
 
 - [Konstanten](../c-language/c-constants.md)
 
@@ -34,7 +34,7 @@ Die folgenden Themen werden erörtert:
 
 - [Interpunktions- und Sonderzeichen](../c-language/punctuation-and-special-characters.md)
 
-Dieser Abschnitt enthält ebenfalls Referenztabellen für [Trigraphen](../c-language/trigraphs.md), [Grenzwerte für Gleitkommakonstanten](../c-language/limits-on-floating-point-constants.md), [Ganzzahlige Grenzen in C++](../c-language/cpp-integer-limits.md) und [Escapesequenzen](../c-language/escape-sequences.md).
+Der Abschnitt enthält auch Referenztabellen für [Trigraphen](../c-language/trigraphs.md), [Grenzwerte für Gleit Komma Konstanten](../c-language/limits-on-floating-point-constants.md), [C- C++ und ganzzahlige Grenzwerte](../c-language/cpp-integer-limits.md)und Escapesequenzen [.](../c-language/escape-sequences.md)
 
 Operatoren sind Symbole (sowohl einzelne Zeichen als auch Zeichenkombinationen), die angeben, wie Werte bearbeitet werden sollen. Jedes Symbol wird als einzelne Einheit interpretiert, die als Token bezeichnet wird. Weitere Informationen finden Sie unter [Operatoren](../c-language/c-operators.md).
 
