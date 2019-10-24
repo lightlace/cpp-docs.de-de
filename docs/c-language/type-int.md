@@ -7,12 +7,12 @@ helpviewer_keywords:
 - portability [C++], type int
 - signed integers
 ms.assetid: 0067ce9a-281e-491a-ae63-632952981e13
-ms.openlocfilehash: 848c9799e7ab5cfdfd2b25cc84e55de02c673f3e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: c69d2308abe2ee3d7e6b392f5a9e78a004791501
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150011"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778359"
 ---
 # <a name="type-int"></a>Typ "int"
 
@@ -22,7 +22,7 @@ Die Typspezifizierer `int` und `unsigned int` (oder einfach `unsigned`) definier
 
 **Microsoft-spezifisch**
 
-Ganzzahlen mit Vorzeichen werden in der Zweierkomplementdarstellung ausgedrückt. Das wichtigste Bit enthält das Vorzeichen: 1 für negative Werte, 0 für positive Werte und 0. Der Wertebereich ist in [Ganzzahlige Grenzen in C++](../c-language/cpp-integer-limits.md) angegeben, was aus der LIMITS.H-Headerdatei stammt.
+Ganzzahlen mit Vorzeichen werden in der Zweierkomplementdarstellung ausgedrückt. Das wichtigste Bit enthält die Zeichen 1 für negative Werte und 0 für positive Werte und Null. Der Wertebereich ist in [C-und C++ ganzzahligen Limits](../c-language/cpp-integer-limits.md)angegeben, die aus den Limits entnommen werden. H-Header Datei.
 
 **Ende Microsoft-spezifisch**
 

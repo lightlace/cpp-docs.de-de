@@ -1,15 +1,15 @@
 ---
 title: „Ordner öffnen“-Unterstützung für C++-Buildsysteme in Visual Studio
-ms.date: 08/20/2019
+ms.date: 10/21/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 78b1c00b07423e9d02f585c707156a1c843bea6f
-ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
+ms.openlocfilehash: 0eed40430050655f8fd9bdc83144adc7aa8c32e7
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976011"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778337"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>„Ordner öffnen“-Unterstützung für C++-Buildsysteme in Visual Studio
 
@@ -73,7 +73,10 @@ Wenn Sie z. b. **x64-Debug**auswählen, erstellt Visual Studio eine Datei mit de
 }
 ```
 
-Diese Konfiguration erbt die Umgebungsvariablen der Visual Studio [x64-Developer-Eingabeaufforderung](building-on-the-command-line.md). Eine dieser Variablen ist `INCLUDE` , und Sie können hier mit dem `${env.INCLUDE}` -Makro darauf verweisen. Die `includePath` -Eigenschaft teilt Visual Studio mit, wo nach allen Quellen gesucht werden soll, die für IntelliSense benötigt werden. In diesem Fall wird Folgendes angezeigt: "alle Verzeichnisse, die von der INCLUDE-Umgebungsvariablen angegeben werden, und auch alle Verzeichnisse in der aktuellen Arbeitsordner Struktur." Die `name` -Eigenschaft ist der Name, der in der Dropdown Liste angezeigt wird, und Sie können beliebig sein. Die `defines` -Eigenschaft stellt Hinweise für IntelliSense bereit, wenn Sie bedingte Kompilierungs Blöcke erkennen. Die `intelliSenseMode` -Eigenschaft stellt einige zusätzliche Hinweise auf der Grundlage des compilertyps bereit. Für MSVC, gcc und clang stehen mehrere Optionen zur Verfügung.
+Diese Konfiguration erbt die Umgebungsvariablen der Visual Studio [x64-Developer-Eingabeaufforderung](building-on-the-command-line.md). Eine dieser Variablen ist `INCLUDE`, und Sie können hier mithilfe des `${env.INCLUDE}`-Makros darauf verweisen. Die `includePath`-Eigenschaft teilt Visual Studio mit, wo nach allen Quellen gesucht werden soll, die für IntelliSense benötigt werden. In diesem Fall wird Folgendes angezeigt: "alle Verzeichnisse, die von der INCLUDE-Umgebungsvariablen angegeben werden, und auch alle Verzeichnisse in der aktuellen Arbeitsordner Struktur." Die `name`-Eigenschaft ist der Name, der in der Dropdown Liste angezeigt wird, und Sie können beliebig sein. Die `defines`-Eigenschaft bietet Hinweise für IntelliSense, wenn Sie bedingte Kompilierungs Blöcke erkennen. Die `intelliSenseMode`-Eigenschaft bietet einige zusätzliche Hinweise auf der Grundlage des compilertyps. Für MSVC, gcc und clang stehen mehrere Optionen zur Verfügung.
+
+> [!NOTE]
+> Wenn Visual Studio die Einstellungen in " *cppproperties. JSON*" ignoriert, versuchen Sie, eine Ausnahme zu Ihrer *gitignore* -Datei hinzuzufügen, wie im folgenden Beispiel: `!/CppProperties.json`.
 
 ## <a name="example-configuration-for-gcc"></a>Beispielkonfiguration für gcc
 
@@ -107,12 +110,12 @@ Wenn Sie einen anderen Compiler als Microsoft C++verwenden, müssen Sie eine ben
 }
 ```
 
-Beachten Sie `environments` den-Block. Es definiert Eigenschaften, die sich wie Umgebungsvariablen Verhalten und nicht nur in der *cppproperties. JSON* -Datei verfügbar sind, sondern auch in den anderen Konfigurationsdateien " *Task. vs. JSON* " und " *Launch. vs. JSON*". Die `Mingw64` -Konfiguration erbt `mingw_w64` die- `INCLUDE` Umgebung und verwendet die-Eigenschaft, um den `includePath`Wert für anzugeben. Sie können dieser Array Eigenschaft nach Bedarf weitere Pfade hinzufügen.
+Beachten Sie den `environments`-Block. Es definiert Eigenschaften, die sich wie Umgebungsvariablen Verhalten und nicht nur in der *cppproperties. JSON* -Datei verfügbar sind, sondern auch in den anderen Konfigurationsdateien " *Task. vs. JSON* " und " *Launch. vs. JSON*". Die `Mingw64` Konfiguration erbt die `mingw_w64` Umgebung und verwendet deren `INCLUDE`-Eigenschaft, um den Wert für `includePath` anzugeben. Sie können dieser Array Eigenschaft nach Bedarf weitere Pfade hinzufügen.
 
 > [!WARNING]
-> Zurzeit gibt es ein bekanntes Problem, bei `INCLUDE` dem der in `environments` angegebene Wert nicht ordnungsgemäß an `includePath` die-Eigenschaft übermittelt wird. Sie können das Problem umgehen, `includePath` indem Sie dem Array die kompletten literalen Include-Pfade hinzufügen.
+> Zurzeit ist ein bekanntes Problem aufgetreten, bei dem der in `environments` angegebene `INCLUDE` Wert nicht ordnungsgemäß an die `includePath`-Eigenschaft übermittelt wird. Sie können das Problem umgehen, indem Sie dem `includePath` Array die kompletten literalincludepfade hinzufügen.
 
-Die `intelliSenseMode` -Eigenschaft wird auf einen Wert festgelegt, der für gcc geeignet ist. Weitere Informationen zu diesen Eigenschaften finden Sie unter [cppproperties Schema Reference](cppproperties-schema-reference.md).
+Die `intelliSenseMode`-Eigenschaft ist auf einen Wert festgelegt, der für gcc geeignet ist. Weitere Informationen zu diesen Eigenschaften finden Sie unter [cppproperties Schema Reference](cppproperties-schema-reference.md).
 
 Wenn alles ordnungsgemäß funktioniert, wird IntelliSense aus den gcc-Headern angezeigt, wenn Sie mit dem Mauszeiger auf einen Typ zeigen:
 
@@ -120,11 +123,11 @@ Wenn alles ordnungsgemäß funktioniert, wird IntelliSense aus den gcc-Headern a
 
 ## <a name="enable-intellisense-diagnostics"></a>IntelliSense-Diagnose aktivieren
 
-Wenn die erwartete IntelliSense-Funktion nicht angezeigt wird, können Sie Probleme beheben, indem Sie zu > Extras**Optionen** > **Text-Editor** > **CC++/**  > **Advanced** wechseln. Legen Sie **Protokollierung aktivieren** auf **true**fest. Legen Sie zunächst den **Protokolliergrad** auf 5 fest, und **Protokollieren** Sie die Filter auf 8.
+Wenn die erwartete IntelliSense-Funktion nicht angezeigt wird, können Sie Probleme **beheben, indem Sie zu Extras**  > **Optionen**  > **Text-Editor**  > **CC++ /**  > **erweitert** wechseln und **Protokollierung aktivieren** festlegen. auf " **true**". Legen Sie zunächst den **Protokolliergrad** auf 5 fest, und **Protokollieren** Sie die Filter auf 8.
 
 ![Diagnoseprotokollierung](media/diagnostic-logging.png)
 
-Die Ausgabe wird an den **Ausgabefenster** weitergeleitet und ist sichtbar, wenn Sie ** Ausgabe anzeigen von: Visuelles C++ Protokoll*. Die Ausgabe enthält unter anderem die Liste der tatsächlichen Includepfade, die IntelliSense zu verwenden versucht. Wenn die Pfade nicht mit denen in " *cppproperties. JSON*" identisch sind, schließen Sie den Ordner, und löschen Sie den Unterordner " *. vs* ", der zwischengespeicherte Browserdaten enthält.
+Die Ausgabe wird an den **Ausgabefenster** weitergeleitet und ist sichtbar, wenn Sie **Ausgabe anzeigen von: C++ visuelles Protokoll*auswählen. Die Ausgabe enthält unter anderem die Liste der tatsächlichen Includepfade, die IntelliSense zu verwenden versucht. Wenn die Pfade nicht mit denen in " *cppproperties. JSON*" identisch sind, schließen Sie den Ordner, und löschen Sie den Unterordner " *. vs* ", der zwischengespeicherte Browserdaten enthält.
 
 ### <a name="define-build-tasks-with-tasksvsjson"></a>Definieren von Buildtasks mit „tasks.vs.json“
 
@@ -157,7 +160,7 @@ Dadurch wird die Datei " *Tasks. vs. JSON* " im Ordner ". vs" erstellt (oder ge�
 
 Die JSON-Datei wird im *vs* -Unterordner abgelegt, den Sie sehen können, wenn Sie oben in **Projektmappen-Explorer**auf die Schaltfläche **alle Dateien anzeigen** klicken. Sie können diesen Task ausführen, indem Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf den Stamm Knoten klicken und dann die Option **Build Hello**auswählen. Wenn die Aufgabe abgeschlossen ist, sollte die neue Datei " *Hello. exe* " in **Projektmappen-Explorer**angezeigt werden.
 
-Sie können viele Arten von Aufgaben definieren. Das folgende Beispiel zeigt eine *Datei "Tasks. vs. JSON* ", die eine einzelne Aufgabe definiert. `taskLabel` definiert den Namen, der im Kontextmenü angezeigt wird. `appliesTo` definiert, für welche Dateien der Befehl ausgeführt werden kann. Die `command` -Eigenschaft verweist auf die COMSPEC-Umgebungsvariable, die den Pfad für die-Konsole ("*cmd. exe* " unter Windows) identifiziert. Sie können ebenfalls auf Umgebungsvariablen verweisen, die in „CppProperties.json“ oder „CMakeSettings.json“ definiert sind. Die `args`-Eigenschaft gibt die Befehlszeile an, die aufgerufen werden soll. Das `${file}`-Makro ruft die ausgewählte Datei im **Projektmappen-Explorer** ab. Im folgenden Beispiel wird der Dateiname der aktuell ausgewählten CPP-Datei angezeigt.
+Sie können viele Arten von Aufgaben definieren. Das folgende Beispiel zeigt eine *Datei "Tasks. vs. JSON* ", die eine einzelne Aufgabe definiert. `taskLabel` definiert den Namen, der im Kontextmenü angezeigt wird. `appliesTo` definiert, für welche Dateien der Befehl ausgeführt werden kann. Die `command`-Eigenschaft verweist auf die COMSPEC-Umgebungsvariable, die den Pfad für die-Konsole ("*cmd. exe* " unter Windows) identifiziert. Sie können ebenfalls auf Umgebungsvariablen verweisen, die in „CppProperties.json“ oder „CMakeSettings.json“ definiert sind. Die `args`-Eigenschaft gibt die Befehlszeile an, die aufgerufen werden soll. Das `${file}`-Makro ruft die ausgewählte Datei im **Projektmappen-Explorer** ab. Im folgenden Beispiel wird der Dateiname der aktuell ausgewählten CPP-Datei angezeigt.
 
 ```json
 {
@@ -180,7 +183,7 @@ Weitere Informationen finden Sie unter [Tasks.vs.json schema reference (Tasks.vs
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>Konfigurieren von Parametern für das Debuggen mithilfe von „launch.vs.json“
 
-Um die Befehlszeilenargumente des Programms und die Debuganweisungen anzupassen, klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf die ausführbare Datei, und wählen Sie **Debuggen und Start** Dadurch wird eine vorhandene Datei " *Launch. vs. JSON* " geöffnet, oder wenn keine vorhanden ist, wird eine neue Datei mit einem Satz minimaler Start Einstellungen erstellt. Zuerst haben Sie die Wahl, welche Art von Debugsitzung Sie konfigurieren möchten. Zum Debuggen eines MinGW-W64-Projekts wählen wir **CC++ /Launch für minggw/Cygwin (gdb)** aus. Dadurch wird eine Startkonfiguration für die Verwendung von " *gdb. exe* " mit einigen fundierten Schätz Werten zu Standardwerten erstellt. Einer dieser Standardwerte ist `MINGW_PREFIX`. Sie können den literalpfad ersetzen (wie unten gezeigt), oder Sie können `MINGW_PREFIX` eine Eigenschaft in " *cppproperties. JSON*" definieren:
+Um die Befehlszeilenargumente des Programms und die Debuganweisungen anzupassen, klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf die ausführbare Datei, und wählen Sie **Debuggen und Start** Dadurch wird eine vorhandene Datei " *Launch. vs. JSON* " geöffnet, oder wenn keine vorhanden ist, wird eine neue Datei mit einem Satz minimaler Start Einstellungen erstellt. Zuerst haben Sie die Wahl, welche Art von Debugsitzung Sie konfigurieren möchten. Zum Debuggen eines MinGW-W64-Projekts wählen wir **CC++ /Launch für minggw/Cygwin (gdb)** aus. Dadurch wird eine Startkonfiguration für die Verwendung von " *gdb. exe* " mit einigen fundierten Schätz Werten zu Standardwerten erstellt. Einer dieser Standardwerte ist `MINGW_PREFIX`. Sie können den literalpfad ersetzen (wie unten gezeigt), oder Sie können eine `MINGW_PREFIX`-Eigenschaft in " *cppproperties. JSON*" definieren:
 
 ```json
 {
@@ -212,7 +215,7 @@ Weitere Informationen finden Sie unter " [Launch. vs. JSON Schema Reference](lau
 
 ## <a name="launching-other-executables"></a>Starten anderer ausführbarer Dateien
 
-Sie können Start Einstellungen für beliebige ausführbare Dateien auf dem Computer definieren. Im folgenden Beispiel wird *7za* gestartet und zusätzliche Argumente angegeben, indem Sie dem `args` JSON-Array hinzugefügt werden:
+Sie können Start Einstellungen für beliebige ausführbare Dateien auf dem Computer definieren. Im folgenden Beispiel wird *7za* gestartet und zusätzliche Argumente angegeben, indem Sie dem JSON-Array `args` hinzugefügt werden:
 
 ```json
 {
