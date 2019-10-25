@@ -1,6 +1,6 @@
 ---
 title: bsearch_s
-ms.date: 11/04/2016
+ms.date: 10/22/2019
 api_name:
 - bsearch_s
 api_location:
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: 9bcd18add216bb0fc2f203183d82e37ede65dba5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fc86576dbbe73f63da6bf0e28e7166ef7c552e55
+ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943481"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811144"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
-Führt eine binäre Suche eines sortierten Arrays aus. Dies ist eine Version von [bsearch](bsearch.md) mit Sicherheitsverbesserungen, wie dies unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.
+Führt eine binäre Suche eines sortierten Arrays aus. Diese Funktion ist eine Version von [bsearch](bsearch.md) mit Sicherheitsverbesserungen, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md)beschrieben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,39 +52,39 @@ void *bsearch_s(
 
 ### <a name="parameters"></a>Parameter
 
-*key*<br/>
-Das Objekt, nach dem gesucht werden soll.
+*Schlüssel* \
+Zeiger auf den Schlüssel, nach dem gesucht werden soll.
 
-*base*<br/>
-Zeiger auf die Basis der Suchdaten.
+*base*\
+Ein Zeiger auf die Basis der Suchdaten.
 
-*number*<br/>
+*Anzahl*\
 Anzahl der Elemente.
 
-*width*<br/>
+*Breite*\
 Breite der Elemente.
 
-*compare*<br/>
+*vergleichen*\
 Rückruffunktion, die zwei Elemente vergleicht. Das erste Argument ist der *Kontext* Zeiger. Das zweite Argument ist ein Zeiger auf den *Schlüssel* für die Suche. Das dritte Argument ist ein Zeiger auf das Array Element, das mit *Key*verglichen werden soll.
 
-*context*<br/>
+*Kontext*\
 Ein Zeiger auf ein Objekt, auf das in der Vergleichsfunktion zugegriffen werden kann.
 
 ## <a name="return-value"></a>Rückgabewert
 
 **bsearch_s** gibt einen Zeiger auf ein Vorkommen von *Key* in dem Array zurück, auf das von *Base*verwiesen wird. Wenn *Key* nicht gefunden wird, gibt die Funktion **null**zurück. Wenn das Array nicht in aufsteigender Reihenfolge sortiert ist oder doppelte Datensätze mit identischen Schlüsseln enthält, ist das Ergebnis nicht vorhersehbar.
 
-Wenn ungültige Parameter an die Funktion übergeben werden, ruft sie den Handler für ungültige Parameter auf, wie in [Parameter Validation](../../c-runtime-library/parameter-validation.md)beschrieben. Wenn die weitere Ausführung zugelassen wird, wird **errno** auf **EINVAL** festgelegt, und die Funktion gibt **null**zurück. Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Wenn ungültige Parameter an die Funktion übergeben werden, ruft Sie den Handler für ungültige Parameter auf, wie unter [Parameter Validierung](../../c-runtime-library/parameter-validation.md)beschrieben. Wenn die weitere Ausführung zugelassen wird, wird **errno** auf **EINVAL** festgelegt, und die Funktion gibt **null**zurück. Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
 |||||||
 |-|-|-|-|-|-|
-|*key*|*base*|*compare*|*number*|*width*|**errno**|
+|*key*|*base*|*compare*|*einigen*|*width*|**errno**|
 |**NULL**|any|any|any|any|**EINVAL**|
 |any|**NULL**|any|!= 0|any|**EINVAL**|
 |any|any|any|any|= 0|**EINVAL**|
-|any|any|**NULL**|ein|any|**EINVAL**|
+|any|any|**NULL**|eine|any|**EINVAL**|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -104,7 +104,7 @@ Der *Kontext* Zeiger kann nützlich sein, wenn die durchsuchte Datenstruktur Tei
 |-------------|---------------------|
 |**bsearch_s**|\<stdlib.h> und \<search.h>|
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Zusätzliche Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -194,7 +194,7 @@ cat found at 002F0F04
 
 ## <a name="see-also"></a>Siehe auch
 
-[Suchen und Sortieren](../../c-runtime-library/searching-and-sorting.md)<br/>
-[_lfind](lfind.md)<br/>
-[_lsearch](lsearch.md)<br/>
-[qsort](qsort.md)<br/>
+[Suchen und Sortieren](../../c-runtime-library/searching-and-sorting.md)\
+[_lfind](lfind.md)\
+[_lsearch](lsearch.md)\
+[qsort](qsort.md)
