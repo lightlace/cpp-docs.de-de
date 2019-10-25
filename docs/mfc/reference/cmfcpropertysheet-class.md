@@ -120,7 +120,7 @@ In der folgenden Abbildung ist ein Eigenschaften Blatt dargestellt, das ein [cmf
 
 In der folgenden Abbildung wird ein Eigenschaftsblatt gezeigt, das im Stile eines Struktursteuerelements vorliegt.
 
-![Eigenschafts] Struktur (../../mfc/reference/media/proptree.png "Eigenschafts") Struktur
+![Eigenschafts](../../mfc/reference/media/proptree.png "Eigenschafts")
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 

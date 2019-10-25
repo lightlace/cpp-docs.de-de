@@ -81,7 +81,7 @@ Die `CVSListBox` -Klasse stellt einen Satz von Bearbeitungs Schaltflächen berei
 
 Im folgenden finden Sie ein Bild des bearbeitbaren Listen Steuer Elements. Der zweite Listeneintrag mit dem Titel "item2" wird für die Bearbeitung ausgewählt.
 
-![Cvslistbox-Steuer] Element (../../mfc/reference/media/cvslistbox.png "Cvslistbox-Steuer") Element
+![Cvslistbox-Steuer](../../mfc/reference/media/cvslistbox.png "Cvslistbox-Steuer")
 
 Wenn Sie den Ressourcen-Editor verwenden, um ein bearbeitbares Listen Steuerelement hinzuzufügen, beachten Sie, dass der Bereich **Toolbox** des Editors kein vordefiniertes bearbeitbares Listen Steuerelement bereitstellt. Fügen Sie stattdessen ein statisches Steuerelement wie das **Gruppenfeld** -Steuerelement hinzu. Das Framework verwendet das statische-Steuerelement als Platzhalter, um die Größe und Position des bearbeitbaren Listen Steuer Elements anzugeben.
 

@@ -44,7 +44,7 @@ Beginnend mit Visual Studio 2015 und dem Windows 10-SDK wurde die CRT-Bibliothek
 
    Diese Aktion ändert die Werte der Projektmakros, die Pfade zu den Headerdateien und Bibliotheksdateien enthalten. Um zu sehen, was sich geändert hat, wählen Sie im Abschnitt "  **C++ visuelle Verzeichnisse** " des Dialog Felds " **Projekteigenschaften** " eine der Eigenschaften aus, z. b. Includeverzeichnisse, \<öffnen Sie die Dropdown Liste, und wählen Sie > Bearbeiten aus. Das Dialogfeld **Includeverzeichnisse** wird angezeigt.
 
-   ![Dialogfeld ' Verzeichnisse einschließen] ' (../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")
+   ![Dialogfeld ' Verzeichnisse einschließen](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")
 
    Wählen Sie die Schaltfläche **Makros > >** aus, und Scrollen Sie in der Liste der Makros nach unten, Windows SDK um alle neuen Werte anzuzeigen.
 

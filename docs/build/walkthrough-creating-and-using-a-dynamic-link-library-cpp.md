@@ -543,7 +543,7 @@ Um dieses Problem zu beheben, können Sie die Bibliotheksdatei direkt in das Cli
 
 Ihre Client-App kann jetzt erfolgreich kompiliert und verknüpft werden, aber noch sind nicht alle erforderlichen Komponenten für die Ausführung vorhanden. Wenn das Betriebssystem Ihre App lädt, sucht es nach der MathLibrary-DLL. Wenn die DLL in bestimmten Systemverzeichnissen, dem Umgebungspfad oder dem lokalen App-Verzeichnis nicht gefunden wird, kann die App nicht geladen werden. Abhängig vom Betriebssystem wird eine Fehlermeldung wie die folgende angezeigt:
 
-![Fehler bei der MathLibrary-dll nicht gefunden] . (media/mathclient-system-error-mathlibrary-dll-not-found.png "Fehler bei der MathLibrary-dll nicht gefunden") .
+![Fehler bei der MathLibrary-dll nicht gefunden](media/mathclient-system-error-mathlibrary-dll-not-found.png "Fehler bei der MathLibrary-dll nicht gefunden") .
 
 Eine Möglichkeit zum Vermeiden dieses Problems besteht darin, die DLL in das Verzeichnis zu kopieren, das Ihre ausführbare Clientdatei als Bestandteil des Buildprozesses enthält. Sie können Ihrem Projekt ein **Postbuildereignis** hinzufügen, um einen Befehl hinzuzufügen, mit dem die dll in das Buildausgabeverzeichnis kopiert wird. Der hier angegebene Befehl kopiert die dll nur, wenn Sie fehlt oder geändert wurde. Sie verwendet Makros, um basierend auf der Buildkonfiguration in die Debug-oder releasespeicherorte zu kopieren.
 

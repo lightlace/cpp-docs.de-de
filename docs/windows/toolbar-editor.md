@@ -63,7 +63,7 @@ Mit dem Symbolleisten- **Editor** können Sie Symbolleisten Ressourcen erstellen
 
 Das Fenster des Symbolleisten- **Editors** zeigt zwei Ansichten eines Schaltflächen Bilds an, identisch mit dem **Bild-Editor** -Fenster. In einem geteilten Balken werden die beiden Bereiche getrennt, und Sie können den Trennbalken von Seite zu Seite ziehen, um die relativen Größen der Bereiche zu ändern. Im aktiven Bereich wird ein Auswahl Rahmen angezeigt, und oberhalb der beiden Ansichten des Bilds befindet sich die Symbolleiste des Antragstellers.
 
-![Symbol] leisten-Editor (../mfc/media/vctoolbareditor.gif "vctoolbareditor")<br/>
+![Symbol leisten-Editor ](../mfc/media/vctoolbareditor.gif "vctoolbareditor")<br/>
 **Symbolleisten-Editor**
 
 Der **Symbol** leisten-Editor ähnelt dem **Bild-Editor** in der Funktionalität, und die Menü Elemente, die Grafiktools und das Bitmap-Raster zwischen den beiden sind identisch. Im Menü " **Bild** " gibt es einen Menübefehl, mit dem Sie zwischen dem Symbolleisten- **Editor** und dem **Bild-Editor**wechseln können. Weitere Informationen zur Verwendung der **Grafik** Symbolleiste, der **Farb** Palette oder des **bildmenüs** finden Sie unter [Bild](../windows/image-editor-for-icons.md)Bearbeitung.

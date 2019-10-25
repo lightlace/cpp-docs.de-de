@@ -256,7 +256,7 @@ In diesem Abschnitt wird gezeigt, wie Sie den GPU-Code Debuggen, d `sum_kernel_t
 
 6. Legen Sie in Zeile 30 einen Haltepunkt fest, wie in der folgenden Abbildung dargestellt.
 
-   ![GPU] -Haltepunkte (../../parallel/amp/media/campgpubreakpoints.png "GPU") -Haltepunkte <br/>
+   ![GPU -Haltepunkte ](../../parallel/amp/media/campgpubreakpoints.png "GPU -Haltepunkte ") <br/>
    GPU-Haltepunkt
 
 7. Klicken Sie in der Menüleiste auf **Debuggen** > **Debuggen starten**. Die Breakpoints im CPU-Code in den Zeilen 67 und 70 werden während des GPU-Debuggens nicht ausgeführt, da diese Codezeilen auf der CPU ausgeführt werden.
