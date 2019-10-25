@@ -106,7 +106,7 @@ Die Symbolleiste des **Bild-Editors** enthält Tools zum Zeichnen, zeichnen, ein
 
 Alle Tools, die auf der Symbolleiste des **Bild-Editors** verfügbar sind, sind auch über die Menü **Bild** > **Tools**verfügbar. Wählen Sie das gewünschte Tool oder die gewünschte Option aus, um die **Bild-Editor** -Symbolleiste und die **options** Auswahl zu verwenden.
 
-![Symbolleiste der Bild] Bearbeitung (../mfc/media/vcimageeditortoolbar.gif "vcimageeditor Toolbar")<br/>
+![Symbolleiste der Bild Bearbeitung ](../mfc/media/vcimageeditortoolbar.gif "vcimageeditor Toolbar")<br/>
 Symbolleiste der **Bild** Bearbeitung
 
 > [!TIP]

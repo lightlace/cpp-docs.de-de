@@ -57,7 +57,7 @@ In diesem Dokument wird die Rolle des Abbruchs in der Parallel Patterns Library 
 
 Differenzierte Aufgaben und Berechnungen werden in der PPL mithilfe von Aufgaben und Aufgabengruppen verwaltet. Sie können Aufgaben Gruppen schachteln, um Strukturen paralleler Arbeitsvorgänge *zu bilden.* Die folgende Abbildung zeigt eine parallele Arbeitsstruktur. In dieser Abbildung stellen `tg1` und `tg2` Aufgabengruppen dar; `t1`, `t2`, `t3`, `t4` und `t5` stellen die Arbeitsvorgänge dar, die von den Aufgabengruppen durchgeführt wird.
 
-![Eine parallele Arbeits] Struktur (../../parallel/concrt/media/parallelwork_trees.png "Eine parallele Arbeits") Struktur
+![Eine parallele Arbeitsstruktur](../../parallel/concrt/media/parallelwork_trees.png "Eine parallele Arbeits")
 
 Das folgende Beispiel zeigt den Code, der zum Erstellen der Struktur in der Abbildung erforderlich ist. In diesem Beispiel `tg1` sind und `tg2` [parallelcurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) -Objekte. `t1`, ,,`t3`und sind [parallelcurrency:: task_handle](../../parallel/concrt/reference/task-handle-class.md) -Objekte. `t5` `t4` `t2`
 

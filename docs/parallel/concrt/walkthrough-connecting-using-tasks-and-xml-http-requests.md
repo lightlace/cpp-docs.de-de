@@ -104,7 +104,7 @@ In diesem Abschnitt wird veranschaulicht, wie `HttpRequest` die-Klasse in einer 
 
 Hier ist die ausgeführte App:
 
-![Die Windows-Runtime APP wird ausgeführt] . (../../parallel/concrt/media/concrt_usingixhr2.png "Die Windows-Runtime APP wird ausgeführt") .
+![Die Windows-Runtime APP wird ausgeführt](../../parallel/concrt/media/concrt_usingixhr2.png "Die Windows-Runtime APP wird ausgeführt") .
 
 ## <a name="next-steps"></a>Nächste Schritte
 

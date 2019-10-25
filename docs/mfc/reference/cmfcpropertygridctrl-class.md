@@ -293,7 +293,7 @@ In der folgenden Tabelle sind vier Auswahl Eigenschafts Typen aufgeführt:
 
 Die folgenden Abbildungen zeigen ein Eigenschaften Raster-Steuerelement, das Eigenschaften auf zwei Arten anzeigt. In der ersten Abbildung werden die Eigenschaften hierarchisch angezeigt, während die zweite die Eigenschaften alphabetisch anzeigt.
 
-![Eigenschafts Liste (PropertySheet] ) (../../mfc/reference/media/proplist.png "Eigenschafts Liste (PropertySheet") )
+![Eigenschafts Liste PropertySheet](../../mfc/reference/media/proplist.png "Eigenschafts Liste PropertySheet")
 
 ## <a name="example"></a>Beispiel
 
