@@ -1,6 +1,6 @@
 ---
 title: bsearch
-ms.date: 11/04/2016
+ms.date: 10/22/2019
 api_name:
 - bsearch
 api_location:
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: 9e44e85d1c6d73a68da2edd099cdeb6156f9759d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6b476cbdd5e9c072cae03ad1091a96e2d0b7422b
+ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939436"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811100"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -51,20 +51,20 @@ void *bsearch(
 
 ### <a name="parameters"></a>Parameter
 
-*key*<br/>
-Das Objekt, nach dem gesucht werden soll.
+*Schlüssel* \
+Zeiger auf den Schlüssel, nach dem gesucht werden soll.
 
-*base*<br/>
-Zeiger auf die Basis der Suchdaten.
+*base*\
+Ein Zeiger auf die Basis der Suchdaten.
 
-*number*<br/>
+*Anzahl*\
 Anzahl der Elemente.
 
-*width*<br/>
+*Breite*\
 Breite der Elemente.
 
-*compare*<br/>
-Rückruffunktion, die zwei Elemente vergleicht. Da erste ist ein Zeiger auf den Schlüssel für die Suche, und das zweite ist ein Zeiger auf das Arrayelement, das mit dem Schlüssel verglichen werden soll.
+*vergleichen*\
+Rückruffunktion, die zwei Elemente vergleicht. Der erste ist ein Zeiger auf den Schlüssel für die Suche, und der zweite ist ein Zeiger auf das Array Element, das mit dem Schlüssel verglichen werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -72,7 +72,7 @@ Rückruffunktion, die zwei Elemente vergleicht. Da erste ist ein Zeiger auf den 
 
 ## <a name="remarks"></a>Hinweise
 
-Die **bsearch** -Funktion führt eine binäre Suche eines sortierten Arrays von *Zahlen* Elementen durch, wobei jede *Breite* Byte groß ist. Der *Basiswert* ist ein Zeiger auf die Basis des zu durchsuchenden Arrays, und *Key* ist der Wert, der gesucht wird. Der *Compare* -Parameter ist ein Zeiger auf eine vom Benutzer bereitgestellte Routine, die den angeforderten Schlüssel mit einem Array Element vergleicht und einen der folgenden Werte zurückgibt, die die zugehörige Beziehung angeben:
+Die **bsearch** -Funktion führt eine binäre Suche eines sortierten Arrays von *Zahlen* Elementen durch, wobei jede *Breite* Byte groß ist. Der *Basiswert* ist ein Zeiger auf die Basis des zu durchsuchenden Arrays, und *Key* ist der Wert, der gesucht wird. Der *Compare* -Parameter ist ein Zeiger auf eine vom Benutzer bereitgestellte Routine, die den angeforderten Schlüssel mit einem Array Element vergleicht. Sie gibt einen der folgenden Werte zurück, die ihre Beziehung angeben:
 
 |Von der *Vergleichs* Routine zurückgegebener Wert|Beschreibung|
 |-----------------------------------------|-----------------|
@@ -80,7 +80,7 @@ Die **bsearch** -Funktion führt eine binäre Suche eines sortierten Arrays von 
 |0|Schlüssel und Arrayelement sind gleich.|
 |> 0|Der Schlüssel ist größer als das Arrayelement.|
 
-Diese Funktion überprüft ihre Parameter. Wenn *Compare*, *Key* oder *Number* **null**ist, oder wenn *Base* **null** und *Number* ungleich 0 (NULL *) ist,* wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter Überprüfung) beschrieben. ](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, wird **errno** auf `EINVAL` festgelegt, und die Funktion gibt **null**zurück.
+Diese Funktion überprüft ihre Parameter. Wenn *Compare*, *Key* oder *Number* **null**ist, oder wenn *Base* **null** und *Number* ungleich NULL ist, oder wenn *Width* gleich 0 (null) ist, ruft die Funktion den Handler für ungültige Parameter auf, wie in Parameter beschrieben. [ Validierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, wird **errno** auf `EINVAL` festgelegt, und die Funktion gibt **null**zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,7 +88,7 @@ Diese Funktion überprüft ihre Parameter. Wenn *Compare*, *Key* oder *Number* *
 |-------------|---------------------|
 |**bsearch**|\<stdlib.h> und \<search.h>|
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Zusätzliche Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -137,7 +137,7 @@ cat found at 002F0F04
 
 ## <a name="see-also"></a>Siehe auch
 
-[Suchen und Sortieren](../../c-runtime-library/searching-and-sorting.md)<br/>
-[_lfind](lfind.md)<br/>
-[_lsearch](lsearch.md)<br/>
-[qsort](qsort.md)<br/>
+[Suchen und Sortieren](../../c-runtime-library/searching-and-sorting.md)\
+[_lfind](lfind.md)\
+[_lsearch](lsearch.md)\
+[qsort](qsort.md)

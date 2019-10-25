@@ -1,6 +1,6 @@
 ---
 title: scanf-Breitenangabe
-ms.date: 11/04/2016
+ms.date: 10/22/2019
 api_location:
 - msvcr100.dll
 - msvcr120.dll
@@ -17,40 +17,40 @@ f1_keywords:
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: 3b00996f3a17ab9298b1edba5a8e60826e19fdcc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 54331f4150c50b084b59ac51b3f34ffe15c5b1c8
+ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957348"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811119"
 ---
 # <a name="scanf-width-specification"></a>scanf-Breitenangabe
 
-Diese Informationen gelten für die Interpretation von Formatzeichenfolgen in der `scanf`-Funktionsreihe, einschließlich der sicheren Versionen wie `scanf_s`. Diese Funktionen nehmen in der Regel an, dass der Eingabestream in eine Folge von Token unterteilt ist. Token werden durch Leerzeichen (Leerzeichen, Tabstoppzeichen oder Zeilenumbruch) oder im Fall von numerischen Typen durch das natürliche Ende dieser getrennt, das durch das erste nicht in numerischen Text konvertierbare Zeichen angegeben ist. Mit den Breitenangaben können Sie jedoch festlegen, dass die Analyse der Eingabe vor dem natürlichen Ende eines Tokens beendet wird.
+Diese Informationen gelten für die Interpretation von Formatzeichenfolgen in der `scanf`-Funktionsreihe, einschließlich der sicheren Versionen wie `scanf_s`. Diese Funktionen nehmen in der Regel an, dass der Eingabestream in eine Folge von Token unterteilt ist. Token werden durch Leerzeichen (Leerzeichen, Tabstopp oder Zeilen Vorstrich) oder für numerische Typen durch das natürliche Ende eines numerischen Datentyps getrennt, wie durch das erste Zeichen angegeben, das nicht in numerischen Text konvertiert werden kann. Mit den Breitenangaben können Sie jedoch festlegen, dass die Analyse der Eingabe vor dem natürlichen Ende eines Tokens beendet wird.
 
 Die *Breitenangabe* besteht aus Zeichen zwischen `%` und dem Typfeldspezifizierer. Sie umfasst u.a. eine positive ganze Zahl, *Breite*-Feld genannt, und die die Größe des Felds angebenden Zeichen, die ggf. auch als Modifizierer des Feldtyps betrachtet werden können, z.B. die Angabe, ob der Ganzzahltyp **kurz** oder **lang** ist. Solche Zeichen werden als das Größenpräfix bezeichnet.
 
-## <a name="the-width-field"></a>Das Feld „Breite“
+## <a name="the-width-field"></a>Das Feld "Breite"
 
-Das Feld *Breite* ist eine positive ganze Dezimalzahl, mit der die maximale Anzahl der für dieses Feld zu lesenden Zeichen gesteuert wird. Es werden nicht mehr als die angegebenen *Breitenzeichen* konvertiert und im entsprechenden `argument` gespeichert. Weniger als die angegebenen *Breitenzeichen* werden möglicherweise gelesen, wenn ein nicht zu konvertierendes Leerstellenzeichen (Leerzeichen, Tabstoppzeichen oder Zeilenumbruch) oder ein Zeichen auftritt, bevor das Ende von *Breite* erreicht ist.
+Das *Width* -Feld ist eine positive ganze Dezimalzahl, die die maximale Anzahl von Zeichen steuert, die für dieses Feld gelesen werden sollen. Es werden nicht mehr als die *breiten* Zeichen konvertiert und im entsprechenden `argument`gespeichert. Weniger als *breiten* Zeichen werden möglicherweise gelesen, wenn ein Leerzeichen oder ein Zeichen, das nicht gemäß dem angegebenen Format konvertiert werden kann, vor dem Erreichen der *Breite* auftritt.
 
-Die Breitenangabe ist unabhängig und unterscheidet sich vom Puffergrößenargument, das von den sicheren Versionen dieser Funktionen erfordert wird (z. B. `scanf_s``wscanf_s` usw.). Im folgenden Beispiel beträgt die Breitenangabe 20 und gibt somit an, dass bis zu 20 Zeichen aus dem Eingabestream gelesen werden. Die Pufferlänge beträgt 21 und schließt somit die möglichen 20 Zeichen mit dem Null-Abschlusszeichen ein:
+Die Width-Spezifikation ist unabhängig und unterscheidet sich vom Puffergrößen Argument, das von den sicheren Versionen dieser Funktionen benötigt wird (z.b. `scanf_s`, `wscanf_s`usw.). Im folgenden Beispiel beträgt die Breitenangabe 20 und gibt somit an, dass bis zu 20 Zeichen aus dem Eingabestream gelesen werden. Die Pufferlänge beträgt 21 und schließt somit die möglichen 20 Zeichen mit dem Null-Abschlusszeichen ein:
 
 ```C
 char str[21];
 scanf_s("%20s", str, 21);
 ```
 
-Wenn das *Breite*-Feld nicht verwendet wird, versucht `scanf_s`, das gesamte Token in der Zeichenfolge zu lesen. Wenn die angegebene Größe nicht für das gesamte Token ausreicht, wird nichts in die Zielzeichenfolge geschrieben. Wenn das *Breite*-Feld angegeben ist, werden die ersten *Breitezeichen* im Token zusammen mit dem NULL-Abschlusszeichen in die Zielzeichenfolge geschrieben.
+Wenn das Feld *Width* nicht verwendet wird, versucht `scanf_s`, das gesamte Token in der Zeichenfolge zu lesen. Wenn die angegebene Größe nicht groß genug für das gesamte Token ist, wird nichts in die Ziel Zeichenfolge geschrieben. Wenn das *Width* -Feld angegeben wird, werden die ersten *breiten* Zeichen im Token zusammen mit dem NULL-Terminator in die Ziel Zeichenfolge geschrieben.
 
-## <a name="the-size-prefix"></a>Das Größenpräfix
+## <a name="the-size-prefix"></a>Das Größen Präfix
 
-Die optionalen Präfixe **h**, **l**, **ll**, **I64** und **L** geben die Größe des `argument` an (lang oder kurz, Einzelbytezeichen oder Breitzeichen, je nach Typzeichen, das sie ändern). Diese Formatangabezeichen werden in `scanf`- oder `wscanf`-Funktionen mit Typzeichen für die Interpretation von Argumenten verwendet, wie in der folgenden Tabelle dargestellt. Das Typpräfix **I64** ist eine Microsoft-Erweiterung und ist nicht ANSI-kompatibel. Typzeichen und ihre Bedeutungen werden in der Tabelle „Typzeichen für scanf-Funktionen“ unter [scanf-Typfeldzeichen](../c-runtime-library/scanf-type-field-characters.md) erläutert.
+Die optionalen Präfixe **h**, **HH**, **l**, **ll**, **I64**und **l** geben die Größe des `argument` an (lang oder kurz, Einzel Byte Zeichen oder breit Zeichen, je nach Typzeichen, das Sie ändern). Diese Formatangabezeichen werden in `scanf`- oder `wscanf`-Funktionen mit Typzeichen für die Interpretation von Argumenten verwendet, wie in der folgenden Tabelle dargestellt. Das Typpräfix **I64** ist eine Microsoft-Erweiterung und ist nicht mit dem Standard-C kompatibel. Die Typzeichen und ihre Bedeutungen werden in der Tabelle "Typzeichen für scanf-Funktionen" in [scanf-Typen Feldzeichen](../c-runtime-library/scanf-type-field-characters.md)beschrieben.
 
 > [!NOTE]
-> Die Präfixe **h**, **l** und **L** stellen beim Verwenden mit Daten vom Typ `char` Microsoft-Erweiterungen dar.
+> Die **h**-, **l**-und **l** -Präfixe sind Microsoft-Erweiterungen, wenn Sie mit Daten vom Typ " **char**" verwendet werden.
 
-### <a name="size-prefixes-for-scanf-and-wscanf-format-type-specifiers"></a>Größenpräfixe für die Formattypspezifizierer scanf und wscanf
+### <a name="size-prefixes-for-scanf-and-wscanf-format-type-specifiers"></a>Größen Präfixe für scanf-und wscanf-formattypspezifizierer
 
 |Angabe von|Präfix|Mit Typspezifizierer|
 |----------------|----------------|-------------------------|
@@ -59,17 +59,19 @@ Die optionalen Präfixe **h**, **l**, **ll**, **I64** und **L** geben die Größ
 |**langes int**|**l**|**d**, **i**, **o**, **x** oder **X**|
 |**langes unsingniertes int**|**l**|**n**|
 |**langes long**|**ll**|**d**, **i**, **o**, **x** oder **X**|
-|`short int`|**h**|**d**, **i**, **o**, **x** oder **X**|
-|**kurzes unsigniertes int**|**h**|**u**|
-|__**int64**|**I64**|**d**, **i**, **o**, **u**, **x** oder **X**|
+|**short int**|**h**|**d**, **i**, **o**, **x** oder **X**|
+|**kurzes unsigniertes int**|**h**|**n**|
+|**char**|**hh**|**d**, **i**, **o**, **x** oder **X**|
+|**unsigned char**|**hh**|**n**|
+|**int64**|**I64**|**d**, **i**, **o**, **u**, **x** oder **X**|
 |Einzelbytezeichen mit `scanf`|**h**|**c** oder **C**|
 |Einzelbytezeichen mit `wscanf`|**h**|**c** oder **C**|
 |Breitzeichen mit `scanf`|**l**|**c** oder **C**|
 |Breitzeichen mit `wscanf`|**l**|**c** oder **C**|
-|Einzelbytezeichenfolge mit `scanf`|**h**|**s** oder **S**|
-|Einzelbytezeichenfolge mit `wscanf`|**h**|**s** oder **S**|
-|Breitzeichenfolge mit `scanf`|**l**|**s** oder **S**|
-|Breitzeichenfolge mit `wscanf`|**l**|**s** oder **S**|
+|Einzel Byte-Zeichenfolge mit `scanf`|**h**|**s** oder **S**|
+|Einzel Byte-Zeichenfolge mit `wscanf`|**h**|**s** oder **S**|
+|Breit Zeichen-Zeichenfolge mit `scanf`|**l**|**s** oder **S**|
+|Breit Zeichen-Zeichenfolge mit `wscanf`|**l**|**s** oder **S**|
 
 Die folgenden Beispiele verwenden die Präfixe **h** und **l** mit `scanf_s`- und `wscanf_s`-Funktionen:
 
@@ -80,29 +82,29 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
 
 Lassen Sie beim Verwenden einer nicht sicheren Funktion in der `scanf`-Reihe den Größenparameter aus, der die Pufferlänge des vorherigen Arguments angibt.
 
-## <a name="reading-undelimited-strings"></a>Lesen von nicht durch Trennzeichen getrennten Zeichenfolgen
+## <a name="reading-undelimited-strings"></a>Lesen von Zeichen folgen ohne Trennzeichen
 
-Zum Lesen von Zeichenfolgen, die nicht durch Trennzeichen getrennt sind, kann ein Zeichensatz in Klammern ( **[ ]** ) das **s**-Typzeichen (Zeichenfolge) ersetzen. Der Zeichensatz in Klammern wird als Steuerzeichenfolge bezeichnet. Das entsprechende Eingabefeld wird bis zum ersten Zeichen gelesen, das nicht in der Steuerzeichenfolge enthalten ist. Wenn das erste Zeichen im Satz ein Caretzeichen ( **^** ) ist, wird der Effekt umgekehrt: Das Eingabefeld wird bis zum ersten Zeichen gelesen, das im restlichen Zeichensatz angezeigt wird.
+Zum Lesen von Zeichenfolgen, die nicht durch Trennzeichen getrennt sind, kann ein Zeichensatz in Klammern ( **[ ]** ) das **s**-Typzeichen (Zeichenfolge) ersetzen. Der Zeichensatz in Klammern wird als *Steuer Zeichenfolge*bezeichnet. Das entsprechende Eingabefeld wird bis zum ersten Zeichen gelesen, das nicht in der Steuer Zeichenfolge angezeigt wird. Wenn das erste Zeichen im Satz ein Caretzeichen ( **^** ) ist, wird der Effekt umgekehrt: das Eingabefeld wird bis zum ersten Zeichen gelesen, das im übrigen Zeichensatz enthalten ist.
 
-Beachten Sie, dass **%[a-z]** und **%[z-a]** auf die gleiche Weise wie **%[abcde...z]** interpretiert werden. Dies ist eine häufige `scanf`-Funktionserweiterung, beachten Sie jedoch, dass sie nicht vom ANSI-Standard erfordert wird
+Beide **% [a-z]** und **% [z-a]** werden als äquivalent zu **% [abcde... z]** . Es handelt sich um eine gängige `scanf` Funktionserweiterung, ist jedoch nicht für Standard-C erforderlich.
 
-## <a name="reading-unterminated-strings"></a>Lesen von nicht beendeten Zeichenfolgen
+## <a name="reading-unterminated-strings"></a>Nicht abgeschlossener Zeichen folgen werden gelesen.
 
-Verwenden Sie zum Speichern einer Zeichenfolge ohne ein NULL-Abschlusszeichen („\0“) die Spezifikation **%** <em>n</em>**c**, wobei *n* für eine ganze Dezimalzahl steht. In diesem Fall gibt das **c**-Typzeichen an, dass das Argument ein Zeiger auf ein Zeichenarray ist. Die nächsten *n*-Zeichen werden aus dem Eingabestream in die angegebene Position gelesen und es wird kein NULL-Zeichen („\0“) angefügt. Wenn *n* nicht angegeben ist, lautet der Standardwert 1.
+Um eine Zeichenfolge zu speichern, ohne ein abschließendes NULL-Zeichen (' \ 0 ') zu speichern, verwenden Sie die Spezifikation `%Nc`, wobei *N* eine ganze Dezimalzahl ist. In diesem Fall gibt das **c**-Typzeichen an, dass das Argument ein Zeiger auf ein Zeichenarray ist. Die nächsten *N* -Zeichen werden aus dem Eingabestream in den angegebenen Speicherort gelesen, und es wird kein NULL-Zeichen (' \ 0 ') angefügt. Wenn *N* nicht angegeben wird, ist der Standardwert 1.
 
 ## <a name="when-scanf-stops-reading-a-field"></a>Wenn scanf das Lesen eines Felds beendet
 
-Die `scanf`-Funktion überprüft Zeichen für Zeichen jedes Eingabefeld. Aus den folgenden Gründen beendet sie möglicherweise das Lesen eines bestimmten Eingabefelds, bevor ein Leerzeichen auftritt:
+Die `scanf`-Funktion überprüft Zeichen für Zeichen jedes Eingabefeld. Möglicherweise wird das Lesen eines bestimmten Eingabe Felds beendet, bevor es aus einem der folgenden Gründe ein Leerzeichen erreicht:
 
 - Die angegebene Breite wurde erreicht.
 
 - Das nächste Zeichen kann nicht wie angegeben konvertiert werden.
 
-- Das nächste Zeichen weist Konflikte mit einem Zeichen in der Steuerzeichenfolge auf, mit dem es übereinstimmen soll.
+- Das nächste Zeichen steht in Konflikt mit einem Zeichen in der Steuer Zeichenfolge, mit dem es abgeglichen werden soll.
 
 - Das nächste Zeichen kann nicht in einem angegebenen Zeichensatz angezeigt werden.
 
-Wenn die `scanf`-Funktion, unabhängig von dem Grund, das Lesen eines Eingabefelds beendet, beginnt das nächste Eingabefeld beim ersten ungelesenen Zeichen. Das einen Konflikt aufweisende Zeichen, falls vorhanden, gilt als ungelesen und stellt das erste Zeichen des nächsten Eingabefelds oder das erste Zeichen in nachfolgenden Lesevorgängen des Eingabestreams dar.
+Wenn die `scanf`-Funktion, unabhängig von dem Grund, das Lesen eines Eingabefelds beendet, beginnt das nächste Eingabefeld beim ersten ungelesenen Zeichen. Das widersprüchliche Zeichen, falls vorhanden, gilt als ungelesen. Es ist das erste Zeichen des nächsten Eingabe Felds oder das erste Zeichen in nachfolgenden Lesevorgängen des Eingabestreams.
 
 ## <a name="see-also"></a>Siehe auch
 
