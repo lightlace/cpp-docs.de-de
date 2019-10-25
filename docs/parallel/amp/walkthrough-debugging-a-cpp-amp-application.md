@@ -354,7 +354,7 @@ Sie können bestimmte GPU-Threads markieren, indem Sie Sie im Fenster " **GPU-Th
 
    Wählen Sie in einem der Fenster oder auf der Symbolleiste **Debugspeicherort** die Schaltfläche nur gekennzeichnete **anzeigen** aus. In der folgenden Abbildung wird die Schaltfläche nur gekennzeichnete anzeigen auf der Symbolleiste **Debugspeicherort** **angezeigt** .
 
-   Symbol ![Leiste "Debugspeicherort" mit einem markierten Symbol anzeigen] Symbol (../../parallel/amp/media/camph.png "Leiste \"Debugspeicherort\" mit einem markierten Symbol anzeigen") <br/>
+   ![Leiste "Debugspeicherort" mit einem markierten Symbol anzeigen](../../parallel/amp/media/camph.png "Leiste \"Debugspeicherort\" mit einem markierten Symbol anzeigen") <br/>
    Schaltfläche "nur gekennzeichnete **anzeigen** "
 
    Nun zeigen die Fenster **GPU-Threads**, **parallele Überwachung**und **parallele Stapel** nur die markierten Threads an.
@@ -373,7 +373,7 @@ Sie können GPU-Threads entweder über das **GPU-Thread** Fenster oder das **par
 
    Die folgende Abbildung des Fensters **GPU-Threads** zeigt, dass alle vier Threads eingefroren sind.
 
-   ![GPU-Thread Fenster] mit fixierten Threads (../../parallel/amp/media/campk.png "GPU-Thread Fenster") mit fixierten Threads <br/>
+   ![GPU-Thread Fenster mit fixierten Threads ](../../parallel/amp/media/campk.png "GPU-Thread Fenster mit fixierten Threads ") <br/>
    Fixierte Threads im Fenster " **GPU-Threads** "
 
    Ebenso zeigt das Fenster **parallele Überwachung** , dass alle vier Threads eingefroren sind.
