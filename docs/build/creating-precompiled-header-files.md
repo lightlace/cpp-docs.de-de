@@ -1,22 +1,22 @@
 ---
 title: Vorkompilierte Headerdateien
-ms.date: 08/19/2019
+ms.date: 10/24/2019
 helpviewer_keywords:
 - precompiled header files, creating
 - PCH files, creating
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 273d8cf996c2717339dd20dcbc7512f9c62afa8d
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
+ms.sourcegitcommit: 33a898bf976c65f998b4e88a84765a0cef4193a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69630494"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920111"
 ---
 # <a name="precompiled-header-files"></a>Vorkompilierte Headerdateien
 
-Wenn Sie in Visual Studio ein neues Projekt erstellen, wird dem Projekt eine *Vorkompilierte Header Datei* mit dem Namen " *PCH. h* " hinzugefügt. (In Visual Studio 2017 und früher wurde die Datei " *stdafx. h*" genannt.) Der Zweck der Datei besteht darin, den Buildprozess zu beschleunigen. Alle stabilen Header Dateien, z. b. Standard Bibliotheks Header `<vector>`wie, sollten hier eingefügt werden. Der vorkompilierte Header wird nur kompiliert, wenn er oder alle darin enthaltenen Dateien geändert werden. Wenn Sie nur Änderungen im Projekt Quell Code vornehmen, überspringt der Build die Kompilierung für den vorkompilierten Header. 
+Wenn Sie in Visual Studio ein neues Projekt erstellen, wird dem Projekt eine *Vorkompilierte Header Datei* mit dem Namen " *PCH. h* " hinzugefügt. (In Visual Studio 2017 und früher wurde die Datei " *stdafx. h*" genannt.) Der Zweck der Datei besteht darin, den Buildprozess zu beschleunigen. Alle stabilen Header Dateien, z. b. Standard Bibliotheks Header wie `<vector>`, sollten hier eingeschlossen werden. Der vorkompilierte Header wird nur kompiliert, wenn er oder alle darin enthaltenen Dateien geändert werden. Wenn Sie nur Änderungen im Projekt Quell Code vornehmen, überspringt der Build die Kompilierung für den vorkompilierten Header. 
 
 Die Compileroptionen für vorkompilierte Header sind [/Y](reference/y-precompiled-headers.md). Auf den Eigenschaften Seiten des Projekts befinden sich die Optionen unter **Konfigurations Eigenschaften > vorkompilierte C/>-C++ Header**. Sie können auswählen, dass keine vorkompilierten Header verwendet werden sollen, und Sie können den Namen und den Pfad der Ausgabedatei angeben. 
 
@@ -87,7 +87,7 @@ Wenn Sie die Option Vorkompilierte Header Datei verwenden (/Yu) angeben, ignorie
 
 ### <a name="pragma-consistency"></a>Pragma-Konsistenz
 
-Pragmas, die während der Erstellung einer PCH-Datei verarbeitet werden, wirken sich normalerweise auf die Datei aus, mit der die PCH-Datei anschließend verwendet wird Die `comment` - `message` und-Pragmas haben keine Auswirkung auf den Rest der Kompilierung.
+Pragmas, die während der Erstellung einer PCH-Datei verarbeitet werden, wirken sich normalerweise auf die Datei aus, mit der die PCH-Datei anschließend verwendet wird Die `comment`-und `message`-Pragmas haben keine Auswirkung auf den Rest der Kompilierung.
 
 Diese Pragmas wirken sich nur auf den Code in der PCH-Datei aus. Sie wirken sich nicht auf Code aus, der anschließend die PCH-Datei verwendet:
 
@@ -116,13 +116,13 @@ Wenn Sie einen vorkompilierten Header verwenden, der mit/Yc oder/Yu erstellt wur
 
 In dieser Tabelle sind Compileroptionen aufgeführt, die bei Verwendung eines vorkompilierten Headers möglicherweise eine Inkonsistenz Warnung auslöst:
 
-|Option|name|Regel|
+|Option|-Name|Regel|
 |------------|----------|----------|
 |/D|Definieren von Konstanten und Makros|Muss zwischen der Kompilierung, die den vorkompilierten Header erstellt hat, und der aktuellen Kompilierung identisch sein. Der Zustand der definierten Konstanten ist nicht aktiviert, aber unvorhersehbare Ergebnisse können auftreten, wenn die Dateien von den Werten der geänderten Konstanten abhängig sind.|
 |/E oder/EP|Präprozessorausgabe in Standardausgabe kopieren|Vorkompilierte Header können nicht mit der/E-Option oder der/EP-Option verwendet werden.|
 |/FR oder/Fr|Informationen zum Microsoft-Quell Browser generieren|Damit die Optionen/fr und/fr mit der Option/Yu gültig sind, müssen Sie auch beim Erstellen des vorkompilierten Headers wirksam werden. Nachfolgende Kompilierungen, die den vorkompilierten Header verwenden, generieren ebenfalls Quell Browser Informationen. Browser Informationen werden in einer einzelnen SBR-Datei platziert, und auf die gleiche Weise wird von anderen Dateien auf dieselbe Weise wie CodeView-Informationen verwiesen. Die Platzierung der Quell Browser Informationen kann nicht überschrieben werden.|
 |/GA,/GD,/ge,/GW oder/GW|Windows-Protokoll Optionen|Muss zwischen der Kompilierung, die den vorkompilierten Header erstellt hat, und der aktuellen Kompilierung identisch sein. Wenn sich diese Optionen unterscheiden, führt dies zu einer Warnmeldung.|
-|/ZI|Umfassende Debuginformationen generieren|Wenn diese Option beim Erstellen des vorkompilierten Headers wirksam ist, können nachfolgende Kompilierungen, die die Vorkompilierung verwenden, diese Debuginformationen verwenden. Wenn/Zi beim Erstellen des vorkompilierten Headers nicht wirksam ist, wird bei nachfolgenden Kompilierungen, bei denen die Vorkompilierung und die/ZI-Option verwendet wird, eine Warnung ausgelöst. Die Debuginformationen werden in der aktuellen Objektdatei abgelegt, und lokale Symbole, die im vorkompilierten Header definiert sind, sind für den Debugger nicht verfügbar.|
+|/Zi|Umfassende Debuginformationen generieren|Wenn diese Option beim Erstellen des vorkompilierten Headers wirksam ist, können nachfolgende Kompilierungen, die die Vorkompilierung verwenden, diese Debuginformationen verwenden. Wenn/Zi beim Erstellen des vorkompilierten Headers nicht wirksam ist, wird bei nachfolgenden Kompilierungen, bei denen die Vorkompilierung und die/ZI-Option verwendet wird, eine Warnung ausgelöst. Die Debuginformationen werden in der aktuellen Objektdatei abgelegt, und lokale Symbole, die im vorkompilierten Header definiert sind, sind für den Debugger nicht verfügbar.|
 
 > [!NOTE]
 >  Die vorkompilierte Header Funktion ist nur für die Verwendung in C C++ -und Quelldateien vorgesehen.
@@ -179,9 +179,9 @@ UNSTABLEHDRS = unstable.h
 CLFLAGS = /c /W3
 # List all linker options common to both debug and final
 # versions of your code here:
-LINKFLAGS = /NOD /ONERROR:NOEXE
+LINKFLAGS = /nologo
 !IF "$(DEBUG)" == "1"
-CLFLAGS   = /D_DEBUG $(CLFLAGS) /Od /Zi /f
+CLFLAGS   = /D_DEBUG $(CLFLAGS) /Od /Zi
 LINKFLAGS = $(LINKFLAGS) /COD
 LIBS      = slibce
 !ELSE
@@ -257,7 +257,7 @@ void savetime( void );
 //
 #ifndef __UNSTABLE_H
 #define __UNSTABLE_H
-#include<iostream.h>
+#include<iostream>
 void notstable( void );
 #endif // __UNSTABLE_H
 ```
@@ -270,6 +270,7 @@ void notstable( void );
 #include"another.h"
 #include"stable.h"
 #include"unstable.h"
+using namespace std;
 // The following code represents code that is deemed stable and
 // not likely to change. The associated interface code is
 // precompiled. In this example, the header files STABLE.H and
