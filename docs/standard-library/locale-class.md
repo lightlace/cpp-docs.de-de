@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 495e82d54a2d3b010e40403271713cd799b9b8ac
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a11f5bf7e8c280da3ba2cae82cf355a3b28c0577
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453536"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890155"
 ---
 # <a name="locale-class"></a>locale-Klasse
 
@@ -50,14 +50,14 @@ Sie können einen offenen Satz dieser Facets definieren. Sie können auch ein Ge
 
 Vordefinierte Gruppen dieser Facets stellen die [locale-Kategorien](#category) dar, die normalerweise in der Standard-C-Bibliothek von der Funktion `setlocale` verwaltet werden.
 
-Die Kategorie "Sortieren" (LC_COLLATE) umfasst folgende Facets:
+Category `collate` (LC_COLLATE) enthält die Facetten:
 
 ```cpp
 collate<char>
 collate<wchar_t>
 ```
 
-Die Kategorie "ctype" (LC_CTYPE) umfasst folgende Facets:
+Category `ctype` (LC_CTYPE) enthält die Facetten:
 
 ```cpp
 ctype<char>
@@ -68,7 +68,7 @@ codecvt<char16_t, char, mbstate_t>
 codecvt<char32_t, char, mbstate_t>
 ```
 
-Die Kategorie "Monetär" (LC_MONETARY) umfasst folgende Facets:
+Category `monetary` (LC_MONETARY) enthält die Facetten:
 
 ```cpp
 moneypunct<char, false>
@@ -81,7 +81,7 @@ money_put<char, ostreambuf_iterator<char>>
 money_put<wchar_t, ostreambuf_iterator<wchar_t>>
 ```
 
-Die Kategorie "numerisch" (LC_NUMERIC) umfasst folgende Facets:
+Category `numeric` (LC_NUMERIC) enthält die Facetten:
 
 ```cpp
 num_get<char, istreambuf_iterator<char>>
@@ -92,7 +92,7 @@ numpunct<char>
 numpunct<wchar_t>
 ```
 
-Die Kategorie "Zeit" (LC_TIME) umfasst folgende Facets:
+Category `time` (LC_TIME) enthält die Facetten:
 
 ```cpp
 time_get<char, istreambuf_iterator<char>>
@@ -101,7 +101,7 @@ time_put<char, ostreambuf_iterator<char>>
 time_put<wchar_t, ostreambuf_iterator<wchar_t>>
 ```
 
-Die Kategorie "Meldungen" (LC_MESSAGES) umfasst folgende Facets:
+Category `messages` (LC_MESSAGES) enthält die Facetten:
 
 ```cpp
 messages<char>
@@ -110,9 +110,9 @@ messages<wchar_t>
 
 (Die letzten Kategorie wird von Posix, jedoch nicht vom C-Standard benötigt.)
 
-Einige dieser vordefinierten Facets werden von iostreams-Klassen dazu verwendet, die Konvertierung von numerischen Werten in und aus Textsequenzen zu steuern.
+Einige dieser vordefinierten Facetten werden von den `iostream`-Klassen verwendet, um die Konvertierung von numerischen Werten in und aus Textsequenzen zu steuern.
 
-Ein Objekt der locale-Klasse speichert einen Gebietsschemanamen als Objekt der Klasse [string](../standard-library/string-typedefs.md#string). Durch Verwenden eines ungültigen Gebietsschemanamens zur Erstellung eines Gebietsschemafacets oder eines Gebietsschemaobjekts wird ein Objekt der Klasse [runtime_error](../standard-library/runtime-error-class.md) ausgelöst. Der gespeicherte Gebietsschemaname ist `"*"`, wenn das Gebietsschemaobjekt nicht davon ausgehen kann, dass ein Gebietsschema im C-Stil genau dem entspricht, das durch das Objekt repräsentiert wird. Andernfalls können Sie ein entsprechendes Gebietsschema in der Standard-C-Bibliothek für das Gebietsschemaobjekt `Loc` festlegen, indem Sie `setlocale`(LC_ALL `,` `Loc` aufrufen. [name](#name)`().c_str()`).
+Ein Objekt der locale-Klasse speichert einen Gebietsschemanamen als Objekt der Klasse [string](../standard-library/string-typedefs.md#string). Durch Verwenden eines ungültigen Gebietsschemanamens zur Erstellung eines Gebietsschemafacets oder eines Gebietsschemaobjekts wird ein Objekt der Klasse [runtime_error](../standard-library/runtime-error-class.md) ausgelöst. Der gespeicherte Gebiets Schema Name ist `"*"`, wenn das Gebiets Schema Objekt nicht sicher sein kann, dass ein Gebiets Schema im C-Stil genau dem durch das-Objekt dargestellten Gebiets Schema entspricht. Andernfalls können Sie ein entsprechendes Gebiets Schema in der Standard-C-Bibliothek für einige Gebiets Schema Objekt `locale_object`erstellen, indem Sie `setlocale(LC_ALL , locale_object.`[Namen](#name)`().c_str())`aufrufen.
 
 In dieser Implementierung können Sie außerdem die statische Memberfunktion aufrufen:
 
@@ -120,13 +120,13 @@ In dieser Implementierung können Sie außerdem die statische Memberfunktion auf
 static locale empty();
 ```
 
-zur Erstellung eines Gebietsschemaobjekts, das keine Facets hat. Es ist außerdem ein transparentes Gebietsschema. Wenn die Vorlagenfunktionen [has_facet](../standard-library/locale-functions.md#has_facet) und [use_facet](../standard-library/locale-functions.md#use_facet) das angeforderte Facet in einem transparenten Gebietsschema nicht finden können, greifen sie zuerst auf das globale Gebietsschema und anschließend, wenn dies transparent ist, auf das klassische Gebietsschema zurück. So können Sie Folgendes schreiben:
+zur Erstellung eines Gebietsschemaobjekts, das keine Facets hat. Außerdem handelt es sich um ein transparentes Gebiets Schema. Wenn die Vorlagen Funktionen [has_facet](../standard-library/locale-functions.md#has_facet) und [Use_facet](../standard-library/locale-functions.md#use_facet) die angeforderte Facette in einem transparenten Gebiets Schema nicht finden können, werden zuerst das globale Gebiets Schema und dann, wenn dies transparent ist, das klassische Gebiets Schema abgefragt. Daher können Sie Folgendes schreiben:
 
 ```cpp
 cout.imbue(locale::empty());
 ```
 
-Nachfolgende Einfügungen in [cout](../standard-library/iostream.md#cout) werden durch den aktuellen Zustand des globalen Gebietsschemas vermittelt. Sie können sogar Folgendes schreiben:
+Nachfolgende Einfügungen in [`cout`](../standard-library/iostream.md#cout) werden durch den aktuellen Zustand des globalen Gebiets Schemas vermittelt. Sie können sogar Folgendes schreiben:
 
 ```cpp
 locale loc(locale::empty(),
@@ -178,7 +178,7 @@ Numerische Formatierungsregeln für nachfolgende Einfügungen in `cout` bleiben 
 |Klasse|Beschreibung|
 |-|-|
 |[facet](#facet_class)|Eine Klasse, die als Basisklasse für alle Gebietsschemafacets dient.|
-|[ID](#id_class)|Die Memberklasse stellt eine einzigartige Facetidentifikation bereit, die als Index zum Suchen von Facets in einem Gebietsschema verwendet wird.|
+|[`id`](#id_class)|Die Memberklasse stellt eine einzigartige Facetidentifikation bereit, die als Index zum Suchen von Facets in einem Gebietsschema verwendet wird.|
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -206,25 +206,25 @@ static const int none = 0;
 
 Der Typ ist ein Synonym für einen **int** -Typ, der eine Gruppe von unterschiedlichen Elementen des Typs "lokale Bitmaske" der Klasse "locale" darstellen kann oder zur Darstellung der entsprechenden C-Gebiets Schema Kategorien verwendet werden kann. Die Elemente sind:
 
-- `collate`, entspricht der C-Kategorie LC_COLLATE
+- `collate`entsprechend der C-Kategorie LC_COLLATE
 
-- `ctype`, entspricht der C-Kategorie LC_CTYPE
+- `ctype`entsprechend der C-Kategorie LC_CTYPE
 
-- `monetary`, entspricht der C-Kategorie LC_MONETARY
+- `monetary`entsprechend der C-Kategorie LC_MONETARY
 
-- `numeric`, entspricht der C-Kategorie LC_NUMERIC
+- `numeric`entsprechend der C-Kategorie LC_NUMERIC
 
-- `time`, entspricht der C-Kategorie LC_TIME
+- `time`entsprechend der C-Kategorie LC_TIME
 
-- `messages`, entspricht der POSIX-Kategorie LC_MESSAGES
+- `messages`entsprechend der POSIX-Kategorie LC_MESSAGES
 
-Zusätzlich gibt es zwei weitere nützliche Werte:
+Zwei weitere nützliche Werte sind:
 
-- `none`, entspricht keiner der C-Kategorien.
+- `none`, die keiner der C-Kategorien entspricht
 
-- `all`, entspricht der C-Union aller Kategorien LC_ALL
+- `all`entsprechend der C-Union aller Kategorien LC_ALL
 
-Sie können eine beliebige Gruppe von Kategorien darstellen, indem `OR` Sie mit diesen Konstanten wie in `monetary` &#124; `time`verwenden.
+Sie können eine beliebige Gruppe von Kategorien darstellen, indem Sie `OR` mit diesen Konstanten wie in `monetary` &#124;`time`verwenden.
 
 ## <a name="classic"></a> locale::classic
 
@@ -240,7 +240,7 @@ Ein Verweis auf das C-Gebietsschema.
 
 ### <a name="remarks"></a>Hinweise
 
-Das klassische C-Gebiets Schema ist die US-amerikanische Das englische ASCII-Gebiets Schema in der Standard-C-Bibliothek, das implizit in nicht internationalisierten Programmen verwendet wird.
+Das klassische c-Gebiets Schema ist das US-englische ASCII-Gebiets Schema in der Standard-c-Bibliothek. Dabei handelt es sich um das Gebiets Schema, das implizit in nicht internationalisierten Programmen verwendet wird.
 
 ### <a name="example"></a>Beispiel
 
@@ -287,17 +287,17 @@ Fügt ein Facet eines angegebenen Gebietsschemas in ein Zielgebietsschema ein.
 
 ```cpp
 template <class Facet>
-locale combine(const locale& Loc) const;
+locale combine(const locale& source_locale) const;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*A.a.o.* \
+*source_locale*\
 Das Gebietsschema enthält das Facet, das in das Zielgebietsschema eingefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Member-Funktion gibt ein Gebiets Schema Objekt zurück, das ersetzt oder  **\*diesem** das `Facet` in *Loc*aufgelistete facetelement hinzufügt.
+Die Member-Funktion gibt ein Gebiets Schema Objekt zurück, das in ersetzt oder **\*dieses** die in *source_locale*aufgeführten Facet`Facet` hinzufügt.
 
 ### <a name="example"></a>Beispiel
 
@@ -336,32 +336,31 @@ Eine Klasse, die als Basisklasse für alle Gebietsschemafacets dient.
 ```cpp
 class facet {
 protected:
-    explicit facet(size_t _Refs = 0);
-   virtual ~facet();
+    explicit facet(size_t references = 0);
+    virtual ~facet();
 private:
-   facet(const facet&)
-   // not defined void operator=(const facet&)
-     // not defined
+    facet(const facet&) // not defined
+    void operator=(const facet&) // not defined
 };
 ```
 
 ### <a name="remarks"></a>Hinweise
 
-Beachten Sie, dass Sie ein Objekt der facet-Klasse nicht kopieren oder zuweisen können. Sie können Objekte, die von der Klasse `locale::facet` abgeleitet wurden, erstellen oder zerstören, aber nicht die Objekte der richtigen Basisklasse. In der Regel erstellen Sie ein vom Facet abgeleitetes Objekt `_Myfac`, wenn Sie ein Gebietsschema genauso wie in **localeloc**( `locale::classic`( ), **new**`_Myfac`); erstellen
+Sie können kein Objekt der Klasse `facet`kopieren oder zuweisen. Sie können Objekte, die von der Klasse `locale::facet` abgeleitet wurden, erstellen oder zerstören, aber nicht die Objekte der richtigen Basisklasse. In der Regel erstellen Sie ein Objekt `_Myfac` das von `facet` abgeleitet ist, wenn Sie eine `locale`erstellen, wie in `locale loc(locale::classic(), new _Myfac);`
 
-In diesem Fall sollte der Konstruktor für das Basisklasse-Facet ein Null-`_Refs`-Argument haben. Wenn das Objekt nicht mehr benötigt wird, wird es gelöscht. Daher geben Sie ein _ *Refs*-Argument, das ungleich null ist, nur in den seltenen Fällen ein, in denen Sie die Verantwortung für die Lebensdauer des Objekts übernehmen.
+In solchen Fällen sollte der Konstruktor für die Basisklasse `facet` ein Argument NULL- *Verweise* aufweisen. Wenn das Objekt nicht mehr benötigt wird, wird es gelöscht. Daher geben Sie ein *References* -Argument ungleich NULL nur in den seltenen Fällen an, in denen Sie die Verantwortung für die Lebensdauer des Objekts übernehmen.
 
 ## <a name="global"></a> locale::global
 
-Setzt das Standardgebietsschema für das Programm zurück. Dies wirkt sich auf das globale Gebietsschema für C und C++ aus.
+Setzt das Standardgebietsschema für das Programm zurück. Dieser-Befehl wirkt sich auf das globale Gebiets Schema C++für C und aus.
 
 ```cpp
-static locale global(const locale& Loc);
+static locale global(const locale& new_default_locale);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*A.a.o.* \
+*new_default_locale*\
 Das Gebietsschema, das als Standardgebietsschema vom Programm verwendet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -405,16 +404,17 @@ The previous locale was: C
 Die Memberklasse stellt eine einzigartige Facetidentifikation bereit, die als Index zum Suchen von Facets in einem Gebietsschema verwendet wird.
 
 ```cpp
-class id 
+class id
 {
    protected:    id();
    private:      id(const id&)
-   void operator=(const id&)  // not defined    
+   void operator=(const id&)  // not defined
 };
 ```
+
 ### <a name="remarks"></a>Hinweise
 
-Die Memberklasse beschreibt das statische Memberobjekt, das von jedem Gebietsschemafacet benötigt wird. Beachten Sie, dass Sie ein Objekt der Klasse `id`nicht kopieren oder zuweisen können.
+Die Memberklasse beschreibt das statische Memberobjekt, das von jedem Gebietsschemafacet benötigt wird. Sie können kein Objekt der Klasse `id`kopieren oder zuweisen.
 
 ## <a name="locale"></a> locale::locale
 
@@ -423,54 +423,54 @@ Erstellt ein Gebietsschema, eine Kopie eines Gebietsschemas oder eine Kopie des 
 ```cpp
 locale();
 
-explicit locale(const char* Locname, category Cat = all);
-explicit locale(const string& Locname);
-locale( const locale& Loc);
-locale(const locale& Loc, const locale& Other, category Cat);
-locale(const locale& Loc, const char* Locname, category Cat);
+explicit locale(const char* locale_name, category new_category = all);
+explicit locale(const string& locale_name);
+locale(const locale& from_locale);
+locale(const locale& from_locale, const locale& Other, category new_category);
+locale(const locale& from_locale, const char* locale_name, category new_category);
 
 template <class Facet>
-locale(const locale& Loc, const Facet* Fac);
+locale(const locale& from_locale, const Facet* new_facet);
 
 ~locale();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Locname*\
+*locale_name*\
 Der Name eines Gebietsschemas.
 
-*A.a.o.* \
+*from_locale*\
 Ein Gebietsschema, das zum Erstellen des neuen Gebietsschemas kopiert werden soll.
 
-*Außer*\
+*Andere* \
 Ein Gebietsschema für die Auswahl einer Kategorie.
 
-*Cat*\
+*new_category*\
 Die Kategorie, die im erstellten Gebietsschema ersetzt werden soll.
 
-*FAC*\
+*new_facet*\
 Das Facet, das im erstellten Gebietsschema ersetzt werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor initialisiert das Objekt, um mit dem globalen Gebietsschema übereinzustimmen. Mit dem zweiten und dritten Konstruktoren werden alle Gebiets Schema Kategorien initialisiert, sodass das Verhalten mit dem Gebiets Schema Namen " *locname*" konsistent ist. Die übrigen Konstruktoren kopieren *Loc*, mit den folgenden Ausnahmen:
+Der erste Konstruktor initialisiert das Objekt, um mit dem globalen Gebietsschema übereinzustimmen. Mit dem zweiten und dritten Konstruktoren werden alle Gebiets Schema Kategorien initialisiert, sodass das Verhalten mit dem Gebiets Schema Namen *locale_name*konsistent ist. Die übrigen Konstruktoren kopieren *from_locale*mit den folgenden Ausnahmen:
 
-`locale(const locale& Loc, const locale& Other, category Cat);`
+`locale(const locale& from_locale, const locale& Other, category new_category);`
 
-ersetzt von *anderen* Facetten, die einer Kategorie c entsprechen, für die C & *Cat* ungleich 0 (null) ist.
+ersetzt von *anderen* Facetten, die einer Kategorie c entsprechen, für die C & *new_category* nicht NULL ist.
 
-`locale(const locale& Loc, const char* Locname, category Cat);`
+`locale(const locale& from_locale, const char* locale_name, category new_category);`
 
-`locale(const locale& Loc, const string& Locname, category Cat);`
+`locale(const locale& from_locale, const string& locale_name, category new_category);`
 
-ersetzt aus `locale(Locname, _All)` den Facetten, die einer Kategorie c entsprechen, für die C & *Cat* ungleich 0 (null) ist.
+ersetzt von `locale(locale_name, all)` den Facetten, die einer Kategorie *replace_category* entsprechen, für die `replace_category & new_category` ungleich 0 (null) ist.
 
-`template<class Facet> locale(const locale& Loc, Facet* Fac);`
+`template<class Facet> locale(const locale& from_locale, Facet* new_facet);`
 
-ersetzt in (oder fügt zu) *Loc* den *facefac*, wenn *FAC* kein NULL-Zeiger ist.
+ersetzt in (oder fügt zu) *from_locale* das facetobjekt *new_facet*, wenn *new_facet* kein NULL-Zeiger ist.
 
-Wenn ein Gebiets Schema Name " *locname* " ein NULL-Zeiger oder anderweitig ungültig ist, löst die Funktion " [Runtime_error](../standard-library/runtime-error-class.md)" aus.
+Wenn der Gebiets Schema Name *locale_name* ein NULL-Zeiger oder anderweitig ungültig ist, löst die Funktion [Runtime_error](../standard-library/runtime-error-class.md)aus.
 
 ### <a name="example"></a>Beispiel
 
@@ -569,16 +569,16 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Richting*\
+*Rechte* \
 Eines der Gebietsschemas, die auf Ungleichheit geprüft werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein boolescher Wert, der **TRUE** ist, wenn die Gebietsschemas nicht Kopien des gleichen Gebietsschemas sind; **FALSE**, wenn die Gebietsschemas Kopien des gleichen Gebietsschemas sind.
+Ein boolescher Wert, der **true** ist, wenn die Gebiets Schemas keine Kopien desselben Gebiets Schemas sind. Es ist **false** , wenn die Gebiets Schemas Kopien desselben Gebiets Schemas sind.
 
 ### <a name="remarks"></a>Hinweise
 
-Zwei Gebietsschemas entsprechen sich, wenn sie das gleiche Gebietsschema sind oder wenn eines eine Kopie der anderen ist oder ihre Namen identisch sind.
+Zwei Gebiets Schemata sind gleich, wenn Sie das gleiche Gebiets Schema sind, wenn eine Kopie der anderen ist, oder wenn Sie identische Namen haben.
 
 ### <a name="example"></a>Beispiel
 
@@ -633,10 +633,10 @@ bool operator()(
 
 ### <a name="parameters"></a>Parameter
 
-*linken*\
+*Linker* \
 Die linke Zeichenfolge.
 
-*Richting*\
+*Rechte* \
 Die rechte Zeichenfolge.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -645,7 +645,7 @@ Die Memberfunktion gibt Folgendes zurück:
 
 - -1, wenn die erste Sequenz im Vergleich kleiner ist als die zweite Sequenz.
 
-- +1, wenn die zweite Sequenz im Vergleich kleiner ist als die erste Sequenz.
+- +1, wenn die zweite Sequenz kleiner als die erste Sequenz ist.
 
 - 0, wenn die Sequenzen gleichwertig sind.
 
@@ -659,7 +659,7 @@ const collate<CharType>& fac = use_fac<collate<CharType>>(*this);
 return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) < 0);
 ```
 
-Daher können Sie ein Gebietsschemaobjekt als ein Funktionsobjekt verwenden.
+Dies bedeutet, dass Sie ein Gebiets Schema Objekt als Funktions Objekt verwenden können.
 
 ### <a name="example"></a>Beispiel
 
@@ -702,16 +702,16 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Richting*\
+*Rechte* \
 Eines der Gebietsschemas, die auf Gleichheit geprüft werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein boolescher Wert, der **TRUE** ist, wenn die Gebietsschemas Kopien des gleichen Gebietsschemas sind; **FALSE**, wenn die Gebietsschemas keine Kopien des gleichen Gebietsschemas sind.
+Ein boolescher Wert, der **true** ist, wenn die Gebiets Schemas Kopien desselben Gebiets Schemas sind. Es ist **false** , wenn die Gebiets Schemas keine Kopien desselben Gebiets Schemas sind.
 
 ### <a name="remarks"></a>Hinweise
 
-Zwei Gebietsschemas entsprechen sich, wenn sie das gleiche Gebietsschema sind oder wenn eines eine Kopie der anderen ist oder ihre Namen identisch sind.
+Zwei Gebiets Schemata sind gleich, wenn Sie das gleiche Gebiets Schema sind, wenn eine Kopie der anderen ist, oder wenn Sie identische Namen haben.
 
 ### <a name="example"></a>Beispiel
 
@@ -762,4 +762,4 @@ and loc3 (English_United States.1252) are not equal.
 [\<locale>](../standard-library/locale.md)\
 [Codepages](../c-runtime-library/code-pages.md)\
 [Gebietsschema-Namen, Sprachen und Zeichenfolgen für Länder und Regionen](../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

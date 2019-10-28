@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::reverse_iterator [C++], base
 - std::reverse_iterator [C++], operator_star
 ms.assetid: c0b34d04-ae9a-4999-9aff-28b313897ffa
-ms.openlocfilehash: aadc5cffd6f88de175ff04f50d6572e38ba05533
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 99fe323177c0aff29f5f01e6835bd800616e2e16
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72686583"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889978"
 ---
 # <a name="reverse_iterator-class"></a>reverse_iterator-Klasse
 
@@ -44,11 +44,11 @@ RandomIterator der Typ, der den Iterator darstellt, der für den umgekehrten Bet
 
 Vorhandene C++-Standardbibliothekscontainer definieren auch die Typen `reverse_iterator` und `const_reverse_iterator` und verfügen über die Memberfunktionen `rbegin` und `rend`, die Reverse-Iteratoren zurückgeben. Diese Iteratoren verfügen über Semantik zum Überschreiben. Der `reverse_iterator` Adapter ergänzt diese Funktionalität, da er einfügesemantik bietet und auch mit Streams verwendet werden kann.
 
-Der `reverse_iterator`, der einen bidirektionalen Iterator erfordert, darf keine der Element Funktionen `operator+=`, `operator+`, `operator-=`, `operator-` oder `operator[]` aufrufen, die nur mit zufälligen zugriffsiteratoren verwendet werden können.
+Der `reverse_iterator`, der einen bidirektionalen Iterator erfordert, darf keine der Element Funktionen `operator+=`, `operator+`, `operator-=`, `operator-`oder `operator[]`aufrufen, die nur mit zufälligen zugriffsiteratoren verwendet werden können.
 
-Der Bereich eines Iterators ist [*First*, *Last*), wobei die eckige Klammer links den Einschluss von *First* und die Klammer auf der rechten Seite angibt, dass Elemente bis zu bis auf das *Letzte* Element eingeschlossen werden. Dieselben Elemente sind in der umgekehrten Sequenz enthalten [ **Rev**  - *First*, **Rev**  - *Last*), sodass, wenn das *Letzte* Element das Element "Past-the-End" in einer Sequenz ist, das erste Element " **Rev** "  -  *zuerst* zeigt in der umgekehrten Sequenz auf 0 (*Last* -1). Die Identität, die alle umgekehrten Iteratoren auf die zugrunde liegenden Iteratoren bezieht:
+Der Bereich eines Iterators ist [*First*, *Last*), wobei die eckige Klammer links den Einschluss von *First* und die Klammer auf der rechten Seite angibt, dass Elemente bis zu bis auf das *Letzte* Element eingeschlossen werden. Dieselben Elemente sind in der umgekehrten Sequenz enthalten [ **Rev** - *First*, **Rev** - *Last*), sodass, wenn das *Letzte* Element das Element "Past-the-End" in einer Sequenz ist, das erste Element " **Rev** " -  *zuerst* zeigt in der umgekehrten Sequenz auf \*(*Last* -1). Die Identität, die alle umgekehrten Iteratoren auf die zugrunde liegenden Iteratoren bezieht:
 
-& \* ( **reverse_iterator** ( *i* )) = = & \* ( *i* -1).
+&\*( **reverse_iterator** ( *i* )) = = &\*( *i* -1).
 
 In der Praxis bedeutet dies, dass in der umgekehrten Sequenz das reverse_iterator-Objekt auf das Element verweist, das eine Position hinter dem Element (rechts davon) liegt, auf das der Iterator in der ursprünglichen Sequenz verwiesen hat. Wenn ein Iterator das Element 6 in der Sequenz adressierte (2, 4, 6, 8), dann adressiert `reverse_iterator` das Element 4 in der umgekehrten Sequenz (8, 6, 4, 2).
 
@@ -109,7 +109,7 @@ Der `reverse_iterator` zugrunde liegenden Iterator.
 
 Die Identität, die alle umgekehrten Iteratoren auf die zugrunde liegenden Iteratoren bezieht:
 
-& \* (`reverse_iterator` ( *i* )) = = & \* ( *i* -1).
+&\*(`reverse_iterator` ( *i* )) = = &\*( *i* -1).
 
 In der Praxis bedeutet dies, dass in der umgekehrten Sequenz `reverse_iterator` auf das Element verweist, das eine Position hinter dem Element (rechts davon) liegt, auf das der Iterator in der ursprünglichen Sequenz verwiesen hat. Wenn ein Iterator das Element 6 in der Sequenz adressierte (2, 4, 6, 8), dann adressiert `reverse_iterator` das Element 4 in der umgekehrten Sequenz (8, 6, 4, 2).
 
@@ -644,7 +644,7 @@ Der Offset, der vom `reverse_iterator` subtrahiert werden soll.
 
 Diese Memberfunktion kann nur verwendet werden, wenn die `reverse_iterator` die Anforderungen für einen Random-Access-Iterator erfüllt.
 
-Der Operator wertet **current** + _ *Off*. aus. Dann wird \***this** zurückgegeben.
+Der Operator wertet die **aktuelle** + *aus* und gibt **\*this**zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -945,7 +945,7 @@ Der Typ ist ein Synonym für den Merkmaltypnamen des Iterators `iterator_traits`
 
 ### <a name="example"></a>Beispiel
 
-Beispiele zum Deklarieren und Verwenden von `reference` finden Sie unter [reverse_iterator:: Operator&#91; ](#op_at) oder [reverse_iterator:: Operator *](#op_star) .
+Beispiele zum Deklarieren und Verwenden von`reference`finden Sie unter [reverse_iterator:: Operator&#91; ](#op_at) oder [reverse_iterator:: Operator *](#op_star) .
 
 ## <a name="reverse_iterator"></a> reverse_iterator::reverse_iterator
 
@@ -972,7 +972,7 @@ Erstellt aus einem zugrunde liegenden Iterator einen standardmäßigen `reverse_
 
 Die Identität, die alle umgekehrten Iteratoren auf die zugrunde liegenden Iteratoren bezieht:
 
-& \* (`reverse_iterator` ( *i* )) = = & \* ( *i* -1).
+&\*(`reverse_iterator` ( *i* )) = = &\*( *i* -1).
 
 In der Praxis bedeutet dies, dass in der umgekehrten Sequenz das reverse_iterator-Objekt auf das Element verweist, das eine Position hinter dem Element (rechts davon) liegt, auf das der Iterator in der ursprünglichen Sequenz verwiesen hat. Wenn ein Iterator das Element 6 in der Sequenz adressierte (2, 4, 6, 8), dann adressiert `reverse_iterator` das Element 4 in der umgekehrten Sequenz (8, 6, 4, 2).
 

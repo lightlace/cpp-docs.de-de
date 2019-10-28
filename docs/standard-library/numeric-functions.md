@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::transform_exclusive_scan [C++]
 - std::transform_inclusive_scan [C++]
 - std::transform_reduce [C++]
-ms.openlocfilehash: 0a9d0ce34b1dcd2dd9252f4b243db85118deabe6
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: ab1e2942cbcfe568dd4c280c059fe0768493794c
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246724"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889967"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt;-Funktionen
 
-## <a name="accumulate"></a> Sammeln
+## <a name="accumulate"></a>Reichert
 
 Berechnet die Summe aller Elemente in einem angegebenen Bereich, einschließlich einigen Anfangswerten, indem aufeinander folgende Teilsummen berechnet werden, oder berechnet das Ergebnis der aufeinander folgenden Teilergebnisse, die auf ähnliche Weise mithilfe eines angegebenen binären Vorgangs (außer Summe) abgerufen werden.
 
@@ -49,25 +49,25 @@ Type accumulate(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*\
+*erste* \
 Ein Eingabeiterator, der das erste Element in dem Bereich adressiert, der entsprechend eines angegebenen binären Vorgangs summiert oder kombiniert werden soll.
 
-*letzte*\
+*Letzter* \
 Ein Eingabeiterator, der das letzte Element im Bereich adressiert, der entsprechend eines angegebenen binären Vorgangs summiert oder kombiniert werden soll. Dieser Vorgang befindet sich eine Position nach dem letzten Element, das tatsächlich im iterierten Sammelbereich enthalten ist.
 
-*val*\
+*Val* -\
 Ein anfänglicher Wert, zu oder mit dem jedes Element hinzugefügt oder kombiniert wird, entsprechend eines angegebenen binären Vorgangs.
 
-*binary_op*\
+*Binary_Op*\
 Der binäre Vorgang, der auf jedes Element im angegebenen Bereich angewendet wird und das Ergebnis der vorherigen Anwendung.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Summe der *Val* und alle Elemente im angegebenen Bereich für die erste Vorlagenfunktion oder, für die zweite Vorlagenfunktion, das Ergebnis des Anwendens der binären Operation angegeben ist, anstelle von der Summenvorgang, um ( *PartialResult, \*Iter*), wobei *PartialResult* ist das Ergebnis des vorherigen Anwendungen des Vorgangs und `Iter` ist ein Iterator, der auf ein Element im Bereich zeigt.
+Die Summe von *Val* und alle Elemente im angegebenen Bereich für die erste Vorlagen Funktion oder, für die zweite Vorlagen Funktion, das Ergebnis der Anwendung der angegebenen binären Operation anstelle des Sum-Vorgangs auf (*PartialResult, \*ITER* ), wobei *PartialResult* das Ergebnis früherer Anwendungen des Vorgangs ist und `Iter` ein Iterator ist, der auf ein Element im Bereich zeigt.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Anfangswert stellt sicher, dass es ein klar definiertes Ergebnis sein wird, wenn der Bereich leer ist, in diesem Fall wird *Val* zurückgegeben wird. Der binäre Vorgang muss nicht assoziativ oder kommutativ sein. Das Ergebnis wird auf den ursprünglichen Wert initialisiert *Val* und dann *Ergebnis*  =  `binary_op` (*Ergebnis*, <strong>\*</strong> `Iter`) iterativ über den Bereich berechnet wird, in denen `Iter` ist ein Iterator, der auf nachfolgende Element im Bereich zeigt. Der Bereich muss gültig sein und die Komplexität ist linear mit der Größe des Bereichs. Der Rückgabetyp des binären Operators muss in **Typ** konvertierbar sein, um Closure während der Iteration sicherzustellen.
+Der Anfangswert stellt sicher, dass es ein klar definiertes Ergebnis gibt, wenn der Bereich leer ist. in diesem Fall wird *Val* zurückgegeben. Der binäre Vorgang muss nicht assoziativ oder kommutativ sein. Das Ergebnis wird mit dem anfänglichen Wert *Val* initialisiert, und *anschließend wird das Ergebnis = * `binary_op` (*Ergebnis*, <strong>\*</strong>`Iter`) iterativ durch den Bereich berechnet, wobei `Iter` ein Iterator ist, der auf aufeinander folgende Werte zeigt. -Element im Bereich. Der Bereich muss gültig sein und die Komplexität ist linear mit der Größe des Bereichs. Der Rückgabetyp des binären Operators muss in **Typ** konvertierbar sein, um Closure während der Iteration sicherzustellen.
 
 ### <a name="example"></a>Beispiel
 
@@ -168,7 +168,7 @@ The vector of partial products is:
 ( 1 2 6 24 120 720 5040 40320 362880 3628800 ).
 ```
 
-## <a name="adjacent_difference"></a> adjacent_difference
+## <a name="adjacent_difference"></a>adjacent_difference
 
 Berechnet die aufeinander folgenden Unterschiede zwischen einem Element und seinem Vorgänger in einem Eingabebereich und gibt die Ergebnisse in einem Zielbereich aus oder berechnet das Ergebnis einer allgemeinen Prozedur, in der der Vorgang zum Feststellen von Unterschieden durch einen anderen angegebenen binären Vorgang ersetzt wird.
 
@@ -205,16 +205,16 @@ ForwardIterator2 adjacent_difference(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*\
+*erste* \
 Ein Eingabeiterator, der das erste Element im Eingabebereich adressiert, dessen Elemente mit ihren jeweiligen Vorgängern differenziert werden sollen oder in dem die Wertpaare durch einen anderen angegebenen binären Vorgang verarbeitet werden sollen.
 
-*letzte*\
+*Letzter* \
 Ein Eingabeiterator, der das letzte Element im Eingabebereich adressiert, dessen Elemente mit ihren jeweiligen Vorgängern differenziert werden sollen oder in dem die Wertpaare durch einen anderen angegebenen binären Vorgang verarbeitet werden sollen.
 
 *Ergebnis*\
 Ein Ausgabeiterator, der das erste Element eines Zielbereichs adressiert, in dem die Reihe von Differenzen oder die Ergebnisse des angegebenen Vorgangs gespeichert werden sollen.
 
-*binary_op*\
+*Binary_Op*\
 Der binäre Vorgang, der im allgemeinen Vorgang angewendet werden soll, der den Vorgang der Subtraktion im Differenzierungsverfahren ersetzt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -223,13 +223,13 @@ Ein Ausgabeiterator, der das Ende des Zielbereichs adressiert: `result` + (`last
 
 ### <a name="remarks"></a>Hinweise
 
-Der Ausgabeiterator _ *Ergebnis* darf derselbe Iterator sein wie der eingabeiterator * erste, *, damit `adjacent_difference`direktes berechnet werden können.
+Das *Ergebnis* des ausgabeiteratorergebnisses kann derselbe *Iterator sein*wie der eingabeiterator, damit `adjacent_difference` Werte direkt berechnet werden können.
 
-Für eine Sequenz von Werten *eine*1 *eine*2, *eine*3 in einem Eingabebereich die erste Vorlagenfunktion aufeinander folgende speichert `partial_difference`s *eine*1 , *eine*2 – *eine*1, a3 – *eine*2 im Zielbereich.
+Bei einer Sequenz von Werten *a*1, *a*2, *a*3 in einem Eingabebereich speichert die erste Vorlagen Funktion aufeinander folgende `partial_difference` Werte *a*1, *a*2- *a*1, a3- *a*2 im Zielbereich.
 
-Für eine Sequenz von Werten *eine*1 *eine*2, *eine*3 in einem Eingabebereich, die zweite Vorlagenfunktion aufeinander folgende speichert `partial_difference`s *eine* 1, *eine*2 `binary_op` *eine*1 *eine*3 `binary_op` *eine*2 im Zielbereich.
+Bei einer Sequenz von Werten *a*1, *a*2, *a*3 in einem Eingabebereich speichert die zweite Vorlagen Funktion aufeinander folgende `partial_difference` Werte *a*1, *a*2 `binary_op` *a*1, *a*3 `binary_op` *a*2 im Ziel. Bereich.
 
-Der binäre Vorgang `binary_op` muss weder assoziativ noch kommutativ sein, da die Reihenfolge der Vorgänge gilt angegeben ist.
+Der binäre Vorgang `binary_op` muss weder assoziativ noch kommutativ sein, da die Reihenfolge der angewendeten Vorgänge angegeben wird.
 
 ### <a name="example"></a>Beispiel
 
@@ -292,7 +292,7 @@ int main( )
 }
 ```
 
-## <a name="exclusive_scan"></a> exclusive_scan
+## <a name="exclusive_scan"></a>exclusive_scan
 
 ```cpp
 template<class InputIterator, class OutputIterator, class T>
@@ -316,14 +316,14 @@ ForwardIterator2 result,
 T init, BinaryOperation binary_op);
 ```
 
-## <a name="gcd"></a> GCD
+## <a name="gcd"></a>GCD
 
 ```cpp
 template <class M, class N>
 constexpr common_type_t<M,N> gcd(M m, N n);
 ```
 
-## <a name="inclusive_scan"></a> inclusive_scan
+## <a name="inclusive_scan"></a>inclusive_scan
 
 ```cpp
 template<class InputIterator, class OutputIterator>
@@ -355,7 +355,7 @@ ForwardIterator2 result,
 BinaryOperation binary_op, T init);
 ```
 
-## <a name="inner_product"></a> inner_product
+## <a name="inner_product"></a>inner_product
 
 Berechnet die Summe des elementweisen Produkts von zwei Bereichen und fügt sie einem angegebenen Anfangswert hinzu oder berechnet das Ergebnis einer allgemeinen Prozedur, in der die Summen- und Produktvorgänge durch andere angegebene binäre Vorgänge ersetzt werden.
 
@@ -379,41 +379,41 @@ Type inner_product(
 
 ### <a name="parameters"></a>Parameter
 
-*first1*\
+*First1* \
 Ein Eingabeiterator, der das erste Element im ersten Bereich adressiert, dessen inneres oder generalisiertes inneres Produkt mit dem zweiten Bereich neu zu berechnen ist.
 
-*Last1*\
+*Last1* \
 Ein Eingabeiterator, der das letzte Element im ersten Bereich adressiert, dessen inneres oder generalisiertes inneres Produkt mit dem zweiten Bereich neu zu berechnen ist.
 
-*first2*\
+*First2* \
 Ein Eingabeiterator, der das erste Element im zweiten Bereich adressiert, dessen inneres oder generalisiertes inneres Produkt mit dem ersten Bereich neu zu berechnen ist.
 
-*val*\
+*Val* -\
 Einen Anfangswert für den das innere oder generalisierte innere Produkt zwischen den Bereichen hinzugefügt wird.
 
-*binary_op1*\
+*Binary_Op1*\
 Der binäre Vorgang, der das innere Produkt des Summenvorgangs ersetzt, wird auf die elementweisen Produkte in der Generalisierung des inneren Produkts angewendet.
 
-*binary_op2*\
+*Binary_Op2*\
 Der binäre Vorgang, der das innere Produkt des elementweisen Produkt des Multiplizierungsvorgangs in der Generalisierung des inneren Produkts ersetzt.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Der erste Memberfunktion gibt die Summe des elementweisen Produkts zurück und fügt den angegebenen Anfangswert hinzu. Für Wertebereiche *a*i und *b*i wird folgendes zurückgegeben:
 
-`val` + (*eine*1 \* *b*1) + (*eine*2 \* *b*2) +... + (*eine*n \* *b*n)
+`val` + (*a*1 \* *b*1) + (*a*2 \* *b*2) +... + (*a*n \* *b*n)
 
-durch iterativen Ersatz *Val* mit `val` + (*eine*ich \* *b*ich).
+durch iteratives Ersetzen von *Val* durch `val` + (*a*i \* *b*i).
 
 Die zweite Memberfunktion gibt folgendes zurück:
 
-`val` *binary_op1* (*eine*1 *binary_op2* *b*1) *binary_op1* (*eine*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* (*eine*n *binary_op2* *b*n)
+`val` *Binary_Op1* (*a*1 *Binary_Op2* *b*1) *Binary_Op1* (*a*2 *Binary_Op2* *b*2) *Binary_Op1* ... *Binary_Op1* (*a*n *Binary_Op2* *b*n)
 
-durch iterativen Ersatz *Val* mit `val` *binary_op1* (*eine*ich *binary_op2* *b* i).
+durch iteratives ersetzen *von Val* durch `val` *Binary_Op1* (*a*i *Binary_Op2* *b*i).
 
 ### <a name="remarks"></a>Hinweise
 
-Der Anfangswert stellt sicher, dass es ein klar definiertes Ergebnis sein wird, wenn der Bereich leer ist, in diesem Fall wird *Val* zurückgegeben wird. Der binäre Vorgang müssen assoziativ oder kommutativ sein. Der Bereich muss gültig sein und die Komplexität ist linear mit der Größe des Bereichs. Der Rückgabetyp des binären Operators muss in **Typ** konvertierbar sein, um Closure während der Iteration sicherzustellen.
+Der Anfangswert stellt sicher, dass es ein klar definiertes Ergebnis gibt, wenn der Bereich leer ist. in diesem Fall wird *Val* zurückgegeben. Die binären Operationen müssen nicht assoziativ oder kommutativ sein. Der Bereich muss gültig sein und die Komplexität ist linear mit der Größe des Bereichs. Der Rückgabetyp des binären Operators muss in **Typ** konvertierbar sein, um Closure während der Iteration sicherzustellen.
 
 ### <a name="example"></a>Beispiel
 
@@ -505,9 +505,9 @@ int main()
 }
 ```
 
-## <a name="iota"></a> Iota
+## <a name="iota"></a>Iota
 
-Speichert einen Startwert, beginnend mit dem ersten Element und füllt ihn mit aufeinander folgenden Schritten des Werts (` value++`) in jedem der Elemente im Intervall `[first,  last)`.
+Speichert einen Startwert, beginnend mit dem ersten Element und füllt mit aufeinander folgenden Schritten dieses Werts (` value++`) in jedem der Elemente im Intervall `[first,  last)`.
 
 ```cpp
 template <class ForwardIterator, class Type>
@@ -516,14 +516,14 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*\
+*erste* \
 Ein Eingabeiterator, der das erste Element im aufzufüllenden Bereich adressiert.
 
-*letzte*\
+*Letzter* \
 Ein Eingabeiterator, der das letzte Element im aufzufüllenden Bereich adressiert.
 
 *value*\
-Der Anfangswert im ersten Element und höher Elemente nacheinander Inkrement zu speichern.
+Der Anfangswert, der im ersten Element gespeichert werden soll, und, um für spätere Elemente nacheinander Inkrement zu erhöhen.
 
 ### <a name="example"></a>Beispiel
 
@@ -567,14 +567,14 @@ int main(void)
 }
 ```
 
-## <a name="lcm"></a> LCM
+## <a name="lcm"></a>LCM
 
 ```cpp
 template <class M, class N>
 constexpr common_type_t<M,N> lcm(M m, N n);
 ```
 
-## <a name="partial_sum"></a> partial_sum
+## <a name="partial_sum"></a>partial_sum
 
 Berechnet eine Reihe von Summen in einem Eingabebereich vom ersten Element bis zum *i*.-Element und speichert das Ergebnis jeder Summe im *i*.-Element eines Zielbereichs oder berechnet das Ergebnis einer allgemeinen Prozedur, in der der Summenvorgang durch einen anderen angegebenen binären Vorgang ersetzt wird.
 
@@ -595,16 +595,16 @@ OutputIterator partial_sum(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*\
+*erste* \
 Ein Eingabeiterator, der das erste Element in dem Bereich adressiert, der entsprechend eines angegebenen binären Vorgangs teilweise summiert oder kombiniert werden soll.
 
-*letzte*\
+*Letzter* \
 Ein Eingabeiterator, der das letzte Element in dem Bereich adressiert, der entsprechend eines angegebenen binären Vorgangs teilweise summiert oder kombiniert werden soll und eine Position nach dem letzten Element folgt, das tatsächlich im iterierten Sammelbereich enthalten ist.
 
 *Ergebnis*\
 Ein Ausgabeiterator, der das erste Element eines Zielbereichs adressiert, in dem die Reihe von Teilsummen oder die Ergebnisse des angegebenen Vorgangs gespeichert werden sollen.
 
-*binary_op*\
+*Binary_Op*\
 Der binäre Vorgang, der im allgemeinen Vorgang angewendet werden soll, der den Vorgang der Summierung im Teilsummenverfahren ersetzt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -613,13 +613,13 @@ Ein Ausgabeiterator, der das Ende des Zielbereichs adressiert: `result` + (`last
 
 ### <a name="remarks"></a>Hinweise
 
-Der Ausgabeiterator *Ergebnis* darf derselbe Iterator sein wie der eingabeiterator *erste*, sodass Teilsummen direkt berechnet werden können.
+Das *Ergebnis* des ausgabeiteratorergebnisses darf derselbe *Iterator sein*wie der eingabeiterator, damit partielle Summen direkt berechnet werden können.
 
-Für eine Sequenz von Werten *eine*1 *eine*2, *eine*3, speichert Sie in einem Eingabebereich, die erste Vorlagenfunktion aufeinander folgende Teilsummen im Zielbereich, in denen die *ich*th-Element wird angegeben, durch (((*eine*1 + *eine*(2) + *eine*(3) *eine*ich).
+Bei einer Sequenz von Werten *a*1, *a*2, *a*3 in einem Eingabebereich speichert die erste Vorlagen Funktion aufeinander folgende Teilsummen im Zielbereich, in dem das *i*th-Element durch (((*a*1 + *a*2) + *a*3) a angegeben wird.i).
 
-Für eine Sequenz von Werten *eine*1, *eine*2, *eine*3, in einem Eingabebereich die zweite Vorlagenfunktion speichert aufeinander folgende Teilsummen im Zielbereich, das IT-Element steht Angabe durch (((*eine*1 `binary_op` *eine* (2)`binary_op` *eine* (3)*eine*ich).
+Bei einer Sequenz von Werten *a*1, *a*2, *a*3 in einem Eingabebereich speichert die zweite Vorlagen Funktion aufeinander folgende Teilsummen im Zielbereich, in dem das Element "ITH" durch (((*a*1 `binary_op` *a*2) `binary_op` *a* 3) *a*i).
 
-Der binäre Vorgang *Binary_op* muss weder assoziativ noch kommutativ sein, da die Reihenfolge der Vorgänge gilt angegeben ist.
+Der binäre Vorgang *Binary_Op* muss weder assoziativ noch kommutativ sein, da die Reihenfolge der Vorgänge angegeben wird.
 
 ### <a name="example"></a>Beispiel
 
@@ -681,7 +681,7 @@ int main( )
 }
 ```
 
-## <a name="reduce"></a> Reduzieren
+## <a name="reduce"></a>Ver
 
 ```cpp
 template<class InputIterator>
@@ -705,7 +705,7 @@ ForwardIterator first, ForwardIterator last, T init,
 BinaryOperation binary_op);
 ```
 
-## <a name="transform_exclusive_scan"></a> transform_exclusive_scan
+## <a name="transform_exclusive_scan"></a>transform_exclusive_scan
 
 ```cpp
 template<class InputIterator, class OutputIterator, class T,
@@ -726,7 +726,7 @@ BinaryOperation binary_op,
 UnaryOperation unary_op);
 ```
 
-## <a name="transform_inclusive_scan"></a> transform_inclusive_scan
+## <a name="transform_inclusive_scan"></a>transform_inclusive_scan
 
 ```cpp
 template<class InputIterator, class OutputIterator,
@@ -761,7 +761,7 @@ UnaryOperation unary_op,
 T init);
 ```
 
-## <a name="transform_reduce"></a> transform_reduce
+## <a name="transform_reduce"></a>transform_reduce
 
 ```cpp
 template<class InputIterator1, class InputIterator2, class T>
