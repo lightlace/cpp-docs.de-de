@@ -79,12 +79,12 @@ helpviewer_keywords:
 - std::forward_list::splice_after
 - std::forward_list::swap
 - std::forward_list::unique
-ms.openlocfilehash: f1015e53e137b9001bd90233c281345d474bc03f
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e13242aa41cc99cdd01a6f16b607ef568195d659
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689701"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890201"
 ---
 # <a name="forward_list-class"></a>forward_list-Klasse
 
@@ -108,7 +108,7 @@ Das gespeicherte Zuordnungsobjekt, das Details zum Belegen und Freigeben des Arb
 
 ## <a name="remarks"></a>Hinweise
 
-Ein `forward_list`-Objekt reserviert und freigibt Speicher für die Sequenz, die es steuert, durch ein gespeichertes Objekt der Klassen *Zuweisung* , das auf der [zuordnerklasse](../standard-library/allocator-class.md) basiert (häufig als `std::allocator)` bezeichnet). Weitere Informationen finden Sie unter [Allocators](../standard-library/allocators.md). Ein zuordnerobjekt muss dieselbe externe Schnittstelle wie ein Objekt vom Typ "`allocator`" aufweisen.
+Ein `forward_list`-Objekt reserviert und freigibt Speicher für die Sequenz, die es steuert, durch ein gespeichertes Objekt der Klassen *Zuweisung* , das auf der [zuordnerklasse](../standard-library/allocator-class.md) basiert (häufig als `std::allocator)`bezeichnet). Weitere Informationen finden Sie unter [Allocators](../standard-library/allocators.md). Ein zuordnerobjekt muss dieselbe externe Schnittstelle wie ein Objekt vom Typ "`allocator`" aufweisen.
 
 > [!NOTE]
 > Das gespeicherte Zuweisungsobjekt wird nicht kopiert, wenn das Containerobjekt zugewiesen wird.
@@ -220,7 +220,7 @@ Die Anzahl zuzuweisender Elemente.
 *Val* -\
 Der jedem Element zuzuweisende Wert.
 
-@No__t_1 *eingeben*
+\ *eingeben*
 Der Typ des Werts.
 
 *IList* -\
@@ -678,7 +678,7 @@ Der Funktionenvergleichsobjekt, das zum Sortieren der Elemente verwendet wird
 
 ### <a name="remarks"></a>Hinweise
 
-`forward_list::merge` entfernt die Elemente aus der `forward_list` `right` und fügt Sie in dieses `forward_list` ein. Beide Sequenzen müssen nach dem gleichen Prädikat sortiert werden, wie unten beschrieben. Die kombinierte Ereignissequenz wird ebenfalls nach diesem Funktionenvergleichssobjekt sortiert.
+`forward_list::merge` entfernt die Elemente aus der `forward_list` `right`und fügt Sie in dieses `forward_list`ein. Beide Sequenzen müssen nach dem gleichen Prädikat sortiert werden, wie unten beschrieben. Die kombinierte Ereignissequenz wird ebenfalls nach diesem Funktionenvergleichssobjekt sortiert.
 
 Für die Iteratoren `Pi` und `Pj`, die Elemente an den Positionen `i` und `j` festlegen, erzwingt die erste Memberfunktion die Reihenfolge `!(*Pj < *Pi)`, immer wenn `i < j` vorliegt. (Die Elemente werden in `ascending` Reihenfolge sortiert.) Die zweite Member-Funktion erzwingt die Reihenfolge `! comp(*Pj, *Pi)`, wenn `i < j`.
 
@@ -810,7 +810,7 @@ void resize(size_type _Newsize, const Type& val);
 
 ### <a name="parameters"></a>Parameter
 
-*_Newsize* \
+*_Newsize*\
 Die Anzahl der Elemente im Vorwärtsliste, deren Größe angepasst wurde
 
 *Val* -\
@@ -1044,4 +1044,4 @@ typedef typename Allocator::value_type value_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ stellt ein Synonym für den Vorlagenparameter _ `Ty` dar.
+Der Type stellt ein Synonym für den Vorlagenparameter `Type` dar.

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: 30367e003d2dad95e870854098e7fcae34f50efa
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: cd1dfc035fde06c4be0f90e1bd11b231d64ab811
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243325"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890132"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt;-Operatoren
 
@@ -35,15 +35,15 @@ operator&(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*\
+*Linker* \
 Das erste der beiden Bitsets, dessen jeweilige Elemente mit dem bitweisen `AND` kombiniert werden sollen.
 
-*Richting*\
+*Rechte* \
 Die zweite der beiden valarray-Klassen, deren jeweilige Elemente mit dem bitweisen `AND` kombiniert werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Bitset, dessen Elemente das Ergebnis der Ausführung der `AND` -Vorgang für die entsprechenden Elemente der *linken* und *rechten*.
+Ein Bitset, dessen Elemente das Ergebnis der Ausführung des `AND` Vorgangs auf den entsprechenden Elementen von *Links* und *Rechts*sind.
 
 ### <a name="example"></a>Beispiel
 
@@ -73,7 +73,7 @@ bitset 2: 0011
 bitset 3: 0001
 ```
 
-## <a name="op_lt_lt"></a> Operator&lt;&lt;
+## <a name="op_lt_lt"></a>Operator&lt;&lt;
 
 Fügt eine Textdarstellung der Bitsequenz in den Ausgabestream ein.
 
@@ -86,7 +86,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parameter
 
-*Richting*\
+*Rechte* \
 Ein Objekt vom Typ **bitset\<N>** , das als Zeichenfolge in den Ausgabestream eingefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -95,9 +95,9 @@ Eine Textdarstellung der Bitsequenz in `ostr`.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion überlädt `operator<<`, sodass ein Bitset ausgegeben werden, ohne es zunächst in eine Zeichenfolge konvertiert. Die Vorlagenfunktion führt Folgendes aus:
+Die Vorlagen Funktion überlädt `operator<<`und ermöglicht so, dass ein Bitset geschrieben werden kann, ohne dass es zuvor in eine Zeichenfolge umgewandelt wird. Die Vorlagenfunktion führt Folgendes aus:
 
-**Ostr** << _*rechts*. [To_string](bitset-class.md) <**CharType**, **"traits"** , **Allocator**\<**CharType**>>)
+`ostr << right.`[to_string](bitset-class.md)`<CharType, Traits, allocator<CharType>>()`
 
 ### <a name="example"></a>Beispiel
 
@@ -130,36 +130,34 @@ int main( )
 }
 ```
 
-## <a name="op_gt_gt"></a> Operator&gt;&gt;
+## <a name="op_gt_gt"></a>Operator&gt;&gt;
 
 Liest eine Folge von Bitzeichen in ein Bitset aus.
 
 ```
 template <class CharType, class Traits, size_t Bits>
 basic_istream<CharType, Traits>& operator>> (
-    basic_istream<CharType, Traits>&
-_Istr,
-    bitset<N>&
-    right);
+    basic_istream<CharType, Traits>& i_str,
+    bitset<N>& right);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*_Istr*\
+*i_str*\
 Die in den Eingabestream eingegebene Zeichenfolge, die in das Bitset eingefügt werden soll.
 
-*Richting*\
+*Rechte* \
 Das Bitset, das die Bits aus dem Eingabestream empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Vorlagenfunktion gibt die Zeichenfolge *_Istr*.
+Die Vorlagen Funktion gibt die Zeichenfolge " *i_str*" zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion überlädt `operator>>` zum Speichern in das Bitset _ *rechts* Wert Bitset (`str`), wobei `str` ist ein Objekt des Typs ["basic_string"](basic-string-class.md)  <  **CharType**, **"traits"** , **Allocator** \< **CharType**>> **&** aus extrahierten *_Istr*.
+Die Vorlagen Funktion überlädt `operator>>`, um im *Bitset zu* speichern. der Wert `bitset(str)`, wobei `str` ein Objekt vom Typ`< CharType, Traits, allocator< CharType > >&` [basic_string](basic-string-class.md) ist, das aus *i_str*extrahiert wurde.
 
-Die Vorlagenfunktion extrahiert Elemente aus *_Istr* und fügt sie in das Bitset bis:
+Die Vorlagen Funktion extrahiert Elemente aus *i_str* und fügt Sie in das Bitset ein, bis:
 
 - Alle Bitelemente aus dem Eingabestream extrahiert und im Bitset gespeichert wurden.
 
@@ -216,7 +214,7 @@ int main()
 }
 ```
 
-## <a name="op_xor"></a> Operator ^
+## <a name="op_xor"></a>Operator ^
 
 Führt ein bitweises `EXCLUSIVE-OR` zwischen zwei Bitsets aus.
 
@@ -230,15 +228,15 @@ operator^(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*\
+*Linker* \
 Das erste der beiden Bitsets, dessen jeweilige Elemente mit dem bitweisen `EXCLUSIVE-OR` kombiniert werden sollen.
 
-*Richting*\
+*Rechte* \
 Die zweite der beiden valarray-Klassen, deren jeweilige Elemente mit dem bitweisen `EXCLUSIVE-OR` kombiniert werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Bitset, dessen Elemente das Ergebnis der Ausführung der `EXCLUSIVE-OR` -Vorgang für die entsprechenden Elemente der *linken* und *rechten*.
+Ein Bitset, dessen Elemente das Ergebnis der Ausführung des `EXCLUSIVE-OR` Vorgangs auf den entsprechenden Elementen von *Links* und *Rechts*sind.
 
 ### <a name="example"></a>Beispiel
 
@@ -268,7 +266,7 @@ bitset 2: 0011
 bitset 3: 0110
 ```
 
-## <a name="op_or"></a> Operator&#124;
+## <a name="op_or"></a>KOM&#124;
 
 Führt ein bitweises `OR` zwischen zwei Bitsets aus.
 
@@ -282,15 +280,15 @@ operator|(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*\
+*Linker* \
 Das erste der beiden Bitsets, dessen jeweilige Elemente mit dem bitweisen `OR` kombiniert werden sollen.
 
-*Richting*\
+*Rechte* \
 Die zweite der beiden valarray-Klassen, deren jeweilige Elemente mit dem bitweisen `OR` kombiniert werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Bitset, dessen Elemente das Ergebnis der Ausführung der `OR` -Vorgang für die entsprechenden Elemente der *linken* und *rechten*.
+Ein Bitset, dessen Elemente das Ergebnis der Ausführung des `OR` Vorgangs auf den entsprechenden Elementen von *Links* und *Rechts*sind.
 
 ### <a name="example"></a>Beispiel
 
