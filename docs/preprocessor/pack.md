@@ -21,20 +21,20 @@ Gibt die Verpackungs Ausrichtung für Struktur-, Union-und Klassenmember an.
 
 ## <a name="syntax"></a>Syntax
 
-> **#Pragma Pack (anzeigen)**\
-> **#pragma pack (Push** [ **,** *Bezeichner* ] [ **,** *n* ] **)**\
-> **#pragma pack (Pop** [ **,** { *Identifier* | *n* }] **)**\
+> **#pragma pack( show )** \
+> **#pragma pack ( push** [ **,** *Bezeichner* ] [ **,** *n* ] **)** \
+> **#pragma pack ( pop** [ **,** { *Identifier* | *n* }] **)** \
 > **#pragma pack (** [ *n* ] **)**
 
 ### <a name="parameters"></a>Parameter
 
-**auftritt**\
+**show**\
 Optionale Zeigt den aktuellen Bytewert für die Verpackungs Ausrichtung an. Der Wert wird von einer Warnmeldung angezeigt.
 
-**Push**\
+**push**\
 Optionale Überträgt den aktuellen Verpackungs Ausrichtungs Wert auf den internen compilerstapel und legt den aktuellen Verpackungs Ausrichtungs Wert auf *n*fest. Wenn *n* nicht angegeben ist, wird der aktuelle Wert für die Verpackungs Ausrichtung per pushübertragung übermittelt
 
-**Chor**\
+**pop**\
 Optionale Entfernt den Datensatz von der obersten Position des internen Compilerstapels. Wenn *n* nicht mit **Pop**angegeben wird, ist der Verpackungs Wert, der dem resultierenden Datensatz oben auf dem Stapel zugeordnet ist, der neue Verpackungs Ausrichtungs Wert. Wenn *n* angegeben wird, z `#pragma pack(pop, 16)`. b., wird *n* zum neuen Verpackungs Ausrichtungs Wert. Wenn Sie einen *Bezeichner*verwenden, z `#pragma pack(pop, r1)`. b., werden alle Datensätze auf dem Stapel so lange per Pop ausgeblendet, bis der Datensatz mit dem *Bezeichner* gefunden wurde. Dieser Datensatz wird per Pop ausgeblendet, und der Verpackungs Wert, der dem resultierenden Datensatz am oberen Rand des Stapels zugeordnet ist, ist der neue Verpackungs Ausrichtungs Wert. Wenn Sie einen *Bezeichner* verwenden, der nicht in einem Datensatz auf dem Stapel gefunden wird, wird der **Pop** ignoriert.
 
 *Figur*\
