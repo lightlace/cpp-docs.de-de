@@ -20,7 +20,7 @@ Die folgende Tabelle enthält die integrierten booleschen und Zeichentypen sowie
 |Namespace|C++ / CX-Name|Definition|C++-Standardname|Wertebereich|
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
 |Plattform|Boolesch|Ein 8-Bit-boolescher Wert.|bool|**"true"** (ungleich null) und **"false"** (null)|
-|default|char16|Ein nicht numerischer 16-Bit-Wert, der einen Unicode-Codepunkt (UTF-16) darstellt.|wchar_t<br /><br /> - oder - <br /><br /> L'c'|(Angegeben durch den Unicode-Standard)|
+|default|char16|Ein nicht numerischer 16-Bit-Wert, der einen Unicode-Codepunkt (UTF-16) darstellt.|wchar_t<br /><br /> - oder -<br /><br /> L'c'|(Angegeben durch den Unicode-Standard)|
 
 ## <a name="numeric-types"></a>Numerische Typen
 
@@ -32,9 +32,9 @@ In der folgenden Tabelle sind die integrierten numerischen Typen aufgeführt. Di
 |uint8|Eine numerischer 8-Bit-Wert ohne Vorzeichen.|unsigned char|0 bis 255|
 |int16|Eine 16-Bit-Ganzzahl mit Vorzeichen.|short|32.768 bis 32.767|
 |uint16|Eine 16-Bit-Ganzzahl ohne Vorzeichen.|unsigned short|0 bis 65.535|
-|int32|Eine 32-Bit-Ganzzahl mit Vorzeichen.|int|2.147.483.648 bis 2.147.483.647|
+|int32|Eine 32-Bit-Ganzzahl mit Vorzeichen.|int|2\.147.483.648 bis 2.147.483.647|
 |uint32|Eine 32-Bit-Ganzzahl ohne Vorzeichen.|unsigned int|0 bis 4.294.967.295|
-|int64|Eine 64-Bit-Ganzzahl mit Vorzeichen.|long Long - oder - __int64|-9,223,372,036,854, 775,808 bis 9.223.372.036.854.775.807|
+|int64|Eine 64-Bit-Ganzzahl mit Vorzeichen.|long Long - oder - __int64|-9,223,372,036,854, 775,808 bis 9,223,372,036,854,775,807|
 |uint64|Eine 64-Bit-Ganzzahl ohne Vorzeichen.|ein lange long - oder - unsigned __int64 ohne Vorzeichen|0 bis 18.446.744.073.709.551.615|
 |float32|Eine 32-Bit-IEEE 754-Gleitkommazahl.|float|3.4E +/- 38 (7 Stellen)|
 |float64|Eine 64-Bit-IEEE 754-Gleitkommazahl.|double|1.7E +/- 308 (15 Stellen)|
