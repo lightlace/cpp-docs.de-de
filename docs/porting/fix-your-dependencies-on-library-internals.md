@@ -1,24 +1,24 @@
 ---
-title: Beheben Ihrer Abhängigkeiten von bibliotheksinternen Elementen
+title: Beheben der Abhängigkeiten von C++ Bibliotheks internen Elementen
 ms.date: 05/24/2017
 helpviewer_keywords:
 - library internals in an upgraded Visual Studio C++ project
 - _Hash_seq in an upgraded Visual Studio C++ project
 ms.assetid: 493e0452-6ecb-4edc-ae20-b6fce2d7d3c5
-ms.openlocfilehash: af395ea6f8c8e6a88bd2b003f0eee948bde8b6a9
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 5486cd65a34e3ef69f3b2e948ba0ad020e68b326
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449106"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627014"
 ---
-# <a name="fix-your-dependencies-on-library-internals"></a>Beheben Ihrer Abhängigkeiten von bibliotheksinternen Elementen
+# <a name="fix-your-dependencies-on-c-library-internals"></a>Beheben der Abhängigkeiten von C++ Bibliotheks internen Elementen
 
 Microsoft hat den Quellcode für die Standardbibliothek, die Mehrheit der C-Laufzeitbibliothek und andere Microsoft-Bibliotheken in vielen Versionen von Visual Studio veröffentlicht. Die Absicht dahinter ist, dass Sie Unterstützung beim Verstehen des Bibliotheksverhaltens und beim Debuggen Ihres Codes erhalten. Ein Nebeneffekt der Veröffentlichung des Bibliotheksquellcodes ist, dass einige interne Werte, Datenstrukturen und Funktionen verfügbar gemacht werden, obwohl sie nicht Teil der Bibliotheksschnittstelle sind. In der Regel haben sie Namen, die mit zwei Unterstrichen oder einem Unterstrich gefolgt von einem Großbuchstaben beginnen; Namen, die der C++-Standard Implementierungen vorbehält. Bei diesen Werten, Strukturen und Funktionen handelt es sich um Implementierungsdetails, die sich ändern können, da sich die Bibliotheken im Laufe der Zeit weiterentwickeln. Daher wird dringend empfohlen, keine Abhängigkeiten von diesen zu erstellen. Wenn Sie dies tun, riskieren Sie nicht portierbaren Code und Probleme beim Versuch, Ihren Code zu neuen Versionen der Bibliotheken zu migrieren.
 
 In den meisten Fällen erwähnen die Dokumente „Neuigkeiten“ oder „Wichtige Änderungen“ jedes Releases von Visual Studio keine Änderungen an bibliotheksinternen Elementen. Schließlich sollten sich diese Implementierungsdetails nicht auf Sie auswirken. Jedoch ist manchmal die Versuchung zu groß, Code zu verwenden, den Sie in der Bibliothek sehen. Dieses Thema behandelt Abhängigkeiten von CRT oder standardbibliotheksinternen Elementen, auf die Sie sich möglicherweise verlassen haben, und beschreibt, wie Sie Ihren Code aktualisieren können, um diese Abhängigkeiten zu entfernen, damit Sie ihn portierbarer machen oder zu neuen Versionen der Bibliothek migrieren können.
 
-## <a name="hashseq"></a>_Hash_seq
+## <a name="_hash_seq"></a>_Hash_seq
 
 Die interne Hash-Funktion `std::_Hash_seq(const unsigned char *, size_t)`, die zum Implementieren von `std::hash` auf einigen Zeichenfolgentypen verwendet wird, war in aktuellen Versionen der Standardbibliothek sichtbar. Diese Funktion implementierte einen [FNV-1a-Hash]( https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) auf einer Zeichenfolge.
 
@@ -76,6 +76,6 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 
 ## <a name="see-also"></a>Siehe auch
 
-[Aktualisieren von Projekten von früheren Versionen von Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Aktualisieren von Projekten aus früheren Versionen von VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Überblick über potenzielle Aktualisierungsprobleme (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Aktualisieren Ihres Codes auf die Universal CRT](upgrade-your-code-to-the-universal-crt.md)

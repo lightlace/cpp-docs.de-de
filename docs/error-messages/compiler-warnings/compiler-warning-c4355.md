@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4355
 ms.assetid: b819ecab-8a07-42d7-8fa4-1180d51626c0
-ms.openlocfilehash: 6b74c8dd5ce9860cb218d21790f12ba05e9be22f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1f5e5be2606a03ec5e9ecd0c571f94c25f82494
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151824"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623750"
 ---
 # <a name="compiler-warning-c4355"></a>Compilerwarnung C4355
 
 "this": Wird in der Basisliste für den Memberinitialisierer verwendet
 
-Die **dies** Zeiger nur innerhalb nicht statischer Memberfunktionen gültig ist. Es kann nicht in der Initialisierungsliste für Basisklasse verwendet werden.
+Der **this** -Zeiger ist nur in nicht statischen Element Funktionen gültig. Sie kann nicht in der Initialisiererliste für eine Basisklasse verwendet werden.
 
-Die Basis-Klasse, Konstruktoren und Klassenmember werden aufgerufen, bevor **dies** Konstruktor. Aktiviert ist, haben Sie ein Zeiger auf ein nicht erstellten Objekt an einen anderen Konstruktor übergeben. Wenn die anderen Konstruktoren den Zugriff auf alle Member oder Memberfunktionen dazu aufrufen, wird das Ergebnis nicht definiert sein. Verwenden Sie nicht die **dies** Zeiger, bis die Erstellung abgeschlossen ist.
+Die Basisklassenkonstruktoren und Klassenmember-Konstruktoren werden vor **diesem** Konstruktor aufgerufen. Tatsächlich haben Sie einen Zeiger auf ein nicht konstruiertes Objekt an einen anderen Konstruktor übergeben. Wenn diese anderen Konstruktoren auf Member zugreifen oder Element Funktionen aufrufen, ist das Ergebnis nicht definiert. Sie sollten **diesen** Zeiger erst verwenden, wenn alle Konstruktionen abgeschlossen sind.
 
 Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-Im folgende Beispiel wird die C4355 generiert:
+Im folgenden Beispiel wird C4355 generiert:
 
-```
+```cpp
 // C4355.cpp
 // compile with: /w14355 /c
 #include <tchar.h>

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4394
 ms.assetid: 5de94de0-17e3-4e7c-92f4-5c3c1b825120
-ms.openlocfilehash: 00c9e139e920473590389c05f076a7cd91a4fb8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b97819a6f1b95f083eb594d3b9b2e68cbf30d19a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311474"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623696"
 ---
 # <a name="compiler-warning-c4394"></a>Compilerwarnung C4394
 
 'Funktion': Ein anwendungsdomänenspezifisches Symbol sollte nicht mit __declspec(dllexport) markiert werden
 
-Eine Funktion mit markiert die [Appdomain](../../cpp/appdomain.md) `__declspec` Modifizierer wird zu MSIL kompiliert (nicht zu systemeigen), und Exporttabellen ([exportieren](../../windows/export.md) `__declspec` Modifizierer) werden für verwaltete Funktionen nicht unterstützt.
+Eine Funktion, die mit dem [AppDomain](../../cpp/appdomain.md) -`__declspec` Modifizierer gekennzeichnet ist, wird in MSIL (nicht in System eigen) kompiliert, und Export Tabellen ([Export](../../windows/export.md)`__declspec` Modifizierer) werden für verwaltete Funktionen nicht unterstützt.
 
-Sie können eine verwaltete Funktion mit öffentlicher Zugriffsmöglichkeit deklarieren. Weitere Informationen finden Sie unter [geben Sichtbarkeit](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) und [membersichtbarkeit](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility).
+Sie können eine verwaltete Funktion mit öffentlicher Zugriffsmöglichkeit deklarieren. Weitere Informationen finden Sie unter [Typsichtbarkeit](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) und Element [Sichtbarkeit](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility).
 
-C4394 wird immer als Fehler ausgegeben.  Sie können diese Warnung mit Deaktivieren der `#pragma warning` oder **/WD**; finden Sie unter [Warnung](../../preprocessor/warning.md) oder  [ /w, / W0, / W1, / W2, / w3, / W4, / W1, / W2, / w3, / W4, / Wall, / WD, / we, / wo, / WV, / WX (Warnstufe)](../../build/reference/compiler-option-warning-level.md)für Weitere Informationen.
+C4394 wird immer als Fehler ausgegeben.  Sie können diese Warnung mit dem `#pragma warning` oder **/WD**deaktivieren. Weitere Informationen finden Sie unter [Warning](../../preprocessor/warning.md) or [/w,/W0,/W1,/W2,/w3,/W4,/W1,/W2,/w3,/W4,/Wall,/WD,/We,/wo,/WV,/WX (Warnstufe)](../../build/reference/compiler-option-warning-level.md) .
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4394 generiert.
+Im folgenden Beispiel wird C4394 generiert.
 
-```
+```cpp
 // C4394.cpp
 // compile with: /clr /c
 __declspec(dllexport) __declspec(appdomain) int g1 = 0;   // C4394

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - stdext::max_none [C++], released
 - stdext::max_none [C++], saved
 ms.assetid: 12ab5376-412e-479c-86dc-2c3d6a3559b6
-ms.openlocfilehash: 0d409928de4bf66bcc6d6dda3008131f87e790c3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b296c641be68efac7410328a448a4ad2bd0fa88e
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460168"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626828"
 ---
-# <a name="maxnone-class"></a>max_none-Klasse
+# <a name="max_none-class"></a>max_none-Klasse
 
 Beschreibt ein Objekt der [max-Klasse](../standard-library/allocators-header.md), das ein [freelist](../standard-library/freelist-class.md)-Objekt auf eine maximale Länge begrenzt.
 
@@ -72,7 +72,7 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion bleibt untätig. Sie wird nach jedem erfolgreichen Aufruf von `cache_freelist::allocate` für den **New**-Operator aufgerufen. Das Argument *_Nx* ist die Anzahl der Speicherblöcke in dem Block, der von Operator **New**zugeordnet wird.
+Die Memberfunktion bleibt untätig. Sie wird nach jedem erfolgreichen Aufruf aufgerufen, indem `cache_freelist::allocate` auf den **New**-Operator. Das Argument *_Nx* ist die Anzahl der Speicherblöcke in dem Block, der von Operator **New**zugeordnet wird.
 
 ## <a name="deallocated"></a> max_none::deallocated
 
@@ -90,7 +90,7 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion bleibt untätig. Diese Member-Funktion wird nach jedem Aufruf von `cache_freelist::deallocate` zum **Delete**-Operator aufgerufen. Das Argument *_Nx* gibt die Anzahl der Speicherblöcke in dem Block an, dessen Zuordnung durch den Operator **Delete**aufgehoben wird.
+Die Memberfunktion bleibt untätig. Diese Member-Funktion wird nach jedem Aufruf von aufgerufen, `cache_freelist::deallocate` auf den **Delete**-Operator. Das Argument *_Nx* gibt die Anzahl der Speicherblöcke in dem Block an, dessen Zuordnung durch den Operator **Delete**aufgehoben wird.
 
 ## <a name="full"></a> max_none::full
 
@@ -106,7 +106,7 @@ Diese Member-Funktion gibt immer **true**zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion wird von `cache_freelist::deallocate` aufgerufen. Wenn der Aufruf **true**zurückgibt `deallocate` , wird der Speicherblock in die freie Liste eingefügt; Wenn false zurück `deallocate` gegeben wird, ruft der Operator Delete auf, um den Block zu **Entfernen** .
+Diese Memberfunktion wird von `cache_freelist::deallocate` aufgerufen. Wenn der-Rückruf **true**zurückgibt, wird der Speicherblock von `deallocate` in die freie Liste eingefügt. Wenn **false**zurückgegeben wird, ruft `deallocate` den Operator **Delete** auf, um den Block freizugeben.
 
 ## <a name="released"></a> max_none::released
 

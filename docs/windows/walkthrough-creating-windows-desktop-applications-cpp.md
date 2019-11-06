@@ -1,17 +1,18 @@
 ---
 title: 'Exemplarische Vorgehensweise: Erstellen einer herkömmlichen Windows-C++Desktop Anwendung ()'
+description: Erstellen einer minimalen, herkömmlichen Windows-Desktop Anwendung mit Visual Studio, C++und der Win32-API
 ms.custom: get-started-article
-ms.date: 10/21/2019
+ms.date: 11/03/2019
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 080c4cd9612058a0a54f19e5d0f4b8add4a03bce
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 6f219a0c199971b563b1c0ff291f2f5d12803023
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778546"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627476"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Exemplarische Vorgehensweise: Erstellen einer herkömmlichen Windows-C++Desktop Anwendung ()
 
@@ -76,9 +77,7 @@ Das Projekt wird jetzt erstellt, und die Quelldatei wird im Editor geöffnet. Fa
 
    ![Benennen des desktopapp-Projekts](../build/media/desktop-app-new-project-name-153.png "Benennen des desktopapp-Projekts")
 
-1. Wählen Sie im Dialogfeld **Windows-Desktop Projekt** unter **Anwendungstyp**die Option **Windows-Anwendung (. exe)** aus. Wählen Sie unter **Zusätzliche Optionen**die Option **Leeres Projekt**aus. Wählen Sie **OK** aus, um das Projekt zu erstellen.
-
-   ![Assistent zum Erstellen von desktopapp-Projekten in Windows-Desktop Projekten](../build/media/desktop-app-new-project-wizard-153.png "Assistent zum Erstellen von desktopapp-Projekten in Windows-Desktop Projekten")
+1. Wählen Sie im Dialogfeld **Windows-Desktop Projekt** unter **Anwendungstyp**die Option **Windows-Anwendung (. exe)** aus. Wählen Sie unter **Zusätzliche Optionen**die Option **Leeres Projekt**aus. Vergewissern Sie sich, dass der **Vorkompilierte Header** nicht ausgewählt Wählen Sie **OK** aus, um das Projekt zu erstellen.
 
 1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt **desktopapp** , wählen Sie **Hinzufügen**aus, und wählen Sie dann **Neues Element**aus.
 
@@ -108,9 +107,7 @@ Das Projekt wird jetzt erstellt, und die Quelldatei wird im Editor geöffnet. Fa
 
    ![Übersicht über das Erstellen von Desktop-Apps im Win32-Anwendungs-Assistenten](../build/media/desktop-app-win32-wizard-overview-150.png "Übersicht über das Erstellen von Desktop-Apps im Win32-Anwendungs-Assistenten")
 
-1. Wählen Sie auf der Seite **Anwendungseinstellungen** unter **Anwendungstyp**die Option **Windows-Anwendung**aus. Wählen Sie unter **Zusätzliche Optionen**die Option **Leeres Projekt**aus. Wählen Sie **Fertig** stellen aus, um das Projekt zu erstellen.
-
-   ![Erstellen von desktopapp-Einstellungen im Win32-Anwendungs-Assistenten](../build/media/desktop-app-win32-wizard-settings-150.png "Erstellen von desktopapp-Einstellungen im Win32-Anwendungs-Assistenten")
+1. Wählen Sie auf der Seite **Anwendungseinstellungen** unter **Anwendungstyp**die Option **Windows-Anwendung**aus. Deaktivieren Sie unter **zusätzliche Optionen die Option** **vorkompilierter Header**, und wählen Sie dann **leeres Projekt**aus. Wählen Sie **Fertig** stellen aus, um das Projekt zu erstellen.
 
 1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt desktopapp, wählen Sie **Hinzufügen**aus, und wählen Sie dann **Neues Element**aus.
 
@@ -144,9 +141,9 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-Desktop Anwendung
    Informationen zu den Parametern und Rückgabe Werten dieser Funktion finden Sie unter [WinMain Entry Point](/windows/win32/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
-   > Was sind diese zusätzlichen Wörter, wie z. b. `CALLBACK` oder `HINSTANCE`, oder `_In_`? Die herkömmliche Windows-API verwendet häufig Typedefs-und Präprozessormakros, um einige Details von Typen und Platt Form spezifischem Code, wie z. b. Aufruf Konventionen, **__declspec** -Deklarationen und compilerpragmas, zu abstrahieren. In Visual Studio können Sie die Funktion "IntelliSense [Quick Info](/visualstudio/ide/using-intellisense#quick-info) " verwenden, um zu sehen, was diese Typedefs und Makros definieren. Zeigen Sie mit der Maus auf das gewünschte Wort, oder wählen Sie es aus, und drücken Sie **STRG** +**K**, **STRG** +**I** für ein kleines Popup Fenster, das die Definition enthält. Weitere Informationen finden Sie unter [Verwenden von IntelliSense](/visualstudio/ide/using-intellisense). Parameter und Rückgabe Typen verwenden oftmals *SAL* -Anmerkungen, um Programmierfehler zu erfassen. Weitere Informationen finden Sie unter [Verwenden von Sal-Anmerkungen zum Reduzieren vonC++ C/Code-Fehlern](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+   > Was sind diese zusätzlichen Wörter, wie z. b. `CALLBACK`oder `HINSTANCE`, oder `_In_`? Die herkömmliche Windows-API verwendet häufig Typedefs-und Präprozessormakros, um einige Details von Typen und Platt Form spezifischem Code, wie z. b. Aufruf Konventionen, **__declspec** -Deklarationen und compilerpragmas, zu abstrahieren. In Visual Studio können Sie die Funktion "IntelliSense [Quick Info](/visualstudio/ide/using-intellisense#quick-info) " verwenden, um zu sehen, was diese Typedefs und Makros definieren. Zeigen Sie mit der Maus auf das gewünschte Wort, oder wählen Sie es aus, und drücken Sie **STRG** +**K**, **STRG** +**I** für ein kleines Popup Fenster, das die Definition enthält. Weitere Informationen finden Sie unter [Verwenden von IntelliSense](/visualstudio/ide/using-intellisense). Parameter und Rückgabe Typen verwenden oftmals *SAL* -Anmerkungen, um Programmierfehler zu erfassen. Weitere Informationen finden Sie unter [Verwenden von Sal-Anmerkungen zum Reduzieren vonC++ C/Code-Fehlern](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
-1. Für Windows-Desktop Programme ist &lt;windows. h-> erforderlich. &lt;tchar. h > definiert das `TCHAR`-Makro, das letztendlich in **wchar_t** aufgelöst wird, wenn das Unicode-Symbol im Projekt definiert ist. andernfalls wird es in **char**aufgelöst.  Wenn Sie immer mit aktiviertem Unicode erstellen, benötigen Sie keinen TCHAR und können **wchar_t** einfach direkt verwenden.
+1. Für Windows-Desktop Programme ist &lt;windows. h-> erforderlich. &lt;Tchar. h > definiert das `TCHAR`-Makro, das letztendlich in **wchar_t** aufgelöst wird, wenn das Unicode-Symbol im Projekt definiert ist. andernfalls wird es in **char**aufgelöst.  Wenn Sie immer mit aktiviertem Unicode erstellen, benötigen Sie keinen TCHAR und können **wchar_t** einfach direkt verwenden.
 
    ```cpp
    #include <windows.h>

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4258
 ms.assetid: bbb75e6d-6693-4e62-8ed3-b006a0ec55e3
-ms.openlocfilehash: a3ce4c81a86920baddfc1b277df0236a96254be4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75d706fafacc5c1524915d063a7fa392cea01b4c
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207395"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624876"
 ---
 # <a name="compiler-warning-level-1-c4258"></a>Compilerwarnung (Stufe 1) C4258
 
-'Variable': Definition von der for-Schleife ignoriert. die Definition des umschließenden Gültigkeitsbereich verwendet"
+' Variable ': die Definition aus der for-Schleife wird ignoriert. die Definition aus dem einschließenden Bereich wird verwendet "
 
-Unter [/Ze](../../build/reference/za-ze-disable-language-extensions.md) und [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md), in der definierten Variablen ein [für](../../cpp/for-statement-cpp.md) Schleife verlassen den Gültigkeitsbereich nach Beenden der **für** Schleife. Diese Warnung tritt auf, wenn eine Variable mit dem gleichen Namen wie die Schleifenvariable, jedoch in der einschließenden Schleife definiert erneut verwendet wird, im Bereich mit der **für** Schleife. Zum Beispiel:
+Unter [/Ze](../../build/reference/za-ze-disable-language-extensions.md) und [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)gehen in einer [for](../../cpp/for-statement-cpp.md) -Schleife definierte Variablen außerhalb des Gültigkeits Bereichs, nachdem die **for** -Schleife beendet wurde. Diese Warnung tritt auf, wenn eine Variable mit dem gleichen Namen wie die Schleifenvariable, aber in der einschließenden Schleife definiert ist, erneut in dem Bereich verwendet wird, der die **for** -Schleife enthält. Beispiel:
 
-```
+```cpp
 // C4258.cpp
 // compile with: /Zc:forScope /W1
 int main()

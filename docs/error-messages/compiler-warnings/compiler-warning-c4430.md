@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4430
 ms.assetid: 12efbfff-aa58-4a86-a7d6-2c6a12d01dd3
-ms.openlocfilehash: fe765fa49b9aa11667e1eac4a9cfed54bb84fd8f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 661b687373d6c72b9f40a05d1406bc89ce332133
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447863"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623704"
 ---
 # <a name="compiler-warning-c4430"></a>Compilerwarnung C4430
 
-Fehlender Typspezifizierer - int wird angenommen. Hinweis: C++ unterstützt nicht die Standard-int
+Fehlender Typspezifizierer - int wird angenommen. Hinweis: C++ "default-int" wird von nicht unterstützt
 
-Dieser Fehler kann infolge einer konformitätsverbesserung für Compiler, die für Visual Studio 2005 durchgeführt wurde generiert werden: alle Deklarationen müssen explizit den Typ angeben Int wird nicht mehr angenommen.
+Dieser Fehler kann als Ergebnis einer compilerübereinstimmungs-Arbeit generiert werden, die für Visual Studio 2005 durchgeführt wurde: alle Deklarationen müssen explizit den Typ angeben. "int" wird nicht mehr angenommen.
 
-C4430 wird immer als Fehler ausgegeben.  Sie können diese Warnung mit Deaktivieren der `#pragma warning` oder **/WD**; finden Sie unter [Warnung](../../preprocessor/warning.md) oder  [ /w, / W0, / W1, / W2, / w3, / W4, / W1, / W2, / w3, / W4, / Wall, / WD, / we, / wo, / WV, / WX (Warnstufe)](../../build/reference/compiler-option-warning-level.md)für Weitere Informationen.
+C4430 wird immer als Fehler ausgegeben.  Sie können diese Warnung mit dem `#pragma warning` oder **/WD**deaktivieren. Weitere Informationen finden Sie unter [Warning](../../preprocessor/warning.md) or [/w,/W0,/W1,/W2,/w3,/W4,/W1,/W2,/w3,/W4,/Wall,/WD,/We,/wo,/WV,/WX (Warnstufe)](../../build/reference/compiler-option-warning-level.md) .
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4430 generiert.
+Im folgenden Beispiel wird C4430 generiert.
 
-```
+```cpp
 // C4430.cpp
 // compile with: /c
 struct CMyClass {

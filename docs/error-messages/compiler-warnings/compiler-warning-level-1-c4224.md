@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4224
 ms.assetid: 1531cae0-5040-49fd-b149-005bb5085391
-ms.openlocfilehash: ed27e6ff63e3d5f3bab4f6d8d9639b84a5606ff2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ac7c49f33c052c895c71ca1dc3ce60be8dd9c8d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367332"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627291"
 ---
 # <a name="compiler-warning-level-1-c4224"></a>Compilerwarnung (Stufe 1) C4224
 
-nicht dem Standard entsprechende Erweiterung: formaler Parameter "Identifier" wurde zuvor als Typ definiert
+nicht dem Standard entsprechende Erweiterung: der formale Parameter "Identifier" wurde zuvor als Typ definiert.
 
-Der Bezeichner wurde bereits als verwendet eine `typedef`. Dies bewirkt, dass eine Warnung ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Der Bezeichner wurde zuvor als `typedef`verwendet. Dies verursacht eine Warnung unter ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // C4224.cpp
 // compile with: /Za /W1 /LD
 typedef int I;

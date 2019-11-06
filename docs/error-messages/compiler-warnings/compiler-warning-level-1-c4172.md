@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4172
 ms.assetid: a8d2bf65-d8b1-4fe3-8340-a223d7e7fde6
-ms.openlocfilehash: caa71da9182c1da1d17d87d901084d0ee9badf73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d53972dbcb2e3ab6a95b0b874cc6bb98cd66840
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391789"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624826"
 ---
 # <a name="compiler-warning-level-1-c4172"></a>Compilerwarnung (Stufe 1) C4172
 
-Zurückgeben der Adresse einer lokalen Variablen oder temporäre
+Zurückgeben der Adresse der lokalen Variablen oder temporär
 
-Eine Funktion gibt die Adresse einer lokalen Variable oder temporäre-Objekts. Lokale Variablen und die temporären Objekte zerstört, wenn eine Funktion zurückgibt, damit die zurückgegebene Adresse nicht gültig ist.
+Eine Funktion gibt die Adresse einer lokalen Variablen oder eines temporären Objekts zurück. Lokale Variablen und temporäre Objekte werden bei Rückgabe einer Funktion zerstört, sodass die zurückgegebene Adresse ungültig ist.
 
-Wandeln Sie die Funktion, sodass sie nicht die Adresse eines Objekts zurückgibt.
+Entwerfen Sie die Funktion so um, dass Sie die Adresse eines lokalen Objekts nicht zurückgibt.
 
-Im folgende Beispiel wird die C4172 generiert:
+Im folgenden Beispiel wird C4172 generiert:
 
-```
+```cpp
 // C4172.cpp
 // compile with: /W1 /LD
 float f = 10;

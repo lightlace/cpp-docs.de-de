@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4162
 ms.assetid: 21ae3c92-501d-4689-ad7d-13753cb65eff
-ms.openlocfilehash: 6c6b675fd47cb6e98255515c7cd77c6dd48ea02b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e70898065a40a965b08b090bc59263acd918515
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391815"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624849"
 ---
 # <a name="compiler-warning-level-1-c4162"></a>Compilerwarnung (Stufe 1) C4162
 
-'Bezeichner': keine Funktion mit C-Bindung gefunden
+"Bezeichner": keine Funktion mit C-Verknüpfung gefunden
 
-Eine Funktion mit C-Verknüpfung deklariert ist, aber es wurde nicht gefunden.
+Eine Funktion mit C-Verknüpfung ist deklariert, kann jedoch nicht gefunden werden.
 
-Um diese Warnung zu beheben, kompilieren, in eine c-Datei (der C-Compiler aufgerufen wird).  Wenn Sie den C++-Compiler aufrufen müssen, setzen Sie "extern"C"vor der Funktionsdeklaration".
+Kompilieren Sie in einer c-Datei (Aufrufen des c-Compilers), um diese Warnung zu beheben.  Wenn Sie den C++ Compiler aufrufen müssen, platzieren Sie extern "C" vor der Funktionsdeklaration.
 
-Das folgende Beispiel generiert C4162
+Im folgenden Beispiel wird C4162 generiert.
 
-```
+```cpp
 // C4162.cpp
 // compile with: /c /W1
 unsigned char _bittest(long* a, long b);
@@ -38,7 +38,7 @@ int main() {
 
 Mögliche Lösung:
 
-```
+```cpp
 // C4162b.cpp
 // compile with: /c
 extern "C"

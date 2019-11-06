@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4485
 ms.assetid: a6f2b437-ca93-4dcd-b9cb-df415e10df86
-ms.openlocfilehash: b5afb829485e0e9533a14e818e6d6785f268a83b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 896fca6c6b257c90ccdf813a9c6cb6bc27ad9e96
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311315"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623609"
 ---
 # <a name="compiler-warning-c4485"></a>Compilerwarnung C4485
 
-'Überschreibungsfunktion': entspricht der Klassenmethode "Basisklassenfunktion" Basismethode der Verweisklasse ist allerdings nicht markierte 'new' oder 'override'; "new" (und "virtual") werden angenommen.
+"override_function": stimmt mit der "base_class_function"-Basis Methode der Verweis Klasse überein, ist jedoch nicht als "New" oder "override" markiert. "New" (und "Virtual") wird angenommen.
 
-Überschreibt ein Accessor, mit oder ohne die `virtual` -Schlüsselwort, eine Basisklasse Accessor-Funktion, aber die `override` oder `new` Spezifizierer war nicht Teil der überschreibenden Funktionssignatur. Hinzufügen der `new` oder `override` Spezifizierer, um diese Warnung zu beheben.
+Ein-Accessor überschreibt, mit oder ohne das `virtual`-Schlüsselwort, eine Basisklassen-Accessorfunktion, aber der `override`-oder `new`-Spezifizierer war nicht Teil der über schreibenden Funktions Signatur. Fügen Sie den `new` oder `override` Spezifizierer hinzu, um diese Warnung zu beheben.
 
-Finden Sie unter [überschreiben](../../extensions/override-cpp-component-extensions.md) und [new (neuer Slot in Vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md) für Weitere Informationen.
+Weitere Informationen finden Sie unter [override](../../extensions/override-cpp-component-extensions.md) und [New (neuer Slot in Vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md) .
 
-C4485 wird immer als Fehler ausgegeben. Verwenden der [Warnung](../../preprocessor/warning.md) Pragma C4485 zu unterdrücken.
+C4485 wird immer als Fehler ausgegeben. Verwenden Sie das [Warning](../../preprocessor/warning.md) -Pragma, um C4485 zu unterdrücken.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel generiert C4485
+Im folgenden Beispiel wird C4485 generiert.
 
-```
+```cpp
 // C4485.cpp
 // compile with: /clr
 delegate void Del();

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-ms.openlocfilehash: a63b542333717a57097da455fb514eeef80344b4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a7dcb9b7acc462d9570ee2cb7adb0dbd06df77c9
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941356"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623835"
 ---
 # <a name="_fcvt_s"></a>_fcvt_s
 
@@ -68,7 +68,7 @@ Der angegebene Puffer, der das Ergebnis der Konvertierung enthält.
 *sizeInBytes*<br/>
 Die Größe des Puffers in Byte.
 
-*value*<br/>
+*Wert*<br/>
 Zu konvertierende Zahl.
 
 *count*<br/>
@@ -88,7 +88,7 @@ Bei einem in der folgenden Tabelle enthaltenen ungültigen Parameter wird von di
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|*buffer*|*sizeInBytes*|Wert|count|dec|sign|Zurück|Wert im *Puffer*|
+|*buffer*|*sizeInBytes*|Wert|count|dec|sign|Return|Wert im *Puffer*|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
 |**NULL**|any|any|any|any|any|**EINVAL**|Nicht geändert.|
 |Not **null** (zeigt auf gültigen Speicher)|<=0|any|any|any|any|**EINVAL**|Nicht geändert.|
@@ -109,9 +109,9 @@ Ein Puffer der Länge **_CVTBUFSIZE** ist für alle Gleit Komma Werte ausreichen
 
 Der Unterschied zwischen **_ecvt_s** und **_fcvt_s** ist die Interpretation des *count* -Parameters. **_ecvt_s** interpretiert *count* als die Gesamtanzahl der Ziffern in der Ausgabe Zeichenfolge, und **_fcvt_s** interpretiert *count* als die Anzahl der Ziffern nach dem Dezimaltrennzeichen.
 
-Die Verwendung dieser Funktion in C++ wird durch eine Vorlagenüberladung vereinfacht. Eine Überladung kann automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+Die Verwendung dieser Funktion in C++ wird durch eine Vorlagenüberladung vereinfacht. Eine Überladung kann automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).
 
-Die Debugversion dieser Funktion füllt zunächst den Puffer mit „0xFD“ auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Die Debugversion dieser Funktion füllt den Puffer zuerst mit "0xFE" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -119,9 +119,9 @@ Die Debugversion dieser Funktion füllt zunächst den Puffer mit „0xFD“ auf.
 |--------------|---------------------|---------------------|
 |**_fcvt_s**|\<stdlib.h>|\<errno.h>|
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Weitere Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
-**Bibliotheken** Alle Versionen der [CRT-Bibliotheksfunktionen](../../c-runtime-library/crt-library-features.md).
+**Bibliotheken:** Alle Versionen der [CRT-Bibliotheksfunktionen](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Beispiel
 

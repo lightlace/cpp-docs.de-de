@@ -1,13 +1,13 @@
 ---
 title: 'Leitfaden zum Portieren: MFC Scribble'
-ms.date: 11/19/2018
+ms.date: 10/23/2019
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: e808f67b1479653add27a54ddf91f6578c046734
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: c5e0e8fecd99e4f03077574da7b7fcb3e538762b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511532"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627214"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Leitfaden zum Portieren: MFC Scribble
 
@@ -23,15 +23,15 @@ Vergewissern Sie sich vor der Aktualisierung, dass die Arbeitsauslastung „Wind
 
 Sichern Sie als Nächstes die Projektmappe samt Inhalt.
 
-Danach müssen wir uns für eine Aktualisierungsmethode entscheiden. Für komplexere Lösungen und Projekte, die für längere Zeit nicht aktualisiert wurden, sollten Sie möglicherweise jeweils nur eine Version von Visual Studio gleichzeitig aktualisieren. Auf diese Weise können Sie eingrenzen, welche Version von Visual Studio ein Problem verursacht hat. Ein einfaches Projekt können Sie es in der aktuellen Version von Visual Studio öffnen und zulassen, dass der Assistent das Projekt konvertiert. Wenn dies nicht funktioniert, können Sie versuchen, jeweils nur eine Version zu aktualisieren, wenn Sie Zugriff auf die entsprechenden Versionen von Visual Studio haben.
+Öffnen Sie abschließend die Projekt Mappe in der aktuellen Version von Visual Studio, und lassen Sie den Assistenten das Konvertieren des Projekts zu. 
 
 Beachten Sie, dass Sie devenv auch in der Befehlszeile mithilfe der `/Upgrade`-Option ausführen können, anstatt den Assistenten zum Aktualisieren von Projekten zu verwenden. Siehe [/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe). Das kann hilfreich bei der Automatisierung des Aktualisierungsvorgangs für eine große Anzahl von Projekten sein.
 
 ### <a name="step-1-converting-the-project-file"></a>Schritt 1. Konvertieren der Projektdatei
 
-Wenn Sie eine alte Projektdatei in Visual Studio 2017 öffnen, bietet Visual Studio das Konvertieren der Projektdatei in die aktuelle Version an, was wir akzeptiert haben. Das folgende Dialogfeld wurde angezeigt:
+Wenn Sie eine alte Projektdatei in Visual Studio öffnen, bietet Visual Studio das Konvertieren der Projektdatei in die aktuellste Version an, die wir akzeptiert haben. Das folgende Dialogfeld wurde angezeigt:
 
-![Prüfen der Änderungen an Projekten und Projektmappen](../porting/media/scribbleprojectupgrade.PNG "Review Project and Solution Changes")
+![Überprüfen von Projekt-und Lösungs Änderungen](../porting/media/scribbleprojectupgrade.PNG "Projekt- und Projektmappenänderungen überprüfen")
 
 Es ist ein Fehler aufgetreten, der uns darüber informiert, dass das Itanium-Ziel nicht verfügbar ist und nicht konvertiert wird.
 
@@ -43,13 +43,13 @@ Zu dem Zeitpunkt, als das vorherige Scribble-Projekt erstellt wurde, war Itanium
 
 Visual Studio hat dann einen Migrationsbericht mit einer Liste aller Probleme der alten Projektdatei angezeigt.
 
-![Upgradebericht](../porting/media/scribblemigrationreport.PNG "Upgrade Report")
+![Upgradebericht](../porting/media/scribblemigrationreport.PNG "Upgradebericht")
 
 In diesem Fall waren alle Probleme Warnungen, und Visual Studio hat die entsprechenden Änderungen in der Projektdatei vorgenommen. Der große Unterschied hinsichtlich des Projekts liegt darin, dass das Buildtool von vcbuild in msbuild geändert wurde. Diese Änderung wurde in Visual Studio 2010 eingeführt. Weitere Änderungen umfassen u. a. eine Neuanordnung der Elementreihenfolge in der Projektdatei selbst. Keines der Probleme bedurfte für dieses einfache Projekt weiterer Aufmerksamkeit.
 
-### <a name="step-2-getting-it-to-build"></a>Schritt 2 Erstellen des Projekts
+### <a name="step-2-getting-it-to-build"></a>Schritt 2. Erstellen des Projekts
 
-Vor der Erstellung überprüfen wir das Plattformtoolset, damit wir wissen, welche Compilerversion das Projektsystem verwendet. Sehen Sie sich im Dialogfeld „Projekteigenschaften“ unter **Konfigurationseigenschaften** in der Kategorie **Allgemein** die Eigenschaft **Plattformtoolset** an. Sie enthält die Version von Visual Studio und die Versionsnummer des Plattformtools, in diesem Fall v141 für die Visual Studio 2017-Version der Tools. Wenn Sie ein Projekt konvertieren, das ursprünglich mit Visual Studio 2010, 2012, 2013 oder 2015 kompiliert wurde, wird das Toolset nicht automatisch auf das Visual Studio 2017-Toolset aktualisiert.
+Vor der Erstellung überprüfen wir das Plattformtoolset, damit wir wissen, welche Compilerversion das Projektsystem verwendet. Sehen Sie sich im Dialogfeld „Projekteigenschaften“ unter **Konfigurationseigenschaften** in der Kategorie **Allgemein** die Eigenschaft **Plattformtoolset** an. Sie enthält die Version von Visual Studio und die Versionsnummer des Plattformtools, in diesem Fall v141 für die Visual Studio 2017-Version der Tools. Wenn Sie ein Projekt konvertieren, das ursprünglich mit Visual Studio 2010, 2012, 2013 oder 2015 kompiliert wurde, wird das Toolset nicht automatisch auf das neueste Toolset aktualisiert.
 
 Für den Wechsel zu Unicode öffnen Sie die Projekteigenschaften unter **Konfigurationseigenschaften**, wählen den Abschnitt **Allgemein** aus und suchen die Eigenschaft **Zeichensatz**. Ändern Sie sie von **Multibyte-Zeichensatz verwenden** in **Unicode-Zeichensatz** verwenden. Als Auswirkung dieser Änderung sind jetzt die Makros _UNICODE und UNICODE definiert, _MBCS aber nicht, was Sie im Eigenschaftendialogfeld unter der Kategorie **C/C++** der Eigenschaft **Befehlszeile** überprüfen können.
 

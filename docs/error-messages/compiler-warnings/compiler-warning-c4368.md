@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4368
 ms.assetid: cb85bcee-fd3d-4aa5-b626-2324f07a4f1b
-ms.openlocfilehash: b2af1166738d867c84ff4ebae832f831af7940ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1870d076d21c02574793a8079c4658b39ebf121
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311493"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623647"
 ---
 # <a name="compiler-warning-c4368"></a>Compilerwarnung C4368
 
@@ -19,15 +19,15 @@ ms.locfileid: "62311493"
 
 Sie können keinen systemeigenen Datenmember in einen CLR-Typ einbetten.
 
-Sie können jedoch einen Zeiger auf einen systemeigenen Typ deklarieren und dessen Lebensdauer im Konstruktor, Destruktor und Finalizer der verwalteten Klasse steuern. Weitere Informationen finden Sie unter [Destruktoren und Finalizer](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Sie können jedoch einen Zeiger auf einen systemeigenen Typ deklarieren und dessen Lebensdauer im Konstruktor, Destruktor und Finalizer der verwalteten Klasse steuern. Weitere Informationen finden Sie unter [debugtoren und Finalizer](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
-Diese Warnmeldung wird immer als Fehler ausgegeben. Verwenden der [Warnung](../../preprocessor/warning.md) Pragma können Sie C4368 deaktivieren.
+Diese Warnmeldung wird immer als Fehler ausgegeben. Verwenden Sie das [Warning](../../preprocessor/warning.md) -Pragma, um C4368 zu deaktivieren.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4368 generiert.
+Im folgenden Beispiel wird C4368 generiert.
 
-```
+```cpp
 // C4368.cpp
 // compile with: /clr /c
 struct N {};

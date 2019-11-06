@@ -79,12 +79,12 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-ms.openlocfilehash: 204abd65981371a970623879ec94ff77db6728b2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: df7f3ec970e0205ab999d1a04299a22dcc422d42
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953559"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625071"
 ---
 # <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s, _ui64tow_s
 
@@ -135,7 +135,7 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 ### <a name="parameters"></a>Parameter
 
-*value*<br/>
+*Wert*<br/>
 Zu konvertierende Zahl.
 
 *buffer*<br/>
@@ -153,7 +153,7 @@ Null, wenn erfolgreich, ein Fehlercode, wenn ein Fehler auftritt. Wenn eine der 
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|Wert|buffer|size|radix|Zurück|
+|Wert|buffer|size|radix|Return|
 |-----------|------------|----------------------|-----------|------------|
 |any|**NULL**|any|any|**EINVAL**|
 |any|any|<=0|any|**EINVAL**|
@@ -168,9 +168,9 @@ Diese Funktionen können eine Zugriffsverletzung generieren, wenn der *Puffer* n
 
 Mit Ausnahme der Parameter und des Rückgabewerts haben die Funktions Familien **_itoa_s** und **_itow_s** dasselbe Verhalten wie die entsprechenden weniger sicheren **_itoa** -und **_itow** -Versionen.
 
-In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).
 
-Die Debug-Bibliotheksversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Die Debug-Bibliotheksversionen dieser Funktionen füllen zunächst den Puffer mit "0xFE" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 Die CRT umfasst bequeme Makros zum Definieren der Größe des Puffers, der zum Konvertieren des längsten möglichen Werts der einzelnen ganzzahligen Typen, einschließlich des NULL-Abschluss Zeichens und des Zeichen Zeichens, für mehrere allgemeine Basen erforderlich ist. Weitere Informationen finden Sie unter [Maximale Anzahl von Konvertierungs Makros](itoa-itow.md#maximum-conversion-count-macros).
 
@@ -191,7 +191,7 @@ Die CRT umfasst bequeme Makros zum Definieren der Größe des Puffers, der zum K
 |**_itoa_s**, **_ltoa_s**, **_ultoa_s**, **_i64toa_s**, **_ui64toa_s**|\<stdlib.h>|
 |**_itow_s**, **_ltow_s**, **_ultow_s**, **_i64tow_s**, **_ui64tow_s**|\<stdlib.h> oder \<wchar.h>|
 
-Diese Funktionen sind Microsoft-spezifisch. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Diese Funktionen sind Microsoft-spezifisch. Weitere Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

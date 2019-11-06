@@ -4,22 +4,22 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: a4d92984d9ecff5afb3c5df08df0933ef3be25e6
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 3988c5f062c1f30886dbaa4bca8502e2bd841dfc
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042654"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624743"
 ---
 # <a name="cmake-predefined-build-configurations"></a>Vordefinierte CMake-Buildkonfigurationen
 
 ::: moniker range="vs-2015"
 
-CMake-Projekte werden in Visual Studio 2017 und höher unterstützt.
+Cmake-Projekte werden in Visual Studio 2017 und höher unterstützt.
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range=">=vs-2017"
 
 In einem CMake-Projekt werden Buildkonfigurationen in einer „CMakeSettings.json“-Datei gespeichert. Wenn Sie in der Hauptsymbolleiste aus der Buildkonfigurations-Dropdownliste **Konfigurationen verwalten...** auswählen, wird ein Dialogfeld angezeigt, das die in Visual Studio verfügbaren CMake-Standardkonfigurationen anzeigt:
 - x86 Debug
@@ -33,7 +33,7 @@ In einem CMake-Projekt werden Buildkonfigurationen in einer „CMakeSettings.jso
 - MinGW Debug
 - MinGW Release
 
-Wenn Sie eine Konfiguration auswählen, wird diese der Datei „CMakeSettings.json“ im Stammordner des Projekts hinzugefügt. Sie können sie dann zum Erstellen Ihres Projekts verwenden.
+Wenn Sie eine Konfiguration auswählen, wird Sie der Datei " *cmakesettings. JSON* " im Stamm Ordner des Projekts hinzugefügt. Sie können sie dann zum Erstellen Ihres Projekts verwenden. Weitere Informationen zu den Konfigurations Eigenschaften finden Sie in der [cmakesettings-Referenz](cmakesettings-reference.md).
 
 
 ## <a name="linux-predefined-build-configurations"></a>Vordefinierte Linux-Buildkonfigurationen:
@@ -358,25 +358,25 @@ Mithilfe dieser Optionen können Sie Befehle vor und nach dem Erstellen und vor 
 In einem CMake-Projekt werden Buildkonfigurationen in einer „CMakeSettings.json“-Datei gespeichert. Wenn Sie in der Hauptsymbolleiste aus der Buildkonfigurations-Dropdownliste **Konfigurationen verwalten...** auswählen, wird ein Dialogfeld angezeigt, das die in Visual Studio verfügbaren CMake-Standardkonfigurationen anzeigt:
 
 - x86 Debug
-- X86 clang-Debug
+- x86 clang-Debuggen
 - x86 Release
-- X86 clang-Version
+- x86 clang-Version
 - x64 Debug
-- X64 clang-Debug
+- x64 clang-Debuggen
 - x64 Release
-- X64 clang-Version
+- x64 clang-Version
 - Linux-Debug
 - Linux-Release
-- Linux-Clang-Debug
-- Linux-Clang-Release
-- Vorhandenen Cache (remote)
-- Vorhandenen Cache
+- Linux-clang-Debug
+- Linux-clang-Release
+- Vorhandener Cache (Remote)
+- Vorhandener Cache
 - MinGW Debug
 - MinGW Release
-- WSL Debug
-- Release von WSL
-- Clang-Debug WSL
-- Clang-Version von WSL
+- WSL-Debug
+- WSL-Release
+- WSL clang-Debuggen
+- WSL clang-Version
 - Clang
 
 Wenn Sie eine Konfiguration auswählen, wird diese der Datei „CMakeSettings.json“ im Stammordner des Projekts hinzugefügt. Sie können sie dann zum Erstellen Ihres Projekts verwenden.

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: f8d461566f748ce5af3d4b2aab443b5966c27dd7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 74caba0398fdb5cdd0f9c80270a42d2903200a5d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958154"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625810"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
@@ -109,7 +109,7 @@ Puffergröße.
 *errnum*<br/>
 Fehlernummer.
 
-*strErrMsg*<br/>
+*"Strauch Meldung"*<br/>
 Vom Benutzer angegebene Meldung.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -118,14 +118,14 @@ Null, wenn erfolgreich, Fehlercode bei Fehler.
 
 ### <a name="error-condtions"></a>Fehlerbedingungen
 
-|*buffer*|*numberOfElements*|*strErrMsg*|Inhalt des *Puffers*|
+|*buffer*|*numberOfElements*|*"Strauch Meldung"*|Inhalt des *Puffers*|
 |--------------|------------------------|-----------------|--------------------------|
 |**NULL**|any|any|n/v|
 |any|0|any|nicht geändert|
 
 ## <a name="remarks"></a>Hinweise
 
-Die **strerror_s** -Funktion ordnet *errnum* einer Fehlermeldungs Zeichenfolge zu und gibt die Zeichenfolge im *Puffer*zurück. **_strerror_s** übernimmt nicht die Fehlernummer. Er verwendet den aktuellen Wert von **errno** , um die entsprechende Meldung zu bestimmen. Weder **strerror_s** noch **_strerror_s** druckt tatsächlich die Meldung: Dazu muss eine Ausgabefunktion wie z. [b. fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)aufgerufen werden:
+Die **strerror_s** -Funktion ordnet *errnum* einer Fehlermeldungs Zeichenfolge zu und gibt die Zeichenfolge im *Puffer*zurück. **_strerror_s** übernimmt nicht die Fehlernummer. Er verwendet den aktuellen Wert von **errno** , um die entsprechende Meldung zu bestimmen. Weder **strerror_s** noch **_strerror_s** druckt tatsächlich die Nachricht: dafür müssen Sie eine Ausgabefunktion wie z. [b. fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)aufrufen:
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -147,9 +147,9 @@ Diese Funktionen überprüfen ihre Parameter. Wenn der Puffer **null** ist oder 
 
 **_strerror_s**, **_wcserror_s**und **__wcserror_s** sind nicht Teil der ANSI-Definition, sondern sind stattdessen Microsoft-Erweiterungen. Verwenden Sie diese nicht, wenn Portabilität gewünscht ist. Verwenden Sie für ANSI-Kompatibilität stattdessen **strerror_s** .
 
-Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen vorhanden) vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen vorhanden) vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).
 
-Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Die Debug-Bibliotheksversionen dieser Funktionen füllen zunächst den Puffer mit "0xFE" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -164,7 +164,7 @@ Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf
 |**strerror_s**, **_strerror_s**|\<string.h>|
 |**_wcserror_s**, **__wcserror_s**|\<string.h> oder \<wchar.h>|
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Zusätzliche Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

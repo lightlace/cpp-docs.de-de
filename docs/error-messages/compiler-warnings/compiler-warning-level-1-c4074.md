@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4074
 ms.assetid: cd510e66-c338-4a86-a4d7-bfa1df9b16c3
-ms.openlocfilehash: d9b0259e95198396d8c34ca43781045248e22ad9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c84bbf436354ed672cedf13358837e298c7e4a5
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374741"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626923"
 ---
 # <a name="compiler-warning-level-1-c4074"></a>Compilerwarnung (Stufe 1) C4074
 
-Fügen Sie in den Compiler reservierten Initialisierungsbereich Initialisierer
+Initialisierer, die in den vom Compiler reservierten Initialisierungs Bereich eingefügt werden
 
-Die Compiler-Initialisierungsbereich, die von angegeben wird [#pragma Init_seg](../../preprocessor/init-seg.md), ist durch Microsoft reserviert. Code in diesem Bereich möglicherweise vor der Initialisierung der C-Laufzeitbibliothek ausgeführt werden.
+Der von [#pragma init_seg](../../preprocessor/init-seg.md)angegebene compilerinitialisierungs Bereich ist von Microsoft reserviert. Der Code in diesem Bereich kann vor der Initialisierung der C-Lauf Zeit Bibliothek ausgeführt werden.
 
-Im folgende Beispiel wird die C4074 generiert:
+Im folgenden Beispiel wird C4074 generiert:
 
-```
+```cpp
 // C4074.cpp
 // compile with: /W1
 #pragma init_seg( compiler )   // C4074

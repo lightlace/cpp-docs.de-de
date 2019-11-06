@@ -6,7 +6,6 @@ f1_keywords:
 - C1036
 - C1041
 - C1048
-- C1049
 - C1063
 - C1069
 - C1101
@@ -31,7 +30,6 @@ helpviewer_keywords:
 - C1036
 - C1041
 - C1048
-- C1049
 - C1063
 - C1069
 - C1101
@@ -52,22 +50,22 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 5ffa1a2633877c8a16eb424f1ddc100bfd6142b8
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 395d7403ef4fe04b671a84a61d320b27ad8ad1c7
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857396"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626569"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Schwerwiegende Compilerfehler C999 bis C1999
 
-Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmenge der Fehlermeldungen, die von der Microsoft C generiert werden /C++ Compiler.
+In den Artikeln in diesem Abschnitt der Dokumentation wird eine Teilmenge der Fehlermeldungen erläutert, die vom Microsoft C/C++ Compiler generiert werden.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
 ## <a name="error-messages"></a>Fehlermeldungen
 
-|Fehler|Meldung|
+|Fehler|Nachricht|
 |-----------|-------------|
 |[Schwerwiegender Fehler C999](../../error-messages/compiler-errors-1/fatal-error-c999.md)|UNBEKANNTE MELDUNG Wählen Sie den technischen Supportbefehl im Visual C++-Hilfemenü, oder öffnen Sie die Hilfedatei für weitere Informationen.|
 |[Schwerwiegender Fehler C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|Ein interner Fehler ist im Compiler aufgetreten.<br /> (Compilerdatei „*file*“, Zeile *number*)<br /> Vereinfachen oder ändern Sie das Programm im Umfeld der oben aufgeführten Positionen, um dieses Problem zu umgehen. Wählen Sie den technischen Supportbefehl im Visual C++-Hilfemenü, oder öffnen Sie die Hilfedatei für weitere Informationen.|
@@ -78,7 +76,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Schwerwiegender Fehler C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|Unbekanntes Flag „*string*“ in „*option*“.|
 |[Schwerwiegender Fehler C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|Keine Quelldatei angegeben|
 |[Schwerwiegender Fehler C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|Compilerlimit: zu tiefe Schachtelung von Makros|
-|[Schwerwiegender Fehler C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie vergessen, hinzufügen ' #include \< *Datei*>' Quellcode?|
+|[Schwerwiegender Fehler C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie vergessen, der Quelle "#include \<*Datei*>" hinzuzufügen?|
 |[Schwerwiegender Fehler C1012](fatal-error-c1012.md)|Fehlende zugehörige Klammer: „*character*“ fehlt.|
 |[Schwerwiegender Fehler C1013](fatal-error-c1013.md)|Compilerlimit: zu viele geöffnete Klammern|
 |[Schwerwiegender Fehler C1014](fatal-error-c1014.md)|Zu viele Includedateien: Tiefe = *number*|
@@ -102,19 +100,19 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Schwerwiegender Fehler C1046](../../error-messages/compiler-errors-1/fatal-error-c1046.md)|Compilerlimit: *structure* zu tief geschachtelt.|
 |[Schwerwiegender Fehler C1047](fatal-error-c1047.md)|Die Objekt- oder Bibliotheksdatei „*file*“ wurde mit einem älteren Compiler als andere Objekte erstellt. Erstellen Sie die alten Objekte und Bibliotheken neu.|
 |Schwerwiegender Fehler C1048|Unbekannte Option „*string*“ in „*option*“.|
-|Schwerwiegender Fehler C1049|Ungültiges numerisches Argument „*value*“.|
+|[Schwerwiegender Fehler C1049](fatal-error-c1049.md)|Ungültiges numerisches Argument „*value*“.|
 |[Schwerwiegender Fehler C1051](../../error-messages/compiler-errors-1/fatal-error-c1051.md)|Programmdatenbankdatei „*file*“ hat ein veraltetes Format. Löschen Sie sie, und starten Sie die Kompilierung erneut.|
-|[Schwerwiegender Fehler C1052](fatal-error-c1052.md)|Programmdatenbankdatei "*Filename*', wurde vom Linker mit/Debug: Fastlink; generiert Compiler kann nicht solche PDB-Dateien zu aktualisieren, löschen Sie es oder/FD an einen anderen PDB-Dateinamen verwenden|
+|[Schwerwiegender Fehler C1052](fatal-error-c1052.md)|die Programm Datenbankdatei "*Dateiname*" wurde vom Linker mit/Debug: fastlink; generiert. der Compiler kann solche PDB-Dateien nicht aktualisieren. Löschen Sie Sie, oder verwenden Sie/FD, um einen anderen PDB-Dateinamen anzugeben.|
 |[Schwerwiegender Fehler C1053](fatal-error-c1053.md)|„*function*“: Funktion ist zu groß.|
 |[Schwerwiegender Fehler C1054](../../error-messages/compiler-errors-1/fatal-error-c1054.md)|Compilerlimit: zu tiefe Schachtelung von Initialisierungen|
 |[Schwerwiegender Fehler C1055](../../error-messages/compiler-errors-1/fatal-error-c1055.md)|Compilerlimit: keine weiteren Schlüssel|
-|[Schwerwiegender Fehler C1057](../../error-messages/compiler-errors-1/fatal-error-c1057.md)|Unerwartetes Dateiende bei der Erweiterung eines Makros|
+|[Schwerwiegender Fehler c1057](../../error-messages/compiler-errors-1/fatal-error-c1057.md)|Unerwartetes Dateiende bei der Erweiterung eines Makros|
 |[Schwerwiegender Fehler C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md)|Kein verfügbarer Speicher mehr im Heap|
 |[Schwerwiegender Fehler C1061](../../error-messages/compiler-errors-1/fatal-error-c1061.md)|Compilerlimit: zu tiefe Schachtelung von Blöcken|
 |Schwerwiegender Fehler C1063|Compilerlimit: Stapelüberlauf des Compilers|
 |[Schwerwiegender Fehler C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md)|Compilerlimit: Überlauf des internen Puffers durch Token|
 |[Schwerwiegender Fehler C1065](../../error-messages/compiler-errors-1/fatal-error-c1065.md)|Compilerlimit: keine weiteren Tags|
-|[Schwerwiegender Fehler C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|Compilergrenze erreicht: 64 KB für Typeneinträge Größe wurde überschritten|
+|[Schwerwiegender Fehler C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|Compilerlimit: Die Größenbeschränkung von 64 KB für Typeneinträge wurde überschritten.|
 |[Schwerwiegender Fehler C1068](fatal-error-c1068.md)|Die Datei „*file*“ kann nicht geöffnet werden.|
 |Schwerwiegender Fehler C1069|Compilerbefehlszeile kann nicht gelesen werden|
 |[Schwerwiegender Fehler C1070](fatal-error-c1070.md)|Fehlende Zuordnung von #if und #endif in Datei „*file*“.|
@@ -124,7 +122,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Schwerwiegender Fehler C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|Keine Entsprechung für das linke Element *token* am Dateiende gefunden.|
 |[Schwerwiegender Fehler C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)|Compilerlimit: Interne Heapgrenze erreicht; Verwenden Sie /Zm, um eine höhere Grenze anzugeben|
 |[Schwerwiegender Fehler C1077](fatal-error-c1077.md)|Compilerlimit: Es können nicht mehr als *number* Befehlszeilenoptionen angegeben werden.|
-|[Schwerwiegender Fehler C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|Compilergrenze erreicht: PCH-Dateigröße überschritten|
+|[Schwerwiegender Fehler C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|Compilerlimit: maximale Größe für PCH-Datei überschritten|
 |[Schwerwiegender Fehler C1080](../../error-messages/compiler-errors-1/fatal-error-c1080.md)|Compilerlimit: Befehlszeilenoption überschreitet die Grenze von *number* Zeichen.|
 |[Schwerwiegender Fehler C1081](../../error-messages/compiler-errors-1/fatal-error-c1081.md)|„*file*“: Dateiname zu lang.|
 |[Schwerwiegender Fehler C1082](fatal-error-c1082.md)|Die *type* -Datei kann nicht geschlossen werden: „*file*“: *message*.|
@@ -155,7 +153,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Schwerwiegender Fehler C1111|Zu viele geschachtelte Vorlagen-/generische Parameter.|
 |Schwerwiegender Fehler C1112|Compilerlimit: `'number`“ Makroargumente zu viel; nur *number* sind zulässig.|
 |[Schwerwiegender Fehler C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#using-Fehler bei „*file*“.|
-|Schwerwiegender Fehler C1114|"*Datei*": WinRT unterstützt nicht #using von einer verwalteten Assembly using|
+|Schwerwiegender Fehler C1114|„*file*“: WinRT unterstützt nicht #using von einer verwalteten Assembly.|
 |[Schwerwiegender Fehler C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|Fehler bei Aufruf von GetProcAddress für „*function*“.|
 |[Schwerwiegender Fehler C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|Fehler beim Aufruf von CryptoAPI.|
 |[Schwerwiegender Fehler C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|Automatische Speicherbelegung überschreitet *size*.|
@@ -217,4 +215,4 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 
 ## <a name="see-also"></a>Siehe auch
 
-[C /C++ Compiler- und Build tools, Fehler und Warnungen](../compiler-errors-1/c-cpp-build-errors.md)
+[Fehler undC++ Warnungen für C/Compiler und Buildtools](../compiler-errors-1/c-cpp-build-errors.md)

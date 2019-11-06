@@ -1,13 +1,13 @@
 ---
 title: 'Leitfaden zum Portieren: Spy++'
-ms.date: 11/19/2018
+ms.date: 10/23/2019
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 175f3fbba7e18f625dc3425c236162737689f068
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
-ms.translationtype: HT
+ms.openlocfilehash: 5505e0dbf23dd02f4ae5924ff4f2bacff3f11eea
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630445"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627235"
 ---
 # <a name="porting-guide-spy"></a>Leitfaden zum Portieren: Spy++
 
@@ -15,7 +15,7 @@ In dieser Portierungsfallstudie erhalten Sie eine Vorstellung über ein typische
 
 ## <a name="spy"></a>Spy++
 
-Spy++ ist ein weit verbreitetes GUI-Diagnosetool für den Windows-Desktop, das alle möglichen Informationen über Benutzeroberflächenelemente auf dem Windows-Desktop bereitstellt. Es stellt die vollständige Fensterhierarchie dar und bietet Zugriff auf Metadaten für jedes Fenster und Steuerelement. Diese nützliche Anwendung gehört seit vielen Jahren zum Lieferumfang von Visual Studio. Eine alte zuletzt in Visual Studio++ 6.0 kompilierte Version des Tools wurde in Visual Studio 2015 portiert. Die Erfahrung für Visual Studio 2017 sollte nahezu identisch sein.
+Spy++ ist ein weit verbreitetes GUI-Diagnosetool für den Windows-Desktop, das alle möglichen Informationen über Benutzeroberflächenelemente auf dem Windows-Desktop bereitstellt. Es stellt die vollständige Fensterhierarchie dar und bietet Zugriff auf Metadaten für jedes Fenster und Steuerelement. Diese nützliche Anwendung gehört seit vielen Jahren zum Lieferumfang von Visual Studio. Eine alte zuletzt in Visual Studio++ 6.0 kompilierte Version des Tools wurde in Visual Studio 2015 portiert. Die Verwendung von Visual Studio 2017 oder Visual Studio 2019 sollte nahezu identisch sein.
 
 Dieser Fall wird als typisch für das Portieren von Windows-Desktopanwendungen behandelt, die MFC und die Win32-API verwenden, insbesondere für alte Projekte, die nicht mit jedem Release von Visual C++ seit Visual C++ 6.0 aktualisiert wurden.
 
@@ -25,7 +25,7 @@ Die Projektdatei mit zwei alten DSW-Dateien aus Visual C++ 6.0 wird problemlos k
 
 Nach dem Upgrade der beiden Projekte sah unsere Projektmappe folgendermaßen aus:
 
-![Die Spy&#43;&#43;-Lösung](../porting/media/spyxxsolution.PNG "The Spy&#43;&#43; Solution")
+![Die Spy&#43; &#43; -Lösung](../porting/media/spyxxsolution.PNG "Die Spy&#43; &#43; -Lösung")
 
 Es sind zwei Projekte enthalten, ein mit einer großen Anzahl von C++-Dateien und ein anderes eine in C geschriebene DLL-Datei.
 
@@ -280,7 +280,7 @@ Beim Wechseln zur Definition des Makros kann festgestellt werden, dass es auf di
 (static_cast< LRESULT (AFX_MSG_CALL CWnd::*)(CPoint) > (&ThisClass :: OnNcHitTest)) },
 ```
 
-Die Ursache des Problems liegt in der Nichtübereinstimmung des Zeigers auf die Memberfunktionstypen. Das Problem stellt nicht die Konvertierung von `CHotLinkCtrl` als Klassentyp in `CWnd` als Klassentyp dar, da dies eine gültige Konvertierung von einer Basisklasse in eine abgeleitete Klasse ist. Das Problem ist der Rückgabetyp: UINT im Vergleich zu LRESULT. LRESULT wird zu LONG_PTR aufgelöst, der je nach binärem Zieltyp ein 64-Bit- oder ein 32-Bit-Zeiger ist. Daher kann UINT nicht in diesen Typ konvertiert werden. Dies ist nach einem Upgrade des vor 2005 geschriebenen Codes nicht ungewöhnlich, da es im Rahmen von 64-Bit-Kompatibilitätsänderungen bei vielen Meldungszuordnungsmethoden zur Änderung des Rückgabetyps von UINT zu LRESULT in Visual Studio 2005 gekommen ist. Im folgenden Code wird der Rückgabetyp von UINT zu LRESULT geändert:
+Die Ursache des Problems liegt in der Nichtübereinstimmung des Zeigers auf die Memberfunktionstypen. Das Problem stellt nicht die Konvertierung von `CHotLinkCtrl` als Klassentyp in `CWnd` als Klassentyp dar, da dies eine gültige Konvertierung von einer Basisklasse in eine abgeleitete Klasse ist. Das Problem ist der Rückgabetyp: uint und LRESULT. LRESULT wird zu LONG_PTR aufgelöst, der je nach binärem Zieltyp ein 64-Bit- oder ein 32-Bit-Zeiger ist. Daher kann UINT nicht in diesen Typ konvertiert werden. Dies ist nach einem Upgrade des vor 2005 geschriebenen Codes nicht ungewöhnlich, da es im Rahmen von 64-Bit-Kompatibilitätsänderungen bei vielen Meldungszuordnungsmethoden zur Änderung des Rückgabetyps von UINT zu LRESULT in Visual Studio 2005 gekommen ist. Im folgenden Code wird der Rückgabetyp von UINT zu LRESULT geändert:
 
 ```cpp
 afx_msg UINT OnNcHitTest(CPoint point);
@@ -292,7 +292,7 @@ Nach dieser Änderung erhalten wir den folgenden Code:
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-Da diese Funktion etwa zehn Mal in verschiedenen von CWnd abgeleiteten Klassen vorkommt, können Sie **Gehe zu Definition** (Tastatur: **F12**) und **Gehe zu Deklaration** (Tastatur: **STRG**+**F12**) auswählen, wenn der Cursor auf die Funktion im Editor zeigt, um nach dieser zu suchen und über das Toolfenster **Symbol suchen** zu dieser zu navigieren. Die Option **Gehe zu Definition** ist in der Regel nützlicher. Mit der Option **Gehe zu Deklaration** wird nach anderen Deklarationen als Definitionsklassendeklarationen gesucht, u. a. Friend-Klassendeklarationen oder Vorwärtsverweise.
+Da diese Funktion etwa zehnmal in verschiedenen von CWnd abgeleiteten Klassen vorkommt, können Sie, wenn der Cursor auf die Funktion im Editor zeigt, **Gehe zu Definition** (Tastatur: **F12**) und **Gehe zu Deklaration** (Tastatur: **STRG**+**F12**) auswählen, um nach dieser zu suchen und über das Toolfenster **Symbol suchen** zu dieser zu navigieren. Die Option **Gehe zu Definition** ist in der Regel nützlicher. Mit der Option **Gehe zu Deklaration** wird nach anderen Deklarationen als Definitionsklassendeklarationen gesucht, u. a. Friend-Klassendeklarationen oder Vorwärtsverweise.
 
 ##  <a name="mfc_changes"></a> Schritt 9. MFC-Änderungen
 
@@ -466,7 +466,7 @@ class CTreeListBox : public CListBox
   BOOL m_bStdMouse : 1;
 ```
 
-Dieser Code wurde geschrieben, bevor der integrierte boolesche Typ in Visual C++ unterstützt wurde. In einem solchen Code war BOOL eine **typedef** für **int**. Der Typ **int** ist ein Typ **mit Vorzeichen**, und die Darstellung eines **int-Typs mit Vorzeichen** besteht darin, das erste Bit als Vorzeichenbit zu verwenden, sodass ein Bitfeld vom Typ „int“ als 0 oder -1 interpretiert werden konnte, was wahrscheinlich nicht beabsichtigt war.
+Dieser Code wurde geschrieben, bevor der integrierte boolesche Typ in Visual C++ unterstützt wurde. In diesem Code war bool eine **typedef** für **int**. Der Typ " **int** " **ist ein Typ** mit Vorzeichen, und die Bitdarstellung eines **int** -Typs mit Vorzeichen besteht darin, das erste Bit als Signier Bit zu verwenden, sodass ein Bitfeld vom Typ "int" als 0 oder-1 interpretiert werden kann, was wahrscheinlich nicht beabsichtigt war.
 
 Es ist bei Betrachtung des Codes nicht erkennbar, warum Bitfelder verwendet werden. Sollte die Größe des Objekts gering gehalten werden, oder wurde irgendwo das binäre Layout des Objekts verwendet? Diese wurden zu gewöhnlichen BOOL-Membern geändert, da kein Grund für die Verwendung eines Bitfeld ersichtlich ist. Es kann nicht gewährleistet werden, dass mit der Verwendung von Bitfeldern die Größe eines Objekts gering gehalten wird. Dies hängt davon ab, wie der Compiler den Typ anordnet.
 
@@ -542,7 +542,7 @@ Umschließen Sie zur Behebung dieses Fehlers das Zeichenfolgenliteral mit \_T.
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 ```
 
-Mit dem \_T-Makro wird ein Zeichenfolgenliteral entsprechend der Einstellung von MBCS oder UNICODE als **char**-Zeichenfolge oder als **wchar_t**-Zeichenfolge kompiliert. Öffnen Sie zum Ersetzen aller Zeichenfolgen durch \_T in Visual Studio zunächst das Feld **Schnellersetzung** (Tastatur: **STRG**+**F**) oder **In Dateien ersetzen** (Tastatur: **STRG**+**UMSCHALT**+**H**), und aktivieren Sie anschließend das Kontrollkästchen **Reguläre Ausdrücke verwenden**. Geben Sie `((\".*?\")|('.+?'))` als zu suchenden Text und `_T($1)` als Text ein, mit dem dieser ersetzt werden soll. Wenn einige Zeichenfolgen bereits vom \_T-Makro eingeschlossen sind, wird es mit diesem Verfahren erneut hinzugefügt, und es werden möglicherweise Suchergebnisse angezeigt, wo das \_T nicht gewünscht ist, wenn Sie beispielsweise `#include` verwenden. Daher wird empfohlen, **Nächstes ersetzen** anstelle von **Alle ersetzen** zu verwenden.
+Mit dem \_T-Makro wird ein Zeichenfolgenliteral entsprechend der Einstellung von MBCS oder UNICODE als **char**-Zeichenfolge oder als **wchar_t**-Zeichenfolge kompiliert. Öffnen Sie zum Ersetzen aller Zeichenfolgen durch \_T in Visual Studio zunächst das Feld **Schnellersetzung** (**STRG**+**F**) oder **In Dateien ersetzen** (**STRG**+**UMSCHALT**+**H**), und aktivieren Sie anschließend das Kontrollkästchen **Reguläre Ausdrücke verwenden**. Geben Sie `((\".*?\")|('.+?'))` als zu suchenden Text und `_T($1)` als Text ein, mit dem dieser ersetzt werden soll. Wenn einige Zeichenfolgen bereits vom \_T-Makro eingeschlossen sind, wird es mit diesem Verfahren erneut hinzugefügt, und es werden möglicherweise Suchergebnisse angezeigt, wo das \_T nicht gewünscht ist, wenn Sie beispielsweise `#include` verwenden. Daher wird empfohlen, **Nächstes ersetzen** anstelle von **Alle ersetzen** zu verwenden.
 
 Diese bestimmte Funktion, [wsprintf](/windows/win32/api/winuser/nf-winuser-wsprintfw), ist in den Windows-Headern definiert, und laut Dokumentation wird ihre Verwendung aufgrund möglichem Pufferüberlauf nicht empfohlen. Für den `szTmp`-Puffer ist keine Größe angegeben. Die Funktion kann somit nicht prüfen, ob der Puffer alle Daten aufnehmen kann, die in diesen geschrieben werden sollen. Informationen zum Portieren in Secure CRT finden Sie im folgenden Abschnitt, in dem die Behebung weiterer ähnlichen Probleme erläutert wird. Das Ersetzen mit [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) ist abgeschlossen.
 
@@ -674,4 +674,4 @@ Das Portieren von Spy++ aus dem ursprünglichen Visual C++ 6.0-Code in den aktue
 ## <a name="see-also"></a>Siehe auch
 
 [Portieren und Aktualisieren: Beispiele und Fallstudien](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
-[Leitfaden zum Portieren: COM Spy](../porting/porting-guide-com-spy.md)
+[Vorherige Fallstudie: COM Spy](../porting/porting-guide-com-spy.md)

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 0a40dad34d607bb52b062fc2cec163dfc8b62219
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1cd2a15db0a27dedd88b9abf24b98d338515c949
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943658"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624784"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s, _wasctime_s
 
@@ -77,7 +77,7 @@ Ein Zeiger auf einen Puffer, um das Ergebnis der Zeichenfolge zu speichern. Dies
 *numberOfElements*<br/>
 Die Größe des Puffers, der zum Speichern des Ergebnisses verwendet wird.
 
-*tmSource*<br/>
+*tmsource*<br/>
 Zeit-/Datumsstruktur. Diese Funktion nimmt einen Zeiger auf ein gültiges **struct** - **TM** -Objekt an.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -86,13 +86,13 @@ Null, wenn erfolgreich. Wenn es einen Fehler gibt, wird der ungültige Parameter
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|*buffer*|*numberOfElements*|*tmSource*|Zurück|Wert im *Puffer*|
+|*buffer*|*numberOfElements*|*tmsource*|Return|Wert im *Puffer*|
 |--------------|------------------------|----------|------------|-----------------------|
-|**NULL**|Beliebig|Beliebig|**EINVAL**|Nicht geändert|
-|Not **null** (zeigt auf gültigen Speicher)|0|Beliebig|**EINVAL**|Nicht geändert|
-|Nicht **null**|0< Größe < 26|Beliebig|**EINVAL**|Leere Zeichenfolge|
-|Nicht **null**|>= 26|**NULL**|**EINVAL**|Leere Zeichenfolge|
-|Nicht **null**|>= 26|Ungültige Zeitstruktur oder Zeitkomponentenwerte außerhalb des Bereichs|**EINVAL**|Leere Zeichenfolge|
+|**NULL**|Beliebig|Beliebig|**EINVAL**|Nicht modifiziert|
+|Not **null** (zeigt auf gültigen Speicher)|0|Beliebig|**EINVAL**|Nicht modifiziert|
+|nicht **null**|0<Größe<26|Beliebig|**EINVAL**|Leere Zeichenfolge|
+|nicht **null**|>= 26|**NULL**|**EINVAL**|Leere Zeichenfolge|
+|nicht **null**|>= 26|Ungültige Zeitstruktur oder Zeitkomponentenwerte außerhalb des Bereichs|**EINVAL**|Leere Zeichenfolge|
 
 > [!NOTE]
 > Fehlerbedingungen für **wasctime_s** ähneln **asctime_s** , mit der Ausnahme, dass die Größenbeschränkung in Wörtern gemessen wird.
@@ -115,9 +115,11 @@ Die **Asctime** -Funktion konvertiert eine als-Struktur gespeicherte Zeit in ein
 
 Die konvertierte Zeichenfolge wird auch gemäß den lokalen Zeitzoneneinstellungen angepasst. Informationen zur Konfiguration der Zeitzonen finden Sie unter den [time, _time32, _time64](time-time32-time64.md), [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md) und [localtime_s, _localtime32_s, _localtime64_2](localtime-s-localtime32-s-localtime64-s.md)-Funktionen. Informationen zur Definition der Zeitzonenumgebung und globalen Variablen finden Sie unter der [_tzset](tzset.md)-Funktion.
 
-Das von **asctime_s** erzeugte Zeichen folgen Ergebnis enthält genau 26 Zeichen und hat das `Wed Jan 02 02:03:55 1980\n\0`Formular. Eine 24-Stunden-Uhr wird verwendet. Alle Felder haben eine feste Breite. Die Zeilenwechsel- und Nullzeichen nehmen die letzten beiden Stellen der Zeichenfolge ein. Der Wert, der als zweiter Parameter übergeben wird, sollte mindestens so hoch sein. Wenn der Wert kleiner ist, wird der Fehlercode " **Eingabe**" zurückgegeben.
+Das von **asctime_s** erzeugte Zeichen folgen Ergebnis enthält genau 26 Zeichen und hat das Formular `Wed Jan 02 02:03:55 1980\n\0`. Eine 24-Stunden-Uhr wird verwendet. Alle Felder haben eine feste Breite. Die Zeilenwechsel- und Nullzeichen nehmen die letzten beiden Stellen der Zeichenfolge ein. Der Wert, der als zweiter Parameter übergeben wird, sollte mindestens so hoch sein. Wenn der Wert kleiner ist, wird der Fehlercode " **Eingabe**" zurückgegeben.
 
 **_wasctime_s** ist eine breit Zeichen Version von **asctime_s**. **_wasctime_s** und **asctime_s** Verhalten sich andernfalls identisch.
+
+Die Debug-Bibliotheksversionen dieser Funktionen füllen zunächst den Puffer mit "0xFE" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mapping"></a>Routinemäßige Allgemeintext-Zuordnung
 
@@ -125,7 +127,7 @@ Das von **asctime_s** erzeugte Zeichen folgen Ergebnis enthält genau 26 Zeichen
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tasctime_s**|**asctime_s**|**asctime_s**|**_wasctime_s**|
 
-Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen vorhanden) vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladung](../../c-runtime-library/secure-template-overloads.md).
+Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen vorhanden) vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="requirements"></a>Anforderungen
 

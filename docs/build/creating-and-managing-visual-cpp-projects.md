@@ -1,6 +1,6 @@
 ---
 title: 'Visual Studio-Projekte: C++'
-ms.date: 12/12/2018
+ms.date: 10/25/2019
 helpviewer_keywords:
 - ATL projects, creating
 - Visual Studio C++ projects, creating
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: 30d3b13ba4d392cdc5d1c7c611b61066503647a2
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: d6bfefdaa3dfc67f861cf116718f89c0e9766e47
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837048"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624476"
 ---
 # <a name="visual-studio-projects---c"></a>Visual Studio-Projekte: C++
 
-Ein *Visual Studio-Projekt* ist ein Projekt, das auf dem MSBuild-Buildsystem basiert. MSBuild ist das native Buildsystem für Visual Studio und im Allgemeinen das beste Buildsystem für UWP-Apps sowie Desktopanwendungen, die von MFC- oder ATL-Bibliotheken oder COM-Komponenten Gebrauch machen, und für andere Windows-spezifische Programme. MSBuild ist eng in Visual Studio integriert. Sie können MSBuild jedoch auch über die Befehlszeile verwenden. 
+Ein *Visual Studio-Projekt* ist ein Projekt, das auf dem MSBuild-Buildsystem basiert. MSBuild ist das systemeigene Buildsystem für Visual Studio und ist im Allgemeinen das beste Buildsystem, das für Windows-spezifische Programme verwendet werden kann. MSBuild ist eng in Visual Studio integriert. Sie können MSBuild jedoch auch über die Befehlszeile verwenden. Für plattformübergreifende Projekte oder Projekte, die Open Source-Bibliotheken verwenden, wird empfohlen, [cmake-Projekte in Visual Studio](cmake-projects-in-visual-studio.md) in Visual Studio 2017 und höher zu verwenden. Informationen zum Aktualisieren von MSBuild-Projekten aus älteren Versionen von Visual Studio finden Sie [im C++ Microsoft-Handbuch zum Portieren und aktualisieren](../porting/visual-cpp-porting-and-upgrading-guide.md).
 
 ## <a name="create-a-project"></a>Erstellen eines Projekts
 
@@ -25,7 +25,7 @@ Ein *Visual Studio-Projekt* ist ein Projekt, das auf dem MSBuild-Buildsystem bas
 
 Sie können C++-Projekte erstellen, indem Sie **Datei** > **Neu** > **Projekt** auswählen und dann die **Sprache** auf C++ einstellen. In der Ergebnisliste sehen Sie eine Liste mit Projektvorlagen, die Sie filtern können, indem Sie die **Plattform** oder den **Projekttyp** festlegen oder Schlüsselwörter in das Suchfeld eingeben. 
 
-   ![Visual Studio 2019-Projektvorlagen](../build/media/vs2019-choose-console-app.png "Visual Studio 2019-Dialogfeld „Neues Projekt“")
+   ![Visual Studio 2019-Projektvorlagen](../build/media/vs2019-choose-console-app.png "Visual Studio 2019 Dialog Feld "Neues Projekt"")
 
 ::: moniker-end
 
@@ -33,11 +33,11 @@ Sie können C++-Projekte erstellen, indem Sie **Datei** > **Neu** > **Projekt** 
 
 Sie können C++-Projekte erstellen, indem Sie **Datei** > **Neu** > **Projekt** und dann Visual C++ im linken Bereich auswählen. Im mittleren Bereich sehen Sie eine Liste mit Projektvorlagen:
 
-   ![Projektvorlagen](../overview/media/vs2017-new-project.png "Visual Studio 2017-Dialogfeld „Neues Projekt“")
+   ![Projektvorlagen](../overview/media/vs2017-new-project.png "Visual Studio 2017 Dialog Feld "Neues Projekt"")
 
 ::: moniker-end
 
-Weitere Informationen zu allen in Visual Studio enthaltenen Standardprojektvorlagen finden Sie unter [C++-Projektvorlagen in Visual Studio](reference/visual-cpp-project-types.md). Sie können eigene Projektvorlagen erstellen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Projektvorlagen](/visualstudio/ide/how-to-create-project-templates).
+Weitere Informationen zu allen in Visual Studio enthaltenen Standardprojektvorlagen finden Sie unter [C++-Projektvorlagen in Visual Studio](reference/visual-cpp-project-types.md). Sie können eigene Projektvorlagen erstellen. Weitere Informationen finden Sie unter Gewusst [wie: Erstellen von Projektvorlagen](/visualstudio/ide/how-to-create-project-templates).
 
 Nachdem Sie ein Projekt erstellt haben, wird es im Fenster des [Projektmappen-Explorers](/visualstudio/ide/solutions-and-projects-in-visual-studio) angezeigt:
 
@@ -87,3 +87,4 @@ Erstellen eines neuen Visual Studio-Projekts aus einer losen Sammlung von Quelld
 ## <a name="see-also"></a>Siehe auch
 
 [Projekte und Buildsysteme](projects-and-build-systems-cpp.md)<br>
+[Leitfaden C++ zum Portieren und Aktualisieren von Microsoft](../porting/visual-cpp-porting-and-upgrading-guide.md)

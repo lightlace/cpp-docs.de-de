@@ -1,5 +1,5 @@
 ---
-title: /Zc:noexceptTypes (C++17 noexcept rules)
+title: /Zc:noexceptTypes (noexcept-Regeln für C++17)
 ms.date: 11/14/2017
 f1_keywords:
 - /Zc:noexceptTypes
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - Zc:noexceptTypes
 - -Zc:noexceptTypes
 ms.assetid: 1cbf7e3c-0f82-4f91-84dd-612bcf26d2c6
-ms.openlocfilehash: 28e06f54049d36262134b6be7eadb0e6e5349a45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35bea7c2c629c615c60a6136f289b6b11926c054
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315936"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624869"
 ---
-# <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc:noexceptTypes (C++17 noexcept rules)
+# <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc:noexceptTypes (noexcept-Regeln für C++17)
 
-Stellt den C ++ 17-standard `throw()` als Alias für `noexcept`, entfernt `throw(<type list>)` und `throw(...)`, und Sie können bestimmte Typen umfassen `noexcept`. Dies kann eine Anzahl von quellkompatibilitätsproblemen im Code verursachen, die mit C ++ 14 oder früher konform. Die **/Zc: noexcepttypes** Option kann oder Angeben der Übereinstimmung mit den C ++ 17-standard können Sie die C ++ 14 und frühere Verhalten, wenn Code im C ++ 17-Modus kompiliert wird.
+Der c++ 17-Standard stellt `throw()` einen Alias für `noexcept`, entfernt `throw(<type list>)` und `throw(...)`und ermöglicht es, dass bestimmte Typen `noexcept`einschließen. Diese Änderung kann eine Reihe von Problemen mit der Quell Kompatibilität in Code verursachen, der c++ 14 oder früher entspricht. Die Option **/Zc: noexcepttypes** gibt eine Übereinstimmung mit dem c++ 17-Standard an. **/Zc: noexcepttypes-** ermöglicht das c++ 14-und frühere Verhalten, wenn Code im c++ 17-Modus kompiliert wird.
 
 ## <a name="syntax"></a>Syntax
 
-> **/Zc:noexceptTypes**[-]
+> **/Zc: noexcepttypes**[-]
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn die **/Zc: noexcepttypes** angegeben wurde, wird der Compiler den C ++ 17-standard entspricht, und behandelt [throw()](../../cpp/exception-specifications-throw-cpp.md) als Alias für ["noexcept"](../../cpp/noexcept-cpp.md), entfernt `throw(<type list>)`und `throw(...)`, und Sie können bestimmte Typen umfassen `noexcept`. Die **/Zc: noexcepttypes** Option ist nur verfügbar, wenn [/Std: c ++ 17](std-specify-language-standard-version.md) oder [/std:latest](std-specify-language-standard-version.md) aktiviert ist. **/ Zc: noexcepttypes** ist standardmäßig aktiviert, der ISO C ++ 17-standard entsprechen. Die [/ PERMISSIVE--](permissive-standards-conformance.md) Option hat keine Auswirkungen auf **/Zc: noexcepttypes**. Diese Option deaktivieren, indem Sie angeben **/Zc:noexceptTypes-** , in das C ++ 14 Verhalten zurückzukehren `noexcept` beim **/std::C ++ 17** oder **/std::latest** angegeben ist.
+Wenn die **/Zc: noexcepttypes** -Option angegeben wird, entspricht der Compiler dem c++ 17-Standard und behandelt [throw ()](../../cpp/exception-specifications-throw-cpp.md) als Alias für [noaußer](../../cpp/noexcept-cpp.md), entfernt `throw(<type list>)` und `throw(...)`und ermöglicht, dass bestimmte Typen `noexcept`einschließen. Die **/Zc: noexcepttypes** -Option ist nur verfügbar, wenn [/Std: c++ 17](std-specify-language-standard-version.md) oder [/Std: Latest](std-specify-language-standard-version.md) aktiviert ist. **/Zc: noexcepttypes** ist standardmäßig aktiviert, um dem ISO c++ 17-Standard zu entsprechen. Die [/permissive-](permissive-standards-conformance.md) -Option hat keine Auswirkung auf **/Zc: noexcepttypes**. Deaktivieren Sie diese Option, indem Sie **/Zc: noexcepttypes** angeben, um zum c++ 14-Verhalten von `noexcept` zurückzukehren, wenn **/Std: c++ 17** oder **/Std: Latest** angegeben wird.
 
-Visual Studio 2017 Version 15.5 ab, der C++-Compiler diagnostiziert weitere nicht übereinstimmender Ausnahmespezifikationen in Deklarationen im C ++ 17-Modus oder den [/ PERMISSIVE--](permissive-standards-conformance.md) angegeben wird.
+Ab Visual Studio 2017 Version 15,5 diagnostiziert der C++ Compiler eher nicht übereinstimmende Ausnahme Spezifikationen in Deklarationen im c++ 17-Modus oder wenn Sie die [/permissive-](permissive-standards-conformance.md) -Option angeben.
 
-Dieses Beispiel zeigt, wie Deklarationen mit einem ausnahmebezeichner verhält, wenn die **/Zc: noexcepttypes** Option deaktiviert oder festgelegt ist. Das Verhalten bei Festlegung, kompilieren Sie mit `cl /EHsc /W4 noexceptTypes.cpp`. Um das Verhalten, wenn deaktiviert anzuzeigen, kompilieren Sie mit `cl /EHsc /W4 /Zc:noexceptTypes- noexceptTypes.cpp`.
+Dieses Beispiel zeigt, wie sich Deklarationen mit einem ausnahmespezifizierer Verhalten, wenn die Option **/Zc: noexcepttypes** festgelegt oder deaktiviert ist. Um das Verhalten beim Festlegen anzuzeigen, kompilieren Sie mit `cl /EHsc /W4 noexceptTypes.cpp`. Kompilieren Sie mit `cl /EHsc /W4 /Zc:noexceptTypes- noexceptTypes.cpp`, um das Verhalten bei der Deaktivierung anzuzeigen.
 
 ```cpp
 // noexceptTypes.cpp
@@ -51,7 +51,7 @@ struct B : A
 };
 ```
 
-Beim Kompilieren mit der Standardeinstellung **/Zc: noexcepttypes**, im Beispiel wird die aufgeführten Warnungen generiert. Um den Code aktualisieren, verwenden Sie stattdessen Folgendes:
+Bei der Kompilierung mit der Standardeinstellung **/Zc: noexcepttypes**generiert das Beispiel die aufgelisteten Warnungen. Um Ihren Code zu aktualisieren, verwenden Sie stattdessen Folgendes:
 
 ```cpp
 void f() noexcept;
@@ -73,14 +73,14 @@ Weitere Informationen über Konformitätsprobleme in Visual C++ finden Sie unter
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen erhalten Sie unter [Set C++ compiler and build properties in Visual Studio (Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio)](../working-with-project-properties.md).
 
-1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Befehlszeile** Eigenschaftenseite.
+1. Klicken Sie auf der Eigenschaftenseite auf **Konfigurationseigenschaften** > **C/C++**  > **Befehlszeile**.
 
-1. Ändern der **zusätzliche Optionen** Eigenschaft sollen **/Zc: noexcepttypes** oder **/Zc:noexceptTypes-** und wählen Sie dann **OK**.
+1. Ändern Sie die Eigenschaft **zusätzliche Optionen** so, dass Sie **/Zc: noexcepttypes** oder **/Zc: noexcepttypes** enthält, und wählen Sie dann **OK**aus.
 
 ## <a name="see-also"></a>Siehe auch
 
-[/Zc (Übereinstimmung)](zc-conformance.md)<br/>
-[noexcept](../../cpp/noexcept-cpp.md)<br/>
-[Ausnahmespezifikationen (throw)](../../cpp/exception-specifications-throw-cpp.md)
+[/Zc (Konformität)](zc-conformance.md)\
+[noaußer](../../cpp/noexcept-cpp.md)\
+[Ausnahme Spezifikationen (Throw)](../../cpp/exception-specifications-throw-cpp.md)

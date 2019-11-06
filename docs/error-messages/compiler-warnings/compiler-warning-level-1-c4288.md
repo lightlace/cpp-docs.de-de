@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4288
 ms.assetid: 6aaeb139-90cd-457a-9d37-65687042736f
-ms.openlocfilehash: d8769f5663ca0bde9048e52d4579012dfccab0a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81094bf019060b56337347f7d364ead7c78c8128
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207094"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626661"
 ---
 # <a name="compiler-warning-level-1-c4288"></a>Compilerwarnung (Stufe 1) C4288
 
-nicht dem Standard entsprechende Erweiterung: 'Var': Loop-Steuerelementvariable, die in der for-Schleife deklariert wurde, wird außerhalb der for-Schleife-Bereich; Es liegen Konflikte mit der Deklaration im äußeren Gültigkeitsbereich
+nicht dem Standard entsprechende Erweiterung: "var": die Schleifen Steuerungs Variable, die in der for-Schleife deklariert wurde, wird außerhalb des for-Schleifen Bereichs verwendet. Sie steht in Konflikt mit der Deklaration im äußeren Gültigkeitsbereich.
 
-Beim Kompilieren mit [/Ze](../../build/reference/za-ze-disable-language-extensions.md) und **/Zc: forScope**, eine Variable deklariert, die einer **für** Schleife wurde verwendet, nach der [für](../../cpp/for-statement-cpp.md)-Schleife-Bereich. Eine Microsoft-Erweiterung der Programmiersprache C++ ermöglicht dieser Variablen im Gültigkeitsbereich bleibt und C4288 erinnert Sie daran, dass die erste Deklaration der Variablen nicht verwendet wird.
+Beim Kompilieren mit [/Ze](../../build/reference/za-ze-disable-language-extensions.md) und **/Zc: forScope-** wurde eine in einer **for** -Schleife deklarierte Variable nach dem [for](../../cpp/for-statement-cpp.md)-Schleifen Bereich verwendet. Eine Microsoft-Erweiterung für C++ die Sprache ermöglicht es, dass diese Variable im Gültigkeitsbereich bleibt, und C4288 erinnert Sie daran, dass die erste Deklaration der Variablen nicht verwendet wird.
 
-Finden Sie unter [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) Informationen zur Vorgehensweise beim Angeben der Microsoft-Erweiterungs im **für** Schleifen/Ze.
+Weitere Informationen zum Angeben der Microsoft-Erweiterung in **for** -Schleifen mit "/Ze" finden Sie unter [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) .
 
-Im folgende Beispiel wird die C4288 generiert:
+Im folgenden Beispiel wird C4288 generiert:
 
-```
+```cpp
 // C4288.cpp
 // compile with: /W1 /c /Zc:forScope-
 int main() {

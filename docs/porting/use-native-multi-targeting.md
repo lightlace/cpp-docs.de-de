@@ -1,16 +1,16 @@
 ---
 title: Verwenden von nativen Zielversionen in Visual Studio, um alte Projekte zu erstellen
-ms.date: 11/04/2016
+ms.date: 10/25/2019
 helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: 35f6ac980a451b375d5005c20853fdd29c78d96d
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: aff21121c181131b04ad22d75f03b7cbb222228a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448941"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627146"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Verwenden von nativen Zielversionen in Visual Studio, um alte Projekte zu erstellen
 
@@ -44,15 +44,18 @@ Wenn Sie kein Upgrade durchführen möchten, führt Visual Studio keine Änderun
 
 ## <a name="instructions-for-visual-studio-2008"></a>Anweisungen für Visual Studio 2008
 
-Visual Studio 2008 verfügte über ein eigenes dediziertes Buildsystem für C++ mit dem Namen **VCBuild**. Ab Visual Studio 2010 wurden C++-Projekte in Visual Studio so verändert, dass sie **MSBuild** verwendeten. Dies bedeutet, dass Sie ein Update durchführen müssen, damit Sie Ihre Visual Studio 2008-Projekte in der neuesten Visual Studio-Version erstellen können. Ihr aktualisiertes Projekt erstellt noch immer Binärdateien, die mit den Binärdateien, die mithilfe der IDE von Visual Studio 2008 erstellt wurden, voll kompatibel sind.
+Visual Studio 2008 verfügte über ein eigenes dediziertes Buildsystem für C++ mit dem Namen **VCBuild**. Ab Visual Studio 2010 wurden C++-Projekte in Visual Studio so verändert, dass sie **MSBuild** verwendeten. Dies bedeutet, dass Sie bei einer permanenten oder fest Zuweisungs basierten Aktualisierung einen Aktualisierungs Schritt durchführen müssen, um Ihre Visual Studio 2008-Projekte in der neuesten Version von Visual Studio zu erstellen. Ihr aktualisiertes Projekt erstellt noch immer Binärdateien, die mit den Binärdateien, die mithilfe der IDE von Visual Studio 2008 erstellt wurden, voll kompatibel sind.
 
 Zunächst müssen Sie zusätzlich zur aktuellen Visual Studio-Version Visual Studio 2010 auf demselben Computer erstellen, auf dem sich Visual Studio 2008 befindet. Nur Visual Studio 2010 installiert die **MSBuild**-Skripts, die für Visual Studio 2008-Projekte erforderlich sind.
 
 Als Nächstes müssen Sie Ihre Visual Studio 2008-Projektmappen und -Projekte auf die aktuelle Version von Visual Studio aktualisieren. Es wird empfohlen, eine Sicherung Ihrer Projekt- und Projektmappendateien zu erstellen, bevor Sie das Upgrade durchführen. Damit der Upgradeprozess beginnen kann, öffnen Sie die Projektmappe in der aktuellen Version von Visual Studio. Wenn Sie die Aufforderung zur Aktualisierung erhalten, überprüfen Sie die dargestellte Information, und wählen Sie dann **OK** aus, um mit dem Upgrade zu beginnen. Wenn Sie mehr als ein Projekt in der Projektmappe haben, müssen Sie den Assistenten zum Erstellen neuer VCXPROJ-Projektdateien parallel mit den vorhandenen VCPROJ-Dateien aktualisieren. Solange Sie noch über eine Kopie der ursprünglichen SLN-Datei verfügen, hat das Upgrade keinen anderen Einfluss auf Ihre vorhandenen Visual Studio 2008-Projekte.
 
+> [!NOTE]
+> Die folgenden Schritte gelten nur für Szenarien mit mehreren Zielanwendungen. Wenn Sie beabsichtigen, das Projekt dauerhaft auf ein späteres Toolset zu aktualisieren, müssen Sie im nächsten Schritt das Projekt speichern, in Visual Studio 2019 öffnen und die dort angezeigten Buildprobleme beheben.
+
 Wenn das Upgrade abgeschlossen ist und der Protokollbericht Fehler oder Warnungen für Ihre Projekte ausgibt, überprüfen Sie diese sorgfältig. Die Konvertierung von **VCBuild** in **MSBuild** kann Probleme verursachen. Stellen Sie sicher, dass Sie alle Aktionselemente verstehen und implementieren, die im Bericht aufgeführt sind. Weitere Informationen zum Upgradeprotokollbericht und zu Problemen, die womöglich bei der Konvertierung von **VCBuild** in **MSBuild** auftreten, finden Sie im Blogpost: [C++ Native Multi-Targeting (Native Festlegung von Zielversionen für C++)](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/).
 
-Wenn das Projektupgrade abgeschlossen ist, und Sie alle Probleme in der Protokolldatei behoben haben, ist Ihre Lösung tatsächlich auf das neueste Toolset ausgerichtet. Als letzten Schritt ändern Sie die Eigenschaften für jedes Projekt in der Projektmappe, um das Toolset von Visual Studio 2008 zu verwenden. Laden Sie die Projektmappe in der aktuellen Version von Visual Studio, und öffnen Sie für jedes Projekt in der Projektmappe die **Eigenschaftenseiten** des Projekts: Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und klicken Sie anschließend auf **Eigenschaften**. Ändern Sie im Dialogfeld **Eigenschaftenseiten** den Wert der Dropdownliste **Konfiguration** in **Alle Konfigurationen**. Wählen Sie unter **Konfigurationseigenschaften**die Option **Allgemein** aus, und ändern Sie dann **Plattformtoolset** in **Visual Studio 2008 (v90)** .
+Wenn das Projektupgrade abgeschlossen ist, und Sie alle Probleme in der Protokolldatei behoben haben, ist Ihre Lösung tatsächlich auf das neueste Toolset ausgerichtet. Als letzten Schritt ändern Sie die Eigenschaften für jedes Projekt in der Projektmappe, um das Toolset von Visual Studio 2008 zu verwenden. Öffnen Sie mithilfe der Lösung, die in der aktuellen Visual Studio-Version geladen ist, für jedes Projekt das Dialogfeld **Eigenschaftenseiten** des Projekts: Klicken Sie mit der rechten Maustaste auf das Projekt im **Projektmappen-Explorer**, und wählen Sie anschließend **Eigenschaften** aus. Ändern Sie im Dialogfeld **Eigenschaftenseiten** den Wert der Dropdownliste **Konfiguration** in **Alle Konfigurationen**. Wählen Sie unter **Konfigurationseigenschaften**die Option **Allgemein** aus, und ändern Sie dann **Plattformtoolset** in **Visual Studio 2008 (v90)** .
 
 Nach dieser Änderung wird der Visual Studio 2008-Compiler und die -Bibliotheken zum Generieren von Projektbinärdateien verwendet, wenn Sie die Projektmappe in der aktuellen Version von Visual Studio erstellen.
 
@@ -66,5 +69,5 @@ Wenn diese Produkte installiert sind, wird die Eigenschaftendropdownliste **Plat
 
 ## <a name="see-also"></a>Siehe auch
 
-[Aktualisieren von Projekten von früheren Versionen von Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Aktualisieren von Projekten aus früheren Versionen von VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Verbesserungen der C++-Konformität in Visual Studio](../overview/cpp-conformance-improvements.md)

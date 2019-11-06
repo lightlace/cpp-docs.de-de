@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4028
 ms.assetid: c3e8b70b-e870-416c-a285-bba5f71dbfc6
-ms.openlocfilehash: bfe54fc40b4d6927a1d75f529ec9b619f9b29226
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19bfd2659ee9017d3a304dee2d647da091515876
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397366"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623850"
 ---
 # <a name="compiler-warning-level-1-c4028"></a>Compilerwarnung (Stufe 1) C4028
 
-formale Parameter 'Nummer' unterscheidet sich von der Deklaration
+formaler Parameter ' Number ' unterscheidet sich von der Deklaration
 
 Der Typ des formalen Parameters stimmt nicht mit dem entsprechenden Parameter in der Deklaration überein. Der Typ in der ursprünglichen Deklaration wird verwendet.
 
-Diese Warnung gilt nur für C#-Quellcode.
+Diese Warnung gilt nur für C-Quellcode.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4028 generiert.
+Im folgenden Beispiel wird C4028 generiert.
 
-```
+```c
 // C4028.c
 // compile with: /W1 /Za
 void f(int , ...);

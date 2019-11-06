@@ -49,12 +49,12 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 196a3aac09db790da6b8137029383cca77c3d2ad
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2ccfde34d12dadb76bc8b4058a3f9b52c3d1f4bc
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947276"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626148"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
@@ -148,13 +148,13 @@ errno_t _mbsncpy_s_l(
 
 ### <a name="parameters"></a>Parameter
 
-*strDest*<br/>
+*der schnellste*<br/>
 Zielzeichenfolge.
 
 *numberOfElements*<br/>
 Die Größe der Zielzeichenfolge in Zeichen.
 
-*strSource*<br/>
+*-Quelle*<br/>
 Quellzeichenfolge.
 
 *count*<br/>
@@ -169,12 +169,12 @@ Das zu verwendende Gebietsschema.
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|*strDest*|*numberOfElements*|*strSource*|Rückgabewert|Inhalt von " *strandest* "|
+|*der schnellste*|*numberOfElements*|*-Quelle*|Rückgabewert|Inhalt von " *strandest* "|
 |---------------|------------------------|-----------------|------------------|---------------------------|
 |**NULL**|any|any|**EINVAL**|nicht geändert|
-|any|any|**NULL**|**EINVAL**|der *schnellste* [0] auf 0 festgelegt|
+|any|any|**NULL**|**EINVAL**|" *strandest*[0]" auf 0 festgelegt.|
 |any|0|any|**EINVAL**|nicht geändert|
-|Nicht **null**|zu klein|any|**ERANGE**|der *schnellste* [0] auf 0 festgelegt|
+|nicht **null**|zu klein|any|**ERANGE**|" *strandest*[0]" auf 0 festgelegt.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -206,11 +206,11 @@ Wenn " *strindest* " oder " *strinsource* " **null** *ist, oder "* -" "". Wenn d
 
 **wcsncpy_s** und **_mbsncpy_s** sind breit Zeichen-und multibytezeichenversionen von **strncpy_s**. Die Argumente und der Rückgabewert von **wcsncpy_s** und **mbsncpy_s** unterscheiden sich entsprechend. Diese sechs Funktionen verhalten sich andernfalls identisch.
 
-Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Gebietsschema](../../c-runtime-library/locale.md).
 
-In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).
 
-Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Die Debug-Bibliotheksversionen dieser Funktionen füllen zunächst den Puffer mit "0xFE" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -230,7 +230,7 @@ Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf
 |**wcsncpy_s**, **_wcsncpy_s_l**|\<string.h> oder \<wchar.h>|
 |**_mbsncpy_s**, **_mbsncpy_s_l**|\<mbstring.h>|
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Zusätzliche Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 
