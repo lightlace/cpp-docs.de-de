@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4003
 ms.assetid: 0ed1c285-4428-4c90-8131-86897e31f115
-ms.openlocfilehash: 7b1b87c643111f2b12124e348be8fb823e113937
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4adbffe3220060ee9d43f01cf94628f85d3991cc
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187305"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627383"
 ---
 # <a name="compiler-warning-level-1-c4003"></a>Compilerwarnung (Stufe 1) C4003
 
 Nicht genügend tatsächliche Parameter für das Makro 'identifier'
 
-Die Anzahl der formalen Parameter in der Makrodefinition überschreitet die Anzahl der tatsächlich im Makro. Makroerweiterung ersetzt leeren Text für die fehlenden Parameter an.
+Die Anzahl der formalen Parameter in der Makro Definition überschreitet die Anzahl der tatsächlichen Parameter im Makro. Die Makro Erweiterung ersetzt leeren Text für die fehlenden Parameter.
 
-Im folgende Beispiel wird die C4003 generiert:
+Im folgenden Beispiel wird C4003 generiert:
 
-```
+```cpp
 // C4003.cpp
 // compile with: /WX
 #define test(a,b) (a+b)

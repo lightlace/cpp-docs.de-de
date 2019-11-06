@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4091
 ms.assetid: 3a404967-ab42-49b0-b324-fd7ba1859d78
-ms.openlocfilehash: 87432a74dfe7c09a52f436d4e91b3f70eb66856b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce6dd980ef70f129a0dbae474b8f717f7573f861
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410446"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626753"
 ---
 # <a name="compiler-warning-level-1-c4091"></a>Compilerwarnung (Stufe 1) C4091
 
-'Schlüsselwort': auf der linken Seite von 'Typ' ignoriert wird, wenn keine Variable deklariert wurde
+' Schlüsselwort ': wird auf der linken Seite von ' type ' ignoriert, wenn keine Variable deklariert ist
 
-Der Compiler hat eine Situation, in denen der Benutzer soll wahrscheinlich eine Variable deklariert werden, aber der Compiler konnte sich nicht um die Variable zu deklarieren.
+Der Compiler hat eine Situation erkannt, in der der Benutzer wahrscheinlich eine Variable deklarieren wollte, aber der Compiler konnte die Variable nicht deklarieren.
 
 ## <a name="example"></a>Beispiel
 
-Ein `__declspec` Attribut am Anfang einer benutzerdefinierten Typdeklaration gilt für die Variable dieses Typs. C4091 weist darauf hin, dass keine Variable deklariert wurde. Im folgende Beispiel wird die C4091 generiert.
+Ein `__declspec` Attribut am Anfang einer benutzerdefinierten Typdeklaration gilt für die Variable dieses Typs. C4091 gibt an, dass keine Variable deklariert wird. Im folgenden Beispiel wird C4091 generiert.
 
-```
+```cpp
 // C4091.cpp
 // compile with: /W1 /c
 __declspec(dllimport) class X {}; // C4091
@@ -38,9 +38,9 @@ class __declspec(dllimport) X3 {};
 
 ## <a name="example"></a>Beispiel
 
-Wenn ein Bezeichner eine Typdefinition ist, kann nicht es auch ein Variablenname sein. Im folgende Beispiel wird die C4091 generiert.
+Wenn ein Bezeichner eine typedef ist, kann er nicht auch ein Variablenname sein. Im folgenden Beispiel wird C4091 generiert.
 
-```
+```cpp
 // C4091_b.cpp
 // compile with: /c /W1 /WX
 #define LIST 4

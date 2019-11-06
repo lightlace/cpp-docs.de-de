@@ -23,12 +23,12 @@ f1_keywords:
 - signal
 helpviewer_keywords:
 - signal function
-ms.openlocfilehash: 04869412272725108911f13857585e650ad20ab9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 232bf7bc518907db8744fbb85e0f3a33c9296006
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948103"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625855"
 ---
 # <a name="signal"></a>signal
 
@@ -115,7 +115,7 @@ Signal Einstellungen werden in erzeugten Prozessen, die durch Aufrufe der [_exec
 |-------------|---------------------|
 |**signal**|\<signal.h>|
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Zusätzliche Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -127,7 +127,6 @@ Im folgenden Beispiel wird gezeigt, wie **Signal** verwendet wird, um dem **SIGA
 // Use signal to attach a signal handler to the abort routine
 #include <stdlib.h>
 #include <signal.h>
-#include <tchar.h>
 
 void SignalHandler(int signal)
 {
@@ -149,9 +148,16 @@ int main()
 }
 ```
 
+Die Ausgabe hängt davon ab, welche Version der Laufzeit verwendet wird, ob es sich bei der App um eine Konsolen-oder Windows-App handelt, und unter Windows-Registrierungs Einstellungen. Für eine Konsolen-APP wird möglicherweise die folgende Meldung an stderr gesendet:
+
 ```Output
-This application has requested the Runtime to terminate it in an unusual way.
-Please contact the application's support team for more information.
+Debug Error!
+
+Program: c:\Projects\crt_signal\Debug\crt_signal.exe
+
+R6010
+
+- abort() has been called
 ```
 
 ## <a name="see-also"></a>Siehe auch

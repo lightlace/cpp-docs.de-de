@@ -2,12 +2,12 @@
 title: Upgraden Ihres Codes auf die Universal CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: 68edcd57ee03ac861a6d2105456f4dbf699c1210
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 0554ff713b499f99e7e7508faf687c1635e6d912
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448997"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627175"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Upgraden Ihres Codes auf die Universal CRT
 
@@ -35,7 +35,7 @@ Wenn Sie Ihre C++-Projekte in Visual Studio aktualisieren und Sie die **Linker**
 
 Da die UCRT jetzt eine Komponente des Betriebssystems Microsoft Windows ist, ist sie als Teil des Betriebssystems in Windows 10 enthalten und ist über Windows Update für ältere Betriebssysteme erhältlich und für Windows Vista über Windows 8.1. Eine neu verteilbare Version ist für Windows XP verfügbar. Als Komponente des Betriebssystems werden UCRT-Updates und die UCRT-Wartung von Windows Update unabhängig von Visual Studio und Microsoft C++-Compilerversionen verwaltet. Da die UCRT eine Windows-Komponente ist, empfehlen für zur Sicherheit und Erleichterung von Updates sowie für eine kleinere Imagegröße die zentrale Bereitstellung der UCRT für Ihre App.
 
-Sie können die UCRT unter jeder Version von Windows verwenden, die von Visual Studio 2015 oder Visual Studio 2017 unterstützt wird. Sie können die URCT über ein vcredist-Paket für unterstützte Versionen von Windows neu verteilen, die nicht Windows 10 sind. Die vcredist-Pakete enthalten die UCRT-Komponenten und installieren diese automatisch auf Windows-Betriebssystemen, auf denen sie nicht automatisch installiert sind. Weitere Informationen finden Sie unter [Verteilen von Visual C++-Dateien](../windows/redistributing-visual-cpp-files.md).
+Sie können die UCRT unter jeder Version von Windows verwenden, die von Visual Studio 2015 oder Visual Studio 2017 unterstützt wird. Sie können die URCT über ein vcredist-Paket für unterstützte Versionen von Windows neu verteilen, die nicht Windows 10 sind. Die vcredist-Pakete enthalten die UCRT-Komponenten und installieren diese automatisch auf Windows-Betriebssystemen, auf denen sie nicht automatisch installiert sind. Weitere Informationen finden Sie unter [Redistributing Visual C++ Files](../windows/redistributing-visual-cpp-files.md).
 
 Eine lokale Bereitstellung der App der UCRT wird zwar unterstützt, wird jedoch aus Leistungs- und Sicherheitsgründen nicht empfohlen. Die DLLs für die lokale Bereitstellung der App sind als Teil des Windows SDK im Unterverzeichnis **redist** enthalten. Die erforderlichen DLLs enthalten „ucrtbase.dll“ und eine Reihe **APISet-Weiterleitungs**-DLLs mit dem Namen „api-ms-win-_subset_.dll“. Die Reihe der erforderlichen DLLs auf jedem Betriebssystem variiert, deshalb empfiehlt es sich, dass Sie alle DLLs einschließen, wenn Sie die lokale Bereitstellung der App verwenden. Zusätzliche Details und Hinweise zu der lokalen App-Bereitstellung finden Sie unter [Deployment in Visual C++ (Bereitstellung in Visual C++)](../windows/deployment-in-visual-cpp.md).
 
@@ -47,6 +47,6 @@ Viele Funktionen wurden in der UCRT hinzugefügt oder aktualisiert, um die ISO C
 
 [Visual C++-Handbuch: Portieren und Aktualisieren](visual-cpp-porting-and-upgrading-guide.md)<br/>
 [Überblick über potenzielle Aktualisierungsprobleme (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
-[Aktualisieren von Projekten von früheren Versionen von Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Aktualisieren von Projekten aus früheren Versionen von VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Änderungsverlauf von Visual C++ von 2003 bis 2015](visual-cpp-change-history-2003-2015.md)<br/>
 [Verbesserungen der C++-Konformität in Visual Studio](../overview/cpp-conformance-improvements.md)

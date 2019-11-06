@@ -1,54 +1,57 @@
 ---
 title: CMakeSettings.json-Schemareferenz
-ms.date: 05/16/2019
+ms.date: 10/31/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: cc9b9a788f17e9257bed628024e3f65dfc89fb23
-ms.sourcegitcommit: b233f05adae607f75815111006a771c432df5a9d
+ms.openlocfilehash: 6f8301c07f87feee80191f5db14fea5b16f02863
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67516384"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624423"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json-Schemareferenz
 
-Die **"cmakesettings.JSON"** -Datei enthält Informationen, der angibt, wie Visual Studio mit CMake zum Erstellen eines Projekts für eine bestimmte Plattform interagieren soll. Diese Datei speichert Informationen wie Umgebungsvariablen oder Argumente für die „cmake.exe“-Umgebung. Sie können sie direkt bearbeiten oder den **CMake-Einstellungs-Editor** verwenden (Visual Studio 2019 und höher). Weitere Informationen über den Editor finden Sie unter [Anpassen von CMake-Buildeinstellungen in Visual Studio](customize-cmake-settings.md).
+::: moniker range="vs-2015"
 
-## <a name="environments"></a>Umgebungen
+Cmake-Projekte werden in Visual Studio 2017 und höher unterstützt.
 
-Das `environments`-Array enthält eine Liste von `items` vom Typ `object`, die ein Compilertoolset „Umgebung“ definieren. Eine Umgebung kann zur Anwendung einer Gruppe von Variablen auf eine `configuration` verwendet werden. Jedes Element im `environments`-Array besteht aus Folgendem:
+::: moniker-end
 
-- `namespace`: Benennt die Umgebung, sodass durch die Form `namespace.variable` über eine Konfiguration auf deren Variablen verwiesen werden kann. Das Standardumgebungsobjekt wird `env` genannt und mit bestimmten Systemumgebungsvariablen aufgefüllt, darunter `%USERPROFILE%`.
-- `environment`: Identifiziert diese Gruppe von Variablen eindeutig. Ermöglicht der Gruppe, später in einem `inheritEnvironments`-Eintrag geerbt zu werden.
-- `groupPriority`: Eine ganze Zahl, die bei der Auswertung die Priorität dieser Variablen angibt. Elemente mit höherer Nummer werden zuerst ausgewertet.
-- `inheritEnvironments`: Ein Array von Werten, die die Gruppe von Umgebungen angeben, die von dieser Gruppe geerbt werden. Durch dieses Feature können Sie Standardumgebungen vererben und benutzerdefinierte Umgebungsvariablen erstellen, die bei der Ausführung an „CMake.exe“ übergeben werden.
+::: moniker range=">=vs-2017"
 
-   ```json
-   "inheritEnvironments": [ "msvc_x64_x64" ]
-   ```
+Die **cmakesettings. JSON** -Datei enthält Informationen, die Visual Studio für IntelliSense verwendet, und zum Erstellen der Befehlszeilenargumente, die an cmake. exe für eine angegebene *Konfigurations* -und *Compilerumgebung*übergeben werden. Eine Konfiguration gibt Eigenschaften an, die für eine bestimmte Plattform und einen Buildtyp gelten, z. b. `x86-Debug` oder `Linux-Release`. Jede Konfiguration gibt eine Umgebung an, in der Informationen zum Compilertoolset (z. b. MSVC, gcc oder clang) gekapselt werden. Cmake verwendet die Befehlszeilenargumente, um die Stammdatei " *cmakecache. txt* " und andere Projektdateien für das Projekt neu zu generieren. Die Werte können in den *CMakeLists. txt* -Dateien überschrieben werden. 
 
-   Das obige Beispiel entspricht der Ausführung der **Developer-Eingabeaufforderung für Visual Studio 2017** oder der **Developer-Eingabeaufforderung für Visual Studio 2019** mit den Argumenten **-arch=amd64 -host_arch=amd64**. Es können jede benutzerdefinierte Umgebung oder diese vordefinierten Umgebungen verwendet werden:
- 
-  - linux_arm: Hiermit wird ARM Linux als Remotezielversion festgelegt.
-  - linux_x64: Hiermit wird x64 Linux als Remotezielversion festgelegt.
-  - linux_x86: Hiermit wird x86 Linux als Remotezielversion festgelegt.
-  - msvc_arm: Hiermit wird ARM Windows mit dem MSVC-Compiler als Zielversion festgelegt.
-  - msvc_arm_x64: Hiermit wird ARM Windows mit dem 64-Bit-MSVC-Compiler als Zielversion festgelegt.
-  - msvc_arm64: Hiermit wird ARM64 Windows mit dem MSVC-Compiler als Zielversion festgelegt.
-  - msvc_arm64_x64: Hiermit wird ARM64 Windows mit dem 64-Bit-MSVC-Compiler als Zielversion festgelegt.
-  - msvc_x64: Hiermit wird x64 Windows mit dem MSVC-Compiler als Zielversion festgelegt.
-  - msvc_x64_x64: Hiermit wird x64 Windows mit dem 64-Bit-MSVC-Compiler als Zielversion festgelegt.
-  - msvc_x86: Hiermit wird x86 Windows mit dem MSVC-Compiler als Zielversion festgelegt.
-  - msvc_x86_x64: Hiermit wird x86 Windows mit dem 64-Bit-MSVC-Compiler als Zielversion festgelegt.
+Sie können Konfigurationen in der IDE hinzufügen oder entfernen und diese dann direkt in der JSON-Datei bearbeiten oder den Editor für die **cmake-Einstellungen** (Visual Studio 2019 und höher) verwenden. Sie können in der IDE problemlos zwischen den Konfigurationen wechseln, um die verschiedenen Projektdateien zu generieren. Weitere Informationen finden Sie [unter Anpassen von cmake-Buildeinstellungen in Visual Studio](customize-cmake-settings.md) .
 
 ## <a name="configurations"></a>Konfigurationen
 
-Das `configurations`-Array besteht aus Objekten, die CMake-Konfigurationen darstellen, die für die Datei „CMakeLists.txt“ im gleichen Ordner gelten. Sie können diese Objekte verwenden, um mehrere Buildkonfigurationen zu definieren und in der IDE einfach zwischen ihnen zu wechseln. 
+Das `configurations` Array enthält alle Konfigurationen für ein cmake-Projekt. Weitere Informationen zu den vordefinierten Konfigurationen finden Sie unter [cmake-vordefinierte Konfigurations Referenz](cmake-predefined-configuration-reference.md) . Sie können der Datei beliebig viele vordefinierte oder benutzerdefinierte Konfigurationen hinzufügen. 
 
 Eine `configuration` verfügt über die folgenden Eigenschaften:
-- `name`: Benennt die Konfiguration.
+
+- `addressSDanitizerEnabled`:, wenn `true` das Programm mit address sanitizer kompiliert (experimentell unter Windows). Kompilieren Sie unter Linux mit-fno-omit-Frame-Pointer und compileroptimierungs Level-OS oder-OO, um optimale Ergebnisse zu erzielen.
+- `addressSanitizerRuntimeFlags`: Laufzeitflags, die über die Umgebungsvariable ASAN_OPTIONS an addresssanitizer übermittelt werden. Format: Flag1 = Value: flag2 = Value2.
+- `buildCommandArgs`: Gibt native Buildoptionen an, die nach „--build --“ an CMake übergeben werden. Beispielsweise wird beim Übergeben von „-v“ mithilfe des Ninja-Generators erzwungen, dass Ninja Befehlszeilen ausgibt. Weitere Informationen zu Ninja-Befehlen finden Sie unter [Ninja-Befehlszeilenargumente](#ninja).
+- `buildRoot`: Gibt das Verzeichnis an, in dem CMake Buildskripts für den ausgewählten Generator erstellt.  Ist dem Schalter **-DCMAKE_BINARY_DIR** zugeordnet und gibt an, wo der CMake-Cache erstellt wird. Wenn der Ordner noch nicht vorhanden ist, wird dieser erstellt. Zu den unterstützten Makros zählen `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`und `${env.VARIABLE}`.
+- `cacheGenerationCommand`: gibt ein Befehlszeilen Tool und Argumente an, z. b. " *gencache. bat Debug* ", um den Cache zu generieren. Der Befehl wird von der Shell in der angegebenen Umgebung für die Konfiguration ausgeführt, wenn der Benutzer eine Neugenerierung anfordert oder wenn die Datei "CMakeLists. txt" oder "cmakesettings. JSON" geändert wird.
+- `cacheRoot`: Gibt den Pfad zu einem CMake-Cache an. Dieses Verzeichnis sollte eine vorhandene „CMakeCache.txt“-Datei enthalten.
+- `clangTidyChecks`: durch Trennzeichen getrennte Liste von warnigns, die an clang-tidy übergeben werden. Platzhalter sind zulässig, und durch das Präfix "-" werden Überprüfungen entfernt.
+- `cmakeCommandArgs`: Gibt zusätzliche Befehlszeilenoptionen an, die beim Aufruf zum Generieren des Caches an CMake übergeben werden.
+- `cmakeToolchain`: Gibt die Toolkettendatei an. Diese wird über „-DCMAKE_TOOLCHAIN_FILE“ an CMake übergeben.
+- `codeAnalysisRuleset`: Gibt den Regelsatz an, der beim Ausführen der Codeanalyse verwendet werden soll. Dies kann ein vollständiger Pfad oder der Dateiname einer Regelsatzdatei sein, die von Visual Studio installiert wird.
+- `configurationType`: Gibt die Buildtypkonfiguration für den ausgewählten Generator an. Folgende stehen zur Auswahl:
+
+  - Debug
+  - Freigabe
+  - MinSizeRel
+  - RelWithDebInfo
+  
+- `ctestCommandArgs`: Gibt zusätzliche Befehlszeilenoptionen an, die beim Ausführen der Tests an CTest übergeben werden.
 - `description`: Beschreibung dieser Konfiguration, die in Menüs angezeigt wird.
+- `enableClangTidyCodeAnalysis`: Verwenden Sie clang-tidy für die Code Analyse.
+- `enableMicrosoftCodeAnalysis`: Verwenden Sie die Microsoft-Code Analysetools für die Code Analyse.
 - `generator`: Gibt an, welcher CMake-Generator für diese Konfiguration verwendet werden soll. Folgende stehen zur Auswahl:
   
   **Nur Visual Studio 2019:**
@@ -66,35 +69,36 @@ Eine `configuration` verfügt über die folgenden Eigenschaften:
   - Unix Makefiles
   - Ninja
 
-Da Ninja für schnelle Buildgeschwindigkeiten statt für Flexibilität und Funktionalität entwickelt wurde, ist dieser als Standardwert festgelegt. Einige CMake-Projekte können jedoch mit Ninja keinen ordnungsgemäßen Build durchführen. In diesem Fall können Sie CMake anweisen, stattdessen ein Visual Studio-Projekt zu erstellen.
+Da Ninja für schnelle Buildgeschwindigkeiten statt für Flexibilität und Funktionalität entwickelt wurde, ist dieser als Standardwert festgelegt. Einige CMake-Projekte können jedoch mit Ninja keinen ordnungsgemäßen Build durchführen. Wenn dies auftritt, können Sie cmake anweisen, stattdessen Visual Studio-Projekte zu generieren.
 
-Öffnen Sie `CMakeSettings.json` über das Hauptmenü, indem Sie auf **CMake > CMake-Einstellungen ändern** klicken, um einen Visual Studio-Generator in Visual Studio 2017 anzugeben. Löschen Sie „Ninja“, und geben Sie „V“ ein. Dadurch wird IntelliSense aktiviert, und Sie können den gewünschten Generator auswählen.
+Um einen Visual Studio-Generator in Visual Studio 2017 anzugeben, öffnen Sie den im Hauptmenü, indem Sie **cmake | Ändern Sie die cmake-Einstellungen**. Löschen Sie „Ninja“, und geben Sie „V“ ein. Dadurch wird IntelliSense aktiviert, und Sie können den gewünschten Generator auswählen.
 
-Um einen Visual Studio-Generator in Visual Studio 2019 anzugeben, klicken Sie mit der rechten Maustaste auf die Datei „CMakeLists.txt“im **Projektmappen-Explorer**, und wählen Sie **CMake-Einstellungen für Projekt** > **Erweiterte Einstellungen anzeigen** > **CMake-Generator** aus.
+Um einen Visual Studio-Generator in Visual Studio 2019 anzugeben, klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf die Datei " *CMakeLists. txt* ", und wählen Sie **cmake Settings for Project** > **Erweiterte Einstellungen anzeigen** > **cmake aus. Generator**.
 
-Wenn in der aktiven Konfiguration ein Visual Studio-Generator angegeben ist, wird standardmäßig „MSBuild.exe“ über `-m -v:minimal`-Argumente aufgerufen. In der Datei `CMakeSettings.json` können Sie zusätzliche [MSBuild-Befehlszeilenargumente](../build/reference/msbuild-visual-cpp-overview.md) angeben, die über die Eigenschaft `buildCommandArgs` an das Buildsystem übergeben werden sollen, um den Build anzupassen:
+Wenn in der aktiven Konfiguration ein Visual Studio-Generator angegeben ist, wird standardmäßig „MSBuild.exe“ über `-m -v:minimal`-Argumente aufgerufen. Zum Anpassen des Builds können Sie in der Datei " *cmakesettings. JSON* " zusätzliche [MSBuild-Befehlszeilenargumente](../build/reference/msbuild-visual-cpp-overview.md) angeben, die über die `buildCommandArgs`-Eigenschaft an das Buildsystem übergeben werden sollen:
 
    ```json
    "buildCommandArgs": "-m:8 -v:minimal -p:PreferredToolArchitecture=x64"
    ```
 
 - `configurationType`: Gibt die Buildtypkonfiguration für den ausgewählten Generator an. Folgende stehen zur Auswahl:
- 
+
   - Debug
   - Freigabe
   - MinSizeRel
   - RelWithDebInfo
  
-- `inheritEnvironments`: Gibt mindestens eine Compilerumgebung an, von der diese Konfiguration abhängt. Dabei kann es sich um jede benutzerdefinierte Umgebung oder eine der vordefinierten Umgebungen handeln.
-- `buildRoot`: Gibt das Verzeichnis an, in dem CMake Buildskripts für den ausgewählten Generator erstellt.  Ist dem Schalter **-DCMAKE_BINARY_DIR** zugeordnet und gibt an, wo der CMake-Cache erstellt wird. Wenn der Ordner nicht vorhanden ist, wird er erstellt. Zu den unterstützten Makros gehören `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
+- `buildRoot`: Gibt das Verzeichnis an, in dem CMake Buildskripts für den ausgewählten Generator erstellt.  Wird dem Switch " **-DCMAKE_BINARY_DIR** " zugeordnet und gibt an, wo die Datei " *cmakecache. txt* " erstellt wird. Wenn der Ordner nicht vorhanden ist, wird er erstellt. Zu den unterstützten Makros gehören `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
 - `installRoot`: Gibt das Verzeichnis an, in dem CMake Installationsziele für den ausgewählten Generator erstellt. Unterstützte Makros sind `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
-- `cmakeCommandArgs`: Gibt zusätzliche Befehlszeilenoptionen an, die beim Aufruf zum Generieren des Caches an CMake übergeben werden.
+- `cmakeCommandArgs`: gibt zusätzliche Befehlszeilenoptionen an, die an cmake übergeben werden, wenn aufgerufen wird, um die Projektdateien zu generieren.
 - `cmakeToolchain`: Gibt die Toolkettendatei an. Diese wird über „-DCMAKE_TOOLCHAIN_FILE“ an CMake übergeben.
 - `buildCommandArgs`: Gibt native Buildoptionen an, die nach „--build --“ an CMake übergeben werden. Beispielsweise wird beim Übergeben von „-v“ mithilfe des Ninja-Generators erzwungen, dass Ninja Befehlszeilen ausgibt. Weitere Informationen zu Ninja-Befehlen finden Sie unter [Ninja-Befehlszeilenargumente](#ninja).
 - `ctestCommandArgs`: Gibt zusätzliche Befehlszeilenoptionen an, die beim Ausführen der Tests an CTest übergeben werden.
 - `codeAnalysisRuleset`: Gibt den Regelsatz an, der beim Ausführen der Codeanalyse verwendet werden soll. Dies kann ein vollständiger Pfad oder der Dateiname einer Regelsatzdatei sein, die von Visual Studio installiert wird.
+- `inheritEnvironments`: Gibt mindestens eine Compilerumgebung an, von der diese Konfiguration abhängt. Dabei kann es sich um jede benutzerdefinierte Umgebung oder eine der vordefinierten Umgebungen handeln. Weitere Informationen finden Sie unter [Umgebungen](#environments).
+- `installRoot`: Gibt das Verzeichnis an, in dem CMake Installationsziele für den ausgewählten Generator erstellt. Unterstützte Makros sind `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
 - `intelliSenseMode`: Gibt den Modus zum Berechnen von IntelliSense-Informationen an. Folgende stehen zur Auswahl:
- 
+
   - windows-msvc-x86
   - windows-msvc-x64
   - windows-msvc-arm
@@ -115,26 +119,28 @@ Wenn in der aktiven Konfiguration ein Visual Studio-Generator angegeben ist, wir
   - linux-gcc-x64
   - linux-gcc-arm
 
-- `cacheRoot`: Gibt den Pfad zu einem CMake-Cache an. Dieses Verzeichnis sollte eine vorhandene „CMakeCache.txt“-Datei enthalten.
+- `cacheRoot`: Gibt den Pfad zu einem CMake-Cache an. Dieses Verzeichnis sollte eine vorhandene Datei " *cmakecache. txt* " enthalten.
+- `name`: Benennt die Konfiguration.  Weitere Informationen zu den vordefinierten Konfigurationen finden Sie unter [cmake-vordefinierte Konfigurations Referenz](cmake-predefined-configuration-reference.md) .
+- `wslPath`: der Pfad zum Start Programm einer Instanz des Windows-Subsystems für Linux.
 
 ### <a name="additional-settings-for-cmake-linux-projects"></a>Zusätzliche Einstellungen für CMake-Projekte unter Linux. 
 
 - `remoteMachineName`: Gibt den Namen des Linux-Remotecomputers an, auf dem CMake, Builds und der Debugger gehostet werden. Verwenden Sie den Verbindungs-Manager zum Hinzufügen neuer Linux-Computer. Unterstützte Makros sind `${defaultRemoteMachineName}`.
 - `remoteCopySourcesOutputVerbosity`: Gibt den Ausführlichkeitsgrad des Quellkopiervorgangs zum Remotecomputer an. Zur Auswahl stehen „Normal“ (Regulär), „Verbose“ (Ausführlich) und „Diagnostic“ (Diagnostisch).
-- `remoteCopySourcesConcurrentCopies`: Gibt die Anzahl gleichzeitiger Kopien, die während der Synchronisierung der Quellen auf den Remotecomputer (nur Sftp) verwendet.
+- `remoteCopySourcesConcurrentCopies`: gibt die Anzahl der gleichzeitigen Kopien an, die während der Synchronisierung der Quellen zum Remote Computer verwendet werden (nur SFTP).
 - `remoteCopySourcesMethod`: Gibt die Methode zum Kopieren von Dateien auf den Remotecomputer an. Zur Auswahl stehen „rsync“ und „sftp“.
 - `remoteCMakeListsRoot`: Gibt das Verzeichnis auf dem Remotecomputer an, das das CMake-Projekt enthält. Unterstützte Makros sind `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
 - `remoteBuildRoot`: Gibt das Verzeichnis auf dem Remotecomputer an, in dem CMake Buildskripts für den ausgewählten Generator erstellt. Unterstützte Makros sind `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
 - `remoteInstallRoot`: Gibt das Verzeichnis auf dem Remotecomputer an, in dem CMake Installationsziele für den ausgewählten Generator erstellt. Unterstützte Makros sind `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}` und `${env.VARIABLE}`, wobei `VARIABLE` eine Umgebungsvariable ist, die auf System-, Benutzer- oder Sitzungsebene definiert wurde.
-- `remoteCopySources`: Ein `boolean`, der angibt, ob Visual Studio Quelldateien auf den Remotecomputer kopieren sollte. Der Standardwert ist "True". Legen Sie diesen Wert auf FALSE fest, wenn Sie die Dateisynchronisierung selbst verwalten.
-- `remoteCopyBuildOutput`: Ein `boolean`, der angibt, ob die Buildausgaben vom Remotesystem kopiert werden sollen.
+- `remoteCopySources`: ein `boolean`, der angibt, ob Visual Studio Quelldateien auf den Remote Computer kopieren soll. Der Standardwert ist "True". Legen Sie diesen Wert auf FALSE fest, wenn Sie die Dateisynchronisierung selbst verwalten.
+- `remoteCopyBuildOutput`: ein `boolean`, der angibt, ob die Buildausgaben vom Remote System kopiert werden sollen.
 - `rsyncCommandArgs`: Gibt zusätzliche Befehlszeilenoptionen an, die an „rsync“ übergeben werden.
-- `remoteCopySourcesExclusionList`: Ein `array`, das eine Liste mit Pfaden angibt, die beim Kopieren von Quelldateien ausgeschlossen werden sollen: Als Pfad kann der Name einer Datei/eines Verzeichnisses oder ein Pfad relativ zum Stammverzeichnis der Kopie angegeben werden. Die Platzhalter \\\"*\\\" und \\\"?\\\" können für einen Globmusterabgleich verwendet werden.
+- `remoteCopySourcesExclusionList`: eine `array`, die eine Liste von Pfaden angibt, die beim Kopieren von Quelldateien ausgeschlossen werden sollen: ein Pfad kann der Name einer Datei bzw. eines Verzeichnisses oder ein Pfad relativ zum Stamm der Kopie sein. Die Platzhalter \\\"*\\\" und \\\"?\\\" können für einen Globmusterabgleich verwendet werden.
 - `cmakeExecutable`: gibt den vollständigen Pfad zur ausführbaren CMake-Programmdatei an, einschließlich des Dateinamens und der Dateierweiterung.
-- `remotePreGenerateCommand`: Gibt den Befehl an, der vor der Ausführung von CMake zum Analysieren der Datei „CMakeLists.txt“ ausgeführt wird.
+- `remotePreGenerateCommand`: gibt den Befehl an, der vor der Ausführung von cmake ausgeführt werden soll, um die Datei " *CMakeLists. txt* " zu analysieren.
 - `remotePrebuildCommand`: Gibt den Befehl an, der vor der Erstellung auf dem Remotecomputer ausgeführt wird.
 - `remotePostbuildCommand`: Gibt den Befehl an, der nach der Erstellung auf dem Remotecomputer ausgeführt wird.
-- `variables`: enthält ein Name/Wert-Paar von CMake-Variablen, die als **-D** *_name_=_value_* an CMake übergeben werden. Wenn die Buildanweisungen Ihres CMake-Projekts das direkte Hinzufügen aller Variablen zur CMake-Cachedatei festlegen, wird empfohlen, diese stattdessen hier hinzuzufügen. Im folgenden Beispiel wird gezeigt, wie Sie die Name/Wert-Paare für das Toolset 14.14.26428 MSVC angeben können:
+- `variables`: enthält ein Name/Wert-Paar von CMake-Variablen, die als **-D** *_name_=_value_* an CMake übergeben werden. Wenn die buildanweisung des cmake-Projekts das Hinzufügen von Variablen direkt zur Datei " *cmakecache. txt* " angeben, empfiehlt es sich, diese stattdessen hinzuzufügen. Im folgenden Beispiel wird gezeigt, wie Sie die Name/Wert-Paare für das Toolset 14.14.26428 MSVC angeben können:
 
 ```json
 "variables": [
@@ -151,26 +157,38 @@ Wenn in der aktiven Konfiguration ein Visual Studio-Generator angegeben ist, wir
   ]
 ```
 
-Beachten Sie, dass standardmäßig vom Typ „STRING“ ausgegangen wird, wenn Sie den `"type"` nicht definieren.
+Beachten Sie Folgendes: Wenn Sie die `"type"`nicht definieren, wird der `"STRING"` Typ standardmäßig angenommen.
 
-## <a name="environment-variables"></a>Umgebungsvariablen
+## <a name="environments"></a>Umgebungen
 
-`CMakeSettings.json` unterstützt ebenfalls die Verwendung von Umgebungsvariablen in allen zuvor erwähnten Eigenschaften. Die Syntax zum Erweitern der Umgebungsvariable %FOO% ist `${env.FOO}`.
+Eine *Umgebung* kapselt die Umgebungsvariablen, die in dem Prozess festgelegt werden, der von Visual Studio zum Aufrufen von cmake. exe verwendet wird. Bei MSVC-Projekten sind die Variablen die Variablen, die in einer [Developer-Eingabeaufforderung](building-on-the-command-line.md) für eine bestimmte Plattform festgelegt sind. Beispielsweise ist die `msvc_x64_x64` Umgebung identisch mit der Ausführung des **Developer-Eingabeaufforderung für vs 2017** oder **Developer-Eingabeaufforderung für vs 2019** mit den Argumenten **-arch = amd64-host_arch = amd64** . Sie können die `env.{<variable_name>}`-Syntax in *cmakesettings. JSON* verwenden, um auf die einzelnen Umgebungsvariablen zu verweisen, z. b. zum Erstellen von Pfaden zu Ordnern.  Die folgenden vordefinierten Umgebungen werden bereitgestellt:
 
-Sie haben in dieser Datei ebenfalls Zugriff auf integrierte Makros:
+- linux_arm: richten Sie eine Remote Verbindung mit Arm Linux ein.
+- linux_x64: Ziel x64 Linux Remote.
+- linux_x86: als Zielversion x86 Linux Remote.
+- msvc_arm: Arm-Zielfenster mit dem MSVC-Compiler.
+- msvc_arm_x64: Arm-Zielfenster mit dem 64-Bit-MSVC-Compiler.
+- msvc_arm64: Ziel arm64 Fenster mit dem MSVC-Compiler.
+- msvc_arm64_x64: Ziel arm64 Fenster mit dem 64-Bit-MSVC-Compiler.
+- msvc_x64: Ziel x64-Fenster mit dem MSVC-Compiler.
+- msvc_x64_x64: Ziel x64-Fenster mit dem 64-Bit-MSVC-Compiler.
+- msvc_x86: Ziel x86-Fenster mit dem MSVC-Compiler.
+- msvc_x86_x64: Ziel x86-Fenster mit dem 64-Bit-MSVC-Compiler.
 
-- `${workspaceRoot}`: stellt den vollständigen Pfad des Arbeitsbereichsordners bereit
-- `${workspaceHash}`: Hash des Speicherorts für den Arbeitsbereich; nützlich für das Erstellen eines eindeutigen Bezeichners für den aktuellen Arbeitsbereich (z.B. für die Verwendung in Ordnerpfaden)
-- `${projectFile}`: der vollständige Pfad der CMakeLists.txt-Stammdatei
-- `${projectDir}`: der vollständige Pfad des Ordners der CMakeLists.txt-Stammdatei
-- `${thisFile}`: der vollständige Pfad der Datei `CMakeSettings.json`
-- `${name}`: der Name der Konfiguration
-- `${generator}`: der Name des CMake-Generators, der in dieser Konfiguration verwendet wurde
+### <a name="accessing-environment-variables-from-cmakeliststxt"></a>Zugreifen auf Umgebungsvariablen aus "CMakeLists. txt"
 
+Aus einer CMakeLists. txt-Datei wird auf alle Umgebungsvariablen durch die Syntax `$ENV{variable_name}`verwiesen. Um die verfügbaren Variablen für eine Umgebung anzuzeigen, öffnen Sie die entsprechende Eingabeaufforderung, und geben Sie `SET`ein. Einige der Informationen in Umgebungsvariablen sind auch über cmake-System-Introspection-Variablen verfügbar, aber es ist möglicherweise bequemer, die Umgebungsvariable zu verwenden. Beispielsweise können die MSVC-Compilerversion oder Windows SDK Version problemlos über die Umgebungsvariablen abgerufen werden.
 
 ### <a name="custom-environment-variables"></a>Benutzerdefinierte Umgebungsvariablen
 
-In `CMakeSettings.json` können Sie benutzerdefinierte Umgebungsvariablen global oder pro Konfiguration in der Eigenschaft **environments** definieren. In folgendem Beispiel wird eine globale Variable (**BuildDir**) definiert, die in den Konfigurationen „x86-Debug“ und „x64-Debug“ geerbt wird. Jede Konfiguration verwendet die Variable, um den Wert für die Eigenschaft **buildRoot** der Konfiguration anzugeben. Beachten Sie ebenfalls, wie jede Konfiguration die Eigenschaft **inheritEnvironments** verwendet, um eine Variable anzugeben, die nur für diese Konfiguration gilt.
+In `CMakeSettings.json`können Sie benutzerdefinierte Umgebungsvariablen Global oder pro Konfiguration im `environments` Array definieren. Eine benutzerdefinierte Umgebung ist eine bequeme Möglichkeit, einen Satz von Eigenschaften zu gruppieren, die Sie anstelle einer vordefinierten Umgebung verwenden können, oder um eine vordefinierte Umgebung zu erweitern oder zu ändern. Jedes Element im `environments`-Array besteht aus Folgendem:
+
+- `namespace`: Benennt die Umgebung, sodass durch die Form `namespace.variable` über eine Konfiguration auf deren Variablen verwiesen werden kann. Das Standard Umgebungs Objekt wird `env` aufgerufen und mit bestimmten System Umgebungsvariablen, einschließlich `%USERPROFILE%`, aufgefüllt.
+- `environment`: Identifiziert diese Gruppe von Variablen eindeutig. Ermöglicht der Gruppe, später in einem `inheritEnvironments`-Eintrag geerbt zu werden.
+- `groupPriority`: eine ganze Zahl, die die Priorität dieser Variablen angibt, wenn diese ausgewertet werden. Elemente mit höherer Nummer werden zuerst ausgewertet.
+- `inheritEnvironments`: ein Array von-Werten, die den Satz von Umgebungen angeben, die von dieser Gruppe geerbt werden. Durch dieses Feature können Sie Standardumgebungen vererben und benutzerdefinierte Umgebungsvariablen erstellen, die bei der Ausführung an „CMake.exe“ übergeben werden.
+
+In folgendem Beispiel wird eine globale Variable (**BuildDir**) definiert, die in den Konfigurationen „x86-Debug“ und „x64-Debug“ geerbt wird. Jede Konfiguration verwendet die Variable, um den Wert für die Eigenschaft **buildRoot** der Konfiguration anzugeben. Beachten Sie ebenfalls, wie jede Konfiguration die Eigenschaft **inheritEnvironments** verwendet, um eine Variable anzugeben, die nur für diese Konfiguration gilt.
 
 ```json
 {
@@ -246,6 +264,20 @@ Im nächsten Beispiel definiert die x86-Debug-Konfiguration einen eigenen Wert f
 }
 ```
 
+## <a name="macros"></a>Makros
+
+Die folgenden Makros können in " *cmakesettings. JSON*" verwendet werden:
+
+- `${workspaceRoot}` – der vollständige Pfad des Arbeitsbereichs Ordners.
+- `${workspaceHash}`: Hash des Speicherorts für den Arbeitsbereich; nützlich für das Erstellen eines eindeutigen Bezeichners für den aktuellen Arbeitsbereich (z.B. für die Verwendung in Ordnerpfaden)
+- `${projectFile}`: der vollständige Pfad der CMakeLists.txt-Stammdatei
+- `${projectDir}`: der vollständige Pfad des Ordners der CMakeLists.txt-Stammdatei
+- `${thisFile}`: der vollständige Pfad der Datei `CMakeSettings.json`
+- `${name}`: der Name der Konfiguration
+- `${generator}`: der Name des CMake-Generators, der in dieser Konfiguration verwendet wurde
+
+Alle Verweise auf Makros und Umgebungsvariablen in " *cmakesettings. JSON* " werden erweitert, bevor Sie an die Befehlszeile "cmake. exe" übergeben werden.
+
 ## <a name="ninja"></a> Ninja-Befehlszeilenargumente
 
 Wenn keine Ziele festgelegt sind, wird das Standardziel erstellt.
@@ -270,6 +302,4 @@ usage: ninja [options] [targets...]
 |   -t TOOL  | Ausführen eines Zusatztools (verwenden Sie „-t list“, um zusätzliche Tools aufzulisten). Beendet Optionen auf oberster Ebene; weitere Flags werden an das Tool übergeben.|
 |   -w FLAG  | Anpassen von Warnungen (verwenden Sie „-w list“, um Warnungen aufzulisten)|
 
-
-
-
+::: moniker-end

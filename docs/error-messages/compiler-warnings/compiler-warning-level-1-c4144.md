@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4144
 ms.assetid: a37b445d-dbc6-43b4-8d95-ffd0e4225464
-ms.openlocfilehash: b2406357baf70e45566f2d2f25839d151bac4186
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e780c2a4f83106bfa298ef5320ddc85daf2d44c4
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352948"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624979"
 ---
 # <a name="compiler-warning-level-1-c4144"></a>Compilerwarnung (Stufe 1) C4144
 
-"Ausdruck": Relationaler Ausdruck als Schalterausdruck
+' Ausdruck ': relationaler Ausdruck als Switch-Ausdruck
 
-Die angegebenen relationalen Ausdrucks wurde als steuernder Ausdruck verwendet eine [wechseln](../../cpp/switch-statement-cpp.md) Anweisung. Die zugeordnete Case-Anweisungen werden boolesche Werte angeboten. Im folgende Beispiel wird die C4144 generiert:
+Der angegebene relationale Ausdruck wurde als Steuerelement Ausdruck einer [Switch](../../cpp/switch-statement-cpp.md) -Anweisung verwendet. Den zugeordneten Case-Anweisungen werden boolesche Werte geboten. Im folgenden Beispiel wird C4144 generiert:
 
-```
+```cpp
 // C4144.cpp
 // compile with: /W1
 int main()

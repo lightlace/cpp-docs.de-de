@@ -3,12 +3,12 @@ title: Willkommen zurück bei C++ (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 5b2868d20c047eef7762256ff8c9bf43de7a0de0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f59395001722244cb407ef07ed8a301f08df85b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209527"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624761"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Willkommen zurück bei C++ (Modern C++)
 
@@ -24,19 +24,19 @@ Modernes C++ betont:
 
 - Intelligente Zeiger anstelle von unformatierten Zeigern.
 
-- `std::string` und `std::wstring` Typen (finden Sie unter [ \<Zeichenfolge >](../standard-library/string.md)) anstelle von unformatierten `char[]` Arrays.
+- `std::string` und `std::wstring` Typen (siehe [\<Zeichenfolge >](../standard-library/string.md)) anstelle von unformatierten `char[]` Arrays.
 
-- [C++-Standardbibliothek](../standard-library/cpp-standard-library-header-files.md) -Container wie `vector`, `list`, und `map` anstelle von unformatierten Arrays oder benutzerdefinierten Containern. Finden Sie unter [ \<Vektor >](../standard-library/vector.md), [ \<Liste >](../standard-library/list.md), und [ \<Map >](../standard-library/map.md).
+- Standard Bibliotheks Container wie `vector`, `list`und `map` anstelle von unformatierten Arrays oder benutzerdefinierten Containern. [ C++ ](../standard-library/cpp-standard-library-header-files.md) Weitere Informationen finden Sie unter [\<Vector >](../standard-library/vector.md), [\<List >](../standard-library/list.md)und [\<Map >](../standard-library/map.md).
 
-- C++-Standardbibliothek [Algorithmen](../standard-library/algorithm.md) anstelle von manuell codierten solche.
+- C++Standard Bibliotheks [Algorithmen](../standard-library/algorithm.md) anstelle von manuell codierten.
 
 - Ausnahmen zum Melden und Behandeln von Fehlerzuständen.
 
-- Sperrenfreie Kommunikation zwischen Threads mithilfe C++-Standardbibliothek `std::atomic<>` (finden Sie unter [ \<atomic >](../standard-library/atomic.md)) anstelle von anderen Mechanismen für die Kommunikation zwischen Threads.
+- Sperrenfreie Thread übergreifende Kommunikation mit C++ Standard Bibliotheks `std::atomic<>` (siehe [\<Atomic >](../standard-library/atomic.md)) anstelle anderer Thread übergreifender Kommunikationsmechanismen.
 
-- Inline [Lambda-Funktionen](../cpp/lambda-expressions-in-cpp.md) anstelle von kleinen separat implementierten Funktionen.
+- Inline- [Lambda-Funktionen](../cpp/lambda-expressions-in-cpp.md) anstelle von kleinen Funktionen, die separat implementiert werden.
 
-- Bereichsbasierte for-Schleifen robustere Schleifen schreiben, die Arbeit mit Arrays, C++-Standardbibliothek-Containern und Windows-Runtime-Auflistungen in der Form `for ( for-range-declaration : expression )`. Dies ist ein Bestandteil der Kernsprachunterstützung. Weitere Informationen finden Sie unter [bereichsbasiert für Anweisung (C++)](../cpp/range-based-for-statement-cpp.md).
+- Bereichs basiert für Schleifen zum Schreiben stabiler Schleifen, die mit Arrays, C++ Standard Bibliotheks Containern und Windows-Runtime Auflistungen in der Form `for ( for-range-declaration : expression )`funktionieren. Dies ist ein Bestandteil der Kernsprachunterstützung. Weitere Informationen finden Sie unter [Range-based for-AnweisungC++()](../cpp/range-based-for-statement-cpp.md).
 
 Die Programmiersprache C++ selbst hat sich auch entwickelt. Vergleichen Sie die folgenden Codeausschnitte. In diesem Ausschnitt wird ursprünglicher C++-Code verwendet:
 
@@ -91,45 +91,45 @@ void f()
 }
 ```
 
-In modernem C++ ist die Verwendung der Ausnahmebehandlung "neu/löschen" oder "explizit" nicht erforderlich, da Sie statt dessen intelligente Zeiger nutzen können. Bei Verwendung der **automatisch** typableitung und [Lambda-Funktion](../cpp/lambda-expressions-in-cpp.md), Sie können Code schneller und schreiben. soll sie festgezogen und ihn besser verstehen. Und eine bereichsbasierte **für** Schleife ist sauberer, einfacher zu verwenden und weniger anfällig für unbeabsichtigte Fehler als eine C-Stil **für** Schleife. Sie können Bausteine mit minimalen Codezeilen verbinden, um die App zu schreiben. Außerdem können Sie diesen Code ausnahme- und arbeitsspeichersicher erstellen und haben keinen Zuordnungs-/Freigabe- oder Fehlercodes zu verarbeiten.
+In modernem C++ ist die Verwendung der Ausnahmebehandlung "neu/löschen" oder "explizit" nicht erforderlich, da Sie statt dessen intelligente Zeiger nutzen können. Wenn Sie die **Automatische** Typableitung und die [Lambda-Funktion](../cpp/lambda-expressions-in-cpp.md)verwenden, können Sie Code schneller schreiben, ihn straffen und besser verstehen. Und eine Bereichs basierte **for** -Schleife ist sauberer, einfacher zu verwenden und weniger anfällig für unbeabsichtigte Fehler als eine **for** -Schleife im C-Stil. Sie können Bausteine mit minimalen Codezeilen verbinden, um die App zu schreiben. Außerdem können Sie diesen Code ausnahme- und arbeitsspeichersicher erstellen und haben keinen Zuordnungs-/Freigabe- oder Fehlercodes zu verarbeiten.
 
-Modernes C++ enthält zwei Arten von Polymorphie: Kompilierzeit, durch Vorlagen, und Laufzeit, durch Vererbung und Virtualisierung. Sie können die beiden Polymorphiearten mit großer Wirkungen kombinieren. Die C++-Standardbibliothek-Vorlage `shared_ptr` interne virtuelle Methoden zum Erreichen der anscheinend mühelosen typlöschung verwendet. Doch überbeanspruchen Sie die Virtualisierung für Polymorphie nicht, wenn eine Vorlage die bessere Wahl ist. Vorlagen können sehr leistungsstark sein.
+Modernes C++ enthält zwei Arten von Polymorphie: Kompilierzeit, durch Vorlagen, und Laufzeit, durch Vererbung und Virtualisierung. Sie können die beiden Polymorphiearten mit großer Wirkungen kombinieren. Die C++ Standard Bibliotheks Vorlage `shared_ptr` verwendet interne virtuelle Methoden, um die scheinbar mühelose typlöschung durchzuführen. Doch überbeanspruchen Sie die Virtualisierung für Polymorphie nicht, wenn eine Vorlage die bessere Wahl ist. Vorlagen können sehr leistungsstark sein.
 
 Wenn Sie von einer anderen Sprache her zu C++ kommen, insbesondere bei einer verwalteten Sprache mit größtenteils Verweistypen und nur wenigen Werttypen, wissen Sie, dass C++-Klassen standardmäßig Werttypen sind. Sie können sie allerdings als Verweistypen angeben, um polymorphes Verhalten zu ermöglichen, das objektorientierte Programmierung unterstützt. Eine hilfreiche Sichtweise: Bei Werttypen geht es mehr um Arbeitsspeicher und Layoutsteuerung, bei Verweistypen geht es dagegen mehr um Basisklassen und virtuelle Funktionen zur Unterstützung von Polymorphie. Standardmäßig können Werttypen kopiert werden. Sie verfügen jeweils über einen Kopierkonstruktor und ein Kopierzuweisungsoperator. Bei der Angabe eines Verweistyps darf die Klasse nicht kopiert werden können. Deaktivieren Sie den Kopierkonstruktor und den Kopierzuweisungsoperator und verwenden Sie einen virtuellen Destruktor, der Polymorphie unterstützt. Bei Werttypen geht es außerdem um die Inhalte, von denen, wenn sie kopiert werden, zwei unabhängige Werte zugewiesen werden, die getrennt geändert werden können. Bei Referenztypen geht es allerdings um Identität (welche Art von Objekt es ist). Aus diesem Grund werden sie manchmal als polymorphe Typen bezeichnet.
 
 C++ erlebt eine Renaissance, da die Leistungsfähigkeit wieder über Allem steht. Sprachen wie Java und C# sind gut, wenn Programmiererproduktivität wichtig ist, aber ihren Einschränkungen werden deutlich, wenn Leistungsfähigkeit entscheidend ist. Bei Effizienz und hohe Leistungsfähigkeit, besonders auf Geräten, deren Hardware eingeschränkt ist, ist das moderne C++ unschlagbar.
 
-Es ist nicht nur eine moderne Sprache, auch die Entwicklungstools sind modern. Visual Studio können alle Teile des Entwicklungszyklus, robuster und effizienter. Das schließt Tools der Anwendungslebenszyklus-Verwaltung (ALM), IDE-Erweiterungen wie IntelliSense, benutzerfreundliche Toolmechanismen wie XAML und das Erstellen, Debuggen sowie viele weitere Tools ein.
+Es ist nicht nur eine moderne Sprache, auch die Entwicklungstools sind modern. In Visual Studio werden alle Teile des Entwicklungszyklen robust und effizient. Das schließt Tools der Anwendungslebenszyklus-Verwaltung (ALM), IDE-Erweiterungen wie IntelliSense, benutzerfreundliche Toolmechanismen wie XAML und das Erstellen, Debuggen sowie viele weitere Tools ein.
 
 Die Artikel in diesem Teil der Dokumentation bieten übergeordnete Richtlinien und bewährte Methoden für die wichtigsten Funktionen und Techniken zum Schreiben moderner C++-Programmen.
 
-- [C++-Typsystem](../cpp/cpp-type-system-modern-cpp.md)
+- [C++Typsystem](../cpp/cpp-type-system-modern-cpp.md)
 
 - [Einheitliche Initialisierung und Delegierung von Konstruktoren](../cpp/uniform-initialization-and-delegating-constructors.md)
 
-- [Objektlebenszeit und Ressourcenverwaltung](../cpp/object-lifetime-and-resource-management-modern-cpp.md)
+- [Objekt Lebensdauer und Ressourcenverwaltung](../cpp/object-lifetime-and-resource-management-modern-cpp.md)
 
 - [Objekteigene Ressourcen (RAII)](../cpp/objects-own-resources-raii.md)
 
 - [Intelligente Zeiger](../cpp/smart-pointers-modern-cpp.md)
 
-- [Pimpl für Kompilierzeitkapselung](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)
+- [Pimpl für Kompilierzeit Kapselung](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)
 
 - [Container](../cpp/containers-modern-cpp.md)
 
 - [Algorithmen](../cpp/algorithms-modern-cpp.md)
 
-- [Zeichenfolgen- und e/a-Formatierung (Modern C++)](../cpp/string-and-i-o-formatting-modern-cpp.md)
+- [Zeichen folgen-und e/a- C++Formatierung (Modern)](../cpp/string-and-i-o-formatting-modern-cpp.md)
 
-- [Fehler- und Ausnahmebehandlung](../cpp/errors-and-exception-handling-modern-cpp.md)
+- [Fehler-und Ausnahmebehandlung](../cpp/errors-and-exception-handling-modern-cpp.md)
 
-- [Portabilität an ABI-Grenzen](../cpp/portability-at-abi-boundaries-modern-cpp.md)
+- [Portabilität an Abi-Grenzen](../cpp/portability-at-abi-boundaries-modern-cpp.md)
 
-Weitere Informationen finden Sie im Artikel Stack Overflow [sind die C++-Idiome in C ++ 11 veraltet](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11).
+Weitere Informationen finden Sie im Stack Overflow Artikel, [in C++ dem Ausdrücke in c++ 11 veraltet ist](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11).
 
 ## <a name="see-also"></a>Siehe auch
 
 [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
 [Lambda-Ausdrücke](../cpp/lambda-expressions-in-cpp.md)<br/>
 [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)<br/>
-[Visual C++-Sprachkonformität](../overview/visual-cpp-language-conformance.md)
+[Microsoft C++ -sprach Konformitäts Tabelle](../overview/visual-cpp-language-conformance.md)

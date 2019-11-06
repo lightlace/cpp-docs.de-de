@@ -34,12 +34,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: f97c07ed01ae629fe3eb61346c6c0fcd8fa803f0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8eeb6a0f43827578c5d5ba900c35a3ac30f4ae7c
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958055"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625841"
 ---
 # <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s, _wsplitpath_s
 
@@ -96,19 +96,19 @@ Vollständiger Pfad
 *Antrie*<br/>
 Laufwerk Buchstabe, gefolgt von einem Doppelpunkt ( **:** ). Sie können **null** für diesen Parameter übergeben, wenn Sie den Laufwerk Buchstaben nicht benötigen.
 
-*driveNumberOfElements*<br/>
+*drivenverberofelements*<br/>
 Die Größe des *Laufwerk* Puffers in Einzel Byte-oder breit Zeichen. Wenn das *Laufwerk* NULL ist, muss dieser Wert 0 ( **null**) sein.
 
-*dir*<br/>
+*has*<br/>
 Verzeichnispfad, einschl. nachstehender Schrägstrich. Schrägstriche ( **/** ), umgekehrte Schrägstriche ( **\\** ) oder beides können verwendet werden. Sie können **null** für diesen Parameter übergeben, wenn Sie den Verzeichnispfad nicht benötigen.
 
-*dirNumberOfElements*<br/>
+*dirnumosterements*<br/>
 Die Größe des *dir* -Puffers in Einzel Byte-oder breit Zeichen. Wenn *dir* NULL ist, muss dieser Wert 0 ( **null**) sein.
 
 *fname*<br/>
 Basisdateiname (ohne Erweiterung). Sie können **null** für diesen Parameter übergeben, wenn Sie den Dateinamen nicht benötigen.
 
-*nameNumberOfElements*<br/>
+*namenumberofelements*<br/>
 Die Größe des *bName* -Puffers in Einzel Byte-oder breit Zeichen. Wenn der Name von " *f* " **null**ist, muss dieser Wert "0" lauten.
 
 *Antrags*<br/>
@@ -153,7 +153,7 @@ Jede Komponente des vollständigen Pfads wird in einem separaten Puffer gespeich
 
 In der folgenden Tabelle werden die Werte der Manifestkonstanten aufgelistet.
 
-|Name|Wert|
+|-Name|Wert|
 |----------|-----------|
 |_MAX_DRIVE|3|
 |_MAX_DIR|256|
@@ -162,9 +162,9 @@ In der folgenden Tabelle werden die Werte der Manifestkonstanten aufgelistet.
 
 Wenn der vollständige Pfad keine Komponente (z. b. ein Dateiname) enthält, weist **_splitpath_s** dem entsprechenden Puffer eine leere Zeichenfolge zu.
 
-Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen vorhanden) vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen vorhanden) vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).
 
-Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Die Debug-Bibliotheksversionen dieser Funktionen füllen zunächst den Puffer mit "0xFE" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -173,7 +173,7 @@ Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf
 |**_splitpath_s**|\<stdlib.h>|
 |**_wsplitpath_s**|\<stdlib.h> oder \<wchar.h>|
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Zusätzliche Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

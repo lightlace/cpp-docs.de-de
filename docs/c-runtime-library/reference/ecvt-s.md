@@ -28,12 +28,12 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: c50200d16a5e542c247d1c85f8c104381af4a883
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a37508c293ee72934a8580f822878f27031b864b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937714"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624388"
 ---
 # <a name="_ecvt_s"></a>_ecvt_s
 
@@ -109,9 +109,9 @@ Ein Puffer der Länge **_CVTBUFSIZE** ist für alle Gleit Komma Werte ausreichen
 
 Der Unterschied zwischen **_ecvt_s** und **_fcvt_s** liegt in der Interpretation des *_Count* -Parameters. **_ecvt_s** interpretiert *_Count* als die Gesamtanzahl der Ziffern in der Ausgabe Zeichenfolge, während **_fcvt_s** *_Count* als Anzahl der Ziffern nach dem Dezimaltrennzeichen interpretiert.
 
-Die Verwendung dieser Funktion in C++ wird durch eine Vorlagenüberladung vereinfacht. Eine Überladung kann automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+Die Verwendung dieser Funktion in C++ wird durch eine Vorlagenüberladung vereinfacht. Eine Überladung kann automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).
 
-Die Debugversion dieser Funktion füllt zunächst den Puffer mit „0xFD“ auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Die Debugversion dieser Funktion füllt den Puffer zuerst mit "0xFE" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -119,7 +119,7 @@ Die Debugversion dieser Funktion füllt zunächst den Puffer mit „0xFD“ auf.
 |--------------|---------------------|---------------------|
 |**_ecvt_s**|\<stdlib.h>|\<errno.h>|
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Weitere Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

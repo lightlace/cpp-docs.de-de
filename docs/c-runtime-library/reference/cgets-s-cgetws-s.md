@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: 2039fc32cecb768c3c3fbc239446abedeb48f188
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: be2acefcf907ca9b908fa7f439b6e245a5e103d8
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939261"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624771"
 ---
 # <a name="_cgets_s-_cgetws_s"></a>_cgets_s, _cgetws_s
 
@@ -89,11 +89,11 @@ Der Rückgabewert ist im Erfolgsfall „0“, andernfalls wird ein Fehlercode au
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|*buffer*|*numberOfElements*|*pSizeRead*|Zurück|Inhalt des *Puffers*|
+|*buffer*|*numberOfElements*|*pSizeRead*|Return|Inhalt des *Puffers*|
 |--------------|------------------------|-----------------|------------|--------------------------|
 |**NULL**|any|any|**EINVAL**|n/v|
-|Nicht **null**|Null|any|**EINVAL**|nicht geändert|
-|Nicht **null**|any|**NULL**|**EINVAL**|Zeichenfolge mit der Länge 0|
+|nicht **null**|Null|any|**EINVAL**|nicht geändert|
+|nicht **null**|any|**NULL**|**EINVAL**|Zeichenfolge mit der Länge 0|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -101,7 +101,9 @@ Der Rückgabewert ist im Erfolgsfall „0“, andernfalls wird ein Fehlercode au
 
 Wenn während des Vorgangs oder im Zuge der Validierung der Parameter ein Fehler auftritt, wird der Handler für ungültige Parameter aufgerufen, wie dies unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird. Wenn die weitere Ausführung zugelassen wird, wird **errno** auf **EINVAL** festgelegt, und **EINVAL** wird zurückgegeben.
 
-In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht. Die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein „size“-Argument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht. Die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein „size“-Argument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).
+
+Die Debug-Bibliotheksversionen dieser Funktionen füllen zunächst den Puffer mit "0xFE" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -116,7 +118,7 @@ In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinf
 |**_cgets_s**|\<conio.h>|
 |**_cgetws_s**|\<conio.h> oder \<wchar.h>|
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Weitere Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Siehe auch
 

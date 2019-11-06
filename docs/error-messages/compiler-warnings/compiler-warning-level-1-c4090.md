@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4090
 ms.assetid: baad469d-23d4-45aa-ad9c-305b32d61e9a
-ms.openlocfilehash: b47d0bfbb6eab24fbe811d3e4f79b6bd86b3bb11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88ed48e9bf7057c55ee4004ca1bb1eb18cd4be51
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406469"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626162"
 ---
 # <a name="compiler-warning-level-1-c4090"></a>Compilerwarnung (Stufe 1) C4090
 
-'Operation': unterschiedliche 'Modifizierer'-Qualifizierer
+"Operation": unterschiedliche Modifizierer-Qualifizierer
 
-Mit einem angegebenen Modifizierer, die verhindert, dass es unbemerkt vom Compiler geändert wird, wird eine Variable in einem Vorgang definiert. Der Ausdruck wird ohne Änderungen kompiliert.
+Eine Variable, die in einem Vorgang verwendet wird, wird mit einem angegebenen Modifizierer definiert, der verhindert, dass Sie ohne Erkennung durch den Compiler geändert wird. Der Ausdruck wird ohne Änderung kompiliert.
 
-Diese Warnung kann verursacht werden, wenn ein Zeiger auf eine **const** oder `volatile` Arbeitselement zugewiesen wird, auf einen Zeiger, der nicht deklariert, wie das Verweisen auf **const** oder `volatile`.
+Diese Warnung kann darauf zurückzuführen sein, dass ein Zeiger **auf eine Konstante oder ein `volatile`** Element einem Zeiger zugewiesen wird, der nicht als **Verweis auf "** Konstante" oder "`volatile`" deklariert wurde.
 
-Diese Warnung wird für die C-Programmen ausgegeben. In einem C++ -Programm ist, gibt der Compiler einen Fehler: [C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md).
+Diese Warnung wird für C-Programme ausgegeben. In einem C++ Programm gibt der Compiler einen Fehler aus: [C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md).
 
-Im folgende Beispiel wird die C4090 generiert:
+Im folgenden Beispiel wird C4090 generiert:
 
-```
+```c
 // C4090.c
 // compile with: /W1
 int *volatile *p;

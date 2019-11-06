@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4103
 ms.assetid: 9021b514-375e-4d62-b261-ccb06f299e8e
-ms.openlocfilehash: 15d7403d461467e33b7e89957821a311179d33a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 456e7d393eb751e99c1969619ccfdcc649193c75
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300284"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627063"
 ---
 # <a name="compiler-warning-level-1-c4103"></a>Compilerwarnung (Stufe 1) C4103
 
-'Dateiname': Ausrichtung wurde nach dem einschließen des Headers, möglicherweise aufgrund fehlender #pragma pack(pop)
+' Dateiname ': die Ausrichtung wurde nach dem einschließen des Headers geändert, möglicherweise fehlt #Pragma Pack (Pop).
 
-Packen von Metriken, wirkt sich auf das Layout der Klassen aus, und häufig, wenn Änderungen in Headerdateien zu packen, sein können.
+Das Verpacken wirkt sich auf das Layout von Klassen aus, und wenn Änderungen über Header Dateien hinweg verpackt werden, können Probleme auftreten.
 
-Verwenden Sie #pragma [Pack](../../preprocessor/pack.md)(pop) vor dem Beenden der Headerdatei, um diese Warnung zu beheben.
+Verwenden Sie #Pragma [Pack](../../preprocessor/pack.md)(Pop), bevor Sie die Header Datei beenden, um diese Warnung zu beheben.
 
-Im folgende Beispiel wird die C4103 generiert:
+Im folgenden Beispiel wird C4103 generiert:
 
-```
+```cpp
 // C4103.h
 #pragma pack(push, 4)
 
@@ -35,7 +35,7 @@ Im folgende Beispiel wird die C4103 generiert:
 
 und anschließend
 
-```
+```cpp
 // C4103.cpp
 // compile with: /LD /W1
 #include "c4103.h"   // C4103

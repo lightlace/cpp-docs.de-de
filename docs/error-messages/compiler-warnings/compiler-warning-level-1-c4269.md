@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4269
 ms.assetid: 96c97bbc-068a-4b65-8cd8-4ed5dca04c15
-ms.openlocfilehash: 9a7f42b2dd65644d3f2abec58236a0b93cc6f635
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 84a0d4c541f67742d68c7f08e0dda52ccd350d04
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207232"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626714"
 ---
 # <a name="compiler-warning-level-1-c4269"></a>Compilerwarnung (Stufe 1) C4269
 
-'Bezeichner': 'const' Automatische Daten, die mit dem vom Compiler generierten Standardkonstruktor initialisiert, verursachen unzuverlässige Ergebnisse
+"Bezeichner": "Konstante" automatische Daten, die mit dem vom Compiler generierten Standardkonstruktor initialisiert werden, erzeugen unzuverlässige Ergebnisse
 
-Ein **const** automatische Instanz von einer nicht trivialen Klasse mit einem vom Compiler generierten Standardkonstruktor initialisiert wird.
+Eine **Konstante automatische Instanz einer nicht** trivialen Klasse wird mit einem vom Compiler generierten Standardkonstruktor initialisiert.
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // C4269.cpp
 // compile with: /c /LD /W1
 class X {
@@ -34,4 +34,4 @@ void g() {
 };
 ```
 
-Da diese Instanz der Klasse, auf dem Stapel, der anfängliche Wert generiert wird `m_data` kann alles sein. Darüber hinaus ist eine **const** -Instanz, den Wert der `m_data` nie geändert werden kann.
+Da diese Instanz der-Klasse auf dem Stapel generiert wird, kann der Anfangswert von `m_data` beliebiger Wert sein. Da es sich **um eine Konstante** Instanz handelt, kann der Wert von `m_data` nie geändert werden.

@@ -1,22 +1,22 @@
 ---
-title: Ändern von WINVER und _WIN32_WINNT
+title: Aktualisieren von WINVER und _WIN32_WINNT
 ms.date: 09/04/2017
 helpviewer_keywords:
 - WINVER in an upgraded Visual Studio C++ project
 - _WIN32_WINNT in an upgraded Visual Studio C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-ms.openlocfilehash: a83e92444e7010e4d3b65153b2e60e1c5d952cef
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 0cfdb3d065a85bd02ef21de9c4c5282cf54fcb2a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511601"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627254"
 ---
-# <a name="modifying-winver-and-_win32_winnt"></a>Ändern von WINVER und _WIN32_WINNT
+# <a name="update-winver-and-_win32_winnt"></a>Aktualisieren von WINVER und _WIN32_WINNT
 
 Visual C++ unterstützt nicht mehr die Zielversionen Windows 95, Windows 98, Windows ME, Windows NT oder Windows 2000. Wenn das **WINVER** - oder **_WIN32_WINNT** -Makro einer dieser Versionen von Windows zugewiesen ist, müssen Sie die Makros ändern. Wenn Sie ein Projekt aktualisieren, das mit einer früheren Version von Visual C++ erstellt wurde, werden möglicherweise Kompilierungsfehler im Zusammenhang mit dem **WINVER** - oder **_WIN32_WINNT** -Makro angezeigt, wenn dieses einer Version von Windows zugewiesen ist, die nicht mehr unterstützt wird.
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 Um die Makros in einer Headerdatei (z. B. targetver.h, die enthalten ist, wenn Sie ein Projekt für Windowns erstellen) zu ändern, fügen Sie die folgenden Zeilen hinzu.
 
@@ -51,7 +51,7 @@ Wenn nicht alle diese Windows-Versionen in der Kopie von SDKDDKVer.h angezeigt w
 > [!NOTE]
 > Es ist nicht gewährleistet, dass die Werte auf jeden Fall funktionieren, wenn Sie interne MFC-Header in die Anwendung aufnehmen.
 
-Dieses Makro kann auch mithilfe der `/D`-Compileroption definiert werden. Weitere Informationen finden Sie unter [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md).
+Dieses Makro kann auch mithilfe der `/D`-Compileroption definiert werden. Weitere Informationen finden Sie unter [/D (Präprozessordefinitionen)](../build/reference/d-preprocessor-definitions.md).
 
 Weitere Informationen zur Bedeutung dieser Makros finden Sie unter [Verwenden der Windows-Header](/windows/win32/WinProg/using-the-windows-headers).
 

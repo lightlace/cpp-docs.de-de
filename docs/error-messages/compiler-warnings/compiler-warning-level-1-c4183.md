@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4183
 ms.assetid: dc48312c-4b34-44dd-80ff-eb5f11d5ca47
-ms.openlocfilehash: 0d947a0f6d777a5ed3191d6d232a604028be2003
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be79c664f09f80d8f0c8779babf236dccac90ea8
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391620"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626230"
 ---
 # <a name="compiler-warning-level-1-c4183"></a>Compilerwarnung (Stufe 1) C4183
 
-"Bezeichner": Rückgabetyp fehlt; davon ausgegangen, dass eine Memberfunktion, die "Int" zurückgibt
+' Identifier ': fehlender Rückgabetyp. angenommen, eine Member-Funktion gibt "int" zurück.
 
-Die Inlinedefinition einer Memberfunktion in einer Klasse oder Struktur muss einen Rückgabetyp nicht. Diese Memberfunktion wird als ein Standardwert, der Rückgabetyp ist `int`.
+Die Inline Definition einer Member-Funktion in einer Klasse oder einer Struktur weist keinen Rückgabetyp auf. Bei dieser Member-Funktion wird davon ausgegangen, dass der Standard Rückgabetyp `int`ist.
 
-Im folgende Beispiel wird die C4183 generiert:
+Im folgenden Beispiel wird C4183 generiert:
 
-```
+```cpp
 // C4183.cpp
 // compile with: /W1 /c
 #pragma warning(disable : 4430)

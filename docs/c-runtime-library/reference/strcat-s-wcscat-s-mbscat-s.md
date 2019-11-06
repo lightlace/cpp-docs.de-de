@@ -38,12 +38,12 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: 4449ec788b33a541a04a46d972f56f792797a16e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b0f2d1a295908ba2f0c8a89f57e81d6f822f3535
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957990"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625780"
 ---
 # <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 
@@ -101,13 +101,13 @@ errno_t _mbscat_s_l(
 
 ### <a name="parameters"></a>Parameter
 
-*strDestination*<br/>
+*"Ziel"*<br/>
 Auf NULL endender Zielzeichenfolgenpuffer.
 
 *numberOfElements*<br/>
 Größe des Zielzeichenfolgenpuffers.
 
-*strSource*<br/>
+*-Quelle*<br/>
 Auf NULL endender Quellzeichenfolgepuffer.
 
 *locale*<br/>
@@ -119,11 +119,11 @@ Null, wenn erfolgreich, ein Fehlercode, wenn ein Fehler auftritt.
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|*strDestination*|*numberOfElements*|*strSource*|Rückgabewert|Inhalt von " *straudestination* "|
+|*"Ziel"*|*numberOfElements*|*-Quelle*|Rückgabewert|Inhalt von " *straudestination* "|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**Null** oder nicht verwaltet|any|any|**EINVAL**|nicht geändert|
-|any|any|**NULL**|**EINVAL**|" *Ziel* " [0] auf 0 festgelegt|
-|any|0 oder zu klein|any|**ERANGE**|" *Ziel* " [0] auf 0 festgelegt|
+|any|any|**NULL**|**EINVAL**|" *stredestination*[0]" auf 0 festgelegt.|
+|any|0 oder zu klein|any|**ERANGE**|" *stredestination*[0]" auf 0 festgelegt.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -142,11 +142,11 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 
 Wenn *die Ziel* Zeichenfolge **ein NULL** -Zeiger ist oder nicht mit NULL endet oder *Wenn die* Ziel Zeichenfolge zu klein ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen " **EINVAL** " zurück und legen " **errno** " auf " **EINVAL**" fest.
 
-Die Versionen von Funktionen mit dem **_l** -Suffix haben das gleiche Verhalten, verwenden jedoch den Gebiets Schema Parameter, der anstelle des aktuellen Gebiets Schemas übergeben wurde. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die Versionen von Funktionen mit dem **_l** -Suffix haben das gleiche Verhalten, verwenden jedoch den Gebiets Schema Parameter, der anstelle des aktuellen Gebiets Schemas übergeben wurde. Weitere Informationen finden Sie unter [Gebietsschema](../../c-runtime-library/locale.md).
 
-In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).
 
-Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Die Debug-Bibliotheksversionen dieser Funktionen füllen zunächst den Puffer mit "0xFE" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -162,7 +162,7 @@ Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf
 |**wcscat_s**|\<string.h> oder \<wchar.h>|
 |**_mbscat_s**|\<mbstring.h>|
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Zusätzliche Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

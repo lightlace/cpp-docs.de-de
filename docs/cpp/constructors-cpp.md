@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 799be6cfd4b14061ba61586f361dd884ad59224c
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: 8fa7f02f8537f60b71ff21a476589cab9fcf595b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587938"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625084"
 ---
 # <a name="constructors-c"></a>Konstruktoren (C++)
 
@@ -68,7 +68,7 @@ int main()
 
 ## <a name="member_init_list"></a>Member-Initialisiererlisten
 
-Ein Konstruktor kann optional über eine Member-Initialisiererliste verfügen, die Klassenmember vor der Ausführung des konstruktortexts initialisiert. (Beachten Sie, dass eine Member-Initialisiererliste nicht dasselbe ist wie eine *Initialisiererliste* vom Typ [Std:: initializer_list \<T >](../standard-library/initializer-list-class.md).)
+Ein Konstruktor kann optional über eine Member-Initialisiererliste verfügen, die Klassenmember vor der Ausführung des konstruktortexts initialisiert. (Beachten Sie, dass eine Member-Initialisiererliste nicht dasselbe ist wie eine *Initialisiererliste* vom Typ [Std:: initializer_list\<t >](../standard-library/initializer-list-class.md).)
 
 Die Verwendung einer Member-Initialisiererliste wird bevorzugt, wenn Werte im Hauptteil des Konstruktors zugewiesen werden, da der Member direkt initialisiert wird. Im folgenden Beispiel wird die Liste der Elementinitialisierer aus allen **bezeichnerausdrücken (Argument)** nach dem Doppelpunkt angezeigt:
 
@@ -78,7 +78,7 @@ Die Verwendung einer Member-Initialisiererliste wird bevorzugt, wenn Werte im Ha
     {}
 ```
 
-Der Bezeichner muss auf einen Klassenmember verweisen. Sie wird mit dem Wert des-Arguments initialisiert. Das Argument kann einer der Konstruktorparameter, ein Funktions-oder ein [Std:: initializer_list \<T >](../standard-library/initializer-list-class.md)sein.
+Der Bezeichner muss auf einen Klassenmember verweisen. Sie wird mit dem Wert des-Arguments initialisiert. Das Argument kann einer der Konstruktorparameter, ein Funktions-oder ein [Std:: initializer_list\<t->](../standard-library/initializer-list-class.md)sein.
 
 Konstante Member und Member des Verweis Typs müssen in der Liste der Elementinitialisierer initialisiert werden.
 
@@ -212,7 +212,7 @@ Ein *bewegungskonstruktor* ist eine spezielle Member-Funktion, die den Besitz de
 Box(Box&& other);
 ```
 
-Der Compiler wählt einen bewegungskonstruktor in bestimmten Situationen aus, in denen das Objekt von einem anderen Objekt desselben Typs initialisiert wird, das zerstört wird und seine Ressourcen nicht mehr benötigt. Das folgende Beispiel zeigt einen Fall, wenn ein bewegungskonstruktor durch Überladungs Auflösung ausgewählt wird. Im Konstruktor, der `get_Box()` aufruft, ist der zurückgegebene Wert ein *xValue* (ablaufender Wert). Er ist keiner Variablen zugewiesen und wird daher in den Gültigkeitsbereich übergehen. Um die Motivation für dieses Beispiel zu gewährleisten, geben wir Box einen großen Vektor von Zeichen folgen an, die den Inhalt darstellen. Anstatt den Vektor und seine Zeichen folgen zu kopieren, wird er vom bewegungskonstruktor aus dem ablaufenden Wert "Box" gestiehlt, sodass der Vektor nun zum neuen Objekt gehört. Der `std::move` Aufrufe ist nur erforderlich, da sowohl `vector` als auch `string` Klassen eigene bewegungskonstruktoren implementieren.
+Der Compiler wählt einen bewegungskonstruktor in bestimmten Situationen aus, in denen das Objekt von einem anderen Objekt desselben Typs initialisiert wird, das zerstört wird und seine Ressourcen nicht mehr benötigt. Das folgende Beispiel zeigt einen Fall, wenn ein bewegungskonstruktor durch Überladungs Auflösung ausgewählt wird. Im Konstruktor, der `get_Box()`aufruft, ist der zurückgegebene Wert ein *xValue* (ablaufender Wert). Er ist keiner Variablen zugewiesen und wird daher in den Gültigkeitsbereich übergehen. Um die Motivation für dieses Beispiel zu gewährleisten, geben wir Box einen großen Vektor von Zeichen folgen an, die den Inhalt darstellen. Anstatt den Vektor und seine Zeichen folgen zu kopieren, wird er vom bewegungskonstruktor aus dem ablaufenden Wert "Box" gestiehlt, sodass der Vektor nun zum neuen Objekt gehört. Der `std::move` Aufrufe ist nur erforderlich, da sowohl `vector` als auch `string` Klassen eigene bewegungskonstruktoren implementieren.
 
 ```cpp
 #include <iostream>
@@ -318,7 +318,7 @@ Ein Konstruktor kann als [constexpr](constexpr-cpp.md) deklariert werden, wenn
 
 ## <a name="init_list_constructors"></a>Initialisiererlisten-Konstruktoren
 
-Wenn ein Konstruktor eine [Std:: initializer_list-\<T \>](../standard-library/initializer-list-class.md) als Parameter annimmt und alle anderen Parameter über Standardargumente verfügen, wird dieser Konstruktor bei der Überladungs Auflösung ausgewählt, wenn die Klasse über Direct instanziiert wird. Initialisierung. Sie können initializer_list verwenden, um alle Member zu initialisieren, die Sie akzeptieren können. Nehmen wir beispielsweise an, dass die Box-Klasse (zuvor gezeigt) einen `std::vector<string>` Member `m_contents`. Sie können einen Konstruktor wie den folgenden bereitstellen:
+Wenn ein Konstruktor eine [Std:: initializer_list\<t-\>](../standard-library/initializer-list-class.md) als Parameter annimmt und alle anderen Parameter über Standardargumente verfügen, wird dieser Konstruktor bei der Überladungs Auflösung ausgewählt, wenn die Klasse über Direct instanziiert wird. Initialisierung. Sie können initializer_list verwenden, um alle Member zu initialisieren, die Sie akzeptieren können. Nehmen wir beispielsweise an, dass die Box-Klasse (zuvor gezeigt) einen `std::vector<string>` Member `m_contents`. Sie können einen Konstruktor wie den folgenden bereitstellen:
 
 ```cpp
     Box(initializer_list<string> list, int w = 0, int h = 0, int l = 0)

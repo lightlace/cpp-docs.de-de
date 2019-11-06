@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4867
 ms.assetid: 8a257d70-c3a7-462d-b285-e57c952a8bf7
-ms.openlocfilehash: 0fd5de46f713aed08508f8755c9e54c3ff46366b
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e093d262bc26cf0acfbb181d621fffc1aa391ee9
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447205"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626590"
 ---
 # <a name="compiler-warning-c4867"></a>Compilerwarnung C4867
 
-'Funktion': Funktionsaufruf fehlt die Argumentliste. Verwenden Sie 'Aufruf', um einen Zeiger auf Member zu erstellen
+"Function": Funktionsaufrufe fehlen Argumentliste; Verwenden Sie "rufen", um einen Zeiger auf den Member zu erstellen.
 
-Ein Zeiger auf Member-Funktion wurde nicht ordnungsgemäß initialisiert.
+Ein Zeiger auf die Member-Funktion wurde nicht ordnungsgemäß initialisiert.
 
-Diese Warnung kann generiert werden, infolge einer konformitätsverbesserung für Compiler, die für Visual Studio 2005 durchgeführt wurde: verbesserte Pointer-to-Member-Konformität.  Code, der vor Visual Studio 2005 kompiliert wird nun C4867 generiert.
+Diese Warnung kann als Ergebnis einer compilerübereinstimmungs-Arbeit generiert werden, die für Visual Studio 2005 ausgeführt wurde: Erweiterte Zeiger-zu-Member-Konformität.  Code, der vor Visual Studio 2005 kompiliert wurde, generiert jetzt C4867.
 
-Diese Warnmeldung wird immer als Fehler ausgegeben. Verwenden Sie das [warning](../../preprocessor/warning.md) -Pragma, um diese Warnung zu deaktivieren. Weitere Informationen über C4867 und MFC/ATL finden Sie unter [_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning).
+Diese Warnmeldung wird immer als Fehler ausgegeben. Verwenden Sie das [warning](../../preprocessor/warning.md) -Pragma, um diese Warnung zu deaktivieren. Weitere Informationen zu C4867 und MFC/ATL finden Sie unter [_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning).
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4867 generiert.
+Im folgenden Beispiel wird C4867 generiert.
 
-```
+```cpp
 // C4867.cpp
 // compile with: /c
 class A {

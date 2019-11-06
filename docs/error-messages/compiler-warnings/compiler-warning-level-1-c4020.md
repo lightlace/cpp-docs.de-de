@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4020
 ms.assetid: 8c4cd6be-9371-4c8c-b0ff-a5ad367bbab0
-ms.openlocfilehash: 75148c210ddd2a611061d58c036d12c084f442cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccab8eaac42932491fc8b88cd28f2d3334b2e849
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400045"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626320"
 ---
 # <a name="compiler-warning-level-1-c4020"></a>Compilerwarnung (Stufe 1) C4020
 
-'Funktion': zu viele übergebene Parameter
+"Function": zu viele tatsächliche Parameter
 
-Die Anzahl der tatsächlichen Parameter in einem Funktionsaufruf überschreitet die Anzahl der formalen Parameter in der Funktionsprototyp oder Definition vor. Der Compiler übergibt die zusätzlich übergebenen Parameter entsprechend der Aufrufkonvention der Funktion.
+Die Anzahl der tatsächlichen Parameter in einem Funktions Aufrufwert überschreitet die Anzahl der formalen Parameter im Funktionsprototyp oder in der Definition. Der Compiler übergibt die zusätzlichen tatsächlichen Parameter entsprechend der Aufruf Konvention der Funktion.
 
-Im folgende Beispiel wird die C4020 generiert:
+Im folgenden Beispiel wird C4020 generiert:
 
-```
+```c
 // C4020.c
 // compile with: /W1 /c
 void f(int);
@@ -32,7 +32,7 @@ int main() {
 
 Mögliche Lösung:
 
-```
+```c
 // C4020b.c
 // compile with: /c
 void f(int);

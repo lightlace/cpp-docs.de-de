@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-ms.openlocfilehash: 7efd7c8e5ce7314e6fe719073685377f4b325fbd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7bd85734e71120a214d652048c02c176728474b2
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952945"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624356"
 ---
 # <a name="_makepath_s-_wmakepath_s"></a>_makepath_s, _wmakepath_s
 
@@ -86,7 +86,7 @@ errno_t _wmakepath_s(
 *path*<br/>
 Vollständiger Pfadpuffer
 
-*sizeInWords*<br/>
+*sizin words*<br/>
 Größe des Puffers in Worten
 
 *sizeInBytes*<br/>
@@ -95,7 +95,7 @@ Größe des Puffers in Byte.
 *Antrie*<br/>
 Enthält einen Buchstaben (A, B usw.) für das gewünschte Laufwerk und einen optionalen nachgestellten Doppelpunkt. **_makepath_s** fügt den Doppelpunkt automatisch in den zusammengesetzten Pfad ein, wenn dieser nicht vorhanden ist. Wenn das Laufwerk **null** ist oder auf eine leere Zeichenfolge verweist, wird kein Laufwerk Buchstabe in der Zeichenfolge für den zusammengesetzten *Pfad* angezeigt.
 
-*dir*<br/>
+*has*<br/>
 Enthält den Pfad der Verzeichnisse, ausgenommen die Laufwerkkennzeichner oder den tatsächlichen Dateinamen. Der nachstehende Schrägstrich ist optional, und entweder ein Schrägstrich (/) oder ein umgekehrter Schrägstrich (\\) oder beides kann in einem einzelnen *dir* -Argument verwendet werden. Wenn kein nachstehender Schrägstrich (/ oder \\) angegeben ist, wird er automatisch eingefügt. Wenn *dir* **null** ist oder auf eine leere Zeichenfolge verweist, wird kein Verzeichnispfad in die zusammengesetzte *Pfad* Zeichenfolge eingefügt.
 
 *fname*<br/>
@@ -110,12 +110,12 @@ Null, wenn erfolgreich, ein Fehlercode, wenn ein Fehler auftritt.
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|*path*|*sizeInWords* / *sizeInBytes*|Zurück|Inhalt des *Pfads*|
+|*path*|*sizin Words* / *sizin Bytes*|Return|Inhalt des *Pfads*|
 |------------|------------------------------------|------------|------------------------|
 |**NULL**|any|**EINVAL**|nicht geändert|
 |any|<= 0|**EINVAL**|nicht geändert|
 
-Wenn Fehlerzustände wie die oben genannten auftreten, wird ein Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird **errno** auf **EINVAL** festgelegt, und die Funktionen gibt **EINVAL**zurück. **Null** ist für die Parameter " *Drive*", " *Name*" und " *ext*" zulässig. Weitere Informationen zum Verhalten, wenn diese Parameter NULL-Zeiger oder leere Zeichenfolgen sind, finden Sie im Abschnitt „Hinweise“.
+Wenn Fehlerzustände wie die oben genannten auftreten, wird ein Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird **errno** auf **EINVAL** festgelegt, und die Funktionen gibt **EINVAL**zurück. **Null** ist für die Parameter " *Drive*", " *Name*" und " *ext*" zulässig. Informationen über das Verhalten, wenn diese Parameter NULL-Zeiger oder leere Zeichen folgen sind, finden Sie im Abschnitt "Hinweise".
 
 ## <a name="remarks"></a>Hinweise
 
@@ -131,9 +131,9 @@ Das *path* -Argument muss auf einen leeren Puffer zeigen, der groß genug ist, u
 
 Wenn path **null**ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Außerdem wird **errno** auf **EINVAL**festgelegt. **Null** -Werte sind für alle anderen Parameter zulässig.
 
-In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).
 
-Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Die Debug-Bibliotheksversionen dieser Funktionen füllen zunächst den Puffer mit "0xFE" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -142,7 +142,7 @@ Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf
 |**_makepath_s**|\<stdlib.h>|
 |**_wmakepath_s**|\<stdlib.h> oder \<wchar.h>|
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Weitere Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

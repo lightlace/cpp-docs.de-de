@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 9bdeb92e03b3ae00258ac48a29cec42ef7e18e81
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 4583bef3ef3033b6ba493ccac1c4fc5360c70e35
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241216"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624889"
 ---
 # <a name="std-specify-language-standard-version"></a>/std (Standardversion für die Sprache festlegen)
 
@@ -23,7 +23,7 @@ Aktivieren Sie unterstützte Features der Programmiersprache C++ aus der angegeb
 
 ## <a name="remarks"></a>Hinweise
 
-Die Option **/std** ist in Visual Studio 2017 und höher verfügbar. Sie wird zum Steuern der versionsspezifischen Features gemäß dem ISO C++-Programmiersprachenstandard verwendet, die während der Kompilierung Ihres Codes aktiviert sind. Diese Option ermöglicht Ihnen, die Unterstützung für bestimmte neue Sprach- und Bibliotheksfeatures zu deaktivieren, die Ihren vorhandenen Code stören können, der mit einer bestimmten Version des Sprachstandards kompatibel ist. Standardmäßig ist **/std:c++14** angegeben, womit Features von Sprache und Standardbibliotheken deaktiviert sind, die sich in späteren Versionen des C++-Sprachstandards finden. Verwenden Sie **/std:c++17**, um die spezifischen Features und das Verhalten gemäß dem C++17-Standard zu aktivieren. Um explizit die aktuell implementierten Features von Compiler und Standardbibliotheken zu aktivieren, die für den nächsten Entwurf des Standards vorgeschlagen sind, verwenden Sie **/std:c++latest**. Alle C ++ 20 Features erfordern **/Std: c ++ neueste**; Wenn die Implementierung abgeschlossen ist, wird ein neues **/Std: c ++ 20** Option wird aktiviert.
+Die Option **/std** ist in Visual Studio 2017 und höher verfügbar. Sie wird zum Steuern der versionsspezifischen Features gemäß dem ISO C++-Programmiersprachenstandard verwendet, die während der Kompilierung Ihres Codes aktiviert sind. Diese Option ermöglicht Ihnen, die Unterstützung für bestimmte neue Sprach- und Bibliotheksfeatures zu deaktivieren, die Ihren vorhandenen Code stören können, der mit einer bestimmten Version des Sprachstandards kompatibel ist. Standardmäßig ist **/std:c++14** angegeben, womit Features von Sprache und Standardbibliotheken deaktiviert sind, die sich in späteren Versionen des C++-Sprachstandards finden. Verwenden Sie **/std:c++17**, um die spezifischen Features und das Verhalten gemäß dem C++17-Standard zu aktivieren. Um explizit die aktuell implementierten Features von Compiler und Standardbibliotheken zu aktivieren, die für den nächsten Entwurf des Standards vorgeschlagen sind, verwenden Sie **/std:c++latest**. Alle c++ 20 Features erfordern **/Std: C + + Latest**; Wenn die Implementierung beendet ist, wird eine neue Option **/Std: c++ 20** aktiviert.
 
 Die Standardoption **/std:c++14** aktiviert den Satz der C++14-Features, die vom MSVC-Compiler implementiert werden. Diese Option deaktiviert Compiler- und Standardbibliotheksunterstützung für Features, die in aktuelleren Versionen des Sprachstandards geändert oder neu sind, mit Ausnahme einiger C++17-Features, die bereits in früheren Releases des MSVC-Compilers implementiert waren. Um Breaking Changes für Benutzer zu vermeiden, die bereits Abhängigkeiten mit den in Visual Studio 2015 Update 2 verfügbaren Features implementiert haben, bleiben diese Features aktiviert, wenn die Option **/std:c++14** angegeben wird:
 
@@ -37,7 +37,7 @@ Die Standardoption **/std:c++14** aktiviert den Satz der C++14-Features, die vom
 
 - [u8-Zeichenliterale](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4267.html)
 
-Weitere Informationen zu den aktivierten C++14- und C++17-Features, wenn **/std:c++14** angegeben ist, finden Sie die Anmerkungen in [Visual C++-Sprachkonformität](../../overview/visual-cpp-language-conformance.md).
+Weitere Informationen dazu, welche c++ 14-und c++ 17-Features aktiviert sind, wenn **/Std: c++ 14** angegeben wird, finden Sie in den Hinweisen in der [Microsoft C++ -sprach Konformitäts Tabelle](../../overview/visual-cpp-language-conformance.md).
 
 Die Option **/std:c++17** aktiviert den vollständigen Satz der C++17-Features, die vom MSVC-Compiler implementiert werden. Diese Option deaktiviert die Unterstützung von Compiler- und Standardbibliotheken für Features, die in Versionen des Arbeitsentwurfs und Fehlerbehebungsaktualisierungen des C++-Standards nach C++17 neu sind oder geändert wurden.
 
@@ -51,7 +51,7 @@ Die während einer C++-Kompilierung wirksame **/std**-Option kann mithilfe des P
 Die Optionen **/std:c++14** und **/std:c++latest** stehen von Visual Studio 2015 Update 3 an zur Verfügung. Die Option **/std:c++17** steht von Visual Studio 2017, Version 15.3, an zur Verfügung. Wie bereits oben angemerkt, wird ein Teil des Verhaltens nach dem C++17-Standard mit der Option **/std:c++14** aktiviert, alle anderen C++17-Features werden aber mit **/std:c++17** aktiviert. C++20-Features werden mit **/std:latest** aktiviert, bis die Implementierung abgeschlossen ist.
 
 > [!NOTE]
-> Abhängig von der MSVC-Compilerversion oder der Updateebene, sind C++17-Features möglicherweise nicht vollständig implementiert oder nicht in vollem Umfang kompatibel, wenn Sie die **/std:c++17**-Optionen angeben. Eine Übersicht der C++-Sprachkonformität in Visual C++ nach Releaseversion finden Sie unter [Visual C++-Sprachkonformität](../../overview/visual-cpp-language-conformance.md).
+> Abhängig von der MSVC-Compilerversion oder der Updateebene, sind C++17-Features möglicherweise nicht vollständig implementiert oder nicht in vollem Umfang kompatibel, wenn Sie die **/std:c++17**-Optionen angeben. Eine Übersicht über die C++ sprach Konformität in Visual C++ nach Releaseversion finden Sie unter [Microsoft C++ Language Konformitäts Table](../../overview/visual-cpp-language-conformance.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 

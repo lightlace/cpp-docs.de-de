@@ -1,37 +1,37 @@
 ---
-title: Compilerwarnung (Stufe 1 und Stufe 4) C4949
+title: Compilerwarnung (Ebene 1 und Ebene 4) C4949
 ms.date: 11/04/2016
 f1_keywords:
 - C4949
 helpviewer_keywords:
 - C4949
 ms.assetid: 34f45a05-c115-49cb-9f67-0bd4f0735d9b
-ms.openlocfilehash: 8050edbd7a653776d046bc7b4155fd43094d9a5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2876813131271ebb2561f8ea7435bb96dc2ce17
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187521"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627417"
 ---
-# <a name="compiler-warning-level-1-and-level-4-c4949"></a>Compilerwarnung (Stufe 1 und Stufe 4) C4949
+# <a name="compiler-warning-level-1-and-level-4-c4949"></a>Compilerwarnung (Ebene 1 und Ebene 4) C4949
 
-Pragmas "managed" und "unmanaged" sind sinnvoll, nur bei der Kompilierung mit "/ Clr [: Option]"
+die Pragmas "Managed" und "unmanaged" sind nur sinnvoll, wenn Sie mit "/CLR [: Option]" kompiliert werden.
 
-Der Compiler ignoriert die [verwaltet](../../preprocessor/managed-unmanaged.md) und nicht verwaltete Pragmas, wenn der Quellcode nicht kompiliert wird, mit ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md). Diese Warnung dient nur zu Informationszwecken.
+Der Compiler ignoriert die [verwalteten](../../preprocessor/managed-unmanaged.md) und nicht verwalteten Pragmas, wenn der Quellcode nicht mit [/CLR](../../build/reference/clr-common-language-runtime-compilation.md)kompiliert ist. Diese Warnung dient nur zu Informationszwecken.
 
-Im folgende Beispiel wird die C4949 generiert:
+Im folgenden Beispiel wird C4949 generiert:
 
-```
+```cpp
 // C4949.cpp
 // compile with: /LD /W1
 #pragma managed   // C4949
 ```
 
-Wenn **#pragma unmanaged** wird verwendet, ohne **"/ CLR"**, C4949 wird eine Warnung der Stufe 4.
+Wenn **#pragma nicht verwaltete** ohne **/CLR**verwendet wird, ist C4949 eine Warnung der Stufe 4.
 
-Im folgende Beispiel wird die C4949 generiert:
+Im folgenden Beispiel wird C4949 generiert:
 
-```
+```cpp
 // C4949b.cpp
 // compile with: /LD /W4
 #pragma unmanaged   // C4949

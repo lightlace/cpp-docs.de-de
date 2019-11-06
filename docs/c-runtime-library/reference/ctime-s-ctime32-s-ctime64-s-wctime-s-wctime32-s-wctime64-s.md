@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-ms.openlocfilehash: d983ee4219985c7b213812a69f6f83f49dbf389b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a6329319be5d002c8f0a35ceb0258cb9081923f7
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941999"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624409"
 ---
 # <a name="ctime_s-_ctime32_s-_ctime64_s-_wctime_s-_wctime32_s-_wctime64_s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 
@@ -139,7 +139,7 @@ Muss groß genug für 26 Zeichen sein. Ein Zeiger auf das Ergebnis der Zeichenfo
 *numberOfElements*<br/>
 Die Größe des Puffers.
 
-*sourceTime*<br/>
+*sourcetime*<br/>
 Zeiger auf die gespeicherte Zeit
 
 ## <a name="return-value"></a>Rückgabewert
@@ -148,13 +148,13 @@ Null, wenn erfolgreich. Wenn ein Fehler aufgrund eines ungültigen Parameters au
 
 ## <a name="error-conditions"></a>Fehlerbedingungen
 
-|*buffer*|*numberOfElements*|*sourceTime*|Zurück|Wert im *Puffer*|
+|*buffer*|*numberOfElements*|*sourcetime*|Return|Wert im *Puffer*|
 |--------------|------------------------|------------|------------|-----------------------|
-|**NULL**|any|any|**EINVAL**|Nicht geändert|
-|Not **null** (zeigt auf gültigen Speicher)|0|any|**EINVAL**|Nicht geändert|
-|Nicht **null**|0< Größe < 26|any|**EINVAL**|Leere Zeichenfolge|
-|Nicht **null**|>= 26|NULL|**EINVAL**|Leere Zeichenfolge|
-|Nicht **null**|>= 26|< 0|**EINVAL**|Leere Zeichenfolge|
+|**NULL**|any|any|**EINVAL**|Nicht modifiziert|
+|Not **null** (zeigt auf gültigen Speicher)|0|any|**EINVAL**|Nicht modifiziert|
+|nicht **null**|0<Größe<26|any|**EINVAL**|Leere Zeichenfolge|
+|nicht **null**|>= 26|NULL|**EINVAL**|Leere Zeichenfolge|
+|nicht **null**|>= 26|< 0|**EINVAL**|Leere Zeichenfolge|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -170,7 +170,9 @@ Die konvertierte Zeichenfolge wird auch gemäß den lokalen Zeitzoneneinstellung
 
 bei **ctime_s** handelt es sich um eine Inline Funktion, die zu **_ctime64_s** ausgewertet wird und **time_t** Äquivalent zu **__time64_t**ist. Wenn Sie den Compiler zwingen müssen, **time_t** als das alte 32-Bit- **time_t**zu interpretieren, können Sie **_USE_32BIT_TIME_T**definieren. Dies führt dazu, dass **ctime_s** zu **_ctime32_s**ausgewertet wird. Dies ist nicht zu empfehlen, weil bei Ihrer Anwendung nach dem 18. Januar 2038 ein Fehler auftreten kann. Die Verwendung dieses Makros ist auf 64-Bit-Plattformen nicht zulässig.
 
-Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen vorhanden) vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads (Sichere Vorlagenüberladungen)](../../c-runtime-library/secure-template-overloads.md).
+Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen vorhanden) vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).
+
+Die Debug-Bibliotheksversionen dieser Funktionen füllen zunächst den Puffer mit "0xFE" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -187,7 +189,7 @@ Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen v
 |**ctime_s**, **_ctime32_s**, **_ctime64_s**|\<time.h>|
 |**_wctime_s**, **_wctime32_s**, **_wctime64_s**|\<time.h> oder \<wchar.h>|
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Zusätzliche Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotheken
 

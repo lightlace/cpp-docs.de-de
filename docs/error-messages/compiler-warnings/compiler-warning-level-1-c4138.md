@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4138
 ms.assetid: 65ebf929-bba0-4237-923b-c1b66adfe17d
-ms.openlocfilehash: 96f8915b9bec166496ca4305d796ce8ef514ca15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6e368f27371b744efa4006630938f68f51a2ca0
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402527"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627095"
 ---
 # <a name="compiler-warning-level-1-c4138"></a>Compilerwarnung (Stufe 1) C4138
 
@@ -21,7 +21,7 @@ Dem schließenden Kommentartrennzeichen geht kein öffnendes Kommentartrennzeich
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // C4138a.cpp
 // compile with: /W1
 int */*comment*/ptr;   // C4138 Ambiguous first delimiter causes warning
@@ -34,7 +34,7 @@ Diese Warnung kann auf den Versuch zurückzuführen sein, Kommentare zu schachte
 
 Die Warnung kann behoben werden, wenn Sie Codeabschnitte, die Kommentare enthalten, auskommentieren, den Code in einen **#if/#endif** -Block einschließen und den steuernden Ausdruck auf 0 (null) festlegen:
 
-```
+```cpp
 // C4138b.cpp
 // compile with: /W1
 #if 0

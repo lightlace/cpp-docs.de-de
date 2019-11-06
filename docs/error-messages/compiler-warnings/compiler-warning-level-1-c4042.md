@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4042
 ms.assetid: e4bd861b-1194-426b-bf79-68c5b021eb0a
-ms.openlocfilehash: 99f4f45aad82aa9898dad4cffb60b8e3311ddc9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db7f0425c3752c20ca8c5d4b6c95845ff64475c5
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152138"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627037"
 ---
 # <a name="compiler-warning-level-1-c4042"></a>Compilerwarnung (Stufe 1) C4042
 
-'Bezeichner': besitzt unzulässige Speicherklasse
+"Identifier": weist eine ungültige Speicher Klasse auf.
 
-Die angegebene Speicher-Klasse kann nicht mit der folgenden ID in diesem Kontext nicht verwendet werden. Der Compiler verwendet die Speicherklasse standardmäßig stattdessen:
+Die angegebene Speicher Klasse kann in diesem Kontext nicht mit diesem Bezeichner verwendet werden. Der Compiler verwendet stattdessen die Standard Speicher Klasse:
 
-- `extern`, wenn *Bezeichner* ist eine Funktion.
+- `extern`, wenn der *Bezeichner* eine Funktion ist.
 
-- **automatische**, wenn *Bezeichner* ist eine formale Parameter oder lokale Variable.
+- **Auto**, wenn der *Bezeichner* ein formaler Parameter oder eine lokale Variable ist.
 
-- Klasse, wenn kein Speicher *Bezeichner* ist eine globale Variable.
+- Keine Speicher Klasse, wenn der *Bezeichner* eine globale Variable ist.
 
-Diese Warnung kann verursacht werden, außer mit einer Speicherklasse **registrieren** in einer Parameterdeklaration.
+Diese Warnung kann dadurch verursacht werden, dass eine andere Speicher Klasse als " **Register** " in einer Parameter Deklaration angegeben wird.
 
-Das folgende Beispiel generiert C4042
+Im folgenden Beispiel wird C4042 generiert.
 
-```
+```cpp
 // C4042.cpp
 // compile with: /W1 /LD
 int func2( __declspec( thread ) int tls_i )    // C4042
