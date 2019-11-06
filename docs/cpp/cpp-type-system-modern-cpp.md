@@ -70,7 +70,7 @@ In der folgenden Tabelle werden die am häufigsten verwendeten grundlegenden Typ
 |bool|1 Byte|Stellt Werte dar, die entweder wahr oder falsch sein können.|
 |char|1 Byte|Verwenden Sie sie für ASCII-Zeichen in Zeichenfolgen im älteren C-Format oder in std::string Objekten, die nie in den UNICODE konvertiert werden müssen.|
 |wchar_t|2 Bytes|Stellt "breite" Zeichenwerte dar, die in den UNICODE-Format codiert werden (UTF-16 bei Windows, andere Betriebssysteme können abweichen). Dies ist der Zeichentyp, der in Zeichenfolgen des Typs `std::wstring` verwendet wird.|
-|nicht signierte &nbsp;char|1 Byte|C++ verfügt über keine integrierten `byte`-Typen.  Verwenden Sie "char" ohne Vorzeichen, um einen Bytewert darzustellen.|
+|unsigned&nbsp;char|1 Byte|C++ verfügt über keine integrierten `byte`-Typen.  Verwenden Sie "char" ohne Vorzeichen, um einen Bytewert darzustellen.|
 |unsigned int|4 Bytes|Die Standardauswahl für Bitflags.|
 |long long|8 Bytes|Stellt sehr große ganzzahlige Werte dar.|
 
