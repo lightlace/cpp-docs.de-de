@@ -111,6 +111,17 @@
           href: build/cmake-predefined-configuration-reference.md
     - name: 'vcpkg: Ein Paket-Manager für C++'
       href: build/vcpkg.md
+    - name: C++ Build Insights
+      expanded: false
+      items:
+        - name: Erste Schritte mit C++ Build Insights
+          href: build-insights/get-started-with-cpp-build-insights.md
+        - name: Windows Performance Analyzer-Grundlagen
+          href: build-insights/wpa-basics.md
+        - name: Referenz zu vcperf.exe
+          href: build-insights/vcperf-reference.md
+        - name: Referenz zu Windows Performance Analyzer-Ansichten
+          href: build-insights/wpa-views-reference.md
     - name: Vorkompilierte Headerdateien
       href: build/creating-precompiled-header-files.md
     - name: C++-Releasebuilds
@@ -2811,20 +2822,38 @@
 - name: Portieren und Aktualisieren von C++-Code
   expanded: false
   items:
-    - name: 'Visual C++-Leitfaden: Portieren und Upgraden'
+    - name: 'Microsoft C++-Leitfaden: Portieren und Upgraden'
       href: porting/visual-cpp-porting-and-upgrading-guide.md
+    - name: Upgraden von Projekten aus früheren Versionen
+      items:
+        - name: Upgraden von Projekten aus früheren Versionen
+          href: porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md
+        - name: Überblick über potenzielle Upgradeprobleme (Visual C++)
+          href: porting/overview-of-potential-upgrade-issues-visual-cpp.md
+        - name: Upgraden Ihres Codes auf die Universal CRT
+          href: porting/upgrade-your-code-to-the-universal-crt.md
+        - name: Aktualisieren von WINVER und _WIN32_WINNT
+          href: porting/modifying-winver-and-win32-winnt.md
+        - name: Beheben Ihrer Abhängigkeiten von bibliotheksinternen Elementen
+          href: porting/fix-your-dependencies-on-library-internals.md
+        - name: Gleitkomma-Migrationsprobleme
+          href: porting/floating-point-migration-issues.md
+        - name: 'Verwenden von nativen Zielversionen in Visual Studio, um alte Projekte zu erstellen'
+          href: porting/use-native-multi-targeting.md
+        - name: In Visual Studio 2019 veraltete C++-Features
+          href: porting/features-deprecated-in-visual-studio.md
+        - name: VCBuild vs. MSBuild
+          href: porting/build-system-changes.md
+        - name: Portieren von Drittanbieterbibliotheken
+          href: porting/porting-third-party-libraries.md
+        - name: Portieren von Datenanwendungen
+          href: data/data-access-programming-mfc-atl.md
     - name: Änderungsverlauf von Visual C++ von 2003 bis 2015
       href: porting/visual-cpp-change-history-2003-2015.md
     - name: 'Visual C++: Neuerungen von 2003 bis 2015'
       href: porting/visual-cpp-what-s-new-2003-through-2015.md
-    - name: C++-Binärdateienkompatibilität zwischen 2015 und 2017
+    - name: C++-Binärdateienkompatibilität zwischen 2015 und 2019
       href: porting/binary-compat-2015-2017.md
-    - name: Überblick über potenzielle Aktualisierungsprobleme (Visual C++)
-      href: porting/overview-of-potential-upgrade-issues-visual-cpp.md
-    - name: Portieren von Drittanbieterbibliotheken
-      href: porting/porting-third-party-libraries.md
-    - name: Portieren von Datenanwendungen
-      href: data/data-access-programming-mfc-atl.md
     - name: 'Portieren und Upgraden: Beispiele und Fallstudien'
       items:
         - name: Beispiele und Fallstudien
@@ -2835,27 +2864,9 @@
           href: porting/porting-guide-com-spy.md
         - name: 'Leitfaden zum Portieren: Spy++'
           href: porting/porting-guide-spy-increment.md
-    - name: Upgraden von Projekten aus früheren Versionen
-      items:
-        - name: Upgraden von Projekten aus früheren Versionen
-          href: porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md
-        - name: Upgraden Ihres Codes auf die Universal CRT
-          href: porting/upgrade-your-code-to-the-universal-crt.md
-        - name: Ändern von WINVER und _WIN32_WINNT
-          href: porting/modifying-winver-and-win32-winnt.md
-        - name: Beheben Ihrer Abhängigkeiten von bibliotheksinternen Elementen
-          href: porting/fix-your-dependencies-on-library-internals.md
-        - name: Gleitkomma-Migrationsprobleme
-          href: porting/floating-point-migration-issues.md
-        - name: 'Verwenden von nativen Zielversionen in Visual Studio, um alte Projekte zu erstellen'
-          href: porting/use-native-multi-targeting.md
-        - name: In Visual Studio 2019 veraltete Visual C++-Features
-          href: porting/features-deprecated-in-visual-studio.md
-        - name: Buildsystemänderungen
-          href: porting/build-system-changes.md
-    - name: "Einführung in Visual\_C++ für UNIX-Benutzer"
+    - name: Einführung in Microsoft C++ für UNIX-Benutzer
       href: porting/introduction-to-visual-cpp-for-unix-users.md
-    - name: Portieren von UNIX auf Win32
+    - name: Ausführen von Linux-Programmen unter Windows
       href: porting/porting-from-unix-to-win32.md
     - name: Einführung in die Universelle Windows-Plattform (C++)
       items:
