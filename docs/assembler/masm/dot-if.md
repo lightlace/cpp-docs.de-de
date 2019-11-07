@@ -1,35 +1,35 @@
 ---
 title: .IF
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .IF
 helpviewer_keywords:
 - .IF directive
 ms.assetid: dccc7615-8fc7-4829-9f39-0ee405f6c1e3
-ms.openlocfilehash: cf9c594d843c937dd2191bee2a7cebadbc615c82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83c9ff588e2fe273e24e1d0b1c16517c5eee3365
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185266"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703776"
 ---
-# <a name="if"></a>.IF
+# <a name="if-32-bit-masm"></a>. IF (32-Bit-MASM)
 
-Generiert Code, der testet `condition1` (z. B. AX-> 7) und führt die *Anweisungen* , wenn die Bedingung erfüllt ist.
+Generiert Code, der `condition1` testet (z. b. ax > 7), und führt die *Anweisungen* aus, wenn diese Bedingung erfüllt ist. (nur 32-Bit-MASM.)
 
 ## <a name="syntax"></a>Syntax
 
-> . IF-Bedingung 1<br/>
+> . Wenn Bedingung1<br/>
 > Anweisungen<br/>
-> [[. ELSEIF Bedingung2<br/>
+> [[. Elseif Bedingung2<br/>
 > Anweisungen]]<br/>
-> [[.ELSE<br/>
+> [[. Woanders<br/>
 > Anweisungen]]<br/>
 > .ENDIF
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn eine [. ANDERE](../../assembler/masm/dot-else.md) folgt, die Anweisungen ausgeführt werden, wenn Sie den ursprünglichen Zustand auf "false" festgelegt wurde. Beachten Sie, dass die Bedingungen zur Laufzeit ausgewertet werden.
+Wenn ein [. ](../../assembler/masm/dot-else.md)Andernfalls werden die zugehörigen-Anweisungen ausgeführt, wenn die ursprüngliche Bedingung false lautet. Beachten Sie, dass die Bedingungen zur Laufzeit ausgewertet werden.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,25 +1,25 @@
 ---
 title: .FARDATA?
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .FARDATA?
 helpviewer_keywords:
 - .FARDATA? directive
 ms.assetid: 3b416313-44b7-4724-a2cf-69d73871a10c
-ms.openlocfilehash: 72ca773c484f04250c7fc40763617694105e6c8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b26da266671eb84b0015cb57c2d0dae11e9ac8d2
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185251"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703846"
 ---
-# <a name="fardata"></a>.FARDATA?
+# <a name="fardata-32-bit-masm"></a>.FARDATA? (32-Bit-MASM)
 
-Bei Verwendung mit [. Modell](../../assembler/masm/dot-model.md), startet ein Datensegment ganz für nicht initialisierte Daten (Segmentnamen FAR_BSS oder *Namen*).
+Bei Verwendung mit [. Model](../../assembler/masm/dot-model.md), startet ein weit reichtes Daten Segment für nicht initialisierte Daten (Segment Name FAR_BSS oder *Name*). (nur 32-Bit-MASM.)
 
 ## <a name="syntax"></a>Syntax
 
-> .FARDATA? [[name]]
+> .FARDATA? [[Name]]
 
 ## <a name="see-also"></a>Siehe auch
 

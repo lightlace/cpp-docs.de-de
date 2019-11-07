@@ -1,32 +1,32 @@
 ---
 title: ASSUME
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - ASSUME
 helpviewer_keywords:
 - ASSUME directive
 ms.assetid: cd162070-aee9-4c65-babc-005c6cc73d7c
-ms.openlocfilehash: 97a57cc8a1acccf70572ff963e496aa79fa3ab43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bf8f0c41e9ce3e296cf201efd4fd9be2033cbdb
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166463"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73702467"
 ---
-# <a name="assume"></a>ASSUME
+# <a name="assume-32-bit-masm"></a>Annahme (32-Bit-MASM)
 
-Fehler beim Überprüfen auf Registerwerte wird aktiviert.
+Aktiviert die Fehlerüberprüfung für Registerwerte. (nur 32-Bit-MASM.)
 
 ## <a name="syntax"></a>Syntax
 
-> ASSUME *Segregister*:*Namen* [[, *Segregister*:*Namen*]]...<br/>
-> ASSUME *Dataregister*:*Typ* [[, *Dataregister*:*Typ*]]...<br/>
-> ASSUME *registrieren*: Fehler [[, *registrieren*: Fehler]]...<br/>
-> ASSUME [[*registrieren*:]] "NOTHING" [[, *registrieren*: "NOTHING"]]...
+> Angenommen, *segregister*:*Name* [[, *segregister*:*Name*]]...<br/>
+> *Dataregiester*:*Type* [[, *dataregiester*:*Type*]]...<br/>
+> *Register*: Error [[, *Register*: Error]]...<br/>
+> [[*Register*:]] Nothing [[, *Register*: Nothing]]...
 
 ## <a name="remarks"></a>Hinweise
 
-Nach einer `ASSUME` ist in Kraft getreten, die Assembler achtet auf die Werte der angegebenen Register. **Fehler** wird ein Fehler generiert, wenn das Register verwendet wird. **"NOTHING"** entfernt fehlerüberprüfung zu registrieren. Sie können verschiedene Arten von Annahmen, die in einer einzigen Anweisung kombinieren.
+Nachdem ein `ASSUME` in Kraft gesetzt wurde, überwacht der Assembler Änderungen an den Werten der angegebenen Register. **Fehler** generiert einen Fehler, wenn das Register verwendet wird. **Nothing** entfernt die Register Fehlerüberprüfung nicht. Sie können verschiedene Arten von Annahmen in einer Anweisung kombinieren.
 
 ## <a name="see-also"></a>Siehe auch
 
