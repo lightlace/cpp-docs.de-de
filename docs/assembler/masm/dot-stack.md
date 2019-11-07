@@ -1,25 +1,25 @@
 ---
 title: .STACK
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .STACK
 helpviewer_keywords:
 - .STACK directive
 ms.assetid: 70019463-5d4f-41b6-8464-023a8ac2466f
-ms.openlocfilehash: f97f10155894a86c9ddcd4cf8633712c458be386
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78c089c771e8e5a8c82905578ec2377246a44a0e
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178630"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703538"
 ---
-# <a name="stack"></a>.STACK
+# <a name="stack-32-bit-masm"></a>. Stack (32-Bit-MASM)
 
-Bei Verwendung mit [. Modell](../../assembler/masm/dot-model.md), definiert ein Stack-Segment (mit Segmentnamen STACK). Der optionale `size` gibt die Anzahl der Bytes für den Stapel (Standardwert 1.024). Die `.STACK` Richtlinie wird automatisch die Stack-Anweisung.
+Bei Verwendung mit [. Modell](../../assembler/masm/dot-model.md)definiert ein Stapel Segment (mit Segment Namen Stapel). Der optionale `size` gibt die Anzahl der Bytes für den Stapel (Standardwert 1.024) an. Die `.STACK`-Direktive schließt die Stack-Anweisung automatisch. (nur 32-Bit-MASM.)
 
 ## <a name="syntax"></a>Syntax
 
-> . Stapel [[Size]]
+> . Stapel [[Größe]]
 
 ## <a name="see-also"></a>Siehe auch
 

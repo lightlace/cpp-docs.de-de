@@ -1,29 +1,29 @@
 ---
 title: INVOKE
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - Invoke
 helpviewer_keywords:
 - INVOKE directive
 ms.assetid: 12d9bb40-33b9-411e-b801-45a1d675967e
-ms.openlocfilehash: efa8f710701e15845c3a6a22ba024c9cf1882457
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 853bc9cd22d866357a4cd2d695beccc3efc20acf
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202617"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703967"
 ---
-# <a name="invoke"></a>INVOKE
+# <a name="invoke-32-bit-masm"></a>Aufrufen (32-Bit-MASM)
 
-Ruft die Prozedur unter der Adresse, die vom *Ausdruck*, wobei die Argumente übergeben werden, auf dem Stapel oder in Registern gemäß den Konventionen für den standard Aufrufen des Typs Language.
+Ruft die Prozedur bei der von *Ausdruck*angegebenen Adresse auf und übergibt die Argumente auf dem Stapel oder in Registern gemäß den Standard Aufruf Konventionen des sprach Typs. (nur 32-Bit-MASM.)
 
 ## <a name="syntax"></a>Syntax
 
-> INVOKE *Ausdruck* [[, *Argumente*]]
+> Aufruf *Ausdruck* [[, *Argumente*]]
 
 ## <a name="remarks"></a>Hinweise
 
-Jedes Argument an die Prozedur übergeben möglicherweise einen Ausdruck, ein paar registrieren oder einen Adressausdruck (ein Ausdruck vorangestellt `ADDR`).
+Jedes Argument, das an die Prozedur übermittelt wird, kann ein Ausdruck, ein Registrierungs Paar oder ein Adress Ausdruck sein (ein Ausdruck, dem `ADDR`vorangestellt ist).
 
 ## <a name="see-also"></a>Siehe auch
 
