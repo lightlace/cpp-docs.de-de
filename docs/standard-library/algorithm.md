@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 0b9b259d49808002442492ce2912b4f9aa96d2b8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f72969052ae3ecc0d9fb88382e1560c846e2167c
+ms.sourcegitcommit: eb254b4462a58d219376ff501bf768bd1adc07ae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456501"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73912899"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -26,7 +26,7 @@ Definiert C++-Standardbibliothek-Containervorlagenfunktionen, die Algorithmen au
 ```
 
 > [!NOTE]
-> Der \<Algorithmus > Bibliothek verwendet auch die `#include <initializer_list>` -Anweisung.
+> Der \<Algorithmus > Bibliothek verwendet auch die `#include <initializer_list>`-Anweisung.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -36,7 +36,7 @@ Die C++-Standardbibliothek-Iteratorbereiche für Algorithmen werden in der Regel
 
 Die C++-Standardbibliothekalgorithmen erweitern die Aktionen, die durch die Vorgänge und die Memberfunktionen jedes C++-Standardbibliothekcontainers unterstützt werden, und lassen das gleichzeitige Arbeiten zum Beispiel mit anderen Typen von Containerobjekten zu. Zwei Suffixe werden verwendet, um Informationen über den Zweck der Algorithmen zu übergeben.
 
-- Das `_if`-Suffix gibt an, dass der Algorithmus mit den Funktionsobjekten verwendet wird, die für die Werte der Elemente statt für die Elemente selbst ausgeführt werden. Der `find_if`-Algorithmus sucht nach Elementen, deren Werte dem Kriterium entsprechen, das durch ein Funktionsobjekt angegeben ist, und der `find`-Algorithmus sucht nach einem bestimmten Wert.
+- Das `_if` Suffix gibt an, dass der Algorithmus mit Funktions Objekten verwendet wird, die für die Werte der Elemente statt für die Elemente selbst ausgeführt werden. Der `find_if`-Algorithmus sucht nach Elementen, deren Werte dem Kriterium entsprechen, das durch ein Funktionsobjekt angegeben ist, und der `find`-Algorithmus sucht nach einem bestimmten Wert.
 
 - Das _copy-Suffix gibt an, dass der Algorithmus nicht nur die Werte der Elemente bearbeitet, sondern die geänderten Werte auch in einen Zielbereich kopiert. Der `reverse`-Algorithmus kehrt die Reihenfolge der Elemente innerhalb eines Bereichs um, und der `reverse_copy`-Algorithmus kopiert das Ergebnis außerdem in einen Zielbereich.
 
@@ -52,7 +52,7 @@ Die numerischen C++-Standardbibliotheksalgorithmen, die für die numerische Vera
 |[all_of](../standard-library/algorithm-functions.md#all_of)|Gibt **true** zurück, wenn eine Bedingung bei jedem Element im angegebenen Bereich vorhanden ist.|
 |[any_of](../standard-library/algorithm-functions.md#any_of)|Gibt **true** zurück, wenn eine Bedingung mindestens einmal im angegebenen Bereich von Elementen vorhanden ist.|
 |[binary_search](../standard-library/algorithm-functions.md#binary_search)|Testet, ob ein Element in einem sortierten Bereich einem angegebenen Wert entspricht oder ihm auf eine von einem binären Prädikat angegebene Weise gleicht.|
-|[clamp](../standard-library/algorithm-functions.md#clamp)||
+|[gekl](../standard-library/algorithm-functions.md#clamp)||
 |[copy](../standard-library/algorithm-functions.md#copy)|Weist die Werte von Elementen aus einem Quellbereich einem Zielbereich zu, durchläuft die Quellelementsequenz und weist ihnen vorwärts neue Positionen zu.|
 |[copy_backward](../standard-library/algorithm-functions.md#copy_backward)|Weist die Werte von Elementen aus einem Quellbereich einem Zielbereich zu, durchläuft die Quellelementsequenz und weist ihnen rückwärts neue Positionen zu.|
 |[copy_if](../standard-library/algorithm-functions.md#copy_if)|Alle Elemente in einem bestimmten Bereich kopieren, die für eine angegebene Bedingung " **true** " testen|
@@ -118,7 +118,7 @@ Die numerischen C++-Standardbibliotheksalgorithmen, die für die numerische Vera
 |[reverse_copy](../standard-library/algorithm-functions.md#reverse_copy)|Kehrt die Reihenfolge der Elemente in einem Quellbereich beim Kopieren in einen Zielbereich um.|
 |[rotate](../standard-library/algorithm-functions.md#rotate)|Vertauscht die Elemente in zwei benachbarten Bereichen.|
 |[rotate_copy](../standard-library/algorithm-functions.md#rotate_copy)|Vertauscht die Elemente in zwei benachbarten Bereiche innerhalb eines Quellbereichs und kopiert das Ergebnis in einen Zielbereich.|
-|[sample](../standard-library/algorithm-functions.md#sample)||
+|[Blutprobe](../standard-library/algorithm-functions.md#sample)||
 |[search](../standard-library/algorithm-functions.md#search)|Sucht das erste Vorkommen einer Sequenz in einem Zielbereich, dessen Elemente gleich den Elementen in einer bestimmten Elementsequenz sind oder dessen Elemente äquivalent sind mit den Elementen in der angegebenen Sequenz, wie durch ein binäres Prädikat festgelegt.|
 |[search_n](../standard-library/algorithm-functions.md#search_n)|Sucht nach der ersten Untersequenz in einem Bereich, der aus einer angegebenen Anzahl von Elementen besteht, die einen bestimmten Wert oder eine Beziehung zu diesem durch ein binäres Prädikat angegebenen Wert haben.|
 |[set_difference](../standard-library/algorithm-functions.md#set_difference)|Vereinigt alle Elemente, die zu dem einen, jedoch nicht zu einem anderen sortierten Quellbereich gehören, in einen einzelnen, sortierten Zielbereich, wobei das Sortierkriterium durch ein binäres Prädikat angegeben werden kann.|
