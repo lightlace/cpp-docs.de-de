@@ -4714,6 +4714,8 @@
               items:
                 - name: Präprozessor
                   href: preprocessor/preprocessor.md
+                - name: Übersicht über den experimentellen Präprozessor
+                  href: preprocessor/preprocessor-experimental-overview.md
                 - name: Phasen der Übersetzung
                   href: preprocessor/phases-of-translation.md
                 - name: Präprozessordirektiven
