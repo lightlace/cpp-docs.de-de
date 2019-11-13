@@ -5,12 +5,12 @@ description: Microsoft C++ in Visual Studio  bewegt sich auf die vollständige 
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: d313a9a1f9f2bc1aa091935658ca1214f929c048
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: 0bbfc364da217525251df0c5f09544ed1ccfe5b6
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998887"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627088"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Verbesserungen der C++-Konformität in Visual Studio
 
@@ -810,7 +810,7 @@ struct Comparer  {
 
 ## <a name="improvements_150"></a> Verbesserungen der Konformität in Visual Studio 2017 RTW (Version 15.0)
 
-Der Microsoft C++-Compiler in Visual Studio 2017 ist mit Unterstützung für generalisierte **constexpr**-Elemente und die Initialisierung für nicht statische Datenelemente (NSDMI) für Aggregate für Funktionen, die im C++14-Standard hinzugefügt wurden, jetzt vollständig. Dem Compiler fehlen jedoch noch einige Funktionen der C++11- und C++98-Standards. Eine Tabelle mit dem aktuellen Compilerstatus finden Sie unter [Visual C++-Sprachkonformität](../visual-cpp-language-conformance.md).
+Der Microsoft C++-Compiler in Visual Studio 2017 ist mit Unterstützung für generalisierte **constexpr**-Elemente und die Initialisierung für nicht statische Datenelemente (NSDMI) für Aggregate für Funktionen, die im C++14-Standard hinzugefügt wurden, jetzt vollständig. Dem Compiler fehlen jedoch noch einige Funktionen der C++11- und C++98-Standards. Eine Tabelle mit dem aktuellen Compilerstatus finden Sie unter [Microsoft C++-Sprachkonformität: Tabelle](../visual-cpp-language-conformance.md).
 
 ### <a name="c11-expression-sfinae-support-in-more-libraries"></a>C++11: Unterstützung für SFINAE für Ausdrücke in mehr Bibliotheken
 
@@ -2850,4 +2850,4 @@ Eine vollständige Liste der Konformitätsverbesserungen bis zum Visual Studio 2
 
 ## <a name="see-also"></a>Siehe auch
 
-[Visual C++-Sprachkonformität](../visual-cpp-language-conformance.md)
+[Microsoft C++-Sprachkonformität: Tabelle](../visual-cpp-language-conformance.md)

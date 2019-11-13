@@ -1,16 +1,16 @@
 ---
 title: 'Microsoft C++-Sprachkonformität: Tabelle'
-ms.date: 08/12/2019
+ms.date: 10/31/2019
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 17ed76551102653e2f05e9731834f4787198db49
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: e3e86acb81120af1b663b56681ff0f8c41036b5a
+ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631643"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754076"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++-Sprachkonformität: Tabelle
 
@@ -346,7 +346,7 @@ Die Compileroption [/Zc:noexceptTypes](../build/reference/zc-noexcepttypes.md) f
 
 <a name="note_B"></a>__B__ Wird im Modus [/permissive-](../build/reference/permissive-standards-conformance.md) in Visual Studio 2017 Version 15.7 unterstützt. Weitere Informationen finden Sie im Blogbeitrag [Two-phase name lookup support comes to MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/09/11/two-phase-name-lookup-support-comes-to-msvc/) (Unterstützung der Namenssuche in zwei Phasen in MSVC).
 
-<a name="note_C"></a>__C__ Der Support des Compilers für die C99-Präprozessorregeln ist in Visual Studio 2017 unvollständig. Variadic-Makros werden unterstützt, aber es treten viele Fehler im Verhalten des Präprozessors auf. Der Präprozessor wird überarbeitet. Diese Änderungen werden bald experimentell im Modus [/permissive-](../build/reference/permissive-standards-conformance.md) ausgeliefert.
+<a name="note_C"></a>__C__ Der Support des Compilers für die C99-Präprozessorregeln ist in Visual Studio 2017 unvollständig. Wir haben den Präprozessor überarbeitet und die Auslieferung der Änderungen in Visual Studio 2017, Version 15.8, mit der Compileroption [/experimental:preprocessor](../build/reference/experimental-preprocessor.md) gestartet.
 
 <a name="note_D"></a>__D__ Unterstützt unter [/std:c++14](../build/reference/std-specify-language-standard-version.md) mit einer unterdrückbaren Warnung ([C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md)).
 
