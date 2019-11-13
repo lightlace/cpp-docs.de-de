@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4905
 ms.assetid: 40240bf4-b14e-4c22-aeb2-52f2851532f6
-ms.openlocfilehash: c1d201eb7d3eee322a1aa1e598eeb24928e361a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0086a3b312895d86f2e76bdbbd348f90654ba8e2
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380655"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051216"
 ---
 # <a name="compiler-warning-level-1-c4905"></a>Compilerwarnung (Stufe 1) C4905
 
 Breites Zeichenfolgenliteral umgewandelt zu "LPSTR"
 
-Der Compiler hat eine unsichere Typumwandlung. Die Umwandlung erfolgreich war, aber Sie sollten eine Konvertierungsroutine verwenden.
+Der Compiler hat eine unsichere Umwandlung erkannt. Die Umwandlung war erfolgreich, aber Sie sollten eine Konvertierungsroutine verwenden.
 
 Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4905 generiert.
+Im folgenden Beispiel wird C4905 generiert.
 
-```
+```cpp
 // C4905.cpp
 // compile with: /W1
 #pragma warning(default : 4905)

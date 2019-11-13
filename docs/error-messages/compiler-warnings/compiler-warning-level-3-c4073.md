@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4073
 ms.assetid: 50081a6e-6acd-45ff-8484-9b1ea926cc5c
-ms.openlocfilehash: db39f76f9bfdd46c300ea6e3738a63b636fe0a03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af9f8fc7323fab8c737e7a63cea20809c9182ad9
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402332"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051916"
 ---
 # <a name="compiler-warning-level-3-c4073"></a>Compilerwarnung (Stufe 3) C4073
 
-Fügen Sie Initialisierungen in Initialisierungsbereich einer Bibliothek
+Initialisierer werden im Bibliotheks Initialisierungs Bereich abgelegt.
 
-Nur die Bibliotheken von Drittanbietern-Entwickler sollten die Initialisierungsbereich einer Bibliothek, verwenden, die angegebenen [#pragma Init_seg](../../preprocessor/init-seg.md). Im folgende Beispiel wird die C4073 generiert:
+Nur Entwickler von Drittanbieterbibliotheken sollten den Bibliotheks Initialisierungs Bereich verwenden, der durch [#pragma init_seg](../../preprocessor/init-seg.md)angegeben wird. Im folgenden Beispiel wird C4073 generiert:
 
-```
+```cpp
 // C4073.cpp
 // compile with: /W3
 #pragma init_seg(lib)   // C4073

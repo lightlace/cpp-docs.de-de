@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4624
 ms.assetid: 14f61769-d92e-482b-9515-debd87b30a66
-ms.openlocfilehash: b1a7d715057f4c6d8ada104ad07f6ad0b9c52fb2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ef871f31d5d1d31e6d1d26d46b6f7f99c8fba86
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221390"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051448"
 ---
 # <a name="compiler-warning-level-1-c4624"></a>Compilerwarnung (Stufe 1) C4624
 
@@ -21,7 +21,7 @@ Ein Destruktor stand nicht für den Zugriff zur Verfügung oder wurde in einer B
 
 Im folgenden Beispiel wird C4624 generiert und gezeigt, wie Sie diesen Fehler beheben:
 
-```
+```cpp
 // C4624.cpp
 // compile with: /W1 /c
 class B {

@@ -2,7 +2,7 @@
 title: Verwenden Sie das C++ Microsoft-Toolset von der Befehlszeile aus.
 description: Verwenden Sie die Microsoft C++ Compiler Toolchain (MSVC) auf der Befehlszeile außerhalb der Visual Studio IDE.
 ms.custom: conceptual
-ms.date: 10/22/2019
+ms.date: 11/12/2019
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,16 +10,20 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: 7aa8673b7bb29591c7cf1c26b96b48261db9fee4
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811161"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051493"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Verwenden Sie das C++ Microsoft-Toolset von der Befehlszeile aus.
 
-Sie können mithilfe von Tools, die in Visual Studio enthalten sind, C- und C++-Anwendungen auf der Befehlszeile erstellen. Das Microsoft C++ -Compilertoolset (MSVC) kann auch als eigenständiges Paket von der [Visual Studio-Download](https://visualstudio.microsoft.com/downloads/) Seite heruntergeladen werden. Es ist Teil des Pakets **Build Tools für Visual Studio** . Sie können auswählen, dass Sie nur die Tools herunterladen C++ , die Sie für die Entwicklung benötigen.
+Sie können mithilfe von Tools, die in Visual Studio enthalten sind, C- und C++-Anwendungen auf der Befehlszeile erstellen. Das Microsoft C++ -Compilertoolset (MSVC) kann auch als eigenständiges Paket heruntergeladen werden, das die Visual Studio-IDE nicht enthält.
+
+## <a name="download-and-install-the-tools"></a>Herunterladen und Installieren der Tools
+
+Wenn Sie Visual Studio und eine C++ Arbeitsauslastung installiert haben, verfügen Sie über alle Befehlszeilen Tools. Weitere Informationen zum Installieren C++ von und Visual Studio finden Sie [unter Installieren C++ von Support in Visual Studio](vscpp-step-0-installation.md). Wenn Sie nur das Befehlszeilen-Toolset wünschen, laden Sie die [Buildtools für Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)herunter. Wenn Sie die heruntergeladene ausführbare Datei ausführen, wird die Visual Studio-Installer aktualisiert und ausgeführt. Um nur die Tools zu installieren, die C++ Sie für die Entwicklung benötigen, wählen Sie die  **C++ Arbeitsauslastung Build Tools** aus. Sie können optionale Bibliotheken und Toolsets auswählen, die unter **Installationsdetails**enthalten sein sollen. Wählen Sie zum Erstellen von Code mithilfe der Visual Studio 2015-oder 2017-Toolsets die optionalen MSVC-V140-oder MSVC v141 Build-Tools aus. Wenn Sie mit Ihrer Auswahl zufrieden sind, wählen Sie **Installieren**aus.
 
 ## <a name="how-to-use-the-command-line-tools"></a>Verwenden der Befehlszeilentools
 

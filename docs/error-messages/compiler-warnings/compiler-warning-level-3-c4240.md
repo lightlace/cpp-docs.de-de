@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4240
 ms.assetid: a2657cdb-18e1-493f-882b-4e10c0bca71d
-ms.openlocfilehash: fe5306cc7909138fea0159553b53c2adc6a46dc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3636e902e8d6ecd34cdc3e1135761c8595dc5998
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402215"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051757"
 ---
 # <a name="compiler-warning-level-3-c4240"></a>Compilerwarnung (Stufe 3) C4240
 
-nicht dem Standard entsprechende Erweiterung: Zugriff auf "Classname" jetzt "Zugriffsspezifizierer ', zuvor definiert wurde ' Zugriffsspezifizierer ' definiert
+nicht dem Standard entsprechende Erweiterung: der Zugriff auf ' Klassenname ' ist nun als ' Zugriffsspezifizierer ' definiert, zuvor als ' Zugriffsspezifizierer ' definiert.
 
-ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)), Sie können nicht den Zugriff auf eine geschachtelte Klasse ändern. Die Standard-Microsoft-Erweiterungen (/ Ze) können Sie folgende Warnung wird angezeigt.
+Unter ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) können Sie den Zugriff auf eine nicht geänderte Klasse ändern. Unter den standardmäßigen Microsoft-Erweiterungen (/Ze) können Sie mit dieser Warnung.
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // C4240.cpp
 // compile with: /W3
 class X

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4018
 ms.assetid: 6e8cbb04-d914-4319-b431-cbc2fbe40eb1
-ms.openlocfilehash: 6436f62a06cbe931ca5b42751d60507f21675c5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e136a82f8a0ecb3f5375d3a486dd017df7edb6e0
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402371"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051981"
 ---
 # <a name="compiler-warning-level-3-c4018"></a>Compilerwarnung (Stufe 3) C4018
 
-'Ausdruck': signed/unsigned-Konflikt
+' Ausdruck ': nicht übereinstimmende/nicht signierte Übereinstimmung
 
-Vergleichen eine Zahl mit und ohne Vorzeichen erforderlich, den Compiler an, den Wert mit Vorzeichen zu solchen ohne Vorzeichen zu konvertieren.
+Beim Vergleichen einer Zahl mit Vorzeichen und Vorzeichen muss der Compiler den signierten Wert in einen Ganzzahl ohne Vorzeichen-Wert konvertieren.
 
-Diese Warnung kann behoben werden, wenn Sie eine der beiden Typen umwandeln, wenn Typen mit und ohne Vorzeichen zu testen.
+Diese Warnung wird möglicherweise korrigiert, wenn Sie einen der beiden Typen beim Testen von signierten und nicht signierten Typen umwandeln.
 
-Im folgende Beispiel wird die C4018 generiert:
+Im folgenden Beispiel wird C4018 generiert:
 
-```
+```cpp
 // C4018.cpp
 // compile with: /W3
 int main() {

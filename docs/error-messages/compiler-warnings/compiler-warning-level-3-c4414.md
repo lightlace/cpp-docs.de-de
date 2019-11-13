@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4414
 ms.assetid: bc81d3ad-55dc-4a6b-a6f2-ec0ef38347df
-ms.openlocfilehash: 0a9ceb332888e306b8cb3bcbe1832f773d02d63d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43570cd43ca6e9d4f892dc577f615e9fa980e561
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401942"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051582"
 ---
 # <a name="compiler-warning-level-3-c4414"></a>Compilerwarnung (Stufe 3) C4414
 
-'Funktion': short-Sprung zur Funktion konvertiert in near
+"Function": kurzsprung zur Funktion konvertiert in Near
 
-Kurze Sprünge generieren kompakte Anweisung, die in eine Adresse in einem begrenzten Bereich von der Anweisung "branches". Die Anweisung enthält einen kurze Offset, der den Abstand zwischen dem Sprung und die Zieladresse, die Definition der Funktion darstellt. Während des Verknüpfens möglicherweise eine Funktion verschoben werden oder ein Link-Time-Optimierungen, die dazu führen, dass die Funktion, die außerhalb des gültigen Bereichs erreichbar, die von einem kurzen Offset verschoben werden. Der Compiler muss einen speziellen Datensatz für den Sprung generieren, müssen Sie die Anweisung "jmp" ganz oder nahe sein. Der Compiler versucht, die Konvertierung.
+Kurze Sprünge generieren eine kompakte Anweisung, die in einem begrenzten Bereich von der Anweisung zu einer Adresse verzweigt. Die Anweisung enthält einen kurzen Offset, der den Abstand zwischen dem Sprung und der Zieladresse (der Funktionsdefinition) darstellt. Beim Verknüpfungs Vorgang kann eine Funktion verschoben werden oder sich auf Link Zeit Optimierungen unterliegen, die bewirken, dass die Funktion aus dem Bereich verschoben wird, der von einem kurzen Offset erreichbar ist. Der Compiler muss einen speziellen Datensatz für den Sprung generieren, der erfordert, dass die "jmp"-Anweisung nah oder weit ist. Der Compiler hat die Konvertierung durchgeführt.
 
 Der folgende Code generiert beispielsweise C4414:
 
-```
+```cpp
 // C4414.cpp
 // compile with: /W3 /c
 // processor: x86

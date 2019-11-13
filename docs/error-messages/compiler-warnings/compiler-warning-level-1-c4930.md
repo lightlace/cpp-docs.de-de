@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4930
 ms.assetid: 89a206c9-c536-4186-8e81-1cde3e7f4f5b
-ms.openlocfilehash: 15cd1ed61c747e2c9168b9fc0fee03dca8403a24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b21cc6364692eb2f3b1d56b03d175df1f2ad7ee8
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242785"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050279"
 ---
 # <a name="compiler-warning-level-1-c4930"></a>Compilerwarnung (Stufe 1) C4930
 
-'Prototyp': Funktion mit Prototyp nicht aufgerufen (war eine Variablendefinition gemeint?)
+"Prototyp": eine prototypisierte Funktion wird nicht aufgerufen (war eine Variablen Definition beabsichtigt?)
 
-Der Compiler hat einen nicht verwendeten Funktionsprototyp. Wenn der Prototyp als Deklaration einer Variablen, entfernen Sie die Klammern öffnen/schließen.
+Der Compiler hat einen nicht verwendeten Funktionsprototyp erkannt. Wenn der Prototyp als Variablen Deklaration gedacht war, entfernen Sie die Klammern öffnende/schließende Klammern.
 
-Im folgende Beispiel wird die C4930 generiert:
+Im folgenden Beispiel wird C4930 generiert:
 
-```
+```cpp
 // C4930.cpp
 // compile with: /W1
 class Lock {
@@ -39,11 +39,11 @@ int main() {
 }
 ```
 
-C4930 kann auch auftreten, wenn der Compiler zwischen der Deklaration einer Funktion Prototyp und eines Funktionsaufrufs unterscheiden kann.
+C4930 kann auch auftreten, wenn der Compiler nicht zwischen einer Funktions prototypdeklaration und einem Funktions aufrufzeichen unterscheiden kann.
 
-Im folgende Beispiel wird die C4930 generiert:
+Im folgenden Beispiel wird C4930 generiert:
 
-```
+```cpp
 // C4930b.cpp
 // compile with: /EHsc /W1
 
@@ -112,4 +112,4 @@ int main()
 }
 ```
 
-Im obigen Beispiel ist das Ergebnis einer Methode, die keine Argumente annimmt an den Konstruktor einer unbenannten lokale Klasse-Variable als Argument übergeben. Der Aufruf kann eindeutig bestimmt werden, durch die lokale Variable erhält oder wenn der Aufruf der Methode mit einer Objektinstanz zusammen mit den entsprechenden Pointer-to-Member-Operator mit einem Präfix.
+Im obigen Beispiel wird das Ergebnis einer Methode, die keine Argumente annimmt, als Argument an den Konstruktor einer unbenannten lokalen Klassen Variablen übergeben. Der-Befehl kann eindeutig sein, indem entweder die lokale Variable benannt oder der Methodenaufrufe mit einer Objektinstanz und dem entsprechenden Zeiger auf Member-Operator vorangestellt werden.

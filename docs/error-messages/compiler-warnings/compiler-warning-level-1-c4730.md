@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4730
 ms.assetid: 11303e3f-162b-4b19-970a-479686123a68
-ms.openlocfilehash: 4da60194deaeac3c79f8c3e9be3bd87d91bc7ca2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5cdd6018afd26b09f7a4555ff8d0431c3364f09e
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386355"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051329"
 ---
 # <a name="compiler-warning-level-1-c4730"></a>Compilerwarnung (Stufe 1) C4730
 
-"main": Kombinieren von _m64 und Gleitkommaausdrücken kann zu fehlerhaftem Code
+"Main": das Mischen von _m64 und Gleit Komma Ausdrücken kann zu fehlerhaftem Code führen.
 
-Eine Funktion verwendet [__m64](../../cpp/m64.md) und **"float"**/**doppelte** Typen. Da der MMX- und Gleitkommaregister denselben physischen registerraum (kann nicht gleichzeitig verwendet werden), mit `__m64` und **"float"**/**doppelte** Typen im gleichen Funktion kann dazu führen, dass Daten beschädigt, möglicherweise eine Ausnahme verursacht.
+Eine Funktion verwendet [__m64](../../cpp/m64.md) -und **float** -/**Double** -Typen. Da die MMX-und Gleit Komma Register denselben physischen Register Bereich aufweisen (nicht gleichzeitig verwendet werden können), kann die Verwendung von `__m64`-und **float** -/**doppelten** Typen in der gleichen Funktion zu Daten Beschädigungen führen, die möglicherweise eine Ausnahme verursachen.
 
-Für eine sichere Verwendung `__m64` Typen und Gleitkommatypen in derselben Funktion, sollte jede Anweisung, einer der Typen verwendet, getrennt werden, durch die **_m_empty()** (für MMX) oder **_m_femms()** (für 3DNow!) systeminterne.
+Um `__m64` Typen und Gleit Komma Typen in derselben Funktion sicher zu verwenden, muss jede Anweisung, die einen der Typen verwendet, durch die systeminterne Funktion **_m_empty ()** (für MMX) oder **_m_femms ()** (für 3DNow!) getrennt werden.
 
-Im folgende Beispiel wird die C4730 generiert:
+Im folgenden Beispiel wird C4730 generiert:
 
-```
+```cpp
 // C4730.cpp
 // compile with: /W1
 // processor: x86

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4156
 ms.assetid: 9adf3acb-c0fe-42a8-a4db-5822b1493f77
-ms.openlocfilehash: 7d9a4ed09f026267e2c0f37fbbe4550ecd668dfc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95605aa29e1faba449e19dcf20e6895d31cc5874
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350464"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052145"
 ---
 # <a name="compiler-warning-level-2-c4156"></a>Compilerwarnung (Stufe 2) C4156
 
-Löschen eines Arrayausdrucks ohne Verwendung der Arrayform von "Delete". die Arrayform ersetzt
+Löschen eines Array Ausdrucks ohne Verwendung der Arrayform von "Delete" Ersetzen eines Array Formulars
 
-Der nicht-Arrayform von **löschen** ein Array kann nicht gelöscht werden. Der Compiler übersetzte **löschen** in das Array-Formular.
+Die nicht-Array-Form von **Delete** kann ein Array nicht löschen. Der Compiler hat **Delete** in das Array Formular übersetzt.
 
-Diese Warnung tritt nur unter Microsoft-Erweiterungen (/ Ze).
+Diese Warnung tritt nur unter Microsoft-Erweiterungen (/Ze) auf.
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // C4156.cpp
 // compile with: /W2
 int main()

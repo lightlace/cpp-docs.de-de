@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4197
 ms.assetid: f766feef-82b0-4d81-8a65-33628c7db196
-ms.openlocfilehash: 15b2fba94bfc956775a1e454893e7509a32000e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d7c8cee42f17ad3301980852b8333ea37f5ca6be
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402241"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051782"
 ---
 # <a name="compiler-warning-level-3-c4197"></a>Compilerwarnung (Stufe 3) C4197
 
-"Type": Flüchtige höchste Ebene bei Umwandlung wird ignoriert.
+"Typ": flüchtig auf oberster Ebene bei Umwandlung wird ignoriert.
 
-Der Compiler hat eine Typumwandlung in einem mit gekennzeichneten [flüchtige](../../cpp/volatile-cpp.md), oder eine Typumwandlung eines r-Typs zu einem Typ, der mit permanenten qualifiziert wird. Gemäß dem C-standard (6.5.3) sind die vollqualifizierten Typen zugeordnete Eigenschaften nur für die l-Wert-Ausdrücken von Bedeutung.
+Der Compiler hat eine Umwandlung in einen r-Werttyp erkannt, der mit [volatile](../../cpp/volatile-cpp.md)qualifiziert ist, oder eine Umwandlung eines r-Werttyps in einen Typ, der mit volatile qualifiziert ist. Gemäß dem C-Standard (6.5.3) sind Eigenschaften, die qualifizierten Typen zugeordnet sind, nur für l-Wert Ausdrücke sinnvoll.
 
-Im folgende Beispiel wird die C4197 generiert:
+Im folgenden Beispiel wird C4197 generiert:
 
-```
+```cpp
 // C4197.cpp
 // compile with: /W3
 #include <stdio.h>
