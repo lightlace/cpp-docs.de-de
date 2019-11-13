@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4392
 ms.assetid: 817806ad-06a6-4b9e-8355-e25687c782dc
-ms.openlocfilehash: 1dc0c546509b17132358f432f6a781035a314a72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b19080f4a86267a48618a5f40d7576c07c96c18a
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386420"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966109"
 ---
 # <a name="compiler-warning-level-1-c4392"></a>Compilerwarnung (Stufe 1) C4392
 
-"Signature": falsche Anzahl von Argumenten für systeminterne Funktion erwartet, "Number" Argumente
+"Signature": falsche Anzahl von Argumenten für die intrinsische Funktion, erwartete "Number"-Argumente.
 
-Die Deklaration einer Funktion für eine systeminterne Compilerfunktion mussten die falsche Anzahl von Argumenten. Das resultierende Image möglicherweise nicht ordnungsgemäß ausgeführt.
+Eine Funktionsdeklaration für eine systeminterne Compilerfunktion weist die falsche Anzahl von Argumenten auf. Das resultierende Image kann möglicherweise nicht ordnungsgemäß ausgeführt werden.
 
-Um diese Warnung zu beheben, korrigieren Sie die Deklaration oder löschen Sie die Deklaration und einfach #include die entsprechende Headerdatei.
+Um diese Warnung zu beheben, korrigieren Sie die Deklaration, oder löschen Sie die Deklaration, und #include Sie einfach die entsprechende Header Datei.
 
-Im folgende Beispiel wird die C4392 generiert:
+Im folgenden Beispiel wird C4392 generiert:
 
-```
+```cpp
 // C4392.cpp
 // compile with: /W1
 // processor: x86

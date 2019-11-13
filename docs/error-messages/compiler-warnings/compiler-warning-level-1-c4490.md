@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4490
 ms.assetid: f9b03ecf-41a1-4f4d-a74c-2c1e88234ccc
-ms.openlocfilehash: bf51994c210bd751e0d29bec169dfc4366784486
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41fa124eed365b87b419a4019262c0c673399295
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161094"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966179"
 ---
 # <a name="compiler-warning-level-1-c4490"></a>Compilerwarnung (Stufe 1) C4490
 
-"override": falsche Verwendung des Überschreibungsspezifizierers; 'Funktion' stimmt nicht mit dem eine Klassenmethode Basismethode der Verweisklasse überein.
+' override ': falsche Verwendung des Überschreibungsspezifizierers; "Function" stimmt nicht mit einer Basis Methode der Verweis Klasse
 
-Ein Überschreibungsspezifizierer wurde falsch verwendet. Z. B. eine Funktion der Schnittstelle nicht überschreiben, Sie implementieren.
+Ein Überschreibungsspezifizierer wurde falsch verwendet. Beispielsweise können Sie eine Schnittstellenfunktion nicht außer Kraft setzen, die Sie implementieren.
 
 Weitere Informationen finden Sie unter [Überschreibungsspezifizierer](../../extensions/override-specifiers-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4490 generiert.
+Im folgenden Beispiel wird C4490 generiert.
 
-```
+```cpp
 // C4490.cpp
 // compile with: /clr /c /W1
 

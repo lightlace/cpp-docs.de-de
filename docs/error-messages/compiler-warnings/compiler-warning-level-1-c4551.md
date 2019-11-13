@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4551
 ms.assetid: 458b59bd-e2d7-425f-9ba6-268ff200424f
-ms.openlocfilehash: 8a30ad5622d8e889a7f3ec64b73ead7c63f65b48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4e7467efa8308e1044e8b7a166174c173dab166
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397353"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966369"
 ---
 # <a name="compiler-warning-level-1-c4551"></a>Compilerwarnung (Stufe 1) C4551
 
-die Argumentliste der Funktion Aufruf fehlt
+fehlende Argumentliste für Funktionsaufrufe
 
-Ein Funktionsaufruf muss die öffnen und schließen Klammern nach dem Funktionsnamen enthalten, selbst wenn die Funktion keine Parameter akzeptiert.
+Ein Funktions aufrufzeichen muss die öffnenden und schließenden Klammern nach dem Funktionsnamen enthalten, auch wenn die Funktion keine Parameter annimmt.
 
-Im folgende Beispiel wird die C4551 generiert:
+Im folgenden Beispiel wird C4551 generiert:
 
-```
+```cpp
 // C4551.cpp
 // compile with: /W1
 void function1() {

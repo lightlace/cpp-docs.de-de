@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Ändern des Ziel Frameworks und des Platt Form Toolsets'
+title: 'Gewusst wie: Ändern des Zielframeworks und des Plattformtoolsets'
 ms.custom: conceptual
 ms.date: 07/24/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: 6af7a4eb47c1d3f8b9c52eec39795c9307ca9d8e
-ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.openlocfilehash: c5e7172fea06f6b455422fb023a0b6462b5c4103
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68492233"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964907"
 ---
-# <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Vorgehensweise: Ändern des Ziel Frameworks und des Platt Form Toolsets
+# <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Gewusst wie: Ändern des Zielframeworks und des Plattformtoolsets
 
 Sie können eine Visual Studio C++ -Projektdatei bearbeiten, um verschiedene Versionen des C++ Platt Form Toolsets, den Windows SDK und die .NET FrameworkC++(nur/CLI-Projekte) als Ziel festzulegen. Standardmäßig wird vom Projektsystem die .NET Framework-Version und die Toolsetversion verwendet, die der von Ihnen zum Erstellen des Projekts verwendeten Version von Visual Studio entsprechen. Sie können alle diese Werte in der vcxproj-Datei ändern, damit Sie die gleiche Codebasis für jedes Kompilierungs Ziel verwenden können.
 
@@ -30,9 +30,9 @@ Visual Studio unterstützt auch die fest C++ Steuerung von zielprojekten. Sie k�
 
 ## <a name="target-framework-ccli-project-only"></a>Ziel Framework (C++nur/CLI-Projekt)
 
-Wenn Sie das Zielframework ändern, ändern Sie auch das Plattformtoolset in eine Version, die das Zielframework unterstützt. Um zum Beispiel .NET Framework 4.5 als Ziel festzulegen, müssen Sie ein kompatibles Plattformtoolset wie Visual Studio 2015 (v140), Visual Studio 2013 (v120) oder Visual Studio 2012 (v110) verwenden. Sie können das [Windows 7,1 SDK](https://www.microsoft.com/en-us/download/details.aspx?id=8279) -Platt Form Toolset verwenden, um die .NET Framework 2,0, 3,0, 3,5 und 4 sowie die x86/x64-Plattformen als Ziel festzulegen.
+Wenn Sie das Zielframework ändern, ändern Sie auch das Plattformtoolset in eine Version, die das Zielframework unterstützt. Um zum Beispiel .NET Framework 4.5 als Ziel festzulegen, müssen Sie ein kompatibles Plattformtoolset wie Visual Studio 2015 (v140), Visual Studio 2013 (v120) oder Visual Studio 2012 (v110) verwenden. Sie können das [Windows 7,1 SDK](https://www.microsoft.com/download/details.aspx?id=8279) -Platt Form Toolset verwenden, um die .NET Framework 2,0, 3,0, 3,5 und 4 sowie die x86/x64-Plattformen als Ziel festzulegen.
 
-Sie können die Zielplattform zusätzlich erweitern, indem Sie ein benutzerdefiniertes Plattformtoolset erstellen. Weitere Informationen finden Sie unter [Systemeigene Festlegung von C++-Zielversionen](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) im Visual C++-Blog.
+Sie können die Zielplattform zusätzlich erweitern, indem Sie ein benutzerdefiniertes Plattformtoolset erstellen. Weitere Informationen finden Sie unter [Systemeigene Festlegung von C++-Zielversionen](https://devblogs.microsoft.com/cppblog/c-native-multi-targeting/) im Visual C++-Blog.
 
 ### <a name="to-change-the-target-framework"></a>So ändern Sie das Zielframework
 

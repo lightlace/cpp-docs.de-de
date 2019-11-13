@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4441
 ms.assetid: 7fc540a5-e41f-47cf-aa37-b2b699c2685e
-ms.openlocfilehash: 45d7a6af09677c1e63dab5ffcc55c35d8203b40b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f45288e1e52d157e5c135a45c0801a909fccfbc
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408237"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966027"
 ---
 # <a name="compiler-warning-level-1-c4441"></a>Compilerwarnung (Stufe 1) C4441
 
-die Aufrufkonvention von "cc1" ignoriert. 'cc2' stattdessen verwendet
+die Aufruf Konvention von "cc1" wird ignoriert. Stattdessen "cc2" verwenden
 
-Memberfunktionen in verwalteten benutzerdefinierten Typen und Generika für globale Funktion verwenden, müssen die [__clrcall](../../cpp/clrcall.md) Aufrufkonvention.  Der Compiler verwendet `__clrcall`.
+Member-Funktionen in verwalteten benutzerdefinierten Typen und globalen Funktions Generika müssen die [__clrcall](../../cpp/clrcall.md) Aufruf Konvention verwenden.  Der Compiler hat `__clrcall`verwendet.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4441 generiert.
+Im folgenden Beispiel wird C4441 generiert.
 
-```
+```cpp
 // C4441.cpp
 // compile with: /clr /W1 /c
 generic <class ItemType>

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4395
 ms.assetid: 8051469a-3a39-4677-80f7-1300fbffe8ea
-ms.openlocfilehash: 27503b94a18b949637293201203e18793f5e7788
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 074e00ff2ae44986127f629da6ef38f9f5df7212
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182404"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964873"
 ---
 # <a name="compiler-warning-level-1-c4395"></a>Compilerwarnung (Stufe 1) C4395
 
-'Funktion': Memberfunktion wird für eine Kopie des Initonly-Datenmembers 'Member' aufgerufen werden
+"Function": die Member-Funktion wird für eine Kopie des initonly-Datenmembers "Member" aufgerufen.
 
-Eine Memberfunktion aufgerufen wurde, auf eine [Initonly (C++ / CLI)](../../dotnet/initonly-cpp-cli.md) -Datenmember.  C4395 weist darauf hin, die die **Initonly** -Datenmember kann nicht von der Funktion geändert werden.
+Eine Member-Funktion wurde für einen [initonly-C++Datenmember (/CLI)](../../dotnet/initonly-cpp-cli.md) aufgerufen.  C4395 warnt, dass der **initonly** -Datenmember nicht durch die-Funktion geändert werden kann.
 
-Im folgende Beispiel wird die C4395 generiert:
+Im folgenden Beispiel wird C4395 generiert:
 
-```
+```cpp
 // C4395.cpp
 // compile with: /W1 /clr
 public value class V {

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4488
 ms.assetid: 55625e46-ddb5-4c7c-99c7-cd4aa9f879bd
-ms.openlocfilehash: c816c1b3f5481ccff19fd2a2377c5fc98f950fee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3d176d034e679f3cca145ccb2fc77cc7fa64f3d
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404077"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965575"
 ---
 # <a name="compiler-warning-level-1-c4488"></a>Compilerwarnung (Stufe 1) C4488
 
-'Funktion': 'Schlüsselwort' Schlüsselwort muss die Schnittstelle '-Schnittstellenmethode ' implementieren
+"Function": erfordert das Schlüsselwort "Keyword" zum Implementieren der Schnittstellen Methode "Interface_method".
 
-Eine Klasse muss alle Member einer Schnittstelle implementieren, von dem sie direkt erbt. Ein implementierter Member muss öffentliche zugriffsmöglichkeiten aufweisen, und Sie müssen als virtuell markiert werden.
+Eine Klasse muss alle Member einer Schnittstelle implementieren, von der Sie direkt erbt. Ein implementiertes Mitglied muss über öffentliche Zugriffsmöglichkeiten verfügen und als virtuell gekennzeichnet sein.
 
 ## <a name="example"></a>Beispiel
 
-C4488 kann auftreten, wenn auf ein implementierter Member nicht öffentlich ist. Im folgende Beispiel wird die C4488 generiert.
+C4488 kann auftreten, wenn ein implementiertes Member nicht öffentlich ist. Im folgenden Beispiel wird C4488 generiert.
 
-```
+```cpp
 // C4488.cpp
 // compile with: /clr /c /W1 /WX
 interface struct MyI {
@@ -42,9 +42,9 @@ public:
 
 ## <a name="example"></a>Beispiel
 
-C4488 kann auftreten, wenn ein implementierter Member nicht als virtuell gekennzeichnet ist. Im folgende Beispiel wird die C4488 generiert.
+C4488 kann auftreten, wenn ein implementiertes Member nicht als virtuell markiert ist. Im folgenden Beispiel wird C4488 generiert.
 
-```
+```cpp
 // C4488_b.cpp
 // compile with: /clr /c /W1 /WX
 interface struct MyI {

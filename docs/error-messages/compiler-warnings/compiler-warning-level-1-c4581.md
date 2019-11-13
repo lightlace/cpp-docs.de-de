@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-ms.openlocfilehash: 9868d33538a1f56906455f2b1772b53eb3a7734d
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 5931516e3f4eba91c3b7a3ab4d0ca4979ce1ed84
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447104"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965923"
 ---
 # <a name="compiler-warning-level-1-c4581"></a>Compilerwarnung (Stufe 1) C4581
 
-Veraltetes Verhalten: "string1" ersetzt durch "Zeichenfolge2" zur Verarbeitung des Attributs
+veraltes Verhalten: "" Zeichenfolge1 "" wurde durch "Zeichenfolge2" zur Verarbeitung des Attributs ersetzt.
 
-Dieser Fehler kann infolge einer konformitätsverbesserung für Compiler, die für Visual Studio 2005 durchgeführt wurde generiert werden: Überprüfen der Parameter für Visual C++ Attribute.
+Dieser Fehler kann als Ergebnis einer compilerübereinstimmungs-Arbeit generiert werden, die für Visual Studio 2005 durchgeführt wurde: C++ Parameter Überprüfung für visuelle Attribute.
 
-In früheren Versionen wurden Werte des Attributs akzeptiert, und zwar unabhängig davon, ob sie in Anführungszeichen eingeschlossen wäre. Wenn der Wert einer Enumeration ist, muss er nicht in Anführungszeichen eingeschlossen werden.
+In früheren Versionen wurden Attributwerte akzeptiert, unabhängig davon, ob Sie in Anführungszeichen eingeschlossen wurden. Wenn der Wert eine Enumeration ist, darf er nicht in Anführungszeichen eingeschlossen werden.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird C4581 generiert.
+Im folgenden Beispiel wird C4581 generiert.
 
-```
+```cpp
 // C4581.cpp
 // compile with: /c /W1
 #include "unknwn.h"

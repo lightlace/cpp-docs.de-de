@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4470
 ms.assetid: f52a3eaa-a235-4747-a47d-9ec4ad4cb0ea
-ms.openlocfilehash: 7fd4644ab39e350c0c0badb527875b427a2c6987
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc1efad7f18310727e2fdb756e49b95294357c4d
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160899"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965408"
 ---
 # <a name="compiler-warning-level-1-c4470"></a>Compilerwarnung (Stufe 1) C4470
 
-zur gleitkommasteuerung ignoriert unter/CLR
+in/CLR werden die Pragmas für Gleit Komma Steuerelemente ignoriert.
 
-Die "float"-Control-Pragmas:
+Die float-Control-Pragmas:
 
 - [fenv_access](../../preprocessor/fenv-access.md)
 
@@ -25,11 +25,11 @@ Die "float"-Control-Pragmas:
 
 - [fp_contract](../../preprocessor/fp-contract.md)
 
-wirken sich nicht unter ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md).
+keine Auswirkung unter [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).
 
-Im folgende Beispiel wird die C4470 generiert:
+Im folgenden Beispiel wird C4470 generiert:
 
-```
+```cpp
 // C4470.cpp
 // compile with: /clr /W1 /LD
 #pragma float_control(except, on)   // C4470

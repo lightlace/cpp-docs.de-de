@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4558
 ms.assetid: 52bb0324-7bec-468c-b35b-13a08d38e578
-ms.openlocfilehash: ae4dd6ebfb00441591a4aa1cdd2ecdfbf37f74d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d47e2a619cb84838144b3be6fd45d1f79ecc8661
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397301"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965998"
 ---
 # <a name="compiler-warning-level-1-c4558"></a>Compilerwarnung (Stufe 1) C4558
 
-Wert des Operanden "Value" ist außerhalb des gültigen Bereichs 'Untergrenze - Obergrenze'
+der Wert des Operanden ' value ' liegt außerhalb des gültigen Bereichs ' lowerbound-upperbound '.
 
-Der Wert, der übergeben wird, um eine Assembly Language-Anweisung ist außerhalb des gültigen Bereichs für den Parameter angegeben. Der Wert wird abgeschnitten.
+Der an eine Assembly-sprach Anweisung übergebenen Wert liegt außerhalb des Bereichs, der für den-Parameter angegeben ist. Der Wert wird abgeschnitten.
 
-Im folgende Beispiel wird die C4558 generiert:
+Im folgenden Beispiel wird C4558 generiert:
 
-```
+```cpp
 // C4558.cpp
 // compile with: /W1
 // processor: x86

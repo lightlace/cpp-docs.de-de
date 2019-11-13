@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4572
 ms.assetid: 482dee5a-29bd-4fc3-b769-9dfd4cd2a964
-ms.openlocfilehash: e32509e4d32eef4f53b8d43a7db769844f1182c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52285f391af0a8028307cbbc320af33f9cb1fca5
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397236"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965948"
 ---
 # <a name="compiler-warning-level-1-c4572"></a>Compilerwarnung (Stufe 1) C4572
 
-[ParamArray]-Attribut ist unter "/ CLR", und verwenden als veraltet markiert "..." Stattdessen
+[ParamArray] das Attribut ist unter/CLR veraltet, verwenden Sie "...". Stattdessen
 
-Es wurde ein veraltetes Format zum Angeben einer Liste variabler Argumente verwendet. Verwenden Sie beim Kompilieren für die CLR auslassungszeichensyntax anstelle von <xref:System.ParamArrayAttribute>. Weitere Informationen finden Sie unter [Variablenargumentlisten (...) (C++ / CLI) ](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Es wurde ein veralteter Stil zum Angeben einer Variablen Argumentliste verwendet. Wenn Sie für die CLR kompilieren, verwenden Sie die Ellipsen Syntax anstelle <xref:System.ParamArrayAttribute>. Weitere Informationen finden Sie unter [Variablen Argument Listen (...) (C++/CLI)](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4572 generiert.
+Im folgenden Beispiel wird C4572 generiert.
 
-```
+```cpp
 // C4572.cpp
 // compile with: /clr /W1
 void Func([System::ParamArray] array<int> ^);   // C4572

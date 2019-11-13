@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4553
 ms.assetid: d8aacbe0-3cb5-4367-a6e5-fd7e28f0ff9d
-ms.openlocfilehash: 7a299d4a99818699e9be31e7d15d9e589de05c15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2d5e52e565878011b2439792c721eeb57cdd20a
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410342"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966323"
 ---
 # <a name="compiler-warning-level-1-c4553"></a>Compilerwarnung (Stufe 1) C4553
 
-'Operator': Operator hat keine Auswirkungen; Wollten Sie "Operator"?
+"Operator": Operator hat keine Auswirkung; haben Sie ' Operator ' beabsichtigt?
 
-Wenn eine Ausdrucksanweisung einen Operator mit keine ungünstigen Nebeneffekte wie am Anfang des Ausdrucks, ist es wahrscheinlich einen Fehler.
+Wenn eine Expression-Anweisung einen Operator ohne Nebeneffekte als Anfang des Ausdrucks aufweist, ist dies wahrscheinlich ein Fehler.
 
-Im folgende Beispiel wird die C4553 generiert:
+Im folgenden Beispiel wird C4553 generiert:
 
-```
+```cpp
 // C4553.cpp
 // compile with: /W1
 int func()

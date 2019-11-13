@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4584
 ms.assetid: ad86582f-cb8c-4d21-8c4c-a6c800059e25
-ms.openlocfilehash: 3c60575e766ea3490a40711fe26c3e402c41fbdd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 831789f5295fcf91e83de3bd0bba12c8429e9fa3
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397249"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966238"
 ---
 # <a name="compiler-warning-level-1-c4584"></a>Compilerwarnung (Stufe 1) C4584
 
-'Klasse1': Base-Klasse 'Klasse2' ist bereits eine Basisklasse von "class3"
+"Class1": die Basisklasse "Klasse2" ist bereits eine Basisklasse von "class3".
 
-Die Klasse, die Sie definiert erbt von zwei Klassen, von denen aus den anderen erbt. Zum Beispiel:
+Die Klasse, die Sie definiert haben, erbt von zwei Klassen, von denen eine von der anderen erbt. Beispiel:
 
-```
+```cpp
 // C4584.cpp
 // compile with: /W1 /LD
 class A {
@@ -32,4 +32,4 @@ class C : public A, public B { // C4584
 };
 ```
 
-In diesem Fall würde eine Warnung für Klasse C ausgegeben werden, weil es erbt sowohl von Klasse A und B, die auch von Klasse a erbt-Klasse Diese Warnung dient als Erinnerung, Sie die Verwendung von Membern, die von diesen Basisklassen vollständig qualifizieren müssen oder aufgrund der Mehrdeutigkeit bezüglich der, die Klassenmember Sie finden ein Compilerfehler generiert werden.
+In diesem Fall würde eine Warnung für die Klasse C ausgegeben, weil Sie sowohl von Klasse a als auch von Klasse B erbt, die auch von Klasse a erbt. Diese Warnung dient als Erinnerung daran, dass Sie die Verwendung von Membern aus diesen Basisklassen vollständig qualifizieren müssen. oder es wird ein Compilerfehler generiert, weil die Mehrdeutigkeit, auf die Sie verweisen, liegt.
