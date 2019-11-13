@@ -3,12 +3,12 @@ title: Herstellen einer Verbindung mit dem Linux-Zielsystem in Visual Studio
 description: Hier finden Sie Informationen zum Herstellen einer Verbindung mit einem Linux-Remotecomputer oder mit WSL über ein C++-Projekt in Visual Studio.
 ms.date: 09/04/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 2f4e6311493f2b29ba6911ec1b76225b6c7abe6d
-ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
+ms.openlocfilehash: 3d91faa7aa83c86e8c2f3544ee61c16f75f8c346
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71925555"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626766"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Herstellen einer Verbindung mit dem Linux-Zielsystem in Visual Studio
 
@@ -79,6 +79,20 @@ So richten Sie die Remoteverbindung ein:
    Protokolle enthalten Verbindungen, alle an den Remotecomputer gesendeten Befehle (Text, Exitcode und Ausführungszeit) sowie die gesamte Ausgabe von Visual Studio an die Shell. Die Protokollierung funktioniert für alle plattformübergreifenden CMake-Projekte oder MSBuild-basierten Linux-Projekte in Visual Studio.
 
    Sie können die Ausgabe in eine Datei oder in den Bereich **Plattformübergreifende Protokollierung** im Ausgabefenster konfigurieren. Bei MSBuild-basierten Linux-Projekten werden Befehle, die von MSBuild an den Remotecomputer ausgegeben werden, nicht an das **Ausgabefenster** weitergeleitet, weil sie prozessextern gesendet werden. Stattdessen werden sie in eine Datei mit dem Präfix „msbuild_“ protokolliert.
+   
+## <a name="tcp-port-forwarding"></a>TCP-Portweiterleitung
+
+Die Linux-Unterstützung von Visual Studio verfügt über eine Abhängigkeit von der TCP-Portweiterleitung. Wenn die TCP-Portweiterleitung in Ihrem Remotesystem deaktiviert wird, wirkt sich dies auf **rsync** und **gdbserver** aus. 
+
+Sowohl MSBuild-basierte Linux-Projekte als auch CMake-Projekte verwenden „rsync“, um [Header aus Ihrem Remotesystem zur Verwendung für IntelliSense in Windows zu kopieren](configure-a-linux-project.md#remote_intellisense). Wenn Sie die TCP-Portweiterleitung nicht aktivieren können, können Sie den automatischen Download von Remoteheadern über „Tools“ > „Optionen“ > „Plattformübergreifend“ > „Verbindungs-Manager“ > „IntelliSense-Manager für Remoteheader“ deaktivieren. Wenn im Remotesystem, mit dem Sie eine Verbindung herstellen möchten, die TCP-Portweiterleitung nicht aktiviert ist, wird der folgende Fehler angezeigt, wenn der Download von Remoteheadern für IntelliSense startet.
+
+![Fehler bei Headern](media/port-forwarding-headers-error.png)
+
+Die CMake-Unterstützung von Visual Studio verwendet „rsync“ ebenfalls, um Quelldateien in das Remotesystem zu kopieren. Wenn Sie die TCP-Portweiterleitung nicht aktivieren können, können Sie SFTP als Methode zum Kopieren von Remotequellen verwenden. SFTP ist im Allgemeinen langsamer als „rsync“, weist aber keine Abhängigkeit von der TCP-Portweiterleitung auf. Sie können Ihre Methode zum Kopieren von Remotequellen mit der remoteCopySourcesMethod-Eigenschaft im [CMake-Einstellungs-Editor](../build/cmakesettings-reference.md#additional-settings-for-cmake-linux-projects) verwalten. Wenn die TCP-Portweiterleitung in Ihrem Remotesystem deaktiviert ist, wird beim ersten Aufrufen von „rsync“ ein Fehler im CMake-Ausgabefenster angezeigt.
+
+![rsync-Fehler](media/port-forwarding-copy-error.png)
+
+„gdbserver“ kann zum Debuggen auf eingebetteten Geräten verwendet werden. Wenn Sie die TCP-Portweiterleitung nicht aktivieren können, müssen Sie „gdb“ für alle Remotedebuggingszenarien verwenden. Beim Debuggen von Projekten in einem Remotesystem wird standardmäßig „gdb“ verwendet. 
 
    ::: moniker-end
 

@@ -3,12 +3,12 @@ title: Installieren der C++-Workload unter Linux in Visual Studio
 description: Informationen zum Herunterladen, Installieren und Einrichten der Linux-Workload für C++ in Visual Studio
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: ad0fd856fc15ce9f787ba620463480bfe3e59d47
-ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
+ms.openlocfilehash: 68e347a4f90fc15f9d3846c82c3392213e1bd7bc
+ms.sourcegitcommit: eb254b4462a58d219376ff501bf768bd1adc07ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71925424"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73912903"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Herunterladen, Installieren und Einrichten der Linux-Workload
 
@@ -48,7 +48,7 @@ Für jedes dieser Szenarios ist die Workload **Linux-Entwicklung mit C++** erfor
 
 Wenn Sie noch keinen Linux-Computer besitzen, können Sie einen virtuellen Linux-Computer in Azure erstellen. Weitere Informationen finden Sie unter [Schnellstart: Erstellen eines virtuellen Linux-Computers im Azure-Portal](/azure/virtual-machines/linux/quick-create-portal).
 
-Unter Windows 10 können Sie Ihre bevorzugte Linux-Distribution im WSL (Windows-Subsystem für Linux) installieren und als Ziel verwenden. Weitere Informationen finden Sie unter [Windows-Subsystem für Linux – Installationsleitfaden für Windows 10](/windows/wsl/install-win10). WSL ist eine praktische Konsolenumgebung, die jedoch nicht für grafische Anwendungen empfohlen wird. 
+Unter Windows 10 können Sie Ihre bevorzugte Linux-Distribution im WSL (Windows-Subsystem für Linux) installieren und als Ziel verwenden. Weitere Informationen finden Sie unter [Windows-Subsystem für Linux – Installationsleitfaden für Windows 10](/windows/wsl/install-win10). Wenn Sie nicht auf den Microsoft Store zugreifen können, können Sie das [WSL-Distributionspaket manuell herunterladen](/windows/wsl/install-manual). WSL ist eine praktische Konsolenumgebung, die jedoch nicht für grafische Anwendungen empfohlen wird. 
 
 ::: moniker-end
 

@@ -5,12 +5,12 @@ ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: f02c5878f5f741c216499f619bfd1392483bfa86
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: bde8b8e17c3186d22493f099a5f7d1b5a2646a67
+ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552342"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754137"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Neuerungen bei C++ in Visual Studio
 
@@ -257,6 +257,10 @@ Der Compiler unterstützt ungefähr 75 % der Features, die neu in C++17 sind (z.
 
 Das MSVC-Compilertoolset in Visual Studio-Version 15.7 erfüllt nun den C++-Standard. Weitere Informationen finden Sie unter [Announcing: MSVC Conforms to the C++ Standard (Ankündigung: MSVC erfüllt den C++-Standard)](https://devblogs.microsoft.com/cppblog/announcing-msvc-conforms-to-the-c-standard/) und [Microsoft C++-Sprachkonformität](../visual-cpp-language-conformance.md).
 
+##### <a name="visual-studio-2017-version-158"></a>Visual Studio 2017 Version 15.8
+
+Die Compileroption [/experimental:preprocessor](../build/reference/experimental-preprocessor.md) aktiviert den neuen experimentellen MSVC-Präprozessor, der letztendlich mit allen gültigen C- und C++-Standards konform sein wird. Weitere Informationen finden Sie unter [Übersicht über den experimentellen MSVC-Präprozessor](../preprocessor/preprocessor-experimental-overview.md).
+
 ### <a name="new-compiler-options"></a>Neue Compileroptionen
 
 - [/permissive-](../build/reference/permissive-standards-conformance.md): Aktiviert alle strikten Compileroptionen für die Übereinstimmung mit Standards und deaktiviert die meisten Microsoft-spezifischen Compilererweiterungen (aber z.B. nicht `__declspec(dllimport)`). Diese Option ist in Visual Studio 2017-Version 15.5 standardmäßig aktiviert.  Der Konformitätsmodus **/permissive-** schließt Unterstützung für die Zweiphasen-Namenssuche ein. Weitere Informationen finden Sie unter [C++ Conformance Improvements in Visual Studio (Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual Studio)](cpp-conformance-improvements.md).
@@ -360,11 +364,11 @@ Eine vollständige Liste der Verbesserungen an der Standardbibliothek in Visual 
 - Es wurden \<optional\>, \<variant\>, `shared_ptr::weak_type`, und \<cstdalign\> hinzugefügt.
 - C++14 `constexpr` wurde in `min(initializer_list)`, `max(initializer_list)` und `minmax(initializer_list)` und `min_element()`, `max_element()` und `minmax_element()` hinzugefügt.
 
-Weitere Informationen finden Sie unter [Visual C++-Sprachkonformität](../visual-cpp-language-conformance.md).
+Weitere Informationen finden Sie unter [Microsoft C++-Sprachkonformität: Tabelle](../visual-cpp-language-conformance.md).
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 Version 15.3
 
-- Es wurden verschiedene weitere C++17-Features implementiert. Weitere Informationen finden Sie unter [Visual C++-Sprachkonformität](cpp-conformance-improvements.md#improvements_153).
+- Es wurden verschiedene weitere C++17-Features implementiert. Weitere Informationen finden Sie unter [Microsoft C++-Sprachkonformität: Tabelle](cpp-conformance-improvements.md#improvements_153).
 - P0602R0 wurde implementiert: „variant and optional should propagate copy/move triviality“.
 - Die Standardbibliothek toleriert jetzt offiziell das Deaktivieren dynamischer RTTI über die Option [/GR-](../build/reference/gr-enable-run-time-type-information.md). `dynamic_pointer_cast()` und `rethrow_if_nested()` erfordern grundsätzlich `dynamic_cast`. Die Standardbibliothek kennzeichnet sie also jetzt als `=delete` unter **/GR-** .
 - Auch wenn dynamische RTTI über **/GR-** deaktiviert wurde, ist „statische RTTI“ (in Form von `typeid(SomeType)`) weiterhin verfügbar und unterstützt verschiedene Komponenten der Standardbibliothek. Die Standardbibliothek unterstützt über **/D\_HAS\_STATIC\_RTTI=0** jetzt auch die Deaktivierung der statischen RTTI. Durch diese Flag werden `std::any`, die Memberfunktionen `target()` und `target_type()` von `std::function` sowie die Friend-Memberfunktionen `get_deleter()` von `std::shared_ptr` und `std::weak_ptr` deaktiviert.
@@ -422,7 +426,7 @@ Weitere Informationen finden Sie unter [Visual C++-Sprachkonformität](../visual
 - `constexpr char_traits`
 - Herleitungsregelwerk für die Standardbibliothek
 
-Weitere Informationen finden Sie unter [Visual C++-Sprachkonformität](../visual-cpp-language-conformance.md).
+Weitere Informationen finden Sie unter [Microsoft C++-Sprachkonformität: Tabelle](../visual-cpp-language-conformance.md).
 
 ### <a name="performance-and-throughput-fixes"></a>Korrekturen für Leistung und Durchsatz
 
@@ -530,11 +534,11 @@ C++ unterstützt jetzt STRG+Klick-**GoTo-Definition**, was die Navigation mit de
 
   ![Fehlerliste](media/ErrorList1.png "Fehlerliste")
 
-  ![Fehlerliste gefiltert](media/ErrorList2.png "Fehlerliste gefiltert")
+  ![Gefilterte Fehlerliste](media/ErrorList2.png "Gefilterte Fehlerliste")
 
 - Die Möglichkeit zum Filtern von Elementen der Memberliste nach Typ wurde hinzugefügt.
 
-  ![Filterung der Memberliste](media/mlfiltering.png "Filterung der Memberliste")
+  ![Filtern der Memberliste](media/mlfiltering.png "Filtern der Memberliste")
 
 - Eine neue experimentelle, vorhersehbare IntelliSense-Funktion, die das kontextbewusste Filtern in der Memberliste bereitstellt, wurde hinzugefügt. Weitere Informationen finden Sie im Blogbeitrag [C++ IntelliSense Improvements – Predictive IntelliSense & Filtering (Verbesserungen in C++-IntelliSense: Predictive IntelliSense und Filtern)](https://devblogs.microsoft.com/cppblog/c-intellisense-improvements-predictive-intellisense-filtering/).
 - **Alle Verweise suchen** (UMSCHALT+F12) ermöglicht nun eine einfachere Navigation, auch in komplexen Codebasen. Das Feature bietet eine erweiterte Gruppierung, Filterung, Sortierung, Suche in Ergebnissen und (für einige Sprachen) eine Einfärbung, damit Sie Ihre Verweise umfassend verstehen können. Für C++ enthält die neue Benutzeroberfläche Informationen dazu, ob Informationen aus einer Variablen gelesen oder in eine Variable geschrieben werden.
@@ -570,7 +574,7 @@ Visual Studio 2017 führt die Unterstützung für die Verwendung von CMake-Proje
 
 - Weitere Konfigurationen werden über eine Datei „CMakeSettings.json“ unterstützt, die sich im gleichen Ordner wie die Datei „CMakeLists.txt“ befindet.
 
-  ![„Ordner öffnen“ von Cmake](media/cmake-cpp.png "„Ordner öffnen“ von Cmake")
+  ![CMake – Ordner öffnen](media/cmake-cpp.png "CMake – Ordner öffnen")
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 Version 15.3
 
