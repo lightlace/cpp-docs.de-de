@@ -1,6 +1,6 @@
 ---
 title: pack-Pragma
-ms.date: 08/29/2019
+ms.date: 11/11/2019
 f1_keywords:
 - pack_CPP
 - vc-pragma.pack
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 4bf0b3d4529de012f4a09d6e60a5b112b9a101df
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 3572bd0d0b0e8149f527c1c43eca5870783b13a8
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218753"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965257"
 ---
 # <a name="pack-pragma"></a>pack-Pragma
 
@@ -21,35 +21,35 @@ Gibt die Verpackungs Ausrichtung für Struktur-, Union-und Klassenmember an.
 
 ## <a name="syntax"></a>Syntax
 
-> **#pragma pack( show )** \
-> **#pragma pack ( push** [ **,** *Bezeichner* ] [ **,** *n* ] **)** \
-> **#pragma pack ( pop** [ **,** { *Identifier* | *n* }] **)** \
+> **#pragma pack (anzeigen)** \
+> **#pragma pack (Push** [ **,** *Identifier* ] [ **,** *n* ] **)** \
+> **#pragma pack (Pop** [ **,** { *Identifier* | *n* }] **)** \
 > **#pragma pack (** [ *n* ] **)**
 
 ### <a name="parameters"></a>Parameter
 
-**show**\
+\ **anzeigen**
 Optionale Zeigt den aktuellen Bytewert für die Verpackungs Ausrichtung an. Der Wert wird von einer Warnmeldung angezeigt.
 
-**push**\
+**Push** -\
 Optionale Überträgt den aktuellen Verpackungs Ausrichtungs Wert auf den internen compilerstapel und legt den aktuellen Verpackungs Ausrichtungs Wert auf *n*fest. Wenn *n* nicht angegeben ist, wird der aktuelle Wert für die Verpackungs Ausrichtung per pushübertragung übermittelt
 
-**pop**\
-Optionale Entfernt den Datensatz von der obersten Position des internen Compilerstapels. Wenn *n* nicht mit **Pop**angegeben wird, ist der Verpackungs Wert, der dem resultierenden Datensatz oben auf dem Stapel zugeordnet ist, der neue Verpackungs Ausrichtungs Wert. Wenn *n* angegeben wird, z `#pragma pack(pop, 16)`. b., wird *n* zum neuen Verpackungs Ausrichtungs Wert. Wenn Sie einen *Bezeichner*verwenden, z `#pragma pack(pop, r1)`. b., werden alle Datensätze auf dem Stapel so lange per Pop ausgeblendet, bis der Datensatz mit dem *Bezeichner* gefunden wurde. Dieser Datensatz wird per Pop ausgeblendet, und der Verpackungs Wert, der dem resultierenden Datensatz am oberen Rand des Stapels zugeordnet ist, ist der neue Verpackungs Ausrichtungs Wert. Wenn Sie einen *Bezeichner* verwenden, der nicht in einem Datensatz auf dem Stapel gefunden wird, wird der **Pop** ignoriert.
+**Pop** -\
+Optionale Entfernt den Datensatz von der obersten Position des internen Compilerstapels. Wenn *n* nicht mit **Pop**angegeben wird, ist der Verpackungs Wert, der dem resultierenden Datensatz oben auf dem Stapel zugeordnet ist, der neue Verpackungs Ausrichtungs Wert. Wenn *n* angegeben wird, z. b. `#pragma pack(pop, 16)`, wird *n* zum neuen Verpackungs Ausrichtungs Wert. Wenn Sie einen *Bezeichner*verwenden, z. b. `#pragma pack(pop, r1)`, werden alle Datensätze auf dem Stapel so lange per Pop ausgeblendet, bis der Datensatz mit dem *Bezeichner* gefunden wurde. Dieser Datensatz wird per Pop ausgeblendet, und der Verpackungs Wert, der dem resultierenden Datensatz am oberen Rand des Stapels zugeordnet ist, ist der neue Verpackungs Ausrichtungs Wert. Wenn Sie einen *Bezeichner* verwenden, der nicht in einem Datensatz auf dem Stapel gefunden wird, wird der **Pop** ignoriert. 
 
-*Figur*\
+Die-Anweisung `#pragma pack (pop, r1, 2)` entspricht `#pragma pack (pop, r1)` gefolgt von `#pragma pack(2)`.
+
+*Bezeichner\*
 Optionale Bei Verwendung mit **Push**weist dem Datensatz im internen compilerstapel einen Namen zu. Bei Verwendung mit **Pop**werden Datensätze vom internen Stapel bis zum Entfernen des *Bezeichners* angezeigt. Wenn der *Bezeichner* im internen Stapel nicht gefunden wird, wird nichts weitergeleitet.
 
 *n*\
 Optionale Gibt den Wert in Bytes an, der für das Packen verwendet werden soll. Wenn die Compileroption [/ZP](../build/reference/zp-struct-member-alignment.md) nicht für das Modul festgelegt ist, ist der Standardwert für *n* 8. Gültige Werte sind 1, 2, 4, 8 und 16. Die Ausrichtung eines Members erfolgt an einer Grenze, die entweder ein Vielfaches von *n*oder ein Vielfaches der Größe des Members ist, je nachdem, welcher Wert kleiner ist.
 
-`#pragma pack(pop, identifier, n)`ist nicht definiert.
-
 ## <a name="remarks"></a>Hinweise
 
-Um eine Klasse zu *Verpacken* , müssen Sie die zugehörigen Member direkt im Arbeitsspeicher platzieren. Dies kann bedeuten, dass einige oder alle Elemente an einer Grenze ausgerichtet werden können, die kleiner als die Standardausrichtung der Zielarchitektur ist. **Pack** übergibt die Steuerung auf der Ebene der Daten Deklaration. Dies unterscheidet sich von der Compileroption [/ZP](../build/reference/zp-struct-member-alignment.md), die nur Steuerelemente auf Modulebene bereitstellt. **pack** wird bei der ersten **Struktur**-, **Vereinigungs**- oder **Klassendeklaration** wirksam, nachdem das Pragma angezeigt wurde. **Pack** hat keine Auswirkung auf Definitionen. Durch das Aufrufen von **Pack** ohne Argumente wird *n* auf den in der Compileroption `/Zp`festgelegten Wert festgelegt. Wenn die-Compileroption nicht festgelegt ist, ist der Standardwert 8.
+Um eine Klasse zu *Verpacken* , müssen Sie die zugehörigen Member direkt im Arbeitsspeicher platzieren. Dies kann bedeuten, dass einige oder alle Elemente an einer Grenze ausgerichtet werden können, die kleiner als die Standardausrichtung der Zielarchitektur ist. **Pack** übergibt die Steuerung auf der Ebene der Daten Deklaration. Dies unterscheidet sich von der Compileroption [/ZP](../build/reference/zp-struct-member-alignment.md), die nur Steuerelemente auf Modulebene bereitstellt. Das **Paket** tritt in **Kraft, nachdem**das Pragma **angezeigt wird.** **Pack** hat keine Auswirkung auf Definitionen. Wenn Sie das **Paket** ohne Argumente aufrufen, wird *n* auf den Wert festgelegt, der in der-Compileroption `/Zp` Wenn die-Compileroption nicht festgelegt ist, ist der Standardwert 8.
 
-Wenn Sie die Ausrichtung einer Struktur ändern, belegt sie vielleicht nicht so viel Platz im Arbeitsspeicher, aber Sie werden eine Abnahme der Leistung feststellen oder sogar eine von der Hardware generierte Ausnahme für einen nicht ausgerichteten Zugriff erhalten.  Sie können dieses Ausnahme Verhalten ändern, indem Sie [" verwenden.](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode)
+Wenn Sie die Ausrichtung einer Struktur ändern, belegt sie vielleicht nicht so viel Platz im Arbeitsspeicher, aber Sie werden eine Abnahme der Leistung feststellen oder sogar eine von der Hardware generierte Ausnahme für einen nicht ausgerichteten Zugriff erhalten.  Sie können dieses Ausnahme Verhalten ändern, indem Sie "* [" verwenden.](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode)
 
 Weitere Informationen zum Ändern der Ausrichtung finden Sie in den folgenden Artikeln:
 
@@ -62,7 +62,7 @@ Weitere Informationen zum Ändern der Ausrichtung finden Sie in den folgenden Ar
 - [Beispiele für die Struktur Ausrichtung](../build/x64-software-conventions.md#examples-of-structure-alignment) (x64-spezifisch)
 
    > [!WARNING]
-   > In Visual Studio 2015 und höher können Sie die Standard Operatoren " **alignas** " und " **alignof** " `declspec( align )` verwenden, die im Unterschied zu `__alignof` und über Compiler hinweg portabel sind. Der C++ Standard gibt keine Komprimierung an, deshalb müssen Sie dennoch **Pack** (oder die entsprechende Erweiterung auf anderen Compilern) verwenden, um Ausrichtungen anzugeben, die kleiner als die Wort Größe der Zielarchitektur sind.
+   > In Visual Studio 2015 und höher können Sie die Standardoperatoren " **alignas** " und " **alignof** " verwenden, die im Gegensatz zu `__alignof` und `declspec( align )` über Compiler hinweg portabel sind. Der C++ Standard gibt keine Komprimierung an, deshalb müssen Sie dennoch **Pack** (oder die entsprechende Erweiterung auf anderen Compilern) verwenden, um Ausrichtungen anzugeben, die kleiner als die Wort Größe der Zielarchitektur sind.
 
 ## <a name="examples"></a>Beispiele
 
@@ -113,6 +113,9 @@ Das folgende Beispiel zeigt die Verwendung der *Push*-, *Pop*-und *Show* -Syntax
 #pragma pack(show)   // C4810
 #pragma pack(push, r1, 16)   // n = 16, pushed to stack
 #pragma pack(show)   // C4810
+
+// pop to the identifier and then set
+// the value of the current packing alignment:
 #pragma pack(pop, r1, 2)   // n = 2 , stack popped
 #pragma pack(show)   // C4810
 ```

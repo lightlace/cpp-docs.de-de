@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-ms.openlocfilehash: 6197bd66214785d515bb1b73ceaf5a68d6751e79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc5e5365ffb53125085ce7b374f1362e93f4bb03
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410407"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966496"
 ---
 # <a name="compiler-warning-level-1-c4378"></a>Compilerwarnung (Stufe 1) C4378
 
-Sie benötigen Funktionszeiger zum Ausführen von Initialisierungen; ModuleHandle:: ResolveMethodHandle
+Sie müssen Funktionszeiger abrufen, um Initialisierer auszuführen. Beachten Sie Folgendes: System:: ModuleHandle:: ResolveMethodHandle
 
-Klicken Sie unter **"/ CLR"**, Initialisierer Symbole enthalten keine Funktionszeiger Funktionstoken.  Müssen Sie Token mit Zeigern konvertieren <xref:System.ModuleHandle.ResolveMethodHandle%2A>.
+In **/CLR**enthalten initialisierersymbole Funktions Token und keine Funktionszeiger.  Sie müssen Token mithilfe von <xref:System.ModuleHandle.ResolveMethodHandle%2A>in Zeiger konvertieren.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4378 generiert.
+Im folgenden Beispiel wird C4378 generiert.
 
-```
+```cpp
 // C4378.cpp
 // compile with: /W1 /clr /c
 typedef void (__cdecl *PF)(void);
@@ -65,9 +65,9 @@ int main () {
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie C4378 aufgelöst wird.
+Im folgenden Beispiel wird gezeigt, wie C4378 aufgelöst wird.
 
-```
+```cpp
 // C4378_b.cpp
 // compile with: /clr
 #pragma warning(disable:4378)

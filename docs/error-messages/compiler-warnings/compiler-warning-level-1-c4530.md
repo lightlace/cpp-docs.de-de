@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4530
 ms.assetid: a04dcdb2-84db-459d-9e5e-4e743887465f
-ms.openlocfilehash: a542f9b6bb73e561592e1e779aa6ee493612e6ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3139d321bca64b9938badebdabccd3ca1eb96d11
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160717"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966262"
 ---
 # <a name="compiler-warning-level-1-c4530"></a>Compilerwarnung (Stufe 1) C4530
 
-C++-Handler verwendet, aber Entladesemantik sind nicht aktiviert. Geben Sie/EHsc
+C++der Ausnahmehandler wird verwendet, aber die Entlade Semantik ist nicht aktiviert. /EHsc angeben
 
-C++-Ausnahmebehandlung verwendet wurde, aber [/EHsc](../../build/reference/eh-exception-handling-model.md) wurde nicht ausgewählt.
+C++Ausnahmebehandlung wurde verwendet, aber [/EHsc](../../build/reference/eh-exception-handling-model.md) wurde nicht ausgewählt.
 
-Wenn die Option/EHsc nicht aktiviert wurde, wird ein Objekt mit automatischem Speicher im Bereich zwischen der Funktion, die dies ausgelöst und die Funktion ausgelöst, Abfangen nicht zerstört werden. Ein Objekt mit automatischem Speicher jedoch erstellt, eine **versuchen Sie es** oder **catch** Block wird zerstört werden.
+Wenn die/EHsc-Option nicht aktiviert wurde, wird ein Objekt mit automatischem Speicher im Frame zwischen der Funktion, die den Throw auslöst, und der Funktion, die den Throw abfängt, nicht zerstört. Ein Objekt mit automatischem Speicher, das in einem **try** -oder **catch** -Block erstellt wurde, wird jedoch zerstört.
 
-Im folgende Beispiel wird die C4530 generiert:
+Im folgenden Beispiel wird C4530 generiert:
 
-```
+```cpp
 // C4530.cpp
 // compile with: /W1
 int main() {

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4329
 ms.assetid: 4316f51a-2c56-4b3f-831e-65d24b83b65c
-ms.openlocfilehash: 31ea3aec2c7dd8e02a23a5c3cf6e5ac406636516
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0eb99d9ab6ac58f32013a8b50330f6139548f499
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390515"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966065"
 ---
 # <a name="compiler-warning-level-1-c4329"></a>Compilerwarnung (Stufe 1) C4329
 
-__declspec(align()) ist für die Enumeration ignoriert.
+__declspec (align ()) wird bei der Aufzählung ignoriert.
 
-Verwenden der [ausrichten](../../cpp/align-cpp.md) Schlüsselwort mit der [__declspec](../../cpp/declspec.md) Modifizierer ist nicht zulässig, auf eine `enum`. Im folgende Beispiel wird die C4329 generiert:
+Die Verwendung des [align](../../cpp/align-cpp.md) -Schlüssel Worts des [__declspec](../../cpp/declspec.md) Modifizierers ist in einem `enum`nicht zulässig. Im folgenden Beispiel wird C4329 generiert:
 
-```
+```cpp
 // C4329.cpp
 // compile with: /W1 /LD
 enum __declspec(align(256)) TestEnum {   // C4329

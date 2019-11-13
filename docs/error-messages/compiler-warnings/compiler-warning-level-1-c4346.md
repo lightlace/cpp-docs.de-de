@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
-ms.openlocfilehash: 53381ca6e33321001299ce27bce550c5b2b8f59e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa71565824355ff4b3658fd9de22c09d6db6dc33
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187217"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966564"
 ---
 # <a name="compiler-warning-level-1-c4346"></a>Compilerwarnung (Stufe 1) C4346
 
-"Name": abhängiger Name ist kein Typ
+"Name": der abhängige Name ist kein Typ.
 
-Die [Typename](../../cpp/typename.md) -Schlüsselwort ist erforderlich, wenn ein abhängiger Name als Typ behandelt werden. Fügen Sie für Code, der in allen Versionen von Visual C++ die gleiche Funktionsweise, `typename` der Deklaration.
+Das Schlüsselwort [tykame](../../cpp/typename.md) ist erforderlich, wenn ein abhängiger Name als Typ behandelt werden soll. Fügen Sie für Code, der in allen Versionen von Visual C++identisch funktioniert, `typename` der Deklaration hinzu.
 
-Im folgende Beispiel wird die C4346 generiert:
+Im folgenden Beispiel wird C4346 generiert:
 
-```
+```cpp
 // C4346.cpp
 // compile with: /WX /LD
 template<class T>
@@ -32,9 +32,9 @@ struct C {
 };
 ```
 
-In den folgenden Beispielen enthält weitere Beispiele, in denen die **Typename** -Schlüsselwort ist erforderlich:
+Die folgenden Beispiele zeigen weitere Beispiele, in denen das Schlüsselwort **tyschlame** erforderlich ist:
 
-```
+```cpp
 // C4346b.cpp
 // compile with: /LD /W1
 template<class T>
@@ -53,9 +53,9 @@ struct M : public L<typename T::Type, T::Value>
 };
 ```
 
-und dieses:
+und dies,
 
-```
+```cpp
 // C4346c.cpp
 // compile with: /LD /WX
 struct Y {

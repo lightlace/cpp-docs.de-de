@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4405
 ms.assetid: 155c64d6-58ae-4455-b61f-ccd711c5da96
-ms.openlocfilehash: e85bdc995fe16f91e2e9c734dacc65ca0b7b622d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 182f9ff061fd2a8ebe5ea0046545412fca5f646a
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182378"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965585"
 ---
 # <a name="compiler-warning-level-1-c4405"></a>Compilerwarnung (Stufe 1) C4405
 
-'Bezeichner': Bezeichner ist ein reserviertes Wort
+"Bezeichner": Bezeichner ist ein reserviertes Wort
 
-Ein Wort reserviert für die Inlineassembly wird als Name einer Variablen verwendet. Dies kann zu unvorhersehbaren Ergebnissen führen. Um diese Warnung zu beheben, vermeiden Sie Namensvariablen mit Wörtern, die für die Inlineassembly reserviert. Im folgende Beispiel wird die C4405 generiert:
+Ein Wort, das für die Inlineassembly reserviert ist, wird als Variablenname verwendet. Dies kann zu unvorhersehbaren Ergebnissen führen. Um diese Warnung zu beheben, vermeiden Sie das Benennen von Variablen, die für die Inlineassembly reserviert sind. Im folgenden Beispiel wird C4405 generiert:
 
-```
+```cpp
 // C4405.cpp
 // compile with: /W1
 // processor: x86

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4540
 ms.assetid: 8085e748-5f4d-43c2-b06d-eaf794edbf72
-ms.openlocfilehash: 86f6cd866f7708277ebba436ba7c076086dc9c8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e514f4f3cf0cc3ee95ff709eda307b143ab3b1c
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160704"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965686"
 ---
 # <a name="compiler-warning-level-1-c4540"></a>Compilerwarnung (Stufe 1) C4540
 
-Dynamic_cast zum Konvertieren in nichtverfügbare oder mehrdeutige Basisklasse verwendet; Laufzeit-Test schlägt fehl, ('Typ1' zu 'Typ2')
+dynamic_cast, die verwendet werden, um in die nicht zugängliche oder mehrdeutige Basis der Lauf Zeit Test schlägt fehl ("Typ1" zu "Typ2").
 
-Sie verwendet haben `dynamic_cast` , die von einem Typ in einen anderen konvertieren. Der Compiler ermittelt, dass immer die Umwandlung fehlschlägt (zurückgeben **NULL**), da eine Basisklasse zugegriffen werden kann (`private`, z. B.) oder nicht eindeutig (mehr als einmal in der Klassenhierarchie, z. B.).
+Sie haben `dynamic_cast` verwendet, um von einem Typ in einen anderen zu konvertieren. Der Compiler hat festgestellt, dass bei der Umwandlung immer ein Fehler auftritt (Rückgabe **null**), weil auf eine Basisklasse (z. b.`private`) oder mehrdeutig (z. b. in der Klassenhierarchie) nicht zugegriffen werden kann.
 
-Das folgende Beispiel zeigt ein Beispiel für diese Warnung aus. Klasse **B** ergibt sich aus der Klasse **ein**. Das Programm verwendet `dynamic_cast` zum Umwandeln von Klasse **B** (die abgeleitete Klasse) Klasse **ein**, die schlägt immer fehl, da Klasse **B** ist `private` und somit kann nicht zugegriffen werden. Ändern den Zugriff auf **ein** zu **öffentliche** die Warnung aufgelöst wird.
+Im folgenden finden Sie ein Beispiel für diese Warnung. Klasse **B** ist von Klasse **a**abgeleitet. Das Programm verwendet `dynamic_cast`, um eine Umwandlung von Klasse **b** (die abgeleitete Klasse) in Klasse **A**durchzuführen, was immer fehlschlägt, da Klasse **b** `private` und somit nicht darauf zugegriffen werden kann. Wenn Sie den Zugriff von **A** auf **Public** ändern, wird die Warnung aufgelöst.
 
-```
+```cpp
 // C4540.cpp
 // compile with: /W1
 

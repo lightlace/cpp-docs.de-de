@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4508
 ms.assetid: c05f113b-b789-4df0-a4ef-78bce4767021
-ms.openlocfilehash: c96db3d4bd1124c96b22363531b7739d0757b613
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 394a59a472100cc30476b5bb87f30c45d867f94b
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160808"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966297"
 ---
 # <a name="compiler-warning-level-1-c4508"></a>Compilerwarnung (Stufe 1) C4508
 
-'Funktion': Funktion sollte einen Wert zurückgeben "void" Rückgabetyp davon ausgegangen, dass
+"Function": Funktion sollte einen Wert zurückgeben. der Rückgabetyp "void" wird angenommen
 
-Die Funktion weist kein Rückgabetyp angegeben. In diesem Fall C4430 ebenfalls ausgelöst, und der Compiler implementiert die C4430 (Standardmäßig ist der Wert ist vom Datentyp Int) gemeldet.
+Für die Funktion wurde kein Rückgabetyp angegeben. In diesem Fall sollte auch C4430 ausgelöst werden, und der Compiler implementiert die von C4430 gemeldete Korrektur (Standardwert ist int).
 
-Um diese Warnung zu beheben, müssen deklarieren Sie den Rückgabetyp der Funktionen explizit.
+Um diese Warnung zu beheben, deklarieren Sie explizit den Rückgabetyp der Funktionen.
 
-Im folgende Beispiel wird die C4508 generiert:
+Im folgenden Beispiel wird C4508 generiert:
 
-```
+```cpp
 // C4508.cpp
 // compile with: /W1 /c
 #pragma warning (disable : 4430)

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4552
 ms.assetid: ebbbb5ee-1c19-45bd-b386-41a19630fc76
-ms.openlocfilehash: 1fb2dc7fd4bc685e457898b47c513c21009146ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9f7fcd5a1949082aad75407f230db2e32dddd67
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410355"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966358"
 ---
 # <a name="compiler-warning-level-1-c4552"></a>Compilerwarnung (Stufe 1) C4552
 
-'Operator': Operator hat keine Auswirkungen; Operator mit Nebeneffekten erwartet
+"Operator": Operator hat keine Auswirkung; Operator mit Nebeneffekt erwartet
 
-Wenn eine Ausdrucksanweisung einen Operator mit keine ungünstigen Nebeneffekte wie am Anfang des Ausdrucks, ist es wahrscheinlich einen Fehler.
+Wenn eine Expression-Anweisung einen Operator ohne Nebeneffekte als Anfang des Ausdrucks aufweist, ist dies wahrscheinlich ein Fehler.
 
-Um diese Warnung zu überschreiben, setzen Sie den Ausdruck in Klammern ein.
+Fügen Sie den Ausdruck in Klammern ein, um diese Warnung zu überschreiben.
 
-Im folgende Beispiel wird die C4552 generiert:
+Im folgenden Beispiel wird C4552 generiert:
 
-```
+```cpp
 // C4552.cpp
 // compile with: /W1
 int main() {

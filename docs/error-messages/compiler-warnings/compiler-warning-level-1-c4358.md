@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4358
 ms.assetid: a9848f84-14b3-405e-81bf-ee3e91a51511
-ms.openlocfilehash: aebac17a343efedf678b55f8940004c85a2db708
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fd3109df3ecd32933b5fc217dfc02181f43d97c
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408380"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966537"
 ---
 # <a name="compiler-warning-level-1-c4358"></a>Compilerwarnung (Stufe 1) C4358
 
-'Operator': Rückgabetyp von kombinierten Delegaten ist nicht 'void'; Der zurückgegebene Wert ist nicht definiert
+"Operator": der Rückgabetyp von kombinierten Delegaten ist nicht "void". der zurückgegebene Wert ist nicht definiert
 
-Zwei Delegaten kombiniert wurden, und der Rückgabewert ist nicht "void". Wenn zwei Delegaten mit nicht-Void-Rückgabe von Werten kombiniert werden, wird der Compiler nicht in der Lage, die richtige Zuweisung vornehmen, wenn der Rückgabewert des Delegaten verwendet wird.
+Zwei Delegaten wurden kombiniert, und der Rückgabewert ist nicht "void". Wenn zwei Delegaten mit nicht leeren Rückgabe Werten kombiniert werden, kann der Compiler keine ordnungsgemäße Zuweisung durchführen, wenn der Rückgabewert des Delegaten verwendet wird.
 
-Im folgende Beispiel wird die C4358 generiert:
+Im folgenden Beispiel wird C4358 generiert:
 
-```
+```cpp
 // C4358.cpp
 // compile with: /clr /W1
 delegate int D();

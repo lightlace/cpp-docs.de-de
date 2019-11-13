@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4383
 ms.assetid: 96c0e52d-874e-4b57-a154-0e49b6a00fae
-ms.openlocfilehash: 2510dda59047632e2a4823f734feeffd0c0a5b02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9681408841173bad4aca3305e727ddde6cd98f14
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390437"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966174"
 ---
 # <a name="compiler-warning-level-1-c4383"></a>Compilerwarnung (Stufe 1) C4383
 
-'Instanzendereferenzierungsoperator': die Bedeutung der Dereferenzierung eines Handles kann sich ändern, wenn ein User-defined 'Operator' Operator vorhanden ist. Schreiben Sie den Operator als statische Funktion, damit der Operand explizit sein.
+' Instance_dereference_operator ': die Bedeutung der Dereferenzierung eines Handles kann sich ändern, wenn ein benutzerdefinierter Operator Operator vorhanden ist. Schreiben Sie den Operator als statische Funktion, um explizit über den Operanden zu verfügen.
 
-Wenn Sie eine benutzerdefinierte Instanz zum Überschreiben der Dereferenzierungsoperator in einem verwalteten Typ hinzufügen, überschreiben Sie potenziell die Fähigkeit der Dereferenzierungsoperator des Typs, das Handle des Objekts zurückzugeben. Berücksichtigen Sie beim Schreiben eines statischen, benutzerdefinierten Dereferenzierungsoperator.
+Wenn Sie eine benutzerdefinierte instanzüberschreibung des Dereferenzierungsoperators in einem verwalteten Typ hinzufügen, überschreiben Sie möglicherweise die Fähigkeit des Dereferenzierungsoperators des Typs, das-Objekt des Handles zurückzugeben. Schreiben Sie ggf. einen statischen, benutzerdefinierten Dereferenzierungsoperator.
 
-Weitere Informationen finden Sie unter [Handle für Objekt (^)](../../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) und [Verweisoperator nachverfolgung](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
+Weitere Informationen finden Sie unter [handle to Object Operator (^)](../../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) und [Tracking Reference Operator](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 
-Darüber hinaus steht ein Instanzenoperator nicht andere Sprachcompiler über Metadaten verwiesen wird. Weitere Informationen finden Sie unter [User-Defined Operators (C++ / CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
+Außerdem ist ein instanzoperator für andere sprach Compiler über Metadaten, auf die verwiesen wird, nicht verfügbar. Weitere Informationen finden Sie unter [benutzerdefinierte Operatoren (C++/CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4383 generiert.
+Im folgenden Beispiel wird C4383 generiert.
 
-```
+```cpp
 // C4383.cpp
 // compile with: /clr /W1
 

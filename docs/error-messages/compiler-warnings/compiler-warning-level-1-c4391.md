@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4391
 ms.assetid: 95c6182c-fae9-4174-8f7b-98aa352e68ca
-ms.openlocfilehash: d9d1cebe08a6a163d76271ab001ec91b7cee82a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60b68906697f76d56ff6c0e13f1b4ec105ef1c25
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386459"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966115"
 ---
 # <a name="compiler-warning-level-1-c4391"></a>Compilerwarnung (Stufe 1) C4391
 
-"Signature": Falscher Rückgabetyp für systeminterne Funktion, erwartet 'type'
+' Signature ': Falscher Rückgabetyp für die intrinsische Funktion, erwartet wurde ' type '.
 
-Die Deklaration einer Funktion für eine systeminterne Compilerfunktion hatte den falschen Rückgabetyp. Das resultierende Image möglicherweise nicht ordnungsgemäß ausgeführt.
+Eine Funktionsdeklaration für eine systeminterne Compilerfunktion hatte den falschen Rückgabetyp. Das resultierende Image kann möglicherweise nicht ordnungsgemäß ausgeführt werden.
 
-Um diese Warnung zu beheben, korrigieren Sie die Deklaration oder löschen Sie die Deklaration und einfach #include die entsprechende Headerdatei.
+Um diese Warnung zu beheben, korrigieren Sie die Deklaration, oder löschen Sie die Deklaration, und #include Sie einfach die entsprechende Header Datei.
 
-Im folgende Beispiel wird die C4391 generiert:
+Im folgenden Beispiel wird C4391 generiert:
 
-```
+```cpp
 // C4391.cpp
 // compile with: /W1
 // processor: x86

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4374
 ms.assetid: 4ac9aaec-d815-4b6e-825f-fa872092dd3b
-ms.openlocfilehash: 5cf18a3dcd94f59ce1ae8feb675f251bea5715a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31a43467020e3d90a2f02c667f7cdb6177b4d833
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302240"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966440"
 ---
 # <a name="compiler-warning-level-1-c4374"></a>Compilerwarnung (Stufe 1) C4374
 
-"Funktion1": Schnittstellenmethode wird von nicht virtuellen Methode "Funktion2" nicht implementiert
+"Funktion1": die Schnittstellen Methode wird nicht von der nicht virtuellen Methode "Funktion2" implementiert.
 
-Der Compiler erwartet wird, finden die [virtuellen](../../cpp/virtual-specifier.md) Schlüsselwort in einer Methodendefinition.
+Der Compiler hat erwartet, das [virtuelle](../../cpp/virtual-specifier.md) Schlüsselwort in einer Methoden Definition zu finden.
 
-Im folgende Beispiel wird die C4374 generiert:
+Im folgenden Beispiel wird C4374 generiert:
 
-```
+```cpp
 // C4374.cpp
 // compile with: /clr /W1 /c /WX
 public interface class I {

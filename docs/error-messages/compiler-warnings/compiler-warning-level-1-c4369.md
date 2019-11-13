@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4369
 ms.assetid: ade87e84-36be-4e00-be99-2930af848feb
-ms.openlocfilehash: b374b67fa3319be35490358d7664bcb45bc640db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 617cb2cc3774b288581a3868125ced19b28ba45a
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207029"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966508"
 ---
 # <a name="compiler-warning-level-1-c4369"></a>Compilerwarnung (Stufe 1) C4369
 
-'Enumerator': ' Enumeratorwert ' kann nicht als 'Type' dargestellt werden, der Wert ist 'New_value'
+' Enumerator ': der Enumeratorwert ' value ' kann nicht als ' type ' dargestellt werden, der Wert ist ' new_value '.
 
-Ein Enumerator wurde größer sein als der größte Wert für den angegebenen zugrunde liegenden Typ berechnet.  Dies hat einen Überlauf verursacht, und der Compiler eingeschlossen, den Enumeratorwert, der den niedrigsten Wert für den Typ.
+Ein Enumerator wurde so berechnet, dass er größer als der größte Wert für den angegebenen zugrunde liegenden Typ ist.  Dies verursachte einen Überlauf, und der Compiler hat den Enumeratorwert auf den niedrigsten möglichen Wert für den Typ umschließen.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4369 generiert.
+Im folgenden Beispiel wird C4369 generiert.
 
-```
+```cpp
 // C4369.cpp
 // compile with: /W1
 int main() {

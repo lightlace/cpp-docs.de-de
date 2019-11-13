@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4546
 ms.assetid: 071e1709-3841-46c1-8e71-96109cd22041
-ms.openlocfilehash: 47dd30b3ce59254528f9500139310412393435d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c2e47b92050bb83b1f55836e633d9749bb5e309
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151876"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966418"
 ---
 # <a name="compiler-warning-level-1-c4546"></a>Compilerwarnung (Stufe 1) C4546
 
 Funktionsaufruf vor dem Komma ohne Argumentliste
 
-Der Compiler hat ein falsch formatiertes Kommaausdruck.
+Der Compiler hat einen falsch formatierten Komma Ausdruck erkannt.
 
 Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4546 generiert:
+Im folgenden Beispiel wird C4546 generiert:
 
-```
+```cpp
 // C4546.cpp
 // compile with: /W1
 #pragma warning (default : 4546)
