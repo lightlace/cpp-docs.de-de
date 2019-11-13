@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4927
 ms.assetid: 7009e740-a2ef-4130-96ba-482e092f717a
-ms.openlocfilehash: 59a39e4e695fdd161135cd70a74e1f3f6518e361
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e56d185f6f87bc6e381ccec9ed8bd50ba3e2245
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393453"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052284"
 ---
 # <a name="compiler-warning-level-1-c4927"></a>Compilerwarnung (Stufe 1) C4927
 
-Unzulässige Konvertierung. mehrere benutzerdefinierte Konvertierungen wurden implizit übernommen.
+Ungültige Konvertierung; Es wurden mehrere benutzerdefinierte Konvertierungen implizit angewendet.
 
-Mehr als eine benutzerdefinierte Konvertierung implizit in einen einzelnen Wert – angewendet wird der Compiler eine explizite Konvertierung wurde nicht gefunden, fand aber eine Konvertierung, die verwendet wurde.
+Mehr als eine benutzerdefinierte Konvertierung wird implizit auf einen einzelnen Wert angewendet, und der Compiler hat keine explizite Konvertierung gefunden, aber es wurde eine Konvertierung gefunden, die er verwendet hat.
 
-Im folgende Beispiel wird die C4927 generiert:
+Im folgenden Beispiel wird C4927 generiert:
 
-```
+```cpp
 // C4927.cpp
 // compile with: /W1
 struct B

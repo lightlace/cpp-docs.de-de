@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4302
 ms.assetid: f5e1c939-e134-4cca-ba1e-9b15a81549ae
-ms.openlocfilehash: b2fc3b5db3c052c7a7b0019eae39dcc4541f64f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68143499c3e22316b443a4c1b55cac6e142552cb
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402566"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052085"
 ---
 # <a name="compiler-warning-level-2-c4302"></a>Compilerwarnung (Stufe 2) C4302
 
-'Konvertierung': Verkürzung von 'Typ 1' in 'Typ 2'
+' Konvertierung ': Abschneiden von ' Type 1 ' in ' Type 2 '
 
-Der Compiler hat eine Konvertierung aus einem größeren Typ in einen kleineren Typ. Informationen möglicherweise verloren.
+Der Compiler hat eine Konvertierung von einem größeren Typ in einen kleineren Typ erkannt. Informationen können verloren gehen.
 
 Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-Im folgende Beispiel wird die C4302 generiert:
+Im folgenden Beispiel wird C4302 generiert:
 
-```
+```cpp
 // C4302.cpp
 // compile with: /W2
 #pragma warning(default : 4302)

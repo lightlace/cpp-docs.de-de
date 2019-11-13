@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4357
 ms.assetid: 9259c633-3c02-4900-b94a-2d8d366d61cd
-ms.openlocfilehash: a7923fdcda2a781c9680f8b3753fd101c73be19c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a1d9f30c4b95236294b67804d57a03873c05143
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402020"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051624"
 ---
 # <a name="compiler-warning-level-3-c4357"></a>Compilerwarnung (Stufe 3) C4357
 
-ParamArray-Argument in der formalen Argumentliste für Delegat "del" ignoriert, wenn 'Funktion' generieren
+Das param-Array Argument in der formalen Argumentliste für den Delegaten "del" wird beim Erstellen von "Function" ignoriert.
 
-Die `ParamArray` Attribut wurde ignoriert, und `function` kann nicht mit Variablen Argumenten aufgerufen werden.
+Das `ParamArray`-Attribut wurde ignoriert, und `function` kann nicht mit variablen Argumenten aufgerufen werden.
 
-Im folgende Beispiel wird die C4357 generiert:
+Im folgenden Beispiel wird C4357 generiert:
 
-```
+```cpp
 // C4357.cpp
 // compile with: /clr /W3 /c
 using namespace System;

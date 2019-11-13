@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4281
 ms.assetid: a9771261-5725-4fc6-87b6-16cf92113a25
-ms.openlocfilehash: 69496438d8078ee0298bdb447fcf4f7df1b75464
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 454118aa9b9cb1fdea5fb10576ac8d26833cb08c
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402150"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051682"
 ---
 # <a name="compiler-warning-level-3-c4281"></a>Compilerwarnung (Stufe 3) C4281
 
-Rekursion Operators "->" durch den Typ 'Typ' aufgetreten
+Rekursion "Operator->" durch Typ "Typ" aufgetreten
 
-Ihr Code kann **Operator ->** selbst aufrufen.
+Der Code ermöglicht **Operator->** , sich selbst aufzurufen.
 
-Im folgende Beispiel wird die C4281 generiert:
+Im folgenden Beispiel wird C4281 generiert:
 
-```
+```cpp
 // C4281.cpp
 // compile with: /W3 /WX
 struct A;

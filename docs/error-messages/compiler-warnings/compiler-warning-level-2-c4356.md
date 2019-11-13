@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4356
 ms.assetid: 3af3defe-de33-43b6-bd6c-2c2e09e34f3f
-ms.openlocfilehash: 218aac1cc98d9b119490a547d63b4b5ee83e53df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f110ee633fed1c3b43ecc06dadcc27fde4f14bde
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402462"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052026"
 ---
 # <a name="compiler-warning-level-2-c4356"></a>Compilerwarnung (Stufe 2) C4356
 
-'Member': statische Datenmember kann nicht über eine abgeleitete Klasse initialisiert werden
+"Member": ein statischer Datenmember kann nicht über eine abgeleitete Klasse initialisiert werden.
 
-Die Initialisierung des ein statischer Datenmember wurde nicht ordnungsgemäß formatiert. Der Compiler akzeptiert die Initialisierung. Um die Warnung zu vermeiden, initialisieren Sie das Element über die Basisklasse aus.
+Die Initialisierung eines statischen Datenmembers war nicht ordnungsgemäß formatiert. Der Compiler hat die Initialisierung akzeptiert. Um die Warnung zu vermeiden, initialisieren Sie den Member über die Basisklasse.
 
-Verwenden der [Warnung](../../preprocessor/warning.md) Pragma, um diese Warnung unterdrücken.
+Verwenden Sie das [Warning](../../preprocessor/warning.md) -Pragma, um diese Warnung zu unterdrücken.
 
-Im folgende Beispiel wird die C4356 generiert:
+Im folgenden Beispiel wird C4356 generiert:
 
-```
+```cpp
 // C4356.cpp
 // compile with: /W2 /EHsc
 #include <iostream>

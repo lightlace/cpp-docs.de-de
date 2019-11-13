@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - C4146
 ms.assetid: d6c31ab1-3120-40d5-8d80-32b5f7046e32
-ms.openlocfilehash: 8b3090f1bc3a64752ede4dab2b1e1b5cd800057d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d595befc80d954c8fb84f83ad6c4e0cb5f4fcf26
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349788"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052166"
 ---
 # <a name="compiler-warning-level-2-c4146"></a>Compilerwarnung (Stufe 2) C4146
 
-einem vorzeichenlosen Typ wurde ein unärer minus-Operator zugewiesen.
+Unärer Minus-Operator, der auf nicht signierten Typ angewendet wird, Ergebnis ist noch nicht signiert
 
-Typen ohne Vorzeichen können nur positive Werte enthalten, damit unäres minus (Negation) nicht in der Regel bei Anwendung auf einen Typ ohne Vorzeichen sinnvoll ist. Sowohl die Operanden und das Ergebnis sind nicht negativ.
+Nicht signierte Typen können nur nicht negative Werte enthalten, daher ist die unäre Minuszeichen (Negation) in der Regel nicht sinnvoll, wenn Sie auf einen Typ ohne Vorzeichen angewendet werden. Sowohl der Operand als auch das Ergebnis sind nicht negativ.
 
-In der Praxis geschieht dies, wenn es sich bei der Programmierer versucht, den minimalen ganzzahligen Wert express-2147483648 handelt. Dieser Wert kann nicht als-2147483648 geschrieben werden, da der Ausdruck in zwei Stufen verarbeitet wird:
+Dies geschieht praktisch, wenn der Programmierer versucht, den minimalen ganzzahligen Wert (-2147483648) auszudrücken. Dieser Wert kann nicht als-2147483648 geschrieben werden, da der Ausdruck in zwei Phasen verarbeitet wird:
 
-1. Die Anzahl 2147483648 wird ausgewertet. Da es größer als der maximal zulässige Ganzzahl-Wert 2147483647 handelt, ist der Typ des 2147483648 nicht [Int](../../c-language/integer-types.md), aber `unsigned int`.
+1. Die Zahl 2147483648 wird ausgewertet. Da der Wert größer als der maximale ganzzahlige Wert 2147483647 ist, ist der Typ von 2147483648 nicht [int](../../c-language/integer-types.md), sondern `unsigned int`.
 
-1. Unäres minus wird auf den Wert mit einem Ergebnis ohne Vorzeichen, der gleich 2147483648 angewendet.
+1. Unäres Minus wird auf den Wert mit einem nicht signierten Ergebnis angewendet, das ebenfalls 2147483648 ist.
 
-Der Typ ohne Vorzeichen des Ergebnisses kann unerwartetes Verhalten verursachen. Wenn das Ergebnis wird in einem Vergleich verwendet, und klicken Sie dann ein Vergleich ohne Vorzeichen werden, z. B. verwendet kann Wenn der andere Operand ein `int`. Hier wird erläutert, warum das nachfolgende Beispielprogramm nur eine Zeile ausgegeben.
+Der nicht signierte Typ des Ergebnisses kann zu unerwartetem Verhalten führen. Wenn das Ergebnis in einem Vergleich verwendet wird, kann ein nicht signierter Vergleich verwendet werden, z. b. wenn der andere Operand eine `int`ist. Dadurch wird erläutert, warum das unten aufgeführte Beispielprogramm nur eine Zeile ausgibt.
 
-Die erwartete zweite Zeile `1 is greater than the most negative int`, wird nicht ausgegeben werden, da `((unsigned int)1) > 2147483648` ist "false".
+Die erwartete zweite Zeile, `1 is greater than the most negative int`, wird nicht gedruckt, weil `((unsigned int)1) > 2147483648` false ist.
 
-Sie können die C4146 vermeiden, indem Sie INT_MIN von limits.h, das den Typ aufweist **signiert Int**.
+Sie können C4146 vermeiden, indem Sie INT_MIN aus Limits. h verwenden, das den Typ " **int int**" aufweist.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4146 generiert:
+Im folgenden Beispiel wird C4146 generiert:
 
-```
+```cpp
 // C4146.cpp
 // compile with: /W2
 #include <stdio.h>

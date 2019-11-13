@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4677
 ms.assetid: a8d656a1-e2ff-4f8b-9028-201765131026
-ms.openlocfilehash: 66b8d42b63bcbf328703523c4eeda7a047f4643c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8567e7392537507a25121977448ac47ec079316b
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374572"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051366"
 ---
 # <a name="compiler-warning-level-1-c4677"></a>Compilerwarnung (Stufe 1) C4677
 
-'Funktion': die Signatur des nicht privaten Members enthält den privaten Assemblytyp 'Private_type'
+"Funktion": die Signatur des nicht privaten Members enthält den privaten Assemblytyp "private_type".
 
-Ein Typ mit öffentlicher Zugriff außerhalb der Assembly verwendet einen Typ, der privaten Zugriff außerhalb der Assembly enthält. Eine Komponente, die den Typ der öffentliche Assemblyzugriff verweist ist nicht möglich, den Typ dieses Element oder Elemente, die auf den privaten Assemblytyp zu verweisen.
+Ein Typ mit öffentlichem Zugriff außerhalb der Assembly verwendet einen Typ, der über privaten Zugriff außerhalb der Assembly verfügt. Eine Komponente, die auf den Typ der öffentlichen Assembly verweist, kann nicht das Typelement oder die Member verwenden, die auf den privaten Assemblytyp verweisen.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4677 generiert.
+Im folgenden Beispiel wird C4677 generiert.
 
-```
+```cpp
 // C4677.cpp
 // compile with: /clr /c /W1
 delegate void TestDel();

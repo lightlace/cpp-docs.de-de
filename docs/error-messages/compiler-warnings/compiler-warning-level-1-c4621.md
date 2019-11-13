@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4621
 ms.assetid: 40931bd9-cb89-497e-86f0-cec9f016c63c
-ms.openlocfilehash: d35c4143d5b90c7a6a49337931dad4ba73804f20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dd4defe18a94f65e265d02f6c26c715667cd696
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221358"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052594"
 ---
 # <a name="compiler-warning-level-1-c4621"></a>Compilerwarnung (Stufe 1) C4621
 
-keine Postfix-Form des Operators"--" für Typ 'Typ', Präfix-Form gefunden.
+Es wurde keine Postfix-Form "Operator--" für den Typ "Type" gefunden, Präfix-Formular verwendet.
 
-Keine Postfix-Dekrementoperators für den angegebenen Typ definiert ist. Der Compiler hat den überladenen Präfixoperator verwendet.
+Es wurde kein postfix-Dekrementoperator für den angegebenen Typ definiert. Der Compiler hat den überladenen Präfixoperator verwendet.
 
-Diese Warnung kann vermieden werden, indem Sie einen Postfix- `--` -Operator definieren. Erstellen Sie eine Version zwei Argumenten, der die `--` Operator wie unten dargestellt:
+Diese Warnung kann vermieden werden, indem Sie einen Postfix- `--` -Operator definieren. Erstellen Sie eine Version des `--` Operators mit zwei Argumenten, wie unten dargestellt:
 
-```
+```cpp
 // C4621.cpp
 // compile with: /W1
 class A

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4742
 ms.assetid: e520881d-1eeb-48b1-9df0-8017ee8ba076
-ms.openlocfilehash: 00ac67fec3aafa5a259b5222bd6bb8654210fa61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11663a9b8672e2f91feb59e275181dbe645484e9
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390424"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051312"
 ---
 # <a name="compiler-warning-level-1-c4742"></a>Compilerwarnung (Stufe 1) C4742
 
-"Var" hat eine unterschiedliche Ausrichtung in "Datei1" und "Datei2": Anzahl und die Anzahl
+"var" hat eine unterschiedliche Ausrichtung in "file1" und "file2": Anzahl und Zahl
 
-Eine externe Variable, die auf die verwiesen wird, oder in zwei Dateien definiert wurde hat eine unterschiedliche Ausrichtung in diesen Dateien. Diese Warnung wird ausgegeben, wenn der Compiler feststellt, dass `__alignof` für die Variable im *"file1"* unterscheidet sich von `__alignof` für die Variable im *Datei2*. Dies kann verursacht werden, mithilfe von inkompatiblen Typen beim Deklarieren von Variablen in verschiedenen Dateien oder mit nicht übereinstimmenden `#pragma pack` in verschiedenen Dateien.
+Eine externe Variable, auf die in zwei Dateien verwiesen oder diese definiert wurde, weist in diesen Dateien unterschiedliche Ausrichtung auf. Diese Warnung wird ausgegeben, wenn der Compiler feststellt, dass sich `__alignof` für die Variable in *file1* `__alignof` von der Variablen in *file2*unterscheidet. Dies kann durch die Verwendung nicht kompatibler Typen beim Deklarieren von Variablen in unterschiedlichen Dateien oder durch die Verwendung von nicht übereinstimmenden `#pragma pack` in verschiedenen Dateien verursacht werden.
 
-Um diese Warnung zu beheben, verwenden Sie die gleichen Typdefinition oder verwenden Sie unterschiedliche Namen für die Variablen.
+Um diese Warnung zu beheben, verwenden Sie entweder die gleiche Typdefinition, oder verwenden Sie andere Namen für die Variablen.
 
-Weitere Informationen finden Sie unter [Pack](../../preprocessor/pack.md) und [__alignof-Operator](../../cpp/alignof-operator.md).
+Weitere Informationen finden Sie unter [Pack](../../preprocessor/pack.md) -und [__alignof Operator](../../cpp/alignof-operator.md).
 
 ## <a name="example"></a>Beispiel
 
 Dies ist die erste Datei, die den Typ definiert.
 
-```
+```c
 // C4742a.c
 // compile with: /c
 struct X {
@@ -37,9 +37,9 @@ struct X {
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4742 generiert.
+Im folgenden Beispiel wird C4742 generiert.
 
-```
+```c
 // C4742b.c
 // compile with: C4742a.c /W1 /GL
 // C4742 expected

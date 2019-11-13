@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4945
 ms.assetid: 6d2079ea-dc59-4611-bc68-9a22c06f7587
-ms.openlocfilehash: 62dfbaed28f1afcdedb41d83158dfe4e8e0f61b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a20effcebe1a36fa1356fffefa3a23a0056a0f0
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384165"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052261"
 ---
 # <a name="compiler-warning-level-1-c4945"></a>Compilerwarnung (Stufe 1) C4945
 
-'Symbol': Symbol aus "assembly2" kann nicht importiert: 'Symbol' wurde bereits von einer anderen Assembly 'assembly1' importiert
+' Symbol ': das Symbol kann nicht aus ' Assembly2 ' importiert werden: da ' Symbol ' bereits aus einer anderen Assembly ' Assembly1 ' importiert wurde.
 
-Ein Symbol aus einer referenzierten Assembly importiert wurden, aber das Symbol bereits aus einer anderen referenzierten Assembly importiert wurden. Entweder eine der Assemblys verweisen, und nicht der Symbolname in eine der Assemblys geändert.
+Ein Symbol wurde aus einer referenzierten Assembly importiert, aber dieses Symbol wurde bereits aus einer anderen Assembly importiert, auf die verwiesen wird. Verweisen Sie entweder nicht auf eine der Assemblys, oder lassen Sie den Symbolnamen in einer der Assemblys geändert.
 
-In den folgenden Beispielen wird C4945 generiert:
+In den folgenden Beispielen wird C4945 generiert.
 
-```
+```csharp
 // C4945a.cs
 // compile with: /target:library
 // C# source code to create a dll
@@ -32,7 +32,7 @@ public class ClassA {
 
 Und dann
 
-```
+```csharp
 // C4945b.cs
 // compile with: /target:library
 // C# source code to create a dll
@@ -43,7 +43,7 @@ public class ClassA {
 
 Und dann
 
-```
+```cpp
 // C4945c.cpp
 // compile with: /clr /LD /W1
 #using "C4945a.dll"

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4243
 ms.assetid: ca72f9ad-ce0b-43a9-a68c-106e1f8b90ef
-ms.openlocfilehash: e08a8538c93681c59779f681812a9ba8f7e316a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed5cc87f1bc376526f5129aa157c38a3f034b20b
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402202"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051743"
 ---
 # <a name="compiler-warning-level-3-c4243"></a>Compilerwarnung (Stufe 3) C4243
 
-'Konvertierungstyp'-Konvertierung von 'type1' in 'Typ2' vorhanden, aber es ist nicht möglich.
+die Konvertierung von "Konvertierungstyp" ist von "Typ1" in "Typ2", aber nicht möglich.
 
-Ein Zeiger auf eine abgeleitete Klasse in einen Zeiger auf eine Basisklasse konvertiert wird, aber die abgeleitete Klasse erbt von der Basisklasse mit privaten oder geschützten Zugriff.
+Ein Zeiger auf eine abgeleitete Klasse wird in einen Zeiger auf eine Basisklasse konvertiert, aber die abgeleitete Klasse erbt die Basisklasse mit privatem oder geschütztem Zugriff.
 
-Im folgende Beispiel wird die C4243 generiert:
+Im folgenden Beispiel wird C4243 generiert:
 
-```
+```cpp
 // C4243.cpp
 // compile with: /W3
 // C4243 expected

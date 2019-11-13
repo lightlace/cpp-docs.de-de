@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4630
 ms.assetid: d8926376-7acc-4fc7-8438-6f0de3468870
-ms.openlocfilehash: 98ea72bef0cb95163604144c1069a13c3b27d81c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 893364183594782b825377f57fa4e525338d62d8
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324531"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052561"
 ---
 # <a name="compiler-warning-level-1-c4630"></a>Compilerwarnung (Stufe 1) C4630
 
-'Symbol': Speicherklassenspezifizierer "Extern" nicht für Elementdefinition
+"Symbol": der Speicherklassenspezifizierer "extern" ist für die Element Definition unzulässig.
 
-Ein Datenmember oder eine Memberfunktion ist definiert als `extern`. Member können nicht extern und sein, jedoch können komplette Objekte. Der Compiler ignoriert die `extern` Schlüsselwort. Im folgende Beispiel wird die C4630 generiert:
+Ein Datenmember oder eine Member-Funktion wird als `extern`definiert. Member können nicht extern sein, auch wenn ganze Objekte dies möglich sind. Der Compiler ignoriert das `extern`-Schlüsselwort. Im folgenden Beispiel wird C4630 generiert:
 
-```
+```cpp
 // C4630.cpp
 // compile with: /W1 /LD
 class A {

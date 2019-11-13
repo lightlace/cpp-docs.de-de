@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4094
 ms.assetid: e68929fb-3a1c-4be7-920b-d5f79f534f99
-ms.openlocfilehash: 73805afc897d14c6d2cc87490dfa0769a8de5193
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c293522e5d60d0edb4cc2da289e0ece71f89329f
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350516"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052199"
 ---
 # <a name="compiler-warning-level-2-c4094"></a>Compilerwarnung (Stufe 2) C4094
 
-Unbenanntes 'token' deklariert keine Symbole
+nicht markierte ' Token ' deklariert keine Symbole
 
-Der Compiler hat eine leere Deklaration einer unbenannten Struktur, Union oder Klasse. Die Deklaration wird ignoriert.
+Der Compiler hat eine leere Deklaration mit einer nicht markierten Struktur, Union oder Klasse erkannt. Die Deklaration wird ignoriert.
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // C4094.cpp
 // compile with: /W2
 struct
@@ -33,4 +33,4 @@ int main()
 }
 ```
 
-Diese Bedingung generiert einen Fehler ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Diese Bedingung generiert einen Fehler unter ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-ms.openlocfilehash: 8baf3c03c87dc70a80b785d7f81cbee4e1d828f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03826f10659cbdf6035cd4dedebecca3e3302e3a
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349710"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052114"
 ---
 # <a name="compiler-warning-level-2-c4250"></a>Compilerwarnung (Stufe 2) C4250
 
-'Klasse1': 'Klasse2:: Member"via Dominanz erbt
+"Class1": erbt "Klasse2:: Member" über Dominanz
 
-Zwei oder mehr Elemente haben den gleichen Namen. In `class2` geerbt wird, da es sich um eine Basisklasse für die anderen Klassen handelt, die dieses Element enthalten.
+Mindestens zwei Member haben denselben Namen. Die in `class2` wird geerbt, da Sie eine Basisklasse für die anderen Klassen ist, die diesen Member enthalten.
 
-Um C4250 zu unterdrücken, verwenden die [Warnung](../../preprocessor/warning.md) Pragma.
+Um C4250 zu unterdrücken, verwenden Sie das [Warning](../../preprocessor/warning.md) -Pragma.
 
-Da eine virtuelle Basisklasse für mehrere abgeleitete Klassen freigegeben werden, dominiert ein Namen in einer abgeleiteten Klasse einen Namen in einer Basisklasse. Z. B. wenn die folgende Hierarchie von Klassen, werden zwei Definitionen von Func in Raute geerbt: die vbc::Func()-Instanz durch die schwachen-Klasse und den dominanten:: func() über die vorherrschende-Klasse. Ein nicht qualifizierter Aufruf von func() über ein Klassenobjekt Raute, und ruft immer die dominate::Func()-Instanz aus.  Würde die schwache Klasse eine Instanz von func() einführen, weder Definition der Definitionen, und der Aufruf als mehrdeutig markiert.
+Da eine virtuelle Basisklasse von mehreren abgeleiteten Klassen gemeinsam genutzt wird, ist ein Name in einer abgeleiteten Klasse ein Name in einer Basisklasse. Bei der folgenden Klassenhierarchie gibt es z. b. zwei Definitionen von Func, die innerhalb des Diamanten geerbt wurden: die Vbc:: Func ()-Instanz durch die schwache Klasse und die dominante:: Func () durch die dominierende Klasse. Ein nicht qualifizierter Aufruf von Func () über ein Diamant Klassenobjekt ruft immer die dominieren:: Func ()-Instanz auf.  Wenn die schwache Klasse eine Instanz von Func () einführen würde, würde keine der Definitionen dominieren, und der-Befehl würde als mehrdeutig gekennzeichnet werden.
 
-```
+```cpp
 // C4250.cpp
 // compile with: /c /W2
 #include <stdio.h>
@@ -47,9 +47,9 @@ int main() {
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4250 generiert.
+Im folgenden Beispiel wird C4250 generiert.
 
-```
+```cpp
 // C4250_b.cpp
 // compile with: /W2 /EHsc
 #include <iostream>
@@ -80,9 +80,9 @@ int main() {
 
 ## <a name="example"></a>Beispiel
 
-Dieses Beispiel zeigt eine komplexere Situation. Im folgende Beispiel wird die C4250 generiert.
+Dieses Beispiel zeigt eine komplexere Situation. Im folgenden Beispiel wird C4250 generiert.
 
-```
+```cpp
 // C4250_c.cpp
 // compile with: /W2 /EHsc
 #include <iostream>

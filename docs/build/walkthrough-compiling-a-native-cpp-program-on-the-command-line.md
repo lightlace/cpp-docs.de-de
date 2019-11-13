@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Kompilieren eines System C++ eigenen Programms in der Befehlszeile'
+title: 'Exemplarische Vorgehensweise: Kompilieren eines systemeigenen C++-Programms in der Befehlszeile'
 description: Verwenden Sie den C++ Microsoft-Compiler über eine Eingabeaufforderung.
 ms.custom: conceptual
 ms.date: 04/23/2019
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: 36017b28ab91478da2515cd7c8588a998013171d
-ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.openlocfilehash: daab00768f8140869a8db39c73f4fec3ab6304c7
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71960719"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051511"
 ---
-# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Exemplarische Vorgehensweise: Kompilieren eines System C++ eigenen Programms in der Befehlszeile
+# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Exemplarische Vorgehensweise: Kompilieren eines systemeigenen C++-Programms in der Befehlszeile
 
 Visual Studio enthält einen Befehlszeilen C++ Compiler, mit dem Sie alles aus grundlegenden Konsolen-apps zu universelle Windows-Plattform-apps, Desktop-Apps, Gerätetreibern und .NET-Komponenten erstellen können.
 
-In dieser exemplarischen Vorgehensweise C++ erstellen Sie ein einfaches Programm "Hello, World" mit einem Text-Editor und kompilieren es dann in der Befehlszeile. Wenn Sie die Visual Studio-IDE testen möchten, anstatt die Befehlszeile zu verwenden, finden Sie weitere Informationen unter [walkthrough: Arbeiten mit Projekten und Projektmappen (C++) ](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) oder [der Verwendung der Visual C++ Studio-IDE für die Desktop Entwicklung](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+In dieser exemplarischen Vorgehensweise C++ erstellen Sie ein einfaches Programm "Hello, World" mit einem Text-Editor und kompilieren es dann in der Befehlszeile. Wenn Sie die Visual Studio-IDE testen möchten, anstatt die Befehlszeile zu verwenden, finden Sie weitere Informationen unter Exemplarische Vorgehensweise [:C++arbeiten mit Projekten und Projektmappen ()](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) oder [Verwenden der Visual Studio-IDE für C++ die Desktop Entwicklung](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
 In dieser exemplarischen Vorgehensweise können Sie Ihr eigenes Visual C++-Programm verwenden, statt das gezeigte einzugeben, oder Sie können ein Visual C++-Codebeispiel aus einem anderen Hilfeartikel verwenden.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Erforderliche Voraussetzungen
 
 Um diese exemplarische Vorgehensweise durchführen zu können, müssen Sie entweder Visual Studio und die optionale **Desktop Entwicklung mit C++**  der Arbeitsauslastung oder die Befehlszeilen-Buildtools für Visual Studio installiert haben.
 
 Visual Studio ist eine leistungsfähige integrierte Entwicklungsumgebung (Integrated Development Environment, IDE), die einen voll funktionsfähigen Editor, Ressourcen-Manager, Debugger und Compiler für viele Sprachen und Plattformen unterstützt. Weitere Informationen zum herunterladen und Installieren von Visual Studio, einschließlich der kostenlosen Visual Studio Community Edition, sowie zur Unterstützung für CC++ /Development finden Sie [unter Installieren C++ der Unterstützung in Visual Studio](vscpp-step-0-installation.md).
 
-Die Buildtools für Visual Studio installieren nur die Befehlszeilen Compiler, Tools und Bibliotheken, die Sie benötigen, um C und C++ Programme zu erstellen. Es eignet sich ideal für buildlabs oder Schulungs Übungen und die Installation relativ schnell. Um nur die Befehlszeilen Tools zu installieren, suchen Sie auf der [Visual Studio-Download](https://visualstudio.microsoft.com/downloads/) Seite nach Buildtools für Visual Studio.
+Die Buildtools für Visual Studio installieren nur die Befehlszeilen Compiler, Tools und Bibliotheken, die Sie benötigen, um C und C++ Programme zu erstellen. Es eignet sich ideal für buildlabs oder Schulungs Übungen und die Installation relativ schnell. Um nur die Befehlszeilen Tools zu installieren, suchen Sie auf der [Visual Studio-Download](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019) Seite nach Buildtools für Visual Studio.
 
 Bevor Sie ein C-oder C++ -Programm in der Befehlszeile erstellen können, müssen Sie sicherstellen, dass die Tools installiert sind und dass Sie über die Befehlszeile darauf zugreifen können. Visual C++ hat komplexe Anforderungen an die Befehlszeilen Umgebung, um die verwendeten Tools, Header und Bibliotheken zu finden. Das **visuelle C++ Element kann nicht in einem einfachen Eingabe** Aufforderungs Fenster ohne Vorbereitung verwendet werden. Glücklicherweise installiert Visual C++ die Tastenkombinationen, um eine Developer-Eingabeaufforderung zu starten, in der die Umgebung für Befehlszeilenbuilds eingerichtet ist. Leider unterscheiden sich die Namen der Verknüpfungen für Entwickler-Eingabe Aufforderungen und deren Position in nahezu jeder Version von C++ Visual und unterschiedlichen Versionen von Windows. Die erste Exemplarische Vorgehensweise ist die Suche nach dem richtigen zu verwendenden.
 
@@ -58,12 +58,12 @@ Bevor Sie ein C-oder C++ -Programm in der Befehlszeile erstellen können, müsse
    Abhängig von der Version von Visual C++ und allen installierten Updates gibt es möglicherweise Unterschiede in den aktuellen Verzeichnis-oder Versionsnummern. Wenn die oben genannte Ausgabe ähnlich aussieht wie Sie sehen, können Sie C-oder C++ -Programme in der Befehlszeile erstellen.
 
    > [!NOTE]
-   > Wenn ein Fehler wie "CL" nicht als interner oder externer Befehl, ausführbares Programm oder eine Batchdatei (Fehler C1034 oder Fehler LNK1104 erkannt wird, wenn Sie den **cl** -Befehl ausführen, wird entweder keine Entwickler-Eingabeaufforderung verwendet, oder etwas ist falsch. mit Ihrer Installation von Visual C++. Sie müssen dieses Problem beheben, bevor Sie fortfahren können.
+   > Wenn Sie eine Fehlermeldung wie z. b. "CL" wird nicht als interner oder externer Befehl, ausführbares Programm oder eine Batchdatei (Fehler C1034 oder Fehler LNK1104) erkennen, wenn Sie den **cl** -Befehl ausführen, verwenden Sie entweder keine Entwickler-Eingabeaufforderung, oder es ist ein Fehler bei der Installation C++der Visualisierung aufgetreten. Sie müssen dieses Problem beheben, bevor Sie fortfahren können.
 
-   Wenn Sie die Verknüpfung für Entwickler-Eingabe Aufforderungen nicht finden oder wenn Sie eine Fehlermeldung erhalten, wenn Sie `cl` eingeben, C++ tritt bei der visuellen Installation möglicherweise ein Problem auf. Versuchen Sie, die visuelle C++ Komponente in Visual Studio erneut zu installieren, oder installieren Sie C++ Microsoft Visual Build Tools neu. Fahren Sie nicht mit dem nächsten Abschnitt fort, bis dies funktioniert. Weitere Informationen zur Installation und Problembehandlung in C++Visual Studio finden Sie unter [Installieren von Visual Studio](/visualstudio/install/install-visual-studio).
+   Wenn Sie die Verknüpfung für Entwickler-Eingabe Aufforderungen nicht finden oder wenn Sie eine Fehlermeldung erhalten, wenn Sie `cl`eingeben, C++ kann bei der visuellen Installation ein Problem auftreten. Versuchen Sie, die visuelle C++ Komponente in Visual Studio erneut zu installieren, oder installieren Sie C++ Microsoft Visual Build Tools neu. Fahren Sie nicht mit dem nächsten Abschnitt fort, bis dies funktioniert. Weitere Informationen zur Installation und Problembehandlung in C++Visual Studio finden Sie unter [Installieren von Visual Studio](/visualstudio/install/install-visual-studio).
 
    > [!NOTE]
-   > Abhängig von der Windows-Version auf dem Computer und der System Sicherheitskonfiguration müssen Sie möglicherweise mit der rechten Maustaste klicken, um das Kontextmenü für die Eingabeaufforderung für Entwickler-Eingabeaufforderung zu öffnen. Wählen Sie dann **als Administrator ausführen** aus, um erfolgreich zu erstellen und auszuführen. Das Programm, das Sie nach dieser exemplarischen Vorgehensweise erstellen.
+   > Abhängig von der Windows-Version auf dem Computer und der System Sicherheitskonfiguration müssen Sie möglicherweise mit der rechten Maustaste klicken, um das Kontextmenü für die Eingabeaufforderung für Entwickler-Eingabeaufforderung zu öffnen. Wählen Sie dann **als Administrator ausführen** aus, um das in dieser exemplarischen Vorgehensweise erstellte Programm erfolgreich zu erstellen und auszuführen.
 
 ### <a name="create-a-visual-c-source-file-and-compile-it-on-the-command-line"></a>Erstellen einer visuellen C++ Quelldatei und Kompilieren in der Befehlszeile
 

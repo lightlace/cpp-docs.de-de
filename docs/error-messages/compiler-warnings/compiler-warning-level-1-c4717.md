@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4717
 ms.assetid: 5ef3c6c7-8599-4714-a973-0f5b69cdab3c
-ms.openlocfilehash: 0cf9aef8f68ca5972fd3d7886cd8061b88d043ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0bc95cc770914a1c02a7a40f9754415c2f013d63
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221140"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051344"
 ---
 # <a name="compiler-warning-level-1-c4717"></a>Compilerwarnung (Stufe 1) C4717
 
-"Function": rekursiv für alle Steuerelementpfade, die Funktion verursacht einen Stapelüberlauf zur Laufzeit
+"Function": rekursiv für alle Steuerelement Pfade, Funktion führt zu einem Lauf Zeit Stapelüberlauf
 
-Jeder Pfad durch eine Funktion enthält einen Aufruf der Funktion. Da keine Möglichkeit, die die Funktion erst nach Aufrufen von sich selbst rekursiv beendet ist, wird die Funktion nie beendet werden.
+Jeder Pfad durch eine Funktion enthält einen aufzurufenden Befehl. Da es keine Möglichkeit gibt, die Funktion zu beenden, ohne sich zuerst selbst rekursiv aufrufen zu müssen, wird die Funktion nie beendet.
 
-Im folgende Beispiel wird die C4717 generiert:
+Im folgenden Beispiel wird C4717 generiert:
 
-```
+```cpp
 // C4717.cpp
 // compile with: /W1 /c
 // C4717 expected

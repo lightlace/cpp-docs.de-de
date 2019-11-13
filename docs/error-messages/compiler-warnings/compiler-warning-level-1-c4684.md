@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4684
 ms.assetid: e95f1a83-2784-4b05-ae94-12148e056e26
-ms.openlocfilehash: 8ba3d75ecb370ac86c9a6ab47f05dd49fc12ba23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6ce86cc297a6529d58573f3e7d906f51771013b
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374403"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052517"
 ---
 # <a name="compiler-warning-level-1-c4684"></a>Compilerwarnung (Stufe 1) C4684
 
-'Attribut': WARNUNG!! Attribut kann zu Ungültiger codegenerierung führen: Verwenden Sie mit Vorsicht
+' Attribut ': Warnung! das Attribut kann eine ungültige Codegenerierung verursachen: Verwendung mit Vorsicht.
 
-Sie verwendet ein Attribut, das nicht häufig verwendet werden soll.
+Sie haben ein Attribut verwendet, das nicht häufig verwendet werden sollte.
 
-Im folgende Beispiel wird die C4684 generiert:
+Im folgenden Beispiel wird C4684 generiert:
 
-```
+```cpp
 // C4684.cpp
 // compile with: /W1 /LD
 [module(name="xx")]; // C4684 expected

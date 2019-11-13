@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4334
 ms.assetid: d845857f-bc95-4faf-a079-626a0cf935ba
-ms.openlocfilehash: 55512bf28c8c20512d0d245810d3e5c1fec36939
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebebfe9994be3dd136e3924cb2aea60c0c901926
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402033"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051638"
 ---
 # <a name="compiler-warning-level-3-c4334"></a>Compilerwarnung (Stufe 3) C4334
 
-'Operator': Ergebnis der 32-Bit-Verschiebung wurde implizit zu 64 Bit konvertiert (war eine 64-Bit-Verschiebung vorgesehen?)
+"Operator": das Ergebnis der 32-Bit-Verschiebung wurde implizit in 64 Bits konvertiert (war 64-Bit-Shift beabsichtigt?)
 
-Das Ergebnis der 32-Bit-Verschiebung wurde implizit nach 64-Bit konvertiert, und der Compiler vermutet, dass eine 64-Bit-Verschiebung vorgesehen war.  Zur Behebung des Problems verwenden Sie eine 64-Bit-Verschiebung, oder wandeln Sie das Ergebnis der Verschiebung explizit in 64-Bit um.
+Das Ergebnis der 32-Bit-Verschiebung wurde implizit in 64-Bits konvertiert, und der Compiler hat fest, dass eine 64-Bit-Verschiebung beabsichtigt war.  Um diese Warnung zu beheben, verwenden Sie entweder die 64-Bit-Schicht, oder wandeln Sie das Verschiebungs Ergebnis explizit in 64-Bit um.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4334 generiert.
+Im folgenden Beispiel wird C4334 generiert.
 
-```
+```cpp
 // C4334.cpp
 // compile with: /W3 /c
 void SetBit(unsigned __int64 *p, int i) {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4615
 ms.assetid: 7b107c01-0da2-4e01-8b40-93813e30b94c
-ms.openlocfilehash: 1032261c39e0a285ac686e09573161de3b46e0e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c682b309cbabbaf97346e37038806d331f949ac
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324544"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052605"
 ---
 # <a name="compiler-warning-level-1-c4615"></a>Compilerwarnung (Stufe 1) C4615
 
-\#Pragma-Warnung: Unbekannter Typ der benutzerwarnung
+\#pragma-Warnung: Unbekannter Benutzer Warnungstyp.
 
-Wurde ein ungültiger Spezifizierer für die Warnung verwendet **Pragma** [Warnung](../../preprocessor/warning.md). Um den Fehler zu beheben, verwenden Sie einen gültigen Bezeichner ein.
+Ein ungültiger Warnungs Spezifizierer wurde mit der **pragma** - [Warnung](../../preprocessor/warning.md)verwendet. Um den Fehler zu beheben, verwenden Sie einen gültigen Warnungs Spezifizierer.
 
-Im folgende Beispiel wird die C4615 generiert:
+Im folgenden Beispiel wird C4615 generiert:
 
-```
+```cpp
 // C4615.cpp
 // compile with: /W1 /LD
 #pragma warning(enable : 4401)   // C4615, 'enable' not valid specifier

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4804
 ms.assetid: 069e8f44-3ef6-43bb-8524-4116fc6eea83
-ms.openlocfilehash: 28b3e49717993a3bf20c8cfec5938d698266c0f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97ad076325b11329896d98367fb3ac311ec5ded9
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406534"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051568"
 ---
 # <a name="compiler-warning-level-1-c4804"></a>Compilerwarnung (Stufe 1) C4804
 
-'Operation': unsichere Verwendung des Typs "Bool", Vorgang
+"Operation": unsichere Verwendung des Typs "bool" in Vorgang
 
-Diese Warnung gilt für bei der Verwendung einer `bool` Variable oder ein Wert in der erwarteten Weise. C4804 wird beispielsweise generiert, bei der Verwendung Operatoren wie z. B. den negativen unäroperator (**-**) oder dem Komplementoperator (`~`). Der Compiler wertet den Ausdruck.
+Diese Warnung gilt für den Fall, dass Sie eine `bool` Variable oder einen Wert auf unerwartete Weise verwendet haben. Beispielsweise wird C4804 generiert, wenn Sie Operatoren verwenden, z. b. den negativen unären Operator ( **-** ) oder den Komplement Operator (`~`). Der Compiler wertet den Ausdruck aus.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4804 generiert:
+Im folgenden Beispiel wird C4804 generiert:
 
-```
+```cpp
 // C4804.cpp
 // compile with: /W1
 

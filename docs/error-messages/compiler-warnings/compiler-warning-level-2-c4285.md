@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4285
 ms.assetid: fa14de1f-fc19-4eec-8bea-81003636e12f
-ms.openlocfilehash: 96e1077ce3c9e60823a11aa41719738265ee703b
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 326b73dcf4665c442926e68995bace60300b6ebf
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345390"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052105"
 ---
 # <a name="compiler-warning-level-2-c4285"></a>Compilerwarnung (Stufe 2) C4285
 
-der Rückgabetyp ist für "Identifier:: Operator ->" rekursiv, wenn mit Infix-Notation verwendet.
+der Rückgabetyp für "Identifier:: Operator->" ist rekursiv, wenn er mithilfe der Infixnotation angewendet wird
 
-Das angegebene **Operator -> ()** Funktionsrückgabetyp kann nicht den Typ für den sie definiert wurde oder ein Verweis auf den Typ, der für die es definiert ist.
+Die angegebene **Operator-> ()** -Funktion kann nicht den Typ zurückgeben, für den Sie definiert ist, oder einen Verweis auf den Typ, für den Sie definiert ist.
 
-Im folgende Beispiel wird die C4285 generiert:
+Im folgenden Beispiel wird C4285 generiert:
 
-```
+```cpp
 // C4285.cpp
 // compile with: /W2
 class C
