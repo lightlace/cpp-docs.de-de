@@ -1,6 +1,6 @@
 ---
 title: basic_string-Klasse
-ms.date: 11/04/2016
+ms.date: 11/12/2019
 f1_keywords:
 - xstring/std::basic_string
 - xstring/std::basic_string::allocator_type
@@ -116,16 +116,16 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: c77c09394bb8997168d8a6756da69e9545dad0a2
-ms.sourcegitcommit: 4a0a108aa6f042576a777feb6dcb310dc0bb9230
+ms.openlocfilehash: 6919f2ece4ed846cd80f791af91797373dea33b2
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73842317"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051501"
 ---
 # <a name="basic_string-class"></a>basic_string-Klasse
 
-Die von einem Objekt vom Typ "`basic_string`" gesteuerten Sequenzen sind C++ die Standard mäßige Zeichen folgen Klasse und werden normalerweise als Zeichen folgen bezeichnet. Sie sollten jedoch nicht mit den auf NULL endenden Zeichen folgen im C++ C-Stil verwechselt werden, die in der Standardbibliothek verwendet werden. Die C++-Standardzeichenfolge ist ein Container, der die Verwendung von Zeichenfolgen als Normaltypen, wie das Verwenden von Vergleichs- und Verkettungsvorgängen, Iteratoren, STL-Algorithmen sowie das Kopieren und Zuweisen mit von Klassenzuweisung verwaltetem Arbeitsspeicher, ermöglicht. Falls eine C++-Standardzeichenfolge in eine auf NULL endende Zeichenfolge im C-Stil konvertiert werden muss, verwenden Sie den Member [basic_string::c_str](#c_str).
+Die von einem Objekt vom Typ "`basic_string`" gesteuerten Sequenzen sind C++ die Standard mäßige Zeichen folgen Klasse und werden normalerweise als Zeichen folgen bezeichnet. Sie sollten jedoch nicht mit den auf NULL endenden Zeichen folgen C++ im C-Stil verwechselt werden, die in der Standardbibliothek verwendet werden. Die C++-Standardzeichenfolge ist ein Container, der die Verwendung von Zeichenfolgen als Normaltypen, wie das Verwenden von Vergleichs- und Verkettungsvorgängen, Iteratoren, STL-Algorithmen sowie das Kopieren und Zuweisen mit von Klassenzuweisung verwaltetem Arbeitsspeicher, ermöglicht. Falls eine C++-Standardzeichenfolge in eine auf NULL endende Zeichenfolge im C-Stil konvertiert werden muss, verwenden Sie den Member [basic_string::c_str](#c_str).
 
 ## <a name="syntax"></a>Syntax
 
@@ -194,9 +194,9 @@ Der Typ, mit dem das gespeicherte Zuordnungsobjekt darstellt wird, mit dem Detai
 |[end](#end)|Gibt einen Iterator zurück, der den Speicherort adressiert, der dem letzten Element einer Zeichenfolge nachfolgt.|
 |[erase](#erase)|Entfernt ein Element oder einen Reihe von Elementen einer Zeichenfolge von einer angegebenen Position.|
 |[find](#find)|Sucht eine Zeichenfolge vorwärts nach dem ersten Vorkommen einer Teilzeichenfolge ab, die mit einer bestimmten Zeichensequenz übereinstimmt.|
-|[find_first_not_of](#find_first_not_of)|Durchsucht eine Zeichenfolge nach dem ersten Zeichen, das kein Element der angegebenen Zeichenfolge ist.|
+|[find_first_not_of](#find_first_not_of)|Durchsucht eine Zeichenfolge nach dem ersten Zeichen, das kein Element einer angegebenen Zeichenfolge ist.|
 |[find_first_of](#find_first_of)|Durchsucht eine Zeichenfolge nach dem ersten Zeichen, das einem Element der angegebenen Zeichenfolge entspricht.|
-|[find_last_not_of](#find_last_not_of)|Durchsucht eine Zeichenfolge nach dem letzten Zeichen, das kein Element der angegebenen Zeichenfolge ist.|
+|[find_last_not_of](#find_last_not_of)|Durchsucht eine Zeichenfolge nach dem letzten Zeichen, das kein Element einer angegebenen Zeichenfolge ist.|
 |[find_last_of](#find_last_of)|Durchsucht eine Zeichenfolge nach dem letzten Zeichen, das ein Element der angegebenen Zeichenfolge ist.|
 |[Vorderseite](#front)|Gibt einen Verweis auf das erste Element in einer Zeichenfolge zurück.|
 |[get_allocator](#get_allocator)|Gibt eine Kopie des zum Erstellen der Zeichenfolge verwendeten `allocator`-Objekts zurück.|
@@ -281,7 +281,7 @@ basic_string<CharType, Traits, Allocator>& append(
 
 basic_string<CharType, Traits, Allocator>& append(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off,
+    size_type offset,
     size_type count);
 
 basic_string<CharType, Traits, Allocator>& append(
@@ -289,7 +289,7 @@ basic_string<CharType, Traits, Allocator>& append(
 
 basic_string<CharType, Traits, Allocator>& append(
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 template <class InputIterator>
 basic_string<CharType, Traits, Allocator>& append(
@@ -313,13 +313,13 @@ Die C-Zeichenfolge, die angefügt werden soll.
 *Str* \
 Die Zeichenfolge, deren Zeichen angefügt werden sollen.
 
-*_Off*\
+*Offset*\
 Der Index des Teils der Quellzeichenfolge, der die anzufügenden Zeichen bereitstellt.
 
 *Anzahl* \
 Die Anzahl der Zeichen, die höchstens aus der Quellzeichenfolge angefügt werden darf.
 
-*_Ch*\
+*char_value*\
 Der Zeichenwert, der angefügt werden soll.
 
 *erste* \
@@ -450,7 +450,7 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 basic_string<CharType, Traits, Allocator>& assign(
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 template <class InIt>
 basic_string<CharType, Traits, Allocator>& assign(
@@ -477,7 +477,7 @@ Die Anzahl der Zeichen, die aus der Quell Zeichenfolge zugewiesen werden sollen.
 *Str* \
 Die Quellzeichenfolge, deren Zeichen der Zielzeichenfolge zugewiesen werden sollen.
 
-*_Ch*\
+*char_value*\
 Der Zeichenwert, der zugewiesen werden soll.
 
 *erste* \
@@ -594,14 +594,14 @@ The string str1 assigned a range of string str2f is: World.
 Stellt mit einem angegebenen Index in einer Zeichenfolge einen Verweis auf das Zeichen.
 
 ```cpp
-const_reference at(size_type _Off) const;
+const_reference at(size_type offset) const;
 
-reference at(size_type _Off);
+reference at(size_type offset);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*_Off*\
+*Offset*\
 Der Index des Elements, auf das verwiesen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -681,7 +681,7 @@ Erstellt eine Zeichenfolge, die leer ist, oder von bestimmten Zeichen initialisi
 basic_string();
 
 explicit basic_string(
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     const basic_string& right);
@@ -691,14 +691,14 @@ basic_string(
 
 basic_string(
     const basic_string& right,
-    size_type _Roff,
+    size_type right_offset,
     size_type count = npos);
 
 basic_string(
     const basic_string& right,
-    size_type _Roff,
+    size_type right_offset,
     size_type count,
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     const value_type* ptr,
@@ -707,23 +707,23 @@ basic_string(
 basic_string(
     const value_type* ptr,
     size_type count,
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     const value_type* ptr);
 
 basic_string(
     const value_type* ptr,
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 basic_string(
     size_type count,
-    value_type _Ch,
-    const allocator_type& _Al);
+    value_type char_value,
+    const allocator_type& alloc_type);
 
 template <class InputIterator>
 basic_string(
@@ -734,7 +734,7 @@ template <class InputIterator>
 basic_string(
     InputIterator first,
     InputIterator last,
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     const_pointer first,
@@ -750,7 +750,7 @@ basic_string(
 *ptr* -\
 Die C-Zeichenfolge, deren Zeichen verwendet werden, um die erstellte `string` zu initialisieren. Dieser Wert darf kein Nullzeiger sein.
 
-*_Al*\
+*alloc_type*\
 Der Speicherzuordnerklasse für das Zeichenfolgenobjekt, das erstellt wird.
 
 *Anzahl* \
@@ -759,10 +759,10 @@ Die Anzahl der zu initialisierenden Zeichen.
 *Rechte* \
 Die Zeichenfolge zum Initialisieren der zu erstellenden Zeichenfolge.
 
-*_Roff*\
+*right_offset*\
 Der Index eines Zeichens in einer Zeichenfolge, die als erste verwendet wird, um Zeichenwerte für die zu erstellende Zeichenfolge zu initialisieren.
 
-*_Ch*\
+*char_value*\
 Der Zeichenwert, der in die zu erstellende Zeichenfolge kopiert werden soll.
 
 *erste* \
@@ -777,9 +777,9 @@ Ein Verweis auf das Zeichenfolgenobjekt, das von den Konstruktoren erstellt wird
 
 ### <a name="remarks"></a>Hinweise
 
-Von allen Konstruktoren wird ein [basic_string::allocator_type](#allocator_type) gespeichert, und die gesteuerte Sequenz wird initialisiert. Das Zuweisungsobjekt ist das Argument `al`, sofern es vorhanden ist. Für den Kopierkonstruktor ist es `right.`[basic_string::get_allocator](#get_allocator)`()`. Andernfalls ist der Wert `Alloc()`.
+Von allen Konstruktoren wird ein [basic_string::allocator_type](#allocator_type) gespeichert, und die gesteuerte Sequenz wird initialisiert. Das Zuweisungsobjekt ist das Argument `al`, sofern es vorhanden ist. Für den Kopierkonstruktor ist `right.`[basic_string:: Get_allocator](#get_allocator)`()`. Andernfalls ist die Zuweisung `Alloc()`.
 
-Die gesteuerte Sequenz wird in eine Kopie der Operandensequenz initialisiert, die von den verbleibenden Operanden angegeben werden. Ein Konstruktor ohne Operandensequenz gibt eine leere gesteuerte Sequenz an. Wenn `InputIterator` ein ganzzahliger Typ in einem Vorlagenkonstruktor ist, verhält sich die Operandensequenz _F `irst,  last` wie `(size_type) first, (value_type) last`.
+Die gesteuerte Sequenz wird in eine Kopie der Operandensequenz initialisiert, die von den verbleibenden Operanden angegeben werden. Ein Konstruktor ohne Operandensequenz gibt eine leere gesteuerte Sequenz an. Wenn `InputIterator` ein ganzzahliger Typ in einem vorlagenkonstruktor ist, verhält sich die operandensequenz `first,  last` identisch mit `(size_type) first, (value_type) last`.
 
 ### <a name="example"></a>Beispiel
 
@@ -890,13 +890,13 @@ const value_type *c_str() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die im C-Stil angegebene Version der aufrufenden Zeichenfolge.  Der Zeigerwert ist nach Aufrufen einer nicht-konstanten Funktion nicht gültig. Dies betrifft auch den Destruktor in der Klasse „basic_string“ im Objekt.
+Ein Zeiger auf die im C-Stil angegebene Version der aufrufenden Zeichenfolge.  Der Zeiger Wert ist nicht gültig, nachdem eine nicht-konstante Funktion, einschließlich des Dekonstruktors, in der Basic_string-Klasse des-Objekts aufgerufen wurde.
 
 ### <a name="remarks"></a>Hinweise
 
 Objekte vom Typ "String", die zur Klassen Vorlage gehören, basic_string\<Char-> nicht notwendigerweise null beendet werden. Das NULL-Zeichen „\0„ wird als Sonderzeichen in einer C-Zeichenfolge verwendet, um das Ende einer Zeichenfolge zu markieren. Es hat allerdings keine besondere Bedeutung in einem Objekt des Typs „string“ und kann genau wie jedes andere Zeichen ein Teil der Zeichenfolge sein. Es gibt eine automatische Konvertierung von **Konstanten char** -<strong>\*</strong> in Zeichen folgen, aber die String-Klasse bietet keine automatischen Konvertierungen von Zeichen folgen im C-Format in Objekte des Typs **basic_string\<Char >** .
 
-Die zurückgegebene Zeichenfolge im C-Format darf nicht geändert werden, weil dadurch der Zeiger auf die Zeichenfolge ungültig oder gelöscht werden könnte. Das liegt daran, dass die Lebensdauer des Zeigers eingeschränkt und sein Besitzer die Klasse „string“ ist.
+Die zurückgegebene Zeichenfolge im C-Stil sollte nicht geändert werden, da dadurch der Zeiger auf die Zeichenfolge ungültig oder gelöscht werden kann, da die Zeichenfolge eine begrenzte Lebensdauer aufweist und sich im Besitz der Klassen Zeichenfolge befindet.
 
 ### <a name="example"></a>Beispiel
 
@@ -1128,30 +1128,30 @@ int compare(
     const basic_string<CharType, Traits, Allocator>& str) const;
 
 int compare(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const basic_string<CharType, Traits, Allocator>& str) const;
 
 int compare(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 int compare(
     const value_type* ptr) const;
 
 int compare(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const value_type* ptr) const;
 
 int compare(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const value_type* ptr
-    size_type _Num2) const;
+    size_type number_2) const;
 ```
 
 ### <a name="parameters"></a>Parameter
@@ -1159,16 +1159,16 @@ int compare(
 *Str* \
 Die Zeichenfolge, die mit der Operandenzeichenfolge verglichen werden soll.
 
-*_Pos1*\
+*position_1*\
 Der Index der Operandenzeichenfolge, an dem der Vergleich beginnt.
 
-*_Num1*\
+*number_1*\
 Die maximale Anzahl von Zeichen aus der Operandenzeichenfolge, die verglichen werden soll.
 
-*_Num2*\
+*number_2*\
 Die maximale Anzahl von Zeichen aus der Parameterzeichenfolge, die verglichen werden soll.
 
-*_Off*\
+*Offset*\
 Der Index der Parameterzeichenfolge, an dem der Vergleich beginnt.
 
 *Anzahl* \
@@ -1408,7 +1408,7 @@ typedef typename allocator_type::const_pointer const_pointer;
 
 Der Typ ist ein Synonym für `allocator_type::const_pointer`.
 
-Für den Typ `string` entspricht dies `char*`.
+Für den Typ `string`entspricht es `char*`.
 
 Zeiger, die als „const“ deklariert werden, müssen beim Deklarieren initialisiert werden. Const-Zeiger zeigen immer auf den gleichen Speicherbereich und können auf konstante oder nicht konstante Daten zeigen.
 
@@ -1448,7 +1448,7 @@ typedef typename allocator_type::const_reference const_reference;
 
 Ein `const_reference`-Typ kann nicht zum Ändern des Werts eines Elements verwendet werden.
 
-Der Typ ist ein Synonym für `allocator_type::const_reference`. Für Zeichen folgen `type` entspricht dies dem Konstanten `char&`.
+Der Typ ist ein Synonym für `allocator_type::const_reference`. Für Zeichen folgen `type`entspricht dies dem Konstanten `char&`.
 
 ### <a name="example"></a>Beispiel
 
@@ -1480,7 +1480,7 @@ Diese Methode ist potenziell unsicher, da sie darauf basiert, dass der Aufrufer 
 size_type copy(
     value_type* ptr,
     size_type count,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>Parameter
@@ -1488,9 +1488,9 @@ size_type copy(
 *ptr* -\
 Das Zielzeichenarray, in das die Elemente kopiert werden sollen.
 
-_ *Zählt* die Anzahl der zu kopierenden Zeichen, höchstens aus der Quell Zeichenfolge.
+*Anzahl* Die Anzahl der Zeichen, die höchstens aus der Quell Zeichenfolge kopiert werden sollen.
 
-*_Off*\
+*Offset*\
 Die Anfangsposition in der Quellzeichenfolge, ab der Kopien erstellt werden dürfen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1499,7 +1499,7 @@ Die Anzahl der tatsächlich kopierten Zeichen.
 
 ### <a name="remarks"></a>Hinweise
 
-Es wird kein NULL-Zeichen ans Ende der Kopie angefügt.
+Ein NULL-Zeichen wird nicht an das Ende der Kopie angehängt.
 
 ### <a name="example"></a>Beispiel
 
@@ -1585,7 +1585,7 @@ size_type _Copy_s(
     value_type* dest,
     size_type dest_size,
     size_type count,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>Parameter
@@ -1596,9 +1596,9 @@ Das Zielzeichenarray, in das die Elemente kopiert werden sollen.
 *dest_size*\
 Die Größe von *dest*.
 
-_ *Zählt* die Anzahl der zu kopierenden Zeichen, höchstens aus der Quell Zeichenfolge.
+*Anzahl* Die Anzahl der Zeichen, die höchstens aus der Quell Zeichenfolge kopiert werden sollen.
 
-*_Off*\
+*Offset*\
 Die Anfangsposition in der Quellzeichenfolge, ab der Kopien erstellt werden dürfen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1607,7 +1607,7 @@ Die Anzahl der tatsächlich kopierten Zeichen.
 
 ### <a name="remarks"></a>Hinweise
 
-Es wird kein NULL-Zeichen ans Ende der Kopie angefügt.
+Ein NULL-Zeichen wird nicht an das Ende der Kopie angehängt.
 
 ### <a name="example"></a>Beispiel
 
@@ -1737,7 +1737,7 @@ typedef typename allocator_type::difference_type difference_type;
 
 Der Ganzzahltyp mit Vorzeichen beschreibt ein Objekt, das die Differenz zwischen den Adressen von zwei beliebigen Elementen in der gesteuerten Sequenz darstellen kann.
 
-Für den Typ `string`entspricht dies `ptrdiff_t`.
+Für den Typ `string`entspricht es `ptrdiff_t`.
 
 ### <a name="example"></a>Beispiel
 
@@ -1904,10 +1904,10 @@ iterator erase(
     iterator last);
 
 iterator erase(
-    iterator _It);
+    iterator iter);
 
 basic_string<CharType, Traits, Allocator>& erase(
-    size_type _Pos = 0,
+    size_type offset = 0,
     size_type count = npos);
 ```
 
@@ -1919,14 +1919,14 @@ Ein Iterator, der die Position des ersten Elements im zu löschenden Bereich adr
 *Letzter* \
 Ein Iterator, der die Position adressiert, die um 1 höher ist als die Position des letzten Elements im zu löschenden Bereich.
 
-*_IT*\
+*ITER* -\
 Ein Iterator, der die Position des Elements in der zu löschenden Zeichenfolge adressiert.
 
-*_Pos*\
+*Offset*\
 Der Index des ersten Zeichens in der zu löschenden Zeichenfolge.
 
 *Anzahl* \
-Die Anzahl der Elemente, die gelöscht werden, sofern im Bereich der mit *_Pos* beginnenden Zeichenfolge entsprechend viele Elemente vorhanden sind.
+Die Anzahl der Elemente, die entfernt werden, wenn im Bereich der Zeichenfolge, die mit *Offset*beginnt, so viele Elemente vorhanden sind.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2003,29 +2003,29 @@ Sucht eine Zeichenfolge vorwärts nach dem ersten Vorkommen einer Teilzeichenfol
 
 ```cpp
 size_type find(
-    value_type _Ch,
-    size_type _Off = 0) const;
+    value_type char_value,
+    size_type offset = 0) const;
 
 size_type find(
     const value_type* ptr,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 
 size_type find(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*_Ch*\
+*char_value*\
 Der Zeichenwert, nach dem die Memberfunktion suchen soll.
 
-*_Off*\
+*Offset*\
 Index der Position, an der die Suche beginnen soll.
 
 *ptr* -\
@@ -2174,33 +2174,33 @@ The index of the 1st element of 'clear' in str4 is: 0
 
 ## <a name="find_first_not_of"></a> basic_string::find_first_not_of
 
-Durchsucht eine Zeichenfolge nach dem ersten Zeichen, das kein Element der angegebenen Zeichenfolge ist.
+Durchsucht eine Zeichenfolge nach dem ersten Zeichen, das kein Element einer angegebenen Zeichenfolge ist.
 
 ```cpp
 size_type find_first_not_of(
-    value_type _Ch,
-    size_type _Off = 0) const;
+    value_type char_value,
+    size_type offset = 0) const;
 
 size_type find_first_not_of(
     const value_type* ptr,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 
 size_type find_first_not_of(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find_first_not_of(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*_Ch*\
+*char_value*\
 Der Zeichenwert, nach dem die Memberfunktion suchen soll.
 
-*_Off*\
+*Offset*\
 Index der Position, an der die Suche beginnen soll.
 
 *ptr* -\
@@ -2366,29 +2366,29 @@ Durchsucht eine Zeichenfolge nach dem ersten Zeichen, das einem Element der ange
 
 ```cpp
 size_type find_first_of(
-    value_type _Ch,
-    size_type _Off = 0) const;
+    value_type char_value,
+    size_type offset = 0) const;
 
 size_type find_first_of(
     const value_type* ptr,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 
 size_type find_first_of(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find_first_of(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*_Ch*\
+*char_value*\
 Der Zeichenwert, nach dem die Memberfunktion suchen soll.
 
-*_Off*\
+*Offset*\
 Index der Position, an der die Suche beginnen soll.
 
 *ptr* -\
@@ -2549,33 +2549,33 @@ the 0th position is: 1
 
 ## <a name="find_last_not_of"></a> basic_string::find_last_not_of
 
-Durchsucht eine Zeichenfolge nach dem letzten Zeichen, das kein Element der angegebenen Zeichenfolge ist.
+Durchsucht eine Zeichenfolge nach dem letzten Zeichen, das kein Element einer angegebenen Zeichenfolge ist.
 
 ```cpp
 size_type find_last_not_of(
-    value_type _Ch,
-    size_type _Off = npos) const;
+    value_type char_value,
+    size_type offset = npos) const;
 
 size_type find_last_not_of(
     const value_type* ptr,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 
 size_type find_last_not_of(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find_last_not_of(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*_Ch*\
+*char_value*\
 Der Zeichenwert, nach dem die Memberfunktion suchen soll.
 
-*_Off*\
+*Offset*\
 Index der Position, an der die Suche enden soll.
 
 *ptr* -\
@@ -2742,29 +2742,29 @@ Durchsucht eine Zeichenfolge nach dem letzten Zeichen, das einem Element der ang
 
 ```cpp
 size_type find_last_of(
-    value_type _Ch,
-    size_type _Off = npos) const;
+    value_type char_value,
+    size_type offset = npos) const;
 
 size_type find_last_of(
     const value_type* ptr,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 
 size_type find_last_of(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find_last_of(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*_Ch*\
+*char_value*\
 Der Zeichenwert, nach dem die Memberfunktion suchen soll.
 
-*_Off*\
+*Offset*\
 Index der Position, an der die Suche enden soll.
 
 *ptr* -\
@@ -2975,60 +2975,60 @@ Fügt ein Element oder mehrere Elemente oder ein Reihe von Elementen an einer be
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     const value_type* ptr);
 
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     const value_type* ptr,
     size_type count);
 
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     const basic_string<CharType, Traits, Allocator>& str);
 
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off,
+    size_type offset,
     size_type count);
 
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 iterator insert(
-    iterator _It);
+    iterator iter);
 
 iterator insert(
-    iterator _It,
-    value_type _Ch)l
+    iterator iter,
+    value_type char_value)l
 template <class InputIterator>
 void insert(
-    iterator _It,
+    iterator iter,
     InputIterator first,
     InputIterator last);
 
 void insert(
-    iterator _It,
+    iterator iter,
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 void insert(
-    iterator _It,
+    iterator iter,
     const_pointer first,
     const_pointer last);
 
 void insert(
-    iterator _It,
+    iterator iter,
     const_iterator first,
     const_iterator last);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*_P0*\
+*Positions*\
 Der Index der Position hinter der Einfügemarke für die neuen Zeichen.
 
 *ptr* -\
@@ -3040,13 +3040,13 @@ Die Anzahl der einzufügenden Zeichen.
 *Str* \
 Die Zeichenfolge, die ganz oder teilweise in die Zielzeichenfolge eingefügt werden soll.
 
-*_Off*\
+*Offset*\
 Der Index des Teils der Quellzeichenfolge, der die anzufügenden Zeichen bereitstellt.
 
-*_Ch*\
+*char_value*\
 Der Zeichenwert der einzufügenden Elemente.
 
-*_IT*\
+*ITER* -\
 Ein Iterator, der die Position adressiert, hinter der ein Zeichen eingefügt werden soll.
 
 *erste* \
@@ -3322,7 +3322,7 @@ Fügt einer Zeichenfolge Zeichen an.
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& operator+=(
-    value_type _Ch);
+    value_type char_value);
 
 basic_string<CharType, Traits, Allocator>& operator+=(
     const value_type* ptr);
@@ -3333,7 +3333,7 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 
 ### <a name="parameters"></a>Parameter
 
-*_Ch*\
+*char_value*\
 Das Zeichen, das angefügt werden soll.
 
 *ptr* -\
@@ -3411,7 +3411,7 @@ Weist dem Inhalt einer Zeichenfolge neue Zeichenwerte zu.
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& operator=(
-    value_type _Ch);
+    value_type char_value);
 
 basic_string<CharType, Traits, Allocator>& operator=(
     const value_type* ptr);
@@ -3425,7 +3425,7 @@ basic_string<CharType, Traits, Allocator>& operator=(
 
 ### <a name="parameters"></a>Parameter
 
-*_Ch*\
+*char_value*\
 Der Zeichenwert, der zugewiesen werden soll.
 
 *ptr* -\
@@ -3504,13 +3504,13 @@ The string str1 reassigned with string str3c is: World.
 Stellt mit einem angegebenen Index in einer Zeichenfolge einen Verweis auf das Zeichen.
 
 ```cpp
-const_reference operator[](size_type _Off) const;
-reference operator[](size_type _Off);
+const_reference operator[](size_type offset) const;
+reference operator[](size_type offset);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*_Off*\
+*Offset*\
 Der Index des Elements, auf das verwiesen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3580,7 +3580,7 @@ typedef typename allocator_type::pointer pointer;
 
 Der Typ ist ein Synonym für `allocator_type::pointer`.
 
-Für Type `string` entspricht es **char**  <strong>\*</strong>.
+Für Type `string`entspricht es **char** <strong>\*</strong>.
 
 ### <a name="example"></a>Beispiel
 
@@ -3622,17 +3622,17 @@ Diese Memberfunktion ruft tatsächlich `erase(size() - 1)` auf, um das letzte El
 Fügt ein Element am Ende der Zeichenfolge hinzu.
 
 ```cpp
-void push_back(value_type _Ch);
+void push_back(value_type char_value);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*_Ch*\
+*char_value*\
 Das Zeichen am Ende der Zeichenfolge hinzugefügt werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion ruft effektiv [insert](#insert)([end](#end), _ *Ch* ) auf.
+Die Member-Funktion ruft [Insert](#insert)( [End](#end), *char_value* ) auf.
 
 ### <a name="example"></a>Beispiel
 
@@ -3762,7 +3762,7 @@ Ein Type-`reference` kann verwendet werden, um den Wert eines Elements zu änder
 
 Der Typ ist ein Synonym für `allocator_type::reference`.
 
-Für den Typ `string` entspricht dies `chr&`.
+Für den Typ `string`entspricht es `chr&`.
 
 ### <a name="example"></a>Beispiel
 
@@ -3852,33 +3852,33 @@ Ersetzt Elemente an einer bestimmten Position in einer Zeichenfolge durch angege
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const value_type* ptr);
 
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const basic_string<CharType, Traits, Allocator>& str);
 
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const value_type* ptr,
-    size_type _Num2);
+    size_type number_2);
 
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Pos2,
-    size_type _Num2);
+    size_type position_2,
+    size_type number_2);
 
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 basic_string<CharType, Traits, Allocator>& replace(
     iterator first0,
@@ -3894,13 +3894,13 @@ basic_string<CharType, Traits, Allocator>& replace(
     iterator first0,
     iterator last0,
     const value_type* ptr,
-    size_type _Num2);
+    size_type number_2);
 
 basic_string<CharType, Traits, Allocator>& replace(
     iterator first0,
     iterator last0,
-    size_type _Num2,
-    value_type _Ch);
+    size_type number_2,
+    value_type char_value);
 
 template <class InputIterator>
 basic_string<CharType, Traits, Allocator>& replace(
@@ -3927,22 +3927,22 @@ basic_string<CharType, Traits, Allocator>& replace(
 *Str* \
 Die Zeichenfolge, die als Quelle für die Zeichen für die Operandenzeichenfolge verwendet werden soll.
 
-*_Pos1*\
+*position_1*\
 Der Index der Operandenzeichenfolge, an dem die Ersetzung beginnt.
 
-*_Num1*\
+*number_1*\
 Die maximale Anzahl von Zeichen, die in der Operandenzeichenfolge ersetzt werden sollen.
 
-*_Pos2*\
+*position_2*\
 Der Index der Parameterzeichenfolge, an dem der Kopiervorgang beginnt.
 
-*_Num2*\
+*number_2*\
 Die maximale Anzahl von Zeichen aus der C-Parameterzeichenfolge.
 
 *ptr* -\
 Die C-Zeichenfolge, die als Quelle für die Zeichen für die Operandenzeichenfolge verwendet werden soll.
 
-*_Ch*\
+*char_value*\
 Das Zeichen, das in die Operandenzeichenfolge kopiert werden soll.
 
 *first0* \
@@ -3958,7 +3958,7 @@ Ein Iterator, const_pointer oder const_iterator, der das erste Zeichen adressier
 Ein Iterator, const_pointer oder const_iterator, der das letzte Zeichen adressiert, das in die Parameterzeichenfolge eingefügt werden soll.
 
 *Anzahl* \
-Gibt an, wie oft *_Ch* in die Operanden Zeichenfolge kopiert wird.
+Gibt an, wie oft *char_value* in die Operanden Zeichenfolge kopiert wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -4243,7 +4243,7 @@ void resize(
 
 void resize(
     size_type count,
-    _Elem _Ch);
+    value_type char_value);
 ```
 
 ### <a name="parameters"></a>Parameter
@@ -4251,7 +4251,7 @@ void resize(
 *Anzahl* \
 Die neue Größe der Zeichenfolge.
 
-*_Ch*\
+*char_value*\
 Der Wert, mit dem angefügte Zeichen initialisiert werden, wenn zusätzliche Elemente erforderlich sind.
 
 ### <a name="remarks"></a>Hinweise
@@ -4365,29 +4365,29 @@ Sucht eine Zeichenfolge rückwärts nach dem ersten Vorkommen einer Teilzeichenf
 
 ```cpp
 size_type rfind(
-    value_type _Ch,
-    size_type _Off = npos) const;
+    value_type char_value,
+    size_type offset = npos) const;
 
 size_type rfind(
     const value_type* ptr,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 
 size_type rfind(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type rfind(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*_Ch*\
+*char_value*\
 Der Zeichenwert, nach dem die Memberfunktion suchen soll.
 
-*_Off*\
+*Offset*\
 Index der Position, an der die Suche beginnen soll.
 
 *ptr* -\
@@ -4622,9 +4622,9 @@ typedef typename allocator_type::size_type size_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Er entspricht `allocator_type::size_type`.
+Dies entspricht `allocator_type::size_type`.
 
-Für den Typ `string`entspricht dies `size_t`.
+Für den Typ `string`entspricht es `size_t`.
 
 ### <a name="example"></a>Beispiel
 
@@ -4661,13 +4661,13 @@ Kopiert eine Teilzeichenfolge höchstens einer beliebigen Anzahl von Zeichen aus
 
 ```cpp
 basic_string<CharType, Traits, Allocator> substr(
-    size_type _Off = 0,
+    size_type offset = 0,
     size_type count = npos) const;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*_Off*\
+*Offset*\
 Ein Index mit Standardwert 0, der das Element an der Position lokalisiert, von der die Kopie der Zeichenfolge erstellt wird.
 
 *Anzahl* \
@@ -4787,7 +4787,7 @@ typedef Traits traits_type;
 
 Der Typ ist ein Synonym für den zweiten Vorlagen Parameter `Traits`.
 
-Für den Typ `string`entspricht es **Char_traits\<Char >** .
+Bei Type `string`entspricht es **Char_traits\<Char->** .
 
 ### <a name="example"></a>Beispiel
 
