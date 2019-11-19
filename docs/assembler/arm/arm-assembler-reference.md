@@ -2,28 +2,29 @@
 title: Referenz zum ARM-Assembler
 ms.date: 08/28/2017
 ms.assetid: f8a076cc-9627-4328-a34a-9c44f7a3aab1
-ms.openlocfilehash: 698bbae8e3ed48ff89c851baba380d7d9de7432a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dadb3730ae0efc4f81ee8141c0dbac956f2693ef
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167542"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163233"
 ---
 # <a name="arm-assembler-reference"></a>Referenz zum ARM-Assembler
 
-Die Artikel in diesem Abschnitt der Dokumentation bieten Referenzmaterial für den Microsoft-ARM-Assembler (Armasm) und verwandte Tools.
+Die Artikel in diesem Abschnitt der Dokumentation enthalten Referenzmaterial für den Microsoft Arm-Assembler (armasm) und verwandte Tools.
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
 |Titel|Beschreibung|
 |-----------|-----------------|
-|[Befehlszeilenverweis des ARM-Assemblers](../../assembler/arm/arm-assembler-command-line-reference.md)|Beschreibt die Befehlszeilenoptionen Armasm an.|
-|[Diagnosemeldungen des ARM-Assemblers](../../assembler/arm/arm-assembler-diagnostic-messages.md)|Beschreibt häufig auftretende Armasm Warn- und Fehlermeldungen.|
-|[ARM-Assemblyanweisungen](../../assembler/arm/arm-assembler-directives.md)|Beschreibt die ARM-Anweisungen, die sich in Armasm unterscheiden.|
-|[ARM Architecture Reference Manual](https://developer.arm.com/search#q=ARM%20Architecture%20Reference%20Manual) auf der ARM-Developer-Website.|Wählen Sie die relevanten manuell für die ARM-Architektur. Jede enthält Referenzabschnitten zur ARM "," Thumb "," NEON "und" VFP und zusätzliche Informationen zu den ARM-Assemblysprache.|
-|[ARM Compiler Armasm Benutzerhandbuch](https://developer.arm.com/search#q=ARM%20Compiler%20armasm%20User%20Guide) auf der ARM-Developer-Website.|Wählen Sie eine aktuelle Version finden Sie aktuelle Informationen zu den ARM-Assemblysprache. **Hinweis**:  Der "Armasm"-Assembler, der die auf der ARM-Developer-Website bezeichnet wird, ist nicht der Microsoft-Armasm-Assembler, der in Visual Studio enthalten ist, und wird in diesem Abschnitt beschrieben.|
+|[Befehlszeilenverweis des ARM-Assemblers](../../assembler/arm/arm-assembler-command-line-reference.md)|Beschreibt die Befehlszeilenoptionen von armasm.|
+|[Diagnosemeldungen des ARM-Assemblers](../../assembler/arm/arm-assembler-diagnostic-messages.md)|Beschreibt häufig auftretende armasm-Warn-und Fehlermeldungen.|
+|[ARM-Assemblyanweisungen](../../assembler/arm/arm-assembler-directives.md)|Beschreibt die Arm-Direktiven, die sich in armasm unterscheiden.|
+|[Referenzhandbuch](https://developer.arm.com/search#q=ARM%20Architecture%20Reference%20Manual) für die ARM-Architektur auf der Arm-Entwickler Website.|Wählen Sie das relevante manuelle für die ARM-Architektur aus. Jede enthält Referenz Abschnitte zu arm, Thumb, Neon und VFP sowie zusätzliche Informationen zur Arm-Assemblysprache.|
+|[Armasm-Benutzerhandbuch für ARM-Compiler](https://developer.arm.com/search#q=ARM%20Compiler%20armasm%20User%20Guide) auf der Arm-Entwickler Website.|Wählen Sie eine aktuelle Version aus, um aktuelle Informationen zur Arm-Assemblysprache zu finden. **Hinweis:**  Der "armasm"-Assembler, auf den auf der Arm-Entwickler Website verwiesen wird, ist nicht der Microsoft armasm-Assembler, der in Visual Studio enthalten ist und in diesem Abschnitt dokumentiert ist.|
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische ARM-Funktionen](../../intrinsics/arm-intrinsics.md)<br/>
-[Intrinsische Compilerfunktionen](../../intrinsics/compiler-intrinsics.md)<br/>
+Systeminterne [Arm](../../intrinsics/arm-intrinsics.md) -Funktionen\
+Systeminterne [ARM64](../../intrinsics/arm64-intrinsics.md) -\
+[Systeminterne Compilerfunktionen](../../intrinsics/compiler-intrinsics.md)
