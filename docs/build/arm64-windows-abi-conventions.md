@@ -1,259 +1,257 @@
 ---
-title: Übersicht über die ARM64-ABI-Konventionen
+title: Übersicht über ARM64-ABI-Konventionen
 ms.date: 03/27/2019
-ms.openlocfilehash: bfb1b5b6be6a7a368c2ed7cab255da90ae7a22df
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 3a3df475b8f814fcecaf2e67a0a62c7267a0de30
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220991"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163218"
 ---
-# <a name="overview-of-arm64-abi-conventions"></a>Übersicht über die ARM64-ABI-Konventionen
+# <a name="overview-of-arm64-abi-conventions"></a>Übersicht über ARM64-ABI-Konventionen
 
-Die grundlegende anwendungsbinärdateischnittstelle (ABI) für Windows, die bei der Kompilierung und Ausführung auf ARM-Prozessoren im 64-Bit-Modus (ARMv8 oder höher Architekturen) zum größten Teil, folgt die ARM EABI für standard AArch64. In diesem Artikel werden einige wichtige Annahmen und Änderungen aus, was in die EABI dokumentiert ist. Weitere Informationen zur 32-Bit-ABI, finden Sie unter [Übersicht der ARM-ABI-Konventionen](overview-of-arm-abi-conventions.md). Weitere Informationen über die standardmäßige ARM EABI finden Sie unter [Application Binary Interface (ABI) für die ARM-Architektur](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html) (externer Link).
+Die grundlegende Anwendungs Binärdatei-Schnittstelle (ABI) für Windows, wenn Sie auf ARM-Prozessoren im 64-Bit-Modus (ARMv8 oder höher) kompiliert und ausgeführt wird, folgt größtenteils der Standard-AArch64 EABI von Arm. In diesem Artikel werden einige der wichtigsten Annahmen und Änderungen der in der EABI dokumentierten Informationen hervorgehoben. Weitere Informationen zur 32-Bit-ABI finden Sie unter [Übersicht über ARM-ABI-Konventionen](overview-of-arm-abi-conventions.md). Weitere Informationen zur Standard-ARM-EABI finden Sie unter [Application Binary Interface (ABI) für die ARM-Architektur](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html) (externer Link).
 
 ## <a name="definitions"></a>Definitionen
 
-ARM verfügt über mehrere Begriffe definiert, mit der Einführung von 64-Bit-Unterstützung können:
+Mit der Einführung der 64-Bit-Unterstützung hat Arm mehrere Begriffe definiert:
 
-- **AArch32** – die ältere 32-Bit-Anweisung set-Architektur (ISA), der von ARM, einschließlich der Ausführung des Thumb-Steuerelement im definiert.
-- **AArch64** – die neue 64-Bit-Anweisung set-Architektur (ISA), der von ARM definiert.
-- **ARMv7** : die Angabe von "7. Generation" ARM-Hardware, die nur Unterstützung für AArch32 enthält. Diese Version der ARM-Hardware ist die erste Version von Windows für ARM unterstützt.
-- **ARMv8** : die Angabe von "8. Generation" ARM-Hardware, das sowohl für AArch32 AArch64 unterstützt.
+- **AArch32** – die von Arm definierte ältere 32-Bit-Anweisungs Satz Architektur (ISA), einschließlich der Thumb-Modus-Ausführung.
+- **AArch64** – die neue von Arm definierte 64-Bit-Anweisungs Satz Architektur (ISA).
+- **ARMv7** – die Spezifikation der Arm-Hardware der 7. Generation, die nur die Unterstützung für AArch32 umfasst. Diese Version der Arm-Hardware ist die erste Version von Windows für Arm unterstützt.
+- **ARMv8** – die Spezifikation der Arm-Hardware der "8. Generation", die Unterstützung für AArch32 und AArch64 umfasst.
 
-Windows werden auch diese Begriffe verwendet:
+Windows verwendet auch die folgenden Begriffe:
 
-- **ARM** – bezieht sich auf die 32-Bit-ARM-Architektur (AArch32), auch als WoA (Windows auf ARM) bezeichnet.
-- **ARM32** – identisch mit ARM, oben; wird in diesem Dokument aus Gründen der Übersichtlichkeit.
-- **ARM64** – bezieht sich auf die 64-Bit-ARM-Architektur (AArch64). Es gibt keine als WoA64.
+- **Arm** – bezieht sich auf die ARM-Architektur 32-Bit (AArch32), die manchmal auch als woa (Windows auf ARM) bezeichnet wird.
+- **ARM32** – identisch mit Arm, oberhalb; wird aus Gründen der Übersichtlichkeit in diesem Dokument verwendet.
+- **ARM64** – verweist auf die 64-Bit-ARM-Architektur (AArch64). Das ist nicht WoA64.
 
-Schließlich werden in Bezug auf Datentypen, die folgenden Definitionen von ARM verwiesen:
+Schließlich wird beim Verweis auf Datentypen auf die folgenden Definitionen von Arm verwiesen:
 
-- **Short-Vektor** – ein Datentyp, der direkt im SIMD, einen Vektor von 8 Byte oder 16 Bytes Menge von Elementen dargestellt werden kann. Es wird ausgerichtet, auf die Größe 8 Byte oder 16 Bytes ist, in dem jedes Element 1, 2, 4 oder 8 Byte sein kann.
-- **Zu HFA (homogen Floating-Point Aggregat)** – ein Datentyp mit identischen Gleitkomma Membern 2 bis 4, floats oder verdoppelt.
-- **HVA (homogen Short-Vektor-Aggregat)** – einem Datentyp mit 2 bis 4 identische kurze-Vektor-Mitglieder.
+- **Short-Vector** – ein Datentyp, der direkt in SIMD dargestellt werden kann, ein Vektor mit 8 Bytes oder einem Wert von 16 Bytes. Er ist auf seine Größe ausgerichtet, entweder 8 Bytes oder 16 Bytes, wobei jedes Element 1, 2, 4 oder 8 Bytes sein kann.
+- **HFA (homogenes Gleit Komma Aggregat)** – ein Datentyp mit 2 bis 4 identischen Gleit Komma Membern, entweder float oder Double.
+- **HVA (homogenes kurzes Vektor Aggregat)** – ein Datentyp mit 2 bis 4 identischen kurzvektor Membern.
 
-## <a name="base-requirements"></a>Grundanforderungen
+## <a name="base-requirements"></a>Grundvoraussetzungen
 
-Die ARM64-Version von Windows wird vorausgesetzt, dass dieser eine ARMv8 ausgeführt wird, oder höher Architektur zu jeder Zeit. Beide Gleitkomma- und werden als NEON-Unterstützung in der Hardware vorhanden sein.
+Die ARM64-Version von Windows setzt voraus, dass Sie immer auf einer ARMv8-oder einer neueren Architektur ausgeführt wird. Die Unterstützung für Gleit Komma-und Neon-Unterstützung wird vermutlich in der Hardware vorhanden sein.
 
-Die ARMv8-Spezifikation ermöglicht die vollständige Unterstützung von AArch32 Anwendungen. Allerdings ist nicht die Unterstützung für vorhandene ARM32-Anwendungen für die ARM64-Version von Windows vorgesehen. (D. h. Es gibt keine Pläne für WOW64). Diese Unterstützung unterliegt erneute Auswertung in der Zukunft, aber es ist die aktuelle arbeiten.
-
-Die ARMv8-Spezifikation werden neue optional Verschlüsselung und CRC-Hilfsprogramm Opcodes für AArch32 und AArch64 beschreibt. Unterstützung für sie ist derzeit optional, jedoch empfohlen. Um dieser Opcodes nutzen zu können, sollten apps zuerst laufzeitprüfungen für ihre Existenz machen.
+In der ARMv8-Spezifikation werden neue optionale Kryptografie-und CRC-hilfsopcodes für AArch32 und AArch64 beschrieben. Die Unterstützung für Sie ist zurzeit optional, wird jedoch empfohlen. Damit diese Opcodes genutzt werden können, sollten apps zunächst überprüfen, ob Sie vorhanden sind.
 
 ## <a name="endianness"></a>Endianness
 
-Wie führt mit der ARM32 Version von Windows, auf ARM64 Windows im little-Endian-Modus. Der Wechsel Bytereihenfolge ist schwer zu erreichen, ohne die Kernel-Modus-Unterstützung in AArch64, daher ist es leichter durchgesetzt werden.
+Wie bei der ARM32-Version von Windows wird unter ARM64 Windows im Little-Endian-Modus ausgeführt. Das Umgestalten von Byte Reihenfolge ist ohne Kernel Modus-Unterstützung in AArch64 schwierig. Daher ist es einfacher, dies zu erzwingen.
 
 ## <a name="alignment"></a>Ausrichtung
 
-ARM64 unter Windows können die CPU-Hardware, falsch ausgerichtete Zugriffe transparent behandeln. In eine Verbesserung von AArch32 kann die diese Unterstützung jetzt auch für alle ganzzahlzugriffe (einschließlich mit mehreren Wörtern zugreift) sowie für Gleitkomma-Zugriff.
+Windows unter ARM64 ermöglicht der CPU-Hardware die transparente Verarbeitung von falsch ausgerichteten Zugriffen. In einer Verbesserung von AArch32 funktioniert diese Unterstützung jetzt auch für alle ganzzahligen Zugriffe (einschließlich der Zugriffe auf mehrere Wörter) und für Gleit Komma Zugriffe.
 
-Zugriffe auf den Speicher für nicht-Cache (Gerät) müssen jedoch noch immer ausgerichtet werden. Falls Code könnte möglicherweise lesen oder Schreiben falsch ausgerichtete Daten aus dem Arbeitsspeicher der nicht zwischengespeicherten, muss Sie sicher, dass alle Zugriffe ausgerichtet sein.
+Allerdings muss der Zugriff auf den nicht zwischengespeicherten (Geräte-) Arbeitsspeicher immer noch ausgerichtet werden. Wenn Code möglicherweise falsch ausgerichtete Daten aus nicht zwischengespeicherten Arbeitsspeicher lesen oder schreiben könnte, muss sichergestellt werden, dass alle Zugriffe ausgerichtet werden.
 
-Layout-standardausrichtung für lokale Variablen:
+Standardlayoutausrichtung für lokale Variablen:
 
-| Größe in Byte | Ausrichtung in bytes |
+| Größe in Bytes | Ausrichtung in Bytes |
 | - | - |
 | 1 | 1 |
 | 2 | 2 |
 | 3, 4 | 4 |
 | > 4 | 8 |
 
-Layout-standardausrichtung für globale Variablen und statischen Variablen:
+Standardlayoutausrichtung für Globals und Statics:
 
-| Größe in Byte | Ausrichtung in bytes |
+| Größe in Bytes | Ausrichtung in Bytes |
 | - | - |
 | 1 | 1 |
 | 2 - 7 | 4 |
 | 8 - 63 | 8 |
-| >= 64 | 16 |
+| > = 64 | 16 |
 
-## <a name="integer-registers"></a>Ganzzahlregister
+## <a name="integer-registers"></a>Ganzzahlige Register
 
-Die Architektur der AArch64 unterstützt 32 Ganzzahlregister:
-
-| Register | Volatil? | Rolle |
-| - | - | - |
-| x0 | Volatil | Parameter/neu registrieren, 1, Ergebnis registrieren |
-| x1-x7 | Volatil | Parameter/neu registrieren 2 bis 8 |
-| x8-x15 | Volatil | Scratch-Register |
-| x16-x17 | Volatil | Intra-Procedure-Call/Scratch-Register |
-| x18 | Nicht volatil | Registrieren Sie Plattform: im Kernelmodus verweist auf KPCR für den aktuellen Prozessor; im Benutzermodus verweist auf TEB |
-| x19-x28 | Nicht volatil | Scratch-Register |
-| x29/fp | Nicht volatil | Frame-Pointer |
-| x30/lr | Nicht volatil | Link-Register |
-
-Jedes Register kann als 64-Bit-Wert (über X0-X30) oder als 32-Bit-Wert (über w0-w30) zugegriffen werden. 32-Bit-Betrieb erweitern 0 (null)-ihre Ergebnisse bis zu 64 Bits.
-
-Sehen Sie die Parameter finden Sie Details für die Verwendung der Parameter Register übergeben.
-
-Im Gegensatz zu AArch32 nicht der Programmzähler (PC) und der Stapelzeiger (SP) indizierten registriert. Sie sind beschränkt, in wie auf sie zugegriffen werden können. Beachten Sie, dass es keine X31 auch registrieren zu können. Diese Codierung ist für besondere Zwecke verwendet werden.
-
-Die Frame-Pointer (x29) ist erforderlich, für die Kompatibilität mit schnellen Stackwalk von ETW- und andere Dienste verwendet werden. Es muss auf den vorherigen {X29, x 30} zeigen Paar auf dem Stapel.
-
-## <a name="floating-pointsimd-registers"></a>Gleitkomma-point/SIMD-Register
-
-Die Architektur der AArch64 unterstützt auch 32 Gleitkomma-point/SIMD-Register, die im folgenden zusammengefasst:
+Die AArch64-Architektur unterstützt 32 ganzzahlige Register:
 
 | Register | Volatil? | Rolle |
 | - | - | - |
-| v0 | Volatil | Parameter/neu registrieren, 1, Ergebnis registrieren |
-| v1-v7 | Volatil | Parameter/neu registriert 2 bis 8 |
-| v8-v15 | Nicht volatil | Scratch-Register (nur die unteren 64 Bits nicht flüchtigen sind) |
-| v16-v31 | Volatil | Scratch-Register |
+| X0 | Volatil | Parameter/Scratch-Register 1, Ergebnisregister |
+| x1-x7 | Volatil | Parameter/Scratch-Register 2-8 |
+| x8-X15 | Volatil | Register für Scratch |
+| x16-x17 | Volatil | Intern aufzurufende Register |
+| x18 | Nicht volatil | Platt Form Register: verweist im Kernel Modus auf "kpcr" für den aktuellen Prozessor. im Benutzermodus zeigt auf TEB. |
+| x19-x28 | Nicht volatil | Register für Scratch |
+| x29/FP | Nicht volatil | Frame-Pointer |
+| x30/LR | Nicht volatil | Register verknüpfen |
 
-Jedes Register kann als 128-Bit-Wert (per v0-v31 oder q0-F31) zugegriffen werden. Es kann als 64-Bit-Wert (über d0-d31), als eine 32-Bit-Wert (über s0-s31), als ein 16-Bit-Wert (über h0-h31) oder als ein 8-Bit-Wert (über b0-b31) zugegriffen werden. Greift auf weniger als 128 Bit Zugriff auf nur die niederwertigen Bits von 128-Bit-Register. Sie lassen die verbleibenden Bits unverändert, sofern nicht anders angegeben. (AArch64 unterscheidet sich von AArch32, in denen die kleinere Register auf größere Register gepackt wurden.)
+Auf jedes Register kann als vollständiger 64-Bit-Wert (über X0-x30) oder als 32-Bit-Wert (über W0-W30) zugegriffen werden. 32-Bit-Vorgänge mit 0 (null) erweitern Sie Ihre Ergebnisse auf bis zu 64 Bits.
 
-Das gleitkommasteuerelements Register (FPCR) hat bestimmte Anforderungen auf die verschiedenen Bitfelder darin:
+Ausführliche Informationen zur Verwendung der Parameter Register finden Sie im Abschnitt Parameter Übergabe.
+
+Anders als bei AArch32 sind der Programm Counter (PC) und der Stapelzeiger (SP) keine indizierten Register. Sie sind darauf beschränkt, wie auf Sie zugegriffen werden kann. Beachten Sie auch, dass es keine x31 Register gibt. Diese Codierung wird für besondere Zwecke verwendet.
+
+Der Frame Zeiger (x29) ist erforderlich, um die Kompatibilität mit der schnellen Stapel Wanderung von etw und anderen Diensten zu nutzen. Er muss auf das vorherige {x29, x30}-paar auf dem Stapel zeigen.
+
+## <a name="floating-pointsimd-registers"></a>Gleit Komma-/SIMD-Register
+
+Die AArch64-Architektur unterstützt auch 32-Gleit Komma-/SIMD-Register, die unten zusammengefasst sind:
+
+| Register | Volatil? | Rolle |
+| - | - | - |
+| v0 | Volatil | Parameter/Scratch-Register 1, Ergebnisregister |
+| v1-V7 | Volatil | Parameter/Scratch-Register 2-8 |
+| V8-V15 | Nicht volatil | Register für Scratch (nur die unteren 64 Bits sind nicht flüchtig) |
+| v16-v31 | Volatil | Register für Scratch |
+
+Auf jedes Register kann als vollständiger 128-Bit-Wert (über "v0-v31" oder "q0-Q31") zugegriffen werden. Der Zugriff auf den Wert erfolgt möglicherweise als 64-Bit-Wert (über D0-D31), als 32-Bit-Wert (über S0-S31), als 16-Bit-Wert (über H0-H31) oder als 8-Bit-Wert (über B0-B31). Zugriffe, die kleiner als 128 Bits sind, greifen nur auf die unteren Bits des vollständigen 128-Bit-Registers zu. Die verbleibenden Bits bleiben unverändert, sofern nicht anders angegeben. (AArch64 unterscheidet sich von AArch32, wobei die kleineren Register zusätzlich zu den größeren Registern gepackt wurden.)
+
+Für das Gleit Komma-Steuerelement Register (fpcr) gelten bestimmte Anforderungen an die verschiedenen Bitfeldern darin:
 
 | Bits | Bedeutung | Volatil? | Rolle |
 | - | - | - | - |
-| 26 | AHP | Nicht flüchtigen | Alternative halb-Precision-Steuerung. |
-| 25 | DN | Nicht flüchtigen | Standardmäßige NaN-modussteuerung. |
-| 24 | FZ | Nicht volatil | Flush-zu-Zero-modussteuerung. |
-| 23-22 | RMode | Nicht volatil | Rounding-modussteuerung. |
-| 15,12-8 | IDE/IXE/etc | Nicht flüchtigen | Ausnahme trap-aktivierungsbits, muss immer 0 sein. |
+| 26 | AHP | Nicht flüchtig | Alternatives Steuerelement mit halber Genauigkeit. |
+| 25 | DN | Nicht flüchtig | Standard-Nan-Modus-Steuerelement |
+| 24 | FZ | Nicht volatil | Steuerelement für die Leerung im NULL-Modus. |
+| 23-22 | RMode | Nicht volatil | Rundungs Modus-Steuerelement. |
+| 15, 12-8 | IDE/IXE/usw. | Nicht flüchtig | Ausnahme Trap-enable Bits, muss immer 0 sein. |
 
-## <a name="system-registers"></a>System-Register
+## <a name="system-registers"></a>System Register
 
-Wie AArch32 bietet die AArch64 Spezifikation drei System kontrolliert "thread-ID" registriert:
+Wie AArch32 stellt die AArch64-Spezifikation drei vom System gesteuerte "Thread-ID"-Register bereit:
 
 | Register | Rolle |
 | - | - |
 | TPIDR_EL0 | Reserviert. |
-| TPIDRRO_EL0 | Enthält die CPU-Anzahl für den aktuellen Prozessor. |
-| TPIDR_EL1 | Zeigt auf KPCR-Struktur für den aktuellen Prozessor. |
+| TPIDRRO_EL0 | Enthält eine CPU-Nummer für den aktuellen Prozessor. |
+| TPIDR_EL1 | Verweist auf die kpcr-Struktur für den aktuellen Prozessor. |
 
-## <a name="floating-point-exceptions"></a>Gleitkommaausnahmen
+## <a name="floating-point-exceptions"></a>Gleit Komma Ausnahmen
 
-Unterstützung für IEEE-Gleitkommaausnahmen ist optional für AArch64 Systeme. Für prozessorvarianten, die Hardware-Gleitkommaausnahmen verfügen, der Windows-Kernel im Hintergrund fängt Ausnahmen ab und deaktiviert sie implizit in der Registrierung FPCR. Das Trap wird ein normalisiertes Verhalten zwischen prozessorvarianten sichergestellt. Andernfalls möglicherweise auf einer Plattform ohne Unterstützung von Ausnahmen entwickelten Code selbst unerwartete Ausnahmen erstellen, bei der Ausführung auf einer Plattform mit Unterstützung.
+Die Unterstützung für IEEE-Gleit Komma Ausnahmen ist in AArch64-Systemen optional. Bei Prozessor Varianten, die Hardware-Gleit Komma Ausnahmen aufweisen, fängt der Windows-Kernel die Ausnahmen im Hintergrund ab und deaktiviert sie implizit im fpcr-Register. Mit diesem Trap wird das normalisierte Verhalten über Prozessor Varianten hinweg sichergestellt. Andernfalls kann der Code, der auf einer Plattform ohne Ausnahme Unterstützung entwickelt wurde, bei der Ausführung auf einer Plattform mit Unterstützung unerwartete Ausnahmen finden.
 
 ## <a name="parameter-passing"></a>Parameterübergabe
 
-Für nicht-Variadic-Funktionen folgt die Windows-ABI die Regeln von ARM für das Übergeben von Parametern. Diese Regeln sind direkt aus dem Prozeduraufruf-Standard für die Architektur der AArch64 Auszug:
+Bei nicht-Variadic-Funktionen befolgt die Windows-ABI die Regeln, die von Arm für die Übergabe von Parametern angegeben werden. Diese Regeln werden direkt aus dem Prozedur aufrufsstandard für die AArch64-Architektur entnommen:
 
-### <a name="stage-a--initialization"></a>Stufe A – Initialisierung
+### <a name="stage-a--initialization"></a>Staging A – Initialization
 
-Diese Phase erfolgt genau einmal vor Beginn der Verarbeitung der Argumente.
+Diese Phase wird genau einmal durchgeführt, bevor die Verarbeitung der Argumente beginnt.
 
-1. Die nächste allgemeinen registrieren Anzahl (NGRN) wird auf 0 (null) festgelegt.
+1. Die nächste allgemeine Registrierungsnummer (ngrn) ist auf 0 (null) festgelegt.
 
-1. Die nächste SIMD und die Floating-Point registrieren Anzahl (NSRN) ist auf 0 (null) festgelegt.
+1. Die nächste SIMD und die Gleit Komma Register Nummer (nsrn) werden auf 0 (null) festgelegt.
 
-1. Die Argumentadresse des nächste gestapelte (NSAA) wird mit dem aktuellen Stack-Pointer Wert (SP) festgelegt.
+1. Die nächste gestapelte Argument Adresse (NSAA) wird auf den aktuellen Stapelzeiger Wert (SP) festgelegt.
 
-### <a name="stage-b--pre-padding-and-extension-of-arguments"></a>Stufe B – vorab-Padding und Erweiterung von Argumenten
+### <a name="stage-b--pre-padding-and-extension-of-arguments"></a>Stufe B – vorab Auffüll Zeichen und Erweiterung von Argumenten
 
-Für jedes Argument in der Liste wird die erste übereinstimmende Regel aus der folgenden Liste angewendet. Wenn keine Regel entspricht, das Argument wird verwendet, werden unmodified.
+Für jedes Argument in der Liste wird die erste übereinstimmende Regel aus der folgenden Liste angewendet. Wenn keine Regel übereinstimmt, wird das Argument unverändert verwendet.
 
-1. Wenn der Argumenttyp ein zusammengesetzter Typ ist, dessen Größe nicht statisch vom Aufrufer und dem aufgerufenen bestimmt werden kann, ist das Argument in den Arbeitsspeicher kopiert, und das Argument durch einen Zeiger auf die Kopie ersetzt wird. (Es sind keine solche Typen in C/C++-, aber in anderen Sprachen oder in spracherweiterungen vorhanden).
+1. Wenn der Argumenttyp ein zusammengesetzter Typ ist, dessen Größe nicht statisch vom Aufrufer und dem aufgerufenen bestimmt werden kann, wird das Argument in den Arbeitsspeicher kopiert, und das Argument wird durch einen Zeiger auf die Kopie ersetzt. (Es gibt keine derartigen Typen in CC++ /, aber Sie sind in anderen Sprachen oder in Spracherweiterungen vorhanden.)
 
-1. Das Argument wird verwendet, wenn der Argumenttyp ist ein zu HFA oder einer HVA-unverändert.
+1. Wenn der Argumenttyp ein HFA oder ein HVA ist, wird das Argument unverändert verwendet.
 
-1. Wenn der Argumenttyp ein zusammengesetzter Typ, der größer als 16 Bytes ist, klicken Sie dann das Argument auf vom Aufrufer zugeordneten Speicher kopiert wird und das Argument durch einen Zeiger auf die Kopie ersetzt wird.
+1. Wenn der Argumenttyp ein zusammengesetzter Typ ist, der größer als 16 Bytes ist, wird das Argument in den vom Aufrufer zugeordneten Arbeitsspeicher kopiert, und das-Argument wird durch einen Zeiger auf die Kopie ersetzt.
 
 1. Wenn der Argumenttyp ein zusammengesetzter Typ ist, wird die Größe des Arguments auf das nächste Vielfache von 8 Bytes aufgerundet.
 
-### <a name="stage-c--assignment-of-arguments-to-registers-and-stack"></a>Stufe C – Zuweisung von Argumenten zu Registern und zum stack
+### <a name="stage-c--assignment-of-arguments-to-registers-and-stack"></a>Phase C – Zuweisung von Argumenten zu Registern und Stapel
 
-Für jedes Argument in der Liste werden wiederum die folgenden Regeln angewendet, bis das Argument zugeordnet wurde. Wenn ein Argument eines Registers zugewiesen wird, müssen in der Registrierung nicht verwendeter Bits Wert nicht angegeben sind. Wenn ein Argument an einen Slot Stack zugewiesen ist, müssen alle nicht verwendeten Auffüll-Bytes Wert nicht angegeben sind.
+Für jedes Argument in der Liste werden die folgenden Regeln nacheinander angewendet, bis das-Argument zugeordnet wurde. Wenn ein Argument einem Register zugewiesen ist, haben alle nicht verwendeten Bits im Register einen nicht angegebenen Wert. Wenn ein Argument einem Stapel Slot zugewiesen ist, haben nicht verwendete Auffüll Bytes einen nicht angegebenen Wert.
 
-1. Wenn das Argument eine halb ist-, Single, Double-Wert - oder Quad Gleitkommazahlen mit doppelter Genauigkeit oder kurzen Vektortyp und die NSRN kleiner als 8, wird das Argument ist die am niedrigstwertigen Bits Registers V zugeordnet\[NSRN]. Die NSRN wird um eins erhöht. Das Argument wurde nun zugeordnet.
+1. Wenn es sich bei dem Argument um einen Gleit Komma-oder kurzvektortyp der Hälfte-, Einzel-, Double-oder Quad-Genauigkeit handelt und der nsrn kleiner als 8 ist, wird das Argument den unwichtigsten Bits von Register v\[nsrn] zugeordnet. Der nsrn wird um eins erhöht. Das-Argument wurde nun zugeordnet.
 
-1. Wenn das Argument ein zu HFA oder einer HVA-ist und sind ausreichend verfügbaren SIMD und Gleitkommaregister (NSRN + Anzahl der Elemente im ≤ 8), wird das Argument zu SIMD Floating-Point registriert wurde, eine Registrierung pro Element der zu HFA oder HVA zugeordnet. Die NSRN wird um die Anzahl der verwendeten Register inkrementiert. Das Argument wurde nun zugeordnet.
+1. Wenn es sich bei dem Argument um eine HFA oder eine HVA handelt und genügend nicht zugewiesene SIMD-und Gleit Komma Register vorhanden sind (nsrn + Anzahl der Member von 8), wird das Argument SIMD-und Gleit Komma Registern zugeordnet, ein Register pro Mitglied der HFA oder HVA. Der nsrn wird um die Anzahl der verwendeten Register erhöht. Das-Argument wurde nun zugeordnet.
 
-1. Wenn das Argument ein zu HFA oder einer HVA-ist, klicken Sie dann die NSRN auf 8 festgelegt ist, und die Größe des Arguments wird auf das nächste Vielfache von 8 Bytes aufgerundet.
+1. Wenn das Argument ein HFA oder ein HVA ist, wird der nsrn auf 8 festgelegt, und die Größe des Arguments wird auf das nächste Vielfache von 8 Bytes aufgerundet.
 
-1. Wenn das Argument ein zu HFA, einer HVA-, Vektortyp für eine Quad-Genauigkeit Gleitkomma oder kurz, wird die NSAA wird aufgerundet auf die größere von 8 oder die natürliche Ausrichtung, der den Typ des Arguments.
+1. Wenn das Argument ein HFA, ein HVA, ein Gleit Komma-oder kurzvektortyp mit vier Genauigkeit ist, wird das NSAA auf den größeren Wert von 8 oder die natürliche Ausrichtung des Argument Typs aufgerundet.
 
-1. Wenn das Argument ein Gleitkomma-halb - oder mit einfacher Genauigkeit ist, wird die Größe des Arguments auf 8 Bytes festgelegt. Der Effekt wird als hätte das Argument auf kopiert wurden, die am niedrigstwertigen Bits eines 64-Bit-Registers, und die verbleibenden Bits, die mit nicht angegebenen Werten gefüllt.
+1. Wenn das Argument ein Gleit kommatyp mit halber oder einfacher Genauigkeit ist, wird die Größe des Arguments auf 8 Bytes festgelegt. Der Effekt ist so, als ob das-Argument in die geringsten Bits eines 64-Bit-Registers kopiert wurde und die restlichen Bits mit nicht angegebenen Werten aufgefüllt wurden.
 
-1. Wenn das Argument ein zu HFA ist, wird einer HVA-, halb-, Einzel-, Double-Wert-, oder Quad Gleitkommazahlen mit doppelter Genauigkeit oder kurzen Vektortyp, und das Argument an der angepassten NSAA in den Speicher kopiert. Die NSAA wird um die Größe des Arguments inkrementiert. Das Argument wurde nun zugeordnet.
+1. Wenn es sich bei dem Argument um einen HFA-, HVA-, ein-oder einen Gleit Komma-oder kurzvektortyp mit doppelter Genauigkeit handelt, wird das Argument beim angepassten NSAA in den Arbeitsspeicher kopiert. Die NSAA wird um die Größe des Arguments inkrementiert. Das-Argument wurde nun zugeordnet.
 
-1. Wenn das Argument ein Ganzzahl- oder Zeigertyp aufweisen ist, die Größe des Arguments kleiner als oder gleich 8 Byte ist und die NGRN kleiner als 8 ist, wird das Argument in der unwichtigsten Bits X kopiert\[NGRN]. Die NGRN wird um eins erhöht. Das Argument wurde nun zugeordnet.
+1. Wenn das Argument ein ganzzahliger Typ oder ein Zeigertyp ist, ist die Größe des Arguments kleiner als oder gleich 8 Bytes, und der ngrn ist kleiner als 8. das Argument wird in x\[ngrn] auf die unwichtigsten Bits kopiert. Der ngrn wird um eins erhöht. Das-Argument wurde nun zugeordnet.
 
-1. Wenn das Argument eine Ausrichtung an 16 verfügt, wird die NGRN klicken Sie dann auf die nächste gerade Zahl aufgerundet.
+1. Wenn das Argument eine Ausrichtung von 16 hat, wird der ngrn auf die nächste gerade Zahl aufgerundet.
 
-1. Wenn das Argument ein Integraltyp ist, der Größe des Arguments gleich 16 ist und dem NGRN weniger als 7 ist, ist das Argument x kopiert\[NGRN]- und x\[NGRN + 1]. X\[NGRN] muss das untere bereits als Double-Wert-Wort für die Arbeitsspeicher-Darstellung des Arguments enthält. Die NGRN wird durch zwei erhöht. Das Argument wurde nun zugeordnet.
+1. Wenn das Argument ein ganzzahliger Typ ist, ist die Größe des Arguments gleich 16, und der ngrn ist kleiner als 7. das Argument wird in x\[ngrn] und x\[ngrn + 1] kopiert. x\[ngrn] muss das untere doppelte Wort der Speicher Darstellung des Arguments enthalten. Der ngrn wird um zwei inkrementiert. Das-Argument wurde nun zugeordnet.
 
-1. Wenn das Argument ein zusammengesetzter Typ ist ist, und die Größe in Doppelworte des Arguments nicht mehr als 8 minus NGRN, wird das Argument wird in aufeinander folgenden Allzweckregistern, beginnend bei x kopiert\[NGRN]. Das-Argument wird übergeben, als wäre er in die Register aus einer Double Word-ausgerichtete Adresse, mit der entsprechenden Reihenfolge von LDR-Anweisungen geladen wurden, die aufeinander folgenden Register aus dem Arbeitsspeicher zu laden. Der Inhalt der alle nicht genutzten Bereichen der Register werden nicht von diesem Standard angegeben sind. Die NGRN wird um die Anzahl der verwendeten Register inkrementiert. Das Argument wurde nun zugeordnet.
+1. Wenn das Argument ein zusammengesetzter Typ ist und die Größe in doppelten Wörtern des Arguments nicht mehr als 8 minus ngrn beträgt, wird das Argument in aufeinander folgende allgemeine Register kopiert, beginnend bei x\[ngrn]. Das Argument wird so übermittelt, als ob es in die Register von einer Doppelwort ausgerichteten Adresse geladen worden wäre, mit einer entsprechenden Folge von LDR-Anweisungen, die aufeinanderfolgende Register aus dem Arbeitsspeicher laden. Der Inhalt aller nicht verwendeten Teile der Register wird von diesem Standard nicht angegeben. Der ngrn wird um die Anzahl der verwendeten Register erhöht. Das-Argument wurde nun zugeordnet.
 
-1. Die NGRN ist auf 8 festgelegt.
+1. Der ngrn ist auf 8 festgelegt.
 
-1. Die NSAA wird aufgerundet auf die größere von 8 oder die natürliche Ausrichtung, der den Typ des Arguments.
+1. Die NSAA wird auf die größere von 8 oder die natürliche Ausrichtung des Argument Typs aufgerundet.
 
-1. Wenn das Argument ein zusammengesetzter Typ ist, wird das Argument in den Speicher an der angepassten NSAA kopiert. Die NSAA wird um die Größe des Arguments inkrementiert. Das Argument wurde nun zugeordnet.
+1. Wenn das Argument ein zusammengesetzter Typ ist, wird das Argument beim angepassten NSAA in den Arbeitsspeicher kopiert. Die NSAA wird um die Größe des Arguments inkrementiert. Das-Argument wurde nun zugeordnet.
 
-1. Wenn die Größe des Arguments auf weniger als 8 Bytes beträgt, wird die Größe des Arguments auf 8 Bytes festgelegt. Der Effekt ist, als ob das Argument an die unwichtigsten Bits von einem 64-Bit-Register kopiert wurde, und die verbleibenden Bits mit nicht angegebenen Werten gefüllt wurden.
+1. Wenn die Größe des Arguments kleiner als 8 Bytes ist, wird die Größe des Arguments auf 8 Bytes festgelegt. Der Effekt ist so, als ob das-Argument in die geringsten Bits eines 64-Bit-Registers kopiert wurde und die restlichen Bits mit nicht angegebenen Werten aufgefüllt wurden.
 
-1. Das Argument wird an der angepassten NSAA in den Speicher kopiert. Die NSAA wird um die Größe des Arguments inkrementiert. Das Argument wurde nun zugeordnet.
+1. Das-Argument wird im angepassten NSAA in den Arbeitsspeicher kopiert. Die NSAA wird um die Größe des Arguments inkrementiert. Das-Argument wurde nun zugeordnet.
 
 ### <a name="addendum-variadic-functions"></a>Nachtrag: Variadic-Funktionen
 
-Funktionen, die eine Variable Anzahl von Argumenten akzeptieren werden anders als oben wie folgt behandelt:
+Funktionen, die eine Variable Anzahl von Argumenten akzeptieren, werden wie folgt anders behandelt:
 
-1. Alle kombinierenden Zeichen ersetzt wurden, werden ähnlich behandelt; keine besondere Behandlung HFAs oder HVAs.
+1. Alle Verbund werden gleich behandelt. keine besondere Behandlung von hfas oder HVAS.
 
-1. SIMD "und" Floating-Point registriert werden, werden nicht verwendet.
+1. SIMD-und Gleit Komma Register werden nicht verwendet.
 
-Tatsächlich ist es identisch mit den folgenden Regeln C.12–C.15 zuweisen Argumente in einer imaginären Stack, in denen die ersten 64 Bytes des Stapels werden in den X0-X7 geladen, und alle übrigen Argumente für den Stapel normalerweise platziert werden.
+Tatsächlich ist sie identisch mit den folgenden Regeln c. 12 – C. 15, um Argumente einem imaginären Stapel zuzuweisen, wobei die ersten 64 Bytes des Stapels in X0-x7 geladen werden und alle verbleibenden Stapel Argumente normal abgelegt werden.
 
 ## <a name="return-values"></a>Rückgabewert
 
 Ganzzahlige Werte werden in X0 zurückgegeben.
 
-Gleitkommazahlen-Punktwerte werden in s0, d0 oder v0, nach Bedarf zurückgegeben.
+Gleit Komma Werte werden nach Bedarf in S0, D0 oder v0 zurückgegeben.
 
-Zu HFA und HVA-Werte werden in s0-s3, d0-d3- oder nach Bedarf v0-v3 zurückgegeben.
+HFA-und HVA-Werte werden nach Bedarf in S0-S3, D0-D3 oder v0-V3 zurückgegeben.
 
-Typen, die als Wert zurückgegebene werden unterschiedlich gehandhabt, je nachdem, ob sie bestimmte Eigenschaften verfügen. Typen, die alle diese Eigenschaften haben,
+Typen, die als Wert zurückgegeben werden, werden unterschiedlich behandelt, je nachdem, ob Sie bestimmte Eigenschaften aufweisen Typen, die über alle diese Eigenschaften verfügen,
 
-- Sie sind *aggregieren* von der C ++ 14-Standarddefinition, d. h., sie haben keine von Benutzern bereitgestellten Konstruktoren, keine privaten oder geschützten nicht statischen Datenmember, ohne Basisklassen und ohne virtuellen Funktionen, und
-- Sie haben einen trivialen Kopierzuweisungsoperator und
-- Sie haben einen trivialen Destruktor,
+- Sie werden durch die c++ 14-Standard Definition *aggregiert* , d. h., Sie haben keine vom Benutzer bereitgestellten Konstruktoren, keine privaten oder geschützten nicht statischen Datenmember, keine Basisklassen und keine virtuellen Funktionen.
+- Sie verfügen über einen trivialen Kopier Zuweisungs Operator, und
+- Sie verfügen über einen trivialen Dekonstruktor,
 
-Verwenden Sie das folgende Format für die Rückgabe an:
+Verwenden Sie den folgenden Rückgabe Stil:
 
-- Typen, die kleiner oder gleich 8 Bytes werden in X0 zurückgegeben werden.
-- Typen, die kleiner oder gleich 16 Byte werden in X0 und X1, mit X0, enthält die niederwertigen 8 Bytes zurückgegeben.
-- Für Typen, die mehr als 16 Bytes muss der Aufrufer einen Speicherblock von ausreichender Größe und Ausrichtung, um das Ergebnis aufzunehmen reservieren. Die Adresse des Speicherblocks muss als ein zusätzliches Argument der Funktion in X8 übergeben werden. Der aufgerufene kann den Ergebnis-Speicherblock zu einem beliebigen Zeitpunkt während der Ausführung der Unterroutine ändern. Der aufgerufene nicht erforderlich, den in X8 gespeicherten Wert beibehalten.
+- Typen, die kleiner oder gleich 8 Bytes sind, werden in X0 zurückgegeben.
+- Typen, die kleiner oder gleich 16 Bytes sind, werden in X0 und x1 zurückgegeben, wobei X0 die untere Ordnung von 8 Bytes enthält.
+- Bei Typen, die größer als 16 Bytes sind, muss der Aufrufer einen Speicherblock mit ausreichender Größe und Ausrichtung reservieren, um das Ergebnis zu speichern. Die Adresse des Speicherblocks muss als zusätzliches Argument an die Funktion in x8 weitergegeben werden. Der aufgerufene kann den Ergebnisspeicher Block jederzeit während der Ausführung der Unterroutine ändern. Der aufgerufene muss den in x8 gespeicherten Wert nicht beibehalten.
 
 Alle anderen Typen verwenden diese Konvention:
 
-- Der Aufrufer muss einen Speicherblock von ausreichender Größe und Ausrichtung, um das Ergebnis aufzunehmen, die reserviert werden. Die Adresse des Speicherblocks muss als ein zusätzliches Argument an die Funktion in X0 oder X1 übergeben werden, wenn $dies X0 übergeben wird. Der aufgerufene kann den Ergebnis-Speicherblock zu einem beliebigen Zeitpunkt während der Ausführung der Unterroutine ändern. Der aufgerufene gibt die Adresse des Speicherblocks in X0 zurück.
+- Der Aufrufer muss einen Speicherblock mit ausreichender Größe und Ausrichtung reservieren, um das Ergebnis zu speichern. Die Adresse des Speicherblocks muss als zusätzliches Argument an die Funktion in X0 oder x1 weitergegeben werden, wenn $this in X0 weitergegeben wird. Der aufgerufene kann den Ergebnisspeicher Block jederzeit während der Ausführung der Unterroutine ändern. Der aufgerufene gibt die Adresse des Speicherblocks in X0 zurück.
 
 ## <a name="stack"></a>Stapel
 
-Nach der ABI, die vom ARM muss der Stapel bleiben, 16-Byte-ausgerichtet. AArch64 enthält eine Hardwarefunktion, die Stapel Ausrichtungsfehler generiert, wenn das SP nicht 16-Byte-ausgerichtet ist und eine Relative SP Lade- oder erfolgt. Windows führt diese Funktion immer aktiviert.
+Nach der von Arm gerichteten ABI muss der Stapel immer 16-Byte-ausgerichtet bleiben. AArch64 enthält eine Hardware Funktion, die Stapel Ausrichtungsfehler generiert, wenn der SP nicht 16-Byte-ausgerichtet ist und ein SP-relativer Lade-oder Speichervorgang durchgeführt wird. Windows wird mit dieser Funktion jederzeit aktiviert.
 
-Funktionen, die 4-KB oder mehr lohnt des Stapels reservieren müssen stellen Sie sicher, dass jede Seite vor der letzten Seite in der Reihenfolge verwendet wird. Dadurch wird sichergestellt, ohne Code "über die Schutzseiten, die von Windows verwendet wird, um die Erweiterung des Stacks läuft". In der Regel die berühren erfolgt durch die `__chkstk` Hilfsmethode, die benutzerdefinierte Aufrufkonvention verfügt, die die gesamte stapelzuordnung geteilt durch 16 X15 übergibt.
+Funktionen, die einen oder mehr Stapel Stapel zuweisen, müssen sicherstellen, dass jede Seite vor der letzten Seite in der richtigen Reihenfolge berührt wird. Dadurch wird sichergestellt, dass kein Code über die Schutz Seiten "springen", die Windows zum Erweitern des Stapels verwendet. In der Regel erfolgt die Berührungen durch das `__chkstk`-Hilfsprogramm, das über eine benutzerdefinierte Aufruf Konvention verfügt, die die gesamte Stapel Belegung dividiert durch 16 in X15 hat.
 
-## <a name="red-zone"></a>Rote zone
+## <a name="red-zone"></a>Rote Zone
 
-Die 16-Byte-Bereich unmittelbar unter dem aktuellen Stack-Pointer ist für die Verwendung von der Analyse reserviert und dynamische patching Szenarien. Dieser Bereich lässt sorgfältig generierten Code eingefügt werden soll, das speichert zwei Register bei [sp, #-16] und verwendet sie vorübergehend für beliebige Zwecke. Der Windows-Kernel wird sichergestellt, dass diese 16 Bytes nicht überschrieben, wenn eine Ausnahme oder ein Interrupt, sowohl Benutzer-als auch Kernel-Modus erstellt wird.
+Der 16-Byte-Bereich direkt unterhalb des aktuellen Stapel Zeigers ist für die Verwendung durch Analyse Szenarien und Szenarien für dynamisches Patchen reserviert. In diesem Bereich kann sorgfältig generierter Code eingefügt werden, der zwei Register bei [SP, #-16] speichert und diese temporär für beliebige Zwecke verwendet. Der Windows-Kernel stellt sicher, dass diese 16 Bytes nicht überschrieben werden, wenn eine Ausnahme oder ein Interrupt im Benutzer-und Kernel Modus ausgeführt wird.
 
-## <a name="kernel-stack"></a>Kernel-stack
+## <a name="kernel-stack"></a>Kernel Stapel
 
-Der Kernel-Modus-Standardstapel in Windows ist sechs Seiten (24 KB). Achten Sie zusätzliche Funktionen mit große Stack-Puffer im Kernel-Modus. Systemabschaltung Interrupt kann mit kleinen Spielraum stammen und erstellen Sie eine panic fehlerüberprüfung Stack.
+Der standardkernelmodusstapel in Windows ist sechs Seiten (rund um die Uhr). Achten Sie besonders auf Funktionen mit großen Stapel Puffern im Kernel Modus. Ein Unterbrechungs gesteuerter interruptvorgang kann mit geringem Spielraum erfolgen und eine Stapel-Panik-Fehlerüberprüfung erstellen.
 
-## <a name="stack-walking"></a>Durchlaufen von Stapeln
+## <a name="stack-walking"></a>Stapel-Walking
 
-Code in Windows wird mit aktivierten Frame-Pointern kompiliert ([/Oy-](reference/oy-frame-pointer-omission.md)) zum schnellen Stackwalk zu ermöglichen. Im Allgemeinen X29 (fp) verweist auf den nächsten Link in der Kette, die eine {fp, Lr} ist, der angibt, des Zeigers zum vorherigen Frame im Stack und die Rückgabeadresse-Paar. Code von Drittanbietern wird empfohlen, die Frame-Pointer aktiviert wird, um verbesserte profilerstellung und Ablaufverfolgung zu ermöglichen.
+Code in Windows wird mit aktivierten Frame Zeigern ([/Oy-](reference/oy-frame-pointer-omission.md)) kompiliert, um eine schnelle Stapel Suche zu ermöglichen. Im allgemeinen verweist x29 (FP) auf den nächsten Link in der Kette, bei dem es sich um ein {FP, LR}-Paar handelt, das den Zeiger auf den vorherigen Frame auf dem Stapel und die Rückgabeadresse angibt. Der Code von Drittanbietern wird auch zum Aktivieren von Frame Zeigern empfohlen, um eine verbesserte Profilerstellung und Ablauf Verfolgung zu ermöglichen.
 
-## <a name="exception-unwinding"></a>Ausnahmeentladung
+## <a name="exception-unwinding"></a>Ausnahme Auflösung
 
-Entladen während der Ausnahmebehandlung wird durch die Verwendung von entladungscodes unterstützt. Die entladungscodes sind eine Folge von Bytes, die im Abschnitt ".xdata" der ausführbaren Datei gespeichert. Sie beschreiben den Betrieb von Prolog und Epilog auf abstrakte Weise, aus, sodass die Effekte eines Funktionsprologs als Vorbereitung für die Sicherung Stapelrahmens des Aufrufers rückgängig gemacht werden können. Weitere Informationen zu den entladungscodes, finden Sie unter [ARM64-Ausnahmebehandlung](arm64-exception-handling.md).
+Das Entladen während der Ausnahmebehandlung wird durch die Verwendung von Entladungs Codes unterstützt. Die Entladungs Codes sind eine Folge von Bytes, die im Abschnitt. XData der ausführbaren Datei gespeichert sind. Sie beschreiben den Vorgang des Prologs und des Epilogs auf abstrakte Weise, sodass die Auswirkungen des Prologs eines funktionsvorgangs rückgängig gemacht werden können, um die Sicherung auf den Stapel Rahmen des Aufrufers zu vorbereiten. Weitere Informationen zu den Entladungs Codes finden Sie unter [ARM64 Exception Handling](arm64-exception-handling.md).
 
-Die ARM EABI gibt auch entladungscodes für ein ausnahmeentladungsmodell, die verwendet werden. Die Spezifikation dargestellt ist jedoch für die Entladung in Windows, wobei Fälle behandelt werden müssen, in dem der Computer in der Mitte funktionsprolog oder Epilog ist, jedoch nicht ausreichend.
+Die ARM-EABI gibt auch ein Ausnahme Entladungs Modell an, das Entladungs Codes verwendet. Allerdings reicht die angegebene Spezifikation nicht für das lösen in Windows aus, da die Fälle behandelt werden müssen, in denen sich der PC in der Mitte eines Funktions Prologs oder Epilogs befindet.
 
-Code, der dynamisch generiert wird, sollte mit dynamischen Funktionstabellen über beschrieben werden `RtlAddFunctionTable` und die zugehörigen Funktionen, damit der generierte Code in der Ausnahmebehandlung teilnehmen kann.
+Dynamisch generierter Code sollte mit dynamischen Funktionstabellen über `RtlAddFunctionTable` und zugehörige Funktionen beschrieben werden, damit der generierte Code an der Ausnahmebehandlung beteiligt sein kann.
 
-## <a name="cycle-counter"></a>Zyklus-counter
+## <a name="cycle-counter"></a>Cycle-Counter
 
-Alle ARMv8 CPUs sind erforderlich, um einen Zyklus-Counter unterstützen registrieren, ein 64-Bit-Register, die Windows konfiguriert wird, um auf jeder Ausnahme-Ebene, einschließlich User-Modus gelesen werden. Darauf über die besondere PMCCNTR_EL0 zu registrieren, verwenden die MSR-Opcode in Assemblycode, oder die `_ReadStatusReg` inhärent für C /C++ Code.
+Alle ARMv8-CPUs sind erforderlich, um ein Cycle Counter-Register zu unterstützen, ein 64-Bit-Register, das Windows so konfiguriert, dass es auf jeder beliebigen Ausnahme Ebene lesbar ist, einschließlich des Benutzermodus. Der Zugriff darauf erfolgt über das spezielle PMCCNTR_EL0 Register, über den MSR-Opcode im Assemblycode oder über die systeminterneC++ `_ReadStatusReg` in C/Code.
 
-Der Zyklus-Counter hier ist ein wahrer Zyklus-Counter, keine tatsächliche Uhr. Die Zählung Frequenz variiert mit der Prozessorfrequenz. Wenn Sie, dass Sie die Häufigkeit des Zyklus-Counters wissen müssen glauben, verwenden Sie darf nicht den Zyklus-Counter. Stattdessen soll die gesamtbetrachtungszeit, Sie für die verwenden `QueryPerformanceCounter`.
+Bei dem hier aufgeführten Zyklen handelt es sich um einen echten Zyklen, nicht um eine Wand Uhr. Die Zähl Häufigkeit variiert je nach Prozessorfrequenz. Wenn Sie der Meinung sind, dass Sie die Häufigkeit des Cycle-Zählers kennen müssen, sollten Sie den-Cycle-Counter nicht verwenden. Stattdessen sollten Sie die Uhrzeit der Wand Messung Messen, für die Sie `QueryPerformanceCounter`verwenden möchten.
 
 ## <a name="see-also"></a>Siehe auch
 
