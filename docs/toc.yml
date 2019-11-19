@@ -2848,6 +2848,8 @@
           href: porting/porting-third-party-libraries.md
         - name: Portieren von Datenanwendungen
           href: data/data-access-programming-mfc-atl.md
+    - name: IDE-Tools zum Upgraden von C++-Code
+      href: porting/ide-tools-for-upgrading-code.md
     - name: Änderungsverlauf von Visual C++ von 2003 bis 2015
       href: porting/visual-cpp-change-history-2003-2015.md
     - name: 'Visual C++: Neuerungen von 2003 bis 2015'
@@ -4102,9 +4104,9 @@
                   href: cpp/binary-operators.md
                 - name: Zuweisung
                   href: cpp/assignment.md
-                - name: Funktionsaufruf
+                - name: 'Funktionsaufruf '
                   href: cpp/function-call-cpp.md
-                - name: Indizierung
+                - name: 'Indizierung '
                   href: cpp/subscripting.md
                 - name: Memberzugriff
                   href: cpp/member-access.md
