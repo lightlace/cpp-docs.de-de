@@ -1,25 +1,25 @@
 ---
-title: Compilerwarnung (Stufe 3) C4554
+title: Compiler Warning (level 3) C4554
 ms.date: 11/04/2016
 f1_keywords:
 - C4554
 helpviewer_keywords:
 - C4554
 ms.assetid: 55bb68f0-2e80-4330-8921-51083c4f8d53
-ms.openlocfilehash: 26251e4acac862e0505ea52e40a7aff2527fd472
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78e0bf70b0e5f17a9803f3a1942c2a4022e1006d
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401825"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188889"
 ---
-# <a name="compiler-warning-level-3-c4554"></a>Compilerwarnung (Stufe 3) C4554
+# <a name="compiler-warning-level-3-c4554"></a>Compiler Warning (level 3) C4554
 
-'Operator': Überprüfen Sie die Operatorrangfolge auf mögliche Fehler; Mithilfe von Klammern um die Rangfolge zu verdeutlichen.
+'operator' : check operator precedence for possible error; use parentheses to clarify precedence
 
-Im folgende Beispiel wird die C4554 generiert:
+The following sample generates C4554:
 
-```
+```cpp
 // C4554.cpp
 // compile with: /W3 /WX
 int main() {

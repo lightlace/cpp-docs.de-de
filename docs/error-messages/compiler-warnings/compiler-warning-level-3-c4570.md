@@ -1,29 +1,29 @@
 ---
-title: Compilerwarnung (Stufe 3) C4570
+title: Compiler Warning (level 3) C4570
 ms.date: 11/04/2016
 f1_keywords:
 - C4570
 helpviewer_keywords:
 - C4570
 ms.assetid: feec1225-e6ad-4995-8d96-c22e864a77bd
-ms.openlocfilehash: 386d7c210c77469d67a75d66f7d8ae35c105b3b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd144847ce6c4f8697cd866d304c23cb9b2be408
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401786"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188876"
 ---
-# <a name="compiler-warning-level-3-c4570"></a>Compilerwarnung (Stufe 3) C4570
+# <a name="compiler-warning-level-3-c4570"></a>Compiler Warning (level 3) C4570
 
-'Typ': ist nicht explizit als abstrakte jedoch abstrakte Funktionen weist deklariert
+'type' : is not explicitly declared as abstract but has abstract functions
 
-Ein Typ, der enthält [abstrakte](../../extensions/abstract-cpp-component-extensions.md) Funktionen sollten sich selbst als abstrakt gekennzeichnet werden.
+A type that contains [abstract](../../extensions/abstract-cpp-component-extensions.md) functions should itself be marked as abstract.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4570 generiert.
+The following sample generates C4570.
 
-```
+```cpp
 // C4570.cpp
 // compile with: /clr /W3 /c
 ref struct X {   // C4570

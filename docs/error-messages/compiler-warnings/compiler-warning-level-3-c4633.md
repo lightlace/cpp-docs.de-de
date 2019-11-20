@@ -1,27 +1,27 @@
 ---
-title: Compilerwarnung (Stufe 3) C4633
+title: Compiler Warning (level 3) C4633
 ms.date: 11/04/2016
 f1_keywords:
 - C4633
 helpviewer_keywords:
 - C4633
 ms.assetid: 6d76f268-ba8c-448b-8e83-b903a18b583b
-ms.openlocfilehash: 039489a804bb5d2bd17186b22bcfb8bea644c377
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea0a26e34ac72be1e8a9fb4cc7dd913ba7d1a742
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401734"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189151"
 ---
-# <a name="compiler-warning-level-3-c4633"></a>Compilerwarnung (Stufe 3) C4633
+# <a name="compiler-warning-level-3-c4633"></a>Compiler Warning (level 3) C4633
 
-XML-dokumentkommentarziel: Fehler: Grund
+XML document comment target: error:  reason
 
-Ein Name übergeben, um die [ \<Param >](../../build/reference/param-visual-cpp.md) Kennung wurde vom Compiler nicht gefunden.
+A name passed to the [\<param>](../../build/reference/param-visual-cpp.md) tag was not found by the compiler.
 
-Im folgende Beispiel wird die C4633 generiert:
+The following sample generates C4633:
 
-```
+```cpp
 // C4633.cpp
 // compile with: /clr /doc /LD /W3
 

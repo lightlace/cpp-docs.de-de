@@ -1,31 +1,31 @@
 ---
-title: Compilerwarnung (Stufe 3) C4641
+title: Compiler Warning (level 3) C4641
 ms.date: 11/04/2016
 f1_keywords:
 - C4641
 helpviewer_keywords:
 - C4641
 ms.assetid: 28fe5c3e-6039-42da-9100-1312b5b15aea
-ms.openlocfilehash: 9357088106a45026eae543f8627ea59988e73995
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a930490f7b53fbbb31abb0f621cf972295d2ea6
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401669"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189427"
 ---
-# <a name="compiler-warning-level-3-c4641"></a>Compilerwarnung (Stufe 3) C4641
+# <a name="compiler-warning-level-3-c4641"></a>Compiler Warning (level 3) C4641
 
-XML-Dokumentkommentar enthält einen mehrdeutigen Querverweis
+XML document comment has an ambiguous cross reference
 
-Der Compiler konnte einen Verweis eindeutig zu beheben. Um diese Warnung zu beheben, geben Sie die erforderlichen Parameterinformationen für den Verweis eindeutig zu machen.
+The compiler was unable to unambiguously resolve a reference. To resolve this warning, specify the parameter information necessary to make the reference unambiguous.
 
 Weitere Informationen finden Sie unter [XML Documentation](../../build/reference/xml-documentation-visual-cpp.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4641 generiert.
+The following sample generates C4641.
 
-```
+```cpp
 // C4641.cpp
 // compile with: /W3 /doc /clr /c
 
