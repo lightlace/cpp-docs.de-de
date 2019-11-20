@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4645
 ms.assetid: fd7c1ddf-f0d0-4e10-bab9-ccb4c3476298
-ms.openlocfilehash: a3e5c834a3f14b9a125176dcddd5bcc355cf1faa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4fa286f177284c03e5067b4af56f4e606b073653
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401643"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189377"
 ---
 # <a name="compiler-warning-level-3-c4645"></a>Compilerwarnung (Stufe 3) C4645
 
@@ -21,7 +21,7 @@ A [return](../../cpp/return-statement-in-program-termination-cpp.md) -Anweisung 
 
 Im folgenden Beispiel wird C4645 generiert:
 
-```
+```cpp
 // C4645.cpp
 // compile with:  /W3
 void __declspec(noreturn) func() {

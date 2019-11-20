@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4635
 ms.assetid: b2ba90de-c093-4a76-8076-b65878467574
-ms.openlocfilehash: 21873a883b19924ce3ef41511d65f8ae640875f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6fd45dc6c28c0d12eb2b2991f8a087b1841d1a9
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401721"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189145"
 ---
 # <a name="compiler-warning-level-3-c4635"></a>Compilerwarnung (Stufe 3) C4635
 
@@ -21,7 +21,7 @@ Der Compiler hat ein Problem mit XML-Tags gefunden.  Beheben Sie das Problem, un
 
 Im folgenden Beispiel wird C4635 generiert:
 
-```
+```cpp
 // C4635.cpp
 // compile with: /doc /clr /W3 /c
 /// <summary>
@@ -33,6 +33,6 @@ Im folgenden Beispiel wird C4635 generiert:
 public ref class Test {};
 ```
 
-Beachten Sie, dass die Ausgabe für dieses Beispiel wie folgt lautet: **End-Tag 'Member' stimmt nicht mit das Starttag 'Summary' überein.**
+Beachten Sie, dass die Ausgabe für dieses Beispiel wie folgt lautet: **Das Endtag 'member' stimmt nicht mit dem Starttag 'summary' überein.**
 
-Das Problem mit diesem Beispiel ist, dass das Endtag für \<summary > nicht ordnungsgemäß formuliert ist, und der Compiler ihn als nicht erkennt die \<summary >-Endtag.  Die \<Member >-Tag wird vom Compiler in jeder Kompilierung/doc in der XDC-Datei eingebettet.  Das Problem ist hier ist also das Endtag \</member >, entspricht nicht das vorherigen Starttag, die der Compiler verarbeitet (\<summary >.
+The problem with this sample is that the end tag for \<summary> is poorly formed, and the compiler does not recognize it as the \<summary> end tag.  The \<member> tag is embedded in the .xdc file by the compiler in every /doc compilation.  So, the problem here is that the end tag \</member>, does not match the previous start tag that the compiler processed (\<summary>.

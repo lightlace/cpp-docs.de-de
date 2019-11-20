@@ -1,29 +1,29 @@
 ---
-title: Compilerwarnung (Stufe 3) C4534
+title: Compiler Warning (level 3) C4534
 ms.date: 11/04/2016
 f1_keywords:
 - c4534
 helpviewer_keywords:
 - C4534
 ms.assetid: ec2adf3b-d7a1-4005-bb0c-5d219df78dc8
-ms.openlocfilehash: 81445ff42aca78a8e40e9c88eff4bb76a41a8669
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e617b18f2c7ed3b51d25eb44101629bbadcef9d
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401877"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189089"
 ---
-# <a name="compiler-warning-level-3-c4534"></a>Compilerwarnung (Stufe 3) C4534
+# <a name="compiler-warning-level-3-c4534"></a>Compiler Warning (level 3) C4534
 
-'Konstruktor' werden nicht auf einen Standardkonstruktor für Klasse 'Klasse' aufgrund von das Standardargument
+'constructor' will not be a default constructor for class 'class' due to the default argument
 
-Eine nicht verwaltete Klasse kann einen Konstruktor mit Parametern, die Standardwerte festgelegt wurden und der Compiler wird dies als den Standardkonstruktor verwenden. Eine Klasse mit markiert die `value` Schlüsselwort nicht verwendet einen Konstruktor mit standardmäßigen Werten für die Parameter als einen standardmäßigen Konstruktor.
+An unmanaged class can have a constructor with parameters that have default values and the compiler will use this as the default constructor. A class marked with the `value` keyword will not use a constructor with default values for its parameters as a default constructor.
 
 Weitere Informationen finden Sie unter [Klassen und Strukturen](../../extensions/classes-and-structs-cpp-component-extensions.md).
 
-Im folgende Beispiel wird die C4534 generiert:
+The following sample generates C4534:
 
-```
+```cpp
 // C4534.cpp
 // compile with: /W3 /clr /WX
 value class MyClass {

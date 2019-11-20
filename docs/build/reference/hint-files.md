@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: af28dac17c57c8c0699950cc1fdb542642c01722
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: ca111fcb8b0fc511fda3bbb3a4769ebc9fdd28bc
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707110"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189009"
 ---
 # <a name="hint-files"></a>Hinweisdateien
 
@@ -36,8 +36,8 @@ Eine Hinweisdatei enthält vom Benutzer anpassbare Hinweise, die die gleiche Syn
 
 > [!IMPORTANT]
 > Wenn Sie eine Hinweisdatei ändern oder hinzufügen, sind zusätzliche Schritte erforderlich, damit die Änderungen wirksam werden:
-> - Versionen vor Version 15.6 von Visual Studio 2017: Löschen Sie in der Projektmappe für alle Änderungen die SDF-Datei und/oder die VC.DB-Datei.
-> - Versionen 15.6 bis 15.9 von Visual Studio 2017: Schließen Sie nach dem Hinzufügen neuer Hinweisdateien die Projektmappe, und öffnen Sie sie anschließend wieder.
+> - In versions before Visual Studio 2017 version 15.6: Delete the .sdf file and/or VC.db file in the solution for all changes.
+> - In Visual Studio 2017 version 15.6 and later: Close and reopen the solution after adding new hint files.
 
 ## <a name="scenario"></a>Szenario
 
@@ -92,13 +92,13 @@ Ab Version 15.8 von Visual Studio 2017 gibt es verschiedene Features, mit denen 
 
 - Mit einer Schnellaktion kann eine Hinweisdatei erstellt werden, die das hervorgehobene Makro einschließt. Wenn bereits eine Hinweisdatei vorhanden ist, kann ihr mit einer anderen Schnellaktion das Makro hinzugefügt werden.
 
-![Hervorgehobenes Makro](media/hint-squiggle-and-actions.png "Mit punktierter Linie unterstrichener Hinweis und Schnellaktionen")
+![Highlighted Macro.](media/hint-squiggle-and-actions.png "Hint squiggle and Quick Actions")
 
 Nach dem Ausführen einer der beiden Schnellaktionen analysiert der Parser die Dateien neu, die von der Hinweisdatei betroffen sind.
 
-Standardmäßig wird das störende Makro als Vorschlag hervorgehoben. Die Hervorhebung kann beispielsweise durch eine grüne oder rote Wellenlinie so angepasst werden, dass sie deutlicher zu sehen ist. Verwenden Sie dazu unter **Extras** > **Optionen** > **Text-Editor** > **C/C++** > **Ansicht** im Abschnitt **Wellenlinien im Code** die Option **Makros in übersprungenen Suchbereichen**.
+Standardmäßig wird das störende Makro als Vorschlag hervorgehoben. Die Hervorhebung kann beispielsweise durch eine grüne oder rote Wellenlinie so angepasst werden, dass sie deutlicher zu sehen ist. Verwenden Sie dazu unter **Extras** > **Optionen** > **Text-Editor** > **C/C++**  > **Ansicht** im Abschnitt **Wellenlinien im Code** die Option **Makros in übersprungenen Suchbereichen**.
 
-![Option „Makros in übersprungenen Suchbereichen“](media/skipped-regions-squiggle-option.png "Option „Wellenlinien im Code“ für übersprungene Bereiche")
+![Macros in Skipped Browsing Regions Option.](media/skipped-regions-squiggle-option.png "Skipped regions squiggle option.")
 
 ## <a name="display-browsing-database-errors"></a>Anzeigen von Fehlern beim Durchsuchen der Datenbank
 
@@ -166,7 +166,7 @@ Die Abbildung stellt einige der physischen Verzeichnisse in einem Visual Studio 
 
 ### <a name="hint-file-directories"></a>Hinweisdateiverzeichnisse
 
-![Allgemeine und projektspezifische Hinweisdateiverzeichnisse](media/hintfile.png "Hinweisdatei")
+![Common and project&#45;specific hint file directories.](media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>Verzeichnisse und Hinweisdateiinhalte
 
