@@ -1,16 +1,16 @@
 ---
-title: Behandeln von Fehlern und Ausnahmen (Modern C++)
-ms.date: 05/07/2019
+title: Modern C++ best practices for exceptions and error handling
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: bb27a92347b327e22afc4f6bb2fb248c12290cae
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 85a8bf0f64681387cbee63f273fda5ce93ab7ad5
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222147"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245865"
 ---
-# <a name="errors-and-exception-handling-modern-c"></a>Behandeln von Fehlern und Ausnahmen (Modern C++)
+# <a name="modern-c-best-practices-for-exceptions-and-error-handling"></a>Modern C++ best practices for exceptions and error handling
 
 In modernem C++ ist in den meisten Szenarien die Verwendung von Ausnahmen die bevorzugte Methode zum Mitteilen und Behandeln von logischen Fehlern und Laufzeitfehler. Dies gilt besonders, wenn der Stapel möglicherweise einige Funktionsaufrufe zwischen der Funktion enthält, die den Fehler entdeckt, und der Funktion, die über den Kontext für die Fehlerbehandlung verfügt. Ausnahmen stellen eine formale, gut definierte Methode für den Code bereit, der Fehler erkennt, um die Informationen an die Aufrufliste (call stack) zu übergeben.
 
@@ -60,29 +60,29 @@ int main()
 }
 ```
 
-Ausnahmen in C++ ähneln denen in Sprachen wie C# und Java. In der **versuchen Sie es** blockieren, wenn eine Ausnahme ist *ausgelöst* wird *abgefangen* vom ersten zugehörigen **catch** Block, dessen Typ, die von übereinstimmt, der Diese Ausnahme. Das heißt, springt die Ausführung von der **auslösen** Anweisung, um die **catch** Anweisung. Ist kein verwendbarer catch-Block vorhanden, wird `std::terminate` aufgerufen und das Programm beendet. In C++ kann jeder Typ ausgelöst werden. Es wird jedoch empfohlen, einen Typ auslösen, der direkt oder indirekt von `std::exception` abgeleitet ist. Im vorherigen Beispiel der Ausnahmetyp, [Invalid_argument](../standard-library/invalid-argument-class.md), wird in der Standardbibliothek in definiert die [ \<Stdexcept >](../standard-library/stdexcept.md) Headerdatei. C++ stellt keine bereit und ist nicht erforderlich, eine **schließlich** Block, um sicherzustellen, dass alle Ressourcen freigegeben werden, wenn eine Ausnahme ausgelöst wird. Die RAII-Technik (Resource Acquisition Is Initialization, Ressourcenbelegung ist Initialisierung), die intelligente Zeiger verwendet, bietet die erforderliche Funktionalität zur Ressourcenbereinigung. Weitere Informationen finden Sie unter [Vorgehensweise: Entwurf für die Ausnahmesicherheit](../cpp/how-to-design-for-exception-safety.md). Weitere Informationen über die C++-stapelentlademechanismus finden Sie unter [Ausnahmen und Stapel entladen](../cpp/exceptions-and-stack-unwinding-in-cpp.md).
+Ausnahmen in C++ ähneln denen in Sprachen wie C# und Java. In the **try** block, if an exception is *thrown* it will be *caught* by the first associated **catch** block whose type matches that of the exception. In other words, execution jumps from the **throw** statement to the **catch** statement. Ist kein verwendbarer catch-Block vorhanden, wird `std::terminate` aufgerufen und das Programm beendet. In C++ kann jeder Typ ausgelöst werden. Es wird jedoch empfohlen, einen Typ auslösen, der direkt oder indirekt von `std::exception` abgeleitet ist. In the previous example, the exception type, [invalid_argument](../standard-library/invalid-argument-class.md), is defined in the standard library in the [\<stdexcept>](../standard-library/stdexcept.md) header file. C++ does not provide, and does not require, a **finally** block to make sure that all resources are released if an exception is thrown. Die RAII-Technik (Resource Acquisition Is Initialization, Ressourcenbelegung ist Initialisierung), die intelligente Zeiger verwendet, bietet die erforderliche Funktionalität zur Ressourcenbereinigung. For more information, see [How to: Design for Exception Safety](how-to-design-for-exception-safety.md). For information about the C++ stack-unwinding mechanism, see [Exceptions and Stack Unwinding](exceptions-and-stack-unwinding-in-cpp.md).
 
 ## <a name="basic-guidelines"></a>Grundlegende Richtlinien
 
 Stabile Fehlerbehandlung ist in jeder Programmiersprache schwierig. Obwohl Ausnahmen etliche Funktionen bereitstellen, die gute Fehlerbehandlung unterstützen, können sie Ihnen nicht die gesamte Arbeit abnehmen. Um die Vorteile des Ausnahmemechanismus auszuschöpfen, sollten Sie Ausnahmen bei der Entwicklung Ihres Codes einplanen.
 
-- Verwenden Sie Assertionen, um Fehler zu verhindern, die nie auftreten sollten. Verwenden Sie Ausnahmen, um Fehler abzufangen, die beispielsweise bei der Eingabevalidierung oder in Parametern von öffentlichen Funktionen auftreten können. Weitere Informationen finden Sie im Abschnitt **Ausnahmen Vs. Assertionen**.
+- Verwenden Sie Assertionen, um Fehler zu verhindern, die nie auftreten sollten. Verwenden Sie Ausnahmen, um Fehler abzufangen, die beispielsweise bei der Eingabevalidierung oder in Parametern von öffentlichen Funktionen auftreten können. For more information, see the section titled **Exceptions vs. Assertions**.
 
 - Verwenden Sie Ausnahmen, wenn der Code, der den Fehler behandelt, durch einen oder mehrere eingeschobene Funktionsaufrufe von dem Code getrennt ist, der den Fehler erkennt. Erwägen Sie, Fehlercodes statt leistungskritischer Schleifen zu verwenden, wenn der Code, der den Fehler behandelt, eng mit dem Code gekoppelt ist, der den Fehler erkennt.
 
-- Für jede Funktion, die eine Ausnahme auslösen oder verteilen kann, sollten Sie eine der drei Ausnahmegarantien bereitstellen: die starke Garantie, die grundlegende Garantie oder die Nothrow (Noexcept)-Garantie. Weitere Informationen finden Sie unter [Vorgehensweise: Entwurf für die Ausnahmesicherheit](../cpp/how-to-design-for-exception-safety.md).
+- Für jede Funktion, die eine Ausnahme auslösen oder verteilen kann, sollten Sie eine der drei Ausnahmegarantien bereitstellen: die starke Garantie, die grundlegende Garantie oder die Nothrow (Noexcept)-Garantie. For more information, see [How to: Design for Exception Safety](how-to-design-for-exception-safety.md).
 
 - Lösen Sie Ausnahmen per Wert aus, fangen Sie Ausnahmen per Referenz ab. Fangen Sie nicht ab, was Sie nicht behandeln können.
 
-- Verwenden Sie keine Ausnahmespezifikationen; sie sind seit C++11 veraltet. Weitere Informationen finden Sie im Abschnitt **Ausnahmespezifikationen und Noexcept**.
+- Verwenden Sie keine Ausnahmespezifikationen; sie sind seit C++11 veraltet. For more information, see the section titled **Exception specifications and noexcept**.
 
-- Verwenden Sie wenn möglich Ausnahmetypen der Standardbibliothek. Leiten Sie benutzerdefinierte Ausnahmetypen aus der [Exception-Klasse](../standard-library/exception-class.md) Hierarchie.
+- Verwenden Sie wenn möglich Ausnahmetypen der Standardbibliothek. Derive custom exception types from the [exception Class](../standard-library/exception-class.md) hierarchy.
 
 - Lassen Sie Ausnahmen nicht von Destruktoren oder Funktionen zur Speicherfreigabe auslösen.
 
 ## <a name="exceptions-and-performance"></a>Ausnahmen und Leistungsfähigkeit
 
-Der Ausnahmemechanismus verursacht nur sehr geringe Leistungseinbußen, wenn keine Ausnahme ausgelöst wird. Wenn eine Ausnahme ausgelöst wird, sind die Kosten für Stapeldurchlauf und -Entladung ungefähr mit den Kosten eines Funktionsaufrufs vergleichbar. Zusätzliche Datenstrukturen sind erforderlich, um die Aufrufliste nach Nachverfolgen einer **versuchen** Block erreicht wird, und zusätzliche Anweisungen sind erforderlich, um den Stapel zu entladen, wenn eine Ausnahme ausgelöst wird. Trotzdem sind in den meisten Szenarien die entsprechenden Leistungseinbußen und der Speicherbedarf nicht signifikant. Die nachteilige Auswirkung von Ausnahmen auf die Leistung ist wahrscheinlich nur auf Systemen mit sehr eingeschränktem Arbeitsspeicher von Bedeutung, oder in leistungskritischen Schleifen, in denen ein Fehler wahrscheinlich wiederkehrend auftritt, und in denen der den Fehler behandelnde Code eng mit dem Code gekoppelt ist, der den Fehler mitteilt. In jedem Fall ist es unmöglich, die Effektivkosten von Ausnahmen ohne Codeprofilierung und Messungen zu ermitteln. Auch in den seltenen Fällen, in denen die Kosten signifikant sind, sollten Sie abwägen, ob diese Kosten nicht die Vorteile rechtfertigen (wie korrekter Code, leichtere Verwaltbarkeit und andere), die von einer gut entworfenen Ausnahmerichtlinie sichergestellt werden.
+Der Ausnahmemechanismus verursacht nur sehr geringe Leistungseinbußen, wenn keine Ausnahme ausgelöst wird. Wenn eine Ausnahme ausgelöst wird, sind die Kosten für Stapeldurchlauf und -Entladung ungefähr mit den Kosten eines Funktionsaufrufs vergleichbar. Additional data structures are required to track the call stack after a **try** block is entered, and additional instructions are required to unwind the stack if an exception is thrown. Trotzdem sind in den meisten Szenarien die entsprechenden Leistungseinbußen und der Speicherbedarf nicht signifikant. Die nachteilige Auswirkung von Ausnahmen auf die Leistung ist wahrscheinlich nur auf Systemen mit sehr eingeschränktem Arbeitsspeicher von Bedeutung, oder in leistungskritischen Schleifen, in denen ein Fehler wahrscheinlich wiederkehrend auftritt, und in denen der den Fehler behandelnde Code eng mit dem Code gekoppelt ist, der den Fehler mitteilt. In jedem Fall ist es unmöglich, die Effektivkosten von Ausnahmen ohne Codeprofilierung und Messungen zu ermitteln. Auch in den seltenen Fällen, in denen die Kosten signifikant sind, sollten Sie abwägen, ob diese Kosten nicht die Vorteile rechtfertigen (wie korrekter Code, leichtere Verwaltbarkeit und andere), die von einer gut entworfenen Ausnahmerichtlinie sichergestellt werden.
 
 ## <a name="exceptions-vs-assertions"></a>Ausnahmen und Assertionen
 
@@ -90,17 +90,16 @@ Ausnahmen und Assertionen sind zwei verschiedene Mechanismen zum Erkennen von La
 
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>C++-Ausnahmen und Windows SEH-Ausnahmen
 
-Sowohl C-Programme als auch C++-Programme können den Mechanismus der strukturierten Ausnahmebehandlung (Structured Exception Handling, SEH) im Windows-Betriebssystem verwenden. Die Konzepte in SEH entsprechen denen für C++ Ausnahmen, die mit dem Unterschied, SEH verwendet die **__try**, **__except**, und **__finally** anstelle von erstellt **testen**  und **catch**. In der Microsoft C++ Compiler (MSVC), C++ Ausnahmen für SEH implementiert werden. Wenn Sie jedoch C++-Code schreiben, verwenden Sie die Syntax für C++-Ausnahmen.
+Sowohl C-Programme als auch C++-Programme können den Mechanismus der strukturierten Ausnahmebehandlung (Structured Exception Handling, SEH) im Windows-Betriebssystem verwenden. The concepts in SEH resemble those in C++ exceptions, except that SEH uses the **__try**, **__except**, and **__finally** constructs instead of **try** and **catch**. In the Microsoft C++ compiler (MSVC), C++ exceptions are implemented for SEH. Wenn Sie jedoch C++-Code schreiben, verwenden Sie die Syntax für C++-Ausnahmen.
 
-Weitere Informationen zu SEH finden Sie unter [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md).
+For more information about SEH, see [Structured Exception Handling (C/C++)](structured-exception-handling-c-cpp.md).
 
 ## <a name="exception-specifications-and-noexcept"></a>Ausnahmespezifikationen und noexcept
 
-Ausnahmespezifikationen wurden in C++ als Möglichkeit eingeführt, um die Ausnahmen festzulegen, die eine Funktion auslösen kann. Ausnahmespezifikationen haben sich in der Praxis jedoch als problematisch herausgestellt und wurden im Normenentwurf C++11 als veraltet gekennzeichnet. Es wird empfohlen, dass Sie keine Ausnahmespezifikationen mit Ausnahme von verwenden `throw()`, was bedeutet, dass die Funktion keine Ausnahmen ermöglicht. Bei Verwendung von Ausnahmespezifikationen des Typs muss `throw(` *Typ*`)`, beachten Sie, dass MSVC des Standards auf bestimmte Weise unterscheidet. Weitere Informationen finden Sie unter [Ausnahmespezifikationen (Throw)](../cpp/exception-specifications-throw-cpp.md). Der Bezeichner `noexcept` wird in C++11 als die bevorzugte Alternative zu `throw()` eingeführt.
+Ausnahmespezifikationen wurden in C++ als Möglichkeit eingeführt, um die Ausnahmen festzulegen, die eine Funktion auslösen kann. Ausnahmespezifikationen haben sich in der Praxis jedoch als problematisch herausgestellt und wurden im Normenentwurf C++11 als veraltet gekennzeichnet. We recommend that you do not use exception specifications except for `throw()`, which indicates that the function allows no exceptions to escape. If you must use exception specifications of the type `throw(`*type*`)`, be aware that MSVC departs from the standard in certain ways. For more information, see [Exception Specifications (throw)](exception-specifications-throw-cpp.md). Der Bezeichner `noexcept` wird in C++11 als die bevorzugte Alternative zu `throw()` eingeführt.
 
 ## <a name="see-also"></a>Siehe auch
 
 [Vorgehensweise: Verbinden von Code, der Ausnahmen zulässt, mit Code ohne Ausnahmen](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
-[Willkommen zurück bei C++ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
 [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)

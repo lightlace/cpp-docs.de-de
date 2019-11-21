@@ -1,31 +1,31 @@
 ---
 title: Ausnahmen und Stapelentladung in C++
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 ms.assetid: a1a57eae-5fc5-4c49-824f-3ce2eb8129ed
-ms.openlocfilehash: 5e094101557469a189311ce2c5344bb895696649
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11657206e86dbc81eb62c1e11b49fd87777f11d8
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398887"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246567"
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>Ausnahmen und Stapelentladung in C++
 
-Im C++-Ausnahmemechanismus geht die Steuerung von der throw-Anweisung zur ersten catch-Anweisung, die den ausgelösten Typ behandeln kann. Wenn die Catch-Anweisung erreicht wird, werden alle automatischen Variablen, die im Bereich zwischen der throw- und catch-Anweisungen in einem Prozess, der so genannten zerstört *stapelentladung*. Bei der Stapelentladung wird die Ausführung wie folgt fortgesetzt:
+Im C++-Ausnahmemechanismus geht die Steuerung von der throw-Anweisung zur ersten catch-Anweisung, die den ausgelösten Typ behandeln kann. When the catch statement is reached, all of the automatic variables that are in scope between the throw and catch statements are destroyed in a process that is known as *stack unwinding*. Bei der Stapelentladung wird die Ausführung wie folgt fortgesetzt:
 
-1. Erreicht der **versuchen** -Anweisung durch normale sequenzielle Ausführung. Der geschützte Bereich in der **versuchen** Block wird ausgeführt.
+1. Control reaches the **try** statement by normal sequential execution. The guarded section in the **try** block is executed.
 
-1. Wenn während der Ausführung des abgesicherten Abschnitts keine Ausnahme ausgelöst wird die **catch** Klauseln, die **versuchen** -Block nicht ausgeführt werden. Die Ausführung wird fortgeführt, bei der Anweisung nach dem letzten **catch** -Klausel, die das zugeordnete folgt **versuchen** Block.
+1. If no exception is thrown during execution of the guarded section, the **catch** clauses that follow the **try** block are not executed. Execution continues at the statement after the last **catch** clause that follows the associated **try** block.
 
-1. Wenn eine Ausnahme, während der Ausführung des abgesicherten Abschnitts oder in einer Routine, die der abgesicherten Abschnitt entweder direkt oder indirekt aufruft ausgelöst wird, wird ein Ausnahmeobjekt erstellt, aus dem Objekt, das erstellt wird die **auslösen** Operanden. (Dies bedeutet, dass ein Kopierkonstruktor beteiligt sein kann.) An diesem Punkt sucht der Compiler eine **catch** -Klausel in einem höheren Ausführungskontext, der verarbeiten kann, eine Ausnahme des Typs, die ausgelöst wird, oder für eine **catch** Handler, der jeden Typ von Ausnahme verarbeiten kann. Die **catch** Handler werden überprüft, in der Reihenfolge ihrer Darstellung nach der **versuchen** Block. Wenn kein entsprechender Handler gefunden wird, wird der nächste dynamisch einschließende **versuchen** -Block ausgewertet wird. Dieser Prozess wird fortgesetzt, bis der äußerste einschließende **versuchen** -Block ausgewertet wird.
+1. If an exception is thrown during execution of the guarded section or in any routine that the guarded section calls either directly or indirectly, an exception object is created from the object that is created by the **throw** operand. (This implies that a copy constructor may be involved.) At this point, the compiler looks for a **catch** clause in a higher execution context that can handle an exception of the type that is thrown, or for a **catch** handler that can handle any type of exception. The **catch** handlers are examined in order of their appearance after the **try** block. If no appropriate handler is found, the next dynamically enclosing **try** block is examined. This process continues until the outermost enclosing **try** block is examined.
 
 1. Wenn ein entsprechender Handler weiterhin nicht gefunden wird oder wenn während des Entladungsprozesses eine Ausnahme auftritt, bevor der Handler die Steuerung übernimmt, wird die vordefinierte Laufzeitfunktion `terminate` aufgerufen. Wenn eine Ausnahme auftritt, nachdem die Ausnahme ausgelöst wurde, aber bevor die Abwicklung beginnt, wird `terminate` aufgerufen.
 
-1. Wenn kein übereinstimmendes **catch** Handler gefunden wird, und sie als Wert abfängt, die formale Parameter initialisiert, indem das Ausnahmeobjekt kopiert. Wenn er als Verweis abfängt, wird der Parameter so initialisiert, dass er auf das Ausnahmeobjekt verweist. Nachdem der formale Parameter initialisiert wurde, beginnt der Prozess der Stapelentladung. Dies beinhaltet die Löschung aller automatischen Objekte, die vollständig erstellt wurden – aber noch nicht zerstört, zwischen dem Beginn der der **versuchen Sie es** Block, der zugeordnet ist die **catch** Handler und die Auslösen der Ausnahme an. Beschädigung tritt in umgekehrter Reihenfolge der Konstruktion auf. Die **catch** Handler wird ausgeführt, und das Programm setzt die Ausführung nach dem letzten Handler fort. –, also auf der ersten Anweisung oder Konstrukt, das nicht ist eine **catch** Handler. Steuerelement kann nur eingeben einer **catch** Ereignishandler über eine ausgelöste Ausnahme, nie über eine **"GoTo"** Anweisung oder ein **Fall** -Bezeichnung in eine **wechseln** -Anweisung.
+1. If a matching **catch** handler is found, and it catches by value, its formal parameter is initialized by copying the exception object. Wenn er als Verweis abfängt, wird der Parameter so initialisiert, dass er auf das Ausnahmeobjekt verweist. Nachdem der formale Parameter initialisiert wurde, beginnt der Prozess der Stapelentladung. This involves the destruction of all automatic objects that were fully constructed—but not yet destructed—between the beginning of the **try** block that is associated with the **catch** handler and the throw site of the exception. Beschädigung tritt in umgekehrter Reihenfolge der Konstruktion auf. The **catch** handler is executed and the program resumes execution after the last handler—that is, at the first statement or construct that is not a **catch** handler. Control can only enter a **catch** handler through a thrown exception, never through a **goto** statement or a **case** label in a **switch** statement.
 
-## <a name="stack-unwinding-example"></a>Beispiel für die Stapelentladung
+## <a name="stack-unwinding-example"></a>Stack unwinding example
 
-Das folgende Beispiel zeigt, wie der Stapel entladen wird, wenn eine Ausnahme ausgelöst wird. Die Ausführung auf dem Thread springt von der throw-Anweisung in `C` auf die catch-Anweisung in `main` und entlädt währenddessen jede Funktionen. Beachten Sie die Reihenfolge, in der die `Dummy`-Objekte erstellt und dann zerstört werden, wenn sie den Gültigkeitsbereich verlassen. Beachten Sie außerdem, dass keine Funktion außer `main` abgeschlossen wird, die die catch-Anweisung enthält. Funktion `A` kehrt nie von ihrem Aufruf von `B()` zurück und `B` nie von seinem Aufruf von `C()`. Wenn Sie die Definition des `Dummy`-Zeigers und die zugehörige Löschanweisung auskommentieren und das Programm dann ausführen, sehen Sie, dass der Zeiger nie gelöscht wird. Dies zeigt, was geschehen kann, wenn Funktionen keine Ausnahmegarantie bieten. Weitere Informationen finden Sie unter „Gewusst wie: Entwurf für Ausnahmen. Wenn Sie die catch-Anweisung auskommentieren, können Sie nachvollziehen, was geschieht, wenn ein Programm aufgrund eines Ausnahmefehlers beendet wird.
+Das folgende Beispiel zeigt, wie der Stapel entladen wird, wenn eine Ausnahme ausgelöst wird. Die Ausführung auf dem Thread springt von der throw-Anweisung in `C` auf die catch-Anweisung in `main` und entlädt währenddessen jede Funktionen. Beachten Sie die Reihenfolge, in der die `Dummy`-Objekte erstellt und dann zerstört werden, wenn sie den Gültigkeitsbereich verlassen. Beachten Sie außerdem, dass keine Funktion außer `main` abgeschlossen wird, die die catch-Anweisung enthält. Funktion `A` kehrt nie von ihrem Aufruf von `B()` zurück und `B` nie von seinem Aufruf von `C()`. Wenn Sie die Definition des `Dummy`-Zeigers und die zugehörige Löschanweisung auskommentieren und das Programm dann ausführen, sehen Sie, dass der Zeiger nie gelöscht wird. Dies zeigt, was geschehen kann, wenn Funktionen keine Ausnahmegarantie bieten. Weitere Informationen finden Sie unter "How to: Design for Exceptions". Wenn Sie die catch-Anweisung auskommentieren, können Sie nachvollziehen, was geschieht, wenn ein Programm aufgrund eines Ausnahmefehlers beendet wird.
 
 ```cpp
 #include <string>

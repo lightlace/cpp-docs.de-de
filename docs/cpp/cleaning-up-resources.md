@@ -9,28 +9,28 @@ helpviewer_keywords:
 - exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
-ms.openlocfilehash: 0db21b20b94dc1a3f347bd848c999a961398759b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 225c3ccaf3342f11ad4eb6d6575ad3ac542acfd2
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386121"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246636"
 ---
 # <a name="cleaning-up-resources"></a>Bereinigen von Ressourcen
 
-Während der Ausführung des Beendigungshandlers wissen Sie möglicherweise nicht, welche Ressourcen tatsächlich zugeordnet wurden, bevor der Beendigungshandler aufgerufen wurde. Es ist möglich, die die **__try** Anweisungsblock wurde unterbrochen, bevor alle Ressourcen zugeordnet wurden, sodass nicht alle Ressourcen geöffnet wurden.
+Während der Ausführung des Beendigungshandlers wissen Sie möglicherweise nicht, welche Ressourcen tatsächlich zugeordnet wurden, bevor der Beendigungshandler aufgerufen wurde. It is possible that the **__try** statement block was interrupted before all resources were allocated, so that not all resources were opened.
 
 Vorsichtshalber sollten Sie daher überprüfen, welche Ressourcen tatsächlich geöffnet sind, bevor Sie die Bereinigung der Abbruchbehandlung fortsetzen. Dazu wird diese Vorgehensweise empfohlen:
 
 1. Initialisieren Sie die Handles mit dem Wert NULL.
 
-1. In der **__try** Anweisung blockiert, Ressourcen zuordnen. Beim Zuordnen der Ressourcen werden positive Werte für die Handles festgelegt.
+1. In the **__try** statement block, allocate resources. Beim Zuordnen der Ressourcen werden positive Werte für die Handles festgelegt.
 
-1. In der **__finally** Anweisungsblock, release jede Ressource, deren entsprechender Handle oder Flagvariable ungleich NULL ist, oder nicht NULL.
+1. In the **__finally** statement block, release each resource whose corresponding handle or flag variable is nonzero or not NULL.
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code verwendet beispielsweise einen Beendigungshandler drei Dateien und einen Speicherblock, die in zugeordnet wurden schließen die **__try** Anweisungsblock. Bevor eine Ressource bereinigt wird, überprüft der Code zunächst, ob die Ressource zugeordnet wurde.
+For example, the following code uses a termination handler to close three files and a memory block that were allocated in the **__try** statement block. Bevor eine Ressource bereinigt wird, überprüft der Code zunächst, ob die Ressource zugeordnet wurde.
 
 ```cpp
 // exceptions_Cleaning_up_Resources.cpp
@@ -72,5 +72,5 @@ int main() {
 
 ## <a name="see-also"></a>Siehe auch
 
-[Schreiben eines Beendigungshandlers](../cpp/writing-a-termination-handler.md)<br/>
+[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
 [Strukturierte Ausnahmebehandlung (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

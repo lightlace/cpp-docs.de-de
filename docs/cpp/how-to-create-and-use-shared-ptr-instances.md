@@ -1,23 +1,23 @@
 ---
-title: 'Vorgehensweise: Erstellen und Verwenden von shared_ptr-Instanzen'
+title: 'How to: Create and use shared_ptr instances'
 ms.custom: how-to
-ms.date: 05/22/2019
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: d0ee1a5e8c5d26e8e0bec060ffe3d5fea30ce0fa
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: 9820e4cd2d1b981d82760fc1cea4e07c85792177
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866150"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245832"
 ---
-# <a name="how-to-create-and-use-shared_ptr-instances"></a>Vorgehensweise: Erstellen und Verwenden von shared_ptr-Instanzen
+# <a name="how-to-create-and-use-shared_ptr-instances"></a>How to: Create and Use shared_ptr instances
 
 Der Typ `shared_ptr` ist ein intelligenter Zeiger in der C++-Standardbibliothek für Szenarien, in denen möglicherweise mehrere Besitzer die Lebensdauer des Objekts im Arbeitsspeicher verwalten müssen. Nachdem Sie einen `shared_ptr` initialisiert haben, können Sie ihn kopieren, als Wert an Funktionsargumente übergeben oder anderen `shared_ptr`-Instanzen zuweisen. Alle Instanzen zeigen auf dasselbe Objekt und greifen gemeinsam auf einen "Kontrollblock" zu, der den Verweiszähler erhöht bzw. verringert, wenn ein neuer `shared_ptr` hinzugefügt wird, den Gültigkeitsbereich verlässt oder zurückgesetzt wird. Wenn der Verweiszähler Null erreicht, löscht der Kontrollblock die Speicherressource und sich selbst.
 
 Die folgende Abbildung zeigt mehrere `shared_ptr`-Instanzen, die auf einen Speicherbereich zeigen.
 
-![Diagramm für gemeinsame Zeiger](../cpp/media/shared_ptr.png "Diagramm für gemeinsame Zeiger")
+![Shared pointer diagram](media/shared_ptr.png "Shared pointer diagram")
 
 ## <a name="example-setup"></a>Beispielkonfiguration
 
@@ -74,25 +74,25 @@ int main()
 
 Verwenden Sie nach Möglichkeit die Funktion [make_shared](../standard-library/memory-functions.md#make_shared) zum Erstellen eines `shared_ptr`, wenn die Speicherressource zum ersten Mal erstellt wird. `make_shared` ist ausnahmesicher. Die Funktion verwendet den gleichen Aufruf zum Zuweisen des Arbeitsspeichers für den Kontrollblock und die Ressource, wodurch der Konstruktionsmehraufwand verringert wird. Wenn Sie `make_shared` nicht verwenden, müssen Sie einen expliziten `new`-Ausdruck zum Erstellen des Objekts verwenden, bevor Sie es an den `shared_ptr`-Konstruktor übergeben. Das folgende Beispiel zeigt verschiedene Möglichkeiten zum Deklarieren und Initialisieren eines `shared_ptr` zusammen mit einem neuen Objekt.
 
-[!code-cpp[stl_smart_pointers#1](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
+[!code-cpp[stl_smart_pointers#1](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
-## <a name="example-2"></a>Beispiel 2
+## <a name="example-2"></a>Beispiel 2
 
 Im folgenden Beispiel wird veranschaulicht, wie `shared_ptr`-Instanzen deklariert und initialisiert werden, die den gemeinsamen Besitz eines Objekts übernehmen, das bereits von einem anderen `shared_ptr` zugeordnet wurde. Angenommen, `sp2` ist ein initialisierter `shared_ptr`.
 
-[!code-cpp[stl_smart_pointers#2](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]
+[!code-cpp[stl_smart_pointers#2](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]
 
 ## <a name="example-3"></a>Beispiel 3
 
 `shared_ptr` ist auch in Containern der C++ Standardbibliothek hilfreich, wenn Sie die Algorithmen verwenden, die Elemente kopieren. Sie können Elemente in einem `shared_ptr` umschließen und sie dann in andere Container kopieren. Voraussetzung ist, dass der zugrunde liegende Arbeitsspeicher solange gültig ist, wie Sie ihn benötigen, und nicht länger. Im folgenden Beispiel wird die Verwendung des `remove_copy_if`-Algorithmus für `shared_ptr`-Instanzen in einem Vektor dargestellt.
 
-[!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
+[!code-cpp[stl_smart_pointers#4](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
 
 ## <a name="example-4"></a>Beispiel 4
 
 Sie können `dynamic_pointer_cast`, `static_pointer_cast` und `const_pointer_cast` zum Umwandeln eines `shared_ptr` verwenden. Diese Funktionen ähneln den `dynamic_cast`-, `static_cast`- und `const_cast`-Operatoren. Im folgenden Beispiel wird das Testen des abgeleiteten Typs jedes Elements in einem Vektor mit `shared_ptr` für Basisklassen sowie das Kopieren der Elemente und das Anzeigen der zugehörigen Informationen gezeigt.
 
-[!code-cpp[stl_smart_pointers#5](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
+[!code-cpp[stl_smart_pointers#5](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
 
 ## <a name="example-5"></a>Beispiel 5
 
@@ -114,8 +114,8 @@ Sie können einen `shared_ptr` folgendermaßen an eine andere Funktion übergebe
 
 Das folgende Beispiel zeigt, wie der `shared_ptr` verschiedene Vergleichsoperatoren überlädt, um Zeigervergleiche für den Arbeitsspeicher zu ermöglichen, der im Besitz der `shared_ptr`-Instanzen ist.
 
-[!code-cpp[stl_smart_pointers#3](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_6.cpp)]
+[!code-cpp[stl_smart_pointers#3](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_6.cpp)]
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intelligente Zeiger (Modern C++)](../cpp/smart-pointers-modern-cpp.md)
+[Intelligente Zeiger (Modern C++)](smart-pointers-modern-cpp.md)

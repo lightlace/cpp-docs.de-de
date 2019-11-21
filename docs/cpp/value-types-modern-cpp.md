@@ -1,24 +1,20 @@
 ---
-title: Werttypen (Modern C++)
-ms.date: 05/07/2019
+title: C++ classes as value types
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: f63bb62c-60da-40d5-ac14-4366608fe260
-ms.openlocfilehash: 204ea9f86377eb8a5796f01cb81a9161163d9649
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 1aabcad46e848e1a499a142adaba5002a829bbf5
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221887"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246022"
 ---
-# <a name="value-types-modern-c"></a>Werttypen (Modern C++)
+# <a name="c-classes-as-value-types"></a>C++ classes as value types
 
-C++-Klassen sind standardmäßig Werttypen. Dieses Thema enthält eine einführende Übersicht über Werttypen und Probleme im Zusammenhang mit ihrer Verwendung.
+C++ classes are by default value types. They can be specified as reference types, which enable polymorphic behavior to support object-oriented programming. Value types are sometimes viewed from the perspective of memory and layout control, whereas reference types are about base classes and virtual functions for polymorphic purposes. By default, value types are copyable, which means there is always a copy constructor and a copy assignment operator. For reference types, you make the class non-copyable (disable the copy constructor and copy assignment operator) and use a virtual destructor, which supports their intended polymorphism. Value types are also about the contents, which, when they are copied, always give you two independent values that can be modified separately. Reference types are about identity - what kind of object is it? For this reason, "reference types" are also referred to as "polymorphic types".
 
-## <a name="value-vs-reference-types"></a>Wert im Vergleich zu Verweistypen
-
-Wie bereits erwähnt, C++-Klassen standardmäßig Werttypen sind. Sie können als Verweistypen, angegeben werden, sodass objektorientierte Programmierung polymorphes Verhalten zu unterstützen. Werttypen werden manchmal auch aus der Perspektive des Speichers und das Layout-Steuerelement angezeigt, während Verweistypen um Basisklassen und virtuelle Funktionen, die für die polymorphe verwendet werden. Standardmäßig sind Werttypen kopiert, was bedeutet, dass stets einen Kopierkonstruktor und ein Kopierzuweisungsoperator vorhanden ist. Für Verweistypen; Sie legen Sie die Klasse nicht kopierbar (Deaktivieren der Kopierkonstruktor und Kopierzuweisungsoperator) und verwenden Sie einen virtuellen Destruktor, die ihre gewünschten Polymorphismus unterstützt. Werttypen sind auch über die Inhalte, die, wenn sie kopiert werden, immer zwei unabhängige Werte erhalten Sie, die getrennt geändert werden kann. Verweistypen sind über Identity – welche Art von Objekt es ist? Aus diesem Grund "Verweistypen" werden auch als "polymorphen Typen" bezeichnet.
-
-Wenn Sie wirklich einen Referenz-ähnlicher-Typ (Basisklasse, virtuelle Funktionen) möchten, müssen Sie explizit zu deaktivieren, kopieren, siehe die `MyRefType` Klasse in den folgenden Code.
+If you really want a reference-like type (base class, virtual functions), you need to explicitly disable copying, as shown in the `MyRefType` class in the following code.
 
 ```cpp
 // cl /EHsc /nologo /W4
@@ -39,7 +35,7 @@ int main()
 }
 ```
 
-Kompilieren des obigen Codes führt zu folgendem Fehler:
+Compiling the above code will result in the following error:
 
 ```Output
 test.cpp(15) : error C2248: 'MyRefType::operator =' : cannot access private member declared in class 'MyRefType'
@@ -47,13 +43,13 @@ test.cpp(15) : error C2248: 'MyRefType::operator =' : cannot access private memb
         meow.cpp(3) : see declaration of 'MyRefType'
 ```
 
-## <a name="value-types-and-move-efficiency"></a>Werttypen Sie und verschieben Sie die Effizienz
+## <a name="value-types-and-move-efficiency"></a>Value types and move efficiency
 
-Zuordnungsaufwand für die Kopie wird aufgrund von Optimierungen für neue vermieden. Z. B. beim Einfügen einer Zeichenfolge in der Mitte einen Vektor von Zeichenfolgen stehen keine Kopie Neubelegung Mehraufwand, nur eine Move - selbst wenn dies zu einer Vergrößerung des Vektors selbst führt. Dies gilt auch für andere Vorgänge, z. B. Ausführen eines Hinzufügevorgangs "auf zwei sehr große Objekte zu finden. Wie aktivieren Sie diesen Wert Vorgang Optimierungen? In einige C++-Compiler wird der Compiler dies für Sie implizit ermöglichen ähnlich wie Kopierkonstruktoren automatisch vom Compiler generiert werden können. Allerdings C++, muss Ihre Klasse auf "opt-in" um Zuweisung und Konstruktoren zu verschieben, indem Sie es in der Klasse deklarieren. Dies erfolgt mithilfe der doppelten kaufmännisches und-Zeichens (& &) Rvalue-Verweis in den entsprechenden Member Funktionsdeklarationen und definierenden bewegungskonstruktor und Methoden für die Zuweisung zu verschieben.  Sie müssen auch den korrekten Code, die Grundlagen aus dem Quellobjekt "stehlen" einfügen.
+Copy allocation overhead is avoided due to new copy optimizations. For example, when you insert a string in the middle of a vector of strings, there will be no copy re-allocation overhead, only a move- even if it results in a grow of the vector itself. This also applies to other operations, for instance performing an add operation on two very large objects. How do you enable these value operation optimizations? In some C++ compilers, the compiler will enable this for you implicitly, much like copy constructors can be automatically generated by the compiler. However, in C++, your class will need to "opt-in" to move assignment and constructors by declaring it in your class definition. This is accomplished by using the double ampersand (&&) rvalue reference in the appropriate member function declarations and defining move constructor and move assignment methods.  You also need to insert the correct code to "steal the guts" out of the source object.
 
-Wie entscheiden Sie, wenn Sie verschieben müssen, aktiviert? Wenn Sie bereits, dass Sie die Erstellung aktiviert kopieren müssen wissen, sollten Sie aktiviert zu verschieben, wenn es günstiger sein als eine tiefe Kopie sein kann. Wenn Sie, dass Sie die Unterstützung verschieben müssen wissen, bedeutet jedoch nicht sie unbedingt, dass die Kopie, die aktiviert werden sollen. Der letzte Fall würde eine "nur zur Verschiebung Type" aufgerufen werden. Ein Beispiel für bereits in der Standardbibliothek ist `unique_ptr`. Nebenbei bemerkt, die alte `auto_ptr` ist veraltet und wurde durch ersetzt `unique_ptr` genau aufgrund des Mangels an Move-Semantik-Unterstützung in der vorherigen Version von C++.
+How do you decide if you need move enabled? If you already know you need copy construction enabled, you probably want move enabled if it can be cheaper than a deep copy. However, if you know you need move support, it doesn't necessarily mean you want copy enabled. This latter case would be called a "move-only type". An example already in the standard library is `unique_ptr`. As a side note, the old `auto_ptr` is deprecated, and was replaced by `unique_ptr` precisely due to the lack of move semantics support in the previous version of C++.
 
-Mithilfe der Verschiebesemantik können Sie Return-Wert oder Insert-Middle. Verschieben ist eine Optimierung der Kopie. Es ist erforderlich, für die Heapzuordnung dieses Problem zu umgehen. Betrachten Sie den folgenden Pseudocode:
+By using move semantics you can return-by-value or insert-in-middle. Move is an optimization of copy. There is need for heap allocation as a workaround. Betrachten Sie den folgenden Pseudocode:
 
 ```cpp
 #include <set>
@@ -82,9 +78,9 @@ HugeMatrix operator+(      HugeMatrix&&,       HugeMatrix&&);
 hm5 = hm1+hm2+hm3+hm4+hm5;   // efficient, no extra copies
 ```
 
-### <a name="enabling-move-for-appropriate-value-types"></a>Aktivieren Schritt für den entsprechenden Werttypen
+### <a name="enabling-move-for-appropriate-value-types"></a>Enabling move for appropriate value types
 
-Aktivieren Sie für eine Wert-ähnliche-Klasse, die in der Verschiebung günstiger als eine tiefe Kopie sein kann verschiebungskonstruktion aus, und verschieben Sie Zuweisung für Effizienz zu. Betrachten Sie den folgenden Pseudocode:
+For a value-like class where move can be cheaper than a deep copy, enable move construction and move assignment for efficiency. Betrachten Sie den folgenden Pseudocode:
 
 ```cpp
 #include <memory>
@@ -106,17 +102,13 @@ public:
 };
 ```
 
-Wenn Sie eine Kopie nachrichtenerstellung/-Zuweisung aktivieren, können auch aktivieren Sie verschieben nachrichtenerstellung/-Zuweisung, wenn es günstiger sein als eine tiefe Kopie sein kann.
+If you enable copy construction/assignment, also enable move construction/assignment if it can be cheaper than a deep copy.
 
-Einige *ohne Wert* Typen sind nur zur Verschiebung, z. B. Wenn Sie eine Ressource, die nur die Übertragung des Besitzes klonen können nicht. Beispiel: `unique_ptr`
-
-## <a name="section"></a>Abschnitt
-
-Content
+Some *non-value* types are move-only, such as when you can’t clone a resource, only transfer ownership. Beispiel: `unique_ptr`
 
 ## <a name="see-also"></a>Siehe auch
 
-[C++- Typsystem (Modern C++)](../cpp/cpp-type-system-modern-cpp.md)<br/>
-[Willkommen zurück bei C++ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++ type system](../cpp/cpp-type-system-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
 [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)
