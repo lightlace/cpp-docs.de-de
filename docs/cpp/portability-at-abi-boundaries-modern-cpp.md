@@ -3,20 +3,20 @@ title: Portabilität an ABI-Grenzen (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: abbd405e-3038-427c-8c24-e00598f0936a
-ms.openlocfilehash: 3f72bc32e436c2f7a2f76ed6bbb9553b5e5be6b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 379b402354c6f08e003dffb38366d1dce20e0987
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267675"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246390"
 ---
 # <a name="portability-at-abi-boundaries-modern-c"></a>Portabilität an ABI-Grenzen (Modern C++)
 
-Verwenden Sie ausreichend portable Datentypen und Konventionen, an den Begrenzungen der Anwendungsbinärdatei-Schnittstelle. Eine "portable-Type" ist ein integrierter C-Typ oder eine Struktur, die nur die integrierte C#-Typen enthält. Klassentypen können nur verwendet werden, wenn der Aufrufer und aufgerufenen auf Layout mit Ausrichtung von einigen Aufrufen Konvention usw. Dies ist nur möglich, wenn beide mit dem gleichen Compiler und der compilereinstellungen kompiliert werden.
+Use sufficiently portable types and conventions at binary interface boundaries. A “portable type” is a C built-in type or a struct that contains only C built-in types. Class types can only be used when caller and callee agree on layout, calling convention, etc. This is only possible when both are compiled with the same compiler and compiler settings.
 
-## <a name="how-to-flatten-a-class-for-c-portability"></a>Wie Sie eine Klasse für den C-Portabilität zu vereinfachen
+## <a name="how-to-flatten-a-class-for-c-portability"></a>How to flatten a class for C portability
 
-Wenn Aufrufer mit einer anderen Compiler/Sprache kompiliert werden kann, dann "vereinfachen", um eine **Extern "C"** -API mit einer bestimmten Aufrufkonvention:
+When callers may be compiled with another compiler/language, then “flatten” to an **extern "C"** API with a specific calling convention:
 
 ```cpp
 // class widget {
@@ -34,6 +34,6 @@ extern "C" {        // functions using explicit "this"
 
 ## <a name="see-also"></a>Siehe auch
 
-[Willkommen zurück bei C++ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
 [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)

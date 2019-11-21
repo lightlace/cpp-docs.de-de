@@ -1,29 +1,29 @@
 ---
-title: 'Vorgehensweise: Entwurf für sichere Ausnahmebehandlung'
+title: 'How to: Design for exception safety'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 37ebcc646864774b15513c9e1891ba14e0705298
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48a2f5a94eb2695c0a08a0ae397d02080e7e1261
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183712"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246513"
 ---
-# <a name="how-to-design-for-exception-safety"></a>Vorgehensweise: Entwurf für sichere Ausnahmebehandlung
+# <a name="how-to-design-for-exception-safety"></a>How to: Design for exception safety
 
 Einer der Vorteile des Ausnahmemechanismus ist, dass die Ausführung – zusammen mit Daten zur Ausnahme – direkt von der Anweisung, die die Ausnahme auslöst, zur ersten catch-Anweisung springt, die sie behandelt. Der Handler kann sich in der Aufrufliste auf einer beliebig höheren Ebene befinden. Funktionen, die zwischen der try- und der throw-Anweisung aufgerufen werden, müssen nicht über Informationen über die ausgelöste Ausnahme verfügen.  Sie müssen jedoch so gestaltet werden, dass sie an jedem Punkt, an dem eine Ausnahme von unten nach oben verteilt wird, den Gültigkeitsbereich "unerwartet" verlassen können. Dabei dürfen sie keine teilweise erstellten Objekte, Speicherverluste oder Datenstrukturen, die in unbrauchbarem Zustand sind, hinterlassen.
 
-## <a name="basic-techniques"></a>Grundlegende Techniken
+## <a name="basic-techniques"></a>Basic techniques
 
 Eine solide Ausnahmebehandlungsrichtlinie erfordert sorgfältige Überlegungen und sollte Teil des Entwurfsprozesses sein. Im Allgemeinen werden die meisten Ausnahmen auf den niedrigeren Ebenen einer Softwarekomponente erkannt und ausgelöst. Diese Ebenen haben in der Regel aber nicht genügend Kontext, um den Fehler zu behandeln oder eine Meldung für den Endbenutzer verfügbar zu machen. Auf den mittleren Ebenen können Funktionen eine Ausnahme abfangen und erneut auslösen, wenn sie das Ausnahmeobjekt überprüfen müssen oder über zusätzliche nützliche Informationen verfügen, die sie für die obere Ebene bereitstellen, die letztendlich die Ausnahme abfängt. Eine Funktion sollte eine Ausnahme nur dann abfangen und behalten, wenn sie sie vollständig behandeln kann. In vielen Fällen ist das richtige Verhalten auf den mittleren Ebenen, eine Ausnahme in der Aufrufliste nach oben weiterzugeben. Sogar auf der höchsten Ebene kann es sinnvoll sein, ein Programm durch einen Ausnahmefehler beenden zu lassen, wenn die Ausnahme das Programm in einem Zustand belässt, in dem nicht garantiert werden kann, dass das Programm korrekt ausgeführt wird.
 
 Egal wie eine Funktion eine Ausnahme behandelt, sie muss nach den folgenden grundlegenden Regeln entworfen werden, um wirklich "ausnahmesicher" zu sein.
 
-### <a name="keep-resource-classes-simple"></a>Halten Sie Ressourcenklassen einfach
+### <a name="keep-resource-classes-simple"></a>Keep resource classes simple
 
-Wenn Sie eine manuelle ressourcenverwaltung in Klassen kapseln, verwenden Sie eine Klasse, die keine außer eine einzelne Ressource zu verwalten. Die Klasse einfach halten, verringern Sie das Risiko der Einführung von Ressourcenverluste. Verwendung [intelligente Zeiger](../cpp/smart-pointers-modern-cpp.md) Wenn möglich, wie im folgenden Beispiel gezeigt. Dieses Beispiel ist bewusst künstlich und vereinfacht, um die Unterschiede bei der Verwendung von `shared_ptr` hervorzuheben.
+When you encapsulate manual resource management in classes, use a class that does nothing except manage a single resource. By keeping the class simple, you reduce the risk of introducing resource leaks. Use [smart pointers](smart-pointers-modern-cpp.md) when possible, as shown in the following example. Dieses Beispiel ist bewusst künstlich und vereinfacht, um die Unterschiede bei der Verwendung von `shared_ptr` hervorzuheben.
 
 ```cpp
 // old-style new/delete version
@@ -83,29 +83,29 @@ public:
 };
 ```
 
-### <a name="use-the-raii-idiom-to-manage-resources"></a>Verwalten von Ressourcen mit der RAII-Technik
+### <a name="use-the-raii-idiom-to-manage-resources"></a>Use the RAII idiom to manage resources
 
-Um ausnahmesicher zu sein, eine Funktion muss sicherstellen, dass die Objekte, mit der es reserviert wurde `malloc` oder **neue** werden zerstört, und alle Ressourcen wie Dateihandles – geschlossen oder freigegeben wird, auch wenn eine Ausnahme ausgelöst wird. Die *Resource Acquisition Is Initialization* (RAII)-Technik bindet die Verwaltung solcher Ressourcen an die Lebensdauer von automatischen Variablen. Wenn eine Funktion den Bereich verlässt, indem sie normal oder aufgrund einer Ausnahme zurückgegeben wird, werden die Destruktoren für alle vollständig konstruierten automatischen Variablen aufgerufen. Ein RAII-Wrapperobjekt wie beispielsweise ein intelligenter Zeiger ruft die entsprechende delete- oder close-Funktion in seinem Destruktor auf. In ausnahmesicherem Code ist es sehr wichtig, den Besitz von jeder Ressource sofort an eine Art von RAII-Objekt zu übergeben. Beachten Sie, dass die `vector`, `string`, `make_shared`, `fstream`, und ähnliche Klassen behandeln die Ressource für Sie.  Allerdings `unique_ptr` und herkömmliche `shared_ptr` Konstruktionen sind speziell, da die ressourcenbelegung vom Benutzer anstelle des Objekts ausgeführt wird; daher werden sie als gewertet *Ressourcenfreigabe ist die Zerstörung* sind jedoch fragwürdige, als RAII.
+To be exception-safe, a function must ensure that objects that it has allocated by using `malloc` or **new** are destroyed, and all resources such as file handles are closed or released even if an exception is thrown. The *Resource Acquisition Is Initialization* (RAII) idiom ties management of such resources to the lifespan of automatic variables. Wenn eine Funktion den Bereich verlässt, indem sie normal oder aufgrund einer Ausnahme zurückgegeben wird, werden die Destruktoren für alle vollständig konstruierten automatischen Variablen aufgerufen. Ein RAII-Wrapperobjekt wie beispielsweise ein intelligenter Zeiger ruft die entsprechende delete- oder close-Funktion in seinem Destruktor auf. In ausnahmesicherem Code ist es sehr wichtig, den Besitz von jeder Ressource sofort an eine Art von RAII-Objekt zu übergeben. Note that the `vector`, `string`, `make_shared`, `fstream`, and similar classes handle acquisition of the resource for you.  However, `unique_ptr` and traditional `shared_ptr` constructions are special because resource acquisition is performed by the user instead of the object; therefore, they count as *Resource Release Is Destruction* but are questionable as RAII.
 
-## <a name="the-three-exception-guarantees"></a>Die drei Ausnahmegarantien
+## <a name="the-three-exception-guarantees"></a>The three exception guarantees
 
-In der Regel wird ausnahmesicherheit im Hinblick auf die drei ausnahmegarantien, die eine Funktion bereitstellen kann erläutert: das *No-Fail-Garantie*, *starke Garantie*, und die *grundlegende Garantie* .
+Typically, exception safety is discussed in terms of the three exception guarantees that a function can provide: the *no-fail guarantee*, the *strong guarantee*, and the *basic guarantee*.
 
-### <a name="no-fail-guarantee"></a>NO-FAIL-Garantie
+### <a name="no-fail-guarantee"></a>No-fail guarantee
 
 Die NO-FAIL-Garantie (oder "NO-THROW") ist die stärkste Garantie, die eine Funktion bereitstellen kann. Sie gibt an, dass die Funktion keine Ausnahme auslöst oder keine Weitergabe einer Ausnahme zulässt. Sie können jedoch eine solche Garantie nur dann zuverlässig bereitstellen, wenn folgende Voraussetzungen zutreffen: (a) Sie wissen, dass alle von dieser Funktion aufgerufenen Funktionen ebenfalls NO-FAIL sind, oder (b) Sie wissen, dass alle ausgelösten Ausnahmen abgefangen werden, bevor sie diese Funktion erreichen, oder (c) Sie wissen, wie Sie alle Ausnahmen abfangen und ordnungsgemäß behandeln, die möglicherweise diese Funktion erreichen.
 
-Sowohl die starke Garantie als auch die grundlegende Garantie basieren auf der Annahme, dass die Destruktoren NO-FAIL sind. Alle Container und Typen in der Standardbibliothek garantieren, dass ihre Destruktoren keine Ausnahmen auslösen. Es gibt auch eine entgegengesetzte Anforderung: Die Standardbibliothek erfordert, dass benutzerdefinierte, die Typen angegeben werden – z. B. Vorlagenargumente – nicht auslösende Destruktoren benötigen.
+Sowohl die starke Garantie als auch die grundlegende Garantie basieren auf der Annahme, dass die Destruktoren NO-FAIL sind. Alle Container und Typen in der Standardbibliothek garantieren, dass ihre Destruktoren keine Ausnahmen auslösen. Es gibt auch eine entgegengesetzte Anforderung: Die Standardbibliothek erfordert, dass benutzerdefinierte Typen, die für sie angegeben werden – z. B. Vorlagenargumente – nicht auslösende Destruktoren besitzen.
 
-### <a name="strong-guarantee"></a>Starke Garantie
+### <a name="strong-guarantee"></a>Strong guarantee
 
 Die starke Garantie gibt an, dass eine Funktion, wenn sie den Bereich aufgrund einer Ausnahme verlässt, keinen Speicherverlust verursacht, und dass der Programmzustand unverändert bleibt. Eine Funktion, die eine starke Garantie bereitstellt, ist im Wesentlichen eine Transaktion, die Commit- oder Zurücksetzungssemantik besitzt: entweder sie wird vollständig abgeschlossen oder sie hat keine Auswirkungen.
 
-### <a name="basic-guarantee"></a>Grundlegende Garantie
+### <a name="basic-guarantee"></a>Basic guarantee
 
 Die grundlegende Garantie ist die schwächste der drei Garantien. Sie kann aber die beste Lösung sein, wenn eine starke Garantie zu viel Speicher oder Leistung in Anspruch nimmt. Die grundlegende Garantie gibt an, dass beim Auftreten einer Ausnahme kein Speicherverlust verursacht wird und das Objekt in einem verwendbaren Zustand bleibt, obwohl die Daten möglicherweise geändert wurden.
 
-## <a name="exception-safe-classes"></a>Ausnahmesichere Klassen
+## <a name="exception-safe-classes"></a>Exception-safe classes
 
 Eine Klasse kann dazu beitragen, ihre eigene Ausnahmesicherheit sicherzustellen, selbst wenn sie von unsicheren Funktionen genutzt wird. Dazu verhindert die Klasse, dass sie teilweise konstruiert oder zerstört wird. Wird ein Klassenkonstruktor vor dem Abschließen beendet, wird das Objekt nie erstellt und dessen Destruktor nie aufgerufen. Für automatische, vor der Ausnahme initialisierte Variablen werden zwar deren Destruktoren aufgerufen. Aber für dynamisch reservierten Speicher oder Ressourcen, die nicht über einen intelligenten Zeiger oder eine ähnliche automatische Variable verwaltet werden, hat dies einen Verlust zur Folge.
 
@@ -121,5 +121,5 @@ Die integrierten Datentypen sind alle NO-FAIL, und die Standardbibliothekstypen 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Behandeln von Fehlern und Ausnahmen (Modern C++)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Vorgehensweise: Verbinden von Code, der Ausnahmen zulässt, mit Code ohne Ausnahmen](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[Modern C++ best practices for exceptions and error handling](errors-and-exception-handling-modern-cpp.md)<br/>
+[Vorgehensweise: Verbinden von Code, der Ausnahmen zulässt, mit Code ohne Ausnahmen](how-to-interface-between-exceptional-and-non-exceptional-code.md)

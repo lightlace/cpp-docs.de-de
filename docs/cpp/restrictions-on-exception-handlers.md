@@ -5,16 +5,16 @@ helpviewer_keywords:
 - restrictions, exception handlers
 - exception handling [C++], exception handlers
 ms.assetid: 31d63524-0e8c-419f-b87c-061f4c0ea470
-ms.openlocfilehash: 7d5bf20da61f4b9f5012b7f2aab932dfc904c302
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 030d444443b3a6e3e2e0ac0e015619046a76d562
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403359"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245155"
 ---
 # <a name="restrictions-on-exception-handlers"></a>Einschränkungen bei Ereignishandlern
 
-Die haupteinschränkung bei Verwendung von ausnahmehandlern im Code ist, dass keine **Goto** gesprungen-Anweisung eine **__try** Anweisungsblock. Stattdessen müssen Sie den Anweisungsblock über die normale Ablaufsteuerung eingeben. Können Sie direkt von einem **__try** Anweisung blockieren und Ausnahmehandler schachteln, wie Sie auswählen.
+The principal limitation to using exception handlers in code is that you cannot use a **goto** statement to jump into a **__try** statement block. Stattdessen müssen Sie den Anweisungsblock über die normale Ablaufsteuerung eingeben. You can jump out of a **__try** statement block and nest exception handlers as you choose.
 
 ## <a name="see-also"></a>Siehe auch
 

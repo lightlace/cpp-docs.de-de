@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hardware exceptions [C++]
 - low level errors
 ms.assetid: 06ac6f01-a8cf-4426-bb12-1688315ae1cd
-ms.openlocfilehash: 17775f3b2ee6dfa235c93d0bf0e3335b464aaa69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59b74f47cd86d94b50ab9213b3e517c2b08db696
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153670"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246552"
 ---
 # <a name="hardware-exceptions"></a>Hardwareausnahmen
 
@@ -27,7 +27,7 @@ Die Hardwareausnahmen, die von Windows erkannt werden, werden in der folgenden T
 |--------------------|------------------------|
 |STATUS_ACCESS_VIOLATION|Lesen oder Schreiben in einer Speicheradresse, auf die nicht zugegriffen werden kann.|
 |STATUS_BREAKPOINT|Auftreten eines Hardware-definierten Haltepunkts. Nur von Debuggern verwendet.|
-|STATUS_DATATYPE_MISALIGNMENT|Lesen oder Schreiben in Daten unter einer Adresse, die nicht ordnungsgemäß ausgerichtet ist. Beispielsweise müssen 16-Bit-Entitäten auf 2-Byte-Begrenzungen ausgerichtet sein. (Nicht anwendbar auf Intel 80*x*86-Prozessoren.)|
+|STATUS_DATATYPE_MISALIGNMENT|Lesen oder Schreiben in Daten unter einer Adresse, die nicht ordnungsgemäß ausgerichtet ist. Beispielsweise müssen 16-Bit-Entitäten auf 2-Byte-Begrenzungen ausgerichtet sein. (Not applicable to Intel 80*x*86 processors.)|
 |STATUS_FLOAT_DIVIDE_BY_ZERO|Teilen des Gleitkommatyps durch 0,0.|
 |STATUS_FLOAT_OVERFLOW|Überschreiten des maximalen positiven Exponenten eines Gleitkommatyps.|
 |STATUS_FLOAT_UNDERFLOW|Überschreiten der Größe des niedrigsten negativen Exponenten eines Gleitkommatyps.|
@@ -38,9 +38,9 @@ Die Hardwareausnahmen, die von Windows erkannt werden, werden in der folgenden T
 |STATUS_INTEGER_OVERFLOW|Versuch, einen Vorgang auszuführen, der den Ganzzahlbereich übersteigt.|
 |STATUS_SINGLE_STEP|Ausführen einer Anweisung im einschrittigen Modus. Nur von Debuggern verwendet.|
 
-Viele der Ausnahmen, die in der vorherigen Tabelle aufgelistet sind, sollen von Debuggern, dem Betriebssystem oder einem anderen Code auf niedriger Ebene behandelt werden. Mit Ausnahme von Ganzzahl- und Gleitkommafehlern sollte der Code diese Fehler nicht verarbeiten. Daher sollten Sie normalerweise den Ausnahmebehandlungsfilter verwenden, um Ausnahmen zu ignorieren (ergibt 0). Andernfalls hindern Sie Mechanismen auf niedrigerer Ebene möglicherweise daran, entsprechend zu reagieren. Sie können jedoch geeignete vorkehrungen gegen die möglichen Auswirkungen dieser Fehler auf niedriger Ebene, durch dauern [Beendigungshandler schreiben](../cpp/writing-a-termination-handler.md).
+Viele der Ausnahmen, die in der vorherigen Tabelle aufgelistet sind, sollen von Debuggern, dem Betriebssystem oder einem anderen Code auf niedriger Ebene behandelt werden. Mit Ausnahme von Ganzzahl- und Gleitkommafehlern sollte der Code diese Fehler nicht verarbeiten. Daher sollten Sie normalerweise den Ausnahmebehandlungsfilter verwenden, um Ausnahmen zu ignorieren (ergibt 0). Andernfalls hindern Sie Mechanismen auf niedrigerer Ebene möglicherweise daran, entsprechend zu reagieren. You can, however, take appropriate precautions against the potential effect of these low-level errors by [writing termination handlers](../cpp/writing-a-termination-handler.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Schreiben eines Ausnahmehandlers](../cpp/writing-an-exception-handler.md)<br/>
+[Writing an exception handler](../cpp/writing-an-exception-handler.md)<br/>
 [Strukturierte Ausnahmebehandlung (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

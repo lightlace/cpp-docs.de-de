@@ -1,49 +1,49 @@
 ---
 title: const- und volatile-Zeiger
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 helpviewer_keywords:
 - volatile keyword [C++], and pointers
 - pointers, and const
 - pointers, and volatile
 - const keyword [C++], volatile pointers
 ms.assetid: 0c92dc6c-400e-4342-b345-63ddfe649d7e
-ms.openlocfilehash: c869adbbdc8a5a17d315e64e5ac15545e0c46e26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0aafde9070275abcb270710e2d4a7a8d9806267
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399121"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246628"
 ---
 # <a name="const-and-volatile-pointers"></a>const- und volatile-Zeiger
 
-Die [const](../cpp/const-cpp.md) und [flüchtige](../cpp/volatile-cpp.md) Schlüsselwörter zu ändern, wie Zeiger behandelt werden. Die **const** -Schlüsselwort Gibt an, dass der Zeiger nach der Initialisierung nicht geändert werden kann; der Zeiger ist danach vor Änderungen geschützt.
+The [const](const-cpp.md) and [volatile](volatile-cpp.md) keywords change how pointers are treated. The **const** keyword specifies that the pointer cannot be modified after initialization; the pointer is protected from modification thereafter.
 
-Die **flüchtige** -Schlüsselwort Gibt an, dass der folgende Name der Wert von Aktionen als die in der benutzeranwendung geändert werden kann. Aus diesem Grund die **flüchtige** -Schlüsselwort ist gut geeignet zum Deklarieren von Objekten im freigegebenen Speicher, die durch mehrere Prozesse oder globale Datenbereiche, die für die Kommunikation mit Dienstroutinen zugegriffen werden kann.
+The **volatile** keyword specifies that the value associated with the name that follows can be modified by actions other than those in the user application. Therefore, the **volatile** keyword is useful for declaring objects in shared memory that can be accessed by multiple processes or global data areas used for communication with interrupt service routines.
 
-Wenn ein Name wird als deklariert **flüchtige**, der Compiler den Wert aus dem Arbeitsspeicher lädt jedes Mal durch das Programm erfolgt erneut. Dies reduziert die mögliche Optimierung erheblich. Wenn sich der Zustand eines Objekts unerwartet ändern kann, ist dies jedoch die einzige Möglichkeit, vorhersagbare Programmleistung sicherzustellen.
+When a name is declared as **volatile**, the compiler reloads the value from memory each time it is accessed by the program. Dies reduziert die mögliche Optimierung erheblich. Wenn sich der Zustand eines Objekts unerwartet ändern kann, ist dies jedoch die einzige Möglichkeit, vorhersagbare Programmleistung sicherzustellen.
 
-Deklarieren Sie das Objekt verweist der Zeiger als **const** oder **flüchtige**, verwenden Sie eine Deklaration des Formulars:
+To declare the object pointed to by the pointer as **const** or **volatile**, use a declaration of the form:
 
 ```cpp
 const char *cpch;
 volatile char *vpch;
 ```
 
-Den Wert des Zeigers deklariert, d. h. die tatsächliche Adresse, die im Zeiger gespeichert – als **const** oder **flüchtige**, verwenden Sie eine Deklaration des Formulars:
+To declare the value of the pointer — that is, the actual address stored in the pointer — as **const** or **volatile**, use a declaration of the form:
 
 ```cpp
 char * const pchc;
 char * volatile pchv;
 ```
 
-Die Programmiersprache C++ verhindert Zuweisungen, die Änderung eines Objekts ermöglichen oder Zeiger deklariert als **const**. Diese Zuweisungen würden die Informationen entfernen, mit denen das Objekt oder der Zeiger deklariert wurde, und dadurch den Zweck der ursprünglichen Deklaration entfremden. Betrachten Sie hierzu die folgenden Deklarationen:
+The C++ language prevents assignments that would allow modification of an object or pointer declared as **const**. Diese Zuweisungen würden die Informationen entfernen, mit denen das Objekt oder der Zeiger deklariert wurde, und dadurch den Zweck der ursprünglichen Deklaration entfremden. Betrachten Sie hierzu die folgenden Deklarationen:
 
 ```cpp
 const char cch = 'A';
 char ch = 'B';
 ```
 
-Erhalten die vorherigen Deklarationen von zwei Objekten (`cch`, des Typs **const Char**, und `ch`, des Typs **Char)**, die folgenden Deklaration/Initialisierungen gültig sind:
+Given the preceding declarations of two objects (`cch`, of type **const char**, and `ch`, of type **char)** , the following declaration/initializations are valid:
 
 ```cpp
 const char *pch1 = &cch;
@@ -61,7 +61,7 @@ char *pch2 = &cch;   // Error
 char *const pch3 = &cch;   // Error
 ```
 
-Die Deklaration von `pch2` deklariert einen Zeiger, mit dem ein konstantes Objekt möglicherweise geändert wird, und ist daher nicht zulässig. Die Deklaration von `pch3` gibt an, dass der Zeiger konstant ist nicht das Objekt die Deklaration ist nicht zulässig, aus demselben Grund der `pch2` Deklaration ist nicht zulässig.
+Die Deklaration von `pch2` deklariert einen Zeiger, mit dem ein konstantes Objekt möglicherweise geändert wird, und ist daher nicht zulässig. The declaration of `pch3` specifies that the pointer is constant, not the object; the declaration is disallowed for the same reason the `pch2` declaration is disallowed.
 
 Die folgenden acht Zuweisungen zeigen die Zuweisung durch einen Zeiger und die Änderung des Zeigerwerts für die vorhergehenden Deklarationen. Gehen Sie vorerst davon aus, dass die Initialisierung für `pch1` durch `pch8` korrekt war.
 
@@ -76,20 +76,20 @@ pch3 = &ch;   // Error: pointer declared const
 pch4 = &ch;   // Error: pointer declared const
 ```
 
-Zeiger deklariert als **flüchtige**, oder als eine Mischung von **const** und **flüchtige**, befolgen die gleichen Regeln.
+Pointers declared as **volatile**, or as a mixture of **const** and **volatile**, obey the same rules.
 
-Zeiger auf **const** Objekte werden häufig wie folgt in Funktionsdeklarationen verwendet:
+Pointers to **const** objects are often used in function declarations as follows:
 
 ```cpp
 errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *strSource );
 ```
 
-Die vorhergehende Anweisung deklariert eine Funktion, [Strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), wobei zwei der drei Argumente des Typs Zeiger zu sind **Char**. Da die Argumente als Verweis übergeben werden und nicht anhand des Werts sähe die Funktion beide ändern `strDestination` und `strSource` Wenn `strSource` wurden nicht als deklariert **const**. Die Deklaration von `strSource` als **const** stellt sicher, dass dem Aufrufer `strSource` kann nicht von der aufgerufenen Funktion geändert werden.
+The preceding statement declares a function, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), where two of the three arguments are of type pointer to **char**. Because the arguments are passed by reference and not by value, the function would be free to modify both `strDestination` and `strSource` if `strSource` were not declared as **const**. The declaration of `strSource` as **const** assures the caller that `strSource` cannot be changed by the called function.
 
 > [!NOTE]
-> Da es eine standardkonvertierung von ist *Typename* <strong>\*</strong> zu **const** *Typename* <strong>\*</strong>, es ist zulässig, ein Argument des Typs übergeben `char *` zu [Strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Das Gegenteil ist jedoch nicht "true"; keine implizite Konvertierung existiert, zum Entfernen der **const** Attribut aus einem Objekt oder Zeiger.
+> Because there is a standard conversion from *typename* <strong>\*</strong> to **const** *typename* <strong>\*</strong>, it is legal to pass an argument of type `char *` to [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). However, the reverse is not true; no implicit conversion exists to remove the **const** attribute from an object or pointer.
 
-Ein **const** Zeiger eines bestimmten Typs in einen Zeiger des gleichen Typs zugewiesen werden kann. Ein Zeiger, die ist jedoch nicht **const** kann nicht zugewiesen werden, um eine **const** Zeiger. Der folgende Code zeigt korrekte und inkorrekte Zuweisungen:
+A **const** pointer of a given type can be assigned to a pointer of the same type. However, a pointer that is not **const** cannot be assigned to a **const** pointer. Der folgende Code zeigt korrekte und inkorrekte Zuweisungen:
 
 ```cpp
 // const_pointer.cpp
@@ -126,4 +126,5 @@ int main() {
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zeiger](../cpp/pointers-cpp.md)
+[Pointers](pointers-cpp.md)
+[Raw pointers](raw-pointers.md)

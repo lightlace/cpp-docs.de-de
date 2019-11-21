@@ -20,81 +20,81 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: c26b72f7c675a4130f38c515cf71ecc290328ccc
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: 045d2bf5617c81bcc4d7a202f36b112d5f0142a6
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "69498607"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246304"
 ---
 # <a name="try-finally-statement"></a>try-finally-Anweisung
 
 **Microsoft-spezifisch**
 
-Die folgende Syntax beschreibt die **try-endlich-** Anweisung:
+The following syntax describes the **try-finally** statement:
 
-> **\_ \_try**<br/>
+> **\_\_try**<br/>
 > {<br/>
-> &nbsp; &nbsp; &nbsp; &nbsp;//überwachten Code<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;// guarded code<br/>
 > }<br/>
-> **\_ \_finally**<br/>
+> **\_\_finally**<br/>
 > {<br/>
-> &nbsp; &nbsp; &nbsp; &nbsp;//Beendigungs Code<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;// termination code<br/>
 > }
 
 ## <a name="grammar"></a>Grammatik
 
 *try-finally-statement*:<br/>
-&nbsp; &nbsp; &nbsp; &nbsp; **\_** **\_try Verbund** Anweisung \_ 0finally *Verbund Anweisung*
+&nbsp;&nbsp;&nbsp;&nbsp; **\_\_try** *compound-statement* **\_\_finally** *compound-statement*
 
-Bei der **Try-End-** Anweisung handelt es sich um eine Microsoft C++ -Erweiterung für C und Sprachen, die es Zielanwendungen ermöglichen, die Ausführung von Bereinigungs Code zu gewährleisten, wenn die Ausführung eines Code Blocks unterbrochen wird. Die Bereinigung besteht aus Aufgaben wie z. B. Neuzuweisung von Arbeitsspeicher, Schließen von Dateien und Freigeben von Dateihandles. Die **try-schließlich-** Anweisung ist besonders nützlich für Routinen mit mehreren Stellen, an denen eine Überprüfung auf einen Fehler erfolgt, der eine vorzeitige Rückgabe von der Routine verursachen könnte.
+The **try-finally** statement is a Microsoft extension to the C and C++ languages that enables target applications to guarantee execution of cleanup code when execution of a block of code is interrupted. Die Bereinigung besteht aus Aufgaben wie z. B. Neuzuweisung von Arbeitsspeicher, Schließen von Dateien und Freigeben von Dateihandles. The **try-finally** statement is especially useful for routines that have several places where a check is made for an error that could cause premature return from the routine.
 
-Verwandte Informationen und ein Codebeispiel finden Sie unter [Try-außer-Anweisung](../cpp/try-except-statement.md). Weitere Informationen über die strukturierte Ausnahmebehandlung im Allgemeinen finden Sie unter [strukturierte Ausnahmebehandlung](../cpp/structured-exception-handling-c-cpp.md). Weitere Informationen zur Behandlung von Ausnahmen in verwalteten Anwendungen mit C++/CLI finden Sie [unter Ausnahmebehandlung unter/CLR](../extensions/exception-handling-cpp-component-extensions.md).
+For related information and a code sample, see [try-except Statement](../cpp/try-except-statement.md). For more information on structured exception handling in general, see [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). For more information on handling exceptions in managed applications with C++/CLI, see [Exception Handling under /clr](../extensions/exception-handling-cpp-component-extensions.md).
 
 > [!NOTE]
-> Die strukturierte Ausnahmebehandlung arbeitet mit Win32 für C- und C++-Quelldateien. Sie ist jedoch nicht speziell für C++ entwickelt. Sie können sicherstellen, dass der Code portabler ist, indem Sie die C++-Ausnahmebehandlung verwenden. Die C++-Ausnahmebehandlung ist auch flexibler, da sie Ausnahmen eines beliebigen Typs behandeln kann. Bei C++ Programmen empfiehlt es sich, den Mechanismus für die C++ Ausnahmebehandlung zu verwenden ([try-, catch-und Throw](../cpp/try-throw-and-catch-statements-cpp.md) -Anweisungen).
+> Die strukturierte Ausnahmebehandlung arbeitet mit Win32 für C- und C++-Quelldateien. Sie ist jedoch nicht speziell für C++ entwickelt. Sie können sicherstellen, dass der Code portabler ist, indem Sie die C++-Ausnahmebehandlung verwenden. Die C++-Ausnahmebehandlung ist auch flexibler, da sie Ausnahmen eines beliebigen Typs behandeln kann. For C++ programs, it is recommended that you use the C++ exception-handling mechanism ([try, catch, and throw](../cpp/try-throw-and-catch-statements-cpp.md) statements).
 
-Die Verbund Anweisung nach der **__try** -Klausel ist der geschützte Abschnitt. Die Verbund Anweisung nach der **__finally** -Klausel ist der Beendigungs Handler. Der Handler gibt eine Reihe von Aktionen an, welche ausgeführt werden, wenn der geschützte Bereich verlassen wird, ungeachtet dessen, ob der geschützte Bereich durch eine Ausnahme verlassen wird (nicht ordnungsgemäße Beendigung) oder durch ein standardmäßiges Fortsetzen (gewöhnliche Beendigung).
+The compound statement after the **__try** clause is the guarded section. The compound statement after the **__finally** clause is the termination handler. Der Handler gibt eine Reihe von Aktionen an, welche ausgeführt werden, wenn der geschützte Bereich verlassen wird, ungeachtet dessen, ob der geschützte Bereich durch eine Ausnahme verlassen wird (nicht ordnungsgemäße Beendigung) oder durch ein standardmäßiges Fortsetzen (gewöhnliche Beendigung).
 
-Das Steuerelement erreicht eine **__try** -Anweisung durch einfache sequenzielle Ausführung (durchlaufen). Wenn das Steuerelement in den **__try**wechselt, wird der zugehörige Handler aktiv. Wenn die Ablaufsteuerung das Ende des try-Blocks erreicht, wird die Ausführung wie folgt fortgesetzt:
+Control reaches a **__try** statement by simple sequential execution (fall through). When control enters the **__try**, its associated handler becomes active. Wenn die Ablaufsteuerung das Ende des try-Blocks erreicht, wird die Ausführung wie folgt fortgesetzt:
 
 1. Der Beendigungshandler wird aufgerufen.
 
-1. Wenn der Beendigungs Handler abgeschlossen ist, wird die Ausführung nach der **__finally** -Anweisung fortgesetzt. Unabhängig davon, wie der geschützte Abschnitt endet (z. b. über ein **goto** aus dem abgesicherten Text oder über eine **Return** -Anweisung), wird der Beendigungs Handler ausgeführt, *bevor* die Ablauf Steuerung aus dem geschützten Abschnitt heraus bewegt wird.
+1. When the termination handler completes, execution continues after the **__finally** statement. Regardless of how the guarded section ends (for example, via a **goto** out of the guarded body or a **return** statement), the termination handler is executed *before* the flow of control moves out of the guarded section.
 
-   Eine **__finally** -Anweisung blockiert nicht das Suchen nach einem entsprechenden Ausnahmehandler.
+   A **__finally** statement does not block searching for an appropriate exception handler.
 
-Wenn eine Ausnahme im **__try** -Block auftritt, muss das Betriebssystem einen Handler für die Ausnahme finden, oder das Programm schlägt fehl. Wenn ein Handler gefunden wird, werden alle **__finally** -Blöcke ausgeführt, und die Ausführung wird im Handler fortgesetzt.
+If an exception occurs in the **__try** block, the operating system must find a handler for the exception or the program will fail. If a handler is found, any and all **__finally** blocks are executed and execution resumes in the handler.
 
 Nehmen Sie z. B. an, eine Reihe von Funktionsaufrufen verbindet Funktion A mit Funktion D, wie in der folgenden Abbildung dargestellt. Jede Funktion verfügt über einen Beendigungshandler. Wenn eine Ausnahme in Funktion D ausgelöst und in A behandelt wird, werden die Beendigungshandler in folgender Reihenfolge aufgerufen, während das System den Stapel abwickelt: D, C, B.
 
-![Reihenfolge der&#45;Beendigungs Handler-Ausführung](../cpp/media/vc38cx1.gif "Reihenfolge der&#45;Beendigungs Handler-Ausführung") <br/>
+![Order of termination&#45;handler execution](../cpp/media/vc38cx1.gif "Order of termination&#45;handler execution") <br/>
 Reihenfolge für das Beenden bei Handlerausführung
 
 > [!NOTE]
-> Das Verhalten von try-endlich unterscheidet sich von einigen anderen Sprachen, die die Verwendung von **schließlich**unterstützen C#, z. b.  Ein einzelner **__try** kann, aber nicht beides, von **__finally** und **__except**.  Wenn beide zusammen verwendet werden sollen, muss eine äußere try-except-Anweisung die innere try-finally-Anweisung einschließen.  Es gelten andere Regeln für die Angabe, wann ein einzelner Block ausgeführt wird.
+> The behavior of try-finally is different from some other languages that support the use of **finally**, such as C#.  A single **__try** may have either, but not both, of **__finally** and **__except**.  Wenn beide zusammen verwendet werden sollen, muss eine äußere try-except-Anweisung die innere try-finally-Anweisung einschließen.  Es gelten andere Regeln für die Angabe, wann ein einzelner Block ausgeführt wird.
 
-Aus Kompatibilitätsgründen mit früheren Versionen sind **_try**, **_finally**und **_leave** Synonyme für **__try**, **__finally**und **__leave** , es sei denn, die Compileroption [/Za \(Disable Spracherweiterungen)](../build/reference/za-ze-disable-language-extensions.md) ist beschrieben.
+For compatibility with previous versions, **_try**, **_finally**, and **_leave** are synonyms for **__try**, **__finally**, and **__leave** unless compiler option [/Za \(Disable language extensions)](../build/reference/za-ze-disable-language-extensions.md) is specified.
 
 ## <a name="the-__leave-keyword"></a>Das __leave-Schlüsselwort
 
-Das **__leave** -Schlüsselwort ist nur innerhalb des geschützten Abschnitts einer **Try-End-** Anweisung gültig, und seine Auswirkung besteht darin, zum Ende des geschützten Abschnitts zu springen. Die Ausführung wird mit der ersten Anweisung im Beendigungshandler fortgesetzt.
+The **__leave** keyword is valid only within the guarded section of a **try-finally** statement, and its effect is to jump to the end of the guarded section. Die Ausführung wird mit der ersten Anweisung im Beendigungshandler fortgesetzt.
 
-Eine **goto** -Anweisung kann auch aus dem abgesicherten Abschnitt herausspringen, beeinträchtigt jedoch die Leistung, da Sie die Stapel Auflösung aufruft. Die **__leave** -Anweisung ist effizienter, da Sie keine Stapel Auflösung verursacht.
+A **goto** statement can also jump out of the guarded section, but it degrades performance because it invokes stack unwinding. The **__leave** statement is more efficient because it does not cause stack unwinding.
 
 ## <a name="abnormal-termination"></a>Nicht ordnungsgemäße Beendigung
 
-Das Beenden einer **try-endlich-** Anweisung mit der [longjmp](../c-runtime-library/reference/longjmp.md) -Lauf Zeitfunktion wird als nicht ordnungsgemäße Beendigung angesehen. Es ist nicht zulässig, in eine **__try** -Anweisung zu springen, aber es ist zulässig, von einem zu springen. Alle **__finally** -Anweisungen, die zwischen dem Punkt der Abfahrt (normale Beendigung des **__try** -Blocks) und dem Ziel (der **__except** -Block, der die Ausnahme behandelt) aktiv sind, müssen ausgeführt werden. Dies wird als "lokale Entladung" bezeichnet.
+Exiting a **try-finally** statement using the [longjmp](../c-runtime-library/reference/longjmp.md) run-time function is considered abnormal termination. It is illegal to jump into a **__try** statement, but legal to jump out of one. All **__finally** statements that are active between the point of departure (normal termination of the **__try** block) and the destination (the **__except** block that handles the exception) must be run. Dies wird als "lokale Entladung" bezeichnet.
 
-Wenn ein **try** -Block aus irgendeinem Grund vorzeitig beendet wird, einschließlich eines Ausschnitts aus dem **-Block,** führt das System die zugeordnete Block Ende-Sperre im Rahmen des Entsperrens des Stapels aus. In solchen Fällen gibt die [abnormalbeendigungs](/windows/win32/Debug/abnormaltermination) Funktion " **true** " zurück, wenn Sie von **innerhalb des letzten** Blocks aufgerufen wird. Andernfalls wird **false**zurückgegeben.
+If a **try** block is prematurely terminated for any reason, including a jump out of the block, the system executes the associated **finally** block as a part of the process of unwinding the stack. In such cases, the [AbnormalTermination](/windows/win32/Debug/abnormaltermination) function returns **true** if called from within the **finally** block; otherwise, it returns **false**.
 
-Der Beendigungs Handler wird nicht aufgerufen, wenn ein Prozess in der Mitte der Ausführung einer **try-schließlich-** Anweisung abgebrochen wird.
+The termination handler is not called if a process is killed in the middle of executing a **try-finally** statement.
 
 **Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Schreiben eines Beendigungshandlers](../cpp/writing-a-termination-handler.md)<br/>
+[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
 [Strukturierte Ausnahmebehandlung (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [Stichwörter](../cpp/keywords-cpp.md)<br/>
-[Beendigungs HandlerSyntax](/windows/win32/Debug/termination-handler-syntax)
+[Termination-Handler Syntax](/windows/win32/Debug/termination-handler-syntax)

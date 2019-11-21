@@ -3,24 +3,24 @@ title: Algorithmen (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 6f758d3c-a7c7-4a50-92bb-97b2f6d4ab27
-ms.openlocfilehash: b972e575c982ae2523ec560a6237eac76ceaf834
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 9ed3b364f3fab880273c19c99bbbc7425545aec2
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345174"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246657"
 ---
 # <a name="algorithms-modern-c"></a>Algorithmen (Modern C++)
 
-Für moderne C++-Programmierung empfehlen wir die Verwendung von der Algorithmen in der [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md). Im Folgenden sind einige wichtige Beispiele aufgeführt:
+For modern C++ programming, we recommend that you use the algorithms in the [C++ Standard Library](../standard-library/cpp-standard-library-reference.md). Im Folgenden sind einige wichtige Beispiele aufgeführt:
 
-- **For_each**, dies ist der standarddurchlaufalgorithmus. (Auch **transformieren** für nicht-in-Place-Semantik.)
+- **for_each**, which is the default traversal algorithm. (Also **transform** for not-in-place semantics.)
 
-- **Find_if**, dies ist der standardsuchalgorithmus.
+- **find_if**, which is the default search algorithm.
 
-- **Sortierung**, **Lower_bound**, und weitere sortieren und Durchsuchen von Algorithmen.
+- **sort**, **lower_bound**, and the other default sorting and searching algorithms.
 
-Verwenden Sie zum Schreiben eines Vergleichsoperators strict **<** und *benannte Lambdas* nach Möglichkeit.
+To write a comparator, use strict **<** and use *named lambdas* when you can.
 
 ```cpp
 auto comp = [](const widget& w1, const widget& w2)
@@ -33,7 +33,7 @@ auto i = lower_bound( v.begin(), v.end(), comp );
 
 ## <a name="loops"></a>Schleifen
 
-Verwenden Sie nach Möglichkeit bereichsbasierte **für** -Schleifen oder algorithmusaufrufe oder beides statt von Hand geschriebener Schleifen. **Kopie**, **transformieren**, **Count_if**, **Remove_if**, und usw. sind wesentlich besser als Hand geschriebene Schleifen, da ihre Absicht offensichtlich ist und sie erleichtern Sie, fehlerfreien Code zu schreiben. Relativ viele Algorithmen für C++-Standardbibliothek haben außerdem implementierungsoptimierungen, die sie effizienter machen.
+When possible, use range-based **for** loops or algorithm calls, or both, instead of hand-written loops. **copy**, **transform**, **count_if**, **remove_if**, and others like them are much better than handwritten loops because their intent is obvious and they make it easier to write bug-free code. Also, many C++ Standard Library algorithms have implementation optimizations that make them more efficient.
 
 Anstelle des alten C++ wie:
 
@@ -61,20 +61,20 @@ auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );
 
 ### <a name="range-based-for-loops"></a>Bereichsbasierte For-Schleifen
 
-Die bereichsbasierte **für** Schleife ist eine C ++ 11-Sprachfunktion, nicht auf ein C++-Standardbibliothek-Algorithmus. Sie verdient jedoch im Rahmen dieser Diskussion über Schleifen Erwähnung. Bereichsbasierte **für** -Schleifen sind eine Erweiterung von der **für** Schlüsselwort und bieten eine komfortable und effiziente Möglichkeit, Schleifen schreiben, die einen Wertebereich durchlaufen. C++-Standardbibliothek-Container, Zeichenfolgen und Arrays sind vorgefertigte für bereichsbasierte **für** Schleifen. Um diese neue Iterationssyntax für den benutzerdefinierten Typ zu aktivieren, fügen Sie die folgende Unterstützung hinzu:
+The range-based **for** loop is a C++11 language feature, not a C++ Standard Library algorithm. Sie verdient jedoch im Rahmen dieser Diskussion über Schleifen Erwähnung. Range-based **for** loops are an extension of the **for** keyword and provide a convenient and efficient way to write loops that iterate over a range of values. C++ Standard Library containers, strings, and arrays are ready-made for range-based **for** loops. Um diese neue Iterationssyntax für den benutzerdefinierten Typ zu aktivieren, fügen Sie die folgende Unterstützung hinzu:
 
 - Eine `begin`-Methode, die einen Iterator zum Anfang der Struktur zurückgibt und eine `end`-Methode, die einen Iterator an das Ende der Struktur zurückgibt.
 
-- Unterstützung im Iterator für diese Methoden: **Operator**<strong>\*</strong>, **Operator! =**, und **"Operator++"** (präfixversion).
+- Support in the iterator for these methods: **operator**<strong>\*</strong>, **operator!=** , and **operator++** (prefix version).
 
 Diese Methoden können entweder Member oder eigenständige Funktionen sein.
 
 ## <a name="random-numbers"></a>Zufallszahlen
 
-Es ist bekannt, dass die alte Funktion CRT `rand()`-Funktion viele Fehler enthält, die ausführlich in der C++-Community erläutert wurden. In modernem C++, die Sie für den Umgang mit diese Schwachpunkt haben keine – ebenso wenig müssen Sie Ihre eigenen gleichmäßig verteilten Zufallszahlen-Generator zu erfinden, da die Tools zum schnellen und einfachen Erstellen sie in der C++-Standardbibliothek, verfügbar sind, siehe [ \<random >](../standard-library/random.md).
+Es ist bekannt, dass die alte Funktion CRT `rand()`-Funktion viele Fehler enthält, die ausführlich in der C++-Community erläutert wurden. In modern C++, you don't have to deal with those shortcomings—nor do you have to invent your own uniformly distributed random number generator—because the tools for quickly and easily creating them are available in the C++ Standard Library, as shown in [\<random>](../standard-library/random.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Willkommen zurück bei C++ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
 [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)<br/>

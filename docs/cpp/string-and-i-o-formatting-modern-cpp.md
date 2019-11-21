@@ -1,19 +1,19 @@
 ---
 title: Formatieren von Zeichenfolgen und Ein-/Ausgaben (Modern C++)
-description: Optionen für die formatierte Zeichenfolge verfügbaren e/a in Modern C++.
+description: Choices for formatted string I/O available in modern C++.
 ms.date: 05/30/2019
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: e22c745798109a2dbef82297c45256593823f806
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: facb0b62cc1e92ed09a9ba729d766e5db7404282
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450501"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245104"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formatieren von Zeichenfolgen und Ein-/Ausgaben (Modern C++)
 
-C++[ \<Iostream >](../standard-library/iostream.md) formatierte Zeichenfolge e/a-Klassen, Funktionen und Operatoren zu unterstützen. Der folgende Code zeigt z. B. festlegen `cout` so formatieren eine ganze Zahl im Hexadezimalformat ausgegeben. Speichert zunächst den aktuellen Zustand zum danach zurücksetzen, da einmal Format Zustand, um übergeben wird `cout`, es bleibt auf diese Weise bis geändert. Es gilt nicht nur für die eine Codezeile erforderlich.
+C++ [\<iostream>](../standard-library/iostream.md) classes, functions, and operators support formatted string I/O. For example, the following code shows how to set `cout` to format an integer to output in hexadecimal. First, it saves the current state to reset it afterwards, because once format state is passed to `cout`, it stays that way until changed. It doesn't just apply to the one line of code.
 
 ```cpp
 #include <iostream>
@@ -39,21 +39,21 @@ int main()
 }
 ```
 
-Dieser Ansatz ist, typsicher und erweiterbares, aber es ist auch komplex und ausführlich.
+This approach is type-safe and extensible, but it's also complex and verbose.
 
-## <a name="alternative-format-options"></a>Alternative Formatoptionen
+## <a name="alternative-format-options"></a>Alternative format options
 
-Als Alternative können Sie `Boost.Format` über die Verstärkung C++ Bibliotheken, auch wenn es nicht dem Standard entspricht. Sie können jede auftriebsbibliothek von der [Boost](https://www.boost.org/) Website.
+As an alternative, you can use `Boost.Format` from the Boost C++ libraries, even though it’s nonstandard. You can download any Boost library from the [Boost](https://www.boost.org/) website.
 
-Einige Vorteile von `Boost.Format` sind:
+Some advantages of `Boost.Format` are:
 
-- Sicher: Typsicher und löst eine Ausnahme für Fehler, z. B. der Spezifikation zu wenige oder zu viele Elemente.
+- Safe: Type-safe, and throws an exception for errors, for example, the specification of too few or too many items.
 
-- Erweiterbar: Kann für jeden Typ, der gestreamt werden kann.
+- Erweiterbar: Funktioniert für jeden Typ, der gestreamt werden kann
 
-- Praktisch: Standard-Posix und ähnliche Formatzeichenfolgen.
+- Bequem: Standard-Posix und ähnliche Formatzeichenfolgen
 
-Obwohl `Boost.Format` basiert auf C++ [ \<Iostream >](../standard-library/iostream-programming.md) Einrichtungen, die sicher und erweiterbar sind, sie aber nicht leistungsoptimiert. Wenn Sie zur Optimierung der Leistung benötigen, sollten Sie C [Printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) und [Sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), denen sind, schnell und einfach zu verwenden. Allerdings sind sie nicht erweiterbar und können Sicherheitsrisiken bergen. (Sichere Versionen sind vorhanden, doch verursachen diese geringfügige Leistungseinbußen. Weitere Informationen finden Sie unter [Printf_s, _printf_s_l, Wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) und [Sprintf_s, _sprintf_s_l, Swprintf_s, _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).
+Although `Boost.Format` is built on C++ [\<iostream>](../standard-library/iostream-programming.md) facilities, which are safe and extensible, they aren't performance-optimized. When you require performance optimization, consider C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) and [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), which are fast and easy to use. However, they aren't extensible or safe from vulnerabilities. (Sichere Versionen sind vorhanden, doch verursachen diese geringfügige Leistungseinbußen. For more information, see [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) and [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).
 
 Im folgenden Code werden einige der Boost-Formatierungsfunktionen verdeutlicht.
 
@@ -69,7 +69,7 @@ Im folgenden Code werden einige der Boost-Formatierungsfunktionen verdeutlicht.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Willkommen zurück bei C++ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
 [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)<br/>
 [\<iostream>](../standard-library/iostream.md)<br/>
