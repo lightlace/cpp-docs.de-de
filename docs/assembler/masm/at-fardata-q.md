@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@fardata? symbol'
 ms.assetid: 5184ac8d-c433-4136-81b2-3e7f6082415d
-ms.openlocfilehash: 50c7d66ca0f4dbd089a11bc2a22ff64e448d58f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c2e036090d53aa2623faea50834cbcf1e5d1e436
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180335"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302666"
 ---
-# <a name="fardata"></a>@fardata?
+# <a name="fardata"></a>\@fardata?
 
-Der Name des Segments von definiert die [. FARDATA? ](../../assembler/masm/dot-fardata-q.md) Richtlinie (Textmakro).
+Der Name des Segments, das von definiert wird [. Fardata?](../../assembler/masm/dot-fardata-q.md) Direktive (Text Makro).
 
 ## <a name="syntax"></a>Syntax
 
-> @fardata?
+> **\@fardata?**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Symbole – Verweis](../../assembler/masm/symbols-reference.md)<br/>
+[Symbole – Verweis](../../assembler/masm/symbols-reference.md)

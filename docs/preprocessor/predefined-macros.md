@@ -1,7 +1,8 @@
 ---
 title: Vordefinierte Makros
+description: Listet die vordefinierten Präprozessormakros von Microsoft C++ auf und beschreibt diese.
 ms.custom: update_every_version
-ms.date: 10/01/2019
+ms.date: 11/20/2019
 f1_keywords:
 - _ATL_VER
 - __ATOM__
@@ -153,12 +154,84 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: 57982e32da75aa7f364c51146e50c3d75b4b7710
-ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
+no-loc:
+- _ATL_VER
+- __ATOM__
+- __AVX__
+- __AVX2__
+- __AVX512BW__
+- __AVX512CD__
+- __AVX512DQ__
+- __AVX512F__
+- __AVX512VL__
+- _CHAR_UNSIGNED
+- __CLR_VER
+- _CONTROL_FLOW_GUARD
+- __COUNTER__
+- __cplusplus
+- __cplusplus_cli
+- __cplusplus_winrt
+- _CPPRTTI
+- _CPPUNWIND
+- __DATE__
+- _DEBUG
+- _DLL
+- __FILE__
+- __FUNCDNAME__
+- __FUNCSIG__
+- __FUNCTION__
+- _INTEGRAL_MAX_BITS
+- _ISO_VOLATILE
+- _KERNEL_MODE
+- __LINE__
+- _M_AMD64
+- _M_ARM
+- _M_ARM_ARMV7VE
+- _M_ARM_FP
+- _M_ARM64
+- _M_CEE
+- _M_CEE_PURE
+- _M_CEE_SAFE
+- _M_FP_EXCEPT
+- _M_FP_FAST
+- _M_FP_PRECISE
+- _M_FP_STRICT
+- _M_IX86
+- _M_IX86_FP
+- _M_X64
+- _MANAGED
+- _MFC_VER
+- _MSC_BUILD
+- _MSC_EXTENSIONS
+- _MSC_FULL_VER
+- _MSC_VER
+- _MSVC_LANG
+- __MSVC_RUNTIME_CHECKS
+- _MT
+- _NATIVE_WCHAR_T_DEFINED
+- _NO_SIZED_DEALLOCATION
+- _OPENMP
+- _PREFAST_
+- _RESUMABLE_FUNCTIONS_SUPPORTED
+- _RTC_CONVERSION_CHECKS_ENABLED
+- __STDC__
+- __STDC_HOSTED__
+- __STDCPP_THREADS__
+- __TIME__
+- __TIMESTAMP__
+- __VA_ARGS__
+- _VC_NODEFAULTLIB
+- _WCHAR_T_DEFINED
+- _WIN32
+- _WIN64
+- _WINRT_DLL
+- __func__
+ms.openlocfilehash: 7d019b527abea89ab8337270fbd22abc9dbecc4e
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74163338"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74305474"
 ---
 # <a name="predefined-macros"></a>Vordefinierte Makros
 
@@ -170,7 +243,7 @@ MSVC unterstützt die vordefinierten Präprozessormakros, die vom ANSI/ISO C99-S
 
 Der Compiler unterstützt diesen vordefinierten Bezeichner, der von ISO C99 und ISO c++ 11 angegeben wird.
 
-- **&#95;&#95; Func &#95;** Der nicht qualifizierte und ungeschützte Name der einschließenden Funktion als **statisches** konstantenarray von **char**.
+- `__func__` den nicht qualifizierten und undekorierten Namen der einschließenden Funktion als ein **statisches, statisches Konstanten** Array von **char**.
 
     ```cpp
     void example(){
@@ -182,45 +255,45 @@ Der Compiler unterstützt diesen vordefinierten Bezeichner, der von ISO C99 und 
 
 Der Compiler unterstützt diese vordefinierten Makros, die von den ISO C99-und ISO c++ 17-Standards angegeben werden.
 
-- **&#95; &#95;** Wird als ganzzahliger Literalwert definiert, wenn die Übersetzungs C++Einheit als kompiliert wird. Andernfalls nicht definiert.
+- `__cplusplus` als ganzzahliger Literalwert definiert, wenn die Übersetzungseinheit C++als kompiliert wird. Andernfalls nicht definiert.
 
-- **&#95; Datum &#95; &#95;** Das Kompilierungs Datum der aktuellen Quelldatei. Das Datum ist ein Zeichenfolgenliteralzeichen mit konstanter Länge in der Form *mmm DD JJJJ*. Der Monats Name *mmm* entspricht dem abgekürzten Monatsnamen, der von der [Asctime](../c-runtime-library/reference/asctime-wasctime.md) -Funktion der C-Lauf Zeit Bibliothek (CRT) generiert wurde. Das erste Zeichen von Date *DD* ist ein Leerzeichen, wenn der Wert kleiner als 10 ist. Dieses Makro wird immer definiert.
+- `__DATE__` das Kompilierungs Datum der aktuellen Quelldatei. Das Datum ist ein Zeichenfolgenliteralzeichen mit konstanter Länge in der Form *mmm DD JJJJ*. Der Monats Name *mmm* entspricht dem abgekürzten Monatsnamen, der von der [Asctime](../c-runtime-library/reference/asctime-wasctime.md) -Funktion der C-Lauf Zeit Bibliothek (CRT) generiert wurde. Das erste Zeichen von Date *DD* ist ein Leerzeichen, wenn der Wert kleiner als 10 ist. Dieses Makro wird immer definiert.
 
-- **&#95; Datei &#95; &#95;** Der Name der aktuellen Quelldatei. Die Datei wird zu einem Zeichenfolgenliteralzeichen **&#95; &#95;&#95;** Um sicherzustellen, dass der vollständige Pfad zur Datei angezeigt wird, verwenden Sie [/FC (vollständiger Pfad der Quell Code Datei in der Diagnose)](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md). Dieses Makro wird immer definiert.
+- `__FILE__` den Namen der aktuellen Quelldatei. `__FILE__` zu einem Zeichenfolgenliteralzeichen erweitert. Verwenden Sie zum Sicherstellen, dass der vollständige Dateipfad zur Datei angezeigt wird, [/FC (Vollständiger Pfad der Quellcodedatei in Diagnostik)](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md) Dieses Makro wird immer definiert.
 
-- **&#95; Zeile &#95; &#95;** Definiert als ganzzahlige Zeilennummer in der aktuellen Quelldatei. Der Wert des **&#95; &#95;Linien&#95;** Makros kann mit einer `#line`-Direktive geändert werden. Dieses Makro wird immer definiert.
+- `__LINE__` als ganzzahlige Zeilennummer in der aktuellen Quelldatei definiert. Der Wert des `__LINE__`-Makros kann mithilfe einer `#line`-Direktive geändert werden. Dieses Makro wird immer definiert.
 
-- **&#95;&#95; Stdc &#95;** Wird nur dann als 1 definiert, wenn es als C kompiliert wird und die [/Za](../build/reference/za-ze-disable-language-extensions.md) -Compileroption angegeben wird. Andernfalls nicht definiert.
+- `__STDC__` nur dann als 1 definiert, wenn es als C kompiliert wird und die [/Za](../build/reference/za-ze-disable-language-extensions.md) -Compileroption angegeben wird. Andernfalls nicht definiert.
 
-- **&#95;&#95;&#95;Gehostetes&#95; stdc** als 1 definiert, wenn es sich um eine *gehostete Implementierung*handelt, eine, die die gesamte erforderliche Standardbibliothek unterstützt. Andernfalls als 0 definiert.
+- `__STDC_HOSTED__` als 1 definiert, wenn es sich bei der Implementierung um eine *gehostete Implementierung*handelt, eine, die die gesamte erforderliche Standardbibliothek unterstützt. Andernfalls als 0 definiert.
 
-- **&#95;&#95;Stdcpp&#95;-&#95; Threads** werden nur dann als 1 definiert, wenn ein Programm mehr als einen Ausführungs Thread aufweisen und als C++kompiliert werden kann. Andernfalls nicht definiert.
+- `__STDCPP_THREADS__` nur dann als 1 definiert, wenn ein Programm mehr als einen Ausführungs Thread aufweisen und als C++kompiliert werden kann. Andernfalls nicht definiert.
 
-- **&#95; Uhrzeit &#95; &#95;** Der Zeitpunkt der Übersetzung der vorverarbeiteten Übersetzungseinheit. Die Zeit ist ein Zeichenfolgenliteral im Format *hh: mm: SS*, das der von der CRT [Asctime](../c-runtime-library/reference/asctime-wasctime.md) -Funktion zurückgegebenen Zeit entspricht. Dieses Makro wird immer definiert.
+- `__TIME__` die Zeit der Übersetzung der vorverarbeiteten Übersetzungseinheit. Die Zeit ist ein Zeichenfolgenliteral im Format *hh: mm: SS*, das der von der CRT [Asctime](../c-runtime-library/reference/asctime-wasctime.md) -Funktion zurückgegebenen Zeit entspricht. Dieses Makro wird immer definiert.
 
 ## <a name="microsoft-specific-predefined-macros"></a>Microsoft-spezifische vordefinierte Makros
 
 MSVC unterstützt diese zusätzlichen vordefinierten Makros.
 
-- **&#95; Atom &#95; &#95;** Definiert als 1, wenn die [/favor: Atom](../build/reference/favor-optimize-for-architecture-specifics.md) -Compileroption festgelegt ist und das compilerziel x86 oder x64 ist. Andernfalls nicht definiert.
+- `__ATOM__` als 1 definiert, wenn die [/favor: Atom](../build/reference/favor-optimize-for-architecture-specifics.md) -Compileroption festgelegt ist und das compilerziel x86 oder x64 ist. Andernfalls nicht definiert.
 
-- **&#95;&#95; AVX &#95;** Definiert als 1, wenn die Compileroptionen [/arch: AVX](../build/reference/arch-x86.md), [/arch: AVX2](../build/reference/arch-x86.md) oder [/arch: AVX512](../build/reference/arch-x86.md) festgelegt sind und das compilerziel x86 oder x64 ist. Andernfalls nicht definiert.
+- `__AVX__` als 1 definiert, wenn die Compileroptionen [/arch: AVX](../build/reference/arch-x86.md), [/arch: AVX2](../build/reference/arch-x86.md) oder [/arch: AVX512](../build/reference/arch-x86.md) festgelegt sind und das compilerziel x86 oder x64 ist. Andernfalls nicht definiert.
 
-- **&#95; AVX2 &#95; &#95;** Definiert als 1, wenn die Compileroption [/arch: AVX2](../build/reference/arch-x86.md) oder [/arch: AVX512](../build/reference/arch-x86.md) festgelegt ist und das compilerziel x86 oder x64 ist. Andernfalls nicht definiert.
+- `__AVX2__` als 1 definiert, wenn die Compileroption [/arch: AVX2](../build/reference/arch-x86.md) oder [/arch: AVX512](../build/reference/arch-x86.md) festgelegt ist und das compilerziel x86 oder x64 ist. Andernfalls nicht definiert.
 
-- **&#95; AVX512BW &#95; &#95;** Definiert als 1, wenn die [/arch: AVX512](../build/reference/arch-x86.md) -Compileroption festgelegt ist und das compilerziel x86 oder x64 ist. Andernfalls nicht definiert.
+- `__AVX512BW__` als 1 definiert, wenn die [/arch: AVX512](../build/reference/arch-x86.md) -Compileroption festgelegt ist und das compilerziel x86 oder x64 ist. Andernfalls nicht definiert.
 
-- **&#95; AVX512CD &#95; &#95;** Definiert als 1, wenn die [/arch: AVX512](../build/reference/arch-x86.md) -Compileroption festgelegt ist und das compilerziel x86 oder x64 ist. Andernfalls nicht definiert.
+- `__AVX512CD__` als 1 definiert, wenn die [/arch: AVX512](../build/reference/arch-x86.md) -Compileroption festgelegt ist und das compilerziel x86 oder x64 ist. Andernfalls nicht definiert.
 
-- **&#95; AVX512DQ &#95; &#95;** Definiert als 1, wenn die [/arch: AVX512](../build/reference/arch-x86.md) -Compileroption festgelegt ist und das compilerziel x86 oder x64 ist. Andernfalls nicht definiert.
+- `__AVX512DQ__` als 1 definiert, wenn die [/arch: AVX512](../build/reference/arch-x86.md) -Compileroption festgelegt ist und das compilerziel x86 oder x64 ist. Andernfalls nicht definiert.
 
-- **&#95; AVX512F &#95; &#95;** Definiert als 1, wenn die [/arch: AVX512](../build/reference/arch-x86.md) -Compileroption festgelegt ist und das compilerziel x86 oder x64 ist. Andernfalls nicht definiert.
+- `__AVX512F__` als 1 definiert, wenn die [/arch: AVX512](../build/reference/arch-x86.md) -Compileroption festgelegt ist und das compilerziel x86 oder x64 ist. Andernfalls nicht definiert.
 
-- **&#95; AVX512VL &#95; &#95;** Definiert als 1, wenn die [/arch: AVX512](../build/reference/arch-x86.md) -Compileroption festgelegt ist und das compilerziel x86 oder x64 ist. Andernfalls nicht definiert.
+- `__AVX512VL__` als 1 definiert, wenn die [/arch: AVX512](../build/reference/arch-x86.md) -Compileroption festgelegt ist und das compilerziel x86 oder x64 ist. Andernfalls nicht definiert.
 
-- **&#95;Char&#95;unsigned** ist als 1 definiert, wenn der standardmäßige **char** -Typ nicht signiert ist. Dieser Wert wird definiert, wenn die Compileroption [/J (Default char type is unsigned)](../build/reference/j-default-char-type-is-unsigned.md) festgelegt ist. Andernfalls nicht definiert.
+- `_CHAR_UNSIGNED` als 1 definiert, wenn der **Standard** Zeichentyp ohne Vorzeichen ist. Dieser Wert wird definiert, wenn die Compileroption [/J (Default char type is unsigned)](../build/reference/j-default-char-type-is-unsigned.md) festgelegt ist. Andernfalls nicht definiert.
 
-- **CLR&#95;-ver &#95; &#95;** Definiert als Ganzzahlliteral, das die Version der Common Language Runtime (CLR) darstellt, die zum Kompilieren der APP verwendet wird. Der Wert wird in der Form `Mmmbbbbb`codiert, wobei `M` die Hauptversion der Laufzeit ist, `mm` die neben Version der Laufzeit ist und `bbbbb` die Buildnummer ist. **&#95;&#95;Der&#95;CLR-ver** ist definiert, wenn die [/CLR](../build/reference/clr-common-language-runtime-compilation.md) -Compileroption festgelegt ist. Andernfalls nicht definiert.
+- `__CLR_VER` als Ganzzahlliteral definiert, das die Version der Common Language Runtime (CLR) darstellt, die zum Kompilieren der APP verwendet wird. Der Wert wird in der Form `Mmmbbbbb`codiert, wobei `M` die Hauptversion der Laufzeit ist, `mm` die neben Version der Laufzeit ist und `bbbbb` die Buildnummer ist. `__CLR_VER` wird definiert, wenn die [/CLR](../build/reference/clr-common-language-runtime-compilation.md) -Compileroption festgelegt ist. Andernfalls nicht definiert.
 
     ```cpp
     // clr_ver.cpp
@@ -231,9 +304,9 @@ MSVC unterstützt diese zusätzlichen vordefinierten Makros.
     }
     ```
 
-- **&#95;Der&#95;Ablauf&#95;Steuerungs Wächter** ist als 1 definiert, wenn die Compileroption [/Guard: CF (Ablauf Steuerungs Schutz aktivieren)](../build/reference/guard-enable-control-flow-guard.md) festgelegt ist. Andernfalls nicht definiert.
+- `_CONTROL_FLOW_GUARD` als 1 definiert, wenn die Compileroption [/Guard: CF (Ablauf Steuerungs Schutz aktivieren)](../build/reference/guard-enable-control-flow-guard.md) festgelegt ist. Andernfalls nicht definiert.
 
-- **&#95; Counter &#95; &#95;** Wird auf ein Ganzzahlliteral erweitert, das bei 0 beginnt. Der Wert wird jedes Mal um 1 erhöht, wenn er in einer Quelldatei oder in enthaltenen Headern der Quelldatei verwendet wird. Der-Wert speichert den Zustand, wenn Sie vorkompilierte Header verwenden. **&#95; &#95;&#95;** Dieses Makro wird immer definiert.
+- `__COUNTER__` auf ein Ganzzahlliteral erweitert, das bei 0 beginnt. Der Wert wird jedes Mal um 1 erhöht, wenn er in einer Quelldatei oder in enthaltenen Headern der Quelldatei verwendet wird. `__COUNTER__` speichert den Zustand beim Verwenden vorkompilierter Header. Dieses Makro wird immer definiert.
 
   In diesem Beispiel wird `__COUNTER__` verwendet, um drei verschiedenen Objekten desselben Typs eindeutige Bezeichner zuzuweisen. Der `exampleClass`-Konstruktor nimmt eine ganze Zahl als Parameter an. In `main`deklariert die Anwendung drei Objekte des Typs `exampleClass`, wobei `__COUNTER__` als eindeutiger bezeichnerparameter verwendet wird:
 
@@ -277,7 +350,7 @@ MSVC unterstützt diese zusätzlichen vordefinierten Makros.
     }
     ```
 
-- **&#95;&#95;CPlusPlus&#95;CLI** ist als ganzzahliger Literalwert 200406 definiert C++ , wenn kompiliert als und eine [/CLR](../build/reference/clr-common-language-runtime-compilation.md) -Compileroption festgelegt wird. Andernfalls nicht definiert. Wenn die  **&#95; &#95;CPlusPlus&#95;-CLI** definiert ist, ist Sie in der gesamten Übersetzungseinheit wirksam.
+- `__cplusplus_cli` bei der Kompilierung als der ganzzahlige Literalwert 200406 definiert, C++ und eine [/CLR](../build/reference/clr-common-language-runtime-compilation.md) -Compileroption wird festgelegt. Andernfalls nicht definiert. Wenn definiert, ist `__cplusplus_cli` in der Übersetzungseinheit wirksam.
 
     ```cpp
     // cplusplus_cli.cpp
@@ -292,27 +365,27 @@ MSVC unterstützt diese zusätzlichen vordefinierten Makros.
     }
     ```
 
-- **&#95;&#95;CPlusPlus&#95;WinRT** wurde bei der Kompilierung als C++ der ganzzahlige Literalwert 201009 definiert, und die Compileroption [/ZW (Windows-Runtime Kompilierung)](../build/reference/zw-windows-runtime-compilation.md) ist festgelegt. Andernfalls nicht definiert.
+- `__cplusplus_winrt` bei der Kompilierung als der ganzzahlige Literalwert 201009 definiert, C++ und die/ZW-Compileroption [(Windows-Runtime Kompilierung)](../build/reference/zw-windows-runtime-compilation.md) ist festgelegt. Andernfalls nicht definiert.
 
-- **&#95;Cpprtti** Definiert als 1, wenn die [Compileroption/gr (Lauf Zeittyp Informationen aktivieren)](../build/reference/gr-enable-run-time-type-information.md) festgelegt ist. Andernfalls nicht definiert.
+- `_CPPRTTI` als 1 definiert, wenn die [Compileroption/gr (Lauf Zeittyp Informationen aktivieren)](../build/reference/gr-enable-run-time-type-information.md) festgelegt ist. Andernfalls nicht definiert.
 
-- **&#95;Cppentladen** Definiert als 1, wenn eine oder mehrere der [/GX (Ausnahmebehandlung aktivieren)](../build/reference/gx-enable-exception-handling.md), [/CLR (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md)oder [/eh (Ausnahme Behandlungsmodell)](../build/reference/eh-exception-handling-model.md) -Compileroptionen festgelegt sind. Andernfalls nicht definiert.
+- `_CPPUNWIND` als 1 definiert, wenn eine oder mehrere der [/GX (Ausnahmebehandlung aktivieren)](../build/reference/gx-enable-exception-handling.md), [/CLR (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md)oder [/eh (Ausnahme Behandlungsmodell)](../build/reference/eh-exception-handling-model.md) -Compileroptionen festgelegt sind. Andernfalls nicht definiert.
 
-- **&#95;Debuggen** Definiert als 1, wenn die [/ldd](../build/reference/md-mt-ld-use-run-time-library.md)-, [/MDD](../build/reference/md-mt-ld-use-run-time-library.md)-oder [/MTD](../build/reference/md-mt-ld-use-run-time-library.md) -Compileroption festgelegt ist. Andernfalls nicht definiert.
+- `_DEBUG` als 1 definiert, wenn die Compileroption [/ldd](../build/reference/md-mt-ld-use-run-time-library.md), [/MDD](../build/reference/md-mt-ld-use-run-time-library.md)oder [/MTD](../build/reference/md-mt-ld-use-run-time-library.md) festgelegt ist. Andernfalls nicht definiert.
 
-- Die dll ist als 1 definiert, wenn die Compileroption [/MD](../build/reference/md-mt-ld-use-run-time-library.md) oder [/MDD](../build/reference/md-mt-ld-use-run-time-library.md) (Multithread-DLL) festgelegt ist.  **&#95;** Andernfalls nicht definiert.
+- `_DLL` als 1 definiert, wenn die Compileroption [/MD](../build/reference/md-mt-ld-use-run-time-library.md) oder [/MDD](../build/reference/md-mt-ld-use-run-time-library.md) (Multithread-DLL) festgelegt ist. Andernfalls nicht definiert.
 
-- **&#95;Funcdname &#95;&#95;** Definiert als Zeichenfolgenliteralwert, der den ergänzten [Namen](../build/reference/decorated-names.md) der einschließenden Funktion enthält. Das-Makro wird nur innerhalb einer Funktion definiert. **&#95;Das &#95;funcdname&#95;** -Makro wird nicht erweitert, wenn Sie die [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) -oder [/P](../build/reference/p-preprocess-to-a-file.md) -Compileroption verwenden.
+- `__FUNCDNAME__` als Zeichenfolgenliterale definiert, das den ergänzten [Namen](../build/reference/decorated-names.md) der einschließenden Funktion enthält. Das-Makro wird nur innerhalb einer Funktion definiert. Das `__FUNCDNAME__`-Makro wird nicht erweitert, wenn Sie die [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) -oder [/P](../build/reference/p-preprocess-to-a-file.md) -Compileroption verwenden.
 
    In diesem Beispiel werden die Makros `__FUNCDNAME__`, `__FUNCSIG__`und `__FUNCTION__` zum Anzeigen von Funktions Informationen verwendet.
 
    [!code-cpp[NVC_Predefined_Macros_Examples#1](../preprocessor/codesnippet/CPP/predefined-macros_1.cpp)]
 
-- **&#95;&#95; Funksig &#95;** Definiert als Zeichenfolgenliteralwert, der die Signatur der einschließenden Funktion enthält. Das-Makro wird nur innerhalb einer Funktion definiert. **&#95;Das &#95;funcsig&#95;** -Makro wird nicht erweitert, wenn Sie die [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) -oder [/P](../build/reference/p-preprocess-to-a-file.md) -Compileroption verwenden. Bei der Kompilierung für ein 64-Bit-Ziel wird die Aufruf Konvention standardmäßig `__cdecl`. Ein Beispiel für die Verwendung finden Sie im `__FUNCDNAME__`-Makro.
+- `__FUNCSIG__` als Zeichenfolgenliterale definiert, das die Signatur der einschließenden Funktion enthält. Das-Makro wird nur innerhalb einer Funktion definiert. Das `__FUNCSIG__`-Makro wird nicht erweitert, wenn Sie die [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) -oder [/P](../build/reference/p-preprocess-to-a-file.md) -Compileroption verwenden. Bei der Kompilierung für ein 64-Bit-Ziel wird die Aufruf Konvention standardmäßig `__cdecl`. Ein Beispiel für die Verwendung finden Sie im `__FUNCDNAME__`-Makro.
 
-- **&#95;&#95; - &#95;Funktion** Definiert als Zeichenfolgenliterale, das den nicht ergänzten Namen der einschließenden Funktion enthält. Das-Makro wird nur innerhalb einer Funktion definiert. **&#95;Das &#95;Funktions&#95;** Makro wird nicht erweitert, wenn Sie die [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) -oder [/P](../build/reference/p-preprocess-to-a-file.md) -Compileroption verwenden. Ein Beispiel für die Verwendung finden Sie im `__FUNCDNAME__`-Makro.
+- `__FUNCTION__` als Zeichenfolgenliterale definiert, das den nicht ergänzten Namen der einschließenden Funktion enthält. Das-Makro wird nur innerhalb einer Funktion definiert. Das `__FUNCTION__`-Makro wird nicht erweitert, wenn Sie die [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) -oder [/P](../build/reference/p-preprocess-to-a-file.md) -Compileroption verwenden. Ein Beispiel für die Verwendung finden Sie im `__FUNCDNAME__`-Makro.
 
-- ganzzahlige **&#95;maximale&#95; &#95;** Definiert als ganzzahliger Literalwert 64, die maximale Größe (in Bit) für einen nicht Vektor-ganzzahligen Typ. Dieses Makro wird immer definiert.
+- `_INTEGRAL_MAX_BITS` als ganzzahliger Literalwert 64 definiert, die maximale Größe (in Bit) für einen nicht Vektor-ganzzahligen Typ. Dieses Makro wird immer definiert.
 
    ```cpp
    // integral_max_bits.cpp
@@ -322,19 +395,19 @@ MSVC unterstützt diese zusätzlichen vordefinierten Makros.
    }
    ```
 
-- **&#95;&#95; IntelliSense &#95;** Definiert als 1 bei einem IntelliSense-compilerdurchlauf in der Visual Studio-IDE. Andernfalls nicht definiert. Sie können dieses Makro verwenden, um den Code zu schützen, den der IntelliSense-Compiler nicht versteht, oder Sie verwenden, um zwischen dem Build und dem IntelliSense-Compiler zu wechseln. Weitere Informationen finden Sie unter [Tipps zur Problembehandlung für IntelliSense-verlangsamtheit](https://devblogs.microsoft.com/cppblog/troubleshooting-tips-for-intellisense-slowness/).
+- `__INTELLISENSE__` bei einem IntelliSense-compilerdurchlauf in der Visual Studio-IDE als 1 definiert. Andernfalls nicht definiert. Sie können dieses Makro verwenden, um den Code zu schützen, den der IntelliSense-Compiler nicht versteht, oder Sie verwenden, um zwischen dem Build und dem IntelliSense-Compiler zu wechseln. Weitere Informationen finden Sie unter [Tipps zur Problembehandlung für IntelliSense-verlangsamtheit](https://devblogs.microsoft.com/cppblog/troubleshooting-tips-for-intellisense-slowness/).
 
-- **&#95;ISO&#95;volatile** ist als 1 definiert, wenn die [/volatile: ISO](../build/reference/volatile-volatile-keyword-interpretation.md) -Compileroption festgelegt ist. Andernfalls nicht definiert.
+- `_ISO_VOLATILE` als 1 definiert, wenn die [/volatile: ISO](../build/reference/volatile-volatile-keyword-interpretation.md) -Compileroption festgelegt ist. Andernfalls nicht definiert.
 
-- **&#95;Der&#95;** als 1 definierte Kernel Modus, wenn die Compileroption [/Kernel (Kernel Modus-Binärdatei erstellen)](../build/reference/kernel-create-kernel-mode-binary.md) festgelegt ist. Andernfalls nicht definiert.
+- `_KERNEL_MODE` als 1 definiert, wenn die Compileroption [/Kernel (Create Kernel Mode Binary)](../build/reference/kernel-create-kernel-mode-binary.md) festgelegt ist. Andernfalls nicht definiert.
 
-- **&#95;M&#95;amd64** Definiert als ganzzahliger Literalwert 100 für Kompilierungen, die auf x64-Prozessoren abzielen. Andernfalls nicht definiert.
+- `_M_AMD64` für Kompilierungen, die auf x64-Prozessoren abzielen, als ganzzahliger Literalwert 100 definiert. Andernfalls nicht definiert.
 
-- **&#95;M&#95;Arm** Definiert als der ganzzahlige Literalwert 7 für Kompilierungen, die auf ARM-Prozessoren abzielen. Andernfalls nicht definiert.
+- `_M_ARM` als ganzzahliger Literalwert 7 für Kompilierungen definiert, die auf ARM-Prozessoren abzielen. Andernfalls nicht definiert.
 
-- **&#95;M&#95;Arm&#95;ARMV7VE** definiert als 1, wenn die [/arch: ARMV7VE](../build/reference/arch-arm.md) -Compileroption für Kompilierungen festgelegt wird, die auf ARM-Prozessoren abzielen. Andernfalls nicht definiert.
+- `_M_ARM_ARMV7VE` als 1 definiert, wenn die [/arch: ARMv7VE](../build/reference/arch-arm.md) -Compileroption für Kompilierungen festgelegt wird, die auf ARM-Prozessoren abzielen. Andernfalls nicht definiert.
 
-- **&#95;M&#95;Arm&#95;FP** definiert als ganzzahliger Literalwert, der angibt, welche [/arch](../build/reference/arch-arm.md) -Compileroption für ARM-Prozessor Ziele festgelegt wurde. Andernfalls nicht definiert.
+- `_M_ARM_FP` als ganzzahliger Literalwert definiert, der angibt, welche [/arch](../build/reference/arch-arm.md) -Compileroption für ARM-Prozessor Ziele festgelegt wurde. Andernfalls nicht definiert.
 
   - Ein Wert im Bereich 30-39, wenn keine `/arch` Arm-Option angegeben wurde, der angibt, dass die Standard Architektur für Arm festgelegt wurde (`VFPv3`).
 
@@ -342,47 +415,47 @@ MSVC unterstützt diese zusätzlichen vordefinierten Makros.
 
   - Weitere Informationen finden Sie unter [/arch (Arm)](../build/reference/arch-arm.md).
 
-- **&#95;M&#95;ARM64** Definiert als 1 für Kompilierungen, die auf 64-Bit-ARM-Prozessoren abzielen. Andernfalls nicht definiert.
+- `_M_ARM64` als 1 für Kompilierungen definiert, die auf 64-Bit-ARM-Prozessoren abzielen. Andernfalls nicht definiert.
 
-- **&#95;M&#95;CEE** ist als 001 definiert, wenn eine/CLR-Compileroption [(Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md) festgelegt ist. Andernfalls nicht definiert.
+- `_M_CEE` als 001 definiert, wenn eine/CLR-Compileroption [(Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md) festgelegt ist. Andernfalls nicht definiert.
 
-- **M&#95;CEE&#95;Pure &#95;** Ab Visual Studio 2015 als veraltet markiert. Wird als 001 definiert, wenn die [/clr: pure](../build/reference/clr-common-language-runtime-compilation.md) -Compileroption festgelegt ist. Andernfalls nicht definiert.
+- `_M_CEE_PURE` ab Visual Studio 2015 veraltet. Wird als 001 definiert, wenn die [/clr: pure](../build/reference/clr-common-language-runtime-compilation.md) -Compileroption festgelegt ist. Andernfalls nicht definiert.
 
-- M-CEE-Sicherheit **&#95; &#95;&#95;** Ab Visual Studio 2015 als veraltet markiert. Definiert als 001, wenn die [/clr: Safe](../build/reference/clr-common-language-runtime-compilation.md) -Compileroption festgelegt ist. Andernfalls nicht definiert.
+- `_M_CEE_SAFE` ab Visual Studio 2015 veraltet. Definiert als 001, wenn die [/clr: Safe](../build/reference/clr-common-language-runtime-compilation.md) -Compileroption festgelegt ist. Andernfalls nicht definiert.
 
-- **&#95;M&#95;FP&#95;außer** definiert als 1, wenn die Compileroption [/fp: außer](../build/reference/fp-specify-floating-point-behavior.md) oder [/fp: strict](../build/reference/fp-specify-floating-point-behavior.md) festgelegt ist. Andernfalls nicht definiert.
+- `_M_FP_EXCEPT` als 1 definiert, wenn die Compileroption [/fp: außer](../build/reference/fp-specify-floating-point-behavior.md) oder [/fp: strict](../build/reference/fp-specify-floating-point-behavior.md) festgelegt ist. Andernfalls nicht definiert.
 
-- **&#95;M&#95;FP&#95;fast** definiert als 1, wenn die [/fp: fast](../build/reference/fp-specify-floating-point-behavior.md) -Compileroption festgelegt ist. Andernfalls nicht definiert.
+- `_M_FP_FAST` als 1 definiert, wenn die [/fp: fast](../build/reference/fp-specify-floating-point-behavior.md) -Compileroption festgelegt ist. Andernfalls nicht definiert.
 
-- **&#95;M&#95;FP&#95;** ist als 1 festgelegt, wenn die [/fp: precise](../build/reference/fp-specify-floating-point-behavior.md) -Compileroption festgelegt ist. Andernfalls nicht definiert.
+- `_M_FP_PRECISE` als 1 definiert, wenn die [/fp: precise](../build/reference/fp-specify-floating-point-behavior.md) -Compileroption festgelegt ist. Andernfalls nicht definiert.
 
-- **&#95;M&#95;FP&#95;Strict** ist als 1 definiert, wenn die [/fp: strict](../build/reference/fp-specify-floating-point-behavior.md) -Compileroption festgelegt ist. Andernfalls nicht definiert.
+- `_M_FP_STRICT` als 1 definiert, wenn die [/fp: strict](../build/reference/fp-specify-floating-point-behavior.md) -Compileroption festgelegt ist. Andernfalls nicht definiert.
 
-- **&#95;M&#95;IX86** Definiert als ganzzahliger Literalwert 600 für Kompilierungen, die auf x86-Prozessoren abzielen. Dieses Makro ist nicht für x64-oder arm-Kompilierungs Ziele definiert.
+- `_M_IX86` für Kompilierungen, die auf x86-Prozessoren abzielen, als ganzzahliger Literalwert 600 definiert. Dieses Makro ist nicht für x64-oder arm-Kompilierungs Ziele definiert.
 
-- **&#95;M&#95;IX86&#95;FP** ist als ganzzahliger Literalwert definiert, der die [/arch](../build/reference/arch-arm.md) -Compileroption angibt, die festgelegt wurde, oder die Standardeinstellung. Dieses Makro wird immer definiert, wenn es sich beim Kompilierungs Ziel um einen x86-Prozessor handelt. Andernfalls nicht definiert. Wenn definiert, lautet der Wert:
+- `_M_IX86_FP` als ganzzahliger Literalwert definiert, der die festgelegte [/arch](../build/reference/arch-arm.md) -Compileroption oder den Standardwert angibt. Dieses Makro wird immer definiert, wenn es sich beim Kompilierungs Ziel um einen x86-Prozessor handelt. Andernfalls nicht definiert. Wenn definiert, lautet der Wert:
 
   - 0, wenn die `/arch:IA32`-Compileroption festgelegt wurde.
 
   - 1, wenn die `/arch:SSE`-Compileroption festgelegt wurde.
 
-  - 2, wenn die Compileroption `/arch:SSE2`, `/arch:AVX`, `/arch:AVX2`oder `/arch:AVX512` festgelegt wurde. Dieser Wert ist der Standardwert, wenn keine `/arch`-Compileroption angegeben wurde. Wenn `/arch:AVX` angegeben wird, wird auch das Makro **&#95; &#95;AVX&#95;** definiert. Wenn `/arch:AVX2` angegeben wird, werden sowohl  **&#95; &#95;&#95; AVX** als **&#95; &#95;auch AVX2&#95;** definiert. Wenn `/arch:AVX512` angegeben ist,  **&#95; &#95;werden auch&#95;AVX**,  **&#95; &#95;&#95;AVX2**,  **&#95; &#95;&#95;AVX512BW**,  **&#95; &#95;AVX512CD&#95;** , **&#95;AVX512DQ, &#95; &#95;** **AVX512F &#95;und&#95; AVX512VL definiert. &#95;** **&#95; &#95;&#95;**
+  - 2, wenn die Compileroption `/arch:SSE2`, `/arch:AVX`, `/arch:AVX2`oder `/arch:AVX512` festgelegt wurde. Dieser Wert ist der Standardwert, wenn keine `/arch`-Compileroption angegeben wurde. Bei Angabe von `/arch:AVX` wird auch das Makro `__AVX__` definiert. Wenn `/arch:AVX2` angegeben wird, werden sowohl `__AVX__` als auch `__AVX2__` definiert. Wenn `/arch:AVX512` angegeben ist, werden auch `__AVX__`, `__AVX2__`, `__AVX512BW__`, `__AVX512CD__`, `__AVX512DQ__`, `__AVX512F__` und `__AVX512VL__` definiert.
 
   - Weitere Informationen finden Sie unter [/arch (x86)](../build/reference/arch-x86.md).
 
-- **&#95;M&#95;x64** Definiert als ganzzahliger Literalwert 100 für Kompilierungen, die auf x64-Prozessoren abzielen. Andernfalls nicht definiert.
+- `_M_X64` für Kompilierungen, die auf x64-Prozessoren abzielen, als ganzzahliger Literalwert 100 definiert. Andernfalls nicht definiert.
 
-- **&#95;Verwaltet** Definiert als 1, wenn die [/CLR](../build/reference/clr-common-language-runtime-compilation.md) -Compileroption festgelegt ist. Andernfalls nicht definiert.
+- `_MANAGED` als 1 definiert, wenn die [/CLR](../build/reference/clr-common-language-runtime-compilation.md) -Compileroption festgelegt ist. Andernfalls nicht definiert.
 
-- **&#95;MSC&#95;-Build** Definiert als Ganzzahlliteral, das das Revisionsnummern Element der Versionsnummer des Compilers enthält. Die Revisionsnummer ist das vierte Element der durch Punkte getrennten Versionsnummer. Wenn die Versionsnummer von Microsoft C/Compiler z. bC++ . 15.00.20706.01 ist, wird  **&#95;das&#95;MSC-Build** -Makro zu 1 ausgewertet. Dieses Makro wird immer definiert.
+- `_MSC_BUILD` als Ganzzahlliteral definiert, das das Revisionsnummern Element der Versionsnummer des Compilers enthält. Die Revisionsnummer ist das vierte Element der durch Punkte getrennten Versionsnummer. Wenn die Versionsnummer von Microsoft C/C++ Compiler beispielsweise 15.00.20706.01 lautet, wird das `_MSC_BUILD` Makro zu 1 ausgewertet. Dieses Makro wird immer definiert.
 
-- **&#95;MSC&#95;-Erweiterungen** werden als 1 definiert, wenn die standardmäßige/Ze-Compileroption [(Spracherweiterungen aktivieren)](../build/reference/za-ze-disable-language-extensions.md) festgelegt ist. Andernfalls nicht definiert.
+- `_MSC_EXTENSIONS` als 1 definiert, wenn die Compileroption "on-by-Default [/Ze (Spracherweiterungen aktivieren)](../build/reference/za-ze-disable-language-extensions.md) " festgelegt ist. Andernfalls nicht definiert.
 
-- **Vollständiger&#95;MSC&#95; &#95;** Definiert als Ganzzahlliteral, das die Elemente Major, Minor und Build number der Versionsnummer des Compilers codiert. Die Haupt Zahl ist das erste Element der durch Punkte getrennten Versionsnummer, die neben Nummer ist das zweite Element, und die Buildnummer ist das dritte Element. Wenn die Versionsnummer von Microsoft C/Compiler beispielsweise 15.00.20706.01C++ ist, wird das  **&#95;Full&#95;&#95;-ver** -Makro von MSC zu 150020706 ausgewertet. Geben Sie `cl /?` in der Befehlszeile ein, um die Versionsnummer des Compilers anzuzeigen. Dieses Makro wird immer definiert.
+- `_MSC_FULL_VER` als Ganzzahlliteral definiert, das die Elemente Major, Minor und Build number der Versionsnummer des Compilers codiert. Die Haupt Zahl ist das erste Element der durch Punkte getrennten Versionsnummer, die neben Nummer ist das zweite Element, und die Buildnummer ist das dritte Element. Wenn die Versionsnummer von Microsoft C/C++ Compiler beispielsweise 15.00.20706.01 lautet, wird das `_MSC_FULL_VER` Makro zu 150020706 ausgewertet. Geben Sie `cl /?` in der Befehlszeile ein, um die Versionsnummer des Compilers anzuzeigen. Dieses Makro wird immer definiert.
 
-- **&#95;MSC&#95;-ver** Definiert als Ganzzahlliteral, das die Haupt-und neben Versions Elemente der Versionsnummer des Compilers codiert. Die Haupt Zahl ist das erste Element der durch Punkte getrennten Versionsnummer, und die neben Zahl ist das zweite Element. Wenn die Versionsnummer von Microsoft C/Compiler beispielsweise 17.00.51106.1C++ lautet, wird das  **&#95;MSC&#95;-ver** -Makro zu 1700 ausgewertet. Geben Sie `cl /?` in der Befehlszeile ein, um die Versionsnummer des Compilers anzuzeigen. Dieses Makro wird immer definiert.
+- `_MSC_VER` als Ganzzahlliteral definiert, das die Haupt-und neben Versions Elemente der Versionsnummer des Compilers codiert. Die Haupt Zahl ist das erste Element der durch Punkte getrennten Versionsnummer, und die neben Zahl ist das zweite Element. Wenn die Versionsnummer von Microsoft C/C++ Compiler beispielsweise 17.00.51106.1 lautet, wird das `_MSC_VER` Makro zu 1700 ausgewertet. Geben Sie `cl /?` in der Befehlszeile ein, um die Versionsnummer des Compilers anzuzeigen. Dieses Makro wird immer definiert.
 
-   |Visual Studio-Version|**&#95;MSC&#95;-Ver**|
+   |Visual Studio-Version|`_MSC_VER`|
    |-|-|
    |Visual Studio 6.0|1200|
    |Visual Studio .NET 2002 (7,0)|1300|
@@ -405,7 +478,7 @@ MSVC unterstützt diese zusätzlichen vordefinierten Makros.
    |Visual Studio 2019 Version 16.2|1922|
    |Visual Studio 2019, Version 16,3|1923|
 
-   Verwenden Sie den **>=** -Operator, um auf compilerreleases oder Updates in einer bestimmten Version von Visual Studio oder nach zu testen. Sie können Sie in einer bedingten Direktive verwenden,  **&#95;um&#95;MSC ver** mit dieser bekannten Version zu vergleichen. Wenn Sie über mehrere gegenseitig ausschließende Versionen verfügen, ordnen Sie Ihre Vergleiche in absteigender Reihenfolge der Versionsnummer an. Mit diesem Code wird beispielsweise auf Compiler überprüft, die in Visual Studio 2017 oder höher veröffentlicht wurden. Als nächstes überprüft er, ob Compiler in oder nach Visual Studio 2015 veröffentlicht wurden. Anschließend werden alle Compiler überprüft, die vor Visual Studio 2015 veröffentlicht wurden:
+   Verwenden Sie den `>=`-Operator, um auf compilerreleases oder Updates in einer bestimmten Version von Visual Studio oder nach zu testen. Sie können Sie in einer bedingten Direktive verwenden, um `_MSC_VER` mit dieser bekannten Version zu vergleichen. Wenn Sie über mehrere gegenseitig ausschließende Versionen verfügen, ordnen Sie Ihre Vergleiche in absteigender Reihenfolge der Versionsnummer an. Mit diesem Code wird beispielsweise auf Compiler überprüft, die in Visual Studio 2017 oder höher veröffentlicht wurden. Als nächstes überprüft er, ob Compiler in oder nach Visual Studio 2015 veröffentlicht wurden. Anschließend werden alle Compiler überprüft, die vor Visual Studio 2015 veröffentlicht wurden:
 
    ```cpp
    #if _MSC_VER >= 1910
@@ -419,11 +492,11 @@ MSVC unterstützt diese zusätzlichen vordefinierten Makros.
 
    Weitere Informationen finden Sie unter [Visual C++ Compiler Version](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/) im Microsoft C++ Team Blog.
 
-- **&#95;MSVC&#95;lang** ist als Ganzzahlliteral definiert C++ , das den Sprachstandard angibt, den der Compiler als Ziel hat. Sie wird nur in Code festgelegt, C++der als kompiliert wird. Das-Makro ist der ganzzahlige Literalwert 201402l standardmäßig oder, wenn die [/Std: c++ 14](../build/reference/std-specify-language-standard-version.md) -Compileroption angegeben wird. Das-Makro wird auf 201703l festgelegt, wenn die Compileroption [/Std: c++ 17](../build/reference/std-specify-language-standard-version.md) angegeben wird. Der Wert wird auf einen höheren, nicht angegebenen Wert festgelegt, wenn die Option [/Std: c + + Latest](../build/reference/std-specify-language-standard-version.md) angegeben wird. Andernfalls ist das Makro nicht definiert. Die  **&#95;Compileroptionen&#95;MSVC lang** und [/Std (Standard Version angeben)](../build/reference/std-specify-language-standard-version.md) sind ab Visual Studio 2015 Update 3 verfügbar.
+- `_MSVC_LANG` als Ganzzahlliteral definiert, C++ das den Sprachstandard angibt, den der Compiler als Ziel hat. Sie wird nur in Code festgelegt, C++der als kompiliert wird. Das-Makro ist der ganzzahlige Literalwert 201402l standardmäßig oder, wenn die [/Std: c++ 14](../build/reference/std-specify-language-standard-version.md) -Compileroption angegeben wird. Das-Makro wird auf 201703l festgelegt, wenn die Compileroption [/Std: c++ 17](../build/reference/std-specify-language-standard-version.md) angegeben wird. Der Wert wird auf einen höheren, nicht angegebenen Wert festgelegt, wenn die Option [/Std: c + + Latest](../build/reference/std-specify-language-standard-version.md) angegeben wird. Andernfalls ist das Makro nicht definiert. Die Compileroptionen `_MSVC_LANG` Makro und [/Std (Standard Version der Sprache angeben)](../build/reference/std-specify-language-standard-version.md) sind ab Visual Studio 2015 Update 3 verfügbar.
 
-- **&#95;&#95;MSVC&#95;-&#95;Lauf Zeit Prüfungen** werden als 1 definiert, wenn eine der [/RTC](../build/reference/rtc-run-time-error-checks.md) -Compileroptionen festgelegt ist. Andernfalls nicht definiert.
+- `__MSVC_RUNTIME_CHECKS` als 1 definiert, wenn eine der [/RTC](../build/reference/rtc-run-time-error-checks.md) -Compileroptionen festgelegt ist. Andernfalls nicht definiert.
 
-- **&#95;MSVC&#95;-traditionell** als "0" definiert, wenn die Compileroption "präprozessorübereinstimmungs Modus [/experimental: Präprozessor](../build/reference/experimental-preprocessor.md) " festgelegt ist Wird standardmäßig als 1 definiert, oder wenn die [/experimental: Präprozessor-Compiler-](../build/reference/experimental-preprocessor.md) Option festgelegt ist, um anzugeben, dass der herkömmliche Präprozessor bereits verwendet wird. Die Compileroption "  **&#95;herkömmliches MSVC&#95;** -Makro" und " [/experimental: präprocessor" (präprozessorkonformitätsmodus aktivieren)](../build/reference/experimental-preprocessor.md) ist ab Visual Studio 2017 Version 15,8 verfügbar.
+- `_MSVC_TRADITIONAL` als 0 definiert, wenn die Compileroption präprozessorübereinstimmungs Modus [/experimental: Präprozessor](../build/reference/experimental-preprocessor.md) festgelegt ist. Wird standardmäßig als 1 definiert, oder wenn die [/experimental: Präprozessor-Compiler-](../build/reference/experimental-preprocessor.md) Option festgelegt ist, um anzugeben, dass der herkömmliche Präprozessor bereits verwendet wird. Die Compileroption `_MSVC_TRADITIONAL` Makro und [/experimental: präprocessor (präprozessorübereinstimmungs Modus aktivieren)](../build/reference/experimental-preprocessor.md) ist ab Visual Studio 2017 Version 15,8 verfügbar.
 
    ```cpp
    #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
@@ -433,11 +506,11 @@ MSVC unterstützt diese zusätzlichen vordefinierten Makros.
    #endif
    ```
 
-- **&#95;MT** Definiert als 1, wenn [/MD oder/MDD](../build/reference/md-mt-ld-use-run-time-library.md) (Multithread-DLL) oder [/MT oder/MTD](../build/reference/md-mt-ld-use-run-time-library.md) (Multithread) angegeben wird. Andernfalls nicht definiert.
+- `_MT` als 1 definiert, wenn [/MD oder/MDD](../build/reference/md-mt-ld-use-run-time-library.md) (Multithread-DLL) oder [/MT oder/MTD](../build/reference/md-mt-ld-use-run-time-library.md) (Multithread) angegeben wird. Andernfalls nicht definiert.
 
-- **&#95;System&#95;eigenes&#95;WCHAR&#95;T definiert** als 1, wenn die [/Zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) -Compileroption festgelegt ist. Andernfalls nicht definiert.
+- `_NATIVE_WCHAR_T_DEFINED` als 1 definiert, wenn die [/Zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) -Compileroption festgelegt ist. Andernfalls nicht definiert.
 
-- **&#95;OpenMP** Definiert als Ganzzahlliteral 200203, wenn die Compileroption [/OpenMP (OpenMP 2,0-Unterstützung aktivieren)](../build/reference/openmp-enable-openmp-2-0-support.md) festgelegt ist. Dieser Wert stellt das Datum der von MSVC implementierten OpenMP-Spezifikation dar. Andernfalls nicht definiert.
+- `_OPENMP` als Ganzzahlliteral 200203 definiert, wenn die Compileroption [/OpenMP (OpenMP 2,0-Unterstützung aktivieren)](../build/reference/openmp-enable-openmp-2-0-support.md) festgelegt ist. Dieser Wert stellt das Datum der von MSVC implementierten OpenMP-Spezifikation dar. Andernfalls nicht definiert.
 
    ```cpp
    // _OPENMP_dir.cpp
@@ -448,25 +521,25 @@ MSVC unterstützt diese zusätzlichen vordefinierten Makros.
    }
    ```
 
-- **&#95;Vorab&#95;** Definiert als 1, wenn die [/analyze](../build/reference/analyze-code-analysis.md) -Compileroption festgelegt ist. Andernfalls nicht definiert.
+- `_PREFAST_` als 1 definiert, wenn die [/analyze](../build/reference/analyze-code-analysis.md) -Compileroption festgelegt ist. Andernfalls nicht definiert.
 
-- **&#95;&#95; Zeit &#95;Stempel** Definiert als Zeichenfolgenliteralwert, der das Datum und die Uhrzeit der letzten Änderung der aktuellen Quelldatei in dem abgekürzten Konstanten Längen Formular enthält, das von der CRT [Asctime](../c-runtime-library/reference/asctime-wasctime.md) -Funktion zurückgegeben wird, z. b. `Fri 19 Aug 13:32:58 2016`. Dieses Makro wird immer definiert.
+- `__TIMESTAMP__` als Zeichenfolgenliterale definiert, das das Datum und die Uhrzeit der letzten Änderung der aktuellen Quelldatei in dem abgekürzten Konstanten Längen Formular enthält, das von der CRT [Asctime](../c-runtime-library/reference/asctime-wasctime.md) -Funktion zurückgegeben wird, z. b. `Fri 19 Aug 13:32:58 2016`. Dieses Makro wird immer definiert.
 
-- **&#95;VC&#95;NODEFAULTLIB** ist als 1 definiert, wenn die Compileroption [/ZL (Standard Bibliotheks Name weglassen)](../build/reference/zl-omit-default-library-name.md) festgelegt ist. Andernfalls nicht definiert.
+- `_VC_NODEFAULTLIB` als 1 definiert, wenn die Compileroption [/ZL (Standard Bibliotheks Name weglassen)](../build/reference/zl-omit-default-library-name.md) festgelegt ist. Andernfalls nicht definiert.
 
-- **&#95;WCHAR&#95;T&#95;definiert** als 1, wenn die standardmäßige [/Zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) -Compileroption festgelegt ist. Das  **&#95;WCHAR&#95;T&#95;-definierte** Makro ist definiert, hat jedoch keinen Wert, wenn die `/Zc:wchar_t-`-Compileroption festgelegt ist, und **wchar_t** in einer System Header Datei definiert ist, die im Projekt enthalten ist. Andernfalls nicht definiert.
+- `_WCHAR_T_DEFINED` als 1 definiert, wenn die standardmäßige [/Zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) -Compileroption festgelegt ist. Das `_WCHAR_T_DEFINED`-Makro ist definiert, hat jedoch keinen Wert, wenn die `/Zc:wchar_t-`-Compileroption festgelegt ist, und **wchar_t** in einer System Header Datei definiert ist, die im Projekt enthalten ist. Andernfalls nicht definiert.
 
-- **&#95;Win32** Definiert als 1, wenn das Kompilierungs Ziel 32-Bit-Arm, 64-Bit Arm, x86 oder x64 ist. Andernfalls nicht definiert.
+- `_WIN32` als 1 definiert, wenn das Kompilierungs Ziel 32-Bit-Arm, 64-Bit Arm, x86 oder x64 ist. Andernfalls nicht definiert.
 
-- **&#95;Win64** Definiert als 1, wenn das Kompilierungs Ziel 64-Bit-Arm oder x64 ist. Andernfalls nicht definiert.
+- `_WIN64` als 1 definiert, wenn das Kompilierungs Ziel 64-Bit-Arm oder x64 ist. Andernfalls nicht definiert.
 
-- **&#95;WinRT&#95;-dll** ist als 1 definiert, C++ Wenn kompiliert als und sowohl [/ZW (Windows-Runtime Kompilierung)](../build/reference/zw-windows-runtime-compilation.md) als auch [/LD-oder/ldd](../build/reference/md-mt-ld-use-run-time-library.md) -Compileroptionen festgelegt werden. Andernfalls nicht definiert.
+- `_WINRT_DLL` als 1 definiert, wenn kompiliert C++ als und sowohl [/ZW (Windows-Runtime Kompilierung)](../build/reference/zw-windows-runtime-compilation.md) als auch [/LD-oder/ldd](../build/reference/md-mt-ld-use-run-time-library.md) -Compileroptionen festgelegt werden. Andernfalls nicht definiert.
 
 Keine Präprozessormakros, die die ATL-oder MFC-Bibliotheksversion identifizieren, werden vom Compiler vordefiniert. ATL-und MFC-Bibliotheks Header definieren diese Versions Makros intern. Sie sind in Präprozessordirektiven, die vor der Aufnahme des erforderlichen Headers erstellt wurden, nicht definiert.
 
-- **ATL&#95; &#95;** Definiert in \<atldef. h > als Ganzzahlliteral, das die ATL-Versionsnummer codiert.
+- `_ATL_VER` in \<atldef. h > als Ganzzahlliteral definiert, das die ATL-Versionsnummer codiert.
 
-- **MFC&#95; &#95;** Definiert in \<afxver_. h > als Ganzzahlliteral, das die MFC-Versionsnummer codiert.
+- `_MFC_VER` in \<afxver_. h-> als Ganzzahlliteral definiert, das die MFC-Versionsnummer codiert.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@stack symbol'
 ms.assetid: 4f656d9f-c3d4-4e19-9d97-bdee01b41861
-ms.openlocfilehash: 07ef0a1383a24f8c63c7e005b6f4e2da80e1ad28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0a351b4305049ecaf6f72c3049ddb3f1f0ecd9d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179223"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301992"
 ---
-# <a name="stack"></a>@stack
+# <a name="stack"></a>\@Stapel
 
-DGROUP für in der Nähe Stapel oder STACK für weit (Textmakro) zur Verfügung.
+"DGROUP" für nahe Stapel oder Stapel für weite Stapel (Text Makro).
 
 ## <a name="syntax"></a>Syntax
 
-> @stack
+> **\@Stapel**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Symbole – Verweis](../../assembler/masm/symbols-reference.md)<br/>
+[Symbole – Verweis](../../assembler/masm/symbols-reference.md)

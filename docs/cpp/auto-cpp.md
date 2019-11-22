@@ -1,5 +1,5 @@
 ---
-title: auto (C++)
+title: Auto (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - auto_CPP
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: 3d77a17d490f8d7680f095367c309ce0e4f366b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8af2aceb2964a5ec3adcbb0b0accab0b051ff48c
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284759"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303382"
 ---
-# <a name="auto-c"></a>auto (C++)
+# <a name="auto-c"></a>Auto (C++)
 
 Leitet den Typ einer deklarierten Variable vom entsprechenden Initialisierungsausdruck ab.
 
@@ -34,35 +34,35 @@ Die **auto** -Schlüsselwort weist den Compiler an den Initialisierungsausdruck 
 
 Wir empfehlen die Verwendung des **auto** Schlüsselwort für die meisten Situationen – es sei denn, Sie möchten wirklich eine Konvertierung vornehmen, da diese Vorteile bietet:
 
-- **Stabilität:** Wenn der Typ des Ausdrucks geändert wird – dies schließt, wenn der Rückgabetyp einer Funktion geändert wird, dann funktioniert.
+- **Stabilität:** Wenn der Typ des Ausdrucks geändert wird (dies schließt auch die Änderung eines Funktionsrückgabetyps ein), funktioniert der Vorgang weiterhin.
 
-- **Leistung:** Sie haben die Sicherheit ist, dass es keine Konvertierung.
+- **Leistung:** Sie haben die Sicherheit, dass keine Konvertierung durchgeführt wird.
 
-- **Benutzerfreundlichkeit:** Sie haben sich keine Gedanken Typ Namen Rechtschreibung schwierigkeiten und Fehler.
+- **Benutzerfreundlichkeit:** Sie müssen sich keine Gedanken über Rechtschreib Probleme mit Typnamen und Typos machen.
 
-- **Effizienz:** Die Codierung kann effizienter sein.
+- **Effizienz:** Ihre Codierung kann effizienter sein.
 
 Fälle von Konvertierungen in denen Sie möglicherweise **auto** nicht verwenden möchten:
 
 - Wenn Sie einen ganz bestimmten Typ benötigen, und nichts anderes infrage kommt.
 
-- Hilfetypen – z. B. `(valarray+valarray)`.
+- Hilfstypen für Ausdrucks Vorlagen – z. b. `(valarray+valarray)`.
 
 Das **auto** -Schlüsselwort verwenden sie anstelle eines Typs zum Deklarieren einer Variablen, und für einen Initialisierungsausdruck. Darüber hinaus können Sie das **auto** -Schlüsselwort mithilfe von Bezeichnern und Deklaratoren wie z. B. **const**, **flüchtige**, Zeiger (`*`), Referenz (`&`), und Rvalue-Verweis (`&&`) verwenden. Der Compiler wertet den Initialisierungsausdruck aus und verwendet dann diese Informationen, um den Typ der Variable herzuleiten.
 
-Der Initialisierungsausdruck kann eine Zuweisung (Gleichheitszeichensyntax), eine direkte Initialisierung (funktionsformatsyntax), werden ein [new-Operator](new-operator-cpp.md) möglich, Ausdruck oder der Initialisierungsausdruck der  *for-Range-Declaration* Parameter in einer [bereichsbasiert für Anweisung (C++)](../cpp/range-based-for-statement-cpp.md) Anweisung. Weitere Informationen finden Sie unter [Initialisierer](../cpp/initializers.md) und den Codebeispielen weiter unten in diesem Dokument.
+Der Initialisierungs Ausdruck kann eine Zuweisung (Gleichheitszeichen Syntax), eine direkte Initialisierung (Funktionsformat Syntax), ein [Operator new](new-operator-cpp.md) -Ausdruck oder der Initialisierungs Ausdruck sein, der für den Parameter " *for-Range-Declaration* " in einer [Bereichs basierten for-C++Anweisung ()](../cpp/range-based-for-statement-cpp.md) -Anweisung ist. Weitere Informationen finden Sie unter [Initialisierer](../cpp/initializers.md) und in den Codebeispielen, die später in diesem Dokument aufgeführt sind.
 
-Die **auto** -Schlüsselwort ist ein Platzhalter für einen Typ, aber es ist nicht selbst ein Typ. Aus diesem Grund die **automatisch** -Schlüsselwort kann nicht in Umwandlungen und Operatoren wie z. B. verwendet werden ["sizeof"](../cpp/sizeof-operator.md) und (für C++ / CLI) [Typeid](../extensions/typeid-cpp-component-extensions.md).
+Die **auto** -Schlüsselwort ist ein Platzhalter für einen Typ, aber es ist nicht selbst ein Typ. Daher kann das **Auto** -Schlüsselwort nicht in Umwandlungen oder Operatoren wie [sizeof](../cpp/sizeof-operator.md) und ( C++for/CLI) [typeid](../extensions/typeid-cpp-component-extensions.md)verwendet werden.
 
 ## <a name="usefulness"></a>Nützlichkeit
 
 Das **auto** Schlüsselwort ist eine einfache Möglichkeit zum Deklarieren einer Variablen, die einen komplizierten Typ aufweist. Beispielsweise können Sie **auto** zum Deklarieren einer Variablen verwenden, welcher einen Initialisierungsausdruck, Vorlagen, Zeiger auf Funktionen oder Zeiger auf Member umfasst.
 
-Sie können auch **auto** zum deklarieren und initialisieren einer Variable mit einem Lambda-Ausdruck verwenden. Sie können den Typ der Variable nicht selbst deklarieren, da der Typ eines Lambdaausdrucks nur dem Compiler bekannt ist. Weitere Informationen finden Sie unter [Beispiele für Lambdaausdrücke](../cpp/examples-of-lambda-expressions.md).
+Sie können auch **auto** zum deklarieren und initialisieren einer Variable mit einem Lambda-Ausdruck verwenden. Sie können den Typ der Variable nicht selbst deklarieren, da der Typ eines Lambdaausdrucks nur dem Compiler bekannt ist. Weitere Informationen finden Sie unter [Beispiele für Lambda-Ausdrücke](../cpp/examples-of-lambda-expressions.md).
 
 ## <a name="trailing-return-types"></a>Nachstehende Rückgabetypen
 
-Sie können **auto**zusammen mit dem **"decltype"** Typspezifizierer verwenden, um Hilfe Vorlagenbibliotheken zu schreiben. Verwendung **auto** und **"decltype"** um eine Vorlagenfunktion deklarieren, deren Rückgabetyp Typ hängt von den Typen seiner Vorlagenargumente. Oder verwenden Sie **auto** und **"decltype"** um eine Vorlagenfunktion zu deklarieren, die einen Aufruf einer anderen Funktion umschließt und gibt dann zurück, was der Rückgabetyp dieser anderen Funktion ist. Weitere Informationen finden Sie unter ["decltype"](../cpp/decltype-cpp.md).
+Sie können **auto**zusammen mit dem **"decltype"** Typspezifizierer verwenden, um Hilfe Vorlagenbibliotheken zu schreiben. Verwendung **auto** und **"decltype"** um eine Vorlagenfunktion deklarieren, deren Rückgabetyp Typ hängt von den Typen seiner Vorlagenargumente. Oder verwenden Sie **auto** und **"decltype"** um eine Vorlagenfunktion zu deklarieren, die einen Aufruf einer anderen Funktion umschließt und gibt dann zurück, was der Rückgabetyp dieser anderen Funktion ist. Weitere Informationen finden Sie unter [decltype](../cpp/decltype-cpp.md).
 
 ## <a name="references-and-cv-qualifiers"></a>Verweise und CV-Qualifizierer
 
@@ -90,7 +90,7 @@ int main( )
 
 Im vorherigen Beispiel ist der MyAuto eine ganze Zahl, ein Int-Verweis, damit erfolgt die Ausgabe `11 11`, nicht `11 12` wie es der Fall wäre, wenn der Verweis-Qualifizierer nicht wäre, indem **auto** abgelegt wurde.
 
-## <a name="type-deduction-with-braced-initializers-c14"></a>Typableitung mit in Klammern gesetzte Initialisierern (C ++ 14)
+## <a name="type-deduction-with-braced-initializers-c14"></a>Typableitung mit geschweizten Initialisierern (c++ 14)
 
 Im folgenden Codebeispiel wird veranschaulicht, wie Sie eine **auto** Variable, mit geschweiften Klammern initialisiert wird. Beachten Sie den Unterschied zwischen B und C sowie zwischen A und E.
 
@@ -125,21 +125,21 @@ Die folgende Tabelle enthält die Einschränkungen für die Verwendung des **aut
 
 |Fehlernummer|Beschreibung|
 |------------------|-----------------|
-|[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|Die **automatisch** Schlüsselwort kann nicht mit einem anderen Typspezifizierer kombiniert werden.|
-|[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|Ein Symbol, das mit deklariert wird die **automatisch** Schlüsselwort muss einen Initialisierer aufweisen.|
-|[C3532](../error-messages/compiler-errors-2/compiler-error-c3532.md)|Sie falsch verwendet die **automatisch** Schlüsselwort, um einen Typ zu deklarieren. Sie haben zum Beispiel einen Methodenrückgabetyp oder ein Array deklariert.|
-|[C3533](../error-messages/compiler-errors-2/compiler-error-c3533.md), [C3539](../error-messages/compiler-errors-2/compiler-error-c3539.md)|Ein Parameter oder ein Vorlagenargument kann nicht deklariert werden, mit der **automatisch** Schlüsselwort.|
-|[C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|Parameter-Methode oder die Vorlage kann nicht deklariert werden, mit der **automatisch** Schlüsselwort.|
+|[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|Das **Auto** -Schlüsselwort kann nicht mit einem anderen Typspezifizierer kombiniert werden.|
+|[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|Ein Symbol, das mit dem **Auto** -Schlüsselwort deklariert wird, muss über einen Initialisierer verfügen.|
+|[C3532](../error-messages/compiler-errors-2/compiler-error-c3532.md)|Sie haben das Schlüsselwort " **Auto** " fälschlicherweise zum Deklarieren eines Typs verwendet. Sie haben zum Beispiel einen Methodenrückgabetyp oder ein Array deklariert.|
+|[C3533](../error-messages/compiler-errors-2/compiler-error-c3533.md), [C3539](../error-messages/compiler-errors-2/compiler-error-c3539.md)|Ein Parameter oder ein Vorlagen Argument kann nicht mit dem Schlüsselwort " **Auto** " deklariert werden.|
+|[C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|Eine Methode oder ein Vorlagen Parameter kann nicht mit dem Schlüsselwort " **Auto** " deklariert werden.|
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|Ein Symbol kann erst verwendet werden, wenn es initialisiert wurde. In der Praxis bedeutet dies, dass eine Variable nicht verwendet werden kann, um sich selbst zu initialisieren.|
-|[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|Sie können nicht eine Umwandlung in einen Typ, der mit deklariert wird die **automatisch** Schlüsselwort.|
-|[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|Alle Symbole in einer Deklaratorliste, die mit deklariert ist die **automatisch** Schlüsselwort muss in den gleichen Typ aufgelöst werden. Weitere Informationen finden Sie unter [Deklarationen und Definitionen](declarations-and-definitions-cpp.md).|
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|Die ["sizeof"](../cpp/sizeof-operator.md) und [Typeid](../extensions/typeid-cpp-component-extensions.md) Operatoren nicht angewendet werden, um ein Symbol, das mit deklariert wird die **automatisch** Schlüsselwort.|
+|[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|Sie können nicht in einen Typ umwandeln, der mit dem Schlüsselwort " **Auto** " deklariert wird.|
+|[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|Alle Symbole in einer Deklaratorliste, die mit dem Schlüsselwort " **Auto** " deklariert wird, müssen in denselben Typ aufgelöst werden. Weitere Informationen finden Sie unter [Deklarationen und Definitionen](declarations-and-definitions-cpp.md).|
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|Die Operatoren [sizeof](../cpp/sizeof-operator.md) und [typeid](../extensions/typeid-cpp-component-extensions.md) können nicht auf ein Symbol angewendet werden, das mit dem **Auto** -Schlüsselwort deklariert wird.|
 
 ## <a name="examples"></a>Beispiele
 
 Die Codefragmente veranschaulichen einige der Methoden in der das **auto** -Schlüsselwort verwendet werden kann.
 
-Die folgenden Deklarationen sind gleichwertig. In der ersten Anweisung, die Variable `j` wird deklariert, um Typ **Int**. In der zweiten Anweisung, die Variable `k` abgeleitet wird, um Typ **Int** , da der Initialisierungsausdruck (0) eine ganze Zahl ist.
+Die folgenden Deklarationen sind gleichwertig. In der ersten Anweisung ist die Variable `j` als Typ " **int**" deklariert. In der zweiten Anweisung wird die Variable `k` in den Typ " **int** " abgeleitet, da der Initialisierungs Ausdruck (0) eine ganze Zahl ist.
 
 ```cpp
 int j = 0;  // Variable j is explicitly type int.
@@ -204,14 +204,14 @@ int v1 = 100, v2 = 200;
 auto x = v1 > v2 ? v1 : v2;
 ```
 
-Das folgende Codefragment initialisiert Variablen `x` eingeben **Int**Variable `y` um einen Verweis auf Typ **const Int**, und die Variable `fp` in einen Zeiger auf eine Funktion Typ zurückgibt **Int**.
+Das folgende Code Fragment initialisiert Variable `x` in den Typ " **int**", "Variable `y`" in einen Verweis auf den Typ "Konstante **int**" und die Variable `fp` einem Zeiger auf eine Funktion, die den Typ " **int**" zurückgibt.
 
 ```cpp
 int f(int x) { return x; }
 int main()
 {
     auto x = f(0);
-    const auto & y = f(1);
+    const auto& y = f(1);
     int (*p)(int x);
     p = f;
     auto fp = p;

@@ -58,16 +58,16 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: 683f3f9ebb09d69461e4f9026841363c452f4793
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 4c594b1ddfc1464417506557bb8743c4979be677
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096171"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74304292"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase-Klasse
 
-Stellt eine Verbindung mit einer Access-Datenbank mithilfe von Data Access Objects (DAO) dar. DAO wird über Office 2013 unterstützt. DAO 3,6 ist die endgültige Version und wird als veraltet eingestuft.
+Stellt eine Verbindung mit einer Access-Datenbank mithilfe von Data Access Objects (DAO) dar. DAO wird über Office 2013 unterstützt. DAO 3,6 ist die endgültige Version, die als veraltet eingestuft wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -75,7 +75,7 @@ Stellt eine Verbindung mit einer Access-Datenbank mithilfe von Data Access Objec
 class CDaoDatabase : public CObject
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Mitglieder
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
@@ -100,7 +100,7 @@ class CDaoDatabase : public CObject
 |[CDaoDatabase::GetName](#getname)|Gibt den Namen der Datenbank, die zurzeit verwendeten zurück.|
 |[CDaoDatabase::GetQueryDefCount](#getquerydefcount)|Gibt die Anzahl von Abfragen, die für die Datenbank definiert.|
 |[CDaoDatabase::GetQueryDefInfo](#getquerydefinfo)|Gibt Informationen zu einer angegebenen Abfrage, die in der Datenbank definiert.|
-|[CDaoDatabase::GetQueryTimeout](#getquerytimeout)|Gibt die Anzahl der Sekunden an, nach welcher Datenbank Vorgänge Abfragen tritt ein Timeout. Wirkt sich auf alle nachfolgenden öffnen, neue hinzufügen, aktualisieren und zu bearbeiten Vorgänge und andere Vorgänge auf ODBC-Datenquellen (nur) wie z. B. `Execute` aufrufen.|
+|[CDaoDatabase::GetQueryTimeout](#getquerytimeout)|Gibt die Anzahl der Sekunden zurück, nach denen ein Timeout bei Datenbankabfrage Vorgängen auftritt. Wirkt sich auf alle nachfolgenden geöffneten, neuen, Aktualisierungs-und Bearbeitungsvorgänge und andere Vorgänge für ODBC-Datenquellen (nur) wie `Execute` Aufrufe aus.|
 |[CDaoDatabase::GetRecordsAffected](#getrecordsaffected)|Gibt die Anzahl der Datensätze, die von der letzten Aktualisierung betroffenen bearbeiten oder das Hinzufügen oder durch einen Aufruf von `Execute`.|
 |[CDaoDatabase::GetRelationCount](#getrelationcount)|Gibt die Anzahl der Beziehungen zwischen Tabellen in der Datenbank definiert.|
 |[CDaoDatabase::GetRelationInfo](#getrelationinfo)|Gibt Informationen zu einer angegebenen Beziehung zwischen Tabellen in der Datenbank definiert.|
@@ -109,7 +109,7 @@ class CDaoDatabase : public CObject
 |[CDaoDatabase::GetVersion](#getversion)|Gibt die Version der Datenbank-Engine, die der Datenbank zugeordnet.|
 |[CDaoDatabase::IsOpen](#isopen)|Ungleich NULL zurück, wenn die `CDaoDatabase` -Objekt aktuell mit einer Datenbank verbunden ist.|
 |[CDaoDatabase::Open](#open)|Herstellen einer Verbindung mit einer Datenbank.|
-|[CDaoDatabase::SetQueryTimeout](#setquerytimeout)|Legt die Anzahl der Sekunden an, nach welcher Datenbank Vorgänge (für nur ODBC-Datenquellen) Abfragen tritt ein Timeout. Wirkt sich auf alle nachfolgenden öffnen, Hinzufügen neuer, update und delete-Operationen.|
+|[CDaoDatabase::SetQueryTimeout](#setquerytimeout)|Legt die Anzahl von Sekunden fest, nach denen bei Datenbankabfrage Vorgängen (nur für ODBC-Datenquellen) ein Timeout auftritt. Wirkt sich auf alle nachfolgenden geöffneten, neuen, Aktualisierungs-und Löschvorgänge aus.|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
@@ -584,9 +584,9 @@ Optionen, die angeben, welche Informationen das Recordset abrufen. Die verfügba
 
 - AFX_DAO_PRIMARY_INFO (Standard)-Namen, Typ
 
-- AFX_DAO_SECONDARY_INFO primäre Informationen Plus: Erstellungsdatum, Datum des letzten Updates, zurückgegebene Datensätze, aktualisierbar
+- Primäre AFX_DAO_SECONDARY_INFO Informationen plus: Erstellungsdatum, Datum der letzten Aktualisierung, gibt Datensätze zurück, aktualisierbar
 
-- AFX_DAO_ALL_INFO primäre und sekundäre Informationen Plus: SQL, Connect, ODBCTimeout
+- AFX_DAO_ALL_INFO primären und sekundären Informationen plus: SQL, Connect, Timeoutfehlers warten soll.
 
 *Wert*<br/>
 Eine Zeichenfolge, die mit dem Namen einer Abfrage, die in der Datenbank, für die Suche nach dem Namen definiert.
@@ -741,9 +741,9 @@ Optionen, die angeben, welche Informationen in der Tabelle abgerufen. Die verfü
 
 - AFX_DAO_PRIMARY_INFO (Standard) ein, die aktualisiert werden kann, Attribute
 
-- AFX_DAO_SECONDARY_INFO primäre Informationen Plus: Erstellungsdatum, Datum der letzten Aktualisierung, Name der Quell Tabelle, verbinden
+- Primäre AFX_DAO_SECONDARY_INFO Informationen plus: Erstellungsdatum, letzte Aktualisierung, Name der Quelltabelle, verbinden
 
-- AFX_DAO_ALL_INFO primäre und sekundäre Informationen Plus: Validierungs Regel, Validierungs Text, Anzahl der Datensätze
+- AFX_DAO_ALL_INFO primären und sekundären Informationen plus: Anzahl der Datensätze Validierungsregel Validierung von Text,
 
 *Wert*<br/>
 Der Name des Objekts Tabledef, für die Suche anhand des Namens.

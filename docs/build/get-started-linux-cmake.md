@@ -4,12 +4,12 @@ description: Einrichten, kompilieren und Debuggen eines C++ Open Source-cmake-Pr
 author: mikeblome
 ms.topic: tutorial
 ms.date: 11/08/2019
-ms.openlocfilehash: 05f120335180d27e84a99819ee97c233dd1b39a7
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 269c9e88133a492f66df7c7f81ab35424aff125d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965100"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303248"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Tutorial: Erstellen C++ von plattformübergreifenden Projekten in Visual Studio
 
@@ -155,7 +155,7 @@ In diesem Schritt debuggen wir ein Beispielprogramm, das die Bullet Physics-Bibl
 
    Wenn Sie bereits eine Remote Verbindung hinzugefügt haben, können Sie dieses Fenster öffnen, indem Sie zu **Tools > Optionen > plattformübergreifende > Verbindungs-Manager**navigieren.
 
-1. Geben Sie die [Verbindungsinformationen für Ihren Linux-Computer an,](/cpp/linux/connect-to-your-remote-linux-computer.md) und wählen Sie **verbinden**aus. Dieser Computer wird von Visual Studio als Standardverbindung für **Linux-Debug**als "cmakesettings. JSON" hinzugefügt. Außerdem werden die Header vom Remote Computer abgerufen, sodass Sie [IntelliSense speziell für diese Remote Verbindung](/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense)erhalten. Anschließend sendet Visual Studio Ihre Dateien an den Remote Computer und generiert den cmake-Cache auf dem Remote System. Diese Schritte können einige Zeit in Anspruch nehmen, abhängig von der Geschwindigkeit des Netzwerks und der Leistung des Remote Computers. Sie wissen, dass es abgeschlossen ist, wenn die Meldung "Ziel Informations Extraktion abgeschlossen" im cmake-Ausgabefenster angezeigt wird.
+1. Geben Sie die [Verbindungsinformationen für Ihren Linux-Computer an,](/cpp/linux/connect-to-your-remote-linux-computer) und wählen Sie **verbinden**aus. Dieser Computer wird von Visual Studio als Standardverbindung für **Linux-Debug**als "cmakesettings. JSON" hinzugefügt. Außerdem werden die Header vom Remote Computer abgerufen, sodass Sie [IntelliSense speziell für diese Remote Verbindung](/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense)erhalten. Anschließend sendet Visual Studio Ihre Dateien an den Remote Computer und generiert den cmake-Cache auf dem Remote System. Diese Schritte können einige Zeit in Anspruch nehmen, abhängig von der Geschwindigkeit des Netzwerks und der Leistung des Remote Computers. Sie wissen, dass es abgeschlossen ist, wenn die Meldung "Ziel Informations Extraktion abgeschlossen" im cmake-Ausgabefenster angezeigt wird.
 
 ## <a name="set-a-breakpoint-build-and-run-on-linux"></a>Festlegen eines halte Punkts, erstellen und Ausführen unter Linux
 

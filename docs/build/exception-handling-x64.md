@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: c1936e51630c78de3e7b9dc8a5c7d141ea01ad4b
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: eff4f1a22512b597b5479dbcaabcc9d5fc93c940
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444864"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303200"
 ---
 # <a name="x64-exception-handling"></a>Ausnahmebehandlung bei x64-Systemen
 
@@ -76,7 +76,7 @@ Die UNWIND_INFO-Struktur muss DWORD aufweisen, das im Arbeitsspeicher ausgericht
    |-|-|
    |`UNW_FLAG_EHANDLER`| Die Funktion verfügt über einen Ausnahmehandler, der bei der Suche nach Funktionen aufgerufen werden muss, die Ausnahmen untersuchen müssen.|
    |`UNW_FLAG_UHANDLER`| Die Funktion verfügt über einen Beendigungs Handler, der beim Entwickeln einer Ausnahme aufgerufen werden sollte.|
-   |`UNW_FLAG_CHAININFO`| Diese Entlade Informationsstruktur ist nicht der primäre Vorgang für die Prozedur. Stattdessen ist der Eintrag der verketteten Entlade Informationen der Inhalt eines vorherigen RUNTIME_FUNCTION-Eintrags. Weitere Informationen finden Sie unter [verkettete Entlade Info Strukturen](#chained-unwind-info-structures). Wenn dieses Flag festgelegt ist, müssen die Flags UNW_FLAG_EHANDLER und UNW_FLAG_UHANDLER gelöscht werden. Außerdem müssen die Felder "Frame Register" und "fester Stapel Zuordnung" die gleichen Werte wie in den primären Entlade Informationen aufweisen.|
+   |`UNW_FLAG_CHAININFO`| Diese Entlade Informationsstruktur ist nicht der primäre Vorgang für die Prozedur. Stattdessen ist der Eintrag der verketteten Entlade Informationen der Inhalt eines vorherigen RUNTIME_FUNCTION Eintrags. Weitere Informationen finden Sie unter [verkettete Entlade Info Strukturen](#chained-unwind-info-structures). Wenn dieses Flag festgelegt ist, müssen die UNW_FLAG_EHANDLER-und UNW_FLAG_UHANDLER Flags gelöscht werden. Außerdem müssen die Felder "Frame Register" und "fester Stapel Zuordnung" die gleichen Werte wie in den primären Entlade Informationen aufweisen.|
 
 - **Größe des Prologs**
 
@@ -88,7 +88,7 @@ Die UNWIND_INFO-Struktur muss DWORD aufweisen, das im Arbeitsspeicher ausgericht
 
 - **Frame Register**
 
-   Wenn ungleich 0 (null) ist, verwendet die Funktion einen Frame Zeiger (FP), und dieses Feld ist die Nummer des nicht flüchtigen Registers, das als Frame Zeiger verwendet wird. dabei wird die gleiche Codierung für das Vorgangs Info-Feld der UNWIND_CODE-Knoten verwendet.
+   Wenn ungleich 0 (null) ist, verwendet die Funktion einen Frame Zeiger (FP), und dieses Feld ist die Nummer des nicht flüchtigen Registers, das als Frame Zeiger verwendet wird. dabei wird die gleiche Codierung für das Vorgangs Info-Feld UNWIND_CODE-Knoten verwendet.
 
 - **Frame Register Offset (skaliert)**
 
@@ -96,11 +96,11 @@ Die UNWIND_INFO-Struktur muss DWORD aufweisen, das im Arbeitsspeicher ausgericht
 
 - **Entladungs Code Array**
 
-   Ein Array von-Elementen, das die Auswirkung des Prologs auf die nicht flüchtigen Register und RSP erläutert. Weitere Informationen zu den Bedeutungen einzelner Elemente finden Sie im Abschnitt zu UNWIND_CODE. Aus Gründen der Ausrichtung weist dieses Array immer eine gerade Anzahl von Einträgen auf, und der endgültige Eintrag wird möglicherweise nicht verwendet. In diesem Fall ist das Array ein länger als durch das Feld Anzahl der Entlade Codes angegeben.
+   Ein Array von-Elementen, das die Auswirkung des Prologs auf die nicht flüchtigen Register und RSP erläutert. Informationen zu den Bedeutungen einzelner Elemente finden Sie im Abschnitt UNWIND_CODE. Aus Gründen der Ausrichtung weist dieses Array immer eine gerade Anzahl von Einträgen auf, und der endgültige Eintrag wird möglicherweise nicht verwendet. In diesem Fall ist das Array ein länger als durch das Feld Anzahl der Entlade Codes angegeben.
 
 - **Adresse des Ausnahme Handlers**
 
-   Ein Bild relativer Zeiger auf den sprachspezifischen Ausnahme-oder Beendigungs Handler der Funktion, wenn Flag UNW_FLAG_CHAININFO Clear und eines der Flags UNW_FLAG_EHANDLER oder UNW_FLAG_UHANDLER festgelegt ist.
+   Ein Bild relativer Zeiger auf den sprachspezifischen Ausnahme-oder Beendigungs Handler der Funktion, wenn Flag UNW_FLAG_CHAININFO klar und eines der Flags UNW_FLAG_EHANDLER oder UNW_FLAG_UHANDLER festgelegt ist.
 
 - **Sprachspezifische Handlerdaten**
 
@@ -108,7 +108,7 @@ Die UNWIND_INFO-Struktur muss DWORD aufweisen, das im Arbeitsspeicher ausgericht
 
 - **Verkettete Entlade Informationen**
 
-   Wenn Flag UNW_FLAG_CHAININFO festgelegt ist, endet die UNWIND_INFO-Struktur mit drei UWORDs.  Diese UWORDs stellen die RUNTIME_FUNCTION-Informationen für die Funktion der verketteten Entladung dar.
+   Wenn Flag UNW_FLAG_CHAININFO festgelegt ist, endet die UNWIND_INFO Struktur mit drei UWORDs.  Diese UWORDs stellen die RUNTIME_FUNCTION Informationen für die Funktion der verketteten Entladung dar.
 
 ### <a name="struct-unwind_code"></a>struct UNWIND_CODE
 
@@ -128,17 +128,17 @@ Offset (ab dem Anfang des Prologs) am Ende der Anweisung, die diesen Vorgang aus
 
 #### <a name="unwind-operation-code"></a>Entladevorgangs Code
 
-Hinweis: für bestimmte Vorgangs Codes ist ein Offset ohne Vorzeichen zu einem Wert im lokalen Stapel Rahmen erforderlich. Dieser Offset wird vom Start, d. h. von der niedrigsten Adresse der fixierten Stapel Zuordnung. Wenn das Rahmen Register Feld in UNWIND_INFO NULL ist, wird dieser Offset von RSP abgeleitet. Wenn das Rahmen Register Feld ungleich 0 (null) ist, wird dieser Offset von dem Ort, an dem sich RSP befand, als das FP-Register erstellt wurde. Sie ist mit dem FP-Register abzüglich des FP-Register Offsets (16 \* der skalierten Frame Register Offset in UNWIND_INFO). Wenn ein FP-Register verwendet wird, muss jeder Entladungs Code, der einen Offset verwendet, erst verwendet werden, nachdem das FP-Register im Prolog erstellt wurde.
+Hinweis: für bestimmte Vorgangs Codes ist ein Offset ohne Vorzeichen zu einem Wert im lokalen Stapel Rahmen erforderlich. Dieser Offset wird vom Start, d. h. von der niedrigsten Adresse der fixierten Stapel Zuordnung. Wenn das Rahmen Register Feld im UNWIND_INFO NULL ist, wird dieser Offset von RSP abgeleitet. Wenn das Rahmen Register Feld ungleich 0 (null) ist, wird dieser Offset von dem Ort, an dem sich RSP befand, als das FP-Register erstellt wurde. Es ist mit dem FP-Register abzüglich des FP-Register Offsets (16 \* dem skalierten Frame Register Offset im UNWIND_INFO) Gleichheits. Wenn ein FP-Register verwendet wird, muss jeder Entladungs Code, der einen Offset verwendet, erst verwendet werden, nachdem das FP-Register im Prolog erstellt wurde.
 
-Für alle Opcodes mit Ausnahme von `UWOP_SAVE_XMM128` und `UWOP_SAVE_XMM128_FAR` ist der Offset immer ein Vielfaches von 8, da alle Stapel Werte, die von Interesse sind, in 8-Byte-Grenzen gespeichert werden (der Stapel selbst ist immer mit 16 Byte ausgerichtet). Bei Vorgangs Codes, die einen kurzen Offset (weniger als 512 KB) benötigen, enthält die abschließende ushort in den Knoten für diesen Code den Offset dividiert durch 8. Bei Vorgangs Codes mit einem langen Offset (512 KB < = Offset < 4 GB) enthalten die letzten beiden ushort-Knoten für diesen Code den Offset (im Little-Endian-Format).
+Für alle Opcodes mit Ausnahme von `UWOP_SAVE_XMM128` und `UWOP_SAVE_XMM128_FAR`ist der Offset immer ein Vielfaches von 8, da alle Stapel Werte, die von Interesse sind, in 8-Byte-Grenzen gespeichert werden (der Stapel selbst ist immer mit 16 Byte ausgerichtet). Bei Vorgangs Codes, die einen kurzen Offset (weniger als 512 KB) benötigen, enthält die abschließende ushort in den Knoten für diesen Code den Offset dividiert durch 8. Bei Vorgangs Codes mit einem langen Offset (512 KB < = Offset < 4 GB) enthalten die letzten beiden ushort-Knoten für diesen Code den Offset (im Little-Endian-Format).
 
-Für die OpCodes `UWOP_SAVE_XMM128` und `UWOP_SAVE_XMM128_FAR` ist der Offset immer ein Vielfaches von 16, da alle 128-Bit-XMM-Vorgänge in einem 16-Byte-ausgerichteten Arbeitsspeicher ausgeführt werden müssen. Daher wird der Skalierungsfaktor 16 für `UWOP_SAVE_XMM128` verwendet und ermöglicht Offsets von weniger als 1 Million.
+Für die OpCodes `UWOP_SAVE_XMM128` und `UWOP_SAVE_XMM128_FAR`ist der Offset immer ein Vielfaches von 16, da alle 128-Bit-XMM-Vorgänge in einem 16-Byte-ausgerichteten Arbeitsspeicher ausgeführt werden müssen. Aus diesem Grund wird ein Skalierungsfaktor von 16 für `UWOP_SAVE_XMM128`verwendet, der Offsets von weniger als 1 Mio. zulässt.
 
 Der Code für den Entladevorgang ist einer der folgenden Werte:
 
 - `UWOP_PUSH_NONVOL` (0) 1 Knoten
 
-  Überträgt ein nicht flüchtiges ganzzahliges Register und dekrementiert RSP um 8. Die Vorgangs Informationen sind die Nummer des Registers. Aufgrund der Einschränkungen für Epilogs müssen `UWOP_PUSH_NONVOL`-Entlade Codes zuerst im Prolog und entsprechend der letzten im Entladungs Code Array angezeigt werden. Diese relative Reihenfolge gilt für alle anderen Entladungs Codes mit Ausnahme von `UWOP_PUSH_MACHFRAME`.
+  Überträgt ein nicht flüchtiges ganzzahliges Register und dekrementiert RSP um 8. Die Vorgangs Informationen sind die Nummer des Registers. Aufgrund der Einschränkungen für Epilogs müssen `UWOP_PUSH_NONVOL` Entladungs Codes zuerst im Prolog und entsprechend im Entladungs Code Array angezeigt werden. Diese relative Reihenfolge gilt für alle anderen Entladungs Codes außer `UWOP_PUSH_MACHFRAME`.
 
 - `UWOP_ALLOC_LARGE` (1) 2 oder 3 Knoten
 
@@ -146,7 +146,7 @@ Der Code für den Entladevorgang ist einer der folgenden Werte:
 
 - `UWOP_ALLOC_SMALL` (2) 1 Knoten
 
-  Zuordnen eines Bereichs mit kleiner Größe auf dem Stapel. Die Größe der Zuordnung ist das Vorgangs Info Feld \* 8 + 8, das Zuordnungen zwischen 8 und 128 Bytes zulässt.
+  Zuordnen eines Bereichs mit kleiner Größe auf dem Stapel. Die Größe der Zuordnung ist das Vorgangs Info Feld \* 8 + 8 und ermöglicht die Zuordnung von 8 zu 128 Bytes.
 
   Der Entlade Code für eine Stapel Zuordnung sollte immer die kürzeste mögliche Codierung verwenden:
 
@@ -158,7 +158,7 @@ Der Code für den Entladevorgang ist einer der folgenden Werte:
 
 - `UWOP_SET_FPREG` (3) 1 Knoten
 
-  Richten Sie das Frame Zeiger Register ein, indem Sie das Register auf einen Offset des aktuellen RSP festlegen. Der Offset ist gleich dem Feld "Frame Register Offset (erweitert)" im UNWIND_INFO-\* 16 und ermöglicht Offsets zwischen 0 und 240. Durch die Verwendung eines Offsets kann ein Frame Zeiger festgelegt werden, der auf die Mitte der fixierten Stapel Zuordnung zeigt, wodurch die Code Dichte unterstützt wird, indem mehr Zugriffe auf kurze Anweisungs Formulare zugreifen können. Das Feld für den Vorgangs Info ist reserviert und sollte nicht verwendet werden.
+  Richten Sie das Frame Zeiger Register ein, indem Sie das Register auf einen Offset des aktuellen RSP festlegen. Der Offset ist gleich dem Feld "Frame Register Offset (skaliert)" in der UNWIND_INFO \* 16 und ermöglicht Offsets zwischen 0 und 240. Durch die Verwendung eines Offsets kann ein Frame Zeiger festgelegt werden, der auf die Mitte der fixierten Stapel Zuordnung zeigt, wodurch die Code Dichte unterstützt wird, indem mehr Zugriffe auf kurze Anweisungs Formulare zugreifen können. Das Feld für den Vorgangs Info ist reserviert und sollte nicht verwendet werden.
 
 - Knoten "`UWOP_SAVE_NONVOL` (4) 2"
 
@@ -183,9 +183,9 @@ Der Code für den Entladevorgang ist einer der folgenden Werte:
   |||
   |-|-|
   |RSP + 32|SS|
-  |RSP + 24|Alte RSP|
+  |RSP+24|Alte RSP|
   |RSP + 16|EFLAGS|
-  |RSP + 8|CS|
+  |RSP+8|CS|
   |RSP|RIP|
 
   Wenn die Vorgangs Informationen 1 entsprechen, wird einer dieser Frames per Pushvorgang übermittelt:
@@ -194,9 +194,9 @@ Der Code für den Entladevorgang ist einer der folgenden Werte:
   |-|-|
   |RSP + 40|SS|
   |RSP + 32|Alte RSP|
-  |RSP + 24|EFLAGS|
+  |RSP+24|EFLAGS|
   |RSP + 16|CS|
-  |RSP + 8|RIP|
+  |RSP+8|RIP|
   |RSP|Fehlercode|
 
   Dieser Entladungs Code wird immer in einem Dummy-Prolog angezeigt, der nie tatsächlich ausgeführt wird, sondern vor dem echten Einstiegspunkt einer interruptaktion angezeigt wird und nur vorhanden ist, um den Push eines Computer Rahmens zu simulieren. `UWOP_PUSH_MACHFRAME` zeichnet diese Simulation auf, was darauf hinweist, dass der Computer diesen Vorgang konzeptionell ausgeführt hat:
@@ -215,7 +215,7 @@ Der Code für den Entladevorgang ist einer der folgenden Werte:
 
   1. Pushfehlercode (wenn die OP-Informationen 1 entsprechen)
 
-  Der simulierte `UWOP_PUSH_MACHFRAME`-Vorgang Dekremente RSP um 40 (op info ist 0) oder 48 (op-Informationen sind 1).
+  Der simulierte `UWOP_PUSH_MACHFRAME` Vorgang Dekremente RSP um 40 (op-Informationen sind 0) oder 48 (op-Informationen sind 1).
 
 #### <a name="operation-info"></a>Vorgangs Informationen
 
@@ -235,7 +235,7 @@ Die Bedeutung der Vorgangs Info Bits hängt vom Vorgangs Code ab. Diese Zuordnun
 
 ### <a name="chained-unwind-info-structures"></a>Verkettete Entlade Info Strukturen
 
-Wenn das UNW_FLAG_CHAININFO-Flag festgelegt ist, ist eine Entlade Informationsstruktur eine sekundäre Struktur, und das Feld Shared Exception-Handler/verkettete info enthält die Informationen zur primären Entladung. Dieser Beispielcode ruft die primären Entlade Informationen ab, wobei angenommen wird, dass `unwindInfo` die Struktur ist, für die das UNW_FLAG_CHAININFO-Flag festgelegt ist.
+Wenn das UNW_FLAG_CHAININFO-Flag festgelegt ist, ist eine Entlade Informationsstruktur eine sekundäre Struktur, und das Feld Shared Exception-Handler/verkettete info enthält die primären Entlade Informationen. Dieser Beispielcode ruft die primären Entlade Informationen ab, wobei angenommen wird, dass `unwindInfo` die Struktur ist, für die das UNW_FLAG_CHAININFO-Flag festgelegt ist.
 
 ```cpp
 PRUNTIME_FUNCTION primaryUwindInfo = (PRUNTIME_FUNCTION)&(unwindInfo->UnwindCode[( unwindInfo->CountOfCodes + 1 ) & ~1]);
@@ -245,13 +245,13 @@ Verkettete Informationen sind in zwei Situationen nützlich. Zuerst kann Sie fü
 
 Sie können auch verkettete Informationen verwenden, um flüchtige Registrierungs Speicherungen zu gruppieren. Der Compiler kann die Speicherung einiger flüchtiger Register verzögern, bis er sich außerhalb des Funktions Eintrags Prologs befindet. Sie können diese Einträge aufzeichnen, indem Sie vor dem gruppierten Code primäre Entlade Informationen für den Teil der Funktion angeben und dann verkettete Informationen mit einer Größe von Prolog angeben, die nicht NULL ist, wobei die Entladungs Codes in den verketteten Informationen die Speicherung der nicht flüchtigen Register widerspiegeln. In diesem Fall sind die Entladungs Codes alle Instanzen von UWOP_SAVE_NONVOL. Eine Gruppierung, die nicht flüchtige Register mithilfe eines Push-Vorgangs speichert oder das RSP-Register mithilfe einer zusätzlichen, festgelegten Stapel Zuordnung ändert, wird nicht unterstützt.
 
-Ein UNWIND_INFO Item, das über UNW_FLAG_CHAININFO Set verfügt, kann einen RUNTIME_FUNCTION-Eintrag enthalten, dessen UNWIND_INFO Item auch UNW_FLAG_CHAININFO festgelegt hat, manchmal auch als *mehrfache*Verkleinerungs Umbrüchen bezeichnet. Schließlich werden die verketteten Entlade Info Zeiger bei einem UNWIND_INFO Element eintreffen, bei dem UNW_FLAG_CHAININFO gelöscht wurde. Dieses Element ist das primäre UNWIND_INFO Item, das auf den eigentlichen Prozedur Einstiegspunkt zeigt.
+Ein UNWIND_INFO Element, das über UNW_FLAG_CHAININFO Menge verfügt, kann einen RUNTIME_FUNCTION Eintrag enthalten, dessen UNWIND_INFO Element auch UNW_FLAG_CHAININFO festgelegt hat, manchmal auch als *mehrfache*Verkleinerung bezeichnet. Schließlich werden die verketteten Entlade Informations Zeiger bei einem UNWIND_INFO Element eintreffen, das UNW_FLAG_CHAININFO gelöscht wurde. Bei diesem Element handelt es sich um das primäre UNWIND_INFO Element, das auf den eigentlichen Prozedur Einstiegspunkt zeigt.
 
 ## <a name="unwind-procedure"></a>Entlade Prozedur
 
 Das Entladungs Code Array wird in absteigender Reihenfolge sortiert. Wenn eine Ausnahme auftritt, wird der gesamte Kontext vom Betriebssystem in einem Kontext Daten Satz gespeichert. Anschließend wird die Ausnahme Dispatchlogik aufgerufen, die wiederholt diese Schritte ausführt, um einen Ausnahmehandler zu finden:
 
-1. Verwenden Sie den aktuellen RIP, der im Kontext Daten Satz gespeichert ist, um nach einem RUNTIME_FUNCTION-Tabelleneintrag zu suchen, der die aktuelle Funktion (oder den Funktionsteil für verkettete UNWIND_INFO-Einträge) beschreibt.
+1. Verwenden Sie den aktuellen RIP, der im Kontext Daten Satz gespeichert ist, um nach einem RUNTIME_FUNCTION Tabelleneintrag zu suchen, der die aktuelle Funktion (oder den Funktionsteil für verkettete UNWIND_INFO Einträge) beschreibt.
 
 1. Wenn kein Funktionstabellen Eintrag gefunden wird, befindet er sich in einer Blatt Funktion, und RSP adressiert direkt den Rückgabe Zeiger. Der Rückgabe Zeiger bei [RSP] wird im aktualisierten Kontext gespeichert. der simulierte RSP wird um 8 erhöht, und Schritt 1 wird wiederholt.
 
@@ -261,7 +261,7 @@ Das Entladungs Code Array wird in absteigender Reihenfolge sortiert. Wenn eine A
 
    - Fall b) Wenn das RIP innerhalb des Prologs liegt, hat das Steuerelement die Funktion nicht eingegeben, es kann für diese Funktion keinen Ausnahmehandler geben, der dieser Ausnahme zugeordnet ist, und die Auswirkungen des Prologs müssen rückgängig gemacht werden, um den Kontext der aufrufenden Funktion zu berechnen. Der RIP befindet sich innerhalb des Prologs, wenn der Abstand von der Funktion mit dem RIP-Wert kleiner oder gleich der in den Entlade Informationen codierten Prolog-Größe ist. Die Auswirkungen des Prologs werden durch das Durchsuchen des Entladungs Codes-Arrays für den ersten Eintrag mit einem Offset, der kleiner oder gleich dem Offset des RIP von der Funktions Start ist, und das Aufheben der Auswirkung aller verbleibenden Elemente im Entladungs Code Array. Schritt 1 wird dann wiederholt.
 
-   - Fall c) Wenn sich der RIP nicht innerhalb eines Prologs oder Epilogs befindet und die Funktion über einen Ausnahmehandler verfügt (UNW_FLAG_EHANDLER is set), dann wird der sprachspezifische Handler aufgerufen. Der Handler scannt seine Daten und ruft Filterfunktionen entsprechend auf. Der sprachspezifische Handler kann zurückgeben, dass die Ausnahme behandelt wurde oder dass die Suche fortgesetzt werden soll. Außerdem kann eine Entladung direkt initiiert werden.
+   - Fall c) Wenn sich der RIP nicht innerhalb eines Prologs oder Epilogs befindet und die Funktion über einen Ausnahmehandler verfügt (UNW_FLAG_EHANDLER festgelegt ist), wird der sprachspezifische Handler aufgerufen. Der Handler scannt seine Daten und ruft Filterfunktionen entsprechend auf. Der sprachspezifische Handler kann zurückgeben, dass die Ausnahme behandelt wurde oder dass die Suche fortgesetzt werden soll. Außerdem kann eine Entladung direkt initiiert werden.
 
 1. Wenn der sprachspezifische Handler den Status "verarbeitet" zurückgibt, wird die Ausführung mit dem ursprünglichen Kontext Daten Satz fortgesetzt.
 
@@ -273,7 +273,7 @@ Der kleinste Satz von Entladungs Daten beträgt 8 Bytes. Dies stellt eine Funkti
 
 ## <a name="language-specific-handler"></a>Sprachspezifischer Handler
 
-Die relative Adresse des sprachspezifischen Handlers ist in der UNWIND_INFO vorhanden, wenn Flags UNW_FLAG_EHANDLER oder UNW_FLAG_UHANDLER festgelegt sind. Wie im vorherigen Abschnitt beschrieben, wird der sprachspezifische Handler als Teil der Suche nach einem Ausnahmehandler oder als Teil einer Entladung aufgerufen. Es verfügt über den folgenden Prototyp:
+Die relative Adresse des sprachspezifischen Handlers ist in der UNWIND_INFO vorhanden, wenn Flags UNW_FLAG_EHANDLER oder UNW_FLAG_UHANDLER festgelegt werden. Wie im vorherigen Abschnitt beschrieben, wird der sprachspezifische Handler als Teil der Suche nach einem Ausnahmehandler oder als Teil einer Entladung aufgerufen. Es verfügt über den folgenden Prototyp:
 
 ```cpp
 typedef EXCEPTION_DISPOSITION (*PEXCEPTION_ROUTINE) (
@@ -305,11 +305,11 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;
 ```
 
-**ControlPc** ist der Wert von RIP innerhalb dieser Funktion. Dieser Wert ist entweder eine Ausnahme Adresse oder die Adresse, an der das Steuerelement die erstellende Funktion verlassen hat. Der RIP-Wert wird verwendet, um zu bestimmen, ob sich das Steuerelement in einem geschützten Konstrukt innerhalb dieser Funktion befindet, z. b. ein `__try`-Block für `__try` @ no__t-2 @ no__t-3 oder `__try` @ no__t-5 @ no__t-6.
+**ControlPc** ist der Wert von RIP innerhalb dieser Funktion. Dieser Wert ist entweder eine Ausnahme Adresse oder die Adresse, an der das Steuerelement die erstellende Funktion verlassen hat. Der RIP-Wert wird verwendet, um zu bestimmen, ob sich das Steuerelement innerhalb dieser Funktion innerhalb eines geschützten Konstrukts befindet, z. b. ein `__try` Block für `__try`/`__except` oder `__try`/`__finally`.
 
 **Imagebase** ist die Abbild Basis (Lade Adresse) des Moduls, das diese Funktion enthält. es muss den im Funktions Eintrag verwendeten 32-Bit-Offsets und Entladungs Informationen zum Aufzeichnen relativer Adressen hinzugefügt werden.
 
-**FunctionEntry** stellt einen Zeiger auf den RUNTIME_FUNCTION-Funktions Eintrag bereit, der die Funktion "Function" und "Entlade Info Image-Base relative Adressen" für diese Funktion enthält.
+**FunctionEntry** stellt einen Zeiger auf den RUNTIME_FUNCTION Funktions Eintrag bereit, der die Funktion enthält, und Entladungs Informationen Image-Base relative Adressen für diese Funktion.
 
 " **Framesherframe** " ist die Adresse der Basis der Stapel Zuordnung für diese Funktion.
 
@@ -330,12 +330,12 @@ Um ordnungsgemäße Assemblyroutinen zu schreiben, gibt es eine Reihe von Pseudo
 |Pseudo Vorgang|Beschreibung|
 |-|-|
 |PROC Frame \[:*ehandler*]|Bewirkt, dass MASM einen Funktionstabellen Eintrag in. pdata generiert und Informationen in. XData für das strukturierte Ausnahme Behandlungs Verhalten einer Funktion entlädt.  Wenn " *ehandler* " vorhanden ist, wird diese Prozedur in ". XData" als sprachspezifischer Handler eingegeben.<br /><br /> Wenn das Frame-Attribut verwendet wird, muss ihm ein gefolgt werden. ENDPROLOG-Direktive.  Wenn es sich bei der Funktion um eine Blatt Funktion handelt (wie in [Funktionstypen](../build/stack-usage.md#function-types)definiert), ist das Frame-Attribut unnötig, ebenso wie der Rest dieser Pseudo Vorgänge.|
-|. Pushreg- *Register*|Generiert einen UWOP_PUSH_NONVOL-Entlade Code Eintrag für die angegebene Registernummer unter Verwendung des aktuellen Offsets im Prolog.<br /><br /> Verwenden Sie Sie nur mit nicht flüchtigen ganzzahligen Registern.  Verwenden Sie für Pushvorgänge flüchtiger Register eine. Stattdessen Zuordnung 8|
-|. SetFrame- *Register*, *Offset*|Füllt das Rahmen Register Feld und den Offset in den Entlade Informationen mit dem angegebenen Register und Offset aus. Der Offset muss ein Vielfaches von 16 und kleiner oder gleich 240 sein. Diese Direktive generiert auch einen UWOP_SET_FPREG-Entlade Code Eintrag für das angegebene Register mit dem aktuellen Prologoffset.|
-|. *Größe* des zugewiesenen Stapels|Generiert ein UWOP_ALLOC_SMALL-oder UWOP_ALLOC_LARGE-Format mit der angegebenen Größe für den aktuellen Offset im Prolog.<br /><br /> Der *Größen* Operand muss ein Vielfaches von 8 sein.|
-|. SAVEREG- *Register*, *Offset*|Generiert entweder einen UWOP_SAVE_NONVOL-oder einen UWOP_SAVE_NONVOL_FAR-Entlade Code Eintrag für das angegebene Register und den Offset unter Verwendung des aktuellen prologoffsets. MASM wählt die effizienteste Codierung aus.<br /><br /> der *Offset* muss positiv und ein Vielfaches von 8 sein. der *Offset* ist relativ zur Basis des Frame-Rahmens der Prozedur, der sich in der Regel in RSP befindet, oder, wenn ein Frame Zeiger verwendet wird, der nicht skalierte Frame Zeiger.|
-|. Savexmm128 *Register*, *Offset*|Generiert entweder einen UWOP_SAVE_XMM128-oder einen UWOP_SAVE_XMM128_FAR-Entlade Code Eintrag für das angegebene XMM-Register und den Offset mithilfe des aktuellen prologoffsets. MASM wählt die effizienteste Codierung aus.<br /><br /> der *Offset* muss positiv und ein Vielfaches von 16 sein.  der *Offset* ist relativ zur Basis des Frame-Rahmens der Prozedur, der sich in der Regel in RSP befindet, oder, wenn ein Frame Zeiger verwendet wird, der nicht skalierte Frame Zeiger.|
-|. PushFrame-\[-*Code*]|Generiert einen UWOP_PUSH_MACHFRAME-Entlade Code Eintrag. Wenn der optionale *Code* angegeben wird, erhält der Entladungs Code Eintrag einen Modifizierer von 1. Andernfalls ist der-Modifizierer 0.|
+|. Pushreg- *Register*|Generiert einen UWOP_PUSH_NONVOL Ladungs Code Eintrag für die angegebene Registernummer unter Verwendung des aktuellen Offsets im Prolog.<br /><br /> Verwenden Sie Sie nur mit nicht flüchtigen ganzzahligen Registern.  Verwenden Sie für Pushvorgänge flüchtiger Register eine. Stattdessen Zuordnung 8|
+|. SetFrame- *Register*, *Offset*|Füllt das Rahmen Register Feld und den Offset in den Entlade Informationen mit dem angegebenen Register und Offset aus. Der Offset muss ein Vielfaches von 16 und kleiner oder gleich 240 sein. Diese Direktive generiert außerdem einen UWOP_SET_FPREG Entladungs Code Eintrag für das angegebene Register unter Verwendung des aktuellen prologoffsets.|
+|. *Größe* des zugewiesenen Stapels|Generiert eine UWOP_ALLOC_SMALL oder eine UWOP_ALLOC_LARGE mit der angegebenen Größe für den aktuellen Offset im Prolog.<br /><br /> Der *Größen* Operand muss ein Vielfaches von 8 sein.|
+|. SAVEREG- *Register*, *Offset*|Generiert entweder einen UWOP_SAVE_NONVOL oder einen UWOP_SAVE_NONVOL_FAR Entladungs Code Eintrag für das angegebene Register und den Offset unter Verwendung des aktuellen prologoffsets. MASM wählt die effizienteste Codierung aus.<br /><br /> der *Offset* muss positiv und ein Vielfaches von 8 sein. der *Offset* ist relativ zur Basis des Frame-Rahmens der Prozedur, der sich in der Regel in RSP befindet, oder, wenn ein Frame Zeiger verwendet wird, der nicht skalierte Frame Zeiger.|
+|. Savexmm128 *Register*, *Offset*|Generiert entweder einen UWOP_SAVE_XMM128 oder einen UWOP_SAVE_XMM128_FAR Entladungs Code Eintrag für das angegebene XMM-Register und den Offset mithilfe des aktuellen prologoffsets. MASM wählt die effizienteste Codierung aus.<br /><br /> der *Offset* muss positiv und ein Vielfaches von 16 sein.  der *Offset* ist relativ zur Basis des Frame-Rahmens der Prozedur, der sich in der Regel in RSP befindet, oder, wenn ein Frame Zeiger verwendet wird, der nicht skalierte Frame Zeiger.|
+|. \[*Code*für PushFrame]|Generiert einen UWOP_PUSH_MACHFRAME Entladungs Code Eintrag. Wenn der optionale *Code* angegeben wird, erhält der Entladungs Code Eintrag einen Modifizierer von 1. Andernfalls ist der-Modifizierer 0.|
 |.ENDPROLOG|Signalisiert das Ende der Prolog-Deklarationen.  Muss in den ersten 255 Bytes der-Funktion auftreten.|
 
 Im folgenden finden Sie einen Beispiel Funktions Prolog mit der richtigen Verwendung der meisten Opcodes:
@@ -361,8 +361,8 @@ sample PROC FRAME
 
 ; you can modify the stack pointer outside of the prologue (similar to alloca)
 ; because we have a frame pointer.
-; if we didn’t have a frame pointer, this would be illegal
-; if we didn’t make this modification,
+; if we didn't have a frame pointer, this would be illegal
+; if we didn't make this modification,
 ; there would be no need for a frame pointer
 
     sub rsp, 060h
@@ -372,14 +372,14 @@ sample PROC FRAME
     mov rax, 0
     mov rax, [rax] ; AV!
 
-; restore the registers that weren’t saved with a push
-; this isn’t part of the official epilog, as described in section 2.5
+; restore the registers that weren't saved with a push
+; this isn't part of the official epilog, as described in section 2.5
 
     movdqa xmm7, [rbp]
     mov rsi, [rbp+018h]
     mov rdi, [rbp-010h]
 
-; Here’s the official epilog
+; Here's the official epilog
 
     lea rsp, [rbp+020h] ; deallocate both fixed and dynamic portions of the frame
     pop rbp
@@ -395,13 +395,13 @@ Um die Verwendung der [unformatierten Pseudo Vorgänge](#raw-pseudo-operations)z
 
 |Makro|Beschreibung|
 |-|-|
-|alloc_stack (n)|Ordnet einen Stapel Rahmen von n Bytes (mit `sub rsp, n`) zu und gibt die entsprechenden Entlade Informationen (. zugcstack n) aus.|
+|alloc_stack(n)|Ordnet einen Stapel Rahmen von n Bytes (mit `sub rsp, n`) zu und gibt die entsprechenden Entlade Informationen (. zugcstack n) aus.|
 |save_reg *reg*, *Loc*|Speichert eine nicht flüchtige Register- *reg* auf dem Stapel bei RSP Offset *Loc*und gibt die entsprechenden Entlade Informationen aus. (. SAVEREG reg, Loc)|
 |push_reg *reg*|Überträgt eine nicht flüchtige Register- *reg* auf dem Stapel und gibt die entsprechenden Entlade Informationen aus. (. pushreg reg)|
 |rex_push_reg *reg*|Speichert ein nicht flüchtiges Register im Stapel mithilfe eines 2-Byte-Pushvorgangs und gibt die entsprechenden Entlade Informationen (. pushreg reg) aus.  Verwenden Sie dieses Makro, wenn der Push die erste Anweisung in der Funktion ist, um sicherzustellen, dass die Funktion Hot-patchfähig ist.|
 |save_xmm128 *reg*, *Loc*|Speichert ein nicht flüchtiges XMM-Registrierungs- *reg* auf dem Stapel bei RSP Offset *Loc*und gibt die entsprechenden Entlade Informationen aus (. savexmm128 reg, Loc).|
-|set_frame *reg*, *Offset*|Legt die Rahmen Register- *reg* als RSP + *Offset* (mit einem `mov` oder einem `lea`) fest und gibt die entsprechenden Entlade Informationen aus (. set_frame reg, Offset).|
-|push_eflags|Überträgt die EFLAGS mit einer `pushfq`-Anweisung und gibt die entsprechenden Entlade Informationen aus (. alloc_stack 8)|
+|set_frame *reg*, *offset*|Legt die Rahmen Register- *reg* auf den RSP +- *Offset* (unter Verwendung eines `mov`oder eines `lea`) fest und gibt die entsprechenden Entlade Informationen aus (. set_frame reg, Offset).|
+|push_eflags|Überträgt die EFLAGS mit einer `pushfq` Anweisung und gibt die entsprechenden Entlade Informationen aus (. alloc_stack 8)|
 
 Hier ist ein Beispiel für einen Funktions Prolog mit ordnungsgemäßer Verwendung der Makros:
 
@@ -423,7 +423,7 @@ sample2 PROC FRAME
     mov rsi, sampleFrame.SavedRsi[rsp]
     mov rdi, sampleFrame.SavedRdi[rsp]
 
-; Here’s the official epilog
+; Here's the official epilog
 
     add rsp, (sizeof sampleFrame)
     ret

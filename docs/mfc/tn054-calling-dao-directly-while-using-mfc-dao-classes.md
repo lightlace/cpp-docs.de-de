@@ -1,5 +1,5 @@
 ---
-title: 'TN054: Direktes Aufrufen von DAO bei Verwendung von MFC-DAO-Klassen'
+title: 'TN054: DAO bei der Verwendung von MFC-DAO-Klassen direkt aufrufen'
 ms.date: 09/17/2019
 helpviewer_keywords:
 - MFC, DAO and
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - TN054
 - DAO (Data Access Objects), and MFC
 ms.assetid: f7de7d85-8d6c-4426-aa05-2e617c0da957
-ms.openlocfilehash: cef9852f762a64579e11fe4b0d8606bfc9d36709
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 0eb9daf156f51ecb4eb1e6fdc721b34878a43351
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095978"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303425"
 ---
-# <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054: Direktes Aufrufen von DAO bei Verwendung von MFC-DAO-Klassen
+# <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054: DAO bei der Verwendung von MFC-DAO-Klassen direkt aufrufen
 
 > [!NOTE]
-> DAO wird für Access-Datenbanken verwendet und wird von Office 2013 unterstützt. 3,6 ist die endgültige Version und wird als veraltet eingestuft. Die visuelle C++ Umgebung und die Assistenten unterstützen DAO nicht (obwohl die DAO-Klassen eingeschlossen sind und Sie Sie weiterhin verwenden können). Microsoft empfiehlt, [OLE DB Vorlagen](../data/oledb/ole-db-templates.md) oder [ODBC und MFC](../data/odbc/odbc-and-mfc.md) für neue Projekte zu verwenden. Sie sollten DAO nur für die Wartung vorhandener Anwendungen verwenden.
+> DAO wird für Access-Datenbanken verwendet und wird von Office 2013 unterstützt. DAO 3,6 ist die endgültige Version, die als veraltet eingestuft wird. Die visuelle C++ Umgebung und die Assistenten unterstützen DAO nicht (obwohl die DAO-Klassen eingeschlossen sind und Sie Sie weiterhin verwenden können). Microsoft empfiehlt, [OLE DB Vorlagen](../data/oledb/ole-db-templates.md) oder [ODBC und MFC](../data/odbc/odbc-and-mfc.md) für neue Projekte zu verwenden. Sie sollten DAO nur für die Wartung vorhandener Anwendungen verwenden.
 
-Wenn Sie die MFC-DAO-Datenbankklassen verwenden, kann es Situationen geben, in denen DAO direkt verwendet werden muss. Normalerweise ist dies nicht der Fall, aber MFC hat einige Hilfsmechanismen bereitgestellt, um die direkte Verwendung von DAO-aufrufen beim Kombinieren der MFC-Klassen mit direkten DAO-aufrufen zu vereinfachen. Direkte DAO-Aufrufe an die Methoden eines von MFC verwalteten DAO-Objekts sollten nur einige wenige Codezeilen erfordern. Wenn Sie DAO-Objekte erstellen und verwenden müssen, die *nicht* von MFC verwaltet werden, müssen Sie etwas mehr Arbeit durchführen, indem Sie für `Release` das-Objekt aufrufen. Dieser Technische Hinweis erläutert, wann DAO direkt aufgerufen werden kann, was die MFC-Hilfsprogramme tun können, um Sie zu unterstützen und wie die DAO-OLE-Schnittstellen verwendet werden. Schließlich enthält diese Notiz einige Beispiel Funktionen, die zeigen, wie DAO direkt für DAO-Sicherheitsfeatures aufgerufen wird.
+Wenn Sie die MFC-DAO-Datenbankklassen verwenden, kann es Situationen geben, in denen DAO direkt verwendet werden muss. Normalerweise ist dies nicht der Fall, aber MFC hat einige Hilfsmechanismen bereitgestellt, um die direkte Verwendung von DAO-aufrufen beim Kombinieren der MFC-Klassen mit direkten DAO-aufrufen zu vereinfachen. Direkte DAO-Aufrufe an die Methoden eines von MFC verwalteten DAO-Objekts sollten nur einige wenige Codezeilen erfordern. Wenn Sie DAO-Objekte erstellen und verwenden müssen, die *nicht* von MFC verwaltet werden, müssen Sie etwas mehr Arbeit durchführen, indem Sie `Release` für das-Objekt aufrufen. Dieser Technische Hinweis erläutert, wann DAO direkt aufgerufen werden kann, was die MFC-Hilfsprogramme tun können, um Sie zu unterstützen und wie die DAO-OLE-Schnittstellen verwendet werden. Schließlich enthält diese Notiz einige Beispiel Funktionen, die zeigen, wie DAO direkt für DAO-Sicherheitsfeatures aufgerufen wird.
 
 ## <a name="when-to-make-direct-dao-calls"></a>Wann direkte DAO-Aufrufe durchführen werden
 
@@ -31,7 +31,7 @@ Die gängigsten Situationen für direkte DAO-Aufrufe treten auf, wenn Sammlungen
 
 ## <a name="a-brief-overview-of-dao-and-mfcs-implementation"></a>Eine kurze Übersicht über die Implementierung von DAO und MFC
 
-Das Umwickeln von DAO in MFC vereinfacht die Verwendung von DAO, indem viele der Details verarbeitet werden, sodass Sie sich keine Gedanken mehr über die kleinen Dinge machen müssen. Dies umfasst die Initialisierung von OLE, die Erstellung und Verwaltung der DAO-Objekte (insbesondere die Auflistungs Objekte), die Fehlerüberprüfung und die Bereitstellung einer stark typisierten , einfacheren `BSTR` Schnittstelle (keine Variant oder Argumente). Sie können direkte DAO-Aufrufe durchführen und diese Features weiterhin nutzen. Der gesamte Code muss für alle Objekte `Release` aufgerufen werden, die von Direct DAO-aufrufen erstellt wurden, und es *werden keine der* Schnittstellen Zeiger geändert, von denen MFC intern abhängig sein kann. Ändern Sie z. b. den *m_pDAORecordset* -Member eines geöffneten `CDaoRecordset` Objekts nicht, es sei denn, Sie kennen *alle* internen Auswirkungen. Sie können jedoch die *m_pDAORecordset* -Schnittstelle verwenden, um DAO direkt aufzurufen, um die Fields-Auflistung zu erhalten. In diesem Fall würde das Member *m_pDAORecordset* nicht geändert werden. Wenn Sie mit dem- `Release` Objekt fertig sind, müssen Sie einfach für das Fields-Sammlungsobjekt aufzurufen.
+Das Umwickeln von DAO in MFC vereinfacht die Verwendung von DAO, indem viele der Details verarbeitet werden, sodass Sie sich keine Gedanken mehr über die kleinen Dinge machen müssen. Dies umfasst die Initialisierung von OLE, die Erstellung und Verwaltung der DAO-Objekte (insbesondere die Auflistungs Objekte), die Fehlerüberprüfung und die Bereitstellung einer stark typisierten, einfacheren Schnittstelle (keine **Variant** -oder `BSTR` Argumente). Sie können direkte DAO-Aufrufe durchführen und diese Features weiterhin nutzen. Der gesamte Code muss `Release` für alle von Direct DAO-aufrufen erstellten Objekte aufrufen *und keinen der* Schnittstellen Zeiger ändern, auf die MFC intern zurückgreifen kann. Ändern Sie z. b. nicht die *m_pDAORecordset* Member eines geöffneten `CDaoRecordset` Objekts, es sei denn, Sie kennen *alle* internen Auswirkungen. Sie können jedoch die *m_pDAORecordset* -Schnittstelle verwenden, um DAO direkt aufzurufen, um die Fields-Auflistung zu erhalten. In diesem Fall würde der *m_pDAORecordset* Member nicht geändert werden. Wenn Sie mit dem-Objekt fertig sind, müssen Sie einfach `Release` für das Fields-Sammlungsobjekt aufzurufen.
 
 ## <a name="description-of-helpers-to-make-dao-calls-easier"></a>Beschreibung der Hilfsprogramme zum Vereinfachen von DAO-aufrufen
 
@@ -41,38 +41,40 @@ Die bereitgestellten Hilfsprogramme, um den Aufruf von DAO zu vereinfachen, sind
 
 Die OLE-Schnittstellen für jedes Objekt in der DAO-Objekthierarchie werden in der Header Datei dbdaoint definiert. H, der sich im Verzeichnis "\Programme\Microsoft Visual Studio .NET 2003 \ VC7\include" befindet. Diese Schnittstellen stellen Methoden bereit, mit denen Sie die gesamte DAO-Hierarchie bearbeiten können.
 
-Für viele der Methoden in den DAO-Schnittstellen müssen Sie ein `BSTR` -Objekt (eine Zeichenfolge mit Längen Präfix, die in der OLE-Automatisierung verwendet wird) bearbeiten. Das `BSTR` -Objekt ist in der Regel im **Variant** -Datentyp gekapselt. Die MFC- `COleVariant` Klasse selbst erbt vom **Variant** -Datentyp. Abhängig davon, ob Sie das Projekt für ANSI oder Unicode erstellen, geben die DAO-Schnittstellen ANSI `BSTR`oder Unicode s zurück. Zwei Makros, V_BSTR und V_BSTRT, sind nützlich, um sicherzustellen, dass die DAO `BSTR` -Schnittstelle den des erwarteten Typs erhält.
+Für viele der Methoden in den DAO-Schnittstellen müssen Sie ein `BSTR` Objekt (eine Zeichenfolge mit Längen Präfix, die in der OLE-Automatisierung verwendet wird) bearbeiten. Das `BSTR`-Objekt ist in der Regel im **Variant** -Datentyp gekapselt. Die MFC-Klasse `COleVariant` selbst vom **Variant** -Datentyp erbt. Abhängig davon, ob Sie das Projekt für ANSI oder Unicode erstellen, geben die DAO-Schnittstellen ANSI-oder Unicode-`BSTR`s zurück. Zwei Makros, V_BSTR und V_BSTRT, sind nützlich, um sicherzustellen, dass die DAO-Schnittstelle die `BSTR` des erwarteten Typs erhält.
 
-V_BSTR extrahiert den *bstrauval* -Member einer `COleVariant`. Dieses Makro wird normalerweise verwendet, wenn Sie den Inhalt eines `COleVariant` an eine Methode einer DAO-Schnittstelle übergeben müssen. Das folgende Code Fragment zeigt die Deklarationen und die tatsächliche Verwendung für zwei Methoden der DAO daouser-Schnittstelle, die das V_BSTR-Makro nutzen:
+V_BSTR extrahiert den *bstrauval* -Member einer `COleVariant`. Dieses Makro wird normalerweise verwendet, wenn Sie den Inhalt einer `COleVariant` an eine Methode einer DAO-Schnittstelle übergeben müssen. Das folgende Code Fragment zeigt die Deklarationen und die tatsächliche Verwendung für zwei Methoden der DAO daouser-Schnittstelle, die das V_BSTR-Makro nutzen:
 
 ```cpp
 COleVariant varOldName;
 COleVariant varNewName(_T("NewUser"), VT_BSTRT);
 
-// Code to assign pUser to a valid value omitted DAO 3.6 is the final version and it is considered obsolete.User *pUser = NULL;
+// Code to assign pUser to a valid value omitted DAOUser *pUser = NULL;
 
 // These method declarations were taken from DBDAOINT.H
 // STDMETHOD(get_Name) (THIS_ BSTR FAR* pbstr) PURE;
 // STDMETHOD(put_Name) (THIS_ BSTR bstr) PURE;
-DAO 3.6 is the final version and it is considered obsolete._CHECK(pUser->get_Name(&V_BSTR (&varOldName))); DAO 3.6 is the final version and it is considered obsolete._CHECK(pUser->put_Name(V_BSTR (&varNewName)));
+DAO_CHECK(pUser->get_Name(&V_BSTR (&varOldName)));
+DAO_CHECK(pUser->put_Name(V_BSTR (&varNewName)));
 ```
 
-Beachten Sie, `VT_BSTRT` dass das `COleVariant` im obigen Konstruktor angegebene Argument sicherstellt, dass ein ANSI `BSTR` in `COleVariant` vorhanden ist, wenn Sie eine ANSI-Version der Anwendung erstellen, `BSTR` und ein Unicode-Element für eine Unicode-Version von. Ihre Anwendung. Dies wird von DAO erwartet.
+Beachten Sie, dass das im obigen `COleVariant`-Konstruktor angegebene `VT_BSTRT` Argument sicherstellt, dass ein ANSI-`BSTR` in der `COleVariant` vorhanden ist, wenn Sie eine ANSI-Version der Anwendung und eine Unicode-`BSTR` für eine Unicode-Version der Anwendung erstellen. Dies wird von DAO erwartet.
 
-Das andere Makro, V_BSTRT, extrahiert entweder den ANSI-oder Unicode- *bstrauval* - `COleVariant` Member von, abhängig vom Typ des Builds (ANSI oder Unicode). Der folgende Code veranschaulicht, wie der `BSTR` Wert aus einem `COleVariant` in einen `CString`extrahiert wird:
+Das andere Makro, V_BSTRT, extrahiert entweder einen ANSI-oder Unicode- *bstrauval* -Member von `COleVariant`, abhängig vom Typ des Builds (ANSI oder Unicode). Der folgende Code veranschaulicht, wie Sie den `BSTR` Wert aus einer `COleVariant` in eine `CString`extrahieren:
 
 ```cpp
 COleVariant varName(_T("MyName"), VT_BSTRT);
 CString str = V_BSTRT(&varName);
 ```
 
-Das V_BSTRT-Makro sowie andere Techniken zum Öffnen anderer in `COleVariant`gespeicherter Typen werden im DAOVIEW-Beispiel veranschaulicht. Diese Übersetzung wird insbesondere in der `CCrack::strVARIANT` -Methode durchgeführt. Diese Methode übersetzt, wenn möglich, den Wert eines `COleVariant` in eine Instanz von. `CString`
+Das V_BSTRT-Makro zusammen mit anderen Techniken zum Öffnen anderer Typen, die in `COleVariant`gespeichert sind, wird im DAOVIEW-Beispiel veranschaulicht. Diese Übersetzung wird insbesondere in der `CCrack::strVARIANT`-Methode durchgeführt. Mit dieser Methode wird, soweit möglich, der Wert einer `COleVariant` in eine Instanz von `CString`übersetzt.
 
 ## <a name="simple-example-of-a-direct-call-to-dao"></a>Einfaches Beispiel für einen direkten Aufrufe von DAO
 
-Situationen können auftreten, wenn die zugrunde liegenden DAO-Auflistungs Objekte aktualisiert werden müssen. Normalerweise sollte dies nicht notwendig sein, aber es ist eine einfache Prozedur, wenn dies erforderlich ist. Ein Beispiel für den Fall, dass eine Auflistung möglicherweise aktualisiert werden muss, ist der Betrieb in einer mehr Benutzerumgebung, in der mehrere Benutzer neue Tabledefs erstellen. In diesem Fall kann es vorkommen, dass die TableDefs-Sammlung veraltet ist. Um die Auflistung zu aktualisieren, müssen Sie einfach die `Refresh` -Methode des jeweiligen Sammlungs Objekts aufzurufen und auf Fehler überprüfen:
+Situationen können auftreten, wenn die zugrunde liegenden DAO-Auflistungs Objekte aktualisiert werden müssen. Normalerweise sollte dies nicht notwendig sein, aber es ist eine einfache Prozedur, wenn dies erforderlich ist. Ein Beispiel für den Fall, dass eine Auflistung möglicherweise aktualisiert werden muss, ist der Betrieb in einer mehr Benutzerumgebung, in der mehrere Benutzer neue Tabledefs erstellen. In diesem Fall kann es vorkommen, dass die TableDefs-Sammlung veraltet ist. Um die Auflistung zu aktualisieren, müssen Sie einfach die `Refresh`-Methode des jeweiligen Sammlungs Objekts aufzurufen und auf Fehler überprüfen:
 
-```cpp DAO 3.6 is the final version and it is considered obsolete._CHECK(pMyDaoDatabase->m_pDAOTableDefs->Refresh());
+```cpp
+DAO_CHECK(pMyDaoDatabase->m_pDAOTableDefs->Refresh());
 ```
 
 Beachten Sie, dass alle DAO-Auflistungs Objekt Schnittstellen derzeit nicht dokumentierte Implementierungsdetails der MFC-DAO-Datenbankklassen sind.
