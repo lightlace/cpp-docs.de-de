@@ -12,12 +12,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: e0daabf3d236eb7038f22c54ea76d616baf613a0
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 9f1fa862a30a83cbda049fc63bac6c33a101587b
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096001"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74305384"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC-ActiveX-Steuerelemente: Weiterführende Themen
 
@@ -43,7 +43,7 @@ Da die ActiveX-Steuerelement Klassen in der Klassenbibliothek enthalten sind, k�
 Eine allgemeine Übersicht über die MFC-Datenbankklassen finden Sie unter [MFC-Datenbankklassen (DAO und ODBC)](../data/mfc-database-classes-odbc-and-dao.md). Der Artikel führt sowohl die MFC-ODBC-Klassen als auch die MFC-DAO-Klassen ein und leitet Sie zu weiteren Details zu.
 
 > [!NOTE]
->   DAO wird über Office 2013 unterstützt. DAO 3,6 ist die endgültige Version und wird als veraltet eingestuft. Die visuelle C++ Umgebung und die Assistenten unterstützen DAO nicht (obwohl die DAO-Klassen eingeschlossen sind und Sie Sie weiterhin verwenden können). Microsoft empfiehlt, [OLE DB Vorlagen](../data/oledb/ole-db-programming.md) oder [ODBC und MFC](../data/odbc/odbc-and-mfc.md) für neue Projekte zu verwenden. Sie sollten DAO nur für die Wartung vorhandener Anwendungen verwenden.
+> DAO wird über Office 2013 unterstützt. DAO 3,6 ist die endgültige Version, die als veraltet eingestuft wird. Die visuelle C++ Umgebung und die Assistenten unterstützen DAO nicht (obwohl die DAO-Klassen eingeschlossen sind und Sie Sie weiterhin verwenden können). Microsoft empfiehlt, [OLE DB Vorlagen](../data/oledb/ole-db-programming.md) oder [ODBC und MFC](../data/odbc/odbc-and-mfc.md) für neue Projekte zu verwenden. Sie sollten DAO nur für die Wartung vorhandener Anwendungen verwenden.
 
 ##  <a name="_core_implementing_a_parameterized_property"></a>Implementieren einer parametrisierten Eigenschaft
 
@@ -67,7 +67,7 @@ Im folgenden Verfahren wird eine parametrisierte Eigenschaft namens Array hinzug
 
 1. Klicken Sie im Kontextmenü auf **Hinzufügen** , und klicken Sie dann auf **Eigenschaft hinzufügen**.
 
-1. Geben`Array`Sie im Feld **Eigenschafts Name den Namen** ein.
+1. Geben Sie im Feld **Eigenschafts Name** `Array`ein.
 
 1. Wählen Sie im Feld **Eigenschaftentyp** die Option **Short**aus.
 
@@ -89,13 +89,13 @@ Die folgenden Zeilen werden der Steuerelement Klasse hinzugefügt. H-Datei:
 
 [!code-cpp[NVC_MFC_AxUI#35](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_2.h)]
 
-Dieser Code deklariert zwei Funktionen mit `GetArray` dem `SetArray` Namen und, die es dem Benutzer ermöglichen, beim Zugriff auf die-Eigenschaft eine bestimmte Zeile und Spalte anzufordern.
+Dieser Code deklariert zwei Funktionen, die als `GetArray` bezeichnet werden, und `SetArray`, die es dem Benutzer ermöglichen, beim Zugriff auf die Eigenschaft eine bestimmte Zeile und Spalte anzufordern.
 
 Außerdem fügt der Assistent zum Hinzufügen von Eigenschaften der Steuerelement Dispatchzuordnung die folgenden Zeilen hinzu, die sich in der Implementierung der Steuerelement Klasse befinden (. Cpp-Datei:
 
 [!code-cpp[NVC_MFC_AxUI#36](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_3.cpp)]
 
-Schließlich werden die Implementierungen der `GetArray` -Funktion und der- `SetArray` Funktion am Ende der hinzugefügt. Cpp-Datei. In den meisten Fällen ändern Sie die Get-Funktion, um den Wert der-Eigenschaft zurückzugeben. Die Set-Funktion enthält normalerweise Code, der ausgeführt werden soll, entweder vor oder nach der Änderung der-Eigenschaft.
+Zum Schluss werden die Implementierungen der Funktionen `GetArray` und `SetArray` am Ende der hinzugefügt. Cpp-Datei. In den meisten Fällen ändern Sie die Get-Funktion, um den Wert der-Eigenschaft zurückzugeben. Die Set-Funktion enthält normalerweise Code, der ausgeführt werden soll, entweder vor oder nach der Änderung der-Eigenschaft.
 
 Damit diese Eigenschaft nützlich ist, können Sie eine zweidimensionale Array Element Variable in der Steuerelement Klasse, vom Typ **Short**, deklarieren, um Werte für die parametrisierte Eigenschaft zu speichern. Anschließend können Sie die Get-Funktion so ändern, dass Sie den Wert zurückgibt, der in der entsprechenden Zeile und Spalte gespeichert wird, wie in den Parametern angegeben, und die Set-Funktion ändern, um den Wert zu aktualisieren, auf den die Zeilen-und Spalten
 
@@ -107,16 +107,16 @@ Um die Art des aufgetretenen Fehlers anzugeben, muss das Steuerelement einen Feh
 
 ### <a name="activex-control-error-codes"></a>ActiveX-Steuerelement-Fehler Codes
 
-|Fehler|Beschreibung|
+|Error|Beschreibung|
 |-----------|-----------------|
 |CTL_E_ILLEGALFUNCTIONCALL|Ungültiger Funktionsaufruf|
 |CTL_E_OVERFLOW|Überlauf|
-|CTL_E_OUTOFMEMORY|Nicht genügend Arbeitsspeicher|
+|CTL_E_OUTOFMEMORY|Nicht genügend Arbeitsspeicher.|
 |CTL_E_DIVISIONBYZERO|Division durch Null|
 |CTL_E_OUTOFSTRINGSPACE|Nicht genügend Zeichenfolgenspeicher|
 |CTL_E_OUTOFSTACKSPACE|Nicht genügend Stapelspeicher|
 |CTL_E_BADFILENAMEORNUMBER|Der Dateiname oder die Zahl ist ungültig.|
-|CTL_E_FILENOTFOUND|Datei nicht gefunden.|
+|CTL_E_FILENOTFOUND|Datei nicht gefunden|
 |CTL_E_BADFILEMODE|Fehlerhafter Dateimodus.|
 |CTL_E_FILEALREADYOPEN|Die Datei ist bereits geöffnet.|
 |CTL_E_DEVICEIOERROR|Geräte-E/A-Fehler|
@@ -150,7 +150,7 @@ Um die Art des aufgetretenen Fehlers anzugeben, muss das Steuerelement einen Feh
 |CTL_E_SEARCHTEXTNOTFOUND|Suchtext wurde nicht gefunden|
 |CTL_E_REPLACEMENTSTOOLONG|Die Ersetzungen sind zu lang|
 
-Verwenden Sie ggf. das CUSTOM_CTL_SCODE-Makro, um einen benutzerdefinierten Fehlercode für eine Bedingung zu definieren, die nicht von einem der Standard Codes abgedeckt wird. Der-Parameter für dieses Makro muss eine ganze Zahl zwischen 1000 und 32767 (einschließlich) sein. Beispiel:
+Verwenden Sie ggf. das CUSTOM_CTL_SCODE-Makro, um einen benutzerdefinierten Fehlercode für eine Bedingung zu definieren, die nicht von einem der Standard Codes abgedeckt wird. Der-Parameter für dieses Makro muss eine ganze Zahl zwischen 1000 und 32767 (einschließlich) sein. Zum Beispiel:
 
 [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]
 
@@ -160,7 +160,7 @@ Wenn Sie ein ActiveX-Steuerelement zum Ersetzen eines vorhandenen VBX-Steuer Ele
 
 In einigen Fällen möchten Sie möglicherweise bestimmte Tastenkombinationen auf besondere Weise verarbeiten. Fügen Sie beispielsweise eine neue Zeile ein, wenn die EINGABETASTE in einem mehrzeiligen Textfeld-Steuerelement gedrückt wird, oder wechseln Sie zwischen einer Gruppe von Bearbeitungs Steuerelementen, wenn eine direktionale Schlüssel-ID gedrückt
 
-Wenn die Basisklasse des ActiveX-Steuer Elements `COleControl`ist, können Sie [CWnd::P retranslatemess Age](../mfc/reference/cwnd-class.md#pretranslatemessage) überschreiben, um Nachrichten zu verarbeiten, bevor Sie vom Container verarbeitet werden. Wenn Sie diese Technik verwenden, wird immer **true** zurückgegeben, wenn Sie die Nachricht in `PreTranslateMessage`ihrer außer Kraft Setzung von verarbeiten.
+Wenn die Basisklasse des ActiveX-Steuer Elements `COleControl`ist, können Sie [CWnd::P retranslatemessen](../mfc/reference/cwnd-class.md#pretranslatemessage) überschreiben, um Nachrichten zu verarbeiten, bevor Sie vom Container verarbeitet werden. Wenn Sie diese Technik verwenden, wird immer **true** zurückgegeben, wenn Sie die Nachricht in ihrer außer Kraft Setzung von `PreTranslateMessage`behandeln.
 
 Im folgenden Codebeispiel wird eine mögliche Möglichkeit zur Behandlung von Nachrichten veranschaulicht, die mit den direktionalen Schlüsseln verknüpft sind.
 
@@ -176,7 +176,7 @@ Sie können Dialogfeld Steuerelemente erstellen, die keine Benutzeroberfläche a
 
      -oder-
 
-- Deklarieren Sie eine lokale Variable und eine Unterklasse als Dialogfeld Element. Fügen Sie Code ein, der dem`CMyCtrl` folgenden ähnelt (ist die Wrapper Klasse, IDC_MYCTRL1 ist die ID des Steuer Elements):
+- Deklarieren Sie eine lokale Variable und eine Unterklasse als Dialogfeld Element. Fügen Sie Code ein, der dem folgenden ähnelt (`CMyCtrl` ist die Wrapper Klasse, IDC_MYCTRL1 die ID des Steuer Elements ist):
 
    [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
 

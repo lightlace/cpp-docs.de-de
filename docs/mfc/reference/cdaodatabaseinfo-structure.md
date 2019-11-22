@@ -7,17 +7,16 @@ helpviewer_keywords:
 - CDaoDatabaseInfo structure [MFC]
 - DAO (Data Access Objects), Databases collection
 ms.assetid: 68e9e0da-8382-4fc6-8115-1b1519392ddb
-ms.openlocfilehash: 46d8056ee4ab478b65f3ef0bd59d88bd3af9b28c
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 60972aa3ecaef4d38c9a0d0ecc70477796aa37aa
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096160"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74304251"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo-Struktur
 
-Die `CDaoDatabaseInfo` Struktur enthält Informationen zu einem Datenbankobjekt, das für Data Access Objects (DAO) definiert ist.
-DAO 3,6 ist die endgültige Version und wird als veraltet eingestuft.
+Die `CDaoDatabaseInfo`-Struktur enthält Informationen zu einem Datenbankobjekt, das für Data Access Objects (DAO) definiert ist. DAO 3,6 ist die endgültige Version, die als veraltet eingestuft wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,41 +50,41 @@ Gibt die Version der Microsoft Jet-Datenbank-Engine an. Um den Wert dieser Eigen
 *m_lCollatingOrder*<br/>
 Gibt die Reihenfolge der Sortierreihenfolge im Text für den Zeichen folgen Vergleich oder die Sortierung an. Mögliche Werte:
 
-- `dbSortGeneral`Verwenden Sie die Sortierreihenfolge Allgemein (Englisch, Französisch, Deutsch, Portugiesisch, Italienisch und modern Spanisch).
+- `dbSortGeneral` die Sortierreihenfolge Allgemein (Englisch, Französisch, Deutsch, Portugiesisch, Italienisch und modern Spanisch) verwenden.
 
-- `dbSortArabic`Verwenden Sie die arabische Sortierreihenfolge.
+- `dbSortArabic` die arabische Sortierreihenfolge verwenden.
 
-- `dbSortCyrillic`Verwenden Sie die russische Sortierreihenfolge.
+- `dbSortCyrillic` die russische Sortierreihenfolge verwenden.
 
-- `dbSortCzech`Verwenden Sie die Tschechische Sortierreihenfolge.
+- `dbSortCzech` die Tschechische Sortierreihenfolge verwenden.
 
-- `dbSortDutch`Verwenden Sie die niederländische Sortierreihenfolge.
+- `dbSortDutch` die niederländische Sortierreihenfolge verwenden.
 
-- `dbSortGreek`Verwenden Sie die griechische Sortierreihenfolge.
+- `dbSortGreek` die griechische Sortierreihenfolge verwenden.
 
-- `dbSortHebrew`Verwenden Sie die hebräische Sortierreihenfolge.
+- `dbSortHebrew` die hebräische Sortierreihenfolge verwenden.
 
-- `dbSortHungarian`Verwenden Sie die ungarische Sortierreihenfolge.
+- `dbSortHungarian` die ungarische Sortierreihenfolge verwenden.
 
-- `dbSortIcelandic`Verwendung der isländischen Sortierreihenfolge.
+- `dbSortIcelandic` die in der isländischen Sortierreihenfolge verwenden.
 
-- `dbSortNorwdan`Verwenden Sie die norwegische oder dänische Sortierreihenfolge.
+- `dbSortNorwdan` die norwegische oder dänische Sortierreihenfolge verwenden.
 
-- `dbSortPDXIntl`Verwenden Sie die internationale Sortierreihenfolge von Paradox.
+- `dbSortPDXIntl` die internationale in der-Sortierreihenfolge verwenden.
 
-- `dbSortPDXNor`Verwenden Sie die "Paradox Norwegian" oder die dänische Sortierreihenfolge
+- `dbSortPDXNor` die "Paradox Norwegian" oder "Danish"-Sortierreihenfolge
 
-- `dbSortPDXSwe`Verwenden Sie die "Paradox Swedish or Finnish"-Sortierreihenfolge
+- `dbSortPDXSwe` die "Paradox Swedish or Finnish"-Sortierreihenfolge verwenden.
 
-- `dbSortPolish`Verwenden Sie die polnische Sortierreihenfolge.
+- `dbSortPolish` die polnische Sortierreihenfolge verwenden.
 
-- `dbSortSpanish`Verwenden Sie die spanische Sortierreihenfolge.
+- `dbSortSpanish` die spanische Sortierreihenfolge verwenden.
 
-- `dbSortSwedFin`Verwenden Sie die schwedische oder finnische Sortierreihenfolge.
+- `dbSortSwedFin` die schwedische oder finnische Sortierreihenfolge verwenden.
 
-- `dbSortTurkish`Verwenden Sie die türkische Sortierreihenfolge.
+- `dbSortTurkish` die Reihenfolge der türkischen Sortierreihenfolge verwenden.
 
-- `dbSortUndefined`Die Sortierreihenfolge ist nicht definiert oder unbekannt.
+- `dbSortUndefined` die Sortierreihenfolge ist nicht definiert oder unbekannt.
 
 Weitere Informationen finden Sie im Thema zum Anpassen der Windows-Registrierungs Einstellungen für den Datenzugriff in der DAO-Hilfe.
 
@@ -99,7 +98,7 @@ Stellt Informationen zur Quelle einer geöffneten Datenbank bereit. Weitere Info
 
 Die Datenbank ist ein DAO-Objekt, das einem MFC-Objekt der Klasse [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)zugrunde liegt. Die Verweise auf Primär, Sekundär und alle oben aufgeführten Informationen geben an, wie die Informationen von der [CDaoWorkspace:: getDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) -Member-Funktion zurückgegeben werden.
 
-Informationen, die von der [CDaoWorkspace:: getDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) -Member-Funktion abgerufen `CDaoDatabaseInfo` werden, werden in einer Struktur gespeichert. Ruft `GetDatabaseInfo` für das `CDaoWorkspace` -Objekt in auf, dessen Daten Bank Auflistung das Datenbankobjekt gespeichert wird. `CDaoDatabaseInfo`definiert auch eine `Dump` Member-Funktion in Debugbuilds. Sie können verwenden `Dump` , um den Inhalt `CDaoDatabaseInfo` eines-Objekts zu speichern.
+Informationen, die von der [CDaoWorkspace:: getDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) -Member-Funktion abgerufen werden, werden in einer `CDaoDatabaseInfo` Struktur gespeichert. Ruft `GetDatabaseInfo` für das `CDaoWorkspace` Objekt in auf, dessen Daten Bank Auflistung das Datenbankobjekt gespeichert wird. `CDaoDatabaseInfo` definiert auch eine `Dump` Member-Funktion in Debugbuilds. Sie können `Dump` verwenden, um den Inhalt eines `CDaoDatabaseInfo` Objekts zu speichern.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - wmemcpy function
 - memcpy function
 ms.assetid: 34abb90b-bffb-46dc-a2f3-a5e9940839d6
-ms.openlocfilehash: e9d947dc4e9ecea654e8cb16e957887fe4360161
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bf7f12cd00780347f23252764aace449dd6f5722
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951852"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303291"
 ---
 # <a name="memcpy-wmemcpy"></a>memcpy, wmemcpy
 
@@ -76,7 +76,7 @@ Der Wert von *dest*.
 > Stellen Sie sicher, dass der Zielpuffer dieselbe Größe wie der Quellpuffer aufweist bzw. größer ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 > [!IMPORTANT]
-> Da so viele Pufferüberläufe und somit potenzielle Sicherheits Exploits auf eine nicht ordnungsgemäße Verwendung von **memcpy**zurückzuführen sind, wird diese Funktion unter den "gesperrten" Funktionen durch den Security Development Lifecycle (SDL) aufgelistet.  Möglicherweise stellen Sie fest, dass einige VC + +-Bibliotheks Klassen **memcpy**weiterhin verwenden.  Darüber hinaus können Sie feststellen, dass der VC + +-compileroptimierer manchmal Aufrufe an **memcpy**ausgibt.  Das Visual C++-Produkt wird gemäß des SDL-Prozesses entwickelt; die Verwendung dieser gesperrten Funktion wurde daher sorgfältig geprüft.  Bei Verwendung in der Bibliothek wurden die Aufrufe sorgfältig geprüft, um sicherzustellen, dass Pufferüberläufe über diese Aufrufe nicht zulässig sind.  Im Falle des Compilers werden manchmal bestimmte Code muster als identisch mit dem Muster von **memcpy**erkannt und daher durch einen-Aufrufausdruck ersetzt.  In solchen Fällen ist die Verwendung von **memcpy** nicht unsicherer als die ursprünglichen Anweisungen. Sie wurden einfach für einen aufrufungoptimierter **memcpy** -Funktion optimiert.  Genau wie die Verwendung „sicherer“ CRT-Funktionen keine Sicherheit garantiert, bedeutet die Verwendung von „gesperrten“ Funktionen keine unmittelbare Gefahr (diese müssen nur sorgfältig überprüft werden, damit die Sicherheit gewährleistet ist).
+> Da so viele Pufferüberläufe und somit potenzielle Sicherheits Exploits auf eine nicht ordnungsgemäße Verwendung von **memcpy**zurückzuführen sind, wird diese Funktion unter den "gesperrten" Funktionen durch den Security Development Lifecycle (SDL) aufgelistet.  Möglicherweise stellen Sie fest, dass einige VC + +-Bibliotheks Klassen **memcpy**weiterhin verwenden.  Darüber hinaus können Sie feststellen, dass der VC + +-compileroptimierer manchmal Aufrufe an **memcpy**ausgibt.  Das Visual C++-Produkt wird gemäß des SDL-Prozesses entwickelt; die Verwendung dieser gesperrten Funktion wurde daher sorgfältig geprüft.  Bei Verwendung in der Bibliothek wurden die Aufrufe sorgfältig geprüft, um sicherzustellen, dass Pufferüberläufe über diese Aufrufe nicht zulässig sind.  Im Falle des Compilers werden manchmal bestimmte Code muster als identisch mit dem Muster von **memcpy**erkannt und daher durch einen-Aufrufausdruck ersetzt.  In solchen Fällen ist die Verwendung von **memcpy** nicht unsicherer als die ursprünglichen Anweisungen. Sie wurden einfach für einen aufrufungoptimierter **memcpy** -Funktion optimiert.  Ebenso wie die Verwendung von "sicheren" CRT-Funktionen keine Sicherheit garantiert (Sie erschweren lediglich die Sicherheit), gewährleistet die Verwendung von "gesperrten" Funktionen keine Gefahr (Sie benötigen nur eine größere Überprüfung, um die Sicherheit zu gewährleisten).
 >
 > Da die **memcpy** -Verwendung durch den VC + +-Compiler und Bibliotheken so sorgfältig geprüft wurde, sind diese Aufrufe in Code zulässig, der andernfalls SDL kompatibel ist.  **memcpy** -Aufrufe, die im Quellcode der Anwendung eingeführt wurden, sind nur kompatibel mit SDL, wenn diese Verwendung von Sicherheitsexperten geprüft wurde.
 
@@ -96,7 +96,7 @@ oder
 
 ## <a name="requirements"></a>Anforderungen
 
-|-Routine zurückgegebener Wert|Erforderlicher Header|
+|Routine|Erforderlicher Header|
 |-------------|---------------------|
 |**memcpy**|\<memory.h> oder \<string.h>|
 |**wmemcpy**|\<wchar.h>|

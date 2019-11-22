@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: dfbcf65462f0bb7bc6ca44f43507efa7b753e7bc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f148347cd132a604622415c65bb3e0352f5308eb
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457710"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303498"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt;-Enumerationen
 
@@ -122,7 +122,7 @@ enum class file_type {
 
 ## <a name="perm_options"></a>perm_options
 
-Schließt die `replace`Werte `add`, `remove`, und`nofollow`ein.
+Enthält Werte `replace`, `add`, `remove`und `nofollow`.
 
 ```cpp
 enum class perm_options;
@@ -130,7 +130,7 @@ enum class perm_options;
 
 ## <a name="perms"></a> perms
 
-Flags für Dateiberechtigungen. Die unterstützten Werte sind im Wesentlichen „readonly“ und „all“. Bei einer schreibgeschützten Datei sind keine *_write-Bits festgelegt. Andernfalls wird das `all` -Bit (0x0777) festgelegt.
+Flags für Dateiberechtigungen. Die unterstützten Werte sind im wesentlichen "schreibgeschützt" und "alle". Bei einer schreibgeschützten Datei sind keine *_write-Bits festgelegt. Andernfalls wird das `all` -Bit (0x0777) festgelegt.
 
 ### <a name="syntax"></a>Syntax
 

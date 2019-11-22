@@ -2,12 +2,12 @@
 title: ARM-Ausnahmebehandlung
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: a3d1a5f3becefc064c5bb38dc566892ae8da8530
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c55baf453c1879f1e0a857cc746bba7802d69f88
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493365"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303281"
 ---
 # <a name="arm-exception-handling"></a>ARM-Ausnahmebehandlung
 
@@ -15,7 +15,7 @@ Windows auf ARM verwendet denselben strukturierten Mechanismus für die Ausnahme
 
 ## <a name="arm-exception-handling"></a>ARM-Ausnahmebehandlung
 
-Windows on Arm verwendet Entladungs *Codes* zum Steuern der Stapel Entladung während der [strukturierten Ausnahmebehandlung](/windows/win32/debug/structured-exception-handling) (SEH). Entladungscodes sind eine Folge von Bytes, die im „.xdata“-Abschnitt des ausführbaren Images gespeichert sind. Sie beschreiben den Betrieb von Funktionseinleitungs- und -epilogcode auf abstrakte Weise, sodass die Wirkung eines Funktionsprologs sich als Vorbereitung auf die Entladung des Stapelrahmens des Aufrufers rückgängig machen lässt.
+Windows on Arm verwendet Entladungs *Codes* zum Steuern der Stapel Entladung während der [strukturierten Ausnahmebehandlung](/windows/win32/debug/structured-exception-handling) (SEH). Entladungscodes sind eine Folge von Bytes, die im „.xdata“-Abschnitt des ausführbaren Images gespeichert sind. Sie beschreiben den Betrieb von Funktions Prolog und Epilogcode auf abstrakte Weise, sodass die Auswirkungen des Prologs eines funktionsvorgangs rückgängig gemacht werden können, um den Stapel Rahmen des Aufrufers zu entwickeln.
 
 Das ARM EABI (Embedded Application Binary Interface) legt ein Ausnahmeentladungsmodell fest, das Entladungscodes verwendet, aber für SEH-Entladung in Windows nicht ausreichend ist. Denn hier müssen asynchrone Fälle gehandhabt werden, in denen der Prozessor inmitten des Prologs oder Epilogs einer Funktion ist. Windows teilt außerdem die Entladungssteuerung in Entladung auf Funktionsebene und für den sprachspezifischen Bereich auf, was in der ARM EABI nicht definiert ist. Deshalb legt Windows auf ARM mehr Details für die Entladung von Daten und Verfahren fest.
 
@@ -25,7 +25,7 @@ Ausführbare Dateien für Windows auf ARM verwenden das portierbare ausführbare
 
 Der Ausnahmebehandlungsmechanismus geht von bestimmten Annahmen über den Code aus, der ABI für Windows auf ARM folgt:
 
-- Wenn eine Ausnahme im Funktionstext auftritt, ist es egal, ob die Vorgänge des Prologs rückgängig gemacht werden oder ob die Vorgänge des Epilogs auf eine nach vorn gerichtete Weise durchgeführt werden. Beides sollte zum gleichen Ergebnis führen.
+- Wenn eine Ausnahme innerhalb des Texts einer Funktion auftritt, spielt es keine Rolle, ob die Vorgänge des Prologs rückgängig gemacht werden oder die Vorgänge des Epilogs vorwärts ausgeführt werden. Beides sollte zum gleichen Ergebnis führen.
 
 - Prologe und Epiloge entsprechen einander tendenziell. Das lässt sich nutzen, um die Größe der für die Beschreibung der Entladung nötigen Metadaten zu verringern.
 
@@ -119,22 +119,22 @@ Wird eine nicht gefaltete Anpassung festgelegt, ist Anweisung die ausdrückliche
 
 Die Anweisungen 2 und 4 werden abhängig davon festgelegt, ob eine Pushübertagung erforderlich ist. In dieser Tabelle ist zusammengefasst, welche Register auf der Grundlage der *C*-, *L*-, *R*-und *PF* -Felder gespeichert werden. In allen Fällen ist *N* gleich *reg* + 4, *E* ist gleich *reg* + 8, und *S* ist gleich (~*Stapel Anpassung*) & 3.
 
-|c|L|R|PF|Ganzzahlregister per Push abgelegt|VFP-Register per Push abgelegt|
+|A|L|R|PF|Ganzzahlregister per Push abgelegt|VFP-Register per Push abgelegt|
 |-------|-------|-------|--------|------------------------------|--------------------------|
-|0|0|0|0|R4-r*N*|none|
-|0|0|0|1|r*S*-r*N*|none|
-|0|0|1|0|none|D8-d*E*|
+|0|0|0|0|R4-r*N*|Keine|
+|0|0|0|1|r*S*-r*N*|Keine|
+|0|0|1|0|Keine|D8-d*E*|
 |0|0|1|1|r*S*-R3|D8-d*E*|
-|0|1|0|0|R4-r*N*, LR|none|
-|0|1|0|1|r*S*-r*N*, LR|none|
+|0|1|0|0|R4-r*N*, LR|Keine|
+|0|1|0|1|r*S*-r*N*, LR|Keine|
 |0|1|1|0|LR|D8-d*E*|
 |0|1|1|1|r*S*-R3, LR|D8-d*E*|
-|1|0|0|0|R4-r*N*, R11|none|
-|1|0|0|1|r*S*-r*N*, R11|none|
+|1|0|0|0|R4-r*N*, R11|Keine|
+|1|0|0|1|r*S*-r*N*, R11|Keine|
 |1|0|1|0|r11|D8-d*E*|
 |1|0|1|1|r*S*-R3, R11|D8-d*E*|
-|1|1|0|0|R4-r*N*, R11, LR|none|
-|1|1|0|1|r*S*-r*N*, R11, LR|none|
+|1|1|0|0|R4-r*N*, R11, LR|Keine|
+|1|1|0|1|r*S*-r*N*, R11, LR|Keine|
 |1|1|1|0|r11, LR|D8-d*E*|
 |1|1|1|1|r*S*-R3, R11, LR|D8-d*E*|
 
@@ -238,25 +238,25 @@ Die folgende Tabelle zeigt die Zuordnung von Entladungscodes zu Opcodes. Die hä
 
 |Byte 1|Byte 2|Byte 3|Byte 4|Opsize|Erklärung|
 |------------|------------|------------|------------|------------|-----------------|
-|00-7F||||16|`add   sp,sp,#X`<br /><br /> where X ist (Code & 0x7F) \* 4|
+|00-7F||||16|`add   sp,sp,#X`<br /><br /> wobei X (Code & 0x7F) \* 4 ist.|
 |80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> Wenn LR per pop ausgelesen wird, wenn der Code & 0x2000 und R0-R12 per pop ausgelesen werden, wenn das entsprechende Bit im Code & 0x1fff festgelegt ist.|
 |C0-CF||||16|`mov   sp,rX`<br /><br /> wobei X Code & 0x0f ist.|
 |D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> wobei X (Code & 0x03) + 4 ist und LR per Pop ausgeblendet wird, wenn Code & 0x04|
 |D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> wobei X (Code & 0x03) + 8 und LR per Pop ausgeblendet wird, wenn Code & 0x04|
 |E0-E7||||32|`vpop  {d8-dX}`<br /><br /> wobei X (Code & 0x07) + 8 ist.|
-|E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> where X ist (Code & 0x03ff) \* 4|
+|E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> wobei X (Code & 0x03ff) \* 4 ist.|
 |EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> Wenn LR per pop ausgelesen wird, wenn Code & 0x0100 und R0-R7 per pop ausgelesen werden, wenn das entsprechende Bit im Code & 0x00FF festgelegt ist.|
 |EE|00-0F|||16|Microsoft-spezifisch|
 |EE|10-FF|||16|Verfügbar|
-|EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> where X ist (Code & 0x000f) \* 4|
+|EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> wobei X (Code & 0x000f) \* 4 ist.|
 |EF|10-FF|||32|Verfügbar|
 |F0-F4||||-|Verfügbar|
 |F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> wobei S (Code & 0x00f 0) > > 4 und E Code & 0x000f ist.|
 |F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> Where S ist ((Code & 0x00f 0) > > 4) + 16 und E ist (Code & 0x000f) + 16|
-|F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> where X ist (Code & 0x00ffff) \* 4|
-|F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> where X ist (Code & 0x00ffffff) \* 4|
-|F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> where X ist (Code & 0x00ffff) \* 4|
-|FA|00-FF|00-FF|00-FF|32|`add   sp,sp,#X`<br /><br /> where X ist (Code & 0x00ffffff) \* 4|
+|F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> wobei X (Code & 0x00ffff) \* 4 ist.|
+|F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> wobei X (Code & 0x00ffffff) \* 4 ist.|
+|F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> wobei X (Code & 0x00ffff) \* 4 ist.|
+|FA|00-FF|00-FF|00-FF|32|`add   sp,sp,#X`<br /><br /> wobei X (Code & 0x00ffffff) \* 4 ist.|
 |FB||||16|nop (16-Bit)|
 |FC||||32|nop (32-Bit)|
 |FD||||16|end + 16-Bit nop im Epilog|
@@ -267,7 +267,7 @@ Dadurch wird der Bereich der hexadezimalen Werte für jedes Byte in einem Entlad
 
 Die Entladungscodes wurden entwickelt, sodass das erste Byte des Codes sowohl die Gesamtgröße des Codes in Bytes als auch die Größe des entsprechenden Opcodes im Anweisungsstream verrät. Um die Größe von Prolog oder Epilog berechnen zu können, gehen Sie die Entladungscodes vom Beginn der Sequenz bis zum Ende durch und verwenden eine Nachschlagetabelle oder eine vergleichbare Methode, um zu bestimmen, wie lange der entsprechende Opcode ist.
 
-Die Entladungscodes 0xFD und 0xFE sind gleich dem regulären Endcode 0xFF, machen aber einen zusätzlichen nop-Opcode im Epilogfall aus, entweder 16- oder 32-Bit. Bei Prologen sind die Codes 0xFD, 0xFE und 0xFF genau gleich. Das erklärt die gemeinsamen Epilogenden `bx lr` oder `b <tailcall-target>`, die keine gleichen Prologanweisungen haben. Das erhöht die Möglichkeit, Entladungssequenzen zwischen Prolog und Epilog zu teilen.
+Die Entladungscodes 0xFD und 0xFE sind gleich dem regulären Endcode 0xFF, machen aber einen zusätzlichen nop-Opcode im Epilogfall aus, entweder 16- oder 32-Bit. Bei Prologen sind die Codes 0xFD, 0xFE und 0xFF genau gleich. Dies berücksichtigt die allgemeinen epilogenden `bx lr` oder `b <tailcall-target>`, die keine entsprechende prologanweisung haben. Das erhöht die Möglichkeit, Entladungssequenzen zwischen Prolog und Epilog zu teilen.
 
 In vielen Fällen sollte es möglich sein, denselben Satz an Entladungscodes für Prologe und Epiloge zu verwenden. Um jedoch die Entladung teilweise ausgeführter Prologe und Epiloge bewältigen zu können, benötigen Sie möglicherweise mehrere Entladungscodesequenzen, die sich hinsichtlich Sortierung oder Verhalten unterscheiden. Deshalb hat jeder Epilog seinen eigenen Index im Entladungsarray, sodass angezeigt wird, wo mit der Umsetzung zu beginnen ist.
 
@@ -290,7 +290,7 @@ Betrachten Sie beispielsweise diese Prolog-Epilog-Sequenz:
 0148:   bx    lr
 ```
 
-Neben jedem Opcode befindet sich der entsprechende Entladungscode, der diesen Vorgang beschreibt. Die Sequenz der Entladungscodes für den Prolog ist ein Spiegelbild derjenigen für den Epilog, abgesehen von der letzten Anweisung. Dieser Fall liegt häufig vor und der Grund, weshalb immer davon ausgegangen wird, dass die Entladungscodes für den Prolog in umgekehrter Reihenfolge zur ihrer Ausführung gespeichert werden. Damit erhalten wir einen gemeinsamen Satz von Entladungscodes:
+Neben jedem Opcode befindet sich der entsprechende Entladungscode, der diesen Vorgang beschreibt. Die Sequenz der Entladungscodes für den Prolog ist ein Spiegelbild derjenigen für den Epilog, abgesehen von der letzten Anweisung. Dieser Fall ist üblich, und der Grund dafür ist, dass die Entladungs Codes für den Prolog immer davon ausgegangen werden, dass Sie in umgekehrter Reihenfolge in der Ausführungsreihenfolge des Prologs gespeichert werden. Damit erhalten wir einen gemeinsamen Satz von Entladungscodes:
 
 ```asm
 0xc7, 0xdd, 0x04, 0xfd
@@ -298,9 +298,9 @@ Neben jedem Opcode befindet sich der entsprechende Entladungscode, der diesen Vo
 
 Der Code 0xFD ist ein Spezialcode für das Ende der Sequenz und bedeutet, dass der Epilog eine 16-Bit-Anweisung länger als der Prolog ist. Damit ist es öfter möglich, Entladungscodes gemeinsam zu nutzen.
 
-Im Beispiel beginnt die Entladung mit dem Epilogfall, wenn beim Ausführen des Funktionstextes zwischen Prolog und Epilog eine Ausnahme auftritt, und zwar bei Offset 0 im Epilogcode. Das entspricht dem Offset 0x140 im Beispiel. Der Entlader führt die volle Entladesequenz aus, da keine Bereinigung vorgenommen wurde. Wenn stattdessen die Ausnahme eine Anweisung nach dem Beginn des Epilogcodes auftritt, kann der Entlader erfolgreich entladen, indem er den ersten Entladungscode überspringt. Bei einer eins-zu-Eins-Zuordnung zwischen Opcodes und Entladungs Codes sollte der Entlader die ersten *n* Entladungs Codes überspringen, wenn die Entladung von Anweisung *n* im Epilog entlädt.
+Im Beispiel beginnt die Entladung mit dem Epilogfall, wenn beim Ausführen des Funktionstextes zwischen Prolog und Epilog eine Ausnahme auftritt, und zwar bei Offset 0 im Epilogcode. Das entspricht dem Offset 0x140 im Beispiel. Der Entlader führt die volle Entladesequenz aus, da keine Bereinigung vorgenommen wurde. Wenn stattdessen die Ausnahme eine Anweisung nach dem Beginn des Epilogcodes auftritt, kann der Entlader erfolgreich entladen, indem er den ersten Entladungscode überspringt. Ausgehend von einer Eins-zu-Eins-Zuordnung von Opcodes und Entladungscodes sollte der Entlader die ersten *n* Entladungscodes überspringen, wenn die Entladung von Anweisung *n* im Epilog stattfindet.
 
-Die gleiche Logik gilt umgekehrt für den Prolog. Findet die Entladung von Offset 0 im Prolog statt, muss nichts ausgeführt werden. Findet die Entladung von einer Anweisung weiter innen statt, sollte die Entladungssequenz einen Entladungscode vom Ende starten, da Prolog-Entladungscodes in umgekehrter Reihenfolge gespeichert werden. Im allgemeinen Fall, wenn das Entladen von der Anweisung *n* im Prolog ausgeführt wird, sollte das Entladen mit *n* Entladungs Codes am Ende der Liste der Codes beginnen.
+Die gleiche Logik gilt umgekehrt für den Prolog. Findet die Entladung von Offset 0 im Prolog statt, muss nichts ausgeführt werden. Findet die Entladung von einer Anweisung weiter innen statt, sollte die Entladungssequenz einen Entladungscode vom Ende starten, da Prolog-Entladungscodes in umgekehrter Reihenfolge gespeichert werden. Im allgemeinen Fall sollte die Entladung bei *n*-Entladungscodes vom Ende der Codeliste beginnen, wenn die Entladung von Anweisung *n* im Prolog erfolgt.
 
 Prolog- und Epilog-Entladungscodes stimmen nicht immer genau überein. In diesem Fall muss das Entladungscode-Array eine Reihe von Codesequenzen enthalten. Verwenden Sie folgende Logik, um den Offset für den Beginn der Verarbeitungscodes zu bestimmen:
 
@@ -328,11 +328,11 @@ Angenommen der Funktionsprolog befindet sich am Beginn der Funktion und kann nic
 
 In ersterem Fall muss nur der Prolog beschrieben werden. Dies kann im Compact. pdata-Formular erfolgen, indem der Prolog normal beschrieben und ein *ret* -Wert von 3 angegeben wird, um einen Epilog anzugeben. Im vollen .xdata-Format kann das erledigt werden, indem man wie üblich die Prologentladungscodes in Index 0 festlegt und eine Epiloganzahl von 0 angibt.
 
-Der zweite Fall ist genauso wie eine normale Funktion. Wenn es nur einen Epilog im Fragment gibt und sich dieser am Ende des Fragments befindet, dann kann ein kompakter .pdata-Datensatz verwendet werden. Andernfalls muss ein vollständiger .xdata-Datensatzes eingesetzt werden. Beachten Sie, dass die für den Epilogstart festgelegten Offsets relativ zum Start des Fragments und nicht dem ursprünglichen Start der Funktion sind.
+Der zweite Fall ist genauso wie eine normale Funktion. Wenn nur ein Epilog im Fragment vorhanden ist und sich am Ende des Fragments befindet, kann ein Compact. pdata-Datensatz verwendet werden. Andernfalls muss ein vollständiger .xdata-Datensatzes eingesetzt werden. Beachten Sie, dass die für den Epilogstart festgelegten Offsets relativ zum Start des Fragments und nicht dem ursprünglichen Start der Funktion sind.
 
-Der dritte und vierte Fall ist jeweils eine Variante des ersten und zweiten Falls, außer dass kein Prolog enthalten ist. In diesen Situationen wird davon ausgegangen, dass es Code vor dem Start des Epilogs gibt und er wird als Teil des Funktionstexts betrachtet, der normalerweise durch das Rückgängigmachen des Prologeffekts entladen wird. Diese Fälle müssen deshalb mit einem Pseudoprolog codiert werden, der beschreibt, wie im Text entladen wird, aber als 0-Länge bei der Bestimmung behandelt wird, ob beim Start des Fragments eine teilweise Entladung durchgeführt wird. Alternativ lässt sich dieser Pseudoprolog beschreiben, indem dieselben Entladungscodes wie beim Epilog verwendet werden, denn sie führen mutmaßlich gleiche Vorgänge durch.
+Der dritte und vierte Fall sind Varianten der ersten und zweiten Fälle, es sei denn, Sie enthalten keinen Prolog. In diesen Situationen wird davon ausgegangen, dass es Code vor dem Start des Epilogs gibt und er wird als Teil des Funktionstexts betrachtet, der normalerweise durch das Rückgängigmachen des Prologeffekts entladen wird. Diese Fälle müssen deshalb mit einem Pseudoprolog codiert werden, der beschreibt, wie im Text entladen wird, aber als 0-Länge bei der Bestimmung behandelt wird, ob beim Start des Fragments eine teilweise Entladung durchgeführt wird. Alternativ lässt sich dieser Pseudoprolog beschreiben, indem dieselben Entladungscodes wie beim Epilog verwendet werden, denn sie führen mutmaßlich gleiche Vorgänge durch.
 
-Im dritten und vierten Fall wird das vorhanden sein eines Pseudo Prologs festgelegt, indem das Flagfeld des Compact. pdata-Datensatzes auf 2 festgelegt wird, oder indem das *F* -Flag im. XData-Header auf 1 festgelegt wird. In beiden Fällen wird die Überprüfung auf eine teilweise Prologentladung ignoriert und alle Nicht-Epilogentladungen werden als voll betrachtet.
+Im dritten und vierten Fall wird das vorhanden sein eines Pseudo Prologs festgelegt, indem das *Flagfeld* des Compact. pdata-Datensatzes auf 2 festgelegt wird, oder indem das *F* -Flag im. XData-Header auf 1 festgelegt wird. In beiden Fällen wird die Überprüfung auf eine teilweise Prologentladung ignoriert und alle Nicht-Epilogentladungen werden als voll betrachtet.
 
 #### <a name="large-functions"></a>Große Funktionen
 
@@ -344,7 +344,7 @@ Wenn ein Fragment keinen Prolog und Epilog hat, erfordert er dennoch einen eigen
 
 #### <a name="shrink-wrapping"></a>Shrink-Wrapping
 
-Ein komplexerer Sonderfall von Funktions Fragmenten istVerkleinerungs Umbrüchen, eine Technik zum verzögern von Register, die vom Anfang der Funktion bis zu einem späteren Zeitpunkt in der Funktion gespeichert wird, um für einfache Fälle zu optimieren, für die keine Register Speicherung erforderlich ist. Das lässt sich als eine äußere Region beschreiben, die den Stapelspeicher zuweist, aber einen minimalen Registersatz speichert sowie einer inneren Region, die weitere Register speichert und wiederherstellt.
+Ein komplexerer Sonderfall von Funktions Fragmenten ist Verkleinerungs Umbrüchen, eine Technik zum verzögern von *Register, die*vom Anfang der Funktion bis zu einem späteren Zeitpunkt in der Funktion gespeichert wird, um für einfache Fälle zu optimieren, für die keine Register Speicherung erforderlich ist. Das lässt sich als eine äußere Region beschreiben, die den Stapelspeicher zuweist, aber einen minimalen Registersatz speichert sowie einer inneren Region, die weitere Register speichert und wiederherstellt.
 
 ```asm
 ShrinkWrappedFunction
@@ -360,7 +360,7 @@ ShrinkWrappedFunction
     pop    {r4, pc}          ; C:
 ```
 
-Bei Funktionen mit Shrink-Wrapping geht man typischerweise davon aus, dass der Platz für die zusätzlichen Registerspeicherungen im normalen Prolog im Voraus zugewiesen wird und die Registerspeicherungen dann mithilfe von `str` oder `stm` erfolgen statt mit `push`. Damit werden alle Aufruflistenzeigerbearbeitungen im ursprünglichen Prolog der Funktion gehalten.
+Bei Funktionen mit Shrink-Wrapping geht man typischerweise davon aus, dass der Platz für die zusätzlichen Registerspeicherungen im normalen Prolog im Voraus zugewiesen wird und die Registerspeicherungen dann mithilfe von `str` oder `stm` erfolgen statt mit `push`. Dadurch bleibt die gesamte Stapelzeiger Bearbeitung im ursprünglichen Prolog der Funktion.
 
 Die Beispielfunktion mit Shrink-Wrapping muss in drei Regionen aufgeteilt werden, die in den Kommentaren mit A, B und C gekennzeichnet sind. Die erste Region A deckt den Start der Funktion bis zum Ende der zusätzlichen nicht flüchtigen Speicherungen ab. Es muss ein .pdata- oder .xdata-Datensatz konstruiert werden, der beschreibt, dass dieses Fragment einen Prolog und keine Epiloge hat.
 
@@ -410,7 +410,7 @@ Wenn nach dem Ignorieren von Epilogen mit nur einer Anweisung keine Epiloge verb
 
 In diesen Beispielen ist die Abbildbasis bei 0x00400000.
 
-### <a name="example-1-leaf-function-no-locals"></a>Beispiel 1: Blattfunktion, kein Lokal
+### <a name="example-1-leaf-function-no-locals"></a>Beispiel 1: Blatt Funktion, keine lokalen
 
 ```asm
 Prologue:
@@ -444,7 +444,7 @@ Epilogue:
 
    - *Stapel* Anpassung = 0, gibt keine Stapel Anpassung an
 
-### <a name="example-2-nested-function-with-local-allocation"></a>Beispiel 2: Geschachtelte Funktion mit lokaler Zuteilung
+### <a name="example-2-nested-function-with-local-allocation"></a>Beispiel 2: netsted-Funktion mit lokaler Zuordnung
 
 ```asm
 Prologue:
@@ -479,7 +479,7 @@ Epilogue:
 
    - *Stapel Anpassung* = 3 (= 0x0c/4)
 
-### <a name="example-3-nested-variadic-function"></a>Beispiel 3: Geschachtelte Variadic-Funktion
+### <a name="example-3-nested-variadic-function"></a>Beispiel 3: netsted Variadic-Funktion
 
 ```asm
 Prologue:
@@ -514,7 +514,7 @@ Epilogue:
 
    - *Stapel* Anpassung = 0, gibt keine Stapel Anpassung an
 
-### <a name="example-4-function-with-multiple-epilogues"></a>Beispiel 4: Funktionen mit mehreren Epilogen
+### <a name="example-4-function-with-multiple-epilogues"></a>Beispiel 4: Funktion mit mehreren Epilogen
 
 ```asm
 Prologue:
@@ -626,7 +626,7 @@ Epilogue:
 
    - *Code Wörter* = 0x01, was 1 32-Bit-Wort von Entladungs Codes angibt
 
-- Wort 1: Epilogbereich bei einem Offset von 0xC6 (= 0x18C/2), beginnt den Entladungscodeindex bei 0x00 und mit der Bedingung 0x0E (immer)
+- Word 1: epilogscope bei Offset 0xc6 (= 0x18c/2), Start des Entladungs Codes bei 0x00 und mit der Bedingung 0x0E (immer)
 
 - Entladungs Codes, beginnend bei Wort 2: (Shared between Prolog/Epilog)
 
@@ -638,7 +638,7 @@ Epilogue:
 
    - Entladungscode 3 = 0xFD: Ende, zählt als 16-Bit-Anweisung für Epilog
 
-### <a name="example-6-function-with-exception-handler"></a>Beispiel 6: Funktion mit Ausnahmehandler
+### <a name="example-6-function-with-exception-handler"></a>Beispiel 6: Funktion mit Ausnahme Handler
 
 ```asm
 Prologue:
@@ -698,7 +698,7 @@ Epilogue:
 
 - Worte 4 und darüber hinaus sind inline gesetzte Ausnahmedaten
 
-### <a name="example-7-funclet"></a>Beispiel 7: Funclet
+### <a name="example-7-funclet"></a>Beispiel 7: funclet
 
 ```asm
 Function:

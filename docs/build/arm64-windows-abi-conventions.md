@@ -1,12 +1,12 @@
 ---
 title: Übersicht über ARM64-ABI-Konventionen
 ms.date: 03/27/2019
-ms.openlocfilehash: 3a3df475b8f814fcecaf2e67a0a62c7267a0de30
-ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
+ms.openlocfilehash: 07d58bbd64795235ad63a7b26b6f18fcffdcd1d2
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74163218"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303268"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Übersicht über ARM64-ABI-Konventionen
 
@@ -73,9 +73,9 @@ Die AArch64-Architektur unterstützt 32 ganzzahlige Register:
 
 | Register | Volatil? | Rolle |
 | - | - | - |
-| X0 | Volatil | Parameter/Scratch-Register 1, Ergebnisregister |
+| x0 | Volatil | Parameter/Scratch-Register 1, Ergebnisregister |
 | x1-x7 | Volatil | Parameter/Scratch-Register 2-8 |
-| x8-X15 | Volatil | Register für Scratch |
+| x8-x15 | Volatil | Register für Scratch |
 | x16-x17 | Volatil | Intern aufzurufende Register |
 | x18 | Nicht volatil | Platt Form Register: verweist im Kernel Modus auf "kpcr" für den aktuellen Prozessor. im Benutzermodus zeigt auf TEB. |
 | x19-x28 | Nicht volatil | Register für Scratch |
@@ -97,8 +97,8 @@ Die AArch64-Architektur unterstützt auch 32-Gleit Komma-/SIMD-Register, die unt
 | Register | Volatil? | Rolle |
 | - | - | - |
 | v0 | Volatil | Parameter/Scratch-Register 1, Ergebnisregister |
-| v1-V7 | Volatil | Parameter/Scratch-Register 2-8 |
-| V8-V15 | Nicht volatil | Register für Scratch (nur die unteren 64 Bits sind nicht flüchtig) |
+| v1-v7 | Volatil | Parameter/Scratch-Register 2-8 |
+| v8-v15 | Nicht volatil | Register für Scratch (nur die unteren 64 Bits sind nicht flüchtig) |
 | v16-v31 | Volatil | Register für Scratch |
 
 Auf jedes Register kann als vollständiger 128-Bit-Wert (über "v0-v31" oder "q0-Q31") zugegriffen werden. Der Zugriff auf den Wert erfolgt möglicherweise als 64-Bit-Wert (über D0-D31), als 32-Bit-Wert (über S0-S31), als 16-Bit-Wert (über H0-H31) oder als 8-Bit-Wert (über B0-B31). Zugriffe, die kleiner als 128 Bits sind, greifen nur auf die unteren Bits des vollständigen 128-Bit-Registers zu. Die verbleibenden Bits bleiben unverändert, sofern nicht anders angegeben. (AArch64 unterscheidet sich von AArch32, wobei die kleineren Register zusätzlich zu den größeren Registern gepackt wurden.)

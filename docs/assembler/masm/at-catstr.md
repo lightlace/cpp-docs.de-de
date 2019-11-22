@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@CatStr symbol'
 ms.assetid: 01fcc590-1ec2-42f6-b868-ed0433297c26
-ms.openlocfilehash: 7c314ee362132da75a6024b76b011963fe6ce3db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aca740aa31866cc55d9babd8fd43b78bdad96a72
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166749"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302893"
 ---
-# <a name="catstr"></a>@CatStr
+# <a name="catstr"></a>\@.
 
-Makrofunktion, die eine oder mehrere Zeichenfolgen verkettet. Gibt eine Zeichenfolge zurück.
+Makrofunktion, die eine oder mehrere Zeichen folgen verkettet. Gibt eine Zeichenfolge zurück.
 
 ## <a name="syntax"></a>Syntax
 
-> @CatStr(string1 [[, string2...]])
+> **\@"(** *Zeichenfolge1* ) (⟦ __,__ *Zeichenfolge2*... ⟧ **)**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Symbole – Verweis](../../assembler/masm/symbols-reference.md)<br/>
+[Symbole – Verweis](../../assembler/masm/symbols-reference.md)

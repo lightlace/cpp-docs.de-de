@@ -20,39 +20,39 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 078e0f450514881084786086683ac026e15ea8be
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 8b216941837cd79492aa6cb707481073b5321bce
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095785"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303448"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Dialogdatenaustausch-Funktionen für CRecordView und CDaoRecordView
 
-In diesem Thema werden die DDX_Field-Funktionen aufgelistet, die zum Austauschen von Daten zwischen einem [CRecordset](../../mfc/reference/crecordset-class.md) und einem [CRecordView](../../mfc/reference/crecordview-class.md) -Formular oder einem [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)-Formular und einem [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) -Formular verwendet werden.  DAO wird für Access-Datenbanken verwendet und wird von Office 2013 unterstützt. 3,6 ist die endgültige Version und wird als veraltet eingestuft.
+In diesem Thema werden die DDX_Field-Funktionen aufgelistet, die zum Austauschen von Daten zwischen einem [CRecordset](../../mfc/reference/crecordset-class.md) und einem [CRecordView](../../mfc/reference/crecordview-class.md) -Formular oder einem [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)-Formular und einem [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) -Formular verwendet werden. DAO wird für Access-Datenbanken verwendet und wird von Office 2013 unterstützt. DAO 3,6 ist die endgültige Version, die als veraltet eingestuft wird.
 
 > [!NOTE]
->  DDX_Field-Funktionen sind wie DDX-Funktionen, da Sie Daten mit Steuerelementen in einem Formular austauschen. Aber im Gegensatz zu DDX tauschen Sie Daten mit den Feldern des zugeordneten Recordsetobjekt der Ansicht anstelle der Felder der Daten Satz Ansicht selbst aus. Weitere Informationen finden Sie Unterklassen `CRecordView` und `CDaoRecordView`.
+>  DDX_Field Funktionen ähneln DDX-Funktionen darin, dass Sie Daten mit Steuerelementen in einem Formular austauschen. Aber im Gegensatz zu DDX tauschen Sie Daten mit den Feldern des zugeordneten Recordsetobjekt der Ansicht anstelle der Felder der Daten Satz Ansicht selbst aus. Weitere Informationen finden Sie Unterklassen `CRecordView` und `CDaoRecordView`.
 
-### <a name="ddx_field-functions"></a>DDX_Field-Funktionen
+### <a name="ddx_field-functions"></a>DDX_Field Funktionen
 
 |||
 |-|-|
 |[DDX_FieldCBIndex](#ddx_fieldcbindex)|Überträgt ganzzahlige Daten zwischen einem Recordset-Felddatenmember und dem Index der aktuellen Auswahl in einem Kombinations Feld in einer [CRecordView](../../mfc/reference/crecordview-class.md) oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md).|
-|[DDX_FieldCBString](#ddx_fieldcbstring)|Überträgt `CString` Daten zwischen einem Recordset-Felddatenmember und dem Bearbeitungs Steuerelement eines Kombinations Felds in `CRecordView` einem `CDaoRecordView`-oder-Element. Beim Verschieben von Daten aus dem Recordset in das-Steuerelement wählt diese Funktion das Element im Kombinations Feld aus, das mit den Zeichen in der angegebenen Zeichenfolge beginnt.|
-|[DDX_FieldCBStringExact](#ddx_fieldcbstringexact)|Überträgt `CString` Daten zwischen einem Recordset-Felddatenmember und dem Bearbeitungs Steuerelement eines Kombinations Felds in `CRecordView` einem `CDaoRecordView`-oder-Element. Beim Verschieben von Daten aus dem Recordset in das-Steuerelement wählt diese Funktion das Element im Kombinations Feld aus, das exakt mit der angegebenen Zeichenfolge übereinstimmt.|
-|[DDX_FieldCheck](#ddx_fieldcheck)|Überträgt boolesche Daten zwischen einem Recordset-Felddatenmember und einem Kontrollkästchen in `CRecordView` einem `CDaoRecordView`oder einem.|
-|[DDX_FieldLBIndex](#ddx_fieldlbindex)|Überträgt ganzzahlige Daten zwischen einem Recordset-Felddatenmember und dem Index der aktuellen Auswahl in einem Listenfeld `CRecordView` in `CDaoRecordView`einem oder einem.|
+|[DDX_FieldCBString](#ddx_fieldcbstring)|Überträgt `CString` Daten zwischen einem Recordset-Felddatenmember und dem Bearbeitungs Steuerelement eines Kombinations Felds in einer `CRecordView` oder `CDaoRecordView`. Beim Verschieben von Daten aus dem Recordset in das-Steuerelement wählt diese Funktion das Element im Kombinations Feld aus, das mit den Zeichen in der angegebenen Zeichenfolge beginnt.|
+|[DDX_FieldCBStringExact](#ddx_fieldcbstringexact)|Überträgt `CString` Daten zwischen einem Recordset-Felddatenmember und dem Bearbeitungs Steuerelement eines Kombinations Felds in einer `CRecordView` oder `CDaoRecordView`. Beim Verschieben von Daten aus dem Recordset in das-Steuerelement wählt diese Funktion das Element im Kombinations Feld aus, das exakt mit der angegebenen Zeichenfolge übereinstimmt.|
+|[DDX_FieldCheck](#ddx_fieldcheck)|Überträgt boolesche Daten zwischen einem Recordset-Felddatenmember und einem Kontrollkästchen in einem `CRecordView` oder `CDaoRecordView`.|
+|[DDX_FieldLBIndex](#ddx_fieldlbindex)|Überträgt ganzzahlige Daten zwischen einem Recordset-Felddatenmember und dem Index der aktuellen Auswahl in einem Listenfeld in einem `CRecordView` oder `CDaoRecordView`.|
 |[DDX_FieldLBString](#ddx_fieldlbstring)|Verwaltet die Übertragung von [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Daten zwischen einem Listenfeld-Steuerelement und den Felddatenmembern eines Recordsets. Beim Verschieben von Daten aus dem Recordset in das-Steuerelement wählt diese Funktion das Element im Listenfeld aus, das mit den Zeichen in der angegebenen Zeichenfolge beginnt.|
-|[DDX_FieldLBStringExact](#ddx_fieldlbstringexact)|Verwaltet die Übertragung `CString` von Daten zwischen einem Listenfeld-Steuerelement und den Felddatenmembern eines Recordsets. Beim Verschieben von Daten aus dem Recordset in das-Steuerelement wählt diese Funktion das erste Element aus, das genau mit der angegebenen Zeichenfolge übereinstimmt.|
-|[DDX_FieldRadio](#ddx_fieldradio)|Überträgt ganzzahlige Daten zwischen einem Recordset-Felddatenmember und einer Gruppe von Options `CRecordView` Feldern `CDaoRecordView`in einem-oder-Element.|
-|[DDX_FieldScroll](#ddx_fieldscroll)|Legt die Bild Lauf Position eines Schiebe leisten-Steuer Elements in einem `CRecordView` - `CDaoRecordView`oder-Element fest oder ruft diese ab Aufrufe von Ihrer [DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) -Funktion.|
-|[DDX_FieldSlider](#ddx_fieldslider)|Synchronisiert die Ziehpunkt Position eines Schieberegler-Steuer Elements in einer Daten Satz `int` Ansicht und einem Felddatenmember eines Recordsets. |
-|[DDX_FieldText](#ddx_fieldtext)|Überladene Versionen sind zum `int`übertragen von **uint**- `DWORD`, **Long**-, [CString](../../atl-mfc-shared/reference/cstringt-class.md)-, **float**-, **Double**-, **Short**-, [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)-und [COleCurrency](../../mfc/reference/colecurrency-class.md) -Daten verfügbar. zwischen einem Recordset-Felddatenmember und einem Bearbeitungsfeld in `CRecordView` einem `CDaoRecordView`-oder-Element.|
+|[DDX_FieldLBStringExact](#ddx_fieldlbstringexact)|Verwaltet die Übertragung von `CString` Daten zwischen einem Listenfeld-Steuerelement und den Felddatenmembern eines Recordsets. Beim Verschieben von Daten aus dem Recordset in das-Steuerelement wählt diese Funktion das erste Element aus, das genau mit der angegebenen Zeichenfolge übereinstimmt.|
+|[DDX_FieldRadio](#ddx_fieldradio)|Überträgt ganzzahlige Daten zwischen einem Recordset-Felddatenmember und einer Gruppe von Options Feldern in einem `CRecordView` oder `CDaoRecordView`.|
+|[DDX_FieldScroll](#ddx_fieldscroll)|Legt die Scrollposition eines Schiebe leisten-Steuer Elements in einem `CRecordView` oder `CDaoRecordView`fest oder ruft diese ab. Aufrufe von Ihrer [DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) -Funktion.|
+|[DDX_FieldSlider](#ddx_fieldslider)|Synchronisiert die Ziehpunkt Position eines Schieberegler-Steuer Elements in einer Daten Satz Ansicht und einen `int` Felddatenmember eines Recordsets. |
+|[DDX_FieldText](#ddx_fieldtext)|Überladene Versionen stehen zum Übertragen von `int`-, **uint**-, **Long**-, `DWORD`-, [CString](../../atl-mfc-shared/reference/cstringt-class.md)-, **float**-, **Double**-, **Short**-, [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)-und [COleCurrency](../../mfc/reference/colecurrency-class.md) -Daten zwischen einem Recordset-Felddatenmember und einem Bearbeitungsfeld in einem `CRecordView` oder `CDaoRecordView`zur Verfügung.|
 
 ##  <a name="ddx_fieldcbindex"></a>DDX_FieldCBIndex
 
-Die `DDX_FieldCBIndex` -Funktion synchronisiert den Index des ausgewählten Elements im Listenfeld-Steuerelement eines Kombinations Feld-Steuer Elements in einer Daten Satz Ansicht `int` und einen Felddatenmember eines Recordsets, das der Daten Satz Ansicht zugeordnet ist.
+Die `DDX_FieldCBIndex`-Funktion synchronisiert den Index des ausgewählten Elements im Listenfeld-Steuerelement eines Kombinations Feld-Steuer Elements in einer Daten Satz Ansicht und einen `int` Felddatenmember eines Recordsets, das der Daten Satz Ansicht zugeordnet ist.
 
 ```
 void AFXAPI DDX_FieldCBIndex(
@@ -77,7 +77,7 @@ Ein Zeiger auf ein [CDataExchange](../../mfc/reference/cdataexchange-class.md) -
 Die ID eines Steuer Elements im [CRecordView](../../mfc/reference/crecordview-class.md) -oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) -Objekt.
 
 *index*<br/>
-Ein Verweis auf einen Felddatenmember im zugeordneten `CRecordset` - `CDaoRecordset` Objekt oder-Objekt.
+Ein Verweis auf einen Felddatenmember im zugeordneten `CRecordset` oder `CDaoRecordset`-Objekt.
 
 *pRecordset*<br/>
 Ein Zeiger auf das [CRecordset](../../mfc/reference/crecordset-class.md) -oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) -Objekt, mit dem Daten ausgetauscht werden.
@@ -92,7 +92,7 @@ Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -vali
 
 ### <a name="example"></a>Beispiel
 
-Ein allgemeines DDX_Field-Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Das Beispiel wäre vergleichbar `DDX_FieldCBIndex`mit.
+Ein allgemeines DDX_Field Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Das Beispiel wäre für `DDX_FieldCBIndex`ähnlich.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -100,7 +100,7 @@ Ein allgemeines DDX_Field-Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldte
 
 ##  <a name="ddx_fieldcbstring"></a>DDX_FieldCBString
 
-Die `DDX_FieldCBString` -Funktion verwaltet die Übertragung von [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Daten zwischen dem Bearbeitungs Steuerelement eines Kombinations Feld-Steuer Elements in `CString` einer Daten Satz Ansicht und einem Felddatenmember eines Recordsets, das mit der Daten Satz Ansicht verknüpft ist.
+Die `DDX_FieldCBString`-Funktion verwaltet die Übertragung von [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Daten zwischen dem Bearbeitungs Steuerelement eines Kombinations Feld-Steuer Elements in einer Daten Satz Ansicht und einem `CString` Field-Datenmember eines Recordsets, das der Daten Satz Ansicht zugeordnet ist.
 
 ```
 void AFXAPI DDX_FieldCBString(
@@ -124,8 +124,8 @@ Ein Zeiger auf ein [CDataExchange](../../mfc/reference/cdataexchange-class.md) -
 *nIDC*<br/>
 Die ID eines Steuer Elements im [CRecordView](../../mfc/reference/crecordview-class.md) -oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) -Objekt.
 
-*value*<br/>
-Ein Verweis auf einen Felddatenmember im zugeordneten `CRecordset` - `CDaoRecordset` Objekt oder-Objekt.
+*Wert*<br/>
+Ein Verweis auf einen Felddatenmember im zugeordneten `CRecordset` oder `CDaoRecordset`-Objekt.
 
 *pRecordset*<br/>
 Ein Zeiger auf das [CRecordset](../../mfc/reference/crecordset-class.md) -oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) -Objekt, mit dem Daten ausgetauscht werden.
@@ -140,7 +140,7 @@ Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -vali
 
 ### <a name="example"></a>Beispiel
 
-Ein allgemeines DDX_Field-Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Das Beispiel enthält einen `DDX_FieldCBString`-Befehl.
+Ein allgemeines DDX_Field Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Das Beispiel enthält einen `DDX_FieldCBString`aufzurufenden.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -148,7 +148,7 @@ Ein allgemeines DDX_Field-Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldte
 
 ## <a name="ddx_fieldcbstringexact"></a>DDX_FieldCBStringExact
 
-Die `DDX_FieldCBStringExact` -Funktion verwaltet die Übertragung von [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Daten zwischen dem Bearbeitungs Steuerelement eines Kombinations Feld-Steuer Elements in `CString` einer Daten Satz Ansicht und einem Felddatenmember eines Recordsets, das mit der Daten Satz Ansicht verknüpft ist.
+Die `DDX_FieldCBStringExact`-Funktion verwaltet die Übertragung von [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Daten zwischen dem Bearbeitungs Steuerelement eines Kombinations Feld-Steuer Elements in einer Daten Satz Ansicht und einem `CString` Field-Datenmember eines Recordsets, das der Daten Satz Ansicht zugeordnet ist.
 
 ```
 void AFXAPI DDX_FieldCBStringExact(
@@ -172,8 +172,8 @@ Ein Zeiger auf ein [CDataExchange](../../mfc/reference/cdataexchange-class.md) -
 *nIDC*<br/>
 Die ID eines Steuer Elements im [CRecordView](../../mfc/reference/crecordview-class.md) -oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) -Objekt.
 
-*value*<br/>
-Ein Verweis auf einen Felddatenmember im zugeordneten `CRecordset` - `CDaoRecordset` Objekt oder-Objekt.
+*Wert*<br/>
+Ein Verweis auf einen Felddatenmember im zugeordneten `CRecordset` oder `CDaoRecordset`-Objekt.
 
 *pRecordset*<br/>
 Ein Zeiger auf das [CRecordset](../../mfc/reference/crecordset-class.md) -oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) -Objekt, mit dem Daten ausgetauscht werden.
@@ -188,7 +188,7 @@ Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -vali
 
 ### <a name="example"></a>Beispiel
 
-Ein allgemeines DDX_Field-Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Aufrufe von `DDX_FieldCBStringExact` wären ähnlich.
+Ein allgemeines DDX_Field Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Aufrufe an `DDX_FieldCBStringExact` wären ähnlich.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -196,7 +196,7 @@ Ein allgemeines DDX_Field-Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldte
 
 ##  <a name="ddx_fieldcheck"></a>DDX_FieldCheck
 
-Die `DDX_FieldCheck` -Funktion verwaltet die Übertragung von **int** -Daten zwischen einem Kontrollkästchen-Steuerelement in einem Dialogfeld, einer Formularansicht oder einem Steuerungs Ansichts Objekt und einem **int** -Datenmember des Dialog Felds, der Formularansicht oder des Steuerungs Ansichts Objekts.
+Die `DDX_FieldCheck`-Funktion verwaltet die Übertragung von **int** -Daten zwischen einem Kontrollkästchen-Steuerelement in einem Dialogfeld, einer Formularansicht oder einem Steuerungs Ansichts Objekt und einem **int** -Datenmember des Dialog Felds, der Formularansicht oder des Steuerungs Ansichts Objekts.
 
 ```
 void AFXAPI DDX_FieldCheck(
@@ -220,7 +220,7 @@ Ein Zeiger auf ein [CDataExchange](../../mfc/reference/cdataexchange-class.md) -
 *nIDC*<br/>
 Die Ressourcen-ID des Kontrollkästchen-Steuer Elements, das der Steuerelement Eigenschaft zugeordnet ist.
 
-*value*<br/>
+*Wert*<br/>
 Ein Verweis auf eine Member-Variable des Dialog Felds, der Formularansicht oder des Steuerelement Ansichts Objekts, mit dem Daten ausgetauscht werden.
 
 *pRecordset*<br/>
@@ -238,7 +238,7 @@ Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -vali
 
 ##  <a name="ddx_fieldlbindex"></a>DDX_FieldLBIndex
 
-Die `DDX_FieldLBIndex` -Funktion synchronisiert den Index des ausgewählten Elements in einem Listenfeld-Steuerelement in einer Daten Satz Ansicht und einen **int** -Felddatenmember eines Recordsets, das der Daten Satz Ansicht zugeordnet ist.
+Die `DDX_FieldLBIndex`-Funktion synchronisiert den Index des ausgewählten Elements in einem Listenfeld-Steuerelement in einer Daten Satz Ansicht und einen **int** -Felddatenmember eines Recordsets, das der Daten Satz Ansicht zugeordnet ist.
 
 ```
 void AFXAPI DDX_FieldLBIndex(
@@ -263,7 +263,7 @@ Ein Zeiger auf ein [CDataExchange](../../mfc/reference/cdataexchange-class.md) -
 Die ID eines Steuer Elements im [CRecordView](../../mfc/reference/crecordview-class.md) -oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) -Objekt.
 
 *index*<br/>
-Ein Verweis auf einen Felddatenmember im zugeordneten `CRecordset` - `CDaoRecordset` Objekt oder-Objekt.
+Ein Verweis auf einen Felddatenmember im zugeordneten `CRecordset` oder `CDaoRecordset`-Objekt.
 
 *pRecordset*<br/>
 Ein Zeiger auf das [CRecordset](../../mfc/reference/crecordset-class.md) -oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) -Objekt, mit dem Daten ausgetauscht werden.
@@ -278,7 +278,7 @@ Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -vali
 
 ### <a name="example"></a>Beispiel
 
-Ein allgemeines DDX_Field-Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) .
+Ein allgemeines DDX_Field Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) .
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -286,7 +286,7 @@ Ein allgemeines DDX_Field-Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldte
 
 ##  <a name="ddx_fieldlbstring"></a>DDX_FieldLBString
 
-Das `DDX_FieldLBString` kopiert die aktuelle Auswahl eines Listenfeld-Steuer Elements in einer Daten Satz Ansicht in ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Felddatenmember eines Recordsets, das der Daten Satz Ansicht zugeordnet ist.
+Der `DDX_FieldLBString` kopiert die aktuelle Auswahl eines Listenfeld-Steuer Elements in einer Daten Satz Ansicht in ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Felddatenmember eines Recordsets, das der Daten Satz Ansicht zugeordnet ist.
 
 ```
 void AFXAPI DDX_FieldLBString(
@@ -310,8 +310,8 @@ Ein Zeiger auf ein [CDataExchange](../../mfc/reference/cdataexchange-class.md) -
 *nIDC*<br/>
 Die ID eines Steuer Elements im [CRecordView](../../mfc/reference/crecordview-class.md) -oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) -Objekt.
 
-*value*<br/>
-Ein Verweis auf einen Felddatenmember im zugeordneten `CRecordset` - `CDaoRecordset` Objekt oder-Objekt.
+*Wert*<br/>
+Ein Verweis auf einen Felddatenmember im zugeordneten `CRecordset` oder `CDaoRecordset`-Objekt.
 
 *pRecordset*<br/>
 Ein Zeiger auf das [CRecordset](../../mfc/reference/crecordset-class.md) -oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) -Objekt, mit dem Daten ausgetauscht werden.
@@ -326,7 +326,7 @@ Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -vali
 
 ### <a name="example"></a>Beispiel
 
-Ein allgemeines DDX_Field-Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Aufrufe von `DDX_FieldLBString` wären ähnlich.
+Ein allgemeines DDX_Field Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Aufrufe an `DDX_FieldLBString` wären ähnlich.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -334,7 +334,7 @@ Ein allgemeines DDX_Field-Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldte
 
 ##  <a name="ddx_fieldlbstringexact"></a>DDX_FieldLBStringExact
 
-Die `DDX_FieldLBStringExact` -Funktion kopiert die aktuelle Auswahl eines Listenfeld-Steuer Elements in einer Daten Satz Ansicht in ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Felddatenmember eines Recordsets, das der Daten Satz Ansicht zugeordnet ist.
+Die `DDX_FieldLBStringExact`-Funktion kopiert die aktuelle Auswahl eines Listenfeld-Steuer Elements in einer Daten Satz Ansicht in ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Felddatenmember eines Recordsets, das der Daten Satz Ansicht zugeordnet ist.
 
 ```
 void AFXAPI DDX_FieldLBStringExact(
@@ -358,8 +358,8 @@ Ein Zeiger auf ein [CDataExchange](../../mfc/reference/cdataexchange-class.md) -
 *nIDC*<br/>
 Die ID eines Steuer Elements im [CRecordView](../../mfc/reference/crecordview-class.md) -oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) -Objekt.
 
-*value*<br/>
-Ein Verweis auf einen Felddatenmember im zugeordneten `CRecordset` - `CDaoRecordset` Objekt oder-Objekt.
+*Wert*<br/>
+Ein Verweis auf einen Felddatenmember im zugeordneten `CRecordset` oder `CDaoRecordset`-Objekt.
 
 *pRecordset*<br/>
 Ein Zeiger auf das [CRecordset](../../mfc/reference/crecordset-class.md) -oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) -Objekt, mit dem Daten ausgetauscht werden.
@@ -374,7 +374,7 @@ Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -vali
 
 ### <a name="example"></a>Beispiel
 
-Ein allgemeines DDX_Field-Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Aufrufe von `DDX_FieldLBStringExact` wären ähnlich.
+Ein allgemeines DDX_Field Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Aufrufe an `DDX_FieldLBStringExact` wären ähnlich.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -382,7 +382,7 @@ Ein allgemeines DDX_Field-Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldte
 
 ##  <a name="ddx_fieldradio"></a>DDX_FieldRadio
 
-Die `DDX_FieldRadio` -Funktion ordnet eine Null basierte **int** -Member-Variable des Recordsets einer Daten Satz Ansicht mit dem aktuell ausgewählten Optionsfeld in einer Gruppe von Options Feldern in der Daten Satz Ansicht zu.
+Die `DDX_FieldRadio`-Funktion ordnet eine Null basierte **int** -Member-Variable des Recordsets einer Daten Satz Ansicht mit dem aktuell ausgewählten Optionsfeld in einer Gruppe von Options Feldern in der Daten Satz Ansicht zu.
 
 ```
 void AFXAPI DDX_FieldRadio(
@@ -404,10 +404,10 @@ void AFXAPI DDX_FieldRadio(
 Ein Zeiger auf ein [CDataExchange](../../mfc/reference/cdataexchange-class.md) -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.
 
 *nIDC*<br/>
-Die ID des ersten in einer Gruppe (mit Style WS_GROUP) der angrenzenden Optionsfeld-Steuerelemente im [CRecordView](../../mfc/reference/crecordview-class.md) -oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) -Objekt.
+Die ID des ersten in einer Gruppe (mit Stil WS_GROUP) der angrenzenden Optionsfeld-Steuerelemente im [CRecordView](../../mfc/reference/crecordview-class.md) -oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) -Objekt.
 
-*value*<br/>
-Ein Verweis auf einen Felddatenmember im zugeordneten `CRecordset` - `CDaoRecordset` Objekt oder-Objekt.
+*Wert*<br/>
+Ein Verweis auf einen Felddatenmember im zugeordneten `CRecordset` oder `CDaoRecordset`-Objekt.
 
 *pRecordset*<br/>
 Ein Zeiger auf das [CRecordset](../../mfc/reference/crecordset-class.md) -oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) -Objekt, mit dem Daten ausgetauscht werden.
@@ -422,7 +422,7 @@ Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -vali
 
 ### <a name="example"></a>Beispiel
 
-Ein allgemeines DDX_Field-Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Aufrufe von `DDX_FieldRadio` wären ähnlich.
+Ein allgemeines DDX_Field Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Aufrufe an `DDX_FieldRadio` wären ähnlich.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -430,7 +430,7 @@ Ein allgemeines DDX_Field-Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldte
 
 ##  <a name="ddx_fieldscroll"></a>DDX_FieldScroll
 
-Die `DDX_FieldScroll` -Funktion synchronisiert die Bild Lauf Position eines Schiebe leisten-Steuer Elements in einer Daten Satz Ansicht und einen **int** -Felddatenmember eines Recordsets, das der Daten Satz Ansicht zugeordnet ist (oder mit einer beliebigen ganzzahligen Variable, der Sie zugeordnet werden).
+Die `DDX_FieldScroll`-Funktion synchronisiert die Bild Lauf Position eines Schiebe leisten-Steuer Elements in einer Daten Satz Ansicht und einen **int** -Felddatenmember eines Recordsets, das der Daten Satz Ansicht zugeordnet ist (oder mit einer beliebigen ganzzahligen Variablen, der Sie zugeordnet werden).
 
 ```
 void AFXAPI DDX_FieldScroll(
@@ -452,10 +452,10 @@ void AFXAPI DDX_FieldScroll(
 Ein Zeiger auf ein [CDataExchange](../../mfc/reference/cdataexchange-class.md) -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.
 
 *nIDC*<br/>
-Die ID des ersten in einer Gruppe (mit Style WS_GROUP) der angrenzenden Optionsfeld-Steuerelemente im [CRecordView](../../mfc/reference/crecordview-class.md) -oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) -Objekt.
+Die ID des ersten in einer Gruppe (mit Stil WS_GROUP) der angrenzenden Optionsfeld-Steuerelemente im [CRecordView](../../mfc/reference/crecordview-class.md) -oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) -Objekt.
 
-*value*<br/>
-Ein Verweis auf einen Felddatenmember im zugeordneten `CRecordset` - `CDaoRecordset` Objekt oder-Objekt.
+*Wert*<br/>
+Ein Verweis auf einen Felddatenmember im zugeordneten `CRecordset` oder `CDaoRecordset`-Objekt.
 
 *pRecordset*<br/>
 Ein Zeiger auf das [CRecordset](../../mfc/reference/crecordset-class.md) -oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) -Objekt, mit dem Daten ausgetauscht werden.
@@ -470,14 +470,14 @@ Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -vali
 
 ### <a name="example"></a>Beispiel
 
-Ein allgemeines DDX_Field-Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Aufrufe von `DDX_FieldScroll` wären ähnlich.
+Ein allgemeines DDX_Field Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Aufrufe an `DDX_FieldScroll` wären ähnlich.
 
 ### <a name="requirements"></a>Anforderungen
 
   **Header** afxdao. h
 
   ## <a name="ddx_fieldslider"></a>DDX_FieldSlider
-Die `DDX_FieldSlider` -Funktion synchronisiert die Ziehpunkt Position eines Schieberegler-Steuer Elements in einer Daten Satz Ansicht und einen **int** -Felddatenmember eines Recordsets, das der Daten Satz Ansicht zugeordnet ist (bzw. mit einer beliebigen ganzzahligen Variablen, der Sie zugeordnet werden).
+Die `DDX_FieldSlider`-Funktion synchronisiert die Ziehpunkt Position eines Schieberegler-Steuer Elements in einer Daten Satz Ansicht und einen **int** -Felddatenmember eines Recordsets, das der Daten Satz Ansicht zugeordnet ist (oder mit einer beliebigen ganzzahligen Variablen, der Sie zugeordnet werden).
 
 ### <a name="syntax"></a>Syntax
 
@@ -503,25 +503,25 @@ Ein Zeiger auf ein [CDataExchange](cdataexchange-class.md) -Objekt. Das Framewor
 *nIDC*<br/>
 Die Ressourcen-ID des Schieberegler-Steuer Elements.
 
-*value*<br/>
+*Wert*<br/>
 Ein Verweis auf den auszutauschenden Wert. Dieser Parameter enthält oder wird verwendet, um die aktuelle Thumb-Position des Schieberegler-Steuer Elements festzulegen.
 
 *pRecordset*<br/>
-Ein Zeiger auf das `CRecordset` zugeordnete-oder `CDaoRecordset` -Objekt, mit dem Daten ausgetauscht werden.
+Ein Zeiger auf den zugeordneten `CRecordset` oder `CDaoRecordset` Objekt, mit dem Daten ausgetauscht werden.
 
 ### <a name="remarks"></a>Hinweise
 
 Wenn Sie Daten aus dem Recordset in den Schieberegler verschieben, legt diese Funktion die Position des Schiebereglers auf den in *value*angegebenen Wert fest. Wenn bei einer Übertragung vom Recordset zum-Steuerelement das Recordsetfeld NULL ist, wird die Position des Schieberegler-Steuer Elements auf 0 festgelegt. Wenn das Steuerelement bei einer Übertragung vom-Steuerelement an das Recordset leer ist, ist der Wert des Recordset-Felds 0.
 
-`DDX_FieldSlider`tauscht keine Bereichs Informationen mit Schieberegler-Steuerelementen aus, die einen Bereich anstatt einfach eine Position festlegen können.
+`DDX_FieldSlider` tauschen keine Bereichs Informationen mit Schieberegler-Steuerelementen aus, die einen Bereich anstatt einfach eine Position festlegen können.
 
 Verwenden Sie die erste außer Kraft setzung der-Funktion, wenn Sie mit den ODBC-basierten Klassenarbeiten. Verwenden Sie die zweite außer Kraft setzung mit den DAO-basierten Klassen.
 
-Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -validierung](../dialog-data-exchange-and-validation.md). Beispiele und weitere Informationen zu DDX für `CRecordView` -und- `CDaoRecordView` Felder finden Sie unter [Daten Satz Ansichten](../../data/record-views-mfc-data-access.md). Weitere Informationen zu Schieberegler-Steuerelementen finden [Sie unter Verwenden von CSliderCtrl](../using-csliderctrl.md).
+Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -validierung](../dialog-data-exchange-and-validation.md). Beispiele und weitere Informationen zu DDX für `CRecordView`-und `CDaoRecordView` Felder finden Sie unter [Daten Satz Ansichten](../../data/record-views-mfc-data-access.md). Weitere Informationen zu Schieberegler-Steuerelementen finden [Sie unter Verwenden von CSliderCtrl](../using-csliderctrl.md).
 
 ### <a name="example"></a>Beispiel
 
-Ein allgemeines DDX_Field-Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Aufrufe von `DDX_FieldSlider` wären ähnlich.
+Ein allgemeines DDX_Field Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Aufrufe an `DDX_FieldSlider` wären ähnlich.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -529,7 +529,7 @@ Ein allgemeines DDX_Field-Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldte
 
 ##  <a name="ddx_fieldtext"></a>DDX_FieldText
 
-Die `DDX_FieldText` Funktion verwaltet die Übertragung von Daten vom Typ " **int**", " **Short**", " **Long**", "DWORD", " [CString](../../atl-mfc-shared/reference/cstringt-class.md)", " **float**", " **Double**", " **bool**" oder " **Byte** " zwischen einem Steuerelement Recordset.
+Die `DDX_FieldText`-Funktion verwaltet die Übertragung von Daten vom Typ " **int**", " **Short**", " **Long**", "DWORD", " [CString](../../atl-mfc-shared/reference/cstringt-class.md)", " **float**", " **Double**", " **bool**" oder " **Byte** " zwischen einem Bearbeitungsfeld-Steuerelement
 
 ```
 void AFXAPI DDX_FieldText(
@@ -649,15 +649,15 @@ Ein Zeiger auf ein [CDataExchange](../../mfc/reference/cdataexchange-class.md) -
 *nIDC*<br/>
 Die ID eines Steuer Elements im [CRecordView](../../mfc/reference/crecordview-class.md) -oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) -Objekt.
 
-*value*<br/>
-Ein Verweis auf einen Felddatenmember im zugeordneten `CRecordset` - `CDaoRecordset` Objekt oder-Objekt. Der Datentyp des Werts hängt davon ab, welche der überladenen Versionen von `DDX_FieldText` Sie verwenden.
+*Wert*<br/>
+Ein Verweis auf einen Felddatenmember im zugeordneten `CRecordset` oder `CDaoRecordset`-Objekt. Der Datentyp des Werts hängt davon ab, welche der überladenen Versionen von `DDX_FieldText` Sie verwenden.
 
 *pRecordset*<br/>
-Ein Zeiger auf das [CRecordset](../../mfc/reference/crecordset-class.md) -oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) -Objekt, mit dem Daten ausgetauscht werden. Mit diesem Zeiger `DDX_FieldText` können NULL-Werte erkannt und festgelegt werden.
+Ein Zeiger auf das [CRecordset](../../mfc/reference/crecordset-class.md) -oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) -Objekt, mit dem Daten ausgetauscht werden. Dieser Zeiger ermöglicht `DDX_FieldText` das erkennen und Festlegen von NULL-Werten.
 
 ### <a name="remarks"></a>Hinweise
 
-Für [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) -Objekte `DDX_FieldText` verwaltet auch die Übertragung von [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)-und [COleCurrency](../../mfc/reference/colecurrency-class.md) -Werten. Ein leeres Bearbeitungsfeld-Steuerelement gibt einen NULL-Wert an. Bei einer Übertragung vom Recordset zum-Steuerelement ist das Feld "Bearbeiten" auf "leer" festgelegt, wenn das Recordsetfeld NULL ist. Wenn das Steuerelement leer ist, wird das Recordsetfeld bei einer Übertragung von einem Steuerelement zu einem Recordset auf NULL festgelegt.
+Für [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) -Objekte `DDX_FieldText` auch die Übertragung von [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)-und [COleCurrency](../../mfc/reference/colecurrency-class.md) -Werten verwaltet. Ein leeres Bearbeitungsfeld-Steuerelement gibt einen NULL-Wert an. Bei einer Übertragung vom Recordset zum-Steuerelement ist das Feld "Bearbeiten" auf "leer" festgelegt, wenn das Recordsetfeld NULL ist. Wenn das Steuerelement leer ist, wird das Recordsetfeld bei einer Übertragung von einem Steuerelement zu einem Recordset auf NULL festgelegt.
 
 Verwenden Sie die-Versionen mit [CRecordset](../../mfc/reference/crecordset-class.md) -Parametern, wenn Sie mit den ODBC-basierten Klassenarbeiten. Verwenden Sie die-Versionen mit [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) -Parametern, wenn Sie mit den DAO-basierten Klassenarbeiten.
 
@@ -665,7 +665,7 @@ Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -vali
 
 ### <a name="example"></a>Beispiel
 
-Die folgende `DoDataExchange` Funktion für eine [CRecordView](../../mfc/reference/crecordview-class.md) enthält `DDX_FieldText` Funktionsaufrufe für drei Datentypen: `IDC_COURSELIST` ist ein Kombinations Feld, die anderen beiden Steuerelemente sind Bearbeitungsfelder. Bei der DAO-Programmierung ist der *m_pSet* -Parameter ein Zeiger auf ein [CRecordset](../../mfc/reference/crecordset-class.md) oder ein [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
+Die folgende `DoDataExchange` Funktion für eine [CRecordView](../../mfc/reference/crecordview-class.md) enthält `DDX_FieldText` Funktionsaufrufe für drei Datentypen: `IDC_COURSELIST` ist ein Kombinations Feld. die anderen beiden Steuerelemente sind Bearbeitungsfelder. Bei der DAO-Programmierung ist der *m_pSet* -Parameter ein Zeiger auf ein [CRecordset](../../mfc/reference/crecordset-class.md) oder ein [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
 
 [!code-cpp[NVC_MFCDatabase#43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]
 

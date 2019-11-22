@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@CurSeg symbol'
 ms.assetid: 8fbf90c1-7734-4113-9ba2-6ec664b3b59f
-ms.openlocfilehash: c575c1c5f25e72f34525c0802483fdb61844293c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69e8c762a10b2cda03cbd5e02708e7510daad1be
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166827"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302749"
 ---
-# <a name="curseg"></a>@CurSeg
+# <a name="curseg"></a>\@Cursor
 
-Der Name des aktuellen Segments (Textmakro).
+Der Name des aktuellen Segments (Text Makro).
 
 ## <a name="syntax"></a>Syntax
 
-> @CurSeg
+> **\@Cursor**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Symbole – Verweis](../../assembler/masm/symbols-reference.md)<br/>
+[Symbole – Verweis](../../assembler/masm/symbols-reference.md)

@@ -4,12 +4,12 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-ms.openlocfilehash: 76378dc5ef9d7443045c329579cfa3c410dc262f
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: da9fa72419dc6971e90124b061da48493d7ca017
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630746"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303157"
 ---
 # <a name="property-page-xml-rule-files"></a>XML-Regeldateien für Eigenschaftenseiten
 
@@ -73,7 +73,7 @@ Wenn Sie alle Daten aus „cl.xml“ entfernen, verbleibt folgendes Gerüst:
 
 Im folgenden Abschnitt werden die Hauptelemente und einige der Metadaten beschrieben, die an diese angefügt werden können.
 
-1. **Rule:**  Bei „Rule“ handelt es sich im Allgemeinen um den Stammknoten der XML-Datei. Dieser kann mehrere Attribute enthalten:
+1. **Rule:** Bei „Rule“ handelt es sich im Allgemeinen um den Stammknoten der XML-Datei. Dieser kann mehrere Attribute enthalten:
 
     ```xml
     <Rule Name="CL" PageTemplate="tool" SwitchPrefix="/" Order="10"
@@ -95,7 +95,7 @@ Im folgenden Abschnitt werden die Hauptelemente und einige der Metadaten beschri
 
    e. **xmlns:** Hierbei handelt es sich um ein XAML-Standardelement. Drei Namespaces werden aufgeführt. Diese entsprechen den Namespaces für die XAML-Deserialisierungsklassen, das XAML-Schema und insbesondere den XAML-Systemnamespace.
 
-   f. **DisplayName:** Dieser Name wird auf der Benutzeroberfläche der Eigenschaftenseite des Knotens „Rule“ (Regel) angezeigt. Dieser Wert wird lokalisiert. „DisplayName“ wurde aufgrund der internen Anforderungen von Lokalisierungstools als untergeordnetes Element von „Rule“ statt als Attribut erstellt (wie „Name“ oder „SwitchPrefix“). Für XAML sind diese gleichwertig. Sie können deshalb ein Attribut daraus erstellen, um die Übersichtlichkeit zu verbessern, oder keine Änderung vornehmen.
+   f. **DisplayName:** Dieser Name wird auf der Benutzeroberfläche der Eigenschaftenseite des Knotens „Rule“ (Regel) angezeigt. Dieser Wert wird lokalisiert. „DisplayName“ wurde aufgrund der internen Anforderungen von Lokalisierungstools als untergeordnetes Element von „Rule“ statt als Attribut erstellt (wie „Name“ oder „SwitchPrefix“). Aus Sicht von XAML sind beide Äquivalent. Sie können deshalb ein Attribut daraus erstellen, um die Übersichtlichkeit zu verbessern, oder keine Änderung vornehmen.
 
    g. **DataSource:** Diese Eigenschaft ist sehr wichtig, da Sie dem Projektsystem mitteilt, an welchem Speicherort der Projektwert gelesen und gespeichert werden soll und wie dieser gruppiert wird. Dies wird im Folgenden erläutert. Für „cl.xml“ sind diese Werte Folgende:
 
@@ -112,7 +112,7 @@ Im folgenden Abschnitt werden die Hauptelemente und einige der Metadaten beschri
    - `HasConfigurationCondition="true"` weist das Projektsystem an, eine Konfigurationsbedingung an den Wert anzufügen, damit dieser nur für die aktuelle Projektkonfiguration wirksam ist. Die Konfiguration kann an die übergeordnete Gruppe oder an den Wert angefügt werden. Öffnen Sie beispielsweise die Projektseiten über den Projektknoten, und legen Sie den Wert der Eigenschaft **Warnungen als Fehler behandeln** unter **Konfigurationseigenschaften > C/C++ > Allgemein** auf „Ja“ fest. Der folgende Wert wird in die Projektdatei geschrieben. Beachten Sie die Konfigurationsbedingung, die an das übergeordnete Element „ItemDefinitionGroup“ angefügt ist.
 
       ```xml
-      <ItemDefinitionGroup Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">
+      <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
         <ClCompile>
           <TreatWarningAsError>true</TreatWarningAsError>
         </ClCompile>
@@ -124,20 +124,20 @@ Im folgenden Abschnitt werden die Hauptelemente und einige der Metadaten beschri
       ```xml
       <ItemGroup>
         <ClCompile Include="stdafx.cpp">
-          <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
+          <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</TreatWarningAsError>
         </ClCompile>
       </ItemGroup>
       ```
 
-   Ein weiteres Attribut von **DataSource**, das zuvor nicht aufgelistet wurde, ist **PersistedName**. Sie können dieses Attribut verwenden, um eine Eigenschaft in der Projektdatei mit einem anderen Namen darzustellen. Standardmäßig ist dieses Attribut auf den **Namen** der Eigenschaft festgelegt.
+   Ein weiteres Attribut von **DataSource**, das zuvor nicht aufgelistet wurde, ist **PersistedName**. Sie können dieses Attribut verwenden, um eine Eigenschaft in der Projektdatei mit einem anderen Namen darzustellen. Standardmäßig ist dieses Attribut auf den **Namen**der Eigenschaft festgelegt.
 
-   Eine einzelne Eigenschaft kann den DataSource-Wert des übergeordneten Rule-Elements überschreiben. In diesem Fall unterscheidet sich der Speicherort des Werts der Eigenschaft von dem anderer Eigenschaften in dieser Regel.
+   Eine einzelne Eigenschaft kann die Datenquelle der übergeordneten Regel überschreiben. In diesem Fall unterscheidet sich der Speicherort für den Wert dieser Eigenschaft von anderen Eigenschaften in der Regel.
 
    h. Es gibt weitere Attribute von „Rule“, einschließlich „Description“ und „SupportsFileBatching“. Diese werden hier nicht dargestellt. Alle Attribute, die auf „Rule“ oder ein anderes Element angewendet werden können, finden Sie in der Dokumentation für diese Typen. Alternativ können Sie die öffentlichen Eigenschaften von Typen im `Microsoft.Build.Framework.XamlTypes`-Namespace der `Microsoft.Build.Framework .dll`-Assembly überprüfen.
 
    i. **DisplayName**, **PageTemplate** und **Order** sind auf die Benutzeroberfläche bezogene Eigenschaften, die in diesem Datenmodell vorhanden sind, das ansonsten von der Benutzeroberfläche unabhängig ist. Diese Eigenschaften werden meistens von allen Benutzeroberflächen verwendet, die zum Anzeigen von Eigenschaftenseiten verwendet werden. Die Eigenschaften **DisplayName** und **Description** sind in fast allen Elementen der XML-Datei vorhanden. Nur diese beiden Eigenschaften werden lokalisiert. Die Lokalisierung dieser Zeichenfolgen wird in einem späteren Beitrag erläutert.
 
-1. **Kategorie**: Eine Regel kann mehrere Kategorien aufweisen. Bei der Reihenfolge, in der diese Kategorien in der XML-Datei aufgeführt werden, handelt es sich um einen Vorschlag für die Benutzeroberfläche, damit diese in der gleichen Reihenfolge angezeigt werden. Die Reihenfolge der Kategorien im Knoten „C/C++“, die auf der Benutzeroberfläche angezeigt wird (Allgemein, Optimierung, Präprozessor, ...),  entspricht beispielsweise der in „cl.xml“. Eine Beispielkategorie sieht folgendermaßen aus:
+1. **Category:** Eine Regel kann mehrere Kategorien aufweisen. Bei der Reihenfolge, in der diese Kategorien in der XML-Datei aufgeführt werden, handelt es sich um einen Vorschlag für die Benutzeroberfläche, damit diese in der gleichen Reihenfolge angezeigt werden. Die Reihenfolge der Kategorien im Knoten „C/C++“, die auf der Benutzeroberfläche angezeigt wird (Allgemein, Optimierung, Präprozessor, ...),  entspricht beispielsweise der in „cl.xml“. Eine Beispielkategorie sieht folgendermaßen aus:
 
     ```xml
     <Category Name="Optimization">
@@ -149,7 +149,7 @@ Im folgenden Abschnitt werden die Hauptelemente und einige der Metadaten beschri
 
    Der obige Codeausschnitt zeigt die Attribute **Name** und **DisplayName**, die zuvor beschrieben wurden. Auch für **Category** gibt es weitere Attribute, die oben nicht verwendet wurden. Sie können mehr über diese erfahren, indem Sie die Dokumentation lesen oder die Assemblys mithilfe von „ildasm.exe“ überprüfen.
 
-1. **Properties:** Dies ist der Hauptbestandteil der XML-Datei, in dem eine Liste aller Eigenschaften der Regel enthalten ist. Jede Eigenschaft kann einen von fünf möglichen Typen aufweisen, die zuvor im XAML-Gerüst dargestellt wurden. In Ihrer Datei können jedoch nur einige dieser Typen vorhanden sein. Eine Eigenschaft besitzt mehrere Attribute, mit denen Sie ausführlich beschrieben werden kann. Hier wird nur **StringProperty** erläutert. Die übrigen Attribute sind jedoch ähnlich.
+1. **Properties:** Dies ist der Hauptbestandteil der XML-Datei, in dem eine Liste aller Eigenschaften der Regel enthalten ist. Jede Eigenschaft kann einen von fünf möglichen Typen aufweisen, die zuvor im XAML-Gerüst dargestellt wurden. In Ihrer Datei können jedoch nur einige dieser Typen vorhanden sein. Eine Eigenschaft besitzt mehrere Attribute, mit denen Sie ausführlich beschrieben werden kann. Hier werde ich nur die **StringProperty** erläutern. Die übrigen Attribute sind jedoch ähnlich.
 
     ```xml
     <StringProperty Subtype="file" Name="ObjectFileName" Category="Output Files" Switch="Fo">
@@ -164,16 +164,16 @@ Im folgenden Abschnitt werden die Hauptelemente und einige der Metadaten beschri
 
    Die meisten Attribute im Codeausschnitt wurden zuvor bereits beschrieben. Neu sind „Subtype“, „Category“ and „Switch“.
 
-   a. **Subtype** ist ein Attribut, das nur für **StringProperty** und **StringListProperty** verfügbar ist und Kontextinformationen enthält. Der Wert von „file“ gibt beispielsweise an, dass die Eigenschaft einen Dateipfad darstellt. Solche Kontextinformationen werden verwendet, um die Bearbeitungsoberfläche zu verbessern, indem ein Windows-Explorer als Editor für die Eigenschaft bereitgestellt wird, mit dem der Benutzer die Datei visuell auswählen kann.
+   a. **Subtype** ist ein Attribut, das nur für **StringProperty** und **StringListProperty** verfügbar ist und Kontextinformationen enthält. Der Wert von „file“ gibt beispielsweise an, dass die Eigenschaft einen Dateipfad darstellt. Diese Kontextinformationen werden verwendet, um die Bearbeitungsfunktionen zu verbessern, indem ein Windows-Explorer als Eigenschaften-Editor bereitgestellt wird, mit dem der Benutzer die Datei visuell auswählen kann.
 
-   b. **Kategorie**: Hierdurch wird die Kategorie der Eigenschaft deklariert. Suchen Sie diese Eigenschaft in der Kategorie **Ausgabedateien** auf der Benutzeroberfläche.
+   b. **Category:** Hierdurch wird die Kategorie der Eigenschaft deklariert. Suchen Sie diese Eigenschaft in der Kategorie **Ausgabedateien** auf der Benutzeroberfläche.
 
    c. **Switch:** Wenn eine Regel ein Tool darstellt (in diesem Fall z.B. ein Compilertool), werden die meisten Eigenschaften der Regel während der Buildzeit als Parameter an das ausführbare Tool übergeben. Der Wert dieses Attributs gibt das Parameterliteral an, das verwendet werden soll. Die oben genannte Eigenschaft gibt an, dass der Parameter **Fo** sein sollte. In Kombination mit dem **SwitchPrefix**-Attribut des übergeordneten Rule-Elements wird diese Eigenschaft an die ausführbare Datei als **/Fo"Debug\"** übergeben. Dies wird in der Befehlszeile für C/C++ auf der Benutzeroberfläche der Eigenschaftenseite angezeigt.
 
    Folgende weitere Eigenschaftenattribute sind vorhanden:
 
-   d. **Visible:** Wenn Sie aus irgendeinem Grund nicht möchten, dass die Eigenschaft auf der Eigenschaftenseite angezeigt wird (aber zur Buildzeit trotzdem verfügbar ist), legen Sie dieses Attribut auf FALSE fest.
+   d. **Sichtbar:** Wenn Sie aus irgendeinem Grund nicht möchten, dass Ihre Eigenschaft in den Eigenschaften Seiten angezeigt wird (aber wahrscheinlich noch während der Buildzeit verfügbar ist), legen Sie dieses Attribut auf "false" fest.
 
-   e. **ReadOnly:** Wenn Sie eine schreibgeschützte Ansicht dieses Eigenschaftswerts auf den Eigenschaftenseiten bereitstellen möchten, legen Sie dieses Attribut auf TRUE fest.
+   e. Schreibgeschützt **:** Wenn Sie in den Eigenschaften Seiten eine schreibgeschützte Ansicht des Eigenschafts Werts angeben möchten, legen Sie dieses Attribut auf "true" fest.
 
-   f. **IncludeInCommandLine:** Einige Eigenschaften müssen während der Buildzeit möglicherweise nicht an ein Tool übergeben werden. Wenn Sie dieses Attribut auf FALSE festlegen, wird es nicht übergeben.
+   f. **IncludeInCommandLine:** Einige Eigenschaft müssen während der Buildzeit möglicherweise nicht an ein Tool übergeben werden. Wenn Sie dieses Attribut auf FALSE festlegen, wird es nicht übergeben.

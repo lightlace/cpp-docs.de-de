@@ -2,16 +2,16 @@
 title: Übersicht über ARM-ABI-Konventionen
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: 17f2598912879d0eb54fd189e1fae541ba2f874f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 176aaaa17af1ce358255ca94eaccc7d5217f2a87
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295233"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303192"
 ---
-# <a name="overview-of-arm32-abi-conventions"></a>Übersicht über die ABI-Konventionen ARM32
+# <a name="overview-of-arm32-abi-conventions"></a>Übersicht über ARM32 ABI-Konventionen
 
-Die Binärschnittstelle (ABI, Application Binary Interface) für den für Windows on ARM-Prozessoren kompilierten Code basiert auf der standardmäßigen ARM EABI. Dieser Artikel zeigt die wichtigsten Unterschiede zwischen Windows on ARM und dem Standard. Dieses Dokument behandelt die ARM32-ABI. Weitere Informationen zur ABI ARM64 finden Sie unter [Übersicht von ARM64-ABI-Konventionen](arm64-windows-abi-conventions.md). Weitere Informationen über die standardmäßige ARM EABI finden Sie unter [Application Binary Interface (ABI) für die ARM-Architektur](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html) (externer Link).
+Die Binärschnittstelle (ABI, Application Binary Interface) für den für Windows on ARM-Prozessoren kompilierten Code basiert auf der standardmäßigen ARM EABI. Dieser Artikel zeigt die wichtigsten Unterschiede zwischen Windows on ARM und dem Standard. In diesem Dokument wird die ARM32 ABI behandelt. Weitere Informationen zur ARM64 ABI finden Sie unter [Übersicht über ARM64 ABI-Konventionen](arm64-windows-abi-conventions.md). Weitere Informationen zur Standard-ARM-EABI finden Sie unter [Application Binary Interface (ABI) für die ARM-Architektur](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html) (externer Link).
 
 ## <a name="base-requirements"></a>Grundanforderungen
 
@@ -23,7 +23,7 @@ Die Unterstützung für die Division von ganzen Zahlen (UDIV/SDIV) wird wärmste
 
 ## <a name="endianness"></a>Endianness
 
-Windows on ARM wird im Little-Endian-Modus ausgeführt. Der MSVC-Compiler und die Windows-Runtime erwarten jederzeit little-Endian-Daten. Auch wenn die SETEND-Instruktion in der ARM-Instruktionssatz-Architektur (ISA) es sogar dem Benutzermodus-Code ermöglicht, die aktuelle Endianness zu ändern, wird davon dringend abgeraten, da es für eine Anwendung gefährlich sein kann. Wenn im Big-Endian-Modus eine Ausnahme generiert wird, ist das Verhalten unvorhersehbar und kann zu einem Anwendungsfehler im Benutzermodus oder zu einer Fehlerprüfung im Kernel-Modus führen.
+Windows on ARM wird im Little-Endian-Modus ausgeführt. Sowohl der MSVC-Compiler als auch die Windows-Runtime erwarten immer nur Little-Endian-Daten. Auch wenn die SETEND-Instruktion in der ARM-Instruktionssatz-Architektur (ISA) es sogar dem Benutzermodus-Code ermöglicht, die aktuelle Endianness zu ändern, wird davon dringend abgeraten, da es für eine Anwendung gefährlich sein kann. Wenn im Big-Endian-Modus eine Ausnahme generiert wird, ist das Verhalten unvorhersehbar und kann zu einem Anwendungsfehler im Benutzermodus oder zu einer Fehlerprüfung im Kernel-Modus führen.
 
 ## <a name="alignment"></a>Ausrichtung
 
@@ -67,11 +67,11 @@ Der Einsatz von IT-Instruktionen in Thumb-2-Code ist mit Ausnahme der folgenden 
 
 Auch wenn aktuelle ARMv7-CPUs nicht den Einsatz von unzulässigen Instruktionsformen melden können, wird dies von zukünftigen Generationen erwartet. Wenn diese Formen erkannt werden, wird jedes Programm, das sie verwendet, unter Umständen mit einer nicht definierten Instruktionsausnahme beendet.
 
-### <a name="sdivudiv-instructions"></a>SDIV/UDIV-Instruktionen
+### <a name="sdivudiv-instructions"></a>Sdiv-/udiv-Anweisungen
 
 Die Nutzung von Divisionsinstruktionen für Ganzzahlen SDIV und UDIV wird vollständig unterstützt, sogar auf Plattformen ohne native Hardware zur Verarbeitung. Der Mehraufwand pro SDIV- oder UDIV-Division auf einem Cortex-A9-Prozessor beträgt etwa 80 Zyklen, hinzu kommt die Gesamtzeit für die Division von 20-250 Zyklen, je nach Eingaben.
 
-## <a name="integer-registers"></a>Ganzzahlregister
+## <a name="integer-registers"></a>Ganzzahlige Register
 
 Der ARM-Prozessor unterstützt 16 Ganzzahlregister:
 
@@ -129,15 +129,15 @@ Die nächste Tabelle zeigt die Gleitkommastatus- und Steuerungsregister (FPSCR)-
 |15, 12-8|IDE, IXE usw.|Nicht volatil|Ausnahme-Trap-Aktivierungsbits, muss immer 0 sein|
 |7, 4-0|IDC, IXC usw.|Volatil|Kumulative Ausnahme-Flags|
 
-## <a name="floating-point-exceptions"></a>Gleitkommaausnahmen
+## <a name="floating-point-exceptions"></a>Gleit Komma Ausnahmen
 
 Der Großteil an ARM-Hardware unterstützt keine IEEE-Gleitkommaausnahmen. Bei Prozessorvarianten mit Hardware-Gleitkommaausnahmen fängt der Windows-Kernel stumm die Ausnahmen ab und deaktiviert sie implizit im FPSCR-Register. Dadurch wird ein normalisiertes Verhalten zwischen Prozessorvarianten sichergestellt. Anderenfalls könnte Code, der auf einer Plattform entwickelt wurde, die keine Ausnahmenunterstützung bietet, unerwartete Ausnahmen erhalten, wenn er auf einer Plattform mit Ausnahmenunterstützung ausgeführt wird.
 
 ## <a name="parameter-passing"></a>Parameterübergabe
 
-Bei nicht variadic-Funktionen folgt die Windows on ARM-ABI den ARM-Regeln für die Parameterübergabe, dazu gehören die VFP- und Advanced SIMD-Erweiterungen. Die folgenden Regeln einhalten der [Prozeduraufruf-Standard für die ARM-Architektur](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf), konsolidiert mit den VFP-Erweiterungen. Standardmäßig werden die ersten vier Ganzzahlargumente und bis zu acht Gleitkomma- oder Vektor-Argumente an Register übergeben, und zusätzliche Argumente werden an den Stack übergeben. Argumente werden Registern oder dem Stack mithilfe der folgenden Prozedur zugewiesen:
+Bei nicht variadic-Funktionen folgt die Windows on ARM-ABI den ARM-Regeln für die Parameterübergabe, dazu gehören die VFP- und Advanced SIMD-Erweiterungen. Diese Regeln folgen dem [Prozedur aufrufsstandard für die ARM-Architektur](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf), konsolidiert mit den VFP-Erweiterungen. Standardmäßig werden die ersten vier Ganzzahlargumente und bis zu acht Gleitkomma- oder Vektor-Argumente an Register übergeben, und zusätzliche Argumente werden an den Stack übergeben. Argumente werden Registern oder dem Stack mithilfe der folgenden Prozedur zugewiesen:
 
-### <a name="stage-a-initialization"></a>Schritt A: Initialisierung
+### <a name="stage-a-initialization"></a>Phase A: Initialisierung
 
 Die Initialisierung wird genau einmal durchgeführt, bevor die Argumentsverarbeitung beginnt:
 
@@ -149,7 +149,7 @@ Die Initialisierung wird genau einmal durchgeführt, bevor die Argumentsverarbei
 
 1. Wenn eine Funktion aufgerufen wird, die ein Ergebnis im Speicher zurückgibt, wird die Adresse für das Ergebnis in r0 platziert und die NCRN wird auf r1 gesetzt.
 
-### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Schritt B: Vorab-padding und Erweiterung von Argumenten
+### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Stufe B: vorab Auffüll Zeichen und Erweiterung von Argumenten
 
 Auf jedes Argument in der Liste wird die erste übereinstimmende Regel aus der folgenden Liste angewendet:
 
@@ -159,7 +159,7 @@ Auf jedes Argument in der Liste wird die erste übereinstimmende Regel aus der f
 
 1. Wenn das Argument ein zusammengesetzter Typ ist, wird die Größe auf das nächste Vielfache von 4 aufgerundet.
 
-### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Phase "c:" Zuweisung von Argumenten zu Registern und zum stack
+### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Phase C: Zuweisung von Argumenten zu Registern und Stapel
 
 Auf jedes Argument in der Liste werden die folgenden Regeln abwechselnd angewendet, bis das Argument zugeordnet wurde:
 
@@ -187,35 +187,35 @@ Der Stack muss dauerhaft 4-Byte-ausgerichtet bleiben und an jeder Funktionsgrenz
 
 Funktionen, die einen Frame-Pointer verwenden müssen, z. B. Funktionen, die `alloca` aufrufen oder die den Stack-Pointer dynamisch ändern, müssen den Frame-Pointer in r11 im Funktionsprolog einrichten und bis zum Epilog unverändert lassen. Funktionen, die keinen Frame-Pointer erfordern, müssen alle Stack-Updates im Prolog durchführen und dann den Stack-Pointer bis zum Epilog unverändert lassen.
 
-Funktionen, die 4 KB oder mehr im Stack zuweisen, müssen sicherstellen, dass jede Seite vor der letzten Seite in der richtigen Reihenfolge verwendet wird. Dadurch wird sichergestellt, dass kein Code über die Schutzseiten „läuft“, die Windows zur Erweiterung des Stacks verwendet. Dies wird in der Regel mithilfe des Hilfsprogramms `__chkstk` erzielt, dem die Stack-Gesamtzuordnung in Bytes geteilt durch 4 an r4 übergeben wird und das die letzte Stackzuordnungsanzahl in Bytes wieder an r4 zurückgibt.
+Funktionen, die 4 KB oder mehr im Stack zuweisen, müssen sicherstellen, dass jede Seite vor der letzten Seite in der richtigen Reihenfolge verwendet wird. Dadurch wird sichergestellt, dass kein Code über die Schutz Seiten "springen", die Windows zum Erweitern des Stapels verwendet. Dies wird in der Regel mithilfe des Hilfsprogramms `__chkstk` erzielt, dem die Stack-Gesamtzuordnung in Bytes geteilt durch 4 an r4 übergeben wird und das die letzte Stackzuordnungsanzahl in Bytes wieder an r4 zurückgibt.
 
-### <a name="red-zone"></a>Rote zone
+### <a name="red-zone"></a>Rote Zone
 
 Dieser 8-Byte-Bereich direkt unter dem aktuellen Stack-Pointer ist für die Analyse und das dynamische Patching reserviert. Dadurch kann sorgfältig generierter Code eingefügt werden, in dem 2 Register bei [sp, #-8] gespeichert werden und der sie vorübergehend für beliebige Zwecke verwendet. Der Windows-Kernel stellt sicher, dass diese 8 Bytes nicht überschrieben werden, wenn eine Ausnahme oder ein Interrupt im Benutzermodus und im Kernel-Modus auftritt.
 
-### <a name="kernel-stack"></a>Kernel-stack
+### <a name="kernel-stack"></a>Kernel Stapel
 
 Der standardmäßige Stack im Kernel-Modus unter Windows besteht aus drei Seiten (12 KB). Achten Sie darauf, keine Funktionen zu erstellen, die über große Stack-Puffer im Kernel-Modus verfügen. Ein Interrupt kann mit sehr kleinem Stack-Spielraum auftreten und eine Panik-Stack-Fehlerprüfung verursachen.
 
-## <a name="cc-specifics"></a>C/C++-Besonderheiten
+## <a name="cc-specifics"></a>C/C++ Besonderheiten
 
 Enumerationen sind 32-Bit-Ganzzahl-Typen, es sei denn mindestens ein Wert in der Enumeration erfordert einen 64-Bit-Doppelwort-Speicher. In diesem Fall wird die Enumeration auf einen 64-Bit-Ganzzahl-Typ heraufgestuft.
 
-`wchar_t` ist definiert als äquivalent zu `unsigned short`, um die Kompatibilität mit anderen Plattformen beizubehalten.
+`wchar_t` ist so definiert, dass Sie `unsigned short`entspricht, um die Kompatibilität mit anderen Plattformen beizubehalten.
 
-## <a name="stack-walking"></a>Durchlaufen von Stapeln
+## <a name="stack-walking"></a>Stapel-Walking
 
-Windows-Code wird mit aktivierten Frame-Pointern kompiliert ([/Oy (Framezeiger unterdrücken)](reference/oy-frame-pointer-omission.md)) zum schnellen Stackwalk zu ermöglichen. Im Allgemeinen verweist das r11-Register auf den nächsten Link in der Kette, bei dem es sich um ein {r11, lr}-Paar handelt, das den Pointer zum vorherigen Frame im Stack und die Rückgabeadresse spezifiziert. Für eine verbesserte Profilerstellung und Ablaufverfolgung empfehlen wir, dass Ihr Code auch Frame-Pointer aktiviert.
+Der Windows-Code wird mit aktivierten Frame Zeigern ([/Oy (Frame-Zeiger-Auslassung)](reference/oy-frame-pointer-omission.md)) kompiliert, um schnelles Stapeln zu ermöglichen. Im Allgemeinen verweist das r11-Register auf den nächsten Link in der Kette, bei dem es sich um ein {r11, lr}-Paar handelt, das den Pointer zum vorherigen Frame im Stack und die Rückgabeadresse spezifiziert. Für eine verbesserte Profilerstellung und Ablaufverfolgung empfehlen wir, dass Ihr Code auch Frame-Pointer aktiviert.
 
-## <a name="exception-unwinding"></a>Ausnahmeentladung
+## <a name="exception-unwinding"></a>Ausnahme Auflösung
 
 Die Stackentladung während der Ausnahmebehandlung wird durch den Einsatz von Entladecodes aktiviert. Bei den Entladecodes handelt es sich um Bytesequenzen, die im Abschnitt .xdata des ausführbaren Bildes gespeichert sind. Sie beschreiben die Operation des Prolog- und Epilogcodes der Funktion auf abstrakte Weise, sodass die Effekte eines Funktionsprologs als Vorbereitung für die Entladung im Stack-Frame des Aufrufers rückgängig gemacht werden.
 
-Die ARM EABI gibt ein Ausnahmeentladungsmodell an, das Entladecodes verwendet. Diese Spezifikation ist jedoch nicht ausreichend zum Entladen unter Windows, wobei Fälle behandelt werden müssen, in denen der Prozessor sich in der Mitte des Prologs oder Epilogs einer Funktion befindet. Weitere Informationen zu Windows auf ARM-Ausnahmedaten und das entladen, finden Sie unter [ARM-Ausnahmebehandlung](arm-exception-handling.md).
+Die ARM EABI gibt ein Ausnahmeentladungsmodell an, das Entladecodes verwendet. Diese Spezifikation ist jedoch nicht ausreichend zum Entladen unter Windows, wobei Fälle behandelt werden müssen, in denen der Prozessor sich in der Mitte des Prologs oder Epilogs einer Funktion befindet. Weitere Informationen zu Windows auf Arm-Ausnahme Daten und zum entwickeln finden Sie unter [Arm-Ausnahmebehandlung](arm-exception-handling.md).
 
 Wir empfehlen, dass dynamisch generierter Code mithilfe von dynamischen Funktionstabellen beschrieben wird, die in Aufrufen von `RtlAddFunctionTable` und zugewiesenen Funktionen angegeben sind, damit der generierte Code sich an der Ausnahmebehandlung beteiligen kann.
 
-## <a name="cycle-counter"></a>Zyklus-counter
+## <a name="cycle-counter"></a>Cycle-Counter
 
 ARM-Prozessoren mit Windows müssen einen Zyklus-Counter unterstützen. Der direkte Einsatz des Counters kann jedoch Probleme verursachen. Um diese Probleme zu vermeiden, verwendet Windows on ARM einen nicht definierten OpCode, um einen normalisierten 64-Bit-Zyklus-Counter-Wert anzufordern. Verwenden Sie aus C oder C++ den intrinsischen `__rdpmccntr64`, um den entsprechenden OpCode auszugeben; verwenden Sie aus der Assembly die `__rdpmccntr64`-Instruktion. Das Lesen des Zyklus-Counters dauert etwa 60 Zyklen auf einem Cortex-A9.
 

@@ -1,6 +1,7 @@
 ---
 title: fenv_access-Pragma
-ms.date: 08/29/2019
+description: Beschreibt die Verwendung und die Auswirkungen der fenv_access Pragma-Direktive. Die fenv_access-Direktive steuert den Zugriff auf die Gleit Komma Umgebung zur Laufzeit.
+ms.date: 11/19/2019
 f1_keywords:
 - vc-pragma.fenv_access
 - fenv_access_CPP
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pragmas, fenv_access
 - fenv_access pragma
 ms.assetid: 2ccea292-0ae4-42ce-9c67-cc189299857b
-ms.openlocfilehash: c8e66881bde12df28bf24e18230471cb4caca792
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: e03eb404f2805a4f7c96509600c063c1b1acf629
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218606"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74305852"
 ---
 # <a name="fenv_access-pragma"></a>fenv_access-Pragma
 
@@ -25,9 +26,17 @@ Deaktiviert (**on**) oder aktiviert (**off**) Optimierungen, die die Tests für 
 
 ## <a name="remarks"></a>Hinweise
 
-In der Standardeinstellung ist **fenv_access** auf **off** (aus) festgelegt. Wenn der Compiler davon ausgehen kann, dass Ihr Code nicht auf die Gleitkommaumgebung zugreift oder diese manipuliert, können viele Gleitkommaoptimierungen gemacht werden. Legen Sie **fenv_access** auf **on** (an) fest, um dem Compiler mitzuteilen, dass Ihr Code auf die Gleitkommaumgegung zugreift, um Statusflags und Ausnahmen zu testen oder Steuerungsmodusflags festzulegen. Der Compiler deaktiviert diese Optimierungen dann, damit Ihr Code konsistent auf die Gleitkommaumgebung zugreifen kann.
+In der Standardeinstellung ist **fenv_access** auf **off** (aus) festgelegt. Der Compiler geht davon aus, dass der Code nicht auf die Gleit Komma Umgebung zugreift oder Sie bearbeitet. Wenn der Zugriff auf die Umgebung nicht erforderlich ist, kann der Compiler mehr erreichen, um den Gleit Komma Code zu optimieren.
 
-Weitere Informationen zum Gleit Komma Verhalten finden Sie unter [/fp (Gleit Komma Verhalten angeben)](../build/reference/fp-specify-floating-point-behavior.md).
+Aktivieren Sie **fenv_access** , wenn der Code Gleit Komma-Statusflags oder-Ausnahmen testet oder steuerungsmodusflags festlegt. Der Compiler deaktiviert Gleit Komma Optimierungen, sodass der Code konsistent auf die Gleit Komma Umgebung zugreifen kann.
+
+Die Befehlszeilenoption [/FP: strict] aktiviert **fenv_access**automatisch. Weitere Informationen zu diesem und anderen Gleit Komma Verhalten finden Sie unter [/fp (Gleit Komma Verhalten angeben)](../build/reference/fp-specify-floating-point-behavior.md).
+
+Es gibt Einschränkungen hinsichtlich der Art und Weise, wie Sie das **fenv_access** -Pragma in Kombination mit anderen Gleit Komma Einstellungen verwenden können:
+
+- Sie können **fenv_access** nur aktivieren, wenn die genaue Semantik aktiviert ist. Die genaue Semantik kann entweder durch das [float_control](float-control.md) -Pragma oder mithilfe der Compileroptionen [/fp: precise](../build/reference/fp-specify-floating-point-behavior.md) oder [/fp: strict](../build/reference/fp-specify-floating-point-behavior.md) aktiviert werden. Der Compiler ist standardmäßig auf **/fp: precise** festgelegt, wenn keine andere Gleit Komma-Befehlszeilenoption angegeben wird.
+
+- Sie können **float_control** nicht verwenden, um die genaue Semantik zu deaktivieren, wenn **fenv_access (on)** festgelegt ist.
 
 Die Optimierungen, die **fenv_access** unterliegen, sind:
 
@@ -75,7 +84,7 @@ int main() {
 out=9.999999776482582e-03
 ```
 
-Wenn Sie `#pragma fenv_access (on)` aus dem vorherigen Beispiel auskommentieren, können Sie sehen, dass sich die Ausgabe unterscheidet, da der Compiler Kompilierzeitevaluierung anwendet, welche den Kontrollmodus nicht verwendet.
+Wenn Sie `#pragma fenv_access (on)` aus dem vorherigen Beispiel kommentieren, ist die Ausgabe anders. Der Grund hierfür ist, dass der Compiler eine Kompilierzeit Auswertung durchführt, die den Steuerelement Modus nicht verwendet.
 
 ```cpp
 // pragma_directive_fenv_access_2.cpp

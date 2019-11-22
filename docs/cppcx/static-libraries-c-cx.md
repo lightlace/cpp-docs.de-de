@@ -2,55 +2,55 @@
 title: Statische Bibliotheken (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-ms.openlocfilehash: 188ba06518bf6cdd154b7d6bd61216ed1e4ffad3
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
-ms.translationtype: HT
+ms.openlocfilehash: f62ef03cfdf2f424fd4a50c2e866d73b5bdce7fc
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877245"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302935"
 ---
 # <a name="static-libraries-ccx"></a>Statische Bibliotheken (C++/CX)
 
-Eine statische Bibliothek, die in einer app (Universelle Windows Plattform) verwendet wird, kann ISO-Standard C++-Code, einschließlich der STL-Typen, und außerdem Aufrufe für Win32-APIs, die von der Windows-Runtime-app-Plattform nicht ausgeschlossen sind enthalten. Eine statische Bibliothek nutzt Windows-Runtime-Komponenten und kann Windows-Runtime-Komponenten mit bestimmten Einschränkungen erstellen.
+Eine statische Bibliothek, die in einer universelle Windows-Plattform-app (UWP) verwendet wird, kann ISO C++ -Standard Code einschließlich STL-Typen und auch Aufrufe von Win32-APIs enthalten, die nicht von der Windows-Runtime App-Plattform ausgeschlossen sind. Eine statische Bibliothek nutzt Windows-Runtime Komponenten und kann Windows-Runtime Komponenten mit bestimmten Einschränkungen erstellen.
 
 ## <a name="creating-static-libraries"></a>Erstellen von statischen Bibliotheken
 
 
-Anweisungen zum Erstellen eines neuen Projekts hängt davon ab, welche Version von Visual Studio, die Sie installiert haben. Stellen Sie sicher, dass Sie die Auswahl für die Version in der Zielauswahl oben links auf die richtige Version festgelegt haben.
+Die Anweisungen zum Erstellen eines neuen Projekts variieren abhängig von der installierten Version von Visual Studio. Stellen Sie sicher, dass die Versions Auswahl in der oberen linken Ecke auf die richtige Version festgelegt ist.
 
 ::: moniker range="vs-2019"
 
-### <a name="to-create-a-uwp-static-library-in-visual-studio-2019"></a>Zum Erstellen von UWP statischen Bibliothek in Visual Studio-2019
+### <a name="to-create-a-uwp-static-library-in-visual-studio-2019"></a>So erstellen Sie eine statische UWP-Bibliothek in Visual Studio 2019
 
-1. Wählen Sie auf der Menüleiste **Datei** > **neu** > **Projekt** zum Öffnen der **Erstellen eines neuen Projekts** Dialogfeld.
+1. Klicken Sie in der Menüleiste auf **Datei** > **Neu** > **Projekt**, um das Dialogfeld **Neues Projekt erstellen** zu öffnen.
 
-1. Legen Sie am oberen Rand des Dialogfelds, **Sprache** zu **C++** legen **Plattform** zu **Windows**, und legen Sie **Projekttyp** zu **UWP**. 
+1. Legen Sie am oberen Rand des Dialog Felds **Sprache** auf **C++** fest, legen Sie **Platform** auf **Windows**fest, und legen Sie **Projekttyp** auf **UWP**fest. 
 
-1. Wählen Sie die gefilterte Liste der Projekttypen, **statische Bibliothek (Universal Windows - C++/CX)** wählen Sie dann **Weiter**. Benennen Sie dem Projekt, und geben Sie den Speicherort des Projekts aus, falls gewünscht, in der nächsten Seite.
+1. Wählen Sie in der gefilterten Liste der Projekttypen **statische Bibliothek (universelle C++Windows-/CX)** aus, und klicken Sie dann auf **weiter**. Geben Sie auf der nächsten Seite dem Projekt einen Namen, und geben Sie den Speicherort des Projekts an, wenn dies gewünscht ist.
 
-1. Wählen Sie die **erstellen** klicken, um das Projekt zu erstellen.
+1. Klicken Sie auf die Schaltfläche **Erstellen**, um das Projekt zu erstellen.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-### <a name="to-create-a-uwp-static-library-in-visual-studio-2017-or-visual-studio-2015"></a>Zum Erstellen von UWP statischen Bibliothek in Visual Studio 2017 oder Visual Studio 2015
+### <a name="to-create-a-uwp-static-library-in-visual-studio-2017-or-visual-studio-2015"></a>So erstellen Sie eine statische UWP-Bibliothek in Visual Studio 2017 oder Visual Studio 2015
 
-1. Klicken Sie in der Menüleiste auf **Datei** > **Neu** > **Projekt**. Klicken Sie unter **Visual C++** > **Windows Universal** wählen **statische Bibliothek (Universal Windows)**.
+1. Klicken Sie in der Menüleiste auf **Datei** > **Neu** > **Projekt**. Wählen Sie unter  **C++ Visual** > **Windows Universal** **(universelle Fenster) die Option statische Bibliothek**aus.
 
-1. Öffnen Sie im **Projektmappen-Explorer**das Kontextmenü für das Projekt, und wählen Sie **Eigenschaften**aus. In der **Eigenschaften** Dialogfeld auf die **Konfigurationseigenschaften** > **C/C++-** Seite **Nutzen von Windows Runtime-Erweiterung** zu **Ja (/ Zw)**.
+1. Öffnen Sie im **Projektmappen-Explorer**das Kontextmenü für das Projekt, und wählen Sie **Eigenschaften**aus. Legen Sie im Dialogfeld **Eigenschaften** auf der Seite **Konfigurations Eigenschaften** > **CC++ /** Seite **Windows-Runtime Erweiterung** verwenden auf **Ja (/ZW)** fest.
 
 ::: moniker-end
 
-Wenn Sie eine neue statische Bibliothek kompilieren, wenn Sie eine Win32-API aufrufen, die für UWP-apps ausgeschlossen wird, löst der Compiler Fehler C3861 aus, die "Bezeichner wurde nicht gefunden." Suchen Sie nach einer alternativen Methode, die für die Windows-Runtime unterstützt wird, finden Sie unter [Alternativen zu Windows-APIs in UWP-apps](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).
+Wenn Sie eine neue statische Bibliothek kompilieren und eine Win32-API aufzurufen, die für UWP-apps ausgeschlossen ist, gibt der Compiler den Fehler C3861 "Identifier nicht gefunden" aus. Eine alternative Methode, die für die Windows-Runtime unterstützt wird, finden Sie unter [Alternativen zu Windows-APIs in UWP-apps](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).
 
-Wenn Sie eine UWP-app-Projektmappe ein statisches C++-Bibliotheksprojekt hinzufügen, müssen Sie möglicherweise eigenschafteneinstellungen des Bibliotheksprojekts aktualisieren, damit die UWP-Support-Eigenschaft festgelegt ist, um **Ja**. Der Code aufgebaut und verknüpft, jedoch ein Fehler tritt auf, wenn Sie versuchen, die app für den Microsoft Store zu überprüfen, ohne diese Einstellung. Die statische Bibliothek sollte mit den gleichen Compilereinstellungen wie das Projekt kompiliert werden, in dem sie verwendet werden.
+Wenn Sie einer UWP-App-Projekt Mappe ein C++ statisches Bibliotheksprojekt hinzufügen, müssen Sie möglicherweise die Eigenschaften Einstellungen des Bibliotheks Projekts aktualisieren, damit die Eigenschaft UWP-Unterstützung auf **Ja**festgelegt ist. Ohne diese Einstellung wird der Code erstellt und verknüpft, aber es tritt ein Fehler auf, wenn Sie versuchen, die APP für die Microsoft Store zu überprüfen. Die statische Bibliothek sollte mit den gleichen Compilereinstellungen wie das Projekt kompiliert werden, in dem sie verwendet werden.
 
 Wenn Sie eine statische Bibliothek nutzen, die öffentliche `ref` -Klassen, öffentliche Schnittstellenklassen oder öffentliche Wertklassen erstellt, gibt der Linker folgende Warnung aus:
 
-> **Warnung LNK4264:** in einer statischen Bibliothek; mit/zw kompilierte Objektdatei wird archiviert Beachten Sie, dass beim Erstellen von Windows-Runtime-Typen nicht empfohlen wird, mit einer statischen Bibliothek verknüpft werden, die Windows-Runtime-Metadaten enthält.
+> **Warnung LNK4264:** Archivieren der mit/ZW kompilierten Objektdatei in eine statische Bibliothek; Beachten Sie, dass es beim Erstellen von Windows-Runtime Typen nicht empfohlen wird, eine Verknüpfung mit einer statischen Bibliothek zu erstellen, die Windows-Runtime Metadaten enthält.
 
-Sie können die Warnung ignorieren, wenn die statische Bibliothek nicht-Windows-Runtime-Komponenten erstellt, die außerhalb der Bibliothek selbst genutzt werden. Wenn die Bibliothek keine Komponenten verwendet, die sie definiert, kann der Linker die Implementierung optimieren, obwohl die öffentlichen Metadaten die Typinformationen enthalten. Das bedeutet, dass öffentliche Komponenten in einer statischen Bibliothek kompiliert, aber nicht zur Laufzeit aktiviert werden. Aus diesem Grund muss jede Komponente des Windows-Runtime, die für die Nutzung vorgesehen ist, von anderen Komponenten oder apps in einer Dynamic Link Library (DLL) implementiert werden.
+Sie können die Warnung nur gefahrlos ignorieren, wenn die statische Bibliothek keine Windows-Runtime Komponenten erzeugt, die außerhalb der Bibliothek selbst genutzt werden. Wenn die Bibliothek keine Komponenten verwendet, die sie definiert, kann der Linker die Implementierung optimieren, obwohl die öffentlichen Metadaten die Typinformationen enthalten. Das bedeutet, dass öffentliche Komponenten in einer statischen Bibliothek kompiliert, aber nicht zur Laufzeit aktiviert werden. Aus diesem Grund müssen alle Windows-Runtime Komponenten, die für die Nutzung durch andere Komponenten oder apps vorgesehen sind, in einer Dynamic Link Library (dll) implementiert werden.
 
 ## <a name="see-also"></a>Siehe auch
 
