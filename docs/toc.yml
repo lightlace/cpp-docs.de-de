@@ -1115,7 +1115,7 @@
                       href: build/reference/notification-hooks.md
                     - name: Fehlerhooks
                       href: build/reference/failure-hooks.md
-                    - name: Ausnahmen (C/C++)
+                    - name: Ausnahmecodes für die DLL-Ladung (C/C++)
                       href: build/reference/exceptions-c-cpp.md
                 - name: Sichern von verzögert geladenen Importen
                   href: build/reference/dumping-delay-loaded-imports.md
@@ -3652,51 +3652,18 @@
               items:
                 - name: Willkommen zurück bei C++ (Modern C++)
                   href: cpp/welcome-back-to-cpp-modern-cpp.md
-                - name: Typsystem (Modern C++)
-                  expanded: false
-                  items:
-                    - name: Typsystem (Modern C++)
-                      href: cpp/cpp-type-system-modern-cpp.md
-                    - name: Werttypen (Modern C++)
-                      href: cpp/value-types-modern-cpp.md
-                    - name: Typumwandlungen und Typsicherheit (Modern C++)
-                      href: cpp/type-conversions-and-type-safety-modern-cpp.md
                 - name: Einheitliche Initialisierung und Delegierung von Konstruktoren
                   href: cpp/uniform-initialization-and-delegating-constructors.md
                 - name: Objektlebenszeit und Ressourcenverwaltung (Modern C++)
                   href: cpp/object-lifetime-and-resource-management-modern-cpp.md
                 - name: Objekteigene Ressourcen (RAII)
                   href: cpp/objects-own-resources-raii.md
-                - name: Intelligente Zeiger (Modern C++)
-                  expanded: false
-                  items:
-                    - name: Intelligente Zeiger (Modern C++)
-                      href: cpp/smart-pointers-modern-cpp.md
-                    - name: 'Vorgehensweise: Erstellen und Verwenden von unique_ptr-Instanzen'
-                      href: cpp/how-to-create-and-use-unique-ptr-instances.md
-                    - name: 'Vorgehensweise: Erstellen und Verwenden von shared_ptr-Instanzen'
-                      href: cpp/how-to-create-and-use-shared-ptr-instances.md
-                    - name: 'Vorgehensweise: Erstellen und Verwenden von weak_ptr-Instanzen'
-                      href: cpp/how-to-create-and-use-weak-ptr-instances.md
-                    - name: 'Vorgehensweise: Erstellen und Verwenden von CComPtr- und CComQIPtr-Instanzen'
-                      href: cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
-                - name: pimpl für Compilierungszeitkapselung (Modern C++)
-                  href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
                 - name: Container (Modern C++)
                   href: cpp/containers-modern-cpp.md
                 - name: Algorithmen (Modern C++)
                   href: cpp/algorithms-modern-cpp.md
                 - name: Formatieren von Zeichenfolgen und Ein-/Ausgaben (Modern C++)
                   href: cpp/string-and-i-o-formatting-modern-cpp.md
-                - name: Behandeln von Fehlern und Ausnahmen (Modern C++)
-                  expanded: false
-                  items:
-                    - name: Behandeln von Fehlern und Ausnahmen (Modern C++)
-                      href: cpp/errors-and-exception-handling-modern-cpp.md
-                    - name: 'Vorgehensweise: Entwurfsrichtlinien für sichere Ausnahmebehandlung'
-                      href: cpp/how-to-design-for-exception-safety.md
-                    - name: 'Vorgehensweise: Verbinden von Code, der Ausnahmen zulässt, mit Code ohne Ausnahmen'
-                      href: cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
                 - name: Portabilität bei ABI-Grenzen (Modern C++)
                   href: cpp/portability-at-abi-boundaries-modern-cpp.md
             - name: Lexikalische Konventionen
@@ -3737,6 +3704,8 @@
                 - name: Deklarationen und Definitionen
                   expanded: false
                   items:
+                    - name: C++-Typsystem
+                      href: cpp/cpp-type-system-modern-cpp.md
                     - name: Deklarationen und Definitionen
                       href: cpp/declarations-and-definitions-cpp.md
                     - name: Übersicht über Deklaratoren
@@ -3880,6 +3849,8 @@
                       href: cpp/floating-limits.md
                 - name: Standardkonvertierungen
                   href: cpp/standard-conversions.md
+                - name: Typumwandlungen und Typsicherheit
+                  href: cpp/type-conversions-and-type-safety-modern-cpp.md
             - name: 'Integrierte Operatoren, Rangfolge und Assoziativität'
               expanded: false
               items:
@@ -4134,7 +4105,7 @@
                       href: cpp/protected-cpp.md
                     - name: public
                       href: cpp/public-cpp.md
-                - name: Initialisieren von Klassen und Strukturen ohne Konstruktoren
+                - name: Initialisierung mit geschweiften Klammern
                   href: cpp/initializing-classes-and-structs-without-constructors-cpp.md
                 - name: Konstruktoren
                   expanded: false
@@ -4145,6 +4116,8 @@
                       href: cpp/copy-constructors-and-copy-assignment-operators-cpp.md
                     - name: Bewegungskonstruktoren und Bewegungszuweisungsoperatoren
                       href: cpp/move-constructors-and-move-assignment-operators-cpp.md
+                    - name: Delegierende Konstruktoren
+                      href: cpp/delegating-constructors.md
                 - name: Destruktoren
                   href: cpp/destructors-cpp.md
                 - name: Übersicht über Memberfunktionen
@@ -4189,6 +4162,8 @@
                   href: cpp/special-member-functions.md
                 - name: Statische Member
                   href: cpp/static-members-cpp.md
+                - name: C++-Klassen als Werttypen
+                  href: cpp/value-types-modern-cpp.md
                 - name: Benutzerdefinierte Typkonvertierungen
                   href: cpp/user-defined-type-conversions-cpp.md
                 - name: Änderbare Datenmember
@@ -4236,41 +4211,56 @@
               items:
                 - name: Zeiger
                   href: cpp/pointers-cpp.md
+                - name: Rohzeiger
+                  href: cpp/raw-pointers.md
                 - name: const- und volatile-Zeiger
                   href: cpp/const-and-volatile-pointers.md
                 - name: Operatoren new und delete
                   href: cpp/new-and-delete-operators.md
+                - name: Intelligente Zeiger
+                  href: cpp/smart-pointers-modern-cpp.md
+                - name: 'Vorgehensweise: Erstellen und Verwenden von unique_ptr-Instanzen'
+                  href: cpp/how-to-create-and-use-unique-ptr-instances.md
+                - name: 'Vorgehensweise: Erstellen und Verwenden von shared_ptr-Instanzen'
+                  href: cpp/how-to-create-and-use-shared-ptr-instances.md
+                - name: 'Vorgehensweise: Erstellen und Verwenden von weak_ptr-Instanzen'
+                  href: cpp/how-to-create-and-use-weak-ptr-instances.md
+                - name: 'Vorgehensweise: Erstellen und Verwenden von CComPtr- und CComQIPtr-Instanzen'
+                  href: cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
+                - name: Pimpl für Kompilierzeitkapselung
+                  href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
             - name: Ausnahmebehandlung in C++
               expanded: false
               items:
                 - name: Ausnahmebehandlung in C++
                   href: cpp/exception-handling-in-visual-cpp.md
-                - name: Ausnahmebehandlung
+                - name: Moderne bewährte Methoden für C++
+                  href: cpp/errors-and-exception-handling-modern-cpp.md
+                - name: Entwurfsrichtlinien für sichere Ausnahmebehandlung
+                  href: cpp/how-to-design-for-exception-safety.md
+                - name: 'Verbinden von Code, der Ausnahmen zulässt, mit Code ohne Ausnahmen'
+                  href: cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
+                - name: 'try-, throw- und catch-Anweisungen'
+                  href: cpp/try-throw-and-catch-statements-cpp.md
+                - name: Auswerten von catch-Blöcken
+                  href: cpp/how-catch-blocks-are-evaluated-cpp.md
+                - name: Ausnahmen und Stapelentladung
+                  href: cpp/exceptions-and-stack-unwinding-in-cpp.md
+                - name: Ausnahmespezifikationen (throw)
+                  href: cpp/exception-specifications-throw-cpp.md
+                - name: noexcept
+                  href: cpp/noexcept-cpp.md
+                - name: Nicht behandelte C++-Ausnahmen
+                  href: cpp/unhandled-cpp-exceptions.md
+                - name: Kombination von C-Ausnahmen (strukturiert) und C++-Ausnahmen
                   expanded: false
                   items:
-                    - name: Ausnahmebehandlung
-                      href: cpp/cpp-exception-handling.md
-                    - name: 'try-, throw- und catch-Anweisungen'
-                      href: cpp/try-throw-and-catch-statements-cpp.md
-                    - name: Auswerten von catch-Blöcken
-                      href: cpp/how-catch-blocks-are-evaluated-cpp.md
-                    - name: Ausnahmen und Stapelentladung in C++
-                      href: cpp/exceptions-and-stack-unwinding-in-cpp.md
-                    - name: Ausnahmespezifikationen (throw)
-                      href: cpp/exception-specifications-throw-cpp.md
-                    - name: noexcept
-                      href: cpp/noexcept-cpp.md
-                    - name: Nicht behandelte C++-Ausnahmen
-                      href: cpp/unhandled-cpp-exceptions.md
                     - name: Kombination von C-Ausnahmen (strukturiert) und C++-Ausnahmen
-                      expanded: false
-                      items:
-                        - name: Kombination von C-Ausnahmen (strukturiert) und C++-Ausnahmen
-                          href: cpp/mixing-c-structured-and-cpp-exceptions.md
-                        - name: Verwenden von setjmp-longjmp
-                          href: cpp/using-setjmp-longjmp.md
-                        - name: Behandeln strukturierter Ausnahmen in C++
-                          href: cpp/exception-handling-differences.md
+                      href: cpp/mixing-c-structured-and-cpp-exceptions.md
+                    - name: Verwenden von setjmp-longjmp
+                      href: cpp/using-setjmp-longjmp.md
+                    - name: Behandeln strukturierter Ausnahmen in C++
+                      href: cpp/exception-handling-differences.md
                 - name: Behandeln strukturierter Ausnahmen in C++
                   expanded: false
                   items:
