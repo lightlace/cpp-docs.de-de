@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - ASSUME directive
 ms.assetid: cd162070-aee9-4c65-babc-005c6cc73d7c
-ms.openlocfilehash: 4bf8f0c41e9ce3e296cf201efd4fd9be2033cbdb
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 73ef8bcc33087a56747b80f94482fcd6c50e3bf6
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73702467"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399269"
 ---
-# <a name="assume-32-bit-masm"></a>Annahme (32-Bit-MASM)
+# <a name="assume-32-bit-masm"></a>ASSUME (32-bit MASM)
 
-Aktiviert die Fehlerüberprüfung für Registerwerte. (nur 32-Bit-MASM.)
+Enables error checking for register values. (32-bit MASM only.)
 
 ## <a name="syntax"></a>Syntax
 
-> Angenommen, *segregister*:*Name* [[, *segregister*:*Name*]]...<br/>
-> *Dataregiester*:*Type* [[, *dataregiester*:*Type*]]...<br/>
-> *Register*: Error [[, *Register*: Error]]...<br/>
-> [[*Register*:]] Nothing [[, *Register*: Nothing]]...
+> **ASSUME**  *segregister* __:__ *name* ⟦ __,__ *segregister* __:__ *name*...⟧\
+> **ASSUME**  *dataregister* __:__ *type* ⟦ __,__ *dataregister* __:__ *type*...⟧\
+> **ASSUME**  *register* __:ERROR__ ⟦ __,__ *register* __:ERROR__...⟧\
+> **ASSUME**  ⟦*register* __:__ ⟧**NOTHING** ⟦ __,__ *register* __:NOTHING__...⟧
 
 ## <a name="remarks"></a>Hinweise
 
-Nachdem ein `ASSUME` in Kraft gesetzt wurde, überwacht der Assembler Änderungen an den Werten der angegebenen Register. **Fehler** generiert einen Fehler, wenn das Register verwendet wird. **Nothing** entfernt die Register Fehlerüberprüfung nicht. Sie können verschiedene Arten von Annahmen in einer Anweisung kombinieren.
+After an **ASSUME** is put into effect, the assembler watches for changes to the values of the given registers. **ERROR** generates an error if the register is used. **NOTHING** removes register error checking. You can combine different kinds of assumptions in one statement.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)

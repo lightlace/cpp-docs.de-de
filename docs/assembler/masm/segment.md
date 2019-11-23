@@ -6,62 +6,62 @@ f1_keywords:
 helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-ms.openlocfilehash: f37be47b92a71e20821cd1e40f8cf1350dfedaff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b7344d9cb685e0212748d7835e19f398f14979e7
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210374"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74393731"
 ---
 # <a name="segment"></a>SEGMENT
 
-Definiert ein Programm Segment namens *Namen* müssen der Segment-Attribute
+Defines a program segment called *name* having segment attributes
 
 ## <a name="syntax"></a>Syntax
 
-> *Namen* SEGMENT [[schreibgeschützt]] [[*ausrichten*]] [[*kombinieren*]] [[*verwenden*]] [[*Merkmale*]] ALIAS (*Zeichenfolge*) [['*Klasse*']]<br/>
-> *statements*<br/>
-> *Namen* endet
+> *name* **SEGMENT** ⟦**READONLY**⟧ ⟦*align*⟧ ⟦*combine*⟧ ⟦*use*⟧ ⟦*characteristics*⟧ **ALIAS(** _string_ **)** ⟦ __'__ *class* __'__ ⟧\
+> *statements*\
+> *name* **ENDS**
 
 #### <a name="parameters"></a>Parameter
 
 *align*<br/>
-Der Bereich der Speicheradressen, die von denen die Startadresse für das Segment ausgewählt werden kann. Der Ausrichtungstyp kann eine der folgenden sein:
+The range of memory addresses from which a starting address for the segment can be selected. The alignment type can be any one of the following:
 
-|Typ ausrichten|Startadresse|
+|Align Type|Starting Address|
 |----------------|----------------------|
-|**BYTE**|Adresse des nächsten verfügbaren Byte.|
-|**WORD**|Nächste verfügbare Word-Adresse (2 Byte pro Wort).|
-|**DWORD**|Nächste verfügbare Doppelwort-Adresse (4 Bytes pro Doppelwort).|
-|**PARA**|Nächste verfügbare Absatz-Adresse (16 Bytes pro Absatz).|
-|**PAGE**|Nächste verfügbare Adresse (256 Byte pro Seite).|
-|**AUSRICHTEN**(*n*)|Nächste verfügbare *n*th-Byte-Adresse. Weitere Informationen finden Sie unter "Hinweise" Abschnitt.|
+|**BYTE**|Next available byte address.|
+|**WORD**|Next available word address (2 bytes per word).|
+|**DWORD**|Next available double word address (4 bytes per double word).|
+|**PARA**|Next available paragraph address (16 bytes per paragraph).|
+|**PAGE**|Next available page address (256 bytes per page).|
+|**ALIGN**(*n*)|Next available *n*th byte address. See Remarks section for more information.|
 
-Wenn dieser Parameter nicht angegeben ist, **PARA** wird standardmäßig verwendet.
+If this parameter is not specified, **PARA** is used by default.
 
-*combine*<br/>
+*combine*\
 **PUBLIC**, **STACK**, **COMMON**, **MEMORY**, **AT**<em>address</em>, **PRIVATE**
 
-*use*<br/>
-**USE16**, **USE32**, **FLATFILE**
+*use*\
+**USE16**, **USE32**, **FLAT**
 
-*characteristics*<br/>
-**INFO**, **lesen**, **schreiben**, **EXECUTE**, **SHARED**, **NOPAGE**, **NOCACHE**, und **verwerfen**
+*characteristics*\
+**INFO**, **READ**, **WRITE**, **EXECUTE**, **SHARED**, **NOPAGE**, **NOCACHE**, and **DISCARD**
 
-Diese werden nur für COFF-Format unterstützt, und die Merkmale für COFF-Abschnitt von ähnlichen Namen entsprechen (z. B. **SHARED** IMAGE_SCN_MEM_SHARED entspricht). Lesen legt das Flag IMAGE_SCN_MEM_READ fest. Das veraltete READONLY-Flag verursacht Abschnitt, um die IMG_SCN_MEM_WRITE-Flag zu deaktivieren. Wenn alle *Merkmale* festgelegt sind, werden die Standardeigenschaften nicht verwendet werden und nur die Programmierer angegebenen Flags sind gültig.
+These are supported for COFF only and correspond to the COFF section characteristics of similar name (for example, **SHARED** corresponds to IMAGE_SCN_MEM_SHARED). READ sets the IMAGE_SCN_MEM_READ flag. The obsolete READONLY flag caused the section to clear the IMG_SCN_MEM_WRITE flag. If any *characteristics* are set, the default characteristics are not used and only the programmer-specified flags are in effect.
 
-`ALIAS(` *string* `)`<br/>
-Diese Zeichenfolge wird als der Name des Abschnitts in der ausgegebenen COFF-Objekt verwendet.  Erstellt mehrere Abschnitte mit den gleichen externen Namen mit unterschiedlichen Namen von MASM-Segment an.
+_string_\
+This string is used as the section name in the emitted COFF object.  Creates multiple sections with the same external name, with distinct MASM segment names.
 
-Nicht unterstützt, die mit **"/ OMF"**.
+Not supported with **/omf**.
 
-*class*<br/>
-Legt fest, wie Segmente kombiniert und in der Datei assemblierten sortiert werden. Typische Werte sind, `'DATA'`, `'CODE'`, `'CONST'` und `'STACK'`
+*Klasse*\
+Designates how segments should be combined and ordered in the assembled file. Typical values are, `'DATA'`, `'CODE'`, `'CONST'` and `'STACK'`
 
 ## <a name="remarks"></a>Hinweise
 
-Für `ALIGN(n)`, *n* kann eine beliebige Potenz von 2 zwischen 1 und 8192 sein; nicht unterstützt wird, mit **"/ OMF"**.
+For `ALIGN(n)`, *n* may be any power of 2 from 1 to 8192; not supported with **/omf**.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

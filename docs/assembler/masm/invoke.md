@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - INVOKE directive
 ms.assetid: 12d9bb40-33b9-411e-b801-45a1d675967e
-ms.openlocfilehash: 853bc9cd22d866357a4cd2d695beccc3efc20acf
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: a5175252364918ca218e81536b29f084f7fd19cc
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703967"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397298"
 ---
-# <a name="invoke-32-bit-masm"></a>Aufrufen (32-Bit-MASM)
+# <a name="invoke-32-bit-masm"></a>INVOKE (32-bit MASM)
 
-Ruft die Prozedur bei der von *Ausdruck*angegebenen Adresse auf und übergibt die Argumente auf dem Stapel oder in Registern gemäß den Standard Aufruf Konventionen des sprach Typs. (nur 32-Bit-MASM.)
+Calls the procedure at the address given by *expression*, passing the arguments on the stack or in registers according to the standard calling conventions of the language type. (32-bit MASM only.)
 
 ## <a name="syntax"></a>Syntax
 
-> Aufruf *Ausdruck* [[, *Argumente*]]
+> **INVOKE** *expression* ⟦ __,__ *argument* ...⟧
 
 ## <a name="remarks"></a>Hinweise
 
-Jedes Argument, das an die Prozedur übermittelt wird, kann ein Ausdruck, ein Registrierungs Paar oder ein Adress Ausdruck sein (ein Ausdruck, dem `ADDR`vorangestellt ist).
+Each argument passed to the procedure may be an expression, a register pair, or an address expression (an expression preceded by **ADDR**).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](../../assembler/masm/directives-reference.md)

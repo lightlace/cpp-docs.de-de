@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - '@WordSize symbol'
 ms.assetid: a4fb3bf1-4f87-4306-ad4d-27d999ce2b3a
-ms.openlocfilehash: 288ccb7e9e72e7f6b692d8ce172b4170fae1ff1a
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 958491deab7db8ae091f1b10dcc5b9650dee5ebe
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301949"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398882"
 ---
-# <a name="wordsize"></a>\@wordsize
+# <a name="wordsize"></a>\@WordSize
 
-Zwei für ein 16-Bit-Segment oder vier für ein 32-Bit-Segment (numeric equate).
+Two for a 16-bit segment or four for a 32-bit segment (numeric equate).
 
 ## <a name="syntax"></a>Syntax
 
@@ -23,4 +23,4 @@ Zwei für ein 16-Bit-Segment oder vier für ein 32-Bit-Segment (numeric equate).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Symbole – Verweis](../../assembler/masm/symbols-reference.md)
+[Symbols reference](symbols-reference.md)

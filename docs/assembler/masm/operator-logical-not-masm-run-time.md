@@ -1,5 +1,5 @@
 ---
-title: operator ! (MASM-Laufzeit)
+title: operator ! (MASM Run Time)
 ms.date: 08/30/2018
 f1_keywords:
 - operator !
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - operator !, syntax
 - '! operator'
 ms.assetid: e94f737a-8251-4a3d-95ec-e95c35689b37
-ms.openlocfilehash: 4a10fa603449e72108977604697227bbb24c3bfc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c412fcbdd9fc8cefb28a9e84d1651a96be2c998c
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62199938"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396759"
 ---
-# <a name="operator--masm-run-time"></a>operator ! (MASM-Laufzeit)
+# <a name="operator--masm-run-time"></a>operator ! (MASM Run Time)
 
-Logische Negation. Verwendet nur in [. IF](../../assembler/masm/dot-if.md), [. WÄHREND](../../assembler/masm/dot-while.md), oder [. Wiederholen Sie die](../../assembler/masm/dot-repeat.md) blockiert und nicht zum Zeitpunkt der Assembly zur Laufzeit ausgewertet.
+Logical negation. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
 
 ## <a name="syntax"></a>Syntax
 
-> ! *expression*
+> **!** *expression*
 
 ## <a name="see-also"></a>Siehe auch
 
-[Operatoren – Referenz](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

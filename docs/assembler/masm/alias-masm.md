@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - ALIAS directive
 ms.assetid: d9725c49-58de-41da-ab01-b06a56cf5cf2
-ms.openlocfilehash: ab00092f410d34119e876db4562e6d0709743d79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 274ac451005015b2693d8674673af574ec781bdc
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166489"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399291"
 ---
 # <a name="alias-masm"></a>ALIAS (MASM)
 
-Die **ALIAS** Richtlinie erstellt einen alternativen Name für eine Funktion.  Dadurch können Sie mehrere Namen für eine Funktion erstellen, oder erstellen Sie Bibliotheken, die den Linker (LINK.exe) Zuordnen von einer alten Funktion in eine neue Funktion zu ermöglichen.
+The **ALIAS** directive creates an alternate name for a function.  This lets you create multiple names for a function, or create libraries that allow the linker (LINK.exe) to map an old function to a new function.
 
 ## <a name="syntax"></a>Syntax
 
-> ALIAS \<*alias*> = \<*actual-name*>
+> **ALIAS \<** _alias_ **> = \<** _actual-name_ **>**
 
 #### <a name="parameters"></a>Parameter
 
-*actual-name*<br/>
-Der tatsächliche Name der Funktion oder Prozedur.  Die spitzen Klammern sind erforderlich.
+*actual-name*\
+The actual name of the function or procedure.  The angle brackets are required.
 
-*alias*<br/>
-Der alternative oder Alias-Name.  Die spitzen Klammern sind erforderlich.
+*alias*\
+The alternate or alias name.  The angle brackets are required.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
