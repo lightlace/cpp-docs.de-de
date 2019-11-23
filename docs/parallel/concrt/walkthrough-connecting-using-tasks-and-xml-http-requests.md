@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Herstellen einer Verbindung mithilfe von Aufgaben und XML-HTTP-Anforderungen'
+title: 'Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - connecting to web services, UWP apps [C++]
@@ -13,7 +13,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 09/25/2019
 ms.locfileid: "69512134"
 ---
-# <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Exemplarische Vorgehensweise: Herstellen einer Verbindung mithilfe von Aufgaben und XML-HTTP-Anforderungen
+# <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen
 
 Dieses Beispiel zeigt, wie die [IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2) -und [IXMLHTTPRequest2Callback](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2callback) -Schnittstellen in Verbindung mit Aufgaben verwendet werden, um HTTP Get-und Post-Anforderungen an einen Webdienst in einer universelle Windows-Plattform-app (UWP) zu senden. Beim Kombinieren von `IXMLHTTPRequest2` mit Aufgaben können Sie Code schreiben, der mit anderen Aufgaben zusammen erstellt wird. Beispielsweise können Sie die Downloadaufgabe als Teil einer Kette von Aufgaben verwenden. Wenn Arbeit abgebrochen wird, kann die Downloadaufgabe auch weiterhin antworten.
 
@@ -24,10 +24,10 @@ Weitere Informationen zu Aufgaben finden Sie Unteraufgaben [Parallelität](../..
 
 Dieses Dokument erläutert zunächst, wie die `HttpRequest`-Klasse und unterstützende Klassen erstellt werden. Anschließend wird gezeigt, wie diese Klasse aus einer UWP-App verwendet wird C++ , die und XAML verwendet.
 
-Ein Beispiel, in dem `IXMLHTTPRequest2` verwendet wird, aber keine Aufgaben verwendet [, finden Sie unter Schnellstart: Herstellen einer Verbindung mithilfe einer XML-HTTP](/previous-versions/windows/apps/hh770550\(v=win.10\))-Anforderung (IXMLHTTPRequest2).
+Ein Beispiel, in dem `IXMLHTTPRequest2` verwendet, aber keine Aufgaben verwendet werden, finden [Sie unter Schnellstart: Herstellen einer Verbindung mithilfe einer XML-HTTP-Anforderung (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
 
 > [!TIP]
->  `IXMLHTTPRequest2`und `IXMLHTTPRequest2Callback` sind die Schnittstellen, die wir für die Verwendung in einer UWP-App empfehlen. Darüber hinaus können Sie dieses Beispiel auch für die Verwendung in einer Desktop-App anpassen.
+>  `IXMLHTTPRequest2` und `IXMLHTTPRequest2Callback` sind die Schnittstellen, die für die Verwendung in einer UWP-App empfohlen werden. Darüber hinaus können Sie dieses Beispiel auch für die Verwendung in einer Desktop-App anpassen.
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
@@ -41,11 +41,11 @@ Die `GetAsync`-Methode und die `PostAsync`-Methode der `HttpRequest`-Klasse erm�
 
 Da die `IXMLHTTPRequest2` Schnittstellen asynchron agieren, wird in diesem Beispiel " [parallelcurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) " verwendet, um eine Aufgabe zu erstellen, die abgeschlossen wird, nachdem das Rückruf Objekt den Downloadvorgang abgeschlossen oder abgebrochen hat. Die `HttpRequest`-Klasse erstellt eine aufgabenbasierte Fortsetzung aus dieser Aufgabe, um das Endergebnis festzulegen. Die `HttpRequest`-Klasse verwendet eine aufgabenbasierte Fortsetzung, um sicherzustellen, dass die Fortsetzungsaufgabe ausgeführt wird, auch wenn die vorherige Aufgabe einen Fehler erzeugt oder abgebrochen wird. Weitere Informationen zu Task basierten Fortsetzungen finden Sie unter [Aufgaben Parallelität](../../parallel/concrt/task-parallelism-concurrency-runtime.md) .
 
-Um ein Abbrechen zu unterstützen, verwenden die Klassen `HttpRequest`, `HttpRequestBuffersCallback` und `HttpRequestStringCallback` Abbruchtoken. Die `HttpRequestBuffersCallback` - `HttpRequestStringCallback` Klasse und die-Klasse verwenden die [parallelcurrency:: cancellation_token:: Register_callback](reference/cancellation-token-class.md#register_callback) -Methode, um das Aufgaben Abschluss Ereignis für die Reaktion auf den Abbruch zu aktivieren. Dieser Abbruchsrückruf bricht den Download ab. Weitere Informationen zum Abbruch finden Sie unter [Abbruch](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
+Um ein Abbrechen zu unterstützen, verwenden die Klassen `HttpRequest`, `HttpRequestBuffersCallback` und `HttpRequestStringCallback` Abbruchtoken. Die Klassen `HttpRequestBuffersCallback` und `HttpRequestStringCallback` verwenden die Methode " [parallelcurrency:: cancellation_token:: Register_callback](reference/cancellation-token-class.md#register_callback) ", um das Aufgaben Abschluss Ereignis für die Reaktion auf den Abbruch zu aktivieren. Dieser Abbruchsrückruf bricht den Download ab. Weitere Informationen zum Abbruch finden Sie unter [Abbruch](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
 
 #### <a name="to-define-the-httprequest-class"></a>So definieren Sie die HttpRequest-Klasse
 
-1. Klicken Sie im Hauptmenü auf **Datei** > **neu** > **Projekt**. 
+1. Wählen Sie im Hauptmenü **Datei** > **neue** > **Projekt**aus. 
 
 1. Verwenden Sie C++ die Vorlage **leere app (universelle Windows** -Vorlage), um ein leeres XAML-App-Projekt zu erstellen. In diesem Beispiel wird das Projekt `UsingIXMLHTTPRequest2`genannt.
 
@@ -65,7 +65,7 @@ Um ein Abbrechen zu unterstützen, verwenden die Klassen `HttpRequest`, `HttpReq
 
 ## <a name="using-the-httprequest-class-in-a-uwp-app"></a>Verwenden der HttpRequest-Klasse in einer UWP-App
 
-In diesem Abschnitt wird veranschaulicht, wie `HttpRequest` die-Klasse in einer UWP-App verwendet wird. Die App enthält ein Eingabefeld, das eine URL-Ressource definiert, und Schaltflächen zum Durchführen von GET- und POST-Anforderungen und zum Abbrechen des aktuellen Vorgangs.
+In diesem Abschnitt wird veranschaulicht, wie Sie die `HttpRequest`-Klasse in einer UWP-App verwenden. Die App enthält ein Eingabefeld, das eine URL-Ressource definiert, und Schaltflächen zum Durchführen von GET- und POST-Anforderungen und zum Abbrechen des aktuellen Vorgangs.
 
 #### <a name="to-use-the-httprequest-class"></a>So verwenden Sie die HttpRequest-Klasse
 
@@ -94,13 +94,13 @@ In diesem Abschnitt wird veranschaulicht, wie `HttpRequest` die-Klasse in einer 
    [!code-cpp[concrt-using-ixhr2#A6](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_9.cpp)]
 
    > [!TIP]
-   > Wenn Ihre APP keine Unterstützung für den Abbruch benötigt, übergeben Sie " [parallelcurrency:: cancellation_token:: None](reference/cancellation-token-class.md#none) " an die-Methode und die `HttpRequest::GetAsync` - `HttpRequest::PostAsync` Methode.
+   > Wenn Ihre APP keine Unterstützung für den Abbruch benötigt, übergeben Sie " [parallelcurrency:: cancellation_token:: None](reference/cancellation-token-class.md#none) " an die Methoden `HttpRequest::GetAsync` und `HttpRequest::PostAsync`.
 
 1. Implementieren Sie die `MainPage::ProcessHttpRequest`-Methode in "MainPage.xaml.cpp".
 
    [!code-cpp[concrt-using-ixhr2#A7](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_10.cpp)]
 
-8. `msxml6.lib`Geben SieindenProjekteigenschaftenunterLinker,Eingabe,und`shcore.lib` an.
+8. Geben Sie in den Projekteigenschaften unter **Linker**, **Eingabe**`shcore.lib` und `msxml6.lib`an.
 
 Hier ist die ausgeführte App:
 
@@ -116,6 +116,6 @@ Hier ist die ausgeführte App:
 [Abbruch in der PPL](cancellation-in-the-ppl.md)<br/>
 [Asynchrone Programmierung inC++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)<br/>
 [Erstellen von asynchronen Vorgängen in C++ für UWP-Apps](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)<br/>
-[Schnellstart: Herstellen einer Verbindung mithilfe der IXMLHTTPRequest2](/previous-versions/windows/apps/hh770550\(v=win.10\))
--Aufgaben Klasse (XML HTTP Request[) (Concurrency Runtime)](../../parallel/concrt/reference/task-class.md)<br/>
+[Schnellstart: Verbindungs Herstellung mithilfe einer XML-HTTP-Anforderung (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\))
+[Aufgaben Klasse (Concurrency Runtime)](../../parallel/concrt/reference/task-class.md)<br/>
 [task_completion_event-Klasse](../../parallel/concrt/reference/task-completion-event-class.md)

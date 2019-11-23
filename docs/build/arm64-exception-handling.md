@@ -55,9 +55,9 @@ Diese Annahmen werden in der Ausnahme Behandlungs Beschreibung vorgenommen:
 
 Stapel Rahmen(media/arm64-exception-handling-stack-frame.png "Layout") für ![Stapel Rahmen Layout]
 
-Bei Frame verketteten Funktionen können das FP-und LR-Paar in Abhängigkeit von Optimierungs Überlegungen an jeder beliebigen Position im lokalen Variablen Bereich gespeichert werden. Das Ziel besteht darin, die Anzahl der lokalen Variablen zu maximieren, die durch eine einzelne Anweisung erreicht werden können, die auf dem Frame Zeiger (x29) oder dem Stapelzeiger (SP) basiert. Für `alloca`-Funktionen muss Sie jedoch verkettet werden, und x29 muss auf den unteren Rand des Stapels zeigen. Um eine bessere Abdeckung im Register-paar-Adressierungs Modus zu ermöglichen, werden nicht flüchtige Registrierungs Speicherbereiche am oberen Rand des lokalen Stapel Bereichs positioniert. Im folgenden finden Sie Beispiele, die einige der effizientesten Prolog Sequenzen veranschaulichen. Um Klarheit und eine bessere Cache Lokalität zu erzielen, wird die Reihenfolge der Speicherung gespeicherter Register in allen kanonischen Prologe in der Reihenfolge "wächst" angezeigt. `#framesz` unten steht für die Größe des gesamten Stapels (mit Ausnahme des Bereichs "Zuweisung"). `#localsz` und `#outsz` kennzeichnen die Größe des lokalen Bereichs (einschließlich des Speicherbereichs für das \<x29, LR > Paar) bzw. die ausgehende Parameter Größe.
+Bei Frame verketteten Funktionen können das FP-und LR-Paar in Abhängigkeit von Optimierungs Überlegungen an jeder beliebigen Position im lokalen Variablen Bereich gespeichert werden. Das Ziel besteht darin, die Anzahl der lokalen Variablen zu maximieren, die durch eine einzelne Anweisung erreicht werden können, die auf dem Frame Zeiger (x29) oder dem Stapelzeiger (SP) basiert. Für `alloca` Funktionen muss Sie jedoch verkettet werden, und x29 muss auf den unteren Rand des Stapels zeigen. Um eine bessere Abdeckung im Register-paar-Adressierungs Modus zu ermöglichen, werden nicht flüchtige Registrierungs Speicherbereiche am oberen Rand des lokalen Stapel Bereichs positioniert. Im folgenden finden Sie Beispiele, die einige der effizientesten Prolog Sequenzen veranschaulichen. Um Klarheit und eine bessere Cache Lokalität zu erzielen, wird die Reihenfolge der Speicherung gespeicherter Register in allen kanonischen Prologe in der Reihenfolge "wächst" angezeigt. `#framesz` unten steht für die Größe des gesamten Stapels (mit Ausnahme des Bereichs "Zuweisung"). `#localsz` und `#outsz` die lokale Bereichs Größe (einschließlich des Speicherbereichs für die \<x29, LR > Paar) bzw. die ausgehende Parameter Größe an.
 
-1. Verkettet, #localsz \< = 512
+1. Verkettet, #localsz \<= 512
 
     ```asm
         stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -96,7 +96,7 @@ Bei Frame verketteten Funktionen können das FP-und LR-Paar in Abhängigkeit von
         sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   Der Zugriff auf alle lokalen Variablen erfolgt basierend auf SP. \<x29, LR > auf den vorherigen Frame zeigt. Für Frame Size \< = 512, "Sub SP,..." kann optimiert werden, wenn der gespeicherte regs-Bereich an den unteren Rand des Stapels verschoben wird. Der Nachteil ist, dass er nicht mit anderen Layouts übereinstimmt, und gespeicherte Umleitungen nehmen einen Teil des Bereichs für paar Umleitungen und den vorab-und Post indizierten Offset-Adressierungs Modus.
+   Der Zugriff auf alle lokalen Variablen erfolgt basierend auf SP. \<x29-> verweist auf den vorherigen Frame. Für Frame Size \<= 512, "Sub SP,..." kann optimiert werden, wenn der gespeicherte regs-Bereich an den unteren Rand des Stapels verschoben wird. Der Nachteil ist, dass er nicht mit anderen Layouts übereinstimmt, und gespeicherte Umleitungen nehmen einen Teil des Bereichs für paar Umleitungen und den vorab-und Post indizierten Offset-Adressierungs Modus.
 
 1. Nicht verkettete, nicht Blatt Funktionen (LR wird im Bereich "int-gespeichert" gespeichert)
 
@@ -128,11 +128,11 @@ Bei Frame verketteten Funktionen können das FP-und LR-Paar in Abhängigkeit von
         sub    sp,sp,#(framesz-16)      // allocate the remaining local area
     ```
 
-   \*: die Zuordnung des reg-Speicherbereichs wird nicht in die STP-Datenbank gefaltet, weil eine vorindizierte reg-LR-STP nicht mit den Entladungs Codes dargestellt werden kann.
+   \* die reg-Speicherbereichs Zuordnung nicht in die STP-Datenbank gefaltet ist, weil eine vorindizierte reg-LR STP nicht mit den Entladungs Codes dargestellt werden kann.
 
-   Der Zugriff auf alle lokalen Variablen erfolgt basierend auf SP. \<x29 > verweist auf den vorherigen Frame.
+   Der Zugriff auf alle lokalen Variablen erfolgt basierend auf SP. \<x29-> verweist auf den vorherigen Frame.
 
-1. Verkettet, #framesz \< = 512, #outsz = 0
+1. Verkettet, #framesz \<= 512, #outsz = 0
 
     ```asm
         stp    x29,lr,[sp,#-framesz]!       // pre-indexed, save <x29,lr>
@@ -287,20 +287,20 @@ Die Entladungs Codes werden gemäß der folgenden Tabelle codiert. Alle Entlade 
 |Entladungs Code|Bits und Interpretation|
 |-|-|
 |`alloc_s`|000XXXXX: Zuordnen eines kleinen Stapels mit der Größe \< 512 (2 ^ 5 * 16).|
-|`save_r19r20_x`|    001zzzzz: speichert \<x19, x20 > Paar bei `[sp-#Z*8]!`, vorindizierter Offset > =-248 |
-|`save_fplr`|        01zzzzzz: speichert \<x29, LR > Pair bei `[sp+#Z*8]`, Offset \< = 504. |
-|`save_fplr_x`|        10zzzzzz: speichert \<x29, LR > Paar bei `[sp-(#Z+1)*8]!`, vorindizierter Offset > =-512 |
+|`save_r19r20_x`|    001zzzzz: Save \<x19, x20 > Pair at `[sp-#Z*8]!`, vorindizierter Offset > =-248 |
+|`save_fplr`|        01zzzzzz: speichert \<x29, LR > Pair bei `[sp+#Z*8]`, Offset \<= 504. |
+|`save_fplr_x`|        10zzzzzz: Speichern Sie \<x29, LR > Pair bei `[sp-(#Z+1)*8]!`, vorindizierter Offset > =-512 |
 |`alloc_m`|        11000xxx' xxxxxxxx: großen Stapel mit Größe \< 16K (2 ^ 11 * 16) zuordnen. |
-|`save_regp`|        110010xx' xxzzzzzz: Save x (19 + #X) Pair bei `[sp+#Z*8]`, Offset \< = 504 |
-|`save_regp_x`|        110011xx' xxzzzzzz: Save Pair x (19 + #X) bei `[sp-(#Z+1)*8]!`, vorindizierter Offset > =-512 |
-|`save_reg`|        110100xx' xxzzzzzz: Save reg x (19 + #X) bei `[sp+#Z*8]`, Offset \< = 504 |
+|`save_regp`|        110010xx' xxzzzzzz: Save x (19 + #X) Pair bei `[sp+#Z*8]`, Offset \<= 504 |
+|`save_regp_x`|        110011xx' xxzzzzzz: Save Pair x (19 + #X) at `[sp-(#Z+1)*8]!`, vorindizierter Offset > =-512 |
+|`save_reg`|        110100xx' xxzzzzzz: Save reg x (19 + #X) bei `[sp+#Z*8]`, Offset \<= 504 |
 |`save_reg_x`|        1101010x' xxxzzzzz: Save reg x (19 + #X) bei `[sp-(#Z+1)*8]!`, vorindizierter Offset > =-256 |
-|`save_lrpair`|         1101011x' xxzzzzzz: Save Pair \<x (19 + 2 * #X), LR > bei `[sp+#Z*8]`, Offset \< = 504 |
-|`save_fregp`|        1101100x' xxzzzzzz: Save Pair d (8 + #X) bei `[sp+#Z*8]`, Offset \< = 504 |
+|`save_lrpair`|         1101011x' xxzzzzzz: Save Pair \<x (19 + 2 * #X), LR > at `[sp+#Z*8]`, Offset \<= 504 |
+|`save_fregp`|        1101100x' xxzzzzzz: Save Pair d (8 + #X) at `[sp+#Z*8]`, Offset \<= 504 |
 |`save_fregp_x`|        1101101x' xxzzzzzz: Save Pair d (8 + #X), at `[sp-(#Z+1)*8]!`, vorindizierter Offset > =-512 |
-|`save_freg`|        1101110x' xxzzzzzz: Save reg d (8 + #X) bei `[sp+#Z*8]`, Offset \< = 504 |
-|`save_freg_x`|        11011110 "xxxzzzzz: Save reg d (8 + #X) bei `[sp-(#Z+1)*8]!`, vorindizierter Offset > =-256 |
-|`alloc_l`|         11100000 ' xxxxxxxxxxxxxxxxxxxxxxxxxx ' xxxxxxxx: Zuordnen eines großen Stapels mit der Größe \< 256M (2 ^ 24 * 16) |
+|`save_freg`|        1101110x' xxzzzzzz: speichert reg d (8 + #X) bei `[sp+#Z*8]`, Offset \<= 504 |
+|`save_freg_x`|        11011110 "xxxzzzzz: Save reg d (8 + #X) at `[sp-(#Z+1)*8]!`, vorindizierter Offset > =-256 |
+|`alloc_l`|         11100000 ' xxxxxxxxxxxxxxxxxxxxxxxxxx ' xxxxxxxx: Zuordnen eines großen Stapels mit der Größe \< 256 m (2 ^ 24 * 16) |
 |`set_fp`|        11100001: x29 einrichten: mit: `mov x29,sp` |
 |`add_fp`|        11100010 ' xxxxxxxx: Set up x29 with: `add x29,sp,#x*8` |
 |`nop`|            11100011: Es ist kein Entladevorgang erforderlich. |
@@ -322,17 +322,17 @@ Die Entladungs Codes werden gemäß der folgenden Tabelle codiert. Alle Entlade 
 
 In Anweisungen mit großen Werten, die mehrere Bytes abdecken, werden die wichtigsten Bits zuerst gespeichert. Mit diesem Entwurf können Sie die Gesamtgröße des Entladungs Codes in Bytes ermitteln, indem Sie nur das erste Byte des Codes suchen. Da jeder Entladungs Code genau einer Anweisung in einem Prolog oder Epilog zugeordnet ist, können Sie die Größe des Prologs oder Epilogs berechnen. Sie können vom Anfang der Sequenz bis zum Ende gehen und eine Nachschlage Tabelle oder ein ähnliches Gerät verwenden, um zu bestimmen, wie lange der entsprechende Opcode ist.
 
-Die nach indizierte Offset Adressierung ist in einem Prolog nicht zulässig. Alle Offset Bereiche (#Z) entsprechen der Codierung der STP/Str-Adressierung mit Ausnahme von `save_r19r20_x`, wobei 248 für alle Speicherbereiche ausreichend ist (10 int-Register + 8 FP-Register + 8 Eingabe Register).
+Die nach indizierte Offset Adressierung ist in einem Prolog nicht zulässig. Alle Offset Bereiche (#Z) entsprechen der Codierung der STP/Str-Adressierung außer `save_r19r20_x`, bei der 248 für alle Speicherbereiche ausreichend ist (10 int-Register + 8 FP-Register + 8 Eingabe Register).
 
-`save_next` muss einem Save for int-oder FP volatile-Registrierungs paar folgen: `save_regp`, `save_regp_x`, `save_fregp`, `save_fregp_x`, `save_r19r20_x` oder einer anderen `save_next`. Dabei wird das nächste Registerpaar beim nächsten 16-Byte-Slot in der Reihenfolge "wächst" gespeichert. Ein `save_next` verweist auf das erste FP-Registerpaar, wenn es auf den `save-next` folgt, der das letzte int-Registerpaar angibt.
+`save_next` müssen einem Save for int-oder FP volatile-Registrierungs paar folgen: `save_regp`, `save_regp_x`, `save_fregp`, `save_fregp_x`, `save_r19r20_x`oder einem anderen `save_next`. Dabei wird das nächste Registerpaar beim nächsten 16-Byte-Slot in der Reihenfolge "wächst" gespeichert. Ein `save_next` verweist auf das erste FP-Registerpaar, wenn es auf den `save-next` folgt, der das letzte int-Registerpaar angibt.
 
-Da die Größe der regulären Rückgabe-und Sprung Anweisungen gleich ist, besteht keine Notwendigkeit, dass ein getrennter `end`-Entladungs Code für Endaufruf Szenarios erforderlich ist.
+Da die Größe der regulären Rückgabe-und Sprung Anweisungen identisch ist, ist es nicht erforderlich, einen separaten `end` Entladungs Code für Endaufruf Szenarios zu erhalten.
 
-`end_c` ist so konzipiert, dass nicht zusammenhängende Funktions Fragmente zu Optimierungszwecken verarbeitet werden. Ein `end_c`, das das Ende der Entladungs Codes im aktuellen Bereich anzeigt, muss von einer anderen Reihe von Entladungs Codes gefolgt werden, die mit einem echten `end` beendet wurden. Die Entladungs Codes zwischen `end_c` und `end` stellen die Prolog-Vorgänge in der übergeordneten Region ("Phantom"-Prolog) dar.  Weitere Details und Beispiele werden im folgenden Abschnitt beschrieben.
+`end_c` ist so konzipiert, dass nicht zusammenhängende Funktions Fragmente zu Optimierungszwecken verarbeitet werden. Auf eine `end_c`, die das Ende der Entladungs Codes im aktuellen Bereich anzeigt, muss eine andere Reihe von Entladungs Codes befolgt werden, die mit einem echten `end`beendet wurden. Die Entladungs Codes zwischen `end_c` und `end` stellen die Prolog-Vorgänge in der übergeordneten Region ("Phantom"-Prolog) dar.  Weitere Details und Beispiele werden im folgenden Abschnitt beschrieben.
 
 ### <a name="packed-unwind-data"></a>Entpackte Entladedaten
 
-Für Funktionen, deren Prologe und Epilogs der unten beschriebenen kanonischen Form folgen, können gepackte Entladedaten verwendet werden. Es entfällt, dass ein. XData-Datensatz vollständig benötigt wird, und reduziert die Kosten für die Bereitstellung von Entladedaten erheblich. Die kanonischen Prologe und Epilogs sind so konzipiert, dass Sie die allgemeinen Anforderungen einer einfachen Funktion erfüllen: Eine, die keinen Ausnahmehandler benötigt und deren Setup-und Beendigungs-Vorgänge in einer Standard Reihenfolge durchführt.
+Für Funktionen, deren Prologe und Epilogs der unten beschriebenen kanonischen Form folgen, können gepackte Entladedaten verwendet werden. Es entfällt, dass ein. XData-Datensatz vollständig benötigt wird, und reduziert die Kosten für die Bereitstellung von Entladedaten erheblich. Die kanonischen Prologe und Epilogs sind so konzipiert, dass Sie die allgemeinen Anforderungen einer einfachen Funktion erfüllen: eine, für die kein Ausnahmehandler erforderlich ist, und die Setup-und Beendigungs-Vorgänge in einer Standard Reihenfolge durchführt.
 
 Das Format eines pData-Datensatzes mit gepackten Entladedaten sieht wie folgt aus:
 
@@ -352,24 +352,24 @@ Die Felder lauten wie folgt:
   - 00 = nicht verkettete Funktion, \<x29, LR > Paar nicht im Stapel gespeichert wird.
   - 01 = nicht verkettete Funktion, \<LR > im Stapel gespeichert
   - 10 = reserviert;
-  - 11 = verkettete Funktion, eine Store-/Auslastungs-paar-Anweisung wird im Prolog-/Epilog-\<x29, LR verwendet >
+  - 11 = verkettete Funktion, eine Store-/Auslastungs-paar-Anweisung wird in Prolog-/Epilog\<x29, LR verwendet >
 - **H** ist ein 1-Bit-Flag, das angibt, ob die Funktion die ganzzahligen Parameter Register (X0-x7) untersucht, indem Sie am Anfang der Funktion gespeichert werden. (0 = registriert keine Start Register, 1 = Häuser Register).
 - **RegI** ist ein 4-Bit-Feld, das die Anzahl der nicht flüchtigen int-Register (x19-x28) angibt, die am kanonischen Stapel Speicherort gespeichert sind.
-- **Regf** ist ein 3-Bit-Feld, das die Anzahl der nicht flüchtigen FP-Register (D8-D15) angibt, die am kanonischen Stapel Speicherort gespeichert sind. (Regf = 0: Es wird kein FP-Register gespeichert. Regf > 0: "Regf + 1 FP-Register" werden gespeichert). Gepackte Entladedaten können nicht für Funktionen verwendet werden, bei denen nur ein FP-Register gespeichert wird.
+- **Regf** ist ein 3-Bit-Feld, das die Anzahl der nicht flüchtigen FP-Register (D8-D15) angibt, die am kanonischen Stapel Speicherort gespeichert sind. (Regf = 0: Es wird kein FP-Register gespeichert. Regf > 0: regf + 1 FP-Register werden gespeichert.) Gepackte Entladedaten können nicht für Funktionen verwendet werden, bei denen nur ein FP-Register gespeichert wird.
 
-Kanonische Prologe, die in die Kategorien 1, 2 (ohne ausgehenden Parameter Bereich), 3 und 4 im obigen Abschnitt fallen, können durch das gepackte Entlade Format dargestellt werden.  Die Epilogs für kanonische Funktionen folgen einem ähnlichen Formular, außer **H** hat keine Auswirkung, die `set_fp`-Anweisung wird ausgelassen, und die Reihenfolge der Schritte und die Anweisungen in jedem Schritt werden im Epilog umgekehrt. Der-Algorithmus für "gepackt. XData" folgt den folgenden Schritten, die in der folgenden Tabelle beschrieben werden:
+Kanonische Prologe, die in die Kategorien 1, 2 (ohne ausgehenden Parameter Bereich), 3 und 4 im obigen Abschnitt fallen, können durch das gepackte Entlade Format dargestellt werden.  Die Epilogs für kanonische Funktionen folgen einem ähnlichen Formular, außer **H** hat keine Auswirkung, die `set_fp` Anweisung wird ausgelassen, und die Reihenfolge der Schritte und die Anweisungen in den einzelnen Schritten werden im Epilog umgekehrt. Der-Algorithmus für "gepackt. XData" folgt den folgenden Schritten, die in der folgenden Tabelle beschrieben werden:
 
 Schritt 0: Berechnen Sie die Größe der einzelnen Bereiche vorab.
 
-Schritt 1: Speichern Sie die in int aufgerufenen gespeicherten Register.
+Schritt 1: Speichern der in int aufgerufenen gespeicherten Register.
 
-Schritt 2: Dieser Schritt ist für Typ 4 in den frühen Abschnitten spezifisch. LR wird am Ende des int-Bereichs gespeichert.
+Schritt 2: dieser Schritt ist für Typ 4 in den frühen Abschnitten spezifisch. LR wird am Ende des int-Bereichs gespeichert.
 
-Schritt 3: Speichert die vom FP aufgerufenen gespeicherten Register.
+Schritt 3: Speichern der von FP aufgerufenen gespeicherten Register.
 
 Schritt 4: Speichern Sie die Eingabeargumente im Startparameter Bereich.
 
-Schritt 5: Weisen Sie den verbleibenden Stapel zu, einschließlich lokaler Bereiche, \<x29, LR > Pair und Bereich für ausgehende Parameter. 5a entspricht dem kanonischen Typ 1. 5B und 5C sind für den kanonischen Typ 2. 5D und 5E sind für Typ 3 und Typ 4.
+Schritt 5: Zuordnen des verbleibenden Stapels, einschließlich lokaler Bereiche, \<x29, LR > Pair und Ausgangsparameter Bereich. 5a entspricht dem kanonischen Typ 1. 5B und 5C sind für den kanonischen Typ 2. 5D und 5E sind für Typ 3 und Typ 4.
 
 Schritt #|Flagwerte|Anzahl von Anweisungen|Opcode|Entladungs Code
 -|-|-|-|-
@@ -384,11 +384,11 @@ Schritt #|Flagwerte|Anzahl von Anweisungen|Opcode|Entladungs Code
 5D|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
 5e|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
-\*, wenn **CR** = = 01 und **RegI** eine ungerade Zahl ist, werden Schritt 2 und Last save_rep in Schritt 1 zu einem save_regp zusammengeführt.
+\* Wenn **CR** = = 01 und **RegI** eine ungerade Zahl ist, werden Schritt 2 und letzte save_rep in Schritt 1 zu einem save_regp zusammengeführt.
 
-\* @ no__t-1 Wenn **RegI** == **CR** = = 0 und **regf** ! = 0, führt die erste STP für den Gleit Komma Wert für die prädekrement.
+\*\* wenn der Wert " **RegI** == **CR** = = 0" und " **regf** ! = 0" lautet, führt die erste STP-Klasse für den Gleit Komma Wert für die prädekrement.
 
-\* @ no__t-1 @ no__t-2 im Epilog ist keine Anweisung vorhanden, die `mov x29,sp` entspricht. Gepackte Entladedaten können nicht verwendet werden, wenn eine Funktion eine Wiederherstellung von SP von x29 erfordert.
+\*\*\* keine der `mov x29,sp` entsprechende Anweisung im Epilog vorhanden. Gepackte Entladedaten können nicht verwendet werden, wenn eine Funktion eine Wiederherstellung von SP von x29 erfordert.
 
 ### <a name="unwinding-partial-prologs-and-epilogs"></a>Entwickeln von partiellen Prologe und Epilogs
 
@@ -476,11 +476,11 @@ Ein typischer Fall von Funktions Fragmenten ist "Code Trennung" mit diesem Compi
 
    Nur der Prolog muss beschrieben werden. Dies kann nicht im Compact. pdata-Format dargestellt werden. Im vollständigen. XData-Fall kann der Wert durch Festlegen von Epilog count = 0 dargestellt werden. Siehe Region 1 im obigen Beispiel.
 
-   Entladungs Codes: `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
+   Entladungs Codes: `set_fp`, `save_regp 0,240``save_fplr_x_256`, `end`.
 
 1. Nur Epilogs (Region 2: Prolog befindet sich in der Host Region)
 
-   Es wird davon ausgegangen, dass beim springen in diesen Bereich alle Prolog Codes ausgeführt wurden. Eine Teilentladung kann in Epilogs auf dieselbe Weise erfolgen wie in einer normalen Funktion. Diese Art von Region kann nicht durch Compact. pdata dargestellt werden. Im vollständigen. XData-Datensatz kann er mit einem "Phantom"-Prolog codiert werden, der durch ein Entladungs Code paar von `end_c` und `end` in Klammern eingeschlossen wird.  Der führende `end_c` gibt an, dass die Größe des Prologs NULL ist. Der Epilogcode-Start Index des einzelnen Epilogcode verweist auf `set_fp`.
+   Es wird davon ausgegangen, dass beim springen in diesen Bereich alle Prolog Codes ausgeführt wurden. Eine Teilentladung kann in Epilogs auf dieselbe Weise erfolgen wie in einer normalen Funktion. Diese Art von Region kann nicht durch Compact. pdata dargestellt werden. Im vollständigen. XData-Datensatz kann er mit einem "Phantom"-Prolog codiert werden, der durch eine `end_c` und `end` Entladungs codepaar in Klammern gesetzt wird.  Die führende `end_c` gibt an, dass die Größe des Prologs NULL ist. Der Epilogcode-Start Index der einzelnen epilogpunkte, die `set_fp`werden sollen.
 
    Entladungs Code für Region 2: `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
 
@@ -521,9 +521,9 @@ Ein weiterer komplizierterer Fall von Funktions Fragmenten ist "Verkleinerung ve
 
 Im Prolog von Region 1 wird der Stapel Speicher vorab zugeordnet. Sie sehen, dass Region 2 denselben Entlade Code hat, auch wenn Sie aus der Host Funktion heraus verschoben wird.
 
-Region 1: `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end` mit dem Epilog-Start Index zeigt auf `set_fp` wie üblich.
+Region 1: `set_fp`, `save_regp 0,240``save_fplr_x_256`, `end` mit Epilog Start Index zeigt wie üblich auf `set_fp`.
 
-Region 2: `save_regp 2, 224`, `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`. Epilog Start Index zeigt auf den ersten Entladungs Code `save_regp 2, 224`.
+Region 2: `save_regp 2, 224`, `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`. Der Epilog-Start Index zeigt auf den ersten Entladungs Code `save_regp 2, 224`.
 
 ### <a name="large-functions"></a>Große Funktionen
 
@@ -587,7 +587,7 @@ Wenn ein Fragment keinen Prolog und kein Epilog hat, erfordert es weiterhin eine
 
 Der Epilog-Start Index [0] verweist auf dieselbe Sequenz von Prolog-Entlade Code.
 
-### <a name="example-3-variadic-unchained-function"></a>Beispiel 3: Nicht verkettete Variadic-Funktion
+### <a name="example-3-variadic-unchained-function"></a>Beispiel 3: nicht verkettete Variadic-Funktion
 
 ```asm
 |Delegate| PROC

@@ -32,11 +32,11 @@ Der folgende Screenshot zeigt das **Team Explorer** Fenster, das von seiner Stan
 
 Im Dokument Fenster ist jede geöffnete Datei in einem Frame im Registerkarten Format enthalten. Sie können diese Registerkarten genau wie Tool Fenster float oder sperren. Weitere Informationen finden Sie unter [Anpassen der Fensterlayouts in Visual Studio](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 
-Um alle Tool Fenster auszublenden und das Fenster des Code-Editors zu maximieren, drücken**Sie** **alt** + **UMSCHALT** + , um den *Vollbildmodus*zu wechseln.
+Wenn Sie alle Tool Fenster ausblenden und das Fenster "Code-Editor" maximieren möchten, drücken **Sie** **alt** + **UMSCHALT** + die EINGABETASTE, um den *Vollbildmodus*zu wechseln.
 
 ## <a name="set-c-coding-styles-and-formatting"></a>Codierungs Stile und Formatierung festlegen C++
 
-Sie können viele einzelne Code Formatierungsoptionen angeben, z. b. Einzug-und Klammer Positionen. Wechseln Sie zu diesem Zweck zu **Extras @no__t-** 1**Optionen** > **Text-Editor**@no__t-**5 CC++/**  > -**Formatierung** (oder geben Sie **STRG + Q** ein, und suchen Sie nach "Formatierung"). Alternativ können Sie einen der [clangformat](https://clang.llvm.org/docs/ClangFormat.html) -Stile angeben (oder ihren eigenen benutzerdefinierten clangformat-Stil).
+Sie können viele einzelne Code Formatierungsoptionen angeben, z. b. Einzug-und Klammer Positionen. Wechseln Sie zu diesem Zweck zu Extras > **Optionen** > **Text-Editor** > **CC++ /**  > - **Formatierung** (oder drücken Sie **STRG + Q** , und **Suchen Sie nach** "Formatierung"). Alternativ können Sie einen der [clangformat](https://clang.llvm.org/docs/ClangFormat.html) -Stile angeben (oder ihren eigenen benutzerdefinierten clangformat-Stil).
 
 ![Screenshot der clangformat-Optionen](media/clang-format-ide.png)
 
@@ -44,7 +44,7 @@ Weitere Informationen zu allen Formatierungsoptionen finden Sie unter [Optionen,
 
 ## <a name="set-the-color-theme"></a>Festlegen des Farbdesigns
 
-Um einen hellen oder dunklen Hintergrund festzulegen, geben Sie **STRG + Q** ein, und suchen Sie nach "Color Theme". Sie finden diese **auch unter Extras @no__t-** 1**Optionen** > **Umgebung**, und wählen Sie **Farb**Design aus.
+Um einen hellen oder dunklen Hintergrund festzulegen, geben Sie **STRG + Q** ein, und suchen Sie nach "Color Theme". Sie finden diese auch in den **Tools** > **Optionen** > **Umgebung**, und wählen Sie **Farb**Design aus.
 
 ![Screenshot der Farbschemas](media/tools-options-color-theme.png)
 
@@ -54,15 +54,15 @@ Hier ist beispielsweise das dunkle Design:
 
 ## <a name="customize-code-colorization"></a>Anpassen der Farbgebung von Code
 
-In Visual Studio 2019 können Sie drei vordefinierte *Farbschemas*auswählen. Diese geben an, wie Code Elemente im Editor farbig markiert werden. Wenn Sie ein Design auswählen möchten, **wechseln Sie zu Extras @no__t-** 1**Optionen** > **Text-Editor** > **C/C++**  > **Ansicht**, und wählen Sie **Farbschema**:
+In Visual Studio 2019 können Sie drei vordefinierte *Farbschemas*auswählen. Diese geben an, wie Code Elemente im Editor farbig markiert werden. Wenn Sie ein Design **auswählen möchten,** wechseln Sie zu Extras > **Optionen** > **Text-Editor** > **C/C++**  > **Ansicht**, und wählen Sie dann **Farbschema**aus:
 
 ![Screenshot der C++ Optionen für Farbschemas mit erweiterter Hervorhebung](media/color-schemes.png)
 
-In dem Farbschema mit dem Namen **Visual Studio 2017**sind die meisten Code Elemente einfach schwarz. Im **erweiterten** Farbschema werden Funktionen, lokale Variablen, Makros und andere Elemente eingefärbt. In den **enhanced (Globals im Vergleich zu Members)** -Schema, sind globale Funktionen und Variablen farbig markiert, um mit den Klassenmembern zu vergleichen. Der Standardmodus ist **erweitert**und sieht wie folgt aus:
+In dem Farbschema mit dem Namen **Visual Studio 2017**sind die meisten Code Elemente einfach schwarz. Im **erweiterten** Farbschema werden Funktionen, lokale Variablen, Makros und andere Elemente eingefärbt. Im **erweiterten Schema (Globals und Members)** werden globale Funktionen und Variablen hervorgehoben, um mit den Klassenmembern zu vergleichen. Der Standardmodus ist **erweitert**und sieht wie folgt aus:
 
 ![Screenshot des erweiterten Farbschemas](media/color-scheme-enhanced.png)
 
-Unabhängig davon, welches Design-oder Farbschema aktiv ist, können Sie die Schriftart und Farben für einzelne Code Elemente anpassen. Wechseln Sie zu diesem Zweck zu **Extras @no__t-** 1**Optionen** > **Umgebung** > **Schriftarten und Farben** (oder drücken Sie **STRG + Q** , und suchen Sie nach "Fonts"). Scrollen Sie in der Liste der Elemente anzeigen, bis die C++ Optionen angezeigt werden.
+Unabhängig davon, welches Design-oder Farbschema aktiv ist, können Sie die Schriftart und Farben für einzelne Code Elemente anpassen. Wechseln Sie zu diesem Zweck zu **Extras** > **Optionen** > **Umgebung** > **Schriftarten und Farben** (oder drücken Sie **STRG + Q** , und suchen Sie nach "Fonts"). Scrollen Sie in der Liste der Elemente anzeigen, bis die C++ Optionen angezeigt werden.
 
 ![Screenshot der C++ Schriftart-und Farboptionen](media/tools-options-cpp-colors.png)
 
@@ -80,7 +80,7 @@ Sie können Befehle hinzufügen oder entfernen oder eine benutzerdefinierte Symb
 
 ![Screenshot der Symbolleiste mit hervorgehobenem Pfeil nach unten und gepunktete Leiste](media/toolbar-move-edit.png).
 
-Weitere Informationen finden Sie unter [Vorgehensweise: Anpassen von Menüs und Symbolleisten in Visual Studio @ no__t-0.
+Weitere Informationen finden Sie unter Gewusst [wie: Anpassen von Menüs und Symbolleisten in Visual Studio](/visualstudio/ide/how-to-customize-menus-and-toolbars-in-visual-studio).
 
 ## <a name="show-or-hide-line-numbers"></a>Anzeigen oder Ausblenden von Zeilennummern
 
@@ -90,4 +90,4 @@ Sie können angeben, ob die Zeilennummern links neben den Editor Fenstern angeze
 
 ## <a name="create-keyboard-shortcuts"></a>Erstellen von Tastenkombinationen
 
-Viele Befehle in Visual Studio verfügen über *Tasten*Kombinationen, Tastenkombinationen mit STRG, alt und Umschalttaste. Sie können diese Tastenkombinationen ändern oder neue in Visual Studio erstellen. Wechseln Sie zu Extras @no__t-**1 Optionen**@no__t-**3 Umgebung** > **Tastatur** (oder geben Sie **STRG + Q** ein, und suchen Sie nach "Verknüpfungen"). Weitere Informationen finden Sie unter [identifizieren und Anpassen von Tastenkombinationen in Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
+Viele Befehle in Visual Studio verfügen über *Tasten*Kombinationen, Tastenkombinationen mit STRG, alt und Umschalttaste. Sie können diese Tastenkombinationen ändern oder neue in Visual Studio erstellen. Wechseln Sie zu Extras ** > Optionen** > **Umgebung** > **Tastatur** (oder geben Sie **STRG + Q** ein, und suchen **Sie nach "** Verknüpfungen"). Weitere Informationen finden Sie unter [identifizieren und Anpassen von Tastenkombinationen in Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
