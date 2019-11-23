@@ -45,7 +45,7 @@ Der Typ des Schlüssels im Schlüssel-Wert-Paar.
 Der Typ des Werts im Schlüssel-Wert-Paar.
 
 *C*<br/>
-Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der Map zu bestimmen. Standardmäßig [> Std:: less @ no__t-1K](../standard-library/less-struct.md).
+Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der Map zu bestimmen. Standardmäßig ist [Std:: less\<K >](../standard-library/less-struct.md).
 
 *__is_valid_winrt_type ()* Eine vom Compiler generierte Funktion, die den Typ von *K* und *V* überprüft und eine benutzerfreundliche Fehlermeldung bereitstellt, wenn der Typ nicht in der Zuordnung gespeichert werden kann.
 
@@ -57,13 +57,13 @@ Zulässige Typen sind:
 
 - Schnittstellen Klasse ^
 
-- Öffentliche Referenzklasse^
+- Öffentliche Verweisklasse^
 
-- value struct
+- Wertstruktur
 
 - Öffentliche Enumerationsklasse
 
-Die Zuordnung ist im Grunde genommen ein Wrapper für [std::map](../standard-library/map-class.md). Dabei handelt es C++ sich um eine konkrete Implementierung der Typen [Windows:: Foundation:: Collections:: IMap < Windows:: Foundation:: Collections:: ikeyvaluepair @ no__t-2K, V > >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) und [iobservablemap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) , die über öffentliche Fenster hinweg übermittelt werden. Lauf Zeit Schnittstellen. Wenn Sie versuchen, einen `Platform::Collections::Map` -Typ in einem öffentlichen Rückgabewert oder Parameter zu verwenden, wird der Compilerfehler C3986 ausgelöst. Sie können den Fehler beheben, indem Sie den Typ des Parameters oder des Rückgabewerts in [Windows:: Foundation:: Collections:: IMap @ no__t-1K, V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)ändern.
+Die Zuordnung ist im Grunde genommen ein Wrapper für [std::map](../standard-library/map-class.md). Dabei handelt es C++ sich um eine konkrete Implementierung der Typen [Windows:: Foundation:: Collections:: IMap < Windows:: Foundation:: Collections:: ikeyvaluepair\<K, V > >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) und [iobservablemap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) , die über öffentliche Windows-Runtime Schnittstellen übergebenen werden. Wenn Sie versuchen, einen `Platform::Collections::Map` -Typ in einem öffentlichen Rückgabewert oder Parameter zu verwenden, wird der Compilerfehler C3986 ausgelöst. Sie können den Fehler beheben, indem Sie den Typ des Parameters oder des Rückgabewerts in [Windows:: Foundation:: Collections:: IMap\<K, V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)ändern.
 
 Weitere Informationen finden Sie unter [Collections](../cppcx/collections-c-cx.md).
 
@@ -85,7 +85,7 @@ Weitere Informationen finden Sie unter [Collections](../cppcx/collections-c-cx.m
 |[Map::HasKey](#haskey)|Ermittelt, ob die aktuelle Map den angegebenen Schlüssel enthält.|
 |[Map::Insert](#insert)|Fügt das angegebene Schlüssel-Wert-Paar dem aktuellen Map-Objekt hinzu.|
 |[Map::Lookup](#lookup)|Ruft das Element am angegebenen Schlüssel im aktuellen Map-Objekt ab.|
-|[Map::Remove](#remove)|Löscht das angegebene Schlüssel-Wert-Paar vom aktuellen Map-Objekt.|
+|[Map::Remove](#remove)|Löscht das angegebene Schlüssel-Wert-Paar aus dem aktuellen Map-Objekt.|
 |[Map::Size](#size)|Gibt die Anzahl von Elementen im aktuellen Map-Objekt zurück.|
 
 ### <a name="events"></a>Ereignisse
@@ -99,7 +99,7 @@ Weitere Informationen finden Sie unter [Collections](../cppcx/collections-c-cx.m
 
 `Map`
 
-### <a name="requirements"></a>Anforderungen
+### <a name="requirements"></a>Voraussetzungen
 
 **Header:** collection.h
 
@@ -132,11 +132,11 @@ Ein Iterator, der das erste Element in der Zuordnung angibt.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine bequeme Möglichkeit, den von First () zurückgegebenen Iterator zu halten, besteht darin, den Rückgabewert einer Variablen zuzuweisen, die mit dem **automatischen** typableitungs Schlüsselwort deklariert wird. Beispiel: `auto x = myMap->First();`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.
+Eine bequeme Möglichkeit, den von First () zurückgegebenen Iterator zu halten, besteht darin, den Rückgabewert einer Variablen zuzuweisen, die mit dem **automatischen** typableitungs Schlüsselwort deklariert wird. Beispielsweise `auto x = myMap->First();`.
 
 ## <a name="getview"></a>Map:: GetView-Methode
 
-Gibt eine schreibgeschützte Ansicht der aktuellen Zuordnung zurück. Das heißt, eine [Platform:: Collections:: MapView-Klasse](../cppcx/platform-collections-mapview-class.md), die die Schnittstelle [Windows:: Foundation:: Collections:: imapview @ no__t-1K, V >]/UWP/API/Windows.Foundation.Collections.IMapView_K_V_) implementiert.
+Gibt eine schreibgeschützte Ansicht der aktuellen Zuordnung zurück. Das heißt, eine [Platform:: Collections:: MapView-Klasse](../cppcx/platform-collections-mapview-class.md), die die Schnittstelle [Windows:: Foundation:: Collections:: imapview\<K, V >]/UWP/API/Windows.Foundation.Collections. IMapView_K_V_) implementiert.
 
 ### <a name="syntax"></a>Syntax
 
@@ -182,7 +182,7 @@ virtual bool Insert(K key, V value);
 *key*<br/>
 Der Schlüsselteil des Schlüssel-Wert-Paars. Der *Schlüsseltyp* lautet Typname *K*.
 
-*value*<br/>
+*Wert*<br/>
 Der Wertteil des Schlüssel-Wert-Paars. Der *Werttyp* ist Typname *V*.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -258,15 +258,15 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert
 
-Ein [mapchangedeventhandler @ no__t-1K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , das Informationen über das Objekt enthält, das das Ereignis ausgelöst hat, sowie die Art der Änderung, die aufgetreten ist. Siehe auch [imapchangedebug-args @ no__t-1K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) und [CollectionChange-Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
+Ein [mapchangedeventhandler-\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , der Informationen zum Objekt enthält, das das Ereignis ausgelöst hat, sowie die Art der Änderung, die aufgetreten ist. Siehe auch [imapchangedebug-args\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) und [CollectionChange-Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
 
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework
+## <a name="net-framework-equivalent"></a>.NET Framework-Entsprechung
 
-Windows-Runtime-apps, C# die oder Visual Basic Project IMap @ no__t-1K, v > as IDictionary @ no__t-2K, v > verwenden.
+Windows-Runtime-apps, C# die oder Visual Basic Project IMap\<k, v > als IDictionary\<k, v > verwenden.
 
 ## <a name="remove"></a>Map:: Remove-Methode
 
-Löscht das angegebene Schlüssel-Wert-Paar vom aktuellen Map-Objekt.
+Löscht das angegebene Schlüssel-Wert-Paar aus dem aktuellen Map-Objekt.
 
 ### <a name="syntax"></a>Syntax
 
@@ -281,7 +281,7 @@ Der Schlüsselteil des Schlüssel-Wert-Paars. Der *Schlüsseltyp* lautet Typname
 
 ## <a name="size"></a>Map:: size-Methode
 
-Gibt die Anzahl der [Windows:: Foundation:: Collections:: ikeyvaluepair @ no__t-1K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) Elemente in der Zuordnung zurück.
+Gibt die Anzahl der [Windows:: Foundation:: Collections:: ikeyvaluepair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) Elemente in der Zuordnung zurück.
 
 ### <a name="syntax"></a>Syntax
 

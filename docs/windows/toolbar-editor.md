@@ -107,13 +107,13 @@ Der **Symbol** leisten-Editor ermöglicht Ihnen Folgendes:
 
 1. Wählen Sie im Dialogfeld **Ressource hinzufügen** in der Liste **Ressourcentyp** die Option **Symbolleiste** aus, und wählen Sie dann **neu**aus.
 
-   Wenn ein Pluszeichen ( **+** ) neben dem Ressourcentyp der **Symbolleiste** angezeigt wird, bedeutet dies, dass Toolbar-Vorlagen verfügbar sind. Wählen Sie das Pluszeichen aus, um die Liste der Vorlagen zu erweitern, wählen Sie eine Vorlage aus, und wählen Sie **neu**aus.
+   Wenn neben dem Ressourcentyp der **Symbolleiste** ein Pluszeichen ( **+** ) angezeigt wird, bedeutet dies, dass Toolbar-Vorlagen verfügbar sind. Wählen Sie das Pluszeichen aus, um die Liste der Vorlagen zu erweitern, wählen Sie eine Vorlage aus, und wählen Sie **neu**aus.
 
 ### <a name="to-convert-bitmaps-to-toolbar-resources"></a>So konvertieren Sie Bitmaps in Symbolleisten Ressourcen
 
 1. Öffnen Sie eine vorhandene Bitmap-Ressource im [Bild-Editor](../windows/image-editor-for-icons.md). Wenn die Bitmap nicht bereits in der *RC* -Datei vorhanden ist, klicken Sie mit der rechten Maustaste auf die *RC* -Datei, und wählen Sie **importieren**aus. Navigieren Sie dann zu der Bitmap, die Sie der *RC* -Datei hinzufügen möchten, und wählen Sie **Öffnen**
 
-1. Wechseln Sie zum Menü **Bild** > Symbolleisten-**Editor**.
+1. Wechseln Sie zum Menü **Bild** > Symbolleisten- **Editor**.
 
    Das Dialogfeld **neue Symbolleisten Ressource** wird angezeigt. Sie können die Breite und Höhe der Symbolbilder entsprechend der Bitmap ändern. Das Symbolleisten Bild wird dann im Symbolleisten- **Editor**angezeigt.
 
@@ -134,7 +134,7 @@ Der **Symbol** leisten-Editor ermöglicht Ihnen Folgendes:
 
    - Weisen Sie der leeren Schaltfläche am rechten Ende der Symbolleiste eine ID zu. Hierzu können Sie die **ID** -Eigenschaft im [Eigenschaften Fenster](/visualstudio/ide/reference/properties-window)bearbeiten. Beispielsweise können Sie einer Symbolleisten-Schaltfläche die gleiche ID wie eine Menüoption geben. Verwenden Sie in diesem Fall das Dropdown-Listenfeld, um die **ID** der Menüoption auszuwählen.
 
-   - Wählen Sie im Bereich **Symbolleisten Ansicht** am rechten Ende der Symbolleiste die Schaltfläche leer aus, und beginnen Sie mit dem zeichnen. Eine Standard Schaltflächen-Befehls-ID wird\<zugewiesen (ID_BUTTON n >).
+   - Wählen Sie im Bereich **Symbolleisten Ansicht** am rechten Ende der Symbolleiste die Schaltfläche leer aus, und beginnen Sie mit dem zeichnen. Eine Standard Schaltflächen-Befehls-ID wird zugewiesen (ID_BUTTON\<n >).
 
 #### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>So fügen Sie einer Symbolleiste ein Bild als Schaltfläche hinzu
 
@@ -145,11 +145,11 @@ Der **Symbol** leisten-Editor ermöglicht Ihnen Folgendes:
    > [!NOTE]
    > Wenn Sie das Bild in Visual Studio öffnen, wird es im Bild- **Editor**geöffnet. Sie können das Bild auch in anderen Grafikprogrammen öffnen.
 
-1. Wechseln Sie zum **Menü** > "**Kopieren**".
+1. Wechseln Sie zum Menü **Bearbeiten** > **Kopieren**.
 
 1. Wechseln Sie zu Ihrer Symbolleiste, indem Sie die zugehörige Registerkarte am oberen Rand des Quell Fensters auswählen.
 
-1. Wechseln Sie zum **Menü** > "**Einfügen**".
+1. Wechseln Sie zum Menü **Bearbeiten** > **Einfügen**.
 
    Das Bild wird auf der Symbolleiste als neue Schaltfläche angezeigt.
 
@@ -183,26 +183,26 @@ Ziehen Sie im Bereich der **Symbolleisten Ansicht** die Schaltfläche, die Sie v
 
 1. Wählen Sie die Symbolleisten Schaltfläche
 
-1. Fügen Sie im [Fenster Eigenschaften](/visualstudio/ide/reference/properties-window)im Feld **Eingabeaufforderung** eine Beschreibung der Schaltfläche für die Statusleiste und nach der Meldung hinzufügen `\n` und den QuickInfo-Namen hinzu.
+1. Fügen Sie im [Fenster Eigenschaften](/visualstudio/ide/reference/properties-window)im Feld **Eingabeaufforderung** eine Beschreibung der Schaltfläche für die Statusleiste hinzu, und fügen Sie nach der Meldung `\n` und den QuickInfo-Namen hinzu.
 
 Um z. b. die QuickInfo für die Schaltfläche " **Drucken** " in **WordPad**anzuzeigen:
 
 1. Öffnen Sie **WordPad**.
 
-1. Zeigen Sie mit dem Mauszeiger auf die **Druck** Symbolleisten-Schalt `Print` Fläche, und beachten Sie, dass das Wort jetzt unter dem Mauszeiger ist.
+1. Zeigen Sie mit dem Mauszeiger auf die **Druck** Symbolleisten-Schaltfläche, und beachten Sie, dass das Wort `Print` jetzt unter dem Mauszeiger ist.
 
-1. Sehen Sie sich die Statusleiste am unteren Rand des **WordPad** -Fensters an, und beachten Sie, dass `Prints the active document`der Text jetzt angezeigt wird.
+1. Sehen Sie sich die Statusleiste am unteren Rand des **WordPad** -Fensters an, und beachten Sie, dass nun der Text `Prints the active document`angezeigt wird.
 
-`Print`ist der QuickInfo-Name `Prints the active document` und die Beschreibung der Schaltfläche für die Statusleiste.
+`Print` ist der QuickInfo-Name und `Prints the active document` die Beschreibung der Schaltfläche für die Statusleiste.
 
-Wenn Sie diesen Effekt mithilfe des Symbolleisten- **Editors**wünschen, legen Sie die `Prints the active document\nPrint`Eigenschaft **prompt** auf fest.
+Wenn Sie diesen Effekt mithilfe des Symbolleisten- **Editors**wünschen, legen Sie die Eigenschaft **prompt** auf `Prints the active document\nPrint`fest.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
 MFC oder ATL
 
 ## <a name="see-also"></a>Siehe auch
 
 [Ressourcen-Editoren](../windows/resource-editors.md)
-[-Menüs und andere Ressourcen](/windows/win32/menurc/resources)<br/>
+[Menüs und andere Ressourcen](/windows/win32/menurc/resources)<br/>
 [Eigenschaften von Symbolleisten-Schaltflächen](../windows/toolbar-button-properties.md)<br/>

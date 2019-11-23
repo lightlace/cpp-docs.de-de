@@ -1,6 +1,6 @@
 ---
-title: Raw pointers (C++)
-description: How to use raw pointers in C++
+title: Rohzeiger (C++)
+description: Verwenden von unformatierten Zeigern inC++
 ms.date: 11/19/2019
 helpviewer_keywords:
 - pointers [C++]
@@ -11,11 +11,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74250685"
 ---
-# <a name="raw-pointers-c"></a>Raw pointers (C++)
+# <a name="raw-pointers-c"></a>Rohzeiger (C++)
 
-A pointer is a type of variable that stores the address of an object in memory and is used to access that object. A *raw pointer* is a pointer whose lifetime is not controlled by an encapsulating object such as a [smart pointer](smart-pointers-modern-cpp.md). A raw pointer can be assigned the address of another non-pointer variable, or it can be assigned a value of [nullptr](nullptr.md). A pointer that has not been assigned a value contains random data.
+Ein Zeiger ist ein Typ von Variable, der die Adresse eines Objekts im Arbeitsspeicher speichert und für den Zugriff auf das Objekt verwendet wird. Ein unformatierter *Zeiger* ist ein Zeiger, dessen Lebensdauer nicht durch ein kapselnde Objekt wie einen [intelligenten Zeiger](smart-pointers-modern-cpp.md)gesteuert wird. Einem unformatierten Zeiger kann die Adresse einer anderen nicht-Zeiger Variablen zugewiesen werden, oder ihm kann der Wert [nullptr](nullptr.md)zugewiesen werden. Ein Zeiger, dem kein Wert zugewiesen wurde, enthält zufällige Daten.
 
-A pointer can also be *dereferenced* to retrieve the value of the object that it points at. The *member access operator* provides access to an object's members.
+Ein Zeiger kann auch *dereferenziert* werden, um den Wert des Objekts abzurufen, auf das er verweist. Der *Member Access-Operator* ermöglicht den Zugriff auf die Member eines Objekts.
 
 ```cpp
     int* p = nullptr; // declare pointer and initialize it
@@ -26,7 +26,7 @@ A pointer can also be *dereferenced* to retrieve the value of the object that it
 
 ```
 
-A pointer can point to a typed object or to **void**. When a program allocates a new object on the [heap](https://wikipedia.org/wiki/Heap) in memory, it receives the address of that object in the form of a pointer. Such pointers are called *owning pointers*; an owning pointer (or a copy of it) must be used to explicitly delete the heap-allocated object when it is no longer needed. Failure to delete the memory results in a *memory leak* and renders that memory location unavailable to any other program on the machine. For more information, see [new and delete operators](new-and-delete-operators.md).
+Ein Zeiger kann auf ein typisiertes Objekt oder auf das **void**-Objekt zeigen. Wenn ein Programm ein neues Objekt auf dem [Heap](https://wikipedia.org/wiki/Heap) im Arbeitsspeicher belegt, empfängt es die Adresse des Objekts in Form eines Zeigers. Solche Zeiger werden als *besitzende Zeiger*bezeichnet. ein Besitz ender Zeiger (oder eine Kopie davon) muss verwendet werden, um das vom Heap zugeordnete Objekt explizit zu löschen, wenn es nicht mehr benötigt wird. Wenn der Arbeitsspeicher nicht gelöscht wird, führt dies zu einem *Speicher* Verluste und rendert diesen Speicher Speicherort für ein anderes Programm auf dem Computer nicht. Weitere Informationen finden Sie unter [New-und DELETE-Operatoren](new-and-delete-operators.md).
 
 ```cpp
 
@@ -35,7 +35,7 @@ A pointer can point to a typed object or to **void**. When a program allocates a
     delete mc; // delete object (please don't forget!)
 ```
 
-A pointer (if it isn't declared as **const**) can be incremented or decremented so that it points to a new location in memory. This is called *pointer arithmetic* and is used in C-style programming to iterate over elements in arrays or other data structures. A **const** pointer can't be made to point to a different memory location, and in that sense is very similar to a [reference](references-cpp.md). For more information, see [const and volatile pointers](const-and-volatile-pointers.md).
+Ein Zeiger (wenn er nicht als " **konstant**" deklariert ist) kann inkrementiert oder dekrementiert werden, sodass er auf einen neuen Speicherort im Arbeitsspeicher verweist. Dies wird als *Zeigerarithmetik* bezeichnet und wird bei der Programmierung im C-Stil verwendet, um Elemente in Arrays oder anderen Datenstrukturen zu durchlaufen. Ein **konstanter Zeiger kann** nicht erstellt werden, um auf einen anderen Speicherort zu verweisen, und in diesem Sinne ähnelt dies einem [Verweis](references-cpp.md). Weitere Informationen finden Sie unter Konstante [und volatile-Zeiger](const-and-volatile-pointers.md).
 
 ```cpp
     // declare a C-style string. Compiler adds terminating '\0'.
@@ -49,13 +49,13 @@ A pointer (if it isn't declared as **const**) can be incremented or decremented 
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
-On 64-bit operating systems, a pointer has a size of 64 bits; a system's pointer size determines how much addressable memory it can have. All copies of a pointer point to the same memory location. Pointers (along with references) are used extensively in C++ to pass larger objects to and from functions because it is usually far more efficient to copy an object's 64-bit address than to copy an entire object. When defining a function, specify pointer parameters as **const** unless you intend for the function to modify the object. In general, **const** references are the preferred way to pass objects to functions unless the value of the object can possibly be **nullptr**.
+Bei 64-Bit-Betriebssystemen hat ein Zeiger eine Größe von 64 Bits. die Zeiger Größe eines Systems bestimmt, wie viel Adressier barer Arbeitsspeicher aufweisen kann. Alle Kopien eines Zeigers zeigen auf denselben Speicherort. Zeiger (zusammen mit verweisen) werden häufig in C++ verwendet, um größere Objekte an und von Funktionen zu übergeben, weil es in der Regel weitaus effizienter ist, die 64-Bit-Adresse eines Objekts zu kopieren, als ein gesamtes Objekt zu kopieren. Geben Sie beim Definieren einer Funktion Zeiger Parameter als **konstant** an, es sei denn, Sie beabsichtigen, dass die Funktion das Objekt ändert. Im Allgemeinen sind die **Konstanten** Verweise die bevorzugte Methode, um Objekte an Funktionen zu übergeben, es sei denn, der Wert des Objekts kann **nullptr**sein.
 
-[Pointers to functions](#pointers_to_functions) enable functions to be passed to other functions and are used for "callbacks" in C-style programming. Modern C++ uses [lambda expressions](lambda-expressions-in-cpp.md) for this purpose.
+[Zeiger auf Funktionen](#pointers_to_functions) ermöglichen das Übertragen von Funktionen an andere Funktionen und werden für "Rückrufe" bei der Programmierung im C-Format verwendet. Modern C++ verwendet für diesen Zweck [Lambda-Ausdrücke](lambda-expressions-in-cpp.md) .
 
-## <a name="initialization-and-member-access"></a>Initialization and member access
+## <a name="initialization-and-member-access"></a>Initialisierung und Element Zugriff
 
-The following example shows how to declare a raw pointer and initialize it with an object allocated on the heap, and then how to use it. It also shows a few of the dangers associated with raw pointers. (Remember, this is C-style programming and not modern C++!)
+Im folgenden Beispiel wird gezeigt, wie ein unformatierter Zeiger deklariert und mit einem Objekt initialisiert wird, das auf dem Heap zugeordnet ist, und wie es verwendet wird. Außerdem werden einige der Gefahren im Zusammenhang mit unformatierten Zeigern angezeigt. (Denken Sie daran, dass es sich hierbei um Programmier Programmierung C++im C-Stil und nicht um moderne
 
 ```cpp
 #include <iostream>
@@ -133,14 +133,14 @@ int main()
 }
 ```
 
-## <a name="pointer-arithmetic-and-arrays"></a>Pointer arithmetic and arrays
+## <a name="pointer-arithmetic-and-arrays"></a>Zeigerarithmetik und Arrays
 
-Pointers and arrays are closely related. When an array is passed by-value to a function, it is passed as a pointer to the first element. The following example demonstrates the following important properties of pointers and arrays:
+Zeiger und Arrays sind eng miteinander verknüpft. Wenn ein Array als Wert an eine Funktion übermittelt wird, wird es als Zeiger an das erste Element übermittelt. Im folgenden Beispiel werden die folgenden wichtigen Eigenschaften von Zeigern und Arrays veranschaulicht:
 
-- the `sizeof` operator returns the total size in bytes of an array
-- to determine the number of elements, divide total bytes by the size of one element
-- when an array is passed to a function, it *decays* to a pointer type
-- the `sizeof` operator when applied to a pointer returns the pointer size, 4 bytes on x86 or 8 bytes on x64
+- der `sizeof`-Operator gibt die Gesamtgröße eines Arrays in Bytes zurück.
+- um die Anzahl der Elemente zu ermitteln, teilen Sie die Gesamtanzahl der Bytes durch die Größe eines Elements.
+- Wenn ein Array an eine Funktion übermittelt wird, *wird es zu* einem Zeigertyp.
+- der `sizeof`-Operator gibt bei Anwendung auf einen Zeiger die Zeiger Größe, 4 Bytes auf x86 oder 8 Bytes auf x64 zurück.
 
 ```cpp
 #include <iostream>
@@ -166,9 +166,9 @@ int main()
 }
 ```
 
-Certain arithmetic operations can be performed on non-const pointers to make them point to a new memory location. A pointer can be incremented and decremented using the **++** , **+=** , **-=** and **--** operators. This technique can be used in arrays and is especially useful in buffers of untyped data. A **void\*** increments by the size of a **char** (1 byte). A typed pointer increments by size of the type it points to.
+Bestimmte Arithmetische Operationen können für nicht konstante Zeiger ausgeführt werden, damit Sie auf einen neuen Speicherort zeigen. Ein Zeiger kann mit den Operatoren **++** , **+=** , **-=** und **--** erhöht und dekrementiert werden. Dieses Verfahren kann in Arrays verwendet werden und ist besonders nützlich für Puffer von nicht typisierten Daten. Ein **void-\*** Inkremente um die Größe eines **char** (1 Byte). Ein typisierter Zeiger erhöht die Größe des Typs, auf den er verweist.
 
-The following example demonstrates how pointer arithmetic can be used to access individual pixels in a bitmap on Windows. Note the use of **new** and **delete**, and the dereference operator. 
+Im folgenden Beispiel wird veranschaulicht, wie Zeigerarithmetik für den Zugriff auf einzelne Pixel in einer Bitmap unter Windows verwendet werden kann. Beachten Sie die Verwendung von " **New** " und " **Delete**" sowie den Dereferenzierungsoperator. 
 
 ```cpp
 #include <Windows.h>
@@ -233,11 +233,11 @@ int main()
 }
 ```
 
-## <a name="void-pointers"></a>void* pointers
+## <a name="void-pointers"></a>void *-Zeiger
 
-A pointer to **void** simply points to a raw memory location. Sometimes it is necessary to use **void\*** pointers, for example when passing between C++ code and C functions. 
+Ein Zeiger auf " **void** " zeigt einfach auf einen rohspeicher Speicherort. Manchmal ist es erforderlich, **void\*** Zeiger zu verwenden, z. b. C++ bei der Übergabe zwischen Code und C-Funktionen. 
 
-When a typed pointer is cast to a void pointer, the contents of the memory location are not changed, but the type information is lost, so that you can't perform increment or decrement operations. A memory location can be cast, for example, from MyClass* to void* and back again to MyClass*. Such operations are inherently error-prone and require great care to avoid errors. Modern C++ discourages the use of void pointers unless absolutely necessary.
+Wenn ein typisierter Zeiger in einen void-Zeiger umgewandelt wird, wird der Inhalt des Speicher Orts nicht geändert, aber die Typinformationen gehen verloren, sodass Sie keine Inkrement-oder Dekrement-Vorgänge ausführen können. Eine Speicheradresse kann z. b. von MyClass * in void * und wieder zurück in MyClass * umgewandelt werden. Solche Vorgänge sind grundsätzlich fehleranfällig und erfordern große Sorgfalt, um Fehler zu vermeiden. Modern C++ schreckt die Verwendung von void-Zeigern ab, sofern dies nicht unbedingt erforderlich ist.
 
 ```cpp
 
@@ -290,11 +290,11 @@ int main()
 }
 ```
 
-## <a name="pointers_to_functions"></a> Pointers to functions
+## <a name="pointers_to_functions"></a>Zeiger auf Funktionen
 
-In C-style programming, function pointers are used primarily to pass functions to other functions. In this scenario, the caller can customize the behavior of a function without modifying it. In modern C++, [lambda expressions](lambda-expressions-in-cpp.md) provide the same capability with greater type safety and other advantages.
+Bei der Programmierung im C-Stil werden Funktionszeiger hauptsächlich verwendet, um Funktionen an andere Funktionen zu übergeben. In diesem Szenario kann der Aufrufer das Verhalten einer Funktion anpassen, ohne Sie zu ändern. In modernen C++sind [Lambda-Ausdrücke](lambda-expressions-in-cpp.md) mit größerer Typsicherheit und anderen Vorteilen identisch.
 
-A function pointer declaration specifies the signature that the pointed-to function must have:
+Eine Funktionszeiger Deklaration gibt die Signatur an, über die die pointierenfunktion verfügen muss:
 
 ```cpp
 // Declare pointer to any function that...
@@ -310,7 +310,7 @@ void (*x)();
 int (*i)(int i, string s, double d);
 ```
 
-The following example shows a function `combine` that takes as a parameter any function that accepts a `std::string` and returns a `std::string`. Depending on the function that is passed to `combine` it will either prepend or append a string.
+Das folgende Beispiel zeigt eine Funktions `combine`, die eine Funktion als Parameter annimmt, die eine `std::string` akzeptiert und eine `std::string`zurückgibt. Abhängig von der Funktion, die an `combine` weitergeleitet wird, wird eine Zeichenfolge vorangestellt oder angefügt.
 
 ```cpp
 #include <iostream>
@@ -344,7 +344,7 @@ int main()
 
 ## <a name="see-also"></a>Siehe auch
 
-[Smart pointers](smart-pointers-modern-cpp.md)
-[Indirection Operator: *](indirection-operator-star.md)<br/>
+[Intelligenter Zeiger](smart-pointers-modern-cpp.md)
+[Dereferenzierungsoperator: *](indirection-operator-star.md)<br/>
 [address-of-Operator](address-of-operator-amp.md)</br>
-[Welcome back to C++](welcome-back-to-cpp-modern-cpp.md)
+[Willkommen zurück beiC++](welcome-back-to-cpp-modern-cpp.md)

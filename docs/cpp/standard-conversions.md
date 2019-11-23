@@ -69,11 +69,11 @@ C++herauf stufungen sind "Wert Beibehaltung", da der Wert nach der herauf Stufun
 
 Wertneutrale Erweiterungen und vorzeichenneutrale Erweiterungen erzeugen normalerweise dieselben Ergebnisse. Sie können jedoch unterschiedliche Ergebnisse erzielen, wenn das herauf gestufte Objekt wie folgt aussieht:
 
-- Ein Operand von `/`, `%`, `/=`, `%=`, `<`, `<=`, `>` oder `>=`
+- Ein Operand von `/`, `%`, `/=`, `%=`, `<`, `<=`, `>`oder `>=`
 
    Diese Operatoren benötigen Vorzeichen zum Bestimmen des Ergebnisses. Bei der Anwendung auf diese Operanden ergeben sich Werterhaltende und Signier enden Aktionen.
 
-- Der linke Operand von `>>` oder `>>=`
+- Der linke Operand des `>>` oder `>>=`
 
    Diese Operatoren behandeln die Mengen mit und ohne Vorzeichen bei einem Verschiebungs Vorgang unterschiedlich. Bei signierten Mengen gibt ein Right Shift-Vorgang das Signier Bit an die frei gewordenen Bitpositionen weiter, während die frei gewordenen Bitpositionen in einer nicht signierten Menge mit 0 gefüllt sind.
 
@@ -101,7 +101,7 @@ int main()
 // Output: 65533
 ```
 
-Im vorangehenden Beispiel wird ein **signiertes kurzes**`i` definiert und mit einer negativen Zahl initialisiert. Der Ausdruck `(u = i)` bewirkt, dass `i` vor der Zuweisung zu `u` in einen **Ganzzahl ohne Vorzeichen Short** -Wert konvertiert wird.
+Im vorherigen Beispiel wird ein **Signed Short**, `i`, definiert und mit einer negativen Zahl initialisiert. Der Ausdruck `(u = i)` bewirkt, dass `i` vor der Zuweisung zu `u`in einen **Ganzzahl ohne Vorzeichen Short** -Typ konvertiert wird.
 
 ### <a name="unsigned-to-signed"></a>Ohne Vorzeichen zu mit Vorzeichen
 
@@ -121,7 +121,7 @@ cout << (i = u) << "\n";
 //Output: -3
 ```
 
-Im vorherigen Beispiel ist `u` ein **kurzes ganzzahliges Objekt ohne** Vorzeichen, das in eine signierte Menge konvertiert werden muss, um den Ausdruck `(i = u)` auszuwerten. Da der Wert nicht ordnungsgemäß in einem **signierten Kurzform**dargestellt werden kann, werden die Daten wie gezeigt falsch interpretiert.
+Im vorherigen Beispiel ist `u` ein **kurzes ganzzahliges Objekt ohne** Vorzeichen, das in eine signierte Menge konvertiert werden muss, um den Ausdrucks `(i = u)`auszuwerten. Da der Wert nicht ordnungsgemäß in einem **signierten Kurzform**dargestellt werden kann, werden die Daten wie gezeigt falsch interpretiert.
 
 ## <a name="floating-point-conversions"></a>Gleitkommakonvertierungen
 
@@ -147,7 +147,7 @@ Viele binäre Operatoren (unter [Ausdrücke mit binären Operatoren](../cpp/expr
 
 ### <a name="conditions-for-type-conversion"></a>Bedingungen für die Typkonvertierung
 
-|Bedingungen erfüllt|Umwandeln|
+|Bedingungen erfüllt|Konvertierung|
 |--------------------|----------------|
 |Jeder Operand ist vom Typ **long Double**.|Ein anderer Operand wird in den Typ **long Double**konvertiert.|
 |Vorangehende Bedingung nicht erfüllt, und der Operand ist vom Typ " **Double**".|Ein anderer Operand wird in den Typ **Double**konvertiert.|
@@ -173,9 +173,9 @@ int main() {
 }
 ```
 
-Die erste Anweisung im vorangehenden Beispiel zeigt die Multiplikation von zwei ganzzahligen Typen, nämlich `iVal` und `ulVal`. Die Bedingung erfüllt ist, dass keiner der Operanden vom Typ "Floating" ist und ein Operand vom Typ " **Ganzzahl ohne Vorzeichen int**" ist. Daher wird der andere Operand `iVal` in den Typ " **Ganzzahl ohne Vorzeichen int**" konvertiert. Das Ergebnis wird dann `dVal` zugewiesen. Die hier eingegebene Bedingung ist, dass ein Operand vom Typ " **Double**" ist, sodass das **Ganzzahl ohne Vorzeichen int** -Ergebnis der Multiplikation in den Typ " **Double**" konvertiert wird.
+Die erste Anweisung im vorangehenden Beispiel zeigt die Multiplikation von zwei ganzzahligen Typen, nämlich `iVal` und `ulVal`. Die Bedingung erfüllt ist, dass keiner der Operanden vom Typ "Floating" ist und ein Operand vom Typ " **Ganzzahl ohne Vorzeichen int**" ist. Daher wird der andere Operand, `iVal`, in den Typ " **Ganzzahl ohne Vorzeichen int**" konvertiert. Das Ergebnis wird dann `dVal`zugewiesen. Die hier eingegebene Bedingung ist, dass ein Operand vom Typ " **Double**" ist, sodass das **Ganzzahl ohne Vorzeichen int** -Ergebnis der Multiplikation in den Typ " **Double**" konvertiert wird.
 
-Die zweite Anweisung im vorangehenden Beispiel zeigt das Hinzufügen **eines Gleit Komma-und eines** ganzzahligen Typs: `fVal` und `ulVal`. Die Variable "`ulVal`" wird in den Typ " **float** " konvertiert (dritte Bedingung in der Tabelle). Das Ergebnis der Addition wird in den Typ **Double** (zweite Bedingung in der Tabelle) konvertiert und `dVal` zugewiesen.
+Die zweite Anweisung im vorangehenden Beispiel zeigt das Hinzufügen **eines Gleit Komma-und** eines ganzzahligen Typs: `fVal` und `ulVal`. Die `ulVal` Variable wird in den Typ **float** konvertiert (dritte Bedingung in der Tabelle). Das Ergebnis der Addition wird in den Typ **Double** (zweite Bedingung in der Tabelle) konvertiert und `dVal`zugewiesen.
 
 ## <a name="pointer-conversions"></a>Zeigerkonvertierungen
 
@@ -194,23 +194,23 @@ Vererbungsdiagramm für Abbildung der Basisklasse-Barrierefreiheit
 
 Die folgende Tabelle zeigt die Zugriffsmöglichkeiten auf die Basisklassen bei der Situation, die in der Abbildung veranschaulicht wird.
 
-|Typ der Funktion|Ableitung|Konvertierung von<br /><br /> B * zu @ no__t-0 legal?|
+|Typ der Funktion|Ableitung|Konvertierung von<br /><br /> B * zu einem\* legal?|
 |----------------------|----------------|-------------------------------------------|
-|Externe (nicht im Klassenumfang enthaltene) Funktion|Private|Nein|
-||Protected|Nein|
-||Public|Ja|
-|B-Memberfunktion (im B-Bereich)|Private|Ja|
-||Protected|Ja|
-||Public|Ja|
-|C-Memberfunktion (im C-Bereich)|Private|Nein|
-||Protected|Ja|
-||Public|Ja|
+|Externe (nicht im Klassenumfang enthaltene) Funktion|Privat|Nein|
+||Geschützt|Nein|
+||Öffentlich|Ja|
+|B-Memberfunktion (im B-Bereich)|Privat|Ja|
+||Geschützt|Ja|
+||Öffentlich|Ja|
+|C-Memberfunktion (im C-Bereich)|Privat|Nein|
+||Geschützt|Ja|
+||Öffentlich|Ja|
 
 Im zweiten Fall, in dem ein Zeiger auf eine Klasse in einen Zeiger auf eine Basisklasse konvertiert werden kann, wird eine explizite Typkonvertierung verwendet. Weitere Informationen zu expliziten Typkonvertierungen finden Sie unter [Operator für explizite Typkonvertierung](explicit-type-conversion-operator-parens.md).
 
 Das Ergebnis einer solchen Konvertierung ist ein Zeiger auf das unter *geordnete*Objekt, der Teil des Objekts, der von der Basisklasse vollständig beschrieben wird.
 
-Der folgende Code definiert zwei Klassen, `A` und `B`, wobei `B` von `A` abgeleitet ist. (Weitere Informationen zur Vererbung finden Sie unter [abgeleitete Klassen](../cpp/inheritance-cpp.md).) Zudem definiert der Code `bObject`, ein Objekt vom Typ `B`, und zwei Zeiger (`pA` und `pB`), die auf das Objekt zeigen.
+Der folgende Code definiert zwei Klassen, `A` und `B`, wobei `B` von `A` abgeleitet ist. (Weitere Informationen zur Vererbung finden Sie unter [abgeleitete Klassen](../cpp/inheritance-cpp.md).) Anschließend definiert Sie `bObject`, ein Objekt vom Typ "`B`" und zwei Zeiger (`pA` und `pB`), die auf das Objekt zeigen.
 
 ```cpp
 // C2039 expected
@@ -239,17 +239,17 @@ int main()
 }
 ```
 
-Der Zeiger `pA` ist vom Typ `A *`, der als "Zeiger auf ein Objekt vom Typ `A`" interpretiert werden kann. Member von `bObject` (z. b. `BComponent` und `BMemberFunc`) sind für den Typ `B` eindeutig und daher über `pA` nicht zugänglich. Der `pA`-Zeiger erlaubt nur Zugriff auf die Eigenschaften (Memberfunktionen und Daten) des Objekts, die in der Klasse `A` definiert sind.
+Der Zeiger `pA` ist vom Typ `A *`, der als "Zeiger auf ein Objekt vom Typ `A`" interpretiert werden kann. Mitglieder von `bObject` (z. b. `BComponent` und `BMemberFunc`) sind für den Typ `B` eindeutig und können daher nicht über `pA`aufgerufen werden. Der `pA`-Zeiger erlaubt nur Zugriff auf die Eigenschaften (Memberfunktionen und Daten) des Objekts, die in der Klasse `A` definiert sind.
 
 ### <a name="pointer-to-function"></a>Zeiger auf Funktion
 
-Ein Zeiger auf eine Funktion kann in den Typ `void *` konvertiert werden, wenn der Typ `void *` groß genug ist, um diesen Zeiger zu speichern.
+Ein Zeiger auf eine Funktion kann in den Typ "`void *`" konvertiert werden, wenn der Typ `void *` groß genug ist, um diesen Zeiger zu speichern.
 
 ### <a name="pointer-to-void"></a>Zeiger auf void
 
 Zeiger auf den Typ " **void** " können in Zeiger auf einen beliebigen anderen Typ konvertiert werden, jedoch nur mit einer expliziten Typumwandlung (im Gegensatz zu C). Ein Zeiger auf einen beliebigen Typ kann implizit in einen Zeiger auf den Typ " **void**" konvertiert werden. Ein Zeiger auf ein unvollständiges Objekt eines Typs kann in einen Zeiger auf **void** (implizit) und zurück (explizit) konvertiert werden. Das Ergebnis einer solchen Konvertierung entspricht dem Wert des ursprünglichen Zeigers. Ein Objekt wird als unvollständig betrachtet, wenn es deklariert ist, aber es sind nicht genügend Informationen verfügbar, um seine Größe oder Basisklasse zu bestimmen.
 
-Ein Zeiger auf ein Objekt, das nicht **konstant** oder **flüchtig** ist, kann implizit in einen Zeiger vom Typ `void *` konvertiert werden.
+Ein Zeiger auf ein Objekt, das nicht **konstant** oder **flüchtig** ist, kann implizit in einen Zeiger vom Typ "`void *`" konvertiert werden.
 
 ### <a name="const-and-volatile-pointers"></a>const- und volatile-Zeiger
 

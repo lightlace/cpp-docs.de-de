@@ -22,11 +22,11 @@ ms.locfileid: "72689150"
 ---
 # <a name="optional-class"></a>optionale Klasse
 
-Die Klassen Vorlage `optional<T>` beschreibt ein Objekt, das einen Wert vom Typ `T` enthalten kann, der als *enthaltener Wert*bezeichnet wird.
+Die Klassen Vorlage `optional<T>` beschreibt ein Objekt, das einen Wert vom Typ `T`enthalten kann, der als *enthaltener Wert*bezeichnet wird.
 
-Wenn eine Instanz von `optional<T>` einen Wert enthält, wird der enthaltene Wert im Speicher des `optional` Objekts in einem Bereich zugeordnet, der für den Typ `T` entsprechend ausgerichtet ist. Wenn eine `optional<T>` in `bool` konvertiert wird, wird das Ergebnis `true`, wenn das Objekt einen Wert enthält. Andernfalls ist es `false`.
+Wenn eine Instanz von `optional<T>` einen Wert enthält, wird der enthaltene Wert im Speicher des `optional` Objekts in einem Bereich zugeordnet, der für den Typ `T`entsprechend ausgerichtet ist. Wenn eine `optional<T>` in `bool`konvertiert wird, wird das Ergebnis `true`, wenn das Objekt einen Wert enthält. Andernfalls ist es `false`.
 
-Der enthaltene Objekttyp `T` darf nicht " [in_place_t](in-place-t-struct.md) " oder " [nullopt_t](nullopt-t-structure.md)" sein. `T` muss dekonstruiert werden, d. h *., der*Dekonstruktor muss alle im Besitz befindlichen Ressourcen freigeben und kann keine Ausnahmen auslösen.
+Der enthaltene Objekttyp `T` darf nicht [in_place_t](in-place-t-struct.md) oder [nullopt_t](nullopt-t-structure.md)sein. `T` muss dekonstruiert werden, d. h *., der*Dekonstruktor muss alle im Besitz befindlichen Ressourcen freigeben und kann keine Ausnahmen auslösen.
 
 Die `optional`-Klasse ist neu in c++ 17.
 
@@ -103,30 +103,30 @@ explicit optional(optional<U>&& rhs);
 *RHS* -\
 Das `optional`, das kopiert oder verschoben werden soll, aus dem enthaltenen Wert.
 
-*I_list* \
+*I_list*\
 Die Initialisiererliste, aus der der enthaltene Wert erstellt werden soll.
 
-*args* \
+*args*\
 Die Argumentliste, aus der der enthaltene Wert erstellt werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-`constexpr optional() noexcept;` 
- `constexpr optional(nullopt_t nullopt) noexcept;` diese Konstruktoren ein `optional` erstellen, das keinen Wert enthält.
+`constexpr optional() noexcept;`
+`constexpr optional(nullopt_t nullopt) noexcept;` diese Konstruktoren ein `optional` erstellen, das keinen Wert enthält.
 
 `constexpr optional(const optional& rhs);` der Kopierkonstruktor den enthaltenen Wert aus dem enthaltenen Wert des Arguments initialisiert. Es ist als **gelöscht** definiert, es sei denn, `is_copy_constructible_v<T>` ist true, und es ist trivial, wenn `is_trivially_copy_constructible_v<T>` true ist.
 
 `constexpr optional(optional&& rhs) noexcept;` der bewegungskonstruktor den enthaltenen Wert initialisiert, indem er vom enthaltenen Wert des Arguments bewegt wird. Es ist nicht an der Überladungs Auflösung beteiligt, es sei denn, `is_move_constructible_v<T>` ist true, und es ist trivial, wenn `is_trivially_move_constructible_v<T>` true ist.
 
-`template <class... Args> constexpr explicit optional(in_place_t, Args&&... args);` Direct initialisiert den enthaltenen Wert als, wenn die Argumente `std::forward<Args>(args)` verwendet werden. Dieser Konstruktor ist `constexpr`, wenn der verwendete `T` Konstruktor `constexpr` ist. Es ist nicht an der Überladungs Auflösung beteiligt, es sei denn, `is_constructible_v<T, Args...>` true
+`template <class... Args> constexpr explicit optional(in_place_t, Args&&... args);` Direct initialisiert den enthaltenen Wert als, wenn die Argumente `std::forward<Args>(args)`verwendet werden. Dieser Konstruktor ist `constexpr`, wenn der verwendete `T` Konstruktor `constexpr`ist. Es ist nicht an der Überladungs Auflösung beteiligt, es sei denn, `is_constructible_v<T, Args...>` true
 
-`template <class U, class... Args> constexpr explicit optional(in_place_t, initializer_list<U> i_list, Args&&... args);` Direct initialisiert den enthaltenen Wert als, wenn die Argumente `i_list, std::forward<Args>(args)` verwendet werden. Dieser Konstruktor ist `constexpr`, wenn der verwendete `T` Konstruktor `constexpr` ist. Es ist nicht an der Überladungs Auflösung beteiligt, es sei denn, `is_constructible_v<T, initializer_list<U>&, Args&&...>` true
+`template <class U, class... Args> constexpr explicit optional(in_place_t, initializer_list<U> i_list, Args&&... args);` Direct initialisiert den enthaltenen Wert als, wenn die Argumente `i_list, std::forward<Args>(args)`verwendet werden. Dieser Konstruktor ist `constexpr`, wenn der verwendete `T` Konstruktor `constexpr`ist. Es ist nicht an der Überladungs Auflösung beteiligt, es sei denn, `is_constructible_v<T, initializer_list<U>&, Args&&...>` true
 
-`template <class U = T> explicit constexpr optional(U&& rhs);` Direct initialisiert den enthaltenen Wert so, als ob er `std::forward<U>(v)` verwendet. Dieser Konstruktor ist `constexpr`, wenn der verwendete `T` Konstruktor `constexpr` ist. Sie ist nicht an der Überladungs Auflösung beteiligt, es sei denn, `is_constructible_v<T, U&&>` ist true, und `is_same_v<remove_cvref_t<U>, in_place_t>` und `is_same_v<remove_cvref_t<U>, optional>` sind false.
+`template <class U = T> explicit constexpr optional(U&& rhs);` Direct initialisiert den enthaltenen Wert so, als ob er `std::forward<U>(v)`verwendet. Dieser Konstruktor ist `constexpr`, wenn der verwendete `T` Konstruktor `constexpr`ist. Sie ist nicht an der Überladungs Auflösung beteiligt, es sei denn, `is_constructible_v<T, U&&>` ist true, und `is_same_v<remove_cvref_t<U>, in_place_t>` und `is_same_v<remove_cvref_t<U>, optional>` sind false.
 
-`template <class U> explicit optional(const optional<U>& rhs);` Wenn *RHS* einen Wert enthält, initialisiert Direct den enthaltenen Wert aus dem enthaltenen Wert des Arguments. Sie ist nicht an der Überladungs Auflösung beteiligt, es sei denn, `is_constructible_v<T, const U&>` ist true, und `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>` und `is_convertible_v<const optional<U>&&, T>` sind alle falsch.
+`template <class U> explicit optional(const optional<U>& rhs);` Wenn *RHS* einen Wert enthält, initialisiert Direct den enthaltenen Wert aus dem enthaltenen Wert des Arguments. Sie ist nicht an der Überladungs Auflösung beteiligt, es sei denn, `is_constructible_v<T, const U&>` ist true, und `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>`und `is_convertible_v<const optional<U>&&, T>` sind alle falsch.
 
-`template <class U> explicit optional(optional<U>&& rhs);` Wenn *RHS* einen Wert enthält, initialisiert Direct den enthaltenen Wert so, als ob er `std::move(*rhs)` verwendet. Sie ist nicht an der Überladungs Auflösung beteiligt, es sei denn, `is_constructible_v<T, U&&>` ist true, und `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>` und `is_convertible_v<const optional<U>&&, T>` sind alle falsch.
+`template <class U> explicit optional(optional<U>&& rhs);` Wenn *RHS* einen Wert enthält, initialisiert Direct den enthaltenen Wert so, als ob er `std::move(*rhs)`verwendet. Sie ist nicht an der Überladungs Auflösung beteiligt, es sei denn, `is_constructible_v<T, U&&>` ist true, und `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>`und `is_convertible_v<const optional<U>&&, T>` sind alle falsch.
 
 ## <a name="optional-destructor"></a>~ Optionaler Dekonstruktor
 

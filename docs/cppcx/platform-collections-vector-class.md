@@ -45,7 +45,7 @@ template <typename T, typename E>
 Der Typ der im Vektorobjekt enthaltenen Elemente.
 
 *E*<br/>
-Gibt ein binäres Prädikat zum Testen der Gleichheit mit Werten des Typs *T*an. Der Standardwert ist `std::equal_to<T>`sein.
+Gibt ein binäres Prädikat zum Testen der Gleichheit mit Werten des Typs *T*an. Der Standardwert ist `std::equal_to<T>`.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -55,9 +55,9 @@ Zulässige Typen sind:
 
 1. Schnittstellen Klasse ^
 
-1. Öffentliche Referenzklasse^
+1. Öffentliche Verweisklasse^
 
-1. value struct
+1. Wertstruktur
 
 1. Öffentliche Enumerationsklasse
 
@@ -96,13 +96,13 @@ Wenn Sie versuchen, einen **Vector** -Typ in einem öffentlichen Rückgabewert o
 |||
 |-|-|
 |Name|Beschreibung|
-|Event [Windows:: Foundation:: Collection:: Vector changedeventhandler @ no__t-1T > ^ Vector Changed](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Tritt auf, wenn sich der Vektor ändert.|
+|Ereignis [Windows:: Foundation:: Collection:: Vector changedeventhandler\<t > ^ Vector Changed](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Tritt auf, wenn sich der Vektor ändert.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 `Vector`
 
-### <a name="requirements"></a>Anforderungen
+### <a name="requirements"></a>Voraussetzungen
 
 **Header:** collection.h
 
@@ -149,7 +149,7 @@ Ein Iterator, der auf das erste Element im Vektor verweist.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine bequeme Möglichkeit, den von First () zurückgegebenen Iterator zu halten, besteht darin, den Rückgabewert einer Variablen zuzuweisen, die mit dem **automatischen** typableitungs Schlüsselwort deklariert wird. Beispiel: `auto x = myVector->First();`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen. Dieser Iterator kennt die Länge der Auflistung.
+Eine bequeme Möglichkeit, den von First () zurückgegebenen Iterator zu halten, besteht darin, den Rückgabewert einer Variablen zuzuweisen, die mit dem **automatischen** typableitungs Schlüsselwort deklariert wird. Beispielsweise `auto x = myVector->First();`. Dieser Iterator kennt die Länge der Auflistung.
 
 Wenn Sie ein Iteratorpaar benötigen, das an eine STL-Funktion übergeben werden soll, verwenden Sie die kostenlosen Funktionen [Windows:: Foundation:: Collections:: begin](../cppcx/begin-function.md) und [Windows:: Foundation:: Collections:: End](../cppcx/end-function.md) .
 
@@ -226,7 +226,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>Parameter
 
-*value*<br/>
+*Wert*<br/>
 Das Element, das gesucht werden soll.
 
 *index*<br/>
@@ -367,7 +367,7 @@ Ein [Platform:: Array](../cppcx/platform-array-class.md) , das verwendet wird, u
 Der Typ einer Auflistung von Objekten, die verwendet werden, um den aktuelle Vector zu initialisieren.
 
 *il*<br/>
-Ein [Std:: initializer_list](../standard-library/initializer-list-class.md) -Objekt vom Typ *T* , das verwendet wird, um den Vektor zu initialisieren.
+Eine [Std:: initializer_list](../standard-library/initializer-list-class.md) von Objekten vom Typ *T* , die verwendet werden, um den Vektor zu initialisieren.
 
 *N*<br/>
 Die Anzahl von Elementen in einer Auflistung von Objekten, die verwendet wird, um den aktuellen Vector zu initialisieren.
@@ -375,7 +375,7 @@ Die Anzahl von Elementen in einer Auflistung von Objekten, die verwendet wird, u
 *size*<br/>
 Die Anzahl von Elementen im Vector.
 
-*value*<br/>
+*Wert*<br/>
 Ein Wert, der verwendet wird, um die einzelnen Elemente im aktuellen Vector zu initialisieren.
 
 *v*<br/>
