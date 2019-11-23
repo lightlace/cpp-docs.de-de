@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .CONTINUE directive
 ms.assetid: 60a6e46d-49e6-4d65-97d0-cbe8c47b3fab
-ms.openlocfilehash: a74fac7e00a801b0b58b8c49694da70f6f779fed
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 18032113bdba0c2ae5182cd2fc3cc3382a1914d5
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703466"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398554"
 ---
-# <a name="continue-32-bit-masm"></a>. Continue (32-Bit-MASM)
+# <a name="continue-32-bit-masm"></a>.CONTINUE (32-bit MASM)
 
-Generiert Code, um zum Anfang eines zu springen [. Während](../../assembler/masm/dot-while.md) oder [. Wiederholen](../../assembler/masm/dot-repeat.md) Sie den Block, wenn `condition` true ist. (nur 32-Bit-MASM.)
+Generates code to jump to the top of a [.WHILE](../../assembler/masm/dot-while.md) or [.REPEAT](../../assembler/masm/dot-repeat.md) block if *condition* is true. (32-bit MASM only.)
 
 ## <a name="syntax"></a>Syntax
 
-> . Continue [[. IF-Bedingung]]
+> **.CONTINUE** ⟦ **.IF** *condition*⟧
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)

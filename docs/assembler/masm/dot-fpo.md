@@ -6,41 +6,41 @@ f1_keywords:
 helpviewer_keywords:
 - .FPO directive
 ms.assetid: 35f4cd61-32f9-4262-b657-73f04f775d09
-ms.openlocfilehash: 3938d9194c35d567ea670e0b92a731193ccd2254
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 650c69be17c9271c343360edbb90f093841a1047
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703799"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398255"
 ---
-# <a name="fpo-32-bit-masm"></a>. (32-Bit-MASM)
+# <a name="fpo-32-bit-masm"></a>.FPO (32-bit MASM)
 
-Die. Die FPO-Direktive steuert die Ausgabe von debugdatensätzen in das Debug $ F-Segment bzw. den Abschnitt. (nur 32-Bit-MASM.)
+The **.FPO** directive controls the emission of debug records to the .debug$F segment or section. (32-bit MASM only.)
 
 ## <a name="syntax"></a>Syntax
 
-> FPO (*cdwlocals*, *cdwpara AMS*, *cbprolog*, *cbregs*, *fuseebp*, *cbframe*)
+> **.FPO** (*cdwLocals*, *cdwParams*, *cbProlog*, *cbRegs*, *fUseBP*, *cbFrame*)
 
 ### <a name="parameters"></a>Parameter
 
-*cdwlocals*<br/>
-Anzahl der lokalen Variablen, ein 32-Bit-Wert ohne Vorzeichen.
+*cdwLocals*\
+Number of local variables, an unsigned 32 bit value.
 
-*cdwparametriams*<br/>
-Die Größe der Parameter in DWords, ein 16-Bit-Wert ohne Vorzeichen.
+*cdwParams*\
+Size of the parameters in DWORDS, an unsigned 16 bit value.
 
-*cbprolog*<br/>
-Anzahl von Bytes im Prologcode der Funktion, ein 8-Bit-Wert ohne Vorzeichen.
+*cbProlog*\
+Number of bytes in the function prolog code, an unsigned 8 bit value.
 
-*cbregs*<br/>
-Anzahl gespeicherter Nummern.
+*cbRegs*\
+Number registers saved.
 
-*fuabbp*<br/>
-Gibt an, ob das EBP-Register zugeordnet wurde. entweder 0 oder 1.
+*fUseBP*\
+Indicates whether the EBP register has been allocated. either 0 or 1.
 
-*cbframe*<br/>
-Gibt den Rahmentyp an.  Weitere Informationen finden Sie unter [FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) .
+*cbFrame*\
+Indicates the frame type.  See [FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) for more information.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

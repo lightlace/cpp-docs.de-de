@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - .IF directive
 ms.assetid: dccc7615-8fc7-4829-9f39-0ee405f6c1e3
-ms.openlocfilehash: 83c9ff588e2fe273e24e1d0b1c16517c5eee3365
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: e8213052dce8d84d62f90d4bc2653435c2b31434
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703776"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398221"
 ---
-# <a name="if-32-bit-masm"></a>. IF (32-Bit-MASM)
+# <a name="if-32-bit-masm"></a>.IF (32-bit MASM)
 
-Generiert Code, der `condition1` testet (z. b. ax > 7), und führt die *Anweisungen* aus, wenn diese Bedingung erfüllt ist. (nur 32-Bit-MASM.)
+Generates code that tests *condition1* (for example, AX > 7) and executes the *statements* if that condition is true. (32-bit MASM only.)
 
 ## <a name="syntax"></a>Syntax
 
-> . Wenn Bedingung1<br/>
-> Anweisungen<br/>
-> [[. Elseif Bedingung2<br/>
-> Anweisungen]]<br/>
-> [[. Woanders<br/>
-> Anweisungen]]<br/>
-> .ENDIF
+> **.IF** *condition1*\
+> *statements*\
+> ⟦ **.ELSEIF** *condition2*\
+> *statements*⟧\
+> ⟦ **.ELSE**\
+> *statements*⟧\
+> **.ENDIF**
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn ein [. ](../../assembler/masm/dot-else.md)Andernfalls werden die zugehörigen-Anweisungen ausgeführt, wenn die ursprüngliche Bedingung false lautet. Beachten Sie, dass die Bedingungen zur Laufzeit ausgewertet werden.
+If a [.ELSE](../../assembler/masm/dot-else.md) follows, its statements are executed if the original condition was false. Note that the conditions are evaluated at run time.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - IFNB directive
 ms.assetid: 9d161ddb-75b7-4cfe-92ef-370c6ef0af62
-ms.openlocfilehash: 280b0bc05d252b1ba265e1bc98b8851d53712ed5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a1fae4c0165321db6bf5980249b5125d7c5e044
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184441"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397368"
 ---
 # <a name="ifnb"></a>IFNB
 
-Assembly gewährt, wenn *Textitem* ist nicht leer.
+Grants assembly if *textitem* is not blank.
 
 ## <a name="syntax"></a>Syntax
 
-> IFNB textitem
+> **IFNB** *textitem*
 
 ## <a name="remarks"></a>Hinweise
 
-Finden Sie unter [IF](../../assembler/masm/if-masm.md) für die vollständige Syntax.
+See [IF](../../assembler/masm/if-masm.md) for complete syntax.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

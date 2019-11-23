@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - .PUSHFRAME directive
 ms.assetid: 17b123d0-4c6d-4fd2-85eb-798e8ad0a73c
-ms.openlocfilehash: 9ea506e25435c5d6f1b10eab8c4f25f72bf88791
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0f047278f6250d5ef359f7992df4ea23f4bbd9b
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178435"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398047"
 ---
 # <a name="pushframe"></a>.PUSHFRAME
 
-Generiert eine `UWOP_PUSH_MACHFRAME` Entladen von Codeeintrag. Wenn der optionale `code` angegeben ist, wird der Eintrag der Entladung Code erhält einen Modifizierer von 1. Andernfalls ist der Modifizierer 0.
+Generates a `UWOP_PUSH_MACHFRAME` unwind code entry. If the optional *code* is specified, the unwind code entry is given a modifier of 1. Otherwise the modifier is 0.
 
 ## <a name="syntax"></a>Syntax
 
-> . PUSHFRAME [Code]
+> **.PUSHFRAME** ⟦*code*⟧;;
 
 ## <a name="remarks"></a>Hinweise
 
-. PUSHFRAME ist nur zulässig, in der Prolog, die von erweitert und ermöglicht ml64.exe angeben, wie eine Funktion des Frames entlädt die [PROC](../../assembler/masm/proc.md) FRAME-Deklaration, um die [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) Richtlinie. Diese Direktiven generieren Sie Code nicht; Generieren sie nur `.xdata` und `.pdata`. . Indem Sie die Anweisungen, die die Aktionen, entladen werden implementieren, sollte PUSHFRAME vorangestellt werden. Es hat sich bewährt, sowohl den Code, den sie auf die Entladung in einem Makro gedacht sind, um sicherzustellen, dass Vereinbarung als auch die Entladung Anweisungen zu umschließen.
+.PUSHFRAME allows ml64.exe users to specify how a frame function unwinds and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.PUSHFRAME** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
 
-Weitere Informationen finden Sie unter [MASM für X64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

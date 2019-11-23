@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .XALL directive
 ms.assetid: b2d851dd-f79e-46c6-825d-1938b8487e8c
-ms.openlocfilehash: f218e412faaa338ce35987f72089d55cc1da25a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 788b6f021c5ae60b59f4cbb68c7b1a65c6e53985
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203803"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397827"
 ---
 # <a name="xall"></a>.XALL
 
-Finden Sie unter [. LISTMACRO](../../assembler/masm/dot-listmacro.md).
+See [.LISTMACRO](../../assembler/masm/dot-listmacro.md).
 
 ## <a name="syntax"></a>Syntax
 
-> .XALL
+> **.XALL**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)
