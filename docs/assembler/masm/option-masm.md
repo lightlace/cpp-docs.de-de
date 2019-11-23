@@ -6,37 +6,37 @@ f1_keywords:
 helpviewer_keywords:
 - OPTION directive
 ms.assetid: 8e10dabd-e36f-4586-ab01-ada96736b0bd
-ms.openlocfilehash: a8215bf1f816baa490a768fb2cab0b3c2e53e20b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f90ab0115c3dde894d468bbbe60ffa0193b8336
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217256"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395167"
 ---
 # <a name="option-masm"></a>OPTION (MASM)
 
-Aktiviert und deaktiviert die Funktionen des Assemblers.
+Enables and disables features of the assembler.
 
 ## <a name="syntax"></a>Syntax
 
-> OPTION *Optionlist*
+> **OPTION** *optionlist*
 
 ## <a name="remarks"></a>Hinweise
 
-Verfügbare Optionen sind:
+Available options include:
 
 |||||
 |-|-|-|-|
 |**CASEMAP**|**DOTNAME**|**NODOTNAME**|**EMULATOR**|
 |**NOEMULATOR**|**EPILOGUE**|**EXPR16**|**EXPR32**|
-|**SPRACHE**|**LJMP**|**NOLJMP**|**M510**|
+|**LANGUAGE**|**LJMP**|**NOLJMP**|**M510**|
 |**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**OFFSET**|
 |**OLDMACROS**|**NOOLDMACROS**|**OLDSTRUCTS**|**NOOLDSTRUCTS**|
-|**PROC**|**PROLOG**|**READONLY**|**NOREADONLY**|
-|**IM BEREICH EINER**|**NOSCOPED**|**SEGMENT**|**SETIF2**.|
+|**PROC**|**PROLOGUE**|**READONLY**|**NOREADONLY**|
+|**SCOPED**|**NOSCOPED**|**SEGMENT**|**SETIF2**.|
 
-Die Syntax für die Sprache ist **OPTION Sprache:**<em>x</em>, wobei *x* ist einer der C, SYSCALL, STDCALL, PASCAL, FORTRAN oder BASIC.  SYSCALL, PASCAL, FORTRAN und BASIC werden nicht unterstützt mit der Verwendung [. Modell](../../assembler/masm/dot-model.md) Flatfile.
+The syntax for LANGUAGE is **OPTION LANGUAGE:** <em>x</em>, where *x* is one of C, SYSCALL, STDCALL, PASCAL, FORTRAN, or BASIC.  SYSCALL, PASCAL, FORTRAN, and BASIC are not supported with used with [.MODEL](../../assembler/masm/dot-model.md) FLAT.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

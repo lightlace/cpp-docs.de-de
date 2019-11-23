@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - COMM directive
 ms.assetid: a23548c4-ad04-41fa-91da-945f228de742
-ms.openlocfilehash: 342c8acd95fd45de1a21dc298325de9a7b40b717
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 063689087b6114f9a2d544ef0b459bf594da3cc4
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179106"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398828"
 ---
 # <a name="comm"></a>COMM
 
-Erstellt eine kommunales Variable mit den Attributen, die im angegebenen *Definition*.
+Creates a communal variable with the attributes specified in *definition*.
 
 ## <a name="syntax"></a>Syntax
 
-> **COMM** *Definition* [, *Definition*]...
+> **COMM** *definition* ⟦ __,__ *definition* ...⟧
 
 ## <a name="remarks"></a>Hinweise
 
-Kommunales Variablen werden durch den Linker zugeordnet und können nicht initialisiert werden. Dies bedeutet, dass Sie auf den Speicherort oder eine Sequenz solcher Variablen abhängen dürfen.
+Communal variables are allocated by the linker, and can't be initialized. This means that you can't depend on the location or sequence of such variables.
 
-Jede *Definition* hat folgendes Format:
+Each *definition* has the following form:
 
-[*Langtype*] [**NEAR** &#124; **weit**] _Bezeichnung_**:**_Typ_[**:**_Anzahl_]
+⟦*langtype*⟧ ⟦⦃**NEAR** &#124; **FAR**⦄⟧ _label_ **:** _type_⟦ **:** _count_⟧
 
-Der optionale *Langtype* legt die Namenskonventionen der folgende Name. Überschreibt es mit einer beliebigen Sprache gemäß der **. Modell** Richtlinie. Der optionale **NEAR** oder **weit** Überschreiben der aktuellen Speichermodell. Die *Bezeichnung* ist der Name der Variablen. Die *Typ* kann einem beliebigen Typspezifizierer sein ([BYTE](../../assembler/masm/byte-masm.md), [WORD](../../assembler/masm/word.md)usw.) oder eine ganze Zahl, die die Anzahl von Bytes angibt. Der optionale *Anzahl* gibt die Anzahl der Elemente in das deklarierte Objekt; der Standardwert ist 1.
+The optional *langtype* sets the naming conventions for the name that follows. It overrides any language specified by the **.MODEL** directive. The optional **NEAR** or **FAR** override the current memory model. The *label* is the name of the variable. The *type* can be any type specifier ([BYTE](../../assembler/masm/byte-masm.md), [WORD](../../assembler/masm/word.md), and so on) or an integer specifying the number of bytes. The optional *count* specifies the number of elements in the declared data object; the default is one.
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel wird ein Array von 512-BYTE-Elementen erstellt:
+This example creates an array of 512 BYTE elements:
 
 ```asm
 COMM FAR ByteArray:BYTE:512
@@ -41,4 +41,4 @@ COMM FAR ByteArray:BYTE:512
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)

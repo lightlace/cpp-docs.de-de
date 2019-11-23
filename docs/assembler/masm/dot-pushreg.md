@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - .PUSHREG directive
 ms.assetid: e0c83758-dfed-40ea-afe6-cb833c8d2d30
-ms.openlocfilehash: 19e36f1c0b073c5b174ea9acb0f1eaac7d771c46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2190bd05667de82dada34a63f11647c653f97247
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203979"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398036"
 ---
 # <a name="pushreg"></a>.PUSHREG
 
-Generiert eine `UWOP_PUSH_NONVOL` Entladen von Codeeintrag für die angegebene Zahl, die mit dem aktuellen offset im Prolog registriert.
+Generates a `UWOP_PUSH_NONVOL` unwind code entry for the specified register number using the current offset in the prologue.
 
 ## <a name="syntax"></a>Syntax
 
-> . PUSHREG registrieren
+> .PUSHREG register
 
 ## <a name="remarks"></a>Hinweise
 
-. PUSHREG ermöglicht ml64.exe angeben, wie eine Funktion des Frames entladen ist nur zulässig, in der Prolog, die von erweitert die [PROC](../../assembler/masm/proc.md) FRAME-Deklaration, um die [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) Richtlinie. Diese Direktiven generieren Sie Code nicht; Generieren sie nur `.xdata` und `.pdata`. . Indem Sie die Anweisungen, die die Aktionen, entladen werden implementieren, sollte PUSHREG vorangestellt werden. Es hat sich bewährt, sowohl den Code, den sie auf die Entladung in einem Makro gedacht sind, um sicherzustellen, dass Vereinbarung als auch die Entladung Anweisungen zu umschließen.
+**.PUSHREG** allows ml64.exe users to specify how a frame function unwinds, and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) **FRAME** declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.PUSHREG** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
 
-Weitere Informationen finden Sie unter [MASM für X64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>Beispiel
 
 ### <a name="description"></a>Beschreibung
 
-Das folgende Beispiel zeigt, wie Sie nicht flüchtigen Tegisters zu senden.
+The following sample shows how to push non-volatile registers.
 
 ### <a name="code"></a>Code
 
@@ -57,4 +57,4 @@ END
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)
