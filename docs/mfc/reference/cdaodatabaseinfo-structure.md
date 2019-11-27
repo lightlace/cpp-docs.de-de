@@ -100,7 +100,7 @@ Die Datenbank ist ein DAO-Objekt, das einem MFC-Objekt der Klasse [CDaoDatabase]
 
 Informationen, die von der [CDaoWorkspace:: getDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) -Member-Funktion abgerufen werden, werden in einer `CDaoDatabaseInfo` Struktur gespeichert. Ruft `GetDatabaseInfo` für das `CDaoWorkspace` Objekt in auf, dessen Daten Bank Auflistung das Datenbankobjekt gespeichert wird. `CDaoDatabaseInfo` definiert auch eine `Dump` Member-Funktion in Debugbuilds. Sie können `Dump` verwenden, um den Inhalt eines `CDaoDatabaseInfo` Objekts zu speichern.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
 **Header:** afxdao.h
 

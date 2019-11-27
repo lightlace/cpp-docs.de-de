@@ -13,9 +13,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397940"
 ---
-# <a name="seq-32-bit-masm"></a>.SEQ (32-bit MASM)
+# <a name="seq-32-bit-masm"></a>. ABF (32-Bit-MASM)
 
-Orders segments sequentially (the default order). (32-bit MASM only.)
+Sortiert Segmente sequenziell (Standard Reihenfolge). (nur 32-Bit-MASM.)
 
 ## <a name="syntax"></a>Syntax
 
@@ -23,4 +23,4 @@ Orders segments sequentially (the default order). (32-bit MASM only.)
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](directives-reference.md)
+[Direktivenverweis](directives-reference.md)

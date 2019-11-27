@@ -53,7 +53,7 @@ Einige Vorteile von `Boost.Format` sind:
 
 - Bequem: Standard-Posix und ähnliche Formatzeichenfolgen
 
-Obwohl `Boost.Format` auf C++ [\<iostream->](../standard-library/iostream-programming.md) Einrichtungen basiert, die sicher und erweiterbar sind, sind Sie nicht leistungsoptimiert. Sofern Sie Leistungsoptimierung erfordern, sollten Sie C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) und [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) berücksichtigen, deren Verwendung schnell und einfach ist. Sie sind jedoch nicht erweiterbar oder nicht sicher vor Sicherheitsrisiken. (Sichere Versionen sind vorhanden, doch verursachen diese geringfügige Leistungseinbußen. Weitere Informationen finden Sie unter [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) und [sprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)(_sprintf_s_l, swprintf_s, _swprintf_s_l).
+Obwohl `Boost.Format` auf C++ [\<iostream->](../standard-library/iostream-programming.md) Einrichtungen basiert, die sicher und erweiterbar sind, sind Sie nicht leistungsoptimiert. Wenn Sie eine Leistungsoptimierung benötigen, sollten Sie C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) und [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)in Erwägung nehmen, die schnell und einfach zu verwenden sind. Sie sind jedoch nicht erweiterbar oder nicht sicher vor Sicherheitsrisiken. (Sichere Versionen sind vorhanden, doch verursachen diese geringfügige Leistungseinbußen. Weitere Informationen finden Sie unter [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) und [sprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)(_sprintf_s_l, swprintf_s, _swprintf_s_l).
 
 Im folgenden Code werden einige der Boost-Formatierungsfunktionen verdeutlicht.
 
@@ -70,7 +70,7 @@ Im folgenden Code werden einige der Boost-Formatierungsfunktionen verdeutlicht.
 ## <a name="see-also"></a>Siehe auch
 
 [Willkommen zurück beiC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
-[C++-Sprachreferenz](../cpp/cpp-language-reference.md)<br/>
+[C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
 [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)<br/>
 [\<iostream>](../standard-library/iostream.md)<br/>
 [\<limits>](../standard-library/limits.md)<br/>

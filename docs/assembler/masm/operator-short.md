@@ -16,12 +16,12 @@ ms.locfileid: "74396173"
 ---
 # <a name="operator-short"></a>Operator SHORT
 
-Sets the type of *label* to short. All jumps to *label* must be short (within the range -128 to +127 bytes from the jump instruction to *label*).
+Legt den Typ der *Bezeichnung* auf Short fest. Alle Sprünge zur *Bezeichnung* müssen kurz sein (innerhalb des Bereichs von-128 bis + 127 Bytes von der Sprung Anweisung bis zur *Bezeichnung*).
 
 ## <a name="syntax"></a>Syntax
 
-> **SHORT** *label*
+> **Kurzbezeichnung**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Operators reference](operators-reference.md)
+[Operatorverweis](operators-reference.md)

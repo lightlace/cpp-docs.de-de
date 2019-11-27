@@ -12,7 +12,7 @@ ms.locfileid: "74303357"
 ---
 # <a name="smart-pointers-modern-c"></a>Intelligente Zeiger (Modern C++)
 
-In der modernen C++-Programmierung enthält die Standardbibliothek *intelligente Zeiger*, die sicherstellen sollen, dass Programme ausnahmensicher und frei von Speicher- und Ressourcenlecks sind.
+In der C++ modernen Programmierung enthält die Standard Bibliothek *intelligente Zeiger*, mit denen sichergestellt werden kann, dass Programme nicht über genügend Arbeitsspeicher und Ressourcen Lecks verfügen und die Ausnahme sicher sind.
 
 ## <a name="uses-for-smart-pointers"></a>Anwendungsmöglichkeiten für intelligente Zeiger
 
@@ -117,5 +117,5 @@ Klasse, die Methoden zum Bearbeiten einer Liste von `CAutoPtr`-Knoten kapselt.
 ## <a name="see-also"></a>Siehe auch
 
 [Zeiger](pointers-cpp.md)<br/>
-[C++-Sprachreferenz](../cpp/cpp-language-reference.md)<br/>
+[C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
 [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)

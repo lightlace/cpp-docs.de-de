@@ -33,21 +33,21 @@ DAO wird über Office 2013 unterstützt. DAO 3,6 ist die endgültige Version, di
 class CDaoFieldExchange
 ```
 
-## <a name="members"></a>Mitglieder
+## <a name="members"></a>Member
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CDaoFieldExchange::IsValidOperation](#isvalidoperation)|Gibt einen Wert ungleich 0 (null) zurück, wenn der aktuelle Vorgang für den Typ des aktualisierten Felds geeignet ist.|
-|[CDaoFieldExchange::SetFieldType](#setfieldtype)|Gibt den Typ des Recordset-Daten Members – Spalte oder Parameter – an, der durch alle nachfolgenden Aufrufe von DFX-Funktionen dargestellt wird, bis zum nächsten Aufruf von `SetFieldType`.|
+|[CDaoFieldExchange:: isvalidoperation](#isvalidoperation)|Gibt einen Wert ungleich 0 (null) zurück, wenn der aktuelle Vorgang für den Typ des aktualisierten Felds geeignet ist.|
+|[CDaoFieldExchange:: SetFieldType](#setfieldtype)|Gibt den Typ des Recordset-Daten Members – Spalte oder Parameter – an, der durch alle nachfolgenden Aufrufe von DFX-Funktionen dargestellt wird, bis zum nächsten Aufruf von `SetFieldType`.|
 
-### <a name="public-data-members"></a>Öffentliche Datenmember
+### <a name="public-data-members"></a>Öffentliche Datenelemente
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CDaoFieldExchange::m_nOperation](#m_noperation)|Der DFX-Vorgang, der vom aktuellen aufrufsvorgang der `DoFieldExchange` Member-Funktion des Recordsets ausgeführt wird.|
-|[CDaoFieldExchange::m_prs](#m_prs)|Ein Zeiger auf das Recordset, für das DFX-Vorgänge ausgeführt werden.|
+|[CDaoFieldExchange:: m_nOperation](#m_noperation)|Der DFX-Vorgang, der vom aktuellen aufrufsvorgang der `DoFieldExchange` Member-Funktion des Recordsets ausgeführt wird.|
+|[CDaoFieldExchange:: m_prs](#m_prs)|Ein Zeiger auf das Recordset, für das DFX-Vorgänge ausgeführt werden.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -73,7 +73,7 @@ Die Member-Funktion von [isvalidoperation](#isvalidoperation) wird zum Schreiben
 
 `CDaoFieldExchange`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
 **Header:** afxdao.h
 
@@ -142,7 +142,7 @@ void SetFieldType(UINT nFieldType);
 
 ### <a name="parameters"></a>Parameter
 
-*nFieldType*<br/>
+*nfieldtype*<br/>
 Ein Wert des in `CDaoFieldExchange`deklarierten **enumerationsfieldtype**, der einen der folgenden Werte aufweisen kann:
 
 - `CDaoFieldExchange::outputColumn`

@@ -17,12 +17,12 @@ ms.locfileid: "74395327"
 ---
 # <a name="operator-width"></a>Operator WIDTH
 
-Returns the width in bits of the current *recordfieldname* or *record*.
+Gibt die Breite in Bits des aktuellen *Recordfieldname* -oder- *Datensatzes*zurück.
 
 ## <a name="syntax"></a>Syntax
 
-> **WIDTH** {*recordfieldname* | *record*}
+> **Breite** {*Recordfieldname* | *Datensatz*}
 
 ## <a name="see-also"></a>Siehe auch
 
-[Operators reference](operators-reference.md)
+[Operatorverweis](operators-reference.md)

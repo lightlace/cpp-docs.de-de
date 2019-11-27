@@ -13,14 +13,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399041"
 ---
-# <a name="filename"></a>\@FileName
+# <a name="filename"></a>Dateiname \@
 
-The base name of the main file being assembled (text macro).
+Der Basisname der Hauptdatei, die zusammengestellt wird (Text Makro).
 
 ## <a name="syntax"></a>Syntax
 
-> **\@FileName**
+> **Dateiname \@**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Symbols reference](symbols-reference.md)
+[Symbol Verweis](symbols-reference.md)

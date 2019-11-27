@@ -17,12 +17,12 @@ ms.locfileid: "74396525"
 ---
 # <a name="operator-parity"></a>Operator PARITY?
 
-Status of parity flag. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
+Der Statusflag für die Parität. Wird nur innerhalb von verwendet [. Wenn](../../assembler/masm/dot-if.md), [. Während](../../assembler/masm/dot-while.md)oder [. Wiederholen](../../assembler/masm/dot-repeat.md) Sie Blöcke und werden zur Laufzeit und nicht zur assemblyzeit ausgewertet.
 
 ## <a name="syntax"></a>Syntax
 
-> **PARITY?**
+> **Parity?**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Operators reference](operators-reference.md)
+[Operatorverweis](operators-reference.md)

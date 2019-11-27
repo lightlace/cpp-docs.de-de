@@ -14,9 +14,9 @@ ms.locfileid: "74245155"
 ---
 # <a name="restrictions-on-exception-handlers"></a>Einschränkungen bei Ereignishandlern
 
-The principal limitation to using exception handlers in code is that you cannot use a **goto** statement to jump into a **__try** statement block. Stattdessen müssen Sie den Anweisungsblock über die normale Ablaufsteuerung eingeben. You can jump out of a **__try** statement block and nest exception handlers as you choose.
+Die Prinzipal Einschränkung bei der Verwendung von Ausnahme Handlern im Code besteht darin, dass Sie keine **goto** -Anweisung verwenden können, um in einen **__try** Anweisungsblock zu springen. Stattdessen müssen Sie den Anweisungsblock über die normale Ablaufsteuerung eingeben. Sie können aus einem **__try** -Anweisungsblock springen und Ausnahmehandler bei der Auswahl Schachteln.
 
 ## <a name="see-also"></a>Siehe auch
 
 [Schreiben eines Ausnahmehandlers](../cpp/writing-an-exception-handler.md)<br/>
-[Strukturierte Ausnahmebehandlung (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

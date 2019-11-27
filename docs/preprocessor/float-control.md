@@ -37,10 +37,10 @@ Gibt an, ob eine Gleit Komma Ausnahme Semantik aktiviert (**on**) oder deaktivie
 
 **mit Ausnahme** von kann nur auf **on** festgelegt werden, wenn **präzise** ebenfalls auf **on**festgelegt ist.
 
-**push**\
+**Push** -\
 Überträgt die aktuelle **float_control** -Einstellung auf den internen compilerstapel.
 
-**pop**\
+**Pop** -\
 Entfernt die **float_control** Einstellung von der obersten Position des internen Compilerstapels und legt diese die neue **float_control** Einstellung fest.
 
 ## <a name="remarks"></a>Hinweise
@@ -49,11 +49,11 @@ Die **präzisen** und **außer** Optionen haben nicht das gleiche Verhalten wie 
 
 | | float_control (präzise, \*) | float_control (außer, \*) | fp_contract (\*) | fenv_access (\*) |
 |-|-|-|-|-|
-| /fp:strict             | an  | an  | off | an  |
-| /fp: strict/fp: außer- | an  | off | off | an  |
-| /fp: präzise            | an  | off | an  | off |
-| /fp:precise /fp:except | an  | an  | an  | off |
-| /fp: schnell               | off | off | an  | off |
+| /fp:strict             | auf  | auf  | off | auf  |
+| /fp: strict/fp: außer- | auf  | off | off | auf  |
+| /fp: präzise            | auf  | off | auf  | off |
+| /fp:precise /fp:except | auf  | auf  | auf  | off |
+| /fp: schnell               | off | off | auf  | off |
 
 Mit anderen Worten, Sie müssen mehrere Pragmas kombinieren, um die Befehlszeilenoptionen " **/fp: fast**", " **/fp: präzise**", " **/fp: strict**" und " **/fp:** " zu emulieren.
 

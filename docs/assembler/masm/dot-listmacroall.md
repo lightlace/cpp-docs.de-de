@@ -15,7 +15,7 @@ ms.locfileid: "74398128"
 ---
 # <a name="listmacroall"></a>.LISTMACROALL
 
-Starts listing of all statements in macros.
+Startet die Auflistung aller Anweisungen in Makros.
 
 ## <a name="syntax"></a>Syntax
 
@@ -23,8 +23,8 @@ Starts listing of all statements in macros.
 
 ## <a name="remarks"></a>Hinweise
 
-Same as [.LALL](../../assembler/masm/dot-lall.md).
+Identisch mit [. Lall](../../assembler/masm/dot-lall.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](directives-reference.md)
+[Direktivenverweis](directives-reference.md)

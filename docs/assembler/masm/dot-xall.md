@@ -15,7 +15,7 @@ ms.locfileid: "74397827"
 ---
 # <a name="xall"></a>.XALL
 
-See [.LISTMACRO](../../assembler/masm/dot-listmacro.md).
+Siehe [. Listmacro](../../assembler/masm/dot-listmacro.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -23,4 +23,4 @@ See [.LISTMACRO](../../assembler/masm/dot-listmacro.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](directives-reference.md)
+[Direktivenverweis](directives-reference.md)

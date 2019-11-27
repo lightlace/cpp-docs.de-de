@@ -18,19 +18,19 @@ ms.locfileid: "74246636"
 ---
 # <a name="cleaning-up-resources"></a>Bereinigen von Ressourcen
 
-Während der Ausführung des Beendigungshandlers wissen Sie möglicherweise nicht, welche Ressourcen tatsächlich zugeordnet wurden, bevor der Beendigungshandler aufgerufen wurde. It is possible that the **__try** statement block was interrupted before all resources were allocated, so that not all resources were opened.
+Während der Ausführung des Beendigungshandlers wissen Sie möglicherweise nicht, welche Ressourcen tatsächlich zugeordnet wurden, bevor der Beendigungshandler aufgerufen wurde. Es ist möglich, dass der **__try** -Anweisungsblock unterbrochen wurde, bevor alle Ressourcen zugewiesen wurden, sodass nicht alle Ressourcen geöffnet wurden.
 
 Vorsichtshalber sollten Sie daher überprüfen, welche Ressourcen tatsächlich geöffnet sind, bevor Sie die Bereinigung der Abbruchbehandlung fortsetzen. Dazu wird diese Vorgehensweise empfohlen:
 
 1. Initialisieren Sie die Handles mit dem Wert NULL.
 
-1. In the **__try** statement block, allocate resources. Beim Zuordnen der Ressourcen werden positive Werte für die Handles festgelegt.
+1. Weisen Sie im **__try** -Anweisungsblock Ressourcen zu. Beim Zuordnen der Ressourcen werden positive Werte für die Handles festgelegt.
 
-1. In the **__finally** statement block, release each resource whose corresponding handle or flag variable is nonzero or not NULL.
+1. Geben Sie im **__finally** -Anweisungsblock jede Ressource frei, deren zugehörige handle-oder Flag-Variable ungleich NULL oder nicht NULL ist.
 
 ## <a name="example"></a>Beispiel
 
-For example, the following code uses a termination handler to close three files and a memory block that were allocated in the **__try** statement block. Bevor eine Ressource bereinigt wird, überprüft der Code zunächst, ob die Ressource zugeordnet wurde.
+Der folgende Code verwendet beispielsweise einen Beendigungs Handler, um drei Dateien und einen Speicherblock zu schließen, die im **__try** Anweisungsblock zugeordnet wurden. Bevor eine Ressource bereinigt wird, überprüft der Code zunächst, ob die Ressource zugeordnet wurde.
 
 ```cpp
 // exceptions_Cleaning_up_Resources.cpp
@@ -72,5 +72,5 @@ int main() {
 
 ## <a name="see-also"></a>Siehe auch
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
-[Strukturierte Ausnahmebehandlung (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Schreiben eines Beendigungs Handlers](../cpp/writing-a-termination-handler.md)<br/>
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

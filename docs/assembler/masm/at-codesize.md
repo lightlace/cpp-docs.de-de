@@ -13,14 +13,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399200"
 ---
-# <a name="codesize"></a>\@CodeSize
+# <a name="codesize"></a>\@codeSize
 
-0 for **TINY**, **SMALL**, **COMPACT**, and **FLAT** models, and 1 for **MEDIUM**, **LARGE**, and **HUGE** models (numeric equate).
+0 für **kleine**, **kleine**, **kompakte**und **flache** Modelle und 1 für **Mittel** **große, große**und **riesige** Modelle (numeric equate).
 
 ## <a name="syntax"></a>Syntax
 
-> **\@CodeSize**
+> **\@codeSize**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Symbols reference](symbols-reference.md)
+[Symbol Verweis](symbols-reference.md)

@@ -15,12 +15,12 @@ ms.locfileid: "74395581"
 ---
 # <a name="org"></a>ORG
 
-Sets the location counter to *expression*.
+Legt den Speicherort des Indikators auf *Ausdruck*fest.
 
 ## <a name="syntax"></a>Syntax
 
-> **ORG** *expression*
+> Organisations *Ausdruck*
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](directives-reference.md)
+[Direktivenverweis](directives-reference.md)

@@ -15,9 +15,9 @@ ms.locfileid: "74189117"
 ---
 # <a name="compiler-warning-level-3-c4637"></a>Compilerwarnung (Stufe 3) C4637
 
-XML document comment target: \<include> tag discarded.  reason
+XML-Dokument Kommentar Ziel: \<> Tag enthalten, das verworfen wurde.  reason
 
-The syntax of an [\<include>](../../build/reference/include-visual-cpp.md) tag was not correct.
+Die Syntax eines [\<include >](../../build/reference/include-visual-cpp.md) -Tags war nicht richtig.
 
 Im folgenden Beispiel wird C4637 generiert:
 

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4001
 ms.assetid: 414a47fe-d597-425e-9374-6a569231dc0a
-ms.openlocfilehash: dd18dc27ee13eab05ea0253c8ebcc990105c15c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc4ae55c5d25719e930a7435e0f9bf3ee2071a21
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401487"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541628"
 ---
 # <a name="compiler-warning-level-4-c4001"></a>Compilerwarnung (Stufe 4) C4001
 
-nicht dem Standard entsprechende Erweiterung "einzeiliger Kommentar" wurde verwendet.
+nicht dem Standard entsprechende Erweiterung "einzeiligen Kommentar" wurde verwendet.
 
 > [!NOTE]
-> Diese Warnung wird in Visual Studio 2017 Version 15.5 entfernt, weil einzeilige Kommentare in C99 standard sind.
+> Diese Warnung wird in Visual Studio 2017 Version 15,5 entfernt, da einzeilige Kommentare in C99 standardmäßig sind.
 
-Einzeilige Kommentare sind in C++ standard "und" standard in C99 C ab.
-Strikte ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)), C-Dateien, einzeilige Kommentare, enthalten, die Warnung C4001 durch die Verwendung einer nicht dem Standard entsprechende Erweiterung. Da einzeilige Kommentare in C++ standard sind, erzeugen C-Dateien, die mit einzeilige Kommentare nicht C4001 beim Kompilieren mit Microsoft-Erweiterungen (/ Ze).
+Einzeilige Kommentare sind standardmäßig C++ in und Standard in C beginnend mit C99.
+Im Rahmen der Strict-ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) generieren C-Dateien, die einzeilige Kommentare enthalten, C4001 aufgrund der Verwendung einer nicht dem Standard entsprechende Erweiterung. Da einzeilige Kommentare in C++Standard sind, wird bei C-Dateien, die einzeilige Kommentare enthalten, bei der Kompilierung mit Microsoft-Erweiterungen (/Ze) keine C4001 erzeugt.
 
 ## <a name="example"></a>Beispiel
 
-Um die Warnung zu deaktivieren, heben Sie die auskommentierung [#pragma warning(Disable:4001) aus](../../preprocessor/warning.md).
+Zum Deaktivieren der Warnung heben Sie die Auskommentierung [#pragma Warnung (deaktivieren: 4001)](../../preprocessor/warning.md)auf.
 
-```
+```cpp
 // C4001.cpp
 // compile with: /W4 /Za /TC
 // #pragma warning(disable:4001)

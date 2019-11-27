@@ -17,29 +17,29 @@ ms.locfileid: "74246711"
 ---
 # <a name="exceptions-ole-exceptions"></a>Ausnahmen: OLE-Ausnahmen
 
-The techniques and facilities for handling exceptions in OLE are the same as those for handling other exceptions. For further information on exception handling, see the article [Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md).
+Die Techniken und Funktionen für die Behandlung von Ausnahmen in OLE sind identisch mit denen für andere Ausnahmen. Weitere Informationen zur Ausnahmebehandlung finden Sie im Artikel [ C++ moderne bewährte Methoden für Ausnahmen und Fehlerbehandlung](../cpp/errors-and-exception-handling-modern-cpp.md).
 
-All exception objects are derived from the abstract base class `CException`. MFC provides two classes for handling OLE exceptions:
+Alle Ausnahme Objekte werden von der abstrakten Basisklasse `CException`abgeleitet. MFC stellt zwei Klassen für die Behandlung von OLE-Ausnahmen bereit:
 
-- [COleException](../mfc/reference/coleexception-class.md) For handling general OLE exceptions.
+- [COleException](../mfc/reference/coleexception-class.md) Zur Behandlung allgemeiner OLE-Ausnahmen.
 
-- [COleDispatchException](../mfc/reference/coledispatchexception-class.md) For generating and handling OLE dispatch (automation) exceptions.
+- [COleDispatchException](../mfc/reference/coledispatchexception-class.md) Zum Erstellen und Verarbeiten von OLE Dispatch-Ausnahmen (Automation).
 
-The difference between these two classes is the amount of information they provide and where they are used. `COleException` has a public data member that contains the OLE status code for the exception. `COleDispatchException` supplies more information, including the following:
+Der Unterschied zwischen diesen beiden Klassen ist die Menge der Informationen, die Sie bereitstellen und wo Sie verwendet werden. `COleException` verfügt über einen öffentlichen Datenmember, der den OLE-Statuscode für die Ausnahme enthält. `COleDispatchException` bietet weitere Informationen, einschließlich der folgenden:
 
-- An application-specific error code
+- Ein anwendungsspezifischer Fehlercode
 
-- An error description, such as "Disk full"
+- Eine Fehlerbeschreibung, z. b. "Datenträger voll"
 
-- A Help context that your application can use to provide additional information for the user
+- Ein Hilfe Kontext, den Ihre Anwendung verwenden kann, um zusätzliche Informationen für den Benutzer bereitzustellen.
 
-- The name of your application's Help file
+- Der Name der Hilfedatei Ihrer Anwendung.
 
-- The name of the application that generated the exception
+- Der Name der Anwendung, die die Ausnahme generiert hat.
 
-`COleDispatchException` provides more information so that it can be used with products like Microsoft Visual Basic. The verbal error description can be used in a message box or other notification; the Help information can be used to help the user respond to the conditions that caused the exception.
+`COleDispatchException` bietet weitere Informationen, damit Sie mit Produkten wie Microsoft Visual Basic verwendet werden können. Die Beschreibung des verbalen Fehlers kann in einem Meldungs Feld oder in einer anderen Benachrichtigung verwendet werden. die Hilfe Informationen können verwendet werden, um dem Benutzer zu helfen, auf die Bedingungen zu reagieren, die die Ausnahme verursacht haben.
 
-Two global functions correspond to the two OLE exception classes: [AfxThrowOleException](../mfc/reference/exception-processing.md#afxthrowoleexception) and [AfxThrowOleDispatchException](../mfc/reference/exception-processing.md#afxthrowoledispatchexception). Use them to throw general OLE exceptions and OLE dispatch exceptions, respectively.
+Zwei globale Funktionen entsprechen den beiden OLE-Ausnahme Klassen: [AfxThrowOleException](../mfc/reference/exception-processing.md#afxthrowoleexception) und [AfxThrowOleDispatchException](../mfc/reference/exception-processing.md#afxthrowoledispatchexception). Verwenden Sie diese, um allgemeine OLE-Ausnahmen bzw. OLE Dispatch-Ausnahmen auszulösen.
 
 ## <a name="see-also"></a>Siehe auch
 

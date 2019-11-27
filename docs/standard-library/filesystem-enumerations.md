@@ -22,7 +22,7 @@ ms.locfileid: "74303498"
 
 In diesem Thema werden die Enumerationen filesystem-Header beschrieben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
 **Header:** \<experimental/filesystem>
 

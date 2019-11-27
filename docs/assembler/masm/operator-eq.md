@@ -17,7 +17,7 @@ ms.locfileid: "74397007"
 ---
 # <a name="operator-eq"></a>Operator EQ
 
-Returns true (-1) if *expression1* equals *expression2*, or returns false (0) if it does not.
+Gibt true (-1) zurück, wenn *expression1* *expression2*entspricht, oder gibt false (0) zurück, wenn dies nicht der Fall ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,4 +25,4 @@ Returns true (-1) if *expression1* equals *expression2*, or returns false (0) if
 
 ## <a name="see-also"></a>Siehe auch
 
-[Operators reference](operators-reference.md)
+[Operatorverweis](operators-reference.md)

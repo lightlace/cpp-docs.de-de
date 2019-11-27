@@ -15,21 +15,21 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397994"
 ---
-# <a name="safeseh-32-bit-masm"></a>.SAFESEH (32-bit MASM)
+# <a name="safeseh-32-bit-masm"></a>. SAFESEH (32-Bit-MASM)
 
-Registers a function as a structured exception handler. (32-bit MASM only.)
+Registriert eine Funktion als einen strukturierten Ausnahmehandler. (nur 32-Bit-MASM.)
 
 ## <a name="syntax"></a>Syntax
 
-> **.SAFESEH** *identifier*
+> **. SAFESEH** - *Bezeichner*
 
 ## <a name="remarks"></a>Hinweise
 
-*identifier* must be the ID for a locally defined [PROC](../../assembler/masm/proc.md) or [EXTRN](../../assembler/masm/extrn.md) PROC. A [LABEL](../../assembler/masm/label-masm.md) is not allowed. The .SAFESEH directive requires the [/safeseh](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml.exe command-line option.
+der *Bezeichner* muss die ID für eine lokal [definierte Prozedur](../../assembler/masm/proc.md) oder eine [EXTRN](../../assembler/masm/extrn.md) -Prozedur sein. Eine [Bezeichnung](../../assembler/masm/label-masm.md) ist nicht zulässig. Die. Die SAFESEH-Direktive erfordert die Befehlszeilenoption [/SAFESEH](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml. exe.
 
-For more information about structured exception handlers, see [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
+Weitere Informationen zu strukturierten Ausnahme Handlern finden Sie unter [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
 
-For example, to register a safe exception handler, create a new MASM file (as follows), assemble with /safeseh, and add it to the linked objects.
+Um z. b. einen sicheren Ausnahmehandler zu registrieren, erstellen Sie eine neue MASM-Datei (wie folgt), assemblieren Sie mit/SAFESEH, und fügen Sie Sie den verknüpften Objekten hinzu.
 
 ```asm
 .386
@@ -41,4 +41,4 @@ end
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](directives-reference.md)
+[Direktivenverweis](directives-reference.md)

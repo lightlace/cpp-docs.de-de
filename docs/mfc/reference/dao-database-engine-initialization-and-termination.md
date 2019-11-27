@@ -20,7 +20,7 @@ DAO wird für Access-Datenbanken verwendet und wird von Office 2013 unterstützt
 
 |||
 |-|-|
-|[AfxDaoInit](#afxdaoinit)|Initialisiert die DAO-Datenbank-Engine.|
+|[Afxdaoinit](#afxdaoinit)|Initialisiert die DAO-Datenbank-Engine.|
 |[AfxDaoTerm](#afxdaoterm)|Beendet das DAO-Datenbankmodul.|
 
 ##  <a name="afxdaoinit"></a>Afxdaoinit
@@ -40,7 +40,7 @@ In den meisten Fällen müssen Sie `AfxDaoInit` nicht aufrufen, da die Anwendung
 
 Weitere Informationen und ein Beispiel für das Aufrufen von `AfxDaoInit`finden Sie im [technischen Hinweis 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
-### <a name="requirements"></a>Anforderungen
+### <a name="requirements"></a>Voraussetzungen
 
   **Header** afxdao. h
 
@@ -61,7 +61,7 @@ In regulären MFC-DLLs wird `AfxDaoTerm` vor der `ExitInstance` Funktion aufgeru
 
 Weitere Informationen finden Sie im [technischen Hinweis 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
-### <a name="requirements"></a>Anforderungen
+### <a name="requirements"></a>Voraussetzungen
 
   **Header** afxdao. h
 

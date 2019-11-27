@@ -15,22 +15,22 @@ ms.locfileid: "74395029"
 ---
 # <a name="proc"></a>PROC
 
-Marks start and end of a procedure block called *label*. The statements in the block can be called with the **CALL** instruction or [INVOKE](../../assembler/masm/invoke.md) directive.
+Markiert den Anfang und das Ende eines Prozedur Blocks namens *Bezeichnung*. Die Anweisungen im-Block können mit der Aufruf [Anweisung oder der](../../assembler/masm/invoke.md) **Aufruf** Direktive aufgerufen werden.
 
 ## <a name="syntax"></a>Syntax
 
-> *label* **PROC** ⟦*distance*⟧ ⟦*language-type*⟧ ⟦*visibility*⟧ ⟦ __\<__ *prologuearg* __>__ ⟧ ⟦**USES** *reglist*⟧ ⟦ __,__ *parameter* ⟦ __:__ *tag*⟧ ...⟧\
-> ⟦**FRAME** ⟦ __:__ *ehandler-address*⟧ ⟧\
-> *statements*\
-> *label* **ENDP**
+> *Label* **proc** ⟦*Distance*⟧ ⟦*Language-Type*⟧ ⟦*Visibility*⟧ ⟦ __\<__ *prologuearg* __>__ ⟧ ⟦**verwendet** *reglist*⟧ ⟦ __,__ *Parameter* ⟦ __:__ *Tag*⟧... ⟧\
+> ⟦**Frame** ⟦ __:__ *ehandler-Address*⟧ ⟧ \
+> *Anweisungen*\
+> *Bezeichnung* **ENDP**
 
 ## <a name="remarks"></a>Hinweise
 
-⟦**FRAME** ⟦ __:__ *ehandler-address*⟧ ⟧ is only valid with ml64.exe, and causes MASM to generate a function table entry in .pdata and unwind information in .xdata for a function's structured exception handling unwind behavior.
+⟦**Frame** ⟦ __:__ *ehandler-Address*⟧ ⟧ ist nur mit ml64. exe gültig und bewirkt, dass MASM einen Funktionstabellen Eintrag in. pdata generiert und Informationen in. XData für die strukturierte Ausnahmebehandlung beim Entladen einer Funktion entlädt.
 
-When the **FRAME** attribute is used, it must be followed by an [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive.
+Wenn das **Frame** -Attribut verwendet wird, muss ihm ein gefolgt werden [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) -Direktive.
 
-See [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) for more information on using ml64.exe.
+Weitere Informationen zur Verwendung von "ml64. exe" finden Sie unter [MASM für x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) .
 
 ## <a name="example"></a>Beispiel
 
@@ -54,7 +54,7 @@ _text ENDS
 END
 ```
 
-The above code will emit the following function table and unwind information:
+Der obige Code gibt die folgende Funktions Tabelle und Entladungs Informationen aus:
 
 ```Output
 FileHeader->Machine 34404
@@ -79,4 +79,4 @@ Dumping Unwind Information for file ex2.exe
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Direktivenverweis](../../assembler/masm/directives-reference.md)

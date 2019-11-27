@@ -15,23 +15,23 @@ ms.locfileid: "74397932"
 ---
 # <a name="setframe"></a>.SETFRAME
 
-Fills in the frame register field and offset in the unwind information using the specified register (*reg*) and offset (*offset*). The offset must be a multiple of 16 and less than or equal to 240. This directive also generates a `UWOP_SET_FPREG` unwind code entry for the specified register using the current prologue offset.
+Füllt das Rahmen Register Feld und den Offset in den Entlade Informationen mit dem angegebenen Register (*reg*) und Offset (*Offset*) aus. Der Offset muss ein Vielfaches von 16 und kleiner oder gleich 240 sein. Diese Direktive generiert außerdem einen `UWOP_SET_FPREG` Entladungs Code Eintrag für das angegebene Register unter Verwendung des aktuellen prologoffsets.
 
 ## <a name="syntax"></a>Syntax
 
-> **.SETFRAME** *reg*, *offset*
+> **. SetFrame** - *reg*, *Offset*
 
 ## <a name="remarks"></a>Hinweise
 
-**.SETFRAME** allows ml64.exe users to specify how a frame function unwinds, and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.SETFRAME** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
+**. Mit setFrame** können Benutzer von ml64. exe angeben, wie sich eine Frame Funktion entlädt, und nur innerhalb des Prologs zulässig, der sich von der [proc](../../assembler/masm/proc.md) Frame-Deklaration zum erstreckt [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) -Direktive. Diese Direktiven generieren keinen Code. Sie generieren nur `.xdata` und `.pdata`. **. SetFrame** sollte Anweisungen vorangestellt sein, die tatsächlich die auszuwickenden Aktionen implementieren. Es wird empfohlen, sowohl die Entlade Direktiven als auch den Code, der in einem Makro entladen werden soll, zu schließen, um eine Vereinbarung zu gewährleisten.
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Weitere Informationen finden Sie unter [MASM für x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>Beispiel
 
 ### <a name="description"></a>Beschreibung
 
-The following sample shows how to use a frame pointer:
+Im folgenden Beispiel wird gezeigt, wie ein Frame Zeiger verwendet wird:
 
 ### <a name="code"></a>Code
 
@@ -64,4 +64,4 @@ END
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](directives-reference.md)
+[Direktivenverweis](directives-reference.md)

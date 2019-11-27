@@ -15,7 +15,7 @@ ms.locfileid: "74398466"
 ---
 # <a name="endprolog"></a>.ENDPROLOG
 
-Signals the end of the prologue declarations.
+Signalisiert das Ende der Prolog-Deklarationen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -23,9 +23,9 @@ Signals the end of the prologue declarations.
 
 ## <a name="remarks"></a>Hinweise
 
-It is an error to use any of the prologue declarations outside of the region between [PROC](../../assembler/masm/proc.md) **FRAME** and **.ENDPROLOG**.
+Es ist ein Fehler, eine der Prolog-Deklarationen außerhalb des Bereichs zwischen dem [proc](../../assembler/masm/proc.md) - **Frame** und zu verwenden **. ENDPROLOG**.
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Weitere Informationen finden Sie unter [MASM für x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="see-also"></a>Siehe auch
 

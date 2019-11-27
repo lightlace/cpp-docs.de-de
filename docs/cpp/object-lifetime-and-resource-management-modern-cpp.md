@@ -92,5 +92,5 @@ Der Entwurf von C++ stellt sicher, dass Objekte zerstört werden, wenn Sie den G
 ## <a name="see-also"></a>Siehe auch
 
 [Willkommen zurück beiC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
-[C++-Sprachreferenz](../cpp/cpp-language-reference.md)<br/>
+[C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
 [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)

@@ -15,11 +15,11 @@ ms.locfileid: "74398316"
 ---
 # <a name="errndef"></a>.ERRNDEF
 
-Generates an error if *name* has not been defined.
+Generiert einen Fehler, wenn der *Name* nicht definiert wurde.
 
 ## <a name="syntax"></a>Syntax
 
-> **.ERRNDEF** *name* ⟦ __,__ *message*⟧
+> **. ERRNDEF** - *Name* ⟦ __,__ *Message*⟧
 
 ## <a name="see-also"></a>Siehe auch
 

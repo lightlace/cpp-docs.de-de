@@ -15,7 +15,7 @@ ms.locfileid: "74399094"
 ---
 # <a name="fardata"></a>\@fardata?
 
-The name of the segment defined by the [.FARDATA?](../../assembler/masm/dot-fardata-q.md) directive (text macro).
+Der Name des Segments, das von definiert wird [. Fardata?](../../assembler/masm/dot-fardata-q.md) Direktive (Text Makro).
 
 ## <a name="syntax"></a>Syntax
 
@@ -23,4 +23,4 @@ The name of the segment defined by the [.FARDATA?](../../assembler/masm/dot-fard
 
 ## <a name="see-also"></a>Siehe auch
 
-[Symbols reference](symbols-reference.md)
+[Symbol Verweis](symbols-reference.md)

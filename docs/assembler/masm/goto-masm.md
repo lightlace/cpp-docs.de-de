@@ -15,16 +15,16 @@ ms.locfileid: "74397479"
 ---
 # <a name="goto-masm"></a>GOTO (MASM)
 
-Transfers assembly to the line marked **:** _macrolabel_.
+Überträgt die Assembly an die Zeile, die mit **:** _Macrolabel_gekennzeichnet ist.
 
 ## <a name="syntax"></a>Syntax
 
-> **GOTO** *macrolabel*
+> **Goto** *makrolabel*
 
 ## <a name="remarks"></a>Hinweise
 
-**GOTO** is permitted only inside [MACRO](macro.md), [FOR](for-masm.md), [FORC](forc.md), [REPEAT](repeat.md), and [WHILE](while-masm.md) blocks. The *macrolabel* target must be the only directive on the line and must be preceded by a leading colon.
+**Goto** ist nur innerhalb von [Makros](macro.md), [for](for-masm.md)-, [FORC](forc.md)-, [Repeat](repeat.md)-und [while](while-masm.md) -Blöcken zulässig. Das *Makro Label* -Ziel muss die einzige Anweisung in der Zeile sein, und es muss ein vorangestelltem Doppelpunkt vorangestellt sein.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](directives-reference.md)
+[Direktivenverweis](directives-reference.md)

@@ -24,7 +24,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > * Hinzufügen einer Verbindung zu einem Linux-Computer
 > * Erstellen und Debuggen des gleichen Ziels unter Linux
 
-## <a name="prerequisites"></a>Erforderliche Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 * Einrichten von Visual Studio für die plattformübergreifende C++-Entwicklung
   * Installieren Sie zunächst [Visual Studio](https://visualstudio.microsoft.com/vs/) , und wählen Sie die **Desktop C++ Entwicklung mit** und die **Linux-Entwicklung mit C++ Workloads**aus. Bei dieser minimalen Installation handelt es sich nur um 3 GB. Abhängig von ihrer Downloadgeschwindigkeit sollte die Installation nicht mehr als 10 Minuten dauern.

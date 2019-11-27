@@ -17,7 +17,7 @@ ms.locfileid: "74246066"
 ---
 # <a name="unhandled-c-exceptions"></a>Nicht behandelte C++-Ausnahmen
 
-If a matching handler (or ellipsis **catch** handler) cannot be found for the current exception, the predefined `terminate` run-time function is called. (You can also explicitly call `terminate` in any of your handlers.) The default action of `terminate` is to call `abort`. Wenn `terminate` eine andere Funktion in Ihrem Programm aufrufen soll, bevor Sie die Anwendung beenden, rufen Sie die `set_terminate`-Funktion mit dem Funktionsnamen auf, der als sein einzelnes Argument aufgerufen werden soll. Sie können `set_terminate` an jedem Punkt im Programm aufrufen. The `terminate` routine always calls the last function given as an argument to `set_terminate`.
+Wenn für die aktuelle Ausnahme kein übereinstimmender Handler (oder ein Auslassungs Zeichen- **catch** -Handler) gefunden werden kann, wird die vordefinierte `terminate` Lauf Zeitfunktion aufgerufen. (Sie können auch `terminate` in einem ihrer Handler explizit aufzurufen.) Die Standardaktion `terminate` ist das aufzurufen `abort`. Wenn `terminate` eine andere Funktion in Ihrem Programm aufrufen soll, bevor Sie die Anwendung beenden, rufen Sie die `set_terminate`-Funktion mit dem Funktionsnamen auf, der als sein einzelnes Argument aufgerufen werden soll. Sie können `set_terminate` an jedem Punkt im Programm aufrufen. Die `terminate` Routine ruft immer die letzte Funktion auf, die als Argument für `set_terminate`angegeben wird.
 
 ## <a name="example"></a>Beispiel
 
@@ -46,7 +46,7 @@ int main() {
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>Ausgabe
 
 ```Output
 term_func was called by terminate.
@@ -56,4 +56,4 @@ Die `term_func`-Funktion muss das Programm oder den aktuellen Thread beenden, id
 
 ## <a name="see-also"></a>Siehe auch
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[Moderne C++ bewährte Methoden für Ausnahmen und Fehlerbehandlung](../cpp/errors-and-exception-handling-modern-cpp.md)

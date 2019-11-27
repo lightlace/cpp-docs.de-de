@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4633
+title: Compilerwarnung (Stufe 3) C4633
 ms.date: 11/04/2016
 f1_keywords:
 - C4633
@@ -13,13 +13,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189151"
 ---
-# <a name="compiler-warning-level-3-c4633"></a>Compiler Warning (level 3) C4633
+# <a name="compiler-warning-level-3-c4633"></a>Compilerwarnung (Stufe 3) C4633
 
-XML document comment target: error:  reason
+XML-Dokument Kommentar Ziel: Fehler: Grund
 
-A name passed to the [\<param>](../../build/reference/param-visual-cpp.md) tag was not found by the compiler.
+Ein Name, der an das [\<param->](../../build/reference/param-visual-cpp.md) Tag übermittelt wurde, wurde vom Compiler nicht gefunden.
 
-The following sample generates C4633:
+Im folgenden Beispiel wird C4633 generiert:
 
 ```cpp
 // C4633.cpp

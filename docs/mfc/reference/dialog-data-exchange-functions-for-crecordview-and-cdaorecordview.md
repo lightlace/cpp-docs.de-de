@@ -94,7 +94,7 @@ Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -vali
 
 Ein allgemeines DDX_Field Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Das Beispiel wäre für `DDX_FieldCBIndex`ähnlich.
 
-### <a name="requirements"></a>Anforderungen
+### <a name="requirements"></a>Voraussetzungen
 
 **Header:** afxdao.h
 
@@ -142,7 +142,7 @@ Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -vali
 
 Ein allgemeines DDX_Field Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Das Beispiel enthält einen `DDX_FieldCBString`aufzurufenden.
 
-### <a name="requirements"></a>Anforderungen
+### <a name="requirements"></a>Voraussetzungen
 
   **Header** afxdao. h
 
@@ -190,7 +190,7 @@ Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -vali
 
 Ein allgemeines DDX_Field Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Aufrufe an `DDX_FieldCBStringExact` wären ähnlich.
 
-### <a name="requirements"></a>Anforderungen
+### <a name="requirements"></a>Voraussetzungen
 
   **Header** afxdao. h
 
@@ -232,7 +232,7 @@ Wenn `DDX_FieldCheck` aufgerufen wird, wird der *Wert* auf den aktuellen Zustand
 
 Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -validierung](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Anforderungen
+### <a name="requirements"></a>Voraussetzungen
 
   **Header** afxdao. h
 
@@ -280,7 +280,7 @@ Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -vali
 
 Ein allgemeines DDX_Field Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) .
 
-### <a name="requirements"></a>Anforderungen
+### <a name="requirements"></a>Voraussetzungen
 
   **Header** afxdao. h
 
@@ -328,7 +328,7 @@ Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -vali
 
 Ein allgemeines DDX_Field Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Aufrufe an `DDX_FieldLBString` wären ähnlich.
 
-### <a name="requirements"></a>Anforderungen
+### <a name="requirements"></a>Voraussetzungen
 
   **Header** afxdao. h
 
@@ -376,7 +376,7 @@ Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -vali
 
 Ein allgemeines DDX_Field Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Aufrufe an `DDX_FieldLBStringExact` wären ähnlich.
 
-### <a name="requirements"></a>Anforderungen
+### <a name="requirements"></a>Voraussetzungen
 
   **Header** afxdao. h
 
@@ -424,7 +424,7 @@ Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -vali
 
 Ein allgemeines DDX_Field Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Aufrufe an `DDX_FieldRadio` wären ähnlich.
 
-### <a name="requirements"></a>Anforderungen
+### <a name="requirements"></a>Voraussetzungen
 
   **Header** afxdao. h
 
@@ -472,7 +472,7 @@ Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -vali
 
 Ein allgemeines DDX_Field Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Aufrufe an `DDX_FieldScroll` wären ähnlich.
 
-### <a name="requirements"></a>Anforderungen
+### <a name="requirements"></a>Voraussetzungen
 
   **Header** afxdao. h
 
@@ -523,7 +523,7 @@ Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -vali
 
 Ein allgemeines DDX_Field Beispiel finden Sie unter [DDX_FieldText](#ddx_fieldtext) . Aufrufe an `DDX_FieldSlider` wären ähnlich.
 
-### <a name="requirements"></a>Anforderungen
+### <a name="requirements"></a>Voraussetzungen
 
 **Header:** afxdao.h
 
@@ -669,7 +669,7 @@ Die folgende `DoDataExchange` Funktion für eine [CRecordView](../../mfc/referen
 
 [!code-cpp[NVC_MFCDatabase#43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]
 
-### <a name="requirements"></a>Anforderungen
+### <a name="requirements"></a>Voraussetzungen
 
   **Header** afxdao. h
 

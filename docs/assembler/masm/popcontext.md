@@ -15,12 +15,12 @@ ms.locfileid: "74395041"
 ---
 # <a name="popcontext"></a>POPCONTEXT
 
-Restores part or all of the current *context* (saved by the [PUSHCONTEXT](../../assembler/masm/pushcontext.md) directive). The *context* can be **ASSUMES**, **RADIX**, **LISTING**, **CPU**, or **ALL**.
+Stellt einen Teil oder den gesamten aktuellen *Kontext* wieder her (gespeichert durch die [PUSHCONTEXT](../../assembler/masm/pushcontext.md) -Direktive). Der *Kontext* kann angenommen **werden**, **Radix**, **Auflistung**, **CPU**oder **all**.
 
 ## <a name="syntax"></a>Syntax
 
-> **POPCONTEXT** *context*
+> **POPCONTEXT** - *Kontext*
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](directives-reference.md)
+[Direktivenverweis](directives-reference.md)

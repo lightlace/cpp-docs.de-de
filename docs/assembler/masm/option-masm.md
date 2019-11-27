@@ -15,28 +15,28 @@ ms.locfileid: "74395167"
 ---
 # <a name="option-masm"></a>OPTION (MASM)
 
-Enables and disables features of the assembler.
+Aktiviert und deaktiviert die Funktionen des Assemblers.
 
 ## <a name="syntax"></a>Syntax
 
-> **OPTION** *optionlist*
+> *Optionsliste* für Optionen
 
 ## <a name="remarks"></a>Hinweise
 
-Available options include:
+Zu den verfügbaren Optionen gehören:
 
 |||||
 |-|-|-|-|
-|**CASEMAP**|**DOTNAME**|**NODOTNAME**|**EMULATOR**|
-|**NOEMULATOR**|**EPILOGUE**|**EXPR16**|**EXPR32**|
-|**LANGUAGE**|**LJMP**|**NOLJMP**|**M510**|
-|**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**OFFSET**|
-|**OLDMACROS**|**NOOLDMACROS**|**OLDSTRUCTS**|**NOOLDSTRUCTS**|
-|**PROC**|**PROLOGUE**|**READONLY**|**NOREADONLY**|
-|**SCOPED**|**NOSCOPED**|**SEGMENT**|**SETIF2**.|
+|**CaseMap**|**Dotname**|**Nodotname**|**Ragend**|
+|**Noemulator**|**Epilog**|**EXPR16**|**EXPR32**|
+|**Kurse**|**Ljmp**|**Noljmp**|**M510**|
+|**NOM510**|**Nokeyword**|**Nosignextend**|**Kompensieren**|
+|**Oldmakros**|**Nooldmakros**|**Oldstructs**|**Nooldstructs**|
+|**PROC**|**Prolog**|**ReadOnly**|**Noreadonly**|
+|**Bereich**|**Im Gültigkeitsbereich**|**SEGMENT**|**SETIF2**.|
 
-The syntax for LANGUAGE is **OPTION LANGUAGE:** <em>x</em>, where *x* is one of C, SYSCALL, STDCALL, PASCAL, FORTRAN, or BASIC.  SYSCALL, PASCAL, FORTRAN, and BASIC are not supported with used with [.MODEL](../../assembler/masm/dot-model.md) FLAT.
+Die Syntax für language ist **options Sprache:** <em>x</em>, wobei *x* der Wert C, syscall, STDCALL, Pascal, Fortran oder Basic ist.  Syscall, Pascal, Fortran und Basic werden bei Verwendung mit nicht unterstützt [. Modell](../../assembler/masm/dot-model.md) flach.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](directives-reference.md)
+[Direktivenverweis](directives-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Timing of exception handling: A summary'
+title: 'Zeitliche Steuerung der Ausnahmebehandlung: eine Zusammenfassung'
 ms.date: 05/07/2019
 helpviewer_keywords:
 - sequence [C++]
@@ -18,12 +18,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246334"
 ---
-# <a name="timing-of-exception-handling-a-summary"></a>Timing of exception handling: A summary
+# <a name="timing-of-exception-handling-a-summary"></a>Zeitliche Steuerung der Ausnahmebehandlung: eine Zusammenfassung
 
-A termination handler is executed no matter how the **__try** statement block is terminated. Causes include jumping out of the **__try** block, a `longjmp` statement that transfers control out of the block, and unwinding the stack due to exception handling.
+Ein Beendigungs Handler wird ausgeführt, unabhängig davon, wie der **__try** -Anweisungsblock beendet wird. Zu den Ursachen gehören das Auslagern aus dem **__try** Block, eine `longjmp` Anweisung, die die Steuerung aus dem Block überträgt, und das Entwickeln des Stapels aufgrund der Ausnahmebehandlung.
 
 > [!NOTE]
->  The Microsoft C++ compiler supports two forms of the `setjmp` and `longjmp` statements. Die schnelle Version umgeht die Abbruchbehandlung, ist jedoch effizienter. To use this version, include the file \<setjmp.h>. Die andere Version unterstützt die Abbruchbehandlung, wie im vorherigen Abschnitt beschrieben. To use this version, include the file \<setjmpex.h>. Die Leistungssteigerung der schnellen Version hängt von der Hardwarekonfiguration ab.
+>  Der Microsoft C++ -Compiler unterstützt zwei Formen der Anweisungen `setjmp` und `longjmp`. Die schnelle Version umgeht die Abbruchbehandlung, ist jedoch effizienter. Um diese Version zu verwenden, schließen Sie die Datei \<setjmp. h-> ein. Die andere Version unterstützt die Abbruchbehandlung, wie im vorherigen Abschnitt beschrieben. Um diese Version zu verwenden, schließen Sie die Datei \<setjmpex. h > ein. Die Leistungssteigerung der schnellen Version hängt von der Hardwarekonfiguration ab.
 
 Das Betriebssystem führt alle Abbruchbehandlungen in der richtigen Reihenfolge aus, bevor ein anderer Code ausgeführt werden kann, einschließlich des Texts eines Ausnahmehandlers.
 
@@ -35,7 +35,7 @@ Wenn die Ursache für die Unterbrechung eine Ausnahme ist, muss das System erst 
 
 1. Wenn dieser Filter die Steuerung übergibt (0 zurückgibt), wird der Prozess fortgesetzt, bis ein Filter gefunden wird, der die Steuerung nicht übergibt.
 
-1. If this filter returns -1, execution continues where the exception was raised, and no termination takes place.
+1. Wenn dieser Filter "-1" zurückgibt, wird die Ausführung fortgesetzt, wo die Ausnahme ausgelöst wurde, und es findet keine Beendigung statt.
 
 1. Wenn der Filter 1 zurückgibt, werden folgende Ereignisse ausgelöst:
 
@@ -49,5 +49,5 @@ Wenn die Ursache für die Unterbrechung eine Ausnahme ist, muss das System erst 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
-[Strukturierte Ausnahmebehandlung (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Schreiben eines Beendigungs Handlers](../cpp/writing-a-termination-handler.md)<br/>
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

@@ -42,71 +42,71 @@ ms.locfileid: "74246728"
 ---
 # <a name="exception-handling-in-mfc"></a>Ausnahmebehandlung in MFC
 
-This article explains the exception-handling mechanisms available in MFC. Two mechanisms are available:
+In diesem Artikel werden die in MFC verfügbaren Mechanismen zur Ausnahmebehandlung erläutert. Es stehen zwei Mechanismen zur Verfügung:
 
-- C++ exceptions, available in MFC version 3.0 and later
+- C++Ausnahmen, verfügbar in MFC, Version 3,0 und höher
 
-- The MFC exception macros, available in MFC versions 1.0 and later
+- Die MFC-Ausnahme Makros, die in den MFC-Versionen 1,0 und höher verfügbar sind.
 
-If you're writing a new application using MFC, you should use the C++ mechanism. You can use the macro-based mechanism if your existing application already uses that mechanism extensively.
+Wenn Sie eine neue Anwendung mit MFC schreiben, sollten Sie den C++ -Mechanismus verwenden. Sie können den Makro basierten Mechanismus verwenden, wenn die vorhandene Anwendung diesen Mechanismus bereits ausgiebig verwendet.
 
-You can readily convert existing code to use C++ exceptions instead of the MFC exception macros. Advantages of converting your code and guidelines for doing so are described in the article [Exceptions: Converting from MFC Exception Macros](../mfc/exceptions-converting-from-mfc-exception-macros.md).
+Sie können vorhandenen Code problemlos konvertieren, um C++ Ausnahmen anstelle der MFC-Ausnahme Makros zu verwenden. Die Vorteile der Code-und Richtlinien für diese Vorgehensweise werden im Artikel [Ausnahmen: Umstellen von MFC-Ausnahme Makros](../mfc/exceptions-converting-from-mfc-exception-macros.md)beschrieben.
 
-If you have already developed an application using the MFC exception macros, you can continue using these macros in your existing code, while using C++ exceptions in your new code. The article [Exceptions: Changes to Exception Macros in Version 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) gives guidelines for doing so.
+Wenn Sie bereits eine Anwendung mit den MFC-Ausnahme Makros entwickelt haben, können Sie diese Makros im vorhandenen Code weiterhin verwenden, während Sie C++ Ausnahmen im neuen Code verwenden. Der Artikel [Ausnahmen: Änderungen an Ausnahme Makros in Version 3,0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) bieten Richtlinien dafür.
 
 > [!NOTE]
->  To enable C++ exception handling in your code, select Enable C++ Exceptions on the Code Generation page in the C/C++ folder of the project's [Property Pages](../build/reference/property-pages-visual-cpp.md) dialog box, or use the [/EHsc](../build/reference/eh-exception-handling-model.md) compiler option.
+>  Um die C++ Ausnahmebehandlung im Code zu aktivieren, wählen C++ Sie im Dialogfeld [Eigenschaften Seiten](../build/reference/property-pages-visual-cpp.md) des Projekts auf derC++ Seite Codegenerierung die Option Ausnahmen aktivieren aus, oder verwenden Sie die [/EHsc](../build/reference/eh-exception-handling-model.md) -Compileroption.
 
 In diesem Artikel werden die folgenden Themen behandelt:
 
-- [When to use exceptions](#_core_when_to_use_exceptions)
+- [Verwendungszwecke von Ausnahmen](#_core_when_to_use_exceptions)
 
-- [MFC exception support](#_core_mfc_exception_support)
+- [Unterstützung für MFC-Ausnahmen](#_core_mfc_exception_support)
 
-- [Further reading about exceptions](#_core_further_reading_about_exceptions)
+- [Weitere Informationen zu Ausnahmen](#_core_further_reading_about_exceptions)
 
-##  <a name="_core_when_to_use_exceptions"></a> When to Use Exceptions
+##  <a name="_core_when_to_use_exceptions"></a>Verwendungszwecke von Ausnahmen
 
-Three categories of outcomes can occur when a function is called during program execution: normal execution, erroneous execution, or abnormal execution. Each category is described below.
+Es können drei Kategorien von Ergebnissen auftreten, wenn eine Funktion während der Programmausführung aufgerufen wird: normale Ausführung, fehlerhafte Ausführung oder ungewöhnliche Ausführung. Jede Kategorie wird unten beschrieben.
 
-- Normal execution
+- Normale Ausführung
 
-   The function may execute normally and return. Some functions return a result code to the caller, which indicates the outcome of the function. The possible result codes are strictly defined for the function and represent the range of possible outcomes of the function. The result code can indicate success or failure or can even indicate a particular type of failure that is within the normal range of expectations. For example, a file-status function can return a code that indicates that the file does not exist. Note that the term "error code" is not used because a result code represents one of many expected outcomes.
+   Die Funktion kann normal ausgeführt werden und zurückgeben. Einige Funktionen geben dem Aufrufer einen Ergebniscode zurück, der das Ergebnis der Funktion angibt. Die möglichen Ergebnis Codes sind für die Funktion streng definiert und stellen den Bereich möglicher Ergebnisse der Funktion dar. Der Ergebniscode kann auf Erfolg oder Fehler hinweisen oder sogar auf eine bestimmte Art von Fehlern hindeuten, die innerhalb des normalen Bereichs von Erwartungen liegt. Beispielsweise kann eine File-Status-Funktion einen Code zurückgeben, der angibt, dass die Datei nicht vorhanden ist. Beachten Sie, dass der Begriff "Fehlercode" nicht verwendet wird, da ein Ergebniscode eines von vielen erwarteten Ergebnissen darstellt.
 
-- Erroneous execution
+- Fehlerhafte Ausführung
 
-   The caller makes some mistake in passing arguments to the function or calls the function in an inappropriate context. This situation causes an error, and it should be detected by an assertion during program development. (For more information on assertions, see [C/C++ Assertions](/visualstudio/debugger/c-cpp-assertions).)
+   Der Aufrufer hat einen Fehler beim Übergeben von Argumenten an die Funktion oder die Funktion in einem ungeeigneten Kontext aufruft. Diese Situation verursacht einen Fehler und sollte bei der Programmentwicklung durch eine-Übersetzung erkannt werden. (Weitere Informationen zu Assertionen finden Sie unter [CC++ /](/visualstudio/debugger/c-cpp-assertions)Assertionen.)
 
-- Abnormal execution
+- Ungewöhnliche Ausführung
 
-   Abnormal execution includes situations where conditions outside the program's control, such as low memory or I/O errors, are influencing the outcome of the function. Abnormal situations should be handled by catching and throwing exceptions.
+   Die ungewöhnliche Ausführung umfasst Situationen, in denen Bedingungen außerhalb der Programmsteuerung, wie z. b. wenig Arbeitsspeicher oder e/a-Fehler, das Ergebnis der Funktion beeinflussen. Ungewöhnliche Situationen sollten durch abfangen und Auslösen von Ausnahmen behandelt werden.
 
-Using exceptions is especially appropriate for abnormal execution.
+Die Verwendung von Ausnahmen eignet sich besonders für die ungewöhnliche Ausführung.
 
-##  <a name="_core_mfc_exception_support"></a> MFC Exception Support
+##  <a name="_core_mfc_exception_support"></a>Unterstützung für MFC-Ausnahmen
 
-Whether you use the C++ exceptions directly or use the MFC exception macros, you will use [CException Class](../mfc/reference/cexception-class.md) or `CException`-derived objects that may be thrown by the framework or by your application.
+Unabhängig davon, ob C++ Sie die Ausnahmen direkt verwenden oder die MFC-Ausnahme Makros verwenden, verwenden Sie die [CException-Klasse](../mfc/reference/cexception-class.md) oder `CException`abgeleitete Objekte, die vom Framework oder von der Anwendung ausgelöst werden können.
 
-The following table shows the predefined exceptions provided by MFC.
+Die folgende Tabelle zeigt die vordefinierten Ausnahmen, die von MFC bereitgestellt werden.
 
 |Ausnahmeklasse|Bedeutung|
 |---------------------|-------------|
-|[CMemoryException-Klasse](../mfc/reference/cmemoryexception-class.md)|Out-of-memory|
-|[CFileException-Klasse](../mfc/reference/cfileexception-class.md)|File exception|
-|[CArchiveException-Klasse](../mfc/reference/carchiveexception-class.md)|Archive/Serialization exception|
-|[CNotSupportedException-Klasse](../mfc/reference/cnotsupportedexception-class.md)|Response to request for unsupported service|
-|[CResourceException-Klasse](../mfc/reference/cresourceexception-class.md)|Windows resource allocation exception|
-|[CDaoException-Klasse](../mfc/reference/cdaoexception-class.md)|Database exceptions (DAO classes)|
-|[CDBException-Klasse](../mfc/reference/cdbexception-class.md)|Database exceptions (ODBC classes)|
+|[CMemoryException-Klasse](../mfc/reference/cmemoryexception-class.md)|Nicht genügend Arbeitsspeicher|
+|[CFileException-Klasse](../mfc/reference/cfileexception-class.md)|Datei Ausnahme|
+|[CArchiveException-Klasse](../mfc/reference/carchiveexception-class.md)|Archiv-/Serialisierungsausnahme|
+|[CNotSupportedException-Klasse](../mfc/reference/cnotsupportedexception-class.md)|Antwort auf Anforderung für nicht unterstützten Dienst|
+|[CResourceException-Klasse](../mfc/reference/cresourceexception-class.md)|Windows-Ressourcen Zuordnungs Ausnahme|
+|[CDaoException-Klasse](../mfc/reference/cdaoexception-class.md)|Daten Bank Ausnahmen (DAO-Klassen)|
+|[CDBException-Klasse](../mfc/reference/cdbexception-class.md)|Daten Bank Ausnahmen (ODBC-Klassen)|
 |[COleException-Klasse](../mfc/reference/coleexception-class.md)|OLE-Ausnahmen|
-|[COleDispatchException-Klasse](../mfc/reference/coledispatchexception-class.md)|Dispatch (automation) exceptions|
-|[CUserException-Klasse](../mfc/reference/cuserexception-class.md)|Exception that alerts the user with a message box, then throws a generic [CException Class](../mfc/reference/cexception-class.md)|
+|[COleDispatchException-Klasse](../mfc/reference/coledispatchexception-class.md)|Dispatch-Ausnahmen (Automation)|
+|[CUserException-Klasse](../mfc/reference/cuserexception-class.md)|Eine Ausnahme, die den Benutzer mit einem Meldungs Feld warnt und dann eine generische [CException-Klasse](../mfc/reference/cexception-class.md) auslöst.|
 
-Seit Version 3.0 verwendet MFC C++-Ausnahmen, unterstützt jedoch weiterhin die älteren Ausnahmebehandlungsmakros, deren Form der von C++-Ausnahmen ähnelt. Obwohl diese Makros nicht für neue Programmierungen empfohlen werden, werden sie weiterhin zu Zwecken der Abwärtskompatibilität unterstützt. In Programmen, die bereits die Makros verwenden, können Sie C++-Ausnahmen ebenfalls problemlos verwenden. During preprocessing, the macros evaluate to the exception handling keywords defined in the MSVC implementation of the C++ language as of Visual C++ version 2.0. Sie können vorhandene Ausnahmemakros beibehalten, während Sie beginnen, C++-Ausnahmen zu verwenden. For information on mixing macros and C++ exception handling and on converting old code to use the new mechanism, see the articles [Exceptions: Using MFC Macros and C++ Exceptions](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) and [Exceptions: Converting from MFC Exception Macros](../mfc/exceptions-converting-from-mfc-exception-macros.md). Bei älteren MFC-Ausnahmemakros, sofern Sie diese noch verwenden, werden C++-Ausnahmeschlüsselwörter ausgewertet. See [Exceptions: Changes to Exception Macros in Version 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md). MFC does not directly support Windows NT structured exception handlers (SEH), as discussed in [Structured Exception Handling](/windows/win32/debug/structured-exception-handling).
+Seit Version 3.0 verwendet MFC C++-Ausnahmen, unterstützt jedoch weiterhin die älteren Ausnahmebehandlungsmakros, deren Form der von C++-Ausnahmen ähnelt. Obwohl diese Makros nicht für neue Programmierungen empfohlen werden, werden sie weiterhin zu Zwecken der Abwärtskompatibilität unterstützt. In Programmen, die bereits die Makros verwenden, können Sie C++-Ausnahmen ebenfalls problemlos verwenden. Während der Vorverarbeitung werden die Makros zu den Schlüsselwörtern für die Ausnahmebehandlung ausgewertet, die in der MSVC- C++ Implementierung C++ der Sprache ab der visuellen Version 2,0 definiert sind. Sie können vorhandene Ausnahmemakros beibehalten, während Sie beginnen, C++-Ausnahmen zu verwenden. Informationen zum Mischen von Makros und C++ zur Ausnahmebehandlung sowie zum Umrechnen des alten Codes für die Verwendung des neuen Mechanismus finden Sie in den Artikeln [Ausnahmen: C++ Verwenden von MFC-Makros und Ausnahmen](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) und [Ausnahmen: Umstellen von MFC-Ausnahme Makros](../mfc/exceptions-converting-from-mfc-exception-macros.md). Bei älteren MFC-Ausnahmemakros, sofern Sie diese noch verwenden, werden C++-Ausnahmeschlüsselwörter ausgewertet. Weitere Informationen finden [Sie unter Ausnahmen: Änderungen an Ausnahme Makros in Version 3,0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md). MFC unterstützt Windows NT-strukturierte Ausnahmehandler (SEH) nicht direkt, wie unter [strukturierte Ausnahmebehandlung](/windows/win32/debug/structured-exception-handling)erläutert.
 
-##  <a name="_core_further_reading_about_exceptions"></a> Further Reading About Exceptions
+##  <a name="_core_further_reading_about_exceptions"></a>Weitere Informationen zu Ausnahmen
 
-The following articles explain using the MFC library for exception handing:
+In den folgenden Artikeln wird die Verwendung der MFC-Bibliothek für die Ausnahme Übergabe erläutert:
 
 - [Ausnahmen: Abfangen und Löschen von Ausnahmen](../mfc/exceptions-catching-and-deleting-exceptions.md)
 
@@ -120,7 +120,7 @@ The following articles explain using the MFC library for exception handing:
 
 - [Ausnahmen: OLE-Ausnahmen](../mfc/exceptions-ole-exceptions.md)
 
-The following articles compare the MFC exception macros with the C++ exception keywords and explain how you can adapt your code:
+In den folgenden Artikeln werden die MFC-Ausnahme Makros C++ mit den Ausnahme Schlüsselwörtern verglichen und erläutert, wie Sie Ihren Code anpassen können:
 
 - [Ausnahmen: Änderungen für Ausnahmemakros in Version 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
 
@@ -130,5 +130,5 @@ The following articles compare the MFC exception macros with the C++ exception k
 
 ## <a name="see-also"></a>Siehe auch
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[How Do I: Create my Own Custom Exception Classes](https://go.microsoft.com/fwlink/p/?linkid=128045)
+[Moderne C++ bewährte Methoden für Ausnahmen und Fehlerbehandlung](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Gewusst wie: Erstellen von eigenen benutzerdefinierten Ausnahme Klassen](https://go.microsoft.com/fwlink/p/?linkid=128045)

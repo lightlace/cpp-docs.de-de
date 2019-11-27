@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4239
 ms.assetid: a23dc16a-649e-4870-9a24-275de1584fcd
-ms.openlocfilehash: 067d1aef41280f4d14fe799e4f4ee26a9f1b9f5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcb66fca7e5b8708171849f885518c15b8355ac4
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401019"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541735"
 ---
 # <a name="compiler-warning-level-4-c4239"></a>Compilerwarnung (Stufe 4) C4239
 
-nicht dem Standard entsprechende Erweiterung: 'token': Konvertierung von 'Type' zu 'Type'
+nicht dem Standard entsprechende Erweiterung verwendet: ' Token ': Konvertierung von ' type ' in ' type '
 
-Diese Konvertierung vom Typ ist nicht vom C++-Standard zulässig, aber es ist zulässig, hier als eine Erweiterung. Diese Warnung folgt immer mindestens eine Zeile der Erläuterung ein, die Language-Regel verletzt wird.
+Diese Typkonvertierung ist vom C++ Standard nicht zulässig, aber hier als Erweiterung zulässig. Auf diese Warnung folgt immer mindestens eine Erklärung, in der die Verletzung der Sprachregel beschrieben wird.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird C4239 generiert.
+Im folgenden Beispiel wird C4239 generiert.
 
-```
+```cpp
 // C4239.cpp
 // compile with: /W4 /c
 struct C {
@@ -39,11 +39,11 @@ void func(void) {
 
 ## <a name="example"></a>Beispiel
 
-Umwandlung von ganzzahligen Typen in Enumerationstypen ist streng nicht zulässig.
+Die Konvertierung eines ganzzahligen Typs in einen Aufzählungstyp ist nicht streng zulässig.
 
-Im folgende Beispiel wird C4239 generiert.
+Im folgenden Beispiel wird C4239 generiert.
 
-```
+```cpp
 // C4239b.cpp
 // compile with: /W4 /c
 enum E { value };

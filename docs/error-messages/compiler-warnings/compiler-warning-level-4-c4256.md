@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-ms.openlocfilehash: 3e8a3ab1b11c719730016e6a0cd248770cd89af8
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e087e3cd36ab85d6f3f6b5cfed1b55cac66ea142
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447773"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541698"
 ---
 # <a name="compiler-warning-level-4-c4256"></a>Compilerwarnung (Stufe 4) C4256
 
-"Function": Konstruktor für die Klasse mit virtuellen Basen besitzt "...". Aufrufe sind möglicherweise nicht mit älteren Versionen von Visual C++ kompatibel
+"Function": der Konstruktor für die Klasse mit virtuellen Basen weist "..." auf. Aufrufe sind möglicherweise nicht mit älteren Versionen von Visual kompatibelC++
 
-Mögliche Inkompatibilitäten.
+Mögliche Inkompatibilität.
 
-Betrachten Sie folgendes Codebeispiel. Wenn die Definition des Konstruktors S2::S2 (Int i,...) wurde mit einer Version von Microsoft kompiliert C++ Compiler vor Version 7, jedoch im folgenden Beispiel wird mithilfe der aktuellen Version kompiliert, den Aufruf des Konstruktors für S3 funktioniert nicht ordnungsgemäß aufgrund einer Änderung des besondere Schreibweisen-Aufrufkonvention. Wenn beide mit Visual C++ 6.0 kompiliert wurden, würde der Aufruf nicht ganz rechts, funktionieren nur, wenn keine Parameter für die Auslassungszeichen übergeben wurden.
+Betrachten Sie folgendes Codebeispiel: Wenn die Definition des Konstruktors S2:: S2 (int i,...) mit einer Version des Microsoft C++ -Compilers vor Version 7 kompiliert wurde, das folgende Beispiel jedoch mit der aktuellen Version kompiliert wurde, funktioniert der Aufruf des Konstruktors für S3 aufgrund einer speziellen Änderung der Aufruf Konvention nicht ordnungsgemäß. Wenn beide mit Visual C++ 6,0 kompiliert wurden, funktioniert der-Befehl nicht ganz richtig, es sei denn, es wurden keine Parameter für die Auslassungs Zeichen übermittelt.
 
-Um diese Warnung zu beheben,
+So beheben Sie diese Warnung
 
-1. Verwenden Sie nicht mit den Auslassungspunkten in einem Konstruktor.
+1. Verwenden Sie keine Ellipsen in einem Konstruktor.
 
-1. Stellen Sie sicher, dass alle Komponenten in ihrem Projekt, mit der aktuellen Version erstellt werden (einschließlich der Bibliotheken, die definieren, oder verweisen auf diese Klasse können), und deaktivieren Sie die Warnung mit dem [Warnung](../../preprocessor/warning.md) Pragma.
+1. Stellen Sie sicher, dass alle Komponenten in Ihrem Projekt mit der aktuellen Version (einschließlich aller Bibliotheken, die diese Klasse definieren oder referenzieren) erstellt werden, und deaktivieren Sie dann die Warnung mithilfe des [Warning](../../preprocessor/warning.md) -Pragmas.
 
-Im folgende Beispiel wird die C4256 generiert:
+Im folgenden Beispiel wird C4256 generiert:
 
-```
+```cpp
 // C4256.cpp
 // compile with: /W4
 // #pragma warning(disable : 4256)

@@ -13,34 +13,34 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398255"
 ---
-# <a name="fpo-32-bit-masm"></a>.FPO (32-bit MASM)
+# <a name="fpo-32-bit-masm"></a>. (32-Bit-MASM)
 
-The **.FPO** directive controls the emission of debug records to the .debug$F segment or section. (32-bit MASM only.)
+Die **. Die FPO** -Direktive steuert die Ausgabe von debugdatensätzen in das Debug $ F-Segment bzw. den Abschnitt. (nur 32-Bit-MASM.)
 
 ## <a name="syntax"></a>Syntax
 
-> **.FPO** (*cdwLocals*, *cdwParams*, *cbProlog*, *cbRegs*, *fUseBP*, *cbFrame*)
+> **. FPO** (*cdwlocals*, *cdwpara AMS*, *cbprolog*, *cbregs*, *fuseebp*, *cbframe*)
 
 ### <a name="parameters"></a>Parameter
 
-*cdwLocals*\
-Number of local variables, an unsigned 32 bit value.
+*cdwlocals* -\
+Anzahl der lokalen Variablen, ein 32-Bit-Wert ohne Vorzeichen.
 
-*cdwParams*\
-Size of the parameters in DWORDS, an unsigned 16 bit value.
+*cdwpara*\
+Die Größe der Parameter in DWords, ein 16-Bit-Wert ohne Vorzeichen.
 
-*cbProlog*\
-Number of bytes in the function prolog code, an unsigned 8 bit value.
+*cbprolog* -\
+Anzahl von Bytes im Prologcode der Funktion, ein 8-Bit-Wert ohne Vorzeichen.
 
-*cbRegs*\
-Number registers saved.
+*cbregs* -\
+Anzahl gespeicherter Nummern.
 
-*fUseBP*\
-Indicates whether the EBP register has been allocated. either 0 or 1.
+*fuberbp* -\
+Gibt an, ob das EBP-Register zugeordnet wurde. entweder 0 oder 1.
 
-*cbFrame*\
-Indicates the frame type.  See [FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) for more information.
+*cbframe* -\
+Gibt den Rahmentyp an.  Weitere Informationen finden Sie unter [FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) .
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](directives-reference.md)
+[Direktivenverweis](directives-reference.md)

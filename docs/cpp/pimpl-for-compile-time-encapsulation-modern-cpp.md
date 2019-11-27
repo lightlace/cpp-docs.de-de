@@ -12,19 +12,19 @@ ms.locfileid: "74245178"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>pimpl für Compilierungszeitkapselung (Modern C++)
 
-The *pimpl idiom* is a modern C++ technique to hide implementation, to minimize coupling, and to separate interfaces. Pimpl is short for "pointer to implementation." You may already be familiar with the concept but know it by other names like Cheshire Cat or Compiler Firewall idiom.
+Das *pimpl-Idiom* ist ein C++ modernes Verfahren zum Ausblenden der Implementierung, zum Minimieren der Kopplung und zum Trennen von Schnittstellen. Pimpl ist für "Zeiger auf Implementierung" kurz. Möglicherweise sind Sie bereits mit dem Konzept vertraut, aber Sie kennen es durch andere Namen wie z. b. Cheshire Cat oder compilerfirewall.
 
-## <a name="why-use-pimpl"></a>Why use pimpl?
+## <a name="why-use-pimpl"></a>Gründe für die Verwendung von pimpl
 
-Here's how the pimpl idiom can improve the software development lifecycle:
+Im folgenden wird erläutert, wie die pimpl-Sprache den Lebenszyklus der Softwareentwicklung verbessern kann:
 
-- Minimization of compilation dependencies.
+- Minimierung von Kompilierungs Abhängigkeiten.
 
-- Separation of interface and implementation.
+- Trennung von Schnittstelle und Implementierung.
 
-- Portability.
+- Verlangen.
 
-## <a name="pimpl-header"></a>Pimpl header
+## <a name="pimpl-header"></a>Pimpl-Header
 
 ```cpp
 // my_class.h
@@ -35,11 +35,11 @@ private:
 };
 ```
 
-The pimpl idiom avoids rebuild cascades and brittle object layouts. It's well suited for (transitively) popular types.
+Das pimpl-Idiom vermeidet das Neuerstellen von Kaskaden und spröden Objekt Layouts. Es eignet sich gut für (transitiv) beliebte Typen.
 
-## <a name="pimpl-implementation"></a>Pimpl implementation
+## <a name="pimpl-implementation"></a>Pimpl-Implementierung
 
-Define the `impl` class in the .cpp file.
+Definieren Sie die `impl`-Klasse in der CPP-Datei.
 
 ```cpp
 // my_class.cpp
@@ -55,10 +55,10 @@ my_class::my_class(): pimpl( new impl )
 
 ## <a name="best-practices"></a>Bewährte Methoden
 
-Consider whether to add support for non-throwing swap specialization.
+Stellen Sie sich vor, ob Sie die Unterstützung für die nicht ausgelöste swapspezialisierung
 
 ## <a name="see-also"></a>Siehe auch
 
-[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Willkommen zurück beiC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
 [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)

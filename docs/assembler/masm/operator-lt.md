@@ -17,12 +17,12 @@ ms.locfileid: "74396664"
 ---
 # <a name="operator-lt"></a>Operator LT
 
-Returns true (-1) if *expression1* is less than *expression2*, or returns false (0) if it is not.
+Gibt true (-1) zurück, wenn *expression1* kleiner als *expression2*ist, oder gibt false (0) zurück, wenn dies nicht der Fall ist.
 
 ## <a name="syntax"></a>Syntax
 
-> *expression1* **LT** *expression2*
+> *expression1* **lt** *expression2*
 
 ## <a name="see-also"></a>Siehe auch
 
-[Operators reference](operators-reference.md)
+[Operatorverweis](operators-reference.md)

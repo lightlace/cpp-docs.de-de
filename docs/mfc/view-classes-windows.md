@@ -49,7 +49,7 @@ Eine Formularansicht, die die Funktionalität der Webbrowser-HTML-Bearbeitungs P
 
 Steuerelement Ansichten zeigen ein Steuerelement als Ansicht an.
 
-[CCtrlView](../mfc/reference/cctrlview-class.md)<br/>
+[Cctrlview](../mfc/reference/cctrlview-class.md)<br/>
 Die Basisklasse für alle Sichten, die Windows-Steuerelementen zugeordnet sind. Die Sichten, die auf-Steuerelementen basieren, werden unten beschrieben.
 
 [CEditView](../mfc/reference/ceditview-class.md)<br/>

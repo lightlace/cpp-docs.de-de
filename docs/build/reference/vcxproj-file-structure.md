@@ -47,7 +47,7 @@ Wenn Sie eine VCXPROJ-Datei manuell bearbeiten, sollten Sie Folgendes beachten:
 
 Sie können die Inhalte einer VCXPROJ-Datei überprüfen, indem Sie einen Text- oder XML-Editor verwenden. Sie können sie in Visual Studio anzeigen, indem Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt klicken und anschließend **Projekt entladen** > **Foo.vcxproj bearbeiten** auswählen.
 
-Zunächst werden Sie feststellen, dass die Elemente auf oberster Ebene in einer bestimmten Reihenfolge angezeigt werden. Zum Beispiel:
+Zunächst werden Sie feststellen, dass die Elemente auf oberster Ebene in einer bestimmten Reihenfolge angezeigt werden. Beispiel:
 
 - Die meisten Eigenschaftengruppen und Elementdefinitionsgruppen werden nach dem Import für „Microsoft.Cpp.Default.props“ angezeigt.
 
@@ -213,7 +213,7 @@ Enthält Elementdefinitionen. Diese müssen die gleichen Bedingungsregeln wie di
 
 Enthält die Elemente (z.B. Quelldateien) des Projekts. Für Projektelemente werden keine Bedingungen unterstützt (d.h. für Elementtypen, die durch Regeldefinitionen als Projektelemente behandelt werden).
 
-Die Metadaten sollten Konfigurationsbedingungen für jede Konfiguration enthalten, auch wenn sie alle identisch sind. Zum Beispiel:
+Die Metadaten sollten Konfigurationsbedingungen für jede Konfiguration enthalten, auch wenn sie alle identisch sind. Beispiel:
 
 ```xml
 <ItemGroup>

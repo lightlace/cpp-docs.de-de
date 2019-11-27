@@ -1,5 +1,5 @@
 ---
-title: operator brackets
+title: Operator Klammern
 ms.date: 08/30/2018
 f1_keywords:
 - operator []
@@ -17,7 +17,7 @@ ms.locfileid: "74397085"
 ---
 # <a name="operator-"></a>operator \[\]
 
-Returns *expression1* plus \[*expression2*\].
+Gibt *expression1* Plus \[*expression2* -\]zurück.
 
 ## <a name="syntax"></a>Syntax
 

@@ -15,16 +15,16 @@ ms.locfileid: "74397399"
 ---
 # <a name="ife"></a>IFE
 
-Grants assembly if *expression* is false (0).
+Erteilt Assembly, wenn *Expression* false (0) ist.
 
 ## <a name="syntax"></a>Syntax
 
-> **IFE** *expression*
+> **IFE** - *Ausdruck*
 
 ## <a name="remarks"></a>Hinweise
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+Die gesamte [Syntax finden Sie](../../assembler/masm/if-masm.md) unter.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](directives-reference.md)
+[Direktivenverweis](directives-reference.md)

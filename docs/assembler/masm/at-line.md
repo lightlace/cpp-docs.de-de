@@ -13,14 +13,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398968"
 ---
-# <a name="line"></a>\@Line
+# <a name="line"></a>\@Zeile
 
-The source line number in the current file (numeric equate).
+Die Quell Zeilennummer in der aktuellen Datei (numeric equate).
 
 ## <a name="syntax"></a>Syntax
 
-> **\@Line**
+> **\@Zeile**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Symbols reference](symbols-reference.md)
+[Symbol Verweis](symbols-reference.md)

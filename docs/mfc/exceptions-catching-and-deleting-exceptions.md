@@ -18,38 +18,38 @@ ms.locfileid: "74246688"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Ausnahmen: Abfangen und Löschen von Ausnahmen
 
-The following instructions and examples show you how to catch and delete exceptions. For more information on the **try**, **catch**, and **throw** keywords, see [Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md).
+Die folgenden Anweisungen und Beispiele veranschaulichen, wie Sie Ausnahmen abfangen und löschen. Weitere Informationen zu den Schlüsselwörtern "Try", " **catch**" und " **throw** " finden **Sie**unter [ C++ moderne Best Practices für Ausnahmen und Fehlerbehandlung](../cpp/errors-and-exception-handling-modern-cpp.md).
 
-Your exception handlers must delete exception objects they handle, because failure to delete the exception causes a memory leak whenever that code catches an exception.
+Die Ausnahmehandler müssen Ausnahme Objekte löschen, die Sie behandeln, da ein Fehler beim Löschen der Ausnahme immer dann einen Speicherplatz verursacht, wenn der Code eine Ausnahme abfängt.
 
-Your **catch** block must delete an exception when:
+Der **catch** -Block muss eine Ausnahme löschen, wenn Folgendes erforderlich ist:
 
-- The **catch** block throws a new exception.
+- Der **catch** -Block löst eine neue Ausnahme aus.
 
-   Of course, you must not delete the exception if you throw the same exception again:
+   Natürlich dürfen Sie die Ausnahme nicht löschen, wenn Sie die gleiche Ausnahme erneut auslösen:
 
    [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
 
-- Execution returns from within the **catch** block.
+- Die Ausführung wird von innerhalb des **catch** -Blocks zurückgegeben.
 
 > [!NOTE]
->  When deleting a `CException`, use the `Delete` member function to delete the exception. Do not use the **delete** keyword, because it can fail if the exception is not on the heap.
+>  Verwenden Sie beim Löschen eines `CException`die `Delete` Member-Funktion, um die Ausnahme zu löschen. Verwenden Sie das Schlüsselwort **Delete** nicht, da es möglicherweise fehlschlägt, wenn sich die Ausnahme nicht auf dem Heap befindet.
 
-#### <a name="to-catch-and-delete-exceptions"></a>To catch and delete exceptions
+#### <a name="to-catch-and-delete-exceptions"></a>So fangen Sie Ausnahmen ab und löschen Sie
 
-1. Use the **try** keyword to set up a **try** block. Execute any program statements that might throw an exception within a **try** block.
+1. Verwenden Sie das **try** -Schlüsselwort, um einen **try** -Block einzurichten. Führen Sie alle Programm Anweisungen aus, die möglicherweise eine Ausnahme in einem **try** -Block auslösen.
 
-   Use the **catch** keyword to set up a **catch** block. Place exception-handling code in a **catch** block. The code in the **catch** block is executed only if the code within the **try** block throws an exception of the type specified in the **catch** statement.
+   Verwenden Sie das **catch** -Schlüsselwort, um einen **catch** -Block einzurichten. Platzieren Sie den Ausnahme Behandlungs Code in einem **catch** -Block. Der Code im **catch** -Block wird nur ausgeführt, wenn der Code im **try** -Block eine Ausnahme des Typs auslöst, der in der **catch** -Anweisung angegeben ist.
 
-   The following skeleton shows how **try** and **catch** blocks are normally arranged:
+   Das folgende Gerüst zeigt, wie **try** -und **catch** -Blöcke normalerweise angeordnet werden:
 
    [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
 
-   When an exception is thrown, control passes to the first **catch** block whose exception-declaration matches the type of the exception. You can selectively handle different types of exceptions with sequential **catch** blocks as listed below:
+   Wenn eine Ausnahme ausgelöst wird, wird die Steuerung an den ersten **catch** -Block weitergeleitet, dessen Exception-Declaration mit dem Typ der Ausnahme übereinstimmt. Sie können verschiedene Typen von Ausnahmen mit sequenziellen **catch** -Blöcken selektiv verarbeiten, wie unten aufgeführt:
 
    [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
-For more information, see [Exceptions: Converting from MFC Exception Macros](../mfc/exceptions-converting-from-mfc-exception-macros.md).
+Weitere Informationen finden Sie unter [Ausnahmen: Umstellen von MFC-Ausnahme Makros](../mfc/exceptions-converting-from-mfc-exception-macros.md).
 
 ## <a name="see-also"></a>Siehe auch
 

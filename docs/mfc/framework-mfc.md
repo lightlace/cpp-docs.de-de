@@ -35,7 +35,7 @@ Kapselung bedeutet, C++ dass die-Klasse `CWnd`z. b. eine Member-Variable vom Typ
 
 [Assistenten und Ressourcen-Editoren](../mfc/wizards-and-the-resource-editors.md)
 
-## <a name="in-related-sections"></a>Verwandte Abschnitte
+## <a name="in-related-sections"></a>In verwandten Abschnitten
 
 [Erstellen im Framework](../mfc/building-on-the-framework.md)
 
@@ -43,7 +43,7 @@ Kapselung bedeutet, C++ dass die-Klasse `CWnd`z. b. eine Member-Variable vom Typ
 
 [CWinApp: Die Anwendungsklasse](../mfc/cwinapp-the-application-class.md)
 
-[Dokumentvorlagen und der Erstellungsvorgang für Dokumente und Ansichten](../mfc/document-templates-and-the-document-view-creation-process.md)
+[Dokumentvorlagen und der Erstellungs Vorgang für Dokumente/Sichten](../mfc/document-templates-and-the-document-view-creation-process.md)
 
 [Meldungsbehandlung und Zuordnung](../mfc/message-handling-and-mapping.md)
 

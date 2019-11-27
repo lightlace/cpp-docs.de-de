@@ -15,7 +15,7 @@ ms.locfileid: "74397874"
 ---
 # <a name="tfcond"></a>.TFCOND
 
-Toggles listing of false conditional blocks.
+Schaltet die Auflistung von falschen bedingten Blöcken ein/aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -23,4 +23,4 @@ Toggles listing of false conditional blocks.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](directives-reference.md)
+[Direktivenverweis](directives-reference.md)

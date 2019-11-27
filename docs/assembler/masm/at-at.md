@@ -15,7 +15,7 @@ ms.locfileid: "74399249"
 ---
 # <a name=""></a>\@\@:
 
-Defines a code label recognizable only between *label1* and *label2*, where *label1* is either start of code or the previous `@@:` label, and *label2* is either end of code or the next `@@:` label. See [\@B](../../assembler/masm/at-b.md) and [\@F](../../assembler/masm/at-f.md).
+Definiert eine Code Bezeichnung, die nur zwischen *Label1* und *Label2*erkennbar ist, wobei *Label1* entweder der Code Anfang oder der vorherige `@@:` Bezeichnung ist und *Label2* entweder das Ende des Codes oder die nächste `@@:` Bezeichnung ist. Weitere Informationen finden Sie unter [\@B](../../assembler/masm/at-b.md) und [\@F](../../assembler/masm/at-f.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -23,4 +23,4 @@ Defines a code label recognizable only between *label1* and *label2*, where *lab
 
 ## <a name="see-also"></a>Siehe auch
 
-[Symbols reference](symbols-reference.md)
+[Symbol Verweis](symbols-reference.md)

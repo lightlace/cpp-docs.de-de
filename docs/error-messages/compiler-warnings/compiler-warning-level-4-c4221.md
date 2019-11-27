@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4221
 ms.assetid: 8532bd68-54dc-4526-8597-f61dcb0a0129
-ms.openlocfilehash: f552a5d76d1a778cdf72cbe079138f609350ffb1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa87c240472df2926753781f0f14cbd69752de00
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401097"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541926"
 ---
 # <a name="compiler-warning-level-4-c4221"></a>Compilerwarnung (Stufe 4) C4221
 
-nicht dem Standard entsprechende Erweiterung: "Bezeichner": kann nicht mit der Adresse der automatischen Variablen initialisiert werden
+nicht dem Standard entsprechende Erweiterung: "Bezeichner": kann nicht mit der Adresse der automatischen Variablen initialisiert werden.
 
-Sie können mit den Standard-Microsoft-Erweiterungen (/ Ze), einen aggregierten Typ initialisieren (**Array**, `struct`, oder **Union**) mit der Adresse einer Variablen (automatisch).
+Mit den standardmäßigen Microsoft-Erweiterungen (/Ze) können Sie einen aggregierten Typ (**Array**, `struct`oder **Union**) mit der Adresse einer lokalen (automatischen) Variablen initialisieren.
 
 ## <a name="example"></a>Beispiel
 
-```
+```c
 // C4221.c
 // compile with: /W4
 struct S
@@ -40,4 +40,4 @@ int main()
 }
 ```
 
-Diese Initialisierungen sind ungültig, ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Diese Initialisierungen sind unter ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) ungültig.

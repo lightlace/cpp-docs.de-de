@@ -46,12 +46,12 @@ Index Objekte und Index Feld Objekte werden nicht durch eine MFC-Klasse dargeste
 
 Ruft die `GetIndexInfo` Member-Funktion des enthaltenden TableDef-oder Recordset-Objekts auf, in dessen Index Auflistung das Index Objekt gespeichert ist, an dem Sie interessiert sind. Greifen Sie dann auf den `m_pFieldInfos` Member des [cdaoindexinfo](../../mfc/reference/cdaoindexinfo-structure.md) -Objekts zu. Die Länge des `m_pFieldInfos` Arrays wird in `m_nFields`gespeichert. `CDaoIndexFieldInfo` definiert auch eine `Dump` Member-Funktion in Debugbuilds. Sie können `Dump` verwenden, um den Inhalt eines `CDaoIndexFieldInfo` Objekts zu speichern.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
 **Header:** afxdao.h
 
 ## <a name="see-also"></a>Siehe auch
 
 [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
-[CDaoTableDef::GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)<br/>
-[CDaoRecordset::GetIndexInfo](../../mfc/reference/cdaorecordset-class.md#getindexinfo)
+[CDaoTableDef:: getIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)<br/>
+[CDaoRecordset:: getIndexInfo](../../mfc/reference/cdaorecordset-class.md#getindexinfo)

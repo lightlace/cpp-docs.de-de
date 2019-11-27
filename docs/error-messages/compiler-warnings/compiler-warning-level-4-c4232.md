@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4232
 ms.assetid: f92028a5-4ddd-43c1-97f5-4f724e5e14af
-ms.openlocfilehash: dee087b73bf032a68daf0527ea584efcc7579361
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d328b1b5e4c3875f29b48eab77cd6f6d49d447f
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401084"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541895"
 ---
 # <a name="compiler-warning-level-4-c4232"></a>Compilerwarnung (Stufe 4) C4232
 
-nicht dem Standard entsprechende Erweiterung: "Bezeichner": Adresse von Dllimport 'Dllimport' ist nicht statisch, Identität nicht garantiert.
+nicht dem Standard entsprechende Erweiterung: "Bezeichner": die Adresse von DllImport "DllImport" ist nicht statisch, Identität nicht garantiert.
 
-Sie können Microsoft-Erweiterungen (/ Ze), einen nicht statischen Wert geben, wie Sie mit der Adresse einer Funktion deklariert die **Dllimport** Modifizierer. ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)), dies verursacht einen Fehler.
+Unter Microsoft Extensions (/Ze) können Sie einen nicht statischen Wert als Adresse einer Funktion angeben, die mit dem **DllImport** -Modifizierer deklariert wird. Unter ANSI Compatibility ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) verursacht dies einen Fehler.
 
-Im folgende Beispiel wird die C4232 generiert:
+Im folgenden Beispiel wird C4232 generiert:
 
-```
+```c
 // C4232.c
 // compile with: /W4 /Ze /c
 int __declspec(dllimport) f();

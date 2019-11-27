@@ -15,12 +15,12 @@ ms.locfileid: "74393704"
 ---
 # <a name="sizestr"></a>SIZESTR
 
-Finds the size of a text item.
+Sucht die Größe eines Text Elements.
 
 ## <a name="syntax"></a>Syntax
 
-> *name* **SIZESTR** *textitem*
+> *Name* **sizestr** *Textitem*
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](directives-reference.md)
+[Direktivenverweis](directives-reference.md)

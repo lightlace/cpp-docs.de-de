@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4619
+title: Compilerwarnung (Stufe 3) C4619
 ms.date: 11/04/2016
 f1_keywords:
 - C4619
@@ -13,15 +13,15 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189166"
 ---
-# <a name="compiler-warning-level-3-c4619"></a>Compiler Warning (level 3) C4619
+# <a name="compiler-warning-level-3-c4619"></a>Compilerwarnung (Stufe 3) C4619
 
-\#pragma warning : there is no warning number 'number'
+\#pragma-Warnung: Es ist keine Warnungs Nummer ' Number ' vorhanden.
 
-An attempt was made to disable a warning that does not exist.
+Es wurde versucht, eine Warnung zu deaktivieren, die nicht vorhanden ist.
 
 Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-The following sample generates C4619:
+Im folgenden Beispiel wird C4619 generiert:
 
 ```cpp
 // C4619.cpp

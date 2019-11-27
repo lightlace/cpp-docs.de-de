@@ -59,7 +59,7 @@ Der Einsatz von IT-Instruktionen in Thumb-2-Code ist mit Ausnahme der folgenden 
    |LDR, LDR[S]B, LDR[S]H|Aus Arbeitsspeicher laden|Jedoch keine LDR-Literalformen|
    |STR, STRB, STRH|Im Arbeitsspeicher speichern||
    |ADD, ADC, RSB, SBC, SUB|Addieren oder subtrahieren|Jedoch nicht ADD/SUB SP, SP, imm7-Formen<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
-   |CMP, CMN|Vergleichen|Rm != PC, Rn != PC|
+   |CMP, CMN|Compare|Rm != PC, Rn != PC|
    |MUL|Multiplizieren||
    |ASR, LSL, LSR, ROR|Bit-Verschiebung||
    |AND, BIC, EOR, ORR, TST|Bitweise arithmetisch||
@@ -75,7 +75,7 @@ Die Nutzung von Divisionsinstruktionen für Ganzzahlen SDIV und UDIV wird vollst
 
 Der ARM-Prozessor unterstützt 16 Ganzzahlregister:
 
-|Register|Volatil?|Rolle|
+|Registrieren|Volatil?|Rolle|
 |--------------|---------------|----------|
 |r0|Volatil|Parameter, Ergebnis, Scratch-Register 1|
 |r1|Volatil|Parameter, Ergebnis, Scratch-Register 2|
@@ -121,7 +121,7 @@ Die nächste Tabelle zeigt die Gleitkommastatus- und Steuerungsregister (FPSCR)-
 |31-28|NZCV|Volatil|Status-Flags|
 |27|QC|Volatil|Kumulative Sättigung|
 |26|AHP|Nicht volatil|Alternative-Half-Precision-Steuerung|
-|25|DN|Nicht volatil|Standardmäßige NaN-Modussteuerung|
+|25|Definierter Name|Nicht volatil|Standardmäßige NaN-Modussteuerung|
 |24|FZ|Nicht volatil|Flush-to-Zero-Modussteuerung|
 |23-22|RMode|Nicht volatil|Rounding-Modussteuerung|
 |21-20|Stride|Nicht volatil|Vektorsprung, muss immer 0 sein|

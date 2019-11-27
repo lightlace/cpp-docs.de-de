@@ -17,12 +17,12 @@ ms.locfileid: "74396966"
 ---
 # <a name="operator-ge"></a>Operator GE
 
-Returns true (-1) if *expression1* is greater than or equal to *expression2*, or returns false (0) if it is not.
+Gibt true (-1) zurück, wenn *expression1* größer als oder gleich *expression2*ist, oder gibt false (0) zurück, wenn dies nicht der Fall ist.
 
 ## <a name="syntax"></a>Syntax
 
-> *expression1* **GE** *expression2*
+> *expression1* **ge** *expression2*
 
 ## <a name="see-also"></a>Siehe auch
 
-[Operators reference](operators-reference.md)
+[Operatorverweis](operators-reference.md)
