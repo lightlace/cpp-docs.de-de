@@ -13,14 +13,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399161"
 ---
-# <a name="curseg"></a>\@CurSeg
+# <a name="curseg"></a>\@Cursor
 
-The name of the current segment (text macro).
+Der Name des aktuellen Segments (Text Makro).
 
 ## <a name="syntax"></a>Syntax
 
-> **\@CurSeg**
+> **\@Cursor**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Symbols reference](symbols-reference.md)
+[Symbol Verweis](symbols-reference.md)

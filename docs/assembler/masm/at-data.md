@@ -13,14 +13,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399192"
 ---
-# <a name="data"></a>\@data
+# <a name="data"></a>\@Daten
 
-The name of the default data group. Evaluates to DGROUP for all models except **FLAT**. Evaluates to **FLAT** under the **FLAT** memory model (text macro).
+Der Name der Standarddaten Gruppe. Wertet für alle Modelle mit Ausnahme von **Flat**eine DGROUP aus. Wird im **flatmemory** -Modell als **flach** ausgewertet (Text Makro).
 
 ## <a name="syntax"></a>Syntax
 
-> **\@data**
+> **\@Daten**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Symbols reference](symbols-reference.md)
+[Symbol Verweis](symbols-reference.md)

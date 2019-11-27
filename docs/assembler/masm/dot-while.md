@@ -13,16 +13,16 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397838"
 ---
-# <a name="while-32-bit-masm"></a>.WHILE (32-bit MASM)
+# <a name="while-32-bit-masm"></a>. WHILE (32-Bit-MASM)
 
-Generates code that executes the block of *statements* while *condition* remains true. (32-bit MASM only.)
+Generiert Code, der den Anweisungsblock ausführt *, während die* *Bedingung* "true" ist. (nur 32-Bit-MASM.)
 
 ## <a name="syntax"></a>Syntax
 
-> **.WHILE** *condition*\
-> *statements*\
+> **. WHILE** *-\*
+> *Anweisungen*\
 > **.ENDW**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](directives-reference.md)
+[Direktivenverweis](directives-reference.md)

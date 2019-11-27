@@ -30,43 +30,43 @@ auto declarator initializer;
 
 ## <a name="remarks"></a>Hinweise
 
-Die **auto** -Schlüsselwort weist den Compiler an den Initialisierungsausdruck einer deklarierten Variable oder einen lambdaausdrucksparameter zu verwenden, um den Typ herzuleiten.
+Das **Auto** -Schlüsselwort weist den Compiler an, den Initialisierungs Ausdruck einer deklarierten Variable oder eines Lambda-Ausdrucks Parameters zu verwenden, um den Typ abzuleiten.
 
-Wir empfehlen die Verwendung des **auto** Schlüsselwort für die meisten Situationen – es sei denn, Sie möchten wirklich eine Konvertierung vornehmen, da diese Vorteile bietet:
+Es wird empfohlen, das Schlüsselwort " **Auto** " für die meisten Situationen zu verwenden – es sei denn, Sie möchten eine Konvertierung –, weil es diese Vorteile bietet:
 
-- **Stabilität:** Wenn der Typ des Ausdrucks geändert wird (dies schließt auch die Änderung eines Funktionsrückgabetyps ein), funktioniert der Vorgang weiterhin.
+- **Stabilität:** , Wenn der Typ des Ausdrucks geändert wird – dies schließt ein, wenn ein Funktions Rückgabetyp geändert wird – er funktioniert einfach.
 
-- **Leistung:** Sie haben die Sicherheit, dass keine Konvertierung durchgeführt wird.
+- **Leistung:** Sie sind sicher, dass keine Konvertierung erfolgt.
 
 - **Benutzerfreundlichkeit:** Sie müssen sich keine Gedanken über Rechtschreib Probleme mit Typnamen und Typos machen.
 
 - **Effizienz:** Ihre Codierung kann effizienter sein.
 
-Fälle von Konvertierungen in denen Sie möglicherweise **auto** nicht verwenden möchten:
+Konvertierungs Fälle, in denen Sie möglicherweise nicht **automatisch**verwenden möchten:
 
 - Wenn Sie einen ganz bestimmten Typ benötigen, und nichts anderes infrage kommt.
 
 - Hilfstypen für Ausdrucks Vorlagen – z. b. `(valarray+valarray)`.
 
-Das **auto** -Schlüsselwort verwenden sie anstelle eines Typs zum Deklarieren einer Variablen, und für einen Initialisierungsausdruck. Darüber hinaus können Sie das **auto** -Schlüsselwort mithilfe von Bezeichnern und Deklaratoren wie z. B. **const**, **flüchtige**, Zeiger (`*`), Referenz (`&`), und Rvalue-Verweis (`&&`) verwenden. Der Compiler wertet den Initialisierungsausdruck aus und verwendet dann diese Informationen, um den Typ der Variable herzuleiten.
+Um das **Auto** -Schlüsselwort zu verwenden, verwenden Sie es anstelle eines Typs, um eine Variable zu deklarieren, und geben Sie einen Initialisierungs Ausdruck an. Außerdem können Sie das Schlüsselwort " **Auto** " mithilfe von Bezeichnern und Deklaratoren wie " **Konstanten**", " **volatile**", "Zeiger (`*`)", "Verweis (`&`)" und "rvalue reference" (`&&`) ändern. Der Compiler wertet den Initialisierungsausdruck aus und verwendet dann diese Informationen, um den Typ der Variable herzuleiten.
 
-Der Initialisierungs Ausdruck kann eine Zuweisung (Gleichheitszeichen Syntax), eine direkte Initialisierung (Funktionsformat Syntax), ein [Operator new](new-operator-cpp.md) -Ausdruck oder der Initialisierungs Ausdruck sein, der für den Parameter " *for-Range-Declaration* " in einer [Bereichs basierten for-C++Anweisung ()](../cpp/range-based-for-statement-cpp.md) -Anweisung ist. Weitere Informationen finden Sie unter [Initialisierer](../cpp/initializers.md) und in den Codebeispielen, die später in diesem Dokument aufgeführt sind.
+Der Initialisierungs Ausdruck kann eine Zuweisung (Gleichheitszeichen Syntax), eine direkte Initialisierung (Funktionsformat Syntax), ein [Operator new](new-operator-cpp.md) -Ausdruck oder der Initialisierungs Ausdruck sein, der für den Parameter " *for-Range-Declaration* " in einer [Bereichs basierten for-C++Anweisung ()](../cpp/range-based-for-statement-cpp.md) -Anweisung ist. Weitere Informationen finden Sie unter [Initialisierer](../cpp/initializers.md) und in den Codebeispielen weiter unten in diesem Dokument.
 
-Die **auto** -Schlüsselwort ist ein Platzhalter für einen Typ, aber es ist nicht selbst ein Typ. Daher kann das **Auto** -Schlüsselwort nicht in Umwandlungen oder Operatoren wie [sizeof](../cpp/sizeof-operator.md) und ( C++for/CLI) [typeid](../extensions/typeid-cpp-component-extensions.md)verwendet werden.
+Das Schlüsselwort " **Auto** " ist ein Platzhalter für einen Typ, aber es ist nicht selbst ein Typ. Daher kann das **Auto** -Schlüsselwort nicht in Umwandlungen oder Operatoren wie [sizeof](../cpp/sizeof-operator.md) und ( C++for/CLI) [typeid](../extensions/typeid-cpp-component-extensions.md)verwendet werden.
 
 ## <a name="usefulness"></a>Nützlichkeit
 
-Das **auto** Schlüsselwort ist eine einfache Möglichkeit zum Deklarieren einer Variablen, die einen komplizierten Typ aufweist. Beispielsweise können Sie **auto** zum Deklarieren einer Variablen verwenden, welcher einen Initialisierungsausdruck, Vorlagen, Zeiger auf Funktionen oder Zeiger auf Member umfasst.
+Das Schlüsselwort " **Auto** " ist eine einfache Möglichkeit zum Deklarieren einer Variablen, die einen komplizierten Typ aufweist. Beispielsweise können Sie " **Auto** " verwenden, um eine Variable zu deklarieren, bei der der Initialisierungs Ausdruck Vorlagen, Zeiger auf Funktionen oder Zeiger auf Member umfasst.
 
-Sie können auch **auto** zum deklarieren und initialisieren einer Variable mit einem Lambda-Ausdruck verwenden. Sie können den Typ der Variable nicht selbst deklarieren, da der Typ eines Lambdaausdrucks nur dem Compiler bekannt ist. Weitere Informationen finden Sie unter [Beispiele für Lambda-Ausdrücke](../cpp/examples-of-lambda-expressions.md).
+Sie können auch " **Auto** " verwenden, um eine Variable in einem Lambda-Ausdruck zu deklarieren und zu initialisieren. Sie können den Typ der Variable nicht selbst deklarieren, da der Typ eines Lambdaausdrucks nur dem Compiler bekannt ist. Weitere Informationen finden Sie unter [Beispiele für Lambda-Ausdrücke](../cpp/examples-of-lambda-expressions.md).
 
 ## <a name="trailing-return-types"></a>Nachstehende Rückgabetypen
 
-Sie können **auto**zusammen mit dem **"decltype"** Typspezifizierer verwenden, um Hilfe Vorlagenbibliotheken zu schreiben. Verwendung **auto** und **"decltype"** um eine Vorlagenfunktion deklarieren, deren Rückgabetyp Typ hängt von den Typen seiner Vorlagenargumente. Oder verwenden Sie **auto** und **"decltype"** um eine Vorlagenfunktion zu deklarieren, die einen Aufruf einer anderen Funktion umschließt und gibt dann zurück, was der Rückgabetyp dieser anderen Funktion ist. Weitere Informationen finden Sie unter [decltype](../cpp/decltype-cpp.md).
+Sie können **Auto**und den **decltype** -Typspezifizierer verwenden, um Vorlagen Bibliotheken zu schreiben. Verwenden Sie **Auto** und **decltype** , um eine Vorlagen Funktion zu deklarieren, deren Rückgabetyp von den Typen seiner Vorlagen Argumente abhängt. Oder verwenden Sie **Auto** und **decltype** , um eine Vorlagen Funktion zu deklarieren, die einen Rückruf einer anderen Funktion umschließt und anschließend den Rückgabetyp dieser anderen Funktion zurückgibt. Weitere Informationen finden Sie unter [decltype](../cpp/decltype-cpp.md).
 
 ## <a name="references-and-cv-qualifiers"></a>Verweise und CV-Qualifizierer
 
-Beachten Sie, dass die Verwendung **auto** Verweise, const-Qualifizierer und flüchtige Qualifizierer löscht. Betrachten Sie das folgende Beispiel:
+Beachten Sie, dass mit **Auto** Drop Verweise, Konstanten Qualifizierern und volatile-Qualifizierer verwendet werden. Betrachten Sie das folgende Beispiel:
 
 ```cpp
 // cl.exe /analyze /EHsc /W4
@@ -88,7 +88,7 @@ int main( )
 }
 ```
 
-Im vorherigen Beispiel ist der MyAuto eine ganze Zahl, ein Int-Verweis, damit erfolgt die Ausgabe `11 11`, nicht `11 12` wie es der Fall wäre, wenn der Verweis-Qualifizierer nicht wäre, indem **auto** abgelegt wurde.
+Im vorherigen Beispiel ist myauto ein int-und kein int-Verweis, sodass die Ausgabe `11 11`ist, nicht `11 12` wie es der Fall wäre, wenn der Verweis Qualifizierer nicht von **Auto**gelöscht wurde.
 
 ## <a name="type-deduction-with-braced-initializers-c14"></a>Typableitung mit geschweizten Initialisierern (c++ 14)
 
@@ -121,7 +121,7 @@ int main()
 
 ## <a name="restrictions-and-error-messages"></a>Beschränkungen und Fehlermeldungen
 
-Die folgende Tabelle enthält die Einschränkungen für die Verwendung des **autom** -Schlüsselwort und die entsprechende diagnosefehlermeldung, die der Compiler gibt.
+In der folgenden Tabelle sind die Einschränkungen für die Verwendung des Schlüssel Worts " **Auto** " und die entsprechende Diagnose Fehlermeldung aufgeführt, die der Compiler ausgibt.
 
 |Fehlernummer|Beschreibung|
 |------------------|-----------------|
@@ -137,7 +137,7 @@ Die folgende Tabelle enthält die Einschränkungen für die Verwendung des **aut
 
 ## <a name="examples"></a>Beispiele
 
-Die Codefragmente veranschaulichen einige der Methoden in der das **auto** -Schlüsselwort verwendet werden kann.
+Diese Code Fragmente veranschaulichen einige der Methoden, mit denen das Schlüsselwort " **Auto** " verwendet werden kann.
 
 Die folgenden Deklarationen sind gleichwertig. In der ersten Anweisung ist die Variable `j` als Typ " **int**" deklariert. In der zweiten Anweisung wird die Variable `k` in den Typ " **int** " abgeleitet, da der Initialisierungs Ausdruck (0) eine ganze Zahl ist.
 
@@ -146,14 +146,14 @@ int j = 0;  // Variable j is explicitly type int.
 auto k = 0; // Variable k is implicitly type int because 0 is an integer.
 ```
 
-Die folgenden Deklarationen sind gleichwertig, die zweite Deklaration ist jedoch einfacher als die erste. Einer der überzeugendsten Gründe für die Verwendung des **auto** -Schlüsselworts ist die Einfachheit.
+Die folgenden Deklarationen sind gleichwertig, die zweite Deklaration ist jedoch einfacher als die erste. Einer der überzeugendsten Gründe für die Verwendung des Schlüssel Worts " **Auto** " ist die Einfachheit.
 
 ```cpp
 map<int,list<string>>::iterator i = m.begin();
 auto i = m.begin();
 ```
 
-Das folgende Codefragment deklariert den Typ der Variablen `iter` und `elem` bei der **for** und **for** Schleifen starten.
+Das folgende Code Fragment deklariert den Typ der Variablen `iter` und `elem`, wenn die **for** -und Range **for** -Schleifen gestartet werden.
 
 ```cpp
 // cl /EHsc /nologo /W4
@@ -181,7 +181,7 @@ int main()
 }
 ```
 
-Das folgende Codefragment verwendet den **new** Operator und die Zeigerdeklaration Deklaration Zeiger deklariert werden.
+Das folgende Code Fragment verwendet den **New** -Operator und die Zeiger Deklaration, um Zeiger zu deklarieren.
 
 ```cpp
 double x = 12.34;
@@ -224,7 +224,7 @@ int main()
 [Auto-Schlüsselwort](../cpp/auto-keyword.md)<br/>
 [Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
 [/Zc:auto (Variablentyp ableiten)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
-[sizeof-Operator](../cpp/sizeof-operator.md)<br/>
+[sizeof Operator](../cpp/sizeof-operator.md)<br/>
 [typeid](../extensions/typeid-cpp-component-extensions.md)<br/>
 [operator new](new-operator-cpp.md)<br/>
 [Deklarationen und Definitionen](declarations-and-definitions-cpp.md)<br/>

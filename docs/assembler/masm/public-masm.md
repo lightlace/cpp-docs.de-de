@@ -15,12 +15,12 @@ ms.locfileid: "74394736"
 ---
 # <a name="public-masm"></a>PUBLIC (MASM)
 
-Makes each variable, label, or absolute symbol specified as *name* available to all other modules in the program.
+Legt fest, dass jede Variable, Bezeichnung oder dieses absolute Symbol als *Name* für alle anderen Module im Programm verfügbar ist.
 
 ## <a name="syntax"></a>Syntax
 
-> **PUBLIC** ⟦language-type⟧ *name* ⟦ __,__ ⟦language-type⟧ *name* ...⟧
+> **Public** ⟦ Language-Type ⟧ *Name* ⟦ __,__ ⟦ Language-Type ⟧ *Name* ... ⟧
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Direktivenverweis](../../assembler/masm/directives-reference.md)

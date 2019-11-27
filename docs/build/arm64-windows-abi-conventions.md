@@ -51,7 +51,7 @@ Allerdings muss der Zugriff auf den nicht zwischengespeicherten (Geräte-) Arbei
 
 Standardlayoutausrichtung für lokale Variablen:
 
-| Größe in Bytes | Ausrichtung in Bytes |
+| Größe (Bytes) | Ausrichtung in Bytes |
 | - | - |
 | 1 | 1 |
 | 2 | 2 |
@@ -60,7 +60,7 @@ Standardlayoutausrichtung für lokale Variablen:
 
 Standardlayoutausrichtung für Globals und Statics:
 
-| Größe in Bytes | Ausrichtung in Bytes |
+| Größe (Bytes) | Ausrichtung in Bytes |
 | - | - |
 | 1 | 1 |
 | 2 - 7 | 4 |
@@ -71,7 +71,7 @@ Standardlayoutausrichtung für Globals und Statics:
 
 Die AArch64-Architektur unterstützt 32 ganzzahlige Register:
 
-| Register | Volatil? | Rolle |
+| Registrieren | Volatil? | Rolle |
 | - | - | - |
 | x0 | Volatil | Parameter/Scratch-Register 1, Ergebnisregister |
 | x1-x7 | Volatil | Parameter/Scratch-Register 2-8 |
@@ -94,7 +94,7 @@ Der Frame Zeiger (x29) ist erforderlich, um die Kompatibilität mit der schnelle
 
 Die AArch64-Architektur unterstützt auch 32-Gleit Komma-/SIMD-Register, die unten zusammengefasst sind:
 
-| Register | Volatil? | Rolle |
+| Registrieren | Volatil? | Rolle |
 | - | - | - |
 | v0 | Volatil | Parameter/Scratch-Register 1, Ergebnisregister |
 | v1-v7 | Volatil | Parameter/Scratch-Register 2-8 |
@@ -108,7 +108,7 @@ Für das Gleit Komma-Steuerelement Register (fpcr) gelten bestimmte Anforderunge
 | Bits | Bedeutung | Volatil? | Rolle |
 | - | - | - | - |
 | 26 | AHP | Nicht flüchtig | Alternatives Steuerelement mit halber Genauigkeit. |
-| 25 | DN | Nicht flüchtig | Standard-Nan-Modus-Steuerelement |
+| 25 | Definierter Name | Nicht flüchtig | Standard-Nan-Modus-Steuerelement |
 | 24 | FZ | Nicht volatil | Steuerelement für die Leerung im NULL-Modus. |
 | 23-22 | RMode | Nicht volatil | Rundungs Modus-Steuerelement. |
 | 15, 12-8 | IDE/IXE/usw. | Nicht flüchtig | Ausnahme Trap-enable Bits, muss immer 0 sein. |
@@ -117,7 +117,7 @@ Für das Gleit Komma-Steuerelement Register (fpcr) gelten bestimmte Anforderunge
 
 Wie AArch32 stellt die AArch64-Spezifikation drei vom System gesteuerte "Thread-ID"-Register bereit:
 
-| Register | Rolle |
+| Registrieren | Rolle |
 | - | - |
 | TPIDR_EL0 | Reserviert. |
 | TPIDRRO_EL0 | Enthält eine CPU-Nummer für den aktuellen Prozessor. |

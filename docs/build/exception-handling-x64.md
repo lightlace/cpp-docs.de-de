@@ -45,14 +45,14 @@ Die Entladedaten-Informationsstruktur wird verwendet, um die Auswirkungen einer 
 |Ubyte: 4|Frame Register|
 |Ubyte: 4|Frame Register Offset (skaliert)|
 |Ushort-\* n|Entladungs Code Array|
-|-Variable|Kann entweder vom folgenden Format (1) oder (2) sein.|
+|variable|Kann entweder vom folgenden Format (1) oder (2) sein.|
 
 (1) Ausnahme Handler
 
 |||
 |-|-|
 |ULONG|Adresse des Ausnahme Handlers|
-|-Variable|Sprachspezifische Handlerdaten (optional)|
+|variable|Sprachspezifische Handlerdaten (optional)|
 
 (2) verkettete Entlade Informationen
 
@@ -400,7 +400,7 @@ Um die Verwendung der [unformatierten Pseudo Vorgänge](#raw-pseudo-operations)z
 |push_reg *reg*|Überträgt eine nicht flüchtige Register- *reg* auf dem Stapel und gibt die entsprechenden Entlade Informationen aus. (. pushreg reg)|
 |rex_push_reg *reg*|Speichert ein nicht flüchtiges Register im Stapel mithilfe eines 2-Byte-Pushvorgangs und gibt die entsprechenden Entlade Informationen (. pushreg reg) aus.  Verwenden Sie dieses Makro, wenn der Push die erste Anweisung in der Funktion ist, um sicherzustellen, dass die Funktion Hot-patchfähig ist.|
 |save_xmm128 *reg*, *Loc*|Speichert ein nicht flüchtiges XMM-Registrierungs- *reg* auf dem Stapel bei RSP Offset *Loc*und gibt die entsprechenden Entlade Informationen aus (. savexmm128 reg, Loc).|
-|set_frame *reg*, *offset*|Legt die Rahmen Register- *reg* auf den RSP +- *Offset* (unter Verwendung eines `mov`oder eines `lea`) fest und gibt die entsprechenden Entlade Informationen aus (. set_frame reg, Offset).|
+|set_frame *reg*, *Offset*|Legt die Rahmen Register- *reg* auf den RSP +- *Offset* (unter Verwendung eines `mov`oder eines `lea`) fest und gibt die entsprechenden Entlade Informationen aus (. set_frame reg, Offset).|
 |push_eflags|Überträgt die EFLAGS mit einer `pushfq` Anweisung und gibt die entsprechenden Entlade Informationen aus (. alloc_stack 8)|
 
 Hier ist ein Beispiel für einen Funktions Prolog mit ordnungsgemäßer Verwendung der Makros:

@@ -15,12 +15,12 @@ ms.locfileid: "74394606"
 ---
 # <a name="real8"></a>REAL8
 
-Allocates and optionally initializes a double-precision (8-byte) floating-point number for each *initializer*.
+Ordnet eine (8-Byte)-Gleit Komma Zahl mit doppelter Genauigkeit für jeden *Initialisierer*zu und initialisiert Sie optional.
 
 ## <a name="syntax"></a>Syntax
 
-> *name* **REAL8** *initializer* ⟦ __,__ *initializer* ...⟧
+> *Name* **REAL8** *Initialisierer* ⟦ __,__ *Initialisierer* ... ⟧
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Direktivenverweis](../../assembler/masm/directives-reference.md)

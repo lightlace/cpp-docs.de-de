@@ -18,12 +18,12 @@ ms.locfileid: "74396443"
 ---
 # <a name="operator-"></a>Operator ;
 
-Treats *text* as a comment.
+Behandelt *Text* als Kommentar.
 
 ## <a name="syntax"></a>Syntax
 
-> __;__ *text*
+> __;__ *Text*
 
 ## <a name="see-also"></a>Siehe auch
 
-[Operators reference](operators-reference.md)
+[Operatorverweis](operators-reference.md)

@@ -15,11 +15,11 @@ ms.locfileid: "74188990"
 ---
 # <a name="arrays-c"></a>Arrays (C++)
 
-An array is a sequence of objects of the same type that occupy a contiguous area of memory. Traditional C-style arrays are the source of many bugs, but are still common, especially in older code bases. In modern C++, we strongly recommend using [std::vector](../standard-library/vector-class.md) or [std::array](../standard-library/array-class-stl.md) instead of C-style arrays described in this section. Both of these standard library types store their elements as a contiguous block of memory but provide much greater type safety along with iterators that are guaranteed to point to a valid location within the sequence. For more information, see [Containers (Modern C++)](containers-modern-cpp.md).
+Ein Array ist eine Sequenz von Objekten desselben Typs, die einen zusammenhängenden Speicherbereich belegen. Herkömmliche Arrays im C-Stil sind die Quelle vieler Fehler, sind aber immer noch üblich, insbesondere in älteren Codebasen. Im modernen C++Bereich wird dringend empfohlen, [Std:: Vector](../standard-library/vector-class.md) oder [Std:: Array](../standard-library/array-class-stl.md) anstelle von Arrays im C-Stil zu verwenden, die in diesem Abschnitt beschrieben werden. Beide Standard Bibliothekstypen speichern ihre Elemente als zusammenhängenden Speicherblock, bieten jedoch viel größere Typsicherheit und Iteratoren, die sicher auf einen gültigen Speicherort innerhalb der Sequenz zeigen. Weitere Informationen finden Sie unter [Container (Modern C++)](containers-modern-cpp.md).
 
-## <a name="stack-declarations"></a>Stack declarations
+## <a name="stack-declarations"></a>Stapel Deklarationen
 
-In a C++ array declaration, the array size is specified after the variable name, not after the type name as in some other languages. The following example declares an array of 1000 doubles to be allocated on the stack. The number of elements must be supplied as an integer literal or else as a constant expression because the compiler has to know how much stack space to allocate; it cannot use a value computed at run-time. Each element in the array is assigned a default value of 0. If you do not assign a default value, each element will initially contain whatever random values happen to be at that location.
+In einer C++ Array Deklaration wird die Array Größe nach dem Variablennamen angegeben, nicht nach dem Typnamen in anderen Sprachen. Im folgenden Beispiel wird ein Array mit 1000-Double-Wert deklariert, das auf dem Stapel zugeordnet werden soll. Die Anzahl der Elemente muss als Ganzzahlliteral oder anderweitig als konstanter Ausdruck angegeben werden, da der Compiler wissen muss, wie viel Stapel Speicher belegt werden muss. ein Wert, der zur Laufzeit berechnet wurde, kann nicht verwendet werden. Jedem Element im Array wird ein Standardwert von 0 zugewiesen. Wenn Sie keinen Standardwert zuweisen, enthält jedes Element anfänglich alle zufälligen Werte, die an diesem Speicherort vorkommen.
 
 ```cpp
     constexpr size_t size = 1000;
@@ -44,20 +44,20 @@ In a C++ array declaration, the array size is specified after the variable name,
     }
 ```
 
-The first element in the array is the 0th element, and the last element is the (*n*-1) element, where *n* is the number of elements the array can contain. The number of elements in the declaration must be of an integral type and must be greater than 0. It is your responsibility to ensure that your program never passes a value to the subscript operator that is greater than `(size - 1)`.
+Das erste Element im-Array ist das nullten-Element, und das letzte Element ist das (*n*-1)-Element, wobei *n* die Anzahl der Elemente ist, die das Array enthalten kann. Die Anzahl der Elemente in der Deklaration muss ein ganzzahliger Typ sein und muss größer als 0 sein. Es liegt in ihrer Verantwortung, sicherzustellen, dass Ihr Programm niemals einen Wert an den Index Operator übergibt, der größer als `(size - 1)`ist.
 
-A zero-sized array is legal only when the array is the last field in a **struct** or **union** and when the Microsoft extensions (/Ze) are enabled.
+Ein Array der Größe 0 (null) ist nur zulässig, wenn das Array das letzte Feld in einer **Struktur** oder **Union** ist und wenn die Microsoft-Erweiterungen (/Ze) aktiviert sind.
 
-Stack-based arrays are faster to allocate and access than heap-based arrays, but the number of elements can't be so large that it uses up too much stack memory. How much is too much depends on your program. You can use profiling tools to determine whether an array is too large.
+Bei Stapel basierten Arrays ist die Zuordnungs-und Zugriffsgeschwindigkeit schneller als bei Heap basierten Arrays, aber die Anzahl von Elementen kann nicht so groß sein, dass zu viel Stapel Speicher verwendet wird. Wie viel zu groß ist, hängt von Ihrem Programm ab. Mit den Profil Erstellungs Tools können Sie bestimmen, ob ein Array zu groß ist.
 
-## <a name="heap-declarations"></a>Heap declarations
+## <a name="heap-declarations"></a>Heap Deklarationen
 
-If you require an array that is too large to be allocated on the stack, or whose size cannot be known at compile time, you can allocate it on the heap with a [new\[\]](new-operator-cpp.md) expression. The operator returns a pointer to the first element. You can use the subscript operator with the pointer variable just as with a stack-based array. You can also use [pointer arithmetic](../c-language/pointer-arithmetic.md) to move the pointer to any arbitrary elements in the array. It is your responsibility to ensure that:
+Wenn Sie ein Array benötigen, das zu groß für die Zuordnung im Stapel ist oder dessen Größe zum Zeitpunkt der Kompilierung nicht bekannt sein kann, können Sie es auf dem Heap mit einem [neuen\[\]](new-operator-cpp.md) Ausdruck zuordnen. Der-Operator gibt einen Zeiger auf das erste Element zurück. Sie können den Index Operator mit der Zeiger Variablen genau wie bei einem Stapel basierten Array verwenden. Sie können auch die [Zeigerarithmetik](../c-language/pointer-arithmetic.md) verwenden, um den Zeiger auf beliebige Elemente im Array zu verschieben. Es liegt in ihrer Verantwortung, Folgendes sicherzustellen:
 
-- you always keep a copy of the original pointer address so that you can delete the memory when you no longer need the array.
-- you do not increment or decrement the pointer address past the array bounds.
+- Sie behalten immer eine Kopie der ursprünglichen Zeiger Adresse, sodass Sie den Arbeitsspeicher löschen können, wenn Sie das Array nicht mehr benötigen.
+- Sie müssen die Zeiger Adresse nicht um die Array Grenzen hinaus erhöhen oder verringern.
 
-The following example shows how to define an array on the heap at run time, and how to access the array elements using the subscript operator or by using pointer arithmetic:
+Im folgenden Beispiel wird gezeigt, wie ein Array auf dem Heap zur Laufzeit definiert wird und wie mit dem Index Operator oder mithilfe von Zeigerarithmetik auf die Array Elemente zugegriffen wird:
 
 ```cpp
 
@@ -117,7 +117,7 @@ int main()
 
 ## <a name="initializing-arrays"></a>Initialisieren von Arrays
 
-You can initialize an array in a loop, one element at a time, or in a single statement. The contents of the following two arrays are identical:
+Sie können ein Array in einer Schleife, ein Element gleichzeitig oder in einer einzelnen Anweisung initialisieren. Der Inhalt der beiden folgenden Arrays ist identisch:
 
 ```cpp
     int a[10];
@@ -129,11 +129,11 @@ You can initialize an array in a loop, one element at a time, or in a single sta
     int b[10]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 ```
 
-## <a name="passing-arrays-to-functions"></a>Passing arrays to functions
+## <a name="passing-arrays-to-functions"></a>Übergeben von Arrays an Funktionen
 
-When an array is passed to a function, it is passed as a pointer to the first element. This is true for both stack-based and heap-based arrays. The pointer contains no additional size or type information. This behavior is called *pointer decay*. When you pass an array to a function, you must always specify the number of elements in a separate parameter. This behavior also implies that the array elements are not copied when the array is passed to a function. To prevent the function from modifying the elements, specify the parameter as a pointer to **const** elements.
+Wenn ein Array an eine Funktion übermittelt wird, wird es als Zeiger auf das erste Element übermittelt. Dies gilt sowohl für Stapel basierte als auch für Heap basierte Arrays. Der-Zeiger enthält keine zusätzlichen Größen-oder Typinformationen. Dieses Verhalten wird als *Zeiger Verfall*bezeichnet. Wenn Sie ein Array an eine Funktion übergeben, müssen Sie immer die Anzahl von Elementen in einem separaten Parameter angeben. Dieses Verhalten impliziert auch, dass die Array Elemente nicht kopiert werden, wenn das Array an eine Funktion übermittelt wird. Um zu verhindern, dass die-Funktion die Elemente ändert, geben Sie den Parameter als Zeiger auf die **Konstanten** Elemente an.
 
-The following example shows a function that accepts an array and a length. The pointer points to the original array, not a copy. Because the parameter is not **const**, the function can modify the array elements.
+Das folgende Beispiel zeigt eine Funktion, die ein Array und eine Länge akzeptiert. Der Zeiger verweist auf das ursprüngliche Array, nicht auf eine Kopie. Da der-Parameter nicht **konstant**ist, kann die-Funktion die Array Elemente ändern.
 
 ```cpp
 void process(double p*, const size_t len)
@@ -146,13 +146,13 @@ void process(double p*, const size_t len)
 }
 ```
 
-Declare the array as const to make it read-only within the function block:
+Deklarieren Sie das Array als "Konstanten", damit es innerhalb des Funktions Blocks schreibgeschützt ist:
 
 ```cpp
 void process(const double p*, const size_t len);
 ```
 
-The same function can also be declared in these ways, with no change in behavior. The array is still passed as a pointer to the first element:
+Dieselbe Funktion kann auch auf diese Weise deklariert werden, ohne dass das Verhalten geändert werden muss. Das Array wird weiterhin als Zeiger auf das erste Element weitergegeben:
 
 ```cpp
 // Unsized array
@@ -162,7 +162,7 @@ void process(const double p[] const size_t len);
 void process(const double p[1000], const size_t len);
 ```
 
-## <a name="multidimensional-arrays"></a>Multidimensional arrays
+## <a name="multidimensional-arrays"></a>Mehrdimensionale Arrays
 
 Bei Arrays, die von anderen Arrays erstellt werden, handelt es sich um mehrdimensionale Arrays. Diese mehrdimensionalen Arrays werden angegeben, indem nacheinander mehrere Konstantenausdrücke in Klammern gesetzt werden. Ein Beispiel ist diese Deklaration:
 
@@ -170,12 +170,12 @@ Bei Arrays, die von anderen Arrays erstellt werden, handelt es sich um mehrdimen
 int i2[5][7];
 ```
 
-It specifies an array of type **int**, conceptually arranged in a two-dimensional matrix of five rows and seven columns, as shown in the following figure:
+Er gibt ein Array vom Typ " **int**" an, das konzeptionell in einer zweidimensionalen Matrix von fünf Zeilen und sieben Spalten angeordnet ist, wie in der folgenden Abbildung dargestellt:
 
-![Conceptual layout of a multi&#45;dimensional array](../cpp/media/vc38rc1.gif "Conceptual layout of a multi&#45;dimensional array") <br/>
+![Konzeptionelles Layout eines mehr&#45;dimensionalen Arrays](../cpp/media/vc38rc1.gif "Konzeptionelles Layout eines mehr&#45;dimensionalen Arrays") <br/>
 Konzeptionelles Layout eines mehrdimensionalen Arrays
 
-In declarations of multidimensioned arrays that have an initializer list (as described in [Initializers](../cpp/initializers.md)), the constant expression that specifies the bounds for the first dimension can be omitted. Beispiel:
+In Deklarationen von multidimensionalen Arrays, die über eine Initialisiererliste verfügen (wie in [Initialisierern](../cpp/initializers.md)beschrieben), kann der Konstante Ausdruck ausgelassen werden, der die Begrenzungen für die erste Dimension angibt. Beispiel:
 
 ```cpp
 // arrays2.cpp
@@ -191,7 +191,7 @@ double TransportCosts[][cMarkets] = {
 
 Die vorhergehende Deklaration definiert ein Array, das aus vier Spalten mit je drei Zeilen besteht. Die Zeilen stellen Factorys dar und die Spalten Märkte, die von den Factorys beliefert werden. Die Werte entsprechen den Transportkosten von den Factorys zu den Märkten. Die erste Dimension des Arrays wird ausgelassen, aber der Compiler füllt sie aus, indem er den Initialisierer untersucht.
 
-Use of the indirection operator (*) on an n-dimensional array type yields an n-1 dimensional array. If n is 1, a scalar (or array element) is yielded.
+Die Verwendung des Dereferenzierungsoperators (*) für einen n-dimensionalen Arraytyp ergibt ein n-1-dimensionales Array. Wenn n 1 ist, ergibt sich ein Skalar (oder Arrayelement).
 
 C++-Arrays werden in zeilengerichteter Reihenfolge gespeichert. Zeilengerichtete Reihenfolge bedeutet, dass sich der letzte Feldindex am schnellsten unterscheidet.
 
@@ -283,7 +283,7 @@ int main()
 
 Das erste Element von `aPoint` wird unter Verwendung des Konstruktors `Point( int, int )` erstellt; die verbleibenden zwei Elemente werden unter Verwendung des Standardkonstruktors erstellt.
 
-Static member arrays (whether **const** or not) can be initialized in their definitions (outside the class declaration). Beispiel:
+Statische Element Arrays **(ob "** Konstante" oder "Not") können in ihren Definitionen (außerhalb der Klassen Deklaration) initialisiert werden. Beispiel:
 
 ```cpp
 // initializing_arrays2.cpp
@@ -301,7 +301,7 @@ int main()
 }
 ```
 
-## <a name="accessing-array-elements"></a>Accessing array elements
+## <a name="accessing-array-elements"></a>Zugreifen auf Array Elemente
 
 Sie können auf einzelne Elemente eines Arrays zugreifen, indem Sie den Arrayfeldindex-Operator (`[ ]`) verwenden. Wenn ein eindimensionales Array in einem Ausdruck ohne Feldindex verwendet wird, wird der Arrayname als Zeiger auf das ersten Element im Array ausgewertet.
 
@@ -336,15 +336,15 @@ int main() {
 }
 ```
 
-In the preceding code, `multi` is a three-dimensional array of type **double**. The `p2multi` pointer points to an array of type **double** of size three. In diesem Beispiel wird das Array mit einem, zwei oder drei Feldindizes verwendet. Obwohl im Allgemeinen alle Feldindizes angegeben werden, wie in der `cout`-Anweisung, ist es manchmal sinnvoll, eine bestimmte Teilmenge von Arrayelementen auszuwählen, wie in den Anweisungen gezeigt, die `cout` folgen.
+Im vorangehenden Code ist `multi` ein dreidimensionales Array vom Typ **Double**. Der `p2multi` Zeiger verweist auf ein Array vom Typ **Double** der Größe 3. In diesem Beispiel wird das Array mit einem, zwei oder drei Feldindizes verwendet. Obwohl im Allgemeinen alle Feldindizes angegeben werden, wie in der `cout`-Anweisung, ist es manchmal sinnvoll, eine bestimmte Teilmenge von Arrayelementen auszuwählen, wie in den Anweisungen gezeigt, die `cout` folgen.
 
-## <a name="overloading-subscript-operator"></a>Overloading subscript operator
+## <a name="overloading-subscript-operator"></a>Überladen des Index Operators
 
-Like other operators, the subscript operator (`[]`) can be redefined by the user. Das Standardverhalten des Indexoperators, wenn er nicht überladen ist, besteht darin, den Arraynamen und den Index unter Verwendung der folgenden Methode zu kombinieren:
+Wie andere Operatoren kann der Index Operator (`[]`) vom Benutzer neu definiert werden. Das Standardverhalten des Indexoperators, wenn er nicht überladen ist, besteht darin, den Arraynamen und den Index unter Verwendung der folgenden Methode zu kombinieren:
 
 `*((array_name) + (subscript))`
 
-Wie bei allen Additionen, an denen Zeigertypen beteiligt sind, wird die Skalierung automatisch zur Anpassung an die Größe des Typs ausgeführt. Therefore, the resultant value is not *n* bytes from the origin of array-name; rather, it is the *n*th element of the array. For more information about this conversion, see [Additive operators](additive-operators-plus-and.md).
+Wie bei allen Additionen, an denen Zeigertypen beteiligt sind, wird die Skalierung automatisch zur Anpassung an die Größe des Typs ausgeführt. Daher ist der resultierende Wert nicht *n* Bytes vom Ursprung von Array-Name; Vielmehr handelt es sich um das *n*-te Element des Arrays. Weitere Informationen zu dieser Konvertierung finden Sie unter [Additive Operatoren](additive-operators-plus-and.md).
 
 Entsprechend wird die Adresse für mehrdimensionale Arrays anhand der folgenden Methode abgeleitet:
 
@@ -352,14 +352,14 @@ Entsprechend wird die Adresse für mehrdimensionale Arrays anhand der folgenden 
 
 ## <a name="arrays-in-expressions"></a>Arrays in Ausdrücken
 
-Wenn ein Bezeichner von einem Arraytyp in einem anderen Ausdruck als `sizeof`, "address-of" (`&`) oder in der Initialisierung eines Verweises auftritt, wird er in einen Zeiger auf das erste Arrayelement konvertiert. Beispiel:
+Wenn ein Bezeichner eines Array Typs in einem anderen Ausdruck als `sizeof`, address-of (`&`) oder Initialisierung eines Verweises auftritt, wird er in einen Zeiger auf das erste Array Element konvertiert. Beispiel:
 
 ```cpp
 char szError1[] = "Error: Disk drive not ready.";
 char *psz = szError1;
 ```
 
-Der Zeiger `psz` zeigt auf das erste Element des Arrays `szError1`. Arrays, unlike pointers, are not modifiable l-values. Daher ist die folgende Zuordnung ungültig:
+Der Zeiger `psz` zeigt auf das erste Element des Arrays `szError1`. Arrays können im Gegensatz zu Zeigern keine änderbaren l-Werte sein. Daher ist die folgende Zuordnung ungültig:
 
 ```cpp
 szError1 = psz;
@@ -367,4 +367,4 @@ szError1 = psz;
 
 ## <a name="see-also"></a>Siehe auch
 
-[std::array](../standard-library/array-class-stl.md)
+[Std:: Array](../standard-library/array-class-stl.md)

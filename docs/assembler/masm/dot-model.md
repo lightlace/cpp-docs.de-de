@@ -13,40 +13,40 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398110"
 ---
-# <a name="model-32-bit-masm"></a>.MODEL (32-bit MASM)
+# <a name="model-32-bit-masm"></a>. Modell (32-Bit-MASM)
 
-Initialisiert das Programmspeichermodell. (32-bit MASM only.)
+Initialisiert das Programmspeichermodell. (nur 32-Bit-MASM.)
 
 ## <a name="syntax"></a>Syntax
 
-> **.MODEL** *memory-model* ⟦ __,__ *language-type*⟧ ⟦ __,__ *stack-option*⟧
+> **. Modell** *Speicher-Model* ⟦ __,__ *Language-Type*⟧ ⟦ __,__ *Stack-Option*⟧
 
 ### <a name="parameters"></a>Parameter
 
-*memory-model*\
+*Speichermodell*\
 Erforderlicher Parameter, der die Größe von Code- und Datenzeigern bestimmt.
 
-*language-type*\
+*Sprachtyp*\
 Optionaler Parameter, der die Aufruf- und Namenskonventionen für Prozeduren und öffentliche Symbole festlegt.
 
-*stack-option*\
+*Stack-Option-* \
 Optionaler Parameter.
 
-*stack-option* is not used if *memory-model* is **FLAT**.
+*Stack-Option* wird nicht verwendet, wenn das *Speichermodell* **flach**ist.
 
-Specifying **NEARSTACK** groups the stack segment into a single physical segment (**DGROUP**) along with data. The stack segment register (**SS**) is assumed to hold the same address as the data segment register (**DS**). **FARSTACK** does not group the stack with **DGROUP**; thus **SS** does not equal **DS**.
+Durch Angeben von **nearstack** wird das Stapel Segment zusammen mit Daten in einem einzelnen physischen Segment (**DGROUP**) gruppiert. Es wird davon ausgegangen, dass das Stapel Segment Register (**SS**) dieselbe Adresse wie das Daten Segment Register (**DS**) enthält. **Farstack** gruppiert den Stapel nicht mit **DGROUP**. Daher entspricht **SS** nicht der **DS**.
 
 ## <a name="remarks"></a>Hinweise
 
-**.MODEL** is not used in [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+**. Das Modell** wird in [MASM für x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)nicht verwendet.
 
 In der folgenden Tabelle werden die möglichen Werte für die einzelnen Parameter auf 16-Bit- und 32-Bit-Plattformen aufgelistet:
 
 |Parameter|32-Bit-Werte|16-Bit-Werte (Support für frühere 16-Bit-Entwicklungen)|
 |---------------|--------------------|----------------------------------------------------------------|
-|*memory-model*|**FLAT**|**TINY**, **SMALL**, **COMPACT**, **MEDIUM**, **LARGE**, **HUGE**, **FLAT**|
-|*language-type*|**C**, **STDCALL**|**C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**|
-|*stack-option*|Nicht verwendet|**NEARSTACK**, **FARSTACK**|
+|*Speichermodell*|**Rate**|**winzig**, **klein**, **kompakt**, **Mittel**, **groß**,groß, **flach**|
+|*Sprachtyp*|**C**, **StdCall**|**C**, **Basic**, **Fortran**, **Pascal**, **syscall**, **StdCall**|
+|*Stack-Option*|Nicht verwendet|**nearstack**, **farstack**|
 
 ## <a name="code"></a>Code
 

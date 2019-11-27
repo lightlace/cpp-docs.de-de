@@ -13,49 +13,49 @@ ms.locfileid: "74393558"
 ---
 # <a name="symbols-reference"></a>Referenz zu Symbolen
 
-## <a name="date-and-time-information"></a>Date and time information
+## <a name="date-and-time-information"></a>Datums-und Uhrzeit Informationen
 
 |||
 |-|-|
-|[\@Date](../../assembler/masm/at-date.md)|[\@Time](../../assembler/masm/at-time.md)|
+|[\@Datum](../../assembler/masm/at-date.md)|[\@Zeit](../../assembler/masm/at-time.md)|
 
-## <a name="environment-information"></a>Environment information
-
-|||
-|-|-|
-|[\@Cpu](../../assembler/masm/at-cpu.md)|[\@Environ](../../assembler/masm/at-environ.md)|
-|[\@Interface](../../assembler/masm/at-interface.md)|[\@Version](../../assembler/masm/at-version.md)|
-
-## <a name="file-information"></a>File information
+## <a name="environment-information"></a>Umgebungs Informationen
 
 |||
 |-|-|
-|[\@FileCur](../../assembler/masm/at-filecur.md)|[\@FileName](../../assembler/masm/at-filename.md)|
-|[\@Line](../../assembler/masm/at-line.md)||
+|[\@-CPU](../../assembler/masm/at-cpu.md)|[\@Environ](../../assembler/masm/at-environ.md)|
+|[\@-Schnittstelle](../../assembler/masm/at-interface.md)|[\@Version](../../assembler/masm/at-version.md)|
 
-## <a name="macro-functions"></a>Macro functions
+## <a name="file-information"></a>Dateiinformationen
 
 |||
 |-|-|
-|[\@CatStr](../../assembler/masm/at-catstr.md)|[\@InStr](../../assembler/masm/at-instr.md)|
-|[\@SizeStr](../../assembler/masm/at-sizestr.md)|[\@SubStr](../../assembler/masm/at-substr.md)|
+|[\@von "flecur"](../../assembler/masm/at-filecur.md)|[Dateiname \@](../../assembler/masm/at-filename.md)|
+|[\@Zeile](../../assembler/masm/at-line.md)||
 
-## <a name="miscellaneous"></a>Sonstiges
+## <a name="macro-functions"></a>Makrofunktionen
+
+|||
+|-|-|
+|[\@.](../../assembler/masm/at-catstr.md)|[\@InStr](../../assembler/masm/at-instr.md)|
+|[\@sizestr](../../assembler/masm/at-sizestr.md)|[\@substr](../../assembler/masm/at-substr.md)|
+
+## <a name="miscellaneous"></a>Verschiedenes
 
 ||||
 |-|-|-|
 |[\$](../../assembler/masm/dollar.md)|[\?](../../assembler/masm/q.md)|[\@\@:](../../assembler/masm/at-at.md)|
 |[\@B](../../assembler/masm/at-b.md)|[\@F](../../assembler/masm/at-f.md)||
 
-## <a name="segment-information"></a>Segment information
+## <a name="segment-information"></a>Segment Informationen
 
 ||||
 |-|-|-|
-|[\@code](../../assembler/masm/at-code.md)|[\@CodeSize](../../assembler/masm/at-codesize.md)|[\@CurSeg](../../assembler/masm/at-curseg.md)|
-|[\@data](../../assembler/masm/at-data.md)|[\@DataSize](../../assembler/masm/at-datasize.md)|[\@fardata](../../assembler/masm/at-fardata.md)|
-|[\@fardata?](../../assembler/masm/at-fardata-q.md)|[\@Model](../../assembler/masm/at-model.md)|[\@stack](../../assembler/masm/at-stack.md)|
-|[\@WordSize](../../assembler/masm/at-wordsize.md)|||
+|[\@-Code](../../assembler/masm/at-code.md)|[\@codeSize](../../assembler/masm/at-codesize.md)|[\@Cursor](../../assembler/masm/at-curseg.md)|
+|[\@Daten](../../assembler/masm/at-data.md)|[\@DataSize](../../assembler/masm/at-datasize.md)|[\@fardata](../../assembler/masm/at-fardata.md)|
+|[\@fardata?](../../assembler/masm/at-fardata-q.md)|[\@Modell](../../assembler/masm/at-model.md)|[\@Stapel](../../assembler/masm/at-stack.md)|
+|[\@wordsize](../../assembler/masm/at-wordsize.md)|||
 
 ## <a name="see-also"></a>Siehe auch
 
-[Microsoft Macro Assembler reference](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Microsoft Macro Assembler-Referenz](../../assembler/masm/microsoft-macro-assembler-reference.md)

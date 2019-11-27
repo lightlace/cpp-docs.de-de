@@ -30,7 +30,7 @@ In der exemplarischen Vorgehensweise wird gezeigt, wie Sie diese Aufgaben ausfü
 
 [!INCLUDE[note_settings_general](../mfc/includes/note_settings_general_md.md)]
 
-## <a name="prerequisites"></a>Erforderliche Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Um diese exemplarische Vorgehensweise durchführen zu können, müssen Sie Visual Studio mit der Arbeitsauslastung und der **optionalen C++ Visual MFC für x86-und x64** **- C++**  Komponente installiert haben.
 

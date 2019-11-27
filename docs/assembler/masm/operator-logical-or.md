@@ -16,7 +16,7 @@ ms.locfileid: "74396729"
 ---
 # <a name="operator-"></a>Operator ||
 
-Logisches OR. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
+Logisches OR. Wird nur innerhalb von verwendet [. Wenn](../../assembler/masm/dot-if.md), [. Während](../../assembler/masm/dot-while.md)oder [. Wiederholen](../../assembler/masm/dot-repeat.md) Sie Blöcke und werden zur Laufzeit und nicht zur assemblyzeit ausgewertet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -24,4 +24,4 @@ Logisches OR. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Operators reference](operators-reference.md)
+[Operatorverweis](operators-reference.md)

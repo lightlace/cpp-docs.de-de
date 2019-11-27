@@ -15,23 +15,23 @@ ms.locfileid: "74398036"
 ---
 # <a name="pushreg"></a>.PUSHREG
 
-Generates a `UWOP_PUSH_NONVOL` unwind code entry for the specified register number using the current offset in the prologue.
+Generiert einen `UWOP_PUSH_NONVOL` Ladungs Code Eintrag für die angegebene Registernummer unter Verwendung des aktuellen Offsets im Prolog.
 
 ## <a name="syntax"></a>Syntax
 
-> .PUSHREG register
+> . Pushreg-Register
 
 ## <a name="remarks"></a>Hinweise
 
-**.PUSHREG** allows ml64.exe users to specify how a frame function unwinds, and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) **FRAME** declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.PUSHREG** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
+**. Pushreg** ermöglicht Benutzern von ml64. exe, anzugeben, wie sich eine Frame Funktion entlädt, und ist nur innerhalb des Prologs zulässig, der von der [proc](../../assembler/masm/proc.md) **Frame** -Deklaration zum reicht [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) -Direktive. Diese Direktiven generieren keinen Code. Sie generieren nur `.xdata` und `.pdata`. **. Der pushreg** sollten Anweisungen vorangestellt werden, die tatsächlich die auszuwickenden Aktionen implementieren. Es wird empfohlen, sowohl die Entlade Direktiven als auch den Code, der in einem Makro entladen werden soll, zu schließen, um eine Vereinbarung zu gewährleisten.
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Weitere Informationen finden Sie unter [MASM für x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>Beispiel
 
 ### <a name="description"></a>Beschreibung
 
-The following sample shows how to push non-volatile registers.
+Im folgenden Beispiel wird gezeigt, wie Sie nicht flüchtige Register per Push übersetzen.
 
 ### <a name="code"></a>Code
 
@@ -57,4 +57,4 @@ END
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](directives-reference.md)
+[Direktivenverweis](directives-reference.md)

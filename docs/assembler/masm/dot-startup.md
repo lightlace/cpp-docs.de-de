@@ -13,9 +13,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397890"
 ---
-# <a name="startup-32-bit-masm"></a>.STARTUP (32-bit MASM)
+# <a name="startup-32-bit-masm"></a>. Start (32-Bit-MASM)
 
-Generates program start-up code. (32-bit MASM only.)
+Generiert Programmstart Code. (nur 32-Bit-MASM.)
 
 ## <a name="syntax"></a>Syntax
 
@@ -23,4 +23,4 @@ Generates program start-up code. (32-bit MASM only.)
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](directives-reference.md)
+[Direktivenverweis](directives-reference.md)

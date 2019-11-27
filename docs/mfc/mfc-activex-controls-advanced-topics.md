@@ -150,7 +150,7 @@ Um die Art des aufgetretenen Fehlers anzugeben, muss das Steuerelement einen Feh
 |CTL_E_SEARCHTEXTNOTFOUND|Suchtext wurde nicht gefunden|
 |CTL_E_REPLACEMENTSTOOLONG|Die Ersetzungen sind zu lang|
 
-Verwenden Sie ggf. das CUSTOM_CTL_SCODE-Makro, um einen benutzerdefinierten Fehlercode für eine Bedingung zu definieren, die nicht von einem der Standard Codes abgedeckt wird. Der-Parameter für dieses Makro muss eine ganze Zahl zwischen 1000 und 32767 (einschließlich) sein. Zum Beispiel:
+Verwenden Sie ggf. das CUSTOM_CTL_SCODE-Makro, um einen benutzerdefinierten Fehlercode für eine Bedingung zu definieren, die nicht von einem der Standard Codes abgedeckt wird. Der-Parameter für dieses Makro muss eine ganze Zahl zwischen 1000 und 32767 (einschließlich) sein. Beispiel:
 
 [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]
 
@@ -174,7 +174,7 @@ Sie können Dialogfeld Steuerelemente erstellen, die keine Benutzeroberfläche a
 
 - Wählen Sie mithilfe des Assistenten zum Hinzufügen von Element Variablen die Option **Steuerungs Variable** aus, und wählen Sie die ID des Steuer Elements Geben Sie einen Element Variablennamen ein, und wählen Sie die Wrapper Klasse des Steuer Elements als **Steuer Elementtyp**aus.
 
-     -oder-
+     \- oder -
 
 - Deklarieren Sie eine lokale Variable und eine Unterklasse als Dialogfeld Element. Fügen Sie Code ein, der dem folgenden ähnelt (`CMyCtrl` ist die Wrapper Klasse, IDC_MYCTRL1 die ID des Steuer Elements ist):
 

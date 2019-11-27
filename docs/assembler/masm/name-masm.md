@@ -19,8 +19,8 @@ Ignoriert.
 
 ## <a name="syntax"></a>Syntax
 
-> **NAME**
+> **Benennen**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](directives-reference.md)
+[Direktivenverweis](directives-reference.md)

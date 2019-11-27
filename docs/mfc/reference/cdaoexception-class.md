@@ -35,28 +35,28 @@ Stellt eine Ausnahmebedingung dar, die von MFC-Datenbankklassen in Bezug auf Dat
 class CDaoException : public CException
 ```
 
-## <a name="members"></a>Mitglieder
+## <a name="members"></a>Member
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CDaoException::CDaoException](#cdaoexception)|Erstellt ein `CDaoException`-Objekt.|
+|[CDaoException:: CDaoException](#cdaoexception)|Erstellt ein `CDaoException`-Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CDaoException::GetErrorCount](#geterrorcount)|Gibt die Anzahl der Fehler in der Fehlersammlung der Datenbank-Engine zurück.|
-|[CDaoException::GetErrorInfo](#geterrorinfo)|Gibt Fehlerinformationen zu einem bestimmten Fehler Objekt in der Fehler Auflistung zurück.|
+|[CDaoException:: GetErrorCount](#geterrorcount)|Gibt die Anzahl der Fehler in der Fehlersammlung der Datenbank-Engine zurück.|
+|[CDaoException:: GetErrorInfo](#geterrorinfo)|Gibt Fehlerinformationen zu einem bestimmten Fehler Objekt in der Fehler Auflistung zurück.|
 
-### <a name="public-data-members"></a>Öffentliche Datenmember
+### <a name="public-data-members"></a>Öffentliche Datenelemente
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CDaoException::m_nAfxDaoError](#m_nafxdaoerror)|Enthält einen erweiterten Fehlercode für jeden Fehler in den MFC-DAO-Klassen.|
-|[CDaoException::m_pErrorInfo](#m_perrorinfo)|Ein Zeiger auf ein [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) -Objekt, das Informationen zu einem DAO-Fehler Objekt enthält.|
-|[CDaoException::m_scode](#m_scode)|Der [SCODE](#m_scode) -Wert, der dem Fehler zugeordnet ist.|
+|[CDaoException:: m_nAfxDaoError](#m_nafxdaoerror)|Enthält einen erweiterten Fehlercode für jeden Fehler in den MFC-DAO-Klassen.|
+|[CDaoException:: m_pErrorInfo](#m_perrorinfo)|Ein Zeiger auf ein [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) -Objekt, das Informationen zu einem DAO-Fehler Objekt enthält.|
+|[CDaoException:: m_scode](#m_scode)|Der [SCODE](#m_scode) -Wert, der dem Fehler zugeordnet ist.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -81,7 +81,7 @@ Weitere Informationen zur Ausnahmebehandlung im allgemeinen oder zu `CDaoExcepti
 
 `CDaoException`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
 **Header:** afxdao.h
 

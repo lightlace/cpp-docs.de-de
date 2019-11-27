@@ -15,15 +15,15 @@ ms.locfileid: "74398798"
 ---
 # <a name="dd"></a>DD
 
-Allocates and optionally initializes a double word (4 bytes) of storage for each *initializer*. **DD** is a synonym of [DWORD](../../assembler/masm/dword.md).
+Ordnet ein doppeltes Wort (4 Bytes) für jeden *Initialisierer*zu und initialisiert es optional. **DD** ist ein Synonym von [DWORD](../../assembler/masm/dword.md).
 
 ## <a name="syntax"></a>Syntax
 
-> ⟦*name*⟧ **DD** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*Name*⟧ **DD** *Initialisierer* ⟦ __,__ *Initialisierer* ... ⟧
 
 ## <a name="remarks"></a>Hinweise
 
-Can also be used as a type specifier anywhere a type is legal.
+Kann auch als Typspezifizierer überall dort verwendet werden, wo ein Typ zulässig ist.
 
 ## <a name="see-also"></a>Siehe auch
 

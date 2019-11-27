@@ -13,14 +13,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398924"
 ---
-# <a name="stack"></a>\@stack
+# <a name="stack"></a>\@Stapel
 
-DGROUP for near stacks or STACK for far stacks (text macro).
+"DGROUP" für nahe Stapel oder Stapel für weite Stapel (Text Makro).
 
 ## <a name="syntax"></a>Syntax
 
-> **\@stack**
+> **\@Stapel**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Symbols reference](symbols-reference.md)
+[Symbol Verweis](symbols-reference.md)

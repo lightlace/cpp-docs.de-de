@@ -15,16 +15,16 @@ ms.locfileid: "74397314"
 ---
 # <a name="instr"></a>INSTR
 
-Finds the first occurrence of *textitem2* in *textitem1*.
+Sucht das erste Vorkommen von *textitem2* in *textitem1*.
 
 ## <a name="syntax"></a>Syntax
 
-> *name* **INSTR** ⟦*position* __,__ ⟧ *textitem1* __,__ *textitem2*
+> *Name* **InStr** ⟦*Position* __,__ ⟧ *textitem1* __,__ *textitem2*
 
 ## <a name="remarks"></a>Hinweise
 
-The starting *position* is optional. Each text item can be a literal string, a constant preceded by a **%** , or the string returned by a macro function.
+Die Anfangs *Position* ist optional. Jedes Textelement kann eine Literalzeichenfolge, eine Konstante, der ein **%** vorangestellt ist, oder die von einer Makrofunktion zurückgegebene Zeichenfolge sein.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](directives-reference.md)
+[Direktivenverweis](directives-reference.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4238
 ms.assetid: 5d4051d3-7b0f-43ea-8c8d-d194bfdceb71
-ms.openlocfilehash: c5ffa07b06f010d10edc14aa7576bb614aa9dd04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 982457ded987f6aee4f2891bbb7d9103b830cc99
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401032"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541786"
 ---
 # <a name="compiler-warning-level-4-c4238"></a>Compilerwarnung (Stufe 4) C4238
 
-nicht dem Standard entsprechende Erweiterung: Klasse Rvalue verwendet als l-Wert
+nicht dem Standard entsprechende Erweiterung: Klasse "Rvalue" wird als "lvalue" verwendet
 
-Für die Kompatibilität mit früheren Versionen von Visual C++, Microsoft-Erweiterungen (**/Ze**) ermöglichen es Ihnen, einen Klassentyp zu verwenden, wie ein Rvalue-Wert in einem Kontext, der implizit oder explizit auf die Adresse akzeptiert. In einigen Fällen, wie im folgenden Beispiel kann dies gefährlich sein.
+Aus Kompatibilitätsgründen mit früheren Versionen C++von Visual können Sie mithilfe von Microsoft-Erweiterungen ( **/Ze**) einen Klassentyp als Rvalue in einem Kontext verwenden, der implizit oder explizit seine Adresse annimmt. In einigen Fällen, wie z. b. im folgenden Beispiel, kann dies gefährlich sein.
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // C4238.cpp
 // compile with: /W4 /c
 struct C {
@@ -31,4 +31,4 @@ struct C {
 C * pC = &C();   // C4238
 ```
 
-Diese Verwendung verursacht einen Fehler ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Diese Verwendung verursacht einen Fehler unter ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

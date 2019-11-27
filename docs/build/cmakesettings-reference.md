@@ -44,7 +44,7 @@ Eine `configuration` verfügt über die folgenden Eigenschaften:
 - `configurationType`: Gibt die Buildtypkonfiguration für den ausgewählten Generator an. Folgende stehen zur Auswahl:
 
   - Debuggen
-  - Freigabe
+  - Version
   - MinSizeRel
   - RelWithDebInfo
   
@@ -84,7 +84,7 @@ Wenn in der aktiven Konfiguration ein Visual Studio-Generator angegeben ist, wir
 - `configurationType`: Gibt die Buildtypkonfiguration für den ausgewählten Generator an. Folgende stehen zur Auswahl:
 
   - Debuggen
-  - Freigabe
+  - Version
   - MinSizeRel
   - RelWithDebInfo
  
@@ -132,7 +132,7 @@ Wenn in der aktiven Konfiguration ein Visual Studio-Generator angegeben ist, wir
 - `remoteCMakeListsRoot`: Gibt das Verzeichnis auf dem Remotecomputer an, das das CMake-Projekt enthält. Unterstützte Makros sind `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
 - `remoteBuildRoot`: Gibt das Verzeichnis auf dem Remotecomputer an, in dem CMake Buildskripts für den ausgewählten Generator erstellt. Unterstützte Makros sind `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
 - `remoteInstallRoot`: Gibt das Verzeichnis auf dem Remotecomputer an, in dem CMake Installationsziele für den ausgewählten Generator erstellt. Unterstützte Makros sind `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}` und `${env.VARIABLE}`, wobei `VARIABLE` eine Umgebungsvariable ist, die auf System-, Benutzer- oder Sitzungsebene definiert wurde.
-- `remoteCopySources`: ein `boolean`, der angibt, ob Visual Studio Quelldateien auf den Remote Computer kopieren soll. Der Standardwert ist "True". Legen Sie diesen Wert auf FALSE fest, wenn Sie die Dateisynchronisierung selbst verwalten.
+- `remoteCopySources`: ein `boolean`, der angibt, ob Visual Studio Quelldateien auf den Remote Computer kopieren soll. Der Standardwert ist true. Legen Sie diesen Wert auf FALSE fest, wenn Sie die Dateisynchronisierung selbst verwalten.
 - `remoteCopyBuildOutput`: ein `boolean`, der angibt, ob die Buildausgaben vom Remote System kopiert werden sollen.
 - `rsyncCommandArgs`: Gibt zusätzliche Befehlszeilenoptionen an, die an „rsync“ übergeben werden.
 - `remoteCopySourcesExclusionList`: eine `array`, die eine Liste von Pfaden angibt, die beim Kopieren von Quelldateien ausgeschlossen werden sollen: ein Pfad kann der Name einer Datei bzw. eines Verzeichnisses oder ein Pfad relativ zum Stamm der Kopie sein. Die Platzhalter \\\"*\\\" und \\\"?\\\" können für einen Globmusterabgleich verwendet werden.

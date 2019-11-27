@@ -80,7 +80,7 @@ Ein-Wert, der den Datentyp des Felds angibt. Weitere Informationen finden Sie im
 *m_lSize*<br/>
 Ein Wert, der die maximale Größe eines DAO-Feld Objekts in Bytes angibt, das Text oder die festgelegte Größe eines Feld Objekts enthält, das Text-oder numerische Werte enthält. Weitere Informationen finden Sie im Thema "Size-Eigenschaft" in der DAO-Hilfe. Die Größe kann einen der folgenden Werte aufweisen:
 
-|Typ|Größe (Byte)|Beschreibung|
+|Typ|Größe (Bytes)|Beschreibung|
 |----------|--------------------|-----------------|
 |`dbBoolean`|1 Byte|Ja/Nein (identisch mit true/false)|
 |`dbByte`|1|Byte|
@@ -152,13 +152,13 @@ Neben der Verwendung zum Untersuchen von Objekteigenschaften können Sie auch `C
 
 Die von der `GetFieldInfo` Member-Funktion (der-Klasse, die das Feld enthält) abgerufenen Informationen werden in einer `CDaoFieldInfo` Struktur gespeichert. Nennen Sie die `GetFieldInfo` Member-Funktion des enthaltenden Objekts in, dessen Fields-Auflistung das Field-Objekt speichert. `CDaoFieldInfo` definiert auch eine `Dump` Member-Funktion in Debugbuilds. Sie können `Dump` verwenden, um den Inhalt eines `CDaoFieldInfo` Objekts zu speichern.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
 **Header:** afxdao.h
 
 ## <a name="see-also"></a>Siehe auch
 
 [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
-[CDaoTableDef::GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
-[CDaoRecordset::GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
-[CDaoQueryDef::GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)
+[CDaoTableDef:: getfieldinfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
+[CDaoRecordset:: getfieldinfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
+[CDaoQueryDef:: getfieldinfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)

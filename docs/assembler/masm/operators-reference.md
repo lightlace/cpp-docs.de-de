@@ -1,5 +1,5 @@
 ---
-title: MASM Operators reference
+title: Referenz für MASM-Operatoren
 ms.date: 08/30/2018
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
@@ -12,81 +12,81 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74395211"
 ---
-# <a name="masm-operators-reference"></a>MASM Operators reference
+# <a name="masm-operators-reference"></a>Referenz für MASM-Operatoren
 
 ## <a name="arithmetic"></a>Arithmetisch
 
 ||||
 |-|-|-|
-|[* (multiply)](operator-multiply.md)|[+ (add)](operator-add.md)|[- (subtract or negate)](operator-subtract-2.md)|
-|[. (field)](operator-dot.md)|[/ (divide)](operator-subtract-1.md)|[&#91;&#93; (index)](operator-brackets.md)|
-|[MOD (remainder)](operator-mod.md)|||
+|[* (multiplizieren)](operator-multiply.md)|[+ (hinzufügen)](operator-add.md)|[-(subtrahieren oder negieren)](operator-subtract-2.md)|
+|[. Flächen](operator-dot.md)|[/(dividieren)](operator-subtract-1.md)|[&#91;&#93;Sin](operator-brackets.md)|
+|[MOD (Rest)](operator-mod.md)|||
 
 ## <a name="control-flow"></a>Ablaufsteuerung
 
 ||||
 |-|-|-|
-|[\! (runtime logical not)](operator-logical-not-masm-run-time.md)|[\!= (runtime not equal)](operator-not-equal-masm.md)|[&#124;&#124; (runtime logical or)](operator-logical-or.md)|
-|[&& (runtime logical and)](operator-logical-and-masm-run-time.md)|[< (runtime less than)](operator-less-than-masm-run-time.md)|[\<= (runtime less or equal)](operator-less-or-equal-masm-run-time.md)|
-|[== (runtime equal)](operator-equal-masm-run-time.md)|[> (runtime greater than)](operator-greater-than-masm-run-time.md)|[>= (runtime greater or equal)](operator-greater-or-equal-masm-run-time.md)|
-|[& (runtime bitwise and)](operator-bitwise-and.md)|||
-|[CARRY? (runtime carry test)](operator-carry-q.md)|[OVERFLOW? (runtime overflow test)](operator-overflow-q.md)|[PARITY? (runtime parity test)](operator-parity-q.md)|
-|[SIGN? (runtime sign test)](operator-sign-q.md)|[ZERO? (runtime zero test)](operator-zero-q.md)||
+|[\! (logische Laufzeit nicht)](operator-logical-not-masm-run-time.md)|[\!= (Laufzeit nicht gleich)](operator-not-equal-masm.md)|[&#124;&#124;(logischer Lauf Zeit Modul oder)](operator-logical-or.md)|
+|[& & (logisches und-Lauf Zeit Modul)](operator-logical-and-masm-run-time.md)|[< (Laufzeit kleiner als)](operator-less-than-masm-run-time.md)|[\<= (Laufzeit ist kleiner oder gleich)](operator-less-or-equal-masm-run-time.md)|
+|[= = (Runtime gleich)](operator-equal-masm-run-time.md)|[> (Laufzeit größer als)](operator-greater-than-masm-run-time.md)|[> = (Laufzeit größer oder gleich)](operator-greater-or-equal-masm-run-time.md)|
+|[& (Bitweises and-Lauf Zeit Modul)](operator-bitwise-and.md)|||
+|[Erledigen? (Lauf Zeit Test ausführen)](operator-carry-q.md)|[Läufen? (Lauf Zeit Überlauf Test)](operator-overflow-q.md)|[Parity? (Lauf Zeit Paritäts Test)](operator-parity-q.md)|
+|[Gebärden? (Lauf Zeit Signatur-Test)](operator-sign-q.md)|[Zins? (Lauf Zeit Zero-Test)](operator-zero-q.md)||
 
-## <a name="logical-and-shift"></a>Logical and Shift
+## <a name="logical-and-shift"></a>Logisches und Shift
 
 ||||
 |-|-|-|
-|[AND (bitwise and)](operator-and.md)|[NOT (bitwise not)](operator-not.md)|[OR (bitwise or)](operator-or.md)|
-|[SHL (shift bits left)](operator-shl.md)|[SHR (shift bits right)](operator-shr.md)|[XOR (bitwise exclusive or)](operator-xor.md)|
+|[Und (Bitweises and)](operator-and.md)|[Not (Bitweises NOT)](operator-not.md)|[Or (Bitweises OR)](operator-or.md)|
+|[SHL (UMSCHALT Bits nach links)](operator-shl.md)|[SHR (Shift Bits right)](operator-shr.md)|[XOR (Bitweises exklusives OR)](operator-xor.md)|
 
 ## <a name="macro"></a>Makro
 
 ||||
 |-|-|-|
-|[\! (character literal)](operator-logical-not-masm.md)|[% (treat as text)](operator-percent.md)||
-|[;; (treat as comment)](operator-semicolons.md)|[&lt; &gt; (treat as one literal)](operator-literal.md)|[& & (substitute parameter value)](operator-logical-and-masm.md)|
+|[\! (Zeichenliteral)](operator-logical-not-masm.md)|[% (als Text behandeln)](operator-percent.md)||
+|[;; (als Kommentar behandeln)](operator-semicolons.md)|[&lt; &gt; (als ein Literalformat behandeln)](operator-literal.md)|[& & (Parameterwert ersetzen)](operator-logical-and-masm.md)|
 
-## <a name="miscellaneous"></a>Sonstiges
+## <a name="miscellaneous"></a>Verschiedenes
 
 ||||
 |-|-|-|
-|[' ' (treat as string)](operator-single-quote.md)|[" " (treat as string)](operator-double-quote.md)||
-|: (local label definition)|:: (register segment and offset)|:: (global label definition)|
-|[; (treat as comment)](operator-semicolon.md)|[DUP (repeat declaration)](operator-dup.md)||
+|["" (als Zeichenfolge behandeln)](operator-single-quote.md)|["" (als Zeichenfolge behandeln)](operator-double-quote.md)||
+|: (Definition der lokalen Bezeichnung)|:: (Register Segment und Offset)|:: (Definition der globalen Bezeichnung)|
+|[; (als Kommentar behandeln)](operator-semicolon.md)|[DUP (Wiederholungs Deklaration)](operator-dup.md)||
 
-## <a name="record"></a>Datensatz
+## <a name="record"></a>Aufnahme
 
 |||
 |-|-|
-|[MASK (get record or field bitmask)](operator-mask.md)|[WIDTH (get record or field width)](operator-width.md)|
+|[Mask (Datensatz-oder Feld-Bitmaske)](operator-mask.md)|[Breite (Datensatz-oder Feldbreite erhalten)](operator-width.md)|
 
 ## <a name="relational"></a>Relational
 
 ||||
 |-|-|-|
-|[EQ (equal)](operator-eq.md)|[GE (greater or equal)](operator-ge.md)|[GT (greater than)](operator-gt.md)|
-|[LE (less or equal)](operator-le.md)|[LT (less than)](operator-lt.md)|[NE (not equal)](operator-ne.md)|
+|[EQ (gleich)](operator-eq.md)|[GE (größer oder gleich)](operator-ge.md)|[GT (größer als)](operator-gt.md)|
+|[Le (kleiner oder gleich)](operator-le.md)|[LT (kleiner als)](operator-lt.md)|[NE (ungleich)](operator-ne.md)|
 
 ## <a name="segment"></a>Segment
 
 |||
 |-|-|
-|[: (segment override)](operator-colon.md)|:: (register segment and offset)|
-|[IMAGEREL (image relative offset)](operator-imagerel.md)|[LROFFSET (loader resolved offset)](operator-lroffset.md)|
-|[OFFSET (segment relative offset)](operator-offset.md)|[SECTIONREL (section relative offset)](operator-sectionrel.md)|
-|[SEG (get segment)](operator-seg.md)||
+|[: (Segment Überschreibung)](operator-colon.md)|:: (Register Segment und Offset)|
+|[IMAGEREL (Bild relativer Offset)](operator-imagerel.md)|[Lroffset (Offset des Lade Moduls)](operator-lroffset.md)|
+|[Offset (relativer Segment Vergleich)](operator-offset.md)|[SECTIONREL (Abschnitts relativer Offset)](operator-sectionrel.md)|
+|[ABG (Segment erhalten)](operator-seg.md)||
 
-## <a name="type"></a>Geben Sie Folgendes ein:
+## <a name="type"></a>Typ
 
 ||||
 |-|-|-|
-|[HIGH (high 8 bits of lowest 16 bits)](operator-high.md)|[HIGH32 (high 32 bits of 64 bits)](operator-high32.md)|[HIGHWORD (high 16 bits of lowest 32 bits)](operator-highword.md)|
-|[LENGTH (number of elements in array)](operator-length.md)|[LENGTHOF (number of elements in array)](operator-lengthof.md)|[LOW (low 8 bits)](operator-low.md)|
-|[LOW32 (low 32 bits)](operator-low32.md)|[LOWWORD (low 16 bits)](operator-lowword.md)|[OPATTR (get argument type info)](operator-opattr.md)|
-|[PTR (pointer to or as type)](operator-ptr.md)|[SHORT (mark short label type)](operator-short.md)|[SIZE (size of type or variable)](operator-size.md)|
-|[SIZEOF (size of type or variable)](operator-sizeof.md)|[THIS (current location)](operator-this.md)|[TYPE (get expression type)](operator-type.md)|
-|[.TYPE (get argument type info)](operator-dot-type.md)|||
+|[Hoch (hohe 8 Bits der niedrigsten 16 Bits)](operator-high.md)|[HIGH32 (hohe 32 Bits von 64 Bits)](operator-high32.md)|[HighWord (hohe 16 Bits der niedrigsten 32 Bits)](operator-highword.md)|
+|[LENGTH (Anzahl von Elementen im Array)](operator-length.md)|[Lengthof (Anzahl von Elementen im Array)](operator-lengthof.md)|[Niedrig (niedrige 8 Bits)](operator-low.md)|
+|[LOW32 (niedrige 32 Bits)](operator-low32.md)|[Lowword (niedrige 16 Bits)](operator-lowword.md)|[OPATTR (Get-Argumenttyp Info)](operator-opattr.md)|
+|[PTR (Zeiger auf oder als Typ)](operator-ptr.md)|[Short (Bezeichnung für kurze Bezeichnung markieren)](operator-short.md)|[Größe (Größe des Typs oder der Variablen)](operator-size.md)|
+|[Sizeof (Größe des Typs oder der Variablen)](operator-sizeof.md)|[This (Aktueller Speicherort)](operator-this.md)|[Type (Ausdruck ' Ausdruck ' eingeben)](operator-type.md)|
+|[. Type (Argument-Typinformationen Get)](operator-dot-type.md)|||
 
 ## <a name="see-also"></a>Siehe auch
 

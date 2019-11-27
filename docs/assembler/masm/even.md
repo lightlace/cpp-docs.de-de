@@ -15,7 +15,7 @@ ms.locfileid: "74397591"
 ---
 # <a name="even"></a>EVEN
 
-Aligns the next variable or instruction on an even byte.
+Richtet die nächste Variable oder Anweisung an einem geraden Byte aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -23,4 +23,4 @@ Aligns the next variable or instruction on an even byte.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](directives-reference.md)
+[Direktivenverweis](directives-reference.md)

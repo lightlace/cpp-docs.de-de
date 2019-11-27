@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4202
 ms.assetid: 253293aa-97a3-4878-a2e8-c6cc9e20b1cb
-ms.openlocfilehash: c66e2243ee5eca55105de27c9824ee8ced338500
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d5e7dd45b58f1231c39565bfd74c5895096a8b7
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401266"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541644"
 ---
 # <a name="compiler-warning-level-4-c4202"></a>Compilerwarnung (Stufe 4) C4202
 
-nicht dem Standard entsprechende Erweiterung: "...": Prototypparameter in der Namensliste ist unzulässig
+nicht dem Standard entsprechende Erweiterung: "...": Prototypparameter in der Namensliste ist ungültig.
 
-Eine herkömmliche Funktionsdefinition enthält Variable Argumente. Diese Definitionen generiert einen Fehler ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Eine Funktionsdefinition im alten Stil enthält Variablen Argumente. Diese Definitionen generieren einen Fehler unter ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
 
 ## <a name="example"></a>Beispiel
 
-```
+```c
 // C4202.c
 // compile with: /W4
 void func( a, b, ...)   // C4202

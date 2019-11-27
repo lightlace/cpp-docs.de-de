@@ -13,14 +13,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398266"
 ---
-# <a name="fardata-32-bit-masm"></a>.FARDATA (32-bit MASM)
+# <a name="fardata-32-bit-masm"></a>. Fardata (32-Bit-MASM)
 
-When used with [.MODEL](../../assembler/masm/dot-model.md), starts a far data segment for initialized data (segment name FAR_DATA or *name*). (32-bit MASM only.)
+Bei Verwendung mit [. Model](../../assembler/masm/dot-model.md): startet ein weit reichtes Daten Segment für initialisierte Daten (Segment Name FAR_DATA oder *Name*). (nur 32-Bit-MASM.)
 
 ## <a name="syntax"></a>Syntax
 
-> **.FARDATA** ⟦*name*⟧
+> **. Fardata** ⟦*Name*⟧
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](directives-reference.md)
+[Direktivenverweis](directives-reference.md)

@@ -259,7 +259,7 @@ Der Compiler unterstützt diese vordefinierten Makros, die von den ISO C99-und I
 
 - `__DATE__` das Kompilierungs Datum der aktuellen Quelldatei. Das Datum ist ein Zeichenfolgenliteralzeichen mit konstanter Länge in der Form *mmm DD JJJJ*. Der Monats Name *mmm* entspricht dem abgekürzten Monatsnamen, der von der [Asctime](../c-runtime-library/reference/asctime-wasctime.md) -Funktion der C-Lauf Zeit Bibliothek (CRT) generiert wurde. Das erste Zeichen von Date *DD* ist ein Leerzeichen, wenn der Wert kleiner als 10 ist. Dieses Makro wird immer definiert.
 
-- `__FILE__` den Namen der aktuellen Quelldatei. `__FILE__` zu einem Zeichenfolgenliteralzeichen erweitert. Verwenden Sie zum Sicherstellen, dass der vollständige Dateipfad zur Datei angezeigt wird, [/FC (Vollständiger Pfad der Quellcodedatei in Diagnostik)](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md) Dieses Makro wird immer definiert.
+- `__FILE__` den Namen der aktuellen Quelldatei. `__FILE__` zu einem Zeichenfolgenliteralzeichen erweitert. Um sicherzustellen, dass der vollständige Pfad zur Datei angezeigt wird, verwenden Sie [/FC (vollständiger Pfad der Quell Code Datei in der Diagnose)](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md). Dieses Makro wird immer definiert.
 
 - `__LINE__` als ganzzahlige Zeilennummer in der aktuellen Quelldatei definiert. Der Wert des `__LINE__`-Makros kann mithilfe einer `#line`-Direktive geändert werden. Dieses Makro wird immer definiert.
 
@@ -306,7 +306,7 @@ MSVC unterstützt diese zusätzlichen vordefinierten Makros.
 
 - `_CONTROL_FLOW_GUARD` als 1 definiert, wenn die Compileroption [/Guard: CF (Ablauf Steuerungs Schutz aktivieren)](../build/reference/guard-enable-control-flow-guard.md) festgelegt ist. Andernfalls nicht definiert.
 
-- `__COUNTER__` auf ein Ganzzahlliteral erweitert, das bei 0 beginnt. Der Wert wird jedes Mal um 1 erhöht, wenn er in einer Quelldatei oder in enthaltenen Headern der Quelldatei verwendet wird. `__COUNTER__` speichert den Zustand beim Verwenden vorkompilierter Header. Dieses Makro wird immer definiert.
+- `__COUNTER__` auf ein Ganzzahlliteral erweitert, das bei 0 beginnt. Der Wert wird jedes Mal um 1 erhöht, wenn er in einer Quelldatei oder in enthaltenen Headern der Quelldatei verwendet wird. `__COUNTER__` speichert den Zustand, wenn Sie vorkompilierte Header verwenden. Dieses Makro wird immer definiert.
 
   In diesem Beispiel wird `__COUNTER__` verwendet, um drei verschiedenen Objekten desselben Typs eindeutige Bezeichner zuzuweisen. Der `exampleClass`-Konstruktor nimmt eine ganze Zahl als Parameter an. In `main`deklariert die Anwendung drei Objekte des Typs `exampleClass`, wobei `__COUNTER__` als eindeutiger bezeichnerparameter verwendet wird:
 
@@ -439,7 +439,7 @@ MSVC unterstützt diese zusätzlichen vordefinierten Makros.
 
   - 1, wenn die `/arch:SSE`-Compileroption festgelegt wurde.
 
-  - 2, wenn die Compileroption `/arch:SSE2`, `/arch:AVX`, `/arch:AVX2`oder `/arch:AVX512` festgelegt wurde. Dieser Wert ist der Standardwert, wenn keine `/arch`-Compileroption angegeben wurde. Bei Angabe von `/arch:AVX` wird auch das Makro `__AVX__` definiert. Wenn `/arch:AVX2` angegeben wird, werden sowohl `__AVX__` als auch `__AVX2__` definiert. Wenn `/arch:AVX512` angegeben ist, werden auch `__AVX__`, `__AVX2__`, `__AVX512BW__`, `__AVX512CD__`, `__AVX512DQ__`, `__AVX512F__` und `__AVX512VL__` definiert.
+  - 2, wenn die Compileroption `/arch:SSE2`, `/arch:AVX`, `/arch:AVX2`oder `/arch:AVX512` festgelegt wurde. Dieser Wert ist der Standardwert, wenn keine `/arch`-Compileroption angegeben wurde. Wenn `/arch:AVX` angegeben wird, wird auch das Makro `__AVX__` definiert. Wenn `/arch:AVX2` angegeben wird, werden sowohl `__AVX__` als auch `__AVX2__` definiert. Wenn `/arch:AVX512` angegeben ist, werden auch `__AVX__`, `__AVX2__`, `__AVX512BW__`, `__AVX512CD__`, `__AVX512DQ__`, `__AVX512F__` und `__AVX512VL__` definiert.
 
   - Weitere Informationen finden Sie unter [/arch (x86)](../build/reference/arch-x86.md).
 

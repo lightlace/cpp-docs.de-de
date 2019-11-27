@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4823
 ms.assetid: 8a77560d-dcea-4cae-aebb-8ebf1b4cef85
-ms.openlocfilehash: 28d490c341c4d14c2e6c03e13007b5a8be423622
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a96877252b0b7699f5e4033f8e695f4d9016a6c9
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401539"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541267"
 ---
 # <a name="compiler-warning-level-3-c4823"></a>Compilerwarnung (Stufe 3) C4823
 
-'Funktion': verwendet, die feste Zeigern, die Entladesemantik ist aber nicht aktiviert. Erwägen Sie die Verwendung von/EHa
+"Function": verwendet anheften-Zeiger, aber die Entlade Semantik ist nicht aktiviert. Verwenden Sie/EHA.
 
-Um ein Objekt auf dem verwalteten Heap verweist ein fester Zeiger deklariert, die in einem Blockbereich lösen zu können, wird der Compiler das Verhalten von Destruktoren für lokale Klassen, die "als", ob der feste Zeiger einen Destruktor enthält, der den Zeiger hebt simuliert. Um einen Aufruf von einem Destruktor nach dem Auslösen einer Ausnahme zu aktivieren, müssen Sie aktivieren Objekt entladen zu können, wozu können Sie [/EHsc](../../build/reference/eh-exception-handling-model.md).
+Um ein Objekt auf dem verwalteten Heap aufzulösen, auf das von einem Fixierungs Zeiger verwiesen wird, der in einem Block Bereich deklariert wurde, simuliert der Compiler das Verhalten von Debuggern von lokalen Klassen, wobei der angeheftete Zeiger einen Dekonstruktor aufweist, der den Zeiger nulliert. Zum Aktivieren eines Aufrufers nach dem Auslösen einer Ausnahme müssen Sie die Objekt Auflösung aktivieren, was Sie mithilfe von [/EHsc](../../build/reference/eh-exception-handling-model.md)tun können.
 
-Sie können auch manuell lösen das Objekt und die Warnung ignorieren.
+Sie können das Objekt auch manuell lösen und die Warnung ignorieren.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4823 generiert.
+Im folgenden Beispiel wird C4823 generiert.
 
-```
+```cpp
 // C4823.cpp
 // compile with: /clr /W3 /EHa-
 using namespace System;

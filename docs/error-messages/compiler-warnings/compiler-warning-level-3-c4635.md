@@ -35,4 +35,4 @@ public ref class Test {};
 
 Beachten Sie, dass die Ausgabe für dieses Beispiel wie folgt lautet: **Das Endtag 'member' stimmt nicht mit dem Starttag 'summary' überein.**
 
-The problem with this sample is that the end tag for \<summary> is poorly formed, and the compiler does not recognize it as the \<summary> end tag.  The \<member> tag is embedded in the .xdc file by the compiler in every /doc compilation.  So, the problem here is that the end tag \</member>, does not match the previous start tag that the compiler processed (\<summary>.
+Das Problem bei diesem Beispiel besteht darin, dass das Endtag für die \<Zusammenfassungs > unzureichend ist, und der Compiler erkennt es nicht als \<Zusammenfassungs > Endtag.  Der \<Member >-Tag wird vom Compiler in jeder/doc-Kompilierung in die XDC-Datei eingebettet.  Das Problem hier ist, dass das Endtag \</Member >, nicht mit dem vorherigen Starttag identisch ist, das der Compiler verarbeitet hat (\<Zusammenfassungs >.

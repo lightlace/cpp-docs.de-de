@@ -21,8 +21,8 @@ ms.locfileid: "74397278"
 
 ## <a name="remarks"></a>Hinweise
 
-See [FORC](../../assembler/masm/forc.md).
+Siehe [FORC](../../assembler/masm/forc.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](directives-reference.md)
+[Direktivenverweis](directives-reference.md)

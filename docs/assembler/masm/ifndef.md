@@ -15,16 +15,16 @@ ms.locfileid: "74397356"
 ---
 # <a name="ifndef"></a>IFNDEF
 
-Grants assembly if *name* has not been defined.
+Erteilt die Assembly, wenn der *Name* nicht definiert wurde.
 
 ## <a name="syntax"></a>Syntax
 
-> **IFNDEF** *name*
+> *Name* der **ifndef**
 
 ## <a name="remarks"></a>Hinweise
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+Die gesamte [Syntax finden Sie](../../assembler/masm/if-masm.md) unter.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](directives-reference.md)
+[Direktivenverweis](directives-reference.md)

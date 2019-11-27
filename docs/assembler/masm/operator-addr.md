@@ -17,7 +17,7 @@ ms.locfileid: "74397116"
 ---
 # <a name="operator-addr"></a>Operator ADDR
 
-See the [INVOKE](../../assembler/masm/invoke.md) directive.
+Siehe die [Aufruf](../../assembler/masm/invoke.md) Direktive.
 
 ## <a name="syntax"></a>Syntax
 

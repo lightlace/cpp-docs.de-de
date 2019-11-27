@@ -104,7 +104,7 @@ Prologe für nicht kanonische Funktionen können bis zu 5 Anweisungen haben (bea
 
 |Anweisung|Es wird davon ausgegangen, dass Opcode vorhanden ist, wenn:|Größe|Opcode|Entladungscodes|
 |-----------------|-----------------------------------|----------|------------|------------------|
-|1|*H*==1|16|`push {r0-r3}`|04|
+|1|*H*= = 1|16|`push {r0-r3}`|04|
 |2|*C*= = 1 oder *L*= = 1 oder *R*= = 0 oder PF = = 1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
 |3a|*C*= = 1 und (*L*= = 0 und *R*= = 1 und PF = = 0)|16|`mov r11,sp`|C0-CF/FB|
 |3b|*C*= = 1 und (*L*= = 1 oder *R*= = 0 oder PF = = 1)|32|`add r11,sp,#xx`|FC|
@@ -121,20 +121,20 @@ Die Anweisungen 2 und 4 werden abhängig davon festgelegt, ob eine Pushübertagu
 
 |A|L|R|PF|Ganzzahlregister per Push abgelegt|VFP-Register per Push abgelegt|
 |-------|-------|-------|--------|------------------------------|--------------------------|
-|0|0|0|0|R4-r*N*|Keine|
-|0|0|0|1|r*S*-r*N*|Keine|
-|0|0|1|0|Keine|D8-d*E*|
+|0|0|0|0|R4-r*N*|none|
+|0|0|0|1|r*S*-r*N*|none|
+|0|0|1|0|none|D8-d*E*|
 |0|0|1|1|r*S*-R3|D8-d*E*|
-|0|1|0|0|R4-r*N*, LR|Keine|
-|0|1|0|1|r*S*-r*N*, LR|Keine|
+|0|1|0|0|R4-r*N*, LR|none|
+|0|1|0|1|r*S*-r*N*, LR|none|
 |0|1|1|0|LR|D8-d*E*|
 |0|1|1|1|r*S*-R3, LR|D8-d*E*|
-|1|0|0|0|R4-r*N*, R11|Keine|
-|1|0|0|1|r*S*-r*N*, R11|Keine|
+|1|0|0|0|R4-r*N*, R11|none|
+|1|0|0|1|r*S*-r*N*, R11|none|
 |1|0|1|0|r11|D8-d*E*|
 |1|0|1|1|r*S*-R3, R11|D8-d*E*|
-|1|1|0|0|R4-r*N*, R11, LR|Keine|
-|1|1|0|1|r*S*-r*N*, R11, LR|Keine|
+|1|1|0|0|R4-r*N*, R11, LR|none|
+|1|1|0|1|r*S*-r*N*, R11, LR|none|
 |1|1|1|0|r11, LR|D8-d*E*|
 |1|1|1|1|r*S*-R3, R11, LR|D8-d*E*|
 
@@ -226,7 +226,7 @@ Obwohl der Prolog und jeder Epilog über einen Index für die Entladungs Codes v
 
 Das Array an Entladungscodes ist ein Pool von Anweisungsequenzen, der genau beschreibt, wie die Wirkungen des Prologs rückgängig gemacht werden und in welcher Reihenfolge. Die Entladungscodes sind ein Satz von Minianweisungen, die als eine Zeichenfolge von Bytes codiert wurden. Wenn die Ausführung abgeschlossen ist, befindet sich die Rückgabeadresse im LR-Register und alle nicht flüchtigen Register werden auf ihre Werte zu Beginn des Funktionsaufrufs zurückgesetzt.
 
-Würden Ausnahmen garantiert immer nur innerhalb einer Funktion auftreten und niemals im Prolog oder Epilog, dann wäre nur eine Entladesequenz nötig. Doch das Windows-Entlademodell erfordert die Fähigkeit, von innerhalb eines teilweise ausgeführten Prologs oder Epilogs aus zu entladen. Damit dieser Anforderung Rechnung getragen wird, wurden die Entladungscodes sorgfältig so entwickelt, dass sie eine unzweifelhafte Eins-zu-Eins-Zuordnung zu jedem relevanten Opcode im Prolog und Epilog haben. Das hat eine Reihe von Auswirkungen:
+Würden Ausnahmen garantiert immer nur innerhalb einer Funktion auftreten und niemals im Prolog oder Epilog, dann wäre nur eine Entladesequenz nötig. Doch das Windows-Entlademodell erfordert die Fähigkeit, von innerhalb eines teilweise ausgeführten Prologs oder Epilogs aus zu entladen. Damit dieser Anforderung Rechnung getragen wird, wurden die Entladungscodes sorgfältig so entwickelt, dass sie eine unzweifelhafte Eins-zu-Eins-Zuordnung zu jedem relevanten Opcode im Prolog und Epilog haben. Dies wirkt sich auf verschiedene Weise aus:
 
 - Es ist möglich, die Länge von Prolog und Epilog zu berechnen, indem man die Anzahl von Entladungscodes zählt. Das ist selbst mit Thumb-2-Anweisungen mit variabler Länge möglich, da es eine eindeutige Zuordnung für 16- und 32-Bit-Opcodes gibt.
 
@@ -298,9 +298,9 @@ Neben jedem Opcode befindet sich der entsprechende Entladungscode, der diesen Vo
 
 Der Code 0xFD ist ein Spezialcode für das Ende der Sequenz und bedeutet, dass der Epilog eine 16-Bit-Anweisung länger als der Prolog ist. Damit ist es öfter möglich, Entladungscodes gemeinsam zu nutzen.
 
-Im Beispiel beginnt die Entladung mit dem Epilogfall, wenn beim Ausführen des Funktionstextes zwischen Prolog und Epilog eine Ausnahme auftritt, und zwar bei Offset 0 im Epilogcode. Das entspricht dem Offset 0x140 im Beispiel. Der Entlader führt die volle Entladesequenz aus, da keine Bereinigung vorgenommen wurde. Wenn stattdessen die Ausnahme eine Anweisung nach dem Beginn des Epilogcodes auftritt, kann der Entlader erfolgreich entladen, indem er den ersten Entladungscode überspringt. Ausgehend von einer Eins-zu-Eins-Zuordnung von Opcodes und Entladungscodes sollte der Entlader die ersten *n* Entladungscodes überspringen, wenn die Entladung von Anweisung *n* im Epilog stattfindet.
+Im Beispiel beginnt die Entladung mit dem Epilogfall, wenn beim Ausführen des Funktionstextes zwischen Prolog und Epilog eine Ausnahme auftritt, und zwar bei Offset 0 im Epilogcode. Das entspricht dem Offset 0x140 im Beispiel. Der Entlader führt die volle Entladesequenz aus, da keine Bereinigung vorgenommen wurde. Wenn stattdessen die Ausnahme eine Anweisung nach dem Beginn des Epilogcodes auftritt, kann der Entlader erfolgreich entladen, indem er den ersten Entladungscode überspringt. Bei einer eins-zu-Eins-Zuordnung zwischen Opcodes und Entladungs Codes sollte der Entlader die ersten *n* Entladungs Codes überspringen, wenn die Entladung von Anweisung *n* im Epilog entlädt.
 
-Die gleiche Logik gilt umgekehrt für den Prolog. Findet die Entladung von Offset 0 im Prolog statt, muss nichts ausgeführt werden. Findet die Entladung von einer Anweisung weiter innen statt, sollte die Entladungssequenz einen Entladungscode vom Ende starten, da Prolog-Entladungscodes in umgekehrter Reihenfolge gespeichert werden. Im allgemeinen Fall sollte die Entladung bei *n*-Entladungscodes vom Ende der Codeliste beginnen, wenn die Entladung von Anweisung *n* im Prolog erfolgt.
+Die gleiche Logik gilt umgekehrt für den Prolog. Findet die Entladung von Offset 0 im Prolog statt, muss nichts ausgeführt werden. Findet die Entladung von einer Anweisung weiter innen statt, sollte die Entladungssequenz einen Entladungscode vom Ende starten, da Prolog-Entladungscodes in umgekehrter Reihenfolge gespeichert werden. Im allgemeinen Fall, wenn das Entladen von der Anweisung *n* im Prolog ausgeführt wird, sollte das Entladen mit *n* Entladungs Codes am Ende der Liste der Codes beginnen.
 
 Prolog- und Epilog-Entladungscodes stimmen nicht immer genau überein. In diesem Fall muss das Entladungscode-Array eine Reihe von Codesequenzen enthalten. Verwenden Sie folgende Logik, um den Offset für den Beginn der Verarbeitungscodes zu bestimmen:
 

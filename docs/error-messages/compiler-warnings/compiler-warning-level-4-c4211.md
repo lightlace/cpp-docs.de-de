@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4211
 ms.assetid: 3eea3455-6faa-4cdb-8730-73db7026bd1f
-ms.openlocfilehash: 6d61191c4a7ed950d979158ccdfa3a390439b019
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6387f58430098e49e7add25e8915bf6b181634e9
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401136"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541840"
 ---
 # <a name="compiler-warning-level-4-c4211"></a>Compilerwarnung (Stufe 4) C4211
 
-nicht dem Standard entsprechende Erweiterung: Neudefinition von Extern als statisch
+nicht dem Standard entsprechende Erweiterung: Neudefinition von extern in static
 
-Mit den Standard-Microsoft-Erweiterungen (/ Ze), können Sie definieren eine `extern` Bezeichner als **statische**.
+Mit den standardmäßigen Microsoft-Erweiterungen (/Ze) können Sie einen `extern` Bezeichner als **statisch**neu definieren.
 
 ## <a name="example"></a>Beispiel
 
-```
+```c
 // C4211.c
 // compile with: /W4
 extern int i;
@@ -32,4 +32,4 @@ int main()
 }
 ```
 
-Derartige Neudefinitionen sind ungültig, ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Diese Neudefinitionen sind unter ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) ungültig.

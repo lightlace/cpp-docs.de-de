@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4289
 ms.assetid: 0dbd2863-4cde-4e16-894b-104a2d5fa724
-ms.openlocfilehash: 3a997af466ddfdaaf4631afeb53d917ce0338c3b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc1a22065be6d5f7f49d6c32f6bc9b6479399e29
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400902"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541970"
 ---
 # <a name="compiler-warning-level-4-c4289"></a>Compilerwarnung (Stufe 4) C4289
 
 Nicht dem Standard entsprechende Erweiterung: 'var': Die loop-Steuerelementvariable, die in der for-Schleife deklariert wurde, wird außerhalb des for-Schleifenbereichs verwendet
 
-Beim Kompilieren mit [/Ze](../../build/reference/za-ze-disable-language-extensions.md) und **/Zc: forScope**, eine Variable deklariert, die einer [für](../../cpp/for-statement-cpp.md) Schleife wurde verwendet, nach der **für**-Schleife-Bereich.
+Beim Kompilieren mit [/Ze](../../build/reference/za-ze-disable-language-extensions.md) und **/Zc: forScope-** wurde eine in einer [for](../../cpp/for-statement-cpp.md) -Schleife deklarierte Variable nach dem **for**-Schleifen Bereich verwendet.
 
-Finden Sie unter [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) Informationen zur Vorgehensweise beim Angeben der gemäß dem Standardverhalten in **für** mit Schleifen **/Ze**.
+Weitere Informationen zum Angeben des Standard Verhaltens in **for** -Schleifen mit **/Ze**finden Sie unter [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) .
 
 Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-Im folgende Beispiel wird die C4289 generiert:
+Im folgenden Beispiel wird C4289 generiert:
 
-```
+```cpp
 // C4289.cpp
 // compile with: /W4 /Zc:forScope-
 #pragma warning(default:4289)

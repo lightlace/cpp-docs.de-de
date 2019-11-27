@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4204
 ms.assetid: 298d2880-6737-448e-b711-15572d540200
-ms.openlocfilehash: e16cb9fb59ee6ec24bb9b68dad1be9432d9eee3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ecbe8bddd3f868070470555e79608ac1ecce380a
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401240"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541673"
 ---
 # <a name="compiler-warning-level-4-c4204"></a>Compilerwarnung (Stufe 4) C4204
 
-nicht dem Standard entsprechende Erweiterung: nicht konstanter aggregierter Initialisierer
+nicht dem Standard entsprechende Erweiterung: nicht konstanter Aggregat Initialisierer
 
-Mit Microsoft-Erweiterungen (/ Ze) können Sie aggregierte Datentypen (Arrays, Strukturen, Unions und Klassen) mit den Werten initialisieren, die sich nicht um Konstanten handelt.
+Mit Microsoft Extensions (/Ze) können Sie Aggregat Typen (Arrays, Strukturen, Unions und Klassen) mit Werten initialisieren, die keine Konstanten sind.
 
 ## <a name="example"></a>Beispiel
 
-```
+```c
 // C4204.c
 // compile with: /W4
 int func1()
@@ -40,4 +40,4 @@ int main()
 }
 ```
 
-Diese Initialisierungen sind ungültig, ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Diese Initialisierungen sind unter ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) ungültig.

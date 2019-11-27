@@ -13,7 +13,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398498"
 ---
-# <a name="else-32-bit-masm"></a>.ELSE (32-bit MASM)
+# <a name="else-32-bit-masm"></a>. Else (32-Bit-MASM)
 
 ## <a name="syntax"></a>Syntax
 
@@ -21,7 +21,7 @@ ms.locfileid: "74398498"
 
 ## <a name="remarks"></a>Hinweise
 
-(32-bit MASM only.) See [.IF](../../assembler/masm/dot-if.md).
+(nur 32-Bit-MASM.) Siehe [. Wenn](../../assembler/masm/dot-if.md).
 
 ## <a name="see-also"></a>Siehe auch
 

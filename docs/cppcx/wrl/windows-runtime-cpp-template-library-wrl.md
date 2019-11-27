@@ -3,12 +3,12 @@ title: Windows Runtime C++ Template Library (WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 7b99f6429f620b56aec5adbc4b8f15d89cc54264
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 7a7b37a32ebaa0bb6ad71c8f710300256589388d
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274670"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541202"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows Runtime C++ Template Library (WRL)
 
@@ -46,34 +46,34 @@ In diesem Channel 9-Video erfahren Sie mehr darüber, wie C++ die Windows-Runtim
 [Vorgehensweise: Aktivieren und Verwenden einer Windows-Runtime Komponente](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
 Zeigt, wie die Windows-Runtime C++ Vorlagen Bibliothek verwendet wird, um die Windows-Runtime zu initialisieren und eine Windows-Runtime Komponente zu aktivieren und zu verwenden.
 
-[Vorgehensweise: Asynchrone Vorgänge vervollständigen](how-to-complete-asynchronous-operations-using-wrl.md)<br/>
+[Vorgehensweise: vervollständigen von asynchronen Vorgängen](how-to-complete-asynchronous-operations-using-wrl.md)<br/>
 Zeigt, wie die Windows-Runtime C++ Vorlagen Bibliothek verwendet wird, um asynchrone Vorgänge zu starten und Aufgaben auszuführen, wenn der Vorgang beendet wird.
 
-[Vorgehensweise: Behandeln von Ereignissen](how-to-handle-events-using-wrl.md)<br/>
+[Gewusst wie: Behandeln von Ereignissen](how-to-handle-events-using-wrl.md)<br/>
 Zeigt, wie die Windows-Runtime C++ Vorlagen Bibliothek verwendet wird, um die Ereignisse eines Windows-Runtime Objekts zu abonnieren und zu behandeln.
 
 [Exemplarische Vorgehensweise: Erstellen einer UWP-App mithilfe von WRL und Media Foundation](walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)<br/>
 Erfahren Sie, wie Sie eine UWP-app erstellen, die [Microsoft Media Foundation](/windows/win32/medfound/microsoft-media-foundation-sdk)verwendet.
 
-[Vorgehensweise: Erstellen einer klassischen COM-Komponente](how-to-create-a-classic-com-component-using-wrl.md)<br/>
+[Gewusst wie: Erstellen einer klassischen COM-Komponente](how-to-create-a-classic-com-component-using-wrl.md)<br/>
 Zeigt, wie die Windows-Runtime C++ Vorlagen Bibliothek zum Erstellen einer grundlegenden COM-Komponente und eine einfache Methode zum Registrieren und Verwenden der COM-Komponente aus einer Desktop-App verwendet wird.
 
 [Vorgehensweise: Direktes Instanziieren von WRL-Komponenten](how-to-instantiate-wrl-components-directly.md)<br/>
 Erfahren Sie, wie Sie mit den Funktionen [Microsoft::WRL::Make](make-function.md) und [Microsoft::WRL::Details::MakeAndInitialize](makeandinitialize-function.md) eine Komponente aus dem Modul instanziieren, das sie definiert.
 
-[Vorgehensweise: Verwenden von „winmdidl.exe“ und „midlrt.exe“ zum Erstellen von .h-Dateien aus Windows-Metadaten](use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
+[Vorgehensweise: Verwenden von winmdidl.exe und midlrt.exe zum Erstellen von .h-Dateien aus Windows-Metadaten](use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
 Zeigt, wie benutzerdefinierte Komponenten für Windows-Runtime von WRL durch Erstellen einer IDL-Datei von den WINMD-Metadaten verarbeitet werden.
 
 [Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 Zeigt, wie die [IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2) -und [IXMLHTTPRequest2Callback](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2callback) -Schnittstellen in Verbindung mit Aufgaben verwendet werden, um HTTP Get-und Post-Anforderungen an einen Webdienst in einer UWP-APP zu senden.
 
 [Beispiel für den Reise-Optimierer von Beispiel Karten](https://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
-Verwendet die `HttpRequest` -Klasse, die in [Walkthrough definiert ist: Herstellen einer Verbindung mithilfe von Aufgaben und](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) XML-HTTP-Anforderungen im Kontext einer kompletten UWP-app.
+Verwendet die `HttpRequest` Klasse, die in Exemplarische Vorgehensweise [: Herstellen einer Verbindung mithilfe von Aufgaben und XML-HTTP-Anforderungen](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) im Kontext einer kompletten UWP-App definiert ist.
 
 [Erstellen einer Windows-Runtime DLL-Komponente C++ mit Sample](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 Zeigt, wie Sie mithilfe der C++ Windows-Runtime Vorlagen Bibliothek eine Prozess interne dll-Komponente erstellen und Sie aus C++/CX, JavaScript und C#nutzen können.
 
-[DirectX Marble Maze-Spielbeispiel](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
+[DirectX Marble Maze-Spielbeispiel](https://docs.microsoft.com/samples/microsoft/windows-appsample-marble-maze/directx-marble-maze-game-sample/)<br/>
 Veranschaulicht, wie die Windows-Runtime C++ Vorlagen Bibliothek verwendet wird, um die Lebensdauer von COM-Komponenten wie DirectX und Media Foundation im Kontext eines kompletten 3D-Spiels zu verwalten.
 
 [Beispiel für das Senden von Popup Benachrichtigungen aus Desktop-Apps](https://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
@@ -109,11 +109,11 @@ Windows-Runtime C++ Vorlagen Bibliothek stellt Typen bereit, die einige grundleg
 
 ### <a name="comptr"></a>ComPtr
 
-[ComPtr](comptr-class.md) ist ein Typ des *intelligenten Zeigermechanismus* , der die Schnittstelle darstellt, die vom Vorlagenparameter angegeben wird. Mit `ComPtr` deklarieren Sie eine Variable, die auf die Member eines Objekts zugreifen kann, das von der Schnittstelle abgeleitet wird. `ComPtr` verwaltet automatisch einen Verweiszähler für den zugrunde liegenden Schnittstellenzeiger und gibt die Schnittstelle frei, wenn der Verweiszähler auf null geht.
+[ComPtr](comptr-class.md) ist ein Typ des *intelligenten Zeigermechanismus* , der die Schnittstelle darstellt, die vom Vorlagenparameter angegeben wird. Mit `ComPtr` deklarieren Sie eine Variable, die auf die Member eines Objekts zugreifen kann, das von der Schnittstelle abgeleitet wird. `ComPtr` verwaltet automatisch einen Verweis Zähler für den zugrunde liegenden Schnittstellen Zeiger und gibt die Schnittstelle frei, wenn der Verweis Zähler auf 0 (null) wechselt.
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
-[RuntimeClass](runtimeclass-class.md) stellt eine instanziierte Klasse dar, die einen Satz angegebener Schnittstellen erbt. Ein `RuntimeClass` -Objekt kann eine Kombination der Unterstützung für eine oder mehrere Windows-Runtime com-Schnittstellen oder einen schwachen Verweis auf eine Komponente bereitstellen.
+[RuntimeClass](runtimeclass-class.md) stellt eine instanziierte Klasse dar, die einen Satz angegebener Schnittstellen erbt. Ein `RuntimeClass`-Objekt kann eine Kombination der Unterstützung für eine oder mehrere Windows-Runtime com-Schnittstellen oder einen schwachen Verweis auf eine Komponente bereitstellen.
 
 ### <a name="module"></a>Modul
 
@@ -125,7 +125,7 @@ Die [Rückruf](callback-function-wrl.md) -Funktion erstellt ein Objekt, dessen M
 
 ### <a name="eventsource"></a>EventSource
 
-Mit[EventSource](eventsource-class.md) verwalten Sie *Delegat* -Ereignishandler. Verwenden Sie C++ Windows-Runtime Vorlagen Bibliothek zum Implementieren eines Delegaten, `EventSource` und verwenden Sie, um Delegaten hinzuzufügen, zu entfernen und aufzurufen.
+Mit[EventSource](eventsource-class.md) verwalten Sie *Delegat* -Ereignishandler. Verwenden Sie C++ Windows-Runtime Vorlagen Bibliothek zum Implementieren eines Delegaten, und verwenden Sie `EventSource`, um Delegaten hinzuzufügen, zu entfernen und aufzurufen.
 
 ### <a name="asyncbase"></a>AsyncBase
 
@@ -133,11 +133,11 @@ Mit[EventSource](eventsource-class.md) verwalten Sie *Delegat* -Ereignishandler.
 
 ### <a name="ftmbase"></a>FtmBase
 
-[FtmBase](ftmbase-class.md) stellt ein Freethread-Marshaller-Objekt dar. `FtmBase` erstellt eine globale Schnittstellentabelle (GIT) und hilft bei der Verwaltung von Marshalling- und Proxyobjekten.
+[FtmBase](ftmbase-class.md) stellt ein Freethread-Marshaller-Objekt dar. `FtmBase` erstellt eine globale Schnittstellen Tabelle (git) und hilft bei der Verwaltung von Marshalling-und Proxy Objekten.
 
 ### <a name="weakref"></a>WeakRef
 
-[WeakRef](weakref-class.md) ist ein Typ des intelligenten Zeigermechanismus, der einen *schwachen Verweis*auf ein Objekt darstellt, das möglicherweise zugänglich ist. Ein `WeakRef` -Objekt kann nur von der Windows-Runtime und nicht vom klassischen com verwendet werden.
+[WeakRef](weakref-class.md) ist ein Typ des intelligenten Zeigermechanismus, der einen *schwachen Verweis*auf ein Objekt darstellt, das möglicherweise zugänglich ist. Ein `WeakRef`-Objekt kann nur von der Windows-Runtime und nicht vom klassischen com verwendet werden.
 
 Ein `WeakRef` -Objekt stellt in der Regel ein Objekt dar, dessen Vorhandensein von einem externen Thread oder einer externen Anwendung gesteuert wird. Beispielsweise kann ein `WeakRef` -Objekt auf ein Dateiobjekt verweisen. Wenn die Datei geöffnet ist, so ist `WeakRef` gültig, und die referenzierte Datei ist zugänglich. Wenn die Datei hingegen geschlossen ist, so ist `WeakRef` ungültig, und die Datei ist nicht zugänglich.
 

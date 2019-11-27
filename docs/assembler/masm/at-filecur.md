@@ -13,14 +13,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399053"
 ---
-# <a name="filecur"></a>\@FileCur
+# <a name="filecur"></a>\@von "flecur"
 
-The name of the current file (text macro).
+Der Name der aktuellen Datei (Text Makro).
 
 ## <a name="syntax"></a>Syntax
 
-> **\@FileCur**
+> **\@von "flecur"**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Symbols reference](symbols-reference.md)
+[Symbol Verweis](symbols-reference.md)

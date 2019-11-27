@@ -17,29 +17,29 @@ ms.locfileid: "74245859"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Auswerten von Catch-Blöcken (C++)
 
-C++ ermöglicht Ihnen das Auslösen von Ausnahmen eines beliebigen Typs, obwohl im Allgemeinen empfohlen wird, Typen auszulösen, die von der std::exception abgeleitet sind. A C++ exception can be caught by a **catch** handler that specifies the same type as the thrown exception, or by a handler that can catch any type of exception.
+C++ ermöglicht Ihnen das Auslösen von Ausnahmen eines beliebigen Typs, obwohl im Allgemeinen empfohlen wird, Typen auszulösen, die von der std::exception abgeleitet sind. Eine C++ -Ausnahme kann von einem **catch** -Handler abgefangen werden, der den gleichen Typ wie die ausgelöste Ausnahme angibt, oder durch einen Handler, der einen beliebigen Ausnahmetyp abfangen kann.
 
 Wenn der Typ der ausgelösten Ausnahme eine Klasse ist, die auch eine Basisklasse (oder Klassen) besitzt, kann sie durch Handler abgefangen werden, die Basisklassen des Ausnahmetyps oder Verweise auf Basen des Ausnahmetyps akzeptieren. Beachten Sie, dass wenn eine Ausnahme durch einen Verweis abgefangen wird, sie an das tatsächlich ausgelöste Ausnahmeobjekt gebunden ist; andernfalls ist es eine Kopie (nahezu identisch mit einem Argument für eine Funktion).
 
-When an exception is thrown, it may be caught by the following types of **catch** handlers:
+Wenn eine Ausnahme ausgelöst wird, kann Sie von den folgenden Typen von **catch** -Handlern abgefangen werden:
 
 - Ein Handler, der jeden Typ akzeptieren kann (mit der Auslassungszeichensyntax).
 
-- A handler that accepts the same type as the exception object; because it is a copy, **const** and **volatile** modifiers are ignored.
+- Ein Handler, der den gleichen Typ wie das Ausnahme Objekt akzeptiert. Da es sich um eine Kopie handelt, werden **Konstanten** und **flüchtige** modifiziererer ignoriert.
 
 - Ein Handler, der einen Verweis auf den gleichen Typ wie das Ausnahmeobjekt akzeptiert.
 
-- A handler that accepts a reference to a **const** or **volatile** form of the same type as the exception object.
+- Ein Handler, der einen Verweis auf eine **Konstante oder** **flüchtige** Form desselben Typs wie das Ausnahme Objekt akzeptiert.
 
-- A handler that accepts a base class of the same type as the exception object; since it is a copy, **const** and **volatile** modifiers are ignored. The **catch** handler for a base class must not precede the **catch** handler for the derived class.
+- Ein Handler, der eine Basisklasse des gleichen Typs wie das Ausnahme Objekt akzeptiert. Da es sich um eine Kopie handelt, werden **Konstanten** und **flüchtige** modifiziererer ignoriert. Der **catch** -Handler für eine Basisklasse darf nicht dem **catch** -Handler für die abgeleitete Klasse vorangestellt sein.
 
 - Ein Handler, der einen Verweis auf eine Basisklasse des gleichen Typs wie das Ausnahmeobjekt akzeptiert.
 
-- A handler that accepts a reference to a **const** or **volatile** form of a base class of the same type as the exception object.
+- Ein Handler, der einen Verweis auf eine **Konstante oder** **flüchtige** Form einer Basisklasse des gleichen Typs wie das Ausnahme Objekt akzeptiert.
 
 - Ein Handler, der einen Zeiger akzeptiert, in den ein ausgelöstes Zeigerobjekt über Standardzeigerkonvertierungsregeln konvertiert werden kann.
 
-The order in which **catch** handlers appear is significant, because handlers for a given **try** block are examined in order of their appearance. Beispielsweise ist es einem Fehler, den Handler einer Basisklasse vor dem Handler einer abgeleiteten Klasse zu platzieren. After a matching **catch** handler is found, subsequent handlers are not examined. As a result, an ellipsis **catch** handler must be the last handler for its **try** block. Beispiel:
+Die Reihenfolge, in der die **catch** -Handler angezeigt werden, ist signifikant, da Handler für einen bestimmten **try** -Block in der Reihenfolge ihrer Darstellung überprüft werden. Beispielsweise ist es einem Fehler, den Handler einer Basisklasse vor dem Handler einer abgeleiteten Klasse zu platzieren. Nachdem ein entsprechender **catch** -Handler gefunden wurde, werden nachfolgende Handler nicht untersucht. Folglich muss ein Ellipsen **catch** -Handler der letzte Handler für den **try** -Block sein. Beispiel:
 
 ```cpp
 // ...
@@ -62,8 +62,8 @@ catch( CExcptClass E )
 }
 ```
 
-In this example, the ellipsis **catch** handler is the only handler that is examined.
+In diesem Beispiel ist der Auslassungs Zeichen- **catch** -Handler der einzige Handler, der untersucht wird.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[Moderne C++ bewährte Methoden für Ausnahmen und Fehlerbehandlung](../cpp/errors-and-exception-handling-modern-cpp.md)

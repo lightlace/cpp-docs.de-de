@@ -15,7 +15,7 @@ ms.locfileid: "74398888"
 ---
 # <a name="version"></a>\@Version
 
-The major and minor version of MASM reported at the command line, as a single number (text macro). For example, MASM version 14.23.28107.0 produces "1423".
+Die Haupt-und neben Version von MASM, die in der Befehlszeile als einzelne Zahl (Text Makro) gemeldet wird. Die MASM-Version 14.23.28107.0 erzeugt z. b. "1423".
 
 ## <a name="syntax"></a>Syntax
 
@@ -23,4 +23,4 @@ The major and minor version of MASM reported at the command line, as a single nu
 
 ## <a name="see-also"></a>Siehe auch
 
-[Symbols reference](symbols-reference.md)
+[Symbol Verweis](symbols-reference.md)

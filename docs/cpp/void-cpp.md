@@ -17,13 +17,13 @@ ms.locfileid: "74245211"
 ---
 # <a name="void-c"></a>void (C++)
 
-When used as a function return type, the **void** keyword specifies that the function does not return a value. When used for a function's parameter list, **void** specifies that the function takes no parameters. When used in the declaration of a pointer, **void** specifies that the pointer is "universal."
+Wenn das **void** -Schlüsselwort als Funktions Rückgabetyp verwendet wird, gibt es an, dass die Funktion keinen Wert zurückgibt. Bei Verwendung für die Parameterliste einer Funktion gibt **void** an, dass die Funktion keine Parameter annimmt. Bei Verwendung in der Deklaration eines Zeigers gibt **void** an, dass der Zeiger "Universal" ist.
 
-If a pointer's type is **void\*** , the pointer can point to any variable that is not declared with the **const** or **volatile** keyword. A **void\*** pointer cannot be dereferenced unless it is cast to another type. A **void\*** pointer can be converted into any other type of data pointer.
+Wenn der Typ eines Zeigers **void\*** ist, kann der Zeiger auf eine beliebige Variable verweisen, die nicht mit dem Schlüsselwort " **Konstanten** " oder " **volatile** " deklariert ist. Ein **void-\*** Zeiger kann nicht dereferenziert werden, es sei denn, er wird in einen anderen Typ umgewandelt. Ein **void-\*** Zeiger kann in beliebige andere Typen von Daten Zeigern konvertiert werden.
 
-A **void** pointer can point to a function, but not to a class member in C++.
+Ein **void** -Zeiger kann auf eine Funktion verweisen, jedoch nicht auf einen Klassenmember in C++.
 
-You cannot declare a variable of type **void**.
+Eine Variable vom Typ " **void**" kann nicht deklariert werden.
 
 ## <a name="example"></a>Beispiel
 
@@ -41,5 +41,5 @@ int main() {
 
 ## <a name="see-also"></a>Siehe auch
 
-[Stichwörter](../cpp/keywords-cpp.md)<br/>
-[Grundlegende Typen](../cpp/fundamental-types-cpp.md)
+[Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
+[Fundamental Types (Grundlegende Typen)](../cpp/fundamental-types-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create and use weak_ptr instances'
+title: 'Vorgehensweise: Erstellen und Verwenden von weak_ptr Instanzen'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
@@ -11,11 +11,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74245599"
 ---
-# <a name="how-to-create-and-use-weak_ptr-instances"></a>How to: Create and use weak_ptr instances
+# <a name="how-to-create-and-use-weak_ptr-instances"></a>Vorgehensweise: Erstellen und Verwenden von weak_ptr Instanzen
 
-Sometimes an object must store a way to access the underlying object of a [shared_ptr](../standard-library/shared-ptr-class.md) without causing the reference count to be incremented. Diese Situation tritt in der Regel auf, wenn zyklische Verweise zwischen `shared_ptr`-Instanzen vorliegen.
+Manchmal muss ein Objekt eine Möglichkeit speichern, auf das zugrunde liegende Objekt eines [shared_ptr](../standard-library/shared-ptr-class.md) zuzugreifen, ohne dass der Verweis Zähler erhöht wird. Diese Situation tritt in der Regel auf, wenn zyklische Verweise zwischen `shared_ptr`-Instanzen vorliegen.
 
-Der optimale Entwurf ist die Vermeidung von gemeinsamem Zeigerbesitz. Wenn Sie jedoch gemeinsamen Besitz von `shared_ptr`-Instanzen benötigen, vermeiden Sie zyklische Verweise zwischen ihnen. When cyclic references are unavoidable, or even preferable for some reason, use [weak_ptr](../standard-library/weak-ptr-class.md) to give one or more of the owners a weak reference to another `shared_ptr`. Mit `weak_ptr` können Sie einen `shared_ptr` erstellen, der eine vorhandene Gruppe verwandter Instanzen verknüpft, wobei nur die zugrunde liegende Speicherressource weiterhin gültig ist. Der `weak_ptr` selbst nimmt nicht an der Referenzzählung teil und kann daher nicht verhindern, dass der Referenzzähler den Wert 0 erreicht. Sie können jedoch einen `weak_ptr` verwenden, um zu versuchen, eine neue Kopie des `shared_ptr` zu erhalten, mit der er initialisiert wurde. If the memory has already been deleted, the `weak_ptr`'s bool operator returns `false`. Wenn der Arbeitsspeicher noch gültig ist, erhöht der neue freigegebene Zeiger den Verweiszähler und stellt sicher, dass der Arbeitsspeicher gültig bleibt, solange die `shared_ptr`-Variable im Gültigkeitsbereich liegt.
+Der optimale Entwurf ist die Vermeidung von gemeinsamem Zeigerbesitz. Wenn Sie jedoch gemeinsamen Besitz von `shared_ptr`-Instanzen benötigen, vermeiden Sie zyklische Verweise zwischen ihnen. Wenn zyklische Verweise unvermeidlich sind oder aus irgendeinem Grund vorzuziehen sind, verwenden Sie [weak_ptr](../standard-library/weak-ptr-class.md) , um einem oder mehreren Besitzern einen schwachen Verweis auf eine andere `shared_ptr`zu übergeben. Mit `weak_ptr` können Sie einen `shared_ptr` erstellen, der eine vorhandene Gruppe verwandter Instanzen verknüpft, wobei nur die zugrunde liegende Speicherressource weiterhin gültig ist. Der `weak_ptr` selbst nimmt nicht an der Referenzzählung teil und kann daher nicht verhindern, dass der Referenzzähler den Wert 0 erreicht. Sie können jedoch einen `weak_ptr` verwenden, um zu versuchen, eine neue Kopie des `shared_ptr` zu erhalten, mit der er initialisiert wurde. Wenn der Arbeitsspeicher bereits gelöscht wurde, gibt der bool-Operator des `weak_ptr``false`zurück. Wenn der Arbeitsspeicher noch gültig ist, erhöht der neue freigegebene Zeiger den Verweiszähler und stellt sicher, dass der Arbeitsspeicher gültig bleibt, solange die `shared_ptr`-Variable im Gültigkeitsbereich liegt.
 
 ## <a name="example"></a>Beispiel
 

@@ -18,15 +18,15 @@ ms.locfileid: "74305852"
 ---
 # <a name="fenv_access-pragma"></a>fenv_access-Pragma
 
-Deaktiviert (**on**) oder aktiviert (**off**) Optimierungen, die die Tests für Flags der Gleitkommaumgbung und Modusänderungen beeinflussen können
+Deaktiviert (aktiviert) oder**aktiviert (** **Off**) Optimierungen, die Gleit Komma-Umgebungs Kennzeichen-Tests und-Modusänderungen ändern können.
 
 ## <a name="syntax"></a>Syntax
 
-> **#pragma fenv_access (** { **on** | **off** } **)**
+> **#pragma fenv_access (** { **on** | **Off** } **)**
 
 ## <a name="remarks"></a>Hinweise
 
-In der Standardeinstellung ist **fenv_access** auf **off** (aus) festgelegt. Der Compiler geht davon aus, dass der Code nicht auf die Gleit Komma Umgebung zugreift oder Sie bearbeitet. Wenn der Zugriff auf die Umgebung nicht erforderlich ist, kann der Compiler mehr erreichen, um den Gleit Komma Code zu optimieren.
+Standardmäßig ist **fenv_access** deaktiviert **.** Der Compiler geht davon aus, dass der Code nicht auf die Gleit Komma Umgebung zugreift oder Sie bearbeitet. Wenn der Zugriff auf die Umgebung nicht erforderlich ist, kann der Compiler mehr erreichen, um den Gleit Komma Code zu optimieren.
 
 Aktivieren Sie **fenv_access** , wenn der Code Gleit Komma-Statusflags oder-Ausnahmen testet oder steuerungsmodusflags festlegt. Der Compiler deaktiviert Gleit Komma Optimierungen, sodass der Code konsistent auf die Gleit Komma Umgebung zugreifen kann.
 
@@ -38,7 +38,7 @@ Es gibt Einschränkungen hinsichtlich der Art und Weise, wie Sie das **fenv_acce
 
 - Sie können **float_control** nicht verwenden, um die genaue Semantik zu deaktivieren, wenn **fenv_access (on)** festgelegt ist.
 
-Die Optimierungen, die **fenv_access** unterliegen, sind:
+Die Arten von Optimierungen, die **fenv_access** unterliegen, sind folgende:
 
 - Globale allgemeine Teilausdruckbeseitigung
 
@@ -54,7 +54,7 @@ Andere Gleitkommapragmas umfassen:
 
 ## <a name="examples"></a>Beispiele
 
-Dieses Beispiel legt **fenv_access** auf **on** fest, um das Gleitkommasteuerregister für die 24-Bit-Genauigkeit festzulegen:
+In diesem Beispiel wird **fenv_access** auf **on** festgelegt, um die Gleit Komma-Steuerelement Registrierung für die 24-Bit-Genauigkeit festzulegen:
 
 ```cpp
 // pragma_directive_fenv_access_x86.cpp

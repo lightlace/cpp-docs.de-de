@@ -15,15 +15,15 @@ ms.locfileid: "74398098"
 ---
 # <a name="nocref"></a>.NOCREF
 
-Suppresses listing of symbols in the symbol table and browser file.
+Unterdrückt das Auflisten von Symbolen in der Symboltabelle und der Browser Datei.
 
 ## <a name="syntax"></a>Syntax
 
-> **.NOCREF** ⟦*name*⟦ __,__ *name* ...⟧⟧
+> **. Nokref** ⟦*Name*⟦ __,__ *Name* ... ⟧⟧
 
 ## <a name="remarks"></a>Hinweise
 
-If names are specified, then only the given names are suppressed. Same as [.XCREF](../../assembler/masm/dot-xcref.md).
+Wenn Namen angegeben werden, werden nur die angegebenen Namen unterdrückt. Identisch mit [. Xkref](../../assembler/masm/dot-xcref.md).
 
 ## <a name="see-also"></a>Siehe auch
 

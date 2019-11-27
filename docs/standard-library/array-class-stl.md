@@ -130,9 +130,9 @@ class array;
 |[const_reference](#const_reference)|Der Typ eines konstanten Verweises auf ein Element.|
 |[const_reverse_iterator](#const_reverse_iterator)|Der Typ eines konstanten umgekehrten Iterators für die gesteuerte Sequenz.|
 |[difference_type](#difference_type)|Der Typ eines Abstands mit Vorzeichen zwischen zwei Elementen.|
-|[Iterator](#iterator)|Der Typ eines Iterators für die gesteuerte Sequenz.|
-|[Zeiger](#pointer)|Der Typ eines Zeigers auf ein Element.|
-|[reference](#reference)|Der Typ eines Verweises auf ein Element.|
+|[iterator](#iterator)|Der Typ eines Iterators für die gesteuerte Sequenz.|
+|[pointer](#pointer)|Der Typ eines Zeigers auf ein Element.|
+|[Verweis](#reference)|Der Typ eines Verweises auf ein Element.|
 |[reverse_iterator](#reverse_iterator)|Der Typ eines umgekehrten Iterators für die gesteuerte Sequenz.|
 |[size_type](#size_type)|Der Typ eines Abstands ohne Vorzeichen zwischen zwei Elementen.|
 |[value_type](#value_type)|Der Typ eines Elements.|
@@ -140,9 +140,9 @@ class array;
 |Memberfunktion|Beschreibung|
 |-|-|
 |[array](#array)|Erstellt ein Arrayobjekt.|
-|[assign](#assign)|(Obsolete. Use `fill`.) Replaces all elements.|
+|[assign](#assign)|Veralteten. Verwenden Sie `fill`.) Ersetzt alle Elemente.|
 |[at](#at)|Greift auf ein Element an einer angegebenen Position zu.|
-|[Rückseite](#back)|Greift auf das letzte Element zu.|
+|[back](#back)|Greift auf das letzte Element zu.|
 |[begin](#begin)|Legt den Anfang der kontrollierten Sequenz fest.|
 |[cbegin](#cbegin)|Gibt einen für wahlfreien Zugriff eingerichteten konstanten Iterator auf das erste Element im Vektor zurück.|
 |[cend](#cend)|Gibt einen für wahlfreien Zugriff eingerichteten konstanten Iterator zurück, der unmittelbar hinter das Ende des Vektors zeigt.|
@@ -152,7 +152,7 @@ class array;
 |[leer](#empty)|Testet, ob Elemente vorhanden sind.|
 |[end](#end)|Legt das Ende der kontrollierten Sequenz fest.|
 |[fill](#fill)|Ersetzt alle Elemente durch einen angegebenen Wert.|
-|[Vorderseite](#front)|Greift auf das erste Element zu.|
+|[front](#front)|Greift auf das erste Element zu.|
 |[max_size](#max_size)|Ermittelt die Anzahl von Elementen.|
 |[rbegin](#rbegin)|Legt den Anfang der umgekehrten kontrollierten Sequenz fest.|
 |[rend](#rend)|Legt das Ende der umgekehrten kontrollierten Sequenz fest.|
@@ -162,11 +162,11 @@ class array;
 |Operator|Beschreibung|
 |-|-|
 |[array::operator=](#op_eq)|Ersetzt die kontrollierte Sequenz.|
-|[array::operator\[\]](#op_at)|Greift auf ein Element an einer angegebenen Position zu.|
+|[Array:: Operator\[\]](#op_at)|Greift auf ein Element an einer angegebenen Position zu.|
 
 ## <a name="remarks"></a>Hinweise
 
-Der Typ hat einen Standardkonstruktor `array()` und einen Standardzuweisungsoperator `operator=` und erfüllt die Anforderungen für ein `aggregate`. Daher können Objekte des Typs `array<Ty, N>` über einen Aggregatinitialisierer initialisiert werden. Ein auf ein Objekt angewendeter
+Der Typ hat einen Standardkonstruktor `array()` und einen Standardzuweisungsoperator `operator=` und erfüllt die Anforderungen für ein `aggregate`. Daher können Objekte des Typs `array<Ty, N>` über einen Aggregatinitialisierer initialisiert werden. Beispiel:
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
@@ -174,7 +174,7 @@ array<int, 4> ai = { 1, 2, 3 };
 
 erstellt das Objekt `ai`, das vier ganzzahlige Werte enthält, initialisiert die ersten drei Elemente mit den Werten 1, 2 und 3 und das vierte Element mit 0.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
 **Header:** \<array>
 
@@ -192,7 +192,7 @@ array(const array& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*\
+*Rechte*\
 Einzufügendes Objekt bzw. einzufügender Bereich.
 
 ### <a name="remarks"></a>Hinweise
@@ -255,12 +255,12 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>Parameter
 
-*off*\
+*aus*\
 Position des Elements, auf das zugegriffen wird
 
 ### <a name="remarks"></a>Hinweise
 
-The member functions return a reference to the element of the controlled sequence at position *off*. Wenn diese Position ungültig ist, löst die Funktion ein Objekt der `out_of_range`-Klasse aus.
+Die Member-Funktionen geben einen Verweis auf das Element der kontrollierten Sequenz an der Position *Off*zurück. Wenn diese Position ungültig ist, löst die Funktion ein Objekt der `out_of_range`-Klasse aus.
 
 ### <a name="example"></a>Beispiel
 
@@ -381,7 +381,7 @@ int main()
 
 ## <a name="cbegin"></a> array::cbegin
 
-Returns a **const** iterator that addresses the first element in the range.
+Gibt einen **Konstanten** Iterator zurück, der das erste Element im Bereich adressiert.
 
 ```cpp
 const_iterator cbegin() const noexcept;
@@ -389,13 +389,13 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>Rückgabewert
 
-A **const** random-access iterator that points at the first element of the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).
+Ein **konstanter** Random-Access-Iterator, der auf das erste Element des Bereichs zeigt oder die Position direkt hinter dem Ende eines leeren Bereichs (für einen leeren Bereich, `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Hinweise
 
 Bei dem Rückgabewert `cbegin` können die Elemente im Bereich nicht geändert werden.
 
-Sie können diese Memberfunktion anstelle der `begin()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. In the example, consider `Container` to be a modifiable (non- **const**) container of any kind that supports `begin()` and `cbegin()`.
+Sie können diese Memberfunktion anstelle der `begin()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [automatischen](../cpp/auto-cpp.md) Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. In diesem Beispiel sollten `Container` ein änderbarer (nicht **konstanter) Container**sein, der `begin()` und `cbegin()`unterstützt.
 
 ```cpp
 auto i1 = Container.begin();
@@ -407,7 +407,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a> array::cend
 
-Returns a **const** iterator that addresses the location just beyond the last element in a range.
+Gibt einen **Konstanten** Iterator zurück, der die Position direkt hinter dem letzten Element in einem Bereich adressiert.
 
 ```cpp
 const_iterator cend() const noexcept;
@@ -421,7 +421,7 @@ Ein Random-Access-Iterator, der auf eine Position unmittelbar nach dem Ende des 
 
 `cend` wird verwendet, um zu testen, ob ein Iterator das Ende seines Bereichs übergeben hat.
 
-Sie können diese Memberfunktion anstelle der `end()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. In the example, consider `Container` to be a modifiable (non- **const**) container of any kind that supports `end()` and `cend()`.
+Sie können diese Memberfunktion anstelle der `end()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [automatischen](../cpp/auto-cpp.md) Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. In diesem Beispiel sollten `Container` ein änderbarer (nicht **konstanter) Container**sein, der `end()` und `cend()`unterstützt.
 
 ```cpp
 auto i1 = Container.end();
@@ -757,7 +757,7 @@ typedef std::ptrdiff_t difference_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Ganzzahltyp mit Vorzeichen beschreibt ein Objekt, das die Differenz zwischen den Adressen von zwei beliebigen Elementen in der gesteuerten Sequenz darstellen kann. Es ist ein Synonym für den Typ `std::ptrdiff_t`.
+Der Ganzzahltyp mit Vorzeichen beschreibt ein Objekt, das die Differenz zwischen den Adressen von zwei beliebigen Elementen in der gesteuerten Sequenz darstellen kann. Es wird als Synonym für den Typ `std::ptrdiff_t` benutzt.
 
 ### <a name="example"></a>Beispiel
 
@@ -1082,14 +1082,14 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>Parameter
 
-*off*\
+*aus*\
 Position des Elements, auf das zugegriffen wird
 
 ### <a name="remarks"></a>Hinweise
 
-The member functions return a reference to the element of the controlled sequence at position *off*. Wenn diese Position ungültig ist, ist das Verhalten nicht definiert.
+Die Member-Funktionen geben einen Verweis auf das Element der kontrollierten Sequenz an der Position *Off*zurück. Wenn diese Position ungültig ist, ist das Verhalten nicht definiert.
 
-There is also a non-member [get](array-functions.md#get) function available to get a reference to an element of an **array**.
+Es ist auch eine nicht-Member- [Get](array-functions.md#get) -Funktion verfügbar, um einen Verweis auf ein Element eines **Arrays**zu erhalten.
 
 ### <a name="example"></a>Beispiel
 
@@ -1133,12 +1133,12 @@ array<Value> operator=(array<Value> right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*\
+*Rechte*\
 Der zu kopierende Container.
 
 ### <a name="remarks"></a>Hinweise
 
-The member operator assigns each element of *right* to the corresponding element of the controlled sequence, then returns `*this`. You use it to replace the controlled sequence with a copy of the controlled sequence in *right*.
+Der Member-Operator weist jedes Element von *right* dem entsprechenden Element der gesteuerten Sequenz zu und gibt dann `*this`zurück. Sie verwenden es, um die gesteuerte Sequenz durch eine Kopie der kontrollierten Sequenz in der *rechten*Ecke zu ersetzen.
 
 ### <a name="example"></a>Beispiel
 
@@ -1453,7 +1453,7 @@ typedef std::size_t size_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der unsignierte Ganzzahltyp beschreibt ein Objekt, das die Länge jeder kontrollierten Sequenz darstellen kann. Es ist ein Synonym für den Typ `std::size_t`.
+Der unsignierte Ganzzahltyp beschreibt ein Objekt, das die Länge jeder kontrollierten Sequenz darstellen kann. Es wird als Synonym für den Typ `std::size_t` benutzt.
 
 ### <a name="example"></a>Beispiel
 
@@ -1497,14 +1497,14 @@ void swap(array& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*\
+*Rechte*\
 Container für den Tausch von Inhalten.
 
 ### <a name="remarks"></a>Hinweise
 
-The member function swaps the controlled sequences between `*this` and *right*. Sie führt verschiedene Elementzuweisungen und Konstruktoraufrufe proportional zu `N` durch.
+Die Member-Funktion tauscht die kontrollierten Sequenzen zwischen `*this` und *Rechts*aus. Sie führt verschiedene Elementzuweisungen und Konstruktoraufrufe proportional zu `N` durch.
 
-There is also a non-member [swap](array-functions.md#swap) function available to swap two **array** instances.
+Es ist auch eine [Swap](array-functions.md#swap) -Funktion ohne Member zum Austauschen von zwei **Array** Instanzen verfügbar.
 
 ### <a name="example"></a>Beispiel
 
@@ -1563,7 +1563,7 @@ typedef Ty value_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Type stellt ein Synonym für den Vorlagenparameter `Ty` dar.
+Der Type stellt ein Synonym für den Vorlagenparameter `Ty`dar.
 
 ### <a name="example"></a>Beispiel
 

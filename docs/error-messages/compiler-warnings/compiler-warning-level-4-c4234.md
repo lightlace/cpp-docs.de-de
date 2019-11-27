@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4234
 ms.assetid: f7fecd5c-8248-4fde-8446-502aedc357ca
-ms.openlocfilehash: 314ee068fb2be6148304360b0aaa3bd8029c283b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63a22fed0832677837eb786268fc92946d295b79
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401071"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541777"
 ---
 # <a name="compiler-warning-level-4-c4234"></a>Compilerwarnung (Stufe 4) C4234
 
-nicht dem Standard entsprechende Erweiterung: ' Schlüsselwort ' für die zukünftige Verwendung reserviert
+nicht dem Standard entsprechende Erweiterung: Schlüsselwort Schlüsselwort für zukünftige Verwendung reserviert
 
-Der Compiler implementiert nicht noch das Schlüsselwort, die, das Sie verwendet.
+Der Compiler implementiert noch nicht das Schlüsselwort, das Sie verwendet haben.
 
-Diese Warnung wird automatisch zu einem Fehler heraufgestuft. Wenn Sie dieses Verhalten ändern möchten, verwenden Sie [#pragma-Warnung](../../preprocessor/warning.md). Geben Sie beispielsweise Folgendes ein, um C4234 in eine Warnung der Stufe 4 zu machen,
+Diese Warnung wird automatisch zu einem Fehler heraufgestuft. Wenn Sie dieses Verhalten ändern möchten, verwenden Sie [#pragma Warnung](../../preprocessor/warning.md). Wenn Sie z. b. C4234 zu einem Warnungs Problem auf der Ebene 4 machen möchten,
 
-```
+```cpp
 #pragma warning(2:4234)
 ```
 

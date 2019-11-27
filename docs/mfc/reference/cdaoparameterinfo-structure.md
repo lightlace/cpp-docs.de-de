@@ -53,7 +53,7 @@ Informationen, die von der [CDaoQueryDef:: GetParameterInfo](../../mfc/reference
 
 `CDaoParameterInfo` definiert auch eine `Dump` Member-Funktion in Debugbuilds. Sie können `Dump` verwenden, um den Inhalt eines `CDaoParameterInfo` Objekts zu speichern.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
 **Header:** afxdao.h
 

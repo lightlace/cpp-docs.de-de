@@ -94,14 +94,14 @@ oder
 #include <wchar.h>
 ```
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
 |Routine|Erforderlicher Header|
 |-------------|---------------------|
 |**memcpy**|\<memory.h> oder \<string.h>|
 |**wmemcpy**|\<wchar.h>|
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Zusätzliche Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (Level 3) C4738
+title: Compilerwarnung (Stufe 3) C4738
 ms.date: 11/04/2016
 f1_keywords:
 - C4738
@@ -13,21 +13,21 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189394"
 ---
-# <a name="compiler-warning-level-3-c4738"></a>Compiler Warning (Level 3) C4738
+# <a name="compiler-warning-level-3-c4738"></a>Compilerwarnung (Stufe 3) C4738
 
 Das 32-Bit-Gleitkommaergebnis wird im Speicher gespeichert. Möglicherweise kommt es zu einem Leistungsverlust
 
-C4738 warns that the result of an assignment, cast, passed argument, or other operation may need to be rounded or that the operation ran out of registers and needed to use memory (spilling). This can result in performance loss.
+C4738 warnt, dass das Ergebnis einer Zuweisung, eines Umwandlungs Vorgangs, eines übergebenen Arguments oder eines anderen Vorgangs möglicherweise gerundet werden muss oder dass der Vorgang nicht aus Registern besteht und für die Verwendung des Arbeitsspeichers (Überlauf) benötigt wird. Dies kann zu Leistungseinbußen führen.
 
-To resolve this warning and avoid rounding, compile with [/fp:fast](../../build/reference/fp-specify-floating-point-behavior.md) or use `double` instead of `float`.
+Kompilieren Sie mit [/fp: fast](../../build/reference/fp-specify-floating-point-behavior.md) , oder verwenden Sie `double` anstelle von `float`, um diese Warnung zu beheben und eine Rundung zu vermeiden.
 
-To resolve this warning and avoid running out of registers, change the order of computation and modify your use of inlining
+Ändern Sie die Reihenfolge der Berechnung, und ändern Sie die Verwendung von Inlining, um diese Warnung zu beheben und das Ausführen von Registern zu vermeiden.
 
 Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 ## <a name="example"></a>Beispiel
 
-The following sample generates C4738:
+Im folgenden Beispiel wird C4738 generiert:
 
 ```cpp
 // C4738.cpp

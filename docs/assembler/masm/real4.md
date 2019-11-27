@@ -15,12 +15,12 @@ ms.locfileid: "74394625"
 ---
 # <a name="real4"></a>REAL4
 
-Allocates and optionally initializes a single-precision (4-byte) floating-point number for each *initializer*.
+Ordnet eine Gleit Komma Zahl mit einfacher Genauigkeit (4 Byte) für jeden *Initialisierer*zu und initialisiert Sie optional.
 
 ## <a name="syntax"></a>Syntax
 
-> *name*  **REAL4** *initializer* ⟦ __,__ *initializer* ...⟧
+> *Name*  **REAL4** *Initialisierer* ⟦ __,__ *Initialisierer* ... ⟧
 
 ## <a name="see-also"></a>Siehe auch
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Direktivenverweis](../../assembler/masm/directives-reference.md)

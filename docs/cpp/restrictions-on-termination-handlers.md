@@ -15,13 +15,13 @@ ms.locfileid: "74246386"
 ---
 # <a name="restrictions-on-termination-handlers"></a>Einschränkungen bei Beendigungshandlern
 
-You cannot use a **goto** statement to jump into a **__try** statement block or a **__finally** statement block. Stattdessen müssen Sie den Anweisungsblock über die normale Ablaufsteuerung eingeben. (You can, however, jump out of a **__try** statement block.) Also, you cannot nest an exception handler or termination handler inside a **__finally** block.
+Sie können keine **goto** -Anweisung verwenden, um in einen **__try** Anweisungsblock oder einen **__finally** -Anweisungsblock zu springen. Stattdessen müssen Sie den Anweisungsblock über die normale Ablaufsteuerung eingeben. (Sie können jedoch aus einem **__try** -Anweisungsblock herausspringen.) Außerdem ist es nicht möglich, einen Ausnahmehandler oder Beendigungs Handler in einem **__finally** Block zu schachteln.
 
-Darüber hinaus erzeugen einige in einem Beendigungshandler zulässige Arten von Code fragliche Ergebnisse. Daher sollten Sie diese, wenn überhaupt, mit Vorsicht verwenden. One is a **goto** statement that jumps out of a **__finally** statement block. Wenn der Block als Teil der normalen Beendigung ausgeführt wird, passiert nichts Ungewöhnliches. Aber wenn das System den Stapel entlädt, wird das Entladen gestoppt, und die aktuelle Funktion erhält die Steuerung,als ob keine nicht ordnungsgemäße Beendigung vorläge.
+Darüber hinaus erzeugen einige in einem Beendigungshandler zulässige Arten von Code fragliche Ergebnisse. Daher sollten Sie diese, wenn überhaupt, mit Vorsicht verwenden. Eine ist eine **goto** -Anweisung, die aus einem **__finally** -Anweisungsblock springt. Wenn der Block als Teil der normalen Beendigung ausgeführt wird, passiert nichts Ungewöhnliches. Aber wenn das System den Stapel entlädt, wird das Entladen gestoppt, und die aktuelle Funktion erhält die Steuerung,als ob keine nicht ordnungsgemäße Beendigung vorläge.
 
-A **return** statement inside a **__finally** statement block presents roughly the same situation. Die Steuerung wird an den unmittelbaren Aufrufer der Funktion zurückgegeben, die den Beendigungshandler enthält. Wenn das System beim Entladen des Stapels war, wird dieser Prozess unterbrochen, und das Programm wird fortgesetzt, als wäre keine Ausnahme ausgelöst worden.
+Eine **Return** -Anweisung in einem **__finally** -Anweisungsblock stellt ungefähr dieselbe Situation dar. Die Steuerung wird an den unmittelbaren Aufrufer der Funktion zurückgegeben, die den Beendigungshandler enthält. Wenn das System beim Entladen des Stapels war, wird dieser Prozess unterbrochen, und das Programm wird fortgesetzt, als wäre keine Ausnahme ausgelöst worden.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
-[Strukturierte Ausnahmebehandlung (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Schreiben eines Beendigungs Handlers](../cpp/writing-a-termination-handler.md)<br/>
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
