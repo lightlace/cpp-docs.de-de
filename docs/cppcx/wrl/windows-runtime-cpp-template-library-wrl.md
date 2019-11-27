@@ -109,13 +109,13 @@ Windows-Runtime C++ Vorlagen Bibliothek stellt Typen bereit, die einige grundleg
 
 ### <a name="comptr"></a>ComPtr
 
-[ComPtr](comptr-class.md) ist ein Typ des *intelligenten Zeigermechanismus* , der die Schnittstelle darstellt, die vom Vorlagenparameter angegeben wird. Mit `ComPtr` deklarieren Sie eine Variable, die auf die Member eines Objekts zugreifen kann, das von der Schnittstelle abgeleitet wird. `ComPtr` verwaltet automatisch einen Verweis Zähler für den zugrunde liegenden Schnittstellen Zeiger und gibt die Schnittstelle frei, wenn der Verweis Zähler auf 0 (null) wechselt.
+[ComPtr](comptr-class.md) ist ein Typ des *intelligenten Zeigermechanismus* , der die Schnittstelle darstellt, die vom Vorlagenparameter angegeben wird. Mit `ComPtr` deklarieren Sie eine Variable, die auf die Member eines Objekts zugreifen kann, das von der Schnittstelle abgeleitet wird. `ComPtr` verwaltet automatisch einen Verweiszähler für den zugrunde liegenden Schnittstellenzeiger und gibt die Schnittstelle frei, wenn der Verweiszähler auf null geht.
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
 [RuntimeClass](runtimeclass-class.md) stellt eine instanziierte Klasse dar, die einen Satz angegebener Schnittstellen erbt. Ein `RuntimeClass`-Objekt kann eine Kombination der Unterstützung für eine oder mehrere Windows-Runtime com-Schnittstellen oder einen schwachen Verweis auf eine Komponente bereitstellen.
 
-### <a name="module"></a>Modul
+### <a name="module"></a>Module
 
 [Module](module-class.md) stellt eine Auflistung von zugehörigen Objekten dar. Ein `Module` -Objekt verwaltet Klassenfactorys, die Objekte erstellen, und die Registrierung, die anderen Anwendungen die Verwendung eines Objekts ermöglicht.
 
@@ -133,7 +133,7 @@ Mit[EventSource](eventsource-class.md) verwalten Sie *Delegat* -Ereignishandler.
 
 ### <a name="ftmbase"></a>FtmBase
 
-[FtmBase](ftmbase-class.md) stellt ein Freethread-Marshaller-Objekt dar. `FtmBase` erstellt eine globale Schnittstellen Tabelle (git) und hilft bei der Verwaltung von Marshalling-und Proxy Objekten.
+[FtmBase](ftmbase-class.md) stellt ein Freethread-Marshaller-Objekt dar. `FtmBase` erstellt eine globale Schnittstellentabelle (GIT) und hilft bei der Verwaltung von Marshalling- und Proxyobjekten.
 
 ### <a name="weakref"></a>WeakRef
 
