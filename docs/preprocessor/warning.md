@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: 9a79f0c4a9eed6b62e42f056f9d1994b44b57297
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: c6c9668f614f932b0a96f30ad3e0395e39ddc400
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216470"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683346"
 ---
 # <a name="warning-pragma"></a>warning-Pragma
 
@@ -24,8 +24,8 @@ Aktiviert die selektive Änderung des Verhaltens der Compilerwarnmeldungen.
 ## <a name="syntax"></a>Syntax
 
 > **#pragma Warnung (** \
-> &nbsp;&nbsp;&nbsp;&nbsp;*warnungsspezifizierer* **:** *Warnung-Number-List*\
-> &nbsp;&nbsp;&nbsp;&nbsp;[ **;** *warnungsspezifizierer* **:** *Warnung-Number-List* ...] **)** \
+> &nbsp;&nbsp;&nbsp;&nbsp;*Warning-specifier* **:** *Warning-Number-List*\
+> &nbsp;&nbsp;&nbsp;&nbsp;[ **;** *Warning-specifier* **:** *Warning-Number-List* ...] **)** \
 > **#pragma Warnung (Push** [ **,** *n* ] **)** \
 > **#pragma Warnung (Pop)**
 
@@ -37,7 +37,7 @@ Die folgenden Parameter für Warnungsbezeichner stehen zur Verfügung.
 |------------------------|-------------|
 |*1, 2, 3, 4*|Wenden Sie die angegebene Ebene auf die angegebenen Warnung(en) an. Aktiviert auch eine angegebene Warnung, die standardmäßig deaktiviert ist.|
 |*default*|Setzen Sie das Warnverhalten auf den Standardwert zurück. Aktiviert auch eine angegebene Warnung, die standardmäßig deaktiviert ist. Die Warnung wird auf der standardmäßigen dokumentierten Ebene generiert.<br /><br /> Weitere Informationen finden Sie unter [standardmäßig](../preprocessor/compiler-warnings-that-are-off-by-default.md)deaktivierte Compilerwarnungen.|
-|*disable*|Geben Sie die angegebene Warnmeldung (en) nicht aus.|
+|*ier*|Geben Sie die angegebene Warnmeldung (en) nicht aus.|
 |*Zeit*|Melden Sie die angegebenen Warnungen als Fehler.|
 |*once*|Zeigen Sie die angegebene(n) Meldung(en) nur einmal an.|
 |*Boots*|Schiebt den aktuellen Zustand des Pragmas auf den Stapel, deaktiviert die angegebene Warnung für die nächste Zeile und ruft dann den Warnungsstapel auf, sodass der Pragmazustand zurückgesetzt wird.|
@@ -63,7 +63,7 @@ Diese Direktive entspricht funktionell dem folgenden Code:
 
 Der Compiler fügt 4000 zu jeder Warnungsnummer zwischen 0 und 999 hinzu.
 
-Bei Warnungszahlen im Bereich 4700–4999, die mit der Codegenerierung zusammenhängen, wird der Status der Warnung aktiviert, wenn der Compiler auf die geöffnete geschweifte Klammer einer Funktion stößt, und er bleibt für den Rest der Funktion aktiv. Die Verwendung des **Warning** -Pragmas in der Funktion zum Ändern des Zustands einer Warn Zahl, die größer als 4699 ist, wird erst nach dem Ende der Funktion wirksam. Im folgenden Beispiel wird die korrekte Platzierung von **Warning** -Pragmas veranschaulicht, um eine Code Generierungs Warnmeldung zu deaktivieren und dann wiederherzustellen.
+Bei Warnungs Nummern im Bereich 4700-4999, bei denen es sich um diejenigen handelt, die der Codegenerierung zugeordnet sind, wird der Status der Warnung wirksam, wenn der Compiler auf die Funktionsdefinition trifft, für den Rest der Funktion wirksam. Die Verwendung des **Warning** -Pragmas in der Funktion zum Ändern des Zustands einer Warn Zahl, die größer als 4699 ist, wird erst nach dem Ende der Funktion wirksam. Im folgenden Beispiel wird die korrekte Platzierung von **Warning** -Pragmas veranschaulicht, um eine Code Generierungs Warnmeldung zu deaktivieren und dann wiederherzustellen.
 
 ```cpp
 // pragma_warning.cpp
@@ -93,7 +93,7 @@ Das **Warning** -Pragma unterstützt auch die folgende Syntax, wobei *n* eine Wa
 
 Das Pragma `warning( push )` speichert den aktuellen Warnungs Status für jede Warnung. Das Pragma `warning( push, n )` speichert den aktuellen Status für jede Warnung und legt die globale Warnstufe auf *n*fest.
 
-Das Pragma `warning( pop )` springt den letzten Warn Status, der auf dem Stapel abgelegt wurde. Alle Änderungen, die Sie am Warn Status zwischen *Push* und *Pop* vorgenommen haben, werden rückgängig gemacht. Betrachten Sie das folgende Beispiel:
+Das Pragma `warning( pop )` holt den letzten Warn Status, der auf den Stapel verschoben wurde. Alle Änderungen, die Sie am Warn Status zwischen *Push* und *Pop* vorgenommen haben, werden rückgängig gemacht. Betrachten Sie das folgende Beispiel:
 
 ```cpp
 #pragma warning( push )

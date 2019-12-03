@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4564
 ms.assetid: 555b301b-313e-4262-9f81-eb878674be60
-ms.openlocfilehash: 1948bdec5367fa7943f5a0de4338fd4ecd6c6581
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5db6bf366c86a716be33539feb0085ac03a9647
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220506"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683162"
 ---
 # <a name="compiler-warning-level-4-c4564"></a>Compilerwarnung (Stufe 4) C4564
 
-Methode 'Methode' Klasse 'Klasse' definiert den nicht unterstützten Standardparameter "Parameter"
+die Methode "Method" der Klasse "Class" definiert den nicht unterstützten Standardparameter "Parameter".
 
-Der Compiler hat eine Methode mit der eine oder mehrere Parameter mit Standardwerten. Die Standardwerte für die Parameter wird ignoriert, wenn die Methode aufgerufen wird. Geben Sie explizit Werte für diese Parameter. Wenn Sie Werte für diese Parameter nicht explizit angeben, generiert der C++-Compiler einen Fehler.
+Der Compiler hat eine Methode mit einem oder mehreren Parametern mit Standardwerten erkannt. Die Standardwerte für die Parameter werden ignoriert, wenn die-Methode aufgerufen wird. Geben Sie Werte für diese Parameter explizit an. Wenn Sie für diese Parameter nicht explizit Werte angeben, generiert der C++ Compiler einen Fehler.
 
-Angegebene die folgenden DLL-Datei mit Visual Basic erstellt wurden können die Standardparameter für Methodenargumente:
+Wenn die folgende dll mit Visual Basic erstellt wird, die Standardparameter für Methodenargumente zulässt:
 
-```
+```vb
 ' C4564.vb
 ' compile with: vbc /t:library C4564.vb
 Public class TestClass
@@ -31,9 +31,9 @@ Public class TestClass
 End class
 ```
 
-Und im folgenden C++-Beispiel, das die DLL-Datei erstellt, die mit Visual Basic verwendet
+Und im folgenden C++ Beispiel, in dem die mit Visual Basic erstellte DLL verwendet wird.
 
-```
+```cpp
 // C4564.cpp
 // compile with: /clr /W4 /WX
 #using <C4564.dll>
