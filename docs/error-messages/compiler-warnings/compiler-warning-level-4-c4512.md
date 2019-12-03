@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4512
 ms.assetid: afb68995-684a-4be5-a73a-38d7a16dc030
-ms.openlocfilehash: c5e84fe1d0e558e689e48fba8df112861f81acec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3b8f11b55cf6ef2df601c125a1b6629aa0554da
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220989"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683183"
 ---
 # <a name="compiler-warning-level-4-c4512"></a>Compilerwarnung (Stufe 4) C4512
 
@@ -29,15 +29,15 @@ Sie können die Warnung C4512 für Ihren Code auf eine von drei Arten beheben:
 
 - Definieren Sie explizit einen Zuweisungsoperator für die Klasse.
 
-- Entfernen Sie **const** oder den Zuweisungsoperator aus dem Datenelement in der Klasse.
+- Entfernen Sie den **Konstanten** -Operator oder den Reference-Operator aus dem Datenelement in der-Klasse.
 
-- Verwenden Sie die #pragma [Warnung](../../preprocessor/warning.md) Anweisung, um die Warnung zu unterdrücken.
+- Verwenden Sie die #Pragma [Warning](../../preprocessor/warning.md) -Anweisung, um die Warnung zu unterdrücken.
 
 ## <a name="example"></a>Beispiel
 
 Im folgenden Beispiel wird C4512 generiert.
 
-```
+```cpp
 // C4512.cpp
 // compile with: /EHsc /W4
 // processor: x86

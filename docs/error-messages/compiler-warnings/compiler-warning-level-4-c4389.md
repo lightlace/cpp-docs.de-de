@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4389
 ms.assetid: fc0e3a8e-f766-437c-b7f1-e61abb2a8765
-ms.openlocfilehash: 7490218c0af61ef3b2346fc1bee9806d87d02294
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2cfb33e8a79259d0ff02dfd832a1b5943cbc0da9
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391581"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74682952"
 ---
 # <a name="compiler-warning-level-4-c4389"></a>Compilerwarnung (Stufe 4) C4389
 
-'Operator': signed/unsigned-Konflikt
+"Operator": nicht übereinstimmende/nicht signierte Übereinstimmung
 
-Ein Vorgang beteiligten mit und ohne Vorzeichen-Variablen. Dies kann zu einem Datenverlust führen.
+Bei einem Vorgang sind signierte und nicht signierte Variablen beteiligt. Dies kann zu einem Datenverlust führen.
 
-Im folgende Beispiel wird die C4389 generiert:
+Im folgenden Beispiel wird C4389 generiert:
 
-```
+```cpp
 // C4389.cpp
 // compile with: /W4
 #pragma warning(default: 4389)

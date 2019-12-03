@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4434
 ms.assetid: 24b8785e-353a-4c37-8bed-ed61001a871d
-ms.openlocfilehash: 6a7d760a7d192c7e0a7bd5e16f77efe1a4099c31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97a010bef151e97914d131b3a1fe2437a244e9c4
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391490"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683217"
 ---
 # <a name="compiler-warning-level-4-c4434"></a>Compilerwarnung (Stufe 4) C4434
 
@@ -21,9 +21,9 @@ C4434 zeigt an, dass die Zugriffsmöglichkeiten eines statischen Konstruktors vo
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird C4434 generiert.
+Im folgenden Beispiel wird C4434 generiert.
 
-```
+```cpp
 // C4434.cpp
 // compile with: /W4 /c /clr
 public ref struct R {

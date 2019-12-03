@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4487
 ms.assetid: 796144cf-cd3c-4edc-b6a4-96192b7eb4f0
-ms.openlocfilehash: 231482547856fc07d43ecfb859b31c2ece49fc5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1583da44368225eabd8181be970f69f6582111e1
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207000"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74682978"
 ---
 # <a name="compiler-warning-level-4-c4487"></a>Compilerwarnung (Stufe 4) C4487
 
-'Abgeleitete_Klassenfunktion': entspricht der geerbten nicht virtuellen Methode "Basisklassenfunktion" aber ist nicht explizit als "new"
+"derived_class_function": stimmt mit der geerbten nicht virtuellen Methode "base_class_function" überein, ist jedoch nicht explizit als "New" markiert.
 
-Eine Funktion in einer abgeleiteten Klasse hat die gleiche Signatur wie eine nicht virtuelle Basisklasse-Funktion. C4487 erinnert Sie daran, dass die Funktion der abgeleiteten Klasse die Funktion der Basisklasse nicht überschreibt. Markieren Sie die Funktion der abgeleiteten Klasse als explizit `new` auf diese Warnung zu beheben.
+Eine Funktion in einer abgeleiteten Klasse verfügt über dieselbe Signatur wie eine nicht virtuelle Basisklassen Funktion. C4487 erinnert Sie daran, dass die Funktion der abgeleiteten Klasse die Basisklassen Funktion nicht außer Kraft setzt. Markieren Sie die Funktion der abgeleiteten Klasse explizit als `new`, um diese Warnung zu beheben.
 
-Weitere Informationen finden Sie unter [new (neuer Slot in Vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md).
+Weitere Informationen finden Sie unter [New (neuer Slot in Vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4487 generiert.
+Im folgenden Beispiel wird C4487 generiert.
 
-```
+```cpp
 // C4487.cpp
 // compile with: /W4 /clr
 using namespace System;

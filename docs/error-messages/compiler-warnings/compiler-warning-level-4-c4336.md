@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4336
 ms.assetid: 93f199dd-d6dd-42c0-82d8-c12d101a7235
-ms.openlocfilehash: 4946b932fa897dab057e430f16c781e2d06bebd0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33c4a25618c1afcf93704b161483bc4c0a6e16a0
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400850"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683321"
 ---
 # <a name="compiler-warning-level-4-c4336"></a>Compilerwarnung (Stufe 4) C4336
 
-Importieren Sie zuerst die übergreifende Typbibliothek "Typbibliothek1", bevor Sie "Typbibliothek2" Importieren
+Importieren Sie die Kreuz referenzierte Typbibliothek "type_lib1", bevor Sie "type_lib2" importieren.
 
-Eine Typbibliothek mit verwiesen wurde, wird die [#import](../../preprocessor/hash-import-directive-cpp.md) Richtlinie. Die Typbibliothek enthalten einen Verweis auf eine andere Typbibliothek, die nicht in referenziert wurde `#import`. Diese anderen TLB-Datei wurde vom Compiler gefunden.
+Auf eine Typbibliothek wurde mit der [#Import](../../preprocessor/hash-import-directive-cpp.md) -Direktive verwiesen. Allerdings enthielt die Typbibliothek einen Verweis auf eine andere Typbibliothek, auf die mit `#import`nicht verwiesen wurde. Diese andere TLB-Datei wurde vom Compiler gefunden.
 
-Zwei Typbibliotheken auf dem Datenträger, die von den folgenden zwei Dateien (kompiliert mit midl.exe) erstellt:
+Bei zwei Typbibliotheken auf dem Datenträger, die aus den folgenden beiden Dateien erstellt wurden (mit "".
 
 ```
 // c4336a.idl
@@ -50,9 +50,9 @@ library C4336bLib
 };
 ```
 
-Im folgende Beispiel wird die C4336 generiert:
+Im folgenden Beispiel wird C4336 generiert:
 
-```
+```cpp
 // C4336.cpp
 // compile with: /W4 /LD
 // #import "C4336a.tlb"

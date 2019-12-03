@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4366
 ms.assetid: 65d2942f-3741-42f4-adf2-4920d5a055ca
-ms.openlocfilehash: 11fcb0070359201de39ca5f33c83d000e02f0835
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18045377210b6c020786ad2ec2e003d0e764e4b5
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391555"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683264"
 ---
 # <a name="compiler-warning-level-4-c4366"></a>Compilerwarnung (Stufe 4) C4366
 
-Das Ergebnis des unären Operators "Operator" möglicherweise nicht ausgerichtet.
+Das Ergebnis des unären Operators "Operator" ist möglicherweise nicht ausgerichtet.
 
-Wenn ein Strukturmember jemals nicht ausgerichtete aufgrund von Überlastung werden konnte, warnt der Compiler bei, dass die Adresse des Mitglieds ein ausgerichtete Zeiger zugewiesen ist. Standardmäßig werden alle Zeiger ausgerichtet.
+Wenn ein Strukturmember aufgrund der Verpackung nicht ausgerichtet werden kann, wird der Compiler gewarnt, wenn die Adresse des betreffenden Members einem ausgerichteten Zeiger zugewiesen wird. Standardmäßig werden alle Zeiger ausgerichtet.
 
-Um C4366 zu beheben, ändern Sie die Ausrichtung der Struktur oder deklarieren den Zeiger mit dem [__unaligned](../../cpp/unaligned.md) Schlüsselwort.
+Um C4366 aufzulösen, ändern Sie entweder die Ausrichtung der Struktur, oder deklarieren Sie den Zeiger mit dem [__unaligned](../../cpp/unaligned.md) -Schlüsselwort.
 
-Weitere Informationen finden Sie unter __unaligned und [Pack](../../preprocessor/pack.md).
+Weitere Informationen finden Sie unter __unaligned und [Paket](../../preprocessor/pack.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4366 generiert.
+Im folgenden Beispiel wird C4366 generiert.
 
-```
+```cpp
 // C4366.cpp
 // compile with: /W4 /c
 // processor: IPF x64

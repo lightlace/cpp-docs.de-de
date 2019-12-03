@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4337
 ms.assetid: 70bc72d9-aac5-45cd-abd3-ebe42a05897b
-ms.openlocfilehash: 2bfa5f9b30fa0325df1c3655ded53ab0525449c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f86d03e30e2776a8dae4cf56032c45d0022ca01d
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400837"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683307"
 ---
 # <a name="compiler-warning-level-4-c4337"></a>Compilerwarnung (Stufe 4) C4337
 
-die übergreifende Typbibliothek 'Typbibliothek1' in 'Typbibliothek2' wird automatisch importiert
+die Kreuz referenzierte Typbibliothek "typelib1" in "typelib2" wird automatisch importiert.
 
-Das Auto_search-Attribut des [die #import-Direktive](../../preprocessor/hash-import-directive-cpp.md) wurde eine Typbibliothek implizit importiert werden.
+Das Auto_search-Attribut der [#Import-Direktive](../../preprocessor/hash-import-directive-cpp.md) hat bewirkt, dass eine Typbibliothek implizit importiert wurde.
 
-Zwei Typbibliotheken auf dem Datenträger, die von den folgenden zwei Dateien (kompiliert mit midl.exe) erstellt:
+Bei zwei Typbibliotheken auf dem Datenträger, die aus den folgenden beiden Dateien erstellt wurden (mit "".
 
 ```
 // C4337a.idl
@@ -38,7 +38,7 @@ library C4337aLib
 };
 ```
 
-und klicken Sie dann die zweite IDL-Datei,
+und dann die zweite IDL-Datei
 
 ```
 // C4337b.idl
@@ -58,9 +58,9 @@ library C4337bLib
 };
 ```
 
-Im folgende Beispiel wird die C4337 generiert:
+Im folgenden Beispiel wird C4337 generiert:
 
-```
+```cpp
 // C4337.cpp
 // compile with: /W4 /LD
 #import "c4337b.tlb" auto_search   // C4337

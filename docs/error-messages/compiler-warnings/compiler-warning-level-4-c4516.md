@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4516
 ms.assetid: 6677bb1f-d26e-4ab9-8644-6b5a2a8f4ff8
-ms.openlocfilehash: 8020103e8e20bf1a5e955cbfdfafc6a328b439e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23e1ec488a661e68d5b53fba50661354182a1015
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221032"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683175"
 ---
 # <a name="compiler-warning-level-4-c4516"></a>Compilerwarnung (Stufe 4) C4516
 
-"Zugriffsdeklarationen": Zugriffsdeklarationen sind veraltet. using-Deklarationen stellen eine bessere Alternative dar
+"Class:: Symbol": Zugriffs Deklarationen sind veraltet. Member using-Deklarationen stellen eine bessere Alternative dar
 
-Das ANSI C++ Committee hat Zugriffsdeklarationen (Ändern der Zugriffsebene eines Members in einer abgeleiteten Klasse, ohne die [mit](../../cpp/using-declaration.md) Schlüsselwort) veraltet sein. Access-Deklarationen können in künftigen Versionen von C++ nicht unterstützt.
+Der ANSI C++ -Ausschuss hat Zugriffs Deklarationen deklariert (das Ändern des Zugriffs eines Members in einer abgeleiteten Klasse ohne das [using](../../cpp/using-declaration.md) -Schlüsselwort) ist veraltet. Zugriffs Deklarationen werden von zukünftigen Versionen von C++möglicherweise nicht unterstützt.
 
-Im folgende Beispiel wird die C4516 generiert:
+Im folgenden Beispiel wird C4516 generiert:
 
-```
+```cpp
 // C4516.cpp
 // compile with: /W4
 class A
