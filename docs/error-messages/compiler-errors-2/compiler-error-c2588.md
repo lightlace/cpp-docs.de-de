@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2588
 ms.assetid: 19a0cabd-ca13-44a5-9be3-ee676abf9bc4
-ms.openlocfilehash: 15f9ba62751d9b3cb17ab56659310292dab41adf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1f73e2585606e7e86213607a96ef713345419c1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350451"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755407"
 ---
 # <a name="compiler-error-c2588"></a>Compilerfehler C2588
 
-":: ~ Identifier': Unzulässiger globaler-Destruktor
+":: ~ Identifier": Ungültiger globaler Dekonstruktor
 
-Der Destruktor wird für andere als eine Klasse, Struktur oder Union definiert. Dies ist nicht zulässig.
+Der destrukturtor ist für etwas anderes als eine Klasse, Struktur oder Union definiert. Dieser Vorgang ist nicht zulässig.
 
-Dieser Fehler kann verursacht werden, durch eine fehlende Klasse, Struktur oder union Namen auf der linken Seite des Bereichsauflösungsoperators (`::`) Operator.
+Dieser Fehler kann durch eine fehlende Klassen-, Struktur-oder Union-Name auf der linken Seite des Bereichs Auflösungs Operators (`::`) verursacht werden.
 
-Im folgende Beispiel wird die C2588 generiert:
+Im folgenden Beispiel wird C2588 generiert:
 
-```
+```cpp
 // C2588.cpp
 ~F();   // C2588
 ```
