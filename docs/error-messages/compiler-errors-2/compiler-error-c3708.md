@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3708
 ms.assetid: 45e71564-9c7f-437f-98d8-a735ce162ed0
-ms.openlocfilehash: 7ee9d59f12cc9e748b08b3e4a704420ea5c58be6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5a2688cf138733a7a2891238953bc9fd894e483
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328509"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757968"
 ---
 # <a name="compiler-error-c3708"></a>Compilerfehler C3708
 
-'Schnittstelle': Ungültige Verwendung von 'Schlüsselwort'; ein Mitglied einer kompatiblen Ereignisquelle muss sein werden.
+' Interface ': Ungültige Verwendung von ' Schlüsselwort '; muss ein Member einer kompatiblen Ereignis Quelle sein.
 
-Um eine Schnittstelle als ein Ereignis zu deklarieren, muss die Deklaration des Ereignisses in einer Ereignisquelle.
+Um eine Schnittstelle als Ereignis zu deklarieren, muss sich die Ereignis Deklaration in einer Ereignis Quelle befinden.
 
-Im folgende Beispiel wird die C3708 generiert:
+Im folgenden Beispiel wird C3708 generiert:
 
-```
+```cpp
 // C3708.cpp
 // compile with: /c
 #define _ATL_ATTRIBUTES 1

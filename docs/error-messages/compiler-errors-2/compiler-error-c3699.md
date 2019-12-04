@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3699
 ms.assetid: 47c29afc-ab8b-4238-adfe-788dd6e00b3b
-ms.openlocfilehash: 93058d34ca9a17ab175a55a7bc7b953d369e65c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec902266550e591623894823e6336bd2436bfbd5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324765"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758033"
 ---
 # <a name="compiler-error-c3699"></a>Compilerfehler C3699
 
-'Operator': Diese Dereferenzierung für Typ 'Typ' können keine
+"Operator": Diese Dereferenzierung kann nicht für den Typ "Typ" verwendet werden.
 
-Es wurde versucht, Dereferenzierung zu verwenden, die für nicht zulässig ist `type`.
+Es wurde versucht, eine Dereferenzierung zu verwenden, die auf `type`nicht zulässig ist.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3699 generiert.
+Im folgenden Beispiel wird C3699 generiert.
 
-```
+```cpp
 // C3699.cpp
 // compile with: /clr /c
 using namespace System;
@@ -36,9 +36,9 @@ int main() {
 
 ## <a name="example"></a>Beispiel
 
-Eine triviale Eigenschaft kann nicht Verweistyp aufweisen. Weitere Informationen finden Sie unter [property](../../extensions/property-cpp-component-extensions.md) . Im folgende Beispiel wird die C3699 generiert.
+Eine triviale Eigenschaft kann keinen Verweistyp aufweisen. Weitere Informationen finden Sie unter [property](../../extensions/property-cpp-component-extensions.md) . Im folgenden Beispiel wird C3699 generiert.
 
-```
+```cpp
 // C3699_b.cpp
 // compile with: /clr /c
 ref struct C {
@@ -49,9 +49,9 @@ ref struct C {
 
 ## <a name="example"></a>Beispiel
 
-Das Äquivalent einer "Zeiger auf einen Zeiger"-Syntax ist ein Handle für ein Nachverfolgungsverweis an. Im folgende Beispiel wird die C3699 generiert.
+Das Äquivalent eines "Zeiger auf eine Zeiger"-Syntax ist ein Handle für einen nach Verfolgungs Verweis. Im folgenden Beispiel wird C3699 generiert.
 
-```
+```cpp
 // C3699_c.cpp
 // compile with: /clr /c
 using namespace System;

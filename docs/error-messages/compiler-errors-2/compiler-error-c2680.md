@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2680
 ms.assetid: d6f7129e-dd17-4661-b680-18d6b925b1cc
-ms.openlocfilehash: 7a0f58ae16baee00a86038c633f996a7d27a1019
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37535c9ffbafd0d312646d5f3cfdb0c4411bc790
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386810"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760308"
 ---
 # <a name="compiler-error-c2680"></a>Compilerfehler C2680
 
-'Typ': Ungültiger Zieltyp für Namen
+"Typ": Ungültiger Zieltyp für Name
 
-Ein Typumwandlungsoperator versucht, auf einen Typ zu konvertieren, der einen Zeiger oder Verweis nicht ist. Die [Dynamic_cast](../../cpp/dynamic-cast-operator.md) -Operator kann nur für Zeiger oder Verweise verwendet werden.
+Ein Umwandlungs Operator hat versucht, in einen Typ zu konvertieren, der kein Zeiger oder Verweis ist. Der [dynamic_cast](../../cpp/dynamic-cast-operator.md) -Operator kann nur für Zeiger oder Verweise verwendet werden.
 
-Im folgende Beispiel wird die C2680 generiert:
+Im folgenden Beispiel wird C2680 generiert:
 
-```
+```cpp
 // C2680.cpp
 // compile with: /c
 class A { virtual void f(); };
@@ -36,7 +36,7 @@ void g(B b) {
 
 C2680 kann auch auftreten, wenn das Ziel nicht definiert ist:
 
-```
+```cpp
 // C2680b.cpp
 // compile with: /clr /c
 // C2680 expected

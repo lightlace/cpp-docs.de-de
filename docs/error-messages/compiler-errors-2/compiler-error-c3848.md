@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3848
 ms.assetid: 32d3ccef-01ec-4f8b-bbff-fb9b1a76b4c4
-ms.openlocfilehash: 1d738311ada14999a5345a4e2394631254dda00a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51a5cf6d866a5e5ee914a3d70365761749f79eea
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380995"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761945"
 ---
 # <a name="compiler-error-c3848"></a>Compilerfehler C3848
 
-Ausdruck mit Typ 'Typ' würden einige Const-Volatile-Qualifizierer 'Function' für den Aufruf verlieren
+ein Ausdruck mit dem Typ "Type" verliert einige Konstante-volatile-Qualifizierer, um "Function" aufzurufen.
 
-Eine Variable mit einem angegebenen Const-Volatile-Typ kann nur Member mit dieselbe oder eine höhere Const-Volatile-Qualifikationen definierten Funktionen aufrufen.
+Eine Variable mit einem angegebenen Konstanten Konstanten Typ kann nur Member-Funktionen aufzurufen, die mit denselben oder größeren Konstanten (konstant) definiert sind.
 
-In den folgenden Beispielen C3848 generiert:
+In den folgenden Beispielen wird C3848 generiert:
 
-```
+```cpp
 // C3848.cpp
 void glbFunc1()
 {

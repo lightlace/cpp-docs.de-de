@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2259
 ms.assetid: e458236f-bdea-4786-9aa6-a98d8bffa5f4
-ms.openlocfilehash: 562882f50edfe2d44ab1f08ee9dbe88fe468af63
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 403d674eae696eb42a837aef9d6e97c4b5b8f6c2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447381"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758787"
 ---
 # <a name="compiler-error-c2259"></a>Compilerfehler C2259
 
@@ -23,9 +23,9 @@ Eine Klasse oder Struktur mit einer oder mehreren rein virtuellen Funktionen kan
 
 Weitere Informationen finden Sie unter [implizit abstrakte Klassen](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes).
 
-Im folgende Beispiel wird der Fehler C2259 generiert:
+Im folgenden Beispiel wird C2259 generiert:
 
-```
+```cpp
 // C2259.cpp
 // compile with: /c
 class V {
@@ -50,11 +50,11 @@ Das Problem kann mit zwei Methoden umgangen werden:
 
 - Verwenden Sie den Bereichsauflösungsoperator für die in der abgeleiteten Klasse definierten Schnittstellenmethoden, um den Namen der implementierten Methode mit dem Namen der Schnittstelle zu kennzeichnen.
 
-C2259 kann auch auftreten, infolge einer konformitätsverbesserung für die in Visual Studio 2005 wurde **/Zc: wchar_t** ist jetzt standardmäßig aktiviert. In diesem Fall kann der Fehler C2599 behoben, die entweder durch Kompilieren mit werden **/Zc:**, um das Verhalten zu erhalten, von früheren Versionen oder vorzugsweise, durch die Aktualisierung Ihrer Typen an, sodass diese kompatibel sind. Weitere Informationen finden Sie unter[/Zc:wchar_t (wchar_t ist der systemeigene Typ)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+C2259 kann auch aufgrund von konformitätsarbeiten auftreten, die in Visual Studio 2005 ausgeführt wurden, **/Zc: wchar_t** ist nun standardmäßig aktiviert. In dieser Situation kann C2599 entweder durch Kompilieren mit **/Zc: wchar_t-** , aufgelöst werden, um das Verhalten von früheren Versionen zu erhalten, oder vorzugsweise durch Aktualisieren ihrer Typen, damit Sie kompatibel sind. Weitere Informationen finden Sie unter[/Zc:wchar_t (wchar_t ist der systemeigene Typ)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
-Im folgende Beispiel wird der Fehler C2259 generiert:
+Im folgenden Beispiel wird C2259 generiert:
 
-```
+```cpp
 // C2259b.cpp
 // compile with: /c
 #include <windows.h>
@@ -90,9 +90,9 @@ public:
 MyClass4 y;
 ```
 
-Im folgende Beispiel wird der Fehler C2259 generiert:
+Im folgenden Beispiel wird C2259 generiert:
 
-```
+```cpp
 // C2259c.cpp
 // compile with: /clr
 interface class MyInterface {

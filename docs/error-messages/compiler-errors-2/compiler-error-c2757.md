@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2757
 ms.assetid: 421f102f-8a32-4d47-a109-811ddf2c909d
-ms.openlocfilehash: 98b43a2f3c0888fc385226cd80889b9911c84690
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9f4661495e0fa5219a517b6f6ca410323a77269
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227912"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759528"
 ---
 # <a name="compiler-error-c2757"></a>Compilerfehler C2757
 
-'Symbol': ein Symbol mit diesem Namen bereits vorhanden ist und daher diesen Namen nicht als ein Namespacename verwendet werden
+' Symbol ': ein Symbol mit diesem Namen ist bereits vorhanden, daher kann dieser Name nicht als Namespace Name verwendet werden.
 
-Ein Symbol in der aktuellen Kompilierung verwendet werden, wie Sie ein Namespace-Bezeichner in einer referenzierten Assembly bereits verwendet wird.
+Ein Symbol, das in der aktuellen Kompilierung als Namespace Bezeichner verwendet wird, wird bereits in einer Assembly verwendet, auf die verwiesen wird.
 
-Im folgende Beispiel wird die C2757 generiert:
+Im folgenden Beispiel wird C2757 generiert:
 
-```
+```cpp
 // C2757a.cpp
 // compile with: /clr /LD
 public ref class Nes {};
@@ -29,7 +29,7 @@ public ref class Nes {};
 
 und anschließend
 
-```
+```cpp
 // C2757b.cpp
 // compile with: /clr /c
 #using <C2757a.dll>

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3539
 ms.assetid: 34a33a0f-d1b6-498f-b312-ffad2d4799b3
-ms.openlocfilehash: be1051859ebbcbdc22a9b71f8c5adba2e75c4e92
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 85381b237480b86b59c33f02601a1b9dc644a5a4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344660"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761529"
 ---
 # <a name="compiler-error-c3539"></a>Compilerfehler C3539
 
-'Typ': ein Vorlagenargument handelt es sich nicht um ein Typ, der "auto" enthält
+"Typ": ein Vorlagen Argument kann kein Typ sein, der "Auto" enthält.
 
-Der Argumenttyp für die angegebene Vorlage darf keine Verwendung von enthalten die `auto` Schlüsselwort.
+Der dargestellte Vorlagen Argumenttyp darf keine Verwendung des `auto`-Schlüssel Worts enthalten.
 
 ### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
 
-1. Geben Sie nicht die Template-Argument, mit der `auto` Schlüsselwort.
+1. Geben Sie das Vorlagen Argument nicht mit dem `auto`-Schlüsselwort an.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel ergibt C3539.
+Im folgenden Beispiel wird C3539 erzeugt.
 
-```
+```cpp
 // C3539.cpp
 // Compile with /Zc:auto
 template<class T> class C{};

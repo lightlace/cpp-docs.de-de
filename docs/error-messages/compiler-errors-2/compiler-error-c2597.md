@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2597
 ms.assetid: 2e48127d-e3ff-4a40-8156-2863e45b1a38
-ms.openlocfilehash: b7bdd10ebd70eb61746690958532854dd98c6429
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 680268948f8642b02768bd4b3092666982e14eb7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228589"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759307"
 ---
 # <a name="compiler-error-c2597"></a>Compilerfehler C2597
 
@@ -27,7 +27,7 @@ Mögliche Ursachen:
 
 1. Im folgenden Beispiel wird C2597 generiert und gezeigt, wie Sie diesen Fehler beheben:
 
-```
+```cpp
 // C2597.cpp
 // compile with: /c
 struct s1 {

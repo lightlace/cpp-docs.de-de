@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2711
 ms.assetid: 9df9f808-7419-4e63-abdd-e6538ff0871f
-ms.openlocfilehash: 568128d6199d16380b6a540173eded25f5588d23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65612e4a7d19295a8fa49576fb1d72c852a76b82
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160938"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757435"
 ---
 # <a name="compiler-error-c2711"></a>Compilerfehler C2711
 
-'Funktion': Diese Funktion kann nicht als verwaltet kompiliert, erwägen Sie, die mit #pragma unmanaged
+"Function": Diese Funktion kann nicht als verwaltet kompiliert werden. verwenden Sie #pragma nicht verwaltete
 
-Einige Anweisungen werden verhindert, dass den Compiler MSIL für die einschließende Funktion generiert wurde.
+Einige Anweisungen verhindern, dass der Compiler MSIL für die einschließende Funktion erzeugt.
 
-Das folgende Beispiel generiert C2711:
+Im folgenden Beispiel wird C2711 generiert:
 
-```
+```cpp
 // C2711.cpp
 // compile with: /clr
 // processor: x86

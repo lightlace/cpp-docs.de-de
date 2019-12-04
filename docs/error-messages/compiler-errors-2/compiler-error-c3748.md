@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3748
 ms.assetid: 6fe71a0a-dd93-4ce6-9729-b9616360cf34
-ms.openlocfilehash: ef1c446f9feb3d40add62513a31fc81a382b98e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b7da734b72acfda4efd55c518b1cc356ff49cce
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226842"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761854"
 ---
 # <a name="compiler-error-c3748"></a>Compilerfehler C3748
 
-'Schnittstelle': verwaltete Schnittstellen lösen möglicherweise keine Ereignisse
+' Schnittstelle ': verwaltete Schnittstellen lösen möglicherweise keine Ereignisse aus
 
-Die [__event](../../cpp/event.md) Schlüsselwort kann nicht innerhalb einer Schnittstelle verwendet werden.
+Das [__event](../../cpp/event.md) -Schlüsselwort kann nicht in einer Schnittstelle angezeigt werden.
 
-Im folgende Beispiel wird die C3748 generiert:
+Im folgenden Beispiel wird C3748 generiert:
 
-```
+```cpp
 // C3748.cpp
 __interface I {
 // try the following line instead

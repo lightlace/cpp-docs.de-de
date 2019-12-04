@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
-ms.openlocfilehash: 2fb2aa86a1fd8f8e0710d787682fdd44abd941ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d51d4c7873d43a655dc11fa8e0fa297b8a69bff
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408666"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735943"
 ---
 # <a name="compiler-error-c2059"></a>Compilerfehler C2059
 
-Syntaxfehler: "token"
+Syntax Fehler: ' Token '
 
-Das Token verursachte einen Syntaxfehler.
+Das Token verursachte einen Syntax Fehler.
 
-Im folgenden Beispiel wird eine Fehlermeldung für die Zeile, die deklariert `j`.
+Im folgenden Beispiel wird eine Fehlermeldung für die Zeile generiert, die `j`deklariert.
 
-```
+```cpp
 // C2059e.cpp
 // compile with: /c
 // C2143 expected
@@ -29,11 +29,11 @@ Im folgenden Beispiel wird eine Fehlermeldung für die Zeile, die deklariert `j`
    int j*; // C2059
 ```
 
-Um die Ursache des Fehlers zu ermitteln, untersuchen Sie nicht nur die Zeile, die in der Fehlermeldung aufgeführt ist, sondern auch die darüber liegenden Zeilen. Wenn keine Ahnung, über das Problem untersuchen die Zeilen zu werden, versuchen Sie die Zeile, die in der Fehlermeldung aufgeführt ist und möglicherweise mehrere Zeilen darüber auskommentieren.
+Um die Ursache des Fehlers zu ermitteln, untersuchen Sie nicht nur die Zeile, die in der Fehlermeldung aufgeführt ist, sondern auch die oben aufgeführten Zeilen. Wenn die Untersuchung der Zeilen keinen Hinweis auf das Problem liefert, versuchen Sie, die Zeile, die in der Fehlermeldung aufgeführt ist, und möglicherweise mehrere Zeilen darüber auszukommentieren.
 
-Wenn die Fehlermeldung auf ein Symbol auftritt, die unmittelbar folgt eine `typedef` Variable, stellen Sie sicher, dass die Variable im Quellcode definiert ist.
+Wenn die Fehlermeldung auf einem Symbol auftritt, das direkt auf eine `typedef` Variable folgt, stellen Sie sicher, dass die Variable im Quellcode definiert ist.
 
-C2059 generiert wird ausgelöst, wenn ein Präprozessorsymbol Name erneut als Bezeichner verwendet wird. Im folgenden Beispiel erkennt der Compiler `DIGITS.ONE` als die Zahl 1, dies ist nicht zulässig als Name für eine Enum-Element:
+C2059 wird ausgelöst, wenn ein präprozessorsymbolname als Bezeichner wieder verwendet wird. Im folgenden Beispiel sieht der Compiler `DIGITS.ONE` als die Zahl 1, die als Enumerationselementname ungültig ist:
 
 ```cpp
 #define ONE 1
@@ -44,9 +44,9 @@ enum class DIGITS {
 };
 ```
 
-Ergibt ein Symbol auf nichts verweist, wie auftreten können, erhalten Sie möglicherweise C2059 beim **/d**_Symbol_ **=** wird verwendet, um Sie zu kompilieren.
+Sie erhalten möglicherweise C2059, wenn ein Symbol als "Nothing" ausgewertet wird, wie es bei der Kompilierung des **/D**- **=** _Symbols_ vorkommen kann.
 
-```
+```cpp
 // C2059a.cpp
 // compile with: /DTEST=
 #include <stdio.h>
@@ -60,11 +60,11 @@ int main() {
 }
 ```
 
-Ein weiterer Fall, in dem C2059 auftreten können, ist beim Kompilieren einer Anwendungs, die eine Struktur in die Standardargumente für eine Funktion angibt. Der Standardwert für ein Argument muss ein Ausdruck sein. Eine Initialisiererliste – z. B. eine, die zum Initialisieren einer Struktur verwendet, ist kein Ausdruck.  Um dieses Problem zu beheben, definieren Sie einen Konstruktor, um die erforderliche Initialisierung auszuführen.
+Ein weiterer Fall, in dem C2059 auftreten kann, ist die Kompilierung einer Anwendung, die eine Struktur in den Standardargumenten für eine Funktion angibt. Der Standardwert für ein Argument muss ein Ausdruck sein. Eine Initialisiererliste – z. b. eine, die zum Initialisieren einer Struktur verwendet wurde – ist kein Ausdruck.  Um dieses Problem zu beheben, definieren Sie einen Konstruktor, um die erforderliche Initialisierung auszuführen.
 
-Im folgende Beispiel wird die C2059 generiert:
+Im folgenden Beispiel wird C2059 generiert:
 
-```
+```cpp
 // C2059b.cpp
 // compile with: /c
 struct ag_type {
@@ -78,11 +78,11 @@ void func(ag_type arg = {5, 7.0});   // C2059
 void func(ag_type arg = ag_type(5, 7.0));   // OK
 ```
 
-C2059 kann bei einer Umwandlung falsch formatiertes auftreten.
+C2059 kann bei einer falsch formatierten Umwandlung auftreten.
 
-Im folgende Beispiel wird die C2059 generiert:
+Im folgenden Beispiel wird C2059 generiert:
 
-```
+```cpp
 // C2059c.cpp
 // compile with: /clr
 using namespace System;
@@ -96,11 +96,11 @@ int main() {
 }
 ```
 
-C2059 kann auch auftreten, wenn Sie versuchen, einen Namespacenamen zu erstellen, der einen Punkt enthält.
+C2059 kann auch auftreten, wenn Sie versuchen, einen Namespace Namen zu erstellen, der einen-Zeitraum enthält.
 
-Im folgende Beispiel wird die C2059 generiert:
+Im folgenden Beispiel wird C2059 generiert:
 
-```
+```cpp
 // C2059d.cpp
 // compile with: /c
 namespace A.B {}   // C2059
@@ -111,7 +111,7 @@ namespace A  {
 }
 ```
 
-C2059 kann auftreten, wenn ein Operator, der einen Namen qualifiziert werden kann (`::`, `->`, und `.`) muss das Schlüsselwort folgen `template`, wie im folgenden Beispiel gezeigt:
+C2059 kann auftreten, wenn ein Operator, der einen Namen (`::`, `->`und `.`) qualifizieren kann, das Schlüsselwort `template`folgen muss, wie im folgenden Beispiel gezeigt:
 
 ```cpp
 template <typename T> struct Allocator {
@@ -125,7 +125,7 @@ template <typename X, typename AY> struct Container {
 };
 ```
 
-Standardmäßig C++ setzt voraus, dass `AY::Rebind` keine Vorlage ist; daher die folgenden `<` interpretiert wird, wie ein kleiner-als-Zeichen.  Sie müssen weisen dem Compiler explizit, die `Rebind` ist eine Vorlage aus, so dass sie ordnungsgemäß für die Spitze Klammer analysieren kann. Um diesen Fehler zu korrigieren, verwenden die `template` Schlüsselwort auf dem abhängigen Namen des Typs, wie hier gezeigt:
+Standardmäßig geht C++ davon aus, dass `AY::Rebind` keine Vorlage ist. Daher wird die folgende `<` als kleiner-als-Zeichen interpretiert.  Sie müssen dem Compiler explizit mitteilen, dass `Rebind` eine Vorlage ist, sodass er die Spitze Klammer ordnungsgemäß analysieren kann. Um diesen Fehler zu beheben, verwenden Sie das `template`-Schlüsselwort für den Namen des abhängigen Typs, wie hier gezeigt:
 
 ```cpp
 template <typename T> struct Allocator {

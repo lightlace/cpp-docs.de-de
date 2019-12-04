@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3764
 ms.assetid: af5d254c-8d4a-4dda-aad9-3c5c1257c868
-ms.openlocfilehash: 2570ee9abb148b919242de7786cd6fa91765286f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ede846c9068978ad5d283e97b1c96d3527bf67c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400252"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757232"
 ---
 # <a name="compiler-error-c3764"></a>Compilerfehler C3764
 
-'Überschreibungsfunktion': kann nicht "Basisklassenfunktion" für die Methode der Basisklasse überschreiben
+' override_function ': die Basisklassen Methode ' Base_class_function ' kann nicht überschrieben werden.
 
-Der Compiler hat ein falsch formatiertes außer Kraft setzen. Zum Beispiel wurde die Funktion der Basisklasse nicht `virtual`. Weitere Informationen finden Sie unter [überschreiben](../../extensions/override-cpp-component-extensions.md).
+Der Compiler hat eine falsch formatierte außer Kraft Setzung erkannt. Beispielsweise wurde die Basisklassen Funktion nicht `virtual`. Weitere Informationen finden Sie unter [außer Kraft](../../extensions/override-cpp-component-extensions.md)Setzung.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3764 generiert.
+Im folgenden Beispiel wird C3764 generiert.
 
-```
+```cpp
 // C3764.cpp
 // compile with: /clr /c
 public ref struct A {
@@ -39,9 +39,9 @@ public ref struct B : A {
 
 ## <a name="example"></a>Beispiel
 
-C3764 kann auch auftreten, wenn eine Basisklasse-Methode, die sowohl explizit ist, und mit dem Namen außer Kraft gesetzt. Im folgende Beispiel wird die C3764 generiert.
+C3764 kann auch auftreten, wenn eine Basisklassen Methode explizit und überschrieben wurde. Im folgenden Beispiel wird C3764 generiert.
 
-```
+```cpp
 // C3764_b.cpp
 // compile with: /clr /c
 ref struct A {

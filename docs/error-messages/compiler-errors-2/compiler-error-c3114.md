@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3114
 ms.assetid: b5d2df4f-87d0-4292-9981-25c6a6013c05
-ms.openlocfilehash: c5a4feae5c8805a27c020b532fd58e0562e46b6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f548c72a0e95c533ed711fe9f2583a7abd6c500
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404116"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760760"
 ---
 # <a name="compiler-error-c3114"></a>Compilerfehler C3114
 
-'Argument': kein gültiges benanntes Attributargument.
+' Argument ': kein gültiges benanntes Attribut Argument.
 
-In der Reihenfolge für Datenmember einer Attributklasse ein benanntes Argument gültig ist, es muss nicht gekennzeichnet werden `static`, `const`, oder `literal`. Wenn eine Eigenschaft, die Eigenschaft muss nicht `static` und muss über get- und set-Accessoren.
+Damit ein attributklassendatenmember ein gültiges benanntes Argument sein kann, darf er nicht als `static`, `const`oder `literal`gekennzeichnet werden. Wenn eine Eigenschaft ist, darf die Eigenschaft nicht `static` und muss über Get-und Set-Accessoren verfügen.
 
-Weitere Informationen finden Sie unter [Eigenschaft](../../extensions/property-cpp-component-extensions.md) und [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
+Weitere Informationen finden Sie unter [Eigenschaft](../../extensions/property-cpp-component-extensions.md) und [benutzerdefinierte Attribute](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3114 generiert.
+Im folgenden Beispiel wird C3114 generiert.
 
-```
+```cpp
 // C3114.cpp
 // compile with: /clr /c
 public ref class A : System::Attribute {

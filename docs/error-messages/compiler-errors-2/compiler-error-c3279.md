@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3279
 ms.assetid: 639afc20-984c-4a95-be35-8bf9409f02d5
-ms.openlocfilehash: 72646d7611163748fe7e27ea6c78cd38426eb6ad
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 3025dbf7c6bf4701218c2d9a956cae26d7180848
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447813"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757604"
 ---
 # <a name="compiler-error-c3279"></a>Compilerfehler C3279
 
 Teilweise oder explizite Spezialisierungen sowie explizite Instanziierungen von Klassenvorlagen, die im cli-Namespace deklariert sind, sind nicht zulässig.
 
-Der `cli` -Namespace wird von Microsoft definiert und enthält Pseudovorlagen. Microsoft C++ Compiler lässt keine benutzerdefinierten partiellen und expliziten spezialisierungen sowie explizite Instanziierungen von Klassenvorlagen in diesem Namespace zu.
+Der `cli` -Namespace wird von Microsoft definiert und enthält Pseudovorlagen. Der Microsoft C++ -Compiler lässt keine benutzerdefinierten, partiellen und expliziten Spezialisierungs-und expliziten Instanziierungen von Klassen Vorlagen in diesem Namespace zu.
 
 Im folgenden Beispiel wird C3279 generiert:
 
-```
+```cpp
 // C3279.cpp
 // compile with: /clr
 namespace cli {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2755
 ms.assetid: 8ee4eeb6-4757-4efe-9100-38ff4a96f1de
-ms.openlocfilehash: c2238058dc4b7df6bbe33e98d6ccde996f36b782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcd4bb5d49f6f6e807ad240c377debb220138c93
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227971"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759554"
 ---
 # <a name="compiler-error-c2755"></a>Compilerfehler C2755
 
-"Param": Nichttyp-Parameter einer teilweisen Spezialisierung muss ein einfacher Bezeichner
+' param ': ein Nichttyp-Parameter einer teilweisen Spezialisierung muss ein einfacher Bezeichner sein.
 
-Der Nichttyp-Parameter muss ein einfacher Kennzeichner, etwas zu sein, die der Compiler zur Kompilierzeit in einen einzelnen Bezeichner oder ein konstanter Wert nicht beheben kann.
+Der nicht-Typparameter muss ein einfacher Bezeichner sein, den der Compiler zum Zeitpunkt der Kompilierung in einen einzelnen Bezeichner oder einen konstanten Wert auflösen kann.
 
-Im folgende Beispiel wird die C2755 generiert:
+Im folgenden Beispiel wird C2755 generiert:
 
-```
+```cpp
 // C2755.cpp
 template<int I, int J>
 struct A {};

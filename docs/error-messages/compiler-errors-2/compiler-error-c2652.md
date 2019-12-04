@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2652
 ms.assetid: 6e3d1a90-a989-4088-8afd-dc82f6a2d66f
-ms.openlocfilehash: 9c9772052b690ad87de1d408c06478d82d48e724
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cedee3f1e3289aaf0ea38d75b6c812b61f891435
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282112"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756122"
 ---
 # <a name="compiler-error-c2652"></a>Compilerfehler C2652
 
-'Bezeichner': Unzulässiger Kopierkonstruktor: erster Parameter darf nicht 'Bezeichner' sein
+"Bezeichner": Unzulässiger Kopierkonstruktor: der erste Parameter darf kein "Bezeichner" sein.
 
-Der erste Parameter in der Kopierkonstruktor hat denselben Typ wie die Klasse, Struktur oder Union, die für die sie definiert ist. Der erste Parameter kann einen Verweis auf den Typ, aber nicht den Typ selbst sein.
+Der erste Parameter im Kopierkonstruktor hat denselben Typ wie die Klasse, Struktur oder Union, für die er definiert ist. Der erste Parameter kann ein Verweis auf den Typ sein, jedoch nicht auf den Typ selbst.
 
-Im folgende Beispiel wird die C2651 generiert:
+Im folgenden Beispiel wird C2651 generiert:
 
-```
+```cpp
 // C2652.cpp
 // compile with: /c
 class A {

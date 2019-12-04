@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2733
 ms.assetid: 67f83561-c633-407c-a2ee-f9fd16e165bf
-ms.openlocfilehash: 26819f1928223b5fa96d275290105f32787057f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ef669a49f4a3ec5a1af1a15a79f2511fa2699dd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208323"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755784"
 ---
 # <a name="compiler-error-c2733"></a>Compilerfehler C2733
 
-zweite C-Bindung für überladene Funktion 'Funktion' nicht zulässig
+zweite C-Verknüpfung der überladenen Funktion "Funktion" nicht zulässig
 
-Mehr als einer überladenen Funktion mit C-Verknüpfung deklariert wird. Wenn Sie C-Bindung verwenden, kann nur eine Form von einer angegebenen Funktion externe sein. Da überladene Funktionen über den gleichen nicht ergänzten Namen verfügen, können sie mit der C-Programmen verwendet werden.
+Mehr als eine überladene Funktion wird mit C-Verknüpfung deklariert. Bei Verwendung der C-Verknüpfung kann nur eine Form einer angegebenen Funktion extern sein. Da überladene Funktionen denselben nicht ergänzten Namen aufweisen, können Sie nicht mit C-Programmen verwendet werden.
 
-Im folgende Beispiel wird die C2733 generiert:
+Im folgenden Beispiel wird C2733 generiert:
 
-```
+```cpp
 // C2733.cpp
 extern "C" {
    void F1(int);

@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C3532
 ms.assetid: 51067853-eda8-4f59-86e8-8924e16d3a95
-ms.openlocfilehash: 7b5d1fe61ae08811186e25547ccc3f33e3b0198e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ef5eb3c2bedd9defbd0b80e6d8c5c8912fcf16d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397392"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761932"
 ---
 # <a name="compiler-error-c3532"></a>Compilerfehler C3532
 
-"Type": falsche Verwendung von 'Auto'
+"Typ": falsche Verwendung von "Auto"
 
-Der angegebene Typ kann nicht deklariert werden, mit der `auto` Schlüsselwort. Beispielsweise können keine der `auto` Schlüsselwort, um ein Array oder eine Methode deklarieren Typ zurückgeben.
+Der angegebenen Typ kann nicht mit dem `auto`-Schlüsselwort deklariert werden. Beispielsweise können Sie das `auto`-Schlüsselwort nicht verwenden, um ein Array oder einen Methoden Rückgabetyp zu deklarieren.
 
 ### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
 
-1. Stellen Sie sicher, dass der Initialisierungsausdruck einen gültigen Typ ergibt.
+1. Stellen Sie sicher, dass der Initialisierungs Ausdruck einen gültigen Typ ergibt.
 
-1. Stellen Sie sicher, dass Sie ein Array oder einen Rückgabetyp der Methode nicht deklarieren.
+1. Stellen Sie sicher, dass Sie kein Array oder Methoden Rückgabetyp deklarieren.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel C3532 erzeugt, da die `auto` Schlüsselwort kann nicht der Rückgabetyp einer Methode deklariert.
+Das folgende Beispiel ergibt C3532, da das `auto`-Schlüsselwort keinen Methoden Rückgabetyp deklarieren kann.
 
-```
+```cpp
 // C3532a.cpp
 // Compile with /Zc:auto
 auto f(){}   // C3532
@@ -37,9 +37,9 @@ auto f(){}   // C3532
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel C3532 erzeugt, da die `auto` Schlüsselwort kann kein Array zu deklarieren.
+Das folgende Beispiel ergibt C3532, da das `auto`-Schlüsselwort kein Array deklarieren kann.
 
-```
+```cpp
 // C3532b.cpp
 // Compile with /Zc:auto
 int main()

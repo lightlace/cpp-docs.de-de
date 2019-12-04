@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2883
 ms.assetid: 5c6d689d-ed42-41ad-b5c0-e9c2e0b8c356
-ms.openlocfilehash: 3f32307e519394433927d49aa92333fdff7b70f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb6b1043d976cfeb8cb92c8780c5b84ea9700b8b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378868"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760953"
 ---
 # <a name="compiler-error-c2883"></a>Compilerfehler C2883
 
-"Name": Funktionsdeklaration steht in Konflikt mit "Bezeichner" eingeführt, durch eine using-Deklaration
+"Name": die Funktionsdeklaration steht in Konflikt mit "Identifier", die mit der using-Deklaration
 
-Sie haben versucht, eine Funktion mehr als einmal definiert. Die erste Definition wurde aus einem Namespace mit einem `using` Deklaration. Bei der zweiten handelte es sich um eine lokale Definition.
+Sie haben versucht, eine Funktion mehrmals zu definieren. Die erste Definition wurde aus einem Namespace mit einer `using` Deklaration erstellt. Die zweite war eine lokale Definition.
 
-Im folgende Beispiel wird die C2883 generiert:
+Im folgenden Beispiel wird C2883 generiert:
 
-```
+```cpp
 // C2883.cpp
 namespace A {
    void z(int);

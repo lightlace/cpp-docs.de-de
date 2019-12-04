@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3675
 ms.assetid: 87461613-6633-430b-b95d-c7cb1bb63776
-ms.openlocfilehash: e29e536bf89aef887dc043327e4b4596703d0538
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6772572d29765370d6cdbf52ed8470ff2f3f054e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363894"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758072"
 ---
 # <a name="compiler-error-c3675"></a>Compilerfehler C3675
 
-'Funktion': ist reserviert, weil "Eigenschaft" definiert ist
+"Function": ist reserviert, da "Property" definiert ist.
 
-Wenn Sie eine einfache Eigenschaft deklarieren, generiert der Compiler die Get- und Set-Accessormethode und die Namen in den Bereich des Programms vorhanden sind.  Die vom Compiler generierten Namen werden durch voranstellen Get_- und Set_ an den Eigenschaftennamen gebildet.  Aus diesem Grund können Sie Funktionen mit dem gleichen Namen wie die vom Compiler generierten Accessoren nicht deklarieren.
+Wenn Sie eine einfache Eigenschaft deklarieren, generiert der Compiler die Get-und set-Accessormethoden, und diese Namen sind im Gültigkeitsbereich des Programms vorhanden.  Die vom Compiler generierten Namen werden gebildet, indem get_ vorangestellt und dem Eigenschaftsnamen set_.  Daher können Sie keine Funktionen mit dem gleichen Namen wie die vom Compiler generierten Accessoren deklarieren.
 
 Weitere Informationen finden Sie unter [property](../../extensions/property-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3675 generiert.
+Im folgenden Beispiel wird C3675 generiert.
 
-```
+```cpp
 // C3675.cpp
 // compile with: /clr /c
 ref struct C {

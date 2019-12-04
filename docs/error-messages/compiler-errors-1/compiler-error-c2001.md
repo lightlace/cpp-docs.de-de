@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2001
 ms.assetid: 0c3a7821-d8e5-4398-ab5a-4116d46e8dda
-ms.openlocfilehash: 03b54fe2373063c8c0f9905da93822928392998d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2bf9bd322812764b2f63493d4b22b58d853a25fa
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209022"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756837"
 ---
 # <a name="compiler-error-c2001"></a>Compilerfehler C2001
 
-Zeilenvorschub in Konstante.
+Zeilen-Zeilen Ausdruck in konstanter Konstante
 
-Eine Zeichenfolgenkonstante kann nicht in einer zweiten Zeile fortgesetzt werden, es sei denn, Sie folgendermaßen vor:
+Eine Zeichen folgen Konstante kann in einer zweiten Zeile nur dann fortgesetzt werden, wenn Sie die folgenden Schritte ausführen:
 
-- Das Ende der ersten Zeile mit einem umgekehrten Schrägstrich.
+- Beenden Sie die erste Zeile mit einem umgekehrten Schrägstrich.
 
-- Schließen Sie die Zeichenfolge in der ersten Zeile mit einem doppelten Anführungszeichen, und öffnen Sie ein weiteres doppeltes Anführungszeichen der Zeichenfolge in der nächsten Zeile.
+- Schließen Sie die Zeichenfolge in der ersten Zeile mit einem doppelten Anführungszeichen, und öffnen Sie die Zeichenfolge in der nächsten Zeile mit einem weiteren doppelten Anführungszeichen.
 
-Beenden die erste Zeile \n ist nicht ausreichend.
+Das Beenden der ersten Zeile mit \n ist nicht ausreichend.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C2001 generiert:
+Im folgenden Beispiel wird C2001 generiert:
 
-```
+```cpp
 // C2001.cpp
 // C2001 expected
 #include <stdio.h>
@@ -45,9 +45,9 @@ int main()
 
 ## <a name="example"></a>Beispiel
 
-Leerzeichen am Anfang der nächsten Zeile nach der ein Zeilenfortsetzungszeichen sind in Zeichenfolgenkonstanten enthalten. Keine der oben aufgeführten Beispiele betten Sie ein neue Zeilenumbruchzeichen in die Zeichenfolgenkonstante. Sie können ein Zeilenumbruchzeichen einbetten, wie hier gezeigt:
+Leerzeichen am Anfang der nächsten Zeile nach einem Zeilen Fortsetzungs Zeichen sind in der Zeichen folgen Konstante enthalten. Keines der oben gezeigten Beispiele bettet ein Zeilen einzeitiges Zeichen in die Zeichen folgen Konstante ein. Wie hier gezeigt, können Sie ein Zeilen Trennzeichen einbetten:
 
-```
+```cpp
 // C2001b.cpp
 #include <stdio.h>
 

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2682
 ms.assetid: 30c6a7c4-f5f7-4fe8-81a8-c48938521ab4
-ms.openlocfilehash: 8a9ec2f59f362df284e9bd5cd8df6ae986d59d77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1ce0132ed0db418359effe60f59e1eb2d3cc221
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266269"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760282"
 ---
 # <a name="compiler-error-c2682"></a>Compilerfehler C2682
 
-casting_operator kann nicht von 'type1' in 'type2' konvertieren
+Casting_operator kann nicht zum Konvertieren von "Typ1" in "Typ2" verwendet werden.
 
-Ein Umwandlungsoperator versucht für die Konvertierung zwischen inkompatiblen Typen. Beispielsweise können keine der [Dynamic_cast](../../cpp/dynamic-cast-operator.md) Operator, um einen Zeiger auf einen Verweis zu konvertieren. Die `dynamic_cast` Operator kann nicht zum Umwandeln von Qualifizierer verwendet werden. Alle Qualifizierer für die Typen müssen übereinstimmen.
+Ein Umwandlungs Operator hat versucht, zwischen nicht kompatiblen Typen zu konvertieren. Beispielsweise können Sie den [dynamic_cast](../../cpp/dynamic-cast-operator.md) -Operator nicht verwenden, um einen Zeiger auf einen Verweis zu konvertieren. Der `dynamic_cast`-Operator kann nicht zum Umwandeln von Qualifizierern verwendet werden. Alle Qualifizierer für die Typen müssen mit identisch sein.
 
-Sie können die `const_cast` Operator, um das Entfernen von Attributen wie z. B. `const`, `volatile`, oder `__unaligned`.
+Sie können den `const_cast`-Operator verwenden, um Attribute wie `const`, `volatile`oder `__unaligned`zu entfernen.
 
-Im folgende Beispiel wird die C2682 generiert:
+Im folgenden Beispiel wird C2682 generiert:
 
-```
+```cpp
 // C2682.cpp
 class A { virtual void f(); };
 class B: public A {};
@@ -33,9 +33,9 @@ void g(A* pa) {
 }
 ```
 
-Im folgende Beispiel wird die C2682 generiert:
+Im folgenden Beispiel wird C2682 generiert:
 
-```
+```cpp
 // C2682b.cpp
 // compile with: /clr
 ref struct R{};

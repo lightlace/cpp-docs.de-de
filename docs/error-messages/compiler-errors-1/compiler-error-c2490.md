@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2490
 ms.assetid: 9de6bddd-b2e2-4ce6-b33b-201a8c2c8c54
-ms.openlocfilehash: 9e06883d0e8b6103eb44d086d3872d86c50a58b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86d9f41db8ba386a64878eebfae989011f637d71
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361803"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757084"
 ---
 # <a name="compiler-error-c2490"></a>Compilerfehler C2490
 
-'Schlüsselwort' in der Funktion mit dem "naked"-Attribut nicht zulässig.
+"Keyword" ist in der Funktion mit dem "Naked"-Attribut nicht zulässig.
 
-Eine Funktion definiert, die als [naked](../../cpp/naked-cpp.md) strukturierte Ausnahmebehandlung kann nicht verwendet werden.
+Eine Funktion, die als [Naked](../../cpp/naked-cpp.md) definiert ist, kann keine strukturierte Ausnahmebehandlung verwenden.
 
-Im folgende Beispiel wird die C2490 generiert:
+Im folgenden Beispiel wird C2490 generiert:
 
-```
+```cpp
 // C2490.cpp
 // processor: x86
 __declspec( naked ) int func() {

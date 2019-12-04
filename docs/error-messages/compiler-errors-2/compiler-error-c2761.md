@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2761
 ms.assetid: 38c79a05-b56d-485b-820f-95e8c0cb926f
-ms.openlocfilehash: 1236cfaf70781b6ca80db1a317a0c1b01b0f2740
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbe2b3089d387d356073febf2b27bbb44b6be7e3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228231"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759502"
 ---
 # <a name="compiler-error-c2761"></a>Compilerfehler C2761
 
-'Funktion': die erneute Deklaration der Funktion nicht zulässig
+"Function": Neudeklaration der Element Funktion nicht zulässig
 
-Eine Memberfunktion kann nicht erneut deklariert werden. Sie können definieren, jedoch nicht neu deklariert werden.
+Eine Member-Funktion kann nicht erneut deklariert werden. Sie können Sie definieren, aber nicht erneut deklarieren.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C2761 generiert.
+Im folgenden Beispiel wird C2761 generiert.
 
-```
+```cpp
 // C2761.cpp
 class a {
    int t;
@@ -36,9 +36,9 @@ void a::test;  // C2761
 
 ## <a name="example"></a>Beispiel
 
-Nicht statische Member einer Klasse oder Struktur können nicht definiert werden.  Im folgende Beispiel wird die C2761 generiert.
+Nicht statische Member einer Klasse oder Struktur können nicht definiert werden.  Im folgenden Beispiel wird C2761 generiert.
 
-```
+```cpp
 // C2761_b.cpp
 // compile with: /c
 struct C {

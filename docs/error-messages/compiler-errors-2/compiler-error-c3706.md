@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
-ms.openlocfilehash: 2d474db5a4d50aed7b59e6f48fb5a3e8165f10c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 810ec59a814b04349913648fb49a03eb63912cd9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400291"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757981"
 ---
 # <a name="compiler-error-c3706"></a>Compilerfehler C3706
 
-'Funktion': muss eine COM-Schnittstelle zum Auslösen von COM-Ereignisse
+"Function": muss eine COM-Schnittstelle zum Auslösen von COM-Ereignissen sein.
 
-Die Schnittstelle, mit denen Sie COM-Ereignisse auslösen muss es sich um eine COM-Schnittstelle sein. In diesem Fall die Schnittstelle sollte entweder definiert werden mit einem visuellen C++ Attribut- oder importierten mit [#import](../../preprocessor/hash-import-directive-cpp.md) aus einer Typbibliothek mit #import Embedded_idl-Attribut.
+Die Ereignis Schnittstelle, mit der com-Ereignisse ausgelöst werden, muss eine COM-Schnittstelle sein. In dieser Situation muss die Schnittstelle entweder mit einem visuellen C++ Attribut definiert oder mithilfe von [#Import](../../preprocessor/hash-import-directive-cpp.md) aus einer Typbibliothek mit dem embedded_idl-Attribut des #Import importiert werden.
 
-Beachten Sie, dass die `#include` Codezeilen die ATL-Headerdateien, die im folgenden Beispiel gezeigt sind erforderlich, für die Verwendung von COM-Ereignisse. Um diesen Fehler zu beheben, stellen `IEvents` (die ereignisauslösende Schnittstelle) eine COM-Schnittstelle durch Anwenden eines der folgenden Attribute auf die Schnittstellendefinition: [Objekt](../../windows/object-cpp.md), [dual](../../windows/dual.md), oder [ Dispinterface](../../windows/dispinterface.md).
+Beachten Sie, dass die `#include` Zeilen der ATL-Header Dateien, die im folgenden Beispiel angezeigt werden, für die Verwendung von COM-Ereignissen erforderlich sind. Um diesen Fehler zu beheben, stellen Sie `IEvents` (die Ereignis Schnittstelle) zu einer COM-Schnittstelle, indem Sie eines der folgenden Attribute auf die Schnittstellen Definition anwenden: [Object](../../windows/object-cpp.md), [Dual](../../windows/dual.md)oder [dispinterface](../../windows/dispinterface.md).
 
-Ist eine Schnittstelle aus einer Headerdatei, die von MIDL generiert werden, werden Sie von vom Compiler nicht als COM-Schnittstelle erkannt.
+Wenn eine Schnittstelle aus einer von "Mittel l" generierten Header Datei besteht, wird Sie vom Compiler nicht als COM-Schnittstelle erkannt.
 
-Im folgende Beispiel wird die C3706 generiert:
+Im folgenden Beispiel wird C3706 generiert:
 
-```
+```cpp
 // C3706.cpp
 // compile with: /c
 // C3706 expected

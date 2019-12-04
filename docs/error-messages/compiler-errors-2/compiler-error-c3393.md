@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3393
 ms.assetid: d57f7c69-0a02-4fe3-9e45-bc62644fd77c
-ms.openlocfilehash: 5147e3e406fde73a05b7069e2a9336f27b3db622
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f6952de20c27a811b85694ae13892eff9231f83
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328665"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757539"
 ---
 # <a name="compiler-error-c3393"></a>Compilerfehler C3393
 
 Syntaxfehler in Einschränkungsklausel: „identifier“ ist kein Typ.
 
-Der an eine Einschränkung übergebene Bezeichner, der ein Typ sein muss, war kein Typ.  Weitere Informationen finden Sie unter [Einschränkungen für generische Typparameter (C++ / CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
+Der an eine Einschränkung übergebene Bezeichner, der ein Typ sein muss, war kein Typ.  Weitere Informationen finden Sie unter [Einschränkungen für generische Typparameter (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Beispiel
 
 Im folgenden Beispiel wird C3393 generiert:
 
-```
+```cpp
 // C3393.cpp
 // compile with: /clr /c
 void MyInterface() {}

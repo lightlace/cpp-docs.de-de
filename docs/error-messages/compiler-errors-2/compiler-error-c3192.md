@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3192
 ms.assetid: 8b0083d4-706f-46f6-858a-e1d9af464cf8
-ms.openlocfilehash: 685657857b2ed41c29c704633b07dc677fc32fc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 977987c0c4a6d3ba86eaad2a0c1b4ff2664ce37c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382306"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761594"
 ---
 # <a name="compiler-error-c3192"></a>Compilerfehler C3192
 
-Syntaxfehler: "^" ist kein Präfixoperator (meinten Sie "*"?)
+Syntax Fehler: "^" ist kein Präfix Operator (meinten Sie "*"?)
 
-Ein Handle kann nicht als ein Dereferenzierungsoperator verwendet werden.
+Ein Handle kann nicht als Dereferenzierungsoperator verwendet werden.
 
-Im folgende Beispiel wird die C3192 generiert:
+Im folgenden Beispiel wird C3192 generiert:
 
-```
+```cpp
 // C3192.cpp
 // compile with: /clr
 using namespace System;

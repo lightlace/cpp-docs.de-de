@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3138
 ms.assetid: 364ee9e8-9358-410e-bd35-9c4a226a3753
-ms.openlocfilehash: d812c14c2f364681fe28a58bdaed68fe3ed8ad30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3980bebdae0301dfbbb3cea91d6631053a118995
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374988"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761250"
 ---
 # <a name="compiler-error-c3138"></a>Compilerfehler C3138
 
-'Schnittstelle': eine 'Attribut'-Schnittstelle muss von IDispatch oder von einer Schnittstelle, die von IDispatch erbt erben
+' Schnittstelle ': eine ' Attribute '-Schnittstelle muss von IDispatch erben oder von einer Schnittstelle, die von IDispatch erbt.
 
-Eine Schnittstelle mit der [dual](../../windows/dual.md) oder [Dispinterface](../../windows/dispinterface.md) Attribute verfügt nicht über `IDispatch` als eine direkte oder indirekte Basisschnittstelle.
+Eine Schnittstelle mit den [Dual](../../windows/dual.md) -oder [dispinterface](../../windows/dispinterface.md) -Attributen hat keine `IDispatch` als direkte oder indirekte Basisschnittstelle.
 
-Im folgende Beispiel wird die C3138 generiert:
+Im folgenden Beispiel wird C3138 generiert:
 
-```
+```cpp
 // C3138.cpp
 #include <unknwn.h>
 

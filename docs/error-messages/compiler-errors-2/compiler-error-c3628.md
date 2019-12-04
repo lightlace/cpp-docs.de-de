@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3628
 ms.assetid: 0ff5a4a4-fcc9-47a0-a4d8-8af9cf2815f6
-ms.openlocfilehash: 581aae7e1f979b3dd39caf2ce3d263fdb856c56a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9976cb2425f8f855ffb2903c07de22822c781e20
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221684"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755823"
 ---
 # <a name="compiler-error-c3628"></a>Compilerfehler C3628
 
-'base Class': verwaltete oder WinRTclasses unterstützen nur öffentliche Vererbung
+' Basisklasse ': verwaltete oder winrtclasses unterstützen nur die öffentliche Vererbung.
 
-Es wurde versucht, mit einer verwalteten oder WinRT Klasse als eine [private](../../cpp/private-cpp.md) oder [geschützt](../../cpp/protected-cpp.md) Basisklasse. Eine verwaltete oder WinRT-Klasse kann nur verwendet werden, als eine Basisklasse mit [öffentliche](../../cpp/public-cpp.md) Zugriff.
+Es wurde versucht, eine verwaltete oder WinRT-Klasse als [private](../../cpp/private-cpp.md) oder [geschützte](../../cpp/protected-cpp.md) Basisklasse zu verwenden. Eine verwaltete oder WinRT-Klasse kann nur als Basisklasse mit [öffentlichem](../../cpp/public-cpp.md) Zugriff verwendet werden.
 
 Im folgenden Beispiel wird C3628 generiert und gezeigt, wie Sie diesen Fehler beheben:
 
-```
+```cpp
 // C3628a.cpp
 // compile with: /clr
 ref class B {

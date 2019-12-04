@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2860
 ms.assetid: ccc83553-90ed-4e94-b5e9-38b58ae38e31
-ms.openlocfilehash: 7d468fb2a71ce23bcd527cb02663dd5f7b7eecad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a6bb4bc12e791e36a31ffc4cf417e21cb71dbdd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302864"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760966"
 ---
 # <a name="compiler-error-c2860"></a>Compilerfehler C2860
 
-"void" nicht möglich, ein Argumenttyp, mit Ausnahme von "(Void)"
+"void" darf kein Argumenttyp sein, mit Ausnahme von "(void)".
 
-Typ `void` kann nicht als Argumenttyp mit anderen Argumenten verwendet werden.
+Type `void` kann nicht als Argumenttyp mit anderen Argumenten verwendet werden.
 
-Im folgende Beispiel wird die C2860 generiert:
+Im folgenden Beispiel wird C2860 generiert:
 
-```
+```cpp
 // C2860.cpp
 // compile with: /c
 void profunc1(void, int i);   // C2860

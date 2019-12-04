@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2593
 ms.assetid: 4a0fe9bb-2163-447d-91f6-1890ed8250f6
-ms.openlocfilehash: c358553a36104b5c389076f5a5ce02f94f85e85a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a385e35376ddce528678980705595bfb98aca95
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386914"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759346"
 ---
 # <a name="compiler-error-c2593"></a>Compilerfehler C2593
 
-'Operator Bezeichner' ist mehrdeutig
+"Operator Identifier" ist mehrdeutig
 
-Mehr als einen möglichen Operator ist für einen überladenen Operator definiert.
+Für einen überladenen Operator ist mehr als ein möglicher Operator definiert.
 
-Dieser Fehler möglicherweise behoben werden, wenn Sie eine explizite Umwandlung auf eine oder mehrere Parameter verwenden.
+Dieser Fehler kann korrigiert werden, wenn Sie eine explizite Umwandlung für einen oder mehrere tatsächliche Parameter verwenden.
 
-Im folgende Beispiel wird die C2593 generiert:
+Im folgenden Beispiel wird C2593 generiert:
 
-```
+```cpp
 // C2593.cpp
 struct A {};
 struct B : A {};
@@ -39,9 +39,9 @@ int main() {
 }
 ```
 
-Dieser Fehler kann verursacht werden, durch Serialisierung eine Gleitkommazahl Variable mit einem `CArchive` Objekt. Der Compiler identifiziert die `<<` Operator als mehrdeutig. Die C++ nur primitive Typen, `CArchive` können serialisieren, werden die Typen mit fester Größe `BYTE`, `WORD`, `DWORD`, und `LONG`. Alle Integer-Typen müssen in einem dieser Typen für die Serialisierung umgewandelt werden. Gleitkomma-Datentypen müssen archiviert werden, mithilfe der `CArchive::Write()` Member-Funktion.
+Dieser Fehler kann dadurch verursacht werden, dass eine Gleit Komma Variable mithilfe eines `CArchive`-Objekts serialisiert wird. Der Compiler identifiziert den `<<` Operator als mehrdeutig. Die einzigen primitiven C++ Typen, die `CArchive` serialisieren können, sind die Typen mit fester Größe `BYTE`, `WORD`, `DWORD`und `LONG`. Alle ganzzahligen Typen müssen für die Serialisierung in einen dieser Typen umgewandelt werden. Gleit Komma Typen müssen mithilfe der `CArchive::Write()` Member-Funktion archiviert werden.
 
-Das folgende Beispiel zeigt, wie Sie eine Gleitkommavariable archivieren (`f`) Archiv `ar`:
+Im folgenden Beispiel wird gezeigt, wie eine Gleit Komma Variable (`f`) archiviert wird, um `ar`zu archivieren:
 
 ```
 ar.Write(&f, sizeof( float ));

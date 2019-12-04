@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3185
 ms.assetid: 5bf96279-043c-4981-9d02-b4550071b192
-ms.openlocfilehash: 45afe70b454f72dd8c9b8ce9771ce1f5aef6a10e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36f350287a1cfaf937ee739800042aaf99f31769
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366081"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761633"
 ---
 # <a name="compiler-error-c3185"></a>Compilerfehler C3185
 
 "TypeId" verwendet für verwalteten oder WinRT-Typ "Typ"; verwenden Sie stattdessen "Operator".
 
-Sie können nicht angewendet werden die [Typeid](../../cpp/typeid-operator.md) Operator, um einen verwalteten oder WinRT-Typ; verwenden Sie [Typeid](../../extensions/typeid-cpp-component-extensions.md) stattdessen.
+Der [typeid](../../cpp/typeid-operator.md) -Operator kann nicht auf einen verwalteten oder WinRT-Typ angewendet werden. Verwenden Sie stattdessen [typeid](../../extensions/typeid-cpp-component-extensions.md) .
 
 Im folgenden Beispiel wird C3185 generiert und gezeigt, wie Sie diesen Fehler beheben:
 
-```
+```cpp
 // C3185a.cpp
 // compile with: /clr
 ref class Base {};

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3168
 ms.assetid: 4c36fcfb-c351-48ff-b4eb-78d2aa1b4d55
-ms.openlocfilehash: f39160cc09825c6d87d56ff5ba80d21a35f41e12
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f09c7e250b4c2b02ba2db582f92d54336bed673
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174158"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761789"
 ---
 # <a name="compiler-error-c3168"></a>Compilerfehler C3168
 
-'Typ': Ungültiger zugrunde liegender Typ für Enumeration
+"Typ": Ungültiger zugrunde liegender Typ für die Aufzählung.
 
-Die zugrunde liegende Geben Sie bei der `enum` Typ war ungültig. Der zugrunde liegende Typ muss es sich um einen ganzzahligen C++-Typ oder einen entsprechenden CLR-Typ sein.
+Der zugrunde liegende Typ, den Sie für den `enum` Typ angegeben haben, war ungültig. Der zugrunde liegende Typ muss ein ganzzahliger C++ Typ oder ein entsprechender CLR-Typ sein.
 
-Im folgende Beispiel wird die C3168 generiert:
+Im folgenden Beispiel wird C3168 generiert:
 
-```
+```cpp
 // C3168.cpp
 // compile with: /clr /c
 ref class G{};

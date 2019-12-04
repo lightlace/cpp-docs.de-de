@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2270
 ms.assetid: b52c068e-0b61-42e7-b775-4d57b3ddcba0
-ms.openlocfilehash: 704d397f06432575b7db531039b4454d4716c54e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67dc970ffb5dac218072ff98046f88c31a9c2db9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388916"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758722"
 ---
 # <a name="compiler-error-c2270"></a>Compilerfehler C2270
 
-"Function": Modifizierer bei nicht-Member-Funktionen nicht zulässig
+"Function": modifiziererer sind für nicht Element Funktionen nicht zulässig.
 
-Eine nichtmemberfunktion deklariert wird, mit [const](../../cpp/const-cpp.md), [flüchtige](../../cpp/volatile-cpp.md), oder einem anderen Speichermodell-Modifizierer.
+Eine nicht-Member-Funktion wird mit [Konstanten](../../cpp/const-cpp.md), [flüchtigen](../../cpp/volatile-cpp.md)oder einem anderen Speicher modellmodifizierer deklariert.
 
-Im folgende Beispiel wird die C2270 generiert:
+Im folgenden Beispiel wird C2270 generiert:
 
-```
+```cpp
 // C2270.cpp
 // compile with: /c
 void func1(void) const;   // C2270, nonmember function

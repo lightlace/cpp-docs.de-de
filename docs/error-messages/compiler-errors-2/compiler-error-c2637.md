@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2637
 ms.assetid: 58d94447-eb96-4d8f-a690-dd78d322462e
-ms.openlocfilehash: 4231a811911fdf600b47962e929f6f3cff1f1bca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a17bd95cf1727d058e0cbd9e3dfb93c500da9fb5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395455"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758254"
 ---
 # <a name="compiler-error-c2637"></a>Compilerfehler C2637
 
-'Bezeichner': Zeiger auf Datenmember kann nicht geändert werden.
+"Bezeichner": Zeiger auf Datenmember können nicht geändert werden.
 
-Ein Zeiger auf ein Datenmember kann nicht durch eine Aufrufkonvention verfügen. Um zu beheben, entfernen Sie die Aufrufkonvention oder deklarieren Sie einen Zeiger auf eine Memberfunktion zu.
+Ein Zeiger auf einen Datenmember kann keine Aufruf Konvention aufweisen. Um aufzulösen, entfernen Sie entweder die Aufruf Konvention, oder deklarieren Sie einen Zeiger auf die Member-Funktion.
 
-Im folgende Beispiel wird die C2637 generiert:
+Im folgenden Beispiel wird C2637 generiert:
 
-```
+```cpp
 // C2637.cpp
 // compile with: /c
 struct S {};

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3240
 ms.assetid: 1a8dc213-b80c-47ae-ada0-e9554b635d1e
-ms.openlocfilehash: a8334b4f95ccadcce73a79d787669cba9f911199
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e38ac53d0473c4fe5daace0f8c674c06b2ae0161
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174171"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756382"
 ---
 # <a name="compiler-error-c3240"></a>Compilerfehler C3240
 
-'Funktion': muss eine nicht überladene, abstrakte Memberfunktion von "Type"
+"Function": muss eine nicht überladene abstrakte Member-Funktion von "Type" sein.
 
-Ein Basistyp enthalten eine Funktion, die definiert wurde. -Funktion muss virtuell sein.
+Ein Basistyp enthielt eine Funktion, die definiert wurde. Die Funktion muss virtuell sein.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3240 generiert.
+Im folgenden Beispiel wird C3240 generiert.
 
-```
+```cpp
 // C3240.cpp
 // compile with: /c
 __interface I {

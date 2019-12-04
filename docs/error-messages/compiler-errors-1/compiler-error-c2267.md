@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2267
 ms.assetid: ea63bebb-6208-4367-8440-39be07f9c360
-ms.openlocfilehash: 5ff8b0bee1f79d9534841e4368fd5a5249cbb413
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c897f8e6b38743ee98ec29707b222901ddde9d7c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153397"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758735"
 ---
 # <a name="compiler-error-c2267"></a>Compilerfehler C2267
 
-'Funktion': statische Funktionen mit blockgültigkeit sind unzulässig
+"Function": statische Funktionen mit Block Bereich sind unzulässig.
 
-Deklariert eine lokale Funktion `static`. Statische Funktionen müssen globalen Gültigkeitsbereich.
+Eine lokale Funktion wird als `static`deklariert. Statische Funktionen müssen einen globalen Gültigkeitsbereich aufweisen.
 
-Im folgende Beispiel wird die C2267 generiert:
+Im folgenden Beispiel wird C2267 generiert:
 
-```
+```cpp
 // C2267.cpp
 static int func2();   // OK
 int main() {

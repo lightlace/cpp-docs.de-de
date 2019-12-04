@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2140
 ms.assetid: d44a0500-002c-4632-9e5e-c71c3a473ec4
-ms.openlocfilehash: 35b6e38290acddb41bdf53d9663a058259300ee8
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 0329872ff0baee595bf32486a53d6abf91d208d4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345681"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756525"
 ---
 # <a name="compiler-error-c2140"></a>Compilerfehler C2140
 
-'Typ': ein Typ, der einen generischen Typparameter abhängig ist, ist als Argument für das systeminterne Typmerkmal 'Eigenschaft' des Compilers nicht zulässig
+"Typ": ein Typ, der von einem generischen Typparameter abhängig ist, ist als Argument für das systeminterne Typmerkmal "Merkmal" des Compilers nicht zulässig.
 
-Eine Typeigenschaft wurde ein ungültiger Typbezeichner übergeben.
+Ein ungültiger Typspezifizierer wurde an eine Typeigenschaft übermittelt.
 
 Weitere Informationen finden Sie unter [Compilerunterstützung für Typmerkmale](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C2140 generiert.
+Im folgenden Beispiel wird C2140 generiert.
 
-```
+```cpp
 // C2140.cpp
 // compile with: /clr /c
 template <class T>

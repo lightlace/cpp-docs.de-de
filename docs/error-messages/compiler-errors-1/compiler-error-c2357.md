@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2357
 ms.assetid: d1083945-0ea2-4385-9e66-8c665978806c
-ms.openlocfilehash: 1872672e776ad13bf16be5ae69729f4f68d8f3b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce1926468bac7e44485be5c0a0944fdf12dce3d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302032"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759918"
 ---
 # <a name="compiler-error-c2357"></a>Compilerfehler C2357
 
-'Bezeichner': eine Funktion vom Typ 'Typ' sein muss
+"Bezeichner": muss eine Funktion vom Typ "Typ" sein.
 
-Ihr Code deklariert eine Version der `atexit` -Funktion, die stimmt nicht mit der Version vom Compiler intern deklariert. Deklarieren Sie `atexit` wie folgt:
+Der Code deklariert eine Version der `atexit`-Funktion, die nicht mit der vom Compiler intern deklarierten Version identisch ist. Deklarieren Sie `atexit` wie folgt:
 
 ```
 int __cdecl atexit(void (__cdecl *)());
 ```
 
-Weitere Informationen finden Sie unter [Init_seg](../../preprocessor/init-seg.md).
+Weitere Informationen finden Sie unter [init_seg](../../preprocessor/init-seg.md).
 
-Im folgende Beispiel wird die C2357 generiert:
+Im folgenden Beispiel wird C2357 generiert:
 
-```
+```cpp
 // C2357.cpp
 // compile with: /c
 // C2357 expected

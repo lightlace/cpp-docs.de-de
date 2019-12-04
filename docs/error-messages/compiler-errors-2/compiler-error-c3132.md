@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3132
 ms.assetid: d54a3d12-336a-4ed0-ad4e-43cddac33b5e
-ms.openlocfilehash: 1a97e04747cb92909380e66d1f4ea8ca62183054
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3ef68e693b77b72c1e4cc2590a404b09b38ab04
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349879"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760204"
 ---
 # <a name="compiler-error-c3132"></a>Compilerfehler C3132
 
-"Funktion-Parameter": Parameterarrays können nur auf formale Argumente vom Typ "eindimensionales verwaltetes Array" angewendet werden
+"function-Parameter": Parameter Arrays können nur auf formale Argumente vom Typ "eindimensionales verwaltetes Array" angewendet werden.
 
-Die <xref:System.ParamArrayAttribute> -Attribut wurde auf einen Parameter, der kein eindimensionales Array war angewendet.
+Das <xref:System.ParamArrayAttribute>-Attribut wurde auf einen Parameter angewendet, bei dem es sich nicht um ein Array mit einer einzelnen Dimension handelte.
 
-Im folgende Beispiel wird die C3132 generiert:
+Im folgenden Beispiel wird C3132 generiert:
 
-```
+```cpp
 // C3132.cpp
 // compile with: /clr /c
 using namespace System;

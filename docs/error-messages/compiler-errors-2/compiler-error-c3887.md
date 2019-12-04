@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3887
 ms.assetid: a7e82426-ef99-437b-9562-2822004e18fe
-ms.openlocfilehash: 85434cb8daba0db82843c09e2d1bb09d98960272
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f64b72fe5d546550c32f60a27360d8a77c8255bd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344500"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736580"
 ---
 # <a name="compiler-error-c3887"></a>Compilerfehler C3887
 
-'Var': der Initialisierer für ein literal-Datenmembers muss ein konstanter Ausdruck sein
+"var": der Initialisierer für einen literaldatenmember muss ein konstanter Ausdruck sein.
 
-Ein [literal](../../extensions/literal-cpp-component-extensions.md) -Datenmember kann nur mit einem konstanten Ausdruck initialisiert werden.
+Ein [literaldatenmember](../../extensions/literal-cpp-component-extensions.md) kann nur mit einer konstanten Ausdrucks Initialisierung initialisiert werden.
 
-Im folgende Beispiel wird die C3887 generiert:
+Im folgenden Beispiel wird C3887 generiert:
 
-```
+```cpp
 // C3887.cpp
 // compile with: /clr
 ref struct Y1 {
@@ -33,7 +33,7 @@ ref struct Y1 {
 
 Mögliche Lösung:
 
-```
+```cpp
 // C3887b.cpp
 // compile with: /clr /c
 ref struct Y1 {

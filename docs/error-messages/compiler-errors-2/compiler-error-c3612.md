@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3612
 ms.assetid: aa6e3a2b-4afa-481c-98c1-1b6d1f82f869
-ms.openlocfilehash: ab18381d3f263e3207662e1667ac5c835983412f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 499c31b0c02bd72695cd6118612609a70316f0ae
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344486"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755745"
 ---
 # <a name="compiler-error-c3612"></a>Compilerfehler C3612
 
-'Typ': eine versiegelte Klasse darf nicht abstrakt sein
+' Typ ': eine versiegelte Klasse kann nicht abstrakt sein.
 
-Mithilfe von definierten Typen `value` sind standardmäßig versiegelt und eine Klasse ist abstrakt, es sei denn, sie alle Methoden der Basisklasse implementiert. Eine versiegelte abstrakte Klasse kann weder eine Basisklasse sein, noch kann er instanziiert werden.
+Typen, die mit `value` definiert sind, sind standardmäßig versiegelt, und eine Klasse ist abstrakt, es sei denn, Sie implementiert alle Methoden der Basis. Eine versiegelte abstrakte Klasse kann keine Basisklasse sein und kann nicht instanziiert werden.
 
 Weitere Informationen finden Sie unter [Klassen und Strukturen](../../extensions/classes-and-structs-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3612 generiert:
+Im folgenden Beispiel wird C3612 generiert:
 
-```
+```cpp
 // C3612.cpp
 // compile with: /clr /c
 value struct V: public System::ICloneable {};   // C3612

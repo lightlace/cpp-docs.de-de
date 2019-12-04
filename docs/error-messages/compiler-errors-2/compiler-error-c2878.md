@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2878
 ms.assetid: 83ee3de1-f554-49e8-a840-1f550cee7f69
-ms.openlocfilehash: f4570b7a2746386c66f8aa783f9270efb15d4765
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: faf50edfcddc64a75062672175ab7fbad63081c1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378899"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736308"
 ---
 # <a name="compiler-error-c2878"></a>Compilerfehler C2878
 
-"Name": Namespace oder Klasse dieses Namens ist nicht vorhanden.
+"Name": ein Namespace oder eine Klasse mit diesem Namen ist nicht vorhanden.
 
-Sie haben auf einen Namespace oder Klasse, die nicht definiert ist.
+Sie haben einen Verweis auf einen Namespace oder eine Klasse erstellt, der nicht definiert ist.
 
-Im folgende Beispiel wird die C2878 generiert:
+Im folgenden Beispiel wird C2878 generiert:
 
-```
+```cpp
 // C2878.cpp
 // compile with: /c
 namespace A {}

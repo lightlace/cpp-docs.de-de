@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2663
 ms.assetid: 1e93e368-fd52-42bf-9908-9b6df467c8c9
-ms.openlocfilehash: d74326e49edd980896276e2c6e67526d8d769cb7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f07b63202d8f171dfb69f4bb294b392152b9290b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360293"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756031"
 ---
 # <a name="compiler-error-c2663"></a>Compilerfehler C2663
 
-'Funktion': Anzahl Überladung(en) gibt es keine zulässige Konvertierung für "this"-Zeiger
+"Funktion": Zahlen Überladungen weisen keine zulässigen Konvertierungen für den this-Zeiger auf.
 
-Der Compiler konnte nicht konvertiert werden `this` auf eine der überladenen Versionen der Memberfunktion.
+Der Compiler konnte `this` nicht in eine der überladenen Versionen der Member-Funktion konvertieren.
 
-Dieser Fehler kann verursacht werden, durch den Aufruf einer nicht -`const` Member-Funktion auf einem `const` Objekt.  Mögliche Lösungen:
+Dieser Fehler kann verursacht werden, wenn eine nicht-`const` Member-Funktion für ein `const`-Objekt aufgerufen wird.  Mögliche Lösungen:
 
-1. Entfernen Sie die `const` aus der Objektdeklaration.
+1. Entfernen Sie die `const` aus der Objekt Deklaration.
 
-1. Hinzufügen `const` auf eine der Überladungen der Member-Funktion.
+1. Fügen Sie einer der Element Funktions Überladungen `const` hinzu.
 
-Im folgende Beispiel wird die C2663 generiert:
+Im folgenden Beispiel wird C2663 generiert:
 
-```
+```cpp
 // C2663.cpp
 struct C {
    void f() volatile {}

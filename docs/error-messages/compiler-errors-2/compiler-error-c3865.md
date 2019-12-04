@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3865
 ms.assetid: 9bc62bb0-4fb8-4856-a5cf-c7cb4029a596
-ms.openlocfilehash: 846657d3598e268d78ff3c39f2bfc901756ad370
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 960c795fe934433e4e3cf79e4c01c49d00205b9b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302019"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761490"
 ---
 # <a name="compiler-error-c3865"></a>Compilerfehler C3865
 
-'Aufrufkonvention': kann nur für systemeigene Memberfunktionen verwendet werden
+' calling_convention ': kann nur für Native Member-Funktionen verwendet werden.
 
-Eine Aufrufkonvention wurde verwendet, auf eine Funktion, die entweder eine globale Funktion oder in einer verwalteten Memberfunktion. Die Aufrufkonvention kann nur in einer systemeigenen (nicht verwaltete) Memberfunktion verwendet werden.
+Eine Aufruf Konvention wurde für eine Funktion verwendet, bei der es sich entweder um eine globale Funktion oder um eine verwaltete Member-Funktion handelte. Die Aufruf Konvention kann nur in einer nativen (nicht verwalteten) Member-Funktion verwendet werden.
 
-Weitere Informationen finden Sie unter [Aufrufkonventionen](../../cpp/calling-conventions.md).
+Weitere Informationen finden Sie unter [Aufrufen von Konventionen](../../cpp/calling-conventions.md).
 
-Im folgende Beispiel wird die C3865 generiert:
+Im folgenden Beispiel wird C3865 generiert:
 
-```
+```cpp
 // C3865.cpp
 // compile with: /clr
 // processor: x86

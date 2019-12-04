@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2073
 ms.assetid: 57908234-be7a-4ce9-b0a7-8b1ad621865e
-ms.openlocfilehash: 2b45d512224ec32459e6da040a6abb0211278e78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 545b2b24d3bfe5a36c5554dfa898d17b05067c3d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303319"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757734"
 ---
 # <a name="compiler-error-c2073"></a>Compilerfehler C2073
 
-'Bezeichner': die Elemente der teilinitialisierung eines Arrays müssen über einen Standardkonstruktor verfügen
+"Bezeichner": Elemente eines teilweise initialisierten Arrays müssen einen Standardkonstruktor aufweisen.
 
-Für ein Array von benutzerdefinierten Typen oder Konstanten wurden zu wenige Initialisierer angegeben. Wenn keine explizite Initialisierung und kein entsprechender Konstruktor für einen Arraymember angeben nicht angegeben werden, muss ein Standardkonstruktor angegeben werden.
+Für ein Array von benutzerdefinierten Typen oder Konstanten wurden zu wenige Initialisierer angegeben. Wenn für einen Arraymember kein expliziter Initialisierer und der entsprechende Konstruktor angegeben sind, muss ein Standardkonstruktor angegeben werden.
 
-Im folgende Beispiel wird die C2073 generiert:
+Im folgenden Beispiel wird C2073 generiert:
 
-```
+```cpp
 // C2073.cpp
 class A {
 public:
@@ -30,7 +30,7 @@ public:
 A a[3] = { A(1), A(2) };   // C2073, no default constructor
 ```
 
-```
+```cpp
 // C2073b.cpp
 // compile with: /c
 class B {

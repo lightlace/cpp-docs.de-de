@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3364
 ms.assetid: 98654741-60fe-4472-a6af-e580f8c0a6e1
-ms.openlocfilehash: e99ab3919edcfb883701c08c52cd7aad60cd4591
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eae1e7ddbc34d36b55d7afa424c137db00ef047d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400356"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757344"
 ---
 # <a name="compiler-error-c3364"></a>Compilerfehler C3364
 
-'Delegat': Delegatkonstruktor: das Argument muss ein Zeiger auf Memberfunktion einer verwalteten Klasse oder einer globalen Funktion sein
+"Delegat": Delegatkonstruktor: das Argument muss ein Zeiger auf eine Member-Funktion der verwalteten Klasse oder globalen Funktion sein.
 
-Der zweite Parameter des Delegatkonstruktors verwendet entweder die Adresse einer Memberfunktion oder die Adresse einer statischen Memberfunktion einer Klasse. Beide werden als einfache Adressen behandelt.
+Der zweite Parameter des Konstruktors des Delegaten übernimmt entweder die Adresse einer Member-Funktion oder die Adresse einer statischen Member-Funktion einer beliebigen Klasse. Beide werden als einfache Adressen behandelt.
 
-Im folgende Beispiel wird die C3364 generiert:
+Im folgenden Beispiel wird C3364 generiert:
 
-```
+```cpp
 // C3364_2.cpp
 // compile with: /clr
 

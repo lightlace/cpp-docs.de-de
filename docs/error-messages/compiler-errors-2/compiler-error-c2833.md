@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2833
 ms.assetid: b9418ce1-e2ee-4599-8959-6fde89c27569
-ms.openlocfilehash: dad6a64f145c3d49d3b43044ea76a11d35827943
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1467a3c67cccf28cc6b9bd0f987fe77b8da8988
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408367"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757877"
 ---
 # <a name="compiler-error-c2833"></a>Compilerfehler C2833
 
-'Operator Operator' ist kein bekannter Operator oder Typ
+"Operator Operator" ist kein bekannter Operator oder Typ.
 
-Das Wort `operator` muss ein Operator, der Sie überschreiben möchten oder ein Typ, die Sie konvertieren möchten folgen.
+Auf das Wort `operator` muss ein Operator folgen, den Sie überschreiben möchten, oder ein Typ, den Sie konvertieren möchten.
 
 Eine Liste der Operatoren, die Sie in einem verwalteten Typ definieren können, finden Sie unter [benutzerdefinierte Operatoren](../../dotnet/user-defined-operators-cpp-cli.md).
 
-Im folgende Beispiel wird die C2833 generiert:
+Im folgenden Beispiel wird C2833 generiert:
 
-```
+```cpp
 // C2833.cpp
 // compile with: /c
 class A {};

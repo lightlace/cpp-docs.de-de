@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2079
 ms.assetid: ca58d6d5-eccd-40b7-ba14-c003223c5bc7
-ms.openlocfilehash: 68435610680e3b21415a1d9439a8133fd1e2557f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea158d8dada013f6b90d0fbe1e7502665c1c24da
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391958"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757721"
 ---
 # <a name="compiler-error-c2079"></a>Compilerfehler C2079
 
-'Bezeichner' wird nicht definierte Klasse/Struktur/Union "Name" verwendet.
+' Identifier ' verwendet nicht definierte Klasse/Struktur/Union ' Name '
 
 Der angegebene Bezeichner ist eine nicht definierte Klasse, Struktur oder Union.
 
-Dieser Fehler kann verursacht werden, durch die Initialisierung einer anonymen Union.
+Dieser Fehler kann dadurch verursacht werden, dass eine anonyme Union initialisiert wird.
 
-Im folgende Beispiel wird die C2079 generiert:
+Im folgenden Beispiel wird C2079 generiert:
 
-```
+```cpp
 // C2079.cpp
 // compile with: /EHsc
 #include <iostream>
@@ -34,7 +34,7 @@ int main() {
 
 Mögliche Lösung:
 
-```
+```cpp
 // C2079b.cpp
 // compile with: /EHsc
 #include <fstream>
@@ -43,9 +43,9 @@ int main( ) {
 }
 ```
 
-C2079 kann auch auftreten, wenn Sie versuchen, ein Objekt auf dem Stapel eines Typs deklarieren, deren Vorwärtsdeklaration nur im Gültigkeitsbereich befindet.
+C2079 kann auch auftreten, wenn Sie versuchen, ein Objekt im Stapel eines Typs zu deklarieren, dessen vorwärts Deklaration nur im Gültigkeitsbereich liegt.
 
-```
+```cpp
 // C2079c.cpp
 class A;
 
@@ -58,7 +58,7 @@ class A {};
 
 Mögliche Lösung:
 
-```
+```cpp
 // C2079d.cpp
 // compile with: /c
 class A;

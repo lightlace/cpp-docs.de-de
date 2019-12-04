@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2874
 ms.assetid: b54fa9d8-8df5-40d9-9b3b-aa3e9dd6a3be
-ms.openlocfilehash: 04cbce14fc1fcb1d5bbb07c7f847c479988224a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a54cb9dda4ae07ea274eaa970248b9ce9002693b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165099"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736372"
 ---
 # <a name="compiler-error-c2874"></a>Compilerfehler C2874
 
-using-Deklaration verursacht eine mehrfache Deklaration von 'Symbol'
+using-Deklaration verursacht eine mehrfache Deklaration von ' Symbol '.
 
-Die Deklaration führt dazu, dass das gleiche Element zweimal definiert werden.
+Die-Deklaration bewirkt, dass das gleiche Element zweimal definiert wird.
 
-Im folgende Beispiel wird die C2874 generiert:
+Im folgenden Beispiel wird C2874 generiert:
 
-```
+```cpp
 // C2874.cpp
 namespace Z {
    int i;

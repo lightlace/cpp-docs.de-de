@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3162
 ms.assetid: 0d4c4a24-1456-4191-b7d8-c38cb7b17c32
-ms.openlocfilehash: f522a2de77e03a7c5f8f8dc774d62744417344fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95cd2c4af614906da7ba2d1c4c5dd488059f970a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174288"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761802"
 ---
 # <a name="compiler-error-c3162"></a>Compilerfehler C3162
 
-'Typ': ein Verweistyp mit einem Destruktor kann nicht als Typ des statischen Datenmember 'Member' verwendet werden
+"Typ": ein Referenztyp mit einem destrukturtor kann nicht als Typ des statischen Datenmembers "Member" verwendet werden.
 
-Die common Language Runtime wissen nicht, wann Sie einen benutzerdefinierten Destruktor ausgeführt werden, wenn die Klasse auch statische Memberfunktion enthält.
+Der Common Language Runtime kann nicht wissen, wann ein benutzerdefinierter destrukturtor ausgeführt werden soll, wenn die Klasse auch eine statische Element Funktion enthält.
 
-Ein Destruktor wird niemals ausgeführt werden, es sei denn, das Objekt explizit gelöscht werden.
+Ein Dekonstruktor wird niemals ausgeführt, es sei denn, das Objekt wird explizit gelöscht.
 
 Weitere Informationen finden Sie unter
 
@@ -29,9 +29,9 @@ Weitere Informationen finden Sie unter
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3162 generiert.
+Im folgenden Beispiel wird C3162 generiert.
 
-```
+```cpp
 // C3162.cpp
 // compile with: /clr /c
 ref struct A {

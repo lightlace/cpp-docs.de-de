@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2677
 ms.assetid: 76bc0b65-f52a-45a6-b6d6-0555f89da9a8
-ms.openlocfilehash: 1be3701c2befbacc11d6a3dea4b99547375286d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c318d3c7f78ad2844b7a94a372634886a1ad56d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395416"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760347"
 ---
 # <a name="compiler-error-c2677"></a>Compilerfehler C2677
 
-Binärer 'Operator': Es konnte kein globaler Operator gefunden werden, der Typ "Type" akzeptiert (oder es ist keine zulässige Konvertierung)
+binärer ' Operator ': Es wurde kein globaler Operator gefunden, der den Typ ' type ' annimmt (oder es ist keine akzeptable Konvertierung zulässig).
 
 Um den Operator zu verwenden, müssen Sie ihn für den angegebenen Typ überladen oder eine Konvertierung in einen Typ definieren, für den der Operator definiert ist.
 
-Im folgende Beispiel wird die C2677 generiert:
+Im folgenden Beispiel wird C2677 generiert:
 
-```
+```cpp
 // C2677.cpp
 class C {
 public:

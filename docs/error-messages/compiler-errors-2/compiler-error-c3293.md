@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3293
 ms.assetid: b772cf98-52e0-4e24-be23-1f5d87d999ac
-ms.openlocfilehash: 84d539722474d5f5dfffe1f6fe121bb7349ba131
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1713632d21ef401fb1177350c81a4a64ed0503ec
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222586"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760113"
 ---
 # <a name="compiler-error-c3293"></a>Compilerfehler C3293
 
 'Accessor': Verwenden Sie 'default', um auf die Standardeigenschaft (Indexer) der 'Typ'-Klasse zuzugreifen.
 
-Auf eine indizierte Eigenschaft wurde nicht ordnungsgemäß zugegriffen.  Weitere Informationen finden Sie unter [How to: Verwenden Sie Eigenschaften in C++/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md) für Weitere Informationen.
+Auf eine indizierte Eigenschaft wurde nicht ordnungsgemäß zugegriffen.  Weitere Informationen finden Sie unter Gewusst [wie C++: Verwenden von Eigenschaften in/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md) .
 
-**Visual Studio 2017 und höher:** In Visual Studio 2015 und früher hat der Compiler in einigen Fällen fälschlicherweise eine Standardeigenschaft als einen Standardindexer kategorisiert. Es war möglich das Problem zu umzugehen, indem mithilfe des „default“-Bezeichners auf die Eigenschaft zugegriffen wurde. Die Lösung selbst wurde problematisch, nachdem default als Schlüsselwort in C++11 eingeführt wurde. Aus diesem Grund wurden in Visual Studio 2017 Fehler behoben, die die Problemumgehung erforderten, und der Compiler löst jetzt einen Fehler aus, wenn „default“ verwendet wird, um auf die Standardeigenschaft für eine Klasse zuzugreifen.
+**Visual Studio 2017 und**höher: in Visual Studio 2015 und früheren Versionen hat der Compiler in einigen Fällen eine Standard Eigenschaft als Standardindexer falsch identifiziert. Es war möglich das Problem zu umzugehen, indem mithilfe des „default“-Bezeichners auf die Eigenschaft zugegriffen wurde. Die Lösung selbst wurde problematisch, nachdem default als Schlüsselwort in C++11 eingeführt wurde. Aus diesem Grund wurden in Visual Studio 2017 Fehler behoben, die die Problemumgehung erforderten, und der Compiler löst jetzt einen Fehler aus, wenn „default“ verwendet wird, um auf die Standardeigenschaft für eine Klasse zuzugreifen.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird C3293 in Visual Studio 2015 und früher.
+Im folgenden Beispiel wird C3293 in Visual Studio 2015 und früher generiert.
 
-```
+```cpp
 // C3293.cpp
 // compile with: /clr /c
 using namespace System;

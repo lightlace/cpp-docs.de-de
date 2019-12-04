@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
-ms.openlocfilehash: ce86f69b36b915b3e757b5d18430c99cb288e4e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e29812563ef1d4d7f6612ea2516f2f6327e90e1b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161003"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760438"
 ---
 # <a name="compiler-error-c2707"></a>Compilerfehler C2707
 
-'Bezeichner': Falscher Kontext für systeminterne Funktion
+"Bezeichner": Ungültiger Kontext für intrinsische Funktion
 
-Strukturierte Ausnahmebehandlung systeminternen Funktionen sind in bestimmten Kontexten ungültig:
+Strukturierte systeminterne Ausnahme Behandlungs Funktionen sind in bestimmten Kontexten ungültig:
 
-- `_exception_code()` außerhalb eines Ausnahmefilters oder `__except` blockieren
+- `_exception_code()` außerhalb eines Ausnahme Filters oder `__except` Blocks
 
-- `_exception_info()` außerhalb eines Ausnahmefilters
+- `_exception_info()` außerhalb eines Ausnahme Filters
 
-- `_abnormal_termination()` außerhalb einer `__finally` blockieren
+- `_abnormal_termination()` außerhalb eines `__finally` Blocks
 
-Um den Fehler zu beheben, achten Sie darauf, dass die Ausnahmebehandlung systeminternen Funktionen im geeigneten Kontext platziert werden.
+Um den Fehler zu beheben, stellen Sie sicher, dass die systeminternen Funktionen für die Ausnahmebehandlung im entsprechenden Kontext abgelegt werden.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C2707 generiert.
+Im folgenden Beispiel wird C2707 generiert.
 
-```
+```cpp
 // C2707.cpp
 #include <windows.h>
 #include <stdio.h>

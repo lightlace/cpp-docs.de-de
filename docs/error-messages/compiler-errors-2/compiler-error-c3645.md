@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3645
 ms.assetid: 346da528-ae86-4cd0-9654-f41bee26ac0d
-ms.openlocfilehash: f733de6920e00f1f53c87884a7a334e575bceb06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 504b13aeb37fae0c350ef88798fefaec6f26c8e8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385783"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757825"
 ---
 # <a name="compiler-error-c3645"></a>Compilerfehler C3645
 
-"Function": __clrcall kann nicht verwendet werden, auf die Funktionen, die in nativen Code kompiliert
+"Function": __clrcall kann nicht für Funktionen verwendet werden, die in System eigenem Code kompiliert wurden.
 
-Das Vorhandensein von Schlüsselwörtern in einer Funktion bewirkt, dass die Funktion in systemeigenem Code kompiliert werden.
+Das vorhanden sein einiger Schlüsselwörter in einer Funktion bewirkt, dass die Funktion in System eigen kompiliert wird.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3645 generiert.
+Im folgenden Beispiel wird C3645 generiert.
 
-```
+```cpp
 // C3645.cpp
 // compile with: /clr /c
 #pragma unmanaged

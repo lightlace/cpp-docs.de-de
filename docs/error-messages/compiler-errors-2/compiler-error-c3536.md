@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3536
 ms.assetid: 8d866075-866b-49eb-9979-ee27b308f7e3
-ms.openlocfilehash: a16c5bd46d806d09861d5734b637c2c9d9b2f9d0
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: a140847b642ac2437b67aa957328c3b8fbfc592d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345491"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761568"
 ---
 # <a name="compiler-error-c3536"></a>Compilerfehler C3536
 
-'Symbol': kann nicht verwendet werden, bevor es initialisiert wird
+"Symbol": kann nicht verwendet werden, bevor es initialisiert wird.
 
-Das angegebene Symbol kann nicht verwendet werden, bevor es initialisiert wird. In der Praxis bedeutet dies, dass eine Variable nicht verwendet werden kann, um sich selbst zu initialisieren.
+Das oben dargestellte Symbol kann nicht verwendet werden, bevor es initialisiert wird. In der Praxis bedeutet dies, dass eine Variable nicht verwendet werden kann, um sich selbst zu initialisieren.
 
 ### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
 
-1. Initialisieren Sie eine Variable mit sich selbst nicht.
+1. Initialisieren Sie keine Variable mit sich selbst.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel C3536 erzeugt, weil jede Variable, mit sich selbst initialisiert wird.
+Das folgende Beispiel ergibt C3536, da jede Variable mit sich selbst initialisiert wird.
 
-```
+```cpp
 // C3536.cpp
 // Compile with /Zc:auto
 int main()

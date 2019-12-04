@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
-ms.openlocfilehash: f00de0ce491d517da11f251b89ccb9a7ae66b77d
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 8dc7b521243c4eafdc22fab851812b6c12b004cf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447261"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755914"
 ---
 # <a name="compiler-error-c2146"></a>Compilerfehler C2146
 
-Syntaxfehler: Fehlendes "token" vor Bezeichner 'Identifier'
+Syntax Fehler: Fehlendes "Token" vor Bezeichner "Bezeichner"
 
-Der Compiler erwartet `token` und `identifier` stattdessen.  Mögliche Ursachen:
+Der Compiler hat `token` erwartet und `identifier` gefunden.  Mögliche Ursachen:
 
-1. Fehler bei Rechtschreib- oder Groß-/Kleinschreibung.
+1. Rechtschreibfehler oder Groß-/Kleinschreibung
 
 1. Fehlender Typspezifizierer in der Deklaration des Bezeichners.
 
-Dieser Fehler kann durch einen Tippfehler verursacht werden. Fehler [C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md) in der Regel vor dem dieser Fehler.
+Dieser Fehler kann durch einen typografischen Fehler verursacht werden. Fehler [C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md) in der Regel liegt dieser Fehler vor.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C2146 generiert.
+Im folgenden Beispiel wird C2146 generiert.
 
-```
+```cpp
 // C2146.cpp
 class CDeclaredClass {};
 
@@ -46,11 +46,11 @@ int main() {
 
 ## <a name="example"></a>Beispiel
 
-Dieser Fehler kann außerdem infolge einer konformitätsverbesserung für Compiler, die für Visual Studio .NET 2003 durchgeführt wurde, generiert werden: fehlende `typename` Schlüsselwort.
+Dieser Fehler kann auch infolge einer compilerübereinstimmungs-Arbeit generiert werden, die für Visual Studio .NET 2003: Fehlendes `typename` Schlüsselwort erfolgt ist.
 
-Im folgende Beispiel wird in Visual Studio .NET 2002 kompiliert, aber in Visual Studio .NET 2003 fehl:
+Das folgende Beispiel wird in Visual Studio .NET 2002 kompiliert, schlägt jedoch in Visual Studio .NET 2003 fehl:
 
-```
+```cpp
 // C2146b.cpp
 // compile with: /c
 template <typename T>
@@ -71,13 +71,13 @@ typename X<T>::Y func() { }
 
 ## <a name="example"></a>Beispiel
 
-Außerdem sehen Sie diesen Fehler infolge einer konformitätsverbesserung für Compiler, die für Visual Studio .NET 2003 durchgeführt wurde: explizite spezialisierungen werden nicht mehr die Vorlageparameter aus der primären Vorlage gefunden.
+Diese Fehlermeldung wird auch aufgrund von compilerübereinstimmungs-Aufgaben angezeigt, die für Visual Studio .NET 2003 ausgeführt wurden: explizite Spezialisierungen finden keine Vorlagen Parameter mehr aus der primären Vorlage.
 
-Die Verwendung von `T` aus der primären Vorlage ist in der expliziten Spezialisierung nicht zulässig. Ersetzen Sie alle Instanzen des Vorlagenparameters in der Spezialisierung für Code in der Visual Studio .NET 2003 und Visual Studio .NET gültig ist mit dem explizit spezialisierte Typ.
+Die Verwendung von `T` aus der primären Vorlage ist in der expliziten Spezialisierung nicht zulässig. Damit Code in Visual Studio .NET 2003 und Visual Studio .net gültig ist, ersetzen Sie alle Instanzen des Vorlagen Parameters in der Spezialisierung durch den explizit spezialisierten Typ.
 
-Im folgende Beispiel kompiliert in Visual Studio .NET aber in Visual Studio .NET 2003 fehl:
+Das folgende Beispiel wird in Visual Studio .NET kompiliert, schlägt jedoch in Visual Studio .NET 2003 fehl:
 
-```
+```cpp
 // C2146_c.cpp
 // compile with: /c
 template <class T>

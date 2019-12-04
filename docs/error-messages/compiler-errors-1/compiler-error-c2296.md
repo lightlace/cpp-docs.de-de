@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2296
 ms.assetid: 47d270f4-13ce-4c16-81e2-7d67c6c4a540
-ms.openlocfilehash: ab9c9450b6e906a47a66f6c28c42ca016c98381b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 020f046648488ca67923b7035acaa6c79ce495e4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182677"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759073"
 ---
 # <a name="compiler-error-c2296"></a>Compilerfehler C2296
 
-'Operator': Ungültiger Linker Operand
+"Operator": Ungültiger Linker Operand
 
-Der linke Operand für `operator` ist ungültig.
+Der linke Operand, der mit `operator` verwendet wird, ist ungültig.
 
-Beispielsweise kann der Compiler eine Deklaration finden Sie unter, wenn Sie einen Funktionsaufruf bestimmt.
+Der Compiler kann z. b. eine Deklaration sehen, in der Sie einen Funktions Aufrufvorgang beabsichtigt haben.
 
-Im folgende Beispiel wird die C2296 generiert:
+Im folgenden Beispiel wird C2296 generiert:
 
-```
+```cpp
 // C2296.cpp
 struct MyStruct {
    struct Help {

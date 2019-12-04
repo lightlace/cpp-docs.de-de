@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
-ms.openlocfilehash: 4a1d46f3b000b5054564b05ca2c3c94a9e7b6398
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca779269d573e3e5d270fccad6afe6220083fa42
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386875"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755992"
 ---
 # <a name="compiler-error-c2666"></a>Compilerfehler C2666
 
-'Bezeichner': Anzahl der Überladungen haben ähnliche Konvertierungen
+"Bezeichner": Zahl Überladungen haben ähnliche Konvertierungen
 
-Einer überladenen Funktion oder Operator ist nicht eindeutig.   Listen der formalen Parameter können auch für den Compiler an, die Mehrdeutigkeit aufzulösen ähnlich sein.  Um diesen Fehler zu beheben, müssen Sie explizit mindestens eine der übergebenen Parameter umgewandelt.
+Eine überladene Funktion oder Operator ist mehrdeutig.   Formale Parameterlisten können für den Compiler zu ähnlich sein, um die Mehrdeutigkeit aufzulösen.  Um diesen Fehler zu beheben, müssen Sie einen oder mehrere der eigentlichen Parameter explizit umwandeln.
 
-Im folgende Beispiel wird die C2666 generiert:
+Im folgenden Beispiel wird C2666 generiert:
 
-```
+```cpp
 // C2666.cpp
 struct complex {
    complex(double);
@@ -35,19 +35,19 @@ int main() {
 }
 ```
 
-Dieser Fehler kann auch infolge einer konformitätsverbesserung für Compiler generiert werden, die für Visual Studio .NET 2003 durchgeführt wurde:
+Dieser Fehler kann auch infolge einer compilerübereinstimmungs-Arbeit generiert werden, die für Visual Studio .NET 2003 ausgeführt wurde:
 
-- binäre Operatoren und benutzerdefinierten Konvertierungen Zeigertypen
+- binäre Operatoren und benutzerdefinierte Konvertierungen in Zeiger Typen
 
-- qualifikationskonvertierung ist nicht identisch mit der identitätskonvertierung
+- die Qualifikations Konvertierung ist nicht mit der Identitäts Konvertierung identisch.
 
-Für die binären Operatoren \<, >, \<= und > =, einen übergebenen Parameter wird jetzt implizit konvertiert in den Typ des Operanden den Typ des Parameters in den Typ des Operanden konvertiert einen benutzerdefinierten Konvertierungsoperator definiert. Es gibt jetzt Mehrdeutigkeiten führen.
+Für die binären Operatoren \<, >, \<= und > = wird ein übergebener Parameter jetzt implizit in den Typ des Operanden konvertiert, wenn der Parametertyp einen benutzerdefinierten Konvertierungs Operator definiert, der in den Typ des Operanden konvertiert werden soll. Es gibt jetzt potenzielle Mehrdeutigkeit.
 
-Rufen Sie für Code, der in der Visual Studio .NET 2003 und Visual Studio .NET der Versionen von Visual C++ gültig ist, des Klasse-Operators, die explizit mit Funktionssyntax ein.
+Für Code, der in Visual Studio .NET 2003 und Visual Studio .NET-Versionen von Visual C++Studio gültig ist, müssen Sie den-Klassen Operator explizit mithilfe der Funktions Syntax aufzurufen.
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // C2666b.cpp
 #include <string.h>
 #include <stdio.h>
@@ -104,9 +104,9 @@ int main()
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel generiert C2666
+Im folgenden Beispiel wird C2666 generiert.
 
-```
+```cpp
 // C2666c.cpp
 // compile with: /c
 

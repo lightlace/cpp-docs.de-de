@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3669
 ms.assetid: be9c7ae4-e96f-47ab-922a-39a3537d5ca6
-ms.openlocfilehash: 3b0ad3aa7395f5f423c8c36f547d4a0e2ad792c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 560f4e8ef39e265f20d3c119858ff06b463d9841
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214900"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758137"
 ---
 # <a name="compiler-error-c3669"></a>Compilerfehler C3669
 
-'Member': Der Überschreibungsspezifizierer "override" ist für statische Memberfunktionen oder Konstruktoren nicht zulässig
+"Member": der Überschreibungsspezifizierer "override" ist für statische Element Funktionen oder Konstruktoren nicht zulässig.
 
-Eine Überschreibung wurde falsch angegeben. Weitere Informationen finden Sie unter [explizite Überschreibungen](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Eine außer Kraft Setzung wurde falsch angegeben. Weitere Informationen finden Sie unter [explizite über](../../extensions/explicit-overrides-cpp-component-extensions.md)schreibungen.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3669 generiert.
+Im folgenden Beispiel wird C3669 generiert.
 
-```
+```cpp
 // C3669.cpp
 // compile with: /clr
 public ref struct R {

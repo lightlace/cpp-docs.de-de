@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2888
 ms.assetid: 244f593e-ff25-4dad-b31f-84dafa3bc84a
-ms.openlocfilehash: c5b547f1c4d62a6f48b6c5f8f901be309e81a67c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93fe37c72a04e8c942f910ed3a631e5ba2a542bc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311904"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760914"
 ---
 # <a name="compiler-error-c2888"></a>Compilerfehler C2888
 
-'Bezeichner': Symbol kann nicht im Namespace 'Namespace' definiert werden
+' Identifier ': das Symbol kann nicht innerhalb des Namespace ' Namespace ' definiert werden.
 
-Ein Symbol, die auf ein-Namespace gehören muss in einem Namespace definiert werden, die a umschließt.
+Ein Symbol, das zu Namespace A gehört, muss in einem Namespace definiert werden, der eine einschließt.
 
-Im folgende Beispiel wird die C2888 generiert:
+Im folgenden Beispiel wird C2888 generiert:
 
-```
+```cpp
 // C2888.cpp
 // compile with: /c
 namespace M {

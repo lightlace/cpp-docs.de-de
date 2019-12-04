@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3182
 ms.assetid: f3681266-308e-4990-a979-8eef8920e186
-ms.openlocfilehash: 6866c7bbcee0a4097e490b344c79a6eec7f94570
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6b183eb30dd0e617e69ab9aac58bea5cb721591
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382409"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761659"
 ---
 # <a name="compiler-error-c3182"></a>Compilerfehler C3182
 
-'Klasse': eine using- oder Zugriffsdeklaration für Member ist innerhalb eines verwalteten oder WinRTtype nicht zulässig
+"Class": eine Member using-Deklaration oder Zugriffs Deklaration ist in einem verwalteten oder winrttype unzulässig.
 
-Ein [mit](../../cpp/using-declaration.md) Deklaration ist in sämtlichen verwalteten Klassen unzulässig.
+Eine [using](../../cpp/using-declaration.md) -Deklaration ist in allen Formen verwalteter Klassen ungültig.
 
 Im folgenden Beispiel wird C3182 generiert und gezeigt, wie Sie diesen Fehler beheben:
 
-```
+```cpp
 // C3182a.cpp
 // compile with: /clr /c
 ref struct B {

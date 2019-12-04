@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2648
 ms.assetid: ce338337-9154-4f85-bb61-b05fdbfad75d
-ms.openlocfilehash: fc563c6e85555b113734ec93fc545bb505bd3f38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74e1aa18d49e8a705a95f17c83bb201e9022d8c5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282152"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755719"
 ---
 # <a name="compiler-error-c2648"></a>Compilerfehler C2648
 
-'Bezeichner': Verwenden von Elementen als Standardparameter statische Elemente erfordert
+"Bezeichner": die Verwendung von Member als Standardparameter erfordert statische Member
 
-Ein nicht statisches Member wird als Standardparameter verwendet.
+Ein nicht statischer Member wird als Standardparameter verwendet.
 
-Im folgende Beispiel wird die C2648 generiert:
+Im folgenden Beispiel wird C2648 generiert:
 
-```
+```cpp
 // C2648.cpp
 // compile with: /c
 class C {

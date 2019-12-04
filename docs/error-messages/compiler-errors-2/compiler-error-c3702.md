@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3702
 ms.assetid: 14fcc20e-4404-45d7-be54-e4f09332fa5a
-ms.openlocfilehash: 3a440703b2b17979dda0c00fb2ff87f2b0eb0ff7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f9a3509dfe47f2d6d410a05409a28885983cd7a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324687"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758007"
 ---
 # <a name="compiler-error-c3702"></a>Compilerfehler C3702
 
-'Funktion': ATL ist erforderlich, damit COM-Ereignisse
+"Function": ATL ist für COM-Ereignisse erforderlich.
 
-Sie haben versucht, die COM-Ereignisse verwenden, ohne die erforderlichen ATL-Headerdateien.
+Sie haben versucht, com-Ereignisse zu verwenden, ohne die erforderlichen ATL-Header Dateien einzuschließen.
 
-Im folgende Beispiel wird die C3702 generiert:
+Im folgenden Beispiel wird C3702 generiert:
 
-```
+```cpp
 // C3702.cpp
 // uncomment the following line to resolve
 // #define _ATL_ATTRIBUTES 1

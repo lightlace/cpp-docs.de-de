@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2647
 ms.assetid: 1034589e-bc3e-41a6-831f-2a1a4b8a2500
-ms.openlocfilehash: ac69dbb4de23be05d375126947fe003ef75fb85e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9553c85efeedb4d3eee4bd40f9e3b86707fd7eb1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222784"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758384"
 ---
 # <a name="compiler-error-c2647"></a>Compilerfehler C2647
 
-'Operator': von 'Typ1' in 'Typ2' kann nicht dereferenziert werden.
+"Operator": Dereferenzierung eines "Typ1" für ein "Typ2" ist nicht möglich.
 
-Der linke Operand des einen Zeiger-auf-Member-Operator ( `->*` oder `.*` ) kann nicht implizit in einen Typ, der im Zusammenhang mit der rechten Operator konvertiert werden.
+Der linke Operand eines Pointer-to-Member-Operators (`->*` oder `.*`) kann nicht implizit in einen Typ konvertiert werden, der mit dem rechten Operator verknüpft ist.
 
-Im folgende Beispiel wird die C2647 generiert:
+Im folgenden Beispiel wird C2647 generiert:
 
-```
+```cpp
 // C2647.cpp
 class C {};
 class D {};
