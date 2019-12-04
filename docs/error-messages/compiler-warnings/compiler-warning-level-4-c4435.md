@@ -1,25 +1,29 @@
 ---
 title: Compilerwarnung (Stufe 4) C4435
 ms.date: 11/04/2016
+f1_keywords:
+- C4435
+helpviewer_keywords:
+- C4435
 ms.assetid: a04524af-2b71-4ff9-9729-d9d1d1904ed7
-ms.openlocfilehash: 43c13c484d6e9accee7c4d2c58b72a4539a75c4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ff545d3de3ef173cdbfd99d7714890e8631ce7a
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391477"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810662"
 ---
 # <a name="compiler-warning-level-4-c4435"></a>Compilerwarnung (Stufe 4) C4435
 
-'Klasse1': Das Objektlayout unter "/ vd2" wird aufgrund der virtuellen Basis 'class2' geändert.
+'class1' : Das Objektlayout unter „/vd2“ wird aufgrund der virtuellen Basis 'class2' geändert.
 
 Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-Unter der standardmäßigen-Kompilierungsoption von/vd1, die abgeleitete Klasse verfügt nicht über eine `vtordisp` Feld für die angegebene virtuelle Basis.  Wenn "/ vd2" oder `#pragma vtordisp(2)` gültig ist, wird eine `vtordisp` Feld wird vorhanden ist, Ändern des Layouts des Objekts sein.  Dies kann zu Binärkompatibilität Problemen führen, wenn interagierenden Module mit unterschiedlichen kompiliert werden `vtordisp` Einstellungen.
+Unter der standardmäßigen Kompilierungs Option von/VD1-hat die abgeleitete Klasse kein `vtordisp` Feld für die virtuelle Basis.  Wenn "/vd2" oder `#pragma vtordisp(2)` wirksam ist, wird ein `vtordisp` Feld vorhanden sein, das das Objekt Layout ändert.  Dies kann zu binären Kompatibilitätsproblemen führen, wenn interagierende Module mit unterschiedlichen `vtordisp` Einstellungen kompiliert werden.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird C4435 generiert.
+Im folgenden Beispiel wird C4435 generiert.
 
 ```cpp
 // C4435.cpp

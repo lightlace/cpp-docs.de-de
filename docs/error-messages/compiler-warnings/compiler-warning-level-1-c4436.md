@@ -1,33 +1,37 @@
 ---
 title: Compilerwarnung (Stufe 1) C4436
 ms.date: 11/04/2016
+f1_keywords:
+- C4436
+helpviewer_keywords:
+- C4436
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
-ms.openlocfilehash: 487fb8c804ac34ba52661774c2552199c764f6b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 762a458072a0a1104cd1af55ef1f61772485b6c9
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408185"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810614"
 ---
 # <a name="compiler-warning-level-1-c4436"></a>Compilerwarnung (Stufe 1) C4436
 
-Dynamic_cast von virtueller Basis 'class1' zu 'Klasse2' im Konstruktor oder Destruktor könnte 'Klasse2' mit #pragma vtordisp(2) wirksam definieren oder beim teilweise konstruierten Objekt Kompilieren mit "/ vd2" auftreten
+die dynamic_cast von der virtuellen Basis "Class1" zu "Klasse2" im Konstruktor oder Dekonstruktor schlägt möglicherweise mit der teilweise konstruierten Objekt Kompilierung mit "/vd2" fehl oder definiert "Klasse2" mit #Pragma vtordisp (2).
 
-Der Compiler hat eine `dynamic_cast` Vorgang mit den folgenden Eigenschaften.
+Der Compiler hat einen `dynamic_cast` Vorgang mit den folgenden Merkmalen gefunden.
 
-- Die Umwandlung ist von einem Zeiger Basisklasse in einer abgeleiteten Klasse Zeiger.
+- Die Umwandlung erfolgt von einem Basisklassen Zeiger auf einen abgeleiteten Klassen Zeiger.
 
-- Die abgeleitete Klasse erbt praktisch die Basisklasse.
+- Die abgeleitete Klasse erbt virtuell die Basisklasse.
 
-- Die abgeleitete Klasse verfügt nicht über eine `vtordisp` Feld für die virtuelle Basisklasse.
+- Die abgeleitete Klasse verfügt über kein `vtordisp` Feld für die virtuelle Basis.
 
-- Die Umwandlung in einen Konstruktor oder Destruktor der abgeleiteten Klasse gefunden wird, oder eine Klasse, was von der abgeleiteten Klasse erbt.
+- Die Umwandlung befindet sich in einem Konstruktor oder Dekonstruktor der abgeleiteten Klasse oder in einer Klasse, die weiter von der abgeleiteten Klasse erbt.
 
-Diese Warnung gibt an die `dynamic_cast` möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn sie auf einem teilweise konstruierten Objekt ausgeführt wird.  Das geschieht, wenn der abgeleitete Konstruktor/Destruktor auf einem untergeordneten Objekt des einige weitere abgeleitete Objekt ausgeführt wird.  Wenn die abgeleitete Klasse, die mit dem Namen in der Warnung nie Weitere wird abgeleitet, die ignoriert werden kann.
+Die Warnung gibt an, dass die `dynamic_cast` möglicherweise nicht ordnungsgemäß ausgeführt wird, wenn Sie auf einem teilweise konstruierten Objekt ausgeführt wird.  Dies ist der Fall, wenn der abgeleitete Konstruktor/Dekonstruktor für ein untergeordnetes Objekt eines weiteren abgeleiteten Objekts ausgeführt wird.  Wenn die abgeleitete Klasse, die in der Warnung benannt ist, nie weiter abgeleitet wird, kann die Warnung ignoriert werden.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel C4436 generiert und zeigt Code Generation entsteht das Problem, über die fehlende `vtordisp` Feld.
+Im folgenden Beispiel wird C4436 generiert und das Code Generierungs Problem veranschaulicht, das sich aus dem Feld Missing `vtordisp` ergibt.
 
 ```cpp
 // C4436.cpp

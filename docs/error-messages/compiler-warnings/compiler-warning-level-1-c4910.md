@@ -1,21 +1,23 @@
 ---
 title: Compilerwarnung (Stufe 1) C4910
 ms.date: 11/04/2016
+f1_keywords:
+- C4910
 helpviewer_keywords:
 - C4910
 ms.assetid: 67963560-fbca-4ca7-93db-06beaf7055f0
-ms.openlocfilehash: 49cbbf3369fc4765d93e67e2dca84a4d975560d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3f29cb895da8c06ed43dd5c9956426f3f6014f1
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242889"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810719"
 ---
 # <a name="compiler-warning-level-1-c4910"></a>Compilerwarnung (Stufe 1) C4910
 
-"\<Bezeichner >": "__declspec(dllexport)" und "Extern" bei einer expliziten Instanziierung nicht miteinander kompatibel sind
+'\<Identifier > ': ' __declspec (dllexport) ' und ' Extern ' sind bei einer expliziten Instanziierung nicht kompatibel.
 
-Die explizite Vorlageninstanziierung namens  *\<Bezeichner >* geändert wird, indem sowohl die `__declspec(dllexport)` und `extern` Schlüsselwörter. Die beiden Schlüsselwörter schließen sich jedoch gegenseitig aus. Das `__declspec(dllexport)` -Schlüsselwort soll die Instanziierung der Vorlagenklasse bewirken, während das `extern` -Schlüsselwort verhindern soll, dass die Vorlagenklasse automatisch instanziiert wird.
+Die explizite Vorlagen Instanziierung mit dem Namen *\<Bezeichner>* wird durch die Schlüsselwörter `__declspec(dllexport)` und `extern` geändert. Die beiden Schlüsselwörter schließen sich jedoch gegenseitig aus. Das `__declspec(dllexport)` -Schlüsselwort soll die Instanziierung der Vorlagenklasse bewirken, während das `extern` -Schlüsselwort verhindern soll, dass die Vorlagenklasse automatisch instanziiert wird.
 
 ## <a name="see-also"></a>Siehe auch
 
