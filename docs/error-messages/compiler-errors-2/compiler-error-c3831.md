@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3831
 ms.assetid: a125d8dc-b75a-4ea0-b6c7-fe7b119dba25
-ms.openlocfilehash: d9aa703f12fd175d9f7fc00eb76e76097a32e860
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61ff2c7f7e99698ffbd521153663b1ab27bd6fde
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390554"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741598"
 ---
 # <a name="compiler-error-c3831"></a>Compilerfehler C3831
 
-'Member': 'Class' sind keine keinen festen Datenmember oder eine Memberfunktion, die einen festen Zeiger zurückgibt
+"Member": "Class" kann kein angeheftete Datenmember oder eine Member-Funktion aufweisen, die einen Fixierungs Zeiger zurückgibt.
 
-[Pin_ptr (C++/CLI)](../../extensions/pin-ptr-cpp-cli.md) wurde falsch verwendet.
+[pin_ptr (C++/CLI)](../../extensions/pin-ptr-cpp-cli.md) wurde falsch verwendet.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3831 generiert:
+Im folgenden Beispiel wird C3831 generiert:
 
-```
+```cpp
 // C3831a.cpp
 // compile with: /clr
 ref class Y
