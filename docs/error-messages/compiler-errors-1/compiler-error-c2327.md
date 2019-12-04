@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2327
 ms.assetid: 95278c95-d1f9-4487-ad27-53311f5e8112
-ms.openlocfilehash: abc9aa92c41947a2536e53108c1fb646792a8202
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36222b8469f5a51254c6a6172e20384ebafc89ab
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300848"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747773"
 ---
 # <a name="compiler-error-c2327"></a>Compilerfehler C2327
 
-'Symbol': ist kein, ein Typname, Static oder Enumerator
+' Symbol ': ist kein Typname, kein statischer oder Enumerator.
 
-Code innerhalb einer geschachtelten Klasse versucht, die Zugriff auf einen Member der einschließenden Klasse, die einen Typnamen, einen statischen Member oder einen Enumerator nicht ist.
+Der Code in einer geschachtelten Klasse versucht, auf einen Member der einschließenden Klasse zuzugreifen, der kein Typname, kein statischer Member oder Enumerator ist.
 
-Beim Kompilieren mit **"/ CLR"**, eine häufige Ursache für Fehler C2327 ist eine Eigenschaft mit dem gleichen Namen wie der Eigenschaftentyp.
+Beim Kompilieren mit **/CLR**ist eine häufige Ursache für C2327 eine Eigenschaft mit demselben Namen wie der Eigenschaftentyp.
 
-Im folgende Beispiel wird die C2327 generiert:
+Im folgenden Beispiel wird C2327 generiert:
 
-```
+```cpp
 // C2327.cpp
 int x;
 class enclose {
@@ -40,9 +40,9 @@ public:
 };
 ```
 
-Fehler C2327 kann auch auftreten, wenn der Name eines Typs durch den Namen eines Members ausgeblendet wird:
+C2327 kann auch auftreten, wenn der Name eines Typs durch den Namen eines Members ausgeblendet wird:
 
-```
+```cpp
 // C2327b.cpp
 class X {};
 
@@ -54,9 +54,9 @@ class S {
 };
 ```
 
-In diesem Fall können auch Fehler C2327 ausgelöst, in dem Sie den Datentyp des Parameters vollständig angeben müssen:
+C2327 kann auch in dieser Situation ausgelöst werden, wenn Sie den Datentyp des Parameters vollständig angeben müssen:
 
-```
+```cpp
 // C2327c.cpp
 // compile with: /c
 struct A {};
@@ -69,9 +69,9 @@ struct B {
 };
 ```
 
-Im folgende Beispiel wird die C2327 generiert:
+Im folgenden Beispiel wird C2327 generiert:
 
-```
+```cpp
 // C2327d.cpp
 // compile with: /clr /c
 using namespace System;
@@ -103,9 +103,9 @@ namespace NA {
 }
 ```
 
-Das folgende Beispiel zeigt Fehler C2327 auf, wenn eine Eigenschaft mit den gleichen Namen wie der Eigenschaftstyp hat:
+Das folgende Beispiel zeigt C2327, wenn eine Eigenschaft denselben Namen wie der Eigenschaftentyp hat:
 
-```
+```cpp
 // C2327f.cpp
 // compile with: /clr /c
 public value class Address {};

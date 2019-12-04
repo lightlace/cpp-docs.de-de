@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3913
 ms.assetid: a678bfce-9524-470d-9f23-7d08ecb972c8
-ms.openlocfilehash: 3a38f7bffd56f025510e092ad37b5f810cb11a9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0dfe8274c2b9ee5d2861239c8bb1464d9642ebc9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406554"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741260"
 ---
 # <a name="compiler-error-c3913"></a>Compilerfehler C3913
 
-Standardeigenschaft muss indiziert werden
+die Standard Eigenschaft muss indiziert werden.
 
-Eine Default-Eigenschaft wurde nicht ordnungsgemäß definiert.
+Eine Standard Eigenschaft wurde falsch definiert.
 
 Weitere Informationen finden Sie unter [property](../../extensions/property-cpp-component-extensions.md).
 
-Im folgende Beispiel wird die C3913 generiert:
+Im folgenden Beispiel wird C3913 generiert:
 
-```
+```cpp
 // C3913.cpp
 // compile with: /clr /c
 ref struct X {

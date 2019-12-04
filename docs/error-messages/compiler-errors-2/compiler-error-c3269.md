@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3269
 ms.assetid: c575f067-244d-4dd5-bf58-9e7630ea58b7
-ms.openlocfilehash: 406b388460b3d449471c884dd6461f2ce59a10f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95f71c9312faaf5c14bd8990898257002c528c0e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365714"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754016"
 ---
 # <a name="compiler-error-c3269"></a>Compilerfehler C3269
 
-'Funktion': eine Memberfunktion einer verwalteten oder WinRTtype kann nicht mit '...' deklariert werden
+"Function": eine Member-Funktion eines verwalteten oder winrttype kann nicht mit "..." deklariert werden.
 
 Verwaltete und WinRT-Klassenmemberfunktionen können keine Parameterlisten variabler Länge deklarieren.
 
 Im folgenden Beispiel wird C3269 generiert und gezeigt, wie Sie diesen Fehler beheben:
 
-```
+```cpp
 // C3269_2.cpp
 // compile with: /clr
 

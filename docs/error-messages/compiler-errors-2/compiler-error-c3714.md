@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3714
 ms.assetid: 17718f75-5a37-4e42-912b-487e91008a95
-ms.openlocfilehash: 9bfdf8b26ab599ef1a28483af7ebc28f0dbc1912
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1078bf8a97f6cb7afeaf7046489fe262c0bb0199
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328340"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753327"
 ---
 # <a name="compiler-error-c3714"></a>Compilerfehler C3714
 
-"Method": eine Ereignishandlermethode muss dieselbe Aufrufkonvention wie die Quelle 'Methode' haben
+"Methode": eine Ereignishandlermethode muss dieselbe Aufruf Konvention wie die Quelle "Method" aufweisen.
 
-Sie definiert eine Ereignishandlermethode, die nicht dieselbe Aufrufkonvention wie die Quelle Ereignis-Methode verwendet haben. Um diesen Fehler zu beheben, geben Sie der Ereignishandlermethode die Konventionen für die gleichen aufrufen wie die Quell-Methode. Stellen Sie z. B. in den folgenden Code, die Aufrufkonventionen der `handler1` und `event1` entsprechen ([__cdecl](../../cpp/cdecl.md) oder [__stdcall](../../cpp/stdcall.md) oder andere). Entfernen von Aufrufen Konvention Schlüsselwörter aus beiden Deklarationen wird auch das Problem lösen, und dazu führen, dass `event1` und `handler1` standardmäßig ist die [Thiscall](../../cpp/thiscall.md) Aufrufkonvention. Finden Sie unter [Aufrufkonventionen](../../cpp/calling-conventions.md) für Weitere Informationen.
+Sie haben eine Ereignishandlermethode definiert, die nicht dieselbe Aufruf Konvention wie die Quell Ereignismethode verwendet hat. Um diesen Fehler zu beheben, müssen Sie der Ereignishandlermethode dieselben Aufruf Konventionen wie die der Quell Ereignismethode übergeben. Nehmen Sie z. b. im folgenden Code die Aufruf Konventionen `handler1` und `event1` Übereinstimmungen ([__cdecl](../../cpp/cdecl.md) oder [__stdcall](../../cpp/stdcall.md) oder andere). Das Entfernen von Schlüsselwörtern für die Aufruf Konvention aus beiden Deklarationen löst auch das Problem und bewirkt, dass `event1` und `handler1` standardmäßig die Aufruf Konvention " [Thiscall](../../cpp/thiscall.md) " haben. Weitere Informationen finden Sie unter [Aufrufen von Konventionen](../../cpp/calling-conventions.md) .
 
-Im folgende Beispiel wird die C3714 generiert:
+Im folgenden Beispiel wird C3714 generiert:
 
-```
+```cpp
 // C3714.cpp
 // compile with: /c
 // processor: x86

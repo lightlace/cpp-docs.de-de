@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3836
 ms.assetid: 254f851b-7b7d-4c34-a740-fcf72f6a636a
-ms.openlocfilehash: 33860273db07894a9a4d15ba6d578598a18819ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c8a7e761f2ece046d5de5c0e74ee911e5ee550d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208056"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741403"
 ---
 # <a name="compiler-error-c3836"></a>Compilerfehler C3836
 
-statischer Konstruktor darf keine Memberinitialisiererliste haben
+statischer Konstruktor darf keine Member-Initialisiererliste haben
 
-Eine verwaltete Klasse kann keinen statischen Konstruktor haben, der auch ein Member-Initialisierungsliste aufweist. Konstruktoren von statischen Klassen werden von der common Language Runtime-Initialisierung beim Initialisieren von statischen Datenmembern Klasse aufgerufen.
+Eine verwaltete Klasse kann nicht über einen statischen Konstruktor verfügen, der auch eine Element Initialisierungs Liste enthält. Statische Klassenkonstruktoren werden vom Common Language Runtime aufgerufen, um eine Klassen Initialisierung durchzuführen, wobei statische Datenmember initialisiert werden.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3836 generiert:
+Im folgenden Beispiel wird C3836 generiert:
 
-```
+```cpp
 // C3836a.cpp
 // compile with: /clr
 ref class M

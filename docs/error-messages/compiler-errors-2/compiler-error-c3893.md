@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3893
 ms.assetid: 90d52eae-6ef2-4db1-b7ad-92f9e8b140fb
-ms.openlocfilehash: 45a140d3fd5f510ee2434950ca3c4b47c0756d75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20c17eaa6555b5511ecbc930eacdb2ec92475b23
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385497"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749502"
 ---
 # <a name="compiler-error-c3893"></a>Compilerfehler C3893
 
-'Var': Verwendung l-Wertes eines Initonly-Datenmembers ist nur zulässig, in einem Instanzenkonstruktor der Klasse "Type_name"
+"var": die Verwendung des l-Werts des initonly-Datenmembers ist nur in einem Instanzkonstruktor der Klasse "TYPE_NAME" zulässig.
 
-Statische [Initonly](../../dotnet/initonly-cpp-cli.md) Datenmember können nur in einem statischen Konstruktor ihre Adresse haben.
+Statische [initonly](../../dotnet/initonly-cpp-cli.md) -Datenmember können nur Ihre Adresse in einem statischen Konstruktor enthalten.
 
-Instanz (nicht statisch) Initonly-Datenmember können nur in den Instanzkonstruktoren (nicht statisch) ihre Adresse haben.
+Instanzen (nicht statisch) initonly-Datenmember können nur Ihre Adresse in Instanzkonstruktoren (nicht statisch) enthalten.
 
-Im folgende Beispiel wird die C3893 generiert:
+Im folgenden Beispiel wird C3893 generiert:
 
-```
+```cpp
 // C3893.cpp
 // compile with: /clr
 ref struct Y1 {

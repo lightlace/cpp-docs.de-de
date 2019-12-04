@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3853
 ms.assetid: 5b71805d-52b4-44ec-80ae-37c68d876f6a
-ms.openlocfilehash: c2282196d045ffd88696149f7d22d4ed7f9603ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef6a57b7528a07756a5a9034482bf99ed3f8cc87
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265476"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754861"
 ---
 # <a name="compiler-error-c3853"></a>Compilerfehler C3853
 
-"=": erneute Initialisieren, einen Verweis oder die Zuweisung über einen Verweis auf Funktion ist nicht zulässig
+"=": das erneute Initialisieren eines Verweises oder einer Zuweisung über eine Verweis-zu-Funktion ist unzulässig.
 
-Kann nicht auf einen Verweis über eine Funktion zuweisen, da Funktionen nicht Lvalues sind.
+Eine Zuweisung zu einem Verweis über eine Funktion ist nicht möglich, da Funktionen keine Lvalues sind.
 
-In den folgenden Beispielen C3853 generiert:
+In den folgenden Beispielen wird C3853 generiert:
 
-```
+```cpp
 // C3853.cpp
 // compile with: /EHsc
 #include <iostream>

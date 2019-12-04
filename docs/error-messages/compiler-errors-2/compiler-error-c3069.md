@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3069
 ms.assetid: ca94291b-2bb4-4e3f-9acf-534234b83513
-ms.openlocfilehash: 6c6451d31da2bb708d3f233225be713981b062e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 230d2569ea314bde2ea9ef0c4fc58d1a9743807f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406755"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749515"
 ---
 # <a name="compiler-error-c3069"></a>Compilerfehler C3069
 
 "Operator": Für den Enumerationstyp nicht zulässig
 
-Ein Operator wird für CLR-Enumerationen nicht unterstützt.  Weitere Informationen finden Sie unter [Vorgehensweise: Definieren und Verarbeiten von Enumerationen in C++/CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).
+Ein Operator wird für CLR-Enumerationen nicht unterstützt.  Weitere Informationen finden Sie unter Gewusst [wie: definieren und Verarbeiten von aufblendaten C++in/CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).
 
 ## <a name="example"></a>Beispiel
 
 Im folgenden Beispiel wird C3069 generiert:
 
-```
+```cpp
 // C3069.cpp
 // compile with: /clr
 enum struct E { e1 };

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2027
 ms.assetid: a39150c0-ec04-45ec-934c-a838bfe76627
-ms.openlocfilehash: 901e9b791616c5684b352c1fda7687f67b895d9c
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 62cf208d9d0025afba06d32a15b9a1e50777c473
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447376"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751000"
 ---
 # <a name="compiler-error-c2027"></a>Compilerfehler C2027
 
-Verwendung von undefiniertem Typ 'Typ'
+Verwendung des nicht definierten Typs "Typ"
 
-Ein Typ kann nicht verwendet werden, bevor sie definiert ist. Um den Fehler zu beheben, achten Sie darauf, dass der Typ vollständig definiert ist, bevor auf Sie verwiesen wird.
+Ein Typ kann erst verwendet werden, nachdem er definiert wurde. Um den Fehler zu beheben, stellen Sie sicher, dass der Typ vollständig definiert ist, bevor Sie darauf verweisen.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C2027 generiert.
+Im folgenden Beispiel wird C2027 generiert.
 
-```
+```cpp
 // C2027.cpp
 class C;
 class D {
@@ -43,11 +43,11 @@ int main() {
 
 ## <a name="example"></a>Beispiel
 
-Es ist möglich, einen Zeiger auf einen Typ deklariert, aber nicht definierte zu deklarieren. Aber C++ lässt sich nicht auf einen Verweis auf einen nicht definierten Typ.
+Es ist möglich, einen Zeiger auf einen deklarierten, aber nicht definierten Typ zu deklarieren. Lässt C++ jedoch keinen Verweis auf einen nicht definierten Typ zu.
 
-Im folgende Beispiel wird die C2027 generiert.
+Im folgenden Beispiel wird C2027 generiert.
 
-```
+```cpp
 // C2027_b.cpp
 class A;
 A& CreateA();

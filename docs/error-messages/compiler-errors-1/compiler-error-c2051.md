@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2051
 ms.assetid: 81c0469a-78e2-49fa-bd76-97cdb135e3ea
-ms.openlocfilehash: e6b0d95628a1b4e7f9707202d57d29b906b1b96d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51bf9b9bcde7f02210dd0e381f1239507ac56bdb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408757"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739102"
 ---
 # <a name="compiler-error-c2051"></a>Compilerfehler C2051
 
-Case-Ausdruck keine Konstante.
+Case-Ausdruck nicht konstant
 
-CASE-Ausdrücke müssen ganzzahlige Konstanten sein.
+Case-Ausdrücke müssen eine ganzzahlige Konstante sein.
 
-Im folgende Beispiel wird die C2051 generiert:
+Im folgenden Beispiel wird C2051 generiert:
 
-```
+```cpp
 // C2051.cpp
 class X {};
 
@@ -40,7 +40,7 @@ int main() {
 
 Mögliche Lösung:
 
-```
+```cpp
 // C2051b.cpp
 class X {};
 

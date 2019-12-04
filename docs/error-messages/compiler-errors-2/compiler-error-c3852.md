@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3852
 ms.assetid: 194e5c5e-0dfb-414e-86db-791c11eb610c
-ms.openlocfilehash: 4ad7718f4efbeb3b0bc481755fd239615ab796cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f264333d802967d0350caa8ab4ba4925ffe019af
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380928"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754874"
 ---
 # <a name="compiler-error-c3852"></a>Compilerfehler C3852
 
-'Member' mit Typ 'Typ': aggregatsinitialisierung konnte diesen Member nicht initialisieren
+' Member ' mit Typ ' type ': die Aggregat Initialisierung konnte diesen Member nicht initialisieren.
 
-Es wurde versucht, standardmäßig initialisiert als Teil einer aggregierter Initialisierung einem Datenmember zuweisen, die in eine aggregatinitialisierung nicht standardmäßig initialisiert empfangen kann.
+Es wurde versucht, eine Standard Initialisierung als Teil einer Aggregat Initialisierung zu einem Datenmember zuzuweisen, der in einer Aggregat Initialisierung keine Standard Initialisierung empfangen kann.
 
-In den folgenden Beispielen C3852 generiert:
+In den folgenden Beispielen wird C3852 generiert:
 
-```
+```cpp
 // C3852.cpp
 struct S
 {

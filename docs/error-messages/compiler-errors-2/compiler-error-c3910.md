@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3910
 ms.assetid: cfcbe620-b463-463b-95ea-2d60ad33ebb5
-ms.openlocfilehash: 186cd67d77e9aafbfe6a7d9dc18afb2bdbd94f0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef63b8f5d1ee4b3f094bed3549eec8157a950e91
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406625"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748878"
 ---
 # <a name="compiler-error-c3910"></a>Compilerfehler C3910
 
-'Ereignis': müssen Member 'Methode' definieren
+' Ereignis ': der Member ' Methode ' muss definiert werden.
 
-Ein Ereignis definiert wurde, aber enthielt nicht die angegebene, erforderliche Accessor-Methode.
+Ein Ereignis wurde definiert, enthielt jedoch nicht die angegebene, erforderliche Accessormethode.
 
-Weitere Informationen finden Sie unter [Ereignis](../../extensions/event-cpp-component-extensions.md).
+Weitere Informationen finden Sie unter [Event](../../extensions/event-cpp-component-extensions.md).
 
-Im folgende Beispiel wird die C3910 generiert:
+Im folgenden Beispiel wird C3910 generiert:
 
-```
+```cpp
 // C3910.cpp
 // compile with: /clr /c
 delegate void H();

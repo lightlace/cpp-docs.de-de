@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2602
 ms.assetid: 6c07a40e-537e-4954-b5c5-1e0e58fe1952
-ms.openlocfilehash: da38600ea099c9b0d73e929a100a8c338bd3388f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cac8bd8aca0a811e1e009a2fdf07cbc200634f2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215528"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737893"
 ---
 # <a name="compiler-error-c2602"></a>Compilerfehler C2602
 
-'class:: Identifier' ist kein Member einer Basisklasse von "Klasse"
+"Class:: Identifier" ist kein Member einer Basisklasse von "Class".
 
-`Identifier` kann nicht zugegriffen werden, da es sich nicht um einen von einer Basisklasse geerbten Member ist.
+auf `Identifier` kann nicht zugegriffen werden, da es sich nicht um einen von einer Basisklasse geerbten Member handelt.
 
-Im folgende Beispiel wird die C2602 generiert:
+Im folgenden Beispiel wird C2602 generiert:
 
-```
+```cpp
 // C2602.cpp
 // compile with: /c
 struct X {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2572
 ms.assetid: f1a42d69-727d-4ce5-88c8-d5f55dea66ac
-ms.openlocfilehash: 78402c054573de8c9860e96b6abe60ec5c3cfe38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed2e9771d1a407b947926a6f0d8beeb51e724ac7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395520"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755485"
 ---
 # <a name="compiler-error-c2572"></a>Compilerfehler C2572
 
-'class:: Member': Neudefinition des Standardparameters: Parameter Param
+' Class:: Member ': Neudefinition des Standard Parameters: Parameter Parameter
 
-Standardparameter können nicht neu definiert werden. Wenn Sie einen anderen Wert für den Parameter, der Standardparameter nicht definiert werden soll benötigen.
+Standardparameter können nicht neu definiert werden. Wenn Sie einen anderen Wert für den Parameter benötigen, sollte der Standardparameter nicht definiert bleiben.
 
-Im folgende Beispiel wird die C2572 generiert:
+Im folgenden Beispiel wird C2572 generiert:
 
-```
+```cpp
 // C2572.cpp
 // compile with: /c
 void f(int i = 1);   // function declaration

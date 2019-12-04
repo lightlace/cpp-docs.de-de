@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3510
 ms.assetid: c48387bc-0300-4a4d-97f7-3fb90f82a451
-ms.openlocfilehash: dbb65628aa6e0da94a91a59724ca8e1cd5b56491
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f9dea77b739aa59474e60cf852fff2577ab6ba9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187351"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753626"
 ---
 # <a name="compiler-error-c3510"></a>Compilerfehler C3510
 
-abhängiger Typ 'Typbib Bibliothek 'wurde' wurde nicht gefunden.
+die abhängige Typbibliothek "Type_lib" wurde nicht gefunden.
 
-[No_registry](../../preprocessor/no-registry.md) und [Auto_search](../../preprocessor/auto-search.md) übergeben wurden `#import` , aber der Compiler konnte nicht keine referenzierte Typbibliothek gefunden.
+[no_registry](../../preprocessor/no-registry.md) und [auto_search](../../preprocessor/auto-search.md) wurden an `#import`, aber der Compiler konnte eine referenzierte Typbibliothek nicht finden.
 
-Um diesen Fehler zu beheben, stellen Sie sicher, dass alle Bibliotheken und Typbibliotheken für den Compiler verfügbar sind.
+Stellen Sie sicher, dass alle Typbibliotheken und referenzierten Typbibliotheken für den Compiler verfügbar sind, um diesen Fehler zu beheben.
 
-Im folgende Beispiel wird die C3510 generiert:
+Im folgenden Beispiel wird C3510 generiert:
 
-Wird davon ausgegangen, dass die folgenden zwei Typbibliotheken erstellt wurden, und C3510a.tlb wurde gelöscht oder nicht auf den Pfad.
+Angenommen, die folgenden beiden Typbibliotheken wurden erstellt, und C3510a. tlb wurde gelöscht oder ist nicht im Pfad.
 
 ```
 // C3510a.idl
@@ -38,7 +38,7 @@ library C3510aLib
 };
 ```
 
-Und klicken Sie dann auf den Quellcode für die zweite Typbibliothek:
+Und dann der Quellcode für die zweite Typbibliothek:
 
 ```
 // C3510b.idl
@@ -54,9 +54,9 @@ library C3510bLib
 };
 ```
 
-Und klicken Sie dann die Client-Code:
+Und dann der Client Code:
 
-```
+```cpp
 // C3510.cpp
 #import "c3510b.tlb" no_registry auto_search   // C3510
 int main() {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3019
 ms.assetid: 31a6d9b6-d29f-4499-9ad8-48dd751e87c7
-ms.openlocfilehash: bba90917614cbc8facb182659c288f9823d8ab45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15b2dbf55b18c50020140eae25a71b18ceb10b10
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386706"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742131"
 ---
 # <a name="compiler-error-c3019"></a>Compilerfehler C3019
 
-Das Inkrement in OpenMP der for-Anweisung weist eine ungültige form
+Inkrement in der for-Anweisung von OpenMP weist eine ungültige Form auf.
 
-Das Inkrement Teil einem OpenMP `for` -Schleife muss die Indexvariable sowohl auf der linken und rechten Seite des Operators verwenden.
+Der Inkrement-Teil einer OpenMP-`for` Schleife muss die Index Variable auf der linken und rechten Seite des Operators verwenden.
 
-Im folgende Beispiel wird die C3019 generiert:
+Im folgenden Beispiel wird C3019 generiert:
 
-```
+```cpp
 // C3019.cpp
 // compile with: /openmp
 int main()

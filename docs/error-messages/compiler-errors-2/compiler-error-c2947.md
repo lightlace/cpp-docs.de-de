@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2947
 ms.assetid: 6c056f62-ec90-4883-8a67-aeeb6ec13546
-ms.openlocfilehash: 3738c257192134eedb8554b0d875023862441416
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7056c13edca534701ffe82f0169897ea804f40d7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227215"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755355"
 ---
 # <a name="compiler-error-c2947"></a>Compilerfehler C2947
 
-erwartet ' >' gefunden. zum Beenden Konstrukt "Syntax"
+">" wird zum Beenden des Konstrukts erwartet, "Syntax" wurde gefunden.
 
-Eine generische oder Vorlagenklasse Argumentliste wurde möglicherweise nicht ordnungsgemäß beendet.
+Eine generische oder Vorlagen Argumentliste wurde möglicherweise nicht ordnungsgemäß beendet.
 
-C2947 kann auch durch Syntaxfehler generiert werden.
+C2947 kann auch durch Syntax Fehler generiert werden.
 
-Im folgende Beispiel wird die C2947 generiert:
+Im folgenden Beispiel wird C2947 generiert:
 
-```
+```cpp
 // C2947.cpp
 // compile with: /c
 template <typename T>=   // C2947

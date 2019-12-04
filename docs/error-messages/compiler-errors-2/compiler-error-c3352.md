@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3352
 ms.assetid: f233bed7-474e-425f-aad2-7801578169d4
-ms.openlocfilehash: 6641f05c8daa5ad505c0bcb8d29a369ad5fd9a9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b679a89bb768ad7a50d0bbaa7b814c7a72f9f4c5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402631"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740428"
 ---
 # <a name="compiler-error-c3352"></a>Compilerfehler C3352
 
-'Funktion': die angegebene Funktion entspricht nicht den Typ des Delegaten 'Typ'
+"Funktion": die angegebene Funktion stimmt nicht mit dem Delegattyp "Typ".
 
-Die Parameterlisten für `function` und der Delegat stimmen nicht überein.
+Die Parameterlisten für `function` und der Delegat stimmen nicht ab.
 
-Weitere Informationen finden Sie unter [Delegate (Komponentenerweiterungen)](../../extensions/delegate-cpp-component-extensions.md).
+Weitere Informationen finden Sie unter [delegieren (C++ Komponenten Erweiterungen)](../../extensions/delegate-cpp-component-extensions.md).
 
-Im folgende Beispiel wird die C3352 generiert:
+Im folgenden Beispiel wird C3352 generiert:
 
-```
+```cpp
 // C3352.cpp
 // compile with: /clr
 delegate int D( int, int );

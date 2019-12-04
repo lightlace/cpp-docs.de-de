@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3254
 ms.assetid: 93427b10-fa72-4e43-80d1-1a6e122f9f40
-ms.openlocfilehash: 7e051c6c44d3b85f6f3faaf5380ecf54cba5d73c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b9ff41fb4f45d9570869ca90e3c6091cc03a58a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173501"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754250"
 ---
 # <a name="compiler-error-c3254"></a>Compilerfehler C3254
 
-"explizite Überschreibung": Klasse enthält die explizite Überschreibung "Override", jedoch nicht von abgeleitet ist, eine Schnittstelle, die die Funktionsdeklaration enthält
+' explizite Überschreibung ': die Klasse enthält die explizite Überschreibung ' override ', wird jedoch nicht von einer Schnittstelle abgeleitet, die die Funktionsdeklaration enthält.
 
-Wenn Sie [explizit überschreiben](../../cpp/explicit-overrides-cpp.md) eine Methode, Klasse, die die Überschreibung enthält muss abgeleitet werden, direkt oder indirekt, überschreiben Sie aus der Typ, der die Funktion enthält.
+Wenn Sie eine Methode [explizit überschreiben](../../cpp/explicit-overrides-cpp.md) , muss die Klasse, die die Überschreibung enthält, direkt oder indirekt von dem Typ abgeleitet werden, der die Funktion enthält, die Sie überschreiben.
 
-Im folgende Beispiel wird die C3254 generiert:
+Im folgenden Beispiel wird C3254 generiert:
 
-```
+```cpp
 // C3254.cpp
 __interface I
 {

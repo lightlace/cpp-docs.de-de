@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C1197
 ms.assetid: 22b801b7-e792-41f6-a461-973c03c69f25
-ms.openlocfilehash: e1c00a001c807b0cc6a5946b61ca4e9d5dc0167a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f698262c73f0b311a92a8940107b552430919bb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62229120"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747240"
 ---
 # <a name="fatal-error-c1197"></a>Schwerwiegender Fehler C1197
 
-'mscorlib.dll_1' kann nicht verwiesen werden, wie das Programm bereits auf 'mscorlib. dll_2' verweist.
+auf ' mscorlib. dll_1 ' kann nicht verwiesen werden, weil das Programm bereits auf ' mscorlib. dll_2 ' verwiesen hat.
 
-Der Compiler ist eine Version der common Language Runtime zugeordnet.  Es wurde jedoch versucht, auf eine Version einer common Language Runtime-Datei von einer früheren Version zu verweisen.
+Der Compiler wird mit einer Version der Common Language Runtime abgeglichen.  Es wurde jedoch versucht, auf eine Version einer Common Language Runtime Datei von einer früheren Version zu verweisen.
 
-Um diesen Fehler zu beheben, müssen Sie nur verweisen Sie Dateien aus der Version von der common Language Runtime, die geliefert, mit der Version von Visual C++, die Sie Kompilieren mit.
+Sie können diesen Fehler beheben, indem Sie nur auf Dateien aus der Version des Common Language Runtime verweisen, die mit der C++ Version von Visual ausgeliefert wurde, mit der Sie kompilieren.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C1197 generiert:
+Im folgenden Beispiel wird C1197 generiert:
 
-```
+```cpp
 // C1197.cpp
 // compile with: /clr /c
 // processor: x86

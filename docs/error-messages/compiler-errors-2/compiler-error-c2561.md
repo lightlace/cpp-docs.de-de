@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2561
 ms.assetid: 0abe955b-53a6-4a3c-8362-b1a8eb40e8d1
-ms.openlocfilehash: 8350c5baf129b88c178be280d2da7fe856c6cf57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4a14be9cd32c752e2ab889417494e80b935e31b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368421"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755563"
 ---
 # <a name="compiler-error-c2561"></a>Compilerfehler C2561
 
-'Bezeichner': Funktion muss einen Wert zurückgeben
+"Bezeichner": die Funktion muss einen Wert zurückgeben.
 
-Die Funktion wurde als Rückgabewert deklariert, aber enthält keine Definition der Funktion ein `return` Anweisung.
+Die Funktion wurde als Rückgabe eines Werts deklariert, aber die Funktionsdefinition enthält keine `return` Anweisung.
 
 Dieser Fehler kann durch einen falschen Funktionsprototyp verursacht werden:
 
-1. Wenn die Funktion keinen Wert zurückgibt, deklarieren Sie die Funktion mit Rückgabetyp ["void"](../../cpp/void-cpp.md).
+1. Wenn die Funktion keinen Wert zurückgibt, deklarieren Sie die Funktion mit dem Rückgabetyp [void](../../cpp/void-cpp.md).
 
-1. Überprüfen Sie, dass alle mögliche Verzweigungen der Funktion einen Wert des Typs im Prototyp deklariert zurückgibt.
+1. Überprüfen Sie, ob alle möglichen Verzweigungen der Funktion einen Wert des im Prototyp deklarierten Typs zurückgeben.
 
-1. C++-Funktionen mit Inline-Assembly-Routinen, die den Rückgabewert in speichern die `AX` registrieren Sie sich möglicherweise eine return-Anweisung. Kopieren Sie den Wert in `AX` in eine temporäre Variable und die Variable aus der Funktion zurückgegeben.
+1. C++Funktionen, die Inline-Assemblyroutinen enthalten, die den Rückgabewert im `AX` Register speichern, benötigen möglicherweise eine Return-Anweisung. Kopieren Sie den Wert in `AX` in eine temporäre Variable, und geben Sie diese Variable von der-Funktion zurück.
 
-Im folgende Beispiel wird die C2561 generiert:
+Im folgenden Beispiel wird C2561 generiert:
 
-```
+```cpp
 // C2561.cpp
 int Test(int x) {
    if (x) {

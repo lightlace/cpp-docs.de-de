@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3834
 ms.assetid: 059e0dc4-300b-4e74-b6c2-41a57831fe2a
-ms.openlocfilehash: 9f2bb96beaac8ede75863084c8ebf8345c940f53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1dac75ca5bea868823eba8e344fb4ec043fae1ad
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327508"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741533"
 ---
 # <a name="compiler-error-c3834"></a>Compilerfehler C3834
 
-Unzulässige explizite Umwandlung zu einem festen Zeiger; Verwenden Sie stattdessen eine angeheftete lokale variable
+Ungültige explizite Umwandlung in einen anheften-Zeiger. Verwenden Sie stattdessen eine angeheftete lokale Variable.
 
-Explizite Umwandlungen in einen festen Zeiger sind nicht zulässig.
+Explizite Umwandlungen in einen fixierten Zeiger sind nicht zulässig.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3834 generiert.
+Im folgenden Beispiel wird C3834 generiert.
 
-```
+```cpp
 // C3834.cpp
 // compile with: /clr
 int main() {

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2534
 ms.assetid: 481f9f54-5b51-4aa0-8eea-218f10807705
-ms.openlocfilehash: e684804ea31b16f31c82e244cb4f9a6aaf2d08c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b1e481c733f52b0be419b7fd786b26a90362f9c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386966"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737088"
 ---
 # <a name="compiler-error-c2534"></a>Compilerfehler C2534
 
-"Bezeichner": Konstruktor kann keinen Wert zurückgeben
+"Bezeichner": der Konstruktor kann keinen Wert zurückgeben.
 
-Ein Konstruktor kann keinen Wert zurückgeben oder keinen Rückgabetyp haben (nicht einmal eine `void` Rückgabetyp).
+Ein Konstruktor kann keinen Wert zurückgeben oder einen Rückgabetyp aufweisen (nicht einmal ein `void` Rückgabetyp).
 
-Dieser Fehler möglicherweise behoben werden, durch das Entfernen der `return` Anweisung aus der Konstruktordefinition.
+Dieser Fehler kann durch Entfernen der `return`-Anweisung aus der Konstruktordefinition korrigiert werden.
 
-Im folgende Beispiel wird die C2534 generiert:
+Im folgenden Beispiel wird C2534 generiert:
 
-```
+```cpp
 // C2534.cpp
 class A {
 public:

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2431
 ms.assetid: 88a5b648-c89f-47d1-a20e-63231ab4f0f7
-ms.openlocfilehash: 6298748b341d58c5d931566f714530a4858e46ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 135f73490cf23313d4ac4e2a5f568f2b6100422b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165878"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744523"
 ---
 # <a name="compiler-error-c2431"></a>Compilerfehler C2431
 
 Unzulässiges Indexregister in "Bezeichner"
 
-ESP-Register wird skaliert oder als sowohl Index-als auch Basisregister verwendet. Die LEICHGEORDNETES Codierung für die X86, die Prozessor entweder nicht zulässig ist.
+Das ESP-Register wird sowohl als Index als auch als Basisregister skaliert oder verwendet. Bei der SIB-Codierung für den x86-Prozessor ist keines zulässig.
 
-Im folgende Beispiel wird die C2431 generiert:
+Im folgenden Beispiel wird C2431 generiert:
 
-```
+```cpp
 // C2431.cpp
 // processor: x86
 int main() {

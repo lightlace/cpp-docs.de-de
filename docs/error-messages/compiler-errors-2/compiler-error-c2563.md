@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2563
 ms.assetid: 54abba68-6458-4ca5-894d-3babdb7b3552
-ms.openlocfilehash: 04a10c82fa6aa39bcf1098d6d4aabfc2f769e7c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 983788f041651fcd313c0707a4a7c64cc6e33c5a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257854"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755537"
 ---
 # <a name="compiler-error-c2563"></a>Compilerfehler C2563
 
-nicht übereinstimmende in der Liste formaler parameter
+nicht übereinstimmende Liste der formalen Parameter.
 
-Die Liste der formalen Parameter einer Funktion (oder ein Zeiger auf eine Funktion) entspricht nicht den von einer anderen Funktion (oder Zeiger auf eine Memberfunktion). Daher kann die Zuweisung von Funktionen oder Zeiger vorgenommen werden.
+Die Liste der formalen Parameter einer Funktion (oder eines Zeigers auf eine Funktion) stimmt nicht mit denen einer anderen Funktion (oder einem Zeiger auf eine Member-Funktion) identisch. Daher kann die Zuweisung von Funktionen oder Zeigern nicht durchgeführt werden.
 
-Im folgende Beispiel wird die C2563 generiert:
+Im folgenden Beispiel wird C2563 generiert:
 
-```
+```cpp
 // C2563.cpp
 void func( int );
 void func( int, int );

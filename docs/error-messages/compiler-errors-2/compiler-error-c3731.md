@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3731
 ms.assetid: 45f89fcd-464c-4bc8-8a42-edcb5416d26c
-ms.openlocfilehash: 5acc33869648f83cd44bc557128c685f521ddf88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9acf80eec0d36db64fa070d691533e7085754ac0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328067"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752950"
 ---
 # <a name="compiler-error-c3731"></a>Compilerfehler C3731
 
-Inkompatibles Ereignis "Funktion1" und der Handler "Funktion2"; Ereignisquelle und Ereignishandler müssen vom gleichen Typ sein.
+Inkompatibles Ereignis "Funktion1" und Handler "Funktion2"; Ereignis Quelle und Ereignishandler müssen denselben Typ aufweisen.
 
-Die Ereignisquelle und einen Ereignisempfänger müssen denselben Typ haben (z. B. `native` im Vergleich zu `com` Typen). Um diesen Fehler zu beheben, stellen Sie die Typen von der Ereignisquelle und Ereignishandler.
+Die Ereignis Quelle und der Ereignis Empfänger müssen denselben Typ aufweisen (z. b. `native` im Vergleich zu `com` Typen). Um diesen Fehler zu beheben, nehmen Sie die Typen der Ereignis Quelle und des Ereignis Handlers in Einklang.
 
-Im folgende Beispiel wird die C3731 generiert:
+Im folgenden Beispiel wird C3731 generiert:
 
-```
+```cpp
 // C3731.cpp
 // compile with: /clr
 #using <mscorlib.dll>
