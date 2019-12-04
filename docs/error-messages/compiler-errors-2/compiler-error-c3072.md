@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3072
 ms.assetid: cdd5cb6b-c478-4698-adfa-c40188d34a18
-ms.openlocfilehash: 2b76fa91d739e9cc89251aaf56aa9b196e62a68d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8fe0802a7529551fce1c0b7242c867db52d8842
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406729"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756759"
 ---
 # <a name="compiler-error-c3072"></a>Compilerfehler C3072
 
-Operator 'Operator' kann nicht auf eine Instanz einer Verweisklasse angewendet werden
+der Operator "Operator" kann nicht auf eine Instanz einer Verweis Klasse angewendet werden.
 
-Verwenden Sie die unären '`operator` ' Operator, um eine Instanz einer Verweisklasse in einen Handletyp zu konvertieren
+Verwenden Sie den unären '`operator` '-Operator, um eine Instanz einer Verweis Klasse in einen Handles-Typ zu konvertieren.
 
-Ein CLR-Typ ist erforderlich, CLR-Operatoren, keine systemeigenen (oder Standard-)-Operatoren.  Weitere Informationen finden Sie unter [Verweisoperator nachverfolgung](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
+Ein CLR-Typ erfordert CLR-Operatoren, nicht native (oder Standard-) Operatoren.  Weitere Informationen finden Sie unter [Tracking Reference Operator](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3072 generiert.
+Im folgenden Beispiel wird C3072 generiert.
 
-```
+```cpp
 // C3072.cpp
 // compile with: /clr
 ref class R {};

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3462
 ms.assetid: 56b75f35-9fad-42d9-a969-eeca5d709bec
-ms.openlocfilehash: 020556be73f0bad8bea6836c9ec0dd0b92dd7f39
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56227f124d49630d8776f291ada302bd6cd6e983
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222370"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756603"
 ---
 # <a name="compiler-error-c3462"></a>Compilerfehler C3462
 
@@ -19,13 +19,13 @@ ms.locfileid: "62222370"
 
 Das TypeForwardedTo-Attribut muss auf einen Typ in den Metadaten angewendet werden, auf die verwiesen wird.
 
-Weitere Informationen finden Sie unter [Typweiterleitung (C++ / CLI)](../../extensions/type-forwarding-cpp-cli.md).
+Weitere Informationen finden Sie unter [TypweiterleitungC++(/CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Beispiel
 
 Im folgenden Beispiel wird eine Komponente erstellt:
 
-```
+```cpp
 // C3462.cpp
 // compile with: /clr /LD
 public ref class R {};
@@ -35,7 +35,7 @@ public ref class R {};
 
 Im folgenden Beispiel wird C3462 generiert:
 
-```
+```cpp
 // C3462b.cpp
 // compile with: /clr /c
 #using "C3462.dll"

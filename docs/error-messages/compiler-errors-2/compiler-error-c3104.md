@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: fee023809246634f2f3da266a718e45861eae76e
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: b92a6eade137a1d319ec286afa08f8477ff029d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447838"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755861"
 ---
 # <a name="compiler-error-c3104"></a>Compilerfehler C3104
 
-Unzulässiges Attributargument.
+Unzulässiges Attribut Argument
 
 Sie haben ein ungültiges Argument für ein Attribut angegeben.
 
-Finden Sie unter [Attributparametertypen](../../extensions/attribute-parameter-types-cpp-component-extensions.md) für Weitere Informationen.
+Weitere Informationen finden Sie unter [Attribut Parameter Typen](../../extensions/attribute-parameter-types-cpp-component-extensions.md) .
 
-Dieser Fehler kann infolge einer konformitätsverbesserung für Compiler, die für Visual Studio 2005 durchgeführt wurde generiert werden: beim Übergeben von verwalteten Arrays auf benutzerdefinierte Attribute, ist der Typ des Arrays nicht mehr aus der Liste aggregatinitialisierung abgeleitet. Der Compiler ist nun erforderlich, um den Typ des Arrays als auch für die Initialisiererliste anzugeben.
+Dieser Fehler kann aufgrund von compilerübereinstimmungs-Aufgaben generiert werden, die für Visual Studio 2005 ausgeführt wurden: Wenn verwaltete Arrays an benutzerdefinierte Attribute übergeben werden, wird der Typ des Arrays nicht mehr aus der aggregierten Initialisierungs Liste abgeleitet. Der Compiler erfordert nun, dass Sie den Typ des Arrays und die Initialisiererliste angeben.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3104 generiert.
+Im folgenden Beispiel wird C3104 generiert.
 
-```
+```cpp
 // C3104a.cpp
 // compile with: /clr /c
 using namespace System;
@@ -46,9 +46,9 @@ ref struct AStruct{};
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3104 generiert.
+Im folgenden Beispiel wird C3104 generiert.
 
-```
+```cpp
 // C3104b.cpp
 // compile with: /clr /c
 // C3104 expected

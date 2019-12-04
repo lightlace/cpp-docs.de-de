@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2754
 ms.assetid: 1cab66c5-da9d-4b81-b7fb-9cdc48ff1ccc
-ms.openlocfilehash: cfe6f8faa1b00faf32ae53e6c25c23532c9f3a3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 179cbaf65bf6440a13da6b35c073af981b074c71
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228524"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759567"
 ---
 # <a name="compiler-error-c2754"></a>Compilerfehler C2754
 
-"Spezialisierung": eine teilweise Spezialisierung kann nicht keinen abhängigen Nichttyp-Vorlagenparameter haben
+"Spezialisierung": eine partielle Spezialisierung darf keinen abhängigen Nichttyp-Vorlagen Parameter aufweisen.
 
-Es wurde versucht, eine Vorlagenklasse teilweise spezialisiert werden, die keinen abhängigen Nichttyp-Vorlagenparameter. Dies ist nicht zulässig.
+Es wurde versucht, eine Vorlagen Klasse, die über einen abhängigen Nichttyp-Vorlagen Parameter verfügt, teilweise zu spezialisieren. Dieser Vorgang ist nicht zulässig.
 
-Im folgende Beispiel wird die C2754 generiert:
+Im folgenden Beispiel wird C2754 generiert:
 
-```
+```cpp
 // C2754.cpp
 // compile with: /c
 

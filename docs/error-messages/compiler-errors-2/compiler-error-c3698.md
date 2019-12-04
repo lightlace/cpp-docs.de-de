@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3698
 ms.assetid: 3c02fb08-7ba4-4637-a06f-19926cb2b5f1
-ms.openlocfilehash: 78cded92c8f73c77f7871278443bd3dfd4dbe686
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29c1df618d6a8a14f441c09a6db0f9457133910b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325181"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758046"
 ---
 # <a name="compiler-error-c3698"></a>Compilerfehler C3698
 
-'Typ': Verwenden Sie diesen Typ kann nicht als Argument von 'Operator'
+"Typ": dieser Typ kann nicht als Argument von "Operator" verwendet werden.
 
 Ein verwaltetes Objekt wurde falsch deklariert.
 
-Im folgende Beispiel wird die C3698 generiert:
+Im folgenden Beispiel wird C3698 generiert:
 
-```
+```cpp
 // C3698.cpp
 // compile with: /clr
 

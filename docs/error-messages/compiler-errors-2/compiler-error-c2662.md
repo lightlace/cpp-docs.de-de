@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2662
 ms.assetid: e172c2a4-f29e-4034-8232-e7dc6f83689f
-ms.openlocfilehash: fefd523ca3b9a3406afc307150322f9d431aa730
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2fa2643898fed510aa7cf0f483b538ebb33b033
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360340"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760451"
 ---
 # <a name="compiler-error-c2662"></a>Compilerfehler C2662
 
-'Funktion': "this"-Zeiger von 'type1' in 'Typ2' kann nicht konvertiert werden.
+"Funktion": der this-Zeiger kann nicht von "Typ1" in "Typ2" konvertiert werden.
 
-Der Compiler konnte nicht konvertiert werden. die `this` Zeiger von `type1` zu `type2`.
+Der Compiler konnte den `this` Zeiger nicht von `type1` in `type2`konvertieren.
 
-Dieser Fehler kann verursacht werden, durch den Aufruf einer nicht -`const` Member-Funktion auf einem `const` Objekt.  Mögliche Lösungen:
+Dieser Fehler kann verursacht werden, wenn eine nicht-`const` Member-Funktion für ein `const`-Objekt aufgerufen wird.  Mögliche Lösungen:
 
-- Entfernen Sie die `const` aus der Objektdeklaration.
+- Entfernen Sie die `const` aus der Objekt Deklaration.
 
-- Hinzufügen `const` auf die Member-Funktion.
+- Fügen Sie `const` der Member-Funktion hinzu.
 
-Im folgende Beispiel wird die C2662 generiert:
+Im folgenden Beispiel wird C2662 generiert:
 
-```
+```cpp
 // C2662.cpp
 class C {
 public:
@@ -41,9 +41,9 @@ int main() {
 }
 ```
 
-Beim Kompilieren mit **"/ CLR"**, Sie können für eine Funktion aufrufen einer `const` oder `volatile` gekennzeichneten verwalteten Typ. Eine const-Memberfunktion einer verwalteten Klasse kann nicht deklariert werden, sodass Sie Methoden für const-verwaltete Objekte aufrufen, können nicht.
+Beim Kompilieren mit **/CLR**können Sie keine Funktion für einen `const` oder `volatile` qualifizierten verwalteten Typ aufzurufen. Sie können keine konstantenmember-Funktion einer verwalteten Klasse deklarieren, sodass Sie keine Methoden für verwaltete verwaltete Objekte abrufen können.
 
-```
+```cpp
 // C2662_b.cpp
 // compile with: /c /clr
 ref struct M {
@@ -67,9 +67,9 @@ ref struct N {
 };
 ```
 
-Im folgende Beispiel wird die C2662 generiert:
+Im folgenden Beispiel wird C2662 generiert:
 
-```
+```cpp
 // C2662_c.cpp
 // compile with: /c
 // C2662 expected

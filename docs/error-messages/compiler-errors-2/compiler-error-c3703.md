@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3703
 ms.assetid: 7e3677d9-f2be-4c26-998f-423564e9023c
-ms.openlocfilehash: 0b34760bc3f5b23148ce84cf590685efad2008df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1071623c8dbaef52a6a391d8858e7502de9c74b4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324635"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757994"
 ---
 # <a name="compiler-error-c3703"></a>Compilerfehler C3703
 
-'Ereignishandler': eine Ereignishandlermethode muss dieselbe Speicherklasse wie die Quelle "Ereignis" haben
+' Ereignishandler ': eine Ereignishandlermethode muss dieselbe Speicher Klasse wie die Quelle ' Ereignis ' aufweisen.
 
-Ein [Ereignis](../../cpp/event-handling.md) verfügt über eine andere Speicherklasse als der Ereignishandler mit dem es verknüpft ist. Beispielsweise tritt dieser Fehler auf, wenn der Ereignishandler eine statischen Memberfunktion ist und das Ereignis nicht statisch ist. Um diesen Fehler zu beheben, geben Sie das Ereignis und den Ereignishandler dieselbe Speicherklasse.
+Ein [Ereignis](../../cpp/event-handling.md) hat eine andere Speicher Klasse als der Ereignishandler, mit dem er verknüpft ist. Dieser Fehler tritt beispielsweise auf, wenn der Ereignishandler eine statische Member-Funktion ist und das Ereignis nicht statisch ist. Um diesen Fehler zu beheben, müssen Sie dem Ereignis und dem Ereignishandler dieselbe Speicher Klasse zuordnen.
 
-Im folgende Beispiel wird die C3703 generiert:
+Im folgenden Beispiel wird C3703 generiert:
 
-```
+```cpp
 // C3703.cpp
 // C3703 expected
 #include <stdio.h>

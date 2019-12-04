@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3650
 ms.assetid: ca4d8de4-b027-4d13-9b9f-03ca62905c33
-ms.openlocfilehash: 54543225144ed0187f6c1e68e7236d886c026860
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b1b769ed7e27e9c8c3edbe6b08452f3ec964727
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385601"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756356"
 ---
 # <a name="compiler-error-c3650"></a>Compilerfehler C3650
 
-'Schnittstellenmethode': kann nicht als explizite Überschreibung verwendet werden, muss eine virtuelle Memberfunktion einer Basisklasse
+"Interface_method": kann nicht als explizite Überschreibung verwendet werden, muss eine virtuelle Member-Funktion einer Basisklasse sein.
 
-Es wurde versucht, eine explizite Überschreibung für ein Element ausführen, die nicht virtuelle war.
+Es wurde versucht, eine explizite außer Kraft setzung für einen Member auszuführen, der nicht virtuell war.
 
-Weitere Informationen finden Sie unter [explizite Überschreibungen](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Weitere Informationen finden Sie unter [explizite über](../../extensions/explicit-overrides-cpp-component-extensions.md)schreibungen.
 
-Im folgende Beispiel wird die C3650 generiert:
+Im folgenden Beispiel wird C3650 generiert:
 
-```
+```cpp
 // C3650.cpp
 // compile with: /clr
 public interface struct I {

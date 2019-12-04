@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2233
 ms.assetid: 236bdf0b-9607-4f26-a249-d8def0b1333c
-ms.openlocfilehash: 7d96230f189a8f9371473d2da4df4e7be295ab03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 066f28bfaacd1ad2e7645822aef082e43e863327
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375963"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759255"
 ---
 # <a name="compiler-error-c2233"></a>Compilerfehler C2233
 
-'Bezeichner': Arrays von Objekten, die Größe 0 (null) enthalten sind nicht zulässig
+' Identifier ': Arrays von Objekten mit Arrays der Größe 0 (null) sind unzulässig.
 
-Jedes Objekt in einem Array muss mindestens ein Element enthalten.
+Jedes-Objekt in einem Array muss mindestens ein-Element enthalten.
 
-Im folgende Beispiel wird die C2233 generiert:
+Im folgenden Beispiel wird C2233 generiert:
 
-```
+```cpp
 // C2233.cpp
 // compile with: /c
 class A {

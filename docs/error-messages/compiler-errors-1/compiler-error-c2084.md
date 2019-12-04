@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2084
 ms.assetid: 990b107f-3721-4851-ae8b-4b69a8c149ed
-ms.openlocfilehash: 0f7e049bc3f96e0a8e2b0a8cd306afeff52f7a5f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 881ae051b2779fe674b31b64a7cbe7be7cf63705
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447327"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757890"
 ---
 # <a name="compiler-error-c2084"></a>Compilerfehler C2084
 
-Funktion "*Funktion*" hat bereits einen Funktionsrumpf
+die Funktion "*Function*" hat bereits einen Text.
 
 Die Funktion wurde bereits definiert.
 
-Bevor Sie Visual Studio 2002
+Vor Visual Studio 2002,
 
-- Der Compiler akzeptiert mehrere vorlagenspezialisierungen, die in den gleichen tatsächlichen Typ aufgelöst, obwohl die zusätzlichen Definitionen nicht zur Verfügung stehen würden. Der Compiler erkennt jetzt diese Definitionen.
+- Der Compiler würde mehrere Vorlagen spezizierungen akzeptieren, die in denselben tatsächlichen Typ aufgelöst wurden, obwohl die zusätzlichen Definitionen nie verfügbar wären. Der Compiler erkennt jetzt diese mehrere Definitionen.
 
-- `__int32` und `int` als separate Typen behandelt wurden. Der Compiler jetzt behandelt `__int32` als Synonym für `int`. Dies bedeutet, dass der Compiler mehrere Definitionen erkennt, wenn eine Funktion, auf beiden überladen ist `__int32` und `int` und gibt einen Fehler aus.
+- `__int32` und `int` wurden als separate Typen behandelt. Der Compiler behandelt nun `__int32` als Synonym für `int`. Dies bedeutet, dass der Compiler mehrere Definitionen erkennt, wenn eine Funktion sowohl für `__int32` als auch für `int` überladen wird und einen Fehler liefert.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C2084 generiert:
+Im folgenden Beispiel wird C2084 generiert:
 
 ```cpp
 // C2084.cpp
@@ -36,9 +36,9 @@ void Func(int) {}   // define function
 void Func(int) {}   // C2084 second definition
 ```
 
-Um diesen Fehler zu beheben, entfernen Sie die doppelte Definition:
+Entfernen Sie die doppelte Definition, um diesen Fehler zu beheben:
 
-```
+```cpp
 // C2084b.cpp
 // compile with: /c
 void Func(int);

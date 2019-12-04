@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2553
 ms.assetid: 64bc1e9a-627f-4ce9-b7bc-dc911bdb9180
-ms.openlocfilehash: 11cb2b83d958f0c59d05034a716a022f00b326ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa3e97d576e994878ab5b080363c4c09b79f42ed
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353189"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756785"
 ---
 # <a name="compiler-error-c2553"></a>Compilerfehler C2553
 
-'Basisfunktion': Typ unterscheidet sich von 'Überschreibungsfunktion' überschreibende virtuelle Funktion zurückgegeben werden
+"Base_function": der Rückgabetyp der virtuellen Funktion unterscheidet sich von "override_function".
 
-Eine Funktion in einer abgeleiteten Klasse hat versucht, eine virtuelle Funktion in einer Basisklasse überschreiben, aber die abgeleitete Klassenfunktion haben nicht den gleichen Rückgabetyp als Funktion der Basisklasse.  Eine außer Kraft setzen-Funktion-Signatur muss es sich um die Signatur der Funktion überschrieben werden übereinstimmen.
+Eine Funktion in einer abgeleiteten Klasse hat versucht, eine virtuelle Funktion in einer Basisklasse zu überschreiben, aber die abgeleitete Klassen Funktion hat nicht denselben Rückgabetyp wie die Basisklassen Funktion.  Eine Überschreibungs Funktions Signatur muss mit der Signatur der Funktion identisch sein, die überschrieben wird.
 
-Im folgende Beispiel wird die C2553 generiert:
+Im folgenden Beispiel wird C2553 generiert:
 
-```
+```cpp
 // C2553.cpp
 // compile with: /clr /c
 ref struct C {

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3225
 ms.assetid: f5f66973-256e-4298-ac46-c87819cbde34
-ms.openlocfilehash: cae0572002c849fb5aed771993d3a89ed82c726a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1caa1e7ce787ffc14e615c946b5d670c75e0332a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174015"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757617"
 ---
 # <a name="compiler-error-c3225"></a>Compilerfehler C3225
 
-generisches Typargument für "Arg" kann nicht 'Typ', es muss ein Werttyp oder ein Handletyp sein
+das generische Typargument für ' arg ' kann nicht ' type ' sein, es muss ein Werttyp oder ein behandlertyp sein.
 
-Das generische Typargument hatte nicht den richtigen Typ.
+Das generische Typargument war nicht vom richtigen Typ.
 
 Weitere Informationen finden Sie unter [Generics](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 
-Einen generischen Typ mit der ein systemeigener Typ kann nicht instanziiert werden. Im folgende Beispiel wird die C3225 generiert.
+Es ist nicht möglich, einen generischen Typ mit einem systemeigenen Typ zu instanziieren. Im folgenden Beispiel wird C3225 generiert.
 
-```
+```cpp
 // C3225.cpp
 // compile with: /clr
 class A {};
@@ -43,7 +43,7 @@ int main() {
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel erstellt eine Komponente, die mithilfe von c#. Beachten Sie, dass die Einschränkung gibt an, dass der generische Typ nur mit einem Werttyp instanziiert werden kann.
+Im folgenden Beispiel wird eine-Komponente C#mithilfe von erstellt. Beachten Sie, dass die-Einschränkung angibt, dass der generische Typ nur mit einem Werttyp instanziiert werden kann.
 
 ```
 // C3225_b.cs
@@ -54,9 +54,9 @@ public class MyList<T> where T: struct {}
 
 ## <a name="example"></a>Beispiel
 
-Dieses Beispiel verwendet der c#-Komponente erstellt und verstößt gegen die Einschränkung, die nur MyList sein kann nicht mit einem Werttyp instanziiert <xref:System.Nullable>. Im folgende Beispiel wird die C3225 generiert.
+In diesem Beispiel wird C#die-erstellte Komponente verwendet und verstößt gegen die Einschränkung, dass myList nur mit einem anderen Werttyp als <xref:System.Nullable>instanziiert werden kann. Im folgenden Beispiel wird C3225 generiert.
 
-```
+```cpp
 // C3225_c.cpp
 // compile with: /clr
 #using "C3225_b.dll"

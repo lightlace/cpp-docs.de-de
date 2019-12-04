@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2195
 ms.assetid: 9f9f035c-9c51-4173-a8ea-c6f907fc5c63
-ms.openlocfilehash: 9d0fdb3623a86adb07e910b186305f3e468d24b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 748516dbcdf5e135964e720d6215f31091bfed9e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174535"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758527"
 ---
 # <a name="compiler-error-c2195"></a>Compilerfehler C2195
 
-'Bezeichner': ist ein Datensegment
+"Bezeichner": ist ein Daten Segment
 
-Die `code_seg` Pragma verwendet einen Segmentname, der für die `data_seg` Pragma.
+Das `code_seg`-Pragma verwendet einen Segment Namen, der mit dem `data_seg`-Pragma verwendet wird.
 
-Im folgende Beispiel wird die C2195 generiert:
+Im folgenden Beispiel wird C2195 generiert:
 
-```
+```cpp
 // C2195.cpp
 #pragma data_seg("MYDATA")
 #pragma code_seg("MYDATA")   // C2195

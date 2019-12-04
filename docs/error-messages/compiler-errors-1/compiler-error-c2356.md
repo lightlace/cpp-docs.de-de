@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2356
 ms.assetid: 84d5a816-9a61-4d45-9978-38e485bbf767
-ms.openlocfilehash: 0166cce6011017b8a18821666083f7c47f58b7a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e306c5a8f9175bc3c7902b20263aa2e451944182
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302539"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759931"
 ---
 # <a name="compiler-error-c2356"></a>Compilerfehler C2356
 
-Initialisierungssegment darf während der Übersetzungseinheit nicht geändert.
+das Initialisierungs Segment darf während der Übersetzungseinheit nicht geändert werden.
 
 Mögliche Ursachen:
 
-- `#pragma init_seg` vor dem Code zur Initialisierung von segment
+- `#pragma init_seg` vorangestelltem Initialisierungs Code des Segments
 
-- `#pragma init_seg` durch eine andere voranstehen `#pragma init_seg`
+- `#pragma init_seg` einem anderen `#pragma init_seg` vorangestellt
 
-Verschieben Sie den Initialisierungscode für Segment an den Anfang des Moduls. Verschieben sie mehrere Bereiche initialisiert werden müssen, die Module zu trennen.
+Um dies aufzulösen, verschieben Sie den Initialisierungs Code des Segments an den Anfang des Moduls. Wenn mehrere Bereiche initialisiert werden müssen, verschieben Sie Sie in separate Module.
 
-Im folgende Beispiel wird die C2356 generiert:
+Im folgenden Beispiel wird C2356 generiert:
 
-```
+```cpp
 // C2356.cpp
 #pragma warning(disable : 4075)
 

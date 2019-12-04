@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2683
 ms.assetid: db605e4f-601b-4d05-92a1-c43ca24de08d
-ms.openlocfilehash: 49e4897ad5db866aa1ca42589859bedff12718df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8526dc1fe3cacc872aa91ca058677d15318fd703
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266867"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760269"
 ---
 # <a name="compiler-error-c2683"></a>Compilerfehler C2683
 
-'cast': 'Typ' ist kein polymorpher Typ
+' Cast ': ' type ' ist kein polymorpher Typ.
 
-Sie können keine [Dynamic_cast](../../cpp/dynamic-cast-operator.md) aus einer nicht polymorph-Klasse (eine Klasse ohne virtuelle Funktionen) zu konvertieren.
+Sie können [dynamic_cast](../../cpp/dynamic-cast-operator.md) nicht verwenden, um eine nicht-polymorphe Klasse (eine Klasse ohne virtuelle Funktionen) zu konvertieren.
 
-Sie können ["static_cast"](../../cpp/static-cast-operator.md) zum Durchführen von Konvertierungen von nicht polymorphen Typen. Allerdings `static_cast` führt eine laufzeitüberprüfung nicht aus.
+Sie können [static_cast](../../cpp/static-cast-operator.md) verwenden, um Konvertierungen von nicht polymorphen Typen auszuführen. `static_cast` führt jedoch keine Lauf Zeit Überprüfung durch.
 
-Im folgende Beispiel wird die C2683 generiert:
+Im folgenden Beispiel wird C2683 generiert:
 
-```
+```cpp
 // C2683.cpp
 // compile with: /c
 class B { };

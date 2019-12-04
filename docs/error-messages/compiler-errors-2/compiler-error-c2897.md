@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2897
 ms.assetid: a88349e2-823f-42a0-8660-0653b677afa4
-ms.openlocfilehash: 264ad52a10c6cf19d1105561f1140cf2d3e2f8e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1433faade0a41ad8b63a3b40cb5d02f724bde658
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378842"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760773"
 ---
 # <a name="compiler-error-c2897"></a>Compilerfehler C2897
 
-ein Destruktor/Finalizer kann nicht keine Funktionsvorlage sein.
+ein debugtor/Finalizer kann keine Funktions Vorlage sein.
 
-Destruktoren oder Finalizer können nicht überladen werden können, ist die Deklaration eines Destruktors als eine Vorlage (die einen Satz von Destruktoren definiert würde) nicht zulässig.
+Dekonstruktoren oder Finalizer können nicht überladen werden. Daher ist das Deklarieren eines Debuggers als Vorlage (die eine Gruppe von Debuggern definieren würde) nicht zulässig.
 
-Im folgende Beispiel wird die C2897 generiert:
+Im folgenden Beispiel wird C2897 generiert:
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C2897 generiert.
+Im folgenden Beispiel wird C2897 generiert.
 
-```
+```cpp
 // C2897.cpp
 // compile with: /c
 class X {
@@ -36,9 +36,9 @@ public:
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C2897 generiert.
+Im folgenden Beispiel wird C2897 generiert.
 
-```
+```cpp
 // C2897_b.cpp
 // compile with: /c /clr
 ref struct R2 {

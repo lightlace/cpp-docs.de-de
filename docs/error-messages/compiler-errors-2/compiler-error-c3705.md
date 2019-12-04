@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3705
 ms.assetid: 8361017d-5782-4214-a9d7-e9825fd29bc8
-ms.openlocfilehash: 8a1a5a7c3c54742f6952f6885a70fd5c1dcf6e0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4f77457be95ae22b2a67214207d361ca105811d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227069"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757929"
 ---
 # <a name="compiler-error-c3705"></a>Compilerfehler C3705
 
-'Funktion': ereignisauslösende Schnittstelle konnte nicht gefunden
+"Funktion": ereigentienschnittstelle kann nicht gefunden werden.
 
-Sie müssen eine Ereignisschnittstelle zur Verwendung von COM-Ereignisse definieren. Beachten Sie, dass die `#include` Codezeilen die ATL-Headerdateien, die im folgenden Beispiel gezeigt sind erforderlich, für die Verwendung von COM-Ereignisse. Um diesen Fehler zu beheben, heben Sie die auskommentierung der Definition der `IEvents` Schnittstelle im Beispielcode.
+Sie müssen eine Ereignis Schnittstelle definieren, um com-Ereignisse zu verwenden. Beachten Sie, dass die `#include` Zeilen der ATL-Header Dateien, die im folgenden Beispiel angezeigt werden, für die Verwendung von COM-Ereignissen erforderlich sind. Um diesen Fehler zu beheben, heben Sie die Auskommentierung der Definition der `IEvents`-Schnittstelle im Beispielcode auf.
 
-Im folgende Beispiel wird die C3705 generiert:
+Im folgenden Beispiel wird C3705 generiert:
 
-```
+```cpp
 // C3705.cpp
 // compile with: /c
 #define _ATL_ATTRIBUTES 1

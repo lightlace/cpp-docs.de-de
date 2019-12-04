@@ -11,12 +11,12 @@ helpviewer_keywords:
 - coding conventions, C++ Standard Library
 - naming conventions [C++], C++ library
 ms.assetid: bf41b79a-2d53-4f46-8d05-779358335146
-ms.openlocfilehash: 8747ef490c0997b1fa3fd5186618b7189fa00970
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d92636a7ed63e09396ff68749560cde9d1f8639c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450697"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755706"
 ---
 # <a name="c-library-conventions"></a>C++-Bibliothekskonventionen
 
@@ -24,7 +24,7 @@ Die C++-Bibliothek erfüllt ähnliche Konventionen wie die C-Standardbibliothek 
 
 Eine Implementierung verfügt über einen gewissen Spielraum, wenn es um die Deklarierung von Typen und Funktionen in der C++-Standardbibliothek geht:
 
-- Namen von Funktionen in der C-Standardbibliothek enthalten entweder einen externen #„C++“ oder einen extern „C“-Link. Fügen Sie den entsprechenden Standard-C-Header ein anstatt eine Inline-Bibliotheksentität zu deklarieren.
+- Die Namen der Funktionen in der c-Standard Bibliothek können entweder externC++"" oder extern "c"-Verknüpfung aufweisen. Fügen Sie den entsprechenden Standard-C-Header ein anstatt eine Inline-Bibliotheksentität zu deklarieren.
 
 - Ein Memberfunktionsname in einer Bibliotheksklasse hat möglicherweise weitere Funktionssignaturen zusätzlich zu denen, die in diesem Dokument aufgeführt werden. Sie können davon ausgehen, dass sich ein an dieser Stelle beschriebener Funktionsaufruf wie erwartet verhält. Die Adresse einer Bibliotheksmemberfunktion kann jedoch nicht zuverlässig entgegengenommen werden. (Der Typ entspricht möglicherweise nicht Ihren Erwartungen.)
 
@@ -50,5 +50,5 @@ Andererseits bestehen durchaus einige Einschränkungen:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)\
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ Standard Library Overview (Übersicht über die C++-Standardbibliothek)](../standard-library/cpp-standard-library-overview.md)\
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)

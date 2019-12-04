@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2287
 ms.assetid: 64556299-4e1f-4437-88b7-2464fc0b95bb
-ms.openlocfilehash: f5493220c4380d1fd67b38995414f48a2ef72a41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 234d0e85d0d6772340797fb6880e0ef79d4191ef
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385822"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759138"
 ---
 # <a name="compiler-error-c2287"></a>Compilerfehler C2287
 
-'Klasse': vererbungsdarstellung: 'Darstellung1' ist einfacher als die erforderliche 'Darstellung2'
+"Class": Vererbungs Darstellung: "representation1" ist weniger allgemein als die erforderliche "representation2".
 
-Eine Klasse wird mit einer einfacheren Darstellung als deklariert.
+Eine Klasse wird mit einer einfacheren Darstellung als erforderlich deklariert.
 
-Im folgende Beispiel wird die C2287 generiert:
+Im folgenden Beispiel wird C2287 generiert:
 
-```
+```cpp
 // C2287.cpp
 // compile with: /vmg /c
 class __single_inheritance X;

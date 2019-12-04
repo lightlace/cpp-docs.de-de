@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2229
 ms.assetid: 933c7cf2-a463-4e74-b0b4-59dedad987fb
-ms.openlocfilehash: 998067e9af178c1898c3443c4e84da965c22fa81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d974c4f0630a592daad956448bf21cea21efb7c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301733"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759268"
 ---
 # <a name="compiler-error-c2229"></a>Compilerfehler C2229
 
-Typ "Identifier" wurde ein ungültiger NULL-array
+der Typ "Bezeichner" weist ein ungültiges Array der Größen NULL auf.
 
-Ein Member einer Struktur oder ein Bit enthält ein Array der Größe 0 (null), die nicht das letzte Element ist.
+Ein Member einer Struktur oder eines Bitfelds enthält ein Array der Größe 0 (null), das nicht das letzte Element ist.
 
-Da Sie eine NULL Array Größe wie das letzte Element der Struktur verwenden können, müssen Sie seine Größe angeben, beim Zuweisen der Struktur.
+Da Sie ein Array mit der Größe 0 (null) als letzten Member der Struktur haben können, müssen Sie die Größe angeben, wenn Sie die Struktur zuordnen.
 
-Wenn 0 (null) großen Arrays nicht der letzte Member der Struktur ist, kann der Compiler nicht den Offset für die verbleibenden Felder berechnen.
+Wenn das Array der Größenangabe nicht der letzte Member der Struktur ist, kann der Compiler den Offset für die verbleibenden Felder nicht berechnen.
 
-Im folgende Beispiel wird die C2229 generiert:
+Im folgenden Beispiel wird C2229 generiert:
 
-```
+```cpp
 // C2229.cpp
 struct S {
    int a[0];  // C2229  zero-sized array

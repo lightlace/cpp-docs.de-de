@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2109
 ms.assetid: 2d1ac79d-a985-4904-a38b-b270578d664d
-ms.openlocfilehash: 6592f36b29fe643e088669089b1af1b69b7b2125
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 109b4693a07374f05e8b51c73c15d04c6d9793cd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364752"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755732"
 ---
 # <a name="compiler-error-c2109"></a>Compilerfehler C2109
 
-Index erfordert Zeiger- oder Arraytyp
+der Index erfordert ein Array oder einen Zeigertyp.
 
-Der Index wurde für eine Variable verwendet, der kein Array ist.
+Der Index wurde für eine Variable verwendet, die kein Array war.
 
-Im folgende Beispiel wird die C2109 generiert:
+Im folgenden Beispiel wird C2109 generiert:
 
-```
+```cpp
 // C2109.cpp
 int main() {
    int a, b[10] = {0};

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3073
 ms.assetid: b24b9b8b-f9fb-4c3c-a1a0-97fad2081bfc
-ms.openlocfilehash: 8a4a2011124056af7064c8241450e1f3613776a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b53e704c14746579a32550726364c062a9ade6f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406703"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756746"
 ---
 # <a name="compiler-error-c3073"></a>Compilerfehler C3073
 
-"Type": Verweisklasse hat keinen benutzerdefinierten Kopierkonstruktor
+' type ': die Verweis Klasse hat keinen benutzerdefinierten Kopierkonstruktor.
 
-In einem [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) Kompilierung, generiert der Compiler einen Kopierkonstruktor für einen Verweistyp nicht. In einem **"/ CLR"** Kompilierung, müssen Sie einen eigenen Kopierkonstruktor für einen Verweistyp definieren, wenn eine Instanz des Typs, der kopiert werden soll.
+In einer/CLR-Kompilierung [(Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) generiert der Compiler keinen Kopierkonstruktor für einen Referenztyp. In jeder **/CLR** -Kompilierung müssen Sie einen eigenen Kopierkonstruktor für einen Verweistyp definieren, wenn Sie davon ausgehen, dass eine Instanz des Typs kopiert werden soll.
 
-Weitere Informationen finden Sie unter [C++-Stapelsemantik für Referenztypen](../../dotnet/cpp-stack-semantics-for-reference-types.md).
+Weitere Informationen finden [ C++ Sie unter Stapel Semantik für Verweis Typen](../../dotnet/cpp-stack-semantics-for-reference-types.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3073 generiert.
+Im folgenden Beispiel wird C3073 generiert.
 
-```
+```cpp
 // C3073.cpp
 // compile with: /clr
 ref class R {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2279
 ms.assetid: 1b5c88ef-2336-49b8-9ddb-d61f97c73e14
-ms.openlocfilehash: f35e384a5b242eb28427e1ff62ac55a3e9b206c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3b37788d6e4727761ab993f0502746edace18e9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388862"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759177"
 ---
 # <a name="compiler-error-c2279"></a>Compilerfehler C2279
 
-Ausnahmespezifikation kann nicht in einer typedef-Deklaration angezeigt werden.
+die Ausnahme Spezifikation kann nicht in einer Typedef-Deklaration auftreten.
 
-Klicken Sie unter **/Za**, [Ausnahmespezifikationen](../../cpp/exception-specifications-throw-cpp.md) sind in einer typedef-Deklaration nicht zulässig.
+Unter **/Za**sind [Ausnahme Spezifikationen](../../cpp/exception-specifications-throw-cpp.md) in einer Typedef-Deklaration nicht zulässig.
 
-Im folgende Beispiel wird die C2279 generiert:
+Im folgenden Beispiel wird C2279 generiert:
 
-```
+```cpp
 // C2279.cpp
 // compile with: /Za /c
 typedef int (*xy)() throw(...);   // C2279

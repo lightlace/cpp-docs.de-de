@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3397
 ms.assetid: a8536e87-79c4-4ed7-bd96-42704d06391f
-ms.openlocfilehash: c6ca48eb53cf1c6d661a201fa8c4d2539669b9bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e00b5cb63d97e023c092f675dbe07a68d9a2548
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328613"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737529"
 ---
 # <a name="compiler-error-c3397"></a>Compilerfehler C3397
 
 Die Aggregatinitialisierung ist in Standardargumenten nicht zulässig.
 
-Ein Array wurde falsch deklariert.  Finden Sie unter [Arrays](../../extensions/arrays-cpp-component-extensions.md) für Weitere Informationen.
+Ein Array wurde falsch deklariert.  Weitere Informationen finden Sie unter [Arrays](../../extensions/arrays-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Beispiel
 
 Im folgenden Beispiel wird C3397 generiert.
 
-```
+```cpp
 // C3397.cpp
 // compile with: /clr
 // /clr /c

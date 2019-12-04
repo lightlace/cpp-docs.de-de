@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2247
 ms.assetid: 72efa03e-615e-4ef9-aede-0a98654b20fd
-ms.openlocfilehash: ab1f83e2075128441cbffd2d939e3b99b45be4c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e82b406b20d77a824b62207b1766fec55ac65c5c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301369"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758904"
 ---
 # <a name="compiler-error-c2247"></a>Compilerfehler C2247
 
-'Bezeichner' nicht zugegriffen werden kann, da 'Klasse' "Spezifizierer" verwendet, um "Klasse" erben
+auf ' Identifier ' kann nicht zugegriffen werden, da ' class ' ' Spezifizierer ' verwendet, um von ' class ' zu erben.
 
-`identifier` wird von einer Klasse deklariert wird, mit dem privaten oder geschützten Zugriff geerbt.
+`identifier` wird von einer Klasse geerbt, die mit privatem oder geschütztem Zugriff deklariert wurde.
 
-Im folgende Beispiel wird die C2247 generiert:
+Im folgenden Beispiel wird C2247 generiert:
 
-```
+```cpp
 // C2247.cpp
 class A {
 public:
@@ -32,11 +32,11 @@ class C : public B {} c;   // so even though C's B is public
 int j = c.i;               // C2247, i not accessible
 ```
 
-Dieser Fehler kann außerdem infolge einer konformitätsverbesserung für Compiler, die für Visual Studio .NET 2003 durchgeführt wurde, generiert werden: Zugriffssteuerung mit geschützten Elementen. Ein geschützter Member (n) kann nur über eine Memberfunktion einer Klasse (B) zugegriffen werden, die von der Klasse (A) erbt der (n) Mitglied ist.
+Dieser Fehler kann auch infolge einer compilerübereinstimmungs-Arbeit generiert werden, die für Visual Studio .NET 2003: Zugriffs Steuerung mit geschützten Membern durchgeführt wurde. Auf einen geschützten Member (n) kann nur über eine Member-Funktion einer Klasse (B) zugegriffen werden, die von der Klasse (a) erbt, von der er (n) ein Member ist.
 
-Deklarieren Sie für Code, der in der Visual Studio .NET 2003 und Visual Studio .NET der Versionen von Visual C++ gültig ist das Element einen Freund des Typs sein. Öffentliche Vererbung kann auch verwendet werden.
+Für Code, der in Visual Studio .NET 2003 und Visual Studio .NET-Versionen von Visual C++Studio gültig ist, deklarieren Sie den Member als Friend des Typs. Die öffentliche Vererbung könnte auch verwendet werden.
 
-```
+```cpp
 // C2247b.cpp
 // compile with: /c
 // C2247 expected
@@ -57,11 +57,11 @@ void A::f() {
 }
 ```
 
-C2247 kann außerdem infolge einer konformitätsverbesserung für Compiler, die für Visual Studio .NET 2003 durchgeführt wurde, generiert werden: private Basisklassen nicht zugegriffen werden kann. Eine Klasse (A), eine private Basisklasse in einen Typ (B) sollte nicht auf einen Typ zugegriffen werden (C), die B als Basisklasse verwendet.
+C2247 kann auch als Ergebnis einer compilerübereinstimmungs-Arbeit generiert werden, die für Visual Studio .NET 2003 ausgeführt wurde: private Basisklassen, auf die jetzt nicht mehr zugegriffen werden kann. Eine Klasse (a), bei der es sich um eine private Basisklasse für einen Typ (b) handelt, sollte nicht für einen Typ (C) zugänglich sein, der B als Basisklasse verwendet.
 
-Verwenden Sie für Code, der in der Visual Studio .NET 2003 und Visual Studio .NET der Versionen von Visual C++ gültig ist den Bereichsoperator.
+Verwenden Sie für Code, der in Visual Studio .NET 2003-und Visual Studio .NET-Versionen von C++Visual Studio gültig ist, den Scope-Operator.
 
-```
+```cpp
 // C2247c.cpp
 // compile with: /c
 struct A {};

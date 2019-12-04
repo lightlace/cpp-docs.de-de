@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3797
 ms.assetid: ab27ff34-8c1d-4297-b004-9e39bd3a4f25
-ms.openlocfilehash: 76206cdffce3f551ff472cbd83df486eb41ae80b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7236cb75aef4250440a1e992415df07fb5b7da3f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400135"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757175"
 ---
 # <a name="compiler-error-c3797"></a>Compilerfehler C3797
 
-"override": Ereignisdeklaration darf keinen Überschreibungsspezifizierer (sollte platziert werden. auf Ereignis hinzufügen/entfernen/Raise-Methoden stattdessen)
+' override ': die Ereignis Deklaration darf keinen Überschreibungsspezifizierer aufweisen (sollte stattdessen auf dem Ereignis Add/Remove/Raise-Methoden platziert werden).
 
-Ein triviales Ereignis (ein Ereignis ohne explizit definierte Accessormethoden) mit einem anderen triviales Ereignis kann nicht überschrieben werden. Das Ereignis überschreiben muss deren Verhalten mit Accessor-Funktionen definieren.
+Es ist nicht möglich, ein triviales Ereignis (ein Ereignis ohne explizit definierte Zugriffsmethoden) mit einem anderen trivialen Ereignis zu überschreiben. Das Überschreibungs Ereignis muss sein Verhalten mit Accessorfunktionen definieren.
 
-Weitere Informationen finden Sie unter [Ereignis](../../extensions/event-cpp-component-extensions.md).
+Weitere Informationen finden Sie unter [Event](../../extensions/event-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3797 generiert.
+Im folgenden Beispiel wird C3797 generiert.
 
-```
+```cpp
 // C3797.cpp
 // compile with: /clr /c
 delegate void MyDel();

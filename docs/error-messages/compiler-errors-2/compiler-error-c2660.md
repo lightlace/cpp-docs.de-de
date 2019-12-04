@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
-ms.openlocfilehash: 3f236f18faa92df660ed677df293373fe9f0800c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: febeb75cbde6738bd9079b7bd86f88c521c29e40
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360371"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756057"
 ---
 # <a name="compiler-error-c2660"></a>Compilerfehler C2660
 
@@ -27,9 +27,9 @@ C2660 kann auftreten, wenn anstelle einer MFC-Memberfunktion versehentlich eine 
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C2660 generiert.
+Im folgenden Beispiel wird C2660 generiert.
 
-```
+```cpp
 // C2660.cpp
 void func( int, int ) {}
 
@@ -41,9 +41,9 @@ int main() {
 
 ## <a name="example"></a>Beispiel
 
-C2660 kann auch auftreten, wenn Sie die Dispose-Methode eines verwalteten Typs direkt aufrufen. Weitere Informationen finden Sie unter [Destruktoren und Finalizer](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). Im folgende Beispiel wird die C2660 generiert.
+C2660 kann auch auftreten, wenn Sie die Dispose-Methode eines verwalteten Typs direkt aufrufen. Weitere Informationen finden Sie unter [debugtoren und Finalizer](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). Im folgenden Beispiel wird C2660 generiert.
 
-```
+```cpp
 // C2660_a.cpp
 // compile with: /clr
 using namespace System;
@@ -65,7 +65,7 @@ int main() {
 
 C2660 tritt auf, wenn eine abgeleitete Klasse eine Funktion ausblendet.
 
-```
+```cpp
 // C2660b.cpp
 // C2660 expected
 #include <stdio.h>
@@ -96,7 +96,7 @@ int main() {
 
 C2660 kann auftreten, wenn Sie eine indizierte Eigenschaft falsch aufrufen.
 
-```
+```cpp
 // C2660c.cpp
 // compile with: /clr
 ref class X {
@@ -121,7 +121,7 @@ int main() {
 
 C2660 kann auftreten, wenn Sie eine indizierte Eigenschaft falsch aufrufen.
 
-```
+```cpp
 // C2660d.cpp
 // compile with: /clr
 ref class A{
@@ -144,7 +144,7 @@ int main() {
 
 C2660 kann auftreten, wenn Sie einen neuen Operator in einer Vorlagenklasse definieren, dieser neue Operator jedoch ein Objekt erzeugt, dessen Typ vom übergeordneten Typ abweicht.
 
-```
+```cpp
 // C2660e.cpp
 // compile with: /c
 #include <malloc.h>

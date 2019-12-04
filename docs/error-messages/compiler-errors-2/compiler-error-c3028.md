@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3028
 ms.assetid: 175e697f-8e8f-492a-8456-6240ffbbb900
-ms.openlocfilehash: 2a1d76d21005ecffc74f9fc64d4bdeb197e9653d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a497de92d782f65bfc27db27755718e7c6bbdbe
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360046"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735867"
 ---
 # <a name="compiler-error-c3028"></a>Compilerfehler C3028
 
-'Member': nur eine Variable oder ein statischer Datenmember kann in einer Datenfreigabeklausel verwendet werden
+"Member": nur eine Variable oder ein statisches Datenmember kann in einer Datenfreigabe Klausel verwendet werden.
 
-Ein anderes Symbol als eine Variable oder ein statischer Datenmember wurde an der Reduction-Klausel übergeben.
+Ein anderes Symbol als eine Variable oder ein statisches Datenmember wurde an die reduction-Klausel übermittelt.
 
-Im folgende Beispiel wird die C3028 generiert:
+Im folgenden Beispiel wird C3028 generiert:
 
-```
+```cpp
 // C3028.cpp
 // compile with: /openmp /link vcomps.lib
 int g_i;

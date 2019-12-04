@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2676
 ms.assetid: 838a5e34-c92f-4f65-a597-e150bf8cf737
-ms.openlocfilehash: 1a3eab8d1df7534f2bfbed42db5c1a660942eacc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c25593df27f7c4e742eb109aeb5e94ba6fdba8c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164987"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760360"
 ---
 # <a name="compiler-error-c2676"></a>Compilerfehler C2676
 
@@ -21,9 +21,9 @@ Um den Operator zu verwenden, müssen Sie ihn für den angegebenen Typ überlade
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C2676 generiert.
+Im folgenden Beispiel wird C2676 generiert.
 
-```
+```cpp
 // C2676.cpp
 // C2676 expected
 struct C {
@@ -55,11 +55,11 @@ int main() {
 
 C2676 kann auch bei dem Versuch auftreten, im `this`-Zeiger eines Referenztyps eine Zeigerarithmetik auszuführen.
 
-Der `this`-Zeiger tritt in einem Referenztyp als Handletyp auf. Weitere Informationen finden Sie unter [Semantik dieses Zeigers](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).
+Der `this`-Zeiger tritt in einem Referenztyp als Handletyp auf. Weitere Informationen finden Sie unter [Semantik des this-Zeigers](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).
 
-Im folgende Beispiel wird die C2676 generiert.
+Im folgenden Beispiel wird C2676 generiert.
 
-```
+```cpp
 // C2676_a.cpp
 // compile with: /clr
 using namespace System;

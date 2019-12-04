@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2492
 ms.assetid: 8c44c9bb-c366-4fe5-a0ab-882e38608aaa
-ms.openlocfilehash: e2b08ef3e46681147c4efd77cbffadb096bbfc16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd52b434f86bdc93124c6005bbf7fadad3cb56b2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360709"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757058"
 ---
 # <a name="compiler-error-c2492"></a>Compilerfehler C2492
 
-"*Variable*': Daten mit threadspeicherdauer dürfen keine Dll-Schnittstelle haben
+"*Variable*": Daten mit Thread Speicherdauer dürfen keine DLL-Schnittstelle aufweisen.
 
-Die Variable wird deklariert, mit der [Thread](../../cpp/thread.md) Attribut, und die DLL-Schnittstelle. Die Adresse der `thread` Variable ist nicht bis zur Laufzeit bekannt, damit nicht zu einer DLL-Import oder Export verknüpft werden.
+Die Variable wird mit dem [Thread](../../cpp/thread.md) -Attribut und mit der DLL-Schnittstelle deklariert. Die Adresse der `thread` Variablen ist erst zur Laufzeit bekannt, sodass Sie nicht mit einem DLL-Import oder-Export verknüpft werden kann.
 
-Im folgende Beispiel wird die C2492 generiert:
+Im folgenden Beispiel wird C2492 generiert:
 
-```
+```cpp
 // C2492.cpp
 // compile with: /c
 class C {

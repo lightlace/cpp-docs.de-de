@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2276
 ms.assetid: 62005ad9-6cb9-4b1f-965d-b875adaf695e
-ms.openlocfilehash: 2128be2be4f0b5be37bbfc5098a35bb39afe5906
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69bbabbf38f7ee02d08f4b5e9dc4bed167919291
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388838"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760061"
 ---
 # <a name="compiler-error-c2276"></a>Compilerfehler C2276
 
-'Operator': Ungültige Operation auf Ausdruck einer gebundenen Memberfunktion
+' Operator ': Ungültiger Vorgang für den Funktions Ausdruck der gebundenen Member
 
-Der Compiler hat ein Problem mit der Syntax zum Erstellen einer Pointer-to-Member gefunden.
+Der Compiler hat ein Problem mit der Syntax zum Erstellen eines Zeigers auf einen Member festgestellt.
 
-Im folgende Beispiel wird die C2276 generiert:
+Im folgenden Beispiel wird C2276 generiert:
 
-```
+```cpp
 // C2276.cpp
 class A {
 public:

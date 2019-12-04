@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2910
 ms.assetid: 09c50e6a-e099-42f6-8ed6-d80e292a7a36
-ms.openlocfilehash: 58d56ad834b34425cda4ac7ba081eabd2424e451
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0061a7171dd08440ec5d8c8b8cadb77303ff8f41
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408354"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761114"
 ---
 # <a name="compiler-error-c2910"></a>Compilerfehler C2910
 
-'Funktion': kann nicht explizit spezialisiert werden
+"Function": kann nicht explizit spezialisiert werden.
 
-Der Compiler hat beim Versuch, eine Funktion explizit zweimal zu spezialisieren.
+Der Compiler hat einen Versuch erkannt, eine Funktion zweimal explizit zu spezialisieren.
 
-Im folgende Beispiel wird die C2910 generiert:
+Im folgenden Beispiel wird C2910 generiert:
 
-```
+```cpp
 // C2910.cpp
 // compile with: /c
 template <class T>
@@ -31,11 +31,11 @@ template <> struct S<int> { void f() {} };
 template <> void S<int>::f() {}   // C2910 delete this specialization
 ```
 
-C2910 kann auch generiert werden, wenn Sie versuchen, ein nicht-Template-Element explizit spezialisiert werden kann. Sie können eine Funktionsvorlage, also nur explizit spezialisiert.
+C2910 kann auch generiert werden, wenn Sie versuchen, einen nicht-Vorlagen Member explizit zu spezialisieren. Das heißt, Sie können eine Funktions Vorlage nur explizit spezialisieren.
 
-Im folgende Beispiel wird die C2910 generiert:
+Im folgenden Beispiel wird C2910 generiert:
 
-```
+```cpp
 // C2910b.cpp
 // compile with: /c
 template <class T> struct A {
@@ -54,13 +54,13 @@ template <> A<void>::A(void* p){}   // C2910
 // A<void>::A(void* p){}
 ```
 
-Dieser Fehler wird außerdem infolge einer konformitätsverbesserung für Compiler, die in Visual Studio .NET 2003 durchgeführt wurde generiert werden:.
+Dieser Fehler wird auch aufgrund von compilerübereinstimmungs-Aufgaben generiert, die in Visual Studio .NET 2003 ausgeführt wurden:.
 
-Für Code in die Visual Studio .NET 2003 und Visual Studio .NET Version von Visual C++ gültig sein wird, entfernen Sie `template <>`.
+Wenn Code in Visual Studio .NET 2003 und Visual Studio .NET-Versionen von Visual C++Studio gültig ist, entfernen Sie `template <>`.
 
-Im folgende Beispiel wird die C2910 generiert:
+Im folgenden Beispiel wird C2910 generiert:
 
-```
+```cpp
 // C2910c.cpp
 // compile with: /c
 template <class T> class A {

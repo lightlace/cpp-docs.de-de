@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C1017
 ms.assetid: 5542e604-599d-4e36-8f83-1d454c5753c9
-ms.openlocfilehash: e2309b93be65b049c35abf96572e144a0a518007
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0feda3bc4c3729d3101be356220aa0124ba85190
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383177"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756941"
 ---
 # <a name="fatal-error-c1017"></a>Schwerwiegender Fehler C1017
 
 Ungültiger Ausdruck für Ganzzahlkonstante
 
-Der Ausdruck in einem `#if` Direktive ist nicht vorhanden oder wurde nicht auf eine Konstante ausgewertet.
+Der Ausdruck in einer `#if` Direktive ist nicht vorhanden oder wurde nicht zu einer Konstanten ausgewertet.
 
-Definiert Konstanten `#define` müssen Werte, der in eine ganzzahlige Konstante ausgewertet werden soll, wenn sie in verwendet werden eine `#if`, `#elif`, oder `#else` Richtlinie.
+Mit `#define` definierte Konstanten müssen Werte aufweisen, die zu einer ganzzahligen Konstante ausgewertet werden, wenn Sie in einer `#if`-, `#elif`-oder `#else`-Direktive verwendet werden.
 
-Im folgende Beispiel wird die C1017 generiert:
+Im folgenden Beispiel wird C1017 generiert:
 
-```
+```cpp
 // C1017.cpp
 #define CONSTANT_NAME "YES"
 #if CONSTANT_NAME   // C1017
@@ -32,7 +32,7 @@ Im folgende Beispiel wird die C1017 generiert:
 
 Mögliche Lösung:
 
-```
+```cpp
 // C1017b.cpp
 // compile with: /c
 #define CONSTANT_NAME 1
@@ -40,11 +40,11 @@ Mögliche Lösung:
 #endif
 ```
 
-Da `CONSTANT_NAME` ergibt eine Zeichenfolge und keine ganze Zahl, die `#if` -Direktive generiert schwerwiegenden Fehler C1017.
+Da `CONSTANT_NAME` zu einer Zeichenfolge und nicht zu einer ganzen Zahl ausgewertet wird, generiert die `#if` Direktive einen schwerwiegenden Fehler C1017.
 
-In anderen Fällen wertet der Präprozessor eine nicht definierte Konstante als 0 (null). Dies kann zu unerwarteten Ergebnissen führen, wie im folgenden Beispiel gezeigt. `YES` nicht definiert ist, sodass es auf 0 (null) ausgewertet wird. Der Ausdruck `#if` `CONSTANT_NAME` ergibt "false" und den Code zu verwendenden `YES` wird vom Präprozessor entfernt. `NO` ist auch nicht definiert ist (null), also `#elif` `CONSTANT_NAME==NO` auf "true" ausgewertet wird (`0 == 0`), verursacht den Präprozessor an, lassen Sie den Code in die `#elif` Teil der Anweisung – genau das Gegenteil des beabsichtigten Verhaltens.
+In anderen Fällen wertet der Präprozessor eine nicht definierte Konstante als 0 (null) aus. Dies kann zu unbeabsichtigten Ergebnissen führen, wie im folgenden Beispiel gezeigt. `YES` ist nicht definiert, daher ergibt es NULL. Der Ausdruck `#if` `CONSTANT_NAME` als false ausgewertet wird, und der Code, der für `YES` verwendet werden soll, wird vom Präprozessor entfernt. `NO` ist ebenfalls nicht definiert (null), sodass `#elif` `CONSTANT_NAME==NO` als true ausgewertet wird (`0 == 0`), sodass der Präprozessor den Code im `#elif` Teil der Anweisung verlässt – genau das Gegenteil des beabsichtigten Verhaltens.
 
-```
+```cpp
 // C1017c.cpp
 // compile with: /c
 #define CONSTANT_NAME YES
@@ -55,4 +55,4 @@ In anderen Fällen wertet der Präprozessor eine nicht definierte Konstante als 
 #endif
 ```
 
-Verwenden, um anzuzeigen, genau wie der Compiler Präprozessordirektiven behandelt [/p](../../build/reference/p-preprocess-to-a-file.md), [/e](../../build/reference/e-preprocess-to-stdout.md), oder [/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md).
+Verwenden Sie [/P](../../build/reference/p-preprocess-to-a-file.md), [/E](../../build/reference/e-preprocess-to-stdout.md)oder [/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md), um genau zu sehen, wie der Compiler Präprozessordirektiven behandelt.
