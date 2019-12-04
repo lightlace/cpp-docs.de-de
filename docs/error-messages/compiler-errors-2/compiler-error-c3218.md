@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3218
 ms.assetid: 0eea19e0-503e-4e07-ae8b-2cb2e95922cd
-ms.openlocfilehash: 87084f9751b1593ec93a3062f23714bba403da9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 386a0c180dd01161ebccdd2b04e899e0cc999614
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182521"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737984"
 ---
 # <a name="compiler-error-c3218"></a>Compilerfehler C3218
 
-'Typ': Typ ist nicht als Einschränkung zulässig.
+"Typ": Typ ist nicht als Einschränkung zulässig.
 
-Für ein Typ eine Einschränkung ist muss er entweder ein Werttyp oder ein Verweis auf eine verwaltete Klasse oder Schnittstelle sein.
+Damit ein Typ eine Einschränkung sein kann, muss es sich entweder um einen Werttyp oder einen Verweis auf eine verwaltete Klasse oder Schnittstelle handeln.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3218 generiert.
+Im folgenden Beispiel wird C3218 generiert.
 
-```
+```cpp
 // C3218.cpp
 // compile with: /clr /c
 class A {};

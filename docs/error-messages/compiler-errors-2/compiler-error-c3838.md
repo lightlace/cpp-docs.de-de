@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3838
 ms.assetid: d6f470c2-131a-4a8c-843a-254acd43da83
-ms.openlocfilehash: c8664c9df837d44ab6e356d54ff9e35c3776778a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 468fc5e8cb6b3a76880f12fe0aab14810f458a90
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208082"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741351"
 ---
 # <a name="compiler-error-c3838"></a>Compilerfehler C3838
 
-von 'Type' kann nicht explizit geerbt werden.
+die explizite Vererbung von "Type" ist nicht möglich.
 
-Das angegebene `type` kann nicht in einer Klasse als Basisklasse dienen.
+Der angegebene `type` kann nicht als Basisklasse in einer Klasse fungieren.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3838 generiert:
+Im folgenden Beispiel wird C3838 generiert:
 
-```
+```cpp
 // C3838a.cpp
 // compile with: /clr /c
 public ref class B : public System::Enum {};   // C3838

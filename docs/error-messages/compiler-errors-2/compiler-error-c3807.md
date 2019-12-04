@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3807
 ms.assetid: 7e2b0aab-8c61-4e71-b9c1-fcaeb6a1b5ea
-ms.openlocfilehash: b5599914666af95a29667acc1ad4ad35eef7608f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4b33782c0a1e5abb811210c9e7a28da7040c805
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391932"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755264"
 ---
 # <a name="compiler-error-c3807"></a>Compilerfehler C3807
 
-'Typ': eine Klasse mit dem ComImport-Attribut kann nicht von "Typ2" abgeleitet werden, nur eine schnittstellenimplementierung ist zulässig.
+"Typ": eine Klasse mit dem ComImport-Attribut kann nicht von "Typ2" abgeleitet werden, es ist nur eine Schnittstellen Implementierung zulässig.
 
-Ein Typ, der von abgeleitet <xref:System.Runtime.InteropServices.ComImportAttribute> können nur eine Schnittstelle implementieren.
+Ein von <xref:System.Runtime.InteropServices.ComImportAttribute> abgeleiteter Typ kann nur eine Schnittstelle implementieren.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3807 generiert.
+Im folgenden Beispiel wird C3807 generiert.
 
-```
+```cpp
 // C3807.cpp
 // compile with: /clr /c
 ref struct S {};

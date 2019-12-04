@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2793
 ms.assetid: ce35f4e8-c357-40ca-95c4-15ff001ad69d
-ms.openlocfilehash: 5533a0e8f75a1a513fbabe451fb41629a4595382
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b8712473631b16e2bbb47430966ccc0c552b9df
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360150"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739388"
 ---
 # <a name="compiler-error-c2793"></a>Compilerfehler C2793
 
-'token': folgen unerwartete token "::", Bezeichner oder Schlüsselwort "Operator" erwartet
+"Token": Unerwartetes Token nach "::", Bezeichner oder Schlüsselwort "Operator" erwartet.
 
-Die einzigen Token, die folgen können `__super::` sind ein Bezeichner oder das Schlüsselwort `operator`.
+Die einzigen Token, die `__super::` folgen können, sind ein Bezeichner oder das Schlüsselwort `operator`.
 
-Im folgende Beispiel wird C2793 generiert:
+Im folgenden Beispiel wird C2793 generiert.
 
-```
+```cpp
 // C2793.cpp
 struct B {
    void mf();

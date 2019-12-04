@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3894
 ms.assetid: 6d5ac903-1dea-431d-8e3a-cebca4342983
-ms.openlocfilehash: 4d935e140d89cb5c3714450597677a7a02a245e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c08a7eca473a4ae043879b49266efec6b8afe7b1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385484"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749437"
 ---
 # <a name="compiler-error-c3894"></a>Compilerfehler C3894
 
-'Var': l-Wert-Verwendung der statischen Initonly-Datenmembers ist nur zulässig, in den Konstruktor der Klasse der Klasse "Klasse"
+"var": die Verwendung des l-Werts eines statischen Initonly-Datenmembers ist nur im Klassenkonstruktor der Klasse "Class" zulässig.
 
-Statische [Initonly](../../dotnet/initonly-cpp-cli.md) Datenmember können nur als l-Werte zum Zeitpunkt der Deklaration oder in einem statischen Konstruktor verwendet werden.
+Statische [initonly](../../dotnet/initonly-cpp-cli.md) -Datenmember können nur als l-Werte zum Zeitpunkt der Deklaration oder in einem statischen Konstruktor verwendet werden.
 
-Instanz (nicht statisch) Initonly-Datenmember können nur als l-Werte zum Zeitpunkt der Deklaration oder in den Instanzkonstruktoren der (nicht statisch) verwendet werden.
+Nicht statische initonly-Datenmember können nur als l-Werte an der Deklaration oder in Instanzkonstruktoren (nicht statisch) verwendet werden.
 
-Im folgende Beispiel wird die C3894 generiert:
+Im folgenden Beispiel wird C3894 generiert:
 
-```
+```cpp
 // C3894.cpp
 // compile with: /clr
 ref struct Y1 {

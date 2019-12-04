@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3199
 ms.assetid: e7a478d3-115a-40a3-991b-c7454fd2e28e
-ms.openlocfilehash: 934e980149ad893e6799b0ab119a148fc5652fdc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f0ca98dc44a78adde378a0f80078ae30c590e11
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402787"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738816"
 ---
 # <a name="compiler-error-c3199"></a>Compilerfehler C3199
 
-Ungültige Verwendung von Gleitkommapragmas: Ausnahmen werden in nicht dem precise-Modus nicht unterstützt
+Ungültige Verwendung von Gleit Komma-Pragmas: Ausnahmen werden im nicht präzisen Modus nicht unterstützt.
 
-Die [Float_control](../../preprocessor/float-control.md) Pragma wurde verwendet, um das Modell für Gleitkommaausnahmen unter Geben Sie eine [/fp](../../build/reference/fp-specify-floating-point-behavior.md) andere Einstellung als **/fp: präzise**.
+Das [float_control](../../preprocessor/float-control.md) -Pragma wurde verwendet, um ein Gleit Komma Ausnahmemodell unter einer [/FP](../../build/reference/fp-specify-floating-point-behavior.md) -Einstellung anzugeben, die nicht **/fp: präzise**ist.
 
-Im folgende Beispiel wird die C3199 generiert:
+Im folgenden Beispiel wird C3199 generiert:
 
-```
+```cpp
 // C3199.cpp
 // compile with: /fp:fast
 #pragma float_control(except, on)   // C3199

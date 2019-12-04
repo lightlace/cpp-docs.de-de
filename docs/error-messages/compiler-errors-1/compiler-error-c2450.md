@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2450
 ms.assetid: 929f1c06-8774-468b-be2a-f428757875a2
-ms.openlocfilehash: 3cbab274f8f7cd04d5fb86db69572e0b7fc1c04e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d015bd165986467a82f33a2ae0dda08c6f6d248
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208970"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744146"
 ---
 # <a name="compiler-error-c2450"></a>Compilerfehler C2450
 
-Switch-Ausdruck vom Typ 'Typ' ist nicht zulässig
+der Switch-Ausdruck vom Typ "Type" ist unzulässig.
 
-Die `switch` Ausdruck ausgewertet wird, auf einen ungültigen Typ. Es muss ausgewertet werden, ein ganzzahliger Typ oder ein Klassentyp mit eindeutige Konvertierung in einen Integer-Datentyp. Wenn er auf einen benutzerdefinierten Typ ausgewertet wird, müssen Sie einen Konvertierungsoperator angeben.
+Der `switch` Ausdruck ergibt einen ungültigen Typ. Es muss zu einem ganzzahligen Typ oder einem Klassentyp mit eindeutiger Konvertierung in einen ganzzahligen Typ ausgewertet werden. Wenn ein benutzerdefinierter Typ ausgewertet wird, müssen Sie einen Konvertierungs Operator bereitstellen.
 
-Im folgende Beispiel wird die C2450 generiert:
+Im folgenden Beispiel wird C2450 generiert:
 
-```
+```cpp
 // C2450.cpp
 class X {
 public:

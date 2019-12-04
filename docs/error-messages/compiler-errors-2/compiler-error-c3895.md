@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3895
 ms.assetid: 771b9fe5-d6d4-4297-bf57-e2f857722155
-ms.openlocfilehash: c4b1cad9ef48f1f16b411aab46e1bb9285d69ff3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 633ffa86bce3579adb808dbba34127bb6f0665c9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385536"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749411"
 ---
 # <a name="compiler-error-c3895"></a>Compilerfehler C3895
 
-'Var': Typ-Datenmember darf nicht "volatile" sein
+"var": Typdatenmember können nicht "volatile" sein.
 
-Bestimmte Arten von Datenmembern, z. B. [literal](../../extensions/literal-cpp-component-extensions.md) oder [Initonly](../../dotnet/initonly-cpp-cli.md), nicht möglich, [flüchtige](../../cpp/volatile-cpp.md).
+Bestimmte Arten von Datenmembern, z. b. [Literale](../../extensions/literal-cpp-component-extensions.md) oder [initonly](../../dotnet/initonly-cpp-cli.md), dürfen nicht [flüchtig](../../cpp/volatile-cpp.md)sein.
 
-Im folgende Beispiel wird die C3895 generiert:
+Im folgenden Beispiel wird C3895 generiert:
 
-```
+```cpp
 // C3895.cpp
 // compile with: /clr
 ref struct Y1 {

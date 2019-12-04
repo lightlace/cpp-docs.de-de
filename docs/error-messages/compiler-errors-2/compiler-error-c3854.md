@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3854
 ms.assetid: 32a9ead0-c6c7-485a-8802-c7b1fe921d3a
-ms.openlocfilehash: 3b48e2c65003537102864fdafe7db70b06ade029
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c62117e9437233f614aa0e57a3848fcb8dd0c79
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265528"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754848"
 ---
 # <a name="compiler-error-c3854"></a>Compilerfehler C3854
 
-Ausdruck links von '=' wird als Funktion ausgewertet. Eine Funktion kann nicht zugewiesen (eine Funktion ist kein l-Wert)
+Ausdruck auf der linken Seite von "=" ergibt eine Funktion. Eine Zuweisung zu einer Funktion ist nicht möglich (eine Funktion ist kein l-Wert).
 
-Ein Verweis kann nicht erneut initialisiert werden. Dereferenzieren eines Verweises auf eine Funktion führt eine Funktion, die ein Rvalue-Wert, wird auf die Sie zuweisen können. Aus diesem Grund nicht über einen Verweis auf eine Funktion zugewiesen.
+Ein Verweis kann nicht erneut initialisiert werden. Das dereferenzieren eines Verweises auf eine Funktion ergibt eine Funktion, bei der es sich um einen Rvalue handelt, dem Sie nicht zugewiesen werden können. Daher können Sie nicht über einen Verweis auf eine Funktion zuweisen.
 
-Im folgende Beispiel wird die C3854 generiert:
+Im folgenden Beispiel wird C3854 generiert:
 
-```
+```cpp
 // C3854.cpp
 int afunc(int i)
 {

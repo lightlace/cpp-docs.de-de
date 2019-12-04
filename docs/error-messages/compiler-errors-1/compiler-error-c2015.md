@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2015
 ms.assetid: 8f40af0a-3a5a-4d6a-8ed7-125966e6bfed
-ms.openlocfilehash: d761dfde26cce9c99ccd4c3e6fd86ae1d6e16ddc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83b78336d74037b9f9f52da8327479f506db1ffc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351091"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751068"
 ---
 # <a name="compiler-error-c2015"></a>Compilerfehler C2015
 
-zu viele Zeichen in Konstante.
+zu viele Zeichen in der Konstante
 
-Eine Zeichenkonstante enthält mehr als zwei Zeichen. Der Grenzwert ist ein Zeichen für standard-Zeichenkonstanten und zwei Zeichen lange Zeichenkonstanten.
+Eine Zeichen Konstante enthält mehr als zwei Zeichen. Das Limit ist ein Zeichen für Standard Zeichen Konstanten und zwei Zeichen für Long-Zeichen Konstanten.
 
-Eine Escapesequenz, z. B. \t, wird in ein einzelnes Zeichen konvertiert.
+Eine Escapesequenz, z. b. \t, wird in ein einzelnes Zeichen konvertiert.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C2015 generiert:
+Im folgenden Beispiel wird C2015 generiert:
 
-```
+```cpp
 // C2015.cpp
 // compile with: /c
 
@@ -35,9 +35,9 @@ char test2 = 'e';   // OK
 
 ## <a name="example"></a>Beispiel
 
-C2015 kann auch auftreten, wenn eine Microsoft-Erweiterung, Zeichenkonstanten, die zu einer ganzen Zahl konvertiert.  Im folgende Beispiel wird die C2015 generiert:
+C2015 kann auch auftreten, wenn eine Microsoft-Erweiterung, Zeichen Konstanten, die in ganze Zahlen konvertiert werden, verwendet wird.  Im folgenden Beispiel wird C2015 generiert:
 
-```
+```cpp
 // C2015b.cpp
 #include <stdio.h>
 

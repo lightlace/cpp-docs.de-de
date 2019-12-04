@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3738
 ms.assetid: dd3ee011-e204-4264-bf3a-da32c4ef7038
-ms.openlocfilehash: e313c7d66bc030183e330dd961fad2fb35f02ac2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffefa0eff23e11412573b8062fa15bb5679923e7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327807"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752768"
 ---
 # <a name="compiler-error-c3738"></a>Compilerfehler C3738
 
-'Aufrufkonvention': die Aufrufkonvention der expliziten Instanziierung muss mit der der instanziierten Vorlage übereinstimmen
+' calling_convention ': die Aufruf Konvention der expliziten Instanziierung muss mit der der instanziierten Vorlage übereinstimmen.
 
-Es wird empfohlen, dass Sie bei einer expliziten Instanziierung nicht durch eine Aufrufkonvention angeben. Falls erforderlich, jedoch müssen die Aufrufkonventionen übereinstimmen.
+Es wird empfohlen, dass Sie keine Aufruf Konvention für eine explizite Instanziierung angeben. Wenn Sie jedoch müssen, müssen die Aufruf Konventionen übereinstimmen.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3738 generiert.
+Im folgenden Beispiel wird C3738 generiert.
 
-```
+```cpp
 // C3738.cpp
 // compile with: /clr
 // processor: x86

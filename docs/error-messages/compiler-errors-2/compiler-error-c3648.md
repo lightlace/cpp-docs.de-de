@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3648
 ms.assetid: 5d042989-41cb-4cd0-aa50-976b70146aaf
-ms.openlocfilehash: 7394f6b9789caa09ffc2ad6c2cf56f037b5d57b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b26be9890bbbdf6276c61023e6867160528e236
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385575"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751832"
 ---
 # <a name="compiler-error-c3648"></a>Compilerfehler C3648
 
-Diese explizite Überschreibungssyntax ist oldSyntax erforderlich.
+Diese explizite Überschreibungs Syntax erfordert/clr: oldSyntax.
 
-Beim Kompilieren für die neueste verwaltete Syntax vom Compiler gefundene expliziten überschreiben Syntax für frühere Versionen, die nicht mehr unterstützt wird.
+Beim Kompilieren für die neueste verwaltete Syntax fand der Compiler eine explizite Überschreibungs Syntax für frühere Versionen, die nicht mehr unterstützt wird.
 
-Weitere Informationen finden Sie unter [explizite Überschreibungen](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Weitere Informationen finden Sie unter [explizite über](../../extensions/explicit-overrides-cpp-component-extensions.md)schreibungen.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3648 generiert:
+Im folgenden Beispiel wird C3648 generiert:
 
-```
+```cpp
 // C3648.cpp
 // compile with: /clr
 public interface struct I {

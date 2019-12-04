@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2503
 ms.assetid: da86cc89-fd04-400b-aa8d-a5ffaf7e3918
-ms.openlocfilehash: c481a27f19a92f47a19f0cfaa7b59cd509bb3c15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cfe574f79eae2e45dc62315245a1b8b773d04df
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164941"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746902"
 ---
 # <a name="compiler-error-c2503"></a>Compilerfehler C2503
 
-'Klasse': Basisklasse kann keine Arrays der Größe Null enthalten
+"Class": Basisklassen dürfen keine Arrays der Größen NULL enthalten.
 
-Eine Klasse oder Struktur enthält ein Array der Größe 0 (null). Ein Array in einer Klasse muss über mindestens ein Element verfügen.
+Eine Basisklasse oder Struktur enthält ein Array der Größen NULL. Ein Array in einer Klasse muss mindestens ein Element aufweisen.
 
-Im folgende Beispiel wird die C2503 generiert:
+Im folgenden Beispiel wird C2503 generiert:
 
-```
+```cpp
 // C2503.cpp
 // compile with: /c
 class A {

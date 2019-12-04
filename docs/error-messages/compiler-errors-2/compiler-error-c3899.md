@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3899
 ms.assetid: 14e07e4a-f7a7-4309-baaa-649d69e12e23
-ms.openlocfilehash: 26860ba0e8fd92f491ee389147605ba82cecf25c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 022bc1a37f7d9cfdb2c206592dd303a9c3c95080
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376028"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749112"
 ---
 # <a name="compiler-error-c3899"></a>Compilerfehler C3899
 
-'Var': Verwendung l-Wertes eines Initonly-Datenmembers ist direkt innerhalb eines parallelen Bereichs in der Klasse "Klasse" nicht zulässig.
+"var": die Verwendung des l-Werts eines initonly-Datenmembers ist nicht direkt innerhalb eines parallelen Bereichs in der Klasse "Class" zulässig.
 
-Ein [Initonly (C++ / CLI)](../../dotnet/initonly-cpp-cli.md) -Datenmember kann nicht initialisiert werden, in dieser Teil einen Konstruktor, der in einem [parallele](../../parallel/openmp/reference/parallel.md) Region.  Dies ist, da der Compiler eine interne Verschieben von Code ist so, dass es tatsächlich nicht mehr Teil des Konstruktors ist.
+Ein [initonly-C++Datenmember (/CLI)](../../dotnet/initonly-cpp-cli.md) kann nicht innerhalb dieses Teils eines Konstruktors initialisiert werden, der sich in einem [parallelen](../../parallel/openmp/reference/parallel.md) Bereich befindet.  Dies liegt daran, dass der Compiler eine interne Verschiebung dieses Codes durchführt, sodass er nicht mehr Teil des Konstruktors ist.
 
-Um zu beheben, initialisieren Sie Initonly-Datenmembers im Konstruktor, aber außerhalb des parallelen Bereichs ein.
+Um dies aufzulösen, initialisieren Sie den initonly-Datenmember im Konstruktor, jedoch außerhalb des parallelen Bereichs.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3899 generiert.
+Im folgenden Beispiel wird C3899 generiert.
 
-```
+```cpp
 // C3899.cpp
 // compile with: /clr /openmp
 #include <omp.h>

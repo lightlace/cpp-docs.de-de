@@ -6,33 +6,33 @@ f1_keywords:
 helpviewer_keywords:
 - C2504
 ms.assetid: c9e002a6-a4ee-4ba7-970e-edf4adb83692
-ms.openlocfilehash: 8f428699aa14cbd1f021a57ed8dcabefa8b24c16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d47d99962d089d873cb9bbdf9baac7eab706fc16
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165085"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746889"
 ---
 # <a name="compiler-error-c2504"></a>Compilerfehler C2504
 
-'Klasse': Basisklasse undefiniert
+"Class": Basisklasse nicht definiert
 
-Die Basisklasse der Klasse deklariert, aber nicht definiert.  Mögliche Ursachen:
+Die Basisklasse ist deklariert, wird aber nie definiert.  Mögliche Ursachen:
 
-1. Include-Datei fehlt.
+1. Fehlende Includedatei.
 
-1. Externe Basisklasse ist nicht mit deklariert ["extern"](../../cpp/using-extern-to-specify-linkage.md).
+1. Externe Basisklasse nicht mit [extern](../../cpp/using-extern-to-specify-linkage.md)deklariert.
 
-Im folgende Beispiel wird die C2504 generiert:
+Im folgenden Beispiel wird C2504 generiert:
 
-```
+```cpp
 // C2504.cpp
 // compile with: /c
 class A;
 class B : public A {};   // C2504
 ```
 
-// OK
+Okay
 
 ```
 class C{};

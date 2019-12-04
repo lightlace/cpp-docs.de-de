@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2798
 ms.assetid: fb0cd861-b228-4f81-8090-e28344a727e0
-ms.openlocfilehash: f3e8f0ac260e49866d1c654f89d34bf57a8ffbc1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6eed1f1aad0783f9e1d5f4126847b54f6b7278e0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152474"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739202"
 ---
 # <a name="compiler-error-c2798"></a>Compilerfehler C2798
 
-'super:: Member' ist mehrdeutig
+"Super:: Member" ist mehrdeutig.
 
-Mehrere geerbte Strukturen enthalten den Member, die Sie verweist auf [super](../../cpp/super.md). Sie können den Fehler beheben, indem Sie entweder:
+Mehrere geerbte Strukturen enthalten den Member, auf den Sie mit [Super](../../cpp/super.md)verwiesen haben. Sie können den Fehler wie folgt beheben:
 
-- Entfernen aus der Vererbungsliste von D. B1 oder B2
+- Entfernen von B1 oder B2 aus der Vererbungs Liste von D.
 
-- Ändern den Namen des Datenelements in B1 oder B2.
+- Ändern des Namens des Datenelements in B1 oder B2.
 
-Im folgende Beispiel wird die C2798 generiert:
+Im folgenden Beispiel wird C2798 generiert:
 
-```
+```cpp
 // C2798.cpp
 struct B1 {
    int i;

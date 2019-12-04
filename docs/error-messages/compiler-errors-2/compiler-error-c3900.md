@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3900
 ms.assetid: a94cc561-8fa8-4344-9e01-e81ff462fae5
-ms.openlocfilehash: 35df94ccfcd7942f9057cb37ceee349c09b80607
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f1289fb9a4d60f2c75b54fd573c83064f1517282
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345407"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749099"
 ---
 # <a name="compiler-error-c3900"></a>Compilerfehler C3900
 
-'Member': im aktuellen Bereich nicht zulässig.
+"Member": ist im aktuellen Gültigkeitsbereich nicht zulässig.
 
-Eigenschaftenblöcken können Funktionsdeklarationen und nur Inlinefunktionsdefinitionen enthalten. Keine Mitglieder als Funktionen sind in Eigenschaftenblöcken zulässig. Es dürfen keine Typdefinitionen, Operatoren oder Friend-Funktionen. Weitere Informationen finden Sie unter [property](../../extensions/property-cpp-component-extensions.md).
+Eigenschafts Blöcke können nur Funktions Deklarationen und Inline Funktionsdefinitionen enthalten. In Eigenschafts Blöcken sind keine anderen Member als Funktionen zulässig. Es sind keine Typedefs-, Operator-oder Friend-Funktionen zulässig. Weitere Informationen finden Sie unter [property](../../extensions/property-cpp-component-extensions.md).
 
-Ereignisdefinitionen können nur Zugriff auf Methoden und Funktionen enthalten.
+Ereignis Definitionen können nur Zugriffsmethoden und-Funktionen enthalten.
 
-Im folgende Beispiel wird die C3900 generiert:
+Im folgenden Beispiel wird C3900 generiert:
 
-```
+```cpp
 // C3900.cpp
 // compile with: /clr
 ref class X {
@@ -34,9 +34,9 @@ ref class X {
 };
 ```
 
-Im folgende Beispiel wird die C3900 generiert:
+Im folgenden Beispiel wird C3900 generiert:
 
-```
+```cpp
 // C3900b.cpp
 // compile with: /clr
 using namespace System;

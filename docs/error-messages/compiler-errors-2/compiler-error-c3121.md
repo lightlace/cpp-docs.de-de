@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3121
 ms.assetid: 1d3c7be4-d42d-4def-8d53-182c0c5cc237
-ms.openlocfilehash: cd8f23a3edbdee4dc4edc294494cb9d73cf6b998
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5d5f85631dbbedcabce89c25d9af7a7a685342c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300712"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740922"
 ---
 # <a name="compiler-error-c3121"></a>Compilerfehler C3121
 
-GUID kann nicht für die Klasse 'Klassenname' geändert werden.
+die GUID für die Klasse "class_name" kann nicht geändert werden.
 
-Sie haben versucht, ändern Sie die Klassen-ID mit [__declspec(uuid)](../../cpp/uuid-cpp.md).
+Sie haben versucht, die Klassen-ID mit [__declspec (UUID)](../../cpp/uuid-cpp.md)zu ändern.
 
-Der folgende Code wird z. B. C3121 generiert:
+Der folgende Code generiert beispielsweise C3121:
 
-```
+```cpp
 // C3121.cpp
 [emitidl];
 [module(name="MyLibrary")];

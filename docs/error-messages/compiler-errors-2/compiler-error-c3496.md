@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3496
 ms.assetid: e19885f2-677f-4c1e-bc69-e35852262dc3
-ms.openlocfilehash: 025498f3fe244916cd0a06e36feee6fdb532acc6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9542f1904c6797a77c88c88a37aff9348364268
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380980"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738179"
 ---
 # <a name="compiler-error-c3496"></a>Compilerfehler C3496
 
@@ -27,7 +27,7 @@ Der `this` -Zeiger kann nicht als Verweis erfasst werden.
 
 Im folgenden Beispiel wird C3496 generiert, weil ein Verweis auf den `this` -Zeiger in der Erfassungsliste eines Lambdaausdrucks auftritt:
 
-```
+```cpp
 // C3496.cpp
 // compile with: /c
 

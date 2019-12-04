@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3379
 ms.assetid: a66c2c4e-091c-4426-9cde-7c4cfb2ffce1
-ms.openlocfilehash: 5bf4e2e42b4534d47a2a7d3c9a838c404a99ba68
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d99214f3ad7e7db1edc215d94c98e9cf9ec4ca2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328879"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742898"
 ---
 # <a name="compiler-error-c3379"></a>Compilerfehler C3379
 
-'Klasse': eine geschachtelte Klasse darf keinen Assembly-Zugriffsspezifizierer als Teil seiner Deklaration haben
+"Class": eine in eine Klasse eingefügte Klasse kann keinen Assemblyzugriffsspezifizierer als Teil der Deklaration
 
-Bei Anwendung auf einem verwalteten Typ, z. B. Klasse oder Struktur, die [öffentliche](../../cpp/public-cpp.md) und [private](../../cpp/private-cpp.md) -Schlüsselwort geben an, ob die Klasse über Assemblymetadaten verfügbar gemacht wird. `public` oder `private` kann nicht für eine geschachtelte Klasse, die den Assemblyzugriff der einschließenden Klasse erben, werden nicht angewendet werden.
+Bei Anwendung auf einen verwalteten Typ, wie z. b. eine Klasse oder Struktur, geben die [öffentlichen](../../cpp/public-cpp.md) und [privaten](../../cpp/private-cpp.md) Schlüsselwörter an, ob die Klasse über Assemblymetadaten verfügbar gemacht wird. `public` oder `private` kann nicht auf eine nicht auf eine-Klasse festgelegt werden, die den Assemblyzugriff der einschließenden Klasse erbt.
 
-Bei Verwendung mit ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md), `ref` und `value` -Schlüsselwort geben an, dass eine Klasse verwaltet wird (finden Sie unter [Klassen und Strukturen](../../extensions/classes-and-structs-cpp-component-extensions.md)).
+Bei Verwendung mit [/CLR](../../build/reference/clr-common-language-runtime-compilation.md)geben die Schlüsselwörter `ref` und `value` an, dass eine Klasse verwaltet wird (siehe [Klassen und Strukturen](../../extensions/classes-and-structs-cpp-component-extensions.md)).
 
-Im folgende Beispiel wird die C3379 generiert:
+Im folgenden Beispiel wird C3379 generiert:
 
-```
+```cpp
 // C3379a.cpp
 // compile with: /clr
 using namespace System;

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3387
 ms.assetid: c54d9925-ed14-4976-b8db-e8d4dc84e536
-ms.openlocfilehash: bd783d9510b1699b33f108a4ce8d8c491028b758
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f083f5c21e494d08374e72155b44ee14719881f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328704"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743145"
 ---
 # <a name="compiler-error-c3387"></a>Compilerfehler C3387
 
-"Member": "__declspec(dllexport)" "/\__declspec(dllimport) nicht auf einen Member eines verwalteten oder WinRT-Typ angewendet werden
+"Member": __declspec (dllexport)/\__declspec (dllimport) kann nicht auf einen Member eines verwalteten oder WinRT-Typs angewendet werden.
 
-Die `dllimport` und [Dllexport](../../cpp/dllexport-dllimport.md) `__declspec` Modifizierer sind nicht zulässig für Member eines verwalteten oder Windows-Runtime-Typ.
+Die `dllimport`-und [dllexport](../../cpp/dllexport-dllimport.md) -`__declspec` Modifizierer sind für Member eines verwalteten Typs oder Windows-Runtime Typs nicht gültig.
 
 Im folgenden Beispiel wird C3387 generiert und gezeigt, wie Sie diesen Fehler beheben:
 
-```
+```cpp
 // C3387a.cpp
 // compile with: /clr /c
 ref class X2 {

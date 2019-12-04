@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2886
 ms.assetid: c01588a1-484c-4dc9-a3f1-f900c6e44543
-ms.openlocfilehash: 2fa7450f03505501c2c4a45023dbb6a86937bb9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a64457c84a48c73ad6714da01e48d41f3cc92efb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388812"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748722"
 ---
 # <a name="compiler-error-c2886"></a>Compilerfehler C2886
 
-'class:: Identifier': Symbol kann nicht in eine Member-using-Deklaration verwendet werden
+"Class:: Identifier": das Symbol kann nicht in einer Member using-Deklaration verwendet werden.
 
-Ein `using` Deklaration verwendet ein Symbol an, wie z. B. einen Namespacenamen an. Ein `using` Deklaration ist für das Deklarieren von Member der Basisklasse.
+Eine `using` Deklaration verwendet ein Symbol, z. b. einen Namespace Namen. Eine `using` Deklaration dient zum Deklarieren der Basisklassenmember.
 
-Im folgende Beispiel wird die C2886 generiert:
+Im folgenden Beispiel wird C2886 generiert:
 
-```
+```cpp
 // C2886.cpp
 // compile with: /c
 namespace Z {

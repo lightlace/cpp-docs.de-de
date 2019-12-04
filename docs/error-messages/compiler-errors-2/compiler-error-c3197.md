@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3197
 ms.assetid: 4e385c3b-222e-425c-9612-46e83ed41650
-ms.openlocfilehash: be9b7dadb4f67a6392cd7a2c46caf61d983e79eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1519daf906485f78fe155d0f67e63d8e8e97ae29
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329035"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739219"
 ---
 # <a name="compiler-error-c3197"></a>Compilerfehler C3197
 
-'Schlüsselwort': kann nur in Definitionen verwendet werden
+' Schlüsselwort ': kann nur in Definitionen verwendet werden.
 
-Ein Schlüsselwort in einer Deklaration verwendet, aber es ist nur gültig, in der Definition einer.
+Ein Schlüsselwort wurde in einer Deklaration verwendet, ist aber nur in einer Definition gültig.
 
-Im folgende Beispiel wird die C3197 generiert:
+Im folgenden Beispiel wird C3197 generiert:
 
-```
+```cpp
 // C3197.cpp
 // compile with: /clr /c
 ref struct R abstract;   // C3197

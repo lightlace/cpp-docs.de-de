@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2638
 ms.assetid: 9d4275e8-406d-455e-afee-3a37799230e0
-ms.openlocfilehash: 0c4c1e73c97f51bb0e52a618829ffb0bed417a45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6053e9bcf49159e8ceefe9264d30319493c4cf1b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395429"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748345"
 ---
 # <a name="compiler-error-c2638"></a>Compilerfehler C2638
 
-"Bezeichner": __based-Modifizierer für Zeiger auf Member unzulässig
+"Bezeichner": __based Modifizierer für Zeiger auf Member unzulässig
 
-Die `__based` Modifizierer kann nicht für Zeiger auf Member verwendet werden.
+Der `__based` Modifizierer kann nicht für Zeiger auf Member verwendet werden.
 
-Im folgende Beispiel wird die C2638 generiert:
+Im folgenden Beispiel wird C2638 generiert:
 
-```
+```cpp
 // C2638.cpp
 void *a;
 

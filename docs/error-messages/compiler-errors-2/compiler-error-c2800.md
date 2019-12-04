@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2800
 ms.assetid: a2f1a590-9fe6-44cb-ad09-b4505ef47c6a
-ms.openlocfilehash: e893866a28c124e9e6cbc9663a488f89ac2d291b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c73ef05894f4f9e08c51ca074de40813ef35616
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408549"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739195"
 ---
 # <a name="compiler-error-c2800"></a>Compilerfehler C2800
 
-'Operator Operator' kann nicht überladen werden
+Operator Operator kann nicht überladen werden.
 
-Die folgenden Operatoren können nicht überladen werden können: Klasse Memberzugriff (`.`), Zeiger auf Member (`.*`), bereichsauflösung (`::`), bedingter Ausdruck (`? :`), und `sizeof`.
+Die folgenden Operatoren können nicht überladen werden: Zugriff auf Klassenmember (`.`), Zeiger auf Member (`.*`), Bereichs Auflösung (`::`), bedingter Ausdruck (`? :`) und `sizeof`.
 
-Im folgende Beispiel wird die C2800 generiert:
+Im folgenden Beispiel wird C2800 generiert:
 
-```
+```cpp
 // C2800.cpp
 // compile with: /c
 class C {

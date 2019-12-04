@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3537
 ms.assetid: f537ebd1-4fb0-4e09-a453-4f38db2c6881
-ms.openlocfilehash: 50a06180dabfa192292fae7ba1962b6b7455bb89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef3e954987b84ea128342b38307769903df4b346
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375924"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740480"
 ---
 # <a name="compiler-error-c3537"></a>Compilerfehler C3537
 
-'Typ': Sie können nicht eine Umwandlung in einen Typ, der "auto" enthält
+"Typ": Sie können nicht in einen Typ umwandeln, der "Auto" enthält.
 
-Eine Variable, die den angegebenen Typ kann nicht umgewandelt werden, da der Typ enthält die `auto` -Schlüsselwort und die standardmäßige [/Zc: Auto](../../build/reference/zc-auto-deduce-variable-type.md) Compileroption aktiviert ist.
+Sie können eine Variable nicht in den entsprechenden Typ umwandeln, da der Typ das `auto`-Schlüsselwort enthält und die standardmäßige [/Zc: Auto](../../build/reference/zc-auto-deduce-variable-type.md) -Compileroption aktiviert ist.
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code wird C3537 erzeugt, da die Variablen auf einen Typ umgewandelt werden, die enthält die `auto` Schlüsselwort.
+Der folgende Code ergibt C3537, da die Variablen in einen Typ umgewandelt werden, der das `auto`-Schlüsselwort enthält.
 
-```
+```cpp
 // C3537.cpp
 // Compile with /Zc:auto
 int main()

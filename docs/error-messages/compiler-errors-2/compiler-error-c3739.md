@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3739
 ms.assetid: acffe894-08b8-4bf2-9249-9501e6e2bad3
-ms.openlocfilehash: 34f035c089b183670e87a23eb62f995b2af23c9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48d0fef86908f3ba5a547417d0625febc5226454
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208668"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752703"
 ---
 # <a name="compiler-error-c3739"></a>Compilerfehler C3739
 
-'Klasse': Syntax wird nur unterstützt, wenn der "Layout_dependent"-Parameter des Event_receiver "true" ist.
+"Class": die Syntax wird nur unterstützt, wenn der Parameter "layout_dependent" event_receiver "true" ist.
 
-Sie haben versucht, eine gesamte Schnittstelle von Ereignissen zu verknüpfen, aber `layout_dependent` auf [Event_receiver](../../windows/event-receiver.md) Attribut ist nicht "true", verknüpfen Sie ein einzelnes Ereignis zu einem Zeitpunkt.
+Sie haben versucht, eine gesamte Ereignis Schnittstelle zu verbinden, `layout_dependent` auf [event_receiver](../../windows/event-receiver.md) Attribut jedoch nicht "true" ist. Sie müssen jeweils ein einzelnes Ereignis anschließen.
 
-Im folgende Beispiel wird die C3739 generiert:
+Im folgenden Beispiel wird C3739 generiert:
 
-```
+```cpp
 // C3739.cpp
 struct A
 {

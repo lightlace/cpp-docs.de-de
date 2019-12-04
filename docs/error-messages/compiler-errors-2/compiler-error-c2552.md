@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2552
 ms.assetid: 0e0ab759-788a-4faf-9337-80d4b9e2e8c9
-ms.openlocfilehash: ddd3755a4fcabf8c097c359f31c9cc189b36f79a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f3e4cfc46655c5201e7a79a9333f532a8fcab9c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353130"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740805"
 ---
 # <a name="compiler-error-c2552"></a>Compilerfehler C2552
 
@@ -19,7 +19,7 @@ ms.locfileid: "62353130"
 
 Der Aggregatbezeichner wurde falsch initialisiert.
 
-[Aggregate](../../c-language/initializing-aggregate-types.md) als definiert sind:
+[Aggregate](../../c-language/initializing-aggregate-types.md) werden wie folgt definiert:
 
 - Arrays
 
@@ -51,7 +51,7 @@ Beim Versuch, für einen Typ eine Aggregatinitialisierung durchzuführen, kann a
 
 Im folgenden Beispiel wird C2552 generiert:
 
-```
+```cpp
 // C2552.cpp
 // compile with: /clr
 #include <string>

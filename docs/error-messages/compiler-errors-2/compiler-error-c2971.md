@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2971
 ms.assetid: fdb5467b-9a41-41ef-ac20-2e9428d5a4fc
-ms.openlocfilehash: 09f3578bff5806fc32a3b5599dcfa8caa3696974
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9912224c5c871f9bae2c6d22f0d38f5f88c983a9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256322"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743288"
 ---
 # <a name="compiler-error-c2971"></a>Compilerfehler C2971
 
-'Klasse': Vorlagenparameter 'Param': 'Arg': eine lokale Variable kann nicht als Nichttyp Argument verwendet werden
+' class ': Vorlagen Parameter ' param ': ' arg ': eine lokale Variable kann nicht als Nichttyp-Argument verwendet werden.
 
-Sie können nicht den Namen oder die Adresse einer lokalen Variablen als Vorlagenargument verwenden.
+Der Name oder die Adresse einer lokalen Variablen kann nicht als Vorlagen Argument verwendet werden.
 
-Im folgende Beispiel wird die C2971 generiert:
+Im folgenden Beispiel wird C2971 generiert:
 
-```
+```cpp
 // C2971.cpp
 template <int *pi>
 class Y {};

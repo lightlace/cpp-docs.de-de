@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2589
 ms.assetid: 1d7942c7-8a81-4bb4-b272-76a0019e8513
-ms.openlocfilehash: 18d8f7130c34f5e1e33bc7aa9b9463f50c243045
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76cc35e57c1577ed23c043740f37c602600da542
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386940"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748501"
 ---
 # <a name="compiler-error-c2589"></a>Compilerfehler C2589
 
-'Bezeichner': Ungültiges Token auf der rechten Seite des '::'
+"Identifier": Ungültiges Token auf der rechten Seite von "::"
 
-Wenn eine Klasse, Struktur oder union-Namen auf der linken Seite des Bereichsauflösungsoperators (zwei Doppelpunkte) angezeigt wird, muss das Token auf der rechten Seite eine Klasse, Struktur oder union-Member sein. Andernfalls kann alle globaler Bezeichner auf der rechten Seite angezeigt.
+Wenn auf der linken Seite des Bereichs Auflösungs Operators (Doppelpunkte) ein Klassen-, Struktur-oder Union-Name angezeigt wird, muss das Token auf der rechten Seite ein Klassen-, Struktur-oder Union-Member sein. Andernfalls kann ein beliebiger globaler Bezeichner auf der rechten Seite angezeigt werden.
 
-Der Bereichsauflösungsoperator kann nicht überladen werden.
+Der Bereichs Auflösungs Operator kann nicht überladen werden.
 
-Im folgende Beispiel wird die C2589 generiert:
+Im folgenden Beispiel wird C2589 generiert:
 
-```
+```cpp
 // C2589.cpp
 void Test(){}
 class A {};

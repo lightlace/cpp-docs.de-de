@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3898
 ms.assetid: d9a90df6-87e4-4fe7-ab01-c226ee86bf10
-ms.openlocfilehash: 503f295d62c598e3138b1a001d6b350c0d90ea84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02c649fb906b0c5f09afe25952a8670c1a0e7f3d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385445"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749203"
 ---
 # <a name="compiler-error-c3898"></a>Compilerfehler C3898
 
-'Var': Typ-Datenmember können nur Member von verwalteten Typen sein
+"var": Typdatenmember können nur Member von verwalteten Typen sein.
 
-Ein [Initonly](../../dotnet/initonly-cpp-cli.md) Datenmember in einer systemeigenen Klasse deklariert wurde.  Ein `initonly` -Datenmember kann nur in einer CLR-Klasse deklariert werden.
+Ein [initonly](../../dotnet/initonly-cpp-cli.md) -Datenmember wurde in einer nativen Klasse deklariert.  Ein `initonly` Datenmember kann nur in einer CLR-Klasse deklariert werden.
 
-Im folgende Beispiel wird die C3898 generiert:
+Im folgenden Beispiel wird C3898 generiert:
 
-```
+```cpp
 // C3898.cpp
 // compile with: /clr
 struct Y1 {
@@ -32,7 +32,7 @@ struct Y1 {
 
 Mögliche Lösung:
 
-```
+```cpp
 // C3898b.cpp
 // compile with: /clr /c
 ref struct Y1 {

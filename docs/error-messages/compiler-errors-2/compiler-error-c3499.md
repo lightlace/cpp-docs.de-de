@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3499
 ms.assetid: 6717de5c-ae0f-4024-bdf2-b5598009e7b6
-ms.openlocfilehash: 381e665745f79f6156350f66e412f0580a06f6fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e50aaeac4a9f02cf3e67c25a08afdc2df0f1c62f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381019"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738010"
 ---
 # <a name="compiler-error-c3499"></a>Compilerfehler C3499
 
@@ -31,7 +31,7 @@ Der Compiler generiert diesen Fehler, wenn ein Lambdaausdruck, der `void` als R�
 
 Im folgenden Beispiel wird C3499 generiert, da der Text eines Lambdaausdrucks mehrere Anweisungen enthält. Außerdem wird ein Wert zurückgegeben, ohne dass vom Lambdaausdruck der Rückgabetyp angegeben wird:
 
-```
+```cpp
 // C3499a.cpp
 
 int main()
@@ -44,7 +44,7 @@ int main()
 
 Im folgenden Beispiel werden zwei mögliche Lösungen für den Fehler C3499 gezeigt: In der ersten Lösung wird der Rückgabetyp des Lambdaausdrucks angegeben. In der zweiten Lösungen werden die Anweisungen, die den Text des Lambdaausdrucks darstellen, in einer einzigen Anweisung kombiniert.
 
-```
+```cpp
 // C3499b.cpp
 
 int main()

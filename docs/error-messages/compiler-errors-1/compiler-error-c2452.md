@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2452
 ms.assetid: a4ec7642-6660-4c7a-9866-853d1cc67daf
-ms.openlocfilehash: 3e2d583efa2b634cf49d8588fa398bd81f24c607
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e8173c2697a931e5b292dc974b6d1b22f376794
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208758"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744107"
 ---
 # <a name="compiler-error-c2452"></a>Compilerfehler C2452
 
-'Typ': Ungültiger Quelltyp für Safe_cast
+' Typ ': Ungültiger Quelltyp für safe_cast
 
-Der Quelltyp für ["safe_cast"](../../extensions/safe-cast-cpp-component-extensions.md) war ungültig.  Z. B. alle Typen in einem `safe_cast` Vorgang muss die CLR-Typen.
+Der Quelltyp für [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) war ungültig.  Beispielsweise müssen alle Typen in einer `safe_cast` Operation CLR-Typen sein.
 
-Im folgende Beispiel wird die C2452 generiert:
+Im folgenden Beispiel wird C2452 generiert:
 
-```
+```cpp
 // C2452.cpp
 // compile with: /clr
 

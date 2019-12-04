@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3828
 ms.assetid: 8d9cee75-9504-4bc8-88b6-2413618a3f45
-ms.openlocfilehash: f499bb2a8fd6d3148935daec89835b79d2ff5b49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b47ddbf0775cab2bd7214f68d1b4ed6e06e6eea
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390593"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741702"
 ---
 # <a name="compiler-error-c3828"></a>Compilerfehler C3828
 
-'Objekttyp': Positionierungsargumente nicht zulässig, beim Erstellen von Instanzen der verwalteten oder WinRTclasses
+"Objekttyp": Platzierungs Argumente sind beim Erstellen von Instanzen von verwalteten oder winrtclasses nicht zulässig.
 
-Wenn Sie ein Objekt eines verwalteten Typs oder der Windows-Runtime-Typ zu erstellen, können keine die Positionierungsform des Operators [Ref neue Gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md) oder [neue](../../cpp/new-operator-cpp.md).
+Wenn Sie ein Objekt eines verwalteten Typs oder Windows-Runtime Typs erstellen, können Sie die Platzierungs Form von Operator [ref New, gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md) oder [New](../../cpp/new-operator-cpp.md)nicht verwenden.
 
 Im folgenden Beispiel wird C3828 generiert und gezeigt, wie Sie diesen Fehler beheben:
 
-```
+```cpp
 // C3828a.cpp
 // compile with: /clr
 ref struct M {

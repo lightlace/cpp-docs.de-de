@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3142
 ms.assetid: 795137ad-d00a-4a9c-9665-0cd8bfb5da8b
-ms.openlocfilehash: 38bf40b6e1b7495232d7c33317408b872081e9f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e23ab20cb147ea8113e1f92f8e24d55b72faa71
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374949"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746018"
 ---
 # <a name="compiler-error-c3142"></a>Compilerfehler C3142
 
-"Eigenschaftsname": Sie können die Adresse einer Eigenschaft nicht übernehmen
+"property_name": Sie können die Adresse einer Eigenschaft nicht übernehmen.
 
-Die Adresse einer Eigenschaft ist nicht für den Entwickler verfügbar.
+Die Adresse einer Eigenschaft ist für den Entwickler nicht verfügbar.
 
-Im folgende Beispiel wird die C3142 generiert:
+Im folgenden Beispiel wird C3142 generiert:
 
-```
+```cpp
 // C3142_2.cpp
 // compile with: /clr
 using namespace System;

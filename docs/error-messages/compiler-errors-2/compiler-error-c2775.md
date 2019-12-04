@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2775
 ms.assetid: 9c488508-ade0-48f1-b94f-d538d15f807a
-ms.openlocfilehash: b0f04a64354f549115c8636cf6130d6e96470016
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be858c7508aa520f78ec144b02738af02099b49b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257191"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740051"
 ---
 # <a name="compiler-error-c2775"></a>Compilerfehler C2775
 
-'Bezeichner': kein 'get'-Methode ist mit dieser Eigenschaft verbunden
+"Bezeichner": keine "Get"-Methode mit dieser Eigenschaft verknüpft
 
-Ein Datenmember deklariert, mit der [Eigenschaft](../../cpp/property-cpp.md) erweitertes Attribut verfügt nicht über eine `get` -Funktion angegeben, aber ein Ausdruck versucht, dessen Wert abgerufen.
+Für einen Datenmember, der mit dem erweiterten Attribut der [Eigenschaft](../../cpp/property-cpp.md) deklariert wurde, ist keine `get` Funktion angegeben, aber ein Ausdruck versucht, seinen Wert abzurufen.
 
-Im folgende Beispiel wird die C2775 generiert:
+Im folgenden Beispiel wird C2775 generiert:
 
-```
+```cpp
 // C2775.cpp
 struct A {
    __declspec(property(put=PutProp2, get=GetProp2)) int prop2;

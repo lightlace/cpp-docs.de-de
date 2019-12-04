@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3265
 ms.assetid: 10ab3e17-4a9f-4120-bab5-21473869b70f
-ms.openlocfilehash: a675567e23764a0b361cab4bef4bc75019de3756
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 633089115fe7edd0bdf06cdbcda6909ae7ac656e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365844"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754159"
 ---
 # <a name="compiler-error-c3265"></a>Compilerfehler C3265
 
-ein verwaltete 'verwaltetes Konstrukt' aus, in eine nicht verwaltete 'nicht verwalteten Konstrukt' kann nicht deklariert werden.
+ein verwaltetes ' verwaltetes Konstrukt ' kann nicht in einem nicht verwalteten ' nicht verwalteten Konstrukt ' deklariert werden.
 
-Sie können kein verwaltetes Objekt in einem nicht verwalteten Kontext einschließen.
+Sie können ein verwaltetes Objekt nicht in einen nicht verwalteten Kontext einschließen.
 
-Im folgende Beispiel wird die C3265 reproduziert:
+Im folgenden Beispiel wird C3265 neu erstellt:
 
-```
+```cpp
 // C3265_2.cpp
 // compile with: /clr /LD
 #include <vcclr.h>

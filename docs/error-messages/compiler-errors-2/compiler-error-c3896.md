@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3896
 ms.assetid: eb8be0f6-5b4e-4d71-8285-8a2a94f8ba29
-ms.openlocfilehash: 00e103720dc666b17566b67da19d4e908bb3addd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f15cd73465f4210ed5e5e34bebe2122c0b88f722
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385523"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749268"
 ---
 # <a name="compiler-error-c3896"></a>Compilerfehler C3896
 
-'Member': Fehlerhafte Initialisierung: Dieser literal-Datenmember kann nur mit "Nullptr" initialisiert werden
+"Member": Unzulässiger Initialisierer: dieser literaldatenmember kann nur mit "nullptr" initialisiert werden.
 
-Ein [literal](../../extensions/literal-cpp-component-extensions.md) Datenmember wurde nicht ordnungsgemäß initialisiert.  Finden Sie unter ["nullptr"](../../extensions/nullptr-cpp-component-extensions.md) für Weitere Informationen.
+Ein [literaldatenmember](../../extensions/literal-cpp-component-extensions.md) wurde nicht ordnungsgemäß initialisiert.  Weitere Informationen finden Sie unter [nullptr](../../extensions/nullptr-cpp-component-extensions.md) .
 
-Im folgende Beispiel wird die C3896 generiert:
+Im folgenden Beispiel wird C3896 generiert:
 
-```
+```cpp
 // C3896.cpp
 // compile with: /clr /c
 ref class R{};

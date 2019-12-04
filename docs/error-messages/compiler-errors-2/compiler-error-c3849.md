@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3849
 ms.assetid: 5347140e-1a81-4841-98c0-b63d98264b64
-ms.openlocfilehash: ec6725472d31b0b2ade0cd73da4440036239fde3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8492f108b57fbc63bd171276b1aa601f96a28b24
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381058"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754887"
 ---
 # <a name="compiler-error-c3849"></a>Compilerfehler C3849
 
-Funktion-Style-Aufruf an ein Ausdruck vom Typ 'Typ' verlieren const- und/oder volatile-Qualifizierer für alle Anzahl verfügbaren operatorüberladungen
+Funktions Stil Aufrufe für einen Ausdruck vom Typ "Typ" verlieren Konstante und/oder flüchtige Qualifizierer für alle verfügbaren Operator Überladungen.
 
-Eine Variable mit einem angegebenen Const-Volatile-Typ kann nur Member mit dieselbe oder eine höhere Const-Volatile-Qualifikationen definierten Funktionen aufrufen.
+Eine Variable mit einem angegebenen Konstanten Konstanten Typ kann nur Member-Funktionen aufzurufen, die mit denselben oder größeren Konstanten (konstant) definiert sind.
 
-Um diesen Fehler zu beheben, geben Sie eine entsprechenden Member-Funktion. Sie können keine Konvertierung in ein Const oder volatile qualifiziertes Objekt ausführen, wenn die Konvertierung zu einer Qualifikation führt. Der Qualifizierer darf, jedoch nicht Qualifizierer in einer Konvertierung.
+Um diesen Fehler zu beheben, stellen Sie eine entsprechende Member-Funktion bereit. Wenn die Konvertierung zu einem Qualifikations Verlust führt, können Sie keine Konvertierung für ein konstantenobjekt oder ein flüchtiges, flüchtiges Objekt ausführen. Sie können Qualifizierer gewinnen, aber keine Qualifizierer in einer Konvertierung verlieren.
 
-In den folgenden Beispielen C3849 generiert:
+In den folgenden Beispielen wird C3849 generiert:
 
-```
+```cpp
 // C3849.cpp
 void glbFunc3(int i, char c)
 {

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3227
 ms.assetid: 7939c23a-96c8-43c2-89e9-f217d132d155
-ms.openlocfilehash: b175b14af55a9a462e040f064cc6e38d13fffb94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 460000531dba77e42379199f276c9e2e02f43a9b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173982"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743418"
 ---
 # <a name="compiler-error-c3227"></a>Compilerfehler C3227
 
-'Parameter': 'Schlüsselwort' kann nicht verwenden werden, um einen generischen Typ zuordnen
+' Parameter ': ' Schlüsselwort ' kann nicht verwendet werden, um einen generischen Typ zuzuordnen.
 
-Um einen Typ zu instanziieren, ist ein geeigneter Konstruktor erforderlich. Allerdings kann der Compiler nicht sicherstellen, dass ein geeigneter Konstruktor verfügbar ist.
+Um einen Typ zu instanziieren, ist ein entsprechender Konstruktor erforderlich. Der Compiler kann jedoch nicht sicherstellen, dass ein geeigneter Konstruktor verfügbar ist.
 
-Sie können Vorlagen anstelle von Generika verwenden, um diesen Fehler zu beheben, oder Sie können eine von mehreren Methoden zum Erstellen einer Instanz des Typs.
+Sie können anstelle von Generika Vorlagen verwenden, um diesen Fehler zu beheben, oder Sie können eine von mehreren Methoden verwenden, um eine Instanz des Typs zu erstellen.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3227 generiert.
+Im folgenden Beispiel wird C3227 generiert.
 
-```
+```cpp
 // C3227.cpp
 // compile with: /clr /c
 generic<class T> interface class ICreate {

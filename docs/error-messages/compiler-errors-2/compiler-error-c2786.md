@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2786
 ms.assetid: 6676d8c0-86dd-4a39-bdda-b75a35f4d137
-ms.openlocfilehash: b03155ad1a209ae59327dd31d432f5623f380ac9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba5d05e9c7cc702509144fb876a1301bfc8bf3d4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265996"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739609"
 ---
 # <a name="compiler-error-c2786"></a>Compilerfehler C2786
 
-'Typ': Ungültiger Operand für __uuidof
+"Type": Ungültiger Operand für __uuidof
 
-Die [__uuidof](../../cpp/uuidof-operator.md) -Operator akzeptiert einen benutzerdefinierten Typ mit einer GUID verbundenen oder ein Objekt eines solchen benutzerdefinierten Typs.  Mögliche Ursachen:
+Der [__uuidof](../../cpp/uuidof-operator.md) -Operator nimmt einen benutzerdefinierten Typ mit einer angefügten GUID oder einem Objekt eines solchen benutzerdefinierten Typs an.  Mögliche Ursachen:
 
-1. Das Argument ist kein den benutzerdefinierten Typ.
+1. Das-Argument ist kein benutzerdefinierter Typ.
 
-1. `__uuidof` die GUID kann nicht aus dem Argument extrahiert werden.
+1. `__uuidof` kann die GUID nicht aus dem Argument extrahieren.
 
-Im folgende Beispiel wird die C2786 generiert:
+Im folgenden Beispiel wird C2786 generiert:
 
-```
+```cpp
 // C2786.cpp
 struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
 

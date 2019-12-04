@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2009
 ms.assetid: fe9d94ed-20a5-4d83-b9c4-60ee69d2f30a
-ms.openlocfilehash: d2216b3fe990109828492fb2b2055e9425c1e306
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 434ae830e78c8fb5fe4e56438a557afb027d264f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361905"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752443"
 ---
 # <a name="compiler-error-c2009"></a>Compilerfehler C2009
 
 Mehrfachverwendung des formalen Makroparameters "identifier"
 
-Die Liste der formalen Parameter einer Makrodefinition wird den Bezeichner mehrfach verwendet. Bezeichner in der Parameterliste des Makros müssen eindeutig sein.
+Die Liste der formalen Parameter einer Makro Definition verwendet mehrmals den Bezeichner. Bezeichner in der Parameterliste des Makros müssen eindeutig sein.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C2009 generiert:
+Im folgenden Beispiel wird C2009 generiert:
 
-```
+```cpp
 // C2009.cpp
 #include <stdio.h>
 
@@ -39,7 +39,7 @@ int main()
 
 Mögliche Lösung:
 
-```
+```cpp
 // C2009b.cpp
 #include <stdio.h>
 

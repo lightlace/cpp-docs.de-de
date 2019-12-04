@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3718
 ms.assetid: 346b5205-c44d-49d3-b66a-96417d3d6986
-ms.openlocfilehash: 765791499370836f7c99ea7af69cb34bcf1e21fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0bcf784f5b522d05585d63a3b38a2befb5aa191
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328251"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753197"
 ---
 # <a name="compiler-error-c3718"></a>Compilerfehler C3718
 
-'Ereignis' kann nur im Kontext einer Memberfunktion der erhaltenen Klasse aufgerufen werden.
+"Event" kann nur im Kontext einer Member-Funktion der empfangenden Klasse aufgerufen werden.
 
-Die `event` kann nur von der empfangenden Klasse aufgerufen werden.
+Der `event` kann nur von der empfangenden Klasse aufgerufen werden.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3718 generiert:
+Im folgenden Beispiel wird C3718 generiert:
 
-```
+```cpp
 // C3718.cpp
 #define _ATL_ATTRIBUTES 1
 #include "atlbase.h"

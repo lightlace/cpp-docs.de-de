@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3509
 ms.assetid: cc2db39a-2f98-4e40-b803-496e585494e6
-ms.openlocfilehash: e5e3c48581b5225bf1cf6777c9891c458034e11f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d91bbdf67b49e5722491f562b5eced2c5af10837
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187485"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753743"
 ---
 # <a name="compiler-error-c3509"></a>Compilerfehler C3509
 
-'Typ': Ungültiger Automation-Rückgabetyp; Wenn ein Parameter markierten "Retval", der Rückgabetyp ist muss "void", "HRESULT" oder "SCODE" sein
+"Typ": Ungültiger Automatisierungs Rückgabetyp. Wenn ein Parameter als "retval" gekennzeichnet ist, muss der Rückgabetyp "void", "HRESULT" oder "SCODE" lauten.
 
-Eine Methode in einer COM-Schnittstelle muss entweder "void" oder ein HRESULT zurückgeben.
+Eine Methode in einer COM-Schnittstelle muss entweder "void" oder "HRESULT" zurückgeben.
 
-Im folgende Beispiel wird die C3509 generiert:
+Im folgenden Beispiel wird C3509 generiert:
 
-```
+```cpp
 // C3509.cpp
 #define _ATL_DEBUG_QI
 

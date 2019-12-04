@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2333
 ms.assetid: 2636fc1e-d3e7-4e68-8628-3c81a99ba813
-ms.openlocfilehash: e9119a8375a276a59cbf3a6db9541f6ccaef5122
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cca7f0d3bd75cca8fdd621fb425dec42e6560f4e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300819"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747747"
 ---
 # <a name="compiler-error-c2333"></a>Compilerfehler C2333
 
-'Funktion': Fehler in Funktionsdeklaration; Funktionstext wird übersprungen
+"Function": Fehler in Funktionsdeklaration; der Funktions Text wird übersprungen.
 
-Dieser Fehler tritt nach einem anderen Fehler, für die Member-Funktionen, die innerhalb ihrer Klasse definiert.
+Dieser Fehler tritt nach einem anderen Fehler auf, der in der Klasse definiert ist.
 
-Im folgende Beispiel wird die C2333 generiert:
+Im folgenden Beispiel wird C2333 generiert:
 
-```
+```cpp
 // C2333.cpp
 struct s1 {
    s1(s1) {}   // C2333

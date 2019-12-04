@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2381
 ms.assetid: cc765f67-64ac-406f-93ef-ae7d548d58d7
-ms.openlocfilehash: b29f7dac6c6d71e12eb0f003cdfc151dd2c349a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 834b9939a99c694c702bb268b928575b4beb8856
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347898"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745394"
 ---
 # <a name="compiler-error-c2381"></a>Compilerfehler C2381
 
-'Funktion': Neudefinition; __declspec(noreturn) unterscheidet sich
+"Function": Neudefinition; __declspec (noreturn) unterscheidet sich
 
-Eine Funktion wurde deklariert, und klicken Sie dann definiert, aber die Definition verwendet die [Noreturn](../../cpp/noreturn.md) `__declspec` Modifizierer. Die Verwendung von `noreturn` Neudefinition der Funktion, die Deklaration und Definition müssen bei der Verwendung von einigen `noreturn`.
+Eine Funktion wurde deklariert und dann definiert, aber die Definition hat den [noreturn](../../cpp/noreturn.md) -`__declspec` Modifizierer verwendet. Die Verwendung von `noreturn` stellt eine Neudefinition der Funktion dar. bei der Deklaration und Definition muss die Verwendung von `noreturn`zugestimmt werden.
 
-Im folgende Beispiel wird die C2381 generiert:
+Im folgenden Beispiel wird C2381 generiert:
 
-```
+```cpp
 // C2381.cpp
 // compile with: /c
 void f1();

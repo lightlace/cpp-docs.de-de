@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3241
 ms.assetid: 2ca14879-bba0-4a23-b22a-72cfff92d6a4
-ms.openlocfilehash: 6eab22a8627b817b7a31e4bd34aad86d1f274615
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a618a9c538558d2aa4b995cbc9071bb8e94a5bc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173500"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754576"
 ---
 # <a name="compiler-error-c3241"></a>Compilerfehler C3241
 
-'Methode': Diese Methode wurde nicht von 'Schnittstelle' eingeführt
+' Methode ': Diese Methode wurde nicht von ' Schnittstelle ' eingeführt.
 
-Wenn Sie eine Funktion explizit überschreiben, muss die Funktionssignatur exakt die Deklaration für die Funktion, die Sie überschreiben.
+Wenn Sie eine Funktion explizit überschreiben, muss die Funktions Signatur genau mit der Deklaration für die Funktion übereinstimmen, die Sie überschreiben.
 
-Im folgende Beispiel wird die C3241 generiert:
+Im folgenden Beispiel wird C3241 generiert:
 
-```
+```cpp
 // C3241.cpp
 #pragma warning(disable:4199)
 

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2790
 ms.assetid: 38d4fce1-ba00-413d-8bc1-e8aa43d7bc1f
-ms.openlocfilehash: e377c18b5c0774a466dc535f2a1fba3411bd15b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c63fe7bb3686692818337e890de7fe4c80a18158
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257126"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739557"
 ---
 # <a name="compiler-error-c2790"></a>Compilerfehler C2790
 
-"super": Dieses Schlüsselwort kann nur innerhalb des Texts der Klassenmemberfunktion verwendet werden
+"Super": dieses Schlüsselwort kann nur innerhalb des Texts der Klassenmember-Funktion verwendet werden.
 
-Diese Fehlermeldung wird angezeigt, wenn der Benutzer versucht, verwendet das Schlüsselwort [super](../../cpp/super.md) außerhalb des Kontexts einer Memberfunktion.
+Diese Fehlermeldung wird angezeigt, wenn der Benutzer versucht, das Schlüsselwort [Super](../../cpp/super.md) außerhalb des Kontexts einer Member-Funktion zu verwenden.
 
-Im folgende Beispiel wird die C2790 generiert:
+Im folgenden Beispiel wird C2790 generiert:
 
-```
+```cpp
 // C2790.cpp
 void f() {
    __super::g();   // C2790

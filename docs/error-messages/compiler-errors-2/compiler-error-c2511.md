@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2511
 ms.assetid: df999efe-fe2b-418b-bb55-4af6a0592631
-ms.openlocfilehash: 9d9ba48b0607e7a30b8748d4e9ae4f7025f11dea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff78cb50b274fe40d513739264bd7e9894bbed9d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165020"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746564"
 ---
 # <a name="compiler-error-c2511"></a>Compilerfehler C2511
 
-"Bezeichner": überladene Memberfunktion nicht in "Klasse" gefunden.
+"Bezeichner": überladene Member-Funktion wurde in "Class" nicht gefunden.
 
-Keine Version der Funktion wird mit den angegebenen Parametern deklariert werden.  Mögliche Ursachen:
+Es wurde keine Version der Funktion mit den angegebenen Parametern deklariert.  Mögliche Ursachen:
 
-1. Falsche Parameter an die Funktion übergeben.
+1. An die Funktion wurden falsche Parameter übermittelt.
 
-1. Parameter, die in der falschen Reihenfolge übergeben werden.
+1. Parameter wurden in falscher Reihenfolge übermittelt.
 
-1. Falsche Schreibweise für Parameternamen.
+1. Falsche Schreibweise von Parameternamen.
 
-Im folgende Beispiel wird die C2511 generiert:
+Im folgenden Beispiel wird C2511 generiert:
 
-```
+```cpp
 // C2511.cpp
 // compile with: /c
 class C {

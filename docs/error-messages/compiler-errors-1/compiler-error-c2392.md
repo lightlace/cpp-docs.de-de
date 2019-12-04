@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2392
 ms.assetid: 98ced473-6383-46ed-b79c-21857d65dcb2
-ms.openlocfilehash: 5977d9bf41d55ef6db8409e0187153fdbf91149e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15fa4a19cdd791ddb3636f30a636cc084bdc4a5f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393596"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745004"
 ---
 # <a name="compiler-error-c2392"></a>Compilerfehler C2392
 
-"Methode1": covariant-Rückgaben Typen nicht, in unterstützt werden verwalteten oder WinRTtypes, andernfalls "Methode2" überschrieben werden
+"Methode1": kovariant-Rückgabe Typen werden in verwalteten oder winrttypes nicht unterstützt; andernfalls wird "Methode2" überschrieben.
 
-Kovariante Rückgabetypen sind nicht zulässig für Windows-Runtime-Memberfunktionen oder beim Kompilieren mit der [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) Option.
+Kovariante Rückgabe Typen sind für Windows-Runtime Member-Funktionen oder beim Kompilieren mit der/CLR-Option [(Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) nicht zulässig.
 
 ## <a name="example"></a>Beispiel
 
 Im folgenden Beispiel wird C2392 generiert und gezeigt, wie Sie diesen Fehler beheben:
 
-```
+```cpp
 // C2392.cpp
 // compile with: /clr
 public ref struct B {

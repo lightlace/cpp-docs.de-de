@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2385
 ms.assetid: 6d3dd1f2-e56d-49d7-865c-6a9acdb17417
-ms.openlocfilehash: bffb4c1088c41832e69b0c6f161b47f6f9f08d06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1247e4da05d65677f602a82591efd3e0c0c374e0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393700"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745252"
 ---
 # <a name="compiler-error-c2385"></a>Compilerfehler C2385
 
-Mehrdeutiger Zugriff von "Member"
+mehrdeutiger Zugriff auf "Member".
 
-Der Member kann von mehr als einem Objekt abgeleitet werden (es wird von mehr als ein Objekt geerbt).  Um diesen Fehler zu beheben
+Der Member kann von mehr als einem Objekt abgeleitet werden (es wird von mehr als einem Objekt geerbt).  So beheben Sie diesen Fehler
 
-- Stellen Sie das Element eindeutig durch eine Typumwandlung.
+- Legen Sie den Member eindeutig durch Bereitstellen einer Umwandlung an.
 
-- Benennen Sie die mehrdeutigen Member in Basisklassen.
+- Benennen Sie die mehrdeutigen Elemente in den Basisklassen um.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird C2385 generiert.
+Im folgenden Beispiel wird C2385 generiert.
 
-```
+```cpp
 // C2385.cpp
 // C2385 expected
 #include <stdio.h>

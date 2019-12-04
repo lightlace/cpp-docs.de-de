@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2514
 ms.assetid: 4b7085e5-6714-4261-80b7-bc72e64ab3e8
-ms.openlocfilehash: aef9df0718d013378f88c1a34d08d1b1e05e214c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0153ec9d48225d153221f2192761da4023fab96
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243756"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746512"
 ---
 # <a name="compiler-error-c2514"></a>Compilerfehler C2514
 
-'Klasse': Klasse besitzt keine Konstruktoren
+"Class": die Klasse besitzt keine Konstruktoren.
 
-Die Klasse, Struktur oder Union verfügt über keinen Konstruktor mit einer Parameterliste, die den Parametern, die instanziiert wird, entspricht.
+Die Klasse, Struktur oder Union verfügt über keinen Konstruktor mit einer Parameterliste, die mit den Parametern übereinstimmt, die verwendet werden, um Sie zu instanziieren.
 
-Eine Klasse muss vollständig deklariert werden, bevor es instanziiert werden kann.
+Eine Klasse muss vollständig deklariert werden, bevor Sie instanziiert werden kann.
 
-Im folgende Beispiel wird die C2514 generiert:
+Im folgenden Beispiel wird C2514 generiert:
 
-```
+```cpp
 // C2514.cpp
 // compile with: /c
 class f;

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3912
 ms.assetid: 674e050c-11fb-4db1-8bdf-a3e95b41161d
-ms.openlocfilehash: bd66196c35715304577b8f6785261be8bdcdafec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9054124cbfe2d86c062c6e97651bd69eebe5471c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406677"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748748"
 ---
 # <a name="compiler-error-c3912"></a>Compilerfehler C3912
 
-'Ereignis': Typ des Ereignisses muss ein Delegattyp sein
+"Ereignis": Ereignistyp muss ein Delegattyp sein.
 
-Ein Ereignis wurde deklariert, aber es hatte nicht den richtigen Typ.
+Ein Ereignis wurde deklariert, war aber nicht vom richtigen Typ.
 
-Weitere Informationen finden Sie unter [Ereignis](../../extensions/event-cpp-component-extensions.md).
+Weitere Informationen finden Sie unter [Event](../../extensions/event-cpp-component-extensions.md).
 
-Im folgende Beispiel wird die C3912 generiert:
+Im folgenden Beispiel wird C3912 generiert:
 
-```
+```cpp
 // C3912.cpp
 // compile with: /clr
 delegate void H();

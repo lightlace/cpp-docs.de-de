@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3066
 ms.assetid: 226f6de5-c4c5-41e2-b31a-2e30a37fbbeb
-ms.openlocfilehash: 126175b44bf0e6f4a58bc0e675cfd0cac1acc1ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80468f4e35ffd9d09706b8bb8fc2fdc6eb8e679e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182612"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738855"
 ---
 # <a name="compiler-error-c3066"></a>Compilerfehler C3066
 
-Es gibt mehrere Möglichkeiten, ein Objekt dieses Typs aufgerufen werden, kann mit diesen Argumenten
+Es gibt mehrere Möglichkeiten, wie ein Objekt dieses Typs mit diesen Argumenten aufgerufen werden kann.
 
-Der Compiler hat einen mehrdeutigen Funktionsaufruf im Zusammenhang mit Ersatzzeichen.
+Der Compiler hat einen mehrdeutigen Funktions aufruten mit Surrogates erkannt.
 
-Im folgende Beispiel wird die C3066 generiert:
+Im folgenden Beispiel wird C3066 generiert:
 
-```
+```cpp
 // C3066.cpp
 template <class T, class U> void func(T*, U*){}
 

@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2422
 ms.assetid: ef0ec302-4028-4778-b134-0b8cea4bcad9
-ms.openlocfilehash: 524eeadb6cf066d3eba3a7e88c45a9e2b993c0ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39f779ee846cf4f328f9c7af59ae394d97d7a3ca
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402884"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744731"
 ---
 # <a name="compiler-error-c2422"></a>Compilerfehler C2422
 
-Unzulässige direkte segmentüberschreibung in "Operand"
+Ungültige Segment Überschreibung in "Operand"
 
-Inline-Assemblycode verwendet fälschlicherweise einen Segment außer Kraft setzen-Operator (Doppelpunkt) bei einem Operanden aus.  Mögliche Ursachen sind:
+Inline-Assemblycode verwendet fälschlicherweise einen Segment Überschreibungs Operator (Doppelpunkt) für einen Operanden.  Folgende Ursachen sind möglich:
 
-- Das Register, die vor der Operator ist kein Segmentregister.
+- Das Register vor dem Operator ist kein Segment Register.
 
-- Das Register, die vor der Operator ist nicht das einzige Segmentregister im Operanden.
+- Das Register, das dem Operator vorangestellt ist, ist nicht das einzige Segment Register im Operanden.
 
-- Die Segment-Operator außer Kraft setzen, wird in ein Dereferenzierungsoperator (eckige Klammern) angezeigt.
+- Der Segment Überschreibungs Operator wird innerhalb eines Dereferenzierungsoperators (eckige Klammern) angezeigt.
 
-- Der Ausdruck nach dem die Außerkraftsetzung Segment-Operator ist nicht unmittelbarer Operand oder einen Speicheroperanden.
+- Der Ausdruck, der auf den Segment Überschreibungs Operator folgt, ist kein unmittelbarer Operand oder Speicher Operand.
 
-Im folgende Beispiel wird die C2422 generiert:
+Im folgenden Beispiel wird C2422 generiert:
 
-```
+```cpp
 // C2422.cpp
 // processor: x86
 int main() {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3745
 ms.assetid: 1e64aec5-7e53-47e5-bc7d-3905230cfc66
-ms.openlocfilehash: da80a10cbf7246ad0aeaecffe20992d2050abb3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7e6bde7ce07edf7a75f38c37f3e4cbb3c6c3486
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208255"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752456"
 ---
 # <a name="compiler-error-c3745"></a>Compilerfehler C3745
 
-'Funktion': nur ein-Ereignis ausgelöst werden kann' "
+"Function": nur ein Ereignis kann "Raised" sein.
 
-Nur eine Funktion, die definiert, mit der [__event](../../cpp/event.md) Schlüsselwort übergeben werden kann, um die [__raise](../../cpp/raise.md) Schlüsselwort.
+Nur eine mit dem [__event](../../cpp/event.md) -Schlüsselwort definierte Funktion kann an das [__raise](../../cpp/raise.md) -Schlüsselwort übermittelt werden.
 
-Im folgende Beispiel wird die C3745 generiert:
+Im folgenden Beispiel wird C3745 generiert:
 
-```
+```cpp
 // C3745.cpp
 struct E {
    __event void func();
