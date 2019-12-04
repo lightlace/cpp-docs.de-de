@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2762
 ms.assetid: 8b81a801-fd48-40a1-8bee-0748795b12e4
-ms.openlocfilehash: 0cb05d0e111319ff135bdb48d51af6eb4a2f2353
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c2f325fc9266321f224429afd3c295141627ecd6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257542"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759853"
 ---
 # <a name="compiler-error-c2762"></a>Compilerfehler C2762
 
-'Klasse': Unzulässiger Ausdruck als Vorlagenargument für "Argument"
+"Class": Ungültiger Ausdruck als Vorlagen Argument für "Argument".
 
-Bei Verwendung [/Za](../../build/reference/za-ze-disable-language-extensions.md), konvertiert der Compiler eine Ganzzahlkonstante nicht in einen Zeiger.
+Wenn [/Za](../../build/reference/za-ze-disable-language-extensions.md)verwendet wird, konvertiert der Compiler eine Ganzzahl nicht in einen Zeiger.
 
-Im folgende Beispiel wird die C2762 generiert:
+Im folgenden Beispiel wird C2762 generiert:
 
-```
+```cpp
 // C2762.cpp
 // compile with: /Za
 template<typename T, T *pT>

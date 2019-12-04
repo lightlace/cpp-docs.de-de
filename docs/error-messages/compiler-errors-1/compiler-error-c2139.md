@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2139
 ms.assetid: 31e047c0-5bf9-46c2-b6de-b627ea6a5768
-ms.openlocfilehash: 15813216399c0f00fea036cd95443235e7acf4c3
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 38e2fd090f3a2b2222658c5fd491c84dd70fd5ea
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344907"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756421"
 ---
 # <a name="compiler-error-c2139"></a>Compilerfehler C2139
 
-'Typ': eine nicht definierte Klasse ist als Argument für das systeminterne Typmerkmal 'Eigenschaft' des Compilers nicht zulässig.
+"Type": eine nicht definierte Klasse ist als Argument für das systeminterne Typmerkmal "Merkmal" des Compilers nicht zulässig.
 
-Ein ungültiges Argument wurde an eine Typeigenschaft übergeben.
+Ein ungültiges Argument wurde an eine Typeigenschaft übermittelt.
 
 Weitere Informationen finden Sie unter [Compilerunterstützung für Typmerkmale](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird C2139 generiert.
+Im folgenden Beispiel wird C2139 generiert.
 
-```
+```cpp
 // C2139.cpp
 // compile with: /EHsc
 #include <iostream>

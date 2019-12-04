@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3767
 ms.assetid: 5247cdcd-639c-4527-bd37-37e74c4e8fab
-ms.openlocfilehash: 61f7479986cccfa3851d85bf8e7bc0e9da3d1cea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 994b235b4775c28126d92c241a7e42dc837d4493
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400200"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757201"
 ---
 # <a name="compiler-error-c3767"></a>Compilerfehler C3767
 
@@ -19,13 +19,13 @@ ms.locfileid: "62400200"
 
 Bei einer in einer Klasse definierten Friend-Funktion wird nicht davon ausgegangen, dass sie so behandelt wird, als wäre sie im globalen Gültigkeitsbereich des Namespaces definiert und deklariert worden. Sie kann jedoch mittels einer argumentbezogenen Suche gefunden werden.
 
-C3767 kann auch von einer wichtigen Änderung verursacht werden: systemeigene Typen sind nun standardmäßig im privaten eine **"/ CLR"** Kompilierung; Siehe [Geben Sie die Sichtbarkeit](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) für Weitere Informationen.
+C3767 kann auch durch ein Breaking Change verursacht werden: Native Typen sind jetzt standardmäßig in einer **/CLR** -Kompilierung privat. Weitere Informationen finden Sie unter [Typsichtbarkeit](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) .
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3767 generiert:
+Im folgenden Beispiel wird C3767 generiert:
 
-```
+```cpp
 // C3767a.cpp
 // compile with: /clr
 using namespace System;
@@ -54,9 +54,9 @@ int main() {
 };
 ```
 
-Im folgende Beispiel wird die C3767 generiert:
+Im folgenden Beispiel wird C3767 generiert:
 
-```
+```cpp
 // C3767c.cpp
 // compile with: /clr /c
 

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2884
 ms.assetid: 8b4d43e3-3fb5-4360-86c8-de59d8736d4f
-ms.openlocfilehash: d920629dc0697d0f2fdd05ac5aca6118b89b88cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0e283c7cd6116655a56f8df67ab4eecf9923b68
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378855"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760940"
 ---
 # <a name="compiler-error-c2884"></a>Compilerfehler C2884
 
-'Name': von using-Deklaration steht in Konflikt mit lokaler Funktion "Function" eingeführt
+"Name": wird mit der-Deklaration in Konflikt mit der lokalen Funktion "Function" eingeführt.
 
-Sie haben versucht, eine Funktion mehr als einmal definiert. Die erste Definition befindet es sich um eine lokale Definition. Die zweite besteht aus einem Namespace mit einem `using` Deklaration.
+Sie haben versucht, eine Funktion mehrmals zu definieren. Die erste Definition ist eine lokale Definition. Die zweite ist von einem Namespace mit einer `using` Deklaration.
 
-Im folgende Beispiel wird die C2884 generiert:
+Im folgenden Beispiel wird C2884 generiert:
 
-```
+```cpp
 // C2884.cpp
 namespace A {
    void z(int);

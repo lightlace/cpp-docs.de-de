@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2491
 ms.assetid: 4e5a8f81-124e-402c-a5ec-d35a89b5469e
-ms.openlocfilehash: 3b48bebde6d7baedea73ed181cd4ea33adc44a69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ee7fb6e66ca9d5e09ad0eb445262c5f87d2060e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361333"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757071"
 ---
 # <a name="compiler-error-c2491"></a>Compilerfehler C2491
 
@@ -23,7 +23,7 @@ Um dieses Problem zu beheben, entfernen Sie den `__declspec(dllimport)`-Bezeichn
 
 Im folgenden Beispiel wird C2491 generiert:
 
-```
+```cpp
 // C2491.cpp
 // compile with: /c
 // function definition

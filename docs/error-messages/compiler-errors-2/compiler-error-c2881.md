@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2881
 ms.assetid: b49c63c2-b064-4d4b-a75e-ddd2af947522
-ms.openlocfilehash: 82a4fbe94bc7250244d57f549e52037d6a54c784
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c171fd529943bb07a6c512e4ac97f64f13f959d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378915"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736281"
 ---
 # <a name="compiler-error-c2881"></a>Compilerfehler C2881
 
-'namespace1': ist bereits als Alias für 'namespace2' verwendet
+"Namespace1": wird bereits als Alias für "Namespace2" verwendet.
 
-Sie können nicht den gleichen Namen als Alias für zwei Namespaces verwenden.
+Sie können nicht denselben Namen als Alias für zwei Namespaces verwenden.
 
-Im folgende Beispiel wird die C2881 generiert:
+Im folgenden Beispiel wird C2881 generiert:
 
-```
+```cpp
 // C2881.cpp
 // compile with: /c
 namespace A {

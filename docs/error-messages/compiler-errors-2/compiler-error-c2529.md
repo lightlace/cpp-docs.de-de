@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2529
 ms.assetid: 73a99e55-b91e-488d-9b72-cc80faaeb436
-ms.openlocfilehash: b634f2369805114209860f5e304a7cd2cca2ec91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5a10131fe03bd98078e87f71d07bf02c51d34f4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266452"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760412"
 ---
 # <a name="compiler-error-c2529"></a>Compilerfehler C2529
 
-'Name': Verweis auf Verweis ist nicht zulässig
+"Name": Verweis auf Verweis ist unzulässig.
 
-Dieser Fehler kann behoben werden, indem Zeigersyntax und das Deklarieren eines Verweises auf einen Zeiger.
+Dieser Fehler kann durch die Verwendung der Zeiger Syntax und das Deklarieren eines Verweises auf einen Zeiger korrigiert werden.
 
-Im folgende Beispiel wird die C2529 generiert:
+Im folgenden Beispiel wird C2529 generiert:
 
-```
+```cpp
 // C2529.cpp
 // compile with: /c
 int i;

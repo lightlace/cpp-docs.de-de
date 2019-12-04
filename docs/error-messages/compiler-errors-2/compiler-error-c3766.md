@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3766
 ms.assetid: b5af2089-2e1e-4e45-a41d-495b6c55656e
-ms.openlocfilehash: 2d871e331987cb2731aad8b4fbc6ec2f094bd218
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1cbd218b127bdf0d6784b7d35dac563d8ea198d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400226"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757214"
 ---
 # <a name="compiler-error-c3766"></a>Compilerfehler C3766
 
-'Typ' muss eine Implementierung für die Schnittstelle, Methode 'Funktion' bereitstellen
+"Type" muss eine Implementierung für die Schnittstellen Methode "Function" bereitstellen.
 
 Eine Klasse, die von einer Schnittstelle erbt, muss die Schnittstellenmember implementieren.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3766 generiert.
+Im folgenden Beispiel wird C3766 generiert.
 
-```
+```cpp
 // C3766.cpp
 // compile with: /clr /c
 

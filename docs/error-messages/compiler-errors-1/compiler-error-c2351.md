@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2351
 ms.assetid: 5439ccf6-66f6-4859-964c-c73f5eddfc1b
-ms.openlocfilehash: 2d93902ee0008a54da1b2ecf165e0a829362511f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6839d0c44efa10ba9507389fea35964fa748d646
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389020"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759970"
 ---
 # <a name="compiler-error-c2351"></a>Compilerfehler C2351
 
-Veraltete Syntax von C++-Konstruktor Initialisierung
+Syntax C++ der veralteten Konstruktorinitialisierung
 
-In einer Initialisierungsliste neuer Formatvorlage für einen Konstruktor müssen Sie jeder direkte Basisklasse explizit benennen, auch wenn es sich um die einzige Basisklasse ist.
+In einer neuen Initialisierungs Liste für einen Konstruktor müssen Sie jede direkte Basisklasse explizit benennen, auch wenn Sie die einzige Basisklasse ist.
 
-Im folgende Beispiel wird die C2351 generiert:
+Im folgenden Beispiel wird C2351 generiert:
 
-```
+```cpp
 // C2351.cpp
 // compile with: /c
 class B {

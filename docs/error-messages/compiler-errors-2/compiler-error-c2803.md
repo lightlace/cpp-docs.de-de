@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2803
 ms.assetid: 2cdbe374-8cc4-4c4e-ba15-062a7479e937
-ms.openlocfilehash: d20b8dde9f4134273adcba0f947f685f7ce7d213
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d39f737ba02f3fa9c9d5f61594ddf730db6739a5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408523"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760659"
 ---
 # <a name="compiler-error-c2803"></a>Compilerfehler C2803
 
-'Operator Operator' muss mindestens einen formalen Parameter des Klassentyps haben.
+"Operator Operator" muss mindestens einen formalen Parameter vom Typ "Class" aufweisen.
 
-Der überladene Operator hat einen Parameter vom Klassentyp.
+Dem überladenen Operator fehlt ein Parameter des Klassen Typs.
 
-Müssen Sie mindestens einen Parameter als Verweis (nicht mit Zeigern, sondern Verweise) oder anhand des Werts zu schreiben können übergeben "ein < b" (ein und b von Typklasse-A).
+Sie müssen mindestens einen Parameter als Verweis übergeben (ohne Zeiger, aber Verweise) oder nach Wert, um "a < b" schreiben zu können (a und b sind vom Typ Klasse a).
 
-Wenn beide Parameter Zeiger ein reiner Vergleich der Zeigeradressen werden und die benutzerdefinierte Konvertierung wird nicht verwendet.
+Wenn beide Parameter Zeiger sind, handelt es sich um einen reinen Vergleich von Zeiger Adressen, und es wird keine benutzerdefinierte Konvertierung verwendet.
 
-Im folgende Beispiel wird die C2803 generiert:
+Im folgenden Beispiel wird C2803 generiert:
 
-```
+```cpp
 // C2803.cpp
 // compile with: /c
 class A{};

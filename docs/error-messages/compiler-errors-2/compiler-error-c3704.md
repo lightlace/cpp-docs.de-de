@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3704
 ms.assetid: ee40ea35-a214-4dec-9489-d7f155dd0ac2
-ms.openlocfilehash: 4e26742de6c294018f81c6f49c1719fdb11d5149
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11e5792344b6f8fba6183f4ab87e1799db803b46
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328535"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757942"
 ---
 # <a name="compiler-error-c3704"></a>Compilerfehler C3704
 
-'Funktion': eine Vararg-Methode kann keine Ereignisse auslösen
+"Function": eine vararg-Methode kann keine Ereignisse auslösen.
 
-Sie haben versucht, verwenden Sie [__event](../../cpp/event.md) für eine Vararg-Methode. Um diesen Fehler zu beheben, ersetzen die `fireEvent(int i, ...)` rufen Sie mit der `fireEvent(int i)` rufen, wie im folgenden Codebeispiel gezeigt.
+Sie haben versucht, [__event](../../cpp/event.md) für eine vararg-Methode zu verwenden. Um diesen Fehler zu beheben, ersetzen Sie den `fireEvent(int i, ...)`-Befehl durch den `fireEvent(int i)`-Befehl, wie im folgenden Codebeispiel gezeigt.
 
-Im folgende Beispiel wird die C3704 generiert:
+Im folgenden Beispiel wird C3704 generiert:
 
-```
+```cpp
 // C3704.cpp
 [ event_source(native) ]
 class CEventSrc {

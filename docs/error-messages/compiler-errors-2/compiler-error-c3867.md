@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-ms.openlocfilehash: 9a5094b6c3d914c2f66ee8ed94bcdcce5827f130
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 7e3f52b2b69058549cb8aa3e14d2a4b4048fc4e4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447187"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756850"
 ---
 # <a name="compiler-error-c3867"></a>Compilerfehler C3867
 
-'Func': Funktionsaufruf fehlt die Argumentliste. Verwenden Sie ' & Func' um einen Zeiger auf Member zu erstellen.
+"Func": Funktionsaufrufe fehlen Argumentliste; Verwenden von "& Func" zum Erstellen eines Zeigers auf einen Member
 
 Sie haben versucht, die Adresse einer Memberfunktion zu verwenden, ohne die Memberfunktion mit dem Klassennamen und dem address-of-Operator zu qualifizieren.
 
-Dieser Fehler kann außerdem infolge einer konformitätsverbesserung für Compiler, die für Visual Studio 2005 durchgeführt wurde, generiert werden: verbesserte Pointer-to-Member-Konformität. Code, der vor Visual Studio 2005 kompiliert generiert nun C3867.
+Dieser Fehler kann auch infolge einer compilerübereinstimmungs-Arbeit generiert werden, die für Visual Studio 2005 ausgeführt wurde: Erweiterte Zeiger-zu-Member-Konformität. Code, der vor Visual Studio 2005 kompiliert wurde, generiert jetzt C3867.
 
 ## <a name="example"></a>Beispiel
 
@@ -27,7 +27,7 @@ Der Compiler kann „C3867“ mit einem irreführenden Auflösungsvorschlag ausg
 
 Im folgenden Beispiel wird C3867 generiert und gezeigt, wie Sie diesen Fehler beheben.
 
-```
+```cpp
 // C3867_1.cpp
 // compile with: /c
 struct Base {
@@ -49,7 +49,7 @@ void Derived::Bar() {
 
 Im folgenden Beispiel wird C3867 generiert und gezeigt, wie Sie diesen Fehler beheben.
 
-```
+```cpp
 // C3867_2.cpp
 #include<stdio.h>
 
@@ -81,7 +81,7 @@ int main() {
 
 Im folgenden Beispiel wird C3867 generiert und gezeigt, wie Sie diesen Fehler beheben.
 
-```
+```cpp
 // C3867_3.cpp
 class X {
 public:
@@ -100,7 +100,7 @@ int main() {
 
 Im folgenden Beispiel wird C3867 generiert.
 
-```
+```cpp
 // C3867_4.cpp
 // compile with: /c
 class A {
@@ -124,7 +124,7 @@ public:
 
 Im folgenden Beispiel wird C3867 generiert.
 
-```
+```cpp
 // C3867_5.cpp
 // compile with: /EHsc
 #include <iostream>

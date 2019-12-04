@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3181
 ms.assetid: 5d450f8b-6cef-4452-a0c4-2076e967451d
-ms.openlocfilehash: dc848d4108ed4a1a7b6646647a1bbb1ec8dcadf7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e30ed7016ca3a4d4948a08c5c09268e52c9a407d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382393"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761672"
 ---
 # <a name="compiler-error-c3181"></a>Compilerfehler C3181
 
-'Typ': Ungültiger Operand für den Operator
+"Type": Ungültiger Operand für Operator.
 
-Ein ungültiger Parameter wurde übergeben, um die [Typeid](../../extensions/typeid-cpp-component-extensions.md) Operator. Der Parameter muss es sich um einen verwalteten Typ sein.
+An den [typeid](../../extensions/typeid-cpp-component-extensions.md) -Operator wurde ein ungültiger Parameter übergeben. Der-Parameter muss ein verwalteter Typ sein.
 
-Beachten Sie, dass der Compiler Aliase für systemeigene Typen verwendet werden, die Typen in der common Language Runtime zugeordnet.
+Beachten Sie, dass der Compiler Aliase für Native Typen verwendet, die Typen in der Common Language Runtime zugeordnet sind.
 
-Im folgende Beispiel wird die C3181 generiert:
+Im folgenden Beispiel wird C3181 generiert:
 
-```
+```cpp
 // C3181a.cpp
 // compile with: /clr
 using namespace System;

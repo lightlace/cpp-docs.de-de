@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2914
 ms.assetid: fc6a0592-f53e-4f5a-88cb-780bbed4acf2
-ms.openlocfilehash: 2500736f799032aea71173931139404b4406a16a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bed9e31d7d1de069ee708f8f482d26b37bc16833
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384347"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761057"
 ---
 # <a name="compiler-error-c2914"></a>Compilerfehler C2914
 
-'Bezeichner': Argument vom Typ kann nicht hergeleitet werden, da das Funktionsargument mehrdeutig ist.
+' Identifier ': Typargument kann nicht abgeleitet werden, da das Funktions Argument mehrdeutig ist
 
-Der Compiler ermitteln nicht, welche überladenen Funktionen für eine generische oder Vorlagenklasse-Argument verwenden sollen.
+Der Compiler kann nicht bestimmen, welche überladenen Funktionen für ein generisches oder Vorlagen Argument verwendet werden sollen.
 
-Im folgende Beispiel wird die C2914 generiert:
+Im folgenden Beispiel wird C2914 generiert:
 
-```
+```cpp
 // C2914.cpp
 // compile with: /c
 void f(int);
@@ -32,9 +32,9 @@ void h() { g(f); }   // C2914
 // void h() { g<int>(f); }
 ```
 
-C2914 kann auch auftreten, wenn Generika verwendet werden.  Im folgende Beispiel wird die C2914 generiert:
+C2914 kann auch auftreten, wenn Generika verwendet werden.  Im folgenden Beispiel wird C2914 generiert:
 
-```
+```cpp
 // C2914b.cpp
 // compile with: /clr /c
 void f(int);

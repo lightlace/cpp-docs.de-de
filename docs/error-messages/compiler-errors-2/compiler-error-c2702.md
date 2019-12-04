@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2702
 ms.assetid: 6def15d4-9a8d-43e7-ae35-42d7cb57c27e
-ms.openlocfilehash: 1353e16d1bfc0999a9efe7a2a3a8d80a50b41f15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03a982ee35f0ac49a12568fc428de333f57f3ffa
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367693"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758319"
 ---
 # <a name="compiler-error-c2702"></a>Compilerfehler C2702
 
-__except möglicherweise nicht in einem Terminierungsblock angezeigt
+__except wird möglicherweise nicht in einem Beendigungs Block angezeigt.
 
-Ein Ausnahmehandler (`__try`/`__except`) können nicht geschachtelt werden, in einem `__finally` Block.
+Ein Ausnahmehandler (`__try`/`__except`) kann nicht in einem `__finally` Block geschachtelt werden.
 
-Im folgende Beispiel wird die C2702 generiert:
+Im folgenden Beispiel wird C2702 generiert:
 
-```
+```cpp
 // C2702.cpp
 // processor: x86 IPF
 int Counter;

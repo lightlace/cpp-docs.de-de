@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3883
 ms.assetid: cdd1c1f4-f268-4469-9c62-d52303114b0c
-ms.openlocfilehash: 51ecf5fbc793c02a23e2aa02fb08e37ebe4b0ad0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dbb0328aa1810d55f2d974aed822992b53101b5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347037"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736658"
 ---
 # <a name="compiler-error-c3883"></a>Compilerfehler C3883
 
-"Var": ein statischer Initonly-Datenmember muss initialisiert werden
+"var": ein statischer initonly-Datenmember muss initialisiert werden.
 
-Eine Variable, die mit markierten [Initonly](../../dotnet/initonly-cpp-cli.md) wurde nicht ordnungsgemäß initialisiert.
+Eine mit [initonly](../../dotnet/initonly-cpp-cli.md) markierte Variable wurde nicht ordnungsgemäß initialisiert.
 
-Im folgende Beispiel wird die C3883 generiert:
+Im folgenden Beispiel wird C3883 generiert:
 
-```
+```cpp
 // C3883.cpp
 // compile with: /clr
 ref struct Y1 {
@@ -32,7 +32,7 @@ ref struct Y1 {
 
 Das folgende Beispiel zeigt eine mögliche Lösung:
 
-```
+```cpp
 // C3883b.cpp
 // compile with: /clr /c
 ref struct Y1 {
@@ -41,9 +41,9 @@ ref struct Y1 {
 };
 ```
 
-Im folgende Beispiel wird veranschaulicht, wie in einem statischen Konstruktor initialisiert werden:
+Im folgenden Beispiel wird gezeigt, wie in einem statischen Konstruktor initialisiert wird:
 
-```
+```cpp
 // C3883c.cpp
 // compile with: /clr /LD
 ref struct Y1 {

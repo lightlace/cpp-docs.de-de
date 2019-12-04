@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3657
 ms.assetid: 89a28a18-4c17-43a1-bda6-deb52c32d203
-ms.openlocfilehash: f979d5776bea5e8fb6e0255bdcdeaacb284932ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1a72fc3d96a5ef3a591fb61d0b2839fb5c1b05b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410485"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758268"
 ---
 # <a name="compiler-error-c3657"></a>Compilerfehler C3657
 
-Destruktoren können keine explizite Überschreibung durchführen oder explizit überschrieben werden.
+Dekonstruktoren können nicht explizit außer Kraft setzen oder explizit überschrieben werden.
 
-Destruktoren oder Finalizer können nicht explizit außer Kraft gesetzt werden. Weitere Informationen finden Sie unter [explizite Überschreibungen](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Dekonstruktoren oder Finalizer können nicht explizit überschrieben werden. Weitere Informationen finden Sie unter [explizite über](../../extensions/explicit-overrides-cpp-component-extensions.md)schreibungen.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3657 generiert.
+Im folgenden Beispiel wird C3657 generiert.
 
-```
+```cpp
 // C3657.cpp
 // compile with: /clr
 public ref struct I {

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3421
 ms.assetid: b52050c6-17a4-424a-8894-337b0cec7010
-ms.openlocfilehash: 399224a3d091a26066a03df0c77511997ae2403c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39a57aa7b85b9f8a8aae0b93e2b346584edef8de
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182419"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756239"
 ---
 # <a name="compiler-error-c3421"></a>Compilerfehler C3421
 
@@ -19,13 +19,13 @@ ms.locfileid: "62182419"
 
 Ein Finalizer ist implizit privat, sodass er von außerhalb des einschließenden Typs nicht aufgerufen werden kann.
 
-Weitere Informationen finden Sie unter [Destruktoren und Finalizer unter How to: Definieren und Verarbeiten von Klassen und Strukturen (C++ / CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Weitere Informationen finden Sie unter [debugtoren und Finalizer in Gewusst wie: definieren und Verarbeiten von Klassen und StrukturenC++(/CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 ## <a name="example"></a>Beispiel
 
 Im folgenden Beispiel wird C3421 generiert:
 
-```
+```cpp
 // C3421.cpp
 // compile with: /clr
 ref class A {};

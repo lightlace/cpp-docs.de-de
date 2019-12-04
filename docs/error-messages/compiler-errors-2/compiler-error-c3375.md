@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3375
 ms.assetid: f1df78c6-e6ca-48f3-8b29-4e1710002bf3
-ms.openlocfilehash: ba1dbf08fb56364d2ab5b8c40847ab89484dc005
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf92f0fabecfa7292a4d6a8644746c489cbf139f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328795"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759749"
 ---
 # <a name="compiler-error-c3375"></a>Compilerfehler C3375
 
@@ -19,13 +19,13 @@ ms.locfileid: "62328795"
 
 Ein Delegat wurde möglicherweise als statische Memberfunktion oder ein ungebundener Delegat als Instanzfunktion instanziiert, daher hat der Compiler diesen Fehler ausgelöst.
 
-Weitere Informationen finden Sie unter [Delegate (Komponentenerweiterungen)](../../extensions/delegate-cpp-component-extensions.md).
+Weitere Informationen finden Sie unter [delegieren (C++ Komponenten Erweiterungen)](../../extensions/delegate-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 
 Im folgenden Beispiel wird C3375 generiert:
 
-```
+```cpp
 // C3375.cpp
 // compile with: /clr
 ref struct R {

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3868
 ms.assetid: f0e45c2a-2149-4885-a03b-0d230069f03a
-ms.openlocfilehash: 3d759d8e527bf38c7408f3497b27287e030d387e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cea8ee926bb5c1bc7482e53ed48a310c870774d1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338440"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761469"
 ---
 # <a name="compiler-error-c3868"></a>Compilerfehler C3868
 
-"Type": Einschränkungen für den generischen Parameter 'Parameter' unterscheiden sich von denen die Deklaration
+"Type": Einschränkungen für den generischen Parameter "Parameter" unterscheiden sich von denen in der Deklaration.
 
-Mehrere Deklarationen müssen dieselben generischen Einschränkungen verfügen.  Weitere Informationen finden Sie unter [Generics](../../extensions/generics-cpp-component-extensions.md).
+Mehrere Deklarationen müssen dieselben generischen Einschränkungen aufweisen.  Weitere Informationen finden Sie unter [Generics](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3868 generiert.
+Im folgenden Beispiel wird C3868 generiert.
 
-```
+```cpp
 // C3868.cpp
 // compile with: /clr /c
 interface struct I1;

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3891
 ms.assetid: 6e1a9458-97f5-4580-bc0f-aa97a1bfd20d
-ms.openlocfilehash: 74b8802a165ab3265cc0f1c6a0b33b31d3db401d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b5ef8b837033a149455c040f748f479aa3f424d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281559"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736398"
 ---
 # <a name="compiler-error-c3891"></a>Compilerfehler C3891
 
-"Var": Ein literal-Datenmember kann nicht als l-Wert verwendet werden
+"var": ein literaldatenmember kann nicht als l-Wert verwendet werden.
 
-Ein [literal](../../extensions/literal-cpp-component-extensions.md) -Variable ist eine Konstante, und der Wert kann nicht geändert werden, nachdem es in der Deklaration initialisiert wurde.
+Eine [literalvariable](../../extensions/literal-cpp-component-extensions.md) ist konstant, und ihr Wert kann nicht geändert werden, nachdem Sie in der Deklaration initialisiert wurde.
 
-Im folgende Beispiel wird die C3891 generiert:
+Im folgenden Beispiel wird C3891 generiert:
 
-```
+```cpp
 // C3891.cpp
 // compile with: /clr
 ref struct Y1 {

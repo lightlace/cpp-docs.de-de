@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2360
 ms.assetid: 51bfd2ee-8108-4777-aa93-148b9cebfa83
-ms.openlocfilehash: 6e956ccb021dc3bce4d107e4aa6e0bbe4356283b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 226fcd8a27c9abdb789b8191a5cf4e59cc4a66cc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364726"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759905"
 ---
 # <a name="compiler-error-c2360"></a>Compilerfehler C2360
 
-Initialisierung von "Bezeichner" durch "Case"-Bezeichnung übersprungen
+die Initialisierung von "Identifier" wird von der Case-Bezeichnung übersprungen.
 
-Die Initialisierung des `identifier` übersprungen werden kann, einem `switch` Anweisung. Sie können nicht hinter einer Deklaration mit einem Initialisierer springen, es sei denn, die Deklaration in einem Block eingeschlossen ist. (Es sei denn, sie innerhalb eines Blocks deklariert wird, wird die Variable Geltungsbereich bis zum Ende der `switch` Anweisung.)
+Die Initialisierung `identifier` kann in einer `switch` Anweisung übersprungen werden. Sie können nur dann eine Deklaration mit einem Initialisierer überspringen, wenn die Deklaration in einen-Block eingeschlossen ist. (Sofern Sie nicht in einem-Block deklariert wird, befindet sich die Variable bis zum Ende der `switch` Anweisung im Gültigkeitsbereich.)
 
-Im folgende Beispiel wird die C2360 generiert:
+Im folgenden Beispiel wird C2360 generiert:
 
-```
+```cpp
 // C2360.cpp
 int main() {
    int x = 0;
@@ -37,7 +37,7 @@ int main() {
 
 Mögliche Lösung:
 
-```
+```cpp
 // C2360b.cpp
 int main() {
    int x = 0;

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3083
 ms.assetid: 05ff791d-52bb-41eb-9511-3ef89d7f4710
-ms.openlocfilehash: 5ff049d3fcfb2c3dbc28baacdecee9b313574fc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee4a2bc683a757e079295c16d1022739eaa5726c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243296"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759710"
 ---
 # <a name="compiler-error-c3083"></a>Compilerfehler C3083
 
-'Funktion': das Symbol auf der linken Seite des ein '::' muss ein Typ sein
+"Function": das Symbol auf der linken Seite von "::" muss ein Typ sein.
 
 Eine Funktion wurde falsch aufgerufen.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3083 generiert.
+Im folgenden Beispiel wird C3083 generiert.
 
-```
+```cpp
 // C3083.cpp
 // compile with: /c
 struct N {

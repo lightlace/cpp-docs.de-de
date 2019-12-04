@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3919
 ms.assetid: 5f8eddda-d751-478b-930d-e18f7191ddfb
-ms.openlocfilehash: 05ac2fc9258a078f352b6012e64e86fe4b70c3f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78a42b264129ee365e664b1242c8aa58dd1244bd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386576"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758475"
 ---
 # <a name="compiler-error-c3919"></a>Compilerfehler C3919
 
-'Event_method': Funktion muss den Typ 'Typ' aufweisen
+"event_method": die Funktion muss den Typ "Typ" aufweisen.
 
-Eine Ereignis-Accessormethode wurde nicht ordnungsgemäß deklariert.
+Eine Ereignisaccessormethode wurde nicht ordnungsgemäß deklariert.
 
-Weitere Informationen zu Ereignissen finden Sie unter [Ereignis](../../extensions/event-cpp-component-extensions.md).
+Weitere Informationen zu Ereignissen finden Sie unter [Event](../../extensions/event-cpp-component-extensions.md).
 
-Im folgende Beispiel wird die C3919 generiert:
+Im folgenden Beispiel wird C3919 generiert:
 
-```
+```cpp
 // C3919.cpp
 // compile with: /clr /c
 using namespace System;

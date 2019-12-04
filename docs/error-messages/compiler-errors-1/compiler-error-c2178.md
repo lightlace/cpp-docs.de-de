@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2178
 ms.assetid: 79a14158-17f3-4221-bd06-9d675c49cef4
-ms.openlocfilehash: cd153bb5b331872bfe35b046d41612998bd0eff7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85cac4919c048c30a3ed1ff5573a3c14b77da0bd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386004"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737191"
 ---
 # <a name="compiler-error-c2178"></a>Compilerfehler C2178
 
-"*Bezeichner*"kann nicht mit deklariert werden"*Spezifizierer*' Spezifizierer
+'*Identifier*' kann nicht mit dem Spezifizierer '*Spezifizierer*' deklariert werden.
 
-Ein `mutable` Spezifizierer in einer Deklaration verwendet wurde, aber der Spezifizierer ist in diesem Kontext nicht zulässig.
+Ein `mutable` Spezifizierer wurde in einer Deklaration verwendet, aber der Spezifizierer ist in diesem Kontext nicht zulässig.
 
-Die `mutable` Spezifizierer kann nur auf Namen von klassendatenmembern angewendet werden, und kann nicht angewendet werden, um deklarierten Namen `const` oder `static`, und kann nicht auf Verweismember angewendet werden.
+Der `mutable` Spezifizierer kann nur auf Namen von klassendatenmembern angewendet werden und kann nicht auf Namen angewendet werden, die `const` oder `static`deklariert sind, und kann nicht auf Verweismember angewendet werden.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie C2178 auftreten können und wie Sie diesen Fehler beheben.
+Im folgenden Beispiel wird gezeigt, wie C2178 auftreten kann und wie es behoben werden kann.
 
-```
+```cpp
 // C2178.cpp
 // compile with: cl /c /W4 C2178.cpp
 

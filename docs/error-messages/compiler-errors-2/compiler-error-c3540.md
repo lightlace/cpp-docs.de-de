@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3540
 ms.assetid: 3c0c959c-e3b7-40eb-b922-ccac44bd9d85
-ms.openlocfilehash: 57e4145557272f76a890a356c79982346cd74d7e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 94f35f9f3bf64e09087f28a11a4fb9802d9d3c0f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345482"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761516"
 ---
 # <a name="compiler-error-c3540"></a>Compilerfehler C3540
 
-"Type": "sizeof" kann nicht angewendet werden, um ein Typ, der "auto" enthält
+"Type": "sizeof" kann nicht auf einen Typ angewendet werden, der "Auto" enthält.
 
-Die ["sizeof"](../../cpp/sizeof-operator.md) Operator kann nicht in den angegebenen Typ angewendet werden, da er enthält die `auto` Spezifizierer.
+Der [sizeof](../../cpp/sizeof-operator.md) -Operator kann nicht auf den angezeigtem Typ angewendet werden, weil er den `auto` Spezifizierer enthält.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel C3540 ergeben.
+Im folgenden Beispiel wird C3540 erzeugt.
 
-```
+```cpp
 // C3540.cpp
 // Compile with /Zc:auto
 int main() {

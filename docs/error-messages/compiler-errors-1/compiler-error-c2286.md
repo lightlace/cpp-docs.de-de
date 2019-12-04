@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2286
 ms.assetid: 078e0201-35cc-42e2-8dbc-6f8cf557b098
-ms.openlocfilehash: 7d3b8297c5f5da29b99abe78999396e8c44df0fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79697a17d322ae15a21e522efa7dfd5c2342f7a6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182768"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759164"
 ---
 # <a name="compiler-error-c2286"></a>Compilerfehler C2286
 
-Zeiger auf Member der Darstellung von 'Bezeichner' ist bereits auf "Vererbung" - Deklaration ignoriert festgelegt
+Zeiger auf Member der "Identifier"-Darstellung sind bereits auf "Vererbung" festgelegt-Deklaration wird ignoriert.
 
-Zwei unterschiedliche Darstellungen der Zeiger auf Member, die für die Klasse vorhanden sein.
+Für die-Klasse sind zwei verschiedene Pointer-to-Member-Darstellungen vorhanden.
 
-Weitere Informationen finden Sie unter [Vererbungsschlüsselwörter](../../cpp/inheritance-keywords.md).
+Weitere Informationen finden Sie unter [Vererbungs Schlüsselwörter](../../cpp/inheritance-keywords.md).
 
 ## <a name="example"></a>Beispiel
 
 Im folgenden Beispiel wird C2286 generiert:
 
-```
+```cpp
 // C2286.cpp
 // compile with: /c
 class __single_inheritance X;

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3290
 ms.assetid: 0baf684b-1143-4953-ac99-a2fa267d8017
-ms.openlocfilehash: f2a346354d8da7d78c5517b01b4438bfb8af50ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a7a73c13c28923761674294d8d6e601b95ffad96
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222706"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760152"
 ---
 # <a name="compiler-error-c3290"></a>Compilerfehler C3290
 
@@ -19,13 +19,13 @@ ms.locfileid: "62222706"
 
 Eine Eigenschaft wurde falsch deklariert. Wenn Sie eine triviale Eigenschaft deklarieren, erstellt der Compiler eine Variable, die von der Eigenschaft aktualisiert wird, und es ist nicht möglich, eine Nachverfolgungsverweisvariable in einer Klasse zu verwenden.
 
-Finden Sie unter [Eigenschaft](../../extensions/property-cpp-component-extensions.md) und [Verweisoperator nachverfolgung](../../extensions/tracking-reference-operator-cpp-component-extensions.md) für Weitere Informationen.
+Weitere Informationen finden Sie unter [Property](../../extensions/property-cpp-component-extensions.md) and [Tracking Reference Operator](../../extensions/tracking-reference-operator-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Beispiel
 
 Im folgenden Beispiel wird C3290 generiert.
 
-```
+```cpp
 // C3290.cpp
 // compile with: /clr /c
 ref struct R {};
