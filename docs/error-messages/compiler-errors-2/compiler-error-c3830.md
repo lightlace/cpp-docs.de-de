@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3830
 ms.assetid: c9798f88-5001-4067-9fb1-09957ddc6fa8
-ms.openlocfilehash: 25f2b86e21d4672c9e0907c366da17072bafa183
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14272d2c0b0f8de63f55d2ba3d1c01cf04e0dfbd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390541"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741637"
 ---
 # <a name="compiler-error-c3830"></a>Compilerfehler C3830
 
-"Typ1": kann nicht von 'type2', Wert Typen können nur von Schnittstellenklassen erben erben
+"Typ1": erbt nicht von "Typ2". Werttypen können nur von Schnittstellen Klassen erben.
 
-Ein Werttyp kann nicht auf eine Basisklasse erben.  Weitere Informationen finden Sie unter [Klassen und Strukturen](../../extensions/classes-and-structs-cpp-component-extensions.md).
+Ein Werttyp kann keine Basisklasse erben.  Weitere Informationen finden Sie unter [Klassen und Strukturen](../../extensions/classes-and-structs-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3830 generiert:
+Im folgenden Beispiel wird C3830 generiert:
 
-```
+```cpp
 // C3830a.cpp
 // compile with: /clr /c
 public value struct MyStruct4 {

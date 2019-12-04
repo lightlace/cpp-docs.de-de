@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2480
 ms.assetid: 1a58d1c2-971b-4084-96fa-f94aa51c02f1
-ms.openlocfilehash: 90016b65d4ddd58da3fb3c5ab6d81322dc0ef394
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e495a8019405a558511637467133877dae1183e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187597"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743522"
 ---
 # <a name="compiler-error-c2480"></a>Compilerfehler C2480
 
-'Bezeichner': "Thread" ist nur für statische Daten gültig
+"Bezeichner": "Thread" ist nur für Datenelemente mit statischem Wertebereich gültig.
 
-Sie können keine der `thread` Attribut mit einer automatischen Variablen, die nicht statische Datenmember, die Funktionsparameter oder in Funktionsdeklarationen oder-Definitionen.
+Das `thread`-Attribut kann nicht mit einer automatischen Variablen, einem nicht statischen Datenmember, einem Funktionsparameter oder in Funktions Deklarationen oder-Definitionen verwendet werden.
 
-Verwenden der `thread` -Attribut für die globalen Variablen, statische Datenmember und nur lokale statische Variablen.
+Verwenden Sie das `thread`-Attribut nur für globale Variablen, statische Datenmember und lokale statische Variablen.
 
-Im folgende Beispiel wird die C2480 generiert:
+Im folgenden Beispiel wird C2480 generiert:
 
-```
+```cpp
 // C2480.cpp
 // compile with: /c
 __declspec( thread ) void func();   // C2480

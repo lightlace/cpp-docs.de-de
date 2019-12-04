@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2034
 ms.assetid: 953d70fa-bde9-4ce6-a55d-741e7bc63ff4
-ms.openlocfilehash: 4b4fe769f78e5f826ba08d4819019210f21f860f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c416c833edf522e4e67cf84aaf7fc945ee8a7972
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400473"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755108"
 ---
 # <a name="compiler-error-c2034"></a>Compilerfehler C2034
 
-'Bezeichner': Typ des Bitfelds ist zu klein für die Anzahl von Bits
+' Identifier ': der Typ des Bitfelds ist zu klein für die Anzahl von Bits.
 
-Die Anzahl der Bits in der Deklaration Bitfeld überschreitet die Größe des Basistyps.
+Die Anzahl der Bits in der Bitfeld Deklaration überschreitet die Größe des Basistyps.
 
-Im folgende Beispiel wird die C2034 generiert:
+Im folgenden Beispiel wird C2034 generiert:
 
-```
+```cpp
 // C2034.cpp
 struct A {
    char test : 9;   // C2034, char has 8 bits
@@ -30,7 +30,7 @@ struct A {
 
 Mögliche Lösung:
 
-```
+```cpp
 // C2034b.cpp
 // compile with: /c
 struct A {

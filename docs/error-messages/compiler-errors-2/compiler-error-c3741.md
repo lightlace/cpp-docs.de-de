@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3741
 ms.assetid: ed311315-cc32-49c9-97fa-01b293d81526
-ms.openlocfilehash: d207c87c7b3f75ac939c155da127720562973160
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2be5c0a4f85448f41f865bdde79d56998fbcf16a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376008"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752599"
 ---
 # <a name="compiler-error-c3741"></a>Compilerfehler C3741
 
-'Klasse': eine Co-Klasse muss bei der "Layout_dependent"-Parameter des Event_receiver = True
+"Class": muss eine Co-Klasse sein, wenn der Parameter "layout_dependent" von event_receiver = True ist.
 
-Wenn `layout_dependent=true` für eine [Event_receiver](../../windows/event-receiver.md) -Klasse, und klicken Sie dann auf die Klasse muss auch verfügen die [Co-Klasse](../../windows/coclass.md) Attribut.
+Wenn `layout_dependent=true` für eine [event_receiver](../../windows/event-receiver.md) Klasse, muss die Klasse auch über das [Co-Klasse](../../windows/coclass.md) -Attribut verfügen.
 
-Im folgende Beispiel wird C3741 generiert:
+Im folgenden Beispiel wird C3741 generiert.
 
-```
+```cpp
 // C3741.cpp
 // compile with: /c
 // C3741 expected

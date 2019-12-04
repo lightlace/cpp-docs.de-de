@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2940
 ms.assetid: af6bf2bf-8de6-4cfd-bbf0-4c6b32a30edf
-ms.openlocfilehash: c5445b7083d11f1439d3e171d35c3ca39411310d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9477a2da32040db67a143a59d940c5f1cbe94904
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301915"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740441"
 ---
 # <a name="compiler-error-c2940"></a>Compilerfehler C2940
 
@@ -21,7 +21,7 @@ Eine generische oder Vorlagenklasse kann nicht als lokale `typedef`verwendet wer
 
 Im folgenden Beispiel wird C2940 generiert:
 
-```
+```cpp
 // C2940.cpp
 template<class T>
 struct TC {};
@@ -33,7 +33,7 @@ int main() {
 
 C2940 kann auch auftreten, wenn Generics verwendet werden:
 
-```
+```cpp
 // C2940b.cpp
 // compile with: /clr
 generic<class T>

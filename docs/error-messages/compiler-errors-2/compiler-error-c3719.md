@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3719
 ms.assetid: d0d59d4e-babb-4480-9ef7-70cf1a28165c
-ms.openlocfilehash: 3ead2f18cdc8b76a0bb3da30e7086bdc80b49d43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4fca5bfd944514bf2658a8af5cbbd58efe5b39fc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328288"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753184"
 ---
 # <a name="compiler-error-c3719"></a>Compilerfehler C3719
 
-'Schnittstelle': eine Ereignisquelle für die Schnittstelle basiert kann nur für COM-Ereignisse verwendet werden
+' Schnittstelle ': eine Schnittstellen basierte Ereignis Quelle kann nur für COM-Ereignisse verwendet werden.
 
 Sie haben eine Schnittstelle in einem nicht-COM-Kontext deklariert.
 
-Im folgende Beispiel wird die C3719 generiert:
+Im folgenden Beispiel wird C3719 generiert:
 
-```
+```cpp
 // C3719a.cpp
 #define _ATL_ATTRIBUTES 1
 #include "atlbase.h"
@@ -46,9 +46,9 @@ int main() {
 }
 ```
 
-Um diesen Fehler zu beheben, wenden die [Objekt](../../windows/object-cpp.md), [Co-Klasse](../../windows/coclass.md), [Event_source](../../windows/event-source.md), und [Event_receiver](../../windows/event-receiver.md) Attribute entsprechend um machen die Klassen, die in denen Sie die Schnittstelle COM-Klassen verwenden. Zum Beispiel:
+Um diesen Fehler zu beheben, wenden Sie das [Objekt](../../windows/object-cpp.md), die [Co-Klasse](../../windows/coclass.md)-, [event_source](../../windows/event-source.md)-und [event_receiver](../../windows/event-receiver.md) Attribute entsprechend an, um die Klassen zu erstellen, in denen Sie die com-Klassen der-Schnittstelle verwenden. Beispiel:
 
-```
+```cpp
 // C3719b.cpp
 #define _ATL_ATTRIBUTES 1
 #include <atlbase.h>

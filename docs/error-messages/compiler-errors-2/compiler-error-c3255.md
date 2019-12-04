@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3255
 ms.assetid: 877ffca2-fd92-44b6-9060-6091b928b1c1
-ms.openlocfilehash: 129d2698a782d2b98267877e8d575a6ee641b94b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43538ce87e1d832fcfc4fca882a9f129b917aad5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173269"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754211"
 ---
 # <a name="compiler-error-c3255"></a>Compilerfehler C3255
 
-"Werttyp": Werttypobjekt auf systemeigenem Heap kann nicht dynamisch zuordnen
+"Werttyp": dieses Werttyp Objekt kann nicht dynamisch im systemeigenen Heap zuzuordnen werden.
 
-Instanzen eines Werttyps (finden Sie unter [Klassen und Strukturen](../../extensions/classes-and-structs-cpp-component-extensions.md)), die verwaltete Elemente enthalten kann auf dem Stapel, aber nicht auf dem Heap erstellt werden.
+Instanzen eines Werttyps (siehe [Klassen und Strukturen](../../extensions/classes-and-structs-cpp-component-extensions.md)), die verwaltete Member enthalten, können auf dem Stapel, aber nicht auf dem Heap erstellt werden.
 
-Im folgende Beispiel wird die C3255 generiert:
+Im folgenden Beispiel wird C3255 generiert:
 
-```
+```cpp
 // C3255.cpp
 // compile with: /clr
 using namespace System;

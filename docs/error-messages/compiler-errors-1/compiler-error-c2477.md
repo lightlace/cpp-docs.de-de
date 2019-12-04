@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2477
 ms.assetid: 60bc324b-6605-4833-8099-a291efc712e7
-ms.openlocfilehash: 73d8daa9576e4edc29958918c107e9edf18cc579
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: aa276ea839f11574609b183d78b46e08581a1b51
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447972"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743652"
 ---
 # <a name="compiler-error-c2477"></a>Compilerfehler C2477
 
-'Member': statische Datenmember kann nicht über eine abgeleitete Klasse initialisiert werden
+"Member": ein statischer Datenmember kann nicht über eine abgeleitete Klasse initialisiert werden.
 
-Ein statischer Datenmember einer Vorlagenklasse wurde nicht ordnungsgemäß initialisiert. Dies ist eine wichtige Änderung in Versionen von Microsoft C++ Compiler vor Visual Studio .NET 2003, um die ISO-Datei entsprechen C++ standard.
+Ein statischer Datenmember einer Vorlagen Klasse wurde nicht ordnungsgemäß initialisiert. Dies ist eine Breaking Change mit Versionen des Microsoft C++ -Compilers vor Visual Studio .NET 2003, um dem ISO C++ -Standard zu entsprechen.
 
-Im folgende Beispiel wird es sich um C2477 generiert:
+Im folgenden Beispiel wird C2477 generiert:
 
-```
+```cpp
 // C2477.cpp
 // compile with: /Za /c
 template <class T>

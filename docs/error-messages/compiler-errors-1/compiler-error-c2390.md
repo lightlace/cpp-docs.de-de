@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C2390
 ms.assetid: 06b749ee-d072-4db1-b229-715f2c0728b5
-ms.openlocfilehash: 89f6ebb02326413e8dca67d333e555321da4e645
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 515e2e151d27dd2eb84fc1dc71b9197b36b14cbb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393635"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745043"
 ---
 # <a name="compiler-error-c2390"></a>Compilerfehler C2390
 
-'Bezeichner': 'Spezifizierer' ist eine inkorrekte Speicherklasse
+"Bezeichner": falsche Speicher Klasse "Spezifizierer"
 
-Die Speicherklasse gilt nicht für die Bezeichner im globalen Gültigkeitsbereich. Anstelle der ungültige Klasse ist die Standardspeicherklasse dient.
+Die Speicher Klasse ist für den Bezeichner des globalen Bereichs nicht gültig. Die Standard Speicher Klasse wird anstelle der ungültigen-Klasse verwendet.
 
 Mögliche Lösungen:
 
-- Wenn der Bezeichner einer Funktion ist, deklarieren Sie ihn mit `extern` Speicher.
+- Wenn der Bezeichner eine Funktion ist, deklarieren Sie ihn mit `extern` Storage.
 
-- Wenn der Bezeichner ein formaler Parameter oder lokale Variable ist, deklarieren Sie es mit automatischem Speicher ein.
+- Wenn der Bezeichner ein formaler Parameter oder eine lokale Variable ist, deklarieren Sie ihn mit dem automatischen Speicher.
 
-- Wenn der Bezeichner eine globale Variable ist, deklarieren Sie ihn mit keine Speicherklasse (Auto-Speicher) ein.
+- Wenn der Bezeichner eine globale Variable ist, deklarieren Sie ihn ohne Speicher Klasse (automatischer Speicher).
 
 ## <a name="example"></a>Beispiel
 
-- Im folgende Beispiel wird die C2390 generiert:
+- Im folgenden Beispiel wird C2390 generiert:
 
-```
+```cpp
 // C2390.cpp
 register int i;   // C2390
 

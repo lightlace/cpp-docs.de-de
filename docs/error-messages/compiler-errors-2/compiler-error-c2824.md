@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2824
 ms.assetid: 5bd865f7-e0af-404e-80fe-e2b798b44a59
-ms.openlocfilehash: 226fc078312a214c561e80064474ee237245c0f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee012d7244079fd881210eb969f4844a2c6e85d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406937"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750636"
 ---
 # <a name="compiler-error-c2824"></a>Compilerfehler C2824
 
-Rückgabetyp für "Operator new" muss "void *"
+der Rückgabetyp für "Operator new" muss "void *" sein.
 
-Mit nicht-basierten Zeigern, Überladen des Operators `new` zurückgeben `void *`.
+Bei nicht basierten Zeigern müssen über Ladungen von Operator `new` `void *`zurückgeben.
 
-Im folgende Beispiel wird die C2824 generiert:
+Im folgenden Beispiel wird C2824 generiert:
 
-```
+```cpp
 // C2824.cpp
 // compile with: /c
 class   A {

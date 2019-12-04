@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2462
 ms.assetid: a8601bf8-f5ce-41de-9117-e2632bd4996b
-ms.openlocfilehash: 0b342f8b878c48a77336fab4921cf4a668e248ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4eb50ddac51ea78ab3a28d7703384f02eb026ecb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368291"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743925"
 ---
 # <a name="compiler-error-c2462"></a>Compilerfehler C2462
 
-'Bezeichner': Typdefinition in "new-Ausdruck" nicht möglich
+' Identifier ': ein Typ kann nicht in ' New-Expression ' definiert werden.
 
-Sie können keinen Typ definieren, in dem Operandenfeld, der die `new` Operator. Fügen Sie die Typdefinition in einer separaten Anweisung.
+Sie können im Operand-Feld des `new` Operators keinen Typ definieren. Legen Sie die Typdefinition in einer separaten Anweisung ab.
 
-Im folgende Beispiel wird die C2462 generiert:
+Im folgenden Beispiel wird C2462 generiert:
 
-```
+```cpp
 // C2462.cpp
 int main() {
    new struct S { int i; };   // C2462

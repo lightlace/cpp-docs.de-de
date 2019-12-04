@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3253
 ms.assetid: da40be26-0f78-4730-8727-ad11cddf8869
-ms.openlocfilehash: 5d161dfab8dff48a1ddd5a8a5036c0bb4d5549aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c895def372fd74f077725479112873020264371f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173248"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754263"
 ---
 # <a name="compiler-error-c3253"></a>Compilerfehler C3253
 
-'Funktion': Fehler bei der expliziten Überschreibung
+"Function": Fehler bei expliziter Überschreibung.
 
-Eine explizite Überschreibung wurde falsch angegeben. Sie können nicht z. B. eine Implementierung für eine Außerkraftsetzung angeben, die Sie auch als reine angeben. Weitere Informationen finden Sie unter [explizite Überschreibungen](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Eine explizite Überschreibung wurde falsch angegeben. Sie können z. b. keine Implementierung für eine außer Kraft Setzung angeben, die Sie auch als rein angeben. Weitere Informationen finden Sie unter [explizite über](../../extensions/explicit-overrides-cpp-component-extensions.md)schreibungen.
 
-Im folgende Beispiel wird die C3253 generiert:
+Im folgenden Beispiel wird C3253 generiert:
 
-```
+```cpp
 // C3253.cpp
 // compile with: /clr
 public interface struct I {

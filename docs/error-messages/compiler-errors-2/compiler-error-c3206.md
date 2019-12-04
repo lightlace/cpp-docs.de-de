@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3206
 ms.assetid: d62995b5-e349-4418-bbe8-8a5e776ca7b0
-ms.openlocfilehash: 665244cbfc87f32274f9eaf9afacfb1caad50659
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a602238ca5a2f2a64eaa601cc6733a897b9fdb4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402683"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738686"
 ---
 # <a name="compiler-error-c3206"></a>Compilerfehler C3206
 
@@ -21,7 +21,7 @@ Eine Vorlagenfunktion wurde so definiert, dass sie ein template-Typargument erwa
 
 Im folgenden Beispiel wird C3206 generiert:
 
-```
+```cpp
 // C3206.cpp
 template <class T>
 void f() {}
@@ -38,7 +38,7 @@ void f1() {
 
 Mögliche Lösung:
 
-```
+```cpp
 // C3206b.cpp
 // compile with: /c
 template <class T>
@@ -54,7 +54,7 @@ void f1() {
 
 C3206 kann auch auftreten, wenn Generics verwendet werden:
 
-```
+```cpp
 // C3206c.cpp
 // compile with: /clr
 generic <class GT1>
@@ -70,7 +70,7 @@ int main() {
 
 Mögliche Lösung:
 
-```
+```cpp
 // C3206d.cpp
 // compile with: /clr
 generic <class GT1>
@@ -84,9 +84,9 @@ int main() {
 }
 ```
 
-Eine Klassenvorlage ist nicht als template-Typargument zulässig. Im folgende Beispiel löst C3206 aus:
+Eine Klassenvorlage ist nicht als template-Typargument zulässig. Im folgenden Beispiel wird C3206 ausgelöst:
 
-```
+```cpp
 // C3206e.cpp
 template <class T>
 struct S {};
@@ -103,7 +103,7 @@ int main() {
 
 Mögliche Lösung:
 
-```
+```cpp
 // C3206f.cpp
 template <class T>
 struct S {};
@@ -118,9 +118,9 @@ int main() {
 }
 ```
 
-Wenn ein Template-Vorlagenparameter erforderlich ist, müssen Sie die Funktion in einer Vorlagenklasse umschließen, die einen Template Template-Parameter akzeptiert:
+Wenn ein Vorlagen Vorlagen Parameter erforderlich ist, müssen Sie die Funktion in einer Vorlagen Klasse einschließen, die einen Vorlagen Vorlagen Parameter annimmt:
 
-```
+```cpp
 // C3206g.cpp
 template <class T>
 struct S {};

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3020
 ms.assetid: f625c7a3-afaa-4bd8-9c1b-51891b832f36
-ms.openlocfilehash: 0e2d8e70dcc9b23c56a321487cd4b933a1086387
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b066e813203f10b902e49a62af97a9a041874752
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386680"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742118"
 ---
 # <a name="compiler-error-c3020"></a>Compilerfehler C3020
 
-"Var": Indexvariable der for-Schleife von OpenMP kann nicht im Schleifenkörper geändert werden
+"var": die Index Variable der for-Schleife von OpenMP kann im Schleifen Text nicht geändert werden.
 
-Eine OpenMP `for` -Schleife kann nicht geändert werden den Index (Schleifenzähler) im Hauptteil der `for` Schleife.
+Eine OpenMP-`for` Schleife kann den Index (Schleifen Indikator) nicht im Text der `for` Schleife ändern.
 
-Im folgende Beispiel wird die C3020 generiert:
+Im folgenden Beispiel wird C3020 generiert:
 
-```
+```cpp
 // C3020.cpp
 // compile with: /openmp
 int main() {
@@ -38,11 +38,11 @@ int main() {
 }
 ```
 
-Eine Variable mit [Lastprivate](../../parallel/openmp/reference/lastprivate.md) kann nicht als Index in eine parallele Schleife verwendet werden.
+Eine mit [Last private](../../parallel/openmp/reference/lastprivate.md) deklarierte Variable kann nicht als Index innerhalb einer parallelisierten Schleife verwendet werden.
 
-Im folgende Beispiel wird für die zweite Lastprivate C3020 angezeigt, da dadurch, einen Schreibvorgang in den Idx_a innerhalb der äußersten for-Schleife ausgelöst wird. Der erste Lastprivate wird keine Fehlermeldung ausgegeben, da dadurch einen Schreibvorgang in Idx_a außerhalb der äußersten for-Schleife (technisch gesehen ist am Ende des letzten Durchlaufs) auslöst. Im folgende Beispiel wird die C3020 generiert.
+Im folgenden Beispiel wird C3020 für den zweiten Last private-Wert verwendet, da Last private einen Schreibvorgang idx_a in der äußersten for-Schleife auslöst. Der erste Last private-Fehler gibt keinen Fehler aus, da Last private einen Schreibvorgang in idx_a außerhalb der äußersten for-Schleife auslöst (technisch gesehen am Ende der letzten Iterationen). Im folgenden Beispiel wird C3020 generiert.
 
-```
+```cpp
 // C3020b.cpp
 // compile with: /openmp /c
 float a[100][100];
@@ -61,7 +61,7 @@ void test(int first, int last)
 
 Das folgende Beispiel zeigt eine mögliche Lösung:
 
-```
+```cpp
 // C3020c.cpp
 // compile with: /openmp /c
 float a[100][100];

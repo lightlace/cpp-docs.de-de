@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3488
 ms.assetid: 0a6fcd76-dd3b-48d7-abb3-22eccda96034
-ms.openlocfilehash: ed3cccb77a40ab646c9a6375cf4c182de62aa478
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b69ed4ac8b7e706096d107e9dfaa4447ca1bc79
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381099"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738426"
 ---
 # <a name="compiler-error-c3488"></a>Compilerfehler C3488
 
@@ -27,13 +27,13 @@ Wenn Sie angeben, dass der Standarderfassungsmodus für einen Lambda-Ausdruck ei
 
 - geben Sie "nach Wert" als Standarderfassungsmodus an, oder
 
-- übergeben Sie die Variable nach Wert an die Erfassungsklausel. (Dies kann das Verhalten des lambda-Ausdrucks ändern.)
+- übergeben Sie die Variable nach Wert an die Erfassungsklausel. (Dies kann das Verhalten des Lambda-Ausdrucks ändern.)
 
 ## <a name="example"></a>Beispiel
 
 Im folgenden Beispiel wird C3488 generiert, weil ein Verweis auf die Variable `n` in der Erfassungsklausel eines Lambda-Ausdrucks angezeigt wird, dessen Standarderfassungsmodus der Modus nach Verweis ist:
 
-```
+```cpp
 // C3488a.cpp
 
 int main()
@@ -47,7 +47,7 @@ int main()
 
 Im folgenden Beispiel werden vier mögliche Lösungen für den Fehler C3488 gezeigt:
 
-```
+```cpp
 // C3488b.cpp
 
 int main()

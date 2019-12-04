@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3198
 ms.assetid: ec4ecf61-0067-4aa4-b443-a91013a1e59d
-ms.openlocfilehash: 61a3d14f9ad47edaa1e9b9f2b25d38b8dae7165c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9e0ce4a84b312e3a9277898b3fc264ea3ae22bb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243220"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739154"
 ---
 # <a name="compiler-error-c3198"></a>Compilerfehler C3198
 
-Ungültige Verwendung von Gleitkommapragmas: Fenv_access-Pragma wird nur im precise-Modus ausgeführt.
+Ungültige Verwendung von Gleit Komma-Pragmas: fenv_access Pragma nur im präzisen Modus arbeitet.
 
-[Fenv_access](../../preprocessor/fenv-access.md) Pragma wurde verwendet, unter einer [/fp](../../build/reference/fp-specify-floating-point-behavior.md) andere Einstellung als **/fp: präzise**.
+[fenv_access](../../preprocessor/fenv-access.md) Pragma wurde unter einer [/FP](../../build/reference/fp-specify-floating-point-behavior.md) -Einstellung verwendet, die nicht **/fp: präzise**ist.
 
-Im folgende Beispiel wird die C3198 generiert:
+Im folgenden Beispiel wird C3198 generiert:
 
-```
+```cpp
 // C3198.cpp
 // compile with: /fp:fast
 #pragma fenv_access(on)   // C3198

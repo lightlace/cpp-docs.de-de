@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2052
 ms.assetid: 922ca43b-b64b-4ef7-9611-c7313be3fd79
-ms.openlocfilehash: 2f7d77dbfcf8eb13b1c4b1a5f50750f954fd9281
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9e891ad60d5eea31a2554320a8c2c584234c435
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408809"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739115"
 ---
 # <a name="compiler-error-c2052"></a>Compilerfehler C2052
 
-'Typ': Unzulässiger Typ für Case-Ausdruck
+' Typ ': Unzulässiger Typ für Case-Ausdruck
 
-CASE-Ausdrücke müssen ganzzahlige Konstanten sein.
+Case-Ausdrücke müssen eine ganzzahlige Konstante sein.
 
-Im folgende Beispiel wird die C2052 generiert:
+Im folgenden Beispiel wird C2052 generiert:
 
-```
+```cpp
 // C2052.cpp
 int main() {
    int index = 0;

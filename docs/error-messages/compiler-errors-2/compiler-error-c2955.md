@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2955
 ms.assetid: 77709fb6-d69b-46fd-a62f-e8564563d01b
-ms.openlocfilehash: c012e5189b9ca1d0b0e786cbddacedee7c6728d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8afdeaf43c0c9789753b9165f1e8a8287aaac76d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300738"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742872"
 ---
 # <a name="compiler-error-c2955"></a>Compilerfehler C2955
 
@@ -19,11 +19,11 @@ ms.locfileid: "62300738"
 
 Eine Klassenvorlage oder generische Klasse kann ohne Vorlagen- bzw. generische Argumentliste nicht als Bezeichner verwendet werden.
 
-Weitere Informationen finden Sie unter [Klassenvorlagen](../../cpp/class-templates.md).
+Weitere Informationen finden Sie unter [Klassen Vorlagen](../../cpp/class-templates.md).
 
 Im folgenden Beispiel wird C2955 generiert und gezeigt, wie Sie diesen Fehler beheben:
 
-```
+```cpp
 // C2955.cpp
 // compile with: /c
 template<class T>
@@ -35,7 +35,7 @@ X<int> x2;   // OK - this is how to fix it.
 
 C2955 kann auch bei dem Versuch auftreten, eine abweichende Definition für eine Funktion zu erstellen, die in einer Klassenvorlage deklariert wurde:
 
-```
+```cpp
 // C2955_b.cpp
 // compile with: /c
 template <class T>
@@ -54,7 +54,7 @@ void CT<T>::CTFunc2() {}
 
 C2955 kann auch auftreten, wenn Generics verwendet werden:
 
-```
+```cpp
 // C2955_c.cpp
 // compile with: /clr
 generic <class T>
@@ -70,7 +70,7 @@ int main() {
 
 ## <a name="example"></a>Beispiel
 
-**Visual Studio 2017 und höher:** Der Compiler diagnostiziert ordnungsgemäß fehlende vorlagenargumentlisten, wenn die Vorlage in einer Vorlagenparameterliste (z. B. als Teil einer Standard-Template-Argument ein Nichttyp-Vorlagenparameter) angezeigt wird. Der folgende Code kompiliert in Visual Studio 2015, aber erzeugt in Visual Studio 2017 einen Fehler.
+**Visual Studio 2017 und höher:** Der Compiler diagnostiziert fehlende Vorlagen Argumentlisten ordnungsgemäß, wenn die Vorlage in einer Vorlagen Parameterliste angezeigt wird (z. b. als Teil eines Standardvorlagen Arguments oder eines Nichttyp-Vorlagen Parameters). Der folgende Code kompiliert in Visual Studio 2015, aber erzeugt in Visual Studio 2017 einen Fehler.
 
 ```
 template <class T> class ListNode;

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2825
 ms.assetid: c832f1c1-5184-4fc2-9356-12b21daa7af3
-ms.openlocfilehash: 1e2f8e8cd38b90a698994743609892896ef0d1a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a51901477958056356a96d71adde4241d60a2ac
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406898"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750584"
 ---
 # <a name="compiler-error-c2825"></a>Compilerfehler C2825
 
-Var: muss eine Klasse oder Namespace verwenden, wenn gefolgt von "::"
+var: muss eine Klasse oder ein Namespace sein, wenn gefolgt von "::"
 
-Nicht erfolgreiche es wurde versucht, um einen qualifizierten Namen zu bilden.
+Es wurde ein nicht erfolgreicher Versuch unternommen, einen qualifizierten Namen zu bilden.
 
-Beispielsweise stellen Sie sicher, dass Ihr Code keine Deklaration einer Funktion enthält, deren Namen der Funktion, die mit beginnt::.
+Stellen Sie z. b. sicher, dass der Code keine Funktionsdeklaration enthält, bei der der Funktionsname mit:: beginnt.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C2825 generiert:
+Im folgenden Beispiel wird C2825 generiert:
 
-```
+```cpp
 // C2825.cpp
 typedef int i;
 int main() {

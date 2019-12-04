@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3825
 ms.assetid: 18e204a1-f26e-42c6-8d74-2b49cc95f940
-ms.openlocfilehash: ddb665dab303b3133d4018910c2142a20a889bb0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98d9dbee8b3d290af0ddd1851380758290a21d4a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390580"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741715"
 ---
 # <a name="compiler-error-c3825"></a>Compilerfehler C3825
 
-'Klasse': eine verwaltete oder WinRTclass können nur verwaltete Unterstützung oder WinRTevents
+' class ': eine verwaltete oder winrtclass kann nur verwaltete oder winrtevents unterstützen.
 
 In verwalteten Klassen werden nur .NET-Ereignisse unterstützt. Nur Windows-Runtime-Ereignisse werden in Windows-Runtime-Klassen unterstützt. Ändern Sie zum Beheben dieses Fehlers in verwaltetem Code den Typparameter von `event_source` und `event_receiver` von `native` zu `managed`. Entfernen Sie alternativ das Attribut.
 
@@ -23,7 +23,7 @@ In verwalteten Klassen werden nur .NET-Ereignisse unterstützt. Nur Windows-Runt
 
 Im folgenden Beispiel wird C3825 generiert und gezeigt, wie Sie diesen Fehler beheben:
 
-```
+```cpp
 // C3825a.cpp
 // compile with: /clr
 public delegate void del1();

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2513
 ms.assetid: ab5b21d3-61e2-4df7-8eea-6f14d6ba8620
-ms.openlocfilehash: 13840246a5dc6a1c1bdbcb55dc47f212ee353d81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 093a5856fdcfa6311fcef93214672b035c91b4fc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165215"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746525"
 ---
 # <a name="compiler-error-c2513"></a>Compilerfehler C2513
 
-'type' : no variable declared before '='
+"Typ": keine Variable vor "=" deklariert
 
-Der Typspezifizierer wird angezeigt, in der Deklaration keinen Variablenbezeichner.
+Der Typspezifizierer wird in der Deklaration ohne Variablen Bezeichner angezeigt.
 
-Im folgende Beispiel wird die C2513 generiert:
+Im folgenden Beispiel wird C2513 generiert:
 
-```
+```cpp
 // C2513.cpp
 int main() {
    int = 9;   // C2513
@@ -29,9 +29,9 @@ int main() {
 }
 ```
 
-Dieser Fehler kann außerdem infolge einer konformitätsverbesserung für Compiler für Visual Studio .NET 2003 erledigt generiert werden: Initialisierung einer Typedef, die nicht mehr zulässig. Die Initialisierung einer TypeDef ist gemäß dem Standard nicht zulässig und wird nun ein Compilerfehler generiert.
+Dieser Fehler kann auch infolge einer für Visual Studio .NET 2003 abgeschlossenen compilerübereinstimmungs-Arbeit generiert werden: die Initialisierung einer TypeDef ist nicht mehr zulässig. Die Initialisierung einer TypeDef ist vom Standard nicht zulässig und generiert nun einen Compilerfehler.
 
-```
+```cpp
 // C2513b.cpp
 // compile with: /c
 typedef struct S {
@@ -41,4 +41,4 @@ typedef struct S {
 // } S;
 ```
 
-Eine Alternative wäre löschen `typedef` zum Definieren einer Variablen mit aggregierten Initialisiererliste, aber dies werden nicht empfohlen, da wird und erstellen Sie eine Variable mit dem gleichen Namen wie der Typ der Typname ausblenden.
+Eine Alternative besteht darin, `typedef` zu löschen, um eine Variable mit Aggregat Initialisiererliste zu definieren. Dies wird jedoch nicht empfohlen, da dadurch eine Variable mit dem gleichen Namen wie der Typ erstellt und der Typname ausgeblendet wird.

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3633
 ms.assetid: 7d65babf-2191-4d67-a69f-f5c4c2ddf946
-ms.openlocfilehash: 2d96a0e4f5f0b34c76f41058316c7f158f1a939d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f44c94cbb3c945406835816d8fc6ed7c39480eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385705"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742625"
 ---
 # <a name="compiler-error-c3633"></a>Compilerfehler C3633
 
-'Member' kann nicht als Member des verwalteten 'Typs' definiert werden.
+"Member" kann nicht als Member des verwalteten Typs "Typ" definiert werden.
 
-CLR-Referenz-Klassendatenmember darf nicht von einem nicht - POD-C++-Typ sein.  Sie können nur einen systemeigenen POD-Typ in einen CLR-Typ instanziieren.  Beispielsweise kann kein POD-Typ einen Kopierkonstruktor oder Zuweisungsoperator enthalten.
+CLR-Verweisklassendatenmember dürfen nicht von einem C++ nicht-POD-Typ sein.  Sie können einen nativen POD-Typ nur in einem CLR-Typ instanziieren.  Ein POD-Typ kann z. b. keinen Kopierkonstruktor oder Zuweisungs Operator enthalten.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C3633 generiert.
+Im folgenden Beispiel wird C3633 generiert.
 
-```
+```cpp
 // C3633.cpp
 // compile with: /clr /c
 #pragma warning( disable : 4368 )

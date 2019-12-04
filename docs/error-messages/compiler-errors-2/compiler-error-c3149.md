@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3149
 ms.assetid: cf6e2616-2f06-46da-8a8a-d449cb481c51
-ms.openlocfilehash: 8238dcec821256dad8101cd7ad59b2d85882c218
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 263eb03b7a9f45458f8d8b586adc6f1cfc5805be
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345512"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745979"
 ---
 # <a name="compiler-error-c3149"></a>Compilerfehler C3149
 
-'Typ': Dieser Typ ohne eine der obersten Ebene 'Char' kann nicht verwendet
+"Typ": dieser Typ kann hier ohne "char" der obersten Ebene nicht verwendet werden.
 
 Eine Deklaration wurde nicht ordnungsgemäß angegeben.
 
-Beispielsweise kann definiert einen CLR-Typ im globalen Gültigkeitsbereich und versucht, eine Variable des Typs als Teil der Definition zu erstellen. Da globale Variablen von CLR-Typen nicht zulässig sind, generiert der Compiler C3149 generiert.
+Beispielsweise haben Sie möglicherweise einen CLR-Typ im globalen Gültigkeitsbereich definiert und versucht, eine Variable des Typs als Teil der Definition zu erstellen. Da globale Variablen von CLR-Typen nicht zulässig sind, generiert der Compiler C3149.
 
-Deklarieren Sie Variablen, die von CLR-Typen in der Definition einer Funktion oder der Typ, um diesen Fehler zu beheben.
+Um diesen Fehler zu beheben, deklarieren Sie Variablen von CLR-Typen in einer Funktions-oder Typdefinition.
 
-Im folgende Beispiel wird die C3149 generiert:
+Im folgenden Beispiel wird C3149 generiert:
 
-```
+```cpp
 // C3149.cpp
 // compile with: /clr
 using namespace System;
@@ -36,9 +36,9 @@ int main() {
 }
 ```
 
-Im folgende Beispiel wird die C3149 generiert:
+Im folgenden Beispiel wird C3149 generiert:
 
-```
+```cpp
 // C3149b.cpp
 // compile with: /clr /c
 delegate int MyDelegate(const int, int);

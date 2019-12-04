@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3908
 ms.assetid: 3c322482-c79e-4197-a578-2ad9bc379d1a
-ms.openlocfilehash: e11d830c3d662ea424caadeb50df669700f8c78f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b57f3346427ff548d11fe776e909eca99433a81
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406549"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749034"
 ---
 # <a name="compiler-error-c3908"></a>Compilerfehler C3908
 
-die Zugriffsebene ist weniger restriktiv als 'Konstrukt'
+die Zugriffsebene ist weniger restriktiv als "Konstrukt".
 
-Eine Eigenschaftenaccessormethode ("Get" oder "Set") darf nicht weniger restriktiv als der Zugriff auf die Eigenschaft selbst zugreifen.  Auf ähnliche Weise für die Methoden der eigenschaftenzugriffsmethode.
+Eine Eigenschaftenaccessormethode (Get oder Set) kann nicht weniger einschränkenden Zugriff haben als der für die Eigenschaft selbst angegebene Zugriff.  Gleiches gilt für Ereignisaccessormethoden.
 
 Weitere Informationen finden Sie unter [Eigenschaft](../../extensions/property-cpp-component-extensions.md) und [Ereignis](../../extensions/event-cpp-component-extensions.md).
 
-Im folgende Beispiel wird die C3908 generiert:
+Im folgenden Beispiel wird C3908 generiert:
 
-```
+```cpp
 // C3908.cpp
 // compile with: /clr
 ref class X {

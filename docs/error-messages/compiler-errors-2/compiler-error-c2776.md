@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2776
 ms.assetid: 9d80addc-62c7-40fc-a2cc-60303abb87df
-ms.openlocfilehash: 200fbc5c42a6b735c072c093ec4cb4f081031824
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79758c88e595e6d5ebb5cd4b39a8df8fc1339752
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257100"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740064"
 ---
 # <a name="compiler-error-c2776"></a>Compilerfehler C2776
 
-nur ein "get"-Methode kann pro Eigenschaft angegeben werden
+nur eine "Get"-Methode kann pro Eigenschaft angegeben werden.
 
-Sie können nur eine angeben `get` Funktion in der [Eigenschaft](../../cpp/property-cpp.md) erweitertes Attribut. Dieser Fehler tritt auf, wenn mehrere `get` Funktionen angegeben werden.
+Sie können nur eine `get` Funktion im erweiterten Attribut der [Eigenschaft](../../cpp/property-cpp.md) angeben. Dieser Fehler tritt auf, wenn mehrere `get` Funktionen angegeben sind.
 
-Im folgende Beispiel wird die C2776 generiert:
+Im folgenden Beispiel wird C2776 generiert:
 
-```
+```cpp
 // C2776.cpp
 struct A {
    __declspec(property(get=GetProp,get=GetPropToo))
