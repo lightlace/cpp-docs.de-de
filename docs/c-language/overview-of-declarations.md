@@ -5,12 +5,12 @@ helpviewer_keywords:
 - declarations, about declarations
 - type qualifiers
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
-ms.openlocfilehash: 439bc878bbcd1c9778fb74738cb3b32b908a5943
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 0ffda6522e632533b0aaa4ba146e8fad082ed435
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148347"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857059"
 ---
 # <a name="overview-of-declarations"></a>Übersicht über Deklarationen
 
@@ -19,9 +19,9 @@ Eine "Deklaration" gibt die Interpretation und die Attribute eines Satzes von Be
 ## <a name="syntax"></a>Syntax
 
 *declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub>**;**
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
 
-/\* *attribute-seq*<sub>opt</sub> ist Microsoft-spezifisch */
+/\* *-Attribut-"-abwählungsfrage*<sub>" ist Microsoft</sub> -spezifisch */
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
@@ -51,7 +51,7 @@ int const *fp;
 
 deklariert eine Variable mit dem Namen `fp` als Zeiger auf einen nicht veränderbaren (**const**) `int`-Wert. Sie können mehr als eine Variable in einer Deklaration definieren, indem Sie mehrere Deklaratoren verwenden, die durch Kommas getrennt werden.
 
-Eine Deklaration muss mindestens einen Deklarator aufweisen, oder ihr Typspezifizierer muss ein Struktur-Tag, ein Union-Tag oder Member einer Enumeration deklarieren. Deklaratoren stellen alle verbleibenden Informationen über einen Bezeichner bereit. Ein Deklarator ist ein Bezeichner, der mit eckigen Klammern (**[ ]**), Sternchen (<strong>\*</strong>) oder runden Klammern ( **( )** ) geändert werden kann, um jeweils ein Array, einen Zeiger oder einen Funktionstyp zu deklarieren. Wenn Sie einfache Variablen (wie Zeichen, ganze Zahlen und Gleitkommawerte) oder Strukturen und Unions einfacher Variablen deklarieren, ist `declarator` nur ein Bezeichner. Weitere Informationen über Deklaratoren finden Sie im Artikel über [Deklaratoren und Variablendeklarationen](../c-language/declarators-and-variable-declarations.md).
+Eine Deklaration muss mindestens einen Deklarator aufweisen, oder ihr Typspezifizierer muss ein Struktur-Tag, ein Union-Tag oder Member einer Enumeration deklarieren. Deklaratoren stellen alle verbleibenden Informationen über einen Bezeichner bereit. Ein Deklarator ist ein Bezeichner, der mit eckigen Klammern ( **[ ]** ), Sternchen (<strong>\*</strong>) oder runden Klammern ( **( )** ) geändert werden kann, um jeweils ein Array, einen Zeiger oder einen Funktionstyp zu deklarieren. Wenn Sie einfache Variablen (wie Zeichen, ganze Zahlen und Gleitkommawerte) oder Strukturen und Unions einfacher Variablen deklarieren, ist `declarator` nur ein Bezeichner. Weitere Informationen über Deklaratoren finden Sie im Artikel über [Deklaratoren und Variablendeklarationen](../c-language/declarators-and-variable-declarations.md).
 
 Alle Definitionen sind implizite Deklarationen, aber nicht alle Deklarationen sind Definitionen. So sind beispielsweise Variablendeklarationen, die mit dem `extern`-Speicherklassenspezifizierer beginnen, eher "verweisende" als "definierende" Deklarationen. Wenn auf eine externe Variable verwiesen wird, bevor sie definiert wurde, oder wenn sie in einer anderen Quelldatei als derjenigen definiert wird, in der sie verwendet wird, ist eine `extern`-Deklaration erforderlich. Der Speicher wird nicht durch "verweisende" Deklarationen zugeordnet. Außerdem können Variablen nicht in Deklarationen initialisiert werden.
 

@@ -1,26 +1,26 @@
 ---
 title: Nicht schwerwiegender ML-Fehler A2206
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2206
 helpviewer_keywords:
 - A2206
 ms.assetid: 711846d0-5a09-4353-8857-60588c25526a
-ms.openlocfilehash: 1ef796fcb55f098932beb66eb7cd2083d65e5144
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6cd24e32dc000b63a6d70520250e5a792cdbc455
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177006"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74854640"
 ---
 # <a name="ml-nonfatal-error-a2206"></a>Nicht schwerwiegender ML-Fehler A2206
 
-**Operator im Ausdruck fehlt**
+**fehlender Operator in Ausdruck**
 
-Ein Ausdruck kann nicht ausgewertet werden, da einen Operator fehlt. Diese Fehlermeldung kann auch ein Nebeneffekt einer vorherigen Programmfehler sein.
+Ein Ausdruck kann nicht ausgewertet werden, da ein Operator fehlt. Diese Fehlermeldung kann auch ein Nebeneffekt eines vorangehenden Programmfehlers sein.
 
-Dieser Fehler wird durch die folgende Zeile generiert:
+Dieser Fehler wird in der folgenden Zeile generiert:
 
 ```asm
 value1 = ( 1 + 2 ) 3

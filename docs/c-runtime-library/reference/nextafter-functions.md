@@ -51,12 +51,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: c56c9f8032c9af2ed4404428abe3b9ee26b4b603
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c6b100fb24d879a16780650d8a374ec26f28c048
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951357"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857722"
 ---
 # <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
@@ -85,7 +85,7 @@ float nexttoward( float x, long double y ); /* C++ only, requires <cmath> */
 long double nexttoward( long double x, long double y ); /* C++ only, requires <cmath> */
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *w*<br/>
 Der Gleitkommawert, der den Startpunkt markiert.
@@ -95,24 +95,24 @@ Der Gleitkommawert, der den Zielpunkt markiert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den nächsten darstellbaren Gleit Komma Wert des Rückgabe Typs nach *x* in der Richtung *y*zurück. Wenn *x* und *y* gleich sind, gibt die Funktion *y*in den Rückgabetyp konvertiert zurück, ohne dass eine Ausnahme ausgelöst wird. Wenn *x* nicht gleich *y*ist und das Ergebnis ein DENORMAL oder NULL ist, werden die Gleit Komma-Ausnahmezustände **FE_UNDERFLOW** und **FE_INEXACT** festgelegt, und das korrekte Ergebnis wird zurückgegeben. Wenn " *x* " oder " *y* " ein NaN-Wert ist, ist der Rückgabewert einer der Eingabe-Nans. Wenn *x* begrenzt ist und das Ergebnis unendlich oder nicht im Typ darstellbar ist, wird eine ordnungsgemäß signierte unendlich oder NaN zurückgegeben, die **FE_OVERFLOW** -und **FE_INEXACT** -Gleit Komma Ausnahmezustände werden festgelegt, und **errno** ist auf ERANGE festgelegt.
+Gibt den nächsten darstellbaren Gleit Komma Wert des Rückgabe Typs nach *x* in der Richtung *y*zurück. Wenn *x* und *y* gleich sind, gibt die Funktion *y*in den Rückgabetyp konvertiert zurück, ohne dass eine Ausnahme ausgelöst wird. Wenn *x* nicht gleich *y*ist und das Ergebnis ein DENORMAL oder NULL ist, werden die **FE_UNDERFLOW** -und **FE_INEXACT** Gleit Komma Ausnahmezustände festgelegt, und das korrekte Ergebnis wird zurückgegeben. Wenn " *x* " oder " *y* " ein NaN-Wert ist, ist der Rückgabewert einer der Eingabe-Nans. Wenn *x* begrenzt ist und das Ergebnis unendlich oder nicht im Typ darstellbar ist, wird eine ordnungsgemäß signierte unendlich oder NaN zurückgegeben, die **FE_OVERFLOW** -und **FE_INEXACT** Gleit Komma Ausnahmezustände werden festgelegt, und **errno** wird auf **ERANGE**festgelegt.
 
 ## <a name="remarks"></a>Hinweise
 
 Die **nextafter** -und **NexTTo** -Funktions Familien sind äquivalent, außer dem Parametertyp *y*. Wenn *x* und *y* gleich sind, wird der zurückgegebene Wert *y* in den Rückgabetyp konvertiert.
 
-Da C++ das überladen zulässt, können Sie \<, wenn Sie cmath-> einschließen, über Ladungen von **nextafter** und **NexTTo** aufzurufen, die **float** -und **Long** **Double** -Typen zurückgeben. In einem C-Programm geben **nextafter** und **NexTTo** immer **Double**zurück.
+Da C++ das überladen zulässt, können Sie, wenn Sie \<cmath-> einschließen, über Ladungen von **nextafter** und **NexTTo** aufzurufen, die **float** -und **Long** **Double** -Typen zurückgeben. In einem C-Programm geben **nextafter** und **NexTTo** immer **Double**zurück.
 
 Die Funktionen **_nextafter** und **_nextafterf** sind Microsoft-spezifisch. Die **_nextafterf** -Funktion ist nur verfügbar, wenn für x64 kompiliert wird.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
 |-Routine zurückgegebener Wert|Erforderlicher Header (C)|Erforderlicher Header (C++)|
 |-------------|---------------------------|-------------------------------|
 |**nextafter**, **nextafterf**, **nextafterl**, **_nextafterf**, **nexttoward**, **nexttowardf**, **nexttowardl**|\<math.h>|\<math.h> oder \<cmath>|
 |**_nextafter**|\<float.h>|\<float.h> oder \<cfloat>|
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Weitere Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,18 +1,18 @@
 ---
 title: /NOPDB
 description: Mit der/NOPDB-Option wird das Laden und Durchsuchen von PDB-Dateien für Symbol Informationen durch DUMPBIN verhindert.
-ms.date: 10/29/2019
+ms.date: 12/04/2019
 f1_keywords:
 - /NOPDB
 helpviewer_keywords:
 - /NOPDB dumpbin option
 - /NOPDB
-ms.openlocfilehash: 3b745049517888d13de245d4e29be3985c122ada
-ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
+ms.openlocfilehash: 7b0c01e59b52bcec6ddf09416dd6aac9999527a6
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73145746"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856968"
 ---
 # <a name="nopdb"></a>/NOPDB
 
@@ -24,7 +24,7 @@ Weist DUMPBIN an, Programm Datenbankdateien (PDB-Dateien) für Symbol Informatio
 
 ## <a name="remarks"></a>Hinweise
 
-Standardmäßig versucht DUMPBIN, PDB-Dateien für die Zielobjekt Dateien, Bibliotheken oder ausführbaren Dateien zu laden. DUMPBIN verwendet diese Informationen, um Adressen mit Symbolnamen abzugleichen. Der Prozess kann zeitaufwändig sein, wenn die PDB-Dateien groß sind oder von einem Remote Server geladen werden müssen. Die Option **/NOPDB** weist DUMPBIN an, diesen Schritt zu überspringen. Sie druckt nur die Adressen und Symbol Informationen, die in der Objektdatei, der Bibliothek oder der ausführbaren Datei verfügbar sind.
+Standardmäßig versucht DUMPBIN, PDB-Dateien für die ausführbaren Zieldateien zu laden. DUMPBIN verwendet diese Informationen, um Adressen mit Symbolnamen abzugleichen. Der Prozess kann zeitaufwändig sein, wenn die PDB-Dateien groß sind oder von einem Remote Server geladen werden müssen. Die Option **/NOPDB** weist DUMPBIN an, diesen Schritt zu überspringen. Es werden nur die in der ausführbaren Datei verfügbaren Adressen und Symbol Informationen ausgegeben.
 
 ### <a name="to-set-the-nopdb-linker-option-in-visual-studio"></a>So legen Sie die Option "/NOPDB Linker" in Visual Studio fest
 

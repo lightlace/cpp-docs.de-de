@@ -1,24 +1,24 @@
 ---
 title: Nicht schwerwiegender ML-Fehler A2097
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2097
 helpviewer_keywords:
 - A2097
 ms.assetid: 52f6f1f8-4eb4-4264-8619-7b9ccb20c0c7
-ms.openlocfilehash: a617c9002e49c15105470cf85803f3edcc34e76c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a0d8e13f876cf20dde4cf4bc9b182a0100052bc
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177755"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74855368"
 ---
 # <a name="ml-nonfatal-error-a2097"></a>Nicht schwerwiegender ML-Fehler A2097
 
 **Segment erwartet: Bezeichner**
 
-Die [Gruppe](../../assembler/masm/group.md) Direktive wurde einen Bezeichner, der ein definierten Segment nicht wurde angegeben.
+Der [Group](../../assembler/masm/group.md) -Direktive wurde ein Bezeichner zugewiesen, der kein definiertes Segment war.
 
 ## <a name="see-also"></a>Siehe auch
 

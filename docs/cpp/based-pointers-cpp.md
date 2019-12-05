@@ -10,29 +10,26 @@ helpviewer_keywords:
 - based pointers
 - pointers, based
 ms.assetid: 1e5f2e96-c52e-4738-8e14-87278681205e
-ms.openlocfilehash: 0a0435aa89e4cf744a5bc3c6dc72a715ed55f954
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 393fe8f8d12266650740942d0605152b6548d146
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498788"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857696"
 ---
 # <a name="based-pointers-c"></a>Basierte Zeiger (C++)
 
-**Microsoft-spezifisch**
-
-Mit dem **__based** -Schlüsselwort können Sie Zeiger auf der Grundlage von Zeigern deklarieren (Zeiger, die Offsets von vorhandenen Zeigern sind).
+Mit dem **__based** -Schlüsselwort können Sie Zeiger auf der Grundlage von Zeigern (Zeiger, die Offsets von vorhandenen Zeigern sind) deklarieren. Das **__based** -Schlüsselwort ist Microsoft-spezifisch.
 
 ## <a name="syntax"></a>Syntax
 
 ```
-
 type __based( base ) declarator
 ```
 
 ## <a name="remarks"></a>Hinweise
 
-Zeiger, die auf Zeiger Adressen basieren, sind die einzige Form des **__based** -Schlüssel Worts, das in 32-Bit-oder 64-Bit-Kompilierungen gültig ist. Für den 32-Bit-C/C++Compiler von Microsoft ist ein basierter Zeiger ein 32-Bit-Offset von einer 32-Bit-Zeigerbasis. Eine ähnliche Einschränkung besteht für 64-Bit-Umgebungen, in denen ein basierter Zeiger ein 64-Bit-Offset von der 64-Bit-Basis ist.
+Zeiger, die auf Zeiger Adressen basieren, sind die einzige Form des **__based** Schlüsselworts, das in 32-Bit-oder 64-Bit-Kompilierungen gültig ist. Für den 32-Bit-C/C++Compiler von Microsoft ist ein basierter Zeiger ein 32-Bit-Offset von einer 32-Bit-Zeigerbasis. Eine ähnliche Einschränkung besteht für 64-Bit-Umgebungen, in denen ein basierter Zeiger ein 64-Bit-Offset von der 64-Bit-Basis ist.
 
 Eine Verwendung von Zeigern, die auf Zeigern basieren, ist für dauerhafte Bezeichner, die Zeiger enthalten. Eine verknüpfte Liste, die aus Zeigern auf Grundlage eines Zeigers besteht, kann auf Datenträger gespeichert werden, dann an eine andere Stelle im Arbeitsspeicher neu geladen werden, wobei die Zeiger weiterhin gültig bleiben. Beispiel:
 
@@ -53,7 +50,7 @@ Dem Zeiger `vpBuffer` wird die Adresse des später im Programm zugewiesenen Arbe
 
 Beim Dereferenzieren eines basierten Zeigers muss die Basis explizit angegeben werden oder implizit durch die Deklaration bekannt sein.
 
-Aus Kompatibilitätsgründen mit früheren Versionen ist **_based** ein Synonym für **__based** , es sei denn, die Compileroption [/Za \(Spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md) ist angegeben.
+Aus Gründen der Kompatibilität mit früheren Versionen ist **_based** ein Synonym für **__based** , es sei denn, die Compileroption [/Za \(Deaktivieren von Spracherweiterungen)](../build/reference/za-ze-disable-language-extensions.md) ist angegeben.
 
 ## <a name="example"></a>Beispiel
 
@@ -94,5 +91,5 @@ int main() {
 
 ## <a name="see-also"></a>Siehe auch
 
-[Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
+[Stichwörter](../cpp/keywords-cpp.md)<br/>
 [alloc_text](../preprocessor/alloc-text.md)

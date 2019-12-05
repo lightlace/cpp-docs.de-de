@@ -8,24 +8,24 @@ f1_keywords:
 helpviewer_keywords:
 - __unaligned keyword [C++]
 ms.assetid: 0cd83aad-1840-47e3-ad33-59bfcbe6375b
-ms.openlocfilehash: 8eb1b93aa55601125600b6c69d9bff3d9ca43aa3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1090a0f3345f749a2afbd80566a9af7b9ea32d53
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244115"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857254"
 ---
-# <a name="unaligned"></a>__unaligned
+# <a name="__unaligned"></a>__unaligned
 
-**Microsoft-spezifisch**. Wenn Sie einen Zeiger mit deklarieren die **__unaligned** Modifizierer, nimmt der Compiler an, dass der Zeiger auf Daten verweist, die nicht ausgerichtet ist. Daher wird für die Plattform angemessene Code wird generiert, um die Behandlung von nicht ausgerichteten Lesevorgänge und schreibt über den Zeiger.
+**Microsoft-spezifisch**. Wenn Sie einen Zeiger mit dem **__unaligned** -Modifizierer deklarieren, geht der Compiler davon aus, dass der Zeiger nicht ausgerichtete Daten adressiert. Folglich wird Platt Form geeigneter Code generiert, um nicht ausgerichtete Lese-und Schreibvorgänge über den Zeiger zu verarbeiten.
 
 ## <a name="remarks"></a>Hinweise
 
-Dieser Modifizierer beschreibt die Ausrichtung der Daten vom Zeiger adressiert wird. der Zeiger selbst wird angenommen, dass ausgerichtet werden.
+Dieser Modifizierer beschreibt die Ausrichtung der Daten, die vom Zeiger adressiert werden. Es wird davon ausgegangen, dass der Zeiger selbst ausgerichtet wird.
 
-Die Notwendigkeit der **__unaligned** Schlüsselwort unterscheidet sich von Plattform und Umgebung. Daten entsprechend kennzeichnen kann zu Problemen, die von Leistungseinbußen zur Folge haben bis hin zu Hardware-Fehlern führen. Die **__unaligned** Modifizierer ist nicht gültig für die X86 Plattform.
+Die Notwendigkeit für das **__unaligned** -Schlüsselwort variiert je nach Plattform und Umgebung. Wenn Daten nicht ordnungsgemäß gekennzeichnet werden, kann dies zu Problemen mit Leistungseinbußen und Hardwarefehlern führen. Der **__unaligned** Modifizierer ist für die x86-Plattform ungültig.
 
-Für die Kompatibilität mit früheren Versionen **_unaligned** ist ein Synonym für **__unaligned** , wenn Compileroption [/Za \(spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md) angegeben wird.
+Aus Gründen der Kompatibilität mit früheren Versionen ist **_unaligned** ein Synonym für **__unaligned** , es sei denn, die Compileroption [/Za \(Deaktivieren von Spracherweiterungen)](../build/reference/za-ze-disable-language-extensions.md) ist angegeben.
 
 Weitere Informationen zur Ausrichtung finden Sie unter:
 
@@ -41,4 +41,4 @@ Weitere Informationen zur Ausrichtung finden Sie unter:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Schlüsselwörter](../cpp/keywords-cpp.md)
+[Stichwörter](../cpp/keywords-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Pragma-Direktiven und das __Pragma-Schlüsselwort
+title: Pragma-Anweisungen und das __pragma-Schlüsselwort
 ms.date: 08/29/2019
 f1_keywords:
 - '#pragma'
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: 2cf075e4ff8049593a1e77c5d2c1c259b224877b
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6cfbcd325dc895719bad5dccc9c19bcda90cdaa0
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222301"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858073"
 ---
-# <a name="pragma-directives-and-the-__pragma-keyword"></a>Pragma-Direktiven und das __Pragma-Schlüsselwort
+# <a name="pragma-directives-and-the-__pragma-keyword"></a>Pragma-Anweisungen und das __pragma-Schlüsselwort
 
 Pragma-Direktiven geben Computer-oder betriebssystemspezifische Compilerfunktionen an. Das **__Pragma** -Schlüsselwort, das für den Microsoft-Compiler spezifisch ist, ermöglicht das Codieren von pragma-Direktiven innerhalb von Makro Definitionen.
 
@@ -79,9 +79,7 @@ cl /Zp8 some_file.cpp
 
 ## <a name="the-__pragma-keyword"></a>Das __Pragma ()-Schlüsselwort
 
-**Microsoft-spezifisch**
-
-Der Compiler unterstützt auch das **__Pragma** -Schlüsselwort, das über die gleiche Funktionalität wie die **#pragma** -Direktive verfügt. Der Unterschied besteht darin, dass das **__Pragma** -Schlüsselwort Inline in einer Makro Definition verwendet werden kann. Die **#pragma** -Direktive kann nicht in einer Makro Definition verwendet werden, da der Compiler das Nummern Zeichen (' # ') in der Direktive als Zeichen folgen [Operator (#)](../preprocessor/stringizing-operator-hash.md)interpretiert.
+Der Compiler unterstützt auch das Microsoft-spezifische **__Pragma** -Schlüsselwort, das über die gleiche Funktionalität wie die **#pragma** -Direktive verfügt. Der Unterschied besteht darin, dass das **__Pragma** -Schlüsselwort Inline in einer Makro Definition verwendet werden kann. Die **#pragma** -Direktive kann nicht in einer Makro Definition verwendet werden, da der Compiler das Nummern Zeichen (' # ') in der Direktive als Zeichen folgen [Operator (#)](../preprocessor/stringizing-operator-hash.md)interpretiert.
 
 Im folgenden Codebeispiel wird veranschaulicht, wie das **__Pragma** -Schlüsselwort in einem Makro verwendet werden kann. Dieser Code wurde dem mfcdual.h-Header im ACDUAL-Beispiel in den Beispielen für die COM-Unterstützung des Compilers entnommen:
 
@@ -103,10 +101,8 @@ END_CATCH_ALL \
 return _hr; \
 ```
 
-**Microsoft-spezifisch beenden**
-
 ## <a name="see-also"></a>Siehe auch
 
 [C/C++ präprozessorverweis](../preprocessor/c-cpp-preprocessor-reference.md)\
 [C-Pragmas](../c-language/c-pragmas.md)\
-[Schlüsselwörter](../cpp/keywords-cpp.md)
+[Stichwörter](../cpp/keywords-cpp.md)

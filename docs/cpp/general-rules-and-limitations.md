@@ -2,22 +2,22 @@
 title: Allgemeine Regeln und Einschränkungen
 ms.date: 11/04/2016
 ms.assetid: 6c48902d-4259-4761-95d4-e421d69aa050
-ms.openlocfilehash: 931ae04ef47262f15d037a2b5eeb35bd01a8419d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bd8956b08d3e5f2109c5574802a3a8a72fba537
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153774"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857527"
 ---
 # <a name="general-rules-and-limitations"></a>Allgemeine Regeln und Einschränkungen
 
-## <a name="microsoft-specific"></a>Microsoft-spezifisch
+**Microsoft-spezifisch**
 
-- Wenn Sie eine Funktion deklariert oder ein ohne Objekt die **Dllimport** oder **Dllexport** -Attribut, Funktion oder des Objekts wird nicht als Teil der DLL-Schnittstelle betrachtet. Daher muss die Definition der Funktion oder des Objekts in diesem Modul oder in einem anderen Modul desselben Programms vorhanden sein. Um der Funktion oder das Objekt Teil der DLL-Schnittstelle zu machen, müssen Sie die Definition der Funktion oder des Objekts im anderen Modul als deklarieren **Dllexport**. Andernfalls wird ein Linkerfehler generiert.
+- Wenn Sie eine Funktion oder ein Objekt ohne das **DllImport** -oder **dllexport** -Attribut deklarieren, wird die Funktion oder das Objekt nicht als Teil der DLL-Schnittstelle betrachtet. Daher muss die Definition der Funktion oder des Objekts in diesem Modul oder in einem anderen Modul desselben Programms vorhanden sein. Um die Funktion oder das Objekt Teil der DLL-Schnittstelle zu machen, müssen Sie die Definition der Funktion oder des Objekts im anderen Modul als **dllexport**deklarieren. Andernfalls wird ein Linkerfehler generiert.
 
-   Wenn Sie eine Funktion deklariert oder ein Objekt mit der **Dllexport** -Attribut seiner Definition muss in einem Modul desselben Programms angezeigt werden. Andernfalls wird ein Linkerfehler generiert.
+   Wenn Sie eine Funktion oder ein Objekt mit dem **dllexport** -Attribut deklarieren, muss die Definition in einem Modul desselben Programms angezeigt werden. Andernfalls wird ein Linkerfehler generiert.
 
-- Wenn ein einzelnes Modul im Programm sowohl enthält **Dllimport** und **Dllexport** -Deklarationen für dieselbe Funktion oder des Objekts, das **Dllexport** -Attribut hat Vorrang vor über die **Dllimport** Attribut. Es wird jedoch eine Compilerwarnung ausgegeben. Zum Beispiel:
+- Wenn ein einzelnes Modul im Programm sowohl **DllImport** -als auch **dllexport** -Deklarationen für dieselbe Funktion oder dasselbe Objekt enthält, hat das **dllexport** -Attribut Vorrang vor dem **DllImport** -Attribut. Es wird jedoch eine Compilerwarnung ausgegeben. Beispiel:
 
     ```cpp
     __declspec( dllimport ) int i;
@@ -25,7 +25,7 @@ ms.locfileid: "62153774"
                                      // dllexport takes precedence.
     ```
 
-- In C++ können Sie einen global deklarierten oder statischen lokalen Datenzeiger initialisieren oder die Adresse eines Objekts deklariert mit dem **Dllimport** -Attribut, das einen Fehler in c generiert wird. Darüber hinaus können Sie einen statischen lokalen Funktionszeiger mit der Adresse einer Funktion, die mit deklariert Initialisieren der **Dllimport** Attribut. In C legt eine solche Zuweisung den Zeiger auf die Adresse des DLL-Importthunks (ein Codestub, der die Steuerung an die Funktion übergibt) anstatt auf die Adresse der Funktion fest. In C++ wird der Zeiger auf die Adresse der Funktion festgelegt. Zum Beispiel:
+- In C++können Sie einen global deklarierten oder statischen lokalen Datenzeiger oder mit der Adresse eines Datenobjekts, das mit dem **DllImport** -Attribut deklariert wurde, initialisieren, das in C einen Fehler generiert. Außerdem können Sie einen statischen lokalen Funktionszeiger mit der Adresse einer Funktion initialisieren, die mit dem **DllImport** -Attribut deklariert wurde. In C legt eine solche Zuweisung den Zeiger auf die Adresse des DLL-Importthunks (ein Codestub, der die Steuerung an die Funktion übergibt) anstatt auf die Adresse der Funktion fest. In C++ wird der Zeiger auf die Adresse der Funktion festgelegt. Beispiel:
 
     ```cpp
     __declspec( dllimport ) void func1( void );
@@ -43,7 +43,7 @@ ms.locfileid: "62153774"
     }
     ```
 
-   Aber da ein Programm, enthält die **Dllexport** Attribut in der Deklaration eines Objekts muss die Definition für dieses Objekt an einer beliebigen Stelle im Programm bereitstellen, initialisieren Sie einen globalen oder lokalen statischen Funktionszeiger mit die Adresse einer **Dllexport** Funktion. Sie können auf ähnliche Weise initialisieren, einen globalen oder lokalen statischen Datenzeiger mit der Adresse einer **Dllexport** Datenobjekt. Zum Beispiel generiert der folgende Code keine Fehler in C oder C++:
+   Da ein Programm, das das **dllexport** -Attribut in der Deklaration eines Objekts enthält, jedoch die Definition für dieses Objekt an einer beliebigen Stelle im Programm bereitstellen muss, können Sie einen globalen oder lokalen statischen Funktionszeiger mit der Adresse einer **dllexport** -Funktion initialisieren. Auf ähnliche Weise können Sie einen globalen oder lokalen statischen Datenzeiger mit der Adresse eines **dllexport** -Datenobjekts initialisieren. Zum Beispiel generiert der folgende Code keine Fehler in C oder C++:
 
     ```cpp
     __declspec( dllexport ) void func1( void );
@@ -59,9 +59,9 @@ ms.locfileid: "62153774"
     }
     ```
 
-- Wenn Sie anwenden **Dllexport** in einer normalen Klasse, die eine Basisklasse verfügt, die nicht als gekennzeichnet ist **Dllexport**, generiert der Compiler C4275.
+- Wenn Sie **dllexport** auf eine reguläre Klasse anwenden, die über eine Basisklasse verfügt, die nicht als **dllexport**gekennzeichnet ist, generiert der Compiler C4275.
 
-   Der Compiler generiert dieselbe Warnung, wenn die Basisklasse eine Spezialisierung einer Klassenvorlage ist. Um dieses Problem umgehen, markieren Sie die Basisklasse mit **Dllexport**. Das Problem bei einer Spezialisierung einer Klassenvorlage ist, wo die **__declspec(dllexport)**; Sie sind nicht zulässig, um die Klassenvorlage zu markieren. Stattdessen explizit instanziiert die Klassenvorlage und markieren Sie diese explizite Instanziierung mit **Dllexport**. Zum Beispiel:
+   Der Compiler generiert dieselbe Warnung, wenn die Basisklasse eine Spezialisierung einer Klassenvorlage ist. Um dieses Problem zu umgehen, markieren Sie die Basisklasse mit **dllexport**. Das Problem bei der Spezialisierung einer Klassen Vorlage besteht darin, den **__declspec (dllexport)** zu platzieren. Sie dürfen die Klassen Vorlage nicht markieren. Instanziieren Sie stattdessen explizit die Klassen Vorlage, und markieren Sie diese explizite Instanziierung mit **dllexport**. Beispiel:
 
     ```cpp
     template class __declspec(dllexport) B<int>;
@@ -69,14 +69,14 @@ ms.locfileid: "62153774"
     // ...
     ```
 
-   Diese Problemumgehung funktioniert nicht, wenn das Vorlagenargument die ableitende Klasse ist. Zum Beispiel:
+   Diese Problemumgehung funktioniert nicht, wenn das Vorlagenargument die ableitende Klasse ist. Beispiel:
 
     ```cpp
     class __declspec(dllexport) D : public B<D> {
     // ...
     ```
 
-   Da dies allgemeines Muster für Vorlagen ist, ändert der Compiler die Semantik der **Dllexport** , wenn es auf eine Klasse angewendet wird, die eine oder mehrere Basisklassen verfügt und mindestens einer der Basisklassen eine Spezialisierung einer Klassenvorlage ist . In diesem Fall wendet der Compiler implizit **Dllexport** auf die spezialisierungen von Klassenvorlagen. Gehen können und eine Warnung nicht abgerufen werden:
+   Da es sich hierbei um ein gängiges Muster mit Vorlagen handelt, hat der Compiler die Semantik von **dllexport** geändert, wenn er auf eine Klasse angewendet wird, die über eine oder mehrere Basisklassen verfügt, und wenn mindestens eine der Basisklassen eine Spezialisierung einer Klassen Vorlage ist. In diesem Fall wendet der Compiler " **dllexport** " implizit auf die Spezialisierungs Klassen Vorlagen an. Sie können folgende Aktionen ausführen und keine Warnung erhalten:
 
     ```cpp
     class __declspec(dllexport) D : public B<D> {
