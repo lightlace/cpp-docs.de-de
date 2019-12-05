@@ -5,16 +5,16 @@ f1_keywords:
 - _div64
 helpviewer_keywords:
 - _div64 intrinsic
-ms.openlocfilehash: 1d05c5d6e25540a5de1b2f8231697c9a738759ce
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 59c5eae66f9e93cb88f9512e405376f2ef5f1ceb
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216774"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858021"
 ---
 # <a name="_div64"></a>_div64
 
-Die `_div64` systeminterne dividiert eine 64-Bit-Ganzzahl durch eine 32-Bit-Ganzzahl. Der Rückgabewert enthält den Quotienten, und der intrinsische Wert gibt den Rest durch einen Zeiger Parameter zurück. `_div64`ist **Microsoft-spezifisch**.
+Die `_div64` System intern dividiert eine 64-Bit-Ganzzahl durch eine 32-Bit-Ganzzahl. Der Rückgabewert enthält den Quotienten, und der intrinsische Wert gibt den Rest durch einen Zeiger Parameter zurück. `_div64` ist **Microsoft-spezifisch**.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,15 +26,15 @@ int _div64(
 );
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*Dividend* \
+*Dividenden* \
 in Die zu dividierende 64-Bit-Ganzzahl.
 
 *divisor* \
 in Die 32-Bit-Ganzzahl, durch die dividiert wird.
 
-*ergibt* \
+*Rest* - \
 vorgenommen Die ganzzahligen 32-Bit-Bits des Restwerts.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -43,11 +43,11 @@ Die 32 Bits des Quotienten.
 
 ## <a name="remarks"></a>Hinweise
 
-Die `_div64` systeminterne dividiert die *Dividende* durch *Divisor*. Sie speichert den Rest in der 32-Bit-Ganzzahl,auf die von Restwerten verwiesen wird, und gibt die 32 Bits des Quotienten zurück.
+Die `_div64` systeminterne dividiert die *Dividende* durch *Divisor*. Sie speichert den Rest in der 32-Bit-Ganzzahl, auf die von *Restwerten*verwiesen wird, und gibt die 32 Bits des Quotienten zurück.
 
 Die `_div64` systeminterne Funktion ist ab Visual Studio 2019 RTM verfügbar.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
 |Systemintern|Architektur|Header|
 |---------------|------------------|------------|

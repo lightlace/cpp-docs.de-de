@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 5a3923ee488771e807600069855299fc240b3212
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c169e454029a28f644a2aabc8d3089bf3069c8c5
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498715"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857592"
 ---
 # <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
@@ -21,7 +21,7 @@ Erstellt ein **_com_ptr_t** -Objekt.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 // Default constructor.
 // Constructs a NULL smart pointer.
 _com_ptr_t() throw();
@@ -133,19 +133,19 @@ explicit _com_ptr_t(
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *pinterface*<br/>
 Ein unformatierter Schnittstellenzeiger.
 
 *fAddRef*<br/>
-TRUE gibt an `AddRef` , dass aufgerufen wird, um den Verweis Zähler für den gekapselten Schnittstellen Zeiger zu erhöhen.
+TRUE gibt an, dass `AddRef` aufgerufen wird, um den Verweis Zähler des gekapselten Schnittstellen Zeigers zu erhöhen.
 
 *cp*<br/>
 Ein **_com_ptr_t** -Objekt.
 
 *p*<br/>
-Ein unformatierter Schnittstellen Zeiger, dessen Typ sich vom Typ des intelligenten Zeigers dieses **_com_ptr_t** -Objekts unterscheidet.
+Ein unformatierter Schnittstellen Zeiger, dessen Typ sich vom Typ des intelligenten Zeigers dieses **_com_ptr_t** Objekts unterscheidet.
 
 *varSrc*<br/>
 Ein `_variant_t`-Objekt.
@@ -157,10 +157,12 @@ Der `CLSID` einer Co-Klasse.
 Kontext für die Ausführung von ausführbarem Code.
 
 *lpcStr*<br/>
-Eine Multibytezeichenfolge, `CLSID` die entweder eine (beginnend mit " **{** `ProgID`") oder enthält.
+Eine Multibytezeichenfolge, die entweder eine `CLSID` (beginnend mit " **{** ") oder eine `ProgID`enthält.
 
 *pOuter*<br/>
 Das äußere unbekannte für die [Aggregation](/windows/win32/com/aggregation).
+
+**Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
 

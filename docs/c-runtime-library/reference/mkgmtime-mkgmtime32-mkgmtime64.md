@@ -1,6 +1,7 @@
 ---
 title: _mkgmtime, _mkgmtime32, _mkgmtime64
-ms.date: 11/04/2016
+description: Beschreibt die Funktionen _mkgmtime, _mkgmtime32 und _mkgmtime64 C-Lauf Zeit Bibliothek und enthält Beispiele für deren Verwendung.
+ms.date: 12/04/2019
 api_name:
 - _mkgmtime32
 - _mkgmtime64
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-ms.openlocfilehash: fcd1e3fdcca37d7e5bb381c234a6d8555ce2766c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3d03fc62853705a68e1a2e408d6af833e8c6b02b
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951670"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857735"
 ---
 # <a name="_mkgmtime-_mkgmtime32-_mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
 
@@ -64,36 +65,28 @@ __time64_t _mkgmtime64(
 );
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*timeptr*<br/>
+*Timeptr* -\
 Ein Zeiger auf die UTC-Zeit als zu konvertierende **Struktur** - **TM** .
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Menge vom Typ **__time32_t** oder **__time64_t** , die die Anzahl der Sekunden darstellt, die seit Mitternacht des 1. Januar 1970 in koordinierter Weltzeit (UTC) verstrichen sind. Wenn das Datum außerhalb des gültigen Bereichs liegt (siehe Abschnitt "Hinweise") oder die Eingabe nicht als gültige Zeit interpretiert werden kann, ist der Rückgabewert-1.
+Eine Menge vom Typ **__time32_t** oder **__time64_t** , die die Anzahl der Sekunden darstellt, die seit dem 1. Januar 1970 (UTC) seit Mitternacht verstrichen sind. Wenn das Datum außerhalb des gültigen Bereichs liegt (siehe Abschnitt "Hinweise") oder die Eingabe nicht als gültige Zeit interpretiert werden kann, ist der Rückgabewert-1.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Funktionen **_mkgmtime32** und **_mkgmtime64** konvertieren eine UTC-Zeit in einen **__time32_t** -oder **__time64_t** -Typ, der die Zeit in UTC darstellt. Verwenden Sie stattdessen **mktime**, **_mktime32**und **_mktime64** , um eine lokale Uhrzeit in die UTC-Zeit zu konvertieren.
+Die Funktionen **_mkgmtime32** und **_mkgmtime64** konvertieren eine UTC-Zeit in eine **__time32_t** oder **__time64_t** Typ, die die Uhrzeit in UTC darstellt. Verwenden Sie stattdessen **mktime**, **_mktime32**und **_mktime64** , um eine lokale Uhrzeit in die UTC-Zeit zu konvertieren.
 
-**_mkgmtime** ist eine Inline Funktion, die zu **_mkgmtime64**ausgewertet wird, und **time_t** entspricht **__time64_t**. Wenn Sie den Compiler zwingen müssen, **time_t** als das alte 32-Bit- **time_t**zu interpretieren, können Sie **_USE_32BIT_TIME_T**definieren. Dies wird nicht empfohlen, weil die Anwendung nach dem 18. Januar 2038 (dem maximalen Bereich eines 32-Bit- **time_t**) möglicherweise fehlschlägt und auf 64-Bit-Plattformen nicht zulässig ist.
+**_mkgmtime** ist eine Inline Funktion, die **_mkgmtime64**ergibt, und **time_t** entspricht **__time64_t**. Wenn Sie den Compiler zwingen müssen, **time_t** als den alten 32-Bit- **time_t**zu interpretieren, können Sie **_USE_32BIT_TIME_T**definieren. Dies wird nicht empfohlen, da Ihre Anwendung nach dem 18. Januar 2038, dem maximalen Bereich einer 32-Bit- **time_t**, möglicherweise fehlschlägt. Auf 64-Bit-Plattformen ist dies überhaupt nicht zulässig.
 
-Die eingeführte Zeitstruktur wird wie folgt geändert, ähnlich wie bei den **_mktime** -Funktionen: die Felder " **Tm_wday** " und " **tm_yday** " werden basierend auf den Werten von " **tm_mday** " und " **Tm_year**" auf neue Werte festgelegt. Legen Sie das **Tm_isdst** -Feld fest, wenn Sie eine **TM** -Struktur Zeit angeben:
+Die eingeführte Zeitstruktur wird wie folgt geändert, auf die gleiche Weise, wie Sie durch die **_mktime** Funktionen geändert wird: die Felder **Tm_wday** und **tm_yday** werden auf Grundlage der Werte von **tm_mday** und **Tm_year**auf neue Werte festgelegt. Da die Uhrzeit als UTC-Zeit angenommen wird, wird das **Tm_isdst** Feld ignoriert.
 
-- Null (0) weist darauf hin, dass die Normalzeit gilt.
+Der Bereich der **_mkgmtime32** Funktion liegt zwischen Mitternacht, 1. Januar 1970, UTC und 23:59:59 Januar 2038 UTC. Der Bereich der **_mkgmtime64** liegt zwischen Mitternacht, 1. Januar 1970, UTC und 23:59:59, 31. Dezember 3000 und UTC. Ein Datum außerhalb des gültigen Bereichs führt zu einem Rückgabewert von-1. Der Bereich der **_mkgmtime** hängt davon ab, ob **_USE_32BIT_TIME_T** definiert ist. Wenn Sie nicht definiert ist (Standardeinstellung), entspricht der Bereich dem **_mkgmtime64**. Andernfalls ist der Bereich auf den 32-Bit-Bereich **_mkgmtime32**beschränkt.
 
-- Ein Wert größer als 0 weist darauf hin, dass die Sommerzeit gilt.
+Sowohl **gmtime** als auch **localtime** verwenden einen gemeinsamen statischen Puffer für die Konvertierung. Wenn Sie diesen Puffer für **_mkgmtime**bereitstellen, werden die vorherigen Inhalte zerstört.
 
-- Ein Wert kleiner als null gibt an, dass der C-Laufzeitbibliothekscode berechnet, ob Normalzeit oder Sommerzeit gilt.
-
-Die C-Laufzeitbibliothek verwendet die ZZ-Umgebungsvariable, um die richtige Sommerzeit zu bestimmen. Wurde keine ZZ festgelegt, wird das Betriebssystem abgefragt, um das richtige regionale Sommerzeitverhalten abzurufen. **Tm_isdst** ist ein erforderliches Feld. Wenn nicht festgelegt, wird sein Wert nicht definiert und der Rückgabewert von **mktime** ist unvorhersehbar.
-
-Der Bereich der **_mkgmtime32** -Funktion liegt zwischen Mitternacht, 1. Januar 1970, UTC und 23:59:59 Januar 2038 UTC. Der Bereich der **_mkgmtime64** liegt zwischen Mitternacht, 1. Januar 1970, UTC und 23:59:59, 31. Dezember 3000 und UTC. Ein Datum außerhalb des gültigen Bereichs führt zu einem Rückgabewert von-1. Der Bereich von **_mkgmtime** hängt davon ab, ob **_USE_32BIT_TIME_T** definiert ist. Wenn nicht definiert (Standardeinstellung), entspricht der Bereich dem Wert von **_mkgmtime64**; Andernfalls ist der Bereich auf den 32-Bit-Bereich von **_mkgmtime32**beschränkt.
-
-Beachten Sie, dass **gmtime** und **localtime** einen einzelnen statisch zugeordneten Puffer für die Konvertierung verwenden. Wenn Sie diesen Puffer für **mkgmtime**bereitstellen, wird der vorherige Inhalt zerstört.
-
-## <a name="example"></a>Beispiel
+## <a name="examples"></a>Beispiele
 
 ```C
 // crt_mkgmtime.c
@@ -130,8 +123,6 @@ int main()
 }
 ```
 
-### <a name="sample-output"></a>Beispielausgabe
-
 ```Output
 Seconds since midnight, January 1, 1970
 My time: 1171588492
@@ -142,7 +133,7 @@ Local Time: Thu Feb 15 17:14:52 2007
 Greenwich Mean Time: Fri Feb 16 01:14:52 2007
 ```
 
-Das folgende Beispiel zeigt, wie die unvollständige Struktur mit den für den Tag der Woche und den Tag des Jahres berechneten Werten ausgefüllt wird.
+Im folgenden Beispiel wird gezeigt, wie die unvollständige Struktur von **_mkgmtime**ausgefüllt wird. Sie berechnet Werte für den Wochentag und das Jahr.
 
 ```C
 // crt_mkgmtime2.c
@@ -179,8 +170,6 @@ int main()
 }
 ```
 
-### <a name="output"></a>Ausgabe
-
 ```Output
 Before calling _mkgmtime, t1 = Sun Feb 12 00:00:00 2003
 t.tm_yday = 0
@@ -190,11 +179,11 @@ t.tm_yday = 42
 
 ## <a name="see-also"></a>Siehe auch
 
-[Uhrzeitverwaltung](../../c-runtime-library/time-management.md)<br/>
-[asctime, _wasctime](asctime-wasctime.md)<br/>
-[asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>
-[gmtime, _gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md)<br/>
-[gmtime_s, _gmtime32_s, _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>
-[localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md)<br/>
-[mktime, _mktime32, _mktime64](mktime-mktime32-mktime64.md)<br/>
-[time, _time32, _time64](time-time32-time64.md)<br/>
+[Time Management (Uhrzeitverwaltung)](../../c-runtime-library/time-management.md)\
+[asctime, _wasctime](asctime-wasctime.md)\
+[asctime_s, _wasctime_s](asctime-s-wasctime-s.md)\
+[gmtime, _gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md)\
+[gmtime_s, _gmtime32_s, _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)\
+[localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md)\
+[mktime, _mktime32, _mktime64](mktime-mktime32-mktime64.md)\
+[time, _time32, _time64](time-time32-time64.md)

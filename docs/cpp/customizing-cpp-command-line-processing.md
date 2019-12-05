@@ -14,22 +14,22 @@ helpviewer_keywords:
 - suppressing environment processing
 - _setenvp function
 ms.assetid: aae01cbb-892b-48b8-8e1f-34f22421f263
-ms.openlocfilehash: da1b3bdd6392b144f9315add4c19de14c1d14d41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1541840521695658b5c4d809ba7e11767b1330a2
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154690"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857553"
 ---
 # <a name="customizing-c-command-line-processing"></a>Anpassen der C++-Befehlszeilenverarbeitung
 
-## <a name="microsoft-specific"></a>Microsoft-spezifisch
+**Microsoft-spezifisch**
 
-Wenn das Programm keine Befehlszeilenargumente akzeptiert, können Sie ein wenig Platz sparen, indem Sie die Verwendung der Bibliotheksroutine unterdrücken, die die Befehlszeilenverarbeitung ausführt. Diese Routine hat die Bezeichnung `_setargv` und wird im beschrieben [Platzhaltererweiterung](../cpp/wildcard-expansion.md). Um ihre Verwendung zu unterdrücken, definieren Sie eine Routine, "nothing" in der Datei mit den `main` funktionieren, und nennen Sie sie `_setargv`. Der Aufruf von `_setargv` erfüllt wird dann durch Ihre Definition von `_setargv`, und die Bibliotheksversion wird nicht geladen werden.
+Wenn das Programm keine Befehlszeilenargumente akzeptiert, können Sie ein wenig Platz sparen, indem Sie die Verwendung der Bibliotheksroutine unterdrücken, die die Befehlszeilenverarbeitung ausführt. Diese Routine wird `_setargv` aufgerufen und unter Platzhalter [Erweiterung](../cpp/wildcard-expansion.md)beschrieben. Um die Verwendung zu unterdrücken, definieren Sie eine Routine, die in der Datei mit der `main`-Funktion keine Aktion ausführt, und benennen Sie Sie `_setargv`. Der `_setargv`-wird dann durch die Definition von `_setargv`erfüllt, und die Bibliotheksversion wird nicht geladen.
 
-Auf ähnliche Weise, wenn Sie niemals auf die umgebungstabelle auf die `envp` -Argument, Sie können Ihre eigene leere Routine anstelle der zu verwendende bereitstellen `_setenvp`, die umgebungsverarbeitende Routine. Wie bei der `_setargv` Funktion `_setenvp` muss deklariert werden, als **Extern "C"**.
+Wenn Sie auf die Umgebungs Tabelle nicht über das `envp`-Argument zugreifen, können Sie auch eine eigene leere Routine bereitstellen, die anstelle von `_setenvp`, der Umgebungs Verarbeitungsroutine, verwendet werden soll. Genau wie bei der `_setargv`-Funktion müssen `_setenvp` als **extern "C"** deklariert werden.
 
-Das Programm möglicherweise Aufrufe an die `spawn` oder `exec` -Gruppe von Routinen in der C-Laufzeitbibliothek. Wenn dies der Fall ist, sollten Sie die umgebungsverarbeitende Routine nicht unterdrücken, da diese Routine verwendet wird, um eine Umgebung aus dem übergeordneten Prozess an den untergeordneten Prozess zu übergeben.
+Das Programm kann in der C-Lauf Zeit Bibliothek Aufrufe an die `spawn` oder `exec` Familie von Routinen tätigen. Wenn dies der Fall ist, sollten Sie die umgebungsverarbeitende Routine nicht unterdrücken, da diese Routine verwendet wird, um eine Umgebung aus dem übergeordneten Prozess an den untergeordneten Prozess zu übergeben.
 
 **Ende Microsoft-spezifisch**
 

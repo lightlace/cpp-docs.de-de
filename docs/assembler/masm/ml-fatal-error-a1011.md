@@ -1,38 +1,38 @@
 ---
 title: Schwerwiegender ML-Fehler A1011
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1011
 helpviewer_keywords:
 - A1011
 ms.assetid: 7fbf092d-4189-4330-a884-dfa2268fc3dd
-ms.openlocfilehash: 591755a1d7066d8251f61d2a22b9601a9ccb9dcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d8d3896f7788aa3f51605651ee1b728b0e1d60a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178565"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856851"
 ---
 # <a name="ml-fatal-error-a1011"></a>Schwerwiegender ML-Fehler A1011
 
-**Richtlinie muss im Steuerelementblock sein.**
+**Direktive muss sich in einem Kontroll Block befinden**
 
-Der Assembler finden Sie eine allgemeine Richtlinie, wo eine nicht erwartet wurde. Eine der folgenden Anweisungen wurde gefunden:
+Der Assembler hat eine Direktive auf hoher Ebene gefunden, die nicht erwartet wurde. Eine der folgenden Anweisungen wurde gefunden:
 
-- [. ANDERE](../../assembler/masm/dot-else.md) ohne [. IF](../../assembler/masm/dot-if.md)
+- [. ](../../assembler/masm/dot-else.md)Andernfalls ohne [. Wenn](../../assembler/masm/dot-if.md)
 
-- [. ENDIF](../../assembler/masm/dot-endif.md) ohne [. IF](../../assembler/masm/dot-if.md)
+- [. Umdif](../../assembler/masm/dot-endif.md) ohne [. Wenn](../../assembler/masm/dot-if.md)
 
-- [. ENDW](../../assembler/masm/dot-endw.md) ohne [. WHILE](../../assembler/masm/dot-while.md)
+- [. Endw](../../assembler/masm/dot-endw.md) ohne [. Während](../../assembler/masm/dot-while.md)
 
-- [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md) ohne [. WIEDERHOLEN SIE DIE](../../assembler/masm/dot-repeat.md)
+- [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md) ohne [. Wiederholen](../../assembler/masm/dot-repeat.md)
 
-- [. WEITERHIN](../../assembler/masm/dot-continue.md) ohne [. WÄHREND](../../assembler/masm/dot-while.md) oder [. WIEDERHOLEN SIE DIE](../../assembler/masm/dot-repeat.md)
+- [. Fahren](../../assembler/masm/dot-continue.md) Sie ohne fort [. Während](../../assembler/masm/dot-while.md) oder [. Wiederholen](../../assembler/masm/dot-repeat.md)
 
-- [. UNTERBRECHEN](../../assembler/masm/dot-break.md) ohne [. WÄHREND](../../assembler/masm/dot-while.md) oder [. WIEDERHOLEN SIE DIE](../../assembler/masm/dot-repeat.md)
+- [. ](../../assembler/masm/dot-break.md)Ohne Abbrechen [. Während](../../assembler/masm/dot-while.md) oder [. Wiederholen](../../assembler/masm/dot-repeat.md)
 
-- [. ANDERE](../../assembler/masm/dot-else.md) folgenden `.ELSE`
+- [. Andernfalls folgt `.ELSE`](../../assembler/masm/dot-else.md)
 
 ## <a name="see-also"></a>Siehe auch
 
