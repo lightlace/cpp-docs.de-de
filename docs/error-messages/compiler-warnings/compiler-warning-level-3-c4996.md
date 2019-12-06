@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: 9d5b8cc3e3ce6445e021163df5301a38aab2c514
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: 98662dc0b5439c1f8857e4f2ad259793a4d03e41
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683329"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898773"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Compilerwarnung (Stufe 3) C4996
 
@@ -23,7 +23,7 @@ Der Code verwendet eine Funktion, einen Klassenmember, eine Variable oder eine t
 
 ## <a name="remarks"></a>Hinweise
 
-Viele Funktionen, Element Funktionen, Vorlagen Funktionen und globale Variablen in Visual Studio-Bibliotheken sind *veraltet*. Einige, z. b. POSIX-Funktionen, sind veraltet, da Sie einen anderen bevorzugten Namen haben. Einige C-Lauf Zeit Bibliotheksfunktionen sind veraltet, da Sie unsicher sind und eine sicherere Variante aufweisen. Andere sind veraltet, da sie veraltet sind. Die veralnungs Nachrichten enthalten in der Regel eine vorgeschlagene Ersetzung für die veraltete Funktion oder globale Variable.
+Viele Funktionen, Element Funktionen, Vorlagen Funktionen und globale Variablen in Visual Studio-Bibliotheken sind *veraltet*. Einige, z. b. POSIX-und Microsoft-spezifische Funktionen, sind veraltet, da Sie nun einen anderen bevorzugten Namen haben. Einige C-Lauf Zeit Bibliotheksfunktionen sind veraltet, da Sie unsicher sind und eine sicherere Variante aufweisen. Andere sind veraltet, da sie veraltet sind. Die veralnungs Nachrichten enthalten in der Regel eine vorgeschlagene Ersetzung für die veraltete Funktion oder globale Variable.
 
 ## <a name="turn-off-the-warning"></a>Warnung deaktivieren
 
@@ -61,9 +61,9 @@ Im folgenden finden Sie einige der allgemeinen Quellen für C4996-Warnungen und-
 
 **Der POSIX-Name für dieses Element ist veraltet. Verwenden Sie stattdessen den ISO-C C++ -Namen und den konformen Namen:** *New-Name*. **Weitere Informationen finden Sie in der Online Hilfe.**
 
-Microsoft hat einige POSIX-Funktionen in der CRT umbenannt, um die Regeln C99 und c++ 03 für Implementierungs definierte globale Funktionsnamen einzuhalten. Nur die Namen sind veraltet, nicht die Funktionen selbst. In den meisten Fällen wurde dem POSIX-Funktionsnamen ein führender unterstrich hinzugefügt, um einen konformen Standardnamen zu erstellen. Der Compiler gibt eine veralnungs Warnung für den ursprünglichen Funktionsnamen aus und schlägt den bevorzugten Namen vor.
+Microsoft hat einige POSIX-und Microsoft-spezifische Bibliotheksfunktionen in der CRT umbenannt, um die Einschränkungen C99 und c++ 03 für reservierte und globale Implementierungs definierte Namen einzuhalten. *Nur die Namen sind veraltet, nicht die Funktionen selbst*. In den meisten Fällen wurde dem Funktionsnamen ein führender unterstrich hinzugefügt, um einen übereinstimmenden Namen zu erstellen. Der Compiler gibt eine veralnungs Warnung für den ursprünglichen Funktionsnamen aus und schlägt den bevorzugten Namen vor.
 
-Um dieses Problem zu beheben, empfiehlt es sich in der Regel, den Code so zu ändern, dass die vorgeschlagenen Funktionsnamen verwendet werden. Die aktualisierten Namen sind jedoch Microsoft-spezifisch. Wenn Sie die vorhandenen Funktionsnamen aus Gründen der Portabilität verwenden müssen, können Sie diese Warnungen deaktivieren. Die POSIX-Funktionen sind nach wie vor in der Bibliothek unter ihren ursprünglichen Namen verfügbar.
+Um dieses Problem zu beheben, empfiehlt es sich in der Regel, den Code so zu ändern, dass die vorgeschlagenen Funktionsnamen verwendet werden. Die aktualisierten Namen sind jedoch Microsoft-spezifisch. Wenn Sie die vorhandenen Funktionsnamen aus Gründen der Portabilität verwenden müssen, können Sie diese Warnungen deaktivieren. Die Funktionen sind nach wie vor in der Bibliothek unter ihren ursprünglichen Namen verfügbar.
 
 Um veraltete Warnungen für diese Funktionen zu deaktivieren, definieren Sie das Präprozessormakro **\_CRT\_nonstdc\_keine\_Warnungen**. Sie können dieses Makro in der Befehlszeile definieren, indem Sie die Option `/D_CRT_NONSTDC_NO_WARNINGS`einschließen.
 
