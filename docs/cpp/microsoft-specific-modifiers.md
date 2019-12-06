@@ -2,28 +2,28 @@
 title: Microsoft-spezifische Modifizierer
 ms.date: 08/16/2018
 ms.assetid: 22c7178c-f854-47fa-9de6-07d23fda58e1
-ms.openlocfilehash: 119e4d06d0235bbf637eefe8754668d3e90b0c52
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d65c0fe99895949d537ccf4368df2add3ff91ad
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301785"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857423"
 ---
 # <a name="microsoft-specific-modifiers"></a>Microsoft-spezifische Modifizierer
 
 Dieser Abschnitt beschreibt Microsoft-spezifische Erweiterungen von C++ in den folgenden Bereichen:
 
-- [Basierende Adressierung](based-addressing.md), die Methode mithilfe eines Zeigers als Basis aus der andere Zeiger versetzt werden können
+- [Basierende Adressierung](based-addressing.md), die Vorgehensweise bei der Verwendung eines Zeigers als Basis, von der andere Zeiger versetzt werden können
 
-- [Funktion-Aufrufkonventionen](calling-conventions.md)
+- [Konventionen zum Aufrufen von Funktionen](calling-conventions.md)
 
-- Erweiterte Speicherklassen-Attribute, die mit deklariert die [__declspec](declspec.md) Schlüsselwort
+- Erweiterte Speicher Klassenattribute, die mit dem [__declspec](declspec.md) -Schlüsselwort deklariert werden
 
-- Die [__w64](w64.md) Schlüsselwort
+- Das [__w64](w64.md) -Schlüsselwort
 
 ## <a name="microsoft-specific-keywords"></a>Microsoft-spezifische Schlüsselwörter
 
-Viele der Microsoft-spezifischen Schlüsselwörter können verwendet werden, um Deklaratoren zum Bilden abgeleiteter Typen zu ändern. Weitere Informationen über Deklaratoren finden Sie unter [Deklaratoren](overview-of-declarators.md).
+Viele der Microsoft-spezifischen Schlüsselwörter können verwendet werden, um Deklaratoren zum Bilden abgeleiteter Typen zu ändern. Weitere Informationen zu Deklaratoren finden Sie unter [Deklaratoren](overview-of-declarators.md).
 
 |Stichwort|Bedeutung|Wird verwendet, um abgeleitete Typen zu bilden?|
 |-------------|-------------|---------------------------------|
@@ -31,7 +31,7 @@ Viele der Microsoft-spezifischen Schlüsselwörter können verwendet werden, um 
 |[__cdecl](cdecl.md)|Der folgende Name verwendet C-Benennungs- und C-Aufrufkonventionen.|Ja|
 |[__declspec](declspec.md)|Der folgende Name gibt ein Microsoft-spezifisches Speicherklassenattribut an.|Nein|
 |[__fastcall](fastcall.md)|Der folgende Name deklariert eine Funktion, die Register verwendet, sofern verfügbar, anstatt des Stapels für die Argumentübergabe.|Ja|
-|[__restrict](extension-restrict.md)|Ähnlich wie __declspec ([einschränken](restrict.md)), aber für die Verwendung von Variablen.|Nein|
+|[__restrict](extension-restrict.md)|Ähnlich wie __declspec ([einschränken](restrict.md)), jedoch für die Verwendung von Variablen.|Nein|
 |[__stdcall](stdcall.md)|Der folgende Name gibt eine Funktion an, die herkömmliche Aufrufkonventionen berücksichtigt.|Ja|
 |[__w64](w64.md)|Markiert einen Datentyp als größer bei einem 64-Bit-Compiler.|Nein|
 |[__unaligned](unaligned.md)|Gibt an, dass ein Zeiger auf einen Typ oder andere Daten nicht ausgerichtet ist.|Nein|

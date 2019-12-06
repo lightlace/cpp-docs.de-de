@@ -12,12 +12,12 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-ms.openlocfilehash: 61662caf28fad2f961a580cf280799711a6909bb
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 5cf56375df417ac68b3e03d00f2bd7770ee571e8
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147684"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857137"
 ---
 # <a name="c-function-definitions"></a>C-Funktionsdefinitionen
 
@@ -36,7 +36,7 @@ Eine Funktionsdefinition gibt den Namen der Funktion, die Typen und die Zahl der
 *function-definition*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-seq* ist Microsoft-spezifisch \*/
+/\* *Attribute-"-* " ist eine Microsoft-spezifische \*/
 
 Prototypparameter sind:
 
@@ -53,8 +53,8 @@ Prototypparameter sind:
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *direct-declarator*:/\* Ein Funktionsdeklarator \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)** /\* Neuer Deklarator \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)** /\* Veralteter Deklarator \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* Neuer Deklarator \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* Veralteter Deklarator \*/
 
 Die Parameterliste in einer Definition verwendet diese Syntax:
 
@@ -79,7 +79,7 @@ Die Parameterliste in einer Funktionsdefinition im alten Format verwendet diese 
 Die Syntax für den Funktionsrumpf lautet:
 
 *compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
 
 Die einzigen Speicherklassenspezifizierer, die eine Funktionsdeklaration ändern können, sind **extern** und **static**. Der Bezeichner **extern** gibt an, dass von anderen Dateien auf die Funktion verwiesen werden kann; das bedeutet, der Funktionsname wird in den Linker exportiert. Der **static**-Bezeichner gibt an, dass auf die Funktion nicht von anderen Dateien verwiesen werden kann, d.h., der Name wird nicht vom Linker exportiert. Wenn keine Speicherklasse in einer Funktionsdefinition steht, wird **extern** angenommen. In jedem Fall ist die Funktion stets vom Definitionspunkt bis an das Ende der Datei sichtbar.
 

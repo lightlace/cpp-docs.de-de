@@ -4,18 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - _set_com_error_handler function
 ms.assetid: 49fe4fca-5e37-4d83-abaf-15be5ce37f94
-ms.openlocfilehash: 864236e86b4aeb6ce7b3315df57af1b577693c26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 226dce24de68edd66ca68c43e41ce0cb5b8a1b48
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267231"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857293"
 ---
-# <a name="setcomerrorhandler"></a>_set_com_error_handler
+# <a name="_set_com_error_handler"></a>_set_com_error_handler
 
-**Microsoft-spezifisch**
-
-Ersetzt die Standardfunktion für die COM-Fehlerbehandlung.
+Ersetzt die Standardfunktion für die COM-Fehlerbehandlung. **_set_com_error_handler** ist Microsoft-spezifisch.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,7 +26,7 @@ void __stdcall _set_com_error_handler(
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameters
 
 *pHandler*<br/>
 Zeiger auf die Ersetzungsfunktion.
@@ -41,7 +39,7 @@ HRESULT-Informationen.
 
 ## <a name="remarks"></a>Hinweise
 
-In der Standardeinstellung [_com_raise_error](../cpp/com-raise-error.md) behandelt alle COM-Fehler. Sie können dieses Verhalten ändern, indem Sie mithilfe von **_set_com_error_handler** , eigene Fehlerbehandlungsfunktion aufzurufen.
+Standardmäßig verarbeitet [_com_raise_error](../cpp/com-raise-error.md) alle com-Fehler. Sie können dieses Verhalten ändern, indem Sie **_set_com_error_handler** verwenden, um eine eigene Fehler Behandlungs Funktion aufzurufen.
 
 Die Ersetzungsfunktion muss über eine Signatur verfügen, die der von `_com_raise_error` entspricht.
 
@@ -86,11 +84,11 @@ int main()
 Exception raised: Unable to establish the connection!
 ```
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
 **Header:** \<comdef.h>
 
-**Lib:** Wenn die **/Zc: wchar_t** -Compileroption angegeben ist (Standardeinstellung), verwenden Sie comsuppw.lib oder comsuppwd.lib. Wenn die **/Zc:** -Compileroption angegeben ist, sollten Sie comsupp.lib verwenden. Weitere Informationen einschließlich Informationen zum Festlegen dieser Option in der IDE finden Sie unter [/Zc: wchar_t (Wchar_t ist der systemeigene Typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+**Lib:** Wenn die **/Zc: wchar_t** -Compileroption angegeben ist (Standardeinstellung), verwenden Sie "comsuppw. lib" oder "comsuppwd. lib". Wenn die **/Zc: wchar_t-Compileroption** angegeben ist, verwenden Sie comsupp. lib. Weitere Informationen, einschließlich Informationen zum Festlegen dieser Option in der IDE, finden Sie unter [/Zc: wchar_t (wchar_t ist System eigener Typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ## <a name="see-also"></a>Siehe auch
 

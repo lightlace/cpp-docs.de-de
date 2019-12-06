@@ -1,5 +1,5 @@
 ---
-title: Intrinsische _InterlockedDecrement-Funktionen
+title: _InterlockedDecrement intrinsische Funktionen
 ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedDecrement16_rel_cpp
@@ -44,14 +44,14 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: f7d46cc90c9925a49948da488c2ed7ede7bdee8f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: f6b256ff1551eea4d0b362e78c9780fce29a8513
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217678"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857917"
 ---
-# <a name="_interlockeddecrement-intrinsic-functions"></a>Intrinsische _InterlockedDecrement-Funktionen
+# <a name="_interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement intrinsische Funktionen
 
 **Microsoft-spezifisch**
 
@@ -98,24 +98,24 @@ __int64 _InterlockedDecrement64_nf(
 );
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*lpaddend*\
+*lpaddend* -\
 [in, out] Ein Zeiger auf die Variable, die dekrementiert werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
 Der Rückgabewert ist der resultierende verringerte Wert.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
 |Systemintern|Architektur|
 |---------------|------------------|
 |`_InterlockedDecrement`, `_InterlockedDecrement16`|x86, ARM, x64, ARM64|
 |`_InterlockedDecrement64`|Arm, x64, ARM64|
-|`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM, ARM64|
+|`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|Arm, ARM64|
 
-**Header Datei** \<intrin. h->
+**Header Datei** \<"intrin. h" >
 
 ## <a name="remarks"></a>Hinweise
 
@@ -123,7 +123,7 @@ Es gibt mehrere Varianten von `_InterlockedDecrement`, die sich basierend auf de
 
 Während die `_InterlockedDecrement`-Funktion mit 32-Bit-Ganzzahlwerten arbeitet, verwendet `_InterlockedDecrement16`16-Bit-Ganzzahlwerte und `_InterlockedDecrement64` 64-Bit-Ganzzahlwerte.
 
-Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel`, wenn Sie Semantiken zum Abrufen bzw. Freigeben benötigen, wie am Anfang und Ende eines kritischen Abschnitts. Die intrinsischen `_nf` Funktionen mit dem Suffix ("No fence") fungieren nicht als Arbeitsspeicher Barriere.
+Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel`, wenn Sie Semantiken zum Abrufen bzw. Freigeben benötigen, wie am Anfang und Ende eines kritischen Abschnitts. Die intrinsischen Funktionen mit einem `_nf`-Suffix ("No fence") fungieren nicht als Arbeitsspeicher Barriere.
 
 Die Variable, auf die der `lpAddend`-Parameter zeigt, muss an einer 32-Bit-Grenze ausgerichtet sein; andernfalls schlägt diese Funktion auf x86-Multiprozessorsystemen und allen Nicht-x86-Systemen fehl. Weitere Informationen finden Sie unter [Ausrichten](../cpp/align-cpp.md).
 
@@ -197,8 +197,10 @@ void __cdecl SimpleThread(void* pParam) {
 }
 ```
 
+**Ende Microsoft-spezifisch**
+
 ## <a name="see-also"></a>Siehe auch
 
-[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)\
+Systeminterne [Compilerfunktionen](../intrinsics/compiler-intrinsics.md)\
 [Stichwörter](../cpp/keywords-cpp.md)\
 [Konflikt mit dem x86-Compiler](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

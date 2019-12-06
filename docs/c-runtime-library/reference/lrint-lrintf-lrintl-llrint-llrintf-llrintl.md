@@ -45,12 +45,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: 72870c3548f0fd6972183b0c090708c6eddc591e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c7831842eb4d3c1eef9c4c9e83bbddb557cec0e3
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953130"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857748"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -100,7 +100,7 @@ long long int llrintl(
 );
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *w*<br/>
 Der zu rundende Wert.
@@ -109,7 +109,7 @@ Der zu rundende Wert.
 
 Wenn erfolgreich, wird der abgerundete ganzzahlige Wert von *x*zurückgegeben.
 
-|Problem|Zurück|
+|Problem:|Zurückgeben des|
 |-----------|------------|
 |*x* liegt außerhalb des Bereichs des Rückgabe Typs.<br /><br /> *x* = ±<br /><br /> *x* = Nan|Löst **FE_INVALID** aus und gibt NULL (0) zurück.|
 
@@ -117,17 +117,17 @@ Wenn erfolgreich, wird der abgerundete ganzzahlige Wert von *x*zurückgegeben.
 
 Da C++ das überladen zulässt, können Sie über Ladungen von **lrint** und **llrint** aufzurufen, die **float** -und **Long** **Double** -Typen annehmen. In einem C-Programm nehmen **lrint** und **llrint** immer einen **Double**-Vorgang auf.
 
-Wenn *x* die Gleit Komma Entsprechung eines ganzzahligen Werts nicht darstellt, rufen diese Funktionen **FE_INEXACT**auf.
+Wenn *x* die Gleit Komma Entsprechung eines ganzzahligen Werts nicht darstellt, erhöhen diese Funktionen **FE_INEXACT**.
 
-**Microsoft-spezifisch**: Wenn das Ergebnis außerhalb des Bereichs des Rückgabe Typs liegt oder wenn der Parameter ein NaN oder unendlich ist, wird der Rückgabewert durch die Implementierung definiert. Der Microsoft-Compiler gibt den Wert 0 (null) zurück.
+**Microsoft-spezifisch**: Wenn das Ergebnis außerhalb des Bereichs des Rückgabe Typs liegt oder wenn der Parameter ein NaN oder unendlich ist, wird der Rückgabewert von der Implementierung definiert. Der Microsoft-Compiler gibt den Wert 0 (null) zurück.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
 |Funktion|C-Header|C++-Header|
 |--------------|--------------|------------------|
 |**lrint**, **lrintf**, **lrintl**, **llrint**, **llrintf**, **llrintl**|\<math.h>|\<cmath>|
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Zusätzliche Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Siehe auch
 

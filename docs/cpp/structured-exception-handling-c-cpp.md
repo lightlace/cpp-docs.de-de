@@ -9,12 +9,12 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: 942a7e48e4315454476bfe93c68169f461b006b2
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 3282f98f48f7e416857ef2f766563ab6038ca41a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245133"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857267"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
@@ -138,14 +138,14 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-Weitere Informationen finden Sie unter [/EH (Exception Handling Model)](../build/reference/eh-exception-handling-model.md).
+Weitere Informationen finden Sie unter [/EH (Ausnahmebehandlungsmodell)](../build/reference/eh-exception-handling-model.md).
 
 **Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
 
 [Ausnahmebehandlung](../cpp/exception-handling-in-visual-cpp.md)<br/>
-[Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
+[Stichwörter](../cpp/keywords-cpp.md)<br/>
 [\<exception>](../standard-library/exception.md)<br/>
 [Fehler-und Ausnahmebehandlung](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [Strukturierte Ausnahmebehandlung (Windows)](/windows/win32/debug/structured-exception-handling)

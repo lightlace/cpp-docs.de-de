@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _get_thread_local_invalid_parameter_handler function
 - _get_invalid_parameter_handler function
 ms.assetid: a176da0e-38ca-4d99-92bb-b0e2b8072f53
-ms.openlocfilehash: 534590fed77fe06149db892d98ba0e555297ac7c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 572d21696d38c47fe0f67d68af5eb249aeb94319
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955828"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857803"
 ---
 # <a name="_get_invalid_parameter_handler-_get_thread_local_invalid_parameter_handler"></a>_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
 
@@ -53,7 +53,7 @@ Ein Zeiger auf die derzeit festgelegte Funktion für ungültige Parameterhandler
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_get_invalid_parameter_handler** -Funktion Ruft den derzeit festgelegten globalen Handler für ungültige Parameter ab. Sie gibt einen NULL-Zeiger zurück, wenn kein globaler Handler für ungültige Parameter festgelegt wurde. Entsprechend ruft **_get_thread_local_invalid_parameter_handler** den aktuellen Thread lokalen Handler für ungültige Parameter des Threads ab, für den Sie aufgerufen wird, oder einen NULL-Zeiger, wenn kein Handler festgelegt wurde. Informationen zum Festlegen von globalen und Thread-lokalen ungültigen Parameterhandlern finden Sie unter [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
+Die **_get_invalid_parameter_handler** -Funktion Ruft den derzeit festgelegten globalen Handler für ungültige Parameter ab. Sie gibt einen NULL-Zeiger zurück, wenn kein globaler Handler für ungültige Parameter festgelegt wurde. Ebenso ruft der **_get_thread_local_invalid_parameter_handler** den aktuellen Thread lokalen Handler für ungültige Parameter des Threads ab, für den er aufgerufen wird, oder einen NULL-Zeiger, wenn kein Handler festgelegt wurde. Informationen zum Festlegen von globalen und Thread-lokalen ungültigen Parameterhandlern finden Sie unter [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
 
 Der zurückgegebene Funktionszeiger des ungültigen Parameterhandlers hat den folgenden Typ:
 
@@ -69,7 +69,7 @@ typedef void (__cdecl* _invalid_parameter_handler)(
 
 Mehr Informationen über ungültige Parameterhandler finden sie unter dem Prototyp in [set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|

@@ -1,6 +1,6 @@
 ---
 title: Platform::Collections::Vector-Klasse
-ms.date: 10/01/2019
+ms.date: 12/04/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: a70856be04a63cad1c700cb3cc52711dde410265
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: b7774c2cdab7b9abcb3ebac1453779055eacf897
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816577"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857891"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector-Klasse
 
@@ -39,7 +39,7 @@ template <typename T, typename E>
    ref class Vector sealed;
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *T*<br/>
 Der Typ der im Vektorobjekt enthaltenen Elemente.
@@ -69,13 +69,13 @@ Wenn Sie versuchen, einen **Vector** -Typ in einem öffentlichen Rückgabewert o
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|-Name|Beschreibung|
 |----------|-----------------|
 |[Vector:: Vector](#ctor)|Initialisiert eine neue Instanz der Vector-Klasse.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|-Name|Beschreibung|
 |----------|-----------------|
 |[Vector:: Append](#append)|Fügt das angegebene Element nach dem letzten Element im aktuellen Vektor ein.|
 |[Vector:: Clear](#clear)|Löscht alle Elemente im aktuellen Vector.|
@@ -84,7 +84,7 @@ Wenn Sie versuchen, einen **Vector** -Typ in einem öffentlichen Rückgabewert o
 |[Vector:: getmany](#getmany)|Ruft eine Sequenz von Elementen vom aktuellen Vektor ab, die am angegebenen Index beginnt.|
 |[Vector::GetView](#getview)|Gibt eine schreibgeschützte Ansicht eines Vektors zurück; also [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md).|
 |[Vector::IndexOf](#indexof)|Sucht das angegebene Element im aktuellen Vector und gibt, wenn es gefunden wurde, den Index des Elements zurück.|
-|[Vector::InsertAt](#insertat)|Fügt das angegebene Element in den aktuellen Vector nach dem Element ein, das durch den angegebenen Index identifiziert wird.|
+|[Vector::InsertAt](#insertat)|Fügt das angegebene Element in den aktuellen Vektor an dem Element ein, das durch den angegebenen Index identifiziert wird.|
 |[Vector::ReplaceAll](#replaceall)|Löscht die Elemente im aktuellen Vektor und fügt dann die Elemente aus dem angegebenen Array ein.|
 |[Vector::RemoveAt](#removeat)|Löscht das Element, das durch den angegebenen Index von dem aktuellen Vektor identifiziert wird.|
 |[Vector::RemoveAtEnd](#removeatend)|Löscht das Element am Ende des aktuellen Vektors.|
@@ -95,14 +95,14 @@ Wenn Sie versuchen, einen **Vector** -Typ in einem öffentlichen Rückgabewert o
 
 |||
 |-|-|
-|Name|Beschreibung|
+|-Name|Beschreibung|
 |Ereignis [Windows:: Foundation:: Collection:: Vector changedeventhandler\<t > ^ Vector Changed](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Tritt auf, wenn sich der Vektor ändert.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 `Vector`
 
-### <a name="requirements"></a>Voraussetzungen
+### <a name="requirements"></a>-Anforderungen
 
 **Header:** collection.h
 
@@ -118,7 +118,7 @@ Fügt das angegebene Element nach dem letzten Element im aktuellen Vektor ein.
 virtual void Append(T item);
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *index*<br/>
 Das Element, das in den Vektor eingefügt werden soll. Der Typ des *Elements* wird durch den *T* -Typnamen definiert.
@@ -163,7 +163,7 @@ Ruft das Element des aktuellen Vector ab, das durch den angegebenen Index bezeic
 virtual T GetAt(unsigned int index);
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *index*<br/>
 Eine nullbasierte, ganze Zahl ohne Vorzeichen, die ein bestimmtes Element im Vector-Objekt spezifiziert.
@@ -184,7 +184,7 @@ virtual unsigned int GetMany(
     Platform::WriteOnlyArray<T>^ dest);
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *startIndex*<br/>
 Der nullbasierte Index des Anfangs der Elemente, die abgerufen werden sollen.
@@ -224,7 +224,7 @@ Sucht das angegebene Element im aktuellen Vector und gibt, wenn es gefunden wurd
 virtual bool IndexOf(T value, unsigned int* index);
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *Wert*<br/>
 Das Element, das gesucht werden soll.
@@ -244,7 +244,7 @@ IndexOf verwendet std::find_if, um das Element zu suchen. Benutzerdefinierte Ele
 
 ##  <a name="insertat"></a>Vector:: InsertAt-Methode
 
-Fügt das angegebene Element in den aktuellen Vector nach dem Element ein, das durch den angegebenen Index identifiziert wird.
+Fügt das angegebene Element in den aktuellen Vektor an dem Element ein, das durch den angegebenen Index identifiziert wird.
 
 ### <a name="syntax"></a>Syntax
 
@@ -252,13 +252,13 @@ Fügt das angegebene Element in den aktuellen Vector nach dem Element ein, das d
 virtual void InsertAt(unsigned int index, T item)
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *index*<br/>
 Eine nullbasierte, ganze Zahl ohne Vorzeichen, die ein bestimmtes Element im Vector-Objekt spezifiziert.
 
 *item*<br/>
-Ein Element, das nach dem durch *Index*angegebenen Element in den Vektor eingefügt werden soll. Der Typ des *Elements* wird durch den *T* -Typnamen definiert.
+Ein Element, das in den Vektor an dem durch *Index*angegebenen Element eingefügt werden soll. Der Typ des *Elements* wird durch den *T* -Typnamen definiert.
 
 ## <a name="removeat"></a>Vector:: RemoveAt-Methode
 
@@ -270,7 +270,7 @@ Löscht das Element, das durch den angegebenen Index von dem aktuellen Vektor id
 virtual void RemoveAt(unsigned int index);
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *index*<br/>
 Eine nullbasierte, ganze Zahl ohne Vorzeichen, die ein bestimmtes Element im Vector-Objekt spezifiziert.
@@ -295,7 +295,7 @@ Löscht die Elemente im aktuellen Vektor und fügt dann die Elemente aus dem ang
 virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *arr*<br/>
 Ein Array von-Objekten, deren Typ durch den *T* -Typnamen definiert wird.
@@ -310,7 +310,7 @@ Weist den angegebenen Wert dem Element im aktuellen Vektor zu, der vom angegeben
 virtual void SetAt(unsigned int index, T item);
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *index*<br/>
 Eine nullbasierte, ganze Zahl ohne Vorzeichen, die ein bestimmtes Element im Vector-Objekt spezifiziert.
@@ -355,7 +355,7 @@ template <typename InIt> Vector(InIt first, InIt last);
 Vector(std::initializer_list<T> il);
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *a*<br/>
 Ein [Std:: Array](../standard-library/array-class-stl.md) , das verwendet wird, um den Vektor zu initialisieren.
@@ -384,7 +384,7 @@ Ein [Lvalues und Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) für einen [
 *ptr*<br/>
 Zeiger zu `std::vector`, der verwendet wird, um den aktuellen Vector zu initialisieren.
 
-*erstes*<br/>
+*first*<br/>
 Das erste Element in einer Sequenz von Objekten, die verwendet werden, um den aktuellen Vector zu initialisieren. Der Typ des *ersten* wird mithilfe der *perfekten Weiterleitung*übermittelt. Weitere Informationen finden Sie unter [RValue-Verweisdeklarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 *last*<br/>

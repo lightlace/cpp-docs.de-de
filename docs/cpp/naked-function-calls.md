@@ -11,18 +11,18 @@ helpviewer_keywords:
 - naked keyword [C++]
 - naked keyword [C++], storage-class attribute
 ms.assetid: 2a66847a-a43f-4541-a7be-c9f5f29b5fdb
-ms.openlocfilehash: f9d8a8747d4a808d040b814005782ed8187bf274
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 242fe83807c6608a09492d0f1f817e3b6e50e530
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301577"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857397"
 ---
 # <a name="naked-function-calls"></a>Naked-Funktionsaufrufe
 
-## <a name="microsoft-specific"></a>Microsoft-spezifisch
+**Microsoft-spezifisch**
 
-Funktionen deklariert, mit der **naked** Attribut ausgegeben werden, ohne Prolog- oder Epilogcode Code, sodass Sie eigene benutzerdefinierte Prolog-/epilogsequenzen mit schreiben die [Inlineassembler](../assembler/inline/inline-assembler.md). Naked-Funktionen werden als erweiterte Funktion bereitgestellt. Sie ermöglichen es Ihnen, eine Funktion zu deklarieren, die von einem anderen Kontext als C/C++ aufgerufen wird, und somit andere Annahmen darüber trifft, wo die Parameter sind oder welche Register beibehalten werden. Zu den Beispielen zählen Routinen wie Interrupthandler. Diese Funktion ist für Writer von virtuellen Gerätetreibern (VxDs) besonders nützlich.
+Funktionen, die mit dem **Naked** -Attribut deklariert werden, werden ohne Prolog-oder Epilogcode ausgegeben, sodass Sie mit dem [Inline Assembler](../assembler/inline/inline-assembler.md)eigene benutzerdefinierte Prolog-/Epilog-Sequenzen schreiben können. Naked-Funktionen werden als erweiterte Funktion bereitgestellt. Sie ermöglichen es Ihnen, eine Funktion zu deklarieren, die von einem anderen Kontext als C/C++ aufgerufen wird, und somit andere Annahmen darüber trifft, wo die Parameter sind oder welche Register beibehalten werden. Zu den Beispielen zählen Routinen wie Interrupthandler. Diese Funktion ist für Writer von virtuellen Gerätetreibern (VxDs) besonders nützlich.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?
 

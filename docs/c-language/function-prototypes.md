@@ -8,12 +8,12 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-ms.openlocfilehash: 2c75db3e1550927af57054a2cc1561d9df1567a4
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 9c42ce5b23e6f755dafd57bdb5a5f79cf1adb4ec
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148803"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857085"
 ---
 # <a name="function-prototypes"></a>Funktionsprototypen
 
@@ -24,7 +24,7 @@ Eine Funktionsdeklaration ist der Funktionsdefinition vorangestellt und gibt den
 *declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
 
-/\* *attribute-seq*<sub>opt</sub> ist Microsoft-spezifisch \*/
+/\* *Attribute-"-* <sub>abwählopt</sub> " ist Microsoft-spezifisches \*/
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub> <br/>
@@ -43,14 +43,14 @@ Eine Funktionsdeklaration ist der Funktionsdefinition vorangestellt und gibt den
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *direct-declarator*:/\* Ein Funktionsdeklarator \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* Neuer Deklarator \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)** /\* Veralteter Deklarator \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**   /\* Neuer Deklarator \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* Veralteter Deklarator \*/
 
 Der Prototyp hat das gleiche Format wie die Funktionsdefinition. Allerdings schließt er mit einem Semikolon unmittelbar nach der schließenden Klammer und hat dementsprechend keinen Text. In jedem Fall muss der Rückgabetyp dem Rückgabetyp entsprechen, der in der Funktionsdefinition angegeben wird.
 
 Funktionsprototypen haben die folgenden wichtigen Verwendungen:
 
-- Sie legen den Rückgabetyp für Funktionen fest, die andere Typen als **int** zurückgeben. Obwohl Funktionen, die **int**-Werte zurückgeben, keine Prototypen erfordern, werden Prototypen empfohlen.
+- Sie legen den Rückgabetyp für Funktionen fest, die andere Typen als **int**zurückgeben. Obwohl Funktionen, die **int** -Werte zurückgeben, keine Prototypen erfordern, werden Prototypen empfohlen.
 
 - Ohne vollständige Prototypen werden Standardkonvertierungen ausgeführt, es wird jedoch nicht versucht, Typ oder Anzahl der Argumente anhand der Anzahl der Parameter zu überprüfen.
 

@@ -65,12 +65,12 @@ helpviewer_keywords:
 - iscsym function
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
-ms.openlocfilehash: ef5b2487fb49739f9a073adbc87546fb5d49d542
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bc38e72818446a94a51a37b8df5c8c8582971b3f
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954414"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857761"
 ---
 # <a name="iscsym-iscsymf-__iscsym-__iswcsym-__iscsymf-__iswcsymf-_iscsym_l-_iswcsym_l-_iscsymf_l-_iswcsymf_l"></a>iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 
@@ -111,7 +111,7 @@ int _iswcsymf_l(
 #define iscsymf __iscsymf
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *c*<br/>
 Zu testende ganze Zahl. *c* muss im Bereich von 0-255 für die schmale Zeichen Version der Funktion liegen.
@@ -121,7 +121,7 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Sowohl **__iscsym** als auch **__iswcsym** geben einen Wert ungleich 0 (null) zurück, wenn *c* ein Buchstabe, ein Unterstrich oder eine Ziffer ist. Sowohl **__iscsymf** als auch **__iswcsymf** geben einen Wert ungleich 0 (null) zurück, wenn *c* ein Buchstabe oder ein Unterstrich ist. Jede dieser Routinen gibt 0 zurück, wenn *c* die Test Bedingung nicht erfüllt. Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch das *übergebene Gebiets* Schema anstelle des aktuellen Gebiets Schemas für Ihr vom Gebiets Schema abhängiges Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Sowohl **__iscsym** als auch **__iswcsym** geben einen Wert ungleich 0 (null) zurück, wenn *c* ein Buchstabe, ein Unterstrich oder eine Ziffer ist. Sowohl **__iscsymf** als auch **__iswcsymf** geben einen Wert ungleich 0 (null) zurück, wenn *c* ein Buchstabe oder ein Unterstrich ist. Jede dieser Routinen gibt 0 zurück, wenn *c* die Test Bedingung nicht erfüllt. Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch das *übergebene* Gebiets Schema anstelle des aktuellen Gebiets Schemas für Ihr vom Gebiets Schema abhängiges Verhalten. Weitere Informationen finden Sie unter [Gebietsschema](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Hinweise
 
@@ -129,13 +129,13 @@ Diese Routinen werden als Makros implementiert, es sei denn, die Präprozessorma
 
 Aus Gründen der Abwärtskompatibilität werden **iscsym** und **iscsymf** nur als Makros definiert, wenn [ &#95; &#95;stdc&#95; ](../../preprocessor/predefined-macros.md) nicht definiert oder als 0 definiert ist. Andernfalls sind Sie nicht definiert.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, **_iswcsymf_l**|C: \<ctype.h><br /><br /> C++: \<cctype> oder \<ctype.h>|
 
-Die **Routinen iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l** **, _iswcsym_l,** **_iscsymf_l**und **_iswcsymf_l** sind Microsoft-spezifisch. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die Routinen **iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**und **_iswcsymf_l** sind Microsoft-spezifisch. Zusätzliche Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Siehe auch
 

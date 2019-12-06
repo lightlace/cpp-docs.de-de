@@ -8,12 +8,12 @@ helpviewer_keywords:
 - statements, about statements
 - Visual C, statements
 ms.assetid: 0d49837a-5399-4881-b60c-af5f4e9720de
-ms.openlocfilehash: 1b5863a021fd74bb80162d589af7c2a1a5b36f9b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: bfa6840553055202f26f55e1dc5971bfd047b2de
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147047"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857072"
 ---
 # <a name="overview-of-c-statements"></a>Übersicht über C-Anweisungen
 
@@ -33,11 +33,11 @@ C-Anweisungen bestehen aus Token, Ausdrücken und anderen Anweisungen. Eine Anwe
 
 [jump-statement](../c-language/break-statement-c.md)
 
-[try-except-statement](../c-language/try-except-statement-c.md)
+[Try-außer-Statement](../c-language/try-except-statement-c.md) /* Microsoft-spezifische \*/
 
-/* Microsoft-spezifisch \*/[try-finally-statement](../c-language/try-finally-statement-c.md) /\* Microsoft-spezifisch\*/
+die [try-schließlich-Anweisung](../c-language/try-finally-statement-c.md) /\* Microsoft-spezifischen \*/
 
-Häufig handelt es sich bei einem Anweisungstext um eine "Verbundanweisung ". Eine Verbundanweisung besteht aus anderen Anweisungen, die Schlüsselwörter enthalten können. Die Verbundanweisung steht in geschweiften Klammern (**{ }**). Alle anderen C-Anweisungen enden mit einem Semikolon (**;**). Das Semikolon ist ein Anweisungsabschlusszeichen.
+Häufig handelt es sich bei einem Anweisungstext um eine "Verbundanweisung ". Eine Verbundanweisung besteht aus anderen Anweisungen, die Schlüsselwörter enthalten können. Die Verbundanweisung steht in geschweiften Klammern ( **{ }** ). Alle anderen C-Anweisungen enden mit einem Semikolon ( **;** ). Das Semikolon ist ein Anweisungsabschlusszeichen.
 
 Die Ausdrucksanweisung enthält einen C-Ausdruck, der die arithmetischen oder logischen Operatoren, die in [Ausdrücke und Zuweisungen](../c-language/expressions-and-assignments.md) eingeführt werden, enthalten kann. Die Null-Anweisung ist eine leere Anweisung.
 

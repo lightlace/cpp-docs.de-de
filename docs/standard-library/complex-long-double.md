@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: afd85321ee443359f17850384b06b854dfe89985
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 978be97484a259d7ae8f3fd24fecf07d50c4c844
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688233"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857969"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
@@ -36,12 +36,12 @@ complex(
 };
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*_RealVal* \
+*_RealVal*\
 Der Wert des Typs **long double** für den Realteil der komplexen Zahl, die erstellt wird
 
-*_ImagVal* \
+*_ImagVal*\
 Der Wert des Typs **long Double** für den imaginären Teil der komplexen Zahl, die erstellt wird.
 
 *complexnum* -\
@@ -115,7 +115,7 @@ Argument of c3 is recovered from c3 using:
 arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
 **Header**: \<complex>
 

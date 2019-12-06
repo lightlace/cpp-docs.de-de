@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: a15e519be14d9a05cb30a8c9282baccc87a5f35e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14b5c12715d1c4c27d9ef8e262170acb2f85e526
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267688"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857345"
 ---
 # <a name="pointers-to-members"></a>Zeiger auf Member
 
@@ -28,33 +28,33 @@ Deklarationen von Zeigern auf Member sind Sonderfälle von Zeigerdeklarationen. 
 
    - Ein optionaler Speicherklassenbezeichner.
 
-   - Optionale **const** und/oder **flüchtige** Spezifizierer.
+   - Optionale **Konstante** und/oder **flüchtige** spezifier.
 
    - Der Typspezifizierer: der Name eines Typs  Dies ist der Typ des Members, auf das gezeigt werden muss, nicht der der Klasse.
 
 1. Der Deklarator:
 
-   - Ein optionaler Microsoft-spezifischer Modifizierer. Weitere Informationen finden Sie unter [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md).
+   - Ein optionaler Microsoft-spezifischer Modifizierer. Weitere Informationen finden Sie unter [Microsoft-spezifische modifiziererer](../cpp/microsoft-specific-modifiers.md).
 
    - Der qualifizierte Name der Klasse, die die Member enthält, auf die gezeigt werden muss.
 
-   - Die __::__ Operator.
+   - Der __::__ -Operator.
 
-   - Die __\*__ Operator.
+   - Der __\*__ -Operator.
 
-   - Optionale **const** und/oder **flüchtige** Spezifizierer.
+   - Optionale **Konstante** und/oder **flüchtige** spezifier.
 
    - Der Bezeichner, der den Zeiger auf ein Member benennt.
 
 1. Ein optionaler Initialisierer:
 
-   - Die **=** Operator.
+   - Der **=** -Operator.
 
-   - Die **&** Operator.
+   - Der **&** -Operator.
 
    - Der qualifizierte Name der Klasse.
 
-   - Die __::__ Operator.
+   - Der __::__ -Operator.
 
    - Der Name eines nicht statischen Members der Klasse des entsprechenden Typs.
 
@@ -82,7 +82,7 @@ int main()
 }
 ```
 
-Im vorherigen Beispiel `pwCaption` ist ein Zeiger auf einen Member der Klasse `Window` weist den Typ, der `char*`. Der Typ von `pwCaption` lautet `char * Window::* `. Im nächsten Codefragment werden Zeiger auf die Memberfunktionen `SetCaption` und `GetCaption` deklariert.
+Im vorherigen Beispiel ist `pwCaption` ein Zeiger auf einen beliebigen Member der-Klasse `Window`, der über den Typ `char*`verfügt. Der Typ von `pwCaption` lautet `char * Window::* `. Im nächsten Codefragment werden Zeiger auf die Memberfunktionen `SetCaption` und `GetCaption` deklariert.
 
 ```cpp
 const char * (Window::*pfnwGC)() = &Window::GetCaption;
@@ -104,9 +104,9 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';
 ```
 
-Der Unterschied zwischen der **.** <strong>\*</strong> und **->** <strong>\*</strong> Operatoren (der Pointer-to-Member-Operatoren) ist, die die **.** <strong>\*</strong> Operator wählt Elemente zwar angegeben, ein Objekt oder einen Objektverweis, der **->** <strong>\*</strong> Operator Wählt Elemente über einen Zeiger an. (Weitere Informationen zu diesen Operatoren finden Sie unter [Ausdrücke mit Zeiger-auf-Member-Operatoren](../cpp/pointer-to-member-operators-dot-star-and-star.md).)
+Der Unterschied zwischen der **.** <strong>\*</strong> und **->** <strong>\*</strong> Operatoren (die Zeiger-zu-Member-Operatoren) ist, dass die **.** <strong>\*</strong> Operator wählt bei einem Objekt-oder Objekt Verweis Elemente aus, während der **->** <strong>\*</strong> -Operator Member durch einen Zeiger auswählt. (Weitere Informationen zu diesen Operatoren finden [Sie unter Ausdrücke mit Zeiger-zu-Member-Operatoren](../cpp/pointer-to-member-operators-dot-star-and-star.md).)
 
-Das Ergebnis der Pointer-to-Member-Operatoren ist der Typ des Members – in diesem Fall `char *`.
+Das Ergebnis der Zeiger-zu-Member-Operatoren ist der Typ des Members – in diesem Fall `char *`.
 
 Im folgenden Codefragment werden die Memberfunktionen `GetCaption` und `SetCaption` mithilfe der Zeiger auf Member aufgerufen:
 
@@ -127,13 +127,13 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 
 ## <a name="restrictions-on-pointers-to-members"></a>Einschränkungen für Zeiger auf Member
 
-Die Adresse eines statischen Members ist kein Zeiger auf einen Member. Es ist ein regulärer Zeiger auf die eine Instanz des statischen Members. Da nur eine Instanz eines statischen Members für alle Objekte einer bestimmten Klasse, die normale Address-of vorhanden ist (**&**) und der Dereferenzierungsoperator (<strong>\*</strong>) Operatoren können verwendet werden.
+Die Adresse eines statischen Members ist kein Zeiger auf einen Member. Es ist ein regulärer Zeiger auf die eine Instanz des statischen Members. Da nur eine Instanz eines statischen Members für alle Objekte einer bestimmten Klasse vorhanden ist, können die normalen address-of-Operatoren ( **&** ) und Dereferenzierungsoperatoren (<strong>\*</strong>) verwendet werden.
 
 ## <a name="pointers-to-members-and-virtual-functions"></a>Zeiger auf Member und virtuelle Funktionen
 
 Das Aufrufen einer virtuellen Funktion durch einen Zeiger auf eine Memberfunktion verhält sich wie beim direkten Aufruf der Funktion. Die ordnungsgemäße Funktion wird in v-table gesucht und aufgerufen.
 
-Entscheidend für das Funktionieren von virtuellen Funktionen ist immer, dass sie durch einen Zeiger auf eine Basisklasse aufgerufen werden. (Weitere Informationen zu virtuellen Funktionen, finden Sie unter [virtuelle Funktionen](../cpp/virtual-functions.md).)
+Entscheidend für das Funktionieren von virtuellen Funktionen ist immer, dass sie durch einen Zeiger auf eine Basisklasse aufgerufen werden. (Weitere Informationen zu virtuellen Funktionen finden Sie unter [virtuelle Funktionen](../cpp/virtual-functions.md).)
 
 Der folgende Code zeigt, wie eine virtuelle Funktion durch einen Zeiger auf eine Memberfunktion aufgerufen werden kann:
 

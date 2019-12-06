@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: 2e561cff956ca51707834bf869a1c114f0c99a3e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: db95453a44f6a55d4bf98638351dcda4bd8377c9
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957041"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857839"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
@@ -56,16 +56,16 @@ int _fpclassf(
 ); /* x64 only */
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *w*<br/>
 Der zu testende Gleitkommawert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **_fpclass** -Funktion und die **_fpclassf** -Funktion geben einen ganzzahligen Wert zurück, der die Gleit Komma Klassifizierung des Arguments *x*angibt. Die Klassifizierung weist möglicherweise einen der folgenden, in \<float.h> definierten Werte auf.
+Die Funktionen **_fpclass** und **_fpclassf** geben einen ganzzahligen Wert zurück, der die Gleit Komma Klassifizierung des Arguments *x*angibt. Die Klassifizierung weist möglicherweise einen der folgenden, in \<float.h> definierten Werte auf.
 
-|Wert|Beschreibung|
+|{2&gt;Wert&lt;2}|Beschreibung|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|Signalisierender NaN|
 |**_FPCLASS_QNAN**|Stiller NaN|
@@ -82,7 +82,7 @@ Die **_fpclass** -Funktion und die **_fpclassf** -Funktion geben einen ganzzahli
 
 Die Funktionen **_fpclass** und **_fpclassf** sind Microsoft-spezifisch. Sie ähneln [fpclassify](fpclassify.md), geben jedoch detaillierte Informationen über das Argument zurück. Die **_fpclassf** -Funktion ist nur verfügbar, wenn Sie für die x64-Plattform kompiliert ist.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
 |Funktion|Erforderlicher Header|
 |--------------|---------------------|

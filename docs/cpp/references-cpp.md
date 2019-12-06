@@ -9,24 +9,24 @@ helpviewer_keywords:
 - references, declaring
 - referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
-ms.openlocfilehash: aafc582299402eabab2736ac7d07b6c4c397413c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2353f0861f0f249416d0bb84a7a951b1cb6d64bc
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244215"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857332"
 ---
 # <a name="references-c"></a>Verweise (C++)
 
-Ein Verweis, z. B. ein Zeiger ist, speichert die Adresse eines Objekts, das sich an anderer Stelle im Speicher befindet. Im Gegensatz zu einem Zeiger kann sich ein Verweis nach der Initialisierung nicht auf ein anderes Objekt beziehen oder auf null gesetzt werden. Es gibt zwei Arten von verweisen: Lvalue-Verweise, die auf einer benannten Variable und Rvalue-Verweise, die verweisen beziehen auf eine [temporäres Objekt](../cpp/temporary-objects.md). Der &-Operator gibt einen Lvalue-Verweis und & &-Operator gibt einen Rvalue-Verweis oder einen universellen Verweis (Rvalue oder Lvalue) je nach Kontext.
+Ein Verweis, z. B. ein Zeiger ist, speichert die Adresse eines Objekts, das sich an anderer Stelle im Speicher befindet. Im Gegensatz zu einem Zeiger kann sich ein Verweis nach der Initialisierung nicht auf ein anderes Objekt beziehen oder auf null gesetzt werden. Es gibt zwei Arten von verweisen: Lvalue-Verweise, die auf eine benannte Variable verweisen, und Rvalue-Verweise, die auf ein [temporäres Objekt](../cpp/temporary-objects.md)verweisen. Der &-Operator gibt einen Lvalue-Verweis an, und der & &-Operator gibt entweder einen rvalue-Verweis oder einen universellen Verweis (entweder Rvalue oder lvalue) in Abhängigkeit vom Kontext an.
 
 Verweise können mit der folgenden Syntax deklariert werden:
 
-> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* \[**=** *expression*]**;**
+> \[*Speicherklassenspezifizierer*] \[*CV-Qualifizierer*] *Typspezifizierer* \[*MS-Modifier*] *Deklarator* \[ **=** *Ausdruck*] **;**
 
 Jeder gültige Deklarator, der einen Verweis angibt, kann verwendet werden. Sofern der Verweis kein Verweis auf den Funktions- oder Arraytyp ist, gilt die folgende vereinfachte Syntax:
 
-> \[*Speicherklassenspezifizierer*] \[ *cv-Qualifizierer*] *-Typspezifizierer* \[ **&** oder **&&**] \[ *cv-Qualifizierer*] *Bezeichner* \[ **=** *Ausdruck*]**;**
+> \[*Speicherklassenspezifizierer*] \[*CV-Qualifizierer*] *Typspezifizierer* \[ **&** oder **&&** ] \[*CV-Qualifizierer*] *Bezeichner* \[ **=** *Ausdruck*] **;**
 
 Verweise werden unter Verwendung dieser Reihenfolge deklariert:
 
@@ -34,25 +34,25 @@ Verweise werden unter Verwendung dieser Reihenfolge deklariert:
 
    - Ein optionaler Speicherklassenbezeichner.
 
-   - Optionale **const** und/oder **flüchtige** Qualifizierer.
+   - Optionale **Konstanten** und/oder **volatile** -Qualifizierer.
 
    - Der Typspezifizierer: der Name eines Typs
 
 1. Der Deklarator:
 
-   - Ein optionaler Microsoft-spezifischer Modifizierer. Weitere Informationen finden Sie unter [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md).
+   - Ein optionaler Microsoft-spezifischer Modifizierer. Weitere Informationen finden Sie unter [Microsoft-spezifische modifiziererer](../cpp/microsoft-specific-modifiers.md).
 
-   - Die **&** Operator oder **&&** Operator.
+   - Der **&** Operator oder **&&** Operator.
 
-   - Optionale **const** und/oder **flüchtige** Qualifizierer.
+   - Optionale **Konstante** und/oder **flüchtige** Qualifizierer.
 
    - Der Bezeichner.
 
 1. Ein optionaler Initialisierer.
 
-Die komplexeren deklaratorformen für Zeiger auf Arrays und Funktionen gelten auch für Verweise auf Arrays und Funktionen verwendet werden. Weitere Informationen finden Sie unter [Zeiger](../cpp/pointers-cpp.md).
+Die komplexeren deklaratorformen für Zeiger auf Arrays und Funktionen gelten auch für Verweise auf Arrays und Funktionen. Weitere Informationen finden Sie unter [Zeiger](../cpp/pointers-cpp.md).
 
-Mehrere Deklaratoren und Initialisierer erscheinen möglicherweise in einer durch Trennzeichen getrennten Liste, die einem einzelnen Deklarationsspezifizierer folgt. Zum Beispiel:
+Mehrere Deklaratoren und Initialisierer erscheinen möglicherweise in einer durch Trennzeichen getrennten Liste, die einem einzelnen Deklarationsspezifizierer folgt. Beispiel:
 
 ```cpp
 int &i;

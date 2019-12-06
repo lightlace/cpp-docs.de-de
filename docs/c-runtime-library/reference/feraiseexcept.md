@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: 40ff315c179a6b62a3073d4f07e4e6a6d1c1acab
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 07c8a79e0a9569db80607e1ec1e16cd4b502783c
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941130"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857826"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -41,7 +41,7 @@ int feraiseexcept(
 );
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *ausgenommen*<br/>
 Die auszulösenden Gleitkommaausnahmen
@@ -52,7 +52,7 @@ Wenn alle angegebenen Ausnahmen erfolgreich ausgelöst werden, wird 0 zurückgeg
 
 ## <a name="remarks"></a>Hinweise
 
-Die **feraianwith** -Funktion versucht, die durch *Exception*angegebenen Gleit Komma Ausnahmen zu erhöhen.   Die **feraionaußer** -Funktion unterstützt diese in \<fenv. h > definierten Ausnahme Makros:
+Die **feraianwith** -Funktion versucht, die durch *Exception*angegebenen Gleit Komma Ausnahmen zu erhöhen.   Die **feraionaußer** -Funktion unterstützt diese Ausnahme Makros, die in \<fenv. h-> definiert sind:
 
 |Ausnahmemakro|Beschreibung|
 |---------------------|-----------------|
@@ -61,21 +61,21 @@ Die **feraianwith** -Funktion versucht, die durch *Exception*angegebenen Gleit K
 |FE_INVALID|Ein Domänenfehler ist in einer früheren Gleitkommaoperation aufgetreten.|
 |FE_OVERFLOW|Ein Bereichsfehler ist aufgetreten; das Ergebnis einer früheren Gleitkommaoperation war zu groß, um dargestellt zu werden.|
 |FE_UNDERFLOW|Das Ergebnis einer früheren Gleitkommaoperation war zu klein, um ganz genau dargestellt zu werden; ein nicht normaler Wert wurde erstellt.|
-|FE_ALLEXCEPT|Bitweiser OR-Operator oder alle unterstützten Gleitkommaausnahmen|
+|FE_ALLEXCEPT|Bitweises OR oder alle unterstützten Gleitkommaausnahmen.|
 
 Das *excepts* -Argument kann NULL, einer der ausnahmemakrowerte oder das bitweise OR von mindestens zwei unterstützten Ausnahme Makros sein. Wenn eines der angegebenen Ausnahmemakros FE_OVERFLOW oder FE_UNDERFLOW ist, kann die Ausnahme FE_INEXACT als Nebeneffekt ausgelöst werden.
 
 Um diese Funktion zu verwenden, müssen Sie vor dem Aufruf Gleitkommaoptimierungen deaktivieren, die den Zugriff mithilfe der `#pragma fenv_access(on)`-Direktive verhindern könnten. Weitere Informationen finden Sie unter [fenv_access](../../preprocessor/fenv-access.md).
 
-**Microsoft-spezifisch:** Die in " *excepts* " angegebenen Ausnahmen werden in der Reihenfolge FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT, ausgelöst. FE_INEXACT kann jedoch auch dann ausgelöst werden, wenn FE_OVERFLOW oder FE_UNDERFLOW ausgelöst wird, auch wenn Sie nicht in *excepts*angegeben werden. **Ende Microsoft-spezifisch**
+**Microsoft-spezifisch:** Die in " *excepts* " angegebenen Ausnahmen werden in der Reihenfolge FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT ausgelöst. FE_INEXACT können jedoch auch dann ausgelöst werden, wenn FE_OVERFLOW oder FE_UNDERFLOW ausgelöst wird, auch wenn Sie nicht in " *excepts*" angegeben sind.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
 |Funktion|C-Header|C++-Header|
 |--------------|--------------|------------------|
 |*feraiseexcept*|\<fenv.h>|\<cfenv>|
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Zusätzliche Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Siehe auch
 

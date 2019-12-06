@@ -7,16 +7,16 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6770d3fb314222c7c58b6b97fa42d74cbc1e9b33
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331212"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857319"
 ---
 # <a name="semantics-of-expressions"></a>Semantik von Ausdrücken
 
-Ausdrücke werden entsprechend der Rangfolge und Gruppierung ihrer Operatoren ausgewertet. ([Operatorrangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md) in [lexikalische Konventionen](../cpp/lexical-conventions.md), zeigt den Beziehungen der C++ Operatoren für Ausdrücke vorgeben.)
+Ausdrücke werden entsprechend der Rangfolge und Gruppierung ihrer Operatoren ausgewertet. ([Operator Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md) in [lexikalischen Konventionen](../cpp/lexical-conventions.md)zeigt die Beziehungen an C++ , die die Operatoren für Ausdrücke erzwingen.)
 
 ## <a name="order-of-evaluation"></a>Reihenfolge der Auswertung
 
@@ -43,8 +43,8 @@ int main()
 54
 ```
 
-![Auswertungsreihenfolge in einem Ausdruck](../cpp/media/vc38zv1.gif "Auswertungsreihenfolge in einem Ausdruck") <br/>
-Reihenfolge der Auswertung von Ausdruck
+![Auswertungs Reihenfolge in einem Ausdruck](../cpp/media/vc38zv1.gif "Auswertungsreihenfolge in einem Ausdruck") <br/>
+Ausdruck-Auswertungs Reihenfolge
 
 Die Reihenfolge der Auswertung des in der obigen Abbildung dargestellten Ausdrucks wird durch die Reihenfolge und die Assoziativität der Operatoren bestimmt:
 
@@ -52,27 +52,27 @@ Die Reihenfolge der Auswertung des in der obigen Abbildung dargestellten Ausdruc
 
 1. Addition (+) besitzt die zweithöchste Priorität, sodass `a` dem Produkt von `b` und `c` hinzugefügt wird.
 
-1. Verschiebung nach links (<<) hat die niedrigste Priorität im Ausdruck, aber es gibt zwei vorkommen. Da der Left Shift-Operator von links nach rechts gruppiert, wird zuerst der linke und dann der rechte Teilausdruck ausgewertet.
+1. Left Shift (< <) hat die niedrigste Rangfolge im Ausdruck, es gibt jedoch zwei vorkommen. Da der Left Shift-Operator von links nach rechts gruppiert, wird zuerst der linke und dann der rechte Teilausdruck ausgewertet.
 
 Wenn Teilausdrücke mit Klammern gruppiert werden, werden die Rangfolge sowie die Reihenfolge der Auswertung des Ausdrucks geändert, wie in der folgenden Abbildung gezeigt.
 
-![Die Reihenfolge der Auswertung eines Ausdrucks mit Klammern](../cpp/media/vc38zv2.gif "Reihenfolge der Auswertung eines Ausdrucks mit Klammern") <br/>
-Reihenfolge der Auswertung von Ausdrücken mit Klammern
+![Auswertungs Reihenfolge des Ausdrucks mit Klammern](../cpp/media/vc38zv2.gif "Auswertungsreihenfolge eines Ausdrucks mit Klammern") <br/>
+Ausdruck-Auswertungs Reihenfolge mit Klammern
 
 Ausdrücke, wie in der Abbildung oben, werden ausschließlich für ihre Nebeneffekte ausgewertet – in diesem Fall, um Informationen zum Standardausgabegerät zu übertragen.
 
 ## <a name="notation-in-expressions"></a>Notation in Ausdrücken
 
-Die Programmiersprache C++ gibt beim Angeben von Operanden bestimmte Kompatibilitäten an. Die folgende Tabelle zeigt die Typen der Operanden an Operatoren, die Operanden des Typs erfordern akzeptable *Typ*.
+Die Programmiersprache C++ gibt beim Angeben von Operanden bestimmte Kompatibilitäten an. In der folgenden Tabelle sind die Typen von Operanden aufgeführt, die für Operatoren zulässig sind, die Operanden vom *Typ Type benötigen.*
 
 ### <a name="operand-types-acceptable-to-operators"></a>Operandentypen, die für Operatoren zulässig sind
 
 |Typ erwartet|Typen zulässig|
 |-------------------|-------------------|
-|*Typ*|`const` *type*<br /> `volatile` *type*<br /> *type*&<br /> `const` *Typ*&<br /> `volatile` *Typ*&<br /> `volatile const` *type*<br /> `volatile const` *Typ*&|
-|*type* \*|*type* \*<br /> `const` *Typ* \*<br /> `volatile` *Typ* \*<br /> `volatile const` *Typ* \*|
-|`const` *type*|*Typ*<br /> `const` *type*<br />`const` *Typ*&|
-|`volatile` *type*|*Typ*<br /> `volatile` *type*<br /> `volatile` *Typ*&|
+|*Typ*|`const`- *Typ*<br /> `volatile`- *Typ*<br /> *type*&<br /> `const` *Typ*&<br /> `volatile` *Typ*&<br /> `volatile const`- *Typ*<br /> `volatile const` *Typ*&|
+|\* *eingeben*|\* *eingeben*<br /> `const` *Typ* \*<br /> `volatile` *Typ* \*<br /> `volatile const` *Typ* \*|
+|`const`- *Typ*|*Typ*<br /> `const`- *Typ*<br />`const` *Typ*&|
+|`volatile`- *Typ*|*Typ*<br /> `volatile`- *Typ*<br /> `volatile` *Typ*&|
 
 Da die vorangehenden Regeln immer in Kombination verwendet werden können, kann ein const-Zeiger auf ein flüchtiges Objekt angegeben werden, wo ein Zeiger erwartet wird.
 
@@ -88,7 +88,7 @@ func( i, ++i );
 
 Die Programmiersprache C++ gewährleistet nicht die Reihenfolge, in der Argumente zu einem Funktionsaufruf ausgewertet werden. Daher könnte `func` im vorhergehenden Beispiel die Werte 7 und 8 oder 8 und 8 für die Parameter empfangen, je nachdem, ob die Parameter von links nach rechts oder von rechts nach links ausgewertet werden.
 
-## <a name="c-sequence-points-microsoft-specific"></a>C++-Sequenzpunkte (Microsoft-spezifisch)
+## <a name="c-sequence-points-microsoft-specific"></a>C++Sequenz Punkte (Microsoft-spezifisch)
 
 Zwischen aufeinanderfolgenden "Sequenzpunkten" kann der Wert eines Objekts nur einmal durch einen Ausdruck geändert werden.
 
