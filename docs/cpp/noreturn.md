@@ -7,27 +7,27 @@ helpviewer_keywords:
 - __declspec keyword [C++], noreturn
 - noreturn __declspec keyword
 ms.assetid: 9c6517e5-22d7-4051-9974-3d2200ae4d1d
-ms.openlocfilehash: 1d78e8f5116eabf9073205b938156197bf1001a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9ca61c9d734ccdd6b8d8374ed3a7c4128ee3d5e
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245244"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857371"
 ---
 # <a name="noreturn"></a>noreturn
 
-## <a name="microsoft-specific"></a>Microsoft-spezifisch
+**Microsoft-spezifisch**
 
-Dies **__declspec** Attribut weist den Compiler, dass keine Funktion zurückgegeben wird. Infolgedessen wird der Compiler weiß, dass der Code nach einem Aufruf einer **__declspec(noreturn)** Funktion ist nicht erreichbar.
+Dieses **__declspec** Attribut weist den Compiler an, dass eine Funktion nicht zurückgibt. Folglich weiß der Compiler, dass der Code, der einem Rückruf einer **__declspec (noreturn)** -Funktion folgt, nicht erreichbar ist.
 
-Wenn der Compiler eine Funktion mit einem Kontrollpfad findet, die keinen Wert zurückgibt, wird eine Warnung (C4715) oder Fehlermeldung (C2202) generiert. Wenn der Kontrollpfad wegen einer Funktion nicht, die nie zurückgegeben erreichbar ist, können Sie **__declspec(noreturn)** um diese Warnung oder Fehler zu vermeiden.
+Wenn der Compiler eine Funktion mit einem Kontrollpfad findet, die keinen Wert zurückgibt, wird eine Warnung (C4715) oder Fehlermeldung (C2202) generiert. Wenn der Steuerelement Pfad aufgrund einer Funktion, die nie zurückgibt, nicht erreicht werden kann, können Sie **__declspec (noreturn)** verwenden, um diese Warnung oder den Fehler zu verhindern.
 
 > [!NOTE]
->  Hinzufügen von **__declspec(noreturn)** an eine Funktion, die erwartet wird, zurückgeben können zu nicht definiertem Verhalten.
+>  Das Hinzufügen von **__declspec (noreturn)** zu einer Funktion, die zurückgegeben werden soll, kann zu undefiniertem Verhalten führen.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird die **else** -Klausel keine return-Anweisung.  Deklarieren von `fatal` als **__declspec(noreturn)** vermeidet einen Fehler oder eine Warnmeldung angezeigt.
+Im folgenden Beispiel enthält die **else** -Klausel keine Return-Anweisung.  Wenn Sie `fatal` als **__declspec (noreturn)** deklarieren, wird ein Fehler oder eine Warnmeldung vermieden.
 
 ```cpp
 // noreturn2.cpp
@@ -43,7 +43,9 @@ int main() {
 }
 ```
 
+**Ende Microsoft-spezifisch**
+
 ## <a name="see-also"></a>Siehe auch
 
 [__declspec](../cpp/declspec.md)<br/>
-[Schlüsselwörter](../cpp/keywords-cpp.md)
+[Stichwörter](../cpp/keywords-cpp.md)

@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
-ms.openlocfilehash: c813b97b85469165aae892b0a4cce888112e3dc5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec5c7d635dbbb63af7177395c5ad08356e1a26f0
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267371"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857306"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Regeln und Einschränkungen für Naked-Funktionen
 
-## <a name="microsoft-specific"></a>Microsoft-spezifisch
+**Microsoft-spezifisch**
 
 Die folgenden Regeln und Einschränkungen treffen auf naked-Funktionen zu:
 
-- Die **zurückgeben** Anweisung ist nicht zulässig.
+- Die **Return** -Anweisung ist nicht zulässig.
 
 - Konstrukte für die strukturierte Ausnahmebehandlung und C++-Ausnahmebehandlung sind nicht zulässig, da sie über den Stapelrahmen entladen werden müssen.
 
@@ -31,9 +31,9 @@ Die folgenden Regeln und Einschränkungen treffen auf naked-Funktionen zu:
 
 - Sie können C++-Klassenobjekte nicht im lexikalischen Bereich der Funktion deklarieren. Sie können jedoch Objekte in einem geschachtelten Block deklarieren.
 
-- Die **naked** Schlüsselwort wird ignoriert, beim Kompilieren mit ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md).
+- Das **Naked** -Schlüsselwort wird beim Kompilieren mit [/CLR](../build/reference/clr-common-language-runtime-compilation.md)ignoriert.
 
-- Für [__fastcall](../cpp/fastcall.md) naked-Funktionen, wenn ein Verweis vorhanden, in der C ist /C++ Code auf eines der Registerargumente, sollte der Prologcode die Werte dieses Registers in den Stapelspeicherort für diese Variable speichern. Zum Beispiel:
+- Wenn für [__fastcall](../cpp/fastcall.md) Naked-Funktionen ein Verweis in C/C++ Code auf eines der Register Argumente vorhanden ist, sollte der Prolog Code die Werte von speichern, die sich bei dem Stapel Speicherort für diese Variable registrieren. Beispiel:
 
 ```cpp
 // nkdfastcl.cpp

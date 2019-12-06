@@ -1,40 +1,40 @@
 ---
 title: Schwerwiegender ML-Fehler A1000
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1000
 helpviewer_keywords:
 - A1000
 ms.assetid: 4fc77a83-8796-4dcf-9c37-6395d635b817
-ms.openlocfilehash: c1149bb4362995c1f63a268deab276b5887b5614
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b403c75b4e27f8b673b262952c286995ae3f935
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178539"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856929"
 ---
 # <a name="ml-fatal-error-a1000"></a>Schwerwiegender ML-Fehler A1000
 
-**Datei kann nicht geöffnet werden: Dateiname**
+**Datei kann nicht geöffnet werden: filename**
 
-Der Assembler konnte nicht zum Öffnen einer Quelle, einschließen oder Ausgabedatei.
+Der Assembler konnte eine Quelle, eine include-Datei oder eine Ausgabedatei nicht öffnen.
 
-Eine der folgenden möglicherweise eine Ursache:
+Eine der folgenden Ursachen kann eine Ursache sein:
 
 - Die Datei ist nicht vorhanden.
 
-- Die Datei wird von einem anderen Prozess verwendet wird.
+- Die Datei wird von einem anderen Prozess verwendet.
 
 - Der Dateiname ist ungültig.
 
-- Eine schreibgeschützte Datei mit der Name der Ausgabedatei ist bereits vorhanden.
+- Eine schreibgeschützte Datei mit dem Ausgabe Dateinamen ist bereits vorhanden.
 
 - Das aktuelle Laufwerk ist voll.
 
-- Das aktuelle Verzeichnis ist der Stamm und ist voll.
+- Das aktuelle Verzeichnis ist das Stammverzeichnis und ist voll.
 
-- Das Gerät kann nicht geschrieben werden.
+- Auf das Gerät kann nicht geschrieben werden.
 
 - Das Laufwerk ist nicht bereit.
 

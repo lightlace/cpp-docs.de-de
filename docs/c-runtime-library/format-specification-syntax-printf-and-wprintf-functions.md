@@ -9,12 +9,12 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: e4def787dc5792921298999eb643ff56dd2c9f3d
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778390"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857865"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntax der Formatangabe: printf- und wprintf-Funktionen
 
@@ -48,10 +48,10 @@ Das *Typ*-Konvertierungsspezifiziererzeichen gibt an, ob das entsprechende Argum
 
 Die Argumente, die der Formatzeichenfolge folgen, werden nach dem entsprechenden *Typ*zeichen und dem optionalen [Größen](#size)präfix interpretiert. Konvertierungen für die Zeichentypen `char` und `wchar_t` werden durch **c** oder **C** angegeben, und Einzelbyte- und Multibyte- oder Breitzeichen-Zeichenfolgen werden je nach benötigter Formatierungsfunktion durch **s** oder **S** angegeben. Zeichen und Zeichenfolgenargumente, die durch **c** und **s** angegeben werden, werden von den `printf`-Familienfunktionen als `char` und `char*` oder von den `wprintf`-Familienfunktionen als `wchar_t` und `wchar_t*` interpretiert. Zeichen und Zeichenfolgenargumente, die durch **C** und **S** angegeben werden, werden von den `printf`-Familienfunktionen als `wchar_t` und `wchar_t*` oder von den `wprintf`-Familienfunktionen als `char` und `char*` interpretiert. Dieses Verhalten ist Microsoft-spezifisch.
 
-Ganzzahlige Typen wie `short`, `int`, `long`, `long long` und deren `unsigned` Varianten werden mithilfe von **d**, **i**, **o**, **u**, **x**und **x**angegeben. Gleit Komma Typen wie 1, 2 und 3 **werden mithilfe von**, **a**, **e**, **e**, **f**, **f**, **g**und **g**angegeben. Wenn Sie nicht durch ein *Größen* Präfix geändert werden, werden ganzzahlige Argumente standardmäßig in 3 Typ umgewandelt, und Gleit Komma Argumente werden in 4 umgewandelt. Bei 64-Bit-Systemen ist `int` ein 32-Bit-Wert. Daher werden ganze 64-Bit-Zahlen verkürzt, wenn sie für Ausgabe formatiert werden, sofern nicht ein *Größen*präfix von **ll** oder **I64** verwendet wird. Durch **p** angegebene Zeigertypen verwenden die Standardzeigergröße für die Plattform.
+Ganzzahlige Typen wie `short`, `int`, `long`, `long long`und deren `unsigned` Varianten werden mithilfe von **d**, **i**, **o**, **u**, **x**und **x**angegeben. Gleit Komma Typen wie `float`, `double`und `long double`**werden mithilfe von**, **a**, **e**, **e**, **f**, **f**, **g**und **g**angegeben. Wenn Sie nicht durch ein *Größen* Präfix geändert werden, werden ganzzahlige Argumente standardmäßig in `int` Typ umgewandelt, und Gleit Komma Argumente werden in `double`umgewandelt. Bei 64-Bit-Systemen ist `int` ein 32-Bit-Wert. Daher werden ganze 64-Bit-Zahlen verkürzt, wenn sie für Ausgabe formatiert werden, sofern nicht ein *Größen*präfix von **ll** oder **I64** verwendet wird. Durch **p** angegebene Zeigertypen verwenden die Standardzeigergröße für die Plattform.
 
 > [!NOTE]
-> **Microsoft-spezifisch**: Das **Z**-Typzeichen sowie das Verhalten der **c**-, **C**-, **s**- und **S**-Typzeichen stellen bei Verwendung mit `printf`- und `wprintf`-Funktionen Microsoft-Erweiterungen dar. Der ISO C-Standard verwendet konsistent **c** und **s** für schmale Zeichen und Zeichenfolgen sowie **C** und **S** für Breitzeichen und Zeichenfolgen in allen Formatierungsfunktionen.
+> **Microsoft-spezifisch:** Das **Z** -Typzeichen und das Verhalten der **c**-, **c**-, **s**-und **s** -Typzeichen, wenn Sie mit den Funktionen `printf` und `wprintf` verwendet werden, sind Microsoft-Erweiterungen. Der ISO C-Standard verwendet konsistent **c** und **s** für schmale Zeichen und Zeichenfolgen sowie **C** und **S** für Breitzeichen und Zeichenfolgen in allen Formatierungsfunktionen.
 
 ### <a name="type-field-characters"></a>Typenfeldzeichen
 
@@ -75,13 +75,13 @@ Ganzzahlige Typen wie `short`, `int`, `long`, `long long` und deren `unsigned` V
 |**A**|Gleitkomma|Ein hexadezimaler Gleitkommawert mit Vorzeichen mit doppelter Genauigkeit mit der Form [−]0X*h.hhhh*__P±__*dd*, wobei *h.hhhh* die hexadezimalen Ziffern (aus Großbuchstaben) der Mantisse sind und *dd* eine oder mehrere Ziffern für den Exponenten darstellt. Die Genauigkeit gibt die Anzahl der Ziffern nach dem Punkt an.|
 |**n**|Zeiger auf eine ganze Zahl|Anzahl der Zeichen, die bisher erfolgreich in den Stream oder Puffer geschrieben wurden. Dieser Wert wird in der ganzen Zahl gespeichert, deren Adresse als Argument angegeben ist. Die Größe des Integers, auf den gezeigt wird, kann durch ein Präfix mit Argumentengrößenangabe gesteuert werden. Der **n**-Bezeichner ist standardmäßig deaktiviert. Weitere Informationen finden Sie im wichtigen Sicherheitshinweis.|
 |**p**|Zeigertyp|Zeigt das Argument als Adresse in Hexadezimalziffern an.|
-|**s**|Zeichenfolge|Gibt bei Verwendung mit `printf`-Funktionen eine Einzelbyte- oder Multibyte-Zeichenfolge und bei Verwendung mit `wprintf`-Funktionen eine Breitzeichenfolge an. Zeichen werden bis zum ersten NULL-Zeichen oder bis zum *precision*-Wert angezeigt.|
-|**S**|Zeichenfolge|Gibt bei Verwendung mit `printf`-Funktionen eine Breitzeichenfolge und bei Verwendung mit `wprintf`-Funktionen eine Einzelbyte- oder Multibyte-Zeichenfolge an. Zeichen werden bis zum ersten NULL-Zeichen oder bis zum *precision*-Wert angezeigt.|
+|**s**|String|Gibt bei Verwendung mit `printf`-Funktionen eine Einzelbyte- oder Multibyte-Zeichenfolge und bei Verwendung mit `wprintf`-Funktionen eine Breitzeichenfolge an. Zeichen werden bis zum ersten NULL-Zeichen oder bis zum *precision*-Wert angezeigt.|
+|**S**|String|Gibt bei Verwendung mit `printf`-Funktionen eine Breitzeichenfolge und bei Verwendung mit `wprintf`-Funktionen eine Einzelbyte- oder Multibyte-Zeichenfolge an. Zeichen werden bis zum ersten NULL-Zeichen oder bis zum *precision*-Wert angezeigt.|
 |**Z**|`ANSI_STRING`- oder `UNICODE_STRING`-Struktur|Wenn die Adresse einer [ANSI_STRING](/windows/win32/api/ntdef/ns-ntdef-string)- oder [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string)-Struktur als Argument übergeben wird, wird die Zeichenfolge, die im Puffer angezeigt wird und auf die vom `Buffer`-Feld der Struktur gezeigt wird, übergeben. Verwenden Sie ein *size*-Längenpräfix von **w**, um ein `UNICODE_STRING`-Argument anzugeben, z.B. `%wZ`. Das `Length`-Feld der Struktur muss auf die Länge der Zeichenfolge in Bytes festgelegt sein. Das `MaximumLength`-Feld der Struktur muss auf die Länge des Puffers in Bytes festgelegt sein.<br /><br /> In der Regel wird das **Z**-Typzeichen nur in Treiberdebugfunktionen mit einer Formatangabe verwendet, z.B. `dbgPrint` und `kdPrint`.|
 
 Ab Visual Studio 2015 entspricht die formatierte Ausgabe dem C99-Standard, wenn das Argument, das einem Gleitkomma-Konvertierungsspezifizierer (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) entspricht, unendlich, unbestimmt oder NaN ist. In dieser Tabelle ist die formatierte Ausgabe aufgeführt:
 
-|Wert|Output|
+|{2&gt;Wert&lt;2}|Output|
 |-----------|------------|
 |infinity|`inf`|
 |Stiller NaN|`nan`|
@@ -92,7 +92,7 @@ All diesen Werten kann ein Vorzeichen vorangestellt werden. Wenn ein Gleitkomma-
 
 Vor Visual Studio 2015 verwendete die CRT ein anderes, Nicht-Standard-Format für die Ausgabe von unendlichen, unbestimmten oder NaN-Werten:
 
-|Wert|Output|
+|{2&gt;Wert&lt;2}|Output|
 |-----------|------------|
 |+unendlich|`1.#INF` *random-digits*|
 |- infinity|`-1.#INF` *random-digits*|
@@ -160,7 +160,7 @@ Das *Typ*zeichen bestimmt entweder die Interpretation von *precision* oder die S
 
 ### <a name="how-precision-values-affect-type"></a>Wie sich Genauigkeitswerte auf den Typ auswirken
 
-|Geben Sie Folgendes ein:|Bedeutung|Default|
+|Typ|Bedeutung|Default|
 |----------|-------------|-------------|
 |**a**, **A**|Die Genauigkeit gibt die Anzahl der Ziffern nach dem Punkt an.|Die Standardgenauigkeit beträgt 13. Wenn die Genauigkeit 0 beträgt, wird kein Dezimaltrennzeichen gedruckt, es sei denn, das **#** -Flag wird verwendet.|
 |**c**, **C**|Die Genauigkeit hat keine Auswirkung.|Zeichen wird gedruckt.|
@@ -204,7 +204,7 @@ Obwohl `long double` in Visual C++ ein gesonderter Typ ist, hat er die gleiche i
 Ein **hc**- oder **hC**-Typspezifizierer ist mit **c** in `printf`-Funktionen und mit **C** in `wprintf`-Funktionen synonym. Ein **lc**-, **lC**-, **wc**- oder **wC**-Typspezifizierer ist mit **C** in `printf`-Funktionen und mit **c** in `wprintf`-Funktionen synonym. Ein **hs**- oder **hS**-Typspezifizierer ist mit **s** in `printf`-Funktionen und mit **S** in `wprintf`-Funktionen synonym. Ein **ls**-, **lS**-, **ws**- oder **wS**-Typspezifizierer ist mit **S** in `printf`-Funktionen und mit **s** in `wprintf`-Funktionen synonym.
 
 > [!NOTE]
-> **Microsoft-spezifisch**: Die Präfixe der Argumentgrößenmodifizierer **I** (i als Großbuchstabe), **I32**, **I64** und **w** sind Microsoft-Erweiterungen und nicht ISO C-konform. Das **h**-Präfix, wenn es mit Daten des Typs `char` und das **I**-Präfix (Kleinbuchstabe „l“), wenn es mit Daten des Typs `double` verwendet wird, sind Microsoft-Erweiterungen.
+> **Microsoft-spezifisch:** Die Präfixe " **i** " (Großbuchstabe i), " **i32**", " **I64**" und " **w** Argument size Modifizierer" sind Microsoft-Erweiterungen und sind nicht ISO-kompatibel. Das **h**-Präfix, wenn es mit Daten des Typs `char` und das **I**-Präfix (Kleinbuchstabe „l“), wenn es mit Daten des Typs `double` verwendet wird, sind Microsoft-Erweiterungen.
 
 ## <a name="see-also"></a>Siehe auch
 

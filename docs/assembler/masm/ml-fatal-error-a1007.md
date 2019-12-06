@@ -1,42 +1,42 @@
 ---
 title: Schwerwiegender ML-Fehler A1007
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1007
 helpviewer_keywords:
 - A1007
 ms.assetid: bcf9c826-beb3-4e93-91fe-1ffd34995fbf
-ms.openlocfilehash: 98933c3a24da22f447174a3b51c4855690aba83e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01633b4fa084b7d5e14af5a5c6e51e3dca684d2a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177902"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856916"
 ---
 # <a name="ml-fatal-error-a1007"></a>Schwerwiegender ML-Fehler A1007
 
-**Die Schachtelungsebene ist zu tief**
+**Schachtelungs Ebene zu tief**
 
-Der Assembler erreicht schachteln. Der Grenzwert beträgt 20 Ebenen außer vermerkt.
+Der Assembler hat das Schachtelungs Limit erreicht. Der Grenzwert beträgt 20 Ebenen, außer wenn nichts anderes angegeben ist.
 
-Eine der folgenden wurde zu tief geschachtelt:
+Eine der folgenden ist zu tief geschachtelt:
 
-- Eine allgemeine Richtlinie z. B. [. IF](../../assembler/masm/dot-if.md), [. Wiederholen Sie die](../../assembler/masm/dot-repeat.md), oder [. WÄHREND](../../assembler/masm/dot-while.md).
+- Eine Direktive auf hoher Ebene, z [. b. Wenn](../../assembler/masm/dot-if.md), [. Wiederholen](../../assembler/masm/dot-repeat.md)Sie oder [. Während](../../assembler/masm/dot-while.md).
 
-- Die Strukturdefinition einer.
+- Eine Struktur Definition.
 
-- Eine bedingte-Assembly-Direktive.
+- Eine Direktive für bedingte Assemblys.
 
-- Die Definition einer Prozedur.
+- Eine Prozedur Definition.
 
-- Ein [PUSHCONTEXT](../../assembler/masm/pushcontext.md) Richtlinie (der Grenzwert ist 10).
+- Eine [PUSHCONTEXT](../../assembler/masm/pushcontext.md) -Anweisung (das Limit ist 10).
 
-- Eine Definition des Segments.
+- Eine Segment Definition.
 
 - Eine Includedatei.
 
-- Ein Makro.
+- Ein-Makro.
 
 ## <a name="see-also"></a>Siehe auch
 
