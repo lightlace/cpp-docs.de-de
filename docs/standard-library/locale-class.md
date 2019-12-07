@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: a11f5bf7e8c280da3ba2cae82cf355a3b28c0577
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890155"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898844"
 ---
 # <a name="locale-class"></a>locale-Klasse
 
@@ -50,14 +50,14 @@ Sie können einen offenen Satz dieser Facets definieren. Sie können auch ein Ge
 
 Vordefinierte Gruppen dieser Facets stellen die [locale-Kategorien](#category) dar, die normalerweise in der Standard-C-Bibliothek von der Funktion `setlocale` verwaltet werden.
 
-Category `collate` (LC_COLLATE) enthält die Facetten:
+Category `collate` (LC_COLLATE) umfasst die Facetten:
 
 ```cpp
 collate<char>
 collate<wchar_t>
 ```
 
-Category `ctype` (LC_CTYPE) enthält die Facetten:
+Category `ctype` (LC_CTYPE) umfasst die Facetten:
 
 ```cpp
 ctype<char>
@@ -68,7 +68,7 @@ codecvt<char16_t, char, mbstate_t>
 codecvt<char32_t, char, mbstate_t>
 ```
 
-Category `monetary` (LC_MONETARY) enthält die Facetten:
+Category `monetary` (LC_MONETARY) umfasst die Facetten:
 
 ```cpp
 moneypunct<char, false>
@@ -81,7 +81,7 @@ money_put<char, ostreambuf_iterator<char>>
 money_put<wchar_t, ostreambuf_iterator<wchar_t>>
 ```
 
-Category `numeric` (LC_NUMERIC) enthält die Facetten:
+Category `numeric` (LC_NUMERIC) umfasst die Facetten:
 
 ```cpp
 num_get<char, istreambuf_iterator<char>>
@@ -92,7 +92,7 @@ numpunct<char>
 numpunct<wchar_t>
 ```
 
-Category `time` (LC_TIME) enthält die Facetten:
+Category `time` (LC_TIME) umfasst die Facetten:
 
 ```cpp
 time_get<char, istreambuf_iterator<char>>
@@ -101,14 +101,14 @@ time_put<char, ostreambuf_iterator<char>>
 time_put<wchar_t, ostreambuf_iterator<wchar_t>>
 ```
 
-Category `messages` (LC_MESSAGES) enthält die Facetten:
+Category `messages` (LC_MESSAGES) umfasst die Facetten:
 
 ```cpp
 messages<char>
 messages<wchar_t>
 ```
 
-(Die letzten Kategorie wird von Posix, jedoch nicht vom C-Standard benötigt.)
+(Die letzte Kategorie ist für POSIX, jedoch nicht für den C-Standard erforderlich.)
 
 Einige dieser vordefinierten Facetten werden von den `iostream`-Klassen verwendet, um die Konvertierung von numerischen Werten in und aus Textsequenzen zu steuern.
 
@@ -120,7 +120,7 @@ In dieser Implementierung können Sie außerdem die statische Memberfunktion auf
 static locale empty();
 ```
 
-zur Erstellung eines Gebietsschemaobjekts, das keine Facets hat. Außerdem handelt es sich um ein transparentes Gebiets Schema. Wenn die Vorlagen Funktionen [has_facet](../standard-library/locale-functions.md#has_facet) und [Use_facet](../standard-library/locale-functions.md#use_facet) die angeforderte Facette in einem transparenten Gebiets Schema nicht finden können, werden zuerst das globale Gebiets Schema und dann, wenn dies transparent ist, das klassische Gebiets Schema abgefragt. Daher können Sie Folgendes schreiben:
+zur Erstellung eines Gebietsschemaobjekts, das keine Facets hat. Außerdem handelt es sich um ein transparentes Gebiets Schema. Wenn die Vorlagen Funktionen [has_facet](../standard-library/locale-functions.md#has_facet) und [Use_facet](../standard-library/locale-functions.md#use_facet) den angeforderten Facette in einem transparenten Gebiets Schema nicht finden können, werden zuerst das globale Gebiets Schema und dann, wenn dies transparent ist, das klassische Gebiets Schema abgefragt. Daher können Sie Folgendes schreiben:
 
 ```cpp
 cout.imbue(locale::empty());
@@ -152,7 +152,7 @@ Numerische Formatierungsregeln für nachfolgende Einfügungen in `cout` bleiben 
 
 ### <a name="member-functions"></a>Memberfunktionen
 
-|Member-Funktion|Beschreibung|
+|Memberfunktion|Beschreibung|
 |-|-|
 |[combine](#combine)|Fügt ein Facet eines angegebenen Gebietsschemas in ein Zielgebietsschema ein.|
 |[name](#name)|Gibt den gespeicherten Gebietsschemanamen zurück.|
@@ -180,7 +180,7 @@ Numerische Formatierungsregeln für nachfolgende Einfügungen in `cout` bleiben 
 |[facet](#facet_class)|Eine Klasse, die als Basisklasse für alle Gebietsschemafacets dient.|
 |[`id`](#id_class)|Die Memberklasse stellt eine einzigartige Facetidentifikation bereit, die als Index zum Suchen von Facets in einem Gebietsschema verwendet wird.|
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
 **Header:** \<locale>
 
@@ -206,15 +206,15 @@ static const int none = 0;
 
 Der Typ ist ein Synonym für einen **int** -Typ, der eine Gruppe von unterschiedlichen Elementen des Typs "lokale Bitmaske" der Klasse "locale" darstellen kann oder zur Darstellung der entsprechenden C-Gebiets Schema Kategorien verwendet werden kann. Die Elemente sind:
 
-- `collate`entsprechend der C-Kategorie LC_COLLATE
+- `collate`entsprechend der Kategorie C LC_COLLATE
 
-- `ctype`entsprechend der C-Kategorie LC_CTYPE
+- `ctype`entsprechend der Kategorie C LC_CTYPE
 
-- `monetary`entsprechend der C-Kategorie LC_MONETARY
+- `monetary`entsprechend der Kategorie C LC_MONETARY
 
-- `numeric`entsprechend der C-Kategorie LC_NUMERIC
+- `numeric`entsprechend der Kategorie C LC_NUMERIC
 
-- `time`entsprechend der C-Kategorie LC_TIME
+- `time`entsprechend der Kategorie C LC_TIME
 
 - `messages`entsprechend der POSIX-Kategorie LC_MESSAGES
 
@@ -222,9 +222,9 @@ Zwei weitere nützliche Werte sind:
 
 - `none`, die keiner der C-Kategorien entspricht
 
-- `all`entsprechend der C-Union aller Kategorien LC_ALL
+- `all`, die der C-Union aller Kategorien entspricht LC_ALL
 
-Sie können eine beliebige Gruppe von Kategorien darstellen, indem Sie `OR` mit diesen Konstanten wie in `monetary` &#124;`time`verwenden.
+Sie können eine beliebige Gruppe von Kategorien darstellen, indem Sie `OR` mit diesen Konstanten wie in `monetary` &#124; `time`verwenden.
 
 ## <a name="classic"></a> locale::classic
 
@@ -290,14 +290,14 @@ template <class Facet>
 locale combine(const locale& source_locale) const;
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *source_locale*\
 Das Gebietsschema enthält das Facet, das in das Zielgebietsschema eingefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Member-Funktion gibt ein Gebiets Schema Objekt zurück, das in ersetzt oder **\*dieses** die in *source_locale*aufgeführten Facet`Facet` hinzufügt.
+Die Member-Funktion gibt ein Gebiets Schema Objekt zurück, das in ersetzt oder **\*dieses** die in *source_locale*aufgelisteten Facet`Facet` hinzufügt.
 
 ### <a name="example"></a>Beispiel
 
@@ -358,7 +358,7 @@ Setzt das Standardgebietsschema für das Programm zurück. Dieser-Befehl wirkt s
 static locale global(const locale& new_default_locale);
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *new_default_locale*\
 Das Gebietsschema, das als Standardgebietsschema vom Programm verwendet werden soll.
@@ -435,7 +435,7 @@ locale(const locale& from_locale, const Facet* new_facet);
 ~locale();
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *locale_name*\
 Der Name eines Gebietsschemas.
@@ -443,7 +443,7 @@ Der Name eines Gebietsschemas.
 *from_locale*\
 Ein Gebietsschema, das zum Erstellen des neuen Gebietsschemas kopiert werden soll.
 
-*Andere* \
+*Andere*\
 Ein Gebietsschema für die Auswahl einer Kategorie.
 
 *new_category*\
@@ -454,21 +454,21 @@ Das Facet, das im erstellten Gebietsschema ersetzt werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor initialisiert das Objekt, um mit dem globalen Gebietsschema übereinzustimmen. Mit dem zweiten und dritten Konstruktoren werden alle Gebiets Schema Kategorien initialisiert, sodass das Verhalten mit dem Gebiets Schema Namen *locale_name*konsistent ist. Die übrigen Konstruktoren kopieren *from_locale*mit den folgenden Ausnahmen:
+Der erste Konstruktor initialisiert das Objekt, um mit dem globalen Gebietsschema übereinzustimmen. Mit dem zweiten und dritten Konstruktoren werden alle Gebiets Schema Kategorien initialisiert, sodass das Verhalten mit dem Namen des Gebiets Schemas konsistent ist *locale_name*. Die übrigen Konstruktoren kopieren *from_locale*, wobei die folgenden Ausnahmen beachtet werden:
 
 `locale(const locale& from_locale, const locale& Other, category new_category);`
 
-ersetzt von *anderen* Facetten, die einer Kategorie c entsprechen, für die C & *new_category* nicht NULL ist.
+ersetzt von *anderen* Facetten, die einer Kategorie c entsprechen, für die C-& *new_category* ungleich 0 (null) ist.
 
 `locale(const locale& from_locale, const char* locale_name, category new_category);`
 
 `locale(const locale& from_locale, const string& locale_name, category new_category);`
 
-ersetzt von `locale(locale_name, all)` den Facetten, die einer Kategorie *replace_category* entsprechen, für die `replace_category & new_category` ungleich 0 (null) ist.
+ersetzt von `locale(locale_name, all)` diese Facetten, die einer Kategorie *replace_category* entsprechen, für die `replace_category & new_category` ungleich 0 (null) ist.
 
 `template<class Facet> locale(const locale& from_locale, Facet* new_facet);`
 
-ersetzt in (oder fügt zu) *from_locale* das facetobjekt *new_facet*, wenn *new_facet* kein NULL-Zeiger ist.
+ersetzt in (oder fügt zu) *from_locale* die *facetnew_facet*, wenn *new_facet* kein NULL-Zeiger ist.
 
 Wenn der Gebiets Schema Name *locale_name* ein NULL-Zeiger oder anderweitig ungültig ist, löst die Funktion [Runtime_error](../standard-library/runtime-error-class.md)aus.
 
@@ -567,9 +567,9 @@ Prüft zwei Gebietsschemen auf Ungleichheit.
 bool operator!=(const locale& right) const;
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*Rechte* \
+*Rechte*\
 Eines der Gebietsschemas, die auf Ungleichheit geprüft werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -631,12 +631,12 @@ bool operator()(
     const basic_string<CharType, Traits, Allocator>& right) const;
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*Linker* \
+*Linker*\
 Die linke Zeichenfolge.
 
-*Rechte* \
+*Rechte*\
 Die rechte Zeichenfolge.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -700,9 +700,9 @@ Prüft zwei Gebietsschemen auf Gleichheit.
 bool operator==(const locale& right) const;
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*Rechte* \
+*Rechte*\
 Eines der Gebietsschemas, die auf Gleichheit geprüft werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert

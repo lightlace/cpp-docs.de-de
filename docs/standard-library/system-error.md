@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: e6eef7152e45e8177c451fc25592fab85c58ccb5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b9ddb3117afe37060b8013be235bdb11a2a031ac
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449749"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898853"
 ---
-# <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
+# <a name="ltsystem_errorgt"></a>&lt;system_error&gt;
 
-Fügen Sie den \<Header System_Error > ein, um die `system_error` Ausnahme Klasse und zugehörige Vorlagen für die Verarbeitung von Low-Level-Systemfehlern zu definieren.
+Fügen Sie den Header \<System_Error > ein, um die Ausnahme Klasse `system_error` und zugehörige Vorlagen für die Verarbeitung von Low-Level-Systemfehlern zu definieren.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
 **Header:** \<system_error>
 
@@ -26,7 +26,7 @@ Fügen Sie den \<Header System_Error > ein, um die `system_error` Ausnahme Klass
 
 ## <a name="members"></a>Member
 
-### <a name="objects"></a>erzwingen
+### <a name="objects"></a>-Objekte
 
 |||
 |-|-|
@@ -55,7 +55,7 @@ Fügen Sie den \<Header System_Error > ein, um die `system_error` Ausnahme Klass
 
 |||
 |-|-|
-|[errc](../standard-library/system-error-enums.md#errc)|Gibt symbolische Namen für alle Fehlercodemakros an, die von Posix in `<errno.h>` definiert sind.|
+|[errc](../standard-library/system-error-enums.md#errc)|Gibt symbolische Namen für alle Fehlercode Makros an, die von POSIX in `<errno.h>`definiert sind.|
 
 ### <a name="classes-and-structs"></a>Klassen und Strukturen
 

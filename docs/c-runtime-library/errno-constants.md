@@ -41,12 +41,12 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-ms.openlocfilehash: 0e11c11b468ff6e058ccf5c75b000396e0473bfa
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 34f92bedfa9606c90196f2e3a5e47dc341b23aea
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747639"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898746"
 ---
 # <a name="errno-constants"></a>errno-Konstanten
 
@@ -56,7 +56,7 @@ ms.locfileid: "57747639"
 #include <errno.h>
 ```
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 Die **errno**-Werte sind Konstanten, die [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) bei verschiedenen Fehlerbedingungen zugewiesen werden.
 
@@ -78,7 +78,7 @@ Die folgenden **errno**-Werte werden unterstützt:
 |**EEXIST**|Dateien sind vorhanden. Es wurde versucht, eine Datei zu erstellen, die bereits vorhanden ist. Die Flags **_O_CREAT** und **_O_EXCL** werden in einem **_open**-Aufruf angegeben, aber die angegebene Datei ist bereits vorhanden.|
 |**EILSEQ**|Ungültige Folge von Bytes (z.B. in einer MBCS-Zeichenfolge).|
 |**EINVAL**|Ungültiges Argument. Für eines der an eine Funktion übergebenen Argumente wurde ein ungültiger Wert angegeben. Beispiel: Der für den Ursprung einer Dateizeigerpositionierung (durch einen Aufruf von **Fseek**) angegebene Wert liegt vor dem Anfang der Datei.|
-|**EMFILE**|Zu viele geöffnete Dateien. Es sind keine weiteren Dateideskriptoren verfügbar, sodass keine Dateien mehr geöffnet werden können.|
+|**EMFILE**|„Zu viele geöffnete Dateien.“ Es sind keine weiteren Dateideskriptoren verfügbar, sodass keine Dateien mehr geöffnet werden können.|
 |**ENOENT**|Datei oder Verzeichnis nicht vorhanden. Die angegebene Datei oder das angegebene Verzeichnis ist nicht vorhanden oder wurde nicht gefunden. Diese Meldung kann auftreten, wenn eine angegebene Datei nicht vorhanden ist, oder eine Komponente eines Pfads kein vorhandenes Verzeichnis angibt.|
 |**ENOEXEC**|Exec-Formatfehler. Es wurde versucht, eine Datei auszuführen, die nicht ausführbar ist oder ein für eine ausführbare Datei ungültiges Format besitzt.|
 |**ENOMEM**|Der Kern reicht nicht aus. Es ist nicht genügend Arbeitsspeicher für den versuchten Operator verfügbar. Diese Meldung kann z.B. auftreten, wenn nicht genügend Arbeitsspeicher verfügbar ist, um einen untergeordneten Prozess auszuführen, oder wenn die Zuordnungsanforderung in einem **_getcwd**-Aufruf nicht erfüllt werden kann.|
@@ -87,7 +87,7 @@ Die folgenden **errno**-Werte werden unterstützt:
 |**EXDEV**|Geräteübergreifende Verbindung. Es wurde versucht, eine Datei (mithilfe der **rename**-Funktion) zu einem anderen Gerät zu verschieben.|
 |**STRUNCATE**|Eine Zeichenfolgenkopie oder Verkettung resultierte in einer abgeschnittenen Zeichenfolge. Siehe [_TRUNCATE](../c-runtime-library/truncate.md).
 
-Die folgenden Werte werden für die Kompatibilität mit Posix unterstützt. Auf Nicht-Posix-Systemen sind sie erforderliche Werte.
+Die folgenden Werte werden für die Kompatibilität mit POSIX unterstützt. Sie sind für nicht-POSIX-Systeme erforderliche Werte.
 
 ```C
 #define E2BIG /* argument list too long */

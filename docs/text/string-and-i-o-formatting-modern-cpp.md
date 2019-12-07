@@ -4,12 +4,12 @@ description: Optionen für formatierte Zeichen folgen-e/a C++, die in modern ver
 ms.date: 05/30/2019
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: facb0b62cc1e92ed09a9ba729d766e5db7404282
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 7ea858a8a8126d3754783edee0dd3ea5409e5f73
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74308186"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898829"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formatieren von Zeichenfolgen und Ein-/Ausgaben (Modern C++)
 
@@ -51,7 +51,7 @@ Einige Vorteile von `Boost.Format` sind:
 
 - Erweiterbar: Funktioniert für jeden Typ, der gestreamt werden kann
 
-- Bequem: Standard-Posix und ähnliche Formatzeichenfolgen
+- Praktisch: POSIX-Standard Zeichen und ähnliche Format Zeichenfolgen.
 
 Obwohl `Boost.Format` auf C++ [\<iostream->](../standard-library/iostream-programming.md) Einrichtungen basiert, die sicher und erweiterbar sind, sind Sie nicht leistungsoptimiert. Wenn Sie eine Leistungsoptimierung benötigen, sollten Sie C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) und [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)in Erwägung nehmen, die schnell und einfach zu verwenden sind. Sie sind jedoch nicht erweiterbar oder nicht sicher vor Sicherheitsrisiken. (Sichere Versionen sind vorhanden, doch verursachen diese geringfügige Leistungseinbußen. Weitere Informationen finden Sie unter [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) und [sprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)(_sprintf_s_l, swprintf_s, _swprintf_s_l).
 
