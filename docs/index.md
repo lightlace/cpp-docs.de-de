@@ -26,7 +26,7 @@ ms.locfileid: "70177503"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Installieren von Visual Studio und Wählen der C++-Arbeitsauslastungen</h3>
+                                    <h3>Installieren von Visual Studio und Wählen der C++-Workloads</h3>
                                 </div>
                             </div>
                         </div>
