@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4254
 ms.assetid: 6f41dfb3-ca21-40d3-bac7-b637e578efa4
-ms.openlocfilehash: 2c68e49d58b0fd6b28607eb0ba78c092441f6f4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8431bd2d89fd5df5cf076ad006ab04006f552c4c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352488"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988060"
 ---
 # <a name="linker-tools-warning-lnk4254"></a>Linkertoolwarnung LNK4254
 
-Abschnitt 'Abschnitt1' (Offset), die in "" section2"zusammengeführt (offset), mit verschiedenen Attributen
+der Abschnitt "Section1" (Offset) wurde in "Section2" (Offset) mit unterschiedlichen Attributen zusammengeführt.
 
-Der Inhalt von einem Abschnitt mit einer anderen zusammengeführt wurden, aber die Attribute der beiden Abschnitte sind unterschiedlich. Das Programm möglicherweise unerwartete Ergebnisse zurückgibt. Beispielsweise können Daten zu lesen, werden nur jetzt in eine schreibbare Abschnitt sein.
+Der Inhalt eines Abschnitts wurde mit einem anderen Abschnitt zusammengeführt, aber die Attribute der beiden Abschnitte unterscheiden sich. Ihr Programm kann unerwartete Ergebnisse liefern. Beispielsweise können Daten, die Sie lesen möchten, sich jetzt in einem beschreibbaren Abschnitt befinden.
 
-Um LNK4254 zu beheben, ändern Sie oder entfernen Sie die Merge-Anforderung aus.
+Um Linkertoolwarnung LNK4254 aufzulösen, ändern Sie die Merge-Anforderung, oder entfernen Sie Sie.
 
-Wenn X86 auf Computern und Windows CE-Plattformen (ARM, MIPS, SH4 und Ziehpunkt) mit Visual C++, die. CRT-Abschnitt ist schreibgeschützt. Wenn Ihr Code auf dem vorherigen Verhalten abhängt (. CRT-Abschnitte sind Lese-/Schreibzugriff), kann unerwartetes Verhalten angezeigt.
+Wenn Sie auf x86-Computer und Windows CE Ziele (Arm, mips, SH4 und Thumb) mit C++Visual abzielen, ist das. Der CRT-Abschnitt ist schreibgeschützt. , Wenn der Code vom vorherigen Verhalten abhängig ist (. CRT-Abschnitte mit Lese-/Schreibzugriff sind möglicherweise ein unerwartetes Verhalten.
 
 Weitere Informationen finden Sie unter
 
@@ -31,9 +31,9 @@ Weitere Informationen finden Sie unter
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die LNK4254 generiert.
+Im folgenden Beispiel wird Linkertoolwarnung LNK4254 generiert.
 
-```
+```cpp
 // LNK4254.cpp
 // compile with: /W1 /link /WX
 // LNK4254 expected

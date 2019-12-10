@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4253
 ms.assetid: ec7433a9-aa9c-495a-a9f2-075e7bc3e7bc
-ms.openlocfilehash: d2fd7238a3f57b11b91813bd40b66cb3e9f47202
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3f45880571e5c06f76d5f063ff993e2f6b2be9b
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352520"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988085"
 ---
 # <a name="linker-tools-warning-lnk4253"></a>Linkertoolwarnung LNK4253
 
-Abschnitt 'Abschnitt1' in "" section2";" nicht zusammengeführt bereits zusammengeführt in 'Abschnitt3'.
+der Abschnitt "Section1" wurde nicht in "Section2" zusammengeführt. bereits in "Section3" zusammengeführt
 
-Der Linker erkannt mehrere Anforderungen in Konflikt stehende zusammenführen. Der Linker ignoriert eine der Anforderungen.
+Der Linker hat mehrere zusammen widersprüchliche Zusammenschluss Anforderungen erkannt. Der Linker ignoriert eine der Anforderungen.
 
-Ein **/MERGE** Option oder Direktive festgestellt wird und die `from` Abschnitt wurde bereits mit einem anderen Abschnitt aufgrund einer vorherigen zusammengeführt **/MERGE** Option oder Direktive (oder aufgrund einer impliziten Zusammenführung der Linker-Tool).
+Eine **/Merge** -Option oder-Direktive wurde gefunden, und der `from` Abschnitt wurde aufgrund einer früheren **/Merge** -Option oder-Direktive (oder aufgrund einer impliziten Zusammenführung vom Linker) bereits in einem anderen Abschnitt zusammengeführt.
 
-Entfernen Sie eines der Merge-Anforderungen an, um LNK4253 generiert zu beheben.
+Entfernen Sie zum Auflösen von Linkertoolwarnung LNK4253 eine der Zusammenschluss Anforderungen.
 
-Wenn X86 auf Computern und Windows CE-Plattformen (ARM, MIPS, SH4 und Ziehpunkt) mit Visual C++, die. CRT-Abschnitt ist jetzt schreibgeschützt. Wenn Ihr Code auf das vorherige Verhalten (. CRT-Abschnitte sind Lese-/Schreibzugriff), kann unerwartetes Verhalten angezeigt.
+Wenn Sie auf x86-Computer und Windows CE Ziele (Arm, mips, SH4 und Thumb) mit C++Visual abzielen, ist das. Der CRT-Abschnitt ist jetzt schreibgeschützt. , Wenn der Code vom vorherigen Verhalten abhängig ist (. CRT-Abschnitte mit Lese-/Schreibzugriff sind möglicherweise ein unerwartetes Verhalten.
 
 Weitere Informationen finden Sie unter
 
@@ -33,9 +33,9 @@ Weitere Informationen finden Sie unter
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird der Linker angewiesen wird, zum Zusammenführen der `.rdata` Abschnitt zweimal, aber in verschiedene Abschnitte. Im folgende Beispiel wird die LNK4253 generiert.
+Im folgenden Beispiel wird der Linker angewiesen, den `.rdata` Abschnitt zweimal zusammenzuführen, aber in verschiedene Abschnitte. Im folgenden Beispiel wird Linkertoolwarnung LNK4253 generiert.
 
-```
+```cpp
 // LNK4253.cpp
 // compile with: /W1 /link /merge:.rdata=text2
 // LNK4253 expected

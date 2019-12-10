@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4709
 ms.assetid: 8abfdd45-8c70-4c27-b0fb-ca0c3f0fccf9
-ms.openlocfilehash: acc74f55a423f1cd18d385cd4dfbec7dfa01c422
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4dd06baf9da3ae454bf87747bdafb2639d817fef
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395208"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74989863"
 ---
 # <a name="compiler-warning-level-4-c4709"></a>Compilerwarnung (Stufe 4) C4709
 
-Kommaoperator innerhalb eines Feldindex-Ausdrucks
+Komma-Operator innerhalb des Array Index Ausdrucks
 
-Tritt ein Komma in einem Feldindex-Ausdrucks, verwendet der Compiler den Wert nach dem letzten Komma.
+Wenn ein Komma in einem Array Index Ausdruck auftritt, verwendet der Compiler den Wert nach dem letzten Komma.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4709 generiert:
+Im folgenden Beispiel wird C4709 generiert:
 
-```
+```cpp
 // C4709.cpp
 // compile with: /W4
 #include <stdio.h>

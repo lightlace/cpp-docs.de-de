@@ -1,17 +1,17 @@
 ---
 title: SEGMENT
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - SEGMENT
 helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-ms.openlocfilehash: b7344d9cb685e0212748d7835e19f398f14979e7
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 933e4e42b4b0f9cc979a3e67805d017f723472ef
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74393731"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988017"
 ---
 # <a name="segment"></a>SEGMENT
 
@@ -23,7 +23,7 @@ Definiert ein Programm Segment namens " *Name* " mit Segment Attributen.
 > *Anweisungen*\
 > *Name* **endet**
 
-#### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameters
 
 *align*<br/>
 Der Bereich der Speicheradressen, von dem eine Startadresse für das Segment ausgewählt werden kann. Der Ausrichtungstyp kann eine der folgenden sein:
@@ -33,16 +33,16 @@ Der Bereich der Speicheradressen, von dem eine Startadresse für das Segment aus
 |**BYTE**|Nächste verfügbare Byte Adresse.|
 |**WORD**|Nächste verfügbare Wort Adresse (2 Bytes pro Wort).|
 |**DWORD**|Nächste verfügbare doppelte Wort Adresse (4 Bytes pro doppeltes Wort).|
-|**Abs**|Nächste verfügbare Absatz Adresse (16 Byte pro Absatz).|
+|**PARA**|Nächste verfügbare Absatz Adresse (16 Byte pro Absatz).|
 |**PAGE**|Nächste verfügbare Seitenadresse (256 Byte pro Seite).|
 |**Ausrichten**(*n*)|Nächste verfügbare *n*-te Byte Adresse. Weitere Informationen finden Sie im Abschnitt "Hinweise".|
 
 Wenn dieser Parameter nicht angegeben wird, wird standardmäßig **para** verwendet.
 
-*kombinieren*\
+*kombinieren* (nur 32-Bit-MASM) \
 **Public**, **Stack**, **Common**, **Memory**, **at**<em>Address</em>, **private**
 
-\ *verwenden*
+*verwenden* Sie (nur 32-Bit-MASM) \
 **USE16**, **USE32**, **Flat**
 
 *Eigenschaften*\

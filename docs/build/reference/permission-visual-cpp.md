@@ -1,5 +1,5 @@
 ---
-title: '&lt;Berechtigung > (C++-Dokumentationskommentare)'
+title: '&lt;Berechtigungs >C++ (Dokumentations Kommentare)'
 ms.date: 11/04/2016
 f1_keywords:
 - permission
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <permission> C++ XML tag
 - permission C++ XML tag
 ms.assetid: 537ee2bc-95bd-48e4-9ce6-3420c3da87f4
-ms.openlocfilehash: 764048f7bc579afa6862bdff40968588955dc307
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7f0a59c85e3fa28d24e44953e207151c3afa0f4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319940"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988675"
 ---
 # <a name="ltpermissiongt"></a>&lt;permission&gt;
 
@@ -25,7 +25,7 @@ Mit dem \<permission>-Tag können Sie den Zugriff auf einen Member dokumentieren
 <permission cref="member">description</permission>
 ```
 
-#### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameters
 
 *member*<br/>
 Ein Verweis auf einen Member oder ein Feld, das von der aktuellen Kompilierungsumgebung aufgerufen werden kann. Der Compiler prüft, ob das angegebene Codeelement vorhanden ist, und übersetzt in der Ausgabe-XML `member` in den kanonischen Elementnamen.  Setzen Sie den Namen in einfache oder doppelte Anführungszeichen.
@@ -41,11 +41,11 @@ Eine Beschreibung des Zugriffs auf den Member
 
 Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](doc-process-documentation-comments-c-cpp.md) kompiliert werden.
 
-Der MSVC-Compiler versucht, Cref-Verweise in einem einzigen Durchlauf durch die Dokumentationskommentare aufzulösen.  Bei Verwendung der C++-Suchregeln wird deshalb, wenn ein Symbol vom Compiler nicht gefunden wird, der Verweis als nicht aufgelöst markiert. Weitere Informationen finden Sie unter [\<seealso>](seealso-visual-cpp.md).
+Der MSVC-Compiler versucht, die Anmerkungen zu dieser Version in einem Durchlauf durch die Dokumentations Kommentare aufzulösen.  Bei Verwendung der C++-Suchregeln wird deshalb, wenn ein Symbol vom Compiler nicht gefunden wird, der Verweis als nicht aufgelöst markiert. Weitere Informationen finden Sie unter [\<seealso>](seealso-visual-cpp.md).
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // xml_permission_tag.cpp
 // compile with: /clr /doc /LD
 // post-build command: xdcmake xml_permission_tag.dll

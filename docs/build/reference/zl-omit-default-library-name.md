@@ -11,16 +11,16 @@ helpviewer_keywords:
 - /Zl compiler option [C++]
 - default libraries, omitting names
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
-ms.openlocfilehash: cb8083d874abe17add1d27096ebce143d03a04cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bcb90dbf071253dc0561845e3bd713dc42d5aef
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315546"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988557"
 ---
 # <a name="zl-omit-default-library-name"></a>/Zl (Kein Standardbibliotheksname)
 
-Lässt C Runtime Library Standardname aus der OBJ-Datei an. Standardmäßig legt der Compiler den Namen der Bibliothek in der OBJ-Datei ab, um den Linker zur richtigen Bibliothek zu leiten.
+Lässt den Standard-C-Lauf Zeit Bibliotheksnamen aus der obj-Datei aus. Standardmäßig legt der Compiler den Namen der Bibliothek in der OBJ-Datei ab, um den Linker zur richtigen Bibliothek zu leiten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,19 +30,19 @@ Lässt C Runtime Library Standardname aus der OBJ-Datei an. Standardmäßig legt
 
 ## <a name="remarks"></a>Hinweise
 
-Weitere Informationen über die Standardbibliothek finden Sie unter [Use Run-Time Library](md-mt-ld-use-run-time-library.md).
+Weitere Informationen zur Standardbibliothek finden Sie unter [Verwenden der Lauf Zeit Bibliothek](md-mt-ld-use-run-time-library.md).
 
-Sie können **/Zl** um OBJ-Dateien zu kompilieren, in eine Bibliothek eingefügt werden sollen. Obwohl nur eine kleine Menge an Speicherplatz für eine einzelne OBJ-Datei weglassen von Namen der Bibliothek gespeichert werden, spielt der gesamte Speicherplatz gespeichert in einer Bibliothek, die viele Objektmodule enthält.
+Sie können **/Zl** verwenden, um OBJ-Dateien zu kompilieren, die Sie in einer Bibliothek speichern möchten. Obwohl der Bibliotheksname weggelassen wird, wird nur ein wenig Speicherplatz für eine einzelne OBJ-Datei gespart, da der gesamte Speicherplatz in einer Bibliothek, die viele Objekt Module enthält, bedeutend ist.
 
-Diese Option ist eine erweiterte Option. Das Festlegen dieser Option werden bestimmte C-Laufzeit-Bibliothek-Unterstützung, die möglicherweise, durch die Anwendung erforderlich, was zu Link-Time-Fehlern, wenn Ihre Anwendung, diese Unterstützung abhängt entfernt. Wenn Sie diese Option verwenden, müssen Sie die erforderlichen Komponenten auf andere Weise bereitstellen.
+Bei dieser Option handelt es sich um eine erweiterte Option. Wenn Sie diese Option festlegen, wird eine bestimmte Unterstützung der C-Lauf Zeit Bibliothek entfernt, die möglicherweise von der Anwendung benötigt wird Wenn Sie diese Option verwenden, müssen Sie die erforderlichen Komponenten auf andere Weise bereitstellen.
 
-Verwendung [/NODEFAULTLIB (Bibliotheken ignorieren)](nodefaultlib-ignore-libraries.md). Leiten Sie den Linker Bibliotheksverweise in allen OBJ-Dateien ignoriert werden sollen.
+Verwenden Sie [/NODEFAULTLIB (Bibliotheken ignorieren)](nodefaultlib-ignore-libraries.md). , um den Linker anzuweisen, Bibliotheks Verweise in allen OBJ-Dateien zu ignorieren.
 
 Weitere Informationen finden Sie unter [CRT Library Features (CRT-Bibliotheksfunktionen)](../../c-runtime-library/crt-library-features.md).
 
-Beim Kompilieren mit **/Zl**, `_VC_NODEFAULTLIB` definiert ist.  Zum Beispiel:
+Beim Kompilieren mit **/Zl**wird `_VC_NODEFAULTLIB` definiert.  Beispiel:
 
-```
+```cpp
 // vc_nodefaultlib.cpp
 // compile with: /Zl
 void Test() {
@@ -56,13 +56,13 @@ void Test() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen erhalten Sie unter [Set C++ compiler and build properties in Visual Studio (Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio)](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
-1. Klicken Sie auf die **erweitert** Eigenschaftenseite.
+1. Klicken Sie auf die Eigenschaften Seite **erweitert** .
 
-1. Ändern der **Standardbibliotheknamen** Eigenschaft.
+1. Ändern Sie die Eigenschaft **Standard Bibliotheksnamen weglassen** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
 

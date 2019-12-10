@@ -7,16 +7,16 @@ helpviewer_keywords:
 - /CLRSUPPORTLASTERROR linker option
 - -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
-ms.openlocfilehash: 5e4a5c86e53d74c8b704ee3780991d496fc1802a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64948d81759d415245e741bc6152d56bb35480d2
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273585"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988354"
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR (Letzten Fehlercode für PInvoke-Aufrufe beibehalten)
 
-**/ CLRSUPPORTLASTERROR**, das ist standardmäßig aktiviert, behält der letzte Fehlercode von Funktionen aufgerufen werden, über den P/Invoke-Mechanismus, der Sie native Funktionen in DLLS aus Code aufrufen kann, die mit kompiliert **"/ CLR"**.
+**/CLRSUPPORTLASTERROR**, das standardmäßig aktiviert ist, behält den letzten Fehlercode von Funktionen bei, die durch den P/Aufruf-Mechanismus aufgerufen werden. Dadurch können Sie Native Funktionen in DLLs aufrufen, von mit **/CLR**kompilierten Code.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,55 +26,55 @@ ms.locfileid: "62273585"
 
 ## <a name="remarks"></a>Hinweise
 
-Beibehalten von den letzten Fehlercode impliziert eine Abnahme der Leistung.  Wenn Sie nicht möchten, die Leistung durch Beibehalten des letzten Fehlercodes an, eine Verknüpfung mit **/CLRSUPPORTLASTERROR:NO**.
+Die Beibehaltung des letzten Fehlercodes impliziert eine Abnahme der Leistung.  Wenn Sie keine Auswirkungen auf die Leistung bei der Beibehaltung des letzten Fehlercodes haben möchten, verknüpfen Sie mit **/CLRSUPPORTLASTERROR: No**.
 
-Sie können die Auswirkungen auf die Leistung minimieren, durch eine Verknüpfung mit **/CLRSUPPORTLASTERROR:SYSTEMDLL**, die nur den letzten Fehlercode für Funktionen beibehalten, in der System-DLLs.  Eine System-DLL ist definiert als eine der folgenden:
+Sie können die Auswirkungen auf die Leistung minimieren, indem Sie eine Verknüpfung mit **/CLRSUPPORTLASTERROR: SYSTEMDLL**herstellen, die nur den letzten Fehlercode für Funktionen in System-DLLs beibehält.  Eine System-dll ist als eine der folgenden Einstellungen definiert:
 
 |||||
 |-|-|-|-|
-|ACLUI.DLL|ACTIVEDS. DLL|ADPTIF. DLL|ADVAPI32.DLL|
-|ASYCFILT.DLL|AUTHZ. DLL|AVICAP32.DLL|AVIFIL32.DLL|
-|CABINET.DLL|CLUSAPI.DLL|COMCTL32.DLL|COMDLG32.DLL|
-|COMSVCS.DLL|CREDUI.DLL|CRYPT32.DLL|CRYPTNET.DLL|
-|CRYPTUI. DLL|D3D8THK.DLL|DBGENG.DLL|DBGHELP. DLL|
-|DCIMAN32.DLL|DNSAPI.DLL|DSPROP. DLL|DSUIEXT.DLL|
-|GDI32.DLL|GLU32.DLL|HLINK.DLL|ICM32.DLL|
-|IMAGEHLP.DLL|IMM32.DLL|IPHLPAPI.DLL|IPROP.DLL|
-|KERNEL32.DLL|KSUSER.DLL|LOADPERF. DLL|LZ32.DLL|
-|MAPI32.DLL|MGMTAPI.DLL|MOBSYNC.DLL|MPR.DLL|
-|MPRAPI.DLL|MQRT.DLL|MSACM32.DLL|MSCMS.DLL|
-|MSI.DLL|MSIMG32.DLL|MSRATING.DLL|MSTASK.DLL|
-|MSVFW32.DLL|MSWSOCK.DLL|MTXEX.DLL|NDDEAPI. DLL|
-|NETAPI32.DLL|NPPTOOLS.DLL|NTDSAPI.DLL|NTDSBCLI.DLL|
-|NTMSAPI.DLL|ODBC32.DLL|ODBCBCP.DLL|OLE32.DLL|
-|OLEACC.DLL|OLEAUT32.DLL|OLEDLG. DLL|OPENGL32.DLL|
-|PDH.DLL|POWRPROF.DLL|QOSNAME.DLL|QUERY.DLL|
-|RASAPI32.DLL|RASDLG. DLL|RASSAPI.DLL|RESUTILS. DLL|
-|RICHED20.DLL|RPCNS4.DLL|RPCRT4.DLL|RTM.DLL|
-|RTUTILS.DLL|SCARDDLG.DLL|SECUR32.DLL|SENSAPI.DLL|
-|SETUPAPI.DLL|SFC.DLL|SHELL32.DLL|SHFOLDER.DLL|
-|SHLWAPI.DLL|SISBKUP.DLL|SNMPAPI.DLL|SRCLIENT.DLL|
-|STI.DLL|TAPI32.DLL|TRAFFIC.DLL|URL.DLL|
-|URLMON.DLL|USER32.DLL|USERENV.DLL|USP10.DLL|
-|UXTHEME. DLL|VDMDBG.DLL|VERSION.DLL|WINFAX.DLL|
-|WINHTTP.DLL|WININET.DLL|WINMM.DLL|WINSCARD.DLL|
-|WINTRUST.DLL|WLDAP32.DLL|WOW32.DLL|WS2_32.DLL|
-|WSNMP32.DLL|WSOCK32.DLL|WTSAPI32.DLL|XOLEHLP.DLL|
+|Aclui. DLL|ACTIVEDS. DLL|Adptif. DLL|Advapi32. DLL|
+|Asycflt. DLL|Authz. DLL|AVICAP32.DLL|AVIFIL32.DLL|
+|KEs. DLL|CLUSAPI. DLL|COMCTL32.DLL|Comdlg32. DLL|
+|Comsvcs. DLL|Mit der Eingabe. DLL|CRYPT32. DLL|Cryptnet. DLL|
+|CRYPTUI. DLL|D3D8THK. DLL|Dbgeng. DLL|DBGHELP. DLL|
+|DCIMAN32.DLL|Dnsapi. DLL|Dsprop. DLL|Dsuiext. DLL|
+|GDI32.DLL|GLU32.DLL|Hlink. DLL|ICM32.DLL|
+|"Imagehlp. DLL|IMM32.DLL|Iphlpapi. DLL|Iprop. DLL|
+|KERNEL32.DLL|Ksuser. DLL|LOADPERF. DLL|LZ32.DLL|
+|Datei "Mapi32. DLL|Mgmtapi. DLL|"Mubsync". DLL|MPR. DLL|
+|MPRAPI. DLL|MQRT.DLL|MSACM32.DLL|MSCMS.DLL|
+|MSI. DLL|MSIMG32. DLL|Msrating. DLL|Mstask. DLL|
+|MSVFW32.DLL|Mswap. DLL|Mtxex. DLL|Nddecoapi. DLL|
+|NETAPI32. DLL|Npptools. DLL|NTDSAPI. DLL|NTDSBCLI.DLL|
+|NtmsApi. DLL|ODBC32.DLL|ODBCBCP.DLL|OLE32.DLL|
+|Oleacc. DLL|Oleaut32. DLL|Oledlg. DLL|OPENGL32. DLL|
+|PDH. DLL|POWRPROF. DLL|Qosname. DLL|Such. DLL|
+|RASAPI32.DLL|Rasdlg. DLL|Rassapi. DLL|Resutils. DLL|
+|Riched20. DLL|RPCNS4.DLL|RPCRT4.DLL|RTM. DLL|
+|Rtutils. DLL|Scarddlg. DLL|SECUR32. DLL|Sensorapi. DLL|
+|Setupapi. DLL|SFC. DLL|Shell32. DLL|SHFOLDER. DLL|
+|Shlwapi. DLL|Sisbkup. DLL|Snmpapi. DLL|Srclient. DLL|
+|D. DLL|TAPI32. DLL|Verkehrssicher. DLL|Urne. DLL|
+|URLMON.DLL|User32. DLL|USERENV. DLL|USP10.DLL|
+|UXTHEME. DLL|VDMDBG. DLL|Version. DLL|WinFax. DLL|
+|WINHTTP.DLL|WinInet. DLL|WINMM. DLL|WINSCARD. DLL|
+|WINTRUST. DLL|WLDAP32.DLL|WOW32.DLL|WS2_32.DLL|
+|WSNMP32.DLL|WSOCK32.DLL|WTSAPI32.DLL|Xolehlp. DLL|
 
 > [!NOTE]
->  Den letzten Fehler beibehalten wird für nicht verwalteten Funktionen, die von CLR-Code im selben Modul genutzt werden, nicht unterstützt.
+>  Die Beibehaltung des letzten Fehlers wird nicht für nicht verwaltete Funktionen unterstützt, die von CLR-Code im selben Modul genutzt werden.
 
 - Weitere Informationen finden Sie unter [/clr (Common Language Runtime-Kompilierung)](clr-common-language-runtime-compilation.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen erhalten Sie unter [Set C++ compiler and build properties in Visual Studio (Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio)](../working-with-project-properties.md).
 
-1. Klicken Sie auf die **Linker** Ordner.
+1. Klicken Sie auf den Ordner **Linker**.
 
 1. Klicken Sie auf die Eigenschaftenseite **Befehlszeile** .
 
-1. Geben Sie die Option in der **zusätzliche Optionen** Feld.
+1. Geben Sie die Option im Feld **zusätzliche Optionen** ein.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
 
@@ -82,9 +82,9 @@ Sie können die Auswirkungen auf die Leistung minimieren, durch eine Verknüpfun
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel definiert eine systemeigene DLL mit einer exportierten Funktion, die letzten Fehler ändert.
+Im folgenden Beispiel wird eine native dll mit einer exportierten Funktion definiert, die den letzten Fehler ändert.
 
-```
+```cpp
 // CLRSUPPORTLASTERROR_dll.cpp
 // compile with: /LD
 #include <windows.h>
@@ -99,9 +99,9 @@ __declspec(dllexport) double MySqrt(__int64 n) {
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel verwendet die DLL, die veranschaulicht, wie **/CLRSUPPORTLASTERROR**.
+Im folgenden Beispiel wird die dll verwendet, und es wird gezeigt, wie **/CLRSUPPORTLASTERROR**verwendet wird.
 
-```
+```cpp
 // CLRSUPPORTLASTERROR_client.cpp
 // compile with: /clr CLRSUPPORTLASTERROR_dll.lib /link /clrsupportlasterror:systemdll
 // processor: x86

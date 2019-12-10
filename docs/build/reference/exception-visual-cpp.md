@@ -1,5 +1,5 @@
 ---
-title: '&lt;Ausnahme > (C++-Dokumentationskommentare)'
+title: '&lt;Ausnahme > (C++ Dokumentations Kommentare)'
 ms.date: 11/04/2016
 f1_keywords:
 - exception
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <exception> C++ XML tag
 - exception C++ XML tag
 ms.assetid: 24451e79-9b89-4b77-98fb-702c6516b818
-ms.openlocfilehash: 327c1bc27f4ae71aa214e09f375f963dad5b33d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ddfe647fa2db55b3ca606265011896a66398a8a2
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292964"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988297"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 
@@ -25,7 +25,7 @@ Mit dem Tag \<exception> können Sie angeben, welche Ausnahmen ausgelöst werden
 <exception cref="member">description</exception>
 ```
 
-#### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameters
 
 *member*<br/>
 Ein Verweis auf eine Ausnahme, die von der aktuellen Kompilierungsumgebung verfügbar ist. Der Compiler prüft mithilfe von Regeln für die Namenssuche, ob die angegebene Ausnahme vorhanden ist, und übersetzt in der Ausgabe-XML `member` in den kanonischen Elementnamen.  Der Compiler gibt eine Warnung aus, wenn er `member` nicht findet.
@@ -41,11 +41,11 @@ Steht für eine Beschreibung.
 
 Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](doc-process-documentation-comments-c-cpp.md) kompiliert werden.
 
-Der MSVC-Compiler versucht, Cref-Verweise in einem einzigen Durchlauf durch die Dokumentationskommentare aufzulösen.  Bei Verwendung der C++-Suchregeln wird deshalb, wenn ein Symbol vom Compiler nicht gefunden wird, der Verweis als nicht aufgelöst markiert. Weitere Informationen finden Sie unter [\<seealso>](seealso-visual-cpp.md).
+Der MSVC-Compiler versucht, die Anmerkungen zu dieser Version in einem Durchlauf durch die Dokumentations Kommentare aufzulösen.  Bei Verwendung der C++-Suchregeln wird deshalb, wenn ein Symbol vom Compiler nicht gefunden wird, der Verweis als nicht aufgelöst markiert. Weitere Informationen finden Sie unter [\<seealso>](seealso-visual-cpp.md).
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // xml_exception_tag.cpp
 // compile with: /clr /doc /LD
 // post-build command: xdcmake xml_exception_tag.dll

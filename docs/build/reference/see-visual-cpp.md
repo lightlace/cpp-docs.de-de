@@ -1,5 +1,5 @@
 ---
-title: '&lt;finden Sie unter > (C++-Dokumentationskommentare)'
+title: '&lt;siehe > (C++ Dokumentations Kommentare)'
 ms.date: 11/04/2016
 f1_keywords:
 - <see>
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <see> C++ XML tag
 - see C++ XML tag
 ms.assetid: 20ef66f4-b278-45cf-8613-63919edf5720
-ms.openlocfilehash: be99d3ac156c587888a7c56997d82531cf86ccec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8693646fa37648d1b20c791d99d159f2c81b8ec1
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318900"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988618"
 ---
 # <a name="ltseegt"></a>&lt;see&gt;
 
@@ -25,7 +25,7 @@ Mit dem \<see>-Tag kann ein Link im Text angegeben werden. Verwenden Sie [\<seea
 <see cref="member"/>
 ```
 
-#### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameters
 
 *member*<br/>
 Ein Verweis auf einen Member oder ein Feld, das von der aktuellen Kompilierungsumgebung aufgerufen werden kann.  Setzen Sie den Namen in einfache oder doppelte Anführungszeichen.
@@ -38,13 +38,13 @@ Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc]
 
 Ein Beispiel für die Verwendung von \<see> finden Sie unter [\<summary>](summary-visual-cpp.md).
 
-Der MSVC-Compiler versucht, Cref-Verweise in einem einzigen Durchlauf durch die Dokumentationskommentare aufzulösen.  Bei Verwendung der C++-Suchregeln wird deshalb, wenn ein Symbol vom Compiler nicht gefunden wird, der Verweis als nicht aufgelöst markiert. Weitere Informationen finden Sie unter [\<seealso>](seealso-visual-cpp.md).
+Der MSVC-Compiler versucht, die Anmerkungen zu dieser Version in einem Durchlauf durch die Dokumentations Kommentare aufzulösen.  Bei Verwendung der C++-Suchregeln wird deshalb, wenn ein Symbol vom Compiler nicht gefunden wird, der Verweis als nicht aufgelöst markiert. Weitere Informationen finden Sie unter [\<seealso>](seealso-visual-cpp.md).
 
 ## <a name="example"></a>Beispiel
 
 Im folgenden Beispiel wird gezeigt, wie Sie einen cref-Verweis auf einen generischen Typ erstellen, sodass der Compiler den Verweis auflöst.
 
-```
+```cpp
 // xml_see_cref_example.cpp
 // compile with: /LD /clr /doc
 // the following cref shows how to specify the reference, such that,

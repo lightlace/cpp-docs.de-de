@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4248
 ms.assetid: e40523ff-e3cb-4ba6-ab79-23f0f339f6cf
-ms.openlocfilehash: db9432c505b7348c9bef5ed34aac1cb4edecb17b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ba05ef067c539dc9c0aca6dc2a395748fd217a2
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352519"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988103"
 ---
 # <a name="linker-tools-warning-lnk4248"></a>Linkertoolwarnung LNK4248
 
-nicht aufgelöstes Typeref-Token (Token) für 'Typ'. Image kann möglicherweise nicht ausgeführt.
+nicht aufgelöstes TypeRef-Token (Token) für ' Typ '; Image kann möglicherweise nicht ausgeführt werden
 
-Ein Typ keine Definition in den MSIL-Metadaten.
+Ein Typ verfügt nicht über eine Definition in den MSIL-Metadaten.
 
-LNK4248 kann auftreten, wenn es nur eine Vorwärtsdeklaration für einen Typ in einer MSIL-Modul ist (kompiliert mit **"/ CLR"**), auf den Typ im MSIL-Modul verwiesen wird, und die MSIL-Modul mit einem systemeigenen Modul verknüpft ist, die eine Definition für Der Typ.
+Linkertoolwarnung LNK4248 kann auftreten, wenn in einem MSIL-Modul (mit **/CLR**kompiliert) nur eine vorwärts Deklaration für einen Typ vorhanden ist, bei der im MSIL-Modul auf den Typ verwiesen wird und das MSIL-Modul mit einem systemeigenen Modul verknüpft ist, das über eine Definition für den Typ verfügt.
 
-In diesem Fall der Linker bietet die native Typdefinition in den MSIL-Metadaten, und dies kann für das korrekte Verhalten bereitstellen.
+In dieser Situation stellt der Linker die Definition des systemeigenen Typs in den MSIL-Metadaten bereit, und dies kann das korrekte Verhalten bereitstellen.
 
-Allerdings ist eine Vorwärts-Typdeklaration einen CLR-Typ, systemeigene Typdefinition des Linkers nicht richtig möglicherweise
+Wenn eine vorwärts-Typdeklaration jedoch ein CLR-Typ ist, ist die native Typdefinition des Linkers möglicherweise nicht korrekt.
 
 Weitere Informationen finden Sie unter [/clr (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
 
-1. Geben Sie die Typdefinition in das MSIL-Modul.
+1. Geben Sie die Typdefinition im MSIL-Modul an.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die LNK4248 generiert. Definieren Sie die Struktur ein aufgelöst.
+Im folgenden Beispiel wird Linkertoolwarnung LNK4248 generiert. Definieren Sie die zu lösende Struktur A.
 
-```
+```cpp
 // LNK4248.cpp
 // compile with: /clr /W1
 // LNK4248 expected
@@ -49,9 +49,9 @@ int main() {
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel verfügt über eine forward-Definition eines Typs.
+Das folgende Beispiel weist eine vorwärts Definition eines Typs auf.
 
-```
+```cpp
 // LNK4248_2.cpp
 // compile with: /clr /c
 class A;   // provide a definition for A here to resolve
@@ -66,9 +66,9 @@ int main() {
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die LNK4248 generiert.
+Im folgenden Beispiel wird Linkertoolwarnung LNK4248 generiert.
 
-```
+```cpp
 // LNK4248_3.cpp
 // compile with: /c
 // post-build command: link LNK4248_2.obj LNK4248_3.obj

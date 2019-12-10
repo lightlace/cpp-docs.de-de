@@ -1,5 +1,5 @@
 ---
-title: '&lt;Seealso > (C++-Dokumentationskommentare)'
+title: '&lt;seeauch > (C++ Dokumentations Kommentare)'
 ms.date: 11/04/2016
 f1_keywords:
 - <seealso>
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - seealso C++ XML tag
 - <seealso> C++ XML tag
 ms.assetid: cb33d100-9c50-4485-8d0c-573429eff155
-ms.openlocfilehash: ea399e98723a265ef3c17f2282b7c81299b4abc5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 698db2df462f561acd897d0d0e56b3106a915466
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318835"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988607"
 ---
 # <a name="ltseealsogt"></a>&lt;seealso&gt;
 
@@ -25,7 +25,7 @@ Mit dem \<seealso>-Tag kann der Text angegeben werden, der im Abschnitt „Siehe
 <seealso cref="member"/>
 ```
 
-#### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameters
 
 *member*<br/>
 Ein Verweis auf einen Member oder ein Feld, das von der aktuellen Kompilierungsumgebung aufgerufen werden kann.  Setzen Sie den Namen in einfache oder doppelte Anführungszeichen.
@@ -40,13 +40,13 @@ Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc]
 
 Ein Beispiel für die Verwendung von \<seealso> finden Sie unter [\<summary>](summary-visual-cpp.md).
 
-Der MSVC-Compiler versucht, Cref-Verweise in einem einzigen Durchlauf durch die Dokumentationskommentare aufzulösen.  Bei Verwendung der C++-Suchregeln wird deshalb, wenn ein Symbol vom Compiler nicht gefunden wird, der Verweis als nicht aufgelöst markiert.
+Der MSVC-Compiler versucht, die Anmerkungen zu dieser Version in einem Durchlauf durch die Dokumentations Kommentare aufzulösen.  Bei Verwendung der C++-Suchregeln wird deshalb, wenn ein Symbol vom Compiler nicht gefunden wird, der Verweis als nicht aufgelöst markiert.
 
 ## <a name="example"></a>Beispiel
 
 Im folgenden Beispiel wird ein nicht aufgelöstes Symbol in einem cref-Verweis referenziert. Der XML-Kommentar für den cref-Verweis auf B::Test ist `<seealso cref="!:B::Test" />`, der Verweis auf A::Test ein wohlgeformtes `<seealso cref="M:A.Test" />`.
 
-```
+```cpp
 // xml_seealso_tag.cpp
 // compile with: /LD /clr /doc
 // post-build command: xdcmake xml_seealso_tag.dll

@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2020
 ms.assetid: 4dd017d0-5e83-471b-ac8a-538ac1ed6870
-ms.openlocfilehash: 7290a90dfd92d84c4632e7f9dd38d36eccd4ac27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c6be2548e277af08f1069a70b26cd761db835bc
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386329"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988764"
 ---
 # <a name="linker-tools-error-lnk2020"></a>Linkertoolfehler LNK2020
 
 nicht aufgelöstes Token "Token"
 
-Ähnlich wie ein nicht definierter externen Fehler, außer dass der Verweis über Metadaten ist. In den Metadaten die alle Funktionen und Daten definiert werden.
+Ähnlich wie ein nicht definierter externer Fehler, mit dem Unterschied, dass der Verweis über Metadaten erfolgt. In den Metadaten müssen alle Funktionen und Daten definiert werden.
 
-Um zu beheben:
+Behebung:
 
-- Definieren Sie die fehlende Funktion oder Daten, oder
+- Definieren Sie die fehlenden Funktionen oder Daten, oder
 
-- Enthalten Sie die Objektdatei oder eine Bibliothek, die in dem die fehlende Funktion oder die Daten bereits definiert ist.
+- Fügen Sie die Objektdatei oder-Bibliothek ein, in der die fehlenden Funktionen oder Daten bereits definiert sind.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die LNK2020 generiert.
+Im folgenden Beispiel wird Linkertoolfehler LNK2020 generiert.
 
-```
+```cpp
 // LNK2020.cpp
 // compile with: /clr /LD
 ref struct A {
@@ -46,11 +46,11 @@ ref struct B {
 
 ## <a name="example"></a>Beispiel
 
-LNK2020 tritt auch auf, wenn Sie erstellen Sie eine Variable eines Typs verwalteten Vorlage, aber auch nicht den Typ instanziiert.
+Linkertoolfehler LNK2020 tritt auch auf, wenn Sie eine Variable eines verwalteten Vorlagen Typs erstellen, aber nicht auch den Typ instanziieren.
 
-Im folgende Beispiel wird die LNK2020 generiert.
+Im folgenden Beispiel wird Linkertoolfehler LNK2020 generiert.
 
-```
+```cpp
 // LNK2020_b.cpp
 // compile with: /clr
 

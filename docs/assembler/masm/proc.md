@@ -1,17 +1,17 @@
 ---
 title: PROC
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - PROC
 helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-ms.openlocfilehash: 5d1e44fcc4adbbe012b2f31fe9c6c27511bafff1
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: e68a7fc9814ba1ca07095e036e88fb5917220086
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395029"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74987931"
 ---
 # <a name="proc"></a>PROC
 
@@ -25,6 +25,8 @@ Markiert den Anfang und das Ende eines Prozedur Blocks namens *Bezeichnung*. Die
 > *Bezeichnung* **ENDP**
 
 ## <a name="remarks"></a>Hinweise
+
+Die ⟦*Distance*⟧-und ⟦*Language-Type*⟧-Argumente sind nur in 32-Bit-MASM gültig.
 
 ⟦**Frame** ⟦ __:__ *ehandler-Address*⟧ ⟧ ist nur mit ml64. exe gültig und bewirkt, dass MASM einen Funktionstabellen Eintrag in. pdata generiert und Informationen in. XData für die strukturierte Ausnahmebehandlung beim Entladen einer Funktion entlädt.
 

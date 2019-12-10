@@ -1,5 +1,5 @@
 ---
-title: '&lt;Beispiel > (C++-Dokumentationskommentare)'
+title: '&lt;Beispiel > (C++ Dokumentations Kommentare)'
 ms.date: 11/04/2016
 f1_keywords:
 - <example>
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <example> C++ XML tag
 - example C++ XML tag
 ms.assetid: c821aaa7-7ea7-4bee-9922-6705ad57f877
-ms.openlocfilehash: 69e4ad8315948c9c77e99f6ebece4debbe3831b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 384e9b9808a49770887eeda69b1d24fdd3f06027
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272532"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988314"
 ---
 # <a name="ltexamplegt"></a>&lt;example&gt;
 
@@ -25,7 +25,7 @@ Mit dem \<example>-Tag kann ein Beispiel für die Verwendung einer Methode oder 
 <example>description</example>
 ```
 
-#### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameters
 
 *Beschreibung*<br/>
 Eine Beschreibung des Codebeispiels.
@@ -36,7 +36,7 @@ Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc]
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // xml_example_tag.cpp
 // compile with: /clr /doc /LD
 // post-build command: xdcmake xml_example_tag.dll

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1301
 ms.assetid: 760da428-7182-4b25-b20a-de90d4b9a9cd
-ms.openlocfilehash: 6a82d7756f1460c56d87a3d7b1360c140de19827
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe64eecfbc9fed57c3748afd5804b76d6e4284a4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160606"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990941"
 ---
 # <a name="linker-tools-error-lnk1301"></a>Linkertoolfehler LNK1301
 
-Clr-Module für LTCG gefunden, nicht kompatibel mit /LTCG:parameter
+LTCG CLR-Module gefunden, nicht kompatibel mit/LTCG: Parameter
 
-Ein mit "/ CLR" und "/ GL" kompilierten Modul wurde an den Linker zusammen mit einem der profilgesteuerten Optimierungen (PGO)-Parameter von "/ LTCG" übergeben.
+Ein Modul, das mit/CLR und/GL kompiliert wurde, wurde zusammen mit einem der Parameter für die Profil gesteuerte Optimierung (PGO) von/LTCG. an den Linker übergeben.
 
-Profilgesteuerte Optimierungen werden zu/CLR-Modulen nicht unterstützt.
+Profil gesteuerte Optimierungen werden für/CLR-Module nicht unterstützt.
 
-Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie unter: .
 
 - [/GL (Optimierung des ganzen Programms)](../../build/reference/gl-whole-program-optimization.md)
 
@@ -33,13 +33,13 @@ Weitere Informationen finden Sie unter:
 
 ### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
 
-1. Kompilieren Sie nicht mit/CLR oder nicht mit einem der PGO-Parameter zu "/ LTCG" verknüpfen.
+1. Nicht mit/clr kompilieren oder nicht mit einem der PGO-Parameter für/LTCG. verknüpfen
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die LNK1301 generiert:
+Im folgenden Beispiel wird Linkertoolfehler LNK1301 generiert:
 
-```
+```cpp
 // LNK1301.cpp
 // compile with: /clr /GL /link /LTCG:PGI LNK1301.obj
 // LNK1301 expected
