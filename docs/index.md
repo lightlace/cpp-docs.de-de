@@ -75,10 +75,10 @@ ms.locfileid: "70177503"
         <h1>Visual C++–Dokumentation</h1>
         <ul class="pivots">
             <li>
-                <a href="#workloads">Arbeitsauslastungen</a>
+                <a href="#workloads">Workloads</a>
                 <ul id="workloads">
                     <li>
-                        <a href="#workloads1">Arbeitsauslastungen</a>
+                        <a href="#workloads1">Workloads</a>
                         <ul id="workloads1" class="cardsC">
                             <li>
                                 <a href="/cpp/cppcx/universal-windows-apps-cpp">
