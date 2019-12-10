@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2033
 ms.assetid: d61db467-9328-4788-bf54-e2a20537f13f
-ms.openlocfilehash: 7e95823e23215848ff3e5d201171523c9009eb2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 407f5eaf94a0e2da43425c3bbdd1955a88c95f14
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298905"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991176"
 ---
 # <a name="linker-tools-error-lnk2033"></a>Linkertoolfehler LNK2033
 
-nicht aufgelöstes Typeref-Token (Token) für 'Typ'
+nicht aufgelöstes TypeRef-Token (Token) für "Type".
 
-Ein Typ keine Definition in den MSIL-Metadaten.
+Ein Typ verfügt nicht über eine Definition in den MSIL-Metadaten.
 
-LNK2033 kann auftreten, bei der Kompilierung mit **/CLR: safe** und es ist nur eine Vorwärtsdeklaration für einen Typ in einer MSIL-Modul, in denen der Typ in den MSIL-Modul verwiesen wird.
+Linkertoolfehler LNK2033 kann auftreten, wenn mit **/clr: Safe** kompiliert wird und nur eine vorwärts Deklaration für einen Typ in einem MSIL-Modul vorhanden ist, bei dem im MSIL-Modul auf den Typ verwiesen wird.
 
-Der Typ muss definiert werden, unter **/CLR: safe**.
+Der Typ muss unter **/clr: Safe**definiert werden.
 
 Weitere Informationen finden Sie unter [/clr (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die LNK2033 generiert.
+Im folgenden Beispiel wird Linkertoolfehler LNK2033 generiert.
 
-```
+```cpp
 // LNK2033.cpp
 // compile with: /clr:safe
 // LNK2033 expected

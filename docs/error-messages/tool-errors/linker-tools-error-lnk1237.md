@@ -6,35 +6,35 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1237
 ms.assetid: 8722ffa8-096a-4bb0-85f9-f3aa0e10872a
-ms.openlocfilehash: ae1a397cdcc10cd89fd046a94e78c15dd46dceed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c56b2eb86c7605fb3330d7b1bb01e3235466ede6
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242530"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990964"
 ---
 # <a name="linker-tools-error-lnk1237"></a>Linkertoolfehler LNK1237
 
-während der codegenerierung eingeführt Compiler Verweis auf das Symbol 'Symbol' definiert, die im Modul "Module" mit "/ GL" kompiliert
+während der Codegenerierung hat der Compiler einen Verweis auf Symbol ' Symbol ' eingeführt, das in Modul ' Module ' definiert ist, das mit/GL kompiliert
 
-Während der codegenerierung, sollte der Compiler keine Symbole, die später auf Definitionen, die kompiliert aufgelöst werden einführen **"/ GL"**. `symbol` ist ein Symbol, das eingeführt und in einer Definition mit kompiliert aufgelöst wurde **"/ GL"**.
+Während der Codegenerierung sollte der Compiler keine Symbole einführen, die später in Definitionen kompiliert werden, die **/GL**kompiliert wurden. `symbol` ist ein Symbol, das in eine mit **/GL**kompilierte Definition eingeführt und später aufgelöst wurde.
 
 Weitere Informationen finden Sie unter [/GL (Optimierung des ganzen Programms)](../../build/reference/gl-whole-program-optimization.md).
 
-Um LNK1237 zu beheben, kompilieren Sie nicht die Symbolbreite **"/ GL"** oder [/Include (Symbolverweise erzwingen)](../../build/reference/include-force-symbol-references.md) um einen Verweis auf das Symbol zu erzwingen.
+Um Linkertoolfehler LNK1237 aufzulösen, kompilieren Sie das Symbol nicht mit **/GL** , oder verwenden Sie [/include (Symbol Verweise erzwingen)](../../build/reference/include-force-symbol-references.md) , um einen Verweis auf das Symbol zu erzwingen.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die LNK1237 generiert. Um diesen Fehler zu beheben, nicht initialisieren Sie das Array in LNK1237_a.cpp, und fügen **/ include: __chkstk** auf den Linkbefehl.
+Im folgenden Beispiel wird Linkertoolfehler LNK1237 generiert. Um diesen Fehler zu beheben, initialisieren Sie das Array nicht in LNK1237_a. cpp, und fügen Sie **/include: __chkstk** dem Link-Befehl hinzu.
 
-```
+```cpp
 // LNK1237_a.cpp
 int main() {
    char c[5000] = {0};
 }
 ```
 
-```
+```cpp
 // LNK1237_b.cpp
 // compile with: /GS- /GL /c LNK1237_a.cpp
 // processor: x86

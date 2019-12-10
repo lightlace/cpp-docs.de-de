@@ -12,12 +12,12 @@ helpviewer_keywords:
 - c compiler option [C++]
 - /c compiler option [C++]
 ms.assetid: 944567ca-16bc-4728-befe-d414a7787f26
-ms.openlocfilehash: c5854fd1255ab509d8778828de25638dd821d74b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d0cf8e5f628f3f5301f54d7c853bfc2ab63cb7e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272831"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988358"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (Kommentare bei der Vorverarbeitung beibehalten)
 
@@ -31,11 +31,11 @@ Behält Kommentare beim Präprozessorlauf bei
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Compileroption erfordert die **/e**, **/p**, oder **/EP** Option.
+Diese Compileroption erfordert die Option **/E**, **/P**oder **/EP** .
 
-Im folgenden Codebeispiel wird der Quellcodekommentar angezeigt.
+Im folgenden Codebeispiel wird der Quell Code Kommentar angezeigt.
 
-```
+```cpp
 // C_compiler_option.cpp
 // compile with: /E /C /c
 int i;   // a variable
@@ -50,13 +50,13 @@ int i;   // a variable
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen erhalten Sie unter [Set C++ compiler and build properties in Visual Studio (Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio)](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
-1. Klicken Sie auf die **Präprozessor** Eigenschaftenseite.
+1. Klicken Sie auf die Eigenschaften Seite **Präprozessor** .
 
-1. Ändern der **Kommentare beibehalten** Eigenschaft.
+1. Ändern Sie die Eigenschaft **Kommentare beibehalten** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
 

@@ -1,6 +1,7 @@
 ---
 title: '&lt;atomic&gt;'
-ms.date: 11/04/2016
+description: Beschreibt die Typen und Funktionen, die im Atomic-Header der Standard C++ Bibliothek verfügbar sind.
+ms.date: 12/06/2019
 f1_keywords:
 - <atomic>
 - atomic/std::atomic_int_least32_t
@@ -48,12 +49,12 @@ f1_keywords:
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-ms.openlocfilehash: b33ec1e7fdc7f93062248a9ad42c78c3b30801fe
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: d11e8bf2067c1c8525725ae74e713ac834d89ec4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688450"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991169"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -68,23 +69,23 @@ Definiert Klassen und Klassen Vorlagen, die zum Erstellen von Typen verwendet we
 ## <a name="remarks"></a>Hinweise
 
 > [!NOTE]
-> In Code, der mit **/CLR**kompiliert wird, wird dieser Header blockiert.
+> In Code, der mit [/clr: pure](../build/reference/clr-common-language-runtime-compilation.md)kompiliert wird, wird dieser Header blockiert. Sowohl **/clr: pure** als auch **/clr: Safe** sind in Visual Studio 2017 und höheren Versionen veraltet.
 
 Ein atomischer Vorgang hat zwei Schlüsseleigenschaften, die dabei helfen, mehrere Threads zu verwenden, um ein Objekt korrekt zu ändern, ohne Mutexsperren zu verwenden.
 
-- Da ein atomischer Vorgang nicht getrennt werden kann, kann ein zweiter atomischer Vorgang am gleichen Objekt von einem anderen Thread den Status des Objekts nur vor oder nach dem ersten atomischen Vorgang abrufen.
+- Da eine atomarische Operation unteilbar ist, kann eine zweite atomarische Operation für dasselbe Objekt aus einem anderen Thread den Zustand des Objekts nur vor oder nach dem ersten atomaren Vorgang abrufen.
 
 - Basierend auf dem Argument [memory_order](../standard-library/atomic-enums.md#memory_order_enum), richtet ein atomischer Vorgang Anforderungen für die Sortierung für die Sichtbarkeit der Effekte anderer atomischer Vorgänge im gleichen Thread ein. Daher unterbindet dieser Vorgang Compileroptimierungen, die die Anforderungen für die Sortierung verletzen.
 
 Auf manchen Plattformen ist es möglicherweise nicht möglich, atomische Vorgänge für bestimme Typen effizient zu implementieren, ohne `mutex`-Sperren zu verwenden. Ein atomischer Typ ist *sperrfrei*, wenn für keine der atomischen Vorgänge auf diesem Typ Sperren verwendet werden.
 
-**C ++ 11**: In Signalhandlern können Sie atomische Vorgänge für ein `obj`-Objekt ausführen, wenn `obj.is_lock_free()` oder `atomic_is_lock_free(x)` TRUE sind.
+**C++ 11**: in Signal Handlern können Sie atomarische Vorgänge für ein Objekt ausführen `obj` wenn `obj.is_lock_free()` oder `atomic_is_lock_free(x)` true sind.
 
-Die [atomic_flag](../standard-library/atomic-flag-structure.md) -Klasse stellt einen minimalen atomaren Typ bereit, der ein **Boolesches** Flag enthält. Die Vorgänge sind immer sperrfrei.
+Die Klasse [atomic_flag](../standard-library/atomic-flag-structure.md) stellt einen minimalen atomaren Typ bereit, der ein **Boolesches** Flag enthält. Die Vorgänge sind immer sperrfrei.
 
 Die Klassen Vorlage `atomic<T>` speichert ein Objekt seines Argument Typs `T` und ermöglicht atomarischen Zugriff auf den gespeicherten Wert. Sie können das Objekt durch Verwendung jedes Typs instanziieren, der mithilfe von [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) kopiert und mithilfe von [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) auf Gleichheit getestet werden kann. Sie können es insbesondere mit benutzerdefinierten Typen, die diese Anforderungen erfüllen, und oftmals auch mit Gleitkommatypen verwenden.
 
-Die Vorlage verfügt über eine Reihe von Spezialisierungen für integrale Typen und eine Teilspezialisierung für Zeiger. Diese Spezialisierungen stellen zusätzliche Vorgänge bereit, die über die primäre Vorlage nicht verfügbar sind.
+Die Vorlage verfügt über eine Reihe von Spezialisierungen für integrale Typen und eine Teilspezialisierung für Zeiger. Diese Spezialisierungsmöglichkeiten stellen zusätzliche Vorgänge bereit, die über die primäre Vorlage nicht verfügbar sind.
 
 ## <a name="pointer-specializations"></a>Zeigerspezialisierungen
 
@@ -94,9 +95,9 @@ Die Teilspezialisierung `atomic<T *>` gilt für alle Zeigertypen. Sie stellen Me
 
 Die `atomic<integral>`-Spezialisierungen sind auf alle integralen Typen anwendbar. Sie stellen zusätzliche Vorgänge bereit, die über die primäre Vorlage nicht verfügbar sind.
 
-Jeder `atomic<integral>`-Typ hat ein entsprechendes Makro, das Sie in `if directive` verwenden können, um beim Kompilieren festzustellen, ob Vorgänge für diesen Typ sperrfrei sind. Wenn der Wert des Makros null ist, sind Vorgänge für diesen Typ nicht sperrfrei. Wenn der Wert 1 ist, sind Vorgänge möglicherweise sperrfrei. Dadurch ist eine Überprüfung der Laufzeit erforderlich. Wenn der Wert 2 ist, sind Vorgänge sperrfrei. Sie können mithilfe der Funktion `atomic_is_lock_free` zur Laufzeit bestimmen, ob Vorgänge für diesen Typ sperrfrei sind.
+Jeder `atomic<integral>`-Typ hat ein entsprechendes Makro, das Sie in `if directive` verwenden können, um beim Kompilieren festzustellen, ob Vorgänge für diesen Typ sperrfrei sind. Wenn der Wert des Makros 0 (null) ist, sind Vorgänge für den Typ nicht sperrenfrei. Wenn der Wert 1 ist, sind Vorgänge möglicherweise sperrfrei. Dadurch ist eine Überprüfung der Laufzeit erforderlich. Wenn der Wert 2 ist, sind Vorgänge sperrfrei. Sie können mithilfe der Funktion `atomic_is_lock_free` zur Laufzeit bestimmen, ob Vorgänge für diesen Typ sperrfrei sind.
 
-Für jeden integralen Typen besteht ein entsprechend benannter atomischer Typ, der ein Objekt dieses integralen Typs verwaltet. Jeder `atomic_integral`-Typ hat den gleichen Satz von Memberfunktionen wie die entsprechende Instanziierung `atomic<T>`, und kann an die atomischen Funktionen übergeben werden, die nicht-Memberfunktionen sind.
+Für jeden ganzzahligen Typ gibt es einen entsprechenden benannten atomaren Typ, der ein Objekt dieses ganzzahligen Typs verwaltet. Jeder `atomic_integral`-Typ hat den gleichen Satz von Memberfunktionen wie die entsprechende Instanziierung `atomic<T>`, und kann an die atomischen Funktionen übergeben werden, die nicht-Memberfunktionen sind.
 
 |`atomic_integral`-Typ|Integrale Typen|`atomic_is_lock_free`-Makro|
 |----------------------------|-------------------|---------------------------------|
@@ -165,7 +166,7 @@ Typedef-Namen bestehen für Spezialisierungen der atomischen Vorlage für einige
 
 ## <a name="functions"></a>Funktionen
 
-In der folgenden Liste haben die Funktionen, die nicht auf `_explicit` enden, die Semantik des entsprechenden `_explicit`, abgesehen von den Funktionen, die über die impliziten [memory_order](../standard-library/atomic-enums.md#memory_order_enum)-Argumente von `memory_order_seq_cst` verfügen.
+In der folgenden Liste verfügen die Funktionen, die nicht auf `_explicit` enden, über die Semantik des entsprechenden `_explicit`, mit dem Unterschied, dass Sie über die impliziten [memory_order](../standard-library/atomic-enums.md#memory_order_enum) Argumente `memory_order_seq_cst`verfügen.
 
 |-Name|Beschreibung|
 |----------|-----------------|

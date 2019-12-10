@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4112
 ms.assetid: aff64897-bb79-4a67-9b6f-902c6d44f3dc
-ms.openlocfilehash: 3678d0ce5d9eb9568f0272da4173e72502b0557f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f614373e1b96de2c8167d7981c0a87a4e1c58435
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280333"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991230"
 ---
 # <a name="compiler-warning-levels-1-and-4-c4112"></a>Compilerwarnung (Stufen 1 und 4) C4112
 
-\#Zeile muss eine ganze Zahl zwischen 1 und Zahl
+für \#Zeile ist eine Ganzzahl zwischen 1 und Zahl erforderlich.
 
 Die [#line](../../preprocessor/hash-line-directive-c-cpp.md) -Direktive gibt einen ganzzahligen Parameter an, der außerhalb des zulässigen Bereichs liegt.
 
@@ -23,7 +23,7 @@ Wenn der angegebene Parameter kleiner als 1 ist, wird der Zeilenzähler auf 1 zu
 
 Im folgenden Beispiel wird C4112 generiert:
 
-```
+```cpp
 // C4112.cpp
 // compile with: /W4
 #line 0   // C4112, value must be between 1 and number

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4706
 ms.assetid: 89cd3f4f-812c-4a4b-9426-65a5a6d1b99c
-ms.openlocfilehash: e57470fcd8e7b014084b094c9ca5e39f0a86d85e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ff8794dcf29539b492f53bfdf6f0810988c0f72
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395221"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74989904"
 ---
 # <a name="compiler-warning-level-4-c4706"></a>Compilerwarnung (Stufe 4) C4706
 
@@ -19,11 +19,11 @@ Zuweisung in bedingtem Ausdruck
 
 Der Testwert in einem bedingten Ausdruck war das Ergebnis einer Zuweisung.
 
-Eine Zuweisung hat es sich um einen Wert (der Wert auf der linken Seite der Zuweisung), der gesetzlich in einem anderen Ausdruck verwenden, einschließlich einem Testausdruck verwendet werden kann.
+Eine Zuweisung verfügt über einen Wert (der Wert auf der linken Seite der Zuweisung), der in einem anderen Ausdruck, einschließlich eines Test Ausdrucks, legal verwendet werden kann.
 
-Im folgende Beispiel wird die C4706 generiert:
+Im folgenden Beispiel wird C4706 generiert:
 
-```
+```cpp
 // C4706a.cpp
 // compile with: /W4
 int main()
@@ -35,9 +35,9 @@ int main()
 }
 ```
 
-Die Warnung wird auch auftreten, wenn Sie die Klammern um die testbedingung doppelklicken:
+Die Warnung tritt auch dann auf, wenn Sie die Test Bedingung um die Klammern herum verdoppeln:
 
-```
+```cpp
 // C4706b.cpp
 // compile with: /W4
 int main()
@@ -49,9 +49,9 @@ int main()
 }
 ```
 
-Wenn Sie beabsichtigen, eine Beziehung zu testen und zu verwenden, nicht um eine Zuordnung vorgenommen der `==` Operator. Z. B. die folgende Zeile wird getestet, ob ein und b sind gleich:
+Wenn Sie beabsichtigen, eine Beziehung zu testen und keine Zuweisung vorzunehmen, verwenden Sie den `==`-Operator. Die folgende Zeile testet z. b., ob a und b gleich sind:
 
-```
+```cpp
 // C4706c.cpp
 // compile with: /W4
 int main()
@@ -63,9 +63,9 @@ int main()
 }
 ```
 
-Wenn Sie den Test mit dem Wert des Ergebnis einer Zuweisung vornehmen möchten, testen Sie, stellen Sie sicher, dass die Zuweisung nicht NULL oder not null ist. Der folgende Code generiert diese Warnung z. B. nicht:
+Wenn Sie beabsichtigen, den Testwert als Ergebnis einer Zuweisung zu erstellen, testen Sie, um sicherzustellen, dass die Zuweisung ungleich 0 (null) oder nicht NULL ist. Der folgende Code generiert beispielsweise keine Warnung:
 
-```
+```cpp
 // C4706d.cpp
 // compile with: /W4
 int main()

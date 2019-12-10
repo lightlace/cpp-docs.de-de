@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4938
 ms.assetid: 6acac81a-9d23-465e-b700-ed4b6e8edcd0
-ms.openlocfilehash: da2725a398a99b5943e128038e75622115a9e34f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c752b5daea42eac7c7dd0e14581d9e781aac9c96
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280203"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988739"
 ---
 # <a name="compiler-warning-level-4-c4938"></a>Compilerwarnung (Stufe 4) C4938
 
-"Var": Reduction-Gleitkommavariable kann dazu führen, dass inkonsistente Ergebnissen bei/fp: strict oder #pragma fenv_access führen
+"var": Die reduction-Gleitkommavariable kann zu inkonsistenten Ergebnissen bei /fp:strict oder #pragma fenv_access führen.
 
 [/fp:strict](../../build/reference/fp-specify-floating-point-behavior.md) oder [fenv_access](../../preprocessor/fenv-access.md) sollte nicht mit reduction-Gleitkommavorgängen von OpenMP verwendet werden, da die Summe in einer anderen Reihenfolge berechnet wird. Daher können die Ergebnisse von den Ergebnissen ohne "/openmp" abweichen.
 
 Im folgenden Beispiel wird C4938 generiert:
 
-```
+```cpp
 // C4938.cpp
 // compile with: /openmp /W4 /fp:strict /c
 // #pragma fenv_access(on)

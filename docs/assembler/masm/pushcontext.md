@@ -1,21 +1,21 @@
 ---
 title: PUSHCONTEXT
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - PUSHCONTEXT
 helpviewer_keywords:
 - PUSHCONTEXT directive
 ms.assetid: 18e528ee-df6c-4ce6-8823-b35b40f757fd
-ms.openlocfilehash: 1d042ad50fef6d9834b35b66c88b3f83ec4995d4
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 853cb2709efec5a11d3639b251189a4344d9cee2
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395719"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74987983"
 ---
 # <a name="pushcontext"></a>PUSHCONTEXT
 
-Speichert einen Teil oder den gesamten aktuellen *Kontext*: die Segment Registrierung nimmt an, den Basis Wert, das Auflisten und das Auflistungs Flag bzw. die Prozessor-/coprozor-Werte. Der *Kontext* kann angenommen **werden**, **Radix**, **Auflistung**, **CPU**oder **all**.
+Speichert einen Teil oder den gesamten aktuellen *Kontext*: die Segment Registrierung nimmt an, den Basis Wert, das Auflisten und das Auflistungs Flag bzw. die Prozessor-/coprozor-Werte. Der *Kontext* kann angenommen **werden (** nur 32-Bit-MASM), **Radix**, **Auflistung**, **CPU** (nur 32-Bit-MASM) oder **alle**.
 
 ## <a name="syntax"></a>Syntax
 

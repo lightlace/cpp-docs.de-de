@@ -1,6 +1,7 @@
 ---
 title: Veraltete Funktionen
-ms.date: 01/22/2019
+description: Listet die veralteten Funktionen auf, die veraltet sind und aus der Microsoft C-Lauf Zeit Bibliothek (CRT) entfernt wurden.
+ms.date: 12/09/2019
 api_name:
 - _beep
 - _sleep
@@ -53,23 +54,23 @@ helpviewer_keywords:
 - _sleep function
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
-ms.openlocfilehash: da5bd0569e7116bfd45e6112da8231d6fc2c9b44
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: c913e44a4f0d06813e877645bd01855baa6fd4dc
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940139"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988784"
 ---
 # <a name="obsolete-functions"></a>Veraltete Funktionen
 
-Bestimmte Bibliotheksfunktionen sind veraltet, und es stehen äquivalente neuere Funktionen zur Verfügung. Wir empfehlen, die aktualisierten Versionen zu verwenden. Andere veraltete Versionen wurden aus der CRT entfernt. In diesem Thema werden die als veraltet eingestuften und die in einer bestimmten Version von Visual Studio entfernten Funktionen aufgelistet.
+Bestimmte Bibliotheksfunktionen sind veraltet, und es stehen äquivalente neuere Funktionen zur Verfügung. Es wird empfohlen, diese Funktionen in die aktualisierten Versionen zu ändern. Andere veraltete Versionen wurden aus der CRT entfernt. In diesem Artikel werden die als veraltet markierten Funktionen und die in einer bestimmten Version von Visual Studio entfernten Funktionen aufgelistet.
 
 ## <a name="deprecated-as-obsolete-in-visual-studio-2015"></a>In Visual Studio 2015 als veraltet eingestuft
 
 |Veraltete Funktion|Alternative|
 |-----------------------|-----------------|
 |`is_wctype`|[iswctype](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|
-|`_loaddll`|[LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw), [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)oder [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary)|
+|`_loaddll`|[LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw), [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) oder [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary)|
 |`_unloaddll`|[FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)|
 |`_getdllprocaddr`|[GetProcAddress](../build/getprocaddress.md)|
 |`_seterrormode`|[SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode)|
@@ -87,10 +88,8 @@ Bestimmte Bibliotheksfunktionen sind veraltet, und es stehen äquivalente neuere
 |[_get_output_format](../c-runtime-library/get-output-format.md)|Keine|
 |[_heapadd](../c-runtime-library/heapadd.md)|Keine|
 |[_heapset](../c-runtime-library/heapset.md)|Keine|
-|[inp, inpw](../c-runtime-library/inp-inpw.md)|Keine|
-|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Keine|
-|[outp, outpw](../c-runtime-library/outp-outpw.md)|Keine|
-|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Keine|
+|[INP, inpw, _inp _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Keine|
+|[outp, outpw, _outp _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Keine|
 |[_set_output_format](../c-runtime-library/set-output-format.md)|Keine|
 
 ## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>Aus der CRT in früheren Versionen von Visual Studio entfernt

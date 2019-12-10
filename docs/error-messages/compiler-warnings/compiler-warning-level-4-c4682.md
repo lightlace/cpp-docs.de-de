@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4682
 ms.assetid: 858ea157-1244-4a61-85df-97b3de43d418
-ms.openlocfilehash: 6566c27999f218b7a214e32dde96bd1cf96fbb12
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6af1bf2d27c04efb58e7f1af0439ed3d16b7491a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395273"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990128"
 ---
 # <a name="compiler-warning-level-4-c4682"></a>Compilerwarnung (Stufe 4) C4682
 
 "Parameter": es wurde kein direktionales Parameterattribut angegeben, Standardwert [in]
 
-Eine Methode für einen Parameter in einer Schnittstelle mit Attributen hat kein Richtungsattribut: [in](../../windows/in-cpp.md) oder [out](../../windows/out-cpp.md). Der Parameter wird auf das Standardattribut „in“ festgelegt.
+Eine Methode für einen Parameter in einer attributierten Schnittstelle verfügt nicht über eines der direktionalen Attribute: [in](../../windows/in-cpp.md) oder [out](../../windows/out-cpp.md). Der-Parameter ist standardmäßig in.
 
 Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
 Im folgenden Beispiel wird C4682 generiert:
 
-```
+```cpp
 // C4682.cpp
 // compile with: /W4
 #pragma warning(default : 4682)

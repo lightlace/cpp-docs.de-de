@@ -1,6 +1,7 @@
 ---
 title: Kompatibilität
-ms.date: 11/04/2016
+description: Beschreibt die Kompatibilität der Microsoft Universal c-Lauf Zeit Bibliothek (ucrt) mit der Standard-c-Bibliothek, POSIX, der sicheren CRT und Store-Apps.
+ms.date: 12/06/2019
 f1_keywords:
 - c.programs
 helpviewer_keywords:
@@ -8,30 +9,30 @@ helpviewer_keywords:
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: 5e9d2edca8da128343bd14ea86a8c1c0023a244b
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: a3bc6f53d1c86268cae95e60a93576c4ac8e3e14
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446664"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988726"
 ---
 # <a name="compatibility"></a>Kompatibilität
 
-Die universelle C-Laufzeitbibliothek (UCRT, Universal C Run-Time Library) unterstützt den größten Teil der C-Standardbibliothek, der für die C++-Kompatibilität erforderlich ist. Sie implementiert die C99-Bibliothek (ISO/IEC 9899:1999), mit Ausnahme der in \<tgmath.h> definierten typgenerischen Makros und der strengen Typkompatibilität in \<complex.h>. Die UCRT implementiert darüber hinaus eine große Teilmenge der POSIX.1-C-Bibliothek (ISO/IEC 9945-1:1996, die POSIX-System-Anwendungsprogrammierschnittstelle), ist aber nicht vollständig mit einem spezifischen POSIX-Standard konform.  Außerdem implementiert die UCRT eine Reihe von Microsoft-spezifischen Funktionen und Makros, die nicht Bestandteil eines Standards sind.
+Die universelle C-Laufzeitbibliothek (UCRT, Universal C Run-Time Library) unterstützt den größten Teil der C-Standardbibliothek, der für die C++-Kompatibilität erforderlich ist. Sie implementiert die C99-Bibliothek (ISO/IEC 9899:1999) mit bestimmten Ausnahmen: die typgenerischen Makros, die in \<tgmath. h-> definiert sind, und eine strikte Typkompatibilität in \<Complex. h->. Die ucrt implementiert auch eine große Teilmenge der POSIX. 1-C-Bibliothek (ISO/IEC 9945-1:1996, POSIX-System Anwendungsprogramm Schnittstelle). Es ist jedoch nicht vollständig mit einem spezifischen POSIX-standardkonform. Die ucrt implementiert auch mehrere Microsoft-spezifische Funktionen und Makros, die nicht Teil eines Standards sind.
 
 Die für die Microsoft-Implementierung von Visual C++ spezifischen Funktionen befinden sich in der vcruntime-Bibliothek.  Viele dieser Funktionen dienen der internen Verwendung und können nicht von Benutzercode aufgerufen werden. Einige sind für den Gebrauch beim Debuggen und aus Gründen der Implementierungskompatibilität dokumentiert.
 
-Im C++-Standard sind Namen, die im globalen Namespace mit einem Unterstrich beginnen, für die Implementierung reserviert. Da sich die POSIX-Funktionen im globalen Namespace befinden, aber nicht Teil der Standard-C-Laufzeitbibliothek sind, weisen die Microsoft-spezifischen Implementierungen dieser Funktionen einen führenden Unterstrich auf. Aus Gründen der Portierbarkeit unterstützt die UCRT außerdem die Standardnamen. Der Microsoft Visual C++-Compiler gibt jedoch beim Kompilieren von Code eine Veraltungswarnung aus, wenn dieser Standardnamen verwendet. Nur die POSIX-Standardnamen sind veraltet, nicht die Funktionen. Um die Warnung zu unterdrücken, definieren Sie `_CRT_NONSTDC_NO_WARNINGS` , bevor Sie Header in den Code einschließen, in denen die ursprünglichen POSIX-Namen verwendet werden.
+Im C++-Standard sind Namen, die im globalen Namespace mit einem Unterstrich beginnen, für die Implementierung reserviert. Sowohl die POSIX-Funktionen als auch die Microsoft-spezifischen Funktionen der Lauf Zeit Bibliothek befinden sich im globalen Namespace, sind jedoch nicht Teil der Standard-C-Lauf Zeit Bibliothek. Aus diesem Grund haben die bevorzugten Microsoft-Implementierungen dieser Funktionen einen führenden Unterstrich. Aus Gründen der Portierbarkeit unterstützt die UCRT außerdem die Standardnamen. Der Microsoft Visual C++-Compiler gibt jedoch beim Kompilieren von Code eine Veraltungswarnung aus, wenn dieser Standardnamen verwendet. Nur die Standardnamen sind veraltet, nicht die Funktionen selbst. Um die Warnung zu unterdrücken, definieren Sie `_CRT_NONSTDC_NO_WARNINGS` , bevor Sie Header in den Code einschließen, in denen die ursprünglichen POSIX-Namen verwendet werden.
 
-Bestimmte Funktionen in der Standard-C-Bibliothek wurden in der Vergangenheit aufgrund missbräuchlich verwendeter Parameter und nicht deaktivierter Puffer häufig unsicher verwendet. Diese Funktionen stellen oft die Ursache von Sicherheitsproblemen im Code dar. Microsoft hat eine Sammlung sichererer Versionen dieser Funktionen erstellt, die die Verwendung der Parameter überprüfen und den Handler für ungültige Parameter aufrufen, wenn hier zur Laufzeit ein Problem erkannt wird.  Standardmäßig gibt der Microsoft Visual C++-Compiler eine Veraltungswarnung aus, wenn eine Funktion verwendet wird, zu der eine sicherere Variante verfügbar ist. Wenn Sie Ihren Code als C++ kompilieren, können Sie `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` auf 1 festlegen, um die meisten Warnungen zu beseitigen. Dabei werden Vorlagenüberladungen verwendet, um die sichereren Varianten aufzurufen, zugleich aber den portierbaren Quelltext beizubehalten. Um die Warnung zu unterdrücken, definieren Sie `_CRT_SECURE_NO_WARNINGS` , bevor Sie Header in den Code einschließen, die diese Funktionen verwenden. Weitere Informationen finden Sie unter [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).
+Bestimmte Funktionen in der Standard-C-Bibliothek wurden in der Vergangenheit aufgrund missbräuchlich verwendeter Parameter und nicht deaktivierter Puffer häufig unsicher verwendet. Diese Funktionen stellen oft die Ursache von Sicherheitsproblemen im Code dar. Microsoft hat einen Satz sicherer Versionen dieser Funktionen erstellt, die die Verwendung von Parametern überprüfen. Sie rufen den Handler für ungültige Parameter auf, wenn zur Laufzeit ein Problem erkannt wird.  Standardmäßig gibt der Microsoft Visual C++-Compiler eine Veraltungswarnung aus, wenn eine Funktion verwendet wird, zu der eine sicherere Variante verfügbar ist. Wenn Sie den Code als C++kompilieren, können Sie `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` als 1 definieren, um die meisten Warnungen auszuschließen. Dieses Makro ermöglicht Vorlagen Überladungen, die sichereren Varianten aufzurufen, während portablen Quellcode beibehalten wird. Um die Warnung zu unterdrücken, definieren Sie `_CRT_SECURE_NO_WARNINGS` , bevor Sie Header in den Code einschließen, die diese Funktionen verwenden. Weitere Informationen finden Sie unter [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).
 
-Sofern nicht in der Dokumentation zu bestimmten Funktionen anders vermerkt, ist die UCRT mit der Windows-API kompatibel.  Bestimmte Funktionen werden in Apps für den Windows 8 Store oder in universellen Windows Plattform-Apps (UWP) unter Windows 10 nicht unterstützt. Diese Funktionen sind unter [CRT-Funktionen, die nicht von UWP-Apps unterstützt werden](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) aufgelistet, dort sind die von der Windows-Runtime und [UWP](/uwp) nicht unterstützten Funktionen aufgezählt.
+Sofern nicht in der Dokumentation zu bestimmten Funktionen anders vermerkt, ist die UCRT mit der Windows-API kompatibel.  Bestimmte Funktionen werden in Windows Store-oder universelle Windows-Plattform-Apps ([UWP](/uwp)) nicht unterstützt. Diese Funktionen werden in CRT-Funktionen aufgelistet, die [in universelle Windows-Plattform-apps nicht unterstützt](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)werden.
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
-|Titel|Beschreibung|
+|Title|Beschreibung|
 |-----------|-----------------|
-|[UWP-Apps, die Windows-Runtime und die C-Runtime](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Beschreibt, wann UCRT-Routinen nicht mit universellen Windows-Apps oder Microsoft Store-Apps kompatibel sind.|
+|[UWP-Apps, die Windows-Runtime und die C-Runtime](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Beschreibt, wann ucrt-Routinen nicht mit universellen Windows-Apps oder Microsoft Store-Apps kompatibel sind.|
 |[ANSI C-Kompatibilität](../c-runtime-library/ansi-c-compliance.md)|Beschreibt die normgerechte Benennung in der UCRT.|
 |[UNIX](../c-runtime-library/unix.md)|Enthält Richtlinien zum Portieren von Programmen zu UNIX.|
 |[Windows-Plattformen (CRT)](../c-runtime-library/windows-platforms-crt.md)|Listet die Betriebssysteme auf, die durch CRT unterstützt werden.|

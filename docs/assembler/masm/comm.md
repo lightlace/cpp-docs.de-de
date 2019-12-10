@@ -1,17 +1,17 @@
 ---
 title: COMM
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - COMM
 helpviewer_keywords:
 - COMM directive
 ms.assetid: a23548c4-ad04-41fa-91da-945f228de742
-ms.openlocfilehash: d36161ba54ca80fc0f576c6f0a7c2a9410bf8075
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: 93e7c891b1c964eca5b3ff7fd15956ef25ea05e6
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541038"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74987942"
 ---
 # <a name="comm"></a>COMM
 
@@ -28,6 +28,8 @@ Die kommunalen Variablen werden vom Linker zugewiesen und können nicht initiali
 Jede *Definition* weist die folgende Form auf:
 
 ⟦*Language-Type*⟧ ⟦**near** | **Far**⟧ _Label_ **:** _Type_⟦ **:** _count_⟧
+
+Die *Sprachtyp-* , **near**-und **Far** -Argumente sind nur in 32-Bit-MASM gültig.
 
 Der optionale *Sprachtyp* legt die Benennungs Konventionen für den folgenden Namen fest. Sie überschreibt alle Sprachen, die von angegeben werden **. Model** -Direktive. Das optionale **near** -oder **Far** -überschreiben das aktuelle Speichermodell. Die *Bezeichnung ist der* Name der Variablen. Der *Typ* kann ein beliebiger Typspezifizierer ([Byte](../../assembler/masm/byte-masm.md), [Word](../../assembler/masm/word.md)usw.) oder eine ganze Zahl sein, die die Anzahl von Bytes angibt. Der optionale *Zähler* gibt die Anzahl der Elemente im deklarierten Datenobjekt an. Die Standard *Anzahl* ist 1.
 

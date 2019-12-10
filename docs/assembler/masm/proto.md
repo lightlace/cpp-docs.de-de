@@ -1,17 +1,17 @@
 ---
 title: PROTO
-ms.date: 10/22/2018
+ms.date: 12/06/2019
 f1_keywords:
 - PROTO
 helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
-ms.openlocfilehash: 24ec2a9abc6c8b76fc81f6d412019296c53160f4
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 9df66b6c89498a2cc1a1864a668b7addfbaf593c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74394753"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74987868"
 ---
 # <a name="proto"></a>PROTO
 
@@ -21,15 +21,15 @@ Prototypen eine Funktion oder Prozedur. Sie können die Funktion, die von der Pr
 
 > *Bezeichnung* **Proto** ⟦*Distance*⟧ ⟦*Language-Type*⟧ ⟦ __,__ ⟦*Parameter*⟧ __:__ *Tag* ... ⟧
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *Bezeichnung*\
 Der Name der Funktion mit prototyptypisierung.
 
-*Entfernungs*\
+*Distance* (nur 32-Bit-MASM.) \
 Optionale Wird in 16-Bit-Speicher Modellen verwendet, um den Standardwert zu überschreiben und **near** -oder **Far** -Aufrufe anzugeben
 
-*Sprachtyp*\
+*Sprachtyp* (nur 32-Bit-MASM.) \
 Optionale Legt die Aufruf-und Benennungs Konvention für Prozeduren und öffentliche Symbole fest. Folgende Konventionen werden unterstützt:
 
 - 32-Bit- **flatmodel** : **C**, **StdCall**

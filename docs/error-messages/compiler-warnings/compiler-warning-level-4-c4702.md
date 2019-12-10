@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4702
 ms.assetid: d8198c1e-8762-42a6-9e6b-cb568b7a1686
-ms.openlocfilehash: 96ae3a0742db5e3a5006f031ce62beb281c38ccd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e46bfef925f999ed7f04b5bbe7c88800209ed14
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395247"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990645"
 ---
 # <a name="compiler-warning-level-4-c4702"></a>Compilerwarnung (Stufe 4) C4702
 
-unerreichbarer code
+nicht erreichbarer Code
 
-Diese Warnung ist das Ergebnis einer konformitätsverbesserung für Compiler, die für Visual Studio .NET 2003 durchgeführt wurde: unerreichbarer Code. Wenn der Compiler (Back-End) nicht erreichbaren Code erkennt, generiert er C4702, eine Warnung der Stufe 4.
+Diese Warnung ist das Ergebnis der compilerübereinstimmungs-Arbeit, die für Visual Studio .NET 2003: nicht erreichbarer Code ausgeführt wurde. Wenn der Compiler (Back-End) nicht erreichbaren Code erkennt, generiert er C4702, eine Warnung der Stufe 4.
 
-Entfernen Sie für Code, der in der Visual Studio .NET 2003 und die Visual Studio .NET der Versionen von Visual C++ gültig ist die nicht erreichbaren Code, oder sicherzustellen Sie, dass der gesamte Quellcode von Visual Studio erreicht werden kann.
+Entfernen Sie für Code, der in Visual Studio .NET 2003-und Visual Studio .NET-Versionen von C++Visual Studio gültig ist, den nicht erreichbaren Code, oder stellen Sie sicher, dass der gesamte Quellcode durch einen bestimmten Ausführungs Verlauf erreichbar ist.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird die C4702 generiert.
+Im folgenden Beispiel wird C4702 generiert.
 
-```
+```cpp
 // C4702.cpp
 // compile with: /W4
 #include <stdio.h>
@@ -38,13 +38,13 @@ int main() {
 
 ## <a name="example"></a>Beispiel
 
-Beim Kompilieren mit **/GX**, **/EHc**, **/EHsc**, oder **EHac** "extern" C-Funktionen verwenden, Code kann nicht erreicht werden kann, und da "extern" C Funktionen sind davon ausgegangen, dass nicht auslösen, der Catch-Block ist daher nicht erreichbar.  Wenn Sie glauben, dass diese Warnung ist ungültig, da eine Funktion auslösen kann, kompilieren Sie mit **/EHa** oder **/EHs**, je nachdem, auf die ausgelöste Ausnahme.
+Beim Kompilieren mit **/GX**, **/EHC**, **/EHsc**oder **/EHac** und der Verwendung externer c-Funktionen kann der Code nicht erreichbar sein, da externe c-Funktionen nicht ausgelöst werden, sodass der catch-Block nicht erreichbar ist.  Wenn Sie der Meinung sind, dass diese Warnung ungültig ist, weil eine Funktion eine Ausnahme auslösen kann, kompilieren Sie mit **/EHa** oder **/EHS**, abhängig von der ausgelösten Ausnahme.
 
-Weitere Informationen finden Sie unter [/EH (Ausnahmebehandlungsmodell)](../../build/reference/eh-exception-handling-model.md) für Weitere Informationen.
+Weitere Informationen finden Sie unter [/eh (Ausnahme Behandlungsmodell)](../../build/reference/eh-exception-handling-model.md) .
 
-Im folgende Beispiel wird die C4702 generiert.
+Im folgenden Beispiel wird C4702 generiert.
 
-```
+```cpp
 // C4702b.cpp
 // compile with: /W4 /EHsc
 #include <iostream>
