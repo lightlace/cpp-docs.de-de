@@ -6370,6 +6370,8 @@
                   expanded: false
                   items:
                     - name: Dateien und Streams
+                      href: c-runtime-library/files-and-streams.md
+                    - name: Textstreams und binäre Streams
                       href: c-runtime-library/text-and-binary-streams.md
                     - name: Bytestreams und weite Streams
                       href: c-runtime-library/byte-and-wide-streams.md
