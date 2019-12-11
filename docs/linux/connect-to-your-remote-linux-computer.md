@@ -3,12 +3,12 @@ title: Herstellen einer Verbindung mit dem Linux-Zielsystem in Visual Studio
 description: Informationen zum Herstellen einer Verbindung mit einem Linux-Remotecomputer oder einem Windows-Subsystem für Linux über ein Visual Studio C++-Projekt
 ms.date: 11/09/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 6f7116ab5dc6c77f88d0787beac32d1c1e0a4716
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 4069979100c3b71a32e90ad72fb334d21a226e64
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966575"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755277"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Herstellen einer Verbindung mit dem Linux-Zielsystem in Visual Studio
 
@@ -82,7 +82,7 @@ So richten Sie die Remoteverbindung ein:
 
 ## <a name="tcp-port-forwarding"></a>TCP-Portweiterleitung
 
-Die Linux-Unterstützung von Visual Studio verfügt über eine Abhängigkeit von der TCP-Portweiterleitung. Wenn die TCP-Portweiterleitung in Ihrem Remotesystem deaktiviert wird, wirkt sich dies auf **rsync** und **gdbserver** aus. 
+Die Linux-Unterstützung von Visual Studio verfügt über eine Abhängigkeit von der TCP-Portweiterleitung. Wenn die TCP-Portweiterleitung in Ihrem Remotesystem deaktiviert wird, wirkt sich dies auf **rsync** und **gdbserver** aus. Wenn Sie von dieser Abhängigkeit betroffen sind, können Sie in der Entwicklercommunity für dieses [Vorschlagsticket](https://developercommunity.visualstudio.com/idea/840265/dont-rely-on-ssh-tcp-port-forwarding-for-c-remote.html) abstimmen.
 
 Sowohl MSBuild-basierte Linux-Projekte als auch CMake-Projekte verwenden „rsync“, um [Header aus Ihrem Remotesystem zur Verwendung für IntelliSense in Windows zu kopieren](configure-a-linux-project.md#remote_intellisense). Wenn Sie die TCP-Portweiterleitung nicht aktivieren können, deaktivieren Sie den automatischen Download von Remoteheadern. Navigieren Sie zum Deaktivieren zu **Extras > Optionen > Plattformübergreifend > Verbindungs-Manager > IntelliSense-Manager für Remoteheader**. Wenn im Remotesystem die TCP-Portweiterleitung nicht aktiviert ist, wird der folgende Fehler angezeigt, wenn der Download von Remoteheadern für IntelliSense startet:
 
