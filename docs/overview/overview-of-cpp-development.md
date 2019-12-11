@@ -1,17 +1,17 @@
 ---
 title: Übersicht über die C++-Entwicklung in Visual Studio
 description: Die Visual Studio-IDE unterstützt C++-Entwicklung unter Windows, Linux, Android und iOS mit einem Code-Editor, Debugger, Testframeworks, statischen Analysetools und weiteren Programmiertools.
-ms.date: 03/08/2019
+ms.date: 12/02/2019
 helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 54ed590122f1eb914ff039378914a1fd4adc5f10
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: d72ea2ab4fa83259152101b357c6b2b69e74c723
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66182900"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810625"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Übersicht über die C++-Entwicklung in Visual Studio
 
@@ -29,13 +29,13 @@ Visual Studio unterstützt alle Projektsysteme und benutzerdefinierten Buildtool
 
    ::: moniker range="vs-2019"
 
-   ![Neue Projektvorlagen](../build/media/mathclient-project-name-2019.png "Dialogfeld „Neues Projekt“ in Visual Studio 2019")
+   ![Neue Projektvorlagen](../build/media/mathclient-project-name-2019.png "Visual Studio 2019, Dialogfeld „Neues Projekt“")
 
    ::: moniker-end
 
    ::: moniker range="<=vs-2017"
 
-   ![Projektvorlagen](media/vs2017-new-project.png "Visual Studio 2017-Dialogfeld „Neues Projekt“")
+   ![Projektvorlagen](media/vs2017-new-project.png "Visual Studio 2017, Dialogfeld „Neues Projekt“")
 
    ::: moniker-end
 
@@ -51,13 +51,13 @@ Mithilfe von Quellcodeverwaltung können Sie die Arbeit mehrerer Entwickler koor
 
 ::: moniker range="vs-2019"
 
-![Team Explorer](media/vs2019-team-explorer.png "Visual Studio 2017 Team Explorer")
+![Team Explorer](media/vs2019-team-explorer.png "Visual Studio 2017, Team Explorer")
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-![Team Explorer](media/vs2017-team-explorer.png "Visual Studio 2017 Team Explorer")
+![Team Explorer](media/vs2017-team-explorer.png "Visual Studio 2017, Team Explorer")
 
 ::: moniker-end
 
@@ -71,9 +71,9 @@ Verwenden Sie zum Beziehen und Installieren von Drittanbieterbibliotheken de[vcp
 
 Wenn Ihr Programm über eine Benutzeroberfläche verfügt, können Sie einen Designer verwenden, um sie schnell mit Steuerelementen wie Schaltflächen, Listenfeldern usw. auszustatten. Wenn Sie ein Steuerelement aus dem Toolbox-Fenster ziehen und es auf der Entwurfsoberfläche ablegen, erstellt Visual Studio die erforderlichen Ressourcen und den Code, damit es funktioniert. Anschließend schreiben Sie den Code, um das Aussehen und Verhalten anzupassen.
 
-![Designer und Toolbox](media/vs2017-toolbox-designer.png "Toolbox und Designer von Visual Studio 2017")
+![Designer und Toolbox](media/vs2017-toolbox-designer.png "Visual Studio 2017, Toolbox und Designer")
 
-Weitere Informationen zum Entwerfen einer Benutzeroberfläche für eine UWP-App finden Sie unter [Design and UI (Design und Benutzeroberfläche)](https://developer.microsoft.com/windows/design).
+Weitere Informationen zum Entwerfen einer Benutzeroberfläche für eine UWP-App finden Sie unter [Design und Benutzeroberfläche](https://developer.microsoft.com/windows/design).
 
 Weitere Informationen zum Erstellen einer Benutzeroberfläche für eine MFC-Anwendung finden Sie unter [MFC Desktop Applications (MFC-Desktopanwendungen)](../mfc/mfc-desktop-applications.md). Weitere Informationen zu Win32-Windows-Programmen finden Sie unter [Windows Desktop Applications (Windows-Desktopanwendungen)](../windows/windows-desktop-applications-cpp.md).
 
@@ -81,21 +81,19 @@ Weitere Informationen zum Erstellen einer Benutzeroberfläche für eine MFC-Anwe
 
 Nachdem Sie ein Projekt erstellt haben, werden alle Projektdateien im Fenster des **Projektmappen-Explorers** angezeigt. (Eine *Projektmappe* ist ein logischer Container für ein oder mehrere verwandte Projekte.) Wenn Sie auf im **Projektmappen-Explorer** auf eine H- oder CPP-Datei klicken, wird die Datei im Code-Editor geöffnet.
 
-![Projektmappen-Explorer und Code-Editor](media/vs2017-solution-explorer-code-editor.png "Projektmappen-Explorer und Code-Editor von Visual Studio 2017")
+![Projektmappen-Explorer und Code-Editor](media/vs2017-solution-explorer-code-editor.png "Visual Studio 2017, Projektmappen-Explorer und Code-Editor")
 
 Der Code-Editor ist ein spezielles Textverarbeitungsprogramm für C++-Quellcode. Er versieht Sprachschlüsselwörter, Methoden- und Variablennamen sowie andere Elemente im Codes mit verschiedenen Farben, sodass der Code besser lesbar und einfacher zu verstehen ist. Darüber hinaus sind Tools für das Umgestalten von Code, Navigieren zwischen verschiedenen Dateien und Verstehen von Codestrukturen enthalten. Weitere Informationen finden Sie unter [Schreiben und Umgestalten von Code](../ide/writing-and-refactoring-code-cpp.md).
 
 ## <a name="add-and-edit-resources"></a>Hinzufügen und Bearbeiten von Ressourcen
 
-Der Begriff *Ressource* umfasst Elemente wie Dialogfelder, Symbole, Bilder, lokalisierbare Zeichenfolgen, Begrüßungsbildschirme, Datenbankverbindungszeichenfolgen oder sonstige Daten, die Sie in die ausführbare Datei einbeziehen möchten.
-
-Weitere Informationen zum Hinzufügen und Bearbeiten von Ressourcen in nativen Desktop-C++-Projekten finden Sie unter [Working with Resource Files (Arbeiten mit Ressourcendateien)](../windows/working-with-resource-files.md).
+Ein Windows-Programm oder eine Windows-DLL enthält in der Regel einige *Ressourcen* wie Dialogfelder, Symbole, Bilder, lokalisierbare Zeichenfolgen, Begrüßungsbildschirme, Datenbankverbindungszeichenfolgen oder sonstige Daten. Visual Studio enthält Tools, mit denen Sie Ressourcen hinzufügen und bearbeiten können. Weitere Informationen finden Sie unter [Arbeiten mit Ressourcendateien](../windows/working-with-resource-files.md).
 
 ## <a name="build-compile-and-link"></a>Erstellen (Kompilieren und Verknüpfen)
 
-Klicken Sie in der Menüleiste auf **Erstellen** > **Projektmappe erstellen**, oder drücken Sie die Tastenkombination STRG+UMSCHALT+B, um ein Projekt zu kompilieren und zu verknüpfen. Buildfehler und Warnungen werden in der Fehlerliste gemeldet (STRG+\\, E). Das **Ausgabefenster** (ALT+2) zeigt Informationen über den Buildprozess an.
+Klicken Sie in der Menüleiste auf **Erstellen** > **Projektmappe erstellen**, oder drücken Sie die Tastenkombination **STRG+UMSCHALT+B**, um ein Projekt zu kompilieren und zu verknüpfen. Buildfehler und Warnungen werden in der Fehlerliste gemeldet (**STRG+\\, E**). Das **Ausgabefenster** (**ALT+2**) zeigt Informationen zum Buildprozess an.
 
-![Ausgabefenster und Fehlerliste](media/vs2017-output-error-list.png "Ausgabefenster und Fehlerliste in Visual Studio 2017")
+![Ausgabefenster und Fehlerliste](media/vs2017-output-error-list.png "Visual Studio 2017, Ausgabefenster und Fehlerliste")
 
 Weitere Informationen zum Konfigurieren von Builds finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../build/working-with-project-properties.md) und [Projects and build systems (Projekte und Buildsysteme)](../build/projects-and-build-systems-cpp.md).
 
@@ -103,9 +101,9 @@ Sie können auch den Compiler (cl.exe) und viele andere buildbezogene, eigenstä
 
 ## <a name="debug"></a>Debug
 
-Debuggen Sie durch Drücken von **F5**. Die Ausführung hält bei allen Haltepunkten an, die Sie gesetzt haben. Sie können den Code auch jeweils zeilenweise durchlaufen, die Werte von Variablen oder Registern anzeigen und in einigen Fällen sogar Änderungen am Code vornehmen und das Debuggen fortsetzen, ohne neu zu kompilieren. Die folgende Abbildung zeigt eine Debugsitzung mit bei einem Haltepunkt angehaltener Ausführung. Die Werte der Datenstrukturelemente sind im Fenster **Überwachen** sichtbar.
+Debuggen Sie durch Drücken von **F5**. Die Ausführung hält bei allen von Ihnen festgelegten Haltepunkten an (indem Sie **F9** drücken). Sie können den Code auch zeilenweise durchlaufen (**F10**), die Werte von Variablen oder Registern anzeigen und in einigen Fällen sogar Änderungen am Code vornehmen und das Debuggen fortsetzen, ohne neu kompilieren zu müssen. Die folgende Abbildung zeigt eine Debugsitzung mit bei einem Haltepunkt angehaltener Ausführung. Die Werte der Datenstrukturelemente sind im Fenster **Überwachen** sichtbar.
 
-![Debugsitzung](media/vs2017-debug-watch.png "Visual Studio 2017-Debugsitzung")
+![Debugsitzung](media/vs2017-debug-watch.png "Visual Studio 2017, Debugsitzung")
 
 Weitere Informationen finden Sie unter [Debuggen in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
 
@@ -113,7 +111,7 @@ Weitere Informationen finden Sie unter [Debuggen in Visual Studio](/visualstudio
 
 Visual Studio enthält das Microsoft-Komponententest-Framework für C++ und Unterstützung für Boost.Test, Google Test und CTest. Führen Sie Ihre Tests im Fenster **Test-Explorer** aus:
 
-![Test-Explorer](media/cpp-test-explorer-passed.png "Visual Studio 2017 Test-Explorer")
+![Test-Explorer](media/cpp-test-explorer-passed.png "Visual Studio 2017, Test-Explorer")
 
 Weitere Informationen finden Sie unter [Verifying Code by Using Unit Tests](/visualstudio/test/unit-test-your-code) (Überprüfen von Code mithilfe von Komponententests) und [Write unit tests for C/C++ in Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp) (Schreiben von Komponententests für C/C++ in Visual Studio).
 
@@ -125,7 +123,7 @@ Visual Studio enthält statische Codeanalysetools, die potenzielle Probleme in I
 
 Sowohl herkömmliche Desktopanwendungen als auch UWP-Apps können über den Microsoft Store bei Kunden bereitgestellt werden. Die Bereitstellung von CRT wird automatisch im Hintergrund durchgeführt. Weitere Informationen finden Sie unter [Veröffentlichen von Windows-Apps und -Spielen](/windows/uwp/publish/).
 
-Auch die Bereitstellung von nativen C++-Desktops auf anderen Computern ist möglich. Weitere Informationen finden Sie unter [Bereitstellen von Desktopanwendungen](../windows/deploying-native-desktop-applications-visual-cpp.md).
+Sie können auch einen nativen C++-Desktop auf einem anderen Computer bereitstellen. Weitere Informationen finden Sie unter [Bereitstellen von Desktopanwendungen](../windows/deploying-native-desktop-applications-visual-cpp.md).
 
 Weitere Informationen zum Bereitstellen eines C++/CLI-Programms finden Sie im [Deployment Guide for Developers (Bereitstellungshandbuch für Entwickler)](/dotnet/framework/deployment/deployment-guide-for-developers).
 
