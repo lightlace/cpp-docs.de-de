@@ -67,11 +67,11 @@ Führen Sie die Bootstrapperdatei aus, um den Visual Studio-Installer zu install
 
 ### <a name="step-4---choose-workloads"></a>Schritt 4: Auswählen von Workloads
 
-Nachdem das Installationsprogramm installiert wurde, können Sie es verwenden, um die Installation anzupassen, indem Sie die gewünschten *Arbeits Auslastungen*oder Funktionsgruppen auswählen. Gehen Sie folgendermaßen vor:
+Nachdem das Installationsprogramm installiert wurde, können Sie es verwenden, um die Installation anzupassen, indem Sie die gewünschten *Workloads* oder Funktionsgruppen auswählen. Gehen Sie folgendermaßen vor:
 
-1. Suchen Sie die gewünschten Arbeitsauslastungen im Bildschirm **Visual Studio wird installiert**.
+1. Suchen Sie die gewünschten Workloads im Bildschirm **Visual Studio wird installiert**.
 
-   ![Visual Studio 2019: Installieren einer Arbeitsauslastung](../get-started/media/vs-installer-workloads.png)
+   ![Visual Studio 2019: Installieren einer Workload](../get-started/media/vs-installer-workloads.png)
 
    Für den C++ grundlegenden Support wählen Sie die Arbeitsauslastung C++"Desktop Entwicklung mit" aus. Sie wird mit dem standardmäßigen Kern-Editor bereitgestellt, der die grundlegende Codebearbeitung für über 20 Sprachen, die Möglichkeit, Code aus einem beliebigen Ordner heraus zu öffnen und zu bearbeiten, ohne dass ein Projekt erforderlich ist, und die integrierte Quellcodekontrolle unterstützt.
 
@@ -79,7 +79,7 @@ Nachdem das Installationsprogramm installiert wurde, können Sie es verwenden, u
 
    Im Bereich **Installationsdetails** werden die enthaltenen und optionalen Komponenten aufgelistet, die von den einzelnen Workloads installiert werden. Sie können optionale Komponenten in dieser Liste auswählen bzw. deaktivieren. Wenn Sie z. b. die Entwicklung mithilfe der compilertoolsets von Visual Studio 2017 oder 2015 unterstützen möchten, wählen Sie die optionalen MSVC-v141-oder MSVC V140-Komponenten aus. Sie können MFC-Unterstützung, die experimentelle Spracherweiterung für experimentelle Module, IncrediBuild und vieles mehr hinzufügen.
 
-1. Nachdem Sie die gewünschten Arbeits Auslastungen und optionalen Komponenten ausgewählt haben, wählen Sie **Installieren**aus.
+1. Nachdem Sie die gewünschten Workloads und optionalen Komponenten ausgewählt haben, wählen Sie **Installieren**aus.
 
     Als Nächstes werden Statusbildschirme angezeigt, die über den Fortschritt der Installation von Visual Studio informieren.
 
@@ -117,7 +117,7 @@ Sie können den Speicherbedarf für die Installation von Visual Studio auf Ihrem
 
 1. Wählen Sie im Startfenster **Neues Projekt erstellen** aus.
 
-1. Geben Sie den Typ von App im Suchfeld ein, den Sie erstellen möchten, um eine Liste der verfügbaren Vorlagen anzuzeigen. Die Liste der Vorlagen basiert auf den Workloads, die Sie bei der Installation ausgewählt haben. Wählen Sie andere Workloads aus, um andere Vorlagen anzuzeigen.
+1. Geben Sie den Typ der zu programmierenden App im Suchfeld ein, um eine Liste der verfügbaren Vorlagen anzuzeigen. Die Liste der Vorlagen basiert auf den Workloads, die Sie bei der Installation ausgewählt haben. Wählen Sie andere Workloads aus, um andere Vorlagen anzuzeigen.
 
    Sie können die Suchergebnisse nach bestimmten Programmiersprachen filtern, indem Sie die Dropdownliste **Sprache** verwenden. Sie können außerdem die Listen **Plattform** und **Projekttyp** zum Filtern verwenden.
 
@@ -177,7 +177,7 @@ Ausführliche Informationen zu Speicherplatz und Betriebssystemanforderungen fin
 
    ![Benachrichtigungs Kennzeichen für Visual Studio 2017](media/vscpp-first-start-page-flag.png "Benachrichtigungs Kennzeichen für Visual Studio 2017")
 
-   Wenn es hervorgehoben ist, wählen Sie es aus, um das **Benachrichtigungs** Fenster zu öffnen. Wenn für Visual Studio Updates verfügbar sind, empfiehlt es sich, diese jetzt zu installieren. Starten Sie Visual Studio nach Abschluss der Installation neu.
+   Wenn es hervorgehoben ist, wählen Sie es aus, um das **Benachrichtigungs**-Fenster zu öffnen. Wenn für Visual Studio Updates verfügbar sind, empfiehlt es sich, diese jetzt zu installieren. Starten Sie Visual Studio nach Abschluss der Installation neu.
 
 ::: moniker-end
 
