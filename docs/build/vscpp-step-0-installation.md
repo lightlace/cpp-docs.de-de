@@ -15,7 +15,7 @@ ms.locfileid: "74857163"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Installieren der C++-Unterstützung in Visual Studio
 
-Wenn Sie Visual Studio und die Visual C++-Tools noch nicht heruntergeladen und installation haben, finden Sie hier Informationen zu den ersten Schritten.
+Wenn Sie Visual Studio und die Visual C++-Tools noch nicht heruntergeladen und installiert haben, finden Sie hier Informationen zu den ersten Schritten.
 
 ::: moniker range="vs-2019"
 
@@ -106,7 +106,7 @@ Standardmäßig versucht das Installationsprogramm bei der ersten Ausführung di
 
 Eine andere Möglichkeit zum Ändern der Standardsprache ist die Ausführung des Installers über die Befehlszeile. Mit dem Befehl `vs_installer.exe --locale en-US` können Sie z.B. erzwingen, dass das Installationsprogramm auf Englisch ausgeführt wird. Das Installationsprogramm speichert diese Einstellung, wenn es das nächste Mal ausgeführt wird. Der Installer unterstützt die folgenden Sprachen: zh-CN, zh-TW, cs-CZ, en-US, es-ES, fr-FR, de-DE, it-IT, ja-JP, ko-KR, pl-PL, pt-BR, ru-RU und tr-TR.
 
-### <a name="step-7---change-the-installation-location-optional"></a>Schritt 7: Ändern des Installationspfades (optional)
+### <a name="step-7---change-the-installation-location-optional"></a>Schritt 7: Ändern des Installationspfads (optional)
 
 Sie können den Speicherbedarf für die Installation von Visual Studio auf Ihrem Systemlaufwerk reduzieren. Sie können den Downloadcache, freigegebene Komponenten, SDKs und Tools auf andere Datenträger verschieben, und Visual Studio dort belassen, wo es am schnellsten ausgeführt werden kann.
 
@@ -121,7 +121,7 @@ Sie können den Speicherbedarf für die Installation von Visual Studio auf Ihrem
 
 1. Wählen Sie im Startfenster **Neues Projekt erstellen** aus.
 
-2. Geben Sie den Typ der zu programmierenden App im Suchfeld ein, um eine Liste der verfügbaren Vorlagen anzuzeigen. Die Liste der Vorlagen basiert auf den Workloads, die Sie bei der Installation ausgewählt haben. Wählen Sie andere Workloads aus, um andere Vorlagen anzuzeigen.
+1. Geben Sie den Typ der zu programmierenden App im Suchfeld ein, um eine Liste der verfügbaren Vorlagen anzuzeigen. Die Liste der Vorlagen basiert auf den Workloads, die Sie bei der Installation ausgewählt haben. Wählen Sie andere Workloads aus, um andere Vorlagen anzuzeigen.
 
    Sie können die Suchergebnisse nach bestimmten Programmiersprachen filtern, indem Sie die Dropdownliste **Sprache** verwenden. Sie können außerdem die Listen **Plattform** und **Projekttyp** zum Filtern verwenden.
 
