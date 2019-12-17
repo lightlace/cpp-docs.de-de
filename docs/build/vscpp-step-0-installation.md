@@ -24,7 +24,7 @@ Wenn Sie Visual Studio und die Visual C++-Tools noch nicht heruntergeladen und i
 Willkommen bei Visual Studio 2019. Sie können ganz einfach die Features, die Sie benötigen, auswählen und installieren. Aufgrund des dadurch reduzierten Speicherbedarfs, werden diese schnell installiert, während das System weniger beeinträchtigt wird.
 
 > [!NOTE]
-> Dieses Thema bezieht sich auf die Installation von Visual Studio unter Windows. [Visual Studio Code](https://code.visualstudio.com/) ist eine vereinfachte, plattformübergreifende Entwicklungsumgebung, die auf Windows-, Mac-und Linux-Systemen ausgeführt wird. Die Microsoft [C/C++ for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) -Erweiterung unterstützt IntelliSense, Debugging, Code Formatierung und automatische Code-Vervollständigung. Visual Studio für Mac unterstützt Microsoft C++ nicht, unterstützt aber .NET-Sprachen und eine plattformübergreifende Entwicklung. Installationsanweisungen finden Sie unter [Install Visual Studio für Mac](/visualstudio/mac/installation/).
+> Dieses Thema bezieht sich auf die Installation von Visual Studio unter Windows. [Visual Studio Code](https://code.visualstudio.com/) ist eine vereinfachte, plattformübergreifende Entwicklungsumgebung, die auf Windows-, Mac-und Linux-Systemen ausgeführt wird. Die Microsoft [C/C++ for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) -Erweiterung unterstützt IntelliSense, Debugging, Codeformatierung und automatische Codevervollständigung. Visual Studio für Mac unterstützt Microsoft C++ nicht, unterstützt aber .NET-Sprachen und eine plattformübergreifende Entwicklung. Installationsanweisungen finden Sie unter [Install Visual Studio für Mac](/visualstudio/mac/installation/).
 
 Sie möchten mehr zu weiteren Neuerungen in dieser Version wissen? Weitere Informationen finden Sie in den Versions [Anmerkungen](/visualstudio/releases/2019/release-notes/)zu Visual Studio.
 
@@ -79,7 +79,7 @@ Nachdem das Installationsprogramm installiert wurde, können Sie es verwenden, u
    * Öffnen und Bearbeiten von Quellcode in einem beliebigen Ordner ohne Vorraussetzung eines Projekts
    * integrierte Versionskontrolle für Quellcode
 
-   Weitere Workloads unterstützen andere Arten der Entwicklung mit C++. Wählen Sie beispielsweise die Workload "Universelle Windows-Plattform Entwicklung" aus, um Apps zu erstellen, die die Windows-Runtime des Microsoft Stores verwenden. Wählen Sie "Spieleentwicklung mit C++", um Spiele zu erstellen, die DirectX, Unreal und Cocos2d verwenden. Wählen Sie "Linux-Entwicklung mit C++" für Programme für Linux-Plattformen zu schreiben, einschließlich der Enwticklung im IOT-Bereich.
+   Weitere Workloads unterstützen andere Arten der Entwicklung mit C++. Wählen Sie beispielsweise die Workload "Entwicklung für die universelle Windows-Plattform" aus, um Apps zu erstellen, die die Windows-Runtime des Microsoft Stores verwenden. Wählen Sie "Spieleentwicklung mit C++", um Spiele zu erstellen, die DirectX, Unreal und Cocos2d verwenden. Wählen Sie "Linux Entwicklung mit C++" für Linux-Plattformen aus, einschließlich der Entwicklung im IoT-Bereich.
 
    Im Bereich **Installationsdetails** werden die enthaltenen und optionalen Komponenten aufgelistet, die von den einzelnen Workloads installiert werden. Sie können optionale Komponenten in dieser Liste auswählen bzw. deaktivieren. Wenn Sie z. b. die Entwicklung mithilfe der Compiler-Tools von Visual Studio 2017 oder 2015 unterstützen möchten, wählen Sie die optionalen MSVC-v141-oder MSVC V140-Komponenten aus. Sie können MFC-Unterstützung, die experimentelle Spracherweiterung für experimentelle Module, IncrediBuild und vieles mehr hinzufügen.
 
@@ -110,7 +110,7 @@ Eine andere Möglichkeit zum Ändern der Standardsprache ist die Ausführung des
 
 Sie können den Speicherbedarf für die Installation von Visual Studio auf Ihrem Systemlaufwerk reduzieren. Sie können den Downloadcache, freigegebene Komponenten, SDKs und Tools auf andere Datenträger verschieben, und Visual Studio dort belassen, wo es am schnellsten ausgeführt werden kann.
 
-  ![Installationspfade für Visual 2019 ändern](../get-started/media/vs-installer-installation-locations.png "Ändern des Installationspfades")
+  ![Installationspfade für Visual 2019 ändern](../get-started/media/vs-installer-installation-locations.png "Ändern des Installationspfads")
 
 > [!IMPORTANT]
 > Sie können nur bei der ersten Installation von Visual Studio ein anderes Laufwerk auswählen. Wenn Sie Visual Studio bereits installiert haben und das Laufwerk wechseln möchten, müssen Sie Visual Studio deinstallieren und anschließend auf dem gewünschten Laufwerk neu installieren.
@@ -155,7 +155,7 @@ Ausführliche Informationen zu Speicherplatz und Betriebssystemanforderungen fin
    >[!Tip]
    > Die Community Edition eignet sich für einzelne Entwickler, Schulungsumgebungen, akademische Forschung und Open Source-Entwicklung. Installieren Sie für andere Verwendungen [Visual Studio 2017 Professional](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) oder [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
-1. Suchen Sie die heruntergeladene Installer-Datei, und führen Sie Sie aus. Sie wird möglicherweise in Ihrem Browser angezeigt, oder Sie finden Sie möglicherweise im Ordner "Downloads". Der Installer benötigt Administratorrechte, um ausgeführt werden zu können. Möglicherweise wird ein Dialogfeld " **Benutzerkontensteuerung** " angezeigt, in dem Sie aufgefordert werden, die Berechtigung zu erteilen, dass das Installationsprogramm Änderungen am System vornehmen darf. Wählen Sie **Ja** aus. Wenn Sie Probleme haben, suchen Sie die heruntergeladene Datei im Datei-Explorer, klicken Sie mit der rechten Maustaste auf das Installer-Symbol, und wählen Sie im Kontextmenü die Option **als Administrator ausführen** aus.
+1. Suchen Sie die heruntergeladene Installerdatei, und führen Sie sie aus. Sie wird möglicherweise in Ihrem Browser angezeigt, oder Sie finden sie möglicherweise im Ordner "Downloads". Der Installer benötigt Administratorrechte, um ausgeführt werden zu können. Möglicherweise wird ein Dialogfeld " **Benutzerkontensteuerung** " angezeigt, in dem Sie aufgefordert werden, die Berechtigung zu erteilen, dass das Installationsprogramm Änderungen am System vornehmen darf. Wählen Sie **Ja** aus. Wenn Sie Probleme haben, suchen Sie die heruntergeladene Datei im Datei-Explorer, klicken Sie mit der rechten Maustaste auf das Installersymbol, und wählen Sie im Kontextmenü die Option **als Administrator ausführen** aus.
 
    ![Herunterladen und Installieren des Visual Studio-Installers](media/vscpp-concierge-run-installer.gif "Herunterladen und Installieren des Visual Studio-Installer")
 
@@ -163,9 +163,9 @@ Ausführliche Informationen zu Speicherplatz und Betriebssystemanforderungen fin
 
    !["Desktop-Entwicklung mit C++" Workload](media/desktop-development-with-cpp.png "Desktopentwicklung mit C++")
 
-   Wählen SIe für C++ die Workload **Desktop-Entwicklung mit C++** aus, und klicken Sie dann auf **Installieren**.
+   Wählen Sie für C++ die Workload **Desktopentwicklung mit C++** aus, und klicken Sie dann auf **Installieren**.
 
-   ![Installieren der Workload "Desktop-Entwicklung mit C++"](media/vscpp-concierge-choose-workload.gif "Installieren der 'Desktop-Entwicklung mit C++' Workload")
+   ![Installieren der Workload "Desktopentwicklung mit C++"](media/vscpp-concierge-choose-workload.gif "Installieren der Workload 'Desktopentwicklung mit C++' Workload")
 
 2. Wenn die Installation abgeschlossen ist, klicken Sie auf die Schaltfläche **starten** , um Visual Studio zu starten.
 
@@ -189,7 +189,7 @@ Ausführliche Informationen zu Speicherplatz und Betriebssystemanforderungen fin
 
 ## <a name="visual-studio-2015-installation"></a>Visual Studio 2015-Installation
 
-Auf der Seite [Downloads älterer Versionen von Visual Studio](https://www.visualstudio.com/vs/older-downloads/) können Sie Visual Studio 2015 herunterladen. Führen Sie das Setupprogramm aus, klicken Sie auf **Benutzerdefinierte Installation**, und wählen Sie die C++-Komponente aus. Wenn Sie C++-Unterstützung zu einer vorhandenen Visual Studio 2015-Installation hinzufügen möchten, klicken Sie auf die Windows-Schaltfläche "Start", **und geben Sie**"Apps und Features" ein. Öffnen Sie das Programm in der Ergebnisliste, und suchen Sie die Visual Studio 2015-Installation in der Liste der installierten Programme. Klicken Sie darauf, wählen Sie  **ändern** aus und wählen Sie die zu installierenden C++-Komponenten aus.
+Auf der Seite [Downloads älterer Versionen von Visual Studio](https://www.visualstudio.com/vs/older-downloads/) können Sie Visual Studio 2015 herunterladen. Führen Sie das Setupprogramm aus, klicken Sie auf **Benutzerdefinierte Installation**, und wählen Sie die C++-Komponente aus. Wenn Sie C++-Unterstützung zu einer vorhandenen Visual Studio 2015-Installation hinzufügen möchten, klicken Sie auf die Windows-Schaltfläche "Start", **und geben Sie**"Apps und Features" ein. Öffnen Sie das Programm in der Ergebnisliste, und suchen Sie die Visual Studio 2015-Installation in der Liste der installierten Programme. Klicken Sie darauf, wählen Sie **ändern** aus, und wählen Sie die zu installierenden C++-Komponenten aus.
 
 In der Regel wird die Verwendung von Visual Studio 2017 empfohlen, auch wenn Sie dann Ihren Code mithilfe des Visual Studio 2015-Compilers kompilieren müssen. Weitere Informationen finden Sie unter [Use native multi-targeting in Visual Studio to build old projects (Verwenden der nativen Festlegung von Zielversionen in Visual Studio, um alte Projekte zu erstellen)](../porting/use-native-multi-targeting.md).
 
