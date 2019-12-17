@@ -109,7 +109,7 @@ Sie können den Speicherbedarf für die Installation von Visual Studio auf Ihrem
   ![Visual Studio 2019-Installations Speicherorte ändern](../get-started/media/vs-installer-installation-locations.png "Ändern des Installations Speicher Orts")
 
 > [!IMPORTANT]
-> Sie können nur bei der ersten Installation von Visual Studio ein anderes Laufwerk auswählen. Wenn Sie Visual Studio bereits installiert haben und das Laufwerk wechseln möchten, müssen Sie Visual Studio deinstallieren und anschließend neu installieren.
+> Sie können nur bei der ersten Installation von Visual Studio ein anderes Laufwerk auswählen. Wenn Sie Visual Studio bereits installiert haben und das Laufwerk wechseln möchten, müssen Sie Visual Studio deinstallieren und anschließend auf dem gewünschten Laufwerk neu installieren.
 
 ### <a name="step-8---start-developing"></a>Schritt 8: Mit dem Entwickeln beginnen
 
@@ -137,7 +137,7 @@ In Visual Studio 2017 ist es einfach, nur die Features auszuwählen und zu insta
 
 - Ein Computer, auf dem Microsoft Windows 7 oder eine höhere Version ausgeführt wird. Für ein optimales Entwicklungserlebnis empfehlen wir Windows 10. Stellen Sie sicher, dass die neuesten Updates auf das System angewendet werden, bevor Sie Visual Studio installieren.
 
-- Ausreichend freier Speicherplatz. Visual Studio benötigt mindestens 7 GB Speicherplatz und kann 50 GB oder mehr belegen, wenn viele gängige Optionen installiert sind. Es wird empfohlen, dass Sie Sie auf Laufwerk C: installieren.
+- Ausreichend freier Speicherplatz. Visual Studio benötigt mindestens 7 GB Speicherplatz und kann 50 GB oder mehr belegen, wenn viele gängige Optionen installiert sind. Es wird empfohlen, dass Sie diese auf Laufwerk C: installieren.
 
 Ausführliche Informationen zu Speicherplatz und Betriebssystemanforderungen finden Sie unter [Systemanforderungen der Visual Studio-Produktfamilie](/visualstudio/productinfo/vs2017-system-requirements-vs). Das Installationsprogramm meldet, wie viel Speicherplatz für die ausgewählten Optionen erforderlich ist.
 
@@ -155,19 +155,19 @@ Ausführliche Informationen zu Speicherplatz und Betriebssystemanforderungen fin
 
    ![Herunterladen und Installieren des Visual Studio-Installers](media/vscpp-concierge-run-installer.gif "Herunterladen und Installieren des Visual Studio-Installer")
 
-1. Der Installer bietet Ihnen eine Liste von Workloads, bei denen es sich um Gruppen von verwandten Optionen für bestimmte Entwicklungsbereiche handelt. Die unter C++ Stützung für ist nun Teil der optionalen Workloads, die nicht standardmäßig installiert werden.
+1. Der Installer bietet Ihnen eine Liste von Workloads, bei denen es sich um Gruppen von verwandten Optionen für bestimmte Entwicklungsbereiche handelt. Die C++-Unterstützung ist nun Teil von optionalen Workloads, die nicht standardmäßig installiert werden.
 
    !["Desktop-Entwicklung mit C++" Workload](media/desktop-development-with-cpp.png "Desktopentwicklung mit C++")
 
-   Wählen C++Sie für die **Desktop Entwicklung mit C++**  Arbeitsauslastung aus, und klicken Sie dann auf **Installieren**.
+   Wählen Sie für C++ die Workload **Desktopentwicklung mit C++** aus, und klicken Sie dann auf **Installieren**.
 
    ![Installieren der Desktop Entwicklung mit C++ Arbeitsauslastung](media/vscpp-concierge-choose-workload.gif "Installieren der Desktop Entwicklung mit C++ Arbeitsauslastung")
 
 1. Wenn die Installation abgeschlossen ist, klicken Sie auf die Schaltfläche **starten** , um Visual Studio zu starten.
 
-   Wenn Sie Visual Studio zum ersten Mal ausführen, werden Sie aufgefordert, sich mit einem Microsoft-Konto anzumelden. Wenn Sie über keins verfügen, können Sie es kostenloses erstellen. Sie müssen auch ein Design auswählen. Keine Sorge, Sie können Sie später ändern, wenn Sie möchten.
+   Wenn Sie Visual Studio zum ersten Mal ausführen, werden Sie aufgefordert, sich mit einem Microsoft-Konto anzumelden. Wenn Sie über kein Microsoft-Konto verfügen, können Sie kostenlos eines erstellen. Des Weiteren werden Sie aufgefordert, ein Design für den Editor auszuwählen. Keine Sorge, Sie können das Design später ändern, wenn Sie möchten.
 
-   Visual Studio kann einige Minuten dauern, bis die Anwendung zum ersten Mal ausgeführt wird. So sieht es in einem kurzen Zeitraum aus:
+   Es kann einige Minuten dauern, bis Visual Studio zum ersten Mal komplett geladen ist. So sieht es in einem kurzen Zeitraum aus:
 
    ![Visual Studio 2017-Anmeldung](media/vscpp-quickstart-first-run.gif "Visual Studio 2017-Anmeldung")
 
