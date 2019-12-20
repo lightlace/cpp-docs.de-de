@@ -1,5 +1,5 @@
 ---
-title: Mixing C (structured) and C++ exceptions
+title: Mischen von C (strukturiert) C++ und Ausnahmen
 ms.date: 08/14/2018
 helpviewer_keywords:
 - exceptions [C++], mixed C and C++
@@ -15,32 +15,32 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246459"
 ---
-# <a name="mixing-c-structured-and-c-exceptions"></a>Mixing C (structured) and C++ exceptions
+# <a name="mixing-c-structured-and-c-exceptions"></a>Mischen von C (strukturiert) C++ und Ausnahmen
 
-If you want to write portable code, the use of structured exception handling (SEH) in a C++ program isn't recommended. However, you may sometimes want to compile using [/EHa](../build/reference/eh-exception-handling-model.md) and mix structured exceptions and C++ source code, and need some facility for handling both kinds of exceptions. Because a structured exception handler has no concept of objects or typed exceptions, it can't handle exceptions thrown by C++ code. However, C++ **catch** handlers can handle structured exceptions. C++ exception handling syntax (**try**, **throw**, **catch**) isn't accepted by the C compiler, but structured exception handling syntax ( **__try**, **__except**, **__finally**) is supported by the C++ compiler.
+Wenn Sie portablen Code schreiben möchten, wird die Verwendung der strukturierten Ausnahmebehandlung (SEH) in C++ einem Programm nicht empfohlen. Möglicherweise möchten Sie jedoch mit [/EHa](../build/reference/eh-exception-handling-model.md) kompilieren und strukturierte Ausnahmen und C++ Quellcode mischen und einige Möglichkeiten für die Behandlung beider Arten von Ausnahmen benötigen. Da ein strukturierter Ausnahmehandler kein Konzept von Objekten oder typisierten Ausnahmen hat, kann er keine Ausnahmen verarbeiten C++ , die von Code ausgelöst werden. C++ Allerdings können **catch** -Handler strukturierte Ausnahmen verarbeiten. C++die Syntax für die Ausnahmebehandlung (**try**, **throw**, **catch**) wird vom C-Compiler nicht akzeptiert, aber die Syntax für die C++ strukturierte Ausnahmebehandlung ( **__try**, **__except** **__finally**) wird vom Compiler unterstützt.
 
-See [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) for information on how to handle structured exceptions as C++ exceptions.
+Informationen zur Behandlung strukturierter Ausnahmen als C++ Ausnahmen finden Sie unter [_set_se_translator](../c-runtime-library/reference/set-se-translator.md).
 
-If you mix structured and C++ exceptions, be aware of these potential issues:
+Wenn Sie strukturierte und C++ Ausnahmen miteinander mischen, beachten Sie diese potenziellen Probleme:
 
 - C++-Ausnahmen und strukturierte Ausnahmen können nicht in derselben Funktion kombiniert werden.
 
-- Termination handlers ( **__finally** blocks) are always executed, even during unwinding after an exception is thrown.
+- Beendigungs Handler ( **__finally** Blöcke) werden immer ausgeführt, auch während der Entwicklung, nachdem eine Ausnahme ausgelöst wurde.
 
-- C++ exception handling can catch and preserve unwind semantics in all modules compiled with the [/EH](../build/reference/eh-exception-handling-model.md) compiler options, which enable unwind semantics.
+- C++durch die Ausnahmebehandlung können Entlade Semantik in allen Modulen abgefangen und beibehalten werden, die mit den [/eh](../build/reference/eh-exception-handling-model.md) -Compileroptionen kompiliert werden, die eine Entlade Semantik ermöglichen.
 
-- Es kann Situationen geben, in denen Destruktorfunktionen nicht für alle Objekte aufgerufen werden. For example, if a structured exception occurs while attempting to make a function call through an uninitialized function pointer, and that function takes as parameters objects that were constructed before the call, the destructors of those objects are not called during stack unwind.
+- Es kann Situationen geben, in denen Destruktorfunktionen nicht für alle Objekte aufgerufen werden. Wenn z. b. eine strukturierte Ausnahme beim Versuch auftritt, einen Funktionsaufruf über einen nicht initialisierten Funktionszeiger durchführen, und diese Funktion als Parameter Objekte annimmt, die vor dem Aufruf erstellt wurden, werden die destrukturtoren dieser Objekte nicht aufgerufen. während der Stapel Entladung.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Using setjmp or longjmp in C++ programs](../cpp/using-setjmp-longjmp.md)
+- [Verwenden von setjmp oder longjmp C++ in Programmen](../cpp/using-setjmp-longjmp.md)
 
-  See more information on the use of `setjmp` and `longjmp` in C++ programs.
+  Weitere Informationen zur Verwendung von `setjmp` und `longjmp` in C++ Programmen finden Sie unter.
 
 - [Behandeln strukturierter Ausnahmen in C++](../cpp/exception-handling-differences.md)
 
-  See examples of the ways you can use C++ to handle structured exceptions.
+  Hier finden Sie Beispiele für die Vorgehensweise C++ , mit der Sie strukturierte Ausnahmen behandeln können.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[Moderne C++ bewährte Methoden für Ausnahmen und Fehlerbehandlung](../cpp/errors-and-exception-handling-modern-cpp.md)
