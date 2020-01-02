@@ -8,9 +8,9 @@ ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: a20a2432cbf8c4dc5f211f6f483c0084888f1199
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74857163"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Installieren der C++-Unterstützung in Visual Studio
