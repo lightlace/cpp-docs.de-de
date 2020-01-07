@@ -1,6 +1,6 @@
 ---
 title: putw
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - putw
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - putw function
 ms.assetid: a004fbb6-7643-4f3f-9ee1-87a23154d49a
-ms.openlocfilehash: f8ab564c3a342487fbc924c9e5680219217c4630
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5a704f458036f6fee87cf9932a4d7be1b6e7efd8
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950489"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300871"
 ---
 # <a name="putw"></a>putw
 
-Diese POSIX-Funktion ist veraltet. Verwenden Sie stattdessen die ISO C++-konforme Funktion [_putw](putw.md).
+Der Microsoft-spezifische Funktionsname `putw` ist ein als veraltet markierte Alias für die [_putw](putw.md) -Funktion. Standardmäßig wird eine [Compilerwarnung (Ebene 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)generiert. Der Name ist veraltet, da er nicht den Standard mäßigen C-Regeln für Implementierungs spezifische Namen folgt. Die-Funktion wird jedoch weiterhin unterstützt.
+
+Es wird empfohlen, stattdessen [_putw](putw.md) zu verwenden. Oder Sie können diesen Funktionsnamen weiterhin verwenden und die Warnung deaktivieren. Weitere Informationen finden Sie unter [Deaktivieren der Namen der Warnungs](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) -und [POSIX-Funktionen](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
