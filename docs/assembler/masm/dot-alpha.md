@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .ALPHA directive
 ms.assetid: 3f9d1386-6367-4cd7-a37f-2cd1cd46f2d7
-ms.openlocfilehash: b8af6309c00d1dfbbc33d9b672f90617fbec3867
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: fae7a6c7c621daf324a4de95d47ff128f837a8b7
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398603"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314158"
 ---
 # <a name="alpha-32-bit-masm"></a>. Alpha (32-Bit-MASM)
 
@@ -23,4 +23,5 @@ Sortiert Segmente alphabetisch. (nur 32-Bit-MASM.)
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+[Direktivenverweis](directives-reference.md)\
+[MASM-BNF-Grammatik](masm-bnf-grammar.md)
