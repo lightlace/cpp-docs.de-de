@@ -8,18 +8,18 @@ helpviewer_keywords:
 - bool keyword [C++]
 - __BOOL_DEFINED macro
 ms.assetid: 9abed3f2-d21c-4eb4-97c5-716342e613d8
-ms.openlocfilehash: e481cb9de7c80d147179efceab2fda9b160f3c21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3384bbb118c7363a603b5b9b0c8a375cb3dd185
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184276"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301625"
 ---
 # <a name="bool-c"></a>bool (C++)
 
-Dieses Schlüsselwort ist ein integrierter Typ. Eine Variable dieses Typs kann Werte haben ["true"](../cpp/true-cpp.md) und ["false"](../cpp/false-cpp.md). Bedingte Ausdrücke weisen den Typ **"bool"** und haben daher Werte vom Typ **"bool"**. Z. B. `i!=0` hat jetzt abhängig vom Wert "true" oder "false" `i`.
+Dieses Schlüsselwort ist ein integrierter Typ. Eine Variable dieses Typs kann die Werte [true](../cpp/true-cpp.md) und [false](../cpp/false-cpp.md)aufweisen. Bedingte Ausdrücke weisen den Typ **bool** auf und verfügen daher über Werte vom Typ **bool**. Beispielsweise ist `i!=0` jetzt "true" oder "false", abhängig vom Wert `i`.
 
-**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Der Operand eines Präfix oder Postfix-Inkrement oder Dekrement Operator möglicherweise nicht vom Typ **"bool"**. Angenommen, das heißt, eine Variable `b` des Typs **"bool"**, diese Ausdrücke sind nicht mehr erlaubt:
+**Visual Studio 2017 Version 15,3 und** höher (verfügbar mit [/Std: c++ 17](../build/reference/std-specify-language-standard-version.md)): der Operand eines Postfix-oder Präfix Inkrement-oder Dekrementoperators ist möglicherweise nicht vom Typ **bool**. Anders ausgedrückt: Wenn eine Variable `b` vom Typ " **bool**" ist, sind diese Ausdrücke nicht mehr zulässig:
 
 ```cpp
     b++;
@@ -28,7 +28,7 @@ Dieses Schlüsselwort ist ein integrierter Typ. Eine Variable dieses Typs kann W
     --b;
 ```
 
-Die Werte "true" und "false" haben folgende Beziehung:
+Die Werte "true" und "false" haben die folgende Beziehung:
 
 ```cpp
 !false == true
@@ -41,16 +41,16 @@ Betrachten Sie folgende Anweisung:
 if (condexpr1) statement1;
 ```
 
-Wenn `condexpr1` ist "true", `statement1` wird immer ausgeführt; Wenn `condexpr1` ist "false", `statement1` niemals ausgeführt.
+Wenn `condexpr1` true ist, wird `statement1` immer ausgeführt. Wenn `condexpr1` false ist, wird `statement1` nie ausgeführt.
 
-Wenn Sie einen Postfix- oder Präfix **++** Operator angewendet wird, um eine Variable vom Typ **"bool"**, die Variable auf "true" festgelegt ist.
-**Visual Studio 2017 Version 15.3 und höher**: "Operator++" für **"bool"** wurde von der Sprache entfernt und wird nicht mehr unterstützt.
+Wenn ein postfix-oder Präfix **++** -Operator auf eine Variable des Typs **bool**angewendet wird, wird die Variable auf true festgelegt.
+**Visual Studio 2017 Version 15,3 und**höher: Operator + + für **bool** wurde aus der Sprache entfernt und wird nicht mehr unterstützt.
 
-Der Postfix- oder Präfix **--** Operator kann nicht auf eine Variable dieses Typs angewendet werden.
+Der Postfix-oder Präfix **--** -Operator kann nicht auf eine Variable dieses Typs angewendet werden.
 
-Die **"bool"** Typ ganzzahligen Erweiterungen beteiligt. Ein rvalue vom Typ **"bool"** konvertiert werden kann, um einen Rvalue vom Typ **Int**, mit "false" immer 0 (null) und "true" 1. Als gesonderter Typ ist **"bool"** an der überladungsauflösung beteiligt ist.
+Der **bool** -Typ nimmt an ganzzahligen Erweiterungen Teil. Ein r-Wert des Typs " **bool** " kann in einen r-Wert vom Typ " **int**" konvertiert werden, wobei "false" 0 (null) und "true" ist. Als eindeutiger Typ nimmt **bool** an der Überladungs Auflösung Teil.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
-[Grundlegende Typen](../cpp/fundamental-types-cpp.md)
+[Stichwörter](../cpp/keywords-cpp.md)<br/>
+[Integrierte Typen](../cpp/fundamental-types-cpp.md)

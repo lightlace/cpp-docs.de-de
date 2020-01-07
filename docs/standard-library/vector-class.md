@@ -1,6 +1,6 @@
 ---
 title: vector-Klasse
-ms.date: 11/04/2016
+ms.date: 01/04/2020
 f1_keywords:
 - vector/std::vector::allocator_type
 - vector/std::vector::const_iterator
@@ -86,16 +86,16 @@ helpviewer_keywords:
 - std::vector [C++], size
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-ms.openlocfilehash: 5afcaddeb4b7a87b3f8845ce51752c6a77b12862
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 8c4284fecf09044ceab326d858d6ffccccdeaf45
+ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688716"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75676963"
 ---
 # <a name="vector-class"></a>vector-Klasse
 
-Die C++ Vektor Klasse der Standard Bibliothek ist eine Klassen Vorlage von Sequenz Containern, die Elemente eines bestimmten Typs in einer linearen Anordnung anordnen und schnellen zufälligen Zugriff auf jedes Element ermöglichen. Sie sollten der jeweils bevorzugte Container für eine Sequenz sein, wenn die Leistung mit wahlfreiem Zugriff ein wichtiger Faktor ist.
+Die C++ Vektor Klasse der Standard Bibliothek ist eine Klassen Vorlage für Sequenz Container. Ein Vektor speichert Elemente eines bestimmten Typs in einer linearen Anordnung und ermöglicht schnellen zufälligen Zugriff auf jedes Element. Ein Vektor ist der bevorzugte Container für eine Sequenz, wenn die Leistung mit Wahl freiem Zugriff eine Premium-Leistung ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -104,9 +104,9 @@ template <class Type, class Allocator = allocator<Type>>
 class vector
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-@No__t_1 *eingeben*
+*Typ*\
 Der im Vektor zu speichernde Elementdatentyp.
 
 *Zuordner\*
@@ -114,13 +114,13 @@ Der Typ, der das gespeicherte allocator-Objekt darstellt, das Details zum Belege
 
 ## <a name="remarks"></a>Hinweise
 
-Vektoren ermöglichen konstante Zeiteinfügungen und -löschungen am Ende der Sequenz. Für das Einfügen oder Löschen von Elementen in der Mitte eines Vektors ist lineare Zeit erforderlich. Der Container der [deque-Klasse](../standard-library/deque-class.md) ist in Bezug auf Einfügungen und Löschungen am Anfang und Ende einer Sequenz leistungsfähiger. Der Container der [list-Klasse](../standard-library/list-class.md) ist in Bezug auf Einfügungen und Löschungen an einer beliebigen Position innerhalb der Sequenz leistungsfähiger.
+Vektoren ermöglichen konstante Zeiteinfügungen und -löschungen am Ende der Sequenz. Für das Einfügen oder Löschen von Elementen in der Mitte eines Vektors ist lineare Zeit erforderlich. Der [Deque-Klassen](../standard-library/deque-class.md) Container ist bei Einfügungen und Löschungen am Anfang und Ende einer Sequenz schneller. Der [List-Klassen](../standard-library/list-class.md) Container ist bei Einfügungen und Löschungen an einer beliebigen Position innerhalb einer Sequenz schneller.
 
 Eine Speicherneubelegung für einen Vektor findet statt, wenn eine Memberfunktion die Sequenz, die in dem vector-Objekt enthalten ist, über dessen aktuelle Speicherkapazität hinaus vergrößern muss. Andere Einfügungen und Löschungen können verschiedene Speicheradressen innerhalb der Sequenz ändern. In allen diesen Fällen werden Iteratoren oder Verweise auf geänderte Teile der Sequenz ungültig. Wenn keine Neuzuordnung stattfindet, bleiben nur Iteratoren und Verweise vor dem Einfüge-/Löschpunkt gültig.
 
-Der [Vektor \<bool > Klasse](../standard-library/vector-bool-class.md) ist eine vollständige Spezialisierung des Klassen Vorlagen Vektors für Elemente des Typs "bool" mit einer Zuweisung für den zugrunde liegenden Typ, der von der Spezialisierung verwendet wird.
+Der [Vektor\<bool-> Klasse](../standard-library/vector-bool-class.md) ist eine vollständige Spezialisierung des Klassen Vorlagen Vektors für Elemente vom Typ `bool`. Sie verfügt über eine Zuweisung für den zugrunde liegenden Typ, der von der Spezialisierung verwendet wird.
 
-Die [vector\<bool> reference-Klasse](../standard-library/vector-bool-class.md#reference_class) ist eine geschachtelte Klasse, deren Objekte Verweise auf Elemente (einzelne Bits) in einem vector\<bool>-Objekt bereitstellen können.
+Der [Vektor\<bool > Reference-Klasse](../standard-library/vector-bool-class.md#reference_class) ist eine geschachtelte Klasse, deren Objekte Verweise auf Elemente (einzelne Bits) in einem Vektor\<booleschen > Objekt bereitstellen können.
 
 ## <a name="members"></a>Member
 
@@ -137,12 +137,12 @@ Die [vector\<bool> reference-Klasse](../standard-library/vector-bool-class.md#re
 |[allocator_type](#allocator_type)|Ein Typ, der die `allocator`-Klasse für das Vektorobjekt darstellt.|
 |[const_iterator](#const_iterator)|Ein Typ, der einen Iterator mit wahlfreiem Zugriff bereitstellt, mit dem ein **const**-Element in einem Vektor gelesen werden kann.|
 |[const_pointer](#const_pointer)|Ein Typ, der einen Zeiger auf ein **const**-Element in einem Vektor bereitstellt.|
-|[const_reference](#const_reference)|Ein Typ, der einen Verweis auf ein **const**-Element bereitstellt, das in einem Vektor zum Lesen und Ausführen von **const**-Vorgängen gespeichert ist.|
+|[const_reference](#const_reference)|Ein Typ, der einen Verweis auf ein in einem Vektor gespeichertes **Konstanten** Element bereitstellt. Sie wird zum Lesen und Ausführen von **Konstanten** Vorgängen verwendet.|
 |[const_reverse_iterator](#const_reverse_iterator)|Ein Typ, der einen Iterator mit direktem Zugriff bereitstellt, mit dem jedes **const**-Element im Vektor gelesen werden kann.|
 |[difference_type](#difference_type)|Ein Typ, der die Differenz zwischen den Adressen von zwei Elementen in einem Vektor bereitstellt.|
 |[Iterator](#iterator)|Ein Typ, der einen Iterator mit wahlfreiem Zugriff bereitstellt, mit dem jedes Element in einem Vektor gelesen oder geändert werden kann.|
 |[Zeiger](#pointer)|Ein Typ, der einen Zeiger auf ein Element in einem Vektor bereitstellt.|
-|[reference](#reference)|Ein Typ, der einen Verweis auf ein in einem Vektor gespeichertes Element bereitstellt.|
+|[Verweis](#reference)|Ein Typ, der einen Verweis auf ein in einem Vektor gespeichertes Element bereitstellt.|
 |[reverse_iterator](#reverse_iterator)|Ein Typ, der einen Iterator mit zufälligem Zugriff bereitstellt, mit dem jedes Element in einem umgekehrten Vektor gelesen oder geändert werden kann.|
 |[size_type](#size_type)|Ein Typ, der die Anzahl von Elementen in einem Vektor zählt.|
 |[value_type](#value_type)|Ein Typ, der den in einem Vektor gespeicherten Datentyp darstellt.|
@@ -153,7 +153,7 @@ Die [vector\<bool> reference-Klasse](../standard-library/vector-bool-class.md#re
 |-|-|
 |[assign](#assign)|Löscht einen Vektor und kopiert die angegebenen Elemente in den leeren Vektor.|
 |[at](#at)|Gibt einen Verweis auf das Element an einer angegebenen Position in dem Vektor zurück.|
-|[Rückseite](#back)|Gibt einen Verweis auf das letzte Element des Vektors zurück.|
+|[back](#back)|Gibt einen Verweis auf das letzte Element des Vektors zurück.|
 |[begin](#begin)|Gibt einen Iterator mit wahlfreiem Zugriff für das erste Element im Vektor zurück.|
 |[capacity](#capacity)|Gibt die Anzahl von Elementen zurück, die der Vektor enthalten kann, ohne zusätzlichen Speicher zuzuweisen.|
 |[cbegin](#cbegin)|Gibt einen const-Iterator mit wahlfreiem Zugriff für das erste Element im Vektor zurück.|
@@ -167,7 +167,7 @@ Die [vector\<bool> reference-Klasse](../standard-library/vector-bool-class.md#re
 |[leer](#empty)|Testet, ob der Vektorcontainer leer ist.|
 |[end](#end)|Gibt einen Iterator mit wahlfreiem Zugriff zurück, der auf das Ende des Vektors zeigt.|
 |[erase](#erase)|Entfernt ein Element oder eine Reihe von Elementen aus angegebenen Positionen in einem Vektor.|
-|[Vorderseite](#front)|Gibt einen Verweis auf das erste Element in einem Vektor zurück.|
+|[front](#front)|Gibt einen Verweis auf das erste Element in einem Vektor zurück.|
 |[get_allocator](#get_allocator)|Gibt ein Objekt an die `allocator`-Klasse zurück, das von einem Vektor verwendet wird.|
 |[insert](#insert)|Fügt ein Element oder eine Reihe von Elementen an einer angegebenen Position in den Vektor ein.|
 |[max_size](#max_size)|Gibt die Maximallänge des Vektors zurück.|
@@ -202,40 +202,40 @@ typedef Allocator allocator_type;
 
 ### <a name="example"></a>Beispiel
 
-In dem Beispiel für [get_allocator](#get_allocator) finden Sie ein Beispiel, das `allocator_type` verwendet.
+In dem Beispiel für [get_allocator](#get_allocator) finden Sie ein Beispiel, in dem `allocator_type` verwendet wird.
 
 ## <a name="assign"></a>einräumen
 
 Löscht einen Vektor und kopiert die angegebenen Elemente in den leeren Vektor.
 
 ```cpp
-void assign(size_type Count, const Type& Val);
-void assign(initializer_list<Type> IList);
+void assign(size_type count, const Type& value);
+void assign(initializer_list<Type> init_list);
 
 template <class InputIterator>
-void assign(InputIterator First, InputIterator Last);
+void assign(InputIterator first, InputIterator last);
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*Erste* \
+*erste*\
 Die Position des ersten Elements in dem zu kopierenden Elementbereich.
 
-*Letzter* \
+*Letzter*\
 Die Position des ersten Elements nach dem zu kopierenden Elementbereich.
 
-*Anzahl* \
+*Anzahl*\
 Die Anzahl von Kopien eines Elements, das in den Vektor eingefügt wird.
 
-*Val* -\
+*value*\
 Der Wert des Elements, das in den Vektor eingefügt wird.
 
-*IList* -\
+*init_list*\
 Das initializer_list-Element, in den die zu kopierenden Elemente eingefügt werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Nachdem ein vorhandenes Elemente in einem Vektor gelöscht wurde, wird entweder "Einfügen eines angegebenen Elementbereichs aus dem ursprünglichen Vektor in einen Vektor" oder "Einfügen von Kopien eines neuen Elements eines angegebenen Werts in einen Vektor" zugewiesen.
+Zuerst löscht `assign` alle vorhandenen Elemente in einem Vektor. `assign` fügt dann entweder einen angegebenen Bereich von Elementen aus dem ursprünglichen Vektor in einen Vektor ein oder fügt Kopien eines neuen angegebenen Wert Elements in einen Vektor ein.
 
 ### <a name="example"></a>Beispiel
 
@@ -289,23 +289,23 @@ int main()
 Gibt einen Verweis auf das Element an einer angegebenen Position in dem Vektor zurück.
 
 ```cpp
-reference at(size_type _Pos);
+reference at(size_type position);
 
-const_reference at(size_type _Pos) const;
+const_reference at(size_type position) const;
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*_Pos* \
+*Positions*\
 Dier Feldindex oder Positionsnummer des Elements, das auf den Vektor verweisen soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Verweis auf das Element, das im Argument indiziert ist. Wenn `_Off` größer ist als die Größe des Vektors, löst `at` eine Ausnahme aus.
+Ein Verweis auf das Element, das im Argument indiziert ist. Wenn die *Position* größer als die Größe des Vektors ist, löst `at` eine Ausnahme aus.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn `at` dem Rückgabewert von `const_reference` zugewiesen wird, kann das Vektorobjekt nicht geändert werden. Wenn `at` dem Rückgabewert von `reference` zugewiesen wird, kann das Vektorobjekt geändert werden.
+Wenn der Rückgabewert von `at` einem `const_reference`zugewiesen wird, kann das Vektor Objekt nicht geändert werden. Wenn `at` dem Rückgabewert von `reference` zugewiesen wird, kann das Vektorobjekt geändert werden.
 
 ### <a name="example"></a>Beispiel
 
@@ -351,9 +351,9 @@ Das letzte Element des Vektors. Wenn der Vektor leer ist, ist der Rückgabewert 
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn `back` dem Rückgabewert von `const_reference` zugewiesen wird, kann das Vektorobjekt nicht geändert werden. Wenn `back` dem Rückgabewert von `reference` zugewiesen wird, kann das Vektorobjekt geändert werden.
+Wenn der Rückgabewert von `back` einem `const_reference`zugewiesen wird, kann das Vektor Objekt nicht geändert werden. Wenn `back` dem Rückgabewert von `reference` zugewiesen wird, kann das Vektorobjekt geändert werden.
 
-Wenn [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) beim Kompilieren als 1 oder 2 definiert ist, tritt beim Zugriff auf ein Element in einem leeren Vektor ein Laufzeitfehler auf.  Weitere Informationen finden Sie unter [Überprüfte Iteratoren](../standard-library/checked-iterators.md) .
+Wenn [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) beim Kompilieren als 1 oder 2 definiert ist, tritt beim Zugriff auf ein Element in einem leeren Vektor ein Laufzeitfehler auf. Weitere Informationen finden Sie unter über [prüfte Iteratoren](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -391,11 +391,11 @@ iterator begin();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Iterator mit direktem Zugriff, der das erste Element im `vector` adressiert oder auf die Position zeigt, der auf einen leeren `vector` folgt. Sie sollten den Rückgabewert immer mit [vector::end](#end) vergleichen, um sicherzustellen, dass er gültig ist.
+Ein Iterator mit direktem Zugriff, der das erste Element im `vector` adressiert oder auf die Position zeigt, der auf einen leeren `vector` folgt. Vergleichen Sie immer den mit [Vector:: End](#end) zurückgegebenen Wert, um sicherzustellen, dass er gültig ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der Rückgabewert von `begin` einem [vector::const_iterator](#const_iterator) zugewiesen wird, kann das `vector`-Objekt nicht geändert werden. Wenn dem Rückgabewert `begin` einem [vector::iterator](#iterator) zugewiesen wird, kann das `vector`-Objekt geändert werden.
+Wenn der Rückgabewert von `begin` einem [Vector:: const_iterator](#const_iterator)zugewiesen wird, kann das `vector` Objekt nicht geändert werden. Wenn dem Rückgabewert `begin` einem [vector::iterator](#iterator) zugewiesen wird, kann das `vector`-Objekt geändert werden.
 
 ### <a name="example"></a>Beispiel
 
@@ -500,9 +500,9 @@ Ein **konstanter** Random-Access-Iterator, der auf das erste Element des Bereich
 
 ### <a name="remarks"></a>Hinweise
 
-Bei dem Rückgabewert `cbegin` können die Elemente im Bereich nicht geändert werden.
+Mit dem Rückgabewert `cbegin`können die Elemente im Bereich nicht geändert werden.
 
-Sie können diese Memberfunktion anstelle der `begin()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. In diesem Beispiel sollten `Container` ein änderbarer (nicht **konstanter) Container**sein, der `begin()` und `cbegin()` unterstützt.
+Sie können diese Memberfunktion anstelle der `begin()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. In diesem Beispiel sollten `Container` ein änderbarer (nicht **konstanter) Container**sein, der `begin()` und `cbegin()`unterstützt.
 
 ```cpp
 auto i1 = Container.begin();
@@ -528,7 +528,7 @@ Ein **konstanter** Random-Access-Iterator, der direkt hinter das Ende des Bereic
 
 `cend` wird verwendet, um zu testen, ob ein Iterator das Ende seines Bereichs übergeben hat.
 
-Sie können diese Memberfunktion anstelle der `end()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. In diesem Beispiel sollten `Container` ein änderbarer (nicht **konstanter) Container**sein, der `end()` und `cend()` unterstützt.
+Sie können diese Memberfunktion anstelle der `end()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. In diesem Beispiel sollten `Container` ein änderbarer (nicht **konstanter) Container**sein, der `end()` und `cend()`unterstützt.
 
 ```cpp
 auto i1 = Container.end();
@@ -538,7 +538,7 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-Der von `cend` zurückgegebene Wert darf nicht dereferenziert werden.
+Der von `cend` zurückgegebene Wert darf nicht dereferenziert werden. Verwenden Sie Sie nur für Vergleiche.
 
 ## <a name="clear"></a>Klartext
 
@@ -586,7 +586,7 @@ typedef implementation-defined const_iterator;
 
 ### <a name="remarks"></a>Hinweise
 
-Ein `const_iterator`-Typ kann nicht zum Ändern des Werts eines Elements verwendet werden.
+Ein Typ `const_iterator` kann nicht zum Ändern des Werts eines Elements verwendet werden.
 
 ### <a name="example"></a>Beispiel
 
@@ -602,13 +602,13 @@ typedef typename Allocator::const_pointer const_pointer;
 
 ### <a name="remarks"></a>Hinweise
 
-Ein `const_pointer`-Typ kann nicht zum Ändern des Werts eines Elements verwendet werden.
+Ein Typ `const_pointer` kann nicht zum Ändern des Werts eines Elements verwendet werden.
 
 Ein [Iterator](#iterator) wird häufiger für den Zugriff auf ein Vektorelement verwendet.
 
 ## <a name="const_reference"></a>const_reference
 
-Ein Typ, der einen Verweis auf ein **const**-Element bereitstellt, das in einem Vektor zum Lesen und Ausführen von **const**-Vorgängen gespeichert ist.
+Ein Typ, der einen Verweis auf ein in einem Vektor gespeichertes **Konstanten** Element bereitstellt. Sie wird zum Lesen und Ausführen von **Konstanten** Vorgängen verwendet.
 
 ```cpp
 typedef typename Allocator::const_reference const_reference;
@@ -616,7 +616,7 @@ typedef typename Allocator::const_reference const_reference;
 
 ### <a name="remarks"></a>Hinweise
 
-Ein `const_reference`-Typ kann nicht zum Ändern des Werts eines Elements verwendet werden.
+Ein Typ `const_reference` kann nicht zum Ändern des Werts eines Elements verwendet werden.
 
 ### <a name="example"></a>Beispiel
 
@@ -660,7 +660,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 ### <a name="remarks"></a>Hinweise
 
-Ein `const_reverse_iterator`-Typ kann nicht den Wert eines Elements ändern und wird verwendet, um den Vektor in umgekehrter Reihenfolge zu durchlaufen.
+Ein Typ `const_reverse_iterator` kann den Wert eines Elements nicht ändern und wird verwendet, um den Vektor in umgekehrter Reihenfolge zu durchlaufen.
 
 ### <a name="example"></a>Beispiel
 
@@ -680,7 +680,7 @@ Ein umgekehrter const-Iterator mit direktem Zugriff, mit dem das erste Element i
 
 ### <a name="remarks"></a>Hinweise
 
-Bei dem Rückgabewert von `crbegin` kann das `vector`-Objekt nicht geändert werden.
+Mit dem Rückgabewert `crbegin`kann das `vector` Objekt nicht geändert werden.
 
 ### <a name="example"></a>Beispiel
 
@@ -731,11 +731,11 @@ Ein const_reverse-Iterator mit direktem Zugriff, mit dem die Position adressiert
 
 `crend` wird bei einem umgekehrten `vector` auf die gleiche Weise verwendet, wie [vector::cend](#cend) bei einem `vector` verwendet wird.
 
-Mit dem Rückgabewert von `crend` (entsprechend verringert) kann das `vector`-Objekt nicht geändert werden.
+Mit dem Rückgabewert `crend` (entsprechend dekrementiert) kann das `vector` Objekt nicht geändert werden.
 
 `crend` kann verwendet werden, um zu testen, ob das Ende der `vector` von einem umgekehrten Iterator erreicht wurde.
 
-Der von `crend` zurückgegebene Wert darf nicht dereferenziert werden.
+Der von `crend` zurückgegebene Wert darf nicht dereferenziert werden. Verwenden Sie Sie nur für Vergleiche.
 
 ### <a name="example"></a>Beispiel
 
@@ -882,18 +882,19 @@ The number '30' is in c1 collection 3 times.
 Fügt ein direkt konstruiertes Element an einer angegebenen Position in den Vektor ein.
 
 ```cpp
+template <class... Types>
 iterator emplace(
-    const_iterator _Where,
-    Type&& val);
+    const_iterator position,
+    Types&&... args);
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*_Where* \
+*Positions*\
 Die Position im [vector](../standard-library/vector-class.md), an der das erste Element eingefügt wird.
 
-*Val* -\
-Der Wert des Elements, das in den `vector` eingefügt wird.
+*args*\
+Konstruktorargumente Die Funktion leitet auf Grundlage der bereitgestellten Argumente die erforderliche die Konstruktorüberladung ab.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -901,7 +902,7 @@ Die Funktion gibt einen Iterator zurück, der auf den Speicherort zeigt, an dem 
 
 ### <a name="remarks"></a>Hinweise
 
-Einfügevorgänge können sehr speicherintensiv sein. Eine Abhandlung zur Leistung von `vector` finden Sie unter [vector-Klasse](../standard-library/vector-class.md).
+Jeder Einfügevorgang kann kostspielig sein. eine Erörterung der `vector` Leistung finden Sie unter [Vector-Klasse](../standard-library/vector-class.md) .
 
 ### <a name="example"></a>Beispiel
 
@@ -951,12 +952,12 @@ Fügt ein direkt konstruiertes Element am Ende des Vektors ein.
 
 ```cpp
 template <class... Types>
-void emplace_back(Types&&... _Args);
+void emplace_back(Types&&... args);
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*_Args* \
+*args*\
 Konstruktorargumente Die Funktion leitet auf Grundlage der bereitgestellten Argumente die erforderliche die Konstruktorüberladung ab.
 
 ### <a name="example"></a>Beispiel
@@ -985,7 +986,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-**TRUE**, wenn der Vektor leer ist; **FALSE**, wenn der Vektor nicht leer ist.
+**true** , wenn der Vektor leer ist. **false** , wenn der Vektor nicht leer ist.
 
 ### <a name="example"></a>Beispiel
 
@@ -1025,11 +1026,11 @@ const_iterator end() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der "past-the-end"-Iterator für den Vektor. Wenn der Vektor leer ist, dann gilt `vector::end() == vector::begin()`.
+Der "past-the-end"-Iterator für den Vektor. Wenn der Vektor leer ist, `vector::end() == vector::begin()`.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der Rückgabewert von `end` einer Variablen vom Typ "`const_iterator`" zugewiesen wird, kann das Vektor Objekt nicht geändert werden. Wenn der Rückgabewert von `end` einer Variablen vom Typ `iterator` zugewiesen wird, kann das Vektor Objekt geändert werden.
+Wenn der Rückgabewert von `end` einer Variablen vom Typ "`const_iterator`" zugewiesen wird, kann das Vektor Objekt nicht geändert werden. Wenn der Rückgabewert von `end` einer Variablen vom Typ `iterator`zugewiesen wird, kann das Vektor Objekt geändert werden.
 
 ### <a name="example"></a>Beispiel
 
@@ -1063,22 +1064,22 @@ Entfernt ein Element oder eine Reihe von Elementen aus angegebenen Positionen in
 
 ```cpp
 iterator erase(
-    const_iterator _Where);
+    const_iterator position);
 
 iterator erase(
     const_iterator first,
     const_iterator last);
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*_Where* \
+*Positions*\
 Die Position des von dem Vektor zu entfernenden Elements.
 
-*erste* \
+*erste*\
 Die Position des ersten Elements, das von dem Vektor entfernt werden soll.
 
-*Letzter* \
+*Letzter*\
 Die Position direkt hinter dem letzten von dem Vektor entfernten Element.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1146,9 +1147,9 @@ Ein Verweis auf das erste Element im Vektorobjekt. Wenn der Vektor leer ist, ist
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn `front` dem Rückgabewert von `const_reference` zugewiesen wird, kann das Vektorobjekt nicht geändert werden. Wenn der Rückgabewert von `front` einem **reference** zugewiesen wird, kann das Vektorobjekt geändert werden.
+Wenn der Rückgabewert von `front` einem `const_reference`zugewiesen wird, kann das Vektor Objekt nicht geändert werden. Wenn der Rückgabewert von `front` einem **reference** zugewiesen wird, kann das Vektorobjekt geändert werden.
 
-Wenn [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) beim Kompilieren als 1 oder 2 definiert ist, tritt beim Zugriff auf ein Element in einem leeren Vektor ein Laufzeitfehler auf.  Weitere Informationen finden Sie unter [Überprüfte Iteratoren](../standard-library/checked-iterators.md) .
+Wenn [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) beim Kompilieren als 1 oder 2 definiert ist, tritt beim Zugriff auf ein Element in einem leeren Vektor ein Laufzeitfehler auf. Weitere Informationen finden Sie unter über [prüfte Iteratoren](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -1190,7 +1191,7 @@ Die von dem Vektor verwendete Zuweisung.
 
 ### <a name="remarks"></a>Hinweise
 
-Zuweisungen für die Vektorklasse geben an, wie die Klasse einen Speicher verwaltet. Für die meisten Programmieranforderungen reichen die Standardzuweisungen mit C++-Standardbibliothek-Container-Klassen aus. Schreiben und Verwenden Ihrer eigener Zuweisungsklasse ist ein C++ -Thema für Fortgeschrittene.
+Zuweisungen für die Vektorklasse geben an, wie die Klasse einen Speicher verwaltet. Für die meisten Programmieranforderungen reichen die Standard-Zuweisungen aus C++-Standardbibliothek-Containerklassen aus. Das Schreiben und verwenden ihrer eigenen zuordnerklasse ist C++ eine erweiterte Funktion.
 
 ### <a name="example"></a>Beispiel
 
@@ -1217,44 +1218,44 @@ int main( )
 
 ## <a name="insert"></a>setze
 
-Fügt ein Element oder mehrere Elemente oder ein Reihe von Elementen an einer bestimmten Position in den Vektor ein.
+Fügt ein Element, mehrere Elemente oder einen Bereich von Elementen an einer angegebenen Position in den Vektor ein.
 
 ```cpp
 iterator insert(
-    const_iterator _Where,
-    const Type& val);
+    const_iterator position,
+    const Type& value);
 
 iterator insert(
-    const_iterator _Where,
-    Type&& val);
+    const_iterator position,
+    Type&& value);
 
 void insert(
-    const_iterator _Where,
+    const_iterator position,
     size_type count,
-    const Type& val);
+    const Type& value);
 
 template <class InputIterator>
 void insert(
-    const_iterator _Where,
+    const_iterator position,
     InputIterator first,
     InputIterator last);
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*_Where* \
+*Positions*\
 Die Position in dem Vektor, an der das erste Element eingefügt wird.
 
-*Val* -\
+*value*\
 Der Wert des Elements, das in den Vektor eingefügt wird.
 
-*Anzahl* \
+*Anzahl*\
 Die Anzahl von Elementen, die in den Vektor eingefügt werden.
 
-*erste* \
+*erste*\
 Die Position des ersten Elements in dem zu kopierenden Elementbereich.
 
-*Letzter* \
+*Letzter*\
 Die Position des ersten Elements nach dem zu kopierenden Elementbereich.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1263,7 +1264,7 @@ Die ersten zwei `insert`-Funktionen geben einen Iterator zurück, der auf den Sp
 
 ### <a name="remarks"></a>Hinweise
 
-Als Vorbedingung dürfen *First* und *Last* keine Iteratoren in den Vektor sein, oder das Verhalten ist nicht definiert. Einfügevorgänge können sehr speicherintensiv sein. Eine Abhandlung zur Leistung von `vector` finden Sie unter [vector-Klasse](../standard-library/vector-class.md).
+Als Vorbedingung dürfen *First* und *Last* keine Iteratoren in den Vektor sein, oder das Verhalten ist nicht definiert. Jeder Einfügevorgang kann kostspielig sein. eine Erörterung der `vector` Leistung finden Sie unter [Vector-Klasse](../standard-library/vector-class.md) .
 
 ### <a name="example"></a>Beispiel
 
@@ -1381,14 +1382,14 @@ int main( )
 Gibt einen Verweis auf das Vektorelement an einer angegebenen Position zurück.
 
 ```cpp
-reference operator[](size_type Pos);
+reference operator[](size_type position);
 
-const_reference operator[](size_type Pos) const;
+const_reference operator[](size_type position) const;
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*POS* -\
+*Positions*\
 Die Position des angegebenen Vektorelements.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1397,9 +1398,9 @@ Wenn die angegebene Position größer oder gleich der Größe des Containers ist
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn `operator[]` dem Rückgabewert von `const_reference` zugewiesen wird, kann das Vektorobjekt nicht geändert werden. Wenn der Rückgabewert von `operator[]` einem Verweis zugewiesen wird, kann das Vektorobjekt geändert werden.
+Wenn der Rückgabewert von `operator[]` einem `const_reference`zugewiesen wird, kann das Vektor Objekt nicht geändert werden. Wenn der Rückgabewert von `operator[]` einem Verweis zugewiesen wird, kann das Vektorobjekt geändert werden.
 
-Wenn [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) beim Kompilieren als 1 oder 2 definiert ist, tritt beim Zugriff auf ein Element außerhalb des Vektorobjekts ein Laufzeitfehler auf.  Weitere Informationen finden Sie unter [Überprüfte Iteratoren](../standard-library/checked-iterators.md) .
+Wenn [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) beim Kompilieren als 1 oder 2 definiert ist, tritt beim Zugriff auf ein Element außerhalb des Vektorobjekts ein Laufzeitfehler auf. Weitere Informationen finden Sie unter über [prüfte Iteratoren](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -1432,14 +1433,14 @@ vector& operator=(const vector& right);
 vector& operator=(vector&& right);
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*Rechte* \
+*Rechte*\
 Der [vector](../standard-library/vector-class.md), der in den `vector` kopiert wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Nachdem alle vorhandenen Elemente in einem `vector` gelöscht wurden, `operator=` entweder kopiert oder verschiebt den Inhalt von *right* in den `vector`.
+Nachdem alle vorhandenen Elemente in einem `vector`gelöscht wurden, `operator=` entweder kopiert oder verschiebt den Inhalt von *right* in den `vector`.
 
 ### <a name="example"></a>Beispiel
 
@@ -1492,7 +1493,7 @@ typedef typename Allocator::pointer pointer;
 
 ### <a name="remarks"></a>Hinweise
 
-Ein **pointer**-Typ kann zum Ändern des Werts eines Elements verwendet werden.
+Ein Typ **pointer** kann zum Ändern des Werts eines Elements verwendet werden.
 
 ### <a name="example"></a>Beispiel
 
@@ -1541,14 +1542,14 @@ Ein Codebeispiel finden Sie unter [vector::push_back()](#push_back).
 Fügt ein Element am Ende des Vektors hinzu.
 
 ```cpp
-void push_back(const T& Val);
+void push_back(const T& value);
 
-void push_back(T&& Val);
+void push_back(T&& value);
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*Val* -\
+*value*\
 Der Wert, der dem am Ende des Vektors hinzugefügten Element zugewiesen werden soll.
 
 ### <a name="example"></a>Beispiel
@@ -1606,7 +1607,7 @@ Ein umgekehrter Iterator mit direktem Zugriff, mit dem das erste Element in eine
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn `rbegin` dem Rückgabewert von `const_reverse_iterator` zugewiesen wird, kann das Vektorobjekt nicht geändert werden. Wenn `rbegin` dem Rückgabewert von `reverse_iterator` zugewiesen wird, kann das Vektorobjekt geändert werden.
+Wenn der Rückgabewert von `rbegin` einem `const_reverse_iterator`zugewiesen wird, kann das Vektor Objekt nicht geändert werden. Wenn `rbegin` dem Rückgabewert von `reverse_iterator` zugewiesen wird, kann das Vektorobjekt geändert werden.
 
 ### <a name="example"></a>Beispiel
 
@@ -1670,11 +1671,11 @@ Ein umgekehrter Iterator mit direktem Zugriff, mit dem die Position adressiert w
 
 `rend` wird bei einem umgekehrten Vektor auf die gleiche Weise verwendet, wie [end](#end) bei einem Vektor verwendet wird.
 
-Wenn `rend` dem Rückgabewert von `const_reverse_iterator` zugewiesen wird, kann das Vektorobjekt nicht geändert werden. Wenn `rend` dem Rückgabewert von `reverse_iterator` zugewiesen wird, kann das Vektorobjekt geändert werden.
+Wenn der Rückgabewert von `rend` einem `const_reverse_iterator`zugewiesen wird, kann das Vektor Objekt nicht geändert werden. Wenn `rend` dem Rückgabewert von `reverse_iterator` zugewiesen wird, kann das Vektorobjekt geändert werden.
 
 `rend` kann verwendet werden, um zu testen, ob das Ende des Vektors von einem umgekehrten Iterator erreicht wurde.
 
-Der von `rend` zurückgegebene Wert darf nicht dereferenziert werden.
+Der von `rend` zurückgegebene Wert darf nicht dereferenziert werden. Verwenden Sie Sie nur für Vergleiche.
 
 ### <a name="example"></a>Beispiel
 
@@ -1711,9 +1712,9 @@ Reserviert eine Mindestlänge von Speicher für ein Vektorobjekt und weist Speic
 void reserve(size_type count);
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*Anzahl* \
+*Anzahl*\
 Die minimale Speicherlänge, die für für den Vektor zugeordnet werden soll.
 
 ### <a name="example"></a>Beispiel
@@ -1749,21 +1750,21 @@ Current capacity of v1 = 20
 Gibt eine neue Größe für einen Vektor an.
 
 ```cpp
-void resize(size_type Newsize);
-void resize(size_type Newsize, Type Val);
+void resize(size_type new_size);
+void resize(size_type new_size, Type value);
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*NewSize* -\
+*new_size*\
 Die neue Größe des Vektors.
 
-*Val* -\
+*value*\
 Der Initialisierungswert für neue Elemente, der zum Vektor hinzugefügt wird, wenn die neue Größe die Originalgröße übersteigt. Wenn der Wert ausgelassen wird, verwenden die neuen Objekte ihren Standardkonstruktor.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn die Größe des Containers kleiner ist als die angeforderte Größe, werden dem Vektor *neue*Elemente hinzugefügt, bis die angeforderte Größe erreicht wird. Wenn die Größe des Containers größer ist als die angeforderte Größe, werden die Elemente, die dem Ende des Containers am nächsten sind, gelöscht, bis der Container die Größe *newSize*erreicht. Wenn die tatsächliche Größe des Containers der angeforderten Größe entspricht, wird keine Aktion durchgeführt.
+Wenn die Größe des Containers kleiner als die angeforderte Größe ist, *new_size*`resize` dem Vektor Elemente hinzu, bis die angeforderte Größe erreicht ist. Wenn die Größe des Containers die angeforderte Größe überschreitet, löscht `resize` die Elemente, die dem Ende des Containers am nächsten sind, bis er die Größe *new_size*erreicht. Wenn die aktuelle Größe des Containers der angeforderten Größe entspricht, wird keine Aktion ausgeführt.
 
 [size](#size) gibt die aktuelle Größe des Vektors an.
 
@@ -1889,7 +1890,7 @@ Ein `reverse_iterator`-Typ wird verwendet, um den Vektor in umgekehrter Reihenfo
 
 Ein Beispiel hierfür finden Sie unter [rbegin](#rbegin).
 
-## <a name="shrink_to_fit"></a>shrink_to_fit
+## <a name="shrink_to_fit"></a> shrink_to_fit
 
 Verwirft Überkapazität.
 
@@ -1995,13 +1996,13 @@ friend void swap(
     vector<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*Rechte* \
-Ein Vektor, der die auszutauschenden Elemente bereitstellt, oder ein Vektor, dessen Elemente mit denen des Vektors nach *Links*ausgetauscht werden sollen.
+*Rechte*\
+Ein Vektor, der die auszutauschenden Elemente bereitstellt. Oder ein Vektor, dessen Elemente mit den Elementen im Vektor nach *Links*ausgetauscht werden sollen.
 
-*Linker* \
-Ein Vektor, dessen Elemente mit denen des Vektor *Rechts*ausgetauscht werden sollen.
+*Linker*\
+Ein Vektor, dessen Elemente mit den Elementen im Vektor *Rechts*ausgetauscht werden sollen.
 
 ### <a name="example"></a>Beispiel
 
@@ -2077,65 +2078,65 @@ int main( )
 
 ## <a name="vector"></a>ve
 
-Erstellt einen Vektor einer bestimmten Größe bzw. mit Elementen eines bestimmten Werts oder mit einer bestimmten Zuweisung oder als vollständige bzw. teilweise Kopie eines anderen Vektors.
+Erstellt einen Vektor. Über Ladungen erstellen einen Vektor einer bestimmten Größe oder mit Elementen eines bestimmten Werts. Oder als Kopie eines ganz oder teilweise eines anderen Vektors. Bei einigen über Ladungen können Sie auch die zu verwendende Zuweisung angeben.
 
 ```cpp
 vector();
-explicit vector(const Allocator& Al);
-explicit vector(size_type Count);
-vector(size_type Count, const Type& Val);
-vector(size_type Count, const Type& Val, const Allocator& Al);
+explicit vector(const Allocator& allocator);
+explicit vector(size_type count);
+vector(size_type count, const Type& value);
+vector(size_type count, const Type& value, const Allocator& allocator);
 
-vector(const vector& Right);
-vector(vector&& Right);
-vector(initializer_list<Type> IList, const _Allocator& Al);
+vector(const vector& source);
+vector(vector&& source);
+vector(initializer_list<Type> init_list, const Allocator& allocator);
 
 template <class InputIterator>
-vector(InputIterator First, InputIterator Last);
+vector(InputIterator first, InputIterator last);
 template <class InputIterator>
-vector(InputIterator First, InputIterator Last, const Allocator& Al);
+vector(InputIterator first, InputIterator last, const Allocator& allocator);
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*Al* -\
+*Zuordner\*
 Die mit diesem Objekt zu verwendende Zuweisungsklasse. [get_allocator](#get_allocator) gibt die Zuweisungsklasse für das Objekt zurück.
 
-*Anzahl* \
+*Anzahl*\
 Die Anzahl der Elemente im erstellten Vektor.
 
-*Val* -\
+*value*\
 Der Wert der Elemente im erstellten Vektor.
 
-*Rechte* \
+*Quell*\
 Der Vektor, dessen Kopie der erstellte Vektor ist.
 
-*Erste* \
+*erste*\
 Die Position des ersten Elements in dem zu kopierenden Elementbereich.
 
-*Letzter* \
+*Letzter*\
 Die Position des ersten Elements nach dem zu kopierenden Elementbereich.
 
-*IList* -\
-Das initializer_list-Element, in dem die zu kopierenden Elemente enthalten sind.
+*init_list*\
+Die `initializer_list`, die die zu Kopier-Elemente enthält.
 
 ### <a name="remarks"></a>Hinweise
 
-Alle Konstruktoren speichern ein*Zuordnungs*Objekt (Al) und initialisieren den Vektor.
+Alle Konstruktoren speichern ein zuordnerobjekt (*Zuweisung*) und initialisieren den Vektor.
 
-Die ersten beiden Konstruktoren geben einen leeren ursprünglichen Vektor an. Der zweite gibt explizit den zu verwendenden zuordnertyp (*Al*) an.
+Die ersten beiden Konstruktoren geben einen leeren ursprünglichen Vektor an. Der zweite Konstruktor gibt explizit den zu verwendenden zuordnertyp (*zuordnertyp*) an.
 
-Der dritte Konstruktor gibt eine Wiederholung einer angegebenen*Anzahl (Anzahl*) von Elementen des Standardwerts für die Klasse `Type` an.
+Der dritte Konstruktor gibt eine Wiederholung einer angegebenen*Anzahl (Anzahl*) von Elementen des Standardwerts für die Klasse `Type`an.
 
-Der vierte und fünfte Konstruktoren geben eine Wiederholung der (*count*) Elemente des Werts *Val*an.
+Der vierte und fünfte Konstruktoren geben eine Wiederholung der (*count*) Elemente des Wert *Werts an.*
 
-Der sechste Konstruktor gibt eine Kopie des Vektor *Rechts*an.
+Der sechste Konstruktor gibt eine Kopie der Vektor *Quelle*an.
 
-Der siebte Konstruktor verschiebt den Vektor nach *Rechts*.
+Der siebte Konstruktor verschiebt die Vektor *Quelle*.
 
 Beim achten Konstruktor wird zum Angeben des Elements ein initializer_list-Element verwendet.
 
-Mit den neunten und zehnten Konstruktoren wird der Bereich [`First`, `Last`) eines Vektors kopiert.
+Mit den neunten und zehnten Konstruktoren wird der Bereich [`first`, `last`) eines Vektors kopiert.
 
 ### <a name="example"></a>Beispiel
 
@@ -2234,5 +2235,5 @@ v1 = 0 0 0v2 = 2 2 2 2 2v3 = 1 1 1v4 = 2 2 2 2 2v5 = 0 1 2 3 4v6 = 1 2v7 = 2 2 2
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

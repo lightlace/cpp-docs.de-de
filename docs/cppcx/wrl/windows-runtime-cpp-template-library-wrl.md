@@ -3,12 +3,12 @@ title: Windows Runtime C++ Template Library (WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 7a7b37a32ebaa0bb6ad71c8f710300256589388d
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: 41b8b45f89e94b8de2ddcb9c87bfd72122db8e1a
+ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541202"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75676937"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows Runtime C++ Template Library (WRL)
 
@@ -147,5 +147,5 @@ Ein `WeakRef` -Objekt stellt in der Regel ein Objekt dar, dessen Vorhandensein v
 |-|-|
 |[Schlüssel-APIs nach Kategorie](key-wrl-apis-by-category.md)|Hebt die primären Windows-Runtime C++ Vorlagen Bibliothekstypen,-Funktionen und-Makros hervor.|
 |[Verweis](wrl-reference.md)|Enthält Referenzinformationen für die Windows-Runtime C++ Vorlagen Bibliothek.|
-|[Kurzübersicht C++/CX)](../../cppcx/quick-reference-c-cx.md)|Beschreibt kurz die C++/CX-Funktionen, die die Windows-Runtime unterstützen.|
+|[Kurzreferenz (C++-CX)](../../cppcx/quick-reference-c-cx.md)|Beschreibt kurz die C++/CX-Funktionen, die die Windows-Runtime unterstützen.|
 |[Verwenden von Windows-Runtime Komponenten in VisualC++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Zeigt, wie/CX C++verwendet wird, um eine grundlegende Windows-Runtime-Komponente zu erstellen.|

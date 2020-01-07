@@ -1,25 +1,25 @@
 ---
 title: ALIGN (MASM)
-ms.date: 01/02/2019
+ms.date: 12/17/2019
 f1_keywords:
 - align
 helpviewer_keywords:
 - ALIGN directive
 ms.assetid: 1c386b23-439f-4ec3-a6de-74427b25e47f
-ms.openlocfilehash: 22b18f2e238c780377b84fc2be3eb6678686bb73
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 700721768deaf92e88b32a97e68c6e017219d19d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74399277"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316589"
 ---
-# <a name="align-masm"></a>ALIGN (MASM)
+# <a name="align"></a>ALIGN
 
 Die **align** -Direktive richtet das nächste Datenelement oder die Anweisung an eine Adresse aus, die ein Vielfaches des Parameters ist. Der-Parameter muss eine Potenz von 2 (z. b. 1, 2, 4 usw.) sein, die kleiner oder gleich der Segment Ausrichtung ist.
 
 ## <a name="syntax"></a>Syntax
 
-> ⟦-*Nummer* **Ausrichten** ⟧
+> **Align** ⟦*ConstantExpression*⟧
 
 ## <a name="remarks"></a>Hinweise
 
@@ -32,4 +32,5 @@ Wenn Daten ausgerichtet sind, wird der übersprungene Speicherplatz mit Nullen a
 ## <a name="see-also"></a>Siehe auch
 
 [Auch](even.md)\
-[Direktivenverweis](directives-reference.md)
+[Direktivenverweis](directives-reference.md)\
+[MASM-BNF-Grammatik](masm-bnf-grammar.md)
