@@ -1,26 +1,26 @@
 ---
-title: C++-Programmiersprachenreferenz
+title: C++-Sprachreferenz
 ms.custom: index-page
-ms.date: 05/06/2019
+ms.date: 12/10/2019
 helpviewer_keywords:
 - C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 1790f5d7ecf834c97a9242e8f42d1fb402604ac6
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 8d828c1b151e37380c123003c245f6b83243f84a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222483"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301586"
 ---
-# <a name="c-language-reference"></a>C++-Programmiersprachenreferenz
+# <a name="c-language-reference"></a>C++-Sprachreferenz
 
-Dieser Verweis wird beschrieben, die C++ Programmiersprache, wie in der Microsoft implementiert C++ Compiler. Die Organisation basiert auf [ *The Annotated C++ Reference Manual* ](http://www.stroustrup.com/arm.html) von Margaret Ellis und Bjarne Stroustrup sowie auf die ANSI/ISO C++ internationalen Standard (ISO/IEC FDIS 14882). Microsoft-spezifische Implementierungen von Funktionen der Programmiersprache C++- sind enthalten.
+Diese Referenz erläutert die C++ Programmiersprache, die im Microsoft C++ -Compiler implementiert ist. Die Organisation basiert auf [*dem kommentierten C++ Referenzhandbuch*](http://www.stroustrup.com/arm.html) von Margaret Ellis und Bjarne Stroustrup sowie auf dem internationalen ANSI/ISO C++ -Standard (ISO/IEC-bdis 14882). Microsoft-spezifische Implementierungen von Funktionen der Programmiersprache C++- sind enthalten.
 
-Eine Übersicht über moderne C++-Programmiertechniken, finden Sie unter [Willkommen zurück bei C++](welcome-back-to-cpp-modern-cpp.md).
+Eine Übersicht über die modernen C++ Programmiermethoden finden [Sie unter Willkommen zurück C++bei ](welcome-back-to-cpp-modern-cpp.md).
 
 Weitere Informationen dazu, wie Sie ein Schlüsselwort oder einen Operator schnell finden, erhalten Sie in den folgenden Tabellen:
 
-- [C++-Schlüsselwörter](../cpp/keywords-cpp.md)
+- [C++Keywords](../cpp/keywords-cpp.md)
 
 - [C++-Operatoren](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
 
@@ -32,8 +32,12 @@ Grundlegende lexikalische Elemente eines C++-Programms: Token, Kommentare, Opera
 [Grundlegende Konzepte](../cpp/basic-concepts-cpp.md)<br/>
 Bereich, Bindung, Programmstart und Beendigung, Speicherklassen und Typen.
 
+[Integrierte Typen](fundamental-types-cpp.md) Die grundlegenden Typen, die in den C++ Compiler integriert sind, und ihre Wertebereiche.
+
 [Standardkonvertierungen](../cpp/standard-conversions.md)<br/>
-Typkonvertierungen zwischen den integrierten bzw. grundlegenden Typen. Außerdem arithmetische Konvertierungen und Konvertierungen mit Zeigern, Verweisen und pointer-to-member-Typen.
+Typkonvertierungen zwischen integrierten Typen. Außerdem arithmetische Konvertierungen und Konvertierungen mit Zeigern, Verweisen und pointer-to-member-Typen.
+
+[Deklarationen und Definitionen](declarations-and-definitions-cpp.md) Deklarieren und Definieren von Variablen, Typen und Funktionen.
 
 [Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 Die Operatoren in C++.
@@ -47,38 +51,38 @@ Eine Programmiertechnik, mit der implizit eine Funktionsobjektklasse definiert u
 [Anweisungen](../cpp/statements-cpp.md)<br/>
 Anweisungen vom Typ Ausdruck, NULL, Verbund, Auswahl, Iteration, Sprung und Deklaration.
 
-[Deklarationen und Definitionen](declarations-and-definitions-cpp.md)<br/>
-Speicherklassenspezifizierer, Funktionsdefinitionen, Initialisierungen, Enumerationen, **Klasse**, **Struktur**, und **Union** Deklarationen und **Typedef**  Deklarationen. Darüber hinaus **Inline** Funktionen **const** -Schlüsselwort, Namespaces.
+[Klassen und Strukturen](../cpp/classes-and-structs-cpp.md)<br/>
+Einführung in Klassen, Strukturen und Unions. Außerdem werden Element Funktionen, spezielle Member-Funktionen, Datenmember, Bitfelder, **dieser** Zeiger, untergliedert.
 
-[Klassen, Strukturen und Unions](../cpp/classes-and-structs-cpp.md)<br/>
-Einführung in Klassen, Strukturen und Unions. Außerdem Memberfunktionen, spezielle Memberfunktionen, Datenmember, Bitfelder, **dies** Zeiger, geschachtelte Klassen.
+[Unions](unions.md)<br/>
+Benutzerdefinierte Typen, in denen alle Member denselben Speicherort verwenden.
 
 [Abgeleitete Klassen](../cpp/inheritance-cpp.md)<br/>
-Einzel- und mehrfachvererbung, **virtuellen** Funktionen, die mehrere Basisklassen, **abstrakte** Klassen, Bereichsregeln. Darüber hinaus die **__super** und **__interface** Schlüsselwörter.
+Einzelne und mehrfache Vererbung, **virtuelle** Funktionen, mehrere Basisklassen, **abstrakte** Klassen, Bereichs Regeln. Außerdem die Schlüsselwörter **__super** und **__interface** .
 
-[Memberzugriffssteuerung](../cpp/member-access-control-cpp.md)<br/>
-Steuern des Zugriffs auf Klassenmember: **öffentliche**, **private**, und **geschützt** Schlüsselwörter. Friend-Funktionen und -Klassen.
+[Mitglied-Access Control](../cpp/member-access-control-cpp.md)<br/>
+Steuern des Zugriffs auf Klassenmember: **öffentliche**, **private**und **geschützte** Schlüsselwörter. Friend-Funktionen und -Klassen.
 
 [Überladen](operator-overloading.md)<br/>
-Überladene Operatoren, Regeln für operatorüberladung.
+Überladene Operatoren, Regeln für die Operator Überladung.
 
 [Ausnahmebehandlung](../cpp/exception-handling-in-visual-cpp.md)<br/>
 C++-Ausnahmebehandlung, strukturierte Ausnahmebehandlung (SEH), Schlüsselwörter, die für das Schreiben von Ausnahmebehandlungsanweisungen verwendet werden.
 
 [Assertionsanweisung und benutzerdefinierte Meldungen](../cpp/assertion-and-user-supplied-messages-cpp.md)<br/>
-`#error` Richtlinie, die **"static_assert"** -Schlüsselwort, das `assert` Makro.
+`#error`-Direktive, das **static_assert** -Schlüsselwort, das `assert`-Makro.
 
 [Vorlagen](../cpp/templates-cpp.md)<br/>
-Vorlagenspezifikationen, Funktionsvorlagen, Klassenvorlagen, **Typename** -Schlüsselwort, Vorlagen im Vergleich zu Makros, Vorlagen und intelligente Zeiger.
+Vorlagen Spezifikationen, Funktions Vorlagen, Klassen Vorlagen, **typoame** -Schlüsselwort, Vorlagen im Vergleich zu Makros, Vorlagen und intelligenten Zeigern.
 
 [Ereignisbehandlung](../cpp/event-handling.md)<br/>
 Deklarieren von Ereignissen und Ereignishandlern.
 
 [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md)<br/>
-Microsoft C++-spezifische Modifizierer. Arbeitsspeicher adressieren, Aufrufkonventionen, **naked** Funktionen, erweiterte speicherklassenattribute (**__declspec**), **__w64**.
+Microsoft C++-spezifische Modifizierer. Arbeitsspeicher Adressierung, Aufruf Konventionen, **Naked** -Funktionen, erweiterte Speicher Klassenattribute ( **__declspec**) **__w64**.
 
 [Inlineassembler](../assembler/inline/inline-assembler.md)<br/>
-Verwenden der Assemblysprache und C++ in **__asm** Blöcke.
+Mithilfe der Assemblysprache und C++ in **__asm** Blöcken.
 
 [COM-Unterstützung des Compilers](../cpp/compiler-com-support.md)<br/>
 Ein Verweis auf Microsoft-spezifische Klassen und globale Funktionen, die zur Unterstützung von COM-Typen verwendet werden.
@@ -87,15 +91,15 @@ Ein Verweis auf Microsoft-spezifische Klassen und globale Funktionen, die zur Un
 Microsoft-Erweiterungen für C++.
 
 [Nicht dem Standard entsprechendes Verhalten](../cpp/nonstandard-behavior.md)<br/>
-Informationen zu nicht dem Standard entsprechendes Verhalten von Microsoft C++ Compiler.
+Informationen zum nicht dem Standard entsprechende Verhalten des C++ Microsoft-Compilers.
 
 [Willkommen zurück bei C++](welcome-back-to-cpp-modern-cpp.md)<br/>
-Eine Übersicht über moderne C++-Programmierung von Methoden zum Schreiben von sicheren, korrekte und effiziente Programme.
+Eine Übersicht über die C++ modernen Programmierverfahren zum Schreiben sicherer, korrekter und effizienter Programme.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
 [Komponentenerweiterungen für Laufzeitplattformen](../extensions/component-extensions-for-runtime-platforms.md)<br/>
-Referenzmaterial zur Verwendung von Microsoft C++ Compiler an, die .NET als Ziel.
+Referenzmaterial zur Verwendung des Microsoft C++ -Compilers für .net.
 
 [Referenz zur C/C++-Erstellung](../build/reference/c-cpp-building-reference.md)<br/>
 Compileroptionen, Linkeroptionen sowie andere Buildtools.
@@ -104,7 +108,7 @@ Compileroptionen, Linkeroptionen sowie andere Buildtools.
 Referenzmaterial für Pragmas, Präprozessordirektiven, vordefinierte Makros und den Präprozessor.
 
 [Visual C++-Bibliotheken](../standard-library/cpp-standard-library-reference.md)<br/>
-Eine Liste mit Links zu den Startseiten für die verschiedenen Microsoft C++ Bibliotheken.
+Eine Liste mit Links zu den Referenz Startseiten für die verschiedenen Microsoft C++ -Bibliotheken.
 
 ## <a name="see-also"></a>Siehe auch
 

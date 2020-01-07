@@ -1,9 +1,6 @@
 ---
 title: 'TN061: ON_NOTIFY- und WM_NOTIFY-Meldungen'
 ms.date: 06/28/2018
-f1_keywords:
-- ON_NOTIFY
-- WM_NOTIFY
 helpviewer_keywords:
 - ON_NOTIFY_EX message [MFC]
 - TN061
@@ -13,35 +10,35 @@ helpviewer_keywords:
 - notification messages
 - WM_NOTIFY message
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
-ms.openlocfilehash: 74eb39a855da3ff3e6da7f14a76bf0804919826d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa1efb628ee45be3dfaee320cf64c4b2cbb91f04
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399576"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302236"
 ---
-# <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: ON_NOTIFY- und WM_NOTIFY-Meldungen
+# <a name="tn061-on_notify-and-wm_notify-messages"></a>TN061: ON_NOTIFY- und WM_NOTIFY-Meldungen
 
 > [!NOTE]
 > Der folgende technische Hinweis wurde seit dem ersten Erscheinen in der Onlinedokumentation nicht aktualisiert. Daher können einige Verfahren und Themen veraltet oder falsch sein. Um aktuelle Informationen zu erhalten, wird empfohlen, das gewünschte Thema im Index der Onlinedokumentation zu suchen.
 
-Diese technische Hinweis enthält Hintergrundinformationen für die neue WM_NOTIFY-Nachricht und wird beschrieben, wie empfohlen (und am häufigsten verwendeten) WM_NOTIFY-Meldungen in der MFC-Anwendung zu verarbeiten.
+Dieser Technische Hinweis enthält Hintergrundinformationen zur neuen WM_NOTIFY Meldung und beschreibt die empfohlene (und gängigste) Methode zum Verarbeiten von WM_NOTIFY Meldungen in ihrer MFC-Anwendung.
 
-**Von Benachrichtigungsmeldungen in Windows 3.x**
+**Benachrichtigungs Meldungen in Windows 3. x**
 
-In Windows 3.x, Benachrichtigung Steuerelemente ihren übergeordneten Elementen von Ereignissen wie Mausklicks, Inhalt und Auswahl und das Hintergrund Zeichnen von Steuerelementen durch Senden einer Nachricht an das übergeordnete Element ändert. Einfache Benachrichtigungen als spezielle WM_COMMAND-Meldungen, mit dem Notification-Code (z. B. BN_CLICKED) gesendet und Steuerelement-ID in gepackt *wParam* und das Handle des Steuerelements in *lParam*. Beachten Sie, dass seit *wParam* und *lParam* voll ist, besteht keine Möglichkeit, zusätzlichen Daten übergeben werden, diese Nachrichten können nur einfache Benachrichtigung sein. Beispielsweise in der Benachrichtigung BN_CLICKED besteht keine Möglichkeit zum Senden von Informationen über den Speicherort des Mauszeigers, wenn die Schaltfläche geklickt wurde.
+In Windows 3. x benachrichtigen die Steuerelemente ihre übergeordneten Ereignisse, wie z. b. Mausklicks, Änderungen an Inhalt und Auswahl, und steuern die Hintergrund Darstellung, indem eine Meldung an das übergeordnete Element gesendet wird. Einfache Benachrichtigungen werden als spezielle WM_COMMAND Nachrichten gesendet, wobei der Benachrichtigungs Code (z. b. BN_CLICKED) und die Steuerelement-ID in *wParam* und das Handle des Steuer Elements in *LPARAM*verpackt werden. Beachten Sie, dass es keine Möglichkeit gibt, zusätzliche Daten zu übergeben, da *wParam* und *LPARAM* voll sind. – diese Nachrichten können nur eine einfache Benachrichtigung sein. Beispielsweise gibt es in der BN_CLICKED Benachrichtigung keine Möglichkeit, Informationen über die Position des Mauszeigers zu senden, wenn auf die Schaltfläche geklickt wurde.
 
-Wenn Steuerelemente in Windows 3.x müssen eine Benachrichtigung, die zusätzliche Daten enthält senden, verwenden sie eine Reihe von Meldungen für spezielle Zwecke, einschließlich WM_CTLCOLOR WM_VSCROLL WM_HSCROLL WM_DRAWITEM WM_MEASUREITEM WM_COMPAREITEM WM_DELETEITEM, WM_ CHARTOITEM WM_VKEYTOITEM und So weiter. Diese Nachrichten können an das Steuerelement gespiegelt werden, die sie gesendet wurden. Weitere Informationen finden Sie unter [TN062: Nachricht Reflektion für Windows-Steuerelemente](../mfc/tn062-message-reflection-for-windows-controls.md).
+Wenn Steuerelemente in Windows 3. x eine Benachrichtigungs Meldung senden müssen, die zusätzliche Daten enthält, verwenden Sie eine Vielzahl von speziellen Nachrichten, einschließlich WM_CTLCOLOR, WM_VSCROLL, WM_HSCROLL, WM_DRAWITEM, WM_MEASUREITEM, WM_COMPAREITEM, WM_DELETEITEM, WM_ Chartoitem, WM_VKEYTOITEM usw. Diese Nachrichten können wieder auf das Steuerelement reflektiert werden, das Sie gesendet hat. Weitere Informationen finden Sie unter [TN062: Message Reflection for Windows Controls](../mfc/tn062-message-reflection-for-windows-controls.md).
 
-**Von Benachrichtigungsmeldungen in Win32**
+**Benachrichtigungs Meldungen in Win32**
 
-Für Steuerelemente, die in Windows 3.1 vorhanden waren, verwendet die Win32-API die Benachrichtigungsnachrichten erstellt werden, mit denen, die meisten in Windows 3.x. Allerdings Win32 sowie eine Reihe von selbst ausgereifte, komplexe Kontrollmechanismen, die in Windows unterstützt 3.x. In vielen Fällen müssen diese Steuerelemente zusätzliche Daten in die benachrichtigungsmeldungen zu senden. Anstatt das Hinzufügen eines neuen **WM_** <strong>\*</strong> Nachrichteneigenschaften werden für jede neue Benachrichtigung, die zusätzliche Daten, die Entwickler von Win32-API benötigt ausgewählt haben, nur eine Nachricht, WM_NOTIFY, hinzufügen, die einem übergeben werden können Menge zusätzlicher Daten auf standardisierte Weise.
+Für Steuerelemente, die in Windows 3,1 vorhanden waren, verwendet die Win32-API die meisten Benachrichtigungs Meldungen, die in Windows 3. x verwendet wurden. Win32 fügt jedoch auch eine Reihe komplexer, komplexer Steuerelemente hinzu, die in Windows 3. x unterstützt werden. Häufig müssen diese Steuerelemente zusätzliche Daten mit ihren Benachrichtigungs Nachrichten senden. Anstatt für jede neue Benachrichtigung, die zusätzliche Daten benötigt, eine neue **WM_** <strong>\*</strong> Meldung hinzuzufügen, haben die Designer der Win32-API entschieden, nur eine Nachricht hinzuzufügen, WM_NOTIFY, die eine beliebige Menge an zusätzlichen Daten auf standardisierte Weise übergeben kann.
 
-WM_NOTIFY-Meldungen enthalten, die ID des Steuerelements, das Senden der Nachricht in *wParam* und einen Zeiger auf eine Struktur in *lParam*. Diese Struktur ist entweder ein **NMHDR** Struktur oder eine größere Struktur, die eine **NMHDR** Struktur wie des ersten Elements. Beachten Sie, dass seit der **NMHDR** Member ersten, als entweder einen Zeiger auf ein Zeiger auf diese Struktur verwendet werden eine **NMHDR** oder als Zeiger auf die größere Struktur, je nachdem, wie Sie ihn umwandeln.
+WM_NOTIFY Meldungen enthalten die ID des Steuer Elements, das die Nachricht in *wParam* sendet, und einen Zeiger auf eine Struktur in *LPARAM*. Diese Struktur ist entweder eine **NMHDR** -Struktur oder eine größere Struktur, deren erstes Mitglied eine **NMHDR** -Struktur aufweist. Beachten Sie, dass ein Zeiger auf diese Struktur als Zeiger auf eine **NMHDR** oder als Zeiger auf die größere Struktur verwendet werden kann, je nachdem, wie Sie ihn umwandeln, da der **NMHDR** -Member erstmalig ist.
 
-In den meisten Fällen der Zeiger verweist auf eine größere-Struktur, und müssen Sie ihn umwandeln, wenn Sie sie verwenden. In nur wenigen Benachrichtigungen, wie allgemeine Benachrichtigungen (, deren Namen beginnen mit **NM_**) und das Tool Tipp des Steuerelements TTN_SHOW und TTN_POP Benachrichtigungen, die eine **NMHDR** Struktur, die tatsächlich verwendet werden.
+In den meisten Fällen zeigt der Zeiger auf eine größere Struktur, und Sie müssen ihn bei der Verwendung umwandeln. Nur einige Benachrichtigungen, wie z. b. die allgemeinen Benachrichtigungen (deren Namen mit **NM_** beginnen) und die TTN_SHOW-und TTN_POP Benachrichtigungen des QuickInfo-Steuer Elements, werden tatsächlich in einer **NMHDR** -Struktur verwendet.
 
-Die **NMHDR** Struktur oder das erste Element enthält, das Handle und die ID des Steuerelements, das Senden der Nachricht und der Benachrichtigungscode (z. B. TTN_SHOW). Das Format der **NMHDR** Struktur wird unten gezeigt:
+Die **NMHDR** -Struktur oder das erste Member enthält das Handle und die ID des Steuer Elements, das die Nachricht sendet, und den Benachrichtigungs Code (z. b. TTN_SHOW). Das Format der **NMHDR** -Struktur ist unten dargestellt:
 
 ```cpp
 typedef struct tagNMHDR {
@@ -51,9 +48,9 @@ typedef struct tagNMHDR {
 } NMHDR;
 ```
 
-Bei einer Nachricht TTN_SHOW der **Code** Member auf TTN_SHOW fest.
+Für eine TTN_SHOW Meldung wird das **Codemember** auf TTN_SHOW festgelegt.
 
-Die meisten Benachrichtigungen übergeben einen Zeiger auf eine größere Datenstruktur, enthält ein **NMHDR** Struktur wie des ersten Elements. Betrachten Sie beispielsweise die Struktur, die von der Listenansicht-Steuerelement des LVN_KEYDOWN-Benachrichtigung, die gesendet wird, wenn eine Taste, in einem Listenansicht-Steuerelement gedrückt wird verwendet. Der Zeiger verweist auf eine **LV_KEYDOWN** -Struktur, die definiert wird, wie unten dargestellt:
+Die meisten Benachrichtigungen übergeben einen Zeiger auf eine größere Struktur, die eine **NMHDR** -Struktur als ersten Member enthält. Betrachten Sie beispielsweise die Struktur, die von der LVN_KEYDOWN Benachrichtigungs Meldung des Listen Ansichts Steuer Elements verwendet wird, die gesendet wird, wenn eine Taste in einem Listenansicht-Steuerelement gedrückt wird. Der Zeiger verweist auf eine **LV_KEYDOWN** -Struktur, die wie unten dargestellt definiert ist:
 
 ```cpp
 typedef struct tagLV_KEYDOWN {
@@ -63,30 +60,30 @@ typedef struct tagLV_KEYDOWN {
 } LV_KEYDOWN;
 ```
 
-Beachten Sie, dass seit der **NMHDR** Member an erster Stelle in dieser Struktur, die Zeiger, die Sie in der Benachrichtigung übergeben umgewandelt werden kann, um entweder einen Zeiger auf ein **NMHDR** oder ein Zeiger auf ein **LV_KEYDOWN** .
+Beachten Sie, dass der Zeiger, der in der Benachrichtigungs Meldung angezeigt wird, in einen Zeiger auf einen **NMHDR** oder einen Zeiger auf einen **LV_KEYDOWN**umgewandelt werden kann, da der **NMHDR** -Member in dieser Struktur an erster Stelle steht.
 
-**Benachrichtigungen, die für alle neuen Windows-Steuerelemente gelten**
+**Benachrichtigungen, die allen neuen Windows-Steuerelementen gemeinsam sind**
 
-Einige Benachrichtigungen gelten für alle neuen Windows-Steuerelemente zur Verfügung. Diese Benachrichtigungen übergeben, einen Zeiger auf ein **NMHDR** Struktur.
+Einige Benachrichtigungen sind von allen neuen Windows-Steuerelementen gemeinsam. Diese Benachrichtigungen übergeben einen Zeiger auf eine **NMHDR** -Struktur.
 
-|Benachrichtigungscode|Gesendet, weil|
+|Benachrichtigungs Code|Gesendet aufgrund|
 |-----------------------|------------------|
-|NM_CLICK|Benutzer klicken auf die linke Maustaste im Steuerelement|
-|NM_DBLCLK|Benutzer doppelklickt linke Maustaste im Steuerelement|
-|NM_RCLICK|Benutzer klickt rechten Maustaste im Steuerelement|
-|NM_RDBLCLK|Benutzer doppelklickt rechten Maustaste im Steuerelement|
-|NM_RETURN|Benutzer, die die EINGABETASTE gedrückt, während das Steuerelement den Eingabefokus besitzt|
-|NM_SETFOCUS|Steuerelement verfügt über Eingabefokus erhalten|
+|NM_CLICK|Vom Benutzer angeklickte linke Maustaste im Steuerelement|
+|NM_DBLCLK|Benutzer hat auf die linke Maustaste im Steuerelement Doppel geklickt.|
+|NM_RCLICK|Benutzer hat auf das Steuerelement mit der rechten Maustaste geklickt.|
+|NM_RDBLCLK|Benutzer, auf den mit der rechten Maustaste im Steuerelement Doppel geklickt wurde|
+|NM_RETURN|Benutzer hat die EINGABETASTE gedrückt, während das Steuerelement den Eingabefokus besitzt|
+|NM_SETFOCUS|Das Steuerelement hat den Eingabefokus erhalten.|
 |NM_KILLFOCUS|Steuerelement hat den Eingabefokus verloren.|
-|NM_OUTOFMEMORY|Steuerelement konnte einen Vorgang nicht abschließen, weil nicht genügend Arbeitsspeicher verfügbar war|
+|NM_OUTOFMEMORY|Das Steuerelement konnte einen Vorgang nicht beenden, weil nicht genügend Arbeitsspeicher verfügbar war.|
 
-##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY: Verarbeiten von WM_NOTIFY-Meldungen in MFC-Anwendungen
+##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a>ON_NOTIFY: Verarbeiten von WM_NOTIFY-Nachrichten in MFC-Anwendungen
 
-Die Funktion `CWnd::OnNotify` benachrichtigungsmeldungen behandelt. Die Standardimplementierung überprüft die meldungszuordnung für Benachrichtigungshandler aufrufen. Im Allgemeinen nicht überschreiben `OnNotify`. Sie können stattdessen bieten eine Handlerfunktion und die meldungszuordnung Ihres Besitzerfensters-Klasse eine Meldungszuordnungseintrags für diesen Handler hinzugefügt.
+Die-Funktion `CWnd::OnNotify` die Benachrichtigungs Meldungen verarbeitet. Die Standard Implementierung überprüft die Meldungs Zuordnung für Benachrichtigungs Handler, um aufzurufen. Im allgemeinen überschreiben Sie `OnNotify`nicht. Stattdessen stellen Sie eine Handlerfunktion bereit und fügen einen Meldungs Zuordnungs Eintrag für diesen Handler der Meldungs Zuordnung der Klasse des Besitzer Fensters hinzu.
 
-Klassen-Assistenten, über das Eigenschaftenblatt des Klassen-Assistenten, erstellen die Meldungszuordnungseintrags ON_NOTIFY und bieten Ihnen eine Skelett Handlerfunktion. Weitere Informationen zur Verwendung der Klassen-Assistent, um dies zu vereinfachen, finden Sie unter [Zuordnen von Meldungen zu Funktionen](../mfc/reference/mapping-messages-to-functions.md).
+Mit dem Klassen-Assistenten können Sie über das Klassen-Assistent-Eigenschaften Blatt den ON_NOTIFY Message-Map-Eintrag erstellen und eine Skeleton-Handlerfunktion bereitstellen. Weitere Informationen zur einfacheren Verwendung von ClassWizard finden Sie unter [Mapping messages to Functions](../mfc/reference/mapping-messages-to-functions.md).
 
-Die meldungszuordnung ON_NOTIFY-Makro hat die folgende Syntax:
+Das ON_NOTIFY Message-Map-Makro weist die folgende Syntax auf:
 
 ```cpp
 ON_NOTIFY(wNotifyCode, id, memberFxn)
@@ -95,15 +92,15 @@ ON_NOTIFY(wNotifyCode, id, memberFxn)
 mit folgenden Parametern:
 
 *wNotifyCode*<br/>
-Der Code der benachrichtigungsmeldung, wie z. B. LVN_KEYDOWN behandelt werden.
+Der Code für die zu behandelnde Benachrichtigungs Meldung, z. b. LVN_KEYDOWN.
 
 *ID*<br/>
-Der untergeordnete Bezeichner des Steuerelements für die die Benachrichtigung gesendet wird.
+Der untergeordnete Bezeichner des Steuer Elements, für das die Benachrichtigung gesendet wird.
 
 *memberFxn*<br/>
-Die Memberfunktion aufgerufen werden, wenn diese Benachrichtigung gesendet wird.
+Die Member-Funktion, die beim Senden dieser Benachrichtigung aufgerufen werden soll.
 
-Ihre Memberfunktion muss mit dem folgenden Prototyp deklariert werden:
+Die Member-Funktion muss mit dem folgenden Prototyp deklariert werden:
 
 ```cpp
 afx_msg void memberFxn(NMHDR* pNotifyStruct, LRESULT* result);
@@ -112,20 +109,20 @@ afx_msg void memberFxn(NMHDR* pNotifyStruct, LRESULT* result);
 mit folgenden Parametern:
 
 *pNotifyStruct*<br/>
-Ein Zeiger auf die Benachrichtigungsstruktur, wie im vorherigen Abschnitt beschrieben.
+Ein Zeiger auf die Benachrichtigungs Struktur, wie im obigen Abschnitt beschrieben.
 
 *result*<br/>
-Ein Zeiger auf den Ergebniscode müssen Sie festlegen, bevor Sie zurückkehren.
+Ein Zeiger auf den Ergebniscode, den Sie vor der Rückgabe festlegen.
 
 ## <a name="example"></a>Beispiel
 
-Um anzugeben, dass die Member-Funktion soll `OnKeydownList1` LVN_KEYDOWN Nachrichten von behandelt die `CListCtrl` , deren ID `IDC_LIST1`, verwenden Sie Klassen-Assistenten, um Ihre meldungszuordnung Folgendes hinzugefügt:
+Um anzugeben, dass die Element Funktion `OnKeydownList1` LVN_KEYDOWN Nachrichten aus dem `CListCtrl` verarbeiten soll, dessen ID `IDC_LIST1`ist, verwenden Sie ClassWizard, um der Meldungs Zuordnung Folgendes hinzuzufügen:
 
 ```cpp
 ON_NOTIFY(LVN_KEYDOWN, IDC_LIST1, OnKeydownList1)
 ```
 
-Im obigen Beispiel ist die Funktion, die von den Klassen-Assistent bereitgestellt:
+Im obigen Beispiel lautet die von ClassWizard bereitgestellte Funktion wie folgt:
 
 ```cpp
 void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
@@ -139,17 +136,17 @@ void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
 }
 ```
 
-Beachten Sie, dass Klassen-Assistent automatisch einen Zeiger des richtigen Typs bereitstellt. Sie können die Benachrichtigungsstruktur zugreifen, entweder durch *pNMHDR* oder *pLVKeyDow*.
+Beachten Sie, dass ClassWizard einen Zeiger vom richtigen Typ automatisch bereitstellt. Sie können entweder über *pNMHDR* oder *plvkeydow*auf die Benachrichtigungs Struktur zugreifen.
 
-##  <a name="_mfcnotes_on_notify_range"></a> ON_NOTIFY_RANGE
+##  <a name="_mfcnotes_on_notify_range"></a>ON_NOTIFY_RANGE
 
-Wenn Sie die gleiche WM_NOTIFY-Nachricht für einen Satz von Steuerelementen verarbeiten müssen, können Sie ON_NOTIFY_RANGE statt ON_NOTIFY. Beispielsweise müssen Sie eine Reihe von Schaltflächen möglicherweise für die Sie die gleiche Aktion für eine bestimmte Meldung ausführen möchten.
+Wenn Sie dieselbe WM_NOTIFY Nachricht für eine Reihe von Steuerelementen verarbeiten müssen, können Sie ON_NOTIFY_RANGE anstelle von ON_NOTIFY verwenden. Beispielsweise können Sie über eine Reihe von Schaltflächen verfügen, für die Sie die gleiche Aktion für eine bestimmte Benachrichtigungs Meldung ausführen möchten.
 
-Wenn Sie ON_NOTIFY_RANGE verwenden, geben Sie einen zusammenhängenden Bereich von untergeordneten Bezeichner für das die benachrichtigungsmeldung behandelt, indem Sie am Anfang und beenden untergeordneten Bezeichner des Bereichs.
+Wenn Sie ON_NOTIFY_RANGE verwenden, geben Sie einen zusammenhängenden Bereich von untergeordneten bezeichaten an, für die die Benachrichtigungs Meldung verarbeitet werden soll, indem Sie die untergeordneten Elemente für den Anfang und das Ende des Bereichs angeben.
 
-ON_NOTIFY_RANGE behandelt-Klassen-Assistenten nicht; um es zu verwenden, müssen Sie die Zuordnung der Nachricht selbst bearbeiten.
+Der ClassWizard behandelt ON_NOTIFY_RANGE nicht. um es zu verwenden, müssen Sie Ihre Meldungs Zuordnung selbst bearbeiten.
 
-Die Meldungszuordnungseintrags und Funktionsprototyp für ON_NOTIFY_RANGE lauten folgendermaßen:
+Der Nachrichten Zuordnungs Eintrag und der Funktionsprototyp für ON_NOTIFY_RANGE lauten wie folgt:
 
 ```cpp
 ON_NOTIFY_RANGE(wNotifyCode, id, idLast, memberFxn)
@@ -158,7 +155,7 @@ ON_NOTIFY_RANGE(wNotifyCode, id, idLast, memberFxn)
 mit folgenden Parametern:
 
 *wNotifyCode*<br/>
-Der Code der benachrichtigungsmeldung, wie z. B. LVN_KEYDOWN behandelt werden.
+Der Code für die zu behandelnde Benachrichtigungs Meldung, z. b. LVN_KEYDOWN.
 
 *ID*<br/>
 Der erste Bezeichner im zusammenhängenden Bereich von Bezeichnern.
@@ -167,9 +164,9 @@ Der erste Bezeichner im zusammenhängenden Bereich von Bezeichnern.
 Der letzte Bezeichner im zusammenhängenden Bereich von Bezeichnern.
 
 *memberFxn*<br/>
-Die Memberfunktion aufgerufen werden, wenn diese Benachrichtigung gesendet wird.
+Die Member-Funktion, die beim Senden dieser Benachrichtigung aufgerufen werden soll.
 
-Ihre Memberfunktion muss mit dem folgenden Prototyp deklariert werden:
+Die Member-Funktion muss mit dem folgenden Prototyp deklariert werden:
 
 ```cpp
 afx_msg void memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
@@ -178,36 +175,36 @@ afx_msg void memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 mit folgenden Parametern:
 
 *ID*<br/>
-Der untergeordnete Bezeichner des Steuerelements, das die Benachrichtigung gesendet werden soll.
+Der untergeordnete Bezeichner des Steuer Elements, das die Benachrichtigung gesendet hat.
 
 *pNotifyStruct*<br/>
-Ein Zeiger auf die Benachrichtigungsstruktur, wie oben beschrieben.
+Ein Zeiger auf die Benachrichtigungs Struktur, wie oben beschrieben.
 
 *result*<br/>
-Ein Zeiger auf den Ergebniscode müssen Sie festlegen, bevor Sie zurückkehren.
+Ein Zeiger auf den Ergebniscode, den Sie vor der Rückgabe festlegen.
 
-##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX, ON_NOTIFY_EX_RANGE
+##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a>ON_NOTIFY_EX ON_NOTIFY_EX_RANGE
 
-Wenn mehr als ein Objekt in der Benachrichtigung, routing, um eine Nachricht verarbeitet werden soll, können Sie ON_NOTIFY_EX (oder ON_NOTIFY_EX_RANGE) anstatt ON_NOTIFY (oder ON_NOTIFY_RANGE) verwenden. Der einzige Unterschied zwischen der **EX** Version und die Standardversion ist, dass für die Memberfunktion aufgerufen der **EX** Version zurückgibt eine **"bool"** , der angibt, und zwar unabhängig davon, ob Es sollte die Verarbeitung von Nachrichten fortgesetzt werden. Zurückgeben von **"false"** von dieser Funktion können Sie dieselbe Nachricht in mehr als ein Objekt zu verarbeiten.
+Wenn Sie mehr als ein Objekt im Benachrichtigungs Routing verwenden möchten, um eine Nachricht zu verarbeiten, können Sie ON_NOTIFY_EX (oder ON_NOTIFY_EX_RANGE) anstelle ON_NOTIFY (oder ON_NOTIFY_RANGE) verwenden. Der einzige Unterschied zwischen der **Ex** -Version und der regulären Version besteht darin, dass die für die **Ex** -Version aufgerufene Element Funktion einen **booleschen** Wert zurückgibt, der angibt, ob die Nachrichtenverarbeitung fortgesetzt werden soll Durch das Zurückgeben von " **false** " aus dieser Funktion können Sie dieselbe Nachricht in mehr als einem Objekt verarbeiten.
 
-Klassen-Assistent wird nicht ON_NOTIFY_EX oder ON_NOTIFY_EX_RANGE behandelt. Wenn Sie beide Buildtypen verwenden möchten, müssen Sie die Zuordnung der Nachricht selbst bearbeiten.
+Der Klassen-Assistent verarbeitet ON_NOTIFY_EX oder ON_NOTIFY_EX_RANGE nicht. Wenn Sie einen von beiden verwenden möchten, müssen Sie Ihre Meldungs Zuordnung selbst bearbeiten.
 
-Die Meldungszuordnungseintrags und Funktionsprototyp für ON_NOTIFY_EX und ON_NOTIFY_EX_RANGE sind wie folgt. Die Bedeutung der Parameter werden genauso wie bei anderen**EX** Versionen.
+Der Nachrichten Zuordnungs Eintrag und der Funktionsprototyp für ON_NOTIFY_EX und ON_NOTIFY_EX_RANGE lauten wie folgt. Die Bedeutungen der Parameter sind die gleichen wie für die nicht-**Ex** -Versionen.
 
 ```cpp
 ON_NOTIFY_EX(nCode, id, memberFxn)
 ON_NOTIFY_EX_RANGE(wNotifyCode, id, idLast, memberFxn)
 ```
 
-Der Prototyp für beide oben genannten Schritte ist das gleiche:
+Der Prototyp für beide oben genannten ist identisch:
 
 ```cpp
 afx_msg BOOL memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 ```
 
-In beiden Fällen *Id* enthält den untergeordnete Bezeichner des Steuerelements, das die Benachrichtigung gesendet.
+In beiden Fällen enthält *ID* den untergeordneten Bezeichner des Steuer Elements, das die Benachrichtigung gesendet hat.
 
-Die Funktion zurückgeben muss **"true"** , wenn die Nachricht vollständig verarbeitet wurde oder **"false"** Wenn andere Objekte in das Befehlsrouting eine Chance zur Verarbeitung der Nachricht haben soll.
+Die Funktion muss " **true** " zurückgeben, wenn die Benachrichtigungs Meldung vollständig verarbeitet wurde, oder " **false** ", wenn andere Objekte im Befehls Routing die Möglichkeit haben sollen, die Nachricht zu verarbeiten.
 
 ## <a name="see-also"></a>Siehe auch
 

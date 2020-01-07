@@ -56,12 +56,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: f4bef0ef4f3cad0411f6da54ce5e2d8883913754
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: dab670c5baef1c51c39a4c936380fab92c5103cc
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940362"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300302"
 ---
 # <a name="_exec-_wexec-functions"></a>_exec- und _wexec-Funktionen
 
@@ -76,14 +76,14 @@ Jede Funktion in dieser Familie lädt einen neuen Prozess und führt ihn aus:
 
 Der Buchstabe am Ende des Funktionsnamens bestimmt die Variante.
 
-|_exec-Funktionssuffix|BESCHREIBUNG|
+|_exec-Funktionssuffix|Beschreibung|
 |----------------------------|-----------------|
 |`e`|`envp`: Array von Zeigern zu Umgebungseinstellungen, wird an den neuen Prozess übergeben.|
 |`l`|Befehlszeilenargumente werden einzeln an die `_exec`-Funktion übergeben. Wird normalerweise verwendet, wenn die Anzahl der Parameter im neuen Prozess im Voraus bekannt ist.|
 |`p`|Die `PATH`-Umgebungsvariable wird verwendet, um die auszuführende Datei zu suchen.|
 |`v`|`argv`: Array von Zeigern zu Befehlszeilenargumenten, wird an die `_exec`-Funktion übergeben. Wird normalerweise verwendet, wenn die Anzahl der Parameter im neuen Prozess variabel ist.|
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 Jede `_exec`-Funktion lädt einen neuen Prozess und führt ihn aus. Alle `_exec`-Funktionen verwenden die gleiche Betriebssystemfunktion ([CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw)). Die `_exec`-Funktionen behandeln ggf. automatisch Argumente mit Multibyte-Zeichenfolgen, wobei Multibyte-Zeichensequenzen entsprechend der derzeit verwendeten Multibyte-Codepage erkannt werden. Die `_wexec`-Funktionen sind Breitzeichenversionen der `_exec`-Funktionen. Die `_wexec`-Funktionen verhalten sich genauso wie ihre entsprechenden `_exec`-Familien, allerdings behandeln sie keine Multibyte-Zeichenfolgen.
 
@@ -118,7 +118,7 @@ Die `_execl`-, `_execle`-, `_execlp`- und `_execlpe`-Aufrufe werden normalerweis
 
 Die `_execv`-, `_execve`-, `_execvp`- und `_execvpe`-Aufrufe sind nützlich, wenn die Anzahl der Parameter im neuen Prozess variabel ist. Zeiger auf Parameter werden als Array, nämlich `argv`, übergeben. Der `argv`[0]-Parameter ist normalerweise ein Zeiger auf `cmdname`. Die Parameter von `argv`[1] bis `argv`[`n`] weisen auf die Zeichenfolgen hin, aus denen die neue Parameterliste besteht. Der `argv`[`n`+1]-Parameter muss ein **NULL**-Zeiger sein, um das Ende der Parameterliste zu markieren.
 
-Dateien, die beim Aufrufen von `_exec` geöffnet waren, bleiben im neuen Prozess geöffnet. Bei `_execl`-, `_execlp`-, `_execv`- und `_execvp`-Aufrufen erbt der neue Prozess die Umgebung des aufrufenden Prozesses. `_execle`-, `_execlpe`-, `_execve`- und `_execvpe`-Aufrufe ändern die Umgebung für den neuen Prozess, indem eine Liste der Umgebungseinstellungen durch den `envp`-Parameter übergeben wird. `envp` ist ein Array von Zeichenzeigern, von denen jedes Element (außer dem letzten Element) auf eine auf NULL endende Zeichenfolge verweist, die eine Umgebungsvariable definiert. Solch eine Zeichenfolge hat normalerweise die Form `NAME`=`value`, wobei `NAME` der Name einer Umgebungsvariable und `value` der Zeichenfolgenwert ist, für den diese Variable festgelegt wird. (Beachten Sie, dass `value` nicht in doppelte Anführungszeichen gesetzt wird.) Das letzte Element des `envp`-Arrays sollte **NULL** sein. Wenn `envp` selbst **NULL** ist, erbt der neue Prozess die Umgebungseinstellungen des aufrufenden Prozesses.
+Dateien, die beim Aufrufen von `_exec` geöffnet waren, bleiben im neuen Prozess geöffnet. Bei `_execl`-, `_execlp`-, `_execv`- und `_execvp`-Aufrufen erbt der neue Prozess die Umgebung des aufrufenden Prozesses. `_execle`-, `_execlpe`-, `_execve`- und `_execvpe`-Aufrufe ändern die Umgebung für den neuen Prozess, indem eine Liste der Umgebungseinstellungen durch den `envp`-Parameter übergeben wird. `envp` ist ein Array von Zeichenzeigern, von denen jedes Element (außer dem letzten Element) auf eine auf NULL endende Zeichenfolge verweist, die eine Umgebungsvariable definiert. Solch eine Zeichenfolge hat normalerweise die Form `NAME`=`value`, wobei `NAME` der Name einer Umgebungsvariable und `value` der Zeichenfolgenwert ist, für den diese Variable festgelegt wird. (Beachten Sie, dass `value` nicht in doppelte Anführungszeichen eingeschlossen ist.) Das letzte Element des `envp` Arrays muss **null**sein. Wenn `envp` selbst **NULL** ist, erbt der neue Prozess die Umgebungseinstellungen des aufrufenden Prozesses.
 
 Ein Programm, das mit einer der `_exec`-Funktionen ausgeführt wird, wird immer in den Speicher geladen, als ob das Feld für die maximale Speicherbelegung in der Kopfzeile der EXE-Datei des Programms auf den Standardwert "0xFFFFH" festgelegt wäre.
 
@@ -126,7 +126,7 @@ Die `_exec`-Aufrufe behalten keine Übersetzungsmodi von geöffneten Dateien bei
 
 ## <a name="example"></a>Beispiel
 
-```
+```c
 // crt_args.c
 // Illustrates the following variables used for accessing
 // command-line arguments and environment variables:
@@ -157,7 +157,7 @@ char **envp )       // Array of environment variable strings
 
 Führen Sie das folgende Programm aus, um "Crt_args.exe" auszuführen:
 
-```
+```c
 // crt_exec.c
 // Illustrates the different versions of exec, including
 //      _execl          _execle          _execlp          _execlpe
@@ -232,7 +232,7 @@ int main( int ac, char* av[] )
 }
 ```
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>-Anforderungen
 
 **Header:** process.h
 

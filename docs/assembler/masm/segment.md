@@ -1,17 +1,17 @@
 ---
 title: SEGMENT
-ms.date: 12/06/2019
+ms.date: 12/16/2019
 f1_keywords:
 - SEGMENT
 helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-ms.openlocfilehash: 933e4e42b4b0f9cc979a3e67805d017f723472ef
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 569604bfd6ed11039ce5492223b8d5f986ceea7a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988017"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318461"
 ---
 # <a name="segment"></a>SEGMENT
 
@@ -25,7 +25,7 @@ Definiert ein Programm Segment namens " *Name* " mit Segment Attributen.
 
 #### <a name="parameters"></a>Parameters
 
-*align*<br/>
+*Ausrichten*\
 Der Bereich der Speicheradressen, von dem eine Startadresse für das Segment ausgewählt werden kann. Der Ausrichtungstyp kann eine der folgenden sein:
 
 |Typ ausrichten|Startadresse|
@@ -55,7 +55,7 @@ Diese Zeichenfolge wird als Abschnitts Name im ausgegebenen COFF-Objekt verwende
 
 Wird bei **/OMF**nicht unterstützt.
 
-*Klasse*\
+*class*\
 Gibt an, wie Segmente in der assemblierten Datei kombiniert und angeordnet werden sollen. Typische Werte sind, `'DATA'`, `'CODE'`, `'CONST'` und `'STACK'`
 
 ## <a name="remarks"></a>Hinweise
@@ -64,4 +64,5 @@ Bei `ALIGN(n)`kann *n* eine beliebige Potenz von 2 zwischen 1 und 8192 sein. wir
 
 ## <a name="see-also"></a>Siehe auch
 
-[Direktivenverweis](directives-reference.md)
+[Direktivenverweis](directives-reference.md)\
+[MASM-BNF-Grammatik](masm-bnf-grammar.md)

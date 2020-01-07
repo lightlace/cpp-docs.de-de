@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - EXTERN directive
 ms.assetid: 667d703d-3aaf-4139-a586-29bc5dab1aff
-ms.openlocfilehash: 38ea50e75f2a8e19a7a99860f691904053b6739a
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 681c4091a3c54a781bed4b01b235dfeb04f552c6
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74987858"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318097"
 ---
-# <a name="extern-masm"></a>EXTERN (MASM)
+# <a name="extern"></a>EXTERN
 
 Definiert eine oder mehrere externe Variablen, Bezeichnungen oder Symbole namens *Name* , deren Typ *Type*ist.
 
@@ -25,8 +25,9 @@ Definiert eine oder mehrere externe Variablen, Bezeichnungen oder Symbole namens
 
 Das *Sprachtyp-* Argument ist nur in 32-Bit-MASM gültig.
 
-Der *Typ* kann " [ABS](../../assembler/masm/operator-abs.md)" lauten, wodurch der *Name* als Konstante importiert wird. Identisch mit [EXTRN](../../assembler/masm/extrn.md).
+Der *Typ* kann " [ABS](operator-abs.md)" lauten, wodurch der *Name* als Konstante importiert wird. Identisch mit [EXTRN](extrn.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+[Direktivenverweis](directives-reference.md)\
+[MASM-BNF-Grammatik](masm-bnf-grammar.md)

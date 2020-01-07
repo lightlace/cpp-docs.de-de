@@ -1,6 +1,6 @@
 ---
 title: strlwr, wcslwr
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - strlwr
 - wcslwr
@@ -26,13 +26,15 @@ helpviewer_keywords:
 - strlwr function
 - wcslwr function
 ms.assetid: b9274824-4365-4674-b656-823c89653656
-ms.openlocfilehash: 39c39a0920de9f448493102851f7ca6f56d4be11
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ff730d6bea6619c50fefb407a7a69c50e1a06af0
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947392"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301079"
 ---
 # <a name="strlwr-wcslwr"></a>strlwr, wcslwr
 
-Diese POSIX-Funktionen sind veraltet. Verwenden Sie stattdessen die konformen ISO C++-Funktionen [_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) oder die Funktionen mit erhöhter Sicherheit [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).
+Die Microsoft-spezifischen Funktionsnamen `strlwr` und `wcslwr` sind als veraltet markierte Aliase für die Funktionen [_strlwr und _wcslwr](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) . Standardmäßig generieren Sie eine [Compilerwarnung (Stufe 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Die Namen sind veraltet, da Sie nicht den Standard mäßigen C-Regeln für Implementierungs spezifische Namen folgen. Die Funktionen werden jedoch weiterhin unterstützt.
+
+Es wird empfohlen, stattdessen [_strlwr oder _wcslwr](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) bzw. die Funktionen für die Sicherheit mit erweiterter [_strlwr_s und _wcslwr_s zu](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md) verwenden. Oder Sie können diese Funktionsnamen weiterhin verwenden und die Warnung deaktivieren. Weitere Informationen finden Sie unter [Deaktivieren der Namen der Warnungs](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) -und [POSIX-Funktionen](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).

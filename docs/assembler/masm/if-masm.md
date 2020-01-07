@@ -1,19 +1,19 @@
 ---
 title: IF (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - if
 helpviewer_keywords:
 - IF directive
 ms.assetid: 82e43712-4f0c-4bf6-90ce-0663e81af707
-ms.openlocfilehash: ed7b9e63bb19dcc16539dbdaaf1f6a7f16566b3c
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 38d366a3a41e7b08759594899cdcbb2cb84dfbfa
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397464"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317291"
 ---
-# <a name="if-masm"></a>IF (MASM)
+# <a name="if"></a>WENN
 
 Erteilt eine Assembly von *if-Anweisungen* , wenn *expression1* den Wert true hat (ungleich 0 (null)) oder *ElseIf-Anweisungen* , wenn *expression1* false (0) und *expression2* true ist.
 
@@ -29,8 +29,9 @@ Erteilt eine Assembly von *if-Anweisungen* , wenn *expression1* den Wert true ha
 
 ## <a name="remarks"></a>Hinweise
 
-Die folgenden Direktiven können für [ElseIf](../../assembler/masm/elseif-masm.md)ersetzt werden: **elseifb**, **ELSEIFDEF**, **elseifdif**, **elseifdifi**, **elseife**, **elseifdn**, **elseimedni**, **elseifnb**und **ELSEIFNDEF**. Optional: assembliert *else--Anweisungen* , wenn der vorherige Ausdruck false ist. Beachten Sie, dass die Ausdrücke zur assemblyzeit ausgewertet werden.
+Die folgenden Direktiven können für [ElseIf](elseif-masm.md)ersetzt werden: **elseifb**, **ELSEIFDEF**, **elseifdif**, **elseifdifi**, **elseife**, **elseifdn**, **elseimedni**, **elseifnb**und **ELSEIFNDEF**. Optional: assembliert *else--Anweisungen* , wenn der vorherige Ausdruck false ist. Beachten Sie, dass die Ausdrücke zur assemblyzeit ausgewertet werden.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Direktivenverweis](directives-reference.md)
+[Direktivenverweis](directives-reference.md)\
+[MASM-BNF-Grammatik](masm-bnf-grammar.md)

@@ -1,5 +1,5 @@
 ---
-title: Einstieg in C++ Build Insights
+title: Erste Schritte mit C++ Build Insights
 description: Eine allgemeine Übersicht über die Verwendung der Tools zur Leistungsanalyse zur Erstellung von Builds, die Teil von C++ builderkenntnissen sind.
 ms.date: 11/03/2019
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 9c31d317cd7b9c6465362e3e532db2128303f602
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 862bfae3bdb27812306dcd356aecab812ea5181c
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73633225"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298739"
 ---
-# <a name="get-started-with-c-build-insights"></a>Einstieg in C++ Build Insights
+# <a name="get-started-with-c-build-insights"></a>Erste Schritte mit C++ Build Insights
 
 ::: moniker range="<=vs-2017"
 
@@ -39,7 +39,9 @@ Eine Version von WPA, die C++ Build Insights unterstützt, ist zurzeit nur in de
 
 ### <a name="to-download-and-install-wpa"></a>So können Sie WPA herunterladen und installieren
 
-1. Navigieren [Sie zur Downloadseite](https://www.microsoft.com/software-download/windowsinsiderpreviewADK)für Windows ADK Insider Preview.
+Hinweis: für die Installation von Windows Performance Analyzer ist Windows 8 oder höher erforderlich.
+
+1. Navigieren [Sie zur Downloadseite](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewADK)für Windows ADK Insider Preview.
 
 1. Laden Sie die Windows ADK Insider Preview herunter. Dabei handelt es sich um ein Datenträger Image.
 

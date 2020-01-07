@@ -1,6 +1,6 @@
 ---
 title: strnset, wcsnset
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - strnset
 - wcsnset
@@ -26,13 +26,15 @@ helpviewer_keywords:
 - strnset function
 - wcsnset function
 ms.assetid: e7868ac9-dc34-4606-bd3c-0fb2e7c51631
-ms.openlocfilehash: ab509e14df9defbb7bf17d373a27069263ab66df
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c1f00410dc15a329d6381af893eab44bb938f248
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946946"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301092"
 ---
 # <a name="strnset-wcsnset"></a>strnset, wcsnset
 
-Diese POSIX-Funktionen sind veraltet. Verwenden Sie stattdessen die konformen ISO C++-Funktionen [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) oder die Funktionen mit erweiterter Sicherheit [_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md).
+Die Microsoft-spezifischen Funktionsnamen `strnset` und `wcsnset` sind als veraltet markierte Aliase für die Funktionen [_strnset und _wcsnset](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) . Standardmäßig generieren Sie eine [Compilerwarnung (Stufe 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Die Namen sind veraltet, da Sie nicht den Standard mäßigen C-Regeln für Implementierungs spezifische Namen folgen. Die Funktionen werden jedoch weiterhin unterstützt.
+
+Es wird empfohlen, stattdessen [_strnset und _wcsnset](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) bzw. die Funktionen für die Sicherheit mit erweiterter [_strnset_s und _wcsnset_s zu](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md) verwenden. Oder Sie können diese Funktionsnamen weiterhin verwenden und die Warnung deaktivieren. Weitere Informationen finden Sie unter [Deaktivieren der Namen der Warnungs](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) -und [POSIX-Funktionen](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).

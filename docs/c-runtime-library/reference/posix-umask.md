@@ -1,6 +1,6 @@
 ---
-title: umask
-ms.date: 11/04/2016
+title: Umask
+ms.date: 12/16/2019
 api_name:
 - umask
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - umask function
 ms.assetid: d2f697fc-08d5-4b70-9dd5-df3f5bb8b754
-ms.openlocfilehash: 988c94e54a23d6ea41a0b7342377f605d7364925
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e22832b7c4b9e9f7af0a6e98955a15b783c6931f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950322"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301105"
 ---
-# <a name="umask"></a>umask
+# <a name="umask"></a>Umask
 
-Diese POSIX-Funktion ist veraltet. Verwenden Sie stattdessen die ISO C++ konforme Funktion [_umask](umask.md) oder die Funktion mit erweiterter Sicherheit [_umask_s](umask-s.md).
+Der von Microsoft implementierte Name der POSIX-Funktion `umask` ist ein als veraltet markierte Alias für die [_umask](umask.md) -Funktion. Standardmäßig wird eine [Compilerwarnung (Ebene 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)generiert. Der Name ist veraltet, da er nicht den Standard mäßigen C-Regeln für Implementierungs spezifische Namen folgt. Die-Funktion wird jedoch weiterhin unterstützt.
+
+Es wird empfohlen, stattdessen [_umask](umask.md) oder [_umask_s](umask-s.md) Funktion mit erweiterter Sicherheit zu verwenden. Oder Sie können diesen Funktionsnamen weiterhin verwenden und die Warnung deaktivieren. Weitere Informationen finden Sie unter [Deaktivieren der Namen der Warnungs](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) -und [POSIX-Funktionen](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).

@@ -1,21 +1,21 @@
 ---
 title: STRUC
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - STRUC
 helpviewer_keywords:
 - STRUC directive
 ms.assetid: 1c7c131e-b787-4902-8db7-3a2342e523f9
-ms.openlocfilehash: fcd4a0e97f5bb93b02b1e3fc53202796ceaf8d15
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 1070b3884d5cbaedbcd2f2502c7a10c68e17bdef
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74393679"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319176"
 ---
 # <a name="struc"></a>STRUC
 
-Siehe [struct](../../assembler/masm/struct-masm.md).
+Siehe [struct](struct-masm.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -23,4 +23,5 @@ Siehe [struct](../../assembler/masm/struct-masm.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Direktivenverweis](directives-reference.md)
+[Direktivenverweis](directives-reference.md)\
+[MASM-BNF-Grammatik](masm-bnf-grammar.md)

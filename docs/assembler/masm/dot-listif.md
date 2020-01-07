@@ -1,17 +1,17 @@
 ---
 title: .LISTIF
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .LISTIF
 helpviewer_keywords:
 - .LISTIF directive
 ms.assetid: 1189ff45-1fa1-4035-a74f-70c2c62b06fd
-ms.openlocfilehash: 0bca36e087f70d6e777dad6c3f9cdbed3170da01
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: d9fe1100a3513fb356e721cc677ad07f0cd7151c
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398156"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317668"
 ---
 # <a name="listif"></a>.LISTIF
 
@@ -23,8 +23,9 @@ Startet die Auflistung von Anweisungen in falsch bedingten Blöcken.
 
 ## <a name="remarks"></a>Hinweise
 
-Identisch mit [. LF-](../../assembler/masm/dot-lfcond.md)ID.
+Identisch mit [. LF-](dot-lfcond.md)ID.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Direktivenverweis](directives-reference.md)
+[Direktivenverweis](directives-reference.md)\
+[MASM-BNF-Grammatik](masm-bnf-grammar.md)

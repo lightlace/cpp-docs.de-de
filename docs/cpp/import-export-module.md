@@ -1,6 +1,6 @@
 ---
 title: module, import, export
-ms.date: 07/15/2019
+ms.date: 12/12/2019
 f1_keywords:
 - module_cpp
 - import_cpp
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - modules [C++]
 - modules [C++], import
 - modules [C++], export
-description: Verwenden Sie die Import-Anweisung für den Zugriff auf Typen und Funktionen, die im angegebenen Modul definiert sind.
-ms.openlocfilehash: ee1d50a76a3304359c0771aa0174968439f5faa4
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+description: Verwenden Sie Import-und Export Deklarationen zum Zugreifen auf und zum Veröffentlichen von Typen und Funktionen, die im angegebenen Modul definiert sind.
+ms.openlocfilehash: ae28bce8e06840cafa5c92521f6e9a62aa5bfde6
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273625"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301456"
 ---
 # <a name="module-import-export"></a>module, import, export
 
-Die Schlüsselwörter " **Module**", " **Import**" und " **Export** " sind in c++ 20 verfügbar und erfordern den [/experimental: Module](../build/reference/experimental-module.md) -Compilerschalter zusammen mit [/Std: C + + Latest](../build/reference/std-specify-language-standard-version.md). Weitere Informationen finden Sie unter [Übersicht über Module in C++ ](modules-cpp.md).
+Die **Module**-, **Import**-und **Export** Deklarationen sind in c++ 20 verfügbar und erfordern den [/experimental: Module](../build/reference/experimental-module.md) -Compilerschalter zusammen mit [/Std: C + + Latest](../build/reference/std-specify-language-standard-version.md). Weitere Informationen finden Sie unter [Übersicht über Module in C++ ](modules-cpp.md).
 
 ## <a name="module"></a>module
 
-Verwenden Sie die **Module** -Anweisung am Anfang einer Modul Implementierungs Datei, um anzugeben, dass der Dateiinhalt zum benannten Modul gehört. 
+Legen Sie eine **Modul** Deklaration am Anfang einer Modul Implementierungs Datei ab, um anzugeben, dass der Dateiinhalt zum benannten Modul gehört.
 
 ```cpp
 module ModuleA;
 ```
 
-## <a name="export"></a>"export"
+## <a name="export"></a>export
 
-Verwenden Sie die **Export Module** -Anweisung für die primäre Schnittstellen Datei des Moduls, die die Erweiterung **. IXX**aufweisen muss:
+Verwenden Sie für die primäre Schnittstellen Datei des Moduls eine **Export Modul** Deklaration, die die Erweiterung **. IXX**aufweisen muss:
 
 ```cpp
 export module ModuleA;
@@ -66,11 +66,11 @@ void main() {
 }
 ```
 
-Das **Export** Schlüsselwort wird möglicherweise nicht in einer Modul Implementierungs Datei angezeigt. Wenn der **Export** -Modifizierer auf einen Namespace Namen angewendet wird, werden alle Namen im-Namespace exportiert.
+Das **Export** Schlüsselwort wird möglicherweise nicht in einer Modul Implementierungs Datei angezeigt. Wenn **Export** auf einen Namespace Namen angewendet wird, werden alle Namen im-Namespace exportiert.
 
 ## <a name="import"></a>import
 
-Verwenden Sie die **Import** -Anweisung, um die Namen eines Moduls in Ihrem Programm sichtbar zu machen. Die Import-Anweisung muss nach der Modul Anweisung und nach allen #include Anweisungen, aber vor allen Deklarationen in der Datei angezeigt werden.
+Verwenden Sie eine **Import** Deklaration, um die Namen eines Moduls in Ihrem Programm sichtbar zu machen. Die Import Deklaration muss nach der Modul Deklaration und nach allen #include Direktiven, aber vor allen Deklarationen in der Datei stehen.
 
 ```cpp
 module ModuleA;
@@ -85,6 +85,45 @@ template <class T>
 class Baz
 {...};
 ```
+
+## <a name="remarks"></a>Hinweise
+
+**Import** und **Module** werden nur dann als Schlüsselwörter behandelt, wenn Sie am Anfang einer logischen Zeile angezeigt werden:
+
+```cpp
+
+// OK:
+module ;
+module module-name
+import :
+import <
+import "
+import module-name
+export module ;
+export module module-name
+export import :
+export import <
+export import "
+export import module-name
+
+// Error:
+int i; module ;
+```
+
+**Microsoft-spezifisch**
+
+In Microsoft C++sind der Token- **Import** und das- **Modul** immer Bezeichner und nie-Schlüsselwörter, wenn Sie als Argumente für ein Makro verwendet werden.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+#define foo(…) __VA_ARGS__
+foo(
+import // Always an identifier, never a keyword
+)
+```
+
+**Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
 

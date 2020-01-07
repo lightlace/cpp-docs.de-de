@@ -1,19 +1,19 @@
 ---
 title: COMMENT (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - Comment
 helpviewer_keywords:
 - COMMENT directive
 ms.assetid: b255ebf2-99b0-401c-a2c3-50ce57533578
-ms.openlocfilehash: 168826fa8ad40ba868db8612e5340b2358788ce4
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 1e0b21dbbbc361527829b11240727282ff65db14
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398836"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315042"
 ---
-# <a name="comment-masm"></a>COMMENT (MASM)
+# <a name="comment"></a>COMMENT
 
 Behandelt den gesamten *Text* zwischen oder in derselben Zeile wie die Trennzeichen als Kommentar.
 
@@ -25,4 +25,5 @@ Behandelt den gesamten *Text* zwischen oder in derselben Zeile wie die Trennzeic
 
 ## <a name="see-also"></a>Siehe auch
 
-[Direktivenverweis](../../assembler/masm/directives-reference.md)\
+[Direktivenverweis](directives-reference.md)\
+[MASM-BNF-Grammatik](masm-bnf-grammar.md)

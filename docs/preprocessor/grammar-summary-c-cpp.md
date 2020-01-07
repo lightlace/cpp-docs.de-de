@@ -1,28 +1,130 @@
 ---
-title: Grammatikzusammenfassung (C/C++)
+title: Zusammenfassung der präprozessorgrammatikC++(C/)
+description: Definiert und beschreibt die Syntax der präprozessorgrammatik von Microsoft C/C++ Compiler (MSVC).
 ms.date: 08/29/2019
 helpviewer_keywords:
 - grammar
 - preprocessor, grammar
 ms.assetid: 0acb6e9b-364c-4ef8-ace4-7be980521121
-ms.openlocfilehash: 41fe97ebdc2d839915f80c5f93b685bbe4f7ed8e
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 99e7e8218a80e28d67767392cadfb5c4918a3bfe
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219052"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302184"
 ---
-# <a name="grammar-summary-cc"></a>Grammatikzusammenfassung (C/C++)
+# <a name="preprocessor-grammar-summary-cc"></a>Zusammenfassung der präprozessorgrammatikC++(C/)
 
-In diesem Abschnitt wird die formale Grammatik des Präprozessors beschrieben. Es behandelt die Syntax von Vorverarbeitungs Direktiven und Operatoren, die in [den Präprozessoranweisungen](../preprocessor/preprocessor.md) und in [pragma-Direktiven](../preprocessor/pragma-directives-and-the-pragma-keyword.md)erläutert werden
+In diesem Artikel wird die formale Grammatik des C- C++ und des Präprozessors beschrieben. Es behandelt die Syntax von Vorverarbeitungs Direktiven und Operatoren. Weitere Informationen finden Sie unter [Präprozessordirektiven](../preprocessor/preprocessor.md) und [pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
-Die folgenden Artikel enthalten die folgenden Artikel:
+## <a name="definitions"></a>Definitionen für die Grammatik Zusammenfassung
 
-- [Definiert](../preprocessor/definitions-for-the-grammar-summary.md)
+Bei Terminalen handelt es sich um Endpunkte in einer Syntaxdefinition. Es ist keine andere Auflösung möglich. Terminale enthalten den Satz reservierter Wörter und benutzerdefinierter Bezeichner.
 
-- [Konventionen](../preprocessor/conventions.md)
+Bei Nichtterminalen handelt es sich um Platzhalter in der Syntax. Die meisten sind an anderer Stelle in dieser Syntaxzusammenfassung definiert. Definitionen können rekursiv sein. Die folgenden nicht Terminals sind im Abschnitt " [lexikalische Konventionen](../cpp/lexical-conventions.md) " der  *C++ Sprachreferenz*definiert:
 
-- [Präprozessorgrammatik](../preprocessor/preprocessor-grammar.md)
+*Constant*, *Constant-Expression*, *Identifier*, *Schlüsselwort*, *Operator*, *Satzzeichen*
+
+Eine optionale Komponente wird durch das tiefgestellte <sub>opt</sub> angegeben. Beispielsweise gibt die folgende Syntax einen optionalen Ausdruck an, der in geschweiften Klammern eingeschlossen ist:
+
+**{** *Expression*<sub>opt</sub> **}**
+
+## <a name="conventions"></a>Dokument Konventionen
+
+Die Konventionen verwenden verschiedene Schriftartattribute für unterschiedliche Syntaxkomponenten. Die Symbole und die Schriftarten lauten wie folgt:
+
+| Attribute | Beschreibung |
+|---------------|-----------------|
+| *nonterminal* | Kursivschrift gibt Nichtterminale an. |
+| **#include** | Fett formatierte Terminale sind literale, reservierte Symbole und Wörter, die wie gezeigt eingegeben werden müssen. Bei Zeichen in diesem Kontext wird immer die Groß-/Kleinschreibung beachtet. |
+| <sub>opt</sub> | Nichtterminale, auf die <sub>opt</sub> folgt, sind immer optional.|
+| Standardschriftart | Zeichen des in dieser Schriftart beschriebenen oder aufgeführten Satzes können als Terminale in C-Anweisungen verwendet werden. |
+
+Ein Doppelpunkt ( **:** ) nach einem Nichtterminal führt ihre Definition ein. Alternative Definitionen werden in separaten Zeilen aufgeführt.
+
+In Code Syntax Blöcken haben diese Symbole in der Standard Schriftart eine besondere Bedeutung:
+
+| Symbol | Beschreibung |
+|---|---|
+| \[ ] | Eckige Klammern umgeben ein optionales Element. |
+| {\|} | Geschweifte Klammern umschließen Alternative Elemente, die durch vertikale Balken voneinander getrennt sind. |
+| ... | Gibt an, dass das vorherige Element Muster wiederholt werden kann. |
+
+In Code Syntax Blöcken sind Kommas (`,`), Punkte (`.`), Semikolons (`;`), Doppelpunkte (`:`), Klammern (`( )`), doppelte Anführungszeichen (`"`) und einfache Anführungszeichen (`'`) Literale.
+
+## <a name="grammar"></a>Präprozessorgrammatik
+
+*Steuerungs Zeile*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *Bezeichnertoken* *-Zeichen*folgen<sub>opt</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *Bezeichner* **(** *bezeichneropt*<sub></sub> **...** **,** *bezeichneropt*<sub></sub> **)** *Tokenzeichenfolge*<sub>opt</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#include** **"** _path-spec_ **"** \
+&nbsp;&nbsp; **&nbsp;&nbsp;#include\<** _Pfadspezifikationen_>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#Line** **"** _Dateiname_ **"** <sub></sub> der *Ziffern Sequenz*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#undef** *Bezeichners*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#Error** *Tokenzeichenfolge*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#pragma** *token-string*
+
+*Constant-Expression*: \
+&nbsp;&nbsp;&nbsp;&nbsp;**definiert (** *Bezeichner* **)** \
+&nbsp;&nbsp;&nbsp;&nbsp;**definierten** *Bezeichner*\
+&nbsp;&nbsp;&nbsp;&nbsp;eines beliebigen anderen konstanten Ausdrucks
+
+*bedingt*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*if-Part* *elif-Parts*<sub>opt</sub> *else-Part*<sub>opt</sub> *EndIf-Line*
+
+*if-Part*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*if-Line-* *Text*
+
+*if-Line*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#if** *Konstante Ausdruck*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *Bezeichners*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *Bezeichner*
+
+*elif-Parts*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-Line-* *Text*\
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-Parts* *elif-Line* *Text*
+
+*elif-Line*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *konstanter Ausdruck*
+
+*else-Part*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*else-Line-* *Text*
+
+*else-Zeile*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#else**
+
+*EndIf-Zeile*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#EndIf**
+
+*Ziffern Sequenz*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*Ziffer*\
+&nbsp;&nbsp;&nbsp;&nbsp;*Ziffern Sequenz*
+
+*Ziffer*: eine von \
+&nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
+
+*Tokenzeichenfolge*: \
+&nbsp;&nbsp;&nbsp;&nbsp;Zeichenfolge von Token
+
+*Token*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*Schlüsselwort*\
+&nbsp;&nbsp;&nbsp;&nbsp;*Bezeichners*\
+&nbsp;&nbsp;&nbsp;&nbsp;*Konstante*\
+&nbsp;&nbsp;&nbsp;&nbsp;*Operator*\
+&nbsp;&nbsp;&nbsp;&nbsp;*punctuator*
+
+*Dateiname*: \
+&nbsp;&nbsp;&nbsp;&nbsp;gültiger Betriebssystem-Dateiname
+
+*Pfadspezifikation*: \
+&nbsp;&nbsp;&nbsp;&nbsp;Gültiger Dateipfad
+
+*Text*: \
+&nbsp;&nbsp;&nbsp;&nbsp;eine beliebige Text Sequenz aus.
+
+> [!NOTE]
+> Die folgenden nicht terminale werden im Abschnitt " [lexikalische Konventionen](../cpp/lexical-conventions.md) " der  *C++ Sprachreferenz*erweitert: *Konstante*, *konstanter Ausdruck*, *Bezeichner*, *Schlüsselwort*, *Operator*und *interpunktator*.
+
 
 ## <a name="see-also"></a>Siehe auch
 

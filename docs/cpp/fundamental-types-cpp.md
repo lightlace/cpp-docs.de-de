@@ -1,6 +1,6 @@
 ---
-title: Grundlegende Typen (C++)
-ms.date: 11/04/2016
+title: Integrierte Typen (C++)
+ms.date: 12/11/2019
 f1_keywords:
 - __int128_cpp
 - __wchar_t_cpp
@@ -43,28 +43,28 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: daa2ad2680a9d7d0239a70ed37ec1d90a3d96d97
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: f6bfc72bf279d09e89423866d9cb46ad3496b49c
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857540"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301495"
 ---
-# <a name="fundamental-types--c"></a>Grundlegende Typen (C++)
+# <a name="built-in-types-c"></a>Integrierte Typen (C++)
 
-Grundlegende Typen in C++ werden in drei Kategorien unterteilt: integraler Typ, Gleitkommatyp und void. Von integralen Typen können ganze Zahlen verarbeitet werden. Von Gleitkommatypen können Werte angegeben werden, die möglicherweise Nachkommastellen aufweisen.
+Integrierte Typen (auch als *grundlegende Typen*bezeichnet) werden vom C++ Sprachstandard angegeben und in den Compiler integriert. Integrierte Typen sind in keiner Header Datei definiert. Integrierte Typen sind in drei Kategorien unterteilt: Integral, Gleit Komma und void. Von integralen Typen können ganze Zahlen verarbeitet werden. Von Gleitkommatypen können Werte angegeben werden, die möglicherweise Nachkommastellen aufweisen.
 
-Der Typ [void](../cpp/void-cpp.md) beschreibt eine leere Menge von Werten. Es kann keine Variable vom Typ **void** angegeben werden – Sie wird primär verwendet, um Funktionen zu deklarieren, die keine Werte zurückgeben, oder um generische Zeiger auf nicht typisierte oder willkürlich typisierte Daten zu deklarieren. Jeder Ausdruck kann explizit konvertiert oder in den Typ " **void**" umgewandelt werden. Allerdings werden solche Ausdrücke auf folgende Anwendungsbereiche begrenzt:
+Der Typ [void](void-cpp.md) beschreibt eine leere Menge von Werten. Es kann keine Variable vom Typ **void** angegeben werden – Sie wird primär verwendet, um Funktionen zu deklarieren, die keine Werte zurückgeben, oder um generische Zeiger auf nicht typisierte oder willkürlich typisierte Daten zu deklarieren. Jeder Ausdruck kann explizit konvertiert oder in den Typ " **void**" umgewandelt werden. Allerdings werden solche Ausdrücke auf folgende Anwendungsbereiche begrenzt:
 
-- Eine Ausdrucksanweisung. (Weitere Informationen finden Sie unter [Ausdrücke](../cpp/expressions-cpp.md).)
+- Eine Ausdrucksanweisung. (Weitere Informationen finden Sie unter [Ausdrücke](expressions-cpp.md).)
 
-- Der linke Operand des Komma-Operators. (Weitere Informationen finden Sie unter [Komma-Operator](../cpp/comma-operator.md) .)
+- Der linke Operand des Komma-Operators. (Weitere Informationen finden Sie unter [Komma-Operator](comma-operator.md).)
 
-- Der zweite oder dritte Operand des bedingten Operators (`? :`). (Weitere Informationen finden Sie unter [Ausdrücke mit dem bedingten Operator](../cpp/conditional-operator-q.md) .)
+- Der zweite oder dritte Operand des bedingten Operators (`? :`). (Weitere Informationen finden Sie unter [Ausdrücke mit dem bedingten Operator](conditional-operator-q.md).)
 
-In der folgenden Tabelle werden die Einschränkungen für die Typgrößen erklärt. Diese Einschränkungen sind unabhängig von der Microsoft-Implementierung.
+In der folgenden Tabelle werden die Einschränkungen für typgrößen in Relation zueinander erläutert. Diese Einschränkungen werden vom C++ Standard vorgeschrieben und sind unabhängig von der Microsoft-Implementierung. Die absolute Größe bestimmter integrierter Typen ist nicht im Standard angegeben.
 
-### <a name="fundamental-types-of-the-c-language"></a>Grundlegende Typen der Programmiersprache C++
+### <a name="built-in-type-size-restrictions"></a>Einschränkungen für die integrierte Typgröße
 
 |Kategorie|Typ|Inhalt|
 |--------------|----------|--------------|
@@ -82,9 +82,9 @@ In der folgenden Tabelle werden die Einschränkungen für die Typgrößen erklä
 
 **Microsoft-spezifisch**
 
-Die folgende Tabelle enthält den Speicherumfang, der für grundlegende Typen in Microsoft C++ erforderlich ist.
+In der folgenden Tabelle wird die Menge des Speichers aufgelistet, die für integrierte Typen in C++Microsoft benötigt wird. Beachten Sie insbesondere, dass **Long** 4 Bytes ist, auch bei 64-Bit-Betriebssystemen.
 
-### <a name="sizes-of-fundamental-types"></a>Größen von grundlegenden Typen
+### <a name="sizes-of-built-in-types"></a>Größen von integrierten Typen
 
 |Typ|-Größe|
 |----------|----------|
@@ -95,10 +95,10 @@ Die folgende Tabelle enthält den Speicherumfang, der für grundlegende Typen in
 
 **Ende Microsoft-spezifisch**
 
-Eine Zusammenfassung des Wertebereichs der einzelnen Typen erhalten Sie unter [Datentypbereiche](../cpp/data-type-ranges.md) .
+Eine Zusammenfassung des Wertebereichs der einzelnen Typen erhalten Sie unter [Datentypbereiche](data-type-ranges.md) .
 
-Weitere Informationen zur Typkonvertierung finden Sie unter [Standardwertkonvertierungen](../cpp/standard-conversions.md).
+Weitere Informationen zur Typkonvertierung finden Sie unter [Standardwertkonvertierungen](standard-conversions.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Datentypbereiche](../cpp/data-type-ranges.md)
+[Datentypbereiche](data-type-ranges.md)

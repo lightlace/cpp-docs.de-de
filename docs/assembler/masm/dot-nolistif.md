@@ -1,17 +1,17 @@
 ---
 title: .NOLISTIF
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - .NOLISTIF
 helpviewer_keywords:
 - .NOLISTIF directive
 ms.assetid: 9243af7a-7221-4531-bbc3-281b6b292bfd
-ms.openlocfilehash: 80a5231d72ba8fe1458aa14c6b555228f8fd968a
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: c3f474528bee5b8838dedef4717295a1cbf82695
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398068"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317590"
 ---
 # <a name="nolistif"></a>.NOLISTIF
 
@@ -23,8 +23,9 @@ Unterdrückt die Auflistung von bedingten Blöcken, deren Bedingung als false (0
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist die Standardeinstellung. Identisch mit [. SFD](../../assembler/masm/dot-sfcond.md).
+Dies ist der Standardwert. Identisch mit [. SFD](dot-sfcond.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 [Direktivenverweis](directives-reference.md)
+[MASM-BNF-Grammatik](masm-bnf-grammar.md)

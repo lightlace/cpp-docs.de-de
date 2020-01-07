@@ -1,15 +1,15 @@
 ---
 title: „Ordner öffnen“-Unterstützung für C++-Buildsysteme in Visual Studio
-ms.date: 10/21/2019
+ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 0eed40430050655f8fd9bdc83144adc7aa8c32e7
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 8342060e7286c1089312874199bf341ec36bed62
+ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778337"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556692"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>„Ordner öffnen“-Unterstützung für C++-Buildsysteme in Visual Studio
 
@@ -39,15 +39,15 @@ Wenn Sie die Visual Studio-IDE mit einem Buildsystem oder einem Compilertoolset 
 
 ## <a name="configure-code-navigation-with-cpppropertiesjson"></a>Konfigurieren der Code Navigation mit cppproperties. JSON
 
-Damit IntelliSense und das Browser Verhalten wie " **Gehe zu Definition** " ordnungsgemäß funktionieren, muss Visual Studio wissen, welcher Compiler Sie verwenden, wo sich die System Header befinden und ob weitere Includedateien gefunden werden, wenn Sie sich nicht direkt im Ordner, den Sie geöffnet haben (der Arbeitsbereichs Ordner). Zum Angeben einer Konfiguration können Sie in der Dropdown Liste der Hauptsymbol Leiste die Option **Konfigurationen verwalten** auswählen:
+Damit IntelliSense und das Browser Verhalten wie " **Gehe zu Definition** " ordnungsgemäß funktionieren, muss Visual Studio wissen, welcher Compiler Sie verwenden, wo sich die System Header befinden und wo sich weitere Includedateien befinden, wenn Sie sich nicht direkt im geöffneten Ordner (Arbeitsbereichs Ordner) befinden. Zum Angeben einer Konfiguration können Sie in der Dropdown Liste der Hauptsymbol Leiste die Option **Konfigurationen verwalten** auswählen:
 
 ![Dropdown Menü "Konfigurationen verwalten"](media/manage-configurations-dropdown.png)
 
-Derzeit bietet Visual Studio vier Standardkonfigurationen, alle für den Microsoft C++ -Compiler:
+Visual Studio bietet die folgenden Standardkonfigurationen:
 
 ![Standardkonfigurationen](media/default-configurations.png)
 
-Wenn Sie z. b. **x64-Debug**auswählen, erstellt Visual Studio eine Datei mit dem Namen *cppproperties. JSON* im Stamm Projektordner und füllt sie wie folgt auf:
+Wenn Sie z. b. **x64-Debug**auswählen, erstellt Visual Studio eine Datei mit dem Namen *cppproperties. JSON* im Stamm Projektordner:
 
 ```json
 {
@@ -78,14 +78,13 @@ Diese Konfiguration erbt die Umgebungsvariablen der Visual Studio [x64-Developer
 > [!NOTE]
 > Wenn Visual Studio die Einstellungen in " *cppproperties. JSON*" ignoriert, versuchen Sie, eine Ausnahme zu Ihrer *gitignore* -Datei hinzuzufügen, wie im folgenden Beispiel: `!/CppProperties.json`.
 
-## <a name="example-configuration-for-gcc"></a>Beispielkonfiguration für gcc
+## <a name="default-configuration-for-mingw-w64"></a>Standardkonfiguration für MinGW-W64
 
-Wenn Sie einen anderen Compiler als Microsoft C++verwenden, müssen Sie eine benutzerdefinierte Konfiguration und Umgebung in *cppproperties. JSON*erstellen. Das folgende Beispiel zeigt eine komplette *cppproperties. JSON* -Datei mit einer einzelnen benutzerdefinierten Konfiguration für die Verwendung von gcc in einer MSYS2-Installation:
+Wenn Sie die MinGW-W64-Konfiguration hinzufügen, sieht der JSON-Code Folgendes aus:
 
 ```json
 {
-  "configurations": [
-   {
+  {
       "inheritEnvironments": [
         "mingw_64"
       ],
@@ -100,20 +99,17 @@ Wenn Sie einen anderen Compiler als Microsoft C++verwenden, müssen Sie eine ben
           "MINGW64_ROOT": "C:\\msys64\\mingw64",
           "BIN_ROOT": "${env.MINGW64_ROOT}\\bin",
           "FLAVOR": "x86_64-w64-mingw32",
-          "TOOLSET_VERSION": "8.3.0",
-          "PATH": "${env.MINGW64_ROOT}\\bin;${env.MINGW64_ROOT}\\..\\usr\\local\\bin;${env.MINGW64_ROOT}\\..\\usr\\bin;${env.MINGW64_ROOT}\\..\\bin;${env.PATH}",
+          "TOOLSET_VERSION": "9.1.0",
+          "PATH": "${env.BIN_ROOT};${env.MINGW64_ROOT}\\..\\usr\\local\\bin;${env.MINGW64_ROOT}\\..\\usr\\bin;${env.MINGW64_ROOT}\\..\\bin;${env.PATH}",
           "INCLUDE": "${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION};${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION}\\tr1;${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION}\\${env.FLAVOR}",
           "environment": "mingw_64"
         }
       ]
-   }
+    }
 }
 ```
 
-Beachten Sie den `environments`-Block. Es definiert Eigenschaften, die sich wie Umgebungsvariablen Verhalten und nicht nur in der *cppproperties. JSON* -Datei verfügbar sind, sondern auch in den anderen Konfigurationsdateien " *Task. vs. JSON* " und " *Launch. vs. JSON*". Die `Mingw64` Konfiguration erbt die `mingw_w64` Umgebung und verwendet deren `INCLUDE`-Eigenschaft, um den Wert für `includePath` anzugeben. Sie können dieser Array Eigenschaft nach Bedarf weitere Pfade hinzufügen.
-
-> [!WARNING]
-> Zurzeit ist ein bekanntes Problem aufgetreten, bei dem der in `environments` angegebene `INCLUDE` Wert nicht ordnungsgemäß an die `includePath`-Eigenschaft übermittelt wird. Sie können das Problem umgehen, indem Sie dem `includePath` Array die kompletten literalincludepfade hinzufügen.
+Beachten Sie den `environments`-Block. Es definiert Eigenschaften, die sich wie Umgebungsvariablen Verhalten und nicht nur in der *cppproperties. JSON* -Datei verfügbar sind, sondern auch in den anderen Konfigurationsdateien " *Task. vs. JSON* " und " *Launch. vs. JSON*". Die `Mingw64` Konfiguration erbt die `mingw_w64` Umgebung und verwendet deren `INCLUDE`-Eigenschaft, um den Wert für `includePath`anzugeben. Sie können dieser Array Eigenschaft nach Bedarf weitere Pfade hinzufügen.
 
 Die `intelliSenseMode`-Eigenschaft ist auf einen Wert festgelegt, der für gcc geeignet ist. Weitere Informationen zu diesen Eigenschaften finden Sie unter [cppproperties Schema Reference](cppproperties-schema-reference.md).
 
@@ -123,7 +119,7 @@ Wenn alles ordnungsgemäß funktioniert, wird IntelliSense aus den gcc-Headern a
 
 ## <a name="enable-intellisense-diagnostics"></a>IntelliSense-Diagnose aktivieren
 
-Wenn die erwartete IntelliSense-Funktion nicht angezeigt wird, können Sie Probleme **beheben, indem Sie zu Extras**  > **Optionen**  > **Text-Editor**  > **CC++ /**  > **erweitert** wechseln und **Protokollierung aktivieren** festlegen. auf " **true**". Legen Sie zunächst den **Protokolliergrad** auf 5 fest, und **Protokollieren** Sie die Filter auf 8.
+Wenn die erwartete IntelliSense-Funktion nicht angezeigt wird, können Sie Probleme **beheben, indem** Sie zu Extras > **Optionen** > **Text-Editor** > **CC++ /**  > **erweitert** wechseln und **Protokollierung aktivieren** auf **wahr**festlegen. Legen Sie zunächst den **Protokolliergrad** auf 5 fest, und **Protokollieren** Sie die Filter auf 8.
 
 ![Diagnoseprotokollierung](media/diagnostic-logging.png)
 
@@ -158,7 +154,7 @@ Dadurch wird die Datei " *Tasks. vs. JSON* " im Ordner ". vs" erstellt (oder ge�
 
 ```
 
-Die JSON-Datei wird im *vs* -Unterordner abgelegt, den Sie sehen können, wenn Sie oben in **Projektmappen-Explorer**auf die Schaltfläche **alle Dateien anzeigen** klicken. Sie können diesen Task ausführen, indem Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf den Stamm Knoten klicken und dann die Option **Build Hello**auswählen. Wenn die Aufgabe abgeschlossen ist, sollte die neue Datei " *Hello. exe* " in **Projektmappen-Explorer**angezeigt werden.
+Die JSON-Datei wird im *vs* -Unterordner abgelegt. Um diesen Ordner anzuzeigen, klicken Sie oben auf der **Projektmappen-Explorer**auf die Schaltfläche **alle Dateien anzeigen** . Sie können diesen Task ausführen, indem Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf den Stamm Knoten klicken und dann die Option **Build Hello**auswählen. Wenn die Aufgabe abgeschlossen ist, sollte die neue Datei " *Hello. exe* " in **Projektmappen-Explorer**angezeigt werden.
 
 Sie können viele Arten von Aufgaben definieren. Das folgende Beispiel zeigt eine *Datei "Tasks. vs. JSON* ", die eine einzelne Aufgabe definiert. `taskLabel` definiert den Namen, der im Kontextmenü angezeigt wird. `appliesTo` definiert, für welche Dateien der Befehl ausgeführt werden kann. Die `command`-Eigenschaft verweist auf die COMSPEC-Umgebungsvariable, die den Pfad für die-Konsole ("*cmd. exe* " unter Windows) identifiziert. Sie können ebenfalls auf Umgebungsvariablen verweisen, die in „CppProperties.json“ oder „CMakeSettings.json“ definiert sind. Die `args`-Eigenschaft gibt die Befehlszeile an, die aufgerufen werden soll. Das `${file}`-Makro ruft die ausgewählte Datei im **Projektmappen-Explorer** ab. Im folgenden Beispiel wird der Dateiname der aktuell ausgewählten CPP-Datei angezeigt.
 
@@ -183,7 +179,7 @@ Weitere Informationen finden Sie unter [Tasks.vs.json schema reference (Tasks.vs
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>Konfigurieren von Parametern für das Debuggen mithilfe von „launch.vs.json“
 
-Um die Befehlszeilenargumente des Programms und die Debuganweisungen anzupassen, klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf die ausführbare Datei, und wählen Sie **Debuggen und Start** Dadurch wird eine vorhandene Datei " *Launch. vs. JSON* " geöffnet, oder wenn keine vorhanden ist, wird eine neue Datei mit einem Satz minimaler Start Einstellungen erstellt. Zuerst haben Sie die Wahl, welche Art von Debugsitzung Sie konfigurieren möchten. Zum Debuggen eines MinGW-W64-Projekts wählen wir **CC++ /Launch für minggw/Cygwin (gdb)** aus. Dadurch wird eine Startkonfiguration für die Verwendung von " *gdb. exe* " mit einigen fundierten Schätz Werten zu Standardwerten erstellt. Einer dieser Standardwerte ist `MINGW_PREFIX`. Sie können den literalpfad ersetzen (wie unten gezeigt), oder Sie können eine `MINGW_PREFIX`-Eigenschaft in " *cppproperties. JSON*" definieren:
+Um die Befehlszeilenargumente des Programms und die Debuganweisungen anzupassen, klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf die ausführbare Datei, und wählen Sie **Debuggen und Start** Dadurch wird eine vorhandene Datei " *Launch. vs. JSON* " geöffnet, oder wenn keine vorhanden ist, wird eine neue Datei mit einem Satz minimaler Start Einstellungen erstellt. Zuerst haben Sie die Wahl, welche Art von Debugsitzung Sie konfigurieren möchten. Zum Debuggen eines MinGW-W64-Projekts wählen wir **CC++ /Launch für MinGW/Cygwin (gdb)** aus. Dadurch wird eine Startkonfiguration für die Verwendung von " *gdb. exe* " mit einigen fundierten Schätz Werten zu Standardwerten erstellt. Einer dieser Standardwerte ist `MINGW_PREFIX`. Sie können den literalpfad ersetzen (wie unten gezeigt), oder Sie können eine `MINGW_PREFIX`-Eigenschaft in " *cppproperties. JSON*" definieren:
 
 ```json
 {

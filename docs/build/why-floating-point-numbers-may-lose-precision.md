@@ -6,30 +6,30 @@ helpviewer_keywords:
 - FLT_EPSILON constant
 - floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-ms.openlocfilehash: 387b2f4a7156e42e59bd70c5a6f747943fb54ca7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 373ce9fa2c2c96fac349940076873a4a637a9dbe
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313583"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298713"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>Warum Gleitkommazahlen an Genauigkeit verlieren können
 
-Dezimale Gleitkommawerte müssen in der Regel nicht genaue binäre Darstellung. Dies ist ein Nebeneffekt der Darstellungsweise von der CPU Gleitkommadaten. Aus diesem Grund treten unter Umständen Präzisionsverlust, und einige Operationen mit Gleitkommazahlen können zu unerwarteten Ergebnissen führen.
+Dezimalwerte für Gleit Komma Werte verfügen im Allgemeinen nicht über eine exakte binäre Darstellung. Dies ist eine neben Auswirkung darauf, wie die CPU Gleit Komma Daten darstellt. Aus diesem Grund kann es zu einem Genauigkeits Verlust kommen, und einige Gleit Komma Vorgänge können zu unerwarteten Ergebnissen führen.
 
-Dieses Verhalten ist das Ergebnis eines der folgenden:
+Dieses Verhalten ist das Ergebnis einer der folgenden:
 
-- Die binäre Darstellung der Dezimalzahl möglicherweise nicht genau.
+- Die binäre Darstellung der Dezimalzahl ist möglicherweise nicht exakt.
 
-- Es ist ein Typenkonflikt zwischen den verwendeten Zahlen (z. B. Mischen von "float" und Double).
+- Es gibt einen Typen Konflikt zwischen den verwendeten Zahlen (z. b. "float" und "Double").
 
-Um das Problem zu beheben, können Sie die meisten Programmierer, die Stellen Sie sicher, dass der Wert größer ist oder kleiner als erforderlich ist, oder sie erhalten und verwenden eine Binary Coded Decimal (BCD)-Bibliothek, die die Genauigkeit gewährleistet wird.
+Um das Verhalten zu beheben, stellen die meisten Programmierer entweder sicher, dass der Wert größer oder kleiner als das benötigte ist, oder Sie erhalten und verwenden eine binäre codierte Decimal (BCD)-Bibliothek, die die Genauigkeit beibehält.
 
-Binäre Darstellung von Gleitkommawerten wirkt sich auf die Genauigkeit und die Genauigkeit von gleitkommaberechnungen. Microsoft Visual C++ verwendet [IEEE-Gleitkomma-Format](ieee-floating-point-representation.md).
+Die binäre Darstellung von Gleit Komma Werten wirkt sich auf die Genauigkeit und Genauigkeit von Gleit Komma Berechnungen aus. Microsoft Visual C++ verwendet das [IEEE-Gleit Komma Format](ieee-floating-point-representation.md).
 
 ## <a name="example"></a>Beispiel
 
-```
+```c
 // Floating-point_number_precision.c
 // Compile options needed: none. Value of c is printed with a decimal
 // point precision of 10 and 6 (printf rounded value by default) to
@@ -58,9 +58,9 @@ int main() {
 They are not equal! The value of c is  2.4679999352 or 2.468000
 ```
 
-## <a name="comments"></a>Kommentare
+## <a name="comments"></a>Comments
 
-Für EPSILON können Sie die FLT_EPSILON, die für "float" als 1.192092896e definiert wird – 07F, oder DBL_EPSILON-Konstante, die für den Double-Wert als 2.2204460492503131e definiert wird-016. Sie müssen float.h für diese Konstanten enthalten. Diese Konstanten sind definiert als die kleinste positive Zahl x, z. B. X + 1,0 ist nicht gleich 1.0. Da dies eine verhältnismäßig kleine Anzahl ist, sollten Sie die benutzerdefinierte Toleranz für Berechnungen mit sehr großen Mengen verwenden.
+Für Epsilon können Sie die Konstanten FLT_EPSILON verwenden, die für float als 1.192092896 e-07f definiert ist, oder DBL_EPSILON, das für Double AS 2.2204460492503131 e-016 definiert ist. Sie müssen float. h für diese Konstanten einschließen. Diese Konstanten werden als kleinste positive Zahl x definiert, sodass x + 1.0 nicht gleich 1,0 ist. Da es sich um eine sehr kleine Zahl handelt, sollten Sie benutzerdefinierte Toleranz für Berechnungen verwenden, die sehr große Zahlen umfassen.
 
 ## <a name="see-also"></a>Siehe auch
 

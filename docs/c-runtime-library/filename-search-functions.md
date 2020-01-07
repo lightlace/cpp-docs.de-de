@@ -20,12 +20,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: ecc01362bdc14af32df5093ad1ac1ee606026d8f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 331d43f3e3a88786f8dac0a6f609f988beea9dbb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940367"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300306"
 ---
 # <a name="filename-search-functions"></a>Dateinamen-Suchfunktionen
 
@@ -37,7 +37,7 @@ Diese Funktionen suchen nach angegebenen Dateinamen und schließen die Suche ab:
 
 - [_findclose](../c-runtime-library/reference/findclose.md)
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 Die `_findfirst` -Funktion stellt Informationen über das erste Vorkommen eines Dateinamens zur Verfügung, der mit der im Argument `filespec` angegebenen Datei übereinstimmt. Sie können in `filespec` beliebige Kombinationen von Platzhalterzeichen verwenden, die vom Hostbetriebssystem unterstützt werden.
 
@@ -67,7 +67,7 @@ Die Felder `time_create` und `time_access` sind in Dateisystemen, die das Anzeig
 Sie können keine Zielattribute angeben (wie etwa `_A_RDONLY`), um den Suchvorgang einzuschränken. Diese Attribute werden im Feld `attrib` der Struktur `_finddata_t` zurückgegeben und können die folgenden Werte aufweisen (die in „IO.h“ definiert sind). Die Benutzer sollten nicht darauf vertrauen, dass dies die einzigen möglichen Werte des Felds `attrib` sind.
 
 `_A_ARCH`<br/>
-Archiv. Bei jeder Änderung der Datei festgelegt und durch den **BACKUP** -Befehl zu löschen. Wert: 0x20.
+Archivieren. Bei jeder Änderung der Datei festgelegt und durch den **BACKUP** -Befehl zu löschen. Wert: 0x20.
 
 `_A_HIDDEN`<br/>
 Versteckte Datei. Im allgemeinen mithilfe des DIR-Befehls nicht angezeigt, sofern nicht die Option **/AH** verwendet wird. Gibt Informationen über normale Dateien und über Dateien, die dieses Attribut aufweisen, zurück. Wert: 0x02.
@@ -108,7 +108,7 @@ Die Funktionen `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`und `_wfin
 
 ## <a name="example"></a>Beispiel
 
-```
+```c
 // crt_find.c
 // This program uses the 32-bit _find functions to print
 // a list of all files (and their attributes) with a .C extension

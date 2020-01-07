@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: bfc114a6e71c0eb0ae70005c2657871b6c9e9692
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 92f14a352e5c177d767232eed36a7e705fd155ce
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398110"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317629"
 ---
 # <a name="model-32-bit-masm"></a>. Modell (32-Bit-MASM)
 
@@ -21,7 +21,7 @@ Initialisiert das Programmspeichermodell. (nur 32-Bit-MASM.)
 
 > **. Modell** *Speicher-Model* ⟦ __,__ *Language-Type*⟧ ⟦ __,__ *Stack-Option*⟧
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *Speichermodell*\
 Erforderlicher Parameter, der die Größe von Code- und Datenzeigern bestimmt.
@@ -38,14 +38,14 @@ Durch Angeben von **nearstack** wird das Stapel Segment zusammen mit Daten in ei
 
 ## <a name="remarks"></a>Hinweise
 
-**. Das Modell** wird in [MASM für x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)nicht verwendet.
+**. Das Modell** wird in [MASM für x64 (ml64. exe)](masm-for-x64-ml64-exe.md)nicht verwendet.
 
 In der folgenden Tabelle werden die möglichen Werte für die einzelnen Parameter auf 16-Bit- und 32-Bit-Plattformen aufgelistet:
 
 |Parameter|32-Bit-Werte|16-Bit-Werte (Support für frühere 16-Bit-Entwicklungen)|
 |---------------|--------------------|----------------------------------------------------------------|
 |*Speichermodell*|**Rate**|**winzig**, **klein**, **kompakt**, **Mittel**, **groß**,groß, **flach**|
-|*Sprachtyp*|**C**, **StdCall**|**C**, **Basic**, **Fortran**, **Pascal**, **syscall**, **StdCall**|
+|*Sprachtyp*|**C**, **StdCall**|**C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**|
 |*Stack-Option*|Nicht verwendet|**nearstack**, **farstack**|
 
 ## <a name="code"></a>Code
@@ -88,4 +88,5 @@ end
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+[Direktivenverweis](directives-reference.md)\
+[MASM-BNF-Grammatik](masm-bnf-grammar.md)

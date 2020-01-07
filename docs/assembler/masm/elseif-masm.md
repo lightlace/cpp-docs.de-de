@@ -1,30 +1,35 @@
 ---
 title: ELSEIF (MASM)
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - ElseIf
 helpviewer_keywords:
 - ELSEIF directive
 ms.assetid: 20a685d6-836e-4e64-902e-4f3daf2e51c2
-ms.openlocfilehash: 75fa24f10129827b0159a5975e28851713316d8b
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 26b5c5415c1d0b065e2d21c3e3cac86155788b0d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398437"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317408"
 ---
-# <a name="elseif-masm"></a>ELSEIF (MASM)
+# <a name="elseif"></a>ELSEIF
 
-Kombiniert [else](../../assembler/masm/else-masm.md) und [if](../../assembler/masm/if-masm.md) in einer-Anweisung.
+Kombiniert [else](else-masm.md) und [if](if-masm.md) in einer-Anweisung.
 
 ## <a name="syntax"></a>Syntax
 
-> **ELSEIF**
+> **ElseIf** *ConstantExpression*\
+> *Anweisungen*\
+> ⟦**Else** -\
+> *else-Anweisungen*⟧ \
+> **EndIf**
 
 ## <a name="remarks"></a>Hinweise
 
-Siehe [if](../../assembler/masm/if-masm.md).
+Weitere [Informationen finden Sie](if-masm.md) unter.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Direktivenverweis](directives-reference.md)
+[Direktivenverweis](directives-reference.md)\
+[MASM-BNF-Grammatik](masm-bnf-grammar.md)

@@ -1,18 +1,18 @@
 ---
 title: Header Dateien (C++)
-ms.date: 04/20/2018
+ms.date: 12/11/2019
 helpviewer_keywords:
 - header files [C++]
-ms.openlocfilehash: 98d37944f8c037f3ba25d80c7d35b3560ad11d40
-ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
+ms.openlocfilehash: ca5036ee53372f44e53b5a6452d4ab220fc3977d
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980474"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301482"
 ---
 # <a name="header-files-c"></a>Header Dateien (C++)
 
-Die Namen der Programmelemente (z. b. Variablen, Funktionen, Klassen usw.) müssen deklariert werden, bevor Sie verwendet werden können. Beispielsweise können Sie nicht einfach schreiben `x = 42` , ohne zuerst "x" zu deklarieren.
+Die Namen der Programmelemente (z. b. Variablen, Funktionen, Klassen usw.) müssen deklariert werden, bevor Sie verwendet werden können. Beispielsweise können Sie nicht einfach `x = 42` schreiben, ohne zuerst "x" zu deklarieren.
 
 ```cpp
 int x; // declaration
@@ -23,9 +23,12 @@ Die-Deklaration teilt dem Compiler mit, ob das Element ein **int**, eine **Doubl
 
 Um das Fehlerpotenzial zu minimieren C++ , hat die Konvention der Verwendung von *Header Dateien* zum enthalten von Deklarationen übernommen. Sie nehmen die Deklarationen in einer Header Datei vor und verwenden dann die #include-Direktive in jeder cpp-Datei oder einer anderen Header Datei, die diese Deklaration erfordert. Die #include-Direktive fügt vor der Kompilierung eine Kopie der Header Datei direkt in die CPP-Datei ein.
 
+> [!NOTE]
+> In Visual Studio 2019 wird das Feature "c++ 20 *modules* " als Verbesserung und schließlich Ersetzung für Header Dateien eingeführt. Weitere Informationen finden Sie unter [Übersicht über Module in C++ ](modules-cpp.md).
+
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt eine gängige Methode zum Deklarieren einer Klasse und deren Verwendung in einer anderen Quelldatei. Wir beginnen mit der Header Datei, `my_class.h`. Sie enthält eine Klassendefinition, aber beachten Sie, dass die Definition unvollständig ist. die Member- `do_something` Funktion ist nicht definiert:
+Das folgende Beispiel zeigt eine gängige Methode zum Deklarieren einer Klasse und deren Verwendung in einer anderen Quelldatei. Wir beginnen mit der Header Datei, `my_class.h`. Sie enthält eine Klassendefinition, aber beachten Sie, dass die Definition unvollständig ist. die Member-Funktions `do_something` ist nicht definiert:
 
 ```cpp
 // my_class.h
@@ -40,9 +43,9 @@ namespace N
 }
 ```
 
-Erstellen Sie als nächstes eine Implementierungs Datei (in der Regel mit einer cpp-Erweiterung oder einer ähnlichen Erweiterung). Wir nennen die Datei my_class. cpp und geben eine Definition für die Element Deklaration an. Wir fügen eine `#include` -Direktive für die Datei "my_class. h" hinzu, damit die my_class-Deklaration an dieser Stelle in die CPP-Datei eingefügt `<iostream>` wird, und wir schließen ein `std::cout`, um die Deklaration für abzurufen. Beachten Sie, dass Anführungszeichen für Header Dateien im gleichen Verzeichnis wie die Quelldatei verwendet werden und spitzen Klammern für die Header der Standardbibliothek verwendet werden. Außerdem verfügen viele Standard Bibliotheks Header nicht über die Dateierweiterung ". h" oder eine andere Dateierweiterung.
+Erstellen Sie als nächstes eine Implementierungs Datei (in der Regel mit einer cpp-Erweiterung oder einer ähnlichen Erweiterung). Wir nennen die Datei my_class. cpp und geben eine Definition für die Element Deklaration an. Wir fügen eine `#include`-Direktive für die Datei "my_class. h" hinzu, damit die my_class-Deklaration an dieser Stelle in die CPP-Datei eingefügt wird. Außerdem wird `<iostream>` zum Abrufen der Deklaration für `std::cout`hinzugefügt. Beachten Sie, dass Anführungszeichen für Header Dateien im gleichen Verzeichnis wie die Quelldatei verwendet werden und spitzen Klammern für die Header der Standardbibliothek verwendet werden. Außerdem verfügen viele Standard Bibliotheks Header nicht über die Dateierweiterung ". h" oder eine andere Dateierweiterung.
 
-In der Implementierungs Datei können wir optional eine **using** -Anweisung verwenden, um zu vermeiden, dass jede Erwähnung von "my_class" oder "cout" mit "N::" oder "Std::" qualifiziert werden muss.  Legen Sie keine **using** -Anweisungen in ihren Header Dateien ab.
+In der Implementierungs Datei können wir optional eine **using** -Anweisung verwenden, um zu vermeiden, dass Sie jede Erwähnung von "my_class" oder "cout" mit "N::" oder "Std::" qualifizieren müssen.  Legen Sie keine **using** -Anweisungen in ihren Header Dateien ab.
 
 ```cpp
 // my_class.cpp
@@ -58,7 +61,7 @@ void my_class::do_something()
 }
 ```
 
-Nun können wir in `my_class` einer anderen cpp-Datei verwenden. Wir #include die Header Datei, sodass der Compiler die Deklaration abruft. Der Compiler muss wissen, dass my_class eine Klasse ist, die über eine öffentliche Member-Funktion mit `do_something()`dem Namen verfügt.
+Nun können `my_class` in einer anderen cpp-Datei verwendet werden. Wir #include die Header Datei, sodass der Compiler die Deklaration abruft. Der Compiler muss wissen, dass es sich bei my_class um eine Klasse mit einer öffentlichen Member-Funktion handelt, die als `do_something()`bezeichnet wird.
 
 ```cpp
 // my_program.cpp
@@ -74,11 +77,11 @@ int main()
 }
 ```
 
-Nachdem der Compiler das Kompilieren der CPP-Datei in OBJ-Dateien abgeschlossen hat, übergibt er die OBJ-Dateien an den Linker. Wenn der Linker die Objektdateien zusammenfasst, findet genau eine Definition für my_class; Sie befindet sich in der obj-Datei, die für my_class. cpp erstellt wurde, und der Build ist erfolgreich.
+Nachdem der Compiler das Kompilieren der CPP-Datei in OBJ-Dateien abgeschlossen hat, übergibt er die OBJ-Dateien an den Linker. Wenn der Linker die Objektdateien zusammenfasst, findet er genau eine Definition für my_class; Sie befindet sich in der obj-Datei, die für my_class. cpp erstellt wurde, und der Build ist erfolgreich.
 
 ## <a name="include-guards"></a>Schutz einschließen
 
-Header Dateien verfügen in der Regel über einen *include* - `#pragma once` Wächter oder eine-Direktive, um sicherzustellen, dass Sie nicht mehrmals in eine einzelne cpp-Datei eingefügt werden.
+Header Dateien verfügen in der Regel über eine *include Guard* -oder eine `#pragma once`-Direktive, um sicherzustellen, dass Sie nicht mehrmals in eine einzelne cpp-Datei eingefügt werden.
 
 ```cpp
 // my_class.h
