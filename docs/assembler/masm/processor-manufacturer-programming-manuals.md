@@ -1,13 +1,13 @@
 ---
 title: Programmierungshandbücher von Prozessorherstellern
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.assetid: 61844163-de2f-419a-808e-04de39dfdddf
-ms.openlocfilehash: bd1cba8378a8b173d36e9cc8975b171cd58d388c
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 3e1f1d32c50d86ac1df271add10936f572a59c20
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74394835"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318656"
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>Programmierungshandbücher von Prozessorherstellern
 
@@ -27,4 +27,5 @@ Weder Visual Studio noch der Microsoft-Makro Assembler unterstützen alle Prozes
 
 ## <a name="see-also"></a>Siehe auch
 
-[Microsoft Macro Assembler-Referenz](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Microsoft Macro Assembler-Referenz](microsoft-macro-assembler-reference.md)\
+[MASM-BNF-Grammatik](masm-bnf-grammar.md)

@@ -1,6 +1,6 @@
 ---
 title: Operator EQ
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator EQ
 - EQ
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - operator EQ
 - EQ operator
 ms.assetid: d88afd01-dd8e-419d-ac4e-49afb4a67197
-ms.openlocfilehash: 20c066f8baf7c764e89ca29a7b27118437f7faa5
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: faf652111eb699d11ec6413ece31e030fa0a0cf5
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397007"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75311611"
 ---
 # <a name="operator-eq"></a>Operator EQ
 
@@ -25,4 +25,5 @@ Gibt true (-1) zurück, wenn *expression1* *expression2*entspricht, oder gibt fa
 
 ## <a name="see-also"></a>Siehe auch
 
-[Operatorverweis](operators-reference.md)
+[Operatorverweis\](operators-reference.md)
+[MASM-BNF-Grammatik](masm-bnf-grammar.md)
