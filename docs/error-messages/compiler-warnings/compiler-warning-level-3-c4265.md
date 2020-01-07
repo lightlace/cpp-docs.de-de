@@ -15,9 +15,9 @@ ms.locfileid: "74051706"
 ---
 # <a name="compiler-warning-level-3-c4265"></a>Compilerwarnung (Stufe 3) C4265
 
-"Class": die Klasse besitzt virtuelle Funktionen, aber der debugtor ist nicht virtuell.
+"Class": die Klasse besitzt virtuelle Funktionen, aber der destruktor ist nicht virtuell.
 
-Wenn eine Klasse über virtuelle Funktionen, aber einen nicht virtuellen debugtor verfügt, werden Objekte des Typs möglicherweise nicht ordnungsgemäß zerstört, wenn die Klasse über einen Basisklassen Zeiger zerstört wird.
+Wenn eine Klasse über virtuelle Funktionen, aber einen nicht virtuellen destruktor verfügt, werden Objekte des Typs möglicherweise nicht ordnungsgemäß zerstört, wenn die Klasse über einen Basisklassen Zeiger zerstört wird.
 
 Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
