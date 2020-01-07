@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2142
 ms.assetid: d0dbe10e-0952-49a4-8b33-e82fb7558b19
-ms.openlocfilehash: eda60204e07fd025a8c62b19de70e8204f9f80f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1345fbb44558db01b19eec04b64cf7aa036931a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353585"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301924"
 ---
 # <a name="compiler-error-c2142"></a>Compilerfehler C2142
 
-unterschiedliche Funktionsdeklarationen, die Variable nur in einer von ihnen angegebene Parameter
+Funktions Deklarationen unterscheiden sich, Variablen Parameter, die nur in einer von Ihnen angegeben sind
 
-Eine Deklaration der Funktion enthält eine Liste der Variable-Parameter. Eine andere Deklaration nicht. ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) nur.
+Eine Deklaration der Funktion enthält eine Variablen Parameterliste. Eine andere Deklaration ist nicht. Nur ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
 
-Im folgende Beispiel wird die C2142 generiert:
+Im folgenden Beispiel wird C2142 generiert:
 
-```
+```c
 // C2142.c
 // compile with: /Za /c
 void func();

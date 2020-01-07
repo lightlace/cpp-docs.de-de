@@ -9,52 +9,52 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: 59a1af8a7eb73207f84ddf2194d5fe9e77d7d46a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: cc21602764a9a3c2584bdd7da62c75974ffdd5fb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221963"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301287"
 ---
 # <a name="thread"></a>thread
 
 **Microsoft-spezifisch**
 
-Die **Thread** erweiterte Speicherklassenmodifizierer wird verwendet, um eine threadlokale Variable zu deklarieren. Verwenden Sie für das Portable entspricht in C ++ 11 und höher, die [Thread_local](../cpp/storage-classes-cpp.md#thread_local) Speicherklassenspezifizierer für portablen Code. Auf Windows `thread_local` wird implementiert, mit **__declspec(thread)**.
+Der erweiterte Speicherklassenmodifizierer **Thread** wird verwendet, um eine Thread lokale Variable zu deklarieren. Verwenden Sie für das Portable Äquivalent in c++ 11 und höher den [thread_local](../cpp/storage-classes-cpp.md#thread_local) Speicherklassenspezifizierer für portablen Code. Unter Windows **thread_local** mit **__declspec (Thread)** implementiert.
 
 ## <a name="syntax"></a>Syntax
 
-> **__declspec (Thread)** *Deklarator*
+*Deklarator* für **__declspec (Thread)**
 
 ## <a name="remarks"></a>Hinweise
 
-Threadlokaler Speicher (TLS) ist der Mechanismus, mit dem jeder Thread in einem Multithreadprozess den Speicher für threadspezifische Daten zuordnet. In den standardmäßigen Multithreadprogrammen werden Daten auf allen Threads eines angegebenen Prozesses freigegeben, während der threadlokale Speicher der Mechanismus zum Zuordnen der threadspezifischen Daten ist. Eine vollständige Erörterung der Threads, finden Sie unter [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
+Threadlokaler Speicher (TLS) ist der Mechanismus, mit dem jeder Thread in einem Multithreadprozess den Speicher für threadspezifische Daten zuordnet. In den standardmäßigen Multithreadprogrammen werden Daten auf allen Threads eines angegebenen Prozesses freigegeben, während der threadlokale Speicher der Mechanismus zum Zuordnen der threadspezifischen Daten ist. Eine umfassende Erörterung der Threads finden Sie unter [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-Deklarationen von threadlokalen Variablen müssen verwenden [erweiterte Attributsyntax](../cpp/declspec.md) und die **__declspec** Schlüsselwort mit dem **Thread** Schlüsselwort. Mit folgendem Code wird z. B. eine Ganzzahl-TLS-Variable deklariert und mit einem Wert initialisiert:
+Deklarationen von lokalen Thread Variablen müssen die [Erweiterte Attribut Syntax](../cpp/declspec.md) und das **__declspec** -Schlüsselwort mit dem **Thread** -Schlüsselwort verwenden. Mit folgendem Code wird z. B. eine Ganzzahl-TLS-Variable deklariert und mit einem Wert initialisiert:
 
 ```cpp
 __declspec( thread ) int tls_i = 1;
 ```
 
-Wenn Sie Thread-lokalen Variablen in dynamisch geladen Bibliotheken verwenden zu können, müssen Sie Faktoren bewusst sein, die dazu führen können, dass eine Thread-Local-Variable, die nicht ordnungsgemäß initialisiert werden:
+Wenn Sie lokale Thread Variablen in dynamisch geladenen Bibliotheken verwenden, müssen Sie die Faktoren kennen, die bewirken können, dass eine Thread lokale Variable nicht ordnungsgemäß initialisiert wird:
 
-1. Wenn die Variable mit einem Funktionsaufruf (einschließlich Konstruktoren) initialisiert wird, wird diese Funktion nur aufgerufen werden, für den Thread, der Binary/laden die DLL in den Prozess verursacht hat, und klicken Sie nach diesen Threads, die gestartet wird, nach dem die Binary/DLL geladen wurde. Die Initialisierungsfunktionen werden nicht für jeden Thread aufgerufen, die bereits ausgeführt wurde, wenn die DLL geladen wurde. Dynamische Initialisierung tritt auf, auf den DllMain-Aufruf für DLL_THREAD_ATTACH, aber die DLL nie Ruft die Nachricht, wenn die DLL im Prozess nicht, wenn der Thread gestartet wird.
+1. Wenn die Variable mit einem Funktionsaufruf initialisiert wird (einschließlich Konstruktoren), wird diese Funktion nur für den Thread aufgerufen, der bewirkt hat, dass die binäre/dll in den Prozess geladen wurde, und für die Threads, die nach dem Laden der Binär-/dll-Datei gestartet wurden. Die Initialisierungs Funktionen werden nicht für andere Threads aufgerufen, die bereits beim Laden der DLL ausgeführt wurden. Die dynamische Initialisierung erfolgt im DllMain-Befehl für DLL_THREAD_ATTACH, aber die DLL erhält diese Nachricht nicht, wenn sich die dll nicht im Prozess befindet, wenn der Thread gestartet wird.
 
-1. Thread-lokalen Variablen, die statisch mit konstanten Werten initialisiert werden, sind für alle Threads in der Regel ordnungsgemäß initialisiert. Ab Dezember 2017 besteht jedoch ein Problem bekannt Übereinstimmung in der Microsoft C++ Compiler bei dem Constexpr-Variablen statt statische Initialisierung dynamische erhalten.
+1. Lokale Thread Variablen, die statisch mit Konstanten Werten initialisiert werden, werden in der Regel ordnungsgemäß für alle Threads initialisiert. Ab Dezember 2017 gibt es jedoch ein bekanntes Konformitäts Problem im Microsoft C++ -Compiler, bei dem **constexpr** -Variablen anstelle der statischen Initialisierung dynamisch empfangen werden.
 
-   Hinweis: Beide Probleme werden voraussichtlich in zukünftigen Updates des Compilers behoben werden.
+   Hinweis: diese beiden Probleme werden bei zukünftigen Updates des Compilers voraussichtlich behoben.
 
-Darüber hinaus müssen Sie diese Richtlinien beachten, wenn Sie threadlokale Objekte und Variablen zu deklarieren:
+Außerdem müssen Sie diese Richtlinien beachten, wenn Sie Thread lokale Objekte und Variablen deklarieren:
 
-- Sie können anwenden, die **Thread** -Attribut nur auf Datendeklarationen und Klassen und Definitionen. **Thread** kann nicht für Funktionsdeklarationen oder-Definitionen verwendet werden.
+- Sie können das **Thread** -Attribut nur auf Klassen-und Datendeklarationen und-Definitionen anwenden. der **Thread** kann nicht für Funktions Deklarationen oder-Definitionen verwendet werden.
 
-- Sie können angeben, die **Thread** Attribut nur für Datenelemente mit statischer Speicherdauer. Hierzu zählen globale Datenobjekte (sowohl **statische** und **"extern"**), lokale statische Objekte sowie statische Datenmember von Klassen. Sie können automatische Datenobjekte mit nicht deklarieren die **Thread** Attribut.
+- Sie können das **Thread** -Attribut nur für Datenelemente mit statischer Speicherdauer angeben. Hierzu zählen globale Datenobjekte (sowohl **statische** als auch **extern**), lokale statische Objekte sowie statische Datenmember von Klassen. Sie können automatische Datenobjekte nicht mit dem **Thread** -Attribut deklarieren.
 
-- Verwenden Sie die **Thread** Attribut für die Deklaration und die Definition eines threadlokalen Objekts, ob die Deklaration und Definition in der gleichen Datei oder in separaten Dateien auftreten.
+- Sie müssen das **Thread** -Attribut für die Deklaration und die Definition eines lokalen Thread Objekts verwenden, unabhängig davon, ob die Deklaration und Definition in der gleichen Datei oder in separaten Dateien auftreten.
 
-- Sie können keine der **Thread** Attribut als Typmodifizierer.
+- Sie können das **Thread** -Attribut nicht als Typmodifizierer verwenden.
 
-- Da die Deklaration von Objekten, verwenden die **Thread** Attribut zulässig ist, diese beiden Beispiele semantisch gleichwertig:
+- Da die Deklaration von Objekten, die das **Thread** -Attribut verwenden, zulässig ist, sind diese beiden Beispiele semantisch äquivalent:
 
     ```cpp
     // declspec_thread_2.cpp
@@ -71,7 +71,7 @@ Darüber hinaus müssen Sie diese Richtlinien beachten, wenn Sie threadlokale Ob
     __declspec( thread ) B2 BObject2;   // BObject2 declared thread local.
     ```
 
-- In Standard-C ist die Initialisierung eines Objekts oder einer Variablen mit einem Ausdruck zulässig, der einen Verweis auf sich selbst enthält. Dies gilt jedoch nur für Objekte, die keinen statischen Wertebereich aufweisen. Obwohl in C++ diese dynamische Objektinitialisierung mit einem Ausdruck, der einen Verweis auf sich selbst enthält, normalerweise zulässig ist, ist dieser Initialisierungstyp für threadlokale Objekte nicht zulässig. Zum Beispiel:
+- Standard C ermöglicht die Initialisierung eines Objekts oder einer Variablen mit einem Ausdruck, der einen Verweis auf sich selbst beinhaltet, aber nur für nicht statische Objekte. Obwohl C++ normalerweise eine solche dynamische Initialisierung eines Objekts mit einem Ausdruck ermöglicht, der einen Verweis auf sich selbst beinhaltet, ist dieser Initialisierungstyp für lokale Thread Objekte nicht zulässig. Beispiel:
 
    ```cpp
    // declspec_thread_3.cpp
@@ -81,12 +81,12 @@ Darüber hinaus müssen Sie diese Richtlinien beachten, wenn Sie threadlokale Ob
    Thread int tls_i = sizeof( tls_i );   // Okay in C and C++
    ```
 
-   Beachten Sie, dass eine **"sizeof"** Ausdruck, der das initialisierte Objekt enthält einen Verweis auf sich selbst stellt keine dar und ist in C und C++ zulässig.
+   Ein **sizeof** -Ausdruck, der das Objekt enthält, das initialisiert wird, stellt keinen Verweis auf sich selbst dar und C++ist in C und zulässig.
 
 **Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
 
 [__declspec](../cpp/declspec.md)<br/>
-[Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
+[Stichwörter](../cpp/keywords-cpp.md)<br/>
 [Threadlokaler Speicher (TLS)](../parallel/thread-local-storage-tls.md)

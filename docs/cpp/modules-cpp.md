@@ -1,16 +1,16 @@
 ---
 title: Übersicht über Module in C++
-ms.date: 07/23/2019
+ms.date: 12/13/2019
 helpviewer_keywords:
 - modules [C++]
 - modules [C++], overview
 description: Module in c++ 20 stellen eine moderne Alternative zu Header Dateien dar.
-ms.openlocfilehash: 17495aa3e295b26fcfa5c489ff6793bb75d13d68
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 28e1824250ad4fb404c528aa9511745abb001f31
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273675"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301378"
 ---
 # <a name="overview-of-modules-in-c"></a>Übersicht über Module in C++
 
@@ -20,7 +20,7 @@ Module können nebeneinander mit Header Dateien verwendet werden. Eine C++ Quell
 
 ## <a name="enable-modules-in-the-microsoft-c-compiler"></a>Aktivieren von Modulen im Microsoft C++ -Compiler
 
-Ab Visual Studio 2019 Version 16,2 sind Module im Microsoft C++ -Compiler nicht vollständig implementiert. Sie können die Module-Funktion verwenden, um einzelne Partitions Module zu erstellen und die von Microsoft bereitgestellten Standard Bibliotheks Module zu importieren. Kompilieren Sie mit [/experimental: Module](../build/reference/experimental-module.md) und [/Std: c + + Latest](../build/reference/std-specify-language-standard-version.md), um die Unterstützung für Module zu aktivieren. Klicken Sie in einem Visual Studio-Projekt in **Projektmappen-Explorer** mit der rechten Maustaste auf den Projekt Knoten, und wählen Sie **Eigenschaften**aus. Legen Sie die Dropdown- **Konfiguration** auf **alle Konfigurationen**fest, und wählen Sie dann **Konfigurations Eigenschaften** >  > **C/C++** **Sprache** >  **C++ Module aktivieren ( experimentell)** .
+Ab Visual Studio 2019 Version 16,2 sind Module im Microsoft C++ -Compiler nicht vollständig implementiert. Sie können die Module-Funktion verwenden, um einzelne Partitions Module zu erstellen und die von Microsoft bereitgestellten Standard Bibliotheks Module zu importieren. Kompilieren Sie mit [/experimental: Module](../build/reference/experimental-module.md) und [/Std: c + + Latest](../build/reference/std-specify-language-standard-version.md), um die Unterstützung für Module zu aktivieren. Klicken Sie in einem Visual Studio-Projekt in **Projektmappen-Explorer** mit der rechten Maustaste auf den Projekt Knoten, und wählen Sie **Eigenschaften**aus. Legen Sie die Dropdown- **Konfiguration** auf **alle Konfigurationen**fest, und wählen Sie dann **Konfigurations Eigenschaften** > **C++ C/**  > **Sprache** >  **C++ Module aktivieren (experimentell)** .
 
 Ein Modul und der Code, in dem es verwendet wird, müssen mit denselben Compileroptionen kompiliert werden.
 
@@ -28,24 +28,24 @@ Ein Modul und der Code, in dem es verwendet wird, müssen mit denselben Compiler
 
 Obwohl es nicht durch den c++ 20-Standard angegeben ist, ermöglicht Microsoft seine C++ Implementierung der Standardbibliothek als Module. Wenn Sie die C++ Standard Bibliothek als Module importieren, anstatt Sie über Header Dateien #including, können Sie die Kompilierungszeiten abhängig von der Größe Ihres Projekts möglicherweise beschleunigen. Die Bibliothek ist in die folgenden Module integriert:
 
-- Std. Regex stellt den Inhalt der Regex-Header \<bereit >
-- Std. File System stellt den Inhalt des \<Header Dateisystems bereit >
-- Std. Memory stellt den Inhalt des Header \<Speichers bereit >
-- Std. Threading bietet den Inhalt von Headern \<Atomic >, \<CONDITION_VARIABLE > \<, Future > \<, Mutex > \<, shared_mutex > und \<Thread >
+- Std. Regex stellt den Inhalt der Regex-Header \<
+- Std. File System stellt den Inhalt von Header \<File System >
+- Std. Memory stellt den Inhalt von Header \<Arbeitsspeicher bereit >
+- Std. Threading bietet den Inhalt von Headern \<Atomic >, \<CONDITION_VARIABLE >, \<zukünftige >, \<Mutex >, \<shared_mutex > und \<Thread >
 - Std. Core bietet alles andere in der C++ Standard Bibliothek.
 
-Um diese Module zu verwenden, fügen Sie einfach am Anfang der Quell Code Datei eine Import-Anweisung hinzu. Beispiel:
+Um diese Module zu verwenden, fügen Sie einfach eine Import Deklaration am Anfang der Quell Code Datei hinzu. Beispiel:
 
 ```cpp
 import std.core;
 import std.regex;
 ```
 
-Um das Microsoft-Standard Bibliotheks Modul zu nutzen, müssen Sie das Programm mit den Optionen [/EHsc](../build/reference/eh-exception-handling-model.md) und [/MD](../build/reference/md-mt-ld-use-run-time-library.md) kompilieren.
+Kompilieren Sie das Programm mit den Optionen [/EHsc](../build/reference/eh-exception-handling-model.md) und [/MD](../build/reference/md-mt-ld-use-run-time-library.md) , um das Microsoft-Standard Bibliotheks Modul zu nutzen.
 
 ## <a name="basic-example"></a>Einfaches Beispiel
 
-Das folgende Beispiel zeigt eine einfache Modul Definition in einer Quelldatei namens " **foo. IXX**". Die Erweiterung **. IXX** ist für Modulschnittstellen Dateien in Visual Studio erforderlich. In diesem Beispiel enthält die Schnittstellen Datei sowohl die Funktionsdefinition als auch die-Deklaration. Die Definitionen können jedoch auch in eine oder mehrere separate Dateien eingefügt werden (wie in einem späteren Beispiel gezeigt). Die " **Export Module foo** "-Anweisung gibt an, dass diese Datei die primäre Schnitt `Foo`Stelle für ein Modul namens ist. Der **Export** -Modifizierer für gibt an `f()` , dass diese Funktion sichtbar ist, wenn `Foo` von einem anderen Programm oder Modul importiert wird. Beachten Sie, dass das Modul auf einen `Bar`Namespace verweist.
+Das folgende Beispiel zeigt eine einfache Modul Definition in einer Quelldatei namens " **foo. IXX**". Die Erweiterung **. IXX** ist für Modulschnittstellen Dateien in Visual Studio erforderlich. In diesem Beispiel enthält die Schnittstellen Datei sowohl die Funktionsdefinition als auch die-Deklaration. Die Definitionen können jedoch auch in eine oder mehrere separate Dateien eingefügt werden (wie in einem späteren Beispiel gezeigt). Die " **Export Module foo** "-Anweisung gibt an, dass diese Datei die primäre Schnittstelle für ein Modul namens "`Foo`" ist. Der **Export** -Modifizierer auf `f()` gibt an, dass diese Funktion sichtbar ist, wenn `Foo` von einem anderen Programm oder Modul importiert wird. Beachten Sie, dass das Modul auf einen Namespace verweist `Bar`.
 
 ```cpp
 export module Foo;
@@ -64,7 +64,7 @@ namespace Bar
 }
 ```
 
-In der Datei " **MyProgram. cpp** " wird die **Import** -Anweisung verwendet, um auf `Foo`den Namen zuzugreifen, der von exportiert wird. Beachten Sie, dass `Bar` der Name hier sichtbar ist, aber nicht alle Member. Beachten Sie auch, dass `ANSWER` das Makro nicht sichtbar ist.
+Die Datei **MyProgram. cpp** verwendet die **Import** Deklaration, um auf den Namen zuzugreifen, der von `Foo`exportiert wird. Beachten Sie, dass der Name `Bar` hier sichtbar ist, aber nicht alle Member. Beachten Sie auch, dass das Makro `ANSWER` nicht sichtbar ist.
 
 ```cpp
 
@@ -132,7 +132,7 @@ Die primäre Schnittstellen Einheit kann Partitions Implementierungs Dateien imp
 
 ## <a name="modules-and-header-files"></a>Module und Header Dateien
 
-Sie können Header Dateien in eine Modul Quelldatei einschließen, indem Sie `#include` die-Direktive vor der Modul Deklaration platzieren. Diese Dateien werden als im *globalen Modul Fragment*angesehen. Ein Modul kann nur die Namen im *globalen Modul Fragment* sehen, die sich in den Überschriften befinden, die es explizit einschließt. Das globale Modul Fragment enthält nur Symbole, die tatsächlich verwendet werden.
+Sie können Header Dateien in eine Modul Quelldatei einschließen, indem Sie die `#include`-Direktive vor der Modul Deklaration platzieren. Diese Dateien werden als im *globalen Modul Fragment*angesehen. Ein Modul kann nur die Namen im *globalen Modul Fragment* sehen, die sich in den Überschriften befinden, die es explizit einschließt. Das globale Modul Fragment enthält nur Symbole, die tatsächlich verwendet werden.
 
 ```cpp
 // MyModuleA.cpp

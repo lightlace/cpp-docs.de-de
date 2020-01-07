@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - C2054
 ms.assetid: 37f7c612-0d7d-4728-9e67-ac4160555f48
-ms.openlocfilehash: 7366995f8930b4733ccff73aef38ebcf65a0c120
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7d90d684c1d95f540f6357bf61ee7c6f889ad3f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408770"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302054"
 ---
 # <a name="compiler-error-c2054"></a>Compilerfehler C2054
 
-erwartet ' (' 'Bezeichner' folgen
+erwartet wurde "(" für "Identifier".
 
-Der Funktionsbezeichner wird in einem Kontext verwendet, die nachfolgende Klammern erfordert.
+Der Funktions Bezeichner wird in einem Kontext verwendet, der nachfolgende Klammern erfordert.
 
-Dieser Fehler kann verursacht werden, indem Sie ein Gleichheitszeichen (=) in einer komplexen Initialisierung auslassen.
+Dieser Fehler kann dadurch verursacht werden, dass bei einer komplexen Initialisierung ein Gleichheitszeichen (=) weggelassen wird.
 
-Im folgende Beispiel wird die C2054 generiert:
+Im folgenden Beispiel wird C2054 generiert:
 
-```
+```c
 // C2054.c
 int array1[] { 1, 2, 3 };   // C2054, missing =
 ```
 
 Mögliche Lösung:
 
-```
+```c
 // C2054b.c
 int main() {
    int array2[] = { 1, 2, 3 };

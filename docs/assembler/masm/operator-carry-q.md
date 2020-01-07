@@ -1,6 +1,6 @@
 ---
 title: Operator CARRY?
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - CARRY?
 - operator CARRY?
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - operator CARRY?
 - CARRY? operator
 ms.assetid: 5b195de7-3f66-436a-b75a-4b8d7c3c83b7
-ms.openlocfilehash: 297e4501d87217d112a3163efc76368571c41d6d
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 51d74e28e176a4e7cd84ba817183d420100365ac
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397068"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75311740"
 ---
 # <a name="operator-carry"></a>Operator CARRY?
 
-Der Status des Carry-Flags. Wird nur innerhalb von verwendet [. Wenn](../../assembler/masm/dot-if.md), [. Während](../../assembler/masm/dot-while.md)oder [. Wiederholen](../../assembler/masm/dot-repeat.md) Sie Blöcke und werden zur Laufzeit und nicht zur assemblyzeit ausgewertet.
+Der Status des Carry-Flags. Wird nur innerhalb von verwendet [. Wenn](dot-if.md), [. Während](dot-while.md)oder [. Wiederholen](dot-repeat.md) Sie Blöcke und werden zur Laufzeit und nicht zur assemblyzeit ausgewertet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,4 +25,5 @@ Der Status des Carry-Flags. Wird nur innerhalb von verwendet [. Wenn](../../asse
 
 ## <a name="see-also"></a>Siehe auch
 
-[Operatorverweis](../../assembler/masm/operators-reference.md)
+[Operatorverweis\](operators-reference.md)
+[MASM-BNF-Grammatik](masm-bnf-grammar.md)

@@ -1,30 +1,43 @@
 ---
-title: Zeichensätze
-ms.date: 05/06/2019
+title: Token und Zeichensätze
+ms.date: 12/10/2019
 helpviewer_keywords:
+- Tokens (C++)
 - Character sets
 - basic source character set (C++)
 - universal character names
 - basic execution character set (C++)
 ms.assetid: 379a2af6-6422-425f-8352-ef0bca6c0d74
-ms.openlocfilehash: 92d60e3383abd7e3b3fa2d689958cf02a9b91e75
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 1f6dbe2faa6348d61ec00b411cc35e8ef5ceb57a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222517"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301612"
 ---
-# <a name="character-sets"></a>Zeichensätze
+# <a name="tokens-and-character-sets"></a>Token und Zeichensätze
 
-Der Text eines C++-Programms wird in Quelldateien gespeichert, die eine bestimmte Zeichencodierung verwenden. Der C++-Standard gibt einen einfachen Quellzeichensatz für Quelldateien und einen einfachen Ausführungszeichensatz für kompilierte Dateien an. Microsoft C++ Compiler (MSVC) können Sie einen zusätzlichen Satz von gebietsschemaspezifischen Zeichen in Quelldateien verwendet werden und kompilierten Dateien.
+Der Text eines C++ Programms besteht aus Token und *Leerzeichen*. Ein Token ist das kleinste Element eines C++-Programms, das für den Compiler von Bedeutung ist. Der C++ Parser erkennt folgende Arten von Token:
 
-## <a name="character-sets"></a>Zeichensätze
+- [Stichwörter](../cpp/keywords-cpp.md)
+- [Bezeichner](../cpp/identifiers-cpp.md)
+- [Numerische, boolesche und Zeigerliterale](../cpp/numeric-boolean-and-pointer-literals-cpp.md)
+- [Zeichenfolgen- und Zeichenliterale](../cpp/string-and-character-literals-cpp.md)
+- [Benutzerdefinierte Literale](../cpp/user-defined-literals-cpp.md)
+- [Operatoren](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+- [Markierungszeichen](../cpp/punctuators-cpp.md)
 
-Der C++-Standard gibt einen *einfachen Quellzeichensatz* an, der in Quelldateien verwendet werden kann. Es können zusätzliche Zeichen mithilfe eines *universellen Zeichennamens*angegeben werden, um Zeichen außerhalb dieses Satzes darzustellen. Beim Kompilieren stellen der *einfache Ausführungszeichensatz* und der *einfache Ausführungsbreitzeichensatz* die Zeichen und Zeichenfolgen dar, die in einem Programm angezeigt werden können. Die MSVC-Implementierung ermöglicht zusätzliche Zeichen im Quellcode und im kompilierten Code.
+Token werden normalerweise durch *Leerzeichen*getrennt, wobei es sich um eine oder mehrere handeln kann:
 
-### <a name="basic-source-character-set"></a>Einfacher Quellzeichensatz
+- Leerzeichen
+- Horizontale oder vertikale Tabstopps
+- Zeilenumbrüche
+- Formular Feeds
+- Comments
 
-Der *einfache Quellzeichensatz* besteht aus 96 Zeichen, die in Quelldateien verwendet werden können. Dieser Satz umfasst das Leerzeichen, den horizontalen Tabstopp, den vertikalen Tabstopp, die Steuerzeichen für Seitenvorschub und Zeilenwechsel sowie diese Gruppe von Grafikzeichen:
+## <a name="basic-source-character-set"></a>Einfacher Quellzeichensatz
+
+Der C++ Standard gibt einen *einfachen Quell Zeichensatz* an, der in Quelldateien verwendet werden kann. Es können zusätzliche Zeichen mithilfe eines *universellen Zeichennamens*angegeben werden, um Zeichen außerhalb dieses Satzes darzustellen. Die MSVC-Implementierung lässt zusätzliche Zeichen zu. Der *grundlegende Quell Zeichensatz* besteht aus 96 Zeichen, die in Quelldateien verwendet werden können. Dieser Satz umfasst das Leerzeichen, den horizontalen Tabstopp, den vertikalen Tabstopp, die Steuerzeichen für Seitenvorschub und Zeilenwechsel sowie diese Gruppe von Grafikzeichen:
 
 `a b c d e f g h i j k l m n o p q r s t u v w x y z`
 
@@ -36,7 +49,7 @@ Der *einfache Quellzeichensatz* besteht aus 96 Zeichen, die in Quelldateien verw
 
 **Microsoft-spezifisch**
 
-MSVC enthält die `$` Zeichen als ein Mitglied des einfachen quellzeichensatzes. MSVC kann auch einen zusätzlichen Satz von Zeichen in Quelldateien verwendet werden, die auf Grundlage der dateicodierung. Standardmäßig speichert Visual Studio die Quelldateien mithilfe der Standardcodepage. Wenn Quelldateien mit einer Gebietsschema-Codepage oder eine Unicode-Codepage gespeichert werden, können Sie die Zeichen dieser Codepage in Ihrem Quellcode verwenden MSVC mit Ausnahme der Steuercodes, die im einfachen quellzeichensatz nicht explizit zugelassen festlegen. Beispielsweise können Sie japanische Zeichen in Kommentaren, Bezeichnern oder Zeichenfolgenliteralen einfügen, wenn Sie die Datei mit einer japanischen Codepage speichern. MSVC lässt keine Zeichenfolgen, die in gültige multibyte-Zeichen oder Unicode-Codepunkte übersetzt werden können. In Abhängigkeit von den Compileroptionen werden möglicherweise nicht alle zulässigen Zeichen in Bezeichnern angezeigt. Weitere Informationen finden Sie unter [Identifiers](../cpp/identifiers-cpp.md).
+MSVC enthält das `$` Zeichen als Member des grundlegenden Quell Zeichensatzes. MSVC ermöglicht außerdem die Verwendung eines zusätzlichen Satzes von Zeichen in Quelldateien, basierend auf der Datei Codierung. Standardmäßig speichert Visual Studio die Quelldateien mithilfe der Standardcodepage. Wenn Quelldateien mit einer Gebiets Schema spezifischen Codepage oder einer Unicode-Codepage gespeichert werden, können Sie mithilfe von MSVC beliebige Zeichen dieser Codepage in Ihrem Quellcode verwenden, mit Ausnahme der Steuercodes, die im einfachen Quell Zeichensatz nicht explizit zulässig sind. Beispielsweise können Sie japanische Zeichen in Kommentaren, Bezeichnern oder Zeichenfolgenliteralen einfügen, wenn Sie die Datei mit einer japanischen Codepage speichern. MSVC lässt keine Zeichen folgen zu, die in gültige Multibytezeichen oder Unicode-Code Punkte übersetzt werden können. In Abhängigkeit von den Compileroptionen werden möglicherweise nicht alle zulässigen Zeichen in Bezeichnern angezeigt. Weitere Informationen finden Sie unter [Identifiers](../cpp/identifiers-cpp.md).
 
 **Ende Microsoft-spezifisch**
 
@@ -48,7 +61,7 @@ Universelle Zeichennamen können in Bezeichnern und Zeichenfolgen sowie in Zeich
 
 **Microsoft-spezifisch**
 
-Microsoft C++ -Compiler behandelt ein Zeichen in universellen Zeichennamens und in literalform Synonym verwenden lassen. Sie können z. B. einen Bezeichner in Form eines universellen Zeichennamens deklarieren und ihn dann in Literalform verwenden:
+Der Microsoft C++ -Compiler behandelt ein Zeichen in Form eines universellen Zeichen namens und in literalform austauschbar. Sie können z. B. einen Bezeichner in Form eines universellen Zeichennamens deklarieren und ihn dann in Literalform verwenden:
 
 ```cpp
 auto \u30AD = 42; // \u30AD is 'キ'
@@ -59,6 +72,6 @@ Das Format von Sonderzeichen in der Windows-Zwischenablage ist von den Gebietssc
 
 **Ende Microsoft-spezifisch**
 
-### <a name="basic-execution-character-set"></a>einfache Ausführungszeichensatz
+### <a name="execution-character-sets"></a>Ausführungs Zeichensätze
 
-Der *einfache Ausführungszeichensatz* und der *einfache Ausführungsbreitzeichensatz* bestehen aus allen Zeichen des einfachen Quellzeichensatzes sowie aus den Steuerzeichen, die Warnung, Rücktaste, Wagenrücklauf und NULL darstellen. Der *Ausführungszeichensatz* und der *Ausführungsbreitzeichensatz* sind Obermengen der grundlegenden Sätze. Sie umfassen die durch die Implementierung definierten Quellzeichen außerhalb des einfachen Quellzeichensatzes. Der Ausführungszeichensatz weist eine gebietsschemaspezifische Darstellung auf.
+Die *Ausführungs Zeichensätze* stellen die Zeichen und Zeichen folgen dar, die in einem kompilierten Programm vorkommen können. Diese Zeichensätze bestehen aus allen Zeichen, die in einer Quelldatei zulässig sind, sowie aus den Steuerzeichen, die Warnung, Rücktaste, Wagen Rücklauf und NULL-Zeichen darstellen. Der Ausführungszeichensatz weist eine gebietsschemaspezifische Darstellung auf.

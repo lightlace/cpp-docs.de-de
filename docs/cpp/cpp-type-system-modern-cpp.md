@@ -3,12 +3,12 @@ title: C++-Typsystem
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 1f12f7505438dc995aaf8a045fd903488e9ff092
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 5755c7818182c5e26c5b3df6407fbe259bfdbcf3
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246600"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301573"
 ---
 # <a name="c-type-system"></a>C++-Typsystem
 
@@ -24,9 +24,7 @@ Das Konzept des *Typs* ist in C++sehr wichtig. Jede Variable, jedes Funktionsarg
 
 ## <a name="specifying-variable-and-function-types"></a>Angeben von Variablen und Funktionstypen
 
-C++ist eine Sprache mit *starker Typisierung* und auch *statisch typisiert*. jedes Objekt weist einen Typ auf, und dieser Typ ändert sich nie (nicht mit statischen Datenobjekten verwechselt).
-**Wenn Sie im Code eine Variable deklarieren** , müssen Sie entweder den Typ explizit angeben oder das Schlüsselwort " **Auto** " verwenden, um den Compiler anzuweisen, den Typ aus dem Initialisierer abzuleiten.
-**Wenn Sie eine Funktion im Code deklarieren** , müssen Sie den Typ jedes Arguments und dessen Rückgabewerts angeben oder **void** , wenn kein Wert von der Funktion zurückgegeben wird. Die Verwendung von Funktionsvorlagen, die Argumente beliebiger Typen ermöglichen stellen eine Ausnahme dar.
+C++ist eine Sprache mit *starker Typisierung* und auch *statisch typisiert*. jedes Objekt weist einen Typ auf, und dieser Typ ändert sich nie (nicht mit statischen Datenobjekten verwechselt). Wenn Sie im Code eine Variable deklarieren, müssen Sie entweder den Typ explizit angeben oder das Schlüsselwort " **Auto** " verwenden, um den Compiler anzuweisen, den Typ aus dem Initialisierer abzuleiten. Wenn Sie eine Funktion im Code deklarieren, müssen Sie den Typ jedes Arguments und dessen Rückgabewerts angeben oder **void** , wenn kein Wert von der Funktion zurückgegeben wird. Die Verwendung von Funktionsvorlagen, die Argumente beliebiger Typen ermöglichen stellen eine Ausnahme dar.
 
 Nachdem Sie eine Variable deklariert haben, können Sie den Typ zu einem späteren Zeitpunkt nicht ändern. Sie können allerdings den Wert der Variablen oder den Rückgabewert einer Funktion in eine andere Variable eines anderen Typs kopieren. Solche Vorgänge werden als *Typkonvertierungen*bezeichnet, die manchmal erforderlich sind, aber auch potenzielle Quellen für Datenverlust oder Unrichtigkeit sind.
 
@@ -55,7 +53,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 Im Gegensatz zu einigen Sprachen gibt es bei C++ keinen universellen Basistyp, von dem alle anderen Typen abgeleitet werden. Die Sprache umfasst viele *grundlegende Typen*, die auch als *integrierte Typen*bezeichnet werden. Dazu zählen numerische Typen wie **int**, **Double**, **Long**, **bool**sowie die **char** -und **wchar_t** -Typen für ASCII-und Unicode-Zeichen. Die meisten grundlegenden Typen (außer " **bool**", " **Double**", " **wchar_t** " und verwandte Typen) haben alle nicht signierte Versionen, die den Wertebereich ändern, den die Variable speichern kann. Ein **int**-Wert, der eine 32-Bit-Ganzzahl mit Vorzeichen speichert, kann z. b. einen Wert zwischen-2.147.483.648 und 2.147.483.647 darstellen. Ein **int**-Wert ohne Vorzeichen, der auch als 32-Bits gespeichert wird, kann einen Wert zwischen 0 und 4.294.967.295 speichern. Die Gesamtzahl der möglichen Werte ist in beiden Fällen gleich, nur der Bereich ist anders.
 
-Die grundlegenden Typen werden vom Compiler erkannt, der über interne Regeln verfügt, die bestimmen, welche Vorgänge auf den Typen ausgeführt werden können und wie sie in andere grundlegenden Typen konvertiert werden können. Eine umfassende Liste der integrierten Typen und ihrer Größe und numerischen Grenzwerte finden Sie unter [grundlegende Typen](../cpp/fundamental-types-cpp.md).
+Die grundlegenden Typen werden vom Compiler erkannt, der über interne Regeln verfügt, die bestimmen, welche Vorgänge auf den Typen ausgeführt werden können und wie sie in andere grundlegenden Typen konvertiert werden können. Eine umfassende Liste der integrierten Typen und ihrer Größe und numerischen Grenzwerte finden Sie unter [integrierte Typen](../cpp/fundamental-types-cpp.md).
 
 In der folgende Abbildung wird die relative Größe der integrierten Datentypen dargestellt:
 
@@ -63,10 +61,10 @@ In der folgende Abbildung wird die relative Größe der integrierten Datentypen 
 
 In der folgenden Tabelle werden die am häufigsten verwendeten grundlegenden Typen aufgelistet:
 
-|Typ|Größe|Anmerkungen|
+|Typ|-Größe|Anmerkungen|
 |----------|----------|-------------|
 |int|4 Bytes|Die Standardauswahl für ganzzahlige Werte.|
-|double|8 Bytes|Die Standardauswahl für Gleitkommawerte.|
+|Doppelt|8 Bytes|Die Standardauswahl für Gleitkommawerte.|
 |bool|1 Byte|Stellt Werte dar, die entweder wahr oder falsch sein können.|
 |char|1 Byte|Verwenden Sie sie für ASCII-Zeichen in Zeichenfolgen im älteren C-Format oder in std::string Objekten, die nie in den UNICODE konvertiert werden müssen.|
 |wchar_t|2 Bytes|Stellt "breite" Zeichenwerte dar, die in den UNICODE-Format codiert werden (UTF-16 bei Windows, andere Betriebssysteme können abweichen). Dies ist der Zeichentyp, der in Zeichenfolgen des Typs `std::wstring` verwendet wird.|
@@ -106,7 +104,7 @@ Wenn Sie eine **Klasse**, **Struktur**, **Union**oder Enumeration definieren **,
 
 ## <a name="pointer-types"></a>Zeigertypen
 
-Zurückgehend zur frühesten Versionen der Programmiersprache C, können Sie in C++ weiterhin eine Variable eines Zeigertyps deklarieren, indem Sie den speziellen Deklarator `*` (Sternchen) verwenden. Ein Zeigertyp speichert die Adresse des Speicherorts im Arbeitsspeicher, in dem der tatsächliche Datenwert gespeichert wird. In modernen C++werden diese als unformatierte *Zeiger*bezeichnet, und der Zugriff erfolgt in Ihrem Code über spezielle Operatoren `*` (Sternchen) oder `->` (Dash mit größer als). Dies wird als *Dereferenzierung*bezeichnet, und welches Element Sie verwenden, hängt davon ab, ob Sie einen Zeiger auf einen Skalar oder einen Zeiger auf einen Member in einem Objekt dereferenzieren. Das Arbeiten mit Zeigertypen ist seit Langem einer der schwierigsten und verwirrendsten Aspekte bei der Programmentwicklung mit C- und C++. In diesem Abschnitt werden einige Fakten und Verfahren beschrieben, die Ihnen bei der Verwendung von unformatierten Zeigern helfen, wenn Sie möchten, aber in modernen C++ Daten ist es nicht mehr erforderlich (oder empfohlen), unformatierte Zeiger für den Besitz von Objekten zu verwenden, da der [intelligente Zeiger](../cpp/smart-pointers-modern-cpp.md) (am Ende dieses Abschnitts ausführlicher erläutert wird). Es ist dennoch hilfreich und sicher, unformatierte Zeiger für das Beobachten von Objekten zu verwenden. Wenn Sie sie aber für Objektbesitz verwenden müssen, sollten Sie dies mit Vorsicht tun und sich genau überlegen, wie die Objekte in deren Besitz erstellt und zerstört werden.
+Zurückgehend zur frühesten Versionen der Programmiersprache C, können Sie in C++ weiterhin eine Variable eines Zeigertyps deklarieren, indem Sie den speziellen Deklarator `*` (Sternchen) verwenden. Ein Zeigertyp speichert die Adresse des Speicherorts im Arbeitsspeicher, in dem der tatsächliche Datenwert gespeichert wird. In modernen C++werden diese als unformatierte *Zeiger*bezeichnet, und der Zugriff erfolgt in Ihrem Code über spezielle Operatoren `*` (Sternchen) oder `->` (Dash mit größer als). Dies wird als *Dereferenzierung*bezeichnet, und welches Element Sie verwenden, hängt davon ab, ob Sie einen Zeiger auf einen Skalar oder einen Zeiger auf einen Member in einem Objekt dereferenzieren. Das Arbeiten mit Zeigertypen ist seit Langem einer der schwierigsten und verwirrendsten Aspekte bei der Programmentwicklung mit C- und C++. In diesem Abschnitt werden einige Fakten und Verfahren für die Verwendung von unformatierten Zeigern beschrieben. In modernen C++-Programmen sind unformatierte Zeiger für den Objektbesitz jedoch aufgrund der Entwicklung des [intelligenten Zeigers](../cpp/smart-pointers-modern-cpp.md) (weitere Informationen am Ende des Abschnitts) nicht mehr erforderlich und werden nicht empfohlen. Es ist dennoch hilfreich und sicher, unformatierte Zeiger für das Beobachten von Objekten zu verwenden. Wenn Sie sie aber für Objektbesitz verwenden müssen, sollten Sie dies mit Vorsicht tun und sich genau überlegen, wie die Objekte in deren Besitz erstellt und zerstört werden.
 
 Als Erstes sollten Sie wissen, dass bei der Deklaration einer unformatierter Zeigervariable nur Speicher zugeordnet wird, der zum Speichern der Adresse des Speicherorts belegt wird, auf den der Zeiger verweist, wenn er dereferenziert wird. Die Speicher Belegung für den Daten Wert selbst (auch als *Sicherungs Speicher*bezeichnet) wurde noch nicht zugeordnet. Das heißt, indem Sie eine unformatierte Zeigervariable deklarieren, erstellen Sie eine Speicheradressenvariable, keine tatsächliche Datenvariable. Das Dereferenzieren einer Zeigervariable vor der Sicherstellung, dass sie eine gültige Adresse auf einen Sicherungsspeicher enthält, verursacht nicht definiertes Verhalten (normalerweise ein schwerwiegender Fehler) im Programm. Im folgenden Beispiel wird die Verwendung dieses Fehlertyps veranschaulicht.
 

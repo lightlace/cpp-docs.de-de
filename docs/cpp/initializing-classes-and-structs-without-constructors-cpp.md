@@ -3,12 +3,12 @@ title: Initialisierung der geschweiften Klammer für Klassen, Strukturen und Uni
 description: Initialisierung von Klammern mit einer beliebigen C++ Klasse, Struktur oder Union verwenden
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-ms.openlocfilehash: c746c6e4c17e5a55475d70f6dc3d927088af579f
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: a2c9db4572b0dde94c42ec6768a0f3bed7766a96
+ms.sourcegitcommit: 15677b0e4d2518847ce59b158990b25c4077e565
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683009"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75652623"
 ---
 # <a name="brace-initialization"></a>Initialisierung mit geschweiften Klammern
 
@@ -136,6 +136,8 @@ kr->add_d({ 4.5 });
 return { 4.5 };
 ```
 
+Im **/Std: c++ 17** -Modus sind die Regeln für eine leere Initialisierung der geschweifter Klammer etwas restriktiver. Siehe [abgeleitete Konstruktoren und erweiterte Aggregat Initialisierung](constructors-cpp.md#extended_aggregate).
+
 ## <a name="initializer_list-constructors"></a>initializer_list-Konstruktoren
 
 Die [initializer_list-Klasse](../standard-library/initializer-list-class.md) stellt eine Liste von Objekten eines angegebenen Typs dar, die in einem Konstruktor und in anderen Kontexten verwendet werden können. Sie können ein initializer_list-Objekt durch Verwenden der Initialisierung mit geschweiften Klammern erstellen:
@@ -162,7 +164,7 @@ Die Standard-Bibliothekscontainerklassen sowie `string`, `wstring` und `regex` v
 vector<int> v1{ 9, 10, 11 };
 map<int, string> m1{ {1, "a"}, {2, "b"} };
 string s{ 'a', 'b', 'c' };
-regex rgx{'x', 'y', 'z'};
+regex rgx{ 'x', 'y', 'z' };
 ```
 
 
