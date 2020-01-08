@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - COMM directive
 ms.assetid: a23548c4-ad04-41fa-91da-945f228de742
-ms.openlocfilehash: 93e7c891b1c964eca5b3ff7fd15956ef25ea05e6
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 0ea02806cae3295af0846baa6c4e9049d54c271b
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74987942"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315172"
 ---
 # <a name="comm"></a>COMM
 
@@ -31,7 +31,7 @@ Jede *Definition* weist die folgende Form auf:
 
 Die *Sprachtyp-* , **near**-und **Far** -Argumente sind nur in 32-Bit-MASM gültig.
 
-Der optionale *Sprachtyp* legt die Benennungs Konventionen für den folgenden Namen fest. Sie überschreibt alle Sprachen, die von angegeben werden **. Model** -Direktive. Das optionale **near** -oder **Far** -überschreiben das aktuelle Speichermodell. Die *Bezeichnung ist der* Name der Variablen. Der *Typ* kann ein beliebiger Typspezifizierer ([Byte](../../assembler/masm/byte-masm.md), [Word](../../assembler/masm/word.md)usw.) oder eine ganze Zahl sein, die die Anzahl von Bytes angibt. Der optionale *Zähler* gibt die Anzahl der Elemente im deklarierten Datenobjekt an. Die Standard *Anzahl* ist 1.
+Der optionale *Sprachtyp* legt die Benennungs Konventionen für den folgenden Namen fest. Sie überschreibt alle Sprachen, die von angegeben werden **. Model** -Direktive. Das optionale **near** -oder **Far** -überschreiben das aktuelle Speichermodell. Die *Bezeichnung ist der* Name der Variablen. Der *Typ* kann ein beliebiger Typspezifizierer ([Byte](byte-masm.md), [Word](word.md)usw.) oder eine ganze Zahl sein, die die Anzahl von Bytes angibt. Der optionale *Zähler* gibt die Anzahl der Elemente im deklarierten Datenobjekt an. Die Standard *Anzahl* ist 1.
 
 ## <a name="example"></a>Beispiel
 
@@ -43,4 +43,5 @@ COMM FAR ByteArray:BYTE:512
 
 ## <a name="see-also"></a>Siehe auch
 
-[Direktivenverweis](directives-reference.md)
+[Direktivenverweis](directives-reference.md)\
+[MASM-BNF-Grammatik](masm-bnf-grammar.md)

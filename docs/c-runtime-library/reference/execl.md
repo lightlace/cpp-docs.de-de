@@ -1,6 +1,6 @@
 ---
 title: execl
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - execl
 api_location:
@@ -23,16 +23,18 @@ f1_keywords:
 helpviewer_keywords:
 - execl function
 ms.assetid: 10f24c52-7ff5-4a61-abcb-fce6d9553f23
-ms.openlocfilehash: c5b7bea0aeffc1ae75007c0592b7e97fce55ea38
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 36e3aed4f87e5c0cf2b0f510052e6a1ffb6831d7
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937607"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299792"
 ---
 # <a name="execl"></a>execl
 
-Diese POSIX-Funktion ist veraltet. Verwenden Sie stattdessen die ISO C++-konforme Funktion [_execl](execl-wexecl.md).
+Der von Microsoft implementierte Name der POSIX-Funktion `execl` ist ein als veraltet markierte Alias für die [_execl](execl-wexecl.md) -Funktion. Standardmäßig wird eine [Compilerwarnung (Ebene 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)generiert. Der Name ist veraltet, da er nicht den Standard mäßigen C-Regeln für Implementierungs spezifische Namen folgt. Die-Funktion wird jedoch weiterhin unterstützt.
+
+Es wird empfohlen, stattdessen [_execl](execl-wexecl.md) zu verwenden. Oder Sie können diesen Funktionsnamen weiterhin verwenden und die Warnung deaktivieren. Weitere Informationen finden Sie unter [Deaktivieren der Namen der Warnungs](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) -und [POSIX-Funktionen](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
 > [!IMPORTANT]
 > Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - statements, labeled
 - goto keyword [C]
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
-ms.openlocfilehash: b23e7e6310ba4ed968e2eac8e6d07d81ee4e79ba
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: b5e0d602332c87510b1fe5f59db3e497b88f0acb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151948"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299116"
 ---
 # <a name="goto-and-labeled-statements-c"></a>goto und bezeichnete Anweisungen (C)
 
@@ -21,15 +21,15 @@ Die Anweisung `goto` übertragt die Steuerung an eine Bezeichnung. Die angegeben
 
 ## <a name="syntax"></a>Syntax
 
-*Anweisung*:<br/>
+*statement*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*labeled-statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*
 
 *jump-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifier*  **;**
+&nbsp;&nbsp;&nbsp;&nbsp;**goto**-*Bezeichner* **.**
 
 *labeled-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  **:**  *statement*
+&nbsp;&nbsp;&nbsp;&nbsp;*Identifier* **:** -*Anweisung*
 
 Eine Anweisungsmarke ist nur für eine `goto`-Anweisung sinnvoll. In jedem anderen Kontext wird eine bezeichnete Anweisung ohne Berücksichtigung der Bezeichnung ausgeführt.
 
@@ -39,7 +39,7 @@ Zur Programmierung empfiehlt es sich, die **break**-, **continue**- und `return`
 
 In diesem Beispiel wird die `goto`-Anweisung veranschaulicht.
 
-```
+```c
 // goto.c
 #include <stdio.h>
 

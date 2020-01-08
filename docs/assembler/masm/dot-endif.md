@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .ENDIF directive
 ms.assetid: b9f25ed5-6634-40f7-bcbc-d3135f09cce6
-ms.openlocfilehash: bc09f72b272435b542ac7f6390a6b7ccf4d887c3
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: bcd8b5b2423abf982f999548a50208dfe8e83f6e
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398471"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313820"
 ---
 # <a name="endif-32-bit-masm"></a>. EndIf (32-Bit-MASM)
 
@@ -21,8 +21,9 @@ ms.locfileid: "74398471"
 
 ## <a name="remarks"></a>Hinweise
 
-(nur 32-Bit-MASM.) Siehe [. Wenn](../../assembler/masm/dot-if.md).
+(nur 32-Bit-MASM.) Siehe [. Wenn](dot-if.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+[Direktivenverweis](directives-reference.md)\
+[MASM-BNF-Grammatik](masm-bnf-grammar.md)

@@ -1,21 +1,21 @@
 ---
 title: QWORD
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - QWORD
 helpviewer_keywords:
 - QWORD directive
 ms.assetid: 70fcad8f-db48-4cb0-9710-8feb58baab22
-ms.openlocfilehash: 9cb62b06872202bb5fee80585ef1bce2a7ac598b
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 3a41327759c069d655293fcd031d81aeb3f18ab4
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74394636"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318565"
 ---
 # <a name="qword"></a>QWORD
 
-Ordnet und initialisiert optional 8 Bytes an Speicher für jeden *Initialisierer*. Kann auch als Typspezifizierer überall dort verwendet werden, wo ein Typ zulässig ist.
+Ordnet und initialisiert optional 8 Bytes an Speicher für jeden *Initialisierer*. Kann auch als Typspezifizierer überall dort verwendet werden, wo ein Typ zulässig ist. **QWORD** ist ein Synonym von [DQ](dq.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -23,6 +23,7 @@ Ordnet und initialisiert optional 8 Bytes an Speicher für jeden *Initialisierer
 
 ## <a name="see-also"></a>Siehe auch
 
-[Direktivenverweis](../../assembler/masm/directives-reference.md)\
-[Sqword](../../assembler/masm/qword.md) -\
-[DQ](../../assembler/masm/dq.md)
+[Direktivenverweis](directives-reference.md)\
+[Sqword](qword.md) -\
+[DQ](dq.md) -\
+[MASM-BNF-Grammatik](masm-bnf-grammar.md)

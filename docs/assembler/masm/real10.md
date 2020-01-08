@@ -1,17 +1,17 @@
 ---
 title: REAL10
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - REAL10
 helpviewer_keywords:
 - REAL10 directive
 ms.assetid: 6abe2c35-db96-45c7-82d7-ea6e2f92fbf9
-ms.openlocfilehash: 22ad35592b4c8a1fcc46f45fad19e42b62790b0b
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: b2f0f0a6a7b3eae7f957535149ae169b0c167982
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74394861"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318578"
 ---
 # <a name="real10"></a>REAL10
 
@@ -23,4 +23,5 @@ Ordnet eine 10-Byte-Gleit Komma Zahl für jeden *Initialisierer*zu und initialis
 
 ## <a name="see-also"></a>Siehe auch
 
-[Direktivenverweis](../../assembler/masm/directives-reference.md)
+[Direktivenverweis](directives-reference.md)\
+[MASM-BNF-Grammatik](masm-bnf-grammar.md)

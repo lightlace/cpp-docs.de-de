@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2099
 ms.assetid: 30e151ee-d458-4901-b0c0-d45054a913f5
-ms.openlocfilehash: 9c83b4a50cb9cf5c5b1992f0f64e2eeb013b48e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9fb7739111d13a585579455ed97cecaca3266e4
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376941"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301937"
 ---
 # <a name="compiler-error-c2099"></a>Compilerfehler C2099
 
@@ -23,7 +23,7 @@ Dieser Fehler wird nur vom C-Compiler ausgegeben und tritt nur für nicht automa
 
 Im folgenden Beispiel wird C2099 generiert.
 
-```
+```c
 // C2099.c
 int j;
 int *p;
@@ -38,11 +38,11 @@ Wenn bei der Konstantenfaltung ein Fehler auftritt, ruft der Compiler die dynami
 
 Kompilieren Sie das Modul als CPP-Datei, oder vereinfachen Sie den Ausdruck, um diesen Fehler zu beheben.
 
-Weitere Informationen finden Sie unter [/fp (Specify Floating-Point Behavior)](../../build/reference/fp-specify-floating-point-behavior.md).
+Weitere Informationen finden Sie unter [/fp (Festlegen des Gleitkommaverhaltens)](../../build/reference/fp-specify-floating-point-behavior.md).
 
 Im folgenden Beispiel wird C2099 generiert.
 
-```
+```c
 // C2099_2.c
 // compile with: /fp:strict /c
 float X = 2.0 - 1.0;   // C2099

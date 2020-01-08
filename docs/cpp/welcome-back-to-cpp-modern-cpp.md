@@ -3,12 +3,12 @@ title: Willkommen zurück bei C++ (Modern C++)
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 2739da77fbfa973ca716abc6d8fa4920b81095d9
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 4dee4779e941c66af1c23f62a88cecec4916a475
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303325"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301742"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Willkommen zurück bei C++ (Modern C++)
 
@@ -47,7 +47,7 @@ Verwenden Sie nach Möglichkeit einen intelligenten Zeiger, wenn Sie Heap Speich
 
 ## <a name="stdstring-and-stdstring_view"></a>Std:: String und Std:: string_view
 
-Zeichen folgen im C-Stil sind eine weitere wichtige Quelle für Fehler. Mithilfe von " [Std:: String" und "Std:: wstring](../standard-library/basic-string-class.md) " können Sie praktisch alle Fehler beseitigen, die mit Zeichen folgen im C-Stil verknüpft sind, und die Vorteile der Element Funktionen zum Suchen, anfügen, voranstellen usw. nutzen. Beide sind für die Geschwindigkeit stark optimiert. Wenn Sie eine Zeichenfolge an eine Funktion übergeben, die nur schreibgeschützten Zugriff erfordert, können Sie in (c++ 17) [Std:: string_view](../standard-library/basic-string-view-class.md) für einen noch größeren Leistungsvorteil verwenden.
+Zeichen folgen im C-Stil sind eine weitere wichtige Quelle für Fehler. Mithilfe von " [Std:: String" und "Std:: wstring](../standard-library/basic-string-class.md) " können Sie praktisch alle Fehler beseitigen, die mit Zeichen folgen im C-Stil verknüpft sind, und die Vorteile der Element Funktionen zum Suchen, anfügen, voranstellen usw. nutzen. Beide sind für die Geschwindigkeit stark optimiert. Wenn Sie eine Zeichenfolge an eine Funktion übergeben, die nur schreibgeschützten Zugriff erfordert, können Sie in c++ 17 [Std:: string_view](../standard-library/basic-string-view-class.md) für einen noch größeren Leistungsvorteil verwenden.
 
 ## <a name="stdvector-and-other-standard-library-containers"></a>Std:: Vector und andere Standard Bibliotheks Container
 

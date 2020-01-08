@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: 438dd855fbbfec01a31a8d4a1a53078e3c44658c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: f364c3c0b558c00e3d411ab5b697ed01ec395cbd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151779"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299077"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Zusammenfassung von Lebensdauer und Sichtbarkeit
 
@@ -18,15 +18,15 @@ Die folgende Tabelle ist eine Zusammenfassung der Lebensdauer- und Sichtbarkeits
 
 ### <a name="summary-of-lifetime-and-visibility"></a>Zusammenfassung von Lebensdauer und Sichtbarkeit
 
-|Attribute:<br /><br /> Ebene|Element|Speicherklasse<br /><br /> Bezeichner|Ergebnis: <br /><br /> Lebensdauer|Sichtbarkeit|
+|Attribute:<br /><br /> Level|Element|Speicherklasse<br /><br /> Bezeichner|Ergebnis:<br /><br /> Lebensdauer|Sichtbarkeit|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
 |Dateibereich|Variablendefinition|**static**|Global|Rest der Quelldatei der Ausführung|
 ||Variablendeklaration|**extern**|Global|Rest der Quelldatei der Ausführung|
 ||Funktionsprototyp oder Definition|**static**|Global|Einzelne Quelldatei|
 ||Funktionsprototyp|**extern**|Global|Rest der Quelldatei|
-|Blockbereich|Variablendeklaration|**extern**|Global|Block|
-||Variablendefinition|**static**|Global|Block|
-||Variablendefinition|**auto** oder **register**|Lokal|Block|
+|Blockbereich|Variablendeklaration|**extern**|Global|Blockieren|
+||Variablendefinition|**static**|Global|Blockieren|
+||Variablendefinition|**auto** oder **register**|Lokal|Blockieren|
 
 ## <a name="example"></a>Beispiel
 
@@ -36,7 +36,7 @@ Im folgenden Beispiel werden Blöcke, Verschachtelung und die Sichtbarkeit von V
 
 ### <a name="code"></a>Code
 
-```
+```c
 // Lifetime_and_Visibility.c
 
 #include <stdio.h>
@@ -62,7 +62,7 @@ int main()  // main function defined at external level
 }
 ```
 
-### <a name="comments"></a>Kommentare
+### <a name="comments"></a>Comments
 
 In diesem Beispiel gibt es vier Sichtbarkeitsebenen: die externe Ebene und drei Blockebenen. Die Werte werden auf dem Bildschirm gemäß den Kommentaren nach der jeweiligen Anweisung ausgegeben.
 

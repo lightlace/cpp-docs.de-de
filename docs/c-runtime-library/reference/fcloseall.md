@@ -1,6 +1,6 @@
 ---
 title: fcloseall
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - fcloseall
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - fcloseall function
 ms.assetid: 4f14acde-5bc5-43da-a709-7a3c559df3cf
-ms.openlocfilehash: 4f4ad76941557796e1c867c9bd9e5f4af6397525
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1594e510239949062fde8bf3a8fb036b4cafa16f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941410"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299519"
 ---
 # <a name="fcloseall"></a>fcloseall
 
-Diese POSIX-Funktion ist veraltet. Verwenden Sie stattdessen die ISO C++-konforme Funktion [_fcloseall](fclose-fcloseall.md).
+Der Microsoft-spezifische Funktionsname `fcloseall` ist ein als veraltet markierte Alias für die [_fcloseall](fclose-fcloseall.md) -Funktion. Standardmäßig wird eine [Compilerwarnung (Ebene 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)generiert. Der Name ist veraltet, da er nicht den Standard mäßigen C-Regeln für Implementierungs spezifische Namen folgt. Die-Funktion wird jedoch weiterhin unterstützt.
+
+Es wird empfohlen, stattdessen [_fcloseall](fclose-fcloseall.md) zu verwenden. Oder Sie können diesen Funktionsnamen weiterhin verwenden und die Warnung deaktivieren. Weitere Informationen finden Sie unter [Deaktivieren der Namen der Warnungs](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) -und [POSIX-Funktionen](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).

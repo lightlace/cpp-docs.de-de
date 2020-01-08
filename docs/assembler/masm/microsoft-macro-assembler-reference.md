@@ -1,18 +1,18 @@
 ---
 title: Microsoft Macro Assembler-Referenz
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), reference
 - MASM (Microsoft Macro Assembler), overview
 - MASM (Microsoft Macro Assembler)
 - MASM (Microsoft Macro Assembler), documentation overview
 ms.assetid: 1446d55f-e2e7-4fd1-a9b8-b15cf7d4e47c
-ms.openlocfilehash: ffd885115448a822131f01c4d27197ab735b238c
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: a9804d3212c6b4d24167478d9a9a12168c3677d5
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397218"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75312650"
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler-Referenz
 
@@ -20,26 +20,30 @@ Der Microsoft Macro Assembler (MASM) bietet verschiedene Vorteile gegenüber Inl
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Ml-und ML64-Befehlszeilenoption](../../assembler/masm/ml-and-ml64-command-line-reference.md)\
+[Ml-und ML64-Befehlszeilenoption](ml-and-ml64-command-line-reference.md)\
 Beschreibt die Befehlszeilenoptionen „ML.exe“ und „ML64.exe“.
 
-[Ml-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)\
+[Ml-Fehlermeldungen](ml-error-messages.md)\
 Beschreibt die schwerwiegenden und die nicht schwerwiegenden Fehlermeldungen und Warnungen von „ML.exe“.
 
 [Direktivenverweis](directives-reference.md)\
 Enthält Links zu Artikeln, in denen die Verwendung von Direktiven in MASM erläutert wird.
 
-[Symbol Verweis](../../assembler/masm/symbols-reference.md)\
+[Symbol Verweis](symbols-reference.md)\
 Enthält Links zu Artikeln, in denen die Verwendung von Symbolen in MASM erläutert wird.
 
-[Operatorverweis\](../../assembler/masm/operators-reference.md)
+[Operatorverweis\](operators-reference.md)
 Enthält Links zu Artikeln, in denen die Verwendung von Operatoren in MASM erläutert wird.
 
-[Programmier Handbücher des Prozessor Herstellers](../../assembler/masm/processor-manufacturer-programming-manuals.md)\
+[Programmier Handbücher des Prozessor Herstellers](processor-manufacturer-programming-manuals.md)\
 Enthält Links zu Websites, die Informationen zur Programmierung von Prozessoren enthalten können, die nicht von Microsoft hergestellt, verkauft oder unterstützt werden.
 
-[MASM für x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)\
+[MASM für x64 (ml64. exe)](masm-for-x64-ml64-exe.md)\
 Informationen dazu, wie Ausgabedateien für x64 erstellt werden.
+
+[MASM-BNF-Grammatik](masm-bnf-grammar.md)
+
+Formale BNF-Beschreibung von MASM für x64.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 

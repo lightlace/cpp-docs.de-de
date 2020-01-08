@@ -22,18 +22,18 @@ helpviewer_keywords:
 - __int8 keyword [C++]
 - __int64 keyword [C++]
 ms.assetid: 8e384602-2578-4980-8cc8-da63842356b2
-ms.openlocfilehash: b765eabcac3f9643c0cae78fefb6ce8231669ffc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e793f23581f7dc62a39fcd8c5c504fb5a2ccbc9
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183453"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301469"
 ---
-# <a name="int8-int16-int32-int64"></a>__int8, __int16, __int32, __int64
+# <a name="__int8-__int16-__int32-__int64"></a>__int8, __int16, __int32, __int64
 
 **Microsoft-spezifisch**
 
-Microsoft C/C++ bietet Unterstützung für ganzzahlige Typen mit angegebener Größe. 8, 16-, 32- oder 64-Bit-Ganzzahl-Variablen deklarieren Sie mithilfe der **__int**<em>n</em> Typspezifizierer verwenden, wobei *n* ist 8, 16, 32 oder 64.
+Microsoft C/C++ bietet Unterstützung für ganzzahlige Typen mit angegebener Größe. Sie können 8-, 16-, 32-oder 64-Bit-ganzzahlige Variablen deklarieren, indem Sie den **__int**<em>n</em> -Typspezifizierer verwenden, wobei *n* 8, 16, 32 oder 64 ist.
 
 Im folgenden Beispiel wird eine Variable für jeden dieser Typen von ganzen Zahlen mit angegebener Größe deklariert:
 
@@ -44,13 +44,13 @@ __int32 nLarge;     // Declares 32-bit integer
 __int64 nHuge;      // Declares 64-bit integer
 ```
 
-Die Typen **__int8**, **__int16**, und **__int32** sind Synonyme für die ANSI-Typen mit der gleichen Größe, und eignen sich für das Schreiben von übertragbarem Code, der identisch verhält. auf mehreren Plattformen. Die **__int8** -Datentyp ist mit dem Typ **Char**, **__int16** ist mit dem Typ **kurze**, und **__int32**  ist mit dem Typ **Int**. Die **__int64** Typ ist mit dem Typ **long long**.
+Die Typen **__int8**, **__int16**und **__int32** sind Synonyme für die ANSI-Typen, die die gleiche Größe aufweisen, und sind für das Schreiben von portablen Code nützlich, der sich auf mehreren Plattformen identisch verhält. Der **__int8** -Datentyp ist mit dem Typ " **char**" Synonym, **__int16** ist mit dem Typ " **Short**" Synonym und **__int32** ist mit dem Typ " **int**" Synonym. Der **__int64** Typ ist ein Synonym für den Typ " **Long Long**".
 
-Für die Kompatibilität mit früheren Versionen **_int8**, **__int16**, **__int32**, und **__int64** sind Synonyme für **__int8** , **__int16**, **__int32**, und **__int64** , wenn Compileroption [/Za \(Sprache deaktivieren Extensions)](../build/reference/za-ze-disable-language-extensions.md) angegeben ist.
+Aus Kompatibilitätsgründen mit früheren Versionen sind **_int8**, **_int16**, **_int32**und **_int64** Synonyme für **__int8**, **__int16**, **__int32**und **__int64** , es sei denn, die Compileroption [/Za \(Deaktivieren von Spracherweiterungen)](../build/reference/za-ze-disable-language-extensions.md) ist angegeben.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, dass ein __int*Xx* Parameter wird höher gestuft werden, um **Int**:
+Das folgende Beispiel zeigt, dass ein __int*xx* -Parameter zu **int**herauf gestuft wird:
 
 ```cpp
 // sized_int_types.cpp
@@ -77,6 +77,6 @@ func
 
 ## <a name="see-also"></a>Siehe auch
 
-[Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
-[Grundlegende Typen](../cpp/fundamental-types-cpp.md)<br/>
+[Stichwörter](../cpp/keywords-cpp.md)<br/>
+[Integrierte Typen](../cpp/fundamental-types-cpp.md)<br/>
 [Datentypbereiche](../cpp/data-type-ranges.md)<br/>

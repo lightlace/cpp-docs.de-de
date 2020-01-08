@@ -8,12 +8,12 @@ helpviewer_keywords:
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
-ms.openlocfilehash: da8a21ac9ff7ce4fd6bde4d2d1e50d8f30806b78
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: ace6d1b8295d0901ef22f3c354b32ad17e296e87
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151207"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299090"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analysieren von C-Befehlszeilenargumenten
 
@@ -23,15 +23,15 @@ Beim Interpretieren von Argumenten, die in der Befehlszeile des Betriebssystems 
 
 - Argumente werden durch einen Leerraum (Leerzeichen oder Tabstopp) abgegrenzt.
 
-- Eine in doppelte Anführungszeichen eingeschlossene Zeichenfolge wird als einzelnes Argument interpretiert, auch wenn darin Leerzeichen enthalten sind. Eine Zeichenfolge in Anführungszeichen kann in ein Argument eingebettet sein. Beachten Sie, dass die Einfügemarke (**^**) nicht als Escape- oder Trennzeichen erkannt wird.
+- Eine in doppelte Anführungszeichen eingeschlossene Zeichenfolge wird als einzelnes Argument interpretiert, auch wenn darin Leerzeichen enthalten sind. Eine Zeichenfolge in Anführungszeichen kann in ein Argument eingebettet sein. Beachten Sie, dass die Einfügemarke ( **^** ) nicht als Escape- oder Trennzeichen erkannt wird.
 
-- Wenn dem doppelten Anführungszeichen ein umgekehrter Schrägstrich vorangestellt wird **\\"**, wird diese Zeichenfolge als literales doppeltes Anführungszeichen (**"**) interpretiert.
+- Wenn dem doppelten Anführungszeichen ein umgekehrter Schrägstrich vorangestellt wird **\\"** , wird diese Zeichenfolge als literales doppeltes Anführungszeichen ( **"** ) interpretiert.
 
 - Ein umgekehrter Schrägstrich wird als solcher interpretiert, sofern er nicht unmittelbar vor einem Anführungszeichen steht.
 
-- Wenn ein doppeltes Anführungszeichen auf eine gerade Anzahl umgekehrter Schrägstriche folgt, wird für jedes Paar umgekehrter Schrägstriche (**\\\\**) ein umgekehrter Schrägstrich (**\\**) im `argv`-Array platziert. Das doppelte Anführungszeichen (**"**) wird als Zeichenfolgentrennzeichen interpretiert.
+- Wenn ein doppeltes Anführungszeichen auf eine gerade Anzahl umgekehrter Schrägstriche folgt, wird für jedes Paar umgekehrter Schrägstriche ( **\\\\** ) ein umgekehrter Schrägstrich ( **\\** ) im `argv`-Array platziert. Das doppelte Anführungszeichen ( **"** ) wird als Zeichenfolgentrennzeichen interpretiert.
 
-- Wenn ein doppeltes Anführungszeichen auf eine ungerade Anzahl umgekehrter Schrägstriche folgt, wird für jedes Paar umgekehrter Schrägstriche (**\\\\**) ein umgekehrter Schrägstrich (**\\**) im `argv`-Array platziert. Das doppelte Anführungszeichen wird vom verbleibenden umgekehrten Schrägstrich als Escapezeichen interpretiert, sodass ein literales doppeltes Anführungszeichen (**"**) in `argv` platziert wird.
+- Wenn ein doppeltes Anführungszeichen auf eine ungerade Anzahl umgekehrter Schrägstriche folgt, wird für jedes Paar umgekehrter Schrägstriche ( **\\\\** ) ein umgekehrter Schrägstrich ( **\\** ) im `argv`-Array platziert. Das doppelte Anführungszeichen wird vom verbleibenden umgekehrten Schrägstrich als Escapezeichen interpretiert, sodass ein literales doppeltes Anführungszeichen ( **"** ) in `argv` platziert wird.
 
 Diese Liste veranschaulicht die zuvor genannten Regeln anhand der an `argv` übergebenen interpretierten Ergebnisse für einige beispielhafte Befehlszeilenargumente. Die Ausgabe in der zweiten, dritten und vierten Spalte stammt aus dem ARGS.C-Programm, das auf die Liste folgt.
 
@@ -47,7 +47,7 @@ Diese Liste veranschaulicht die zuvor genannten Regeln anhand der an `argv` übe
 
 ### <a name="code"></a>Code
 
-```
+```c
 // Parsing_C_Commandline_args.c
 // ARGS.C illustrates the following variables used for accessing
 // command-line arguments and environment variables:
@@ -76,7 +76,7 @@ char **envp )      // Array of environment variable strings
 }
 ```
 
-## <a name="comments"></a>Kommentare
+## <a name="comments"></a>Comments
 
 Ein Beispiel für die Ausgabe dieses Programms ist:
 

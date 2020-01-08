@@ -1,37 +1,62 @@
 ---
-title: Deklarationen und Definitionen (C++)
-ms.date: 11/04/2016
+title: Deklarationen und DefinitionenC++()
+ms.date: 12/12/2019
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
-ms.openlocfilehash: 1e76f636a6efd652ac629ad2f97f0b09f6171f9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d52294b635e05f42a4c48620214a90cad609f575
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399069"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301547"
 ---
-# <a name="declarations-and-definitions-c"></a>Deklarationen und Definitionen (C++)
+# <a name="declarations-and-definitions-c"></a>Deklarationen und DefinitionenC++()
 
-Deklarationen führen Namen in einem Programm, z. B. die Namen von Variablen, Namespaces, Funktionen und Klassen. Deklarationen geben außerdem die Typinformationen als auch andere Eigenschaften des Objekts an, das deklariert wird. Ein Name muss deklariert werden, bevor er verwendet werden kann. In C++ bestimmt der Punkt, an dem ein Name deklariert wird, ob er für den Compiler sichtbar ist. Sie können nicht auf eine Funktion oder Klasse, die zu einem späteren Zeitpunkt in der Kompilierungseinheit deklariert ist, verweisen; Sie können *Vorwärtsdeklarationen* , diese Einschränkung zu umgehen.
+Ein C++ Programm besteht aus verschiedenen Entitäten, z. b. Variablen, Funktionen, Typen und Namespaces. Jede dieser Entitäten muss *deklariert* werden, bevor Sie verwendet werden können. Eine-Deklaration gibt einen eindeutigen Namen für die Entität an, zusammen mit Informationen über ihren Typ und andere Merkmale. An C++ dem Punkt, an dem ein Name deklariert wird, ist der Punkt, an dem er für den Compiler sichtbar wird. Sie können nicht auf eine Funktion oder Klasse verweisen, die zu einem späteren Zeitpunkt in der Kompilierungseinheit deklariert wird. Variablen sollten vor dem Zeitpunkt, an dem Sie verwendet werden, so nah wie möglich sein.
 
-Definitionen angeben, welchen Code oder Daten auf den Namen beschreibt. Der Compiler benötigt die Definition, um Speicherplatz für das zu reservieren, was deklariert wird.
+Das folgende Beispiel zeigt einige Deklarationen:
 
-## <a name="declarations"></a>Deklarationen
+```cpp
+#include <string>
 
-Eine Deklaration führt mindestens einen Namen in ein Programm ein. Deklarationen können in einem Programm mehrmals vorkommen. Daher können Klassen, Strukturen, Enumerationstypen und andere benutzerdefinierte Typen für die einzelnen Kompilierungseinheiten deklariert werden. Die Einschränkung für diese mehrfache Deklaration besteht darin, dass alle Deklarationen identisch sein müssen. Deklarationen dienen als auch Definitionen, außer wenn auf die Deklaration Folgendes zutrifft:
+void f(); // forward declaration
 
-1. Sie ist ein Funktionsprototyp (eine Funktionsdeklaration ohne Funktionstext).
+int main()
+{
+    const double pi = 3.14; //OK
+    int i = f(2); //OK. f is forward-declared
+    std::string str; // OK std::string is declared in <string> header
+    C obj; // error! C not yet declared.
+    j = 0; // error! No type specified.
+    auto k = 0; // OK. type inferred as int by compiler.
+}
 
-1. Enthält die **"extern"** Spezifizierer, aber keine Initialisierer (Objekte und Variablen) oder Funktionsrumpf (Funktionen). Dies gibt an, dass die Definition nicht notwendigerweise in der aktuellen Übersetzungseinheit ist, und weist dem Namen eine externe Bindung zu.
+int f(int i)
+{
+    return i + 42;
+}
 
-1. Sie ist von einem statischen Datenmember innerhalb einer Klassendeklaration.
+namespace N {
+   class C{/*...*/};
+}
+```
 
-   Da statische Klassendatenmember diskrete Variablen sind, die für alle Objekte der Klasse freigegeben werden, müssen sie definiert werden und außerhalb der Klassendeklaration initialisiert werden. (Weitere Informationen über Klassen und Klassenmembern finden Sie unter [Klassen](../cpp/classes-and-structs-cpp.md).)
+In Zeile 5 wird die `main`-Funktion deklariert. In Zeile 7 **wird eine Konstante** Variable mit dem Namen `pi` deklariert und *Initialisiert*. In Zeile 8 wird ein Integer-`i` deklariert und mit dem Wert initialisiert, der von der Funktion `f`erzeugt wird. Der Name `f` der für den Compiler aufgrund der *Vorwärts Deklaration* in Zeile 3 sichtbar ist. 
 
-1. Sie ist eine Klassennamendeklaration ohne nachfolgende Definition, wie `class T;`.
+In Zeile 9 wird eine Variable mit dem Namen `obj` vom Typ `C` deklariert. Diese Deklaration löst jedoch einen Fehler aus, da `C` bis zu einem späteren Zeitpunkt im Programm nicht deklariert wird und nicht vorwärts deklariert ist. Um den Fehler zu beheben, können Sie entweder die gesamte *Definition* des `C` vor `main` verschieben oder eine vorwärts Deklaration dafür hinzufügen. Dieses Verhalten unterscheidet sich von anderen Sprachen wie C#z. b., in denen Funktionen und Klassen vor dem Zeitpunkt der Deklaration in einer Quelldatei verwendet werden können. 
 
-1. Ist eine **Typedef** Anweisung.
+In Zeile 10 wird eine Variable mit dem Namen `str` vom Typ `std::string` deklariert. Der Name `std::string` ist sichtbar, da er in der `string` [Header Datei](header-files-cpp.md) eingeführt wird, die in Zeile 1 in der Quelldatei zusammengeführt wird. `std` ist der Namespace, in dem die `string` Klasse deklariert wird.
 
-Beispiele für Deklarationen, die auch Definitionen sind:
+In Zeile 11 wird ein Fehler ausgelöst, da der Name `j` nicht deklariert wurde. Eine Deklaration muss einen Typ bereitstellen, im Gegensatz zu anderen Sprachen wie javaScript. In Zeile 12 wird das `auto`-Schlüsselwort verwendet, das den Compiler anweist, den Typ der `k` basierend auf dem Wert abzuleiten, mit dem Sie initialisiert wird. Der Compiler wählt in diesem Fall `int` für den Typ aus.  
+
+## <a name="declaration-scope"></a>Gültigkeitsbereich der Deklaration
+
+Der von einer Deklaration eingeführte Name ist innerhalb des *Bereichs* gültig, in dem die Deklaration auftritt. Im vorherigen Beispiel sind die Variablen, die innerhalb der `main` Funktion deklariert werden, *lokale Variablen*. Sie können eine andere Variable mit dem Namen `i` außerhalb von Main im globalen Gültigkeits *Bereich*deklarieren, und es wäre eine vollständig getrennte Entität. Eine solche Duplizierung von Namen kann jedoch zu Verwirrung und Fehlern im Programmierer führen und sollte vermieden werden. In Zeile 21 wird die Klasse `C` im Gültigkeitsbereich des Namespace `N`deklariert. Durch die Verwendung von Namespaces können *Namenskollisionen*vermieden werden. Die C++ meisten Standard Bibliotheksnamen werden innerhalb des `std`-Namespace deklariert. Weitere Informationen darüber, wie Bereichs Regeln mit Deklarationen interagieren, finden Sie unter [Scope](../cpp/scope-visual-cpp.md).
+
+## <a name="definitions"></a>Definitionen
+
+Einige Entitäten, einschließlich Funktionen, Klassen, enumerationseinheiten und Konstanten Variablen, müssen zusätzlich zu den deklarierten definiert werden. Eine *Definition* stellt dem Compiler alle Informationen zur Verfügung, die er benötigt, um Computercode zu generieren, wenn die Entität später im Programm verwendet wird. Im vorherigen Beispiel enthält Zeile 3 eine Deklaration für die-Funktion `f` aber die *Definition* für die-Funktion wird in den Zeilen 15 bis 18 bereitgestellt. In Zeile 21 ist die Klasse `C` deklariert und definiert (obwohl die Klasse so definiert ist, dass Sie nichts tut). Eine Konstante Variable muss in derselben Anweisung, in der Sie deklariert ist, mit anderen Worten einem Wert zugewiesen werden. Eine Deklaration eines integrierten Typs, wie z. b. `int`, ist automatisch eine Definition, da der Compiler weiß, wie viel Speicherplatz dafür belegt werden soll.
+
+Das folgende Beispiel zeigt Deklarationen, die auch Definitionen sind:
 
 ```cpp
 // Declare and define int variables i and j.
@@ -45,48 +70,43 @@ enum suits { Spades = 1, Clubs, Hearts, Diamonds };
 class CheckBox : public Control
 {
 public:
-            Boolean IsChecked();
+    Boolean IsChecked();
     virtual int     ChangeState() = 0;
 };
 ```
 
-Beispiele für Deklarationen, die keine Definitionen sind:
+Es folgen einige Deklarationen, die keine Definitionen sind:
 
 ```cpp
 extern int i;
 char *strchr( const char *Str, const char Target );
 ```
 
-Es wird angenommen, dass ein Name unmittelbar nach seinem Deklarator, jedoch vor seinem (optionalen) Initialisierer deklariert wird. Weitere Informationen finden Sie unter [Zeitpunkt der Deklarationen](../cpp/point-of-declaration-in-cpp.md).
+## <a name="typedefs-and-using-statements"></a>Typedefs und using-Anweisungen
 
-Deklarationen werden in einem *Bereich*. Der Bereich steuert die Sichtbarkeit des deklarierten Namens und die Dauer des definierten Objekts, falls vorhanden. Weitere Informationen darüber, wie Bereichsregeln mit Deklarationen interagieren, finden Sie unter [Bereich](../cpp/scope-visual-cpp.md).
+In älteren Versionen von C++wird das [typedef](aliases-and-typedefs-cpp.md) -Schlüsselwort verwendet, um einen neuen Namen zu deklarieren, der ein *Alias* für einen anderen Namen ist. Beispielsweise ist der Typ `std::string` ein anderer Name für `std::basic_string<char>`. Es sollte offensichtlich sein, warum Programmierer den Typedef-Namen und nicht den tatsächlichen Namen verwenden. In modernen C++ist das [using](aliases-and-typedefs-cpp.md) -Schlüsselwort als typedef vorzuziehen, aber die Idee ist identisch: ein neuer Name wird für eine Entität deklariert, die bereits deklariert und definiert ist.
 
-Eine Objektdeklaration ist auch eine Definition, es sei denn, die **"extern"** Speicherklassenspezifizierer, die in beschriebenen [Speicherklassen](storage-classes-cpp.md). Eine Funktionsdeklaration ist auch eine Definition, es sei denn, sie ist ein Prototyp. Ein Prototyp ist ein Funktionsheader ohne einen definierenden Funktionsrumpf. Die Definition eines Objekts bewirkt die Speicherbelegung und die richtige Initialisierung des Objekts.
+## <a name="static-class-members"></a>Statische Klassenmember
 
-## <a name="definitions"></a>Definitionen
+Da statische Klassendatenmember diskrete Variablen sind, die von allen Objekten der Klasse gemeinsam genutzt werden, müssen Sie außerhalb der Klassendefinition definiert und initialisiert werden. (Weitere Informationen finden Sie unter [Klassen](../cpp/classes-and-structs-cpp.md).)
 
-Eine Definition ist eine eindeutige Spezifikation eines Objekts oder einer Variable, Funktion, Klasse oder eines Enumerators. Da Definitionen eindeutig sein müssen, kann ein Programm nur eine Definition für ein gegebenes Programmelement enthalten. Es kann eine n:1-Zuordnung zwischen Deklarationen und Definitionen vorgenommen werden. Es gibt zwei Fälle, in denen ein Programmelement deklariert werden und nicht definiert werden kann:
+## <a name="extern-declarations"></a>externe Deklarationen
 
-1. Eine Funktion wird deklariert, aber nie mit einem Funktionsaufruf oder einem Ausdruck, der die Adresse der Funktion akzeptiert, referenziert.
+Ein C++ Programm kann mehr als eine [Kompilierungseinheit](header-files-cpp.md)enthalten. Verwenden Sie zum Deklarieren einer Entität, die in einer separaten Kompilierungseinheit definiert ist, das [extern](extern-cpp.md) -Schlüsselwort. Die Informationen in der Deklaration sind für den Compiler ausreichend, aber wenn die Definition der Entität im Verknüpfungs Schritt nicht gefunden werden kann, gibt der Linker einen Fehler aus.
 
-1. Eine Klasse wird nur auf eine Weise verwendet, die nicht erfordert, dass ihre Definition bekannt ist. Allerdings muss die Klasse deklariert werden. Das folgende Codebeispiel veranschaulicht einen solchen Fall:
+## <a name="in-this-section"></a>In diesem Abschnitt
 
-    ```cpp
-    // definitions.cpp
-    class WindowCounter;   // Forward declaration; no definition
-
-    class Window
-    {
-       // Definition of WindowCounter not required
-       static WindowCounter windowCounter;
-    };
-
-    int main()
-    {
-    }
-    ```
+[Speicherklassen](storage-classes-cpp.md)<br/>
+[const](const-cpp.md)<br/>
+[constexpr](constexpr-cpp.md)<br/>
+[extern](extern-cpp.md)<br/>
+[Initialisierer](initializers.md)<br/>
+[Aliasse und Typdefinitionen](aliases-and-typedefs-cpp.md)<br/>
+[using-Deklaration](using-declaration.md)<br/>
+[volatile](volatile-cpp.md)<br/>
+[decltype](decltype-cpp.md)<br/>
+[Attribute inC++](attributes.md)<br/>
 
 ## <a name="see-also"></a>Siehe auch
 
 [Grundlegende Konzepte](../cpp/basic-concepts-cpp.md)<br/>
-[Zeitpunkt der Deklarationen](../cpp/point-of-declaration-in-cpp.md)

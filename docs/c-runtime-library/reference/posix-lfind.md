@@ -1,6 +1,6 @@
 ---
 title: lfind
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - lfind
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - lfind function
 ms.assetid: 2528e787-94b6-4740-8a8d-6efc276d1f42
-ms.openlocfilehash: 7e2b79b67e14421e03fe8761a412de9ad4a5e1cc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7a1ac69bbebfea45345c7dae17b18f02b84228cd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950537"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300910"
 ---
 # <a name="lfind"></a>lfind
 
-Diese POSIX-Funktion ist veraltet. Verwenden Sie stattdessen die ISO C++-konforme Funktion [_lfind](lfind.md) oder die Funktion mit erweiterter Sicherheit [_lfind_s](lfind-s.md).
+Der von Microsoft implementierte Name der POSIX-Funktion `lfind` ist ein als veraltet markierte Alias für die [_lfind](lfind.md) -Funktion. Standardmäßig wird eine [Compilerwarnung (Ebene 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)generiert. Der Name ist veraltet, da er nicht den Standard mäßigen C-Regeln für Implementierungs spezifische Namen folgt. Die-Funktion wird jedoch weiterhin unterstützt.
+
+Es wird empfohlen, stattdessen [_lfind](lfind.md) oder [_lfind_s](lfind-s.md) Funktion mit erweiterter Sicherheit zu verwenden. Oder Sie können diesen Funktionsnamen weiterhin verwenden und die Warnung deaktivieren. Weitere Informationen finden Sie unter [Deaktivieren der Namen der Warnungs](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) -und [POSIX-Funktionen](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).

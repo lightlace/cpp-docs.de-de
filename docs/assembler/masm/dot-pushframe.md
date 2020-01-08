@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - .PUSHFRAME directive
 ms.assetid: 17b123d0-4c6d-4fd2-85eb-798e8ad0a73c
-ms.openlocfilehash: 5f951396291ecb12dab500a364f176106c5daa8b
-ms.sourcegitcommit: 2cac0150ab3bc8260f866451019b8e22c7e1ac11
+ms.openlocfilehash: 0aaec119d26d87fddb1eba505458da1250a5926e
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74945851"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317577"
 ---
 # <a name="pushframe"></a>.PUSHFRAME
 
@@ -24,10 +24,11 @@ Generiert einen `UWOP_PUSH_MACHFRAME` Entladungs Code Eintrag. Wenn das optional
 
 ## <a name="remarks"></a>Hinweise
 
-. Mithilfe von PushFrame können Benutzer von ml64. exe angeben, wie sich eine Frame Funktion entlädt. Es ist nur innerhalb des Prologs zulässig, der sich von der [proc](../../assembler/masm/proc.md) Frame-Deklaration zum erstreckt [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) -Direktive. Diese Direktiven generieren keinen Code. Sie generieren nur `.xdata` und `.pdata`. **. Dem PushFrame** sollten Anweisungen vorangestellt sein, die tatsächlich die auszuwickenden Aktionen implementieren. Es empfiehlt sich, sowohl die Entlade Direktiven als auch den Code, der in einem Makro entladen werden soll, zu schließen, um eine Vereinbarung zu gewährleisten.
+. Mithilfe von PushFrame können Benutzer von ml64. exe angeben, wie sich eine Frame Funktion entlädt. Es ist nur innerhalb des Prologs zulässig, der sich von der [proc](proc.md) Frame-Deklaration zum erstreckt [. ENDPROLOG](dot-endprolog.md) -Direktive. Diese Direktiven generieren keinen Code. Sie generieren nur `.xdata` und `.pdata`. **. Dem PushFrame** sollten Anweisungen vorangestellt sein, die tatsächlich die auszuwickenden Aktionen implementieren. Es empfiehlt sich, sowohl die Entlade Direktiven als auch den Code, der in einem Makro entladen werden soll, zu schließen, um eine Vereinbarung zu gewährleisten.
 
-Weitere Informationen finden Sie unter [MASM für x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Weitere Informationen finden Sie unter [MASM für x64 (ml64. exe)](masm-for-x64-ml64-exe.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Direktivenverweis](directives-reference.md)
+[Direktivenverweis](directives-reference.md)\
+[MASM-BNF-Grammatik](masm-bnf-grammar.md)

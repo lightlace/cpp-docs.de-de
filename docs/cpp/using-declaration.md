@@ -3,22 +3,20 @@ title: using-Deklaration
 ms.date: 11/04/2016
 helpviewer_keywords:
 - using declaration
-- declaring namespaces, unqualified names in namespaces
 - declarations [C++], using-declaration
 - namespaces [C++], unqualified names in
 - using keyword [C++]
-- declarations [C++], namespaces
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-ms.openlocfilehash: 46d8b1e13b55988efd40643482ffd6123034ccb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a158094141307acb507d5f3e873c600e89135ad7
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403346"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301274"
 ---
 # <a name="using-declaration"></a>using-Deklaration
 
-Die using-Deklaration führt einen Namen im deklarativen Bereich, in denen die using-Deklaration angezeigt wird.
+Die **using** -Deklaration führt einen Namen in den deklarativen Bereich ein, in dem die using-Deklaration angezeigt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -27,17 +25,17 @@ using [typename] nested-name-specifier unqualified-id ;
 using declarator-list ;
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*geschachtelten namesspezifizierer* eine Sequenz von Namespace, Klasse, oder Namen der Enumeration und bereichsauflösungsoperatoren (:), die durch ein Bereichsauflösungsoperator beendet. Ein einzelnes Bereichsauflösungsoperator kann verwendet werden, um einen Namen aus dem globalen Namespace einzuführen. Das Schlüsselwort **Typename** ist optional und kann verwendet werden, zum Auflösen von abhängigen Namen, wenn von einer Basisklasse in einer Klassenvorlage eingeführt.
+*Name des "netsted-Name-Specifiers* " Eine Sequenz von Namespace-, Klassen-oder Enumerationsnamen und Bereichs Auflösungs Operatoren (::), die durch einen Bereichs Auflösungs Operator beendet werden. Ein einzelner Bereichs Auflösungs Operator kann verwendet werden, um einen Namen aus dem globalen Namespace einzuführen. Das Schlüsselwort **tykame** ist optional und kann verwendet werden, um abhängige Namen aufzulösen, wenn Sie in eine Klassen Vorlage aus einer Basisklasse eingefügt werden.
 
-*nicht qualifizierte Id* ein nicht qualifizierte Id-Ausdruck, der möglicherweise einen Bezeichner, Name eines überladenen Operators, einen benutzerdefinierten Literale Operator oder Konvertierung Funktionsnamen, einen Destruktor Klassennamen oder eine Vorlage namens und einer Argumentliste aus.
+nicht *qualifizierte-ID* Ein nicht qualifizierter ID-Ausdruck, bei dem es sich um einen Bezeichner, einen überladenen Operator Namen, einen benutzerdefinierten literaloperator oder einen Namen für eine Konvertierungs Funktion, einen klassendedekonstruktor oder einen Vorlagen Namen und eine Argumentliste handelt
 
-*Deklaratorliste* eine durch Trennzeichen getrennte Liste der [**Typename**] *geschachtelten namesspezifizierer* *nicht qualifizierte Id* Deklaratoren verwenden, folgen optional ein mit den Auslassungspunkten.
+*Deklarator-List* Eine durch Trennzeichen getrennte Liste von [**typoame** *],* die als nicht gekennzeichnete ID-Deklaratoren, gefolgt von den *Auslassungs* Zeichen, optional.
 
 ## <a name="remarks"></a>Hinweise
 
-Ein using-Deklaration führt Sie einen nicht qualifizierten Name als Synonym für eine Entität einer anderen Stelle deklariert. Sie können einen eindeutigen Namen aus einem bestimmten Namespace ohne explizite Qualifizierung in der Region für die Deklaration verwendet werden, in dem er angezeigt wird. Dies ist im Gegensatz zu den [using-Direktive](../cpp/namespaces-cpp.md#using_directives), wodurch *alle* die Namen in einem Namespace ohne Qualifikation verwendet werden. Die **mit** -Schlüsselwort dient außerdem zum [Geben Sie Aliase](../cpp/aliases-and-typedefs-cpp.md).
+Eine using-Deklaration führt einen nicht qualifizierten Namen als Synonym für eine an anderer Stelle deklarierte Entität ein. Er ermöglicht die Verwendung eines einzelnen Namens aus einem bestimmten Namespace ohne explizite Qualifizierung in dem Deklarations Bereich, in dem er angezeigt wird. Dies steht im Gegensatz zur [using-Direktive](../cpp/namespaces-cpp.md#using_directives), mit der *alle* Namen in einem Namespace ohne Qualifikation verwendet werden können. Das **using** -Schlüsselwort wird auch für [Typaliase](../cpp/aliases-and-typedefs-cpp.md)verwendet.
 
 ## <a name="example"></a>Beispiel
 
@@ -127,7 +125,7 @@ In B::f()
 
 ## <a name="example"></a>Beispiel
 
-Member deklariert wird, mithilfe einer mit Deklaration kann mithilfe der expliziten Qualifikation verweisen. Das Präfix `::` verweist auf den globalen Namespace.
+Auf Member, die mit einer using-Deklaration deklariert werden, kann mithilfe der expliziten Qualifizierung verwiesen werden. Das Präfix `::` verweist auf den globalen Namespace.
 
 ```cpp
 // using_declaration3.cpp
@@ -169,7 +167,7 @@ In A::g
 
 Wenn eine using-Deklaration erfolgt, verweist das von der Deklaration erstellte Synonym nur auf Definitionen, die zum Zeitpunkt der using-Deklaration gültig waren. Definitionen, die nach der using-Deklaration einem Namespace hinzugefügt werden, sind ungültige Synonyme.
 
-Ein Name definiert, die von einem **mit** Deklaration ist ein Alias für den ursprünglichen Namen. Er wirkt sich nicht auf den Typ, die Verknüpfung oder andere Attribute der ursprünglichen Deklaration aus.
+Ein Name, der durch eine **using** -Deklaration definiert ist, ist ein Alias für seinen ursprünglichen Namen. Er wirkt sich nicht auf den Typ, die Verknüpfung oder andere Attribute der ursprünglichen Deklaration aus.
 
 ```cpp
 // post_declaration_namespace_additions.cpp
@@ -219,7 +217,7 @@ Im Beispiel oben veranlasst die `using B::i`-Anweisung, dass eine zweite `int i`
 
 ## <a name="example"></a>Beispiel
 
-Eine lokale Funktionsdeklaration kann nicht den gleichen Namen und Typ wie eine Funktion haben, die von einer using-Deklaration eingeführt wird. Zum Beispiel:
+Eine lokale Funktionsdeklaration kann nicht den gleichen Namen und Typ wie eine Funktion haben, die von einer using-Deklaration eingeführt wird. Beispiel:
 
 ```cpp
 // functions_in_namespaces2.cpp
@@ -306,7 +304,7 @@ In D::g(char)
 
 Alle in einer using-Deklaration erwähnten Instanzen eines Namens müssen verfügbar sein. Insbesondere muss der Membername zugänglich sein, wenn eine abgeleitete Klasse eine using-Deklaration verwendet, um auf einen Member einer Basisklasse zuzugreifen. Wenn der Name der einer überladenen Memberfunktion ist, muss auf alle genannten Funktionen zugegriffen werden können.
 
-Weitere Informationen über die Barrierefreiheit von Elementen finden Sie unter [Memberzugriffssteuerung](../cpp/member-access-control-cpp.md).
+Weitere Informationen zur Barrierefreiheit von Membern finden Sie unter [Member-Access Control](../cpp/member-access-control-cpp.md).
 
 ```cpp
 // using_declaration_inheritance2.cpp
@@ -330,4 +328,4 @@ public:
 ## <a name="see-also"></a>Siehe auch
 
 [Namespaces](../cpp/namespaces-cpp.md)<br/>
-[Schlüsselwörter](../cpp/keywords-cpp.md)
+[Stichwörter](../cpp/keywords-cpp.md)

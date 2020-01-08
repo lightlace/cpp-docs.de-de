@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2192
 ms.assetid: a147197e-e72d-4620-939b-f9e08d7c7c12
-ms.openlocfilehash: 3285221089c2a1ed61b03572ed8915ebfbb00e48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab04ce47df110036cb0b55d2e24866b52fe74f2e
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303007"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301859"
 ---
 # <a name="compiler-error-c2192"></a>Compilerfehler C2192
 
-verschiedene Parameter 'Number'-Deklaration
+Deklaration des Parameters "Number" unterschiedlich
 
-Eine C-Funktion wurde ein zweites Mal mit einer anderen Parameterliste deklariert. C# unterstützt keine überladene Funktionen.
+Eine C-Funktion wurde ein zweites Mal mit einer anderen Parameterliste deklariert. C unterstützt keine überladenen Funktionen.
 
-Im folgende Beispiel wird die C2192 generiert:
+Im folgenden Beispiel wird C2192 generiert:
 
-```
+```c
 // C2192.c
 // compile with: /Za /c
 void func( float, int );

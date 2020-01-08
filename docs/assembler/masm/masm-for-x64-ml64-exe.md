@@ -1,17 +1,17 @@
 ---
 title: MASM für x64 (ml64.exe)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 helpviewer_keywords:
 - ml64
 - ml64.exe
 - masm for x64
 ms.assetid: 89059103-f372-4968-80ea-0c7f90bb9c91
-ms.openlocfilehash: 68f5a14b092109a647e7a81ed6c3fef148a5571b
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 5e324414a0d4d7e74bb28d54c1d858ef6fb9793c
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397225"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75312741"
 ---
 # <a name="masm-for-x64-ml64exe"></a>MASM für x64 (ml64.exe)
 
@@ -19,7 +19,7 @@ Visual Studio enthält sowohl 32-Bit-als auch 64-Bit-gehostete Versionen von Mic
 
 Wenn Sie MASM verwenden möchten, um Code für x64-Ziele in der Befehlszeile zu erstellen, müssen Sie eine Developer-Eingabeaufforderung für x64-Ziele verwenden, mit der der erforderliche Pfad und andere Umgebungsvariablen festgelegt werden. Informationen zum Starten einer Developer-Eingabeaufforderung finden Sie unter [Build C/C++ Code in der Befehlszeile](../../build/building-on-the-command-line.md).
 
-Informationen zu den Befehlszeilenoptionen von ml64. exe finden Sie unter [ml-und ML64-Befehlszeilen Referenz](../../assembler/masm/ml-and-ml64-command-line-reference.md).
+Informationen zu den Befehlszeilenoptionen von ml64. exe finden Sie unter [ml-und ML64-Befehlszeilen Referenz](ml-and-ml64-command-line-reference.md).
 
 Der Inline Assembler oder die Verwendung des ASM-Schlüssel Worts wird für x64-oder arm-Ziele nicht unterstützt. Um Ihren x86-Code, der den Inline Assembler verwendet, auf x64 oder Arm zu portieren, C++können Sie Ihren Code in konvertieren, systeminterne Compilerfunktionen verwenden oder Quelldateien in Assemblersprache erstellen. Der Microsoft C++ -Compiler unterstützt systeminterne Funktionen, um Ihnen die Verwendung von speziellen Funktions Anweisungen (z. b. privilegiert, bitscan/Test, Interlocked usw.) in so nah wie möglich zu ermöglichen. Informationen zu verfügbaren systeminternen Funktionen finden Sie unter systeminterne [Compilerfunktionen](../../intrinsics/compiler-intrinsics.md).
 
@@ -43,21 +43,21 @@ Erstellen Sie den Assembler-Sprachcode in der ASM-Datei, die Sie hinzugefügt ha
 
 Sie können die folgenden ml64-spezifischen Direktiven in Ihrem assemblyquellcode verwenden, der x64 als Ziel verwendet:
 
-- [.ALLOCSTACK](../../assembler/masm/dot-allocstack.md)
+- [.ALLOCSTACK](dot-allocstack.md)
 
-- [.ENDPROLOG](../../assembler/masm/dot-endprolog.md)
+- [.ENDPROLOG](dot-endprolog.md)
 
-- [.PUSHFRAME](../../assembler/masm/dot-pushframe.md)
+- [.PUSHFRAME](dot-pushframe.md)
 
-- [.PUSHREG](../../assembler/masm/dot-pushreg.md)
+- [.PUSHREG](dot-pushreg.md)
 
-- [.SAVEREG](../../assembler/masm/dot-savereg.md)
+- [.SAVEREG](dot-savereg.md)
 
-- [.SAVEXMM128](../../assembler/masm/dot-savexmm128.md)
+- [.SAVEXMM128](dot-savexmm128.md)
 
-- [.SETFRAME](../../assembler/masm/dot-setframe.md)
+- [.SETFRAME](dot-setframe.md)
 
-Außerdem wurde die [proc](../../assembler/masm/proc.md) -Direktive für die Verwendung mit ml64. exe aktualisiert.
+Außerdem wurde die [proc](proc.md) -Direktive für die Verwendung mit ml64. exe aktualisiert.
 
 ## <a name="32-bit-address-mode-address-size-override"></a>32-Bit-Adress Modus (Adressgröße außer Kraft Setzung)
 
@@ -82,4 +82,4 @@ mov eax, DWORD PTR [ecx*2+r10+0100h]
 
 ## <a name="see-also"></a>Siehe auch
 
-[Referenz zum Microsoft-Makroassembler](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Referenz zum Microsoft-Makroassembler](microsoft-macro-assembler-reference.md)

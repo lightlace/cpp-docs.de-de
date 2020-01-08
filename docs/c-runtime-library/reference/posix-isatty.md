@@ -1,6 +1,6 @@
 ---
 title: isatty
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - isatty
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - isatty function
 ms.assetid: 610d0b09-a1db-41ef-9f45-a2c6076b4683
-ms.openlocfilehash: 9fc9014ab24248dfb06973f71bb4bf97e2ab4abd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c42d68ae6471ae992783b7869e554448f0934289
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950641"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300949"
 ---
 # <a name="isatty"></a>isatty
 
-Diese POSIX-Funktion ist veraltet. Verwenden Sie stattdessen die ISO C++-konforme Funktion [_isatty](isatty.md).
+Der von Microsoft implementierte Name der POSIX-Funktion `isatty` ist ein als veraltet markierte Alias für die [_isatty](isatty.md) -Funktion. Standardmäßig wird eine [Compilerwarnung (Ebene 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)generiert. Der Name ist veraltet, da er nicht den Standard mäßigen C-Regeln für Implementierungs spezifische Namen folgt. Die-Funktion wird jedoch weiterhin unterstützt.
+
+Es wird empfohlen, stattdessen [_isatty](isatty.md) zu verwenden. Oder Sie können diesen Funktionsnamen weiterhin verwenden und die Warnung deaktivieren. Weitere Informationen finden Sie unter [Deaktivieren der Namen der Warnungs](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) -und [POSIX-Funktionen](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).

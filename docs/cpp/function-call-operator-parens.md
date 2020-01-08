@@ -10,16 +10,16 @@ helpviewer_keywords:
 - functions [C++], function-call operator
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
-ms.openlocfilehash: 79c43ed11bfc73ec4bfaedad0a20b45fb6ca1ffb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3194c34bacfe7b2ed758ab245c5858eadb18e64e
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154151"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301521"
 ---
 # <a name="function-call-operator-"></a>Funktionsaufrufoperator: ()
 
-Ein postfixausdruck, gefolgt von den Funktionsaufrufoperator **()**, gibt einen Funktionsaufruf.
+Ein Postfix-Expression, gefolgt vom Funktions aufrufsoperator **()** , gibt einen Funktions aufzurufen an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,9 +32,9 @@ postfix-expression
 
 Die Argumente für den Funktionsaufrufoperator sind null oder mehr Ausdrücke, die durch Trennzeichen getrennt sind – die tatsächlichen Argumente der Funktion.
 
-Die *Postfix-Expression* muss zu einer Funktionsadresse (z. B. einen Funktionsbezeichner oder den Wert eines Funktionszeigers) ausgewertet und *Argument-Expression-List* ist eine Liste von Ausdrücken (getrennt durch Kommas), deren Werte (die Argumente) an die Funktion übergeben werden. Das *argument-expression-list*-Argument kann leer sein.
+Der *Postfix-Expression* muss zu einer Funktions Adresse (z. b. einem Funktions Bezeichner oder dem Wert eines Funktions Zeigers) ausgewertet werden, und die *Argument-Expression-List* ist eine Liste von Ausdrücken (durch Kommas getrennt), deren Werte (die Argumente) an die Funktion übermittelt werden. Das *argument-expression-list*-Argument kann leer sein.
 
-Die *Postfix-Expression* muss eines der folgenden Typen sein:
+Der *Postfix-Expression* muss einen der folgenden Typen aufweisen:
 
 - Funktion, die den Typ `T` zurückgibt. Eine Beispieldeklaration ist
 
@@ -129,7 +129,7 @@ int main()
 }
 ```
 
-Der vorhergehende Code definiert eine Klasse namens `Point`, enthält private Objekte, die darstellen, *x* und *y* Koordinaten. Diese Datenobjekte müssen geändert und ihre Werte abgerufen werden. Dieses Programm ist nur einer von mehreren Entwürfen für eine solche Klasse. Eine Verwendung der Funktionen `GetX` und `SetX` oder `GetY` und `SetY` ist ein anderer möglicher Entwurf.
+Der vorangehende Code definiert eine Klasse mit dem Namen `Point`, die private Datenobjekte enthält, die *x* -und *y* -Koordinaten darstellen. Diese Datenobjekte müssen geändert und ihre Werte abgerufen werden. Dieses Programm ist nur einer von mehreren Entwürfen für eine solche Klasse. Eine Verwendung der Funktionen `GetX` und `SetX` oder `GetY` und `SetY` ist ein anderer möglicher Entwurf.
 
 Funktionen, die Klassentypen, Zeiger auf Klassentypen oder Verweise auf Klassentypen zurückgeben, können als linker Operand für Memberauswahloperatoren verwendet werden. Daher ist der folgende Code gültig:
 
@@ -174,10 +174,10 @@ int main() {
 }
 ```
 
-Funktionen können rekursiv aufgerufen werden. Weitere Informationen über Funktionsdeklarationen finden Sie unter [Funktionen](functions-cpp.md). Verwandtes Material finden Sie [Programm und Verknüpfung](../cpp/program-and-linkage-cpp.md).
+Funktionen können rekursiv aufgerufen werden. Weitere Informationen zu Funktions Deklarationen finden Sie unter [Functions](functions-cpp.md). Verwandte Materialien sind [Übersetzungseinheiten und Verknüpfungen](../cpp/program-and-linkage-cpp.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 [Postfixausdrücke](../cpp/postfix-expressions.md)<br/>
-[C++-Built-in-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Integrierte C++-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Funktionsaufruf](../c-language/function-call-c.md)

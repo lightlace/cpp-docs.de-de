@@ -1,6 +1,6 @@
 ---
 title: Operator AND
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - And
 - operator AND
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - operator AND
 - AND operator
 ms.assetid: 6862d248-c169-4db8-a478-9d0ce4fdd1e3
-ms.openlocfilehash: f5b4bf499c09a795a76b0894f626c550c9367ed5
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 9f5884496653f9065e8eb3504dd9ca2f119ca495
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397112"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316719"
 ---
 # <a name="operator-and"></a>Operator AND
 
@@ -25,4 +25,5 @@ Gibt das Ergebnis einer bitweisen and-Operation für *expression1* und *expressi
 
 ## <a name="see-also"></a>Siehe auch
 
-[Operatoren – Referenz](../../assembler/masm/operators-reference.md)
+[Operatorverweis\](operators-reference.md)
+[MASM-BNF-Grammatik](masm-bnf-grammar.md)

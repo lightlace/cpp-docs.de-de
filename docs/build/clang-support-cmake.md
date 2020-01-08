@@ -4,12 +4,12 @@ ms.date: 07/01/2019
 ms.description: Configure a CMake project in Visual Studio to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ CMake projects
-ms.openlocfilehash: 4e912c905dd7d0f742768da4c7a2acb968b4ca8e
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: b5a5985ad6a82d1c7ff45ceb3668273ec96292ec
+ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218219"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556720"
 ---
 # <a name="clangllvm-support-in-visual-studio-cmake-projects"></a>Clang/llvm-Unterstützung in Visual Studio cmake-Projekten
 
@@ -23,11 +23,11 @@ Clang-Unterstützung ist in Visual Studio 2019 verfügbar.
 
 Sie können Visual Studio mit clang zum Bearbeiten und Debuggen C++ von cmake-Projekten verwenden, die auf Windows oder Linux abzielen.
 
-**Windows:** Visual Studio 2019 Version 16,1 bietet Unterstützung für das Bearbeiten, erstellen und Debuggen mit clang/llvm in cmake-Projekten, die auf Windows abzielen. 
+**Windows**: Visual Studio 2019 Version 16,1 bietet Unterstützung für das Bearbeiten, erstellen und Debuggen mit clang/llvm in cmake-Projekten, die auf Windows abzielen.
 
-**Linux**: Für Linux cmake-Projekte ist keine besondere Visual Studio-Unterstützung erforderlich. Sie können clang mit dem Paket-Manager Ihrer Distribution installieren und die entsprechenden Befehle in der Datei "CMakeLists. txt" hinzufügen.
+**Linux**: für Linux cmake-Projekte ist keine besondere Visual Studio-Unterstützung erforderlich. Sie können clang mit dem Paket-Manager Ihrer Distribution installieren und die entsprechenden Befehle in der Datei "CMakeLists. txt" hinzufügen.
 
-## <a name="install"></a>Installieren
+## <a name="install"></a>Installieren von
 
 Für eine optimale IDE-Unterstützung in Visual Studio wird empfohlen, die neuesten clang-Compilertools für Windows zu verwenden. Wenn Sie diese noch nicht kennen, können Sie Sie installieren, indem Sie die Visual Studio-Installer öffnen und den  **C++ clang-Compiler für Windows** unter **Desktop Entwicklung mit C++**  optionalen Komponenten auswählen. Wenn Sie eine benutzerdefinierte clang-Installation verwenden, überprüfen Sie die  **C++ Komponente clang-CL für v142 Build Tools** .
 
@@ -41,7 +41,7 @@ So fügen Sie einem cmake-Projekt eine neue clang-Konfiguration hinzu:
 
 1. Klicken Sie unter **Konfigurationen**auf die Schaltfläche **Konfiguration hinzufügen** :
 
-   ![Konfiguration hinzufügen](media/cmake-add-config-icon.png)
+   ![Hinzufügen einer Konfiguration](media/cmake-add-config-icon.png)
 
 1. Wählen Sie die gewünschte clang-Konfiguration (Beachten Sie, dass separate clang-Konfigurationen für Windows und Linux bereitgestellt werden), und klicken Sie dann auf **auswählen**:
 
@@ -66,7 +66,7 @@ Standardmäßig sucht Visual Studio an zwei Stellen nach clang:
 - Windows Die intern installierte Kopie von clang/llvm, die im Visual Studio-Installer verfügbar ist.
 - (Windows und Linux) Die PATH-Umgebungsvariable.
 
-Sie können einen anderen Speicherort angeben, indem Sie die Variablen **CMAKE_C_COMPILER** und **CMAKE_CXX_COMPILER** cmake in den **cmake-Einstellungen**festlegen:
+Sie können einen anderen Speicherort angeben, indem Sie die **CMAKE_C_COMPILER** -und **CMAKE_CXX_COMPILER** cmake-Variablen in den **cmake-Einstellungen**festlegen:
 
 ![Clang-Toolset clang](media/clang-location-cmake.png)
 
@@ -74,7 +74,7 @@ Sie können einen anderen Speicherort angeben, indem Sie die Variablen **CMAKE_C
 
 Für Windows-Konfigurationen ruft cmake standardmäßig clang im [clang-cl-](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf) Modus auf und verknüpft mit der Microsoft-Implementierung der Standard Bibliothek. **Clang-cl. exe** befindet sich standardmäßig in `C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin`.
 
- Sie können diese Werte in den **cmake-Einstellungen** unter **cmake-Variablen und Cache**ändern. Klicken Sie auf **Erweiterte Variablen anzeigen**. Scrollen Sie nach unten, und klicken Sie dann auf die Schaltfläche **Durchsuchen** , um einen anderen compilerpfad anzugeben.
+ Sie können diese Werte in den **cmake-Einstellungen** unter **cmake-Variablen und Cache**ändern. Klicken Sie auf **Erweiterte Variablen anzeigen**. Scrollen Sie nach **CMAKE_CXX_COMPILER**unten, und klicken Sie dann auf die Schaltfläche **Durchsuchen** , um einen anderen compilerpfad anzugeben.
 
 ## <a name="edit-build-and-debug"></a>Bearbeiten, erstellen und Debuggen
 

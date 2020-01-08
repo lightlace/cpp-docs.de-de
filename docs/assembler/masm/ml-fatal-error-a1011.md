@@ -1,18 +1,18 @@
 ---
 title: Schwerwiegender ML-Fehler A1011
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - A1011
 helpviewer_keywords:
 - A1011
 ms.assetid: 7fbf092d-4189-4330-a884-dfa2268fc3dd
-ms.openlocfilehash: 0d8d3896f7788aa3f51605651ee1b728b0e1d60a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5607d6d56e0b3889332dcf2624d519529819b1c9
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856851"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318076"
 ---
 # <a name="ml-fatal-error-a1011"></a>Schwerwiegender ML-Fehler A1011
 
@@ -20,20 +20,20 @@ ms.locfileid: "74856851"
 
 Der Assembler hat eine Direktive auf hoher Ebene gefunden, die nicht erwartet wurde. Eine der folgenden Anweisungen wurde gefunden:
 
-- [. ](../../assembler/masm/dot-else.md)Andernfalls ohne [. Wenn](../../assembler/masm/dot-if.md)
+- [. ](dot-else.md)Andernfalls ohne [. Wenn](dot-if.md)
 
-- [. Umdif](../../assembler/masm/dot-endif.md) ohne [. Wenn](../../assembler/masm/dot-if.md)
+- [. Umdif](dot-endif.md) ohne [. Wenn](dot-if.md)
 
-- [. Endw](../../assembler/masm/dot-endw.md) ohne [. Während](../../assembler/masm/dot-while.md)
+- [. Endw](dot-endw.md) ohne [. Während](dot-while.md)
 
-- [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md) ohne [. Wiederholen](../../assembler/masm/dot-repeat.md)
+- [. UNTILCXZ](dot-untilcxz.md) ohne [. Wiederholen](dot-repeat.md)
 
-- [. Fahren](../../assembler/masm/dot-continue.md) Sie ohne fort [. Während](../../assembler/masm/dot-while.md) oder [. Wiederholen](../../assembler/masm/dot-repeat.md)
+- [. Fahren](dot-continue.md) Sie ohne fort [. Während](dot-while.md) oder [. Wiederholen](dot-repeat.md)
 
-- [. ](../../assembler/masm/dot-break.md)Ohne Abbrechen [. Während](../../assembler/masm/dot-while.md) oder [. Wiederholen](../../assembler/masm/dot-repeat.md)
+- [. ](dot-break.md)Ohne Abbrechen [. Während](dot-while.md) oder [. Wiederholen](dot-repeat.md)
 
-- [. Andernfalls folgt `.ELSE`](../../assembler/masm/dot-else.md)
+- [. Andernfalls folgt `.ELSE`](dot-else.md)
 
 ## <a name="see-also"></a>Siehe auch
 
-[ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)<br/>
+[ML-Fehlermeldungen](ml-error-messages.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2055
 ms.assetid: 6cec79cc-6bec-443f-9897-fbf5452718c7
-ms.openlocfilehash: 3c198168b4445e619148e5611621fa3ddba95d6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9cb6e4d5891c5aefc9d66e7d70a5cd7685ccd393
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408786"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302041"
 ---
 # <a name="compiler-error-c2055"></a>Compilerfehler C2055
 
-Liste der formalen Parameter erwartet, keiner Liste
+Liste formaler Parameter erwartet, keine Typliste
 
-Eine Funktionsdefinition enthält eine Liste der Parameter anstelle einer formellen Parameterliste. ANSI C erfordert, dass formale Parameter benannt werden, sofern sie Sie nicht "void" oder ein Auslassungszeichen (`...`).
+Eine Funktionsdefinition enthält eine Parametertyp Liste anstelle einer formalen Parameterliste. ANSI C erfordert, dass formale Parameter benannt werden, es sei denn, Sie sind void oder ein Ellipsen (`...`).
 
-Im folgende Beispiel wird die C2055 generiert:
+Im folgenden Beispiel wird C2055 generiert:
 
-```
+```c
 // C2055.c
 // compile with: /c
 void func(int, char) {}  // C2055

@@ -1,26 +1,26 @@
 ---
 title: Vorlagen (C++)
-ms.date: 11/04/2016
+ms.date: 12/27/2019
 f1_keywords:
 - template_cpp
 helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-ms.openlocfilehash: f1532b5aa4ea712feab08b49b7c035187ca0d042
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36ada3cc3b933e99e9b29b3b58463f6bc526fc7d
+ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330491"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546405"
 ---
 # <a name="templates-c"></a>Vorlagen (C++)
 
-Vorlagen sind die Grundlage für die generische Programmierung in C++. Als stark typisierte Sprache erfordert C++ alle Variablen, ein bestimmtes Typs, entweder explizit vom Programmierer deklariert oder vom Compiler abgeleitet haben. Allerdings aussehen viele Datenstrukturen und Algorithmen gleich unabhängig davon, welche Art sie arbeiten. Vorlagen ermöglichen Ihnen, definieren Sie die Vorgänge einer Klasse oder Funktion, und ermöglichen das Angeben von welchen konkreten Typen, dass diese Vorgänge sollten auf funktionieren.
+Vorlagen sind die Grundlage für die generische Programmierung C++in. Als stark typisierte Sprache erfordert, C++ dass alle Variablen einen bestimmten Typ aufweisen, der entweder explizit vom Programmierer deklariert oder vom Compiler abgeleitet wurde. Viele Datenstrukturen und Algorithmen sehen jedoch unabhängig von dem Typ, auf dem Sie ausgeführt werden, dieselbe aus. Vorlagen ermöglichen es Ihnen, die Vorgänge einer Klasse oder Funktion zu definieren und den Benutzer anzugeben, an welchen konkreten Typen diese Vorgänge funktionieren sollen.
 
 ## <a name="defining-and-using-templates"></a>Definieren und Verwenden von Vorlagen
 
-Eine Vorlage ist ein Konstrukt, das generiert einen normalen Typ oder die Funktion zum Zeitpunkt der Kompilierung anhand der Argumente, die der Benutzer für den Vorlagenparameter bereitstellt. Beispielsweise können Sie eine Funktionsvorlage wie folgt definieren:
+Eine Vorlage ist ein Konstrukt, das zum Zeitpunkt der Kompilierung einen normalen Typ oder eine gewöhnliche Funktion generiert, basierend auf Argumenten, die der Benutzer für die Vorlagen Parameter bereitstellt. Beispielsweise können Sie eine Funktions Vorlage wie folgt definieren:
 
 ```cpp
 template <typename T>
@@ -30,9 +30,9 @@ T minimum(const T& lhs, const T& rhs)
 }
 ```
 
-Der obige Code wird beschrieben, eine Vorlage für eine generische Funktion mit einem einzelnen Typparameter *T*, deren Wert zurück, und rufen Sie die Parameter (Lhs und Rhs) sind "all" dieses Typs. Sie können einen Typparameter beliebig benennen, die Sie wie bei, aber durch Konvention einzelnen Großbuchstaben am häufigsten verwendet werden. *T* ist ein Vorlagenparameter, der **Typename** Schlüsselwort besagt, dass dieser Parameter als Platzhalter für einen Typ ist. Wenn die Funktion aufgerufen wird, wird der Compiler ersetzt jede Instanz des `T` mit dem konkreten Typ-Argument, das vom Benutzer angegebenen oder vom Compiler abgeleitet ist. Der Prozess, in dem der Compiler generiert eine Klasse oder Funktion aus einer Vorlage wird als bezeichnet *Vorlageninstanziierung*; `minimum<int>` ist eine Instanziierung der Vorlage `minimum<T>`.
+Der obige Code beschreibt eine Vorlage für eine generische Funktion mit einem einzelnen Typparameter " *T*", deren Rückgabewert und die aufrufen Parameter (LHS und RHS) alle diesen Typ haben. Sie können einen Typparameter beliebig benennen, aber in der Regel werden einzelne Großbuchstaben in der Konvention verwendet. *T* ist ein Vorlagen Parameter. Das Schlüsselwort " **tykame** " besagt, dass dieser Parameter ein Platzhalter für einen Typ ist. Wenn die-Funktion aufgerufen wird, ersetzt der Compiler jede Instanz von `T` durch das konkrete Typargument, das entweder vom Benutzer angegeben oder vom Compiler abgeleitet wird. Der Prozess, in dem der Compiler eine Klasse oder eine Funktion aus einer Vorlage generiert, wird als *Vorlagen Instanziierung*bezeichnet. `minimum<int>` ist eine Instanziierung der Vorlage `minimum<T>`.
 
-Benutzer kann an anderer Stelle eine Instanz der Vorlage deklarieren, die speziell für "int" verwendet wird Nehmen Sie an, dass get_a() und get_b() Funktionen, die einem "int" zurückgeben:
+An anderer Stelle kann ein Benutzer eine Instanz der für int spezialisierten Vorlage deklarieren. angenommen, get_a () und get_b () sind Funktionen, die einen int-Wert zurückgeben:
 
 ```cpp
 int a = get_a();
@@ -40,13 +40,13 @@ int b = get_b();
 int i = minimum<int>(a, b);
 ```
 
-Allerdings da dies eine Funktionsvorlage und der Compiler können hergeleitet werden. den Typ des `T` aus den Argumenten *eine* und *b*, können Sie ihn genau wie eine normale Funktion aufrufen:
+Da es sich hierbei um eine Funktions Vorlage handelt und der Compiler den Typ des `T` aus den Argumenten *a* und *b*ableiten kann, können Sie ihn genau wie eine gewöhnliche Funktion aufzurufen:
 
 ```cpp
 int i = minimum(a, b);
 ```
 
-Wenn der Compiler diese letzte Anweisung erkennt, generiert er eine neue Funktion, in der jedes Vorkommen des *T* in der Vorlage wird durch ersetzt **Int**:
+Wenn der Compiler auf die letzte Anweisung trifft, generiert er eine neue Funktion, in der jedes Vorkommen von *T* in der Vorlage durch **int**ersetzt wird:
 
 ```cpp
 int minimum(const int& lhs, const int& rhs)
@@ -55,25 +55,25 @@ int minimum(const int& lhs, const int& rhs)
 }
 ```
 
-Die Regeln für die wie führt der Compiler die typableitung in Funktionsvorlagen basieren auf den Regeln für normale Funktionen. Weitere Informationen finden Sie unter [überladen Auflösung von Funktionsvorlagenaufrufen](../cpp/overload-resolution-of-function-template-calls.md).
+Die Regeln, wie der Compiler die Typableitung in Funktions Vorlagen ausführt, basieren auf den Regeln für normale Funktionen. Weitere Informationen finden Sie unter [Überladungs Auflösung von Funktions Vorlagen aufrufen](../cpp/overload-resolution-of-function-template-calls.md).
 
-## <a id="type_parameters"></a> Typparameter
+## <a id="type_parameters"></a>Typparameter
 
-In der `minimum` Vorlage oben, beachten Sie, dass der Typparameter *T* sind nicht in irgendeiner Weise gekennzeichnet, bis er in die Funktionsparameter Aufruf verwendet wird, werden die Konstanten und verweisqualifizierern hinzugefügt.
+Beachten Sie in der obigen `minimum` Vorlage, dass der Typparameter *t* in keiner Weise qualifiziert ist, bis er in den Funktionsaufrufen-Parametern verwendet wird, in denen die Konstanten und Verweis Qualifizierer hinzugefügt werden.
 
-Es gibt praktisch keine Begrenzung hinsichtlich der Anzahl von Typparametern. Trennen Sie mehrere Parameter durch Kommas an:
+Es gibt keine praktische Beschränkung für die Anzahl der Typparameter. Trennen Sie mehrere Parameter durch Kommas:
 
 ```cpp
 template <typename T, typename U, typename V> class Foo{};
 ```
 
-Das Schlüsselwort **Klasse** entspricht **Typename** in diesem Kontext. Sie können das vorherige Beispiel als Ausdrücken:
+Die Schlüsselwort **Klasse** entspricht **tyname** in diesem Kontext. Sie können das vorherige Beispiel wie folgt ausdrücken:
 
 ```cpp
 template <class T, class U, class V> class Foo{};
 ```
 
-Den Operator Auslassungspunkte (...) können Sie um eine Vorlage zu definieren, die eine beliebige Anzahl von NULL oder mehr Parameter vom Typ akzeptiert:
+Sie können den Ellipsen Operator (...) verwenden, um eine Vorlage zu definieren, die eine beliebige Anzahl von NULL oder mehr Typparametern annimmt:
 
 ```cpp
 template<typename... Arguments> class vtclass;
@@ -83,7 +83,7 @@ vtclass<int> vtinstance2;
 vtclass<float, bool> vtinstance3;
 ```
 
-Alle integrierten oder benutzerdefinierten Typ kann als Typargument verwendet werden. Sie können z. B. Std:: Vector in der Standardbibliothek verwenden, zum Speichern von int-Elementen, Double-Werte, Zeichenfolgen, MyClass, const MyClass *, MyClass &. Die primäre Einschränkung, wenn mithilfe von Vorlagen ist, dass ein Argument vom Typ alle Operationen unterstützen muss, die an die Typparameter angewendet werden. Angenommen, wir rufen Sie minimale MyClass wie in diesem Beispiel verwenden:
+Alle integrierten oder benutzerdefinierten Typen können als Typargument verwendet werden. Sie können z. b. " [Std:: Vector](../standard-library/vector-class.md) " in der Standard Bibliothek zum Speichern von Variablen vom Typ " **int**", " **Double**", " [Std:: String](../standard-library/basic-string-class.md)", "`MyClass`", " **Konstanten** `MyClass`*", "`MyClass&`" usw. verwenden. Die primäre Einschränkung bei der Verwendung von Vorlagen besteht darin, dass ein Typargument alle Vorgänge unterstützen muss, die auf die Typparameter angewendet werden. Wenn wir z. b. `minimum` mit `MyClass` wie in diesem Beispiel aufgerufen haben:
 
 ```cpp
 class MyClass
@@ -101,9 +101,9 @@ int main()
 }
 ```
 
-Ein Compilerfehler generiert werden, weil MyClass keine Überladung für bietet die < Operator.
+Ein Compilerfehler wird generiert, da `MyClass` keine Überladung für den **<** -Operator bereitstellt.
 
-Es gibt keine inhärenten Anforderung, dass die Typargumente für alle bestimmte Vorlage, die alle mit der gleichen Objekthierarchie angehören, obwohl Sie eine Vorlage definieren können, die eine solche Einschränkung erzwingt. Sie können mit Vorlagen Objekt-orientierte Techniken kombinieren. Angenommen, Sie können speichern abgeleiteten * in einem Vektor\<Base\*>.    Beachten Sie, dass die Argumente müssen Verweise
+Es ist nicht zwingend erforderlich, dass die Typargumente für eine bestimmte Vorlage zur gleichen Objekthierarchie gehören. Sie können jedoch auch eine Vorlage definieren, die eine solche Einschränkung erzwingt. Sie können objektorientierte Techniken mit Vorlagen kombinieren. Beispielsweise können Sie ein abgeleitetes * in einem Vektor\<Basis\*> speichern.    Beachten Sie, dass die Argumente Zeiger sein müssen.
 
 ```cpp
 vector<MyClass*> vec;
@@ -115,11 +115,11 @@ vector<MyClass*> vec;
    vec2.push_back(make_shared<MyDerived>());
 ```
 
-Die grundlegenden Anforderungen, die auf Elemente in der Vektor und andere standard-Bibliothek-Container zu erzwingen `T` ist, die `T` werden Kopie zugewiesen werden kann und die Kopie konstruiert werden kann.
+Die grundlegenden Anforderungen, die `std::vector` und andere Standard Bibliotheks Container für Elemente von `T` erzwingen, besteht darin, dass `T` kopierbar und kopierbar sind.
 
-## <a name="non-type-parameters"></a>Nichttyp-Parameter
+## <a name="non-type-parameters"></a>Nicht-Typparameter
 
-Im Gegensatz zu generischen Typen in anderen Sprachen wie c# und Java unterstützt C++-Vorlagen Nichttyp-Parameter, die auch als Parameter bezeichnet. Beispielsweise können Sie einen Konstanten ganzzahligen Wert um anzugeben, die Länge eines Arrays, wie in diesem Beispiel bereitstellen, die auf die Klasse "Std:: Array" in der Standardbibliothek ähnlich ist:
+Anders als bei generischen Typen in anderen C# Sprachen, wie C++ z. b. und Java, unterstützen Vorlagen *nicht-Typparameter*, auch als Wert Parameter bezeichnet. Beispielsweise können Sie einen Konstanten ganzzahligen Wert bereitstellen, um die Länge eines Arrays anzugeben, wie in diesem Beispiel, das der [Std:: Array](../standard-library/array-class-stl.md) -Klasse in der Standard Bibliothek ähnelt:
 
 ```cpp
 template<typename T, size_t L>
@@ -131,17 +131,29 @@ public:
 };
 ```
 
-Beachten Sie die Syntax in der Vorlagendeklaration. Der Wert von "size_t" wird als ein Vorlagenargument zum Zeitpunkt der Kompilierung übergeben und muss Konstante oder einen Ausdruck für "constexpr" sein. Sie verwenden es folgendermaßen:
+Beachten Sie die Syntax in der Vorlagen Deklaration. Der `size_t`-Wert wird als Vorlagen Argument zur Kompilierzeit und muss **const** oder ein **constexpr** -Ausdruck sein. Sie verwenden sie folgendermaßen:
 
 ```cpp
 MyArray<MyClass*, 10> arr;
 ```
 
-Andere Arten von einschließlich Zeiger und Verweise auf Werte können als Nichttyp-Parameter übergeben werden. Beispielsweise können Sie einen Zeiger an eine Funktion oder ein Funktionsobjekt, das Sie zum Anpassen eines Vorgangs in den Code der Vorlage übergeben.
+Andere Arten von Werten, einschließlich Zeiger und Verweise, können als nicht-Typparameter angegeben werden. Beispielsweise können Sie einen Zeiger auf ein Funktions-oder Funktions Objekt übergeben, um einen Vorgang innerhalb des Vorlagen Codes anzupassen.
 
-## <a id="template_parameters"></a> Vorlagen als Vorlagenparameter
+### <a name="type-deduction-for-non-type-template-parameters"></a>Typableitung für Nichttyp-Vorlagen Parameter
 
-Eine Vorlage kann es sich um einen Template-Parameter sein. In diesem Beispiel MyClass2 verfügt über zwei Vorlagenparameter: Typename-Parameter *T* und einem Vorlagenparameter *Arr*:
+In Visual Studio 2017 und höher im Modus **/Std: c++ 17** leitet der Compiler den Typ eines nicht-typvorlagen Arguments ab, das mit **Auto**deklariert ist:
+
+```cpp
+template <auto x> constexpr auto constant = x;
+
+auto v1 = constant<5>;      // v1 == 5, decltype(v1) is int
+auto v2 = constant<true>;   // v2 == true, decltype(v2) is bool
+auto v3 = constant<'a'>;    // v3 == 'a', decltype(v3) is char
+```
+
+## <a id="template_parameters"></a>Vorlagen als Vorlagen Parameter
+
+Eine Vorlage kann ein Vorlagen Parameter sein. In diesem Beispiel verfügt MyClass2 über zwei Vorlagen Parameter: einen tyname-Parameter *T* und einen Vorlagen Parameter *arr*:
 
 ```cpp
 template<typename T, template<typename U, int I> class Arr>
@@ -153,7 +165,7 @@ class MyClass2
 };
 ```
 
-Da die *Arr* Parameter selbst keinen Text enthält, die Parameternamen sind nicht erforderlich. Es ist ein Fehler zum Verweisen auf *Arr*des Typename oder Klasse Parameternamen von innerhalb des Texts der `MyClass2`. Aus diesem Grund *Arr*des Typparameternamen können weggelassen werden, wie im folgenden Beispiel gezeigt:
+Da der *arr* -Parameter selbst keinen Text hat, werden seine Parameternamen nicht benötigt. Tatsächlich ist es ein Fehler, auf die Namen der *arr*-Typnamen oder-Klassen Parameter aus dem Hauptteil des `MyClass2`zu verweisen. Aus diesem Grund können die Typparameter Namen von *arr*weggelassen werden, wie im folgenden Beispiel gezeigt:
 
 ```cpp
 template<typename T, template<typename, int> class Arr>
@@ -164,21 +176,21 @@ class MyClass2
 };
 ```
 
-## <a name="default-template-arguments"></a>Standardvorlagenargumente
+## <a name="default-template-arguments"></a>Standardvorlagen Argumente
 
-Klassen- und Funktionsvorlagen können Standardargumente haben. Wenn Sie eine Vorlage einem Standardargument, Sie lassen, es nicht angegeben, bei der Verwendung. Beispielsweise weist die Std:: Vector-Vorlage ein Standardargument für die Zuweisung:
+Klassen-und Funktions Vorlagen können Standardargumente aufweisen. Wenn eine Vorlage über ein Standardargument verfügt, können Sie Sie nicht angegeben, wenn Sie Sie verwenden. Beispielsweise verfügt die Vorlage "Std:: Vector" über ein Standardargument für die Zuweisung:
 
 ```cpp
 template <class T, class Allocator = allocator<T>> class vector;
 ```
 
-In den meisten Fällen ist die standardmäßige Std:: allocator-Klasse akzeptabel, damit Sie einen Vektor wie folgt verwenden:
+In den meisten Fällen ist die standardmäßige Std:: zuordcator-Klasse akzeptabel, daher verwenden Sie einen Vektor wie den folgenden:
 
 ```cpp
 vector<int> myInts;
 ```
 
-Aber wenn es sich bei Bedarf eine benutzerdefinierte Zuweisung können Sie angeben, wie folgt:
+Bei Bedarf können Sie jedoch einen benutzerdefinierten Zuweiser wie den folgenden angeben:
 
 ```cpp
 vector<int, MyAllocator> ints;
@@ -186,7 +198,7 @@ vector<int, MyAllocator> ints;
 
 Bei mehrfachen Vorlagenargumenten müssen alle Argumente nach dem ersten Standardargument Standardargumente haben.
 
-Wenn Sie eine Vorlage verwenden, deren Parameter alle Standardwerte verwendet werden, verwenden Sie die leeren spitzen Klammern:
+Wenn Sie eine Vorlage verwenden, deren Parameter standardmäßig standardmäßig verwendet werden, verwenden Sie leere eckige Klammern:
 
 ```cpp
 template<typename A = int, typename B = double>
@@ -203,7 +215,7 @@ int main()
 
 ## <a name="template-specialization"></a>Vorlagenspezialisierung
 
-In einigen Fällen ist es nicht möglich oder wünschenswert ist für eine Vorlage aus, um genau den gleichen Code für jeden Typ zu definieren. Möglicherweise möchten Sie z. B. einen Codepfad ausgeführt werden, nur dann, wenn das Typargument ein Zeiger oder ein Std:: wstring ist oder ein von einer bestimmten Basisklasse Typ abgeleiteter definieren.  In solchen Fällen können Sie definieren eine *Spezialisierung* der Vorlage für den gewählten. Wenn ein Benutzer die Vorlage mit diesem Typ instanziiert, der Compiler verwendet die Spezialisierung, um die Klasse zu generieren, und für alle anderen Dateitypen, wählt des Compilers die allgemeine Vorlage. Spezialisierungen, die in dem alle Parameter sind spezialisiert sind *abgeschlossen spezialisierungen*. Wenn nur einige der Parameter angegeben wurden, heißt es eine *teilspezialisierung*.
+In einigen Fällen ist es nicht möglich oder wünschenswert, dass eine Vorlage genau denselben Code für einen beliebigen Typ definiert. Beispielsweise möchten Sie möglicherweise einen Codepfad definieren, der nur ausgeführt werden soll, wenn das Typargument ein Zeiger ist, oder eine Std:: wstring-Klasse oder ein von einer bestimmten Basisklasse abgeleiteter Typ.  In solchen Fällen können Sie eine *Spezialisierung* der Vorlage für diesen bestimmten Typ definieren. Wenn ein Benutzer die Vorlage mit diesem Typ instanziiert, verwendet der Compiler die-Spezialisierung, um die-Klasse zu generieren, und für alle anderen Typen wählt der Compiler die allgemeinere Vorlage aus. Spezialisierungen, bei denen alle Parameter spezialisiert sind, sind *vollständige Spezialisierungen*. Wenn nur einige der Parameter spezialisiert sind, wird es als *partielle Spezialisierung*bezeichnet.
 
 ```cpp
 template <typename K, typename V>
@@ -217,6 +229,6 @@ MyMap<int, MyClass> classes; // uses original template
 MyMap<string, MyClass> classes2; // uses the partial specialization
 ```
 
-Eine Vorlage kann eine beliebige Anzahl von spezialisierungen haben, solange jede spezielle Typparameter eindeutig ist. Nur Klassenvorlagen können teilweise spezialisiert werden. Alle vollständige oder partielle spezialisierungen einer Vorlage müssen im selben Namespace wie die ursprüngliche Vorlage deklariert werden.
+Eine Vorlage kann beliebig viele Spezialisierungen aufweisen, solange jeder spezialisierte Typparameter eindeutig ist. Nur Klassen Vorlagen können teilweise spezialisiert sein. Alle vollständigen und partiellen Spezialisierungs Arbeiten einer Vorlage müssen im selben Namespace wie die ursprüngliche Vorlage deklariert werden.
 
-Weitere Informationen finden Sie unter [Spezialisierung einer Klassenvorlage](../cpp/template-specialization-cpp.md).
+Weitere Informationen finden Sie unter [Vorlagen Spezialisierung](../cpp/template-specialization-cpp.md).

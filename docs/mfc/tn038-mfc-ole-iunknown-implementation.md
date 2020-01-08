@@ -1,5 +1,5 @@
 ---
-title: 'TN038: MFC-OLE-IUnknown-Implementierung'
+title: 'TN038: MFC-OLE IUnknown-Implementierung'
 ms.date: 06/28/2018
 helpviewer_keywords:
 - aggregation macros [MFC]
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - END_INTERFACE_PART macro [MFC]
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
-ms.openlocfilehash: fb5ddf7fbbf2b59a8e0434e4b097284e309c918d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9ceb903ec38bc0ad7cfdee1c59babd2379422ac3
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511054"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302353"
 ---
-# <a name="tn038-mfcole-iunknown-implementation"></a>TN038: MFC/OLE-IUnknown-Implementierung
+# <a name="tn038-mfcole-iunknown-implementation"></a>TN038: Implementieren von MFC/OLE-IUnknown
 
 > [!NOTE]
 > Der folgende technische Hinweis wurde seit dem ersten Erscheinen in der Onlinedokumentation nicht aktualisiert. Daher können einige Verfahren und Themen veraltet oder falsch sein. Um aktuelle Informationen zu erhalten, wird empfohlen, das gewünschte Thema im Index der Onlinedokumentation zu suchen.
@@ -68,7 +68,7 @@ ULONG CMyObj::Release()
 }
 ```
 
-Die [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) -Member-Funktion ist ein wenig interessanter. Es ist nicht sehr interessant, ein Objekt zu verwenden, dessen einzige Member-Funktionen [adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) und [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) sind – es wäre schön, das Objekt anzuweisen, mehr Dinge auszuführen, als [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) bereitstellt. Dies ist der Ort, an dem [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) nützlich ist. Sie ermöglicht Ihnen, eine andere "Schnittstelle" für dasselbe Objekt zu erhalten. Diese Schnittstellen werden normalerweise von [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) abgeleitet und fügen zusätzliche Funktionalität hinzu, indem neue Element Funktionen hinzugefügt werden. Für COM-Schnittstellen werden nie Membervariablen in der Schnittstelle deklariert, und alle Memberfunktionen werden als rein virtuell deklariert. Ein auf ein Objekt angewendeter
+Die [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) -Member-Funktion ist ein wenig interessanter. Es ist nicht sehr interessant, ein Objekt zu verwenden, dessen einzige Member-Funktionen [adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) und [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) sind – es wäre schön, das Objekt anzuweisen, mehr Dinge auszuführen, als [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) bereitstellt. Dies ist der Ort, an dem [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) nützlich ist. Sie ermöglicht Ihnen, eine andere "Schnittstelle" für dasselbe Objekt zu erhalten. Diese Schnittstellen werden normalerweise von [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) abgeleitet und fügen zusätzliche Funktionalität hinzu, indem neue Element Funktionen hinzugefügt werden. Für COM-Schnittstellen werden nie Membervariablen in der Schnittstelle deklariert, und alle Memberfunktionen werden als rein virtuell deklariert. Ein auf ein Objekt angewendeter
 
 ```cpp
 class IPrintInterface : public IUnknown
@@ -78,7 +78,7 @@ public:
 };
 ```
 
-Um eine iprintinterface abzurufen, wenn Sie nur über ein [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)verfügen, können Sie [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) aufrufen `IPrintInterface`, indem Sie den `IID` von verwenden. Eine `IID` ist eine 128-Bit-Zahl, die die Schnittstelle eindeutig identifiziert. Für jede Schnittstelle gibt es eine `IID`, die entweder von Ihnen oder OLE definiert wird. Wenn *Punk* ein Zeiger auf ein [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Objekt ist, kann der Code zum Abrufen einer iprintinterface-Schnittstelle wie folgt lauten:
+Um eine iprintinterface abzurufen, wenn Sie nur über ein [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)verfügen, können Sie [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) aufrufen, indem Sie die `IID` der `IPrintInterface`verwenden. Eine `IID` ist eine 128-Bit-Zahl, die die Schnittstelle eindeutig identifiziert. Für jede Schnittstelle gibt es eine `IID`, die entweder von Ihnen oder OLE definiert wird. Wenn *Punk* ein Zeiger auf ein [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Objekt ist, kann der Code zum Abrufen einer iprintinterface-Schnittstelle wie folgt lauten:
 
 ```cpp
 IPrintInterface* pPrint = NULL;
@@ -90,7 +90,7 @@ if (pUnk->QueryInterface(IID_IPrintInterface, (void**)&pPrint) == NOERROR)
 }
 ```
 
-Das ist ziemlich einfach, aber wie wäre es, wenn Sie ein Objekt implementieren, das sowohl die iprintinterface-als auch die [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle unterstützt. in diesem Fall ist es einfach, da die iprintinterface direkt von [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) abgeleitet wird – durch Implementieren von iprintinterface [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) wird automatisch unterstützt. Beispiel:
+Das ist ziemlich einfach, aber wie wäre es, wenn Sie ein Objekt implementieren, das sowohl die iprintinterface-als auch die [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle unterstützt. in diesem Fall ist es einfach, da die iprintinterface direkt von [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) abgeleitet wird – durch Implementieren von iprintinterface, [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) wird automatisch unterstützt Beispiel:
 
 ```cpp
 class CPrintObj : public CPrintInterface
@@ -102,7 +102,7 @@ class CPrintObj : public CPrintInterface
 };
 ```
 
-Die Implementierungen von [adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) und [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) sind genau dieselben wie die oben implementierten. `CPrintObj::QueryInterface`sieht in etwa wie folgt aus:
+Die Implementierungen von [adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) und [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) sind genau dieselben wie die oben implementierten. `CPrintObj::QueryInterface` würde etwa wie folgt aussehen:
 
 ```cpp
 HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)
@@ -117,7 +117,7 @@ HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)
 }
 ```
 
-Wenn der Schnittstellenbezeichner (IID) erkannt wird, wird ein Zeiger auf das Objekt zurückgegeben. Andernfalls tritt ein Fehler auf. Beachten Sie außerdem, dass eine erfolgreiche [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) zu einer impliziten [adressfolge](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)führt. Natürlich müssten Sie auch CEditObj::Print implementieren. Das ist einfach, da die iprintinterface direkt von der [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle abgeleitet wurde. Wenn Sie jedoch zwei verschiedene Schnittstellen unterstützen möchten, die beide von [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)abgeleitet sind, beachten Sie Folgendes:
+Wenn der Schnittstellenbezeichner (IID) erkannt wird, wird ein Zeiger auf das Objekt zurückgegeben. Andernfalls tritt ein Fehler auf. Beachten Sie außerdem, dass eine erfolgreiche [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) zu einer impliziten [adressfolge](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)führt. Natürlich müssten Sie auch CEditObj::Print implementieren. Das ist einfach, da die iprintinterface direkt von der [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle abgeleitet wurde. Wenn Sie jedoch zwei verschiedene Schnittstellen unterstützen möchten, die beide von [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)abgeleitet sind, beachten Sie Folgendes:
 
 ```cpp
 class IEditInterface : public IUnkown
@@ -232,7 +232,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(REFIID iid, void** ppvObj)
 }
 ```
 
-Beachten Sie, dass der größte Teil der [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Implementierung in der ceditprintobj-Klasse platziert wird, anstatt den Code in ceditprintobj:: ceditobj und ceditprintobj:: cprintobj zu duplizieren. So wird die Codemenge reduziert und Fehler vermieden. Der wichtigste Punkt hierbei ist, dass von der IUnknown-Schnittstelle [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) aufgerufen werden kann, um eine beliebige Schnittstelle abzurufen, die vom Objekt unterstützt wird, und aus jeder dieser Schnittstellen ist es möglich, das gleiche zu tun. Dies bedeutet, dass alle [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) -Funktionen, die für jede Schnittstelle verfügbar sind, sich genau auf dieselbe Weise Verhalten müssen. Damit diese eingebetteten Objekte die Implementierung im "äußeren Objekt" aufrufen kann, wird ein Gegenzeiger verwendet (m_pParent). Der m_pParent-Zeiger wird während des CEditPrintObj-Konstruktors initialisiert. Anschließend würden Sie CEditPrintObj::CPrintObj::PrintObject und CEditPrintObj::CEditObj::EditObject ebenfalls implementieren. Es wurde relativ viel Code für eine Funktion, die Fähigkeit zum Bearbeiten des Objekts, hinzugefügt. Glücklicherweise ist es recht selten, dass Schnittstellen nur über eine einzelne Memberfunktion verfügen (es kann jedoch durchaus vorkommen) und in diesem Fall würden EditObject und PrintObject normalerweise zu einer einzelnen Schnittstelle kombiniert werden.
+Beachten Sie, dass der größte Teil der [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Implementierung in der ceditprintobj-Klasse platziert wird, anstatt den Code in ceditprintobj:: ceditobj und ceditprintobj:: cprintobj zu duplizieren. So wird die Codemenge reduziert und Fehler vermieden. Der wichtigste Punkt hierbei ist, dass von der IUnknown-Schnittstelle [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) aufgerufen werden kann, um eine beliebige Schnittstelle abzurufen, die vom Objekt unterstützt wird, und aus jeder dieser Schnittstellen ist es möglich, das gleiche zu tun. Dies bedeutet, dass alle [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) -Funktionen, die für jede Schnittstelle verfügbar sind, sich genau auf dieselbe Weise Verhalten müssen. Damit diese eingebetteten Objekte die Implementierung im "äußeren Objekt" aufrufen kann, wird ein Gegenzeiger verwendet (m_pParent). Der m_pParent-Zeiger wird während des CEditPrintObj-Konstruktors initialisiert. Anschließend würden Sie CEditPrintObj::CPrintObj::PrintObject und CEditPrintObj::CEditObj::EditObject ebenfalls implementieren. Es wurde relativ viel Code für eine Funktion, die Fähigkeit zum Bearbeiten des Objekts, hinzugefügt. Glücklicherweise ist es recht selten, dass Schnittstellen nur über eine einzelne Memberfunktion verfügen (es kann jedoch durchaus vorkommen) und in diesem Fall würden EditObject und PrintObject normalerweise zu einer einzelnen Schnittstelle kombiniert werden.
 
 Das ist eine umfassende Erläuterung und viel Code für ein solch einfaches Szenario. Die MFC/OLE-Klassen stellen eine einfachere Alternative zur Verfügung. Die MFC-Implementierung verwendet eine Technik, die mit der Methode vergleichbar ist, mit der Windows-Meldungen mit Meldungszuordnungen umschlossen werden. Diese Funktion wird als *Schnittstellen* Zuordnungen bezeichnet und wird im nächsten Abschnitt erläutert.
 
@@ -240,11 +240,11 @@ Das ist eine umfassende Erläuterung und viel Code für ein solch einfaches Szen
 
 MFC/OLE beinhaltet die Implementierung von "Schnittstellenzuordnungen", die in Bezug auf Konzept und in der Ausführung den "Meldungszuordnungen" und "Dispatchzuordnungen" von MFC ähneln. Die Kernfunktionen der Schnittstellenzuordnungen von MFC sind folgende:
 
-- Eine Standard Implementierung von [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown), die in die `CCmdTarget` -Klasse integriert ist.
+- Eine Standard Implementierung von [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown), die in die `CCmdTarget`-Klasse integriert ist.
 
 - Wartung des Verweis zählungs, geändert durch die [adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) und die [Freigabe](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)
 
-- Datengestützte Implementierung von [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))
+- Datengestützte Implementierung von [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))
 
 Außerdem unterstützen Schnittstellenzuordnungen die folgenden erweiterten Funktionen:
 
@@ -256,7 +256,7 @@ Außerdem unterstützen Schnittstellenzuordnungen die folgenden erweiterten Funk
 
 Weitere Informationen zur Aggregation finden Sie im Thema [Aggregation](/windows/win32/com/aggregation) .
 
-Die Unterstützung der Schnittstellenzuordnung von MFC haben ihren Stammpfad in der `CCmdTarget`-Klasse. `CCmdTarget`der Verweis Zähler "*has-a*" und alle der [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Implementierung zugeordneten Element Funktionen (z. b. der Verweis Zähler in `CCmdTarget`). Um eine Klasse zu erstellen, die OLE-COM unterstützt, leiten Sie eine Klasse von `CCmdTarget` ab, und verwenden Sie verschiedene Makros sowie Memberfunktionen von `CCmdTarget`, um die gewünschten Schnittstellen zu implementieren. Die Implementierung von MFC verwendet geschachtelte Klassen, um die jeweilige Schnittstellenimplementierung ähnlich wie im Beispiel oben zu definieren. Dies wird mit einer Standardimplementierung von IUnknown sowie mit einer Reihe von Makros erleichtert, durch die ein Teil des sich wiederholenden Codes entfällt.
+Die Unterstützung der Schnittstellenzuordnung von MFC haben ihren Stammpfad in der `CCmdTarget`-Klasse. `CCmdTarget` "*has-a"-* Verweis Zähler und alle der [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Implementierung zugeordneten Element Funktionen (z. b. der Verweis Zähler in `CCmdTarget`). Um eine Klasse zu erstellen, die OLE-COM unterstützt, leiten Sie eine Klasse von `CCmdTarget` ab, und verwenden Sie verschiedene Makros sowie Memberfunktionen von `CCmdTarget`, um die gewünschten Schnittstellen zu implementieren. Die Implementierung von MFC verwendet geschachtelte Klassen, um die jeweilige Schnittstellenimplementierung ähnlich wie im Beispiel oben zu definieren. Dies wird mit einer Standardimplementierung von IUnknown sowie mit einer Reihe von Makros erleichtert, durch die ein Teil des sich wiederholenden Codes entfällt.
 
 ## <a name="interface-map-basics"></a>Grundlagen zu Schnittstellenzuordnungen
 
@@ -270,13 +270,13 @@ Die Unterstützung der Schnittstellenzuordnung von MFC haben ihren Stammpfad in 
 
 4. Verwenden Sie in der Implementierungs Datei die Makros BEGIN_INTERFACE_MAP und END_INTERFACE_MAP, um die Schnittstellen Zuordnung der Klasse zu definieren.
 
-5. Verwenden Sie für jede unterstützte IID das INTERFACE_PART-Makro zwischen den Makros BEGIN_INTERFACE_MAP und END_INTERFACE_MAP, um die IID einem bestimmten "Teil" der Klasse zuzuordnen.
+5. Verwenden Sie für jede unterstützte IID das INTERFACE_PART-Makro zwischen den BEGIN_INTERFACE_MAP-und END_INTERFACE_MAP-Makros, um die IID einem bestimmten "Teil" der Klasse zuzuordnen.
 
 6. Implementieren Sie die geschachtelten Klassen, die die von Ihnen unterstützten Schnittstellen darstellen.
 
-7. Verwenden Sie das METHOD_PROLOGUE-Makro, um auf `CCmdTarget`das übergeordnete, von abgeleitete Objekt zuzugreifen.
+7. Verwenden Sie das METHOD_PROLOGUE-Makro, um auf das übergeordnete, `CCmdTarget`von abgeleitete Objekt zuzugreifen.
 
-8. [Adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref), [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)und [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) können an die `CCmdTarget` Implementierung dieser Funktionen delegieren (`ExternalAddRef`, `ExternalRelease`und `ExternalQueryInterface`).
+8. " [Adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)", " [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)" und " [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) " können an die `CCmdTarget` Implementierung dieser Funktionen (`ExternalAddRef`, `ExternalRelease`und `ExternalQueryInterface`) delegiert werden.
 
 Das obige CPrintEditObj-Beispiel kann implementiert wie folgt werden:
 
@@ -300,7 +300,7 @@ protected:
 };
 ```
 
-Die obige Deklaration erstellt eine Klasse, die von `CCmdTarget` abgeleitet wird. Das DECLARE_INTERFACE_MAP-Makro weist das Framework an, dass diese Klasse über eine benutzerdefinierte Schnittstellen Zuordnung verfügt. Außerdem definieren das BEGIN_INTERFACE_PART-Makro und das END_INTERFACE_PART-Makro eine Reihe von Klassen, die in diesem Fall die Namen ceditobj und cprintobj enthalten. (das X wird nur verwendet, um die in der Tabelle definierten Klassen von globalen Klassen zu unterscheiden, die mit "C" beginnen, und Schnittstellen Klassen, die beginnen Sie mit "I"). Zwei geschachtelte Member dieser Klassen werden erstellt: m_CEditObj bzw. m_CPrintObj. Die Makros deklarieren automatisch die Funktionen " [adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)", " [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)" und " [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) ". Daher deklarieren Sie nur die Funktionen, die für diese Schnittstelle spezifisch sind: Editobject und PrintObject (das OLE-Makro STDMETHOD wird verwendet, sodass **_stdcall** und virtuelle Schlüsselwörter entsprechend für die Zielplattform bereitgestellt werden).
+Die obige Deklaration erstellt eine Klasse, die von `CCmdTarget` abgeleitet wird. Das DECLARE_INTERFACE_MAP-Makro weist das Framework an, dass diese Klasse über eine benutzerdefinierte Schnittstellen Zuordnung verfügt. Außerdem definieren die Makros "BEGIN_INTERFACE_PART" und "END_INTERFACE_PART" die Verwendung von Klassen, die in diesem Fall die Namen "ceditobj" und "cprintobj" enthalten. (das X wird nur zur Unterscheidung der in der Tabelle verwendeten Klassen von globalen Klassen verwendet, die mit "C" beginnen, und Schnittstellen Klassen beginnen Sie mit "I"). Zwei geschachtelte Member dieser Klassen werden erstellt: m_CEditObj bzw. m_CPrintObj. Die Makros deklarieren automatisch die Funktionen " [adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)", " [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)" und " [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) ". Daher deklarieren Sie nur die Funktionen, die für diese Schnittstelle spezifisch sind: editobject und PrintObject (das OLE-Makro STDMETHOD wird verwendet, sodass **_stdcall** und virtuelle Schlüsselwörter entsprechend für die Zielplattform bereitgestellt werden).
 
 So implementieren Sie Schnittstellenzuordnung für diese Klasse:
 
@@ -311,9 +311,9 @@ BEGIN_INTERFACE_MAP(CPrintEditObj, CCmdTarget)
 END_INTERFACE_MAP()
 ```
 
-Damit wird die IID "IID_IPrintInterface" mit "m_CPrintObj" und "IID_IEditInterface" mit "m_CEditObj" verbunden. Die `CCmdTarget` Implementierung von [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) (`CCmdTarget::ExternalQueryInterface`) verwendet diese Zuordnung, um bei Anforderung Zeiger auf m_CPrintObj und m_CEditObj zurückzugeben. Es ist nicht erforderlich, einen Eintrag für `IID_IUnknown` einzuschließen. Das Framework verwendet die erste Schnittstelle in der Zuordnung (in diesem Fall "m_CPrintObj"), wenn `IID_IUnknown` angefordert wird.
+Damit wird die IID "IID_IPrintInterface" mit "m_CPrintObj" und "IID_IEditInterface" mit "m_CEditObj" verbunden. Die `CCmdTarget` Implementierung von [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) (`CCmdTarget::ExternalQueryInterface`) verwendet diese Zuordnung, um Zeiger auf m_CPrintObj und m_CEditObj zurückzugeben, wenn dies angefordert wird. Es ist nicht erforderlich, einen Eintrag für `IID_IUnknown` einzuschließen. Das Framework verwendet die erste Schnittstelle in der Zuordnung (in diesem Fall "m_CPrintObj"), wenn `IID_IUnknown` angefordert wird.
 
-Obwohl das BEGIN_INTERFACE_PART-Makro die [adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)-, [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) -und [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) -Funktionen für Sie automatisch deklariert hat, müssen Sie Sie dennoch implementieren:
+Obwohl das BEGIN_INTERFACE_PART-Makro die [adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)-, [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) -und [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) -Funktionen für Sie automatisch deklariert hat, müssen Sie Sie dennoch implementieren:
 
 ```cpp
 ULONG FAR EXPORT CEditPrintObj::XEditObj::AddRef()
@@ -353,10 +353,10 @@ Durch Verwendung der Frameworkimplementierung von Meldungszuordnungen mussten ei
 
 - Deklarieren eine dieser integrierten Methoden auf beiden Schnittstellen
 
-Darüber hinaus verwendet das Framework Meldungszuordnungen intern. So können Sie aus einer Frameworkklasse ableiten, beispielsweise `COleServerDoc`, die bereits bestimmte Schnittstellen unterstützt und entweder Ersatz oder Hinzufügungen zu den Schnittstellen bereitstellt, die im Framework enthalten sind. Dies ist möglich, da das Framework das Erben einer Schnittstellenzuordnung von einer Basisklasse vollständig unterstützt. Dies ist der Grund, warum BEGIN_INTERFACE_MAP als zweiter Parameter den Namen der Basisklasse annimmt.
+Darüber hinaus verwendet das Framework Meldungszuordnungen intern. So können Sie aus einer Frameworkklasse ableiten, beispielsweise `COleServerDoc`, die bereits bestimmte Schnittstellen unterstützt und entweder Ersatz oder Hinzufügungen zu den Schnittstellen bereitstellt, die im Framework enthalten sind. Dies ist möglich, da das Framework das Erben einer Schnittstellenzuordnung von einer Basisklasse vollständig unterstützt. Dies ist der Grund, warum BEGIN_INTERFACE_MAP als zweiten Parameter den Namen der Basisklasse annimmt.
 
 > [!NOTE]
-> Es ist im Allgemeinen nicht möglich, die Implementierung der integrierten MFC-Implementierungen der OLE-Schnittstellen nur durch Vererben der eingebetteten Spezialisierung dieser Schnittstelle von der MFC-Version wiederzuverwenden. Dies ist nicht möglich, da durch die Verwendung des METHOD_PROLOGUE-Makros zum Abrufen des Zugriffs `CCmdTarget`auf das enthaltende abgeleitete Objekt ein *fester Offset* des eingebetteten Objekts `CCmdTarget`aus dem von abgeleiteten Objekt impliziert wird. Dies bedeutet z. B., dass Sie kein eingebettetes XMyAdviseSink von der MFC-Implementierung in `COleClientItem::XAdviseSink` ableiten können, da XAdviseSink sich an einem bestimmten Offset oben im `COleClientItem`-Objekt befinden muss.
+> Es ist im Allgemeinen nicht möglich, die Implementierung der integrierten MFC-Implementierungen der OLE-Schnittstellen nur durch Vererben der eingebetteten Spezialisierung dieser Schnittstelle von der MFC-Version wiederzuverwenden. Dies ist nicht möglich, da die Verwendung des METHOD_PROLOGUE-Makros zum Abrufen des Zugriffs auf das enthaltende `CCmdTarget`abgeleitete Objekt einen *fixierten Offset* des eingebetteten Objekts aus dem `CCmdTarget`abgeleiteten Objekt impliziert. Dies bedeutet z. B., dass Sie kein eingebettetes XMyAdviseSink von der MFC-Implementierung in `COleClientItem::XAdviseSink` ableiten können, da XAdviseSink sich an einem bestimmten Offset oben im `COleClientItem`-Objekt befinden muss.
 
 > [!NOTE]
 > Sie können alle Funktionen, für die das Standardverhalten von MFC gelten soll, jedoch an die MFC-Implementierung delegieren. Dies wird in der MFC-Implementierung von `IOleInPlaceFrame` (XOleInPlaceFrame) in der `COleFrameHook`-Klasse ausgeführt (sie delegiert viele Funktionen zu m_xOleInPlaceUIWindow). Dieser Entwurf wurde ausgewählt, um die Laufzeitgröße von Objekten zu reduzieren, die viele Schnittstellen implementieren. Mit diesem Entwurf ist kein Gegenzeiger mehr erforderlich (wie bei Verwendung von m_pParent im vorherigen Abschnitt).
@@ -365,11 +365,11 @@ Darüber hinaus verwendet das Framework Meldungszuordnungen intern. So können S
 
 Zusätzlich zur Unterstützung von eigenständigen COM-Objekten unterstützt MFC auch Aggregation. Die Aggregation selbst ist zu komplex und kann hier nicht erörtert werden. Weitere Informationen zur Aggregation finden Sie im Thema [Aggregation](/windows/win32/com/aggregation) . Dieser Hinweis beschreibt einfach die Unterstützung für die Aggregation, die in den Framework und die Schnittstellenzuordnungen integriert ist.
 
-Es gibt zwei Möglichkeiten, Aggregationen zu verwenden: (1) verwenden eines COM-Objekts, das Aggregationen unterstützt, und (2) Implementieren eines Objekts, das von einem anderen aggregiert werden kann. Diese Funktionen können als "Verwenden eines Aggregatobjekts" und "Ausstatten einer Objekt-Implementierung mit Aggregatfähigkeit" bezeichnet werden. MFC unterstützt beide Funktionen.
+Es gibt zwei Möglichkeiten, Aggregation zu verwenden: (1) mit einem COM-Objekt, das Aggregation unterstützt und (2) durch Implementierung eines Objekts, von einem anderen aggregiert werden kann. Diese Funktionen können als "Verwenden eines Aggregatobjekts" und "Ausstatten einer Objekt-Implementierung mit Aggregatfähigkeit" bezeichnet werden. MFC unterstützt beide Funktionen.
 
 ### <a name="using-an-aggregate-object"></a>Verwenden eines Aggregatobjekts
 
-Zur Verwendung eines Aggregatobjekts, muss es eine Methode geben, um das Aggregat in den QueryInterface-Mechanismus einzubinden. Das heißt, das Aggregatobjekt muss sich wie ein systemeigener Teil des Objekts verhalten. Wie funktioniert das in den MFC-Schnittstellen Zuordnungs Mechanismus, zusätzlich zum INTERFACE_PART-Makro, bei dem ein ein-und ein-Objekt einer IID zugeordnet ist, können Sie auch ein Aggregat Objekt als Teil `CCmdTarget` ihrer abgeleiteten Klasse deklarieren. Zu diesem Zweck wird das INTERFACE_AGGREGATE-Makro verwendet. Auf diese Weise können Sie eine Member-Variable angeben (bei der es sich um einen Zeiger auf eine [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Klasse oder eine abgeleitete Klasse handeln muss), die in den Schnittstellen Zuordnungs Mechanismus integriert werden soll. Wenn der Zeiger nicht NULL ist, `CCmdTarget::ExternalQueryInterface` wenn aufgerufen wird, ruft das Framework automatisch die [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) -Member-Funktion des Aggregat Objekts auf `IID` , wenn die angeforderte nicht eine `IID`der nativen, von der `CCmdTarget`Objekt selbst.
+Zur Verwendung eines Aggregatobjekts, muss es eine Methode geben, um das Aggregat in den QueryInterface-Mechanismus einzubinden. Das heißt, das Aggregatobjekt muss sich wie ein systemeigener Teil des Objekts verhalten. Wie funktioniert das in den MFC-Schnittstellen Zuordnungs Mechanismus, zusätzlich zum INTERFACE_PART-Makro, bei dem ein gespeichertes Objekt einer IID zugeordnet ist, können Sie auch ein Aggregat Objekt als Teil ihrer `CCmdTarget` abgeleiteten Klasse deklarieren. Zu diesem Zweck wird das INTERFACE_AGGREGATE-Makro verwendet. Auf diese Weise können Sie eine Member-Variable angeben (bei der es sich um einen Zeiger auf eine [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Klasse oder eine abgeleitete Klasse handeln muss), die in den Schnittstellen Zuordnungs Mechanismus integriert werden soll. Wenn der Zeiger nicht NULL ist, wenn `CCmdTarget::ExternalQueryInterface` aufgerufen wird, ruft das Framework automatisch die [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) -Member-Funktion des Aggregat Objekts auf, wenn die angeforderte `IID` nicht eine der nativen `IID`s ist, die vom `CCmdTarget` Objekt selbst unterstützt werden.
 
 #### <a name="to-use-the-interface_aggregate-macro"></a>So verwenden Sie das INTERFACE_AGGREGATE-Makro
 
@@ -419,13 +419,13 @@ BEGIN_INTERFACE_MAP(CAggrExample, CCmdTarget)
 END_INTERFACE_MAP()
 ```
 
-Die m_lpAggrInner-Variable wird im Konstruktor auf NULL initialisiert. Das Framework ignoriert eine Null-Member-Variable in der Standard Implementierung von [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)). Das `OnCreateAggregates`-Objekt eignet sich gut, um die Aggregatobjekte tatsächlich zu erstellen. Sie müssen dieses Objekt explizit aufrufen, wenn Sie das Objekt außerhalb der MFC-Implementierung von `COleObjectFactory` erstellen. Der Grund für das Erstellen von Aggregaten in `CCmdTarget::OnCreateAggregates` und die Verwendung von `CCmdTarget::GetControllingUnknown` wird offensichtlich, wenn das Erstellen von aggregatfähigen Objekten erläutert wird.
+Die m_lpAggrInner-Variable wird im Konstruktor auf NULL initialisiert. Das Framework ignoriert eine Null-Member-Variable in der Standard Implementierung von [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)). Das `OnCreateAggregates`-Objekt eignet sich gut, um die Aggregatobjekte tatsächlich zu erstellen. Sie müssen dieses Objekt explizit aufrufen, wenn Sie das Objekt außerhalb der MFC-Implementierung von `COleObjectFactory` erstellen. Der Grund für das Erstellen von Aggregaten in `CCmdTarget::OnCreateAggregates` und die Verwendung von `CCmdTarget::GetControllingUnknown` wird offensichtlich, wenn das Erstellen von aggregatfähigen Objekten erläutert wird.
 
-Mit dieser Methode erhält das Objekt alle Schnittstellen, die das Aggregatobjekt unterstützt, sowie deren systemeigene Schnittstellen. Wenn Sie nur eine Teilmenge der Schnittstellen benötigen, die das Aggregat unterstützt, können Sie `CCmdTarget::GetInterfaceHook` überschreiben. Dies ermöglicht eine sehr niedrige hookability, ähnlich wie bei [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)). Normalerweise werden alle Schnittstellen gewünscht, die das Aggregat unterstützt.
+Mit dieser Methode erhält das Objekt alle Schnittstellen, die das Aggregatobjekt unterstützt, sowie deren systemeigene Schnittstellen. Wenn Sie nur eine Teilmenge der Schnittstellen benötigen, die das Aggregat unterstützt, können Sie `CCmdTarget::GetInterfaceHook` überschreiben. Dies ermöglicht eine sehr niedrige hookability, ähnlich wie bei [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)). Normalerweise werden alle Schnittstellen gewünscht, die das Aggregat unterstützt.
 
 ### <a name="making-an-object-implementation-aggregatable"></a>Ausstatten einer Objekt-Implementierung mit Aggregationsfähigkeit
 
-Damit ein Objekt aggregierbar ist, muss die Implementierung von [adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref), [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)und [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) an ein "kontrollierendes unbekanntes" delegiert werden. Anders ausgedrückt: damit es Teil des Objekts ist, muss es die [adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref), [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)und [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) an ein anderes Objekt delegieren, das auch von [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)abgeleitet ist. Dieses "controlling unknown"-Objekt wird dem Objekt beim Erstellen zur Verfügung gestellt, d. h., es wird der Implementierung von `COleObjectFactory` bereitgestellt. Das Implementieren bedeutet einen geringen Mehraufwand, und in einigen Fällen ist es nicht wünschenswert, sodass dies laut MFC optional ist. Um ein Objekt aggregatfähig zu machen, rufen Sie `CCmdTarget::EnableAggregation` im Konstruktor des Objekts auf.
+Damit ein Objekt aggregierbar ist, muss die Implementierung von [adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref), [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)und [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) an ein "kontrollierendes unbekanntes" delegiert werden. Anders ausgedrückt: damit es Teil des Objekts ist, muss es die [adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref), [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)und [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) an ein anderes Objekt delegieren, das auch von [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)abgeleitet ist. Dieses "controlling unknown"-Objekt wird dem Objekt beim Erstellen zur Verfügung gestellt, d. h., es wird der Implementierung von `COleObjectFactory` bereitgestellt. Das Implementieren bedeutet einen geringen Mehraufwand, und in einigen Fällen ist es nicht wünschenswert, sodass dies laut MFC optional ist. Um ein Objekt aggregatfähig zu machen, rufen Sie `CCmdTarget::EnableAggregation` im Konstruktor des Objekts auf.
 
 Wenn das Objekt auch Aggregate verwendet, müssen Sie zudem sicherstellen, das richtige "controlling unknown"-Objekt an die Aggregatobjekte zu übergeben. Normalerweise wird dieser [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Zeiger beim Erstellen des Aggregats an das-Objekt übermittelt. Beispielsweise ist der pUnkOuter-Parameter der "controlling unknown"-Zeiger für Objekte, die mit `CoCreateInstance` erstellt werden. Der richtige "controlling unknown"-Zeiger kann durch Aufrufen von `CCmdTarget::GetControllingUnknown` abgerufen werden. Der Wert, der von dieser Funktion zurückgegeben wird, ist jedoch während des Konstruktors ungültig. Aus diesem Grund wird vorgeschlagen, die Aggregate nur in einer Überschreibung von `CCmdTarget::OnCreateAggregates` zu erstellen, bei der der Rückgabewert von `GetControllingUnknown` zuverlässig ist, auch wenn er von der `COleObjectFactory`-Implementierung erstellt wird.
 
@@ -456,7 +456,7 @@ DWORD ExternalQueryInterface(
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameters
 
 *lpIID*<br/>
 Ein ferner Zeiger auf eine IID (das erste Argument für QueryInterface)
@@ -496,7 +496,7 @@ DECLARE_INTERFACE_MAP
 
 #### <a name="remarks"></a>Hinweise
 
-Verwenden Sie dieses Makro in einer Klasse, die von `CCmdTarget` abgeleitet ist und über eine Schnittstellenzuordnung verfügt. Wird auf die gleiche Weise wie DECLARE_MESSAGE_MAP verwendet. Dieser Makroaufruf sollte in die Klassendefinition, normalerweise in einer Headerdatei (.H), platziert werden. Eine Klasse mit DECLARE_INTERFACE_MAP muss die Schnittstellen Zuordnung in der Implementierungs Datei () definieren. Cpp) mit den Makros BEGIN_INTERFACE_MAP und END_INTERFACE_MAP.
+Verwenden Sie dieses Makro in einer Klasse, die von `CCmdTarget` abgeleitet ist und über eine Schnittstellenzuordnung verfügt. Wird auf die gleiche Weise wie DECLARE_MESSAGE_MAP verwendet. Dieser Makroaufruf sollte in die Klassendefinition, normalerweise in einer Headerdatei (.H), platziert werden. Eine Klasse mit DECLARE_INTERFACE_MAP muss die Schnittstellen Zuordnung in der Implementierungs Datei () definieren. Cpp) mit den BEGIN_INTERFACE_MAP-und END_INTERFACE_MAP-Makros.
 
 ### <a name="begin_interface_part-and-end_interface_part--macro-descriptions"></a>BEGIN_INTERFACE_PART und END_INTERFACE_PART – Makrobeschreibungen
 
@@ -505,7 +505,7 @@ BEGIN_INTERFACE_PART(localClass, iface);
 END_INTERFACE_PART(localClass)
 ```
 
-#### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameters
 
 *localClass*<br/>
 Der Name der Klasse, die die Schnittstelle implementiert
@@ -515,11 +515,11 @@ Der Name der Schnittstelle, die diese Klasse implementiert
 
 #### <a name="remarks"></a>Hinweise
 
-Für jede Schnittstelle, die von der Klasse implementiert wird, benötigen Sie ein BEGIN_INTERFACE_PART-und END_INTERFACE_PART-Paar. Diese Makros definieren eine lokale Klasse, die von der von Ihnen definierten OLE-Schnittstelle abgeleitet wird, sowie eine eingebettete Membervariable dieser Klasse. Die Member " [adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)", " [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)" und " [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) " werden automatisch deklariert. Sie müssen die Deklarationen für die anderen Element Funktionen einschließen, die Teil der implementierten Schnittstelle sind (diese Deklarationen werden zwischen den Makros BEGIN_INTERFACE_PART und END_INTERFACE_PART platziert).
+Für jede Schnittstelle, die von der Klasse implementiert wird, benötigen Sie eine BEGIN_INTERFACE_PART und END_INTERFACE_PART Paar. Diese Makros definieren eine lokale Klasse, die von der von Ihnen definierten OLE-Schnittstelle abgeleitet wird, sowie eine eingebettete Membervariable dieser Klasse. Die Member " [adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)", " [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)" und " [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) " werden automatisch deklariert. Sie müssen die Deklarationen für die anderen Element Funktionen einschließen, die Teil der implementierten Schnittstelle sind (diese Deklarationen werden zwischen den BEGIN_INTERFACE_PART-und END_INTERFACE_PART-Makros platziert).
 
-Das *iface* -Argument ist die OLE-Schnittstelle, die Sie implementieren möchten `IAdviseSink`, z `IPersistStorage` . b. oder (oder Ihre eigene benutzerdefinierte Schnittstelle).
+Das *iface* -Argument ist die OLE-Schnittstelle, die Sie implementieren möchten, z. b. `IAdviseSink`oder `IPersistStorage` (oder Ihre eigene benutzerdefinierte Schnittstelle).
 
-Das *localclass* -Argument ist der Name der lokalen Klasse, die definiert wird. Der Buchstabe "x" wird dem Namen automatisch vorangestellt. Diese Namenskonvention wird verwendet, um Konflikte mit gleichnamigen globalen Klassen zu vermeiden. Außerdem ist der Name des eingebetteten Members identisch mit dem Namen der *localclass* , mit dem Unterschied, dass es sich um ein Präfix von 'm _x handelt.
+Das *localclass* -Argument ist der Name der lokalen Klasse, die definiert wird. Der Buchstabe "x" wird dem Namen automatisch vorangestellt. Diese Namenskonvention wird verwendet, um Konflikte mit gleichnamigen globalen Klassen zu vermeiden. Außerdem ist der Name des eingebetteten Members identisch mit dem Namen der *localclass* , mit dem Unterschied, dass er "m_x" vorangestellt ist.
 
 Beispiel:
 
@@ -536,7 +536,7 @@ END_INTERFACE_PART(MyAdviseSink)
 würde eine lokale Klasse mit dem Namen XMyAdviseSink definieren, der von IAdviseSink abgeleitet wurde, und ein Member der Klasse, in der es als m_xMyAdviseSink.Note deklariert wird:
 
 > [!NOTE]
-> Die Zeilen, die `STDMETHOD`mit _ beginnen, werden im Wesentlichen aus OLE2 kopiert. H und leicht geändert. Durch Kopieren aus OLE2.H lassen sich Fehler reduzieren, die andernfalls schwer zu beheben sind.
+> Die Zeilen, die mit `STDMETHOD`_ beginnen, werden im Wesentlichen aus OLE2 kopiert. H und leicht geändert. Durch Kopieren aus OLE2.H lassen sich Fehler reduzieren, die andernfalls schwer zu beheben sind.
 
 ### <a name="begin_interface_map-and-end_interface_map--macro-descriptions"></a>BEGIN_INTERFACE_MAP und END_INTERFACE_MAP – Makrobeschreibungen
 
@@ -545,7 +545,7 @@ BEGIN_INTERFACE_MAP(theClass, baseClass)
 END_INTERFACE_MAP
 ```
 
-#### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameters
 
 *spiegeln*<br/>
 Die Klasse, in der die Schnittstellenzuordnung definiert werden soll
@@ -555,7 +555,7 @@ Die Klasse, von der *TheClass* abgeleitet ist.
 
 #### <a name="remarks"></a>Hinweise
 
-Die BEGIN_INTERFACE_MAP-und END_INTERFACE_MAP-Makros werden in der Implementierungs Datei verwendet, um die Schnittstellen Zuordnung tatsächlich zu definieren. Für jede Schnittstelle, die implementiert wird, ist mindestens ein INTERFACE_PART-Makro Aufruf vorhanden. Für jedes Aggregat, das von der-Klasse verwendet wird, gibt es einen INTERFACE_AGGREGATE-Makro Aufruf.
+Die BEGIN_INTERFACE_MAP-und END_INTERFACE_MAP-Makros werden in der Implementierungs Datei verwendet, um die Schnittstellen Zuordnung tatsächlich zu definieren. Für jede Schnittstelle, die implementiert wird, ist mindestens ein INTERFACE_PART Makro Aufruf vorhanden. Für jedes Aggregat, das von der-Klasse verwendet wird, gibt es einen INTERFACE_AGGREGATE Makro Aufruf.
 
 ### <a name="interface_part--macro-description"></a>INTERFACE_PART – Makrobeschreibung
 
@@ -563,7 +563,7 @@ Die BEGIN_INTERFACE_MAP-und END_INTERFACE_MAP-Makros werden in der Implementieru
 INTERFACE_PART(theClass, iid, localClass)
 ```
 
-#### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameters
 
 *spiegeln*<br/>
 Der Name der Klasse, die die Schnittstellenzuordnung enthält.
@@ -576,7 +576,7 @@ Der Name der lokalen Klasse (ohne das "X").
 
 #### <a name="remarks"></a>Hinweise
 
-Dieses Makro wird zwischen dem BEGIN_INTERFACE_MAP-Makro und dem END_INTERFACE_MAP-Makro für jede Schnittstelle verwendet, die von Ihrem Objekt unterstützt wird. Sie ermöglicht es Ihnen, eine IID einem Member der Klasse zuzuordnen, die von *TheClass* und *localclass*angegeben wird. Das 'm _x-"wird der *localclass* automatisch hinzugefügt. Beachten Sie, dass maximal eine `IID` mit einem einzigen Member zugeordnet werden kann. Dies ist hilfreich, wenn Sie nur eine "am stärksten abgeleitete" Schnittstelle implementieren und alle Zwischenschnittstellen ebenfalls bereitstellen möchten. Ein gutes Beispiel hierfür ist die `IOleInPlaceFrameWindow`-Schnittstelle. Die Hierarchie sieht wie folgt aus:
+Dieses Makro wird zwischen dem BEGIN_INTERFACE_MAP-Makro und dem END_INTERFACE_MAP-Makro für jede Schnittstelle verwendet, die von Ihrem Objekt unterstützt wird. Sie ermöglicht es Ihnen, eine IID einem Member der Klasse zuzuordnen, die von *TheClass* und *localclass*angegeben wird. Das "m_x" wird der *localclass* automatisch hinzugefügt. Beachten Sie, dass maximal eine `IID` mit einem einzigen Member zugeordnet werden kann. Dies ist hilfreich, wenn Sie nur eine "am stärksten abgeleitete" Schnittstelle implementieren und alle Zwischenschnittstellen ebenfalls bereitstellen möchten. Ein gutes Beispiel hierfür ist die `IOleInPlaceFrameWindow`-Schnittstelle. Die Hierarchie sieht wie folgt aus:
 
 ```Hierarchy
 IUnknown
@@ -585,7 +585,7 @@ IUnknown
             IOleInPlaceFrameWindow
 ```
 
-Wenn ein Objekt implementiert `IOleInPlaceFrameWindow`, kann `QueryInterface` ein Client eine der folgenden Schnittstellen haben `IOleUIWindow`: `IOleWindow`, oder [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown), neben der "am stärksten abgeleiteten `IOleInPlaceFrameWindow` " Schnittstelle (der, den Sie tatsächlich implementieren). Um dies zu umgehen, können Sie mehr als ein INTERFACE_PART-Makro verwenden, um jede und jede Basis `IOleInPlaceFrameWindow` Schnittstelle der-Schnittstelle zuzuordnen:
+Wenn ein Objekt `IOleInPlaceFrameWindow`implementiert, kann ein Client auf einer der folgenden Schnittstellen `QueryInterface`: `IOleUIWindow`, `IOleWindow`oder [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown), neben der "am stärksten abgeleiteten" Schnittstelle `IOleInPlaceFrameWindow` (der, den Sie tatsächlich implementieren). Um dies zu umgehen, können Sie mehr als ein INTERFACE_PART Makro verwenden, um jede einzelne Basisschnittstelle der `IOleInPlaceFrameWindow`-Schnittstelle zuzuordnen:
 
 in der Klassendefinitionsdatei:
 
@@ -611,7 +611,7 @@ Das Framework berücksichtigt IUnknown, da es immer erforderlich ist.
 INTERFACE_AGGREGATE(theClass, theAggr)
 ```
 
-#### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameters
 
 *spiegeln*<br/>
 Der Name der Klasse, die die Schnittstellenzuordnung enthält,
@@ -621,7 +621,7 @@ Der Name der Membervariable, die aggregiert werden soll.
 
 #### <a name="remarks"></a>Hinweise
 
-Dieses Makro wird verwendet, um dem Framework mitzuteilen, dass die Klasse ein Aggregatobjekt verwendet. Es muss zwischen den Makros BEGIN_INTERFACE_PART und END_INTERFACE_PART angezeigt werden. Ein Aggregat Objekt ist ein separates Objekt, das von [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)abgeleitet ist. Mithilfe eines Aggregats und des INTERFACE_AGGREGATE-Makros können Sie festlegen, dass alle Schnittstellen, die das Aggregat unterstützt, von dem-Objekt direkt unterstützt werden. Das Argument "- *aggr* " ist einfach der Name einer Element Variablen ihrer Klasse, die von [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) (entweder direkt oder indirekt) abgeleitet ist. Alle INTERFACE_AGGREGATE-Makros müssen den INTERFACE_PART-Makros folgen, wenn Sie in eine Schnittstellen Zuordnung eingefügt werden.
+Dieses Makro wird verwendet, um dem Framework mitzuteilen, dass die Klasse ein Aggregatobjekt verwendet. Es muss zwischen den BEGIN_INTERFACE_PART-und END_INTERFACE_PART-Makros angezeigt werden. Ein Aggregat Objekt ist ein separates Objekt, das von [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)abgeleitet ist. Wenn Sie ein Aggregat und das INTERFACE_AGGREGATE-Makro verwenden, können Sie festlegen, dass alle Schnittstellen, die das Aggregat unterstützt, von dem-Objekt direkt unterstützt werden. Das Argument "- *aggr* " ist einfach der Name einer Element Variablen ihrer Klasse, die von [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) (entweder direkt oder indirekt) abgeleitet ist. Alle INTERFACE_AGGREGATE Makros müssen den INTERFACE_PART Makros folgen, wenn Sie in eine Schnittstellen Zuordnung eingefügt werden.
 
 ## <a name="see-also"></a>Siehe auch
 

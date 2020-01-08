@@ -1,18 +1,18 @@
 ---
 title: Nicht schwerwiegender ML-Fehler A2034
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - A2034
 helpviewer_keywords:
 - A2034
 ms.assetid: 6438970c-0aee-4f14-a058-5fe47d0ee216
-ms.openlocfilehash: 578a839b319b10dff7f89d6fafdf556315a4f850
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: c27c7d1b62afca760454c39552bfd1fd36857e08
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856687"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317057"
 ---
 # <a name="ml-nonfatal-error-a2034"></a>Nicht schwerwiegender ML-Fehler A2034
 
@@ -24,16 +24,16 @@ Eines der folgenden wurde außerhalb eines Segment Blocks gefunden:
 
 - Eine Bezeichnungs Definition
 
-- Einen [this](../../assembler/masm/operator-this.md) -Operator
+- Einen [this](operator-this.md) -Operator
 
-- Ein [$](../../assembler/masm/dollar.md) -Operator
+- Ein [$](dollar.md) -Operator
 
 - Eine Prozedur Definition
 
-- Eine [align](../../assembler/masm/align-masm.md) -Direktive
+- Eine [align](align-masm.md) -Direktive
 
-- Eine [org](../../assembler/masm/org.md) -Direktive
+- Eine [org](org.md) -Direktive
 
 ## <a name="see-also"></a>Siehe auch
 
-[ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)<br/>
+[ML-Fehlermeldungen](ml-error-messages.md)

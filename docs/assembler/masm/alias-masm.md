@@ -1,19 +1,19 @@
 ---
 title: ALIAS (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - Alias
 helpviewer_keywords:
 - ALIAS directive
 ms.assetid: d9725c49-58de-41da-ab01-b06a56cf5cf2
-ms.openlocfilehash: 274ac451005015b2693d8674673af574ec781bdc
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 5aef169c5632e74722438c63718ce5b783a8da09
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74399291"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316602"
 ---
-# <a name="alias-masm"></a>ALIAS (MASM)
+# <a name="alias"></a>ALIAS
 
 Die **Alias** -Direktive erstellt einen alternativen Namen für eine Funktion.  Auf diese Weise können Sie mehrere Namen für eine Funktion erstellen oder Bibliotheken erstellen, mit denen der Linker (Link. exe) eine alte Funktion einer neuen Funktion zuordnen kann.
 
@@ -21,7 +21,7 @@ Die **Alias** -Direktive erstellt einen alternativen Namen für eine Funktion.  
 
 > **Alias \<** _Alias_ **> = \<** _tatsächlicher Name_ **>**
 
-#### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameters
 
 *tatsächlicher Name*\
 Der tatsächliche Name der Funktion oder Prozedur.  Die Klammern sind erforderlich.
@@ -31,4 +31,5 @@ Der Alternative oder Alias Name.  Die Klammern sind erforderlich.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+[Direktivenverweis](directives-reference.md)\
+[MASM-BNF-Grammatik](masm-bnf-grammar.md)

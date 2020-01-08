@@ -1,105 +1,112 @@
 ---
 title: Linkertoolfehler LNK2001
-ms.date: 05/17/2017
+ms.date: 12/19/2019
 f1_keywords:
 - LNK2001
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-ms.openlocfilehash: 916c37e3283f40ff5ded865a573ff45839de6e2a
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: b6d1e53d8f057ddc93e2dfde65cb951d247dfcc0
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449622"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302132"
 ---
 # <a name="linker-tools-error-lnk2001"></a>Linkertoolfehler LNK2001
 
-nicht aufgelöstes externes Symbol "*Symbol*"
+> nicht aufgelöstes externes Symbol "*Symbol*"
 
-Der kompilierte Code stellt einen Verweis oder einen Aufruf von *Symbol*, aber dieses Symbol ist nicht definiert, in die Bibliotheken oder Objektdateien, die dem Linker angegeben.
+Der kompilierte Code erstellt einen Verweis oder einen Verweis auf das *Symbol*. Das Symbol ist in Bibliotheken oder Objektdateien, die vom Linker durchsucht wurden, nicht definiert.
 
-Diese Fehlermeldung folgt Schwerwiegender Fehler [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md). Sie müssen alle LNK2001 und LNK2019 Fehler zum Beheben von Fehler LNK1120 beheben.
+Auf diese Fehlermeldung folgt ein schwerwiegender Fehler [Linkertoolfehler LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md). Beheben Sie zum Beheben von Fehler Linkertoolfehler LNK1120 zuerst alle LNK2001-und LNK2019-Fehler.
 
-## <a name="possible-causes"></a>Mögliche Ursachen
-
-Es gibt viele Möglichkeiten, um diesen Fehler zu erhalten, aber alle umfassen einen Verweis auf eine Funktion oder Variable, die der Linker kann nicht *beheben*, oder suchen Sie eine Definition für. Der Compiler erkennen, wenn ein Symbol nicht *deklariert*, aber nicht bei nicht *definiert*, weil die Definition in einer anderen Quelldatei oder eine Bibliothek sein kann. Wenn ein Symbol ist bezeichnet, aber nicht definiert, generiert der Linker einen Fehler aus.
-
-### <a name="coding-issues"></a>Codierungsprobleme
-
-Dieser Fehler kann verursacht werden, nicht übereinstimmenden Groß-/Kleinschreibung in Ihrem Quellcode oder eine Moduldefinitionsdatei (.def) Datei. Wenn Sie den Namen einer Variablenverweis z. B. `var1` in einer C++-Quelldatei, und versuchen Sie es für den Zugriff als `VAR1` in einer anderen, kann dieser Fehler wird generiert. Um dieses Problem zu beheben, verwenden Sie konsistent Schreibweise und Groß-/Kleinschreibung Namen.
-
-Dieser Fehler kann verursacht werden, in ein Projekt, verwendet [inlineersetzung](../../error-messages/tool-errors/function-inlining-problems.md) , wenn Sie die Funktionen in einer Quelldatei und nicht in einer Headerdatei definieren. Inlinefunktionen können nicht außerhalb der Quelldatei angezeigt werden, die sie definiert. Um dieses Problem zu beheben, definieren Sie die Inline-Funktionen in den Headern, in dem sie deklariert werden.
-
-Dieser Fehler kann verursacht werden, wenn Sie eine C-Funktion aus einem C++-Programm, ohne Aufrufen eine `extern "C"` Deklaration für die C-Funktion. Der Compiler verwendet verschiedene interne symbolnamenskonventionen für C- und C++-Code, und den internen Symbolnamen, den der Linker sucht nach, wenn Symbole aufgelöst werden kann. Um dieses Problem zu beheben, verwenden Sie eine `extern "C"` Wrapper für alle Deklarationen von C-Funktionen, die in Ihren C++-Code, wodurch den Compiler verwendet die interne C-Namenskonvention für diese Symbole verwendet. Compileroptionen [/TP](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) und [/TC](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) bewirken, dass der Compiler Dateien als C++- oder C, unabhängig von der Erweiterung bzw. kompilieren. Diese Optionen können dazu führen, dass interne Funktionsnamen unterscheiden, was Sie erwarten.
-
-Dieser Fehler kann verursacht werden, versucht, auf Sie verweisen, Funktionen oder Daten, die externen Bindung verfügen. In C++ sind Inlinefunktionen und `const` Daten eine interne Bindung haben, sofern nicht ausdrücklich angegeben als `extern`. Um dieses Problem zu beheben, verwenden Sie explizite `extern` Deklarationen von Symbolen außerhalb der definierenden Quelldatei bezeichnet.
-
-Dieser Fehler kann verursacht werden, indem eine [fehlender Funktionsrumpf oder fehlende Variable](../../error-messages/tool-errors/missing-function-body-or-variable.md) Definition. Dieser Fehler ist häufig, wenn Sie deklarieren, aber nicht festlegen, Variablen, Funktionen oder Klassen in Ihrem Code. Der Compiler benötigt nur einen Funktionsprototyp oder `extern` Variablendeklaration eine Objektdatei ohne Fehler, sondern der Linker generiert kann einen Aufruf der Funktion oder ein Verweis auf die Variable auflösen, da die Funktion Code oder eine Variable ein Leerzeichen vorhanden ist reserviert. Um dieses Problem zu beheben, stellen Sie sicher, dass alle referenzierten Funktion und die Variable in einer Quelldatei oder in Ihrem Link-Bibliothek vollständig definiert ist.
-
-Dieser Fehler kann durch einen Funktionsaufruf verursacht werden, die Rückgabe-und Parametertypen oder Aufrufkonventionen, die nicht in der Definition der Funktion entsprechen verwendet. In C++-Objektdateien [Namen Decoration](../../error-messages/tool-errors/name-decoration.md) umfasst die Aufrufkonvention, Klasse oder Namespace-Gültigkeitsbereich und die Rückgabe- und Parametertypen einer Funktion in der endgültigen ergänzten Funktionsnamen ein, die verwendet wird, wie das Symbol entsprechend Wenn Aufrufe die Funktion aus anderen Objektdateien werden aufgelöst. Um dieses Problem zu beheben, stellen Sie sicher, dass die Deklaration, Definition und Aufrufe an die Funktion, die alle die gleichen Bereiche, Typen und Aufrufkonventionen verwenden.
-
-Dieser Fehler kann in C++-Code verursacht werden, wenn Sie einen Funktionsprototyp in einer Klassendefinition enthalten, aber nicht [enthalten die Implementierung](../../error-messages/tool-errors/missing-function-body-or-variable.md) der Funktion, und dann aufgerufen wird. Um dieses Problem zu beheben, werden Sie Sie sicher, dass eine Definition für alle aufgerufen, die Member einer Klasse deklariert.
-
-Dieser Fehler kann von einem Versuch, eine reine virtuelle Funktion aus einer abstrakten Klasse aufrufen verursacht werden. Eine reine virtuelle Funktion verfügt über keine Implementierung der Basisklasse. Um dieses Problem zu beheben, stellen Sie sicher, dass alle virtuellen Funktionen implementiert werden.
-
-Dieser Fehler kann verursacht werden, indem Sie versuchen, eine Variable deklariert, die innerhalb einer Funktion verwenden ([eine lokale Variable](../../error-messages/tool-errors/automatic-function-scope-variables.md)) außerhalb des Bereichs dieser Funktion. Um dieses Problem zu beheben, entfernen Sie den Verweis auf die Variable, die nicht im Bereich befindet, oder verschieben Sie die Variable in einem höheren Bereich.
-
-Dieser Fehler kann auftreten, bei der Erstellung einer Releaseversion der ein ATL-Projekt, erstellen eine Meldung, dass CRT-Startcode erforderlich ist. Um dieses Problem beheben, führen Sie eine der folgenden
-
-- Entfernen Sie `_ATL_MIN_CRT` aus der Liste der Präprozessor definiert werden, um die CRT-Startcode enthalten sein kann. Finden Sie unter [Eigenschaftenseite "Allgemein" (Projekt)](../../build/reference/general-property-page-project.md) für Weitere Informationen.
-
-- Wenn möglich, entfernen Sie Aufrufe von CRT-Funktionen, für die CRT-Startcode erforderlich. Verwenden Sie stattdessen ihre Win32-Entsprechungen. Verwenden Sie z. B. `lstrcmp` statt `strcmp`. Bekannten Funktionen, die CRT-Startcode erfordern sind Teil der Zeichenfolge und Gleitkommafunktionen.
-
-### <a name="compilation-and-link-issues"></a>Probleme mit der Kompilierung und Verknüpfung
-
-Dieser Fehler kann auftreten, wenn das Projekt einen Verweis auf eine Bibliothek fehlt (. LIB) oder ein Objekt (. OBJ)-Datei. Um dieses Problem zu beheben, fügen Sie dem Projekt einen Verweis auf die erforderliche Bibliothek oder Objektdatei hinzu. Weitere Informationen finden Sie unter [LIB-Dateien als Linkereingabe](../../build/reference/dot-lib-files-as-linker-input.md).
-
-Dieser Fehler kann auftreten, wenn Sie verwenden die [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) oder [/Zl](../../build/reference/zl-omit-default-library-name.md) Optionen. Wenn Sie diese Optionen angeben, werden erforderlichen Code enthaltenen Bibliotheken nicht in das Projekt verknüpft, es sei denn, Sie explizit eingeschlossen haben. Um dieses Problem zu beheben, müssen enthalten Sie explizit alle Bibliotheken, die Sie auf die Link-Befehlszeile verwenden. Wenn viele fehlende CRT oder Funktionsnamen angezeigt wird, wenn Sie diese Optionen verwenden, müssen enthalten Sie die CRT und Standard-Bibliothek-DLLs oder Bibliotheksdateien Dateien explizit, unter dem Link.
-
-Wenn Sie mit der Kompilierung der **"/ CLR"** option, es kann ein fehlender Verweis auf ".cctor". Um dieses Problem zu beheben, finden Sie unter [Initialization of Mixed Assemblies](../../dotnet/initialization-of-mixed-assemblies.md) für Weitere Informationen.
-
-Dieser Fehler kann auftreten, wenn Sie die Release-Modus-Bibliotheken beim Erstellen einer Debugversion einer Anwendung verknüpfen. Auf ähnliche Weise bei der Verwendung von Optionen **/MTd** oder **/MDd** oder definieren Sie `_DEBUG` , und klicken Sie dann auf die Version Bibliotheken verknüpfen, erwarten, dass viele potenzielle nicht aufgelöste externe, neben anderen Problemen. Verknüpfen einen Releasebuild der Modus mit den Debugbibliotheken bewirkt auch, dass ähnliche Probleme. Um dieses Problem zu beheben, stellen Sie sicher Verwendung der Debugbibliotheken in den Debugbuilds, Einzelhandel-Bibliotheken in Ihrer Retail-builds.
-
-Dieser Fehler kann auftreten, wenn Ihr Code auf ein Symbol, von einer Version einer Bibliothek verweist, aber Sie eine andere Version der Bibliothek an den Linker bereitstellen. Sie können im Allgemeinen nicht mischen, Objektdateien oder Bibliotheken, die für verschiedene Versionen des Compilers erstellt werden. Die Bibliotheken, die in einer neuen Version liefern können es sich um Symbole enthalten, die in den Bibliotheken, die in früheren Versionen und umgekehrt enthalten nicht gefunden werden kann. Um dieses Problem zu beheben, erstellen Sie alle Objektdateien und Bibliotheken mit der gleichen Version des Compilers vor miteinander verknüpft werden.
-
-- Die Tools &#124; Optionen &#124; Projekte &#124; VC++-Verzeichnisse im Dialogfeld unter die Auswahl des Library-Dateien, können Sie die Suchreihenfolge der Bibliothek zu ändern. Das Dialogfeld "Eigenschaftenseiten" des Projekts im Ordner Linker kann auch Pfade enthalten, die veraltet sein könnten.
-
-- Dieses Problem kann auftreten, wenn ein neues SDK (z. B. an einen anderen Speicherort) installiert ist, und die Suchreihenfolge nicht aktualisiert wird, um auf den neuen Speicherort zu verweisen. In der Regel sollten Sie dort den Pfad zum neuen SDK enthalten und lib-Verzeichnisse vor den Standardspeicherort für die Visual C++. Darüber hinaus kann ein Projekt mit eingebetteten Pfaden nach wie vor auf alte Pfade verweisen, die sind gültig, aber für neue Funktionen hinzugefügt, indem die neue Version, die an einen anderen Speicherort installiert ist veraltet.
-
-- Wenn Sie in der Befehlszeile erstellen und Ihre eigenen Umgebungsvariablen erstellt haben, stellen Sie sicher, dass die Pfade zu den Tools, Bibliotheken und Headerdateien zum eine konsistente Version wechseln. Weitere Informationen finden Sie unter [Festlegen der Pfad- und Umgebungsvariablen für Befehlszeilenbuilds](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)
-
-Es gibt derzeit keinen Standard für [C++ Benennung](../../error-messages/tool-errors/name-decoration.md) zwischen compileranbietern oder sogar zwischen unterschiedlichen Versionen eines Compilers. Aus diesem Grund Verknüpfen von Objektdateien, die mit anderen Compilern kompiliert möglicherweise nicht dasselbe Benennungsschema erstellt und somit Fehler LNK2001 verursacht.
-
-[Mischen von Inline und nicht-Inline-Kompilierungsoptionen](../../error-messages/tool-errors/function-inlining-problems.md) können auf verschiedene Module LNK2001 verursacht. Wenn eine C++-Bibliothek mit Inlinefunktionen eingeschaltet erstellt wird ( **/Ob1** oder **/Ob2**) jedoch die entsprechende Headerdatei, beschreibt die Funktionen inlining deaktiviert (kein `inline` Schlüsselwort), diesen Fehler Tritt auf. Um dieses Problem zu beheben, definieren Sie die Funktionen `inline` in der Headerdatei, die Sie in anderen Quelldateien enthalten.
-
-Bei Verwendung der `#pragma inline_depth` Compiler, stellen Sie sicher, Sie haben eine [Wert 2 oder höher festgelegt](../../error-messages/tool-errors/function-inlining-problems.md), und stellen Sie sicher, dass Sie auch verwenden, die [/Ob1](../../build/reference/ob-inline-function-expansion.md) oder [/Ob2](../../build/reference/ob-inline-function-expansion.md) -Compileroption.
-
-Dieser Fehler kann auftreten, wenn Sie den LINK weglassen option/NOENTRY, wenn Sie eine reine Ressourcen-DLL erstellen. Um dieses Problem zu beheben, fügen Sie die Option/NOENTRY auf den Linkbefehl.
-
-Dieser Fehler kann auftreten, wenn Sie falsche/Subsystem oder/Entry-Einstellungen in Ihrem Projekt verwenden. Z. B. Wenn Sie eine Konsolenanwendung, und geben Sie die native, nicht aufgelöster externe Fehler generiert für `WinMain`. Um dieses Problem zu beheben, stellen Sie sicher, dass Sie mit den Optionen für den Projekttyp übereinstimmen. Weitere Informationen zu diesen Optionen und Einstiegspunkte finden Sie unter den [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) und [/Entry](../../build/reference/entry-entry-point-symbol.md) Optionen des Linkers.
-
-### <a name="exported-symbol-issues"></a>Probleme mit dem exportierten symbol
-
-Dieser Fehler tritt auf, wenn ein Export in eine DEF-Datei aufgelisteten nicht gefunden wird. Dies könnte sein, da er nicht vorhanden, falsch geschrieben oder ergänzte C++-Namen verwendet. Eine DEF-Datei nimmt nicht ergänzte Namen. Um dieses Problem zu beheben, entfernen Sie nicht benötigte Exporte aus, und verwenden Sie `extern "C"` Deklarationen für die exportierten Symbolen.
+Es gibt viele Möglichkeiten, LNK2001 Fehler zu erhalten. Alle Elemente beinhalten einen *Verweis* auf eine Funktion oder Variable, die der Linker nicht *Auflösen*kann, oder es wird eine Definition für gefunden. Der Compiler kann ermitteln, wann Ihr Code kein Symbol *deklariert* , aber nicht, wenn er eine solche nicht *definiert* . Das liegt daran, dass sich die Definition in einer anderen Quelldatei oder Bibliothek befinden kann. Wenn sich Ihr Code auf ein Symbol bezieht, aber nie definiert ist, generiert der Linker einen Fehler.
 
 ## <a name="what-is-an-unresolved-external-symbol"></a>Was ist ein nicht aufgelöstes externes Symbol?
 
-Ein *Symbol* ist der Name für eine Funktion oder globale Variable, die intern von einer kompilierte Objektdatei oder Bibliothek verwendet. Ein Symbol ist *definiert* in der Objektdatei, dem Speicher zugeordnet ist, für eine globale Variable oder eine Funktion, in der kompilierte Code für den Funktionsrumpf befindet. Ein *externes Symbol* ein Symbolzeichen ist, dass das *auf die verwiesen wird*, d. h. verwendet oder in einer Objektdatei Namens, jedoch in einer anderen Bibliothek oder Objektdatei-Datei definiert. Ein *exportierten Symbol* ist ein, der öffentlich zur Verfügung gestellt werden, indem Sie die Objektdatei oder eine Bibliothek, die es definiert. Der Linker muss *beheben*, oder suchen Sie die entsprechende Definition für jede externe Symbol auf die durch eine Objektdatei verwiesen wird, wenn sie in einer Anwendung oder DLL verknüpft ist. Der Linker generiert einen Fehler auf, wenn er ein externes Symbol nicht auflösen kann, durch eine entsprechende exportierten Symbol in einer der verknüpften Dateien suchen.
+Ein *Symbol* ist der interne Name für eine Funktion oder eine globale Variable. Dabei handelt es sich um die Form des Namens, der in einer kompilierten Objektdatei oder-Bibliothek verwendet oder definiert wird. Eine globale Variable wird in der Objektdatei definiert, der Speicher zugeordnet wird. Eine Funktion wird in der Objektdatei definiert, in der der kompilierte Code für den Funktions Text platziert wird. Ein *externes Symbol* ist ein Objekt, auf das in einer Objektdatei verwiesen wird, das jedoch in einer anderen Bibliothek oder Objektdatei definiert ist. Ein *exportiertes Symbol* wird von der Objektdatei oder der Bibliothek, in der es definiert ist, öffentlich verfügbar gemacht.
+
+Zum Erstellen einer Anwendung oder dll muss jedes verwendete Symbol über eine Definition verfügen. Der Linker muss alle externen Symbole *Auflösen*, auf die von den einzelnen Objektdateien verwiesen wird, oder die entsprechende Definition für finden. Der Linker generiert einen Fehler, wenn er ein externes Symbol nicht auflösen kann. Dies bedeutet, dass der Linker in keiner der verknüpften Dateien eine entsprechende exportierte Symbol Definition finden konnte.
+
+## <a name="compilation-and-link-issues"></a>Kompilierungs-und Link Probleme
+
+Dieser Fehler kann auftreten:
+
+- Wenn das Projekt keinen Verweis auf eine Bibliothek () fehlt. LIB) oder Objekt (. Obj-Datei). Um dieses Problem zu beheben, fügen Sie dem Projekt einen Verweis auf die erforderliche Bibliothek oder Objektdatei hinzu. Weitere Informationen finden Sie unter [lib-Dateien als Eingabe](../../build/reference/dot-lib-files-as-linker-input.md)für den Linker.
+
+- Wenn das Projekt einen Verweis auf eine Bibliothek enthält (. LIB) oder Objekt (. Obj-Datei), die ihrerseits Symbole aus einer anderen Bibliothek erfordert. Dies kann auch vorkommen, wenn Sie keine Funktionen aufzurufen, die die Abhängigkeit verursachen. Um dieses Problem zu beheben, fügen Sie dem Projekt einen Verweis auf die andere Bibliothek hinzu. Weitere Informationen finden Sie Untergrund Legendes [zum klassischen Modell für das Verknüpfen: übernehmen von Symbolen für die Fahrt](https://devblogs.microsoft.com/oldnewthing/20130108-00/?p=5623).
+
+- Wenn Sie die Optionen [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) oder [/Zl](../../build/reference/zl-omit-default-library-name.md) verwenden. Wenn Sie diese Optionen angeben, sind Bibliotheken, die erforderlichen Code enthalten, nicht mit dem Projekt verknüpft, es sei denn, Sie haben Sie explizit eingeschlossen. Um dieses Problem zu beheben, schließen Sie explizit alle Bibliotheken ein, die Sie in der Befehlszeile für den Link verwenden. Wenn viele fehlende CRT-oder Standard Bibliotheks Funktionsnamen angezeigt werden, wenn Sie diese Optionen verwenden, schließen Sie die CRT-und Standardbibliothek-DLLs bzw. Bibliotheksdateien explizit in den Link ein.
+
+- Bei der Kompilierung mit der **/CLR** -Option. Möglicherweise fehlt ein Verweis auf `.cctor`. Weitere Informationen zum Beheben dieses Problems finden Sie unter [Initialisierung gemischter](../../dotnet/initialization-of-mixed-assemblies.md)Assemblys.
+
+- Wenn Sie bei der Erstellung einer Debugversion einer Anwendung eine Verknüpfung mit den Releasemodusbibliotheken herstellen. Wenn Sie die Optionen **/MTD** oder **/MDD** verwenden oder `_DEBUG` definieren und dann Links zu den Releasebibliotheken verwenden, sollten Sie neben anderen Problemen auch viele potenziell nicht aufgelöste externale erwarten. Durch das Verknüpfen eines Releasemodusbuilds mit den Debugbibliotheken werden auch ähnliche Probleme verursacht. Um dieses Problem zu beheben, stellen Sie sicher, dass Sie die Debugbibliotheken in ihren Debugbuilds und die Einzelhandels Bibliotheken in ihren Einzelhandels Builds verwenden.
+
+- Wenn sich Ihr Code auf ein Symbol aus einer Bibliotheksversion bezieht, verknüpfen Sie aber eine andere Version der Bibliothek. Im Allgemeinen ist es nicht möglich, Objektdateien oder Bibliotheken zu mischen, die für unterschiedliche Versionen des Compilers erstellt wurden. Die Bibliotheken, die in einer Version enthalten sind, enthalten möglicherweise Symbole, die in den Bibliotheken in anderen Versionen nicht gefunden werden können. Um dieses Problem zu beheben, erstellen Sie alle Objektdateien und Bibliotheken mit der gleichen Version des Compilers, bevor Sie miteinander verknüpft werden. Weitere Informationen finden [ C++ Sie unter binäre Kompatibilität 2015-2019](../../porting/binary-compat-2015-2017.md).
+
+- , Wenn Bibliothekspfade veraltet sind. Im Dialogfeld Extras **> Optionen > Projekte > Dialogfeld "VC + +-Verzeichnisse** " unter der Auswahl von **Bibliotheksdateien** können Sie die Such Reihenfolge der Bibliothek ändern. Der Linker-Ordner im Dialogfeld Eigenschaften Seiten des Projekts kann auch Pfade enthalten, die möglicherweise veraltet sind.
+
+- Wenn eine neue Windows SDK installiert ist (möglicherweise an einem anderen Speicherort). Die Bibliotheks Such Reihenfolge muss aktualisiert werden, um auf den neuen Speicherort zu verweisen. Normalerweise sollten Sie den Pfad zu den neuen SDK include-und lib-Verzeichnissen vor dem standardmäßigen C++ visuellen Speicherort platzieren. Außerdem kann ein Projekt, das eingebettete Pfade enthält, immer noch auf alte Pfade verweisen, die gültig sind, aber nicht aktuell sind. Aktualisieren Sie die Pfade für neue Funktionen, die von der neuen Version hinzugefügt werden, die an einem anderen Speicherort installiert ist.
+
+- Wenn Sie in der Befehlszeile erstellen und eigene Umgebungsvariablen erstellt haben. Überprüfen Sie, ob die Pfade zu Tools, Bibliotheken und Header Dateien in eine konsistente Version gelangen. Weitere Informationen finden Sie unter [Festlegen der Pfad-und Umgebungsvariablen für Befehlszeilenbuilds](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md) .
+
+## <a name="coding-issues"></a>Codierungs Probleme
+
+Dieser Fehler kann die folgenden Ursachen haben:
+
+- Nicht übereinstimmender Fall in Ihrem Quellcode oder in der Modul Definitionsdatei (. def). Wenn Sie z. b. eine Variable `var1` in einer C++ Quelldatei benennen und versuchen, auf die Variable als `VAR1` in einer anderen zuzugreifen, wird dieser Fehler generiert. Um dieses Problem zu beheben, verwenden Sie konsistent geschriebene und Schreibweise Namen.
+
+- Ein Projekt, das das [Inlining von Funktionen](../../error-messages/tool-errors/function-inlining-problems.md)verwendet. Dies kann vorkommen, wenn Sie die Funktionen als `inline` in einer Quelldatei anstatt in einer Header Datei definieren. Inline Funktionen können nicht außerhalb der Quelldatei angezeigt werden, in der Sie definiert sind. Um dieses Problem zu beheben, definieren Sie die Inline Funktionen in den Headern, in denen Sie deklariert werden.
+
+- Aufrufen einer c-Funktion von C++ einem Programm ohne Verwendung einer `extern "C"` Deklaration für die C-Funktion. Der Compiler verwendet andere interne Symbol Benennungs Konventionen für C C++ und Code. Beim Auflösen von Symbolen sucht der Linker nach dem internen Symbolnamen. Um dieses Problem zu beheben, verwenden Sie einen `extern "C"` Wrapper um alle Deklarationen von C- C++ Funktionen, die in Ihrem Code verwendet werden. Dies bewirkt, dass der Compiler die interne C-Benennungs Konvention für diese Symbole verwendet. Die Compileroptionen [/tp](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) und [/TC](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) bewirken, dass der Compiler C++ Dateien als bzw. C kompiliert, unabhängig von der Dateinamenerweiterung. Diese Optionen können dazu führen, dass interne Funktionsnamen von Ihren Erwartungen abweichen.
+
+- Es wurde versucht, auf Funktionen oder Daten zu verweisen, für die keine externe Verknüpfung vorhanden ist. Inline C++Funktionen und `const` Daten in verfügen über interne Verknüpfungen, es sei denn, Sie werden explizit als `extern`angegeben. Um dieses Problem zu beheben, verwenden Sie explizite `extern` Deklarationen für Symbole, auf die außerhalb der definierenden Quelldatei verwiesen wird.
+
+- Ein [fehlender Funktions Text oder eine Variablen](../../error-messages/tool-errors/missing-function-body-or-variable.md) Definition. Dieser Fehler wird häufig beim Deklarieren, aber nicht beim Definieren von Variablen, Funktionen oder Klassen im Code angezeigt. Der Compiler benötigt nur einen Funktionsprototyp oder eine `extern` Variablen Deklaration, um eine Objektdatei zu generieren, ohne dass ein Fehler aufgetreten ist, aber der Linker kann einen aufrufungstyp oder einen Verweis auf die Variable nicht auflösen, da kein Funktionscode oder variabler Speicherplatz reserviert ist. Um dieses Problem zu beheben, stellen Sie sicher, dass alle referenzierten Funktionen und Variablen in einer Quelldatei oder-Bibliothek definiert werden, die Sie verknüpfen.
+
+- Ein Funktionsaufruf, der Rückgabe-und Parametertypen oder Aufruf Konventionen verwendet, die nicht mit denen in der Funktionsdefinition übereinstimmen. In C++ Objektdateien codiert die [namens](../../error-messages/tool-errors/name-decoration.md) Ergänzung die Aufruf Konvention, den Klassen-oder Namespace Bereich und die Rückgabe-und Parametertypen einer Funktion. Die codierte Zeichenfolge wird Teil des endgültigen ergänzten Funktionsnamens. Dieser Name wird vom Linker verwendet, um Aufrufe der Funktion aus anderen Objektdateien aufzulösen oder abzugleichen. Um dieses Problem zu beheben, stellen Sie sicher, dass die Funktionsdeklaration, die Definition und die Aufrufe die gleichen Bereiche, Typen und Aufruf Konventionen verwenden.
+
+- C++der von Ihnen aufzurufende Code, wenn Sie einen Funktionsprototyp in eine Klassendefinition einschließen, aber nicht [die Implementierung](../../error-messages/tool-errors/missing-function-body-or-variable.md) der Funktion einschließen. Um dieses Problem zu beheben, stellen Sie sicher, dass Sie eine Definition für alle Klassenmember angeben, die Sie anrufen.
+
+- Es wurde versucht, eine rein virtuelle Funktion aus einer abstrakten Basisklasse aufzurufen. Eine rein virtuelle Funktion verfügt über keine Basisklassen Implementierung. Um dieses Problem zu beheben, stellen Sie sicher, dass alle sogenannten virtuellen Funktionen implementiert sind.
+
+- Es wird versucht, eine Variable zu verwenden, die innerhalb einer Funktion ([einer lokalen Variablen](../../error-messages/tool-errors/automatic-function-scope-variables.md)) außerhalb des Gültigkeits Bereichs dieser Funktion deklariert ist. Um dieses Problem zu beheben, entfernen Sie den Verweis auf die Variable, die sich nicht im Gültigkeitsbereich befindet, oder verschieben Sie die Variable in einen höheren Bereich.
+
+- Wenn Sie eine Releaseversion eines ATL-Projekts erstellen, wird eine Nachricht erstellt, die den CRT-Startcode erfordert. Um dieses Problem zu beheben, führen Sie einen der folgenden Schritte aus:
+
+  - Entfernen Sie `_ATL_MIN_CRT` aus der Liste der Präprozessordefinitionen, damit CRT-Startcode eingefügt werden kann. Weitere Informationen finden Sie unter [Allgemeine Eigenschaften Seite (Projekt)](../../build/reference/general-property-page-project.md).
+
+  - Entfernen Sie nach Möglichkeit Aufrufe von CRT-Funktionen, die CRT-Startcode erfordern. Verwenden Sie stattdessen ihre Win32-Entsprechungen. Verwenden Sie z. B. `lstrcmp` statt `strcmp`. Bekannte Funktionen, die CRT-Startcode erfordern, sind einige der Zeichen folgen-und Gleit Komma Funktionen.
+
+## <a name="consistency-issues"></a>Konsistenzprobleme
+
+Zurzeit gibt es keinen Standard [ C++ ](../../error-messages/tool-errors/name-decoration.md) für die namens Ergänzung zwischen compileranbietern oder sogar zwischen verschiedenen Versionen desselben Compilers. Objektdateien, die mit anderen Compilern kompiliert wurden, verwenden möglicherweise nicht dasselbe Benennungs Schema. Das verknüpfen kann zu Fehlern führen, LNK2001.
+
+Das [Mischen von Inline-und nicht-Inline-Kompilierungsoptionen](../../error-messages/tool-errors/function-inlining-problems.md) für verschiedene Module kann LNK2001 verursachen. Wenn eine C++ Bibliothek mit aktivierter Funktion Inlining ( **/ob1** oder **/Ob2**) erstellt wird, aber in der entsprechenden Header Datei, die die Funktionen beschreibt, das Inlining deaktiviert ist (kein `inline` Schlüsselwort), tritt dieser Fehler auf. Um dieses Problem zu beheben, definieren Sie die Funktionen `inline` in der Header Datei, die Sie in andere Quelldateien einschließen.
+
+Wenn Sie die `#pragma inline_depth` Compiler-Direktive verwenden, stellen Sie sicher, dass Sie den [Wert 2 oder höher](../../error-messages/tool-errors/function-inlining-problems.md)festgelegt haben, und stellen Sie sicher, dass Sie auch die [/ob1](../../build/reference/ob-inline-function-expansion.md) -oder [/Ob2](../../build/reference/ob-inline-function-expansion.md) -Compileroption verwenden.
+
+Dieser Fehler kann auftreten, wenn Sie die Link Option/NOENTRY beim Erstellen einer reinen Ressourcen-DLL weglassen. Um dieses Problem zu beheben, fügen Sie dem Link-Befehl die Option/NOENTRY hinzu.
+
+Dieser Fehler kann auftreten, wenn Sie in Ihrem Projekt falsche/Subsystem-oder/Entry-Einstellungen verwenden. Wenn Sie z. b. eine Konsolenanwendung schreiben und/Subsystem: Windows angeben, wird ein nicht aufgelöster externer Fehler für `WinMain`generiert. Um dieses Problem zu beheben, stellen Sie sicher, dass Sie die Optionen mit dem Projekttyp vergleichen. Weitere Informationen zu diesen Optionen und Einstiegspunkten finden Sie unter den Linkeroptionen [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) und [/Entry](../../build/reference/entry-entry-point-symbol.md) .
+
+## <a name="exported-def-file-symbol-issues"></a>Probleme beim Exportieren von DEF-Datei Symbolen
+
+Dieser Fehler tritt auf, wenn ein in einer DEF-Datei aufgeführter Export nicht gefunden wurde. Dies kann daran liegen, dass der Export nicht vorhanden ist, falsch geschrieben ist C++ oder ergänzte Namen verwendet. Eine DEF-Datei nimmt keine ergänzten Namen. Um dieses Problem zu beheben, entfernen Sie nicht benötigte Exporte, und verwenden Sie `extern "C"` Deklarationen für exportierte Symbole.
 
 ## <a name="use-the-decorated-name-to-find-the-error"></a>Verwenden Sie den ergänzten Namen, um den Fehler zu finden
 
-Die C++-Compiler und Linker Verwendung [Namensergänzung](../../error-messages/tool-errors/name-decoration.md), auch bekannt als *Name-mangling*, um zusätzliche Informationen zu den Typ einer Variablen oder der Rückgabetyp, Parametertypen, Bereich und Aufruf codieren die Konvention für die eine Funktion in den Symbolnamen an. Dieses ergänzte Name wird den Symbolnamen, die vom Linker, zum Auflösen externer Symbole verwendet gesuchte.
+Der C++ Compiler und der Linker verwenden die [namens](../../error-messages/tool-errors/name-decoration.md)Ergänzung, auch bekannt als *Name-Mangling*. Bei der namens Ergänzung werden zusätzliche Informationen über den Typ einer Variablen in ihren Symbolnamen codiert. Der Symbol Name für eine Funktion codiert den Rückgabetyp, die Parametertypen, den Gültigkeitsbereich und die Aufruf Konvention. Dieser ergänzte Name ist der Symbol Name, der vom Linker zum Auflösen externer Symbole gesucht wird.
 
-Da die zusätzliche Informationen Teil des Symbolnamens wird, kann ein Linkfehler führen, wenn die Deklaration einer Funktion oder Variable nicht genau mit die Definition der Funktion oder Variable übereinstimmt. Dies kann passieren, auch wenn dieselbe Headerdatei sowohl der aufrufende Code und den Code definieren verwendet wird, wenn verschiedene Compilerflags verwendet werden, wenn die Quelldateien zu kompilieren. Beispielsweise erhalten Sie diesen Fehler, wenn der Code kompiliert wird, um Sie verwenden die `__vectorcall` Aufrufkonvention, aber Sie link zu einer Bibliothek, die von Clients mithilfe der standardmäßigen aufrufen erwartet `__cdecl` oder `__fastcall` Aufrufkonvention. In diesem Fall stimmen die Symbole nicht überein, da die Aufrufkonventionen unterschiedlich sind.
+Ein Link Fehler kann auftreten, wenn die Deklaration einer Funktion oder Variablen nicht *exakt* mit der Definition der Funktion oder Variablen übereinstimmt. Das liegt daran, dass jeder Unterschied zu einem Teil des Symbol namens wird. Der Fehler kann auch auftreten, wenn dieselbe Header Datei sowohl im aufrufenden Code als auch im definierenden Code verwendet wird. Eine Möglichkeit besteht darin, die Quelldateien mit unterschiedlichen Compilerflags zu kompilieren. Beispielsweise, wenn Ihr Code für die Verwendung der `__vectorcall` Aufruf Konvention kompiliert wird, Sie jedoch eine Verknüpfung zu einer Bibliothek herstellen, die erwartet, dass Clients Sie mithilfe der standardmäßigen `__cdecl` oder `__fastcall` Aufruf Konvention aufrufen. In diesem Fall stimmen die Symbole nicht überein, da die Aufruf Konventionen unterschiedlich sind.
 
-Damit können Sie die Ursache für diese Art von Fehler zu finden, zeigt die Fehlermeldung für den Linker sowohl der "Anzeigename" den Namen, die in Quellcode und den ergänzten Namen (in Klammern) für die nicht aufgelöstes externes Symbol verwendet. Sie müssen nicht wissen, wie der ergänzte Name werden sollen, vergleicht sie mit anderen ergänzten Namen zu übersetzen. Sie können Befehlszeilentools verwenden, die mit dem Compiler zum Vergleichen der erwarteten Symbolname und den tatsächlichen Symbolnamen enthalten sind:
+Um die Ursache zu finden, werden in der Fehlermeldung zwei Versionen des Namens angezeigt. Dabei werden sowohl der "Anzeige Name", der im Quellcode verwendete Name als auch der ergänzte Name (in Klammern) angezeigt. Sie müssen nicht wissen, wie der ergänzte Name interpretiert werden soll. Sie können nach wie vor nach anderen ergänzten Namen suchen und diese vergleichen. Befehlszeilen Tools können dabei helfen, den erwarteten Symbolnamen und den eigentlichen Symbolnamen zu finden und zu vergleichen:
 
-- Die [/EXPORTS](../../build/reference/dash-exports.md) und [& gt; SYMBOLE](../../build/reference/symbols.md) Optionen des DUMPBIN-Befehlszeilentools können Sie ermitteln, welche Symbole in den DLL- und Objekt- oder Bibliotheksdateien definiert sind. Sie können dies verwenden, um sicherzustellen, dass die exportierten Namen übereinstimmen ergänzt, die der ergänzten den Linker sucht nach Namen.
+- Die Optionen [/Exports](../../build/reference/dash-exports.md) und [/Symbols](../../build/reference/symbols.md) des DUMPBIN-Befehlszeilen Tools sind hier nützlich. Sie können Sie dabei unterstützen, herauszufinden, welche Symbole in den dll-und Objekt-oder Bibliotheksdateien definiert sind. Mithilfe der Symbolliste können Sie überprüfen, ob die exportierten ergänzten Namen den ergänzten Namen entsprechen, nach denen der Linker sucht.
 
-In einigen Fällen meldet der Linker kann nur den ergänzten Name für ein Symbol. Sie können das Befehlszeilentool UNDNAME verwenden, zum Abrufen eines ergänzten Namens nicht ergänzten Formulars.
+- In einigen Fällen kann der Linker nur den ergänzten Namen für ein Symbol melden. Sie können das Befehlszeilen Tool "undname" verwenden, um die nicht ergänzte Form eines ergänzten Namens zu erhalten.
 
-## <a name="additional-resources"></a>Zusätzliche Ressourcen
+## <a name="additional-resources"></a>Weitere Ressourcen
 
-Weitere Informationen zu möglichen Ursachen und Lösungen für LNK2001 finden Sie unter der Stack Overflow-Frage [Was ist ein Fehler für undefined Reference/unresolved external Symbol, und wie behebe ich es?](https://stackoverflow.com/q/12573816/2002113).
-
+Weitere Informationen finden Sie in der Stack Overflow Frage ["Was ist ein nicht definierter Verweis/nicht aufgelöstes externes Symbol, und wie kann ich das Problem beheben?"](https://stackoverflow.com/q/12573816/2002113).

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: 65b74798c4b3b513acea0b51ecc0cb7df98391c1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: c47ab59b1d8b9e73add640f7a7cf5fb146dc7c53
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944309"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300260"
 ---
 # <a name="_heapset"></a>_heapset
 
@@ -47,7 +47,7 @@ int _heapset(
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameters
 
 *fill*<br/>
 Füllzeichen.
@@ -65,23 +65,23 @@ Füllzeichen.
 
 Wenn ein Fehler auftritt, setzt `_heapset``errno` zudem auf `ENOSYS`.
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 Die Funktion `_heapset` zeigt freie Speicherpositionen oder Knoten an, die unabsichtlich überschrieben wurden.
 
-`_heapset` überprüft auf minimale Konsistenz auf dem Heap und legt dann jedes Byte der als frei eingetragenen Heappositionen auf den Wert von `fill` fest. Dieser bekannte Wert zeigt, welche Arbeitsspeicherpositionen des Heaps freie Knoten enthalten und welche Daten enthalten, die unabsichtlich an freigegebene Speicherpositionen geschrieben wurden. Wenn das Betriebssystem `_heapset` nicht unterstützt (z.B. Windows 98), gibt die Funktion `_HEAPOK` zurück und legt `errno` auf `ENOSYS` fest.
+`_heapset` überprüft auf minimale Konsistenz auf dem Heap und legt dann jedes Byte der als frei eingetragenen Heappositionen auf den Wert von `fill` fest. Dieser bekannte Wert zeigt, welche Arbeitsspeicherpositionen des Heaps freie Knoten enthalten und welche Daten enthalten, die unabsichtlich an freigegebene Speicherpositionen geschrieben wurden. Wenn das Betriebssystem nicht `_heapset` unterstützt (beispielsweise Windows 98), gibt die Funktion `_HEAPOK` zurück und legt `errno` auf `ENOSYS` fest.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>-Anforderungen
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|
 |-------------|---------------------|---------------------|
 |`_heapset`|\<malloc.h>|\<errno.h>|
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../c-runtime-library/compatibility.md) in der Einführung.
+Weitere Informationen zur Kompatibilität finden Sie unter [Compatibility](../c-runtime-library/compatibility.md) in der Einführung.
 
 ## <a name="example"></a>Beispiel
 
-```
+```c
 // crt_heapset.c
 // This program checks the heap and
 // fills in free entries with the character 'Z'.
@@ -123,7 +123,7 @@ OK - heap is fine
 
 ## <a name="see-also"></a>Siehe auch
 
-[Speicherreservierung](../c-runtime-library/memory-allocation.md)<br/>
+[Speicherbelegung](../c-runtime-library/memory-allocation.md)<br/>
 [_heapadd](../c-runtime-library/heapadd.md)<br/>
 [_heapchk](../c-runtime-library/reference/heapchk.md)<br/>
 [_heapmin](../c-runtime-library/reference/heapmin.md)<br/>
