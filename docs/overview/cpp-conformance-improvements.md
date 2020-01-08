@@ -5,12 +5,12 @@ description: Microsoft C++ in Visual Studio  bewegt sich auf die vollständige 
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 06fa060b674e51a3352a9a928bccdbfa6c63aae4
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: de31c2e61f0a10c785d610d3227a659c59b56d38
+ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74858034"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546431"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Verbesserungen der C++-Konformität in Visual Studio
 
@@ -1241,13 +1241,11 @@ Weitere Informationen finden Sie unter [Konstruktoren](../cpp/constructors-cpp.m
 
 [P0017R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)
 
-Wenn der Konstruktor einer Basisklasse nicht öffentlich jedoch verfügbar für eine abgeleitete Klasse ist, können Sie im **/std:c++17**-Modus in Visual Studio Version 15.7 nicht länger leere geschweifte Klammern zum Initialisieren eines Objekts des abgeleiteten Typs verwenden.
-
+Wenn der Konstruktor einer Basisklasse zwar nicht öffentlich, dafür aber für eine abgeleitete Klasse verfügbar ist, können Sie im **/std:c++17**-Modus in Visual Studio Version 2017 Version 15.7 nicht länger Leerzeichen zum Initialisieren eines Objekts des abgeleiteten Typs verwenden.
 Im folgenden Beispiel ist das konforme Verhalten von C++14 dargestellt:
 
 ```cpp
 struct Derived;
-
 struct Base {
     friend struct Derived;
 private:
@@ -1255,32 +1253,26 @@ private:
 };
 
 struct Derived : Base {};
-
 Derived d1; // OK. No aggregate init involved.
 Derived d2 {}; // OK in C++14: Calls Derived::Derived()
                // which can call Base ctor.
 ```
 
 In C++17 gilt `Derived` nun als Aggregattyp. Das bedeutet, dass die Initialisierung von `Base` über den privaten Standardkonstruktor direkt als Teil der erweiterten Aggregatinitialisierungsregel erfolgt. Zuvor wurde der private Konstruktor `Base` über den `Derived`-Konstruktor aufgrund der Friend-Deklaration erfolgreich aufgerufen.
-
 Das folgende Beispiel zeigt das Verhalten von C++17 im Modus **/std:c++17** in Visual Studio Version 15.7:
 
 ```cpp
 struct Derived;
-
 struct Base {
     friend struct Derived;
 private:
     Base() {}
 };
-
 struct Derived : Base {
     Derived() {} // add user-defined constructor
                  // to call with {} initialization
 };
-
 Derived d1; // OK. No aggregate init involved.
-
 Derived d2 {}; // error C2248: 'Base::Base': cannot access
                // private member declared in class 'Base'
 ```
@@ -1928,7 +1920,7 @@ Um die Warnung zu korrigieren, fügen Sie zuerst `extern "C"` hinzu:
 extern "C" __declspec(noinline) HRESULT __stdcall
 ```
 
-Diese Warnung ist standardmäßig in 15.3 deaktiviert (standardmäßig aktiviert in Version 15.5) und wirkt sich nur auf den mit **/Wall** und **/WX** kompilierten Code aus.
+Diese Warnung ist in Version 15.3 standardmäßig deaktiviert (standardmäßig aktiviert in Version 15.5) und wirkt sich nur auf den mit **/Wall** und **/WX** kompilierten Code aus.
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>**decltype** und Aufrufe gelöschter Destruktoren
 
@@ -2179,7 +2171,7 @@ Mit dem folgenden Code wird der Fehler vermieden:
 catch (int (*)[1]) {}
 ```
 
-### <a name="tr1"></a> `std::tr1`-Namespace ist veraltet
+### <a name="tr1"></a> Der `std::tr1`-Namespace ist veraltet.
 
 Der `std::tr1`-Namespace, der nicht dem Standard entspricht, ist nun sowohl im C++14- als auch im C++17-Modus als veraltet markiert. In Visual Studio-2017 Version 15.5 löst der folgende Code C4996 aus:
 
