@@ -6,12 +6,12 @@ ms.author: mblome
 ms.date: 05/16/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 58f8a9b8223dc54bf083ebbac97528f88890777c
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: ce28d42fd3452a5e8195f3ced6bbbb06430b1d14
+ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837023"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75676950"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Ein C++-Paket-Manager für Windows, Linux und macOS
 
@@ -81,7 +81,7 @@ The following packages will be built and installed:
 Additional packages (*) will be installed to complete this operation.
 ```
 
-Verwenden Sie bei CMAKE-Projekten CMAKE_TOOLCHAIN_FILE, um Bibliotheken mit `find_package()` zur Verfügung zu stellen. Beispiel:
+Verwenden Sie bei CMAKE-Projekten CMAKE_TOOLCHAIN_FILE, um Bibliotheken mit `find_package()` zur Verfügung zu stellen. Zum Beispiel:
 
 ```cmd
 cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
@@ -111,7 +111,7 @@ Führen Sie **vcpkg integrate install** aus, um Visual Studio so zu konfiguriere
 
 Nun können Sie auf Header einfach die #include-Anweisung ausführen, indem Sie den Ordner/Header eingeben und automatisch vervollständigen lassen. Es sind keine weiteren Schritte erforderlich, um Verknüpfungen mit Bibliotheken zu erstellen oder Projektverweise hinzuzufügen. Die folgende Abbildung zeigt, wie Visual Studio die azure-storage-cpp-Header sucht. Vcpkg platziert seine Header im Unterordner **/installed**, partitioniert nach Zielplattform. Das folgende Diagramm zeigt die Liste der Includedateien im Unterordner **/was** für die Bibliothek:
 
-![vcpkg-IntelliSense-Integration](media/vcpkg-intellisense.png "vcpkg and IntelliSense")
+![Integration von vcpkg-IntelliSense](media/vcpkg-intellisense.png "vcpkg und IntelliSense")
 
 ### <a name="per-project"></a>Pro Projekt
 
@@ -182,7 +182,7 @@ Sie können Ihren Klon von vcpkg beliebig bearbeiten. Sie können mehrere vcpkg-
 
 ## <a name="uninstall-vcpkg"></a>Deinstallieren von vcpkg
 
-Löschen Sie einfach das Verzeichnis.
+Löschen Sie einfach das vcpkg-Verzeichnis. Dadurch wird die vcpkg-Verteilung deinstalliert, sowie alle für vcpkg installierten Bibliotheken.
 
 ## <a name="send-feedback-about-vcpkg"></a>Senden von Feedback zu vcpkg
 
