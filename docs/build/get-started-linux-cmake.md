@@ -1,15 +1,14 @@
 ---
 title: Erstellen plattformübergreifender C++-Projekte in Visual Studio
 description: Einrichten, kompilieren und Debuggen eines C++ Open Source-cmake-Projekts in Visual Studio, das auf Linux und Windows abzielt.
-author: mikeblome
 ms.topic: tutorial
-ms.date: 11/08/2019
-ms.openlocfilehash: 269c9e88133a492f66df7c7f81ab35424aff125d
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.date: 01/08/2020
+ms.openlocfilehash: 83d71d3078e892a51aef159b225fecec2b581f20
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303248"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791762"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Tutorial: Erstellen C++ von plattformübergreifenden Projekten in Visual Studio
 
@@ -44,10 +43,10 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
     chmod +x cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh
     ```
 
-  * Sie sehen die Optionen zum Ausführen des Skripts mit `-–help`. Es wird empfohlen, dass Sie die `–prefix`-Option verwenden, um die Installation im Pfad **/usr/local** anzugeben, da dies der Standard Speicherort ist, an dem Visual Studio nach cmake sucht. Im folgenden Beispiel sehen Sie das Linux-x86_64-Skript. Ändern Sie ihn nach Bedarf, wenn Sie eine andere Zielplattform verwenden.
+  * Sie sehen die Optionen zum Ausführen des Skripts mit `-–help`. Es wird empfohlen, dass Sie die `–prefix`-Option verwenden, um die Installation im Pfad **/usr** anzugeben, da **/usr/bin** der Standard Speicherort ist, an dem Visual Studio nach cmake sucht. Im folgenden Beispiel sehen Sie das Linux-x86_64-Skript. Ändern Sie ihn nach Bedarf, wenn Sie eine andere Zielplattform verwenden.
 
     ```cmd
-    sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr/local
+    sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr
     ```
 
 * Auf Ihrem Windows-Computer muss Git für Windows installiert sein.

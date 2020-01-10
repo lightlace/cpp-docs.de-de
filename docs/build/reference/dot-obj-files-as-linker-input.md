@@ -9,12 +9,12 @@ helpviewer_keywords:
 - COFF files
 - OBJ files as linker input
 - .obj files as linker input
-ms.openlocfilehash: 3e02ccc09ae8c9c2f3df88bc1767ff0188baa1f4
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 304c9861b85be1925e48d47c6006fcbcdd41dc22
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492940"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791596"
 ---
 # <a name="obj-files-as-linker-input"></a>.OBJ-Dateien als Linkereingabe
 
@@ -28,7 +28,7 @@ Microsoft stellt eine umfassende Beschreibung des Common Object File Format bere
 
 Ab Visual Studio 2005 unterstützt der Microsoft MSVC-Compiler Unicode-Zeichen in Bezeichners gemäß ISO/IEC c-und- C++ Standards. In früheren Versionen des Compilers wurden nur ASCII-Zeichen in Bezeichnerzeichen unterstützt. Zur Unterstützung von Unicode in den Namen von Funktionen, Klassen und Statics verwenden der Compiler und Linker die Unicode-UTF-8-Codierung für COFF-Symbole in OBJ-Dateien. Die UTF-8-Codierung ist aufwärts kompatibel mit der ASCII-Codierung, die von früheren Versionen von Visual Studio verwendet wurde.
 
-Weitere Informationen zum Compiler und zum Linker finden Sie [unter Unicode-Unterstützung im Compiler und Linker](unicode-support-in-the-compiler-and-linker.md). Weitere Informationen zum Unicode-Standard finden Sie unter [Unicode](https://www.unicode.org/) -Organisation.
+Weitere Informationen zum Compiler und zum Linker finden Sie [unter Unicode-Unterstützung im Compiler und Linker](unicode-support-in-the-compiler-and-linker.md). Weitere Informationen zum Unicode-Standard finden Sie unter [Unicode](https://home.unicode.org/) -Organisation.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -36,5 +36,5 @@ Weitere Informationen zum Compiler und zum Linker finden Sie [unter Unicode-Unte
 [MSVC-Linkeroptionen](linker-options.md)<br/>
 [Unterstützung für Unicode](../../text/support-for-unicode.md)<br/>
 [Unicode-Unterstützung im Compiler und Linker](unicode-support-in-the-compiler-and-linker.md)<br/>
-[Unicode-Standard](https://www.unicode.org/)<br/>
+[Unicode-Standard](https://home.unicode.org/)<br/>
 [PE-Format](/windows/win32/Debug/pe-format)
