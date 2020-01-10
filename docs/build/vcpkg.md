@@ -1,17 +1,15 @@
 ---
 title: 'vcpkg: Ein C++-Paket-Manager für Windows, Linux und macOS'
 description: Vcpkg ist ein Befehlszeilen-Paket-Manager, der den Erwerb und die Installation von Open Source-C++-Bibliotheken für Windows erheblich vereinfacht.
-author: mikeblome
-ms.author: mblome
 ms.date: 05/16/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: ce28d42fd3452a5e8195f3ced6bbbb06430b1d14
-ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
+ms.openlocfilehash: a116c33d7bb0b1d1396e68681d34995168a0bdc5
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75676950"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791622"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Ein C++-Paket-Manager für Windows, Linux und macOS
 
