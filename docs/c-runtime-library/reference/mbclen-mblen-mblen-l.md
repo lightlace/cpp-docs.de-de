@@ -1,6 +1,7 @@
 ---
 title: _mbclen, mblen, _mblen_l, _mbclen_l
-ms.date: 01/22/2019
+description: Beschreibt die Funktionen der Microsoft C-Lauf Zeit Bibliothek (CRT) _mbclen, Mblen, _mblen_l und _mbclen_l.
+ms.date: 01/08/2020
 api_name:
 - _mbclen
 - mblen
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: 96775f513b33eb407981480c17cb609dd85383f6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4676d850448af386a5aface69f616a4ac6f85cbf
+ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952564"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755066"
 ---
 # <a name="_mbclen-mblen-_mblen_l-_mbclen_l"></a>_mbclen, mblen, _mblen_l, _mbclen_l
 
@@ -77,31 +78,35 @@ int _mblen_l(
 );
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*c*<br/>
+*c* -\
 Multibytezeichen.
 
-*mbstr*<br/>
+*mbstr* -\
 Adresse einer Multibytezeichen-Bytesequenz.
 
-*count*<br/>
+*Anzahl*\
 Anzahl zu überprüfender Bytes.
 
-*locale*<br/>
+Gebiets *Schema\*
 Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_mbclen** gibt 1 oder 2 zurück, je nachdem, ob das Multibytezeichen *c* 1 oder 2 Bytes lang ist. Für **_mbclen**gibt es keine Fehlerrückgabe. Wenn *mbstr* nicht **null**ist, gibt **mblen** die Länge des multibytezeichens in Byte zurück. Wenn *mbstr* **null** ist oder auf das breit Zeichen NULL zeigt, gibt **mblen** 0 zurück. Wenn das Objekt, auf das *mbstr* zeigt, kein gültiges Multibytezeichen innerhalb der ersten *count* -Zeichen bildet, gibt **mblen** -1 zurück.
+**_mbclen** und **_mbclen_l** gibt 1 oder 2 zurück, gemäß der Länge des multibytezeichens *c*. Die Funktionen geben immer 1 für UTF-8 zurück, unabhängig davon, ob *c* Multibytezeichen ist oder nicht. Es gibt keine Fehlerrückgabe für **_mbclen**.
+
+Wenn *mbstr* nicht **null**ist, geben **mblen** und **_mblen_l** die Länge des multibytezeichens in Byte zurück. Die **mblen** -und **_mblen_l** -Funktionen funktionieren ordnungsgemäß für UTF-8 und geben möglicherweise einen Wert zwischen 1 und 3 zurück. Wenn *mbstr* **null** ist (oder auf das breit Zeichen NULL zeigt), geben **mblen** und **_mblen_l** 0 zurück. Das Objekt, auf das *mbstr* zeigt, muss ein gültiges Multibytezeichen innerhalb der ersten *Anzahl* von Zeichen oder **mblen** und **_mblen_l** Rückgabe-1 bilden.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbclen** -Funktion gibt die Länge des multibytezeichens *c*in Byte zurück. Wenn *c* nicht auf das führende Byte eines multibytezeichens zeigt, wie durch einen impliziten **_ismbblead**-aufrufungs Wert bestimmt, ist das Ergebnis von **_mbclen** unvorhersehbar.
+Die **_mbclen** -Funktion gibt die Länge des multibytezeichens *c*in Byte zurück. Wenn *c* nicht auf das führende Byte eines multibytezeichens zeigt (wie durch einen impliziten- [_ismbblead](ismbblead-ismbblead-l.md)festgelegt, ist das Ergebnis von **_mbclen** unvorhersehbar.
 
-**mblen** gibt die Länge von *mbstr* in Byte zurück, wenn es sich um ein gültiges Multibytezeichen handelt, und bestimmt die Gültigkeit von Multibytezeichen, die der Codepage zugeordnet ist. **mblen** untersucht *Anzahl* oder weniger Bytes, die in *mbstr*enthalten sind, jedoch nicht mehr als **MB_CUR_MAX** bytes.
+**mblen** gibt die Länge von *mbstr* in Byte zurück, wenn es sich um ein gültiges Multibytezeichen handelt. Außerdem wird die mit der Codepage verknüpfte Multibyte-Zeichen Gültigkeit bestimmt. **mblen** untersucht *Anzahl* oder weniger Bytes, die in *mbstr*enthalten sind, jedoch nicht mehr als **MB_CUR_MAX** bytes.
 
-Der Ausgabewert wird von der **LC_CTYPE** -Kategorieeinstellung des Gebiets Schemas beeinflusst. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md) . Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebiets Schema für dieses vom Gebiets Schema abhängige Verhalten. Die **_l** -suffixt-Versionen Verhalten sich identisch, verwenden jedoch stattdessen den übergebenen Gebiets Schema Parameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert wird von der **LC_CTYPE** Kategorieeinstellung des Gebiets Schemas beeinflusst. Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebiets Schema für dieses vom Gebiets Schema abhängige Verhalten. Die **_l** suffittversionen Verhalten sich identisch, verwenden jedoch stattdessen den übergebenen Gebiets Schema Parameter. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md) und [locale](../../c-runtime-library/locale.md).
+
+**_mbclen**, **_mblen_l**und **_mbclen_l** sind Microsoft-spezifisch, nicht Teil der Standard-C-Bibliothek. Wir empfehlen Ihnen nicht, Sie zu verwenden, wenn Sie portablen Code verwenden möchten. Verwenden Sie für die Standard-C-Kompatibilität stattdessen **mblen** oder **mbrlen** .
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -109,7 +114,7 @@ Der Ausgabewert wird von der **LC_CTYPE** -Kategorieeinstellung des Gebiets Sche
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tclen**|Führt eine Zuordnung zum Makro oder zur Inlinefunktion aus|**_mbclen**|Führt eine Zuordnung zum Makro oder zur Inlinefunktion aus|
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
@@ -117,7 +122,7 @@ Der Ausgabewert wird von der **LC_CTYPE** -Kategorieeinstellung des Gebiets Sche
 |**mblen**|\<stdlib.h>|
 |**_mblen_l**|\<stdlib.h>|
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Weitere Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -160,8 +165,9 @@ Length in bytes of NULL multibyte character 0: 0
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zeichenklassifizierung](../../c-runtime-library/character-classification.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[_mbccpy, _mbccpy_l](mbccpy-mbccpy-l.md)<br/>
-[strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)<br/>
+[Zeichenklassifizierung](../../c-runtime-library/character-classification.md)\
+[Locale](../../c-runtime-library/locale.md)\
+[Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)\
+[_mbccpy, _mbccpy_l](mbccpy-mbccpy-l.md)\
+[mbrlen](mbrlen.md) -\
+[strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)

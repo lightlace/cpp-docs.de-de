@@ -1,6 +1,7 @@
 ---
 title: _ismbblead, _ismbblead_l
-ms.date: 11/04/2016
+description: Beschreibt die Funktionen der Microsoft C-Lauf Zeit Bibliothek (CRT) _ismbblead und _ismbblead_l.
+ms.date: 01/08/2020
 api_name:
 - _ismbblead_l
 - _ismbblead
@@ -35,16 +36,16 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-ms.openlocfilehash: c0f9ec748a86d5d1413cf4f881234d786c2a2d78
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6a7bb992eeeb9c66a7cbdea0ed34cf797d374617
+ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954067"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755031"
 ---
 # <a name="_ismbblead-_ismbblead_l"></a>_ismbblead, _ismbblead_l
 
-Testet ein Zeichen, um festzustellen, ob es sich um ein führendes Byte eines Multibytezeichens handelt.
+Testet ein Zeichen, um zu bestimmen, ob es sich um ein führendes Byte eines multibytezeichens handelt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,12 +59,12 @@ int _ismbblead_l(
 );
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*c*<br/>
+*c* -\
 Die zu testende ganze Zahl.
 
-*locale*<br/>
+Gebiets *Schema\*
 Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -76,13 +77,17 @@ Multibytezeichen bestehen aus einem führenden Byte gefolgt von einem nachfolgen
 
 **_ismbblead** verwendet das aktuelle Gebiets Schema für vom Gebiets Schema abhängiges Verhalten. **_ismbblead_l** ist beinahe identisch, verwendet jedoch stattdessen das übergebene Gebiets Schema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+Wenn das Gebiets Schema UTF-8 ist, gibt **_ismbblead** und **_ismbblead_l** immer 0 (false) zurück, ob *c* ein führendes Byte ist oder nicht.
+
+**_ismbblead** und **_ismbblead_l** sind Microsoft-spezifisch, nicht Teil der Standard-C-Bibliothek. Wir empfehlen Ihnen nicht, Sie zu verwenden, wenn Sie portablen Code verwenden möchten. Verwenden Sie für die Standard-C-Kompatibilität stattdessen **mbrlen** .
+
+### <a name="generic-text-routine-mappings"></a>Zuordnungen von generischen Text Routinen
 
 |Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_istlead**|Gibt immer "false" zurück|**_ismbblead**|Gibt immer "false" zurück|
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|
 |-------------|---------------------|---------------------|
@@ -91,9 +96,10 @@ Multibytezeichen bestehen aus einem führenden Byte gefolgt von einem nachfolgen
 
 \* Für Manifestkonstanten für die Testbedingungen.
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Weitere Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Byteklassifizierung](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb-Routinen](../../c-runtime-library/ismbb-routines.md)<br/>
+[Byte Klassifizierung](../../c-runtime-library/byte-classification.md)\
+[_ismbb Routinen](../../c-runtime-library/ismbb-routines.md)\
+[mbrlen](mbrlen.md)
