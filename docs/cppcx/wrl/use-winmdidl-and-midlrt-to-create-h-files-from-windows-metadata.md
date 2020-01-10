@@ -1,16 +1,16 @@
 ---
-title: 'Vorgehensweise: Verwenden von „winmdidl.exe“ und „midlrt.exe“ zum Erstellen von H-Dateien aus Windows-Metadaten'
+title: 'Gewusst wie: Verwenden von winmdidl.exe und midlrt.exe zum Erstellen von .h-Dateien aus Windows-Metadaten'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: 8288fc11fd53fdef423a57d0faefbaa7c06326aa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3aa7cd28a37ec7187cc3c87927a83e45eeda2a4e
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500431"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791669"
 ---
-# <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Vorgehensweise: Verwenden von „winmdidl.exe“ und „midlrt.exe“ zum Erstellen von H-Dateien aus Windows-Metadaten
+# <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Gewusst wie: Verwenden von winmdidl.exe und midlrt.exe zum Erstellen von .h-Dateien aus Windows-Metadaten
 
 "Winmdidl.exe" und "midlrt.exe" aktivieren Interaktionen auf COM-Ebene zwischen systemeigenem C++-Code und Komponenten für Windows-Runtime. "Winmdidl.exe" verwendet als Eingabe eine WINMD-Datei, die Metadaten für eine Komponente für Windows-Runtime enthält, und gibt eine IDL-Datei aus. "Midlrt.exe" konvertiert diese IDL-Datei in Headerdateien, die der C++-Code verarbeiten kann. Beide Tools werden an der Befehlszeile ausgeführt.
 
@@ -36,13 +36,13 @@ Winmdidl.exe [/nologo] [/suppressversioncheck] [/time] [/outdir:dir] [/banner:fi
 Verhindert die Anzeige der winmdidl-Copyrightmeldung und -Versionsnummer auf der Konsole.
 
 **/suppressversioncheck**<br/>
-Wird nicht verwendet.
+Nicht verwendet.
 
 **/Time**<br/>
 Zeigt die gesamte Ausführungszeit in der Konsolenausgabe an.
 
 **/outdir:** <em>dir</em><br/>
-Gibt ein Ausgabeverzeichnis an. Wenn der Pfad Leerzeichen enthält, verwenden Sie Anführungszeichen. Das Standardausgabe Verzeichnis ist  *\<Laufwerk >* : \Users\\ *\<username >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12,0\\.
+Gibt ein Ausgabeverzeichnis an. Wenn der Pfad Leerzeichen enthält, verwenden Sie Anführungszeichen. Das Standardausgabe Verzeichnis ist *\<Laufwerk >* : \Users\\ *\<username >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12,0\\.
 
 **/Banner:** <em>Datei</em><br/>
 Gibt eine Datei an, die benutzerdefinierten Text enthält, der am Anfang der generierten IDL-Datei der standardmäßigen Copyrightmeldung und winmdidl-Versionsnummer vorangestellt wird. Wenn der Pfad Leerzeichen enthält, verwenden Sie Anführungszeichen.
@@ -65,11 +65,11 @@ Das folgende Beispiel zeigt einen winmdidl-Befehl an einer Visual Studio-x86-Ein
 
 Im folgenden Beispiel wird die Konsolenanzeige von "winmdidl" gezeigt, die angibt, dass der Vorgang erfolgreich war.
 
-**C:\users\giraffe\documents\\\Test_for_winmdidl.idl wird erzeugt**
+**C:\users\giraffe\documents\\\ Test_for_winmdidl. idl wird erzeugt.**
 
 Anschließend wird "midlrt" auf der generierten IDL-Datei ausgeführt. Beachten Sie, dass das **metadata_dir** -Argument nach dem Namen der IDL-Datei angegeben wird. Der Pfad von "\WinMetadata\" ist erforderlich – es ist der Speicherort für "windows.winmd".
 
-`C:\Program Files (x86)\Microsoft Visual Studio 12.0> midlrt "c:\users\mblome\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"`
+`C:\Program Files (x86)\Microsoft Visual Studio 12.0> midlrt "c:\users\username\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"`
 
 ## <a name="remarks"></a>Hinweise
 
