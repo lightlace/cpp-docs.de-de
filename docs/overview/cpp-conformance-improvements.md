@@ -3,14 +3,12 @@ title: Verbesserungen an C++ bei der Übereinstimmung mit Standards
 ms.date: 12/04/2019
 description: Microsoft C++ in Visual Studio  bewegt sich auf die vollständige Konformität mit dem Sprachstandard C++20 zu.
 ms.technology: cpp-language
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: de31c2e61f0a10c785d610d3227a659c59b56d38
-ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
+ms.openlocfilehash: e9c2a69c8d33ea692a76a5642a15b581567c2c63
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75546431"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793842"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Verbesserungen der C++-Konformität in Visual Studio
 
@@ -2591,7 +2589,7 @@ struct D : B<T*> {
 };
 ```
 
-Für Version 15.7 von Visual Studio 2017 im Modus **/std:c++17** ist das Schlüsselwort **typename** in der Anweisung **using** von D erforderlich. Wenn **typename** nicht vorhanden ist, löst der Compiler die Warnung C4346: ( *'B<T\*>::type': Abhängiger Name ist kein Typ.* ) und den Fehler C2061 (*Syntaxfehler: Bezeichner 'type'* ) aus:
+Für Version 15.7 von Visual Studio 2017 im Modus **/std:c++17** ist das Schlüsselwort **typename** in der Anweisung **using** von D erforderlich. Wenn **typename** nicht vorhanden ist, löst der Compiler die Warnung C4346: ('B<T>::type': Abhängiger Name ist kein Typ.* ) und den Fehler C2061 (*Syntaxfehler: Bezeichner 'type'* ) aus:
 
 ```cpp
 template<typename T>
