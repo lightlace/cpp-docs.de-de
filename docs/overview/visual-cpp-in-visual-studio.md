@@ -5,14 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: ea047aca90b03179c0a39cb653e0b9bc08306c64
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 74e1b34549a8e8d0f1e22e6f40aacbd4429b272f
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626213"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793787"
 ---
 # <a name="c-in-visual-studio"></a>C++ in Visual Studio
 
@@ -64,7 +62,7 @@ Erfahren Sie mehr über moderne C++-Programmiertechniken, die auf C++11 und höh
 [Standard C++](https://isocpp.org/)<br/>
 Lernen Sie C++ kennen, verschaffen Sie sich einen Überblick über das moderne C++, und greifen Sie auf Links für Bücher, Artikel, Gespräche und Ereignisse zu.
 
-[Erlernen von Visual C++](../build/vscpp-step-1-create.md)<br/>
+[Visual C++ kennen lernen](../build/vscpp-step-1-create.md)<br/>
 Beginnen Sie mit dem Erlernen von C++.
 
 [Visual C++-Beispiele](visual-cpp-samples.md)<br/>
