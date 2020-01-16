@@ -4,12 +4,12 @@ description: Beschreibt die Verwendung von Visual Studio zum Konfigurieren der c
 ms.date: 01/13/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: ff1de8241c2489e675f82f469f1cf697a72f5034
-ms.sourcegitcommit: 275b71219d2a8bd5d78f87e21dd909e9968c2f44
+ms.openlocfilehash: 5e627f02b5245baede6e92268cedfc43957f3abc
+ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75946813"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031329"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Konfigurieren von CMake-Debugsitzungen
 
@@ -73,7 +73,7 @@ Es gibt viele " *Launch. vs. JSON* "-Eigenschaften, die alle debuggingszenarien 
 
 ## <a name="launchvsjson-reference-for-remote-linux-projects"></a>Launch. vs. JSON-Referenz für Linux-Remote Projekte
 
-Die folgenden Eigenschaften sind spezifisch für **remotedebugkonfigurationen**. Sie können [Befehle auch direkt an gdb senden und die](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands) [miengine-Protokollierung aktivieren](https://github.com/microsoft/MIEngine/wiki/Logging). Mithilfe dieser Eigenschaften können Sie sehen, welche Befehle an gdb gesendet werden, welche Ausgabe-gdb zurückgibt und wie lange die einzelnen Befehle dauern.
+Die folgenden Eigenschaften sind spezifisch für **remotedebugkonfigurationen**. Sie können auch [benutzerdefinierte gdb-Befehle ausführen](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands) , um Befehle direkt an den zugrunde liegenden Debugger zu senden, und die [miengine-Protokollierung aktivieren](https://github.com/microsoft/MIEngine/wiki/Logging) , um anzuzeigen, welche Befehle an gdb gesendet werden, welche Ausgabe-gdb zurückgibt und wie lange jeder Befehl dauert.
 
 - `cwd`: Aktuelles Arbeitsverzeichnis zum Suchen nach Abhängigkeiten und anderen Dateien auf dem Remote Computer. Das Makro `${debugInfo.defaultWorkingDirectory}` kann verwendet werden. Der Standardwert ist der Stamm arbeitsbereichroot, es sei denn, er wurde in *CMakeLists. txt*überschrieben. Diese Eigenschaft wird nur für Remote Konfigurationen verwendet. `currentDir` wird zum Festlegen des aktuellen Verzeichnisses der Start-App für ein lokales Projekt verwendet.
 
