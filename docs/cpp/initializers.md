@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [C++], array-element initializers
 - aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: fd926177dd7540d8dc1e8512e9f17e20a0b8238c
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: 2cc68f2384402ce1eb3ac06b414f597a6b3951f0
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661616"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123967"
 ---
 # <a name="initializers"></a>Initialisierer
 
@@ -81,7 +81,7 @@ Die Initialisierung mit 0 (NULL) ist die Festlegung einer Variablen auf einen NU
 
 - Numerische Variablen werden mit 0 initialisiert (oder 0,0 oder 0,0000000000 usw.).
 
-- Char-Variablen werden mit `'\0'`initialisiert.
+- Char-Variablen werden initialisiert, um `'\0'`.
 
 - Zeiger werden mit " **nullptr**" initialisiert.
 
@@ -173,7 +173,7 @@ int main() {
 }
 ```
 
-Weitere Informationen zur Initialisierung von globalen statischen Objekten finden Sie unter [zusätzliche Überlegungen zum Start](../cpp/additional-startup-considerations.md).
+Weitere Informationen zur Initialisierung von globalen statischen Objekten finden Sie unter [Hauptfunktion und Befehlszeilenargumente](main-function-command-line-args.md).
 
 ### <a name="value-initialization"></a>Wertinitialisierung
 
@@ -417,7 +417,7 @@ int main() {
 }
 ```
 
-Die folgende Ausgabe wird angezeigt:
+Daraufhin sollte die folgende Ausgabe angezeigt werden:
 
 ```Output
 agg1: c: 1
@@ -427,7 +427,7 @@ myArr3: 8 9 10 0 0
 ```
 
 > [!IMPORTANT]
-> Arraymember, die deklariert, aber während der Aggregat Initialisierung nicht explizit initialisiert werden, werden mit `myArr3` 0 (null) initialisiert, wie oben beschrieben.
+> Arraymember, die deklariert, aber während der Aggregat Initialisierung nicht explizit initialisiert werden, werden mit 0 (null) initialisiert, wie in `myArr3` oben.
 
 #### <a name="initializing-unions-and-structs"></a>Initialisieren von Unions und Strukturen
 
@@ -534,7 +534,7 @@ Bei der Initialisierung einer Referenztypvariable verwendet der Compiler das Ent
 ![Entscheidungs Diagramm für die Initialisierung von Verweis Typen](../cpp/media/vc38s71.gif "Entscheidungs Diagramm für die Initialisierung von Verweis Typen") <br/>
 Entscheidungs Diagramm für die Initialisierung von Verweis Typen
 
-Verweise auf **flüchtige** Typen (als **flüchtiger** *Typname* <strong>&</strong> *Bezeichner*deklariert) können mit **flüchtigen** Objekten desselben Typs oder mit Objekten initialisiert werden, die nicht als **flüchtig** deklariert wurden. . Sie können jedoch nicht mit **Konstanten** Objekten dieses Typs initialisiert werden. Ebenso können Verweise auf **Konstante Typen (** die als " **Konstanten** *Typname* <strong>&</strong> -Bezeichner" deklariert sind) mit Konstanten Objekten desselben Typs (oder mit Objekten, die eine Konvertierung in diesen Typ oder mit Objekten aufweisen) initialisiert werden **.** die nicht als **konstant**deklariert wurden. Sie können jedoch nicht mit **flüchtigen** Objekten dieses Typs initialisiert werden.
+Verweise auf **flüchtige** Typen (als **flüchtiges** *Typname* <strong>&</strong> *Bezeichner*deklariert) können mit **flüchtigen** Objekten desselben Typs oder mit Objekten initialisiert werden, die nicht als **flüchtig**deklariert wurden. Sie können jedoch nicht mit **Konstanten** Objekten dieses Typs initialisiert werden. Ebenso können Verweise auf **Konstante Typen (** **die als "** Konstante *Typname* <strong>&</strong> *Bezeichner*" deklariert sind) mit **Konstanten** Objekten desselben Typs (oder mit Objekten, die eine Konvertierung in diesen Typ aufweisen, oder mit Objekten, die nicht als " **konstant**" deklariert wurden) initialisiert werden. Sie können jedoch nicht mit **flüchtigen** Objekten dieses Typs initialisiert werden.
 
 Verweise, die nicht mit dem Schlüsselwort " **Konstanten** " oder " **volatile** " qualifiziert sind, können nur mit Objekten initialisiert werden, die entweder als " **konstant** " oder " **flüchtig**" deklariert
 
