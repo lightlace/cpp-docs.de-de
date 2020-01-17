@@ -9,12 +9,12 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-ms.openlocfilehash: d16f8a5b7b6b23ad90aad886bbb9654e706549cb
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 28b0d826dc02376f952d3522f2f037eacd298b8e
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151039"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123941"
 ---
 # <a name="main-function-and-program-execution"></a>main-Funktion und Programmausführung
 
@@ -26,7 +26,7 @@ Jedes C-Programm verfügt über eine primäre Funktion (main), die mit **main** 
 main( int argc, char *argv[ ], char *envp[ ] )
 ```
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 Funktionen innerhalb des Quellprogramms führen eine oder mehrere bestimmte Aufgaben aus. Die **main**-Funktion ruft diese Funktionen auf, um die jeweiligen Aufgaben auszuführen. Wenn **main** eine andere Funktion aufruft, übergibt sie die Ablaufsteuerung an die Funktion, sodass die Ausführung bei der ersten Anweisung in der Funktion beginnt. Eine Funktion gibt die Steuerung an **main** zurück, wenn eine `return`-Anweisung ausgeführt wird, oder wenn das Ende der Funktion erreicht ist.
 
@@ -38,5 +38,5 @@ Eine Beschreibung der Breitzeichenversion von **main** finden Sie unter [Verwend
 
 ## <a name="see-also"></a>Siehe auch
 
-[main: Programmstart](../cpp/main-program-startup.md)<br/>
+[Main-Funktion und Befehlszeilenargumente (C++)](../cpp/main-function-command-line-args.md)\
 [Analysieren von C-Befehlszeilenargumenten](../c-language/parsing-c-command-line-arguments.md)
