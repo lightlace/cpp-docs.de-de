@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4703
 ms.assetid: 5dad454e-69e3-4931-9168-050a861c05f8
-ms.openlocfilehash: 6115db7611de521d66df3b1f555349891d72cc03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5033490550f318cab65f984cab81b08102641c9d
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395234"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518360"
 ---
 # <a name="compiler-warning-level-4-c4703"></a>Compilerwarnung (Stufe 4) C4703
 
-Möglicherweise nicht initialisierte lokale Zeigervariable "Name" verwendet
+Potentially uninitialized local pointer variable 'name' used
 
-Der lokale Zeigervariable *Namen* kann verwendet werden können, ohne einen Wert zugewiesen wird. Dies kann zu unvorhersehbaren Ergebnissen führen.
+The local pointer variable *name* might have been used without being assigned a value. Dies kann zu unvorhersehbaren Ergebnissen führen.
 
 ## <a name="example"></a>Beispiel
 
@@ -37,7 +37,7 @@ void func(int size)
         free(p);
 }
 
-void main()
+int main()
 {
     func(9);
 }
@@ -48,7 +48,7 @@ c:\src\test.cpp(10) : warning C4701: potentially uninitialized local variable 'p
 c:\src\test.cpp(10) : warning C4703: potentially uninitialized local pointer variable 'p' used
 ```
 
-Um diese Warnung zu beheben, initialisieren Sie die Variable, wie im folgenden Beispiel gezeigt:
+Um diese Warnung zu korrigieren, initialisieren Sie die Variable wie im folgenden Beispiel gezeigt:
 
 ```cpp
 #include <malloc.h>
@@ -64,7 +64,7 @@ void func(int size)
         free(p);
 }
 
-void main()
+int main()
 {
     func(9);
 }
@@ -73,4 +73,4 @@ void main()
 ## <a name="see-also"></a>Siehe auch
 
 [Compilerwarnung (Ebene 4) C4701](../../error-messages/compiler-warnings/compiler-warning-level-4-c4701.md)<br/>
-[Warnungen, / SDL und Verbessern der Erkennung von nicht initialisierten Variablen](https://www.microsoft.com/security/blog/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection/)
+[Warnungen,/SDL und verbessern der Erkennung nicht initialisierter Variablen](https://www.microsoft.com/security/blog/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection/)

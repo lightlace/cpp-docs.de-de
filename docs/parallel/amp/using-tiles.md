@@ -2,16 +2,16 @@
 title: Verwenden von Kacheln
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c935134e033d12fc140c8d377ef59d0b47265fc
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405370"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518256"
 ---
 # <a name="using-tiles"></a>Verwenden von Kacheln
 
-Sie können Kacheln verwenden, um die Beschleunigung der App zu maximieren. Kacheln unterteilt die Threads in gleiche rechteckige Teilmengen bzw. *Kacheln*. Wenn Sie eine geeignete Flächengröße und Kachelalgorithmus verwenden, können Sie noch mehr Beschleunigung aus dem C++ AMPcode abrufen. Die grundlegenden Komponenten des Kachelns sind:
+Sie können Kacheln verwenden, um die Beschleunigung der App zu maximieren. Beim Zicken werden Threads in gleiche rechteckige Teilmengen oder *Kacheln*aufgeteilt. Wenn Sie eine geeignete Flächengröße und Kachelalgorithmus verwenden, können Sie noch mehr Beschleunigung aus dem C++ AMPcode abrufen. Die grundlegenden Komponenten des Kachelns sind:
 
 - `tile_static`-Variablen. Der wichtigste Vorteil des Kachelns liegt in der Leistungssteigerung durch den `tile_static`-Zugriff. Zugriff auf Daten im `tile_static`-Arbeitsspeicher kann erheblich schneller sein als ein Zugriff auf Daten im globalen Namensbereich (`array`-Objekte oder `array_view`-Objekte). Eine Instanz einer `tile_static`-Variable wird für jeden Tile erstellt, und alle Threads in den Tile haben Zugriff auf die Variable. In einem typischen Kachelalgorithmus werden Daten einmalig vom globalen Speicher in den `tile_static`-Speicher kopiert und darauf dann mehrfach vom `tile_static`-Speicher zugegriffen.
 
@@ -19,7 +19,7 @@ Sie können Kacheln verwenden, um die Beschleunigung der App zu maximieren. Kach
 
 - Lokale und globale Indizierung. Sie haben Zugriff auf den Index des Threads, relativ zum vollständigen `array_view`-Objekt oder das `array`-Objekt und dem Index relativ zur Kachel. Das Verwenden des lokalen Index kann den Code besser lesbar machen und einfacher zu debuggen. Üblicherweise verwenden Sie lokale Indizierung zum Zugreifen auf die `tile_static`-Variablen und globale Indizierung für den Zugriff auf `array`-Variablen und `array_view`-Variablen.
 
-- [Tiled_extent-Klasse](../../parallel/amp/reference/tiled-extent-class.md) und [Tiled_index-Klasse](../../parallel/amp/reference/tiled-index-class.md). Sie verwenden ein `tiled_extent`-Objekt anstelle eines `extent`-Objekts im `parallel_for_each`- Aufruf. Sie verwenden ein `tiled_index`-Objekt anstelle eines `index`-Objekts im `parallel_for_each`- Aufruf.
+- [tiled_extent-Klasse](../../parallel/amp/reference/tiled-extent-class.md) und [tiled_index-Klasse](../../parallel/amp/reference/tiled-index-class.md). Sie verwenden ein `tiled_extent`-Objekt anstelle eines `extent`-Objekts im `parallel_for_each`- Aufruf. Sie verwenden ein `tiled_index`-Objekt anstelle eines `index`-Objekts im `parallel_for_each`- Aufruf.
 
 Um die Vorteile des Kachelns zu nutzen, muss Ihr Algorithmus die zu verarbeitende Berechnungsdomäne in Kacheln partitionieren und anschließend die Kacheldaten in `tile_static`-Variablen für einen schnelleren Zugriff kopieren.
 
@@ -27,7 +27,7 @@ Um die Vorteile des Kachelns zu nutzen, muss Ihr Algorithmus die zu verarbeitend
 
 Das folgende Diagramm stellt eine 8 x 9-Datenmatrix dar, die in einer 2 x 3-Kachelgruppe angeordnet wird.
 
-![8&#45;von&#45;9-Matrix aufgeteilt in 2&#45;von&#45;3 Kacheln](../../parallel/amp/media/usingtilesmatrix.png "8&#45;von&#45;9-Matrix aufgeteilt in 2&#45;von&#45;3 Kacheln")
+![8&#45;-&#45;bis 9-Matrix in&#45;2&#45;x 3 Kacheln aufgeteilt](../../parallel/amp/media/usingtilesmatrix.png "8&#45;-&#45;bis 9-Matrix in&#45;2&#45;x 3 Kacheln aufgeteilt")
 
 Im folgenden Beispiel werden globale, unterteilte und lokale Indizes dieser gekachelten Matrix. Zum Erstellen eines `array_view`-Objekts werden Elemente des `Description`-Typs verwendet. Die `Description` enthält die globalen, unterteilten und lokalen Indizes des Elements in der Matrix. Der Code im Aufruf von `parallel_for_each` legt die Werte von globalen, unterteilten und lokalen Indizes für jedes Element fest. Die Ausgabe zeigt die Werte in den `Description`-Strukturen an.
 
@@ -134,7 +134,7 @@ void TilingDescription() {
     }
 }
 
-void main() {
+int main() {
     TilingDescription();
     char wait;
     std::cin >> wait;
@@ -151,7 +151,7 @@ Die Hauptarbeit des Beispiels steckt in der Definition des `array_view`-Objekts 
 
 4. Beim Ausführen jedes Threads gibt der `t_idx`-Index Informationen zurück, in welcher Unterteilung sich der Thread befindet (`tiled_index::tile`-Eigenschaft) und an welcher Position sich der Thread in der Kachel befindet (`tiled_index::local`-Eigenschaft).
 
-## <a name="tile-synchronizationtilestatic-and-tilebarrierwait"></a>Synchronisieren der Unterteilungen – „tile_static“ und „tile_barrier::wait“
+## <a name="tile-synchronizationtile_static-and-tile_barrierwait"></a>Synchronisieren der Unterteilungen – „tile_static“ und „tile_barrier::wait“
 
 Im vorherigen Beispiel wurde das Kachellayout und -indizes veranschaulicht, es ist jedoch nicht an sich sehr nützlich.  Eine Unterteilung wird dann nützlich, wenn die Kacheln fest mit dem Algorithmus und den `tile_static`-Variablen verbunden sind. Da alle Threads in einer Kachel über Zugriff auf `tile_static`-Variablen verfügen, werden Aufrufe an `tile_barrier::wait` verwendet, um den Zugriff auf die Variablen `tile_static` zu synchronisieren. Obwohl alle Threads in einer Kachel Zugriff auf die `tile_static`-Variablen haben, gibt es keine festgelegte Reihenfolge der Ausführung der Threads in der Kachel. Das folgende Beispiel zeigt, wie `tile_static`-Variablen und die `tile_barrier::wait`-Methode verwendet werden, um den Durchschnittswert der einzelnen Kacheln zu berechnen. Die Schlüssel zum Verständnis des Beispiels sind:
 
@@ -289,15 +289,15 @@ Es gibt zwei Arten von Speicherzugriffen, die synchronisiert werden müssen: glo
 
 - `tile_static`
 
-Ein *Arbeitsspeicher-Fence* wird sichergestellt, dass der Speicher Zugriffe für andere Threads in der threadkachel verfügbar sind und das die programmreihenfolge entsprechend ausgeführt werden. Um dies sicherzustellen, ordnen Compiler und Prozessoren die Lese- und Schreibzugriffe fenceübergreifend nicht neu. In C++ AMP wird ein Arbeitsspeicher-Fence durch einen Aufruf eine dieser Methoden erstellt:
+Ein *Speicher Fence* stellt sicher, dass Speicherzugriffe für andere Threads in der Thread Kachel verfügbar sind und dass Speicherzugriffe entsprechend der Programm Reihenfolge ausgeführt werden. Um dies sicherzustellen, ordnen Compiler und Prozessoren die Lese- und Schreibzugriffe fenceübergreifend nicht neu. In C++ AMP wird ein Arbeitsspeicher-Fence durch einen Aufruf eine dieser Methoden erstellt:
 
-- [tile_barrier:: Wait-Methode](reference/tile-barrier-class.md#wait): Erstellt einen Fence um globalen und `tile_static` Arbeitsspeicher.
+- [tile_barrier:: Wait-Methode](reference/tile-barrier-class.md#wait): erstellt einen Fence um globalen und `tile_static` Arbeitsspeicher.
 
-- [tile_barrier:: wait_with_all_memory_fence-Methode](reference/tile-barrier-class.md#wait_with_all_memory_fence): Erstellt einen Fence um globalen und `tile_static` Arbeitsspeicher.
+- [tile_barrier:: wait_with_all_memory_fence-Methode](reference/tile-barrier-class.md#wait_with_all_memory_fence): erstellt einen Fence um sowohl globalen als auch `tile_static` Arbeitsspeicher.
 
-- [tile_barrier:: wait_with_global_memory_fence-Methode](reference/tile-barrier-class.md#wait_with_global_memory_fence): Erstellt einen Fence ausschließlich um globalen Arbeitsspeicher.
+- [tile_barrier:: wait_with_global_memory_fence-Methode](reference/tile-barrier-class.md#wait_with_global_memory_fence): erstellt einen Fence um nur globalen Arbeitsspeicher.
 
-- [tile_barrier:: wait_with_tile_static_memory_fence-Methode](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): Erstellt einen Fence ausschließlich um `tile_static` Arbeitsspeicher.
+- [tile_barrier:: wait_with_tile_static_memory_fence-Methode](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): erstellt einen Fence um nur `tile_static` Arbeitsspeicher.
 
 Das Aufrufen eines bestimmten von Ihnen benötigten Fence kann die Leistung Ihrer App verbessern. Der Grenztyp hat Auswirkungen auf die neue Anordnung von Anweisungen durch Compiler und Hardware. Wenn Sie beispielsweise einen globalen Arbeitsspeicher-Fence verwenden, gilt er nur für globale Speicherzugriffe und daher werden Compiler und Hardware möglicherweise Lese- und Schreibvorgänge in `tile_static`-Variablen auf beiden Seiten des Fence neu anordnen.
 

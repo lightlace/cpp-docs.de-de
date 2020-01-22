@@ -1,21 +1,21 @@
 ---
-title: Attribute in C++
+title: Attribute inC++
 ms.date: 05/06/2019
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: bc92e5f3e279edc6fbea7f99d52c469f9fdf04f8
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 5967974d419299778e4aadaa235ee21c62e16d34
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222308"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518295"
 ---
-# <a name="attributes-in-c"></a>Attribute in C++
+# <a name="attributes-in-c"></a>Attribute inC++
 
-Der C++-Standard definiert einen Satz von Attributen und können auch Compileranbieter so definieren Sie eigene Attribute (innerhalb eines anbieterspezifische-Namespace), aber der Compiler sind erforderlich, um nur die Attribute, die gemäß dem Standard zu erkennen.
+Der C++ Standard definiert einen Satz von Attributen und ermöglicht compileranbietern auch das Definieren Ihrer eigenen Attribute (innerhalb eines herstellerspezifischen Namespace). Compiler müssen jedoch nur die im Standard definierten Attribute erkennen.
 
-In einigen Fällen überlappen Standardattribute compilerspezifischen "declspec"-Parameter. In Visual C++ können Sie die `[[deprecated]]` Attribut anstelle von `declspec(deprecated)` und das Attribut wird von einem beliebigen konformen-Compiler erkannt werden. Für alle anderen "declspec" Parameter wie z. B. Dllimport und Dllexport gibt es noch keine Attribut Entsprechung, damit Sie weiterhin "declspec"-Syntax verwenden müssen. Attribute wirken sich nicht auf das System der Typen, und die Bedeutung eines Programms nicht ändern. Compiler ignoriert die Attributwerte, die sie nicht erkennen.
+In einigen Fällen überlappen sich Standard Attribute mit compilerspezifischen declspec-Parametern. In Visual C++können Sie das `[[deprecated]]`-Attribut verwenden, anstatt `declspec(deprecated)` zu verwenden, und das-Attribut wird von allen kompatiblen compilererkennungen erkannt. Für alle anderen declspec-Parameter, wie z. b. DllImport und dllexport, gibt es noch kein Attribut äquivalent, sodass Sie weiterhin die declspec-Syntax verwenden müssen. Attribute wirken sich nicht auf das Typsystem aus und ändern die Bedeutung eines Programms nicht. Compiler ignorieren Attributwerte, die Sie nicht erkennen.
 
-**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Sie können den Namespace für alle Namen mit einem einzelnen angeben, im Rahmen einer Attributliste **mit** Introducer:
+**Visual Studio 2017 Version 15,3 und** höher (verfügbar mit [/Std: c++ 17](../build/reference/std-specify-language-standard-version.md)): im Bereich einer Attribut Liste können Sie den Namespace für alle Namen mit einem einzelnen **mithilfe** von Introduction angeben:
 
 ```cpp
 void g() {
@@ -24,26 +24,26 @@ void g() {
 }
 ```
 
-## <a name="c-standard-attributes"></a>C++-Standard-Attribute
+## <a name="c-standard-attributes"></a>C++Standard Attribute
 
-In C ++ 11 Geben Sie Attribute für eine standardisierte Möglichkeit zum Kommentieren von C++-Konstrukte (einschließlich aber nicht beschränkt auf Klassen, Funktionen, Variablen und Blöcke) mit zusätzlichen Informationen, die nicht unbedingt anbieterspezifische. Ein Compiler können diese Informationen zum Generieren der informationsmeldungen oder spezielle Logik angewendet, wenn den attributierten Code zu kompilieren. Der Compiler ignoriert alle Attribute, die er nicht erkennt, was bedeutet, dass Sie Ihren eigenen benutzerdefinierten Attributen, die mit der folgenden Syntax definieren können. Attribute werden durch doppelte eckige Klammern eingeschlossen:
+In c++ 11 bieten Attribute eine standardisierte Möglichkeit zum Kommentieren von C++ Konstrukten (einschließlich, aber nicht beschränkt auf Klassen, Funktionen, Variablen und Blöcke) mit zusätzlichen Informationen, die möglicherweise Hersteller spezifisch sind. Ein Compiler kann diese Informationen zum Generieren von Informationsmeldungen oder zum Anwenden spezieller Logik beim Kompilieren des attributierten Codes verwenden. Der Compiler ignoriert alle Attribute, die nicht erkannt werden. Dies bedeutet, dass Sie mit dieser Syntax keine eigenen benutzerdefinierten Attribute definieren können. Attribute werden durch doppelte eckige Klammern eingeschlossen:
 
 ```cpp
 [[deprecated]]
 void Foo(int);
 ```
 
-Attribute, die eine standardisierte Alternative zu anbieterspezifischer Erweiterungen wie z. B. #pragma-Anweisungen darstellen __declspec() (Visual C++), oder &#95; &#95;Attribut&#95; &#95; (GNU). Allerdings müssen Sie weiterhin die anbieterspezifische Konstrukte für die meisten Zwecke zu verwenden. Der Standard gibt derzeit die folgenden Attribute, die ein entsprechenden Compiler erkennen soll:
+Attribute stellen eine standardisierte Alternative zu herstellerspezifischen Erweiterungen, z. b. #pragma Direktiven, __declspec ( C++) (Visual &#95; &#95;)&#95; &#95; oder Attribut (GNU) dar. Für die meisten Zwecke müssen Sie jedoch weiterhin die herstellerspezifischen Konstrukte verwenden. Der Standard gibt derzeit die folgenden Attribute an, die ein konformer Compiler erkennen sollte:
 
-- `[[noreturn]]` Gibt an, dass eine Funktion niemals zurückgibt; Anders ausgedrückt: es immer eine Ausnahme ausgelöst. Der Compiler kann anpassen, deren kompilierungsregeln für `[[noreturn]]` Entitäten.
+- `[[noreturn]]` gibt an, dass eine Funktion niemals zurückgibt. Das heißt, es wird immer eine Ausnahme ausgelöst. Der Compiler kann seine Kompilierungs Regeln für `[[noreturn]]` Entitäten anpassen.
 
-- `[[carries_dependency]]` Gibt an, dass die Funktion datenabhängigkeits-Reihenfolge in Bezug auf die Synchronisierung von Threads verteilt. Das Attribut kann angewendet werden, um einen oder mehrere Parameter, um anzugeben, dass das übergebene Argument eine Abhängigkeit in den Funktionstext enthält. Für die Funktion selbst, um anzugeben, dass der Rückgabewert eine Abhängigkeit aus der Funktion enthält, kann das Attribut angewendet werden. Diese Informationen können der Compiler effizienteren Code generiert.
+- `[[carries_dependency]]` gibt an, dass die Funktion die Reihenfolge der Daten Abhängigkeit in Bezug auf die Thread Synchronisierung weitergibt. Das-Attribut kann auf einen oder mehrere Parameter angewendet werden, um anzugeben, dass das übergebenen Argument eine Abhängigkeit in den Funktions Rumpf enthält. Das-Attribut kann auf die Funktion selbst angewendet werden, um anzugeben, dass der Rückgabewert eine Abhängigkeit von der Funktion enthält. Der Compiler kann diese Informationen verwenden, um effizienteren Code zu generieren.
 
-- `[[deprecated]]` **Visual Studio 2015 und höher:** Gibt an, dass eine Funktion nicht vorgesehen ist, verwendet werden, und möglicherweise nicht vorhanden in zukünftigen Versionen einer Bibliothek-Schnittstelle. Der Compiler kann dies verwenden, um eine informationsmeldung zu generieren, wenn Clientcode versucht die Funktion aufgerufen. Kann auf die Deklaration einer Klasse, einen Typedef-Namen, eine Variable, einen nicht statischen Datenmember, eine Funktion, einen Namespace, eine Enumeration, einen Enumerator oder eine Spezialisierung einer Klassenvorlage angewendet werden.
+- `[[deprecated]]` **Visual Studio 2015 und höher:** gibt an, dass eine Funktion nicht für die Verwendung vorgesehen ist und in zukünftigen Versionen einer Bibliotheks Schnittstelle möglicherweise nicht vorhanden ist. Der Compiler kann dies verwenden, um eine Informations Meldung zu generieren, wenn der Client Code versucht, die Funktion aufzurufen. Kann auf die Deklaration einer Klasse, einen Typedef-Namen, eine Variable, einen nicht statischen Datenmember, eine Funktion, einen Namespace, eine Enumeration, einen Enumerator oder eine Vorlagen Spezialisierung angewendet werden.
 
-- `[[fallthrough]]` **Visual Studio 2017 und höher:** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) die `[[fallthrough]]` -Attribut kann verwendet werden, im Kontext des [wechseln](switch-statement-cpp.md) Anweisungen als Hinweis für den Compiler (oder Leser der Code), die das Fallthrough-Verhalten vorgesehen ist. Microsoft C++ Compiler derzeit warnt nicht Fallthrough-Verhalten, damit Sie dieses Attribut keine Wirkung Compilerverhalten hat.
+- `[[fallthrough]]` **Visual Studio 2017 und höher:** (verfügbar mit [/Std: c++ 17](../build/reference/std-specify-language-standard-version.md)) das `[[fallthrough]]`-Attribut kann im Kontext von [Switch](switch-statement-cpp.md) -Anweisungen als Hinweis für den Compiler verwendet werden (oder jeder, der den Code liest), der für das Ausweich Verhalten vorgesehen ist. Der Microsoft C++ -Compiler warnt derzeit nicht bei einem FallThrough-Verhalten, sodass dieses Attribut keine Auswirkung auf das Compilerverhalten hat.
 
-- `[[nodiscard]]` **Visual Studio 2017 Version 15.3 und höher:** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) gibt an, dass der Rückgabewert einer Funktion nicht verworfen werden soll. Löst die Warnung von C4834, wie im folgenden Beispiel gezeigt:
+- `[[nodiscard]]` **Visual Studio 2017 Version 15,3 und höher:** (verfügbar mit [/Std: c++ 17](../build/reference/std-specify-language-standard-version.md)) gibt an, dass der Rückgabewert einer Funktion nicht verworfen werden soll. Löst die Warnung C4834 aus, wie im folgenden Beispiel gezeigt:
 
     ```cpp
     [[nodiscard]]
@@ -56,14 +56,14 @@ Attribute, die eine standardisierte Alternative zu anbieterspezifischer Erweiter
     }
     ```
 
-- `[[maybe_unused]]` **Visual Studio 2017 Version 15.3 und höher:** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) gibt an, dass die Variable, Funktion, Klasse, Typedef, nicht statischen Datenmember, Enumeration oder Spezialisierung einer Klassenvorlage absichtlich nicht verwendet werden kann. Der Compiler warnt nicht, wenn eine Entität markiert `[[maybe_unused]]` wird nicht verwendet. Eine Entität, die ohne das Attribut deklariert ist kann später mit dem Attribut und umgekehrt erneut deklariert werden. Eine Entität wird markiert, nachdem die erste Deklaration, die markiert ist, analysiert wird und für den Rest der Übersetzung von der aktuellen Übersetzungseinheit betrachtet.
+- `[[maybe_unused]]` **Visual Studio 2017 Version 15,3 und höher:** (verfügbar mit [/Std: c++ 17](../build/reference/std-specify-language-standard-version.md)) gibt an, dass eine Variable, eine Funktion, eine Klasse, eine typedef, ein nicht statisches Datenmember, eine Enumeration oder eine Vorlagen Spezialisierung absichtlich nicht verwendet werden kann. Der Compiler warnt nicht, wenn eine Entität, die als `[[maybe_unused]]` gekennzeichnet ist, nicht verwendet wird. Eine Entität, die ohne das-Attribut deklariert wird, kann später mit dem-Attribut und umgekehrt erneut deklariert werden. Eine Entität wird als gekennzeichnet betrachtet, nachdem die erste markierte Deklaration analysiert wurde, und für die restliche Übersetzung der aktuellen Übersetzungseinheit.
 
-## <a name="microsoft-specific-attributes"></a>Microsoft-spezifischen Attribute
+## <a name="microsoft-specific-attributes"></a>Microsoft-spezifische Attribute
 
-- `[[gsl::suppress(rules)]]` Dieses Microsoft-spezifische Attribut wird verwendet, für das Unterdrücken von Warnungen von Überprüfungen, die erzwingen, [Richtlinien Support Library (VA)](https://github.com/Microsoft/GSL) Regeln in Code. Betrachten Sie beispielsweise mit diesem Codeausschnitt aus:
+- `[[gsl::suppress(rules)]]` dieses Microsoft-spezifische Attribut wird zum Unterdrücken von Warnungen von Checker verwendet, die [gsl-Regeln (Guidelines Support Library)](https://github.com/Microsoft/GSL) im Code erzwingen. Sehen Sie sich beispielsweise den folgenden Code Ausschnitt an:
 
     ```cpp
-    void main()
+    int main()
     {
         int arr[10]; // GSL warning 26494 will be fired
         int* p = arr; // GSL warning 26485 will be fired
@@ -75,12 +75,13 @@ Attribute, die eine standardisierte Alternative zu anbieterspezifischer Erweiter
     }
     ```
 
-  Das Beispiel löst Warnungen aus:
+  Im Beispiel werden folgende Warnungen ausgelöst:
 
-  - 26494 (Geben Sie die Regel 5: Immer ein Objekt initialisiert.)
+  - 26494 (Typregel 5: Initialisieren Sie immer ein Objekt.)
 
-  - 26485 (Bounds-Regel 3: Kein Array zu zeigerverfall.)
+  - 26485 (Begrenzungen Regel 3: kein Array zu Zeiger Verfall.)
 
-  - 26481 (Begrenzungen Regel 1: Verwenden Sie keine Zeigerarithmetik. Verwenden Sie Spanne stattdessen.)
+  - 26481 (Begrenzungen-Regel 1: Verwenden Sie keine Zeigerarithmetik. Verwenden Sie stattdessen span.)
 
-  Die ersten beiden Warnungen ausgelöst werden, wenn Sie mit dem CppCoreCheck Code Analysetool installiert und aktiviert diesen Code kompilieren. Aber aufgrund des Attributs wird nicht die dritte Warnung ausgelöst. Sie können das gesamte begrenzungsprofil unterdrücken, indem Sie das Schreiben von [[gsl::suppress(bounds)]], ohne eine spezielle regelzahl. Der C++ Core Guidelines dienen können Sie besser und sicherer Code zu schreiben. Das Attribut unterdrücken erleichtert es, die die Warnungen zu deaktivieren, wenn sie nicht erwünscht sind.
+  Die ersten beiden Warnungen werden ausgelöst, wenn Sie diesen Code mit dem Code Analysetool cppcorecheck kompilieren, das installiert und aktiviert ist. Die dritte Warnung wird jedoch aufgrund des-Attributs nicht ausgelöst. Sie können das gesamte Begrenzungen-Profil unterdrücken, indem Sie [[gsl:: Unterdrückung (Begrenzungen)]] schreiben, ohne eine bestimmte Regel Nummer einzuschließen. Die C++ grundlegenden Richtlinien sollen Ihnen helfen, besseren und sichereren Code zu schreiben. Mit dem Attribut "unterdrücken" können Sie die Warnungen auf einfache Weise deaktivieren, wenn Sie nicht gewünscht werden.
+  

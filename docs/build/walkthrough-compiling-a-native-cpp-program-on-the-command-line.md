@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Kompilieren eines systemeigenen C++-Programms in der Befehlszeile'
+title: 'Exemplarische Vorgehensweise: Kompilieren eines systemeigenen C++-Programms über die Befehlszeile'
 description: Verwenden Sie den C++ Microsoft-Compiler über eine Eingabeaufforderung.
 ms.custom: conceptual
 ms.date: 04/23/2019
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: daab00768f8140869a8db39c73f4fec3ab6304c7
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: d002fd4c4edc99775e62023dda7998fba2c6a44f
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051511"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518171"
 ---
-# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Exemplarische Vorgehensweise: Kompilieren eines systemeigenen C++-Programms in der Befehlszeile
+# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Exemplarische Vorgehensweise: Kompilieren eines systemeigenen C++-Programms über die Befehlszeile
 
 Visual Studio enthält einen Befehlszeilen C++ Compiler, mit dem Sie alles aus grundlegenden Konsolen-apps zu universelle Windows-Plattform-apps, Desktop-Apps, Gerätetreibern und .NET-Komponenten erstellen können.
 
@@ -24,7 +24,7 @@ In dieser exemplarischen Vorgehensweise C++ erstellen Sie ein einfaches Programm
 
 In dieser exemplarischen Vorgehensweise können Sie Ihr eigenes Visual C++-Programm verwenden, statt das gezeigte einzugeben, oder Sie können ein Visual C++-Codebeispiel aus einem anderen Hilfeartikel verwenden.
 
-## <a name="prerequisites"></a>Erforderliche Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Um diese exemplarische Vorgehensweise durchführen zu können, müssen Sie entweder Visual Studio und die optionale **Desktop Entwicklung mit C++**  der Arbeitsauslastung oder die Befehlszeilen-Buildtools für Visual Studio installiert haben.
 
@@ -78,7 +78,7 @@ Bevor Sie ein C-oder C++ -Programm in der Befehlszeile erstellen können, müsse
    ```cpp
    #include <iostream>
    using namespace std;
-   void main()
+   int main()
    {
        cout << "Hello, world, from Visual C++!" << endl;
    }
