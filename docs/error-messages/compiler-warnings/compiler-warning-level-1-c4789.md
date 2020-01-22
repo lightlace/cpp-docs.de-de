@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-ms.openlocfilehash: 36a5032098c5caabb1b050833e487fd58679a782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36278615631d017db1d1c2fc4eecf8c1612892de
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187230"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518399"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>Compilerwarnung (Stufe 1) C4789
 
-> Puffer "*Bezeichner*' Größe *N* Bytes werden überlaufen; *M* Bytes werden ab Offset geschrieben *L*
+> der Puffer "*Bezeichner*" der Größe von *N* Bytes wird überlaufen. *M* Bytes werden ab Offset *L* geschrieben.
 
 ## <a name="remarks"></a>Hinweise
 
-**C4789** Pufferüberläufe warnt, wenn bestimmte Funktionen der C-Laufzeit (CRT) verwendet werden. Sie können auch unterschiedliche Größen melden, wenn Parameter übergeben oder Zuweisungen erfolgen. Die Warnung ist möglich, wenn die Datengrößen zur Kompilierzeit bekannt sind. Diese Warnung gilt für Situationen, in denen die typische Datengrößen-Konflikterkennung umgangen wird.
+**C4789** warnt vor Pufferüberläufen, wenn bestimmte CRT-Funktionen (C Run-Time) verwendet werden. Sie kann auch Größen Konflikte melden, wenn Parameter weitergegeben werden oder Zuweisungen vorgenommen werden. Die Warnung ist möglich, wenn die Datengrößen zum Zeitpunkt der Kompilierung bekannt sind. Diese Warnung gilt für Situationen, in denen die typische Datengrößen-Konflikterkennung umgangen wird.
 
-**C4789** warnt, wenn Daten in einen Datenblock, der zu klein zum Zeitpunkt der Kompilierung bekannt wurde kopiert.
+**C4789** warnt, wenn Daten in einen Datenblock kopiert werden, der bekanntermaßen zum Zeitpunkt der Kompilierung zu klein ist.
 
-Die Warnung tritt auf, wenn die Kopie mit das systeminterne Formular einer der folgenden CRT-Funktionen verwendet:
+Die Warnung tritt auf, wenn die Kopie das intrinsische Formular einer dieser CRT-Funktionen verwendet:
 
 - [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)
 
@@ -31,9 +31,9 @@ Die Warnung tritt auf, wenn die Kopie mit das systeminterne Formular einer der f
 
 - [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md), [wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)
 
-Die Warnung wird auch angezeigt, wenn Sie Parameter für einen größeren Datentyp umgewandelt, und stellen Sie dann eine kopierzuweisung über einen Lvalue-Verweis.
+Die Warnung wird auch angezeigt, wenn Sie einen Parameter in einen größeren Datentyp umwandeln und dann eine Kopier Zuweisung aus einem Lvalue-Verweis erstellen.
 
-Visual C++ möglicherweise diese Warnung für einen Codepfad generieren, die nicht ausgeführt wird. Sie können die Warnung mithilfe von `#pragma` vorübergehend deaktivieren, wie im folgenden Beispiel gezeigt:
+Visual C++ generiert diese Warnung möglicherweise für einen Codepfad, der nie ausgeführt wird. Sie können die Warnung mithilfe von `#pragma` vorübergehend deaktivieren, wie im folgenden Beispiel gezeigt:
 
 ```cpp
 #pragma warning( push )
@@ -42,7 +42,7 @@ Visual C++ möglicherweise diese Warnung für einen Codepfad generieren, die nic
 #pragma warning( pop )
 ```
 
-Diese Sprache wird verhindert, dass Visual C++ die Warnung für diese bestimmten Codeblock generiert. `#pragma warning(push)` behält den vorhandenen Zustand bei, bevor dieser von `#pragma warning(disable: 4789)` geändert wird. `#pragma warning(pop)` stellt den gepushten Zustand wieder her und entfernt die Auswirkungen der `#pragma warning(disable:4789)`. Weitere Informationen zu den C++ Präprozessordirektive `#pragma`, finden Sie unter [Warnung](../../preprocessor/warning.md) und [Pragma-Direktiven und das __Pragma-Schlüsselwort](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+Diese Ausdrucksweise verhindert C++ , dass die Warnung für diesen spezifischen Codeblock von Visual erzeugt wird. `#pragma warning(push)` behält den vorhandenen Zustand bei, bevor dieser von `#pragma warning(disable: 4789)` geändert wird. `#pragma warning(pop)` stellt den gepushten Zustand wieder her und entfernt die Auswirkungen der `#pragma warning(disable:4789)`. Weitere Informationen zur C++ Präprozessordirektive `#pragma`finden Sie unter [Warning](../../preprocessor/warning.md) -und [pragma-Direktiven und das __Pragma-Schlüsselwort](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -78,7 +78,7 @@ Im folgende Beispiel wird außerdem C4789 generiert.
 // processor: x86
 short G;
 
-void main()
+int main()
 {
    int * p = (int *)&G;
    *p = 3;   // C4789 - writes an int through a pointer to short

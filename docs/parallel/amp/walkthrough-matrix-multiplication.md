@@ -1,67 +1,67 @@
 ---
-title: 'Exemplarische Vorgehensweise: Matrizenmultiplikation'
+title: 'Exemplarische Vorgehensweise: Matrixmultiplikation'
 ms.date: 04/23/2019
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: afa9dba8938f9d701b8f21ca3575eb06eb688ac0
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: 341800e258f89db340d206ebe04bc20d4763ad1a
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877480"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518490"
 ---
-# <a name="walkthrough-matrix-multiplication"></a>Exemplarische Vorgehensweise: Matrizenmultiplikation
+# <a name="walkthrough-matrix-multiplication"></a>Exemplarische Vorgehensweise: Matrixmultiplikation
 
 Befolgen Sie die exemplarische Vorgehensweise, um mithilfe von C++ AMP die Ausführung der Matrixmultiplikation zu beschleunigen. Es werden zwei Algorithmen vorgestellt, einer ohne und einer mit Tiling.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Vor dem Start:
 
-- Lesen [Übersicht über C++ AMP](../../parallel/amp/cpp-amp-overview.md).
+- Lesen [ C++ ](../../parallel/amp/cpp-amp-overview.md)Sie den Artikelübersicht.
 
 - Lesen [mithilfe von Kacheln](../../parallel/amp/using-tiles.md).
 
-- Stellen Sie sicher, dass Sie über mindestens ausführen, sind Windows 7 oder Windows Server 2008 R2.
+- Stellen Sie sicher, dass Sie mindestens Windows 7 oder Windows Server 2008 R2 ausführen.
 
 ### <a name="to-create-the-project"></a>So erstellen Sie das Projekt
 
-Anweisungen zum Erstellen eines neuen Projekts hängt davon ab, welche Version von Visual Studio, die Sie installiert haben. Stellen Sie sicher, dass Sie die Auswahl für die Version in der Zielauswahl oben links auf die richtige Version festgelegt haben.
+Die Anweisungen zum Erstellen eines neuen Projekts variieren abhängig von der installierten Version von Visual Studio. Stellen Sie sicher, dass die Versions Auswahl in der oberen linken Ecke auf die richtige Version festgelegt ist.
 
 ::: moniker range="vs-2019"
 
-### <a name="to-create-the-project-in-visual-studio-2019"></a>Zum Erstellen des Projekts in Visual Studio-2019
+### <a name="to-create-the-project-in-visual-studio-2019"></a>So erstellen Sie das Projekt in Visual Studio 2019
 
-1. Wählen Sie auf der Menüleiste **Datei** > **neu** > **Projekt** zum Öffnen der **Erstellen eines neuen Projekts** Dialogfeld.
+1. Wählen Sie in der Menüleiste **Datei** > **neue** > **Projekt** aus, um das Dialogfeld **Neues Projekt erstellen** zu öffnen.
 
-1. Legen Sie am oberen Rand des Dialogfelds, **Sprache** zu **C++** legen **Plattform** zu **Windows**, und legen Sie **Projekttyp** zu **Konsole**. 
+1. Legen Sie oben im Dialogfeld die **Sprache** auf **C++** , die **Plattform** auf **Windows** und den **Projekttyp** auf **Konsole** fest. 
 
-1. Wählen Sie die gefilterte Liste der Projekttypen, **leeres Projekt** wählen Sie dann **Weiter**. Geben Sie in der nächsten Seite *MatrixMultiply* in die **Namen** Feld zum Angeben eines Namens für das Projekt, und geben Sie den Speicherort des Projekts aus, falls gewünscht.
+1. Wählen Sie in der gefilterten Liste der Projekttypen **leeres Projekt** aus, und klicken Sie dann auf **weiter**. Geben Sie auf der nächsten Seite *Matrixmultiplikation* in das Feld **Name** ein, um einen Namen für das Projekt anzugeben, und geben Sie ggf. den Projekt Speicherort an.
 
-   ![Neue Konsolen-app](../../build/media/mathclient-project-name-2019.png "neue Konsolen-app")
+   ![Neue Konsolen-App](../../build/media/mathclient-project-name-2019.png "Neue Konsolen-App")
 
-1. Wählen Sie die **erstellen** klicken, um das Client-Projekt zu erstellen.
+1. Klicken Sie auf die Schaltfläche **Erstellen**, um das Clientprojekt zu erstellen.
 
-1. In **Projektmappen-Explorer**, öffnen Sie das Kontextmenü für **Quelldateien**, und wählen Sie dann **hinzufügen** > **neues Element**.
+1. Öffnen Sie in **Projektmappen-Explorer**das Kontextmenü für **Quelldateien**, und wählen Sie dann > **Neues Element** **Hinzufügen** aus.
 
-1. In der **neues Element hinzufügen** wählen Sie im Dialogfeld **C++-Datei (.cpp)**, geben Sie *MatrixMultiply.cpp* in die **Namen** ein, und wählen Sie dann die  **Hinzufügen** Schaltfläche.
+1. Wählen Sie **C++** im Dialogfeld Neues Element hinzufügen die Option Datei (. cpp) aus, geben Sie *Matrixmultiplikation. cpp* in das Feld Name ein, und wählen Sie dann die Schaltfläche hinzufügen aus.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-### <a name="to-create-a-project-in-visual-studio-2017-or-2015"></a>Zum Erstellen eines Projekts in Visual Studio 2017 oder 2015
+### <a name="to-create-a-project-in-visual-studio-2017-or-2015"></a>So erstellen Sie ein Projekt in Visual Studio 2017 oder 2015
 
-1. Wählen Sie auf der Menüleiste in Visual Studio **Datei** > **neu** > **Projekt**.
+1. Wählen Sie in Visual Studio auf der Menüleiste **Datei** > **Neues** > **Projekt**aus.
 
-1. Klicken Sie unter **installiert** wählen Sie im Vorlagenbereich **Visual C++**.
+1. Wählen Sie unter **installiert** im Bereich Vorlagen die **Option C++Visualisierung** aus.
 
-1. Wählen Sie **leeres Projekt**, geben Sie *MatrixMultiply* in die **Namen** ein, und wählen Sie dann die **OK** Schaltfläche.
+1. Wählen Sie **leeres Projekt**aus, geben Sie *Matrixmultiplikation* in das Feld **Name** ein, und klicken Sie dann auf die Schaltfläche **OK** .
 
 1. Klicken Sie auf **Weiter**.
 
-1. In **Projektmappen-Explorer**, öffnen Sie das Kontextmenü für **Quelldateien**, und wählen Sie dann **hinzufügen** > **neues Element**.
+1. Öffnen Sie in **Projektmappen-Explorer**das Kontextmenü für **Quelldateien**, und wählen Sie dann > **Neues Element** **Hinzufügen** aus.
 
-1. In der **neues Element hinzufügen** wählen Sie im Dialogfeld **C++-Datei (.cpp)**, geben Sie *MatrixMultiply.cpp* in die **Namen** ein, und wählen Sie dann die  **Hinzufügen** Schaltfläche.
+1. Wählen Sie **C++** im Dialogfeld Neues Element hinzufügen die Option Datei (. cpp) aus, geben Sie *Matrixmultiplikation. cpp* in das Feld Name ein, und wählen Sie dann die Schaltfläche hinzufügen aus.
 
 ::: moniker-end
 
@@ -69,13 +69,13 @@ Anweisungen zum Erstellen eines neuen Projekts hängt davon ab, welche Version v
 
 In diesem Abschnitt erwägen Sie die Multiplikation von zwei Matrizen, A und B, die folgendermaßen definiert werden:
 
-![3&#45;von&#45;2-Matrix ein](../../parallel/amp/media/campmatrixanontiled.png "3&#45;von&#45;2-Matrix ein")
+![3&#45;um&#45;2 Matrix A](../../parallel/amp/media/campmatrixanontiled.png "3&#45;um&#45;2 Matrix A")
 
-![2&#45;von&#45;B-3-Matrix](../../parallel/amp/media/campmatrixbnontiled.png "2&#45;von&#45;B-3-Matrix")
+![2&#45;x&#45;3 Matrix B](../../parallel/amp/media/campmatrixbnontiled.png "2&#45;x&#45;3 Matrix B")
 
 A ist eine 3 x 2-Matrix und B eine 2 x 3-Matrix. Das Produkt der Multiplikation von A nach B ist die folgende Matrix 3 x 3-Matrix. Das Produkt wird berechnet, indem die Zeilen von A mit den Spalten von B Element für Element multipliziert werden.
 
-![3&#45;von&#45;3 Produktmatrix](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;von&#45;3 Produktmatrix.")
+![3&#45;-&#45;bis 3-Produkt Matrix](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;-&#45;bis 3-Produkt Matrix")
 
 ### <a name="to-multiply-without-using-c-amp"></a>Multiplizieren ohne C++ AMP
 
@@ -101,7 +101,7 @@ A ist eine 3 x 2-Matrix und B eine 2 x 3-Matrix. Das Produkt der Multiplikation 
        }
    }
 
-   void main() {
+   int main() {
        MultiplyWithOutAMP();
        getchar();
    }
@@ -111,9 +111,9 @@ A ist eine 3 x 2-Matrix und B eine 2 x 3-Matrix. Das Produkt der Multiplikation 
 
 1. Klicken Sie in der Menüleiste auf **Datei** > **Alle speichern**.
 
-1. Wählen Sie die **F5** Tastenkombination mit dem Debuggen beginnen, und stellen Sie sicher, dass die Ausgabe richtig ist.
+1. Drücken Sie die **Taste F5** , um das Debugging zu starten, und überprüfen Sie, ob die Ausgabe korrekt ist.
 
-1. Wählen Sie **EINGABETASTE** beenden die Anwendung.
+1. Drücken Sie die **Eingabe** Taste, um die Anwendung zu beenden.
 
 ### <a name="to-multiply-by-using-c-amp"></a>Multiplizieren mithilfe von C++ AMP
 
@@ -164,46 +164,46 @@ A ist eine 3 x 2-Matrix und B eine 2 x 3-Matrix. Das Produkt der Multiplikation 
 1. Ändern Sie die `main`-Methode, um die `MultiplyWithAMP`-Methode aufzurufen.
 
    ```cpp
-   void main() {
+   int main() {
        MultiplyWithOutAMP();
        MultiplyWithAMP();
        getchar();
    }
    ```
 
-1. Drücken Sie die **STRG**+**F5** Tastenkombination mit dem Debuggen beginnen, und stellen Sie sicher, dass die Ausgabe richtig ist.
+1. Drücken Sie die Tastenkombination **STRG**+**F5** , um das Debugging zu starten und zu überprüfen, ob die Ausgabe korrekt ist.
 
-1. Drücken Sie die **LEERTASTE** beenden die Anwendung.
+1. Drücken Sie die **LEERTASTE** , um die Anwendung zu beenden.
 
 ## <a name="multiplication-with-tiling"></a>Multiplikation mit Tiling
 
-Tiling ist eine Technik, die Daten in gleich skalierte Teilmengen partitioniert die als Kacheln bezeichnet werden. Drei Dinge ändern sich, wenn Sie Tiling verwenden.
+Das Ticken ist eine Technik, bei der Daten in gleich große Teilmengen partitioniert werden, die als Kacheln bezeichnet werden. Drei Dinge ändern sich, wenn Sie Tiling verwenden.
 
 - Sie können `tile_static`-Variablen erstellen. Der Zugriff auf Daten im `tile_static`-Space erfolgt möglicherweise um ein Vielfaches schneller als der Zugriff im globalen Namespace. Eine Instanz einer `tile_static`-Variable wird für jeden Tile erstellt, und alle Threads in den Tile haben Zugriff auf die Variable. Der Hauptvorteil beim Tiling ist die Leistungssteigerung durch den `tile_static`-Zugriff.
 
-- Rufen Sie die [tile_barrier:: wait](reference/tile-barrier-class.md#wait) Methode, um alle Threads in einen Tile an einer angegebenen Codezeile zu beenden. Sie können die Reihenfolge, in der die Threads ausgeführt werden, nicht sicherstellen, nur dass alle Threads in eine Tile beim Aufruf von `tile_barrier::wait` beendet werden, bevor sie weiter ausgeführt werden.
+- Sie können die [tile_barrier:: Wait](reference/tile-barrier-class.md#wait) -Methode aufzurufen, um alle Threads in einer Kachel in einer bestimmten Codezeile anzuhalten. Sie können die Reihenfolge, in der die Threads ausgeführt werden, nicht sicherstellen, nur dass alle Threads in eine Tile beim Aufruf von `tile_barrier::wait` beendet werden, bevor sie weiter ausgeführt werden.
 
 - Sie haben Zugriff auf den Index des Threads relativ zum vollständigen `array_view`-Objekt und den Index relativ zur Tile. Durch Verwenden des lokalen Index wird der Code einfacher zu lesen und zu debuggen.
 
 Um Tiling in der Matrixmultiplikation zu nutzen, muss der Algorithmus die Matrix in Tiles partitionieren und die Tiledaten für einen schnelleren Zugriff in `tile_static`-Variable kopieren. In diesem Beispiel wird die Matrix in Submatrizes gleicher Größe partitioniert. Das Produkt wird gefunden, indem die Submatrizes multipliziert werden. Die zwei Matrizen und ihr Produkt sind in diesem Beispiel:
 
-![4&#45;von&#45;4-Matrix ein](../../parallel/amp/media/campmatrixatiled.png "4&#45;von&#45;4-Matrix ein")
+![4&#45;x&#45;4 Matrix A](../../parallel/amp/media/campmatrixatiled.png "4&#45;x&#45;4 Matrix A")
 
-![4&#45;von&#45;4-Matrix B](../../parallel/amp/media/campmatrixbtiled.png "4&#45;von&#45;B-4-Matrix")
+![4&#45;x&#45;4 Matrix B](../../parallel/amp/media/campmatrixbtiled.png "4&#45;x&#45;4 Matrix B")
 
-![4&#45;von&#45;4 Produktmatrix](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;von&#45;4 Produktmatrix.")
+![4&#45;x&#45;4-Produkt Matrix](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;x&#45;4-Produkt Matrix")
 
 Die Matrizen sind in vier 2 x 2-Matrizen partitioniert, die wie folgt definiert werden:
 
-![4&#45;von&#45;4-Matrix aufgeteilt in 2 eine&#45;von&#45;2 Sub&#45;Matrizen](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;von&#45;4-Matrix aufgeteilt in 2 eine&#45;von&#45;2 Sub&#45;Matrizen")
+![4&#45;x&#45;4 Matrix A in 2&#45;x&#45;2 Teil&#45;Matrizen partitioniert](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;x&#45;4 Matrix A in 2&#45;x&#45;2 Teil&#45;Matrizen partitioniert")
 
-![4&#45;von&#45;B-4-Matrix aufgeteilt in 2&#45;von&#45;2 Sub&#45;Matrizen](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;von&#45;B-4-Matrix aufgeteilt in 2&#45;von&#45;2 Sub&#45;Matrizen")
+![4&#45;x&#45;4 Matrix B in 2&#45;x&#45;2 Teil&#45;Matrizen partitioniert](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;x&#45;4 Matrix B in 2&#45;x&#45;2 Teil&#45;Matrizen partitioniert")
 
 Das Produkt von A und B kann nun wie folgt geschrieben und berechnet werden:
 
-![4&#45;von&#45;4-Matrix aufgeteilt in 2 A-B&#45;von&#45;2 Sub&#45;Matrizen](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;von&#45;4-Matrix aufgeteilt in 2 A-B&#45;von&#45;2 Sub&#45;Matrizen")
+![4&#45;x&#45;4 Matrix A B in 2&#45;x&#45;2 Teil&#45;Matrizen partitioniert](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;x&#45;4 Matrix A B in 2&#45;x&#45;2 Teil&#45;Matrizen partitioniert")
 
-Da es sich bei den Matrizen `a` bis `h` um 2 x 2-Matrizen handelt, sind alle Produkte und Summen aus ihnen ebenfalls 2 x 2-Matrizen. Außerdem folgt, dass das Produkt von A und B ist ein 4 x 4-Matrix an, wie erwartet. Um den Algorithmus schnell zu überprüfen, berechnen Sie den Wert des Elements in der ersten Zeile/ ersten Spalte im Produkt. In diesem Beispiel ist dies der Wert des Elements in der ersten Zeile/ersten Spalte von `ae + bg`. Sie müssen für jeden Begriff nur die erste Spalte/erste Zeile von `ae` und `bg` berechnen. Dieser Wert für `ae` ist `(1 * 1) + (2 * 5) = 11`. Der Wert für `bg` ist `(3 * 1) + (4 * 5) = 23`. Der endgültige Wert ist `11 + 23 = 34`. Dies ist korrekt.
+Da es sich bei den Matrizen `a` bis `h` um 2 x 2-Matrizen handelt, sind alle Produkte und Summen aus ihnen ebenfalls 2 x 2-Matrizen. Außerdem folgt, dass das Produkt von a und B wie erwartet eine 4 x 4-Matrix ist. Um den Algorithmus schnell zu überprüfen, berechnen Sie den Wert des Elements in der ersten Zeile/ ersten Spalte im Produkt. In diesem Beispiel ist dies der Wert des Elements in der ersten Zeile/ersten Spalte von `ae + bg`. Sie müssen für jeden Begriff nur die erste Spalte/erste Zeile von `ae` und `bg` berechnen. Dieser Wert für `ae` ist `(1 * 1) + (2 * 5) = 11`. Der Wert für `bg` ist `(3 * 1) + (4 * 5) = 23`. Der endgültige Wert ist `11 + 23 = 34`. Dies ist korrekt.
 
 Um diesen Algorithmus implementieren, verwendet der Code:
 
@@ -293,7 +293,7 @@ Um diesen Algorithmus implementieren, verwendet der Code:
 
    1. Multiplizieren Sie `locA` und `locB`, und fügen Sie die Ergebnisse in `product` ein.
 
-   1. Kopieren Sie die Elemente der Tile [0,1] der `a` in `locA`. Kopieren Sie die Elemente der Tile [1,0] der `b` in `locB`.
+   1. Kopieren Sie die Elemente der Kachel [0, 1] von `a` in `locA`. Kopieren Sie die Elemente der Kachel [1, 0] von `b` in `locB`.
 
    1. Multiplizieren Sie `locA` und `locB`, und fügen Sie sie den Ergebnissen hinzu, die bereits in `product` vorhanden sind.
 
@@ -305,10 +305,10 @@ Um diesen Algorithmus implementieren, verwendet der Code:
 
    In den Beispielen ohne AMP und ohne Tiling wird vom globalen Arbeitsspeicher aus auf jedes Elements von A und B viermal zugegriffen, um das Produkt zu berechnen. Im Tile-Beispiel wird auf jedes Element zweimal aus dem globalen Arbeitsspeicher und viermal aus dem `tile_static`-Speicher zugegriffen. Dies bedeutet keinen signifikanten Leistungsgewinn. Dies ist jedoch der Fall, wenn es sich bei A und B um 1024 x 1024-Matrizen und um Tilegrößen von 16 handelt. In diesem Fall würde jedes Element nur 16 Mal in den`tile_static`-Speicher kopiert und 1024 Mal aus dem`tile_static`-Arbeitsspeicher zugegriffen.
 
-1. Ändern die main-Methode aufrufen, die `MultiplyWithTiling` Methode, wie gezeigt.
+1. Ändern Sie die Main-Methode so, dass die `MultiplyWithTiling`-Methode aufgerufen wird (siehe).
 
    ```cpp
-   void main() {
+   int main() {
        MultiplyWithOutAMP();
        MultiplyWithAMP();
        MultiplyWithTiling();
@@ -316,9 +316,9 @@ Um diesen Algorithmus implementieren, verwendet der Code:
    }
    ```
 
-1. Drücken Sie die **STRG**+**F5** Tastenkombination mit dem Debuggen beginnen, und stellen Sie sicher, dass die Ausgabe richtig ist.
+1. Drücken Sie die Tastenkombination **STRG**+**F5** , um das Debugging zu starten und zu überprüfen, ob die Ausgabe korrekt ist.
 
-1. Drücken Sie die **Speicherplatz** Balken, um die Anwendung zu beenden.
+1. Drücken Sie die **LEERTASTE** , um die Anwendung zu beenden.
 
 ## <a name="see-also"></a>Siehe auch
 

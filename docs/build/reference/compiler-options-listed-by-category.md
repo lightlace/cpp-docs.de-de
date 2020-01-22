@@ -1,15 +1,15 @@
 ---
 title: Compileroptionen nach Kategorien sortiert
-ms.date: 08/08/2019
+ms.date: 01/08/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 8c99b2dd60e6c2266d5095a477ee4a5b2e0c8bd0
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 0734cdc6fb7d8b543c6415bfd6b4f98469703586
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685200"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518412"
 ---
 # <a name="compiler-options-listed-by-category"></a>Compileroptionen (nach Kategorie sortiert)
 
@@ -17,7 +17,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 
 ## <a name="optimization"></a>Optimierung
 
-|Option|Zweck|
+|-Option|Zweck|
 |------------|-------------|
 |[/O1](o1-o2-minimize-size-maximize-speed.md)|Erstellt kompakten Code.|
 |[/O2](o1-o2-minimize-size-maximize-speed.md)|Erstellt schnellen Code.|
@@ -33,7 +33,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 
 ## <a name="code-generation"></a>Codeerzeugung
 
-|Option|Zweck|
+|-Option|Zweck|
 |------------|-------------|
 |[/arch](arch-x86.md)|Verwendet SSE- oder SSE2-Anweisungen bei der Codeerzeugung. (nur x86)|
 |[/clr](clr-common-language-runtime-compilation.md)|Erzeugt eine Ausgabedatei, die auf der Common Language Runtime ausgeführt werden kann.|
@@ -64,6 +64,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Generiert schnelle Transzendente.|
 |[/QIfist](qifist-suppress-ftol.md)|Veraltet. Unterdrückt den Aufruf der `_ftol` -Hilfsfunktion, wenn eine Konvertierung von einem Gleitkommatyp zu einem ganzzahligen Typ erforderlich ist. (nur x86)|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Entfernt `fwait` -Befehle in `try` -Blöcken.|
+|[/QIntel-jcc-erratum](qintel-jcc-erratum.md)|Verringert die Auswirkungen der Intel JCC Erratum-mikrocodeaktualisierung auf die Leistung.|
 |[/Qpar](qpar-auto-parallelizer.md)|Ermöglicht automatische Parallelisierung von Schleifen.|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|Aktiviert die Berichterstellungsebenen für die automatische Parallelisierung.|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Verwendet ganzzahlige Verschiebungsanweisungen für Gleitkommawerte und deaktiviert bestimmte Gleitkomma-Ladeoptimierungen.|
@@ -74,7 +75,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 
 ## <a name="output-files"></a>Ausgabedateien
 
-|Option|Zweck|
+|-Option|Zweck|
 |------------|-------------|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|Verarbeitet Dokumentationskommentare zu einer XML-Datei.|
 |[/FA](fa-fa-listing-file.md)|Konfiguriert eine Assemblylistendatei.|
@@ -89,7 +90,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 
 ## <a name="preprocessor"></a>Präprozessor
 
-|Option|Zweck|
+|-Option|Zweck|
 |------------|-------------|
 |[/AI](ai-specify-metadata-directories.md)|Gibt das zu durchsuchende Verzeichnis an, um Dateiverweise aufzulösen, die an die [#using](../../preprocessor/hash-using-directive-cpp.md) -Direktive übergeben wurden.|
 |[/C](c-preserve-comments-during-preprocessing.md)|Behält Kommentare beim Präprozessorlauf bei|
@@ -105,9 +106,9 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/u](u-u-undefine-symbols.md)|Entfernt alle vorkompilierten Makros.|
 |[/X](x-ignore-standard-include-paths.md)|Ignoriert das standardmäßige Includeverzeichnis.|
 
-## <a name="language"></a>Sprache
+## <a name="language"></a>Language
 
-|Option|Zweck|
+|-Option|Zweck|
 |------------|-------------|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|Die constexpr-Auswertung zum Zeitpunkt der Kompilierung steuern.|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|Ermöglicht [#pragma omp](../../preprocessor/omp.md) im Quellcode.|
@@ -126,13 +127,13 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/ZI](z7-zi-zi-debug-information-format.md)|Fügt Debuginformationen in eine Programmdatenbank ein, die mit Bearbeiten und Fortfahren kompatibel ist. (nur x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Erzeugt vollständige Debuginformationen.|
 |[/Zl](zl-omit-default-library-name.md)|Entfernt den Standardbibliotheksnamen aus der OBJ-Datei.|
-|[/Zp](zp-struct-member-alignment.md) *n*|Komprimiert Strukturmember.|
+|[/ZP](zp-struct-member-alignment.md) *n*|Komprimiert Strukturmember.|
 |[/Zs](zs-syntax-check-only.md)|Prüft nur die Syntax.|
 |[/ZW](zw-windows-runtime-compilation.md)|Erzeugt eine Ausgabedatei, die auf dem Windows-Runtime ausgeführt wird.|
 
 ## <a name="linking"></a>Verknüpfen
 
-|Option|Zweck|
+|-Option|Zweck|
 |------------|-------------|
 |[/F](f-set-stack-size.md)|Legt die Stapelgröße fest.|
 |[/LD](md-mt-ld-use-run-time-library.md)|Erstellt eine Dynamic Link Library (DLL).|
@@ -146,7 +147,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 
 ## <a name="miscellaneous"></a>Verschiedenes
 
-|Option|Zweck|
+|-Option|Zweck|
 |------------|-------------|
 |[/?](help-compiler-command-line-help.md)|Listet die Compileroptionen auf.|
 |[@](at-specify-a-compiler-response-file.md)|Legt eine Antwortdatei fest.|
@@ -200,14 +201,14 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 
 Experimentelle Optionen können nur von bestimmten Versionen des Compilers unterstützt werden und können sich in unterschiedlichen Compilerversionen unterschiedlich verhalten. Häufig ist die beste oder einzige Dokumentation für experimentelle Optionen im [ C++ Microsoft Team Blog](https://devblogs.microsoft.com/cppblog/).
 
-|Option|Zweck|
+|-Option|Zweck|
 |------------|-------------|
 |[/experimental: Modul](experimental-module.md)|Ermöglicht die Unterstützung von experimentellen Modulen.|
 |[/experimental: Präprozessor](experimental-preprocessor.md)|Aktiviert die experimentelle Unterstützung für den Präprozessor.|
 
 ## <a name="deprecated-and-removed-compiler-options"></a>Veraltete und entfernte Compileroptionen
 
-|Option|Zweck|
+|-Option|Zweck|
 |------------|-------------|
 |[/clr:noAssembly](clr-common-language-runtime-compilation.md)|Veraltet. Verwenden Sie stattdessen [/LN (Create MSIL Module)](ln-create-msil-module.md) .|
 |[/Fr](fr-fr-create-dot-sbr-file.md)|Veraltet. Erstellt eine Browseinformationsdatei ohne lokale Variablen.|

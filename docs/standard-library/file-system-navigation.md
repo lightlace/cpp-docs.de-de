@@ -2,18 +2,18 @@
 title: Dateisystemnavigation
 ms.date: 11/04/2016
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-ms.openlocfilehash: cfdc789daab5b476566f2072109d23fb9310094f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea9bf44a11087180d3bd02c5dcd5d1acfa4b9e57
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405195"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518503"
 ---
 # <a name="file-system-navigation"></a>Dateisystemnavigation
 
-Die \<Filesystem > Header implementiert die C++ Datei System technische Spezifikation ISO/IEC TS 18822:2015 (endgültige Fassung: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) und enthält Typen und Funktionen, mit denen Sie plattformunabhängigen Code für die Navigation im Dateisystem schreiben können. Da er plattformübergreifend ist, enthält er APIs, die für Windows-Systeme nicht relevant sind. Beispielsweise bedeutet dies, dass `is_fifo(const path&)` gibt immer **"false"** auf Windows.
+Der Header \<filesystem> implementiert die technische Dateisystemspezifikation für C++ ISO/IEC TS 18822:2015 (endgültige Fassung: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) und enthält Typen und Funktionen, mit denen Sie plattformunabhängigen Code für die Navigation im Dateisystem schreiben können. Da er plattformübergreifend ist, enthält er APIs, die für Windows-Systeme nicht relevant sind. Dies bedeutet beispielsweise, dass `is_fifo(const path&)` bei Windows immer **false** zurückgibt.
 
-## <a name="overview"></a>Übersicht
+## <a name="overview"></a>Übersicht über
 
 Verwenden Sie die \<filesystem>-APIs für die folgenden Aufgaben:
 
@@ -88,7 +88,7 @@ wstring DisplayPathInfo()
     return wos.str();
 }
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     wcout << DisplayPathInfo() << endl;
     // wcout << ComparePaths() << endl; // see following example
@@ -167,7 +167,7 @@ Ein `path` -Objekt ist implizit in `std::wstring` oder `std::string`konvertibel.
 using namespace std;
 using namespace std::experimental::filesystem;
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     wchar_t* p = L"C:/Users/Public/Documents";
     path filePath(p);
