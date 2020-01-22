@@ -2,12 +2,12 @@
 title: Konfigurieren eines C++ Projekts unter Linux in Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 1cfaeb6611a27af498325739271d4dba38581dd6
-ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
+ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71960661"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031366"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurieren eines Linux-Projekts
 
@@ -95,6 +95,9 @@ Da die gesamte Kompilierung auf einem Remotecomputer (oder WSL) erfolgt, wurden 
 ## <a name="remote_intellisense"></a> IntelliSense für Header auf Remotesystemen
 
 Beim Hinzufügen einer neuen Verbindung im **Verbindungs-Manager** erkennt Visual Studio automatisch die Includeverzeichnisse für den Compiler auf dem Remotesystem. Visual Studio komprimiert diese Dateien dann und kopiert sie in ein Verzeichnis auf dem lokalen Windows-Computer. Wenn Sie anschließend diese Verbindung in Visual Studio oder CMake nutzen, wird mithilfe der Header in diesen Verzeichnissen IntelliSense bereitgestellt.
+
+> [!NOTE]
+> In Visual Studio 2019, Version 16.5 und höher, wurde die Remoteheaderkopie optimiert. Header werden nun bedarfsgesteuert kopiert, wenn ein Linux-Projekt geöffnet oder CMake für ein Linux-Ziel konfiguriert wird. Der Kopiervorgang erfolgt pro Projekt und im Hintergrund, basierend auf den angegebenen Compilern des Projekts. Weitere Informationen finden Sie unter [Improvements to Accuracy and Performance of Linux IntelliSense](https://devblogs.microsoft.com/cppblog/improvements-to-accuracy-and-performance-of-linux-intellisense/) (Verbesserung der Genauigkeit und Leistung von Linux IntelliSense).
 
 Diese Funktion hängt davon ab, ob auf dem Linux-Computer Zip installiert ist. Sie können Zip mit diesem apt-get-Befehl installieren:
 
