@@ -1,14 +1,13 @@
 ---
 title: Herstellen einer Verbindung mit dem Linux-Zielsystem in Visual Studio
 description: Informationen zum Herstellen einer Verbindung mit einem Linux-Remotecomputer oder einem Windows-Subsystem für Linux über ein Visual Studio C++-Projekt
-ms.date: 11/09/2019
-ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 4069979100c3b71a32e90ad72fb334d21a226e64
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.date: 01/17/2020
+ms.openlocfilehash: d0065b63d7a81d3ae3d68b26184c88aca77f601c
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755277"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518217"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Herstellen einer Verbindung mit dem Linux-Zielsystem in Visual Studio
 
@@ -18,17 +17,58 @@ Die Unterstützung für Linux ist in Visual Studio 2017 und höher verfügbar.
 
 ::: moniker-end
 
+::: moniker range="vs-2017"
+
+Sie können ein Linux-Projekt für einen Remotecomputer oder ein Windows-Subsystem für Linux (WSL) konfigurieren. Für Remotecomputer und WSL müssen Sie in Visual Studio 2017 eine Remoteverbindung einrichten.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+Sie können ein Linux-Projekt für einen Remotecomputer oder ein Windows-Subsystem für Linux (WSL) konfigurieren. Für einen Remotecomputer müssen Sie in Visual Studio eine Remoteverbindung einrichten. Um eine Verbindung mit WSL herzustellen, fahren Sie mit dem Abschnitt [Herstellen einer Verbindung mit WSL](#connect-to-wsl) fort.
+
+::: moniker-end
+
 ::: moniker range=">=vs-2017"
 
-Sie können ein Linux-Projekt für einen Remotecomputer oder ein Windows-Subsystem für Linux (WSL) konfigurieren. Für Remotecomputer und WSL in Visual Studio 2017 müssen Sie eine Remoteverbindung einrichten.
+Wenn Sie eine Remoteverbindung verwenden, erstellt Visual Studio C++-Linux-Projekte auf dem Remotecomputer. Es spielt keine Rolle, ob es sich um einen physischen Computer, eine VM in der Cloud oder um WSL handelt.
+Um das Projekt zu erstellen, kopiert Visual Studio den Quellcode auf Ihren Linux-Remotecomputer. Anschließend wird der Code entsprechend der in Visual Studio ausgewählten Einstellungen kompiliert.
 
-## <a name="connect-to-a-remote-linux-computer"></a>Herstellen einer Verbindung mit einem Linux-Remotecomputer
+::: moniker-end
 
-Beim Erstellen eines C++-Linux-Projekts für ein Linux-Remotesystem (virtueller oder physischer Computer) wird Linux-Quellcode auf Ihren Linux-Remotecomputer kopiert. Anschließend wird er entsprechend der in Visual Studio ausgewählten Einstellungen kompiliert.
+::: moniker range="vs-2019"
 
-So richten Sie die Remoteverbindung ein:
+> [!NOTE]
+> Visual Studio 2019 Version 16.5 oder höher unterstützt auch sichere, mit FIPS 140-2 (Federal Information Processing Standard) kompatible kryptografische Verbindungen mit Linux-Systemen für Remoteentwicklung. Um eine mit FIPS kompatible Verbindung zu verwenden, führen Sie stattdessen die Schritte unter [Einrichten einer FIPS-konformen sicheren Linux-Remoteentwicklung](set-up-fips-compliant-secure-remote-linux-development.md) aus.
 
-1. Erstellen Sie das Projekt zum ersten Mal. Sie können stattdessen aber auch manuell einen neuen Eintrag erstellen. Klicken Sie auf **Extras > Optionen**, öffnen Sie den Knoten **Plattformübergreifend > Verbindungs-Manager**, und klicken Sie dann auf die Schaltfläche **Hinzufügen**.
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
+## <a name="set-up-the-ssh-server-on-the-remote-system"></a>Einrichten des SSH-Servers auf dem Remotesystem
+
+Wenn SSH nicht bereits auf Ihrem Linux-System eingerichtet ist und ausgeführt wird, führen Sie die folgenden Schritte aus, um SSH zu installieren. In den Beispielen in diesem Artikel wird Ubuntu 18.04 LTS mit OpenSSH Server Version 7.6 verwendet. Allerdings sollten die Anweisungen für jede Distribution identisch sein, die eine moderate aktuelle Version von OpenSSH verwendet.
+
+1. Installieren und starten Sie auf dem Linux-System den OpenSSH-Server:
+
+   ```bash
+   sudo apt install openssh-server
+   sudo service ssh start
+   ```
+
+1. Wenn Sie möchten, dass der SSH-Server beim Start des Systems automatisch gestartet wird, aktivieren Sie ihn mithilfe von systemctl:
+
+   ```bash
+   sudo systemctl enable ssh
+   ```
+
+## <a name="set-up-the-remote-connection"></a>Einrichten der Remoteverbindung
+
+1. Klicken Sie in Visual Studio in der Menüleiste auf **Extras > Optionen**, um das Dialogfeld **Optionen** zu öffnen. Wählen Sie dann **Plattformübergreifend > Verbindungs-Manager** aus, um das Dialogfeld „Verbindungs-Manager“ zu öffnen.
+
+   Wenn Sie zuvor noch keine Verbindung in Visual Studio eingerichtet haben, öffnet Visual Studio das Dialogfeld „Verbindungs-Manager“, wenn Sie das Projekt erstmals erstellen.
+
+1. Wählen Sie im Dialogfeld „Verbindungs-Manager“ die Schaltfläche **Hinzufügen** aus, um eine neue Verbindung hinzuzufügen.
 
    ![Verbindungs-Manager](media/settings_connectionmanager.png)
 
@@ -38,7 +78,7 @@ So richten Sie die Remoteverbindung ein:
 
 1. Geben Sie die folgenden Informationen ein:
 
-   | Eingabe | BESCHREIBUNG
+   | Eingabe | Beschreibung
    | ----- | ---
    | **Hostname**           | Name oder IP-Adresse des Zielgeräts
    | **Port**                | Port, auf dem der SSH-Dienst ausgeführt wird, in der Regel Port 22
@@ -48,19 +88,11 @@ So richten Sie die Remoteverbindung ein:
    | **Datei für den privaten Schlüssel**    | Für die SSH-Verbindung erstellte private Schlüsseldatei
    | **Passphrase**          | Passphrase mit dem zuvor ausgewählten privaten Schlüssel
 
-   Sie können entweder ein Kennwort oder eine Schlüsseldatei und eine Passphrase zur Authentifizierung verwenden. In vielen Entwicklungsszenarien ist die Kennwortauthentifizierung ausreichend. Wenn Sie lieber eine öffentliche/private Schlüsseldatei verwenden möchten, können Sie eine neue Datei erstellen oder [eine vorhandene wiederverwenden](https://security.stackexchange.com/questions/10203/reusing-private-public-keys). Derzeit werden nur RSA- und DSA-Schlüssel unterstützt.
-
-   Mit den folgenden Schritten können Sie eine private RSA-Schlüsseldatei erstellen:
-
-   1. Erstellen Sie mit `ssh-keygen -t rsa` ein SSH-Schlüsselpaar auf dem Windows-Computer. Mit diesem Befehl wird ein öffentlicher und einer privater Schlüssel erstellt. Standardmäßig wird der Schlüssel unter `C:\Users\%USERNAME%\.ssh` platziert, wobei die Namen `id_rsa.pub` und `id_rsa` verwendet werden.
-
-   1. Kopieren Sie den öffentlichen Schlüssel von Windows auf den Linux-Computer: `scp -p C:\Users\%USERNAME%\.ssh\id_rsa.pub user@hostname`.
-
-   1. Fügen Sie den Schlüssel auf dem Linux-System zur Liste der autorisierten Schlüssel hinzu (und stellen Sie sicher, dass die Datei die richtigen Berechtigungen besitzt): `cat ~/id_rsa.pub >> ~/.ssh/authorized_keys; chmod 600 ~/.ssh/authorized_keys`
+   Sie können entweder ein Kennwort oder eine Schlüsseldatei und eine Passphrase zur Authentifizierung verwenden. In vielen Entwicklungsszenarien ist Kennwortauthentifizierung ausreichend, aber Schlüsseldateien sind sicherer. Wenn Sie bereits über ein Schlüsselpaar verfügen, ist es möglich, dieses wiederzuverwenden. Zurzeit werden von Visual Studio nur RSA- und DSA-Schlüssel für Remoteverbindungen unterstützt.
 
 1. Klicken Sie auf die Schaltfläche **Verbinden**, um eine Verbindung mit dem Remotecomputer herzustellen.
 
-   Wenn die Verbindung erfolgreich hergestellt wird, beginnt Visual Studio damit, IntelliSense zur Verwendung der Remoteheader zu konfigurieren. Weitere Informationen finden Sie unter [IntelliSense für Header auf Remotesystemen](configure-a-linux-project.md#remote_intellisense).
+   Wenn die Verbindung erfolgreich hergestellt wird, konfiguriert Visual Studio IntelliSense für die Verwendung der Remoteheader. Weitere Informationen finden Sie unter [IntelliSense für Header auf Remotesystemen](configure-a-linux-project.md#remote_intellisense).
 
    Wenn die Verbindung nicht erfolgreich hergestellt wird, werden die Eintragsfelder, die geändert werden müssen, rot umrandet.
 
@@ -72,13 +104,23 @@ So richten Sie die Remoteverbindung ein:
 
    ::: moniker range="vs-2019"
 
-   Navigieren Sie zu **Tools > Optionen > Plattformübergreifend > Protokollierung**, um zur Unterstützung der Fehlerbehebung bei Verbindungsproblemen die Protokollierung zu aktivieren:
+## <a name="logging-for-remote-connections"></a>Protokollierung für Remoteverbindungen
+
+   Sie können Protokollierung aktivieren, um Verbindungsprobleme zu beheben. Wählen Sie in der Menüleiste **Extras > Optionen** aus. Wählen Sie im Dialogfeld **Optionen** **Plattformübergreifend > Protokollierung** aus:
 
    ![Remoteprotokollierung](media/remote-logging-vs2019.png)
 
    Protokolle enthalten Verbindungen, alle an den Remotecomputer gesendeten Befehle (Text, Exitcode und Ausführungszeit) sowie die gesamte Ausgabe von Visual Studio an die Shell. Die Protokollierung funktioniert für alle plattformübergreifenden CMake-Projekte oder MSBuild-basierten Linux-Projekte in Visual Studio.
 
-   Sie können die Ausgabe in eine Datei oder in den Bereich **Plattformübergreifende Protokollierung** im Ausgabefenster konfigurieren. Bei MSBuild-basierten Linux-Projekten werden MSBuild-Befehle, die an den Remotecomputer gesendet werden, nicht an das **Ausgabefenster** weitergeleitet, weil sie prozessextern gesendet werden. Stattdessen werden sie in eine Datei mit dem Präfix „msbuild_“ protokolliert.
+   Sie können konfigurieren, ob die Ausgabe in eine Datei oder in den Bereich **Plattformübergreifende Protokollierung** im Ausgabefenster erfolgen soll. Bei MSBuild-basierten Linux-Projekten werden MSBuild-Befehle, die an den Remotecomputer gesendet werden, nicht an das **Ausgabefenster** weitergeleitet, weil sie prozessextern gesendet werden. Stattdessen werden sie in eine Datei mit dem Präfix „msbuild_“ protokolliert.
+
+## <a name="command-line-utility-for-the-connection-manager"></a>Befehlszeilenhilfsprogramm für den Verbindungs-Manager  
+
+**Visual Studio 2019 Version 16.5 oder höher**: „ConnectionManager.exe“ ist ein Befehlszeilenhilfsprogramm zum Verwalten von Remoteentwicklungsverbindungen außerhalb von Visual Studio. Es ist gut für Aufgaben wie die Bereitstellung eines neuen Entwicklungscomputers geeignet. Sie können es auch zum Einrichten von Visual Studio für Continuous Integration verwenden. Beispiele für den und eine umfassende Referenz zum ConnectionManager-Befehl finden Sie unter [ConnectionManager-Referenz](connectionmanager-reference.md).  
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 ## <a name="tcp-port-forwarding"></a>TCP-Portweiterleitung
 
@@ -94,9 +136,9 @@ Die CMake-Unterstützung von Visual Studio verwendet „rsync“ ebenfalls, um Q
 
 „gdbserver“ kann zum Debuggen auf eingebetteten Geräten verwendet werden. Wenn Sie die TCP-Portweiterleitung nicht aktivieren können, müssen Sie „gdb“ für alle Remotedebuggingszenarios verwenden. Beim Debuggen von Projekten in einem Remotesystem wird standardmäßig „gdb“ verwendet.
 
-::: moniker-end
-
 ## <a name="connect-to-wsl"></a>Herstellen einer Verbindung mit WSL
+
+::: moniker-end
 
 ::: moniker range="vs-2017"
 
