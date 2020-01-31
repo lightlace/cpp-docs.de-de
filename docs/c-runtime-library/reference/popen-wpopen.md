@@ -1,6 +1,7 @@
 ---
 title: _popen, _wpopen
-ms.date: 11/04/2016
+description: Ein Verweis auf die Funktionen der Microsoft C-Lauf Zeit Bibliothek (CRT) _popen und _wpopen.
+ms.date: 01/28/2020
 api_name:
 - _popen
 - _wpopen
@@ -36,12 +37,21 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-ms.openlocfilehash: 0e58ffd523c6919d70c68454f3547736afdef565
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+no-loc:
+- _popen
+- _wpopen
+- _tpopen
+- _doserrno
+- errno
+- _sys_errlist
+- _sys_nerr
+- EINVAL
+ms.openlocfilehash: 68531256fd688b50b659c885635ffa17d17773a5
+ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950999"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76894319"
 ---
 # <a name="_popen-_wpopen"></a>_popen, _wpopen
 
@@ -63,23 +73,23 @@ FILE *_wpopen(
 );
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*command*<br/>
+*Befehls*\
 Befehl, der ausgeführt werden soll.
 
-*mode*<br/>
+*Modus*\
 Modus des zurückgegebenen Streams.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Stream zurück, der einem Ende der erstellten Pipe zugeordnet ist. Das andere Ende der Pipe ist der Standardeingabe oder Standardausgabe des erzeugten Befehls zugeordnet. Die Funktionen geben bei einem Fehler **NULL** zurück. Wenn der Fehler ein ungültiger Parameter ist, z. b. wenn der *Befehl* oder der *Modus* ein NULL-Zeiger ist oder der *Modus* kein gültiger Modus ist, wird **errno** auf **EINVAL**festgelegt. Gültige Modi können Sie dem Abschnitt mit den Hinweisen entnehmen.
+Gibt einen Stream zurück, der einem Ende der erstellten Pipe zugeordnet ist. Das andere Ende der Pipe ist der Standardeingabe oder Standardausgabe des erzeugten Befehls zugeordnet. Die Funktionen geben bei einem Fehler **NULL** zurück. Wenn der Fehler durch einen ungültigen Parameter verursacht wird, wird **errno** auf **EINVAL**festgelegt. Gültige Modi können Sie dem Abschnitt mit den Hinweisen entnehmen.
 
 Weitere Informationen über diese und andere Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_popen** -Funktion erstellt eine Pipe und führt asynchron eine generierte Kopie des Befehls Prozessors mit dem angegebenen Zeichen folgen *Befehl*aus. Die Zeichenfolge *mode* gibt den angeforderten Zugriffstyp wie folgt an.
+Die **_popen** -Funktion erstellt eine Pipe. Anschließend führt Sie asynchron eine generierte Kopie des Befehls Prozessors aus und verwendet den *Befehl* als Befehlszeile. Die Zeichenfolge *mode* gibt den angeforderten Zugriffstyp wie folgt an.
 
 |Zugriffsmodus|Beschreibung|
 |-|-|
@@ -99,14 +109,14 @@ Die **_popen** -Funktion erstellt eine Pipe und führt asynchron eine generierte
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tpopen**|**_popen**|**_popen**|**_wpopen**|
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_popen**|\<stdio.h>|
 |**_wpopen**|\<stdio.h> oder \<wchar.h>|
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Weitere Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotheken
 
@@ -141,7 +151,7 @@ int main( void )
 
    while(fgets(psBuffer, 128, pPipe))
    {
-      printf(psBuffer);
+      puts(psBuffer);
    }
 
    /* Close pipe and print return value of pPipe. */
@@ -156,9 +166,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Beispielausgabe
-
-Bei dieser Ausgabe wird davon ausgegangen, dass das aktuelle Verzeichnis nur eine Datei mit der Dateierweiterung .c enthält.
+Bei dieser Ausgabe wird davon ausgegangen, dass sich im aktuellen Verzeichnis nur eine Datei mit der Dateinamenerweiterung `.c` befindet.
 
 ```Output
 Volume in drive C is CDRIVE
@@ -175,6 +183,6 @@ Process returned 0
 
 ## <a name="see-also"></a>Siehe auch
 
-[Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_pclose](pclose.md)<br/>
-[_pipe](pipe.md)<br/>
+[Prozess-und Umgebungs Steuerungs](../../c-runtime-library/process-and-environment-control.md)\
+[_pclose](pclose.md)\
+[_pipe](pipe.md)
