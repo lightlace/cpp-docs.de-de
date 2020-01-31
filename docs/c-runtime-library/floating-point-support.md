@@ -8,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: 1d03333dee12989af5897c34ba96484930a39673
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
-ms.translationtype: HT
+ms.openlocfilehash: a0ee21378a6feb7ada39dc00f0e181672470e231
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703128"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821511"
 ---
 # <a name="math-and-floating-point-support"></a>Mathematische Unterstützung und Gleitkommaunterstützung
 
@@ -25,7 +25,7 @@ Viele der Gleitkommafunktionen in der mathematischen Bibliothek haben unterschie
 
 ## <a name="supported-math-and-floating-point-routines"></a>Unterstützte mathematische und Gleitkommaroutinen
 
-|-Routine zurückgegebener Wert|Verwendung|
+|-Routine zurückgegebener Wert|Mit|
 |-|-|
 [abs, labs, llabs, _abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Berechnet den absoluten Wert eines Ganzzahltyps
 [acos, acosf, acosl](../c-runtime-library/reference/acos-acosf-acosl.md)|Berechnet den Arkuskosinus
@@ -72,7 +72,7 @@ Viele der Gleitkommafunktionen in der mathematischen Bibliothek haben unterschie
 [floor, floorf, floorl](../c-runtime-library/reference/floor-floorf-floorl.md)|Berechnet den Tiefstwert
 [fma, fmaf, fmal](../c-runtime-library/reference/fma-fmaf-fmal.md)|Berechnet eine Fused-multiply-add-Operation
 [fmax, fmaxf, fmaxl](../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)|Berechnet die maximale Anzahl der Argumente
-[fmin, fminf, fminl](../c-runtime-library/reference/fmin-fminf-fminl.md)|Berechnet die minimale Anzahl der Argumente
+[fmin, fminf, fminl](../c-runtime-library/reference/fmin-fminf-fminl.md)|Berechnet den minimalen der Argumente.
 [fmod, fmodf, fmodl](../c-runtime-library/reference/fmod-fmodf.md)|Berechnet den Gleitkommarest
 [_fpclass, _fpclassf](../c-runtime-library/reference/fpclass-fpclassf.md)|Gibt die Klassifizierung eines Gleitkommawerts zurück
 [fpclassify](../c-runtime-library/reference/fpclassify.md)|Gibt die Klassifizierung eines Gleitkommawerts zurück
@@ -127,7 +127,7 @@ Viele der Gleitkommafunktionen in der mathematischen Bibliothek haben unterschie
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Berechnet die Quadratwurzel
 [_status87, _statusfp, _statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|Ruft das Gleitkommastatuswort ab
 [strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|Konvertiert eine Zeichenfolge in einen **float**-Wert.
-[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Konvertiert eine Zeichenfolge in einen Wert von **long** **double**
+[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Konvertiert eine Zeichenfolge in einen **Long** **Double** -
 [tan, tanf, tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|Berechnet den Tangens
 [tanh, tanhf, tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Berechnet den hyperbolischen Tangens
 [tgamma, tgammaf, tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|Berechnet die Gammafunktion

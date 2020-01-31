@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: d37e6fdd2521f07728305bfbf5441cebb363030a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10fb053ed97aaca0f4a31e3843d96aa194d8949d
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398900"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821687"
 ---
 # <a name="callback-function-wrl"></a>Callback-Funktion (WRL)
 
@@ -189,7 +189,7 @@ ComPtr<TDelegateInterface> Callback(
 );
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *TDelegateInterface*<br/>
 Ein Vorlagenparameter, der die Schnittstelle des Delegaten angibt, der beim Eintreten eines Ereignisses aufgerufen wird.
@@ -222,7 +222,7 @@ Ein Vorlagenparameter, der den Typ des sechsten Rückrufmethodenarguments angibt
 Ein Vorlagenparameter, der den Typ des siebten Rückrufmethodenarguments angibt.
 
 *TArg8*<br/>
-Ein Vorlagenparameter, der den Typ des achten Rückrufmethodenarguments angibt.
+Ein Vorlagen Parameter, der den Typ des achten Rückruf Methoden Arguments angibt.
 
 *TArg9*<br/>
 Ein Vorlagenparameter, der den Typ des neunten Rückrufmethodenarguments angibt.
@@ -233,7 +233,7 @@ Ein Objekt, das das Rückrufobjekt und seine Memberfunktion darstellt.
 *object*<br/>
 Das Objekt, dessen Memberfunktion beim Eintreten eines Ereignisses aufgerufen wird.
 
-*method*<br/>
+*anzuwenden*<br/>
 Die Memberfunktion, die beim Eintreten eines Ereignisses aufgerufen wird.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -242,11 +242,11 @@ Ein Objekt, dessen Memberfunktion die angegebene Rückrufmethode ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Basis eines Delegatobjekts muss `IUnknown`, nicht `IInspectable`.
+Die Basis eines Delegatobjekts muss `IUnknown`und nicht `IInspectable`sein.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
-**Header:** event.h
+**Header:** Event. h
 
 **Namespace:** Microsoft::WRL
 

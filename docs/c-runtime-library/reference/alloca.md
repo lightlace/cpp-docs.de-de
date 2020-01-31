@@ -26,12 +26,12 @@ helpviewer_keywords:
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-ms.openlocfilehash: 2212f9e40c78932b63eebfc221ad2f07fa3d3f9d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 77ce6e0cdb5e1ad3f5317989c7804abc5aed4e69
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943698"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821433"
 ---
 # <a name="_alloca"></a>_alloca
 
@@ -45,37 +45,37 @@ void *_alloca(
 );
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *size*<br/>
 Bytes, die vom Stapel zugeordnet werden.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **_alloca** -Routine gibt einen **void** -Zeiger auf den zugeordneten Speicherplatz zurück, der für die Speicherung eines beliebigen Objekt Typs geeignet ist. Wenn *size* gleich 0 ist, ordnet **_alloca** ein Element der Länge 0 zu und gibt einen gültigen Zeiger auf dieses Element zurück.
+Die **_alloca** -Routine gibt einen **void** -Zeiger auf den zugeordneten Speicherplatz zurück, der für die Speicherung eines beliebigen Objekt Typs geeignet ist. Wenn die *Größe* 0 ist, weist **_alloca** ein Element der Länge 0 zu und gibt einen gültigen Zeiger auf dieses Element zurück.
 
 Eine Stapelüberlaufausnahme wird generiert, wenn der Speicherplatz nicht zugeordnet werden kann. Die Stapelüberlaufausnahme ist keine C++-Ausnahme, sondern eine strukturierte Ausnahme. Sie müssen anstelle der C++-Ausnahmebehandlung die [Strukturierte Ausnahmebehandlung](../../cpp/structured-exception-handling-c-cpp.md) (Structured Exception Handling, SEH) verwenden.
 
 ## <a name="remarks"></a>Hinweise
 
-**_alloca** ordnet die *Größe* von Bytes aus dem Programm Stapel zu. Der zugewiesene Speicherplatz wird automatisch freigegeben, wenn die aufrufende Funktion beendet wird (nicht, wenn die Zuordnung lediglich den Gültigkeitsbereich verlässt). Übergeben Sie daher den von **_alloca** zurückgegebenen Zeiger Wert nicht als Argument an [Free](free.md).
+**_alloca** weist die *Größe* von Bytes aus dem Programm Stapel zu. Der zugewiesene Speicherplatz wird automatisch freigegeben, wenn die aufrufende Funktion beendet wird (nicht, wenn die Zuordnung lediglich den Gültigkeitsbereich verlässt). Übergeben Sie daher nicht den von **_alloca** zurückgegebenen Zeiger Wert als Argument an [Free](free.md).
 
-Es gibt Einschränkungen beim expliziten Aufrufen von **_alloca** in einem Ausnahmehandler (eh). EH-Routinen, die auf x86-Klassen-Prozessoren ausgeführt werden, arbeiten in Ihrem eigenen Arbeitsspeicher Rahmen: Sie führen ihre Aufgaben im Speicherbereich aus, der nicht auf dem aktuellen Speicherort des Stapel Zeigers der einschließenden Funktion basiert. Die am häufigsten verwendeten Implementierungen umfassen die strukturierte Windows NT-Ausnahmebehandlung (SEH) und C++-Catch-Klauselausdrücke. Daher führt das explizite Aufrufen von **_alloca** in einem der folgenden Szenarien zu einem Programmfehler während der Rückgabe an die aufrufenden eh-Routine:
+Es gibt Einschränkungen beim expliziten Aufrufen von **_alloca** in einem Ausnahmehandler (eh). EH-Routinen, die auf x86-Klasse-Prozessoren ausgeführt werden, arbeiten in ihrem eigenen Speicherrahmen: Sie führen Ihre Tasks im Speicherplatz aus, der nicht auf der aktuellen Position des Stapelzeigers der einschließenden Funktion basiert. Die am häufigsten verwendeten Implementierungen umfassen die strukturierte Windows NT-Ausnahmebehandlung (SEH) und C++-Catch-Klauselausdrücke. Daher führt das explizite Aufrufen von **_alloca** in einem der folgenden Szenarien zu einem Programmfehler während der Rückgabe an die aufrufenden eh-Routine:
 
-- Ausnahme Filter Ausdruck für Windows NT-SEH:`__except ( _alloca() )`
+- Ausnahme Filter Ausdruck für Windows NT SEH: `__except ( _alloca() )`
 
-- Abschließender Ausnahmehandler für Windows NT SEH:`__finally { _alloca() }`
+- Abschließender Ausnahmehandler für Windows NT SEH: `__finally { _alloca() }`
 
 - C++-EH-Catch-Klauselausdruck
 
-**_Alloca** kann jedoch direkt innerhalb einer eh-Routine oder von einem von der Anwendung bereitgestellten Rückruf aufgerufen werden, der von einem der zuvor aufgelisteten eh-Szenarien aufgerufen wird.
+**_Alloca** können jedoch direkt innerhalb einer eh-Routine oder von einem von der Anwendung bereitgestellten Rückruf aufgerufen werden, der von einem der zuvor aufgelisteten eh-Szenarien aufgerufen wird.
 
 > [!IMPORTANT]
-> Wenn in Windows XP **_alloca** innerhalb eines try/catch-Blocks aufgerufen wird, müssen Sie [_resetstkoflw](resetstkoflw.md) im catch-Block aufrufen.
+> Wenn **_alloca** in Windows XP innerhalb eines try/catch-Blocks aufgerufen wird, müssen Sie [_resetstkoflw](resetstkoflw.md) im catch-Block aufrufen.
 
-Zusätzlich zu den oben genannten Einschränkungen kann **_alloca** nicht in **__except** -Blöcken verwendet werden, wenn die Option[/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) verwendet wird. Weitere Informationen finden Sie unter [/clr Restrictions](../../build/reference/clr-restrictions.md).
+Zusätzlich zu den oben genannten Einschränkungen können **_alloca** bei Verwendung der Option[/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) nicht in **__except** Blöcken verwendet werden. Weitere Informationen finden Sie unter [/clr Restrictions](../../build/reference/clr-restrictions.md).
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
@@ -119,7 +119,7 @@ int main()
         }
     }
 
-    // If an exception occured with the _alloca function
+    // If an exception occurred with the _alloca function
     __except( GetExceptionCode() == STATUS_STACK_OVERFLOW )
     {
         printf_s("_alloca failed!\n");
@@ -141,7 +141,7 @@ Allocated 1000 bytes of stack at 0x0012FB50
 
 ## <a name="see-also"></a>Siehe auch
 
-[Speicherreservierung](../../c-runtime-library/memory-allocation.md)<br/>
+[Speicherbelegung](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
 [malloc](malloc.md)<br/>
 [realloc](realloc.md)<br/>

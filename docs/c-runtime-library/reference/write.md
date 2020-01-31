@@ -26,12 +26,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: 2c483df8e07b9496a0a22c1a1ebccf2b40d129cb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5eaee64c1bf6ad4b4d59c3a7b1a1434741e74454
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944860"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821791"
 ---
 # <a name="_write"></a>_write
 
@@ -47,7 +47,7 @@ int _write(
 );
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *fd*<br/>
 Dateideskriptor der Datei, in die die Daten geschrieben werden.
@@ -60,13 +60,13 @@ Anzahl der Bytes.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei erfolgreicher Ausführung gibt **_write** die Anzahl der geschriebenen Bytes zurück. Wenn der tatsächliche Speicherplatz auf dem Datenträger kleiner ist als die Größe des Puffers, den die Funktion versucht, auf den Datenträger zu schreiben, schlägt **_write** fehl und leert keinen der Inhalte des Puffers auf den Datenträger. Der Rückgabewert-1 gibt einen Fehler an. Wenn ungültige Parameter übergeben werden, ruft diese Funktion den Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion-1 zurück, und **errno** wird auf einen von drei Werten festgelegt: **EBADF**, d. h. der Dateideskriptor ist ungültig, oder die Datei wird nicht zum Schreiben geöffnet. **ENOSPC**, was bedeutet, dass auf dem Gerät nicht genügend Speicherplatz für den Vorgang vorhanden ist. oder **EINVAL**, d. h., der *Puffer* war ein NULL-Zeiger, oder es wurde eine ungerade *Anzahl* von Bytes an eine Datei im Unicode-Modus übermittelt.
+Bei erfolgreicher Ausführung gibt **_write** die Anzahl der geschriebenen Bytes zurück. Wenn der tatsächliche Speicherplatz auf dem Datenträger kleiner ist als die Größe des Puffers, der von der Funktion auf den Datenträger geschrieben werden soll, **_write** fehl, und der Inhalt des Puffers wird nicht auf den Datenträger geleert. Der Rückgabewert-1 gibt einen Fehler an. Wenn ungültige Parameter übergeben werden, ruft diese Funktion den Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion-1 zurück, und **errno** wird auf einen von drei Werten festgelegt: **EBADF**, was bedeutet, dass der Dateideskriptor ungültig ist oder die Datei nicht zum Schreiben geöffnet ist. **ENOSPC**, was bedeutet, dass auf dem Gerät nicht genügend Speicherplatz für den Vorgang vorhanden ist. oder **EINVAL**, d. h., der *Puffer* war ein NULL-Zeiger, oder es wurde eine ungerade *Anzahl* von Bytes an eine Datei im Unicode-Modus übermittelt.
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Wenn die Datei im Textmodus geöffnet ist, wird jedes Zeilenvorschub Zeichen durch ein Wagen Rücklauf-Zeilenvorschub-Paar in der Ausgabe ersetzt. Der Ersatz wirkt sich nicht auf den Rückgabewert aus.
 
-Wenn die Datei im Unicode-Übersetzungsmodus geöffnet wird – z. b. Wenn *FD* mit **_open** oder **_sopen** geöffnet wird und ein Modusparameter ist, der **_O_WTEXT**, **_O_U16TEXT**oder **_O_U8TEXT**enthält, oder wenn er mithilfe von geöffnet wird. **fopen** und ein Modusparameter, der **CCS = Unicode**, **CCS = UTF-16LE**oder **CCS = UTF-8**enthält, oder wenn der Modus in einen Unicode-Übersetzungsmodus mithilfevon _setmode*geändert wird, wird als* Zeiger auf einen Array von **wchar_t** , das **UTF-16-** Daten enthält. Der Versuch, in diesem Modus eine ungerade Anzahl von Bytes zu schreiben, führt zu einem Parametervalidierungsfehler.
+Wenn die Datei im Unicode-Übersetzungsmodus geöffnet wird – z. b. Wenn *FD* mit **_open** oder **_sopen** geöffnet wird und ein Modusparameter **_O_WTEXT**enthält, **_O_U16TEXT**oder **_O_U8TEXT**oder, wenn es mit **fopen** und einem Modusparameter, der **CCS = Unicode**, **CCS = UTF-16LE**oder **CCS = UTF-8**enthält, oder wenn der Modus in einen Unicode-Übersetzungsmodus geändert wird, mithilfe **_setmode**–-*Puffer* als Zeiger auf einen-Wert interpretiert wird. ein Array von **wchar_t** , das **UTF-16-** Daten enthält. Der Versuch, in diesem Modus eine ungerade Anzahl von Bytes zu schreiben, führt zu einem Parametervalidierungsfehler.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -74,13 +74,13 @@ Die **_write** -Funktion schreibt *count* -Bytes aus dem *Puffer* in die mit *FD
 
 Beim Schreiben in Dateien, die im Textmodus geöffnet wurden, behandelt **_write** ein STRG + Z-Zeichen als logisches Dateiende. Beim Schreiben auf ein Gerät behandelt **_write** ein STRG + Z-Zeichen im Puffer als Ausgabe Abschluss Zeichen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_write**|\<io.h>|
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Zusätzliche Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -124,7 +124,7 @@ int main( void )
             perror("Invalid parameter: buffer was NULL!");
             break;
          default:
-            // An unrelated error occured
+            // An unrelated error occurred
             perror("Unexpected error!");
       }
    }

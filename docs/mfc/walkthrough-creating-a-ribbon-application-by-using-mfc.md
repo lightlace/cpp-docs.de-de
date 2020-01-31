@@ -1,18 +1,18 @@
 ---
-title: 'Exemplarische Vorgehensweise: Erstellen einer Menü Bandanwendung mithilfe von MFC'
+title: 'Exemplarische Vorgehensweise: Erstellen einer Menübandanwendung mithilfe von MFC'
 ms.date: 09/09/2019
 helpviewer_keywords:
 - ribbon application, creating (MFC)
-- creating a ribbon aplication (MFC)
+- creating a ribbon application (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 41084a78287521610ba400deab32d1052c9217c1
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 0f81b27d479b15864302b21a467bff9489ba465a
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907392"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821921"
 ---
-# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Exemplarische Vorgehensweise: Erstellen einer Menü Bandanwendung mithilfe von MFC
+# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Exemplarische Vorgehensweise: Erstellen einer Menübandanwendung mithilfe von MFC
 
 In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie mit dem **MFC-Anwendungs-Assistenten** eine Anwendung erstellen, die standardmäßig über ein Menüband verfügt. Sie können dann das Menüband erweitern, indem Sie eine **benutzerdefinierte** Menüband-Kategorie hinzufügen, die über einen Menü Band Bereich für **Favoriten** verfügt
 
@@ -22,7 +22,7 @@ Diese exemplarische Vorgehensweise setzt voraus, dass Sie Visual Studio für die
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>So erstellen Sie eine MFC-Anwendung mit einem Menüband
 
-1. Verwenden Sie den **MFC-Anwendungs-Assistenten** , um eine MFC-Anwendung mit einem Menüband zu erstellen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Verwenden der neuen MFC-Shell](walkthrough-using-the-new-mfc-shell-controls.md) -Steuerelemente, um Anweisungen zum Öffnen des Assistenten für Ihre Version von Visual Studio zu finden.
+1. Verwenden Sie den **MFC-Anwendungs-Assistenten** , um eine MFC-Anwendung mit einem Menüband zu erstellen. Unter Exemplarische Vorgehensweise [: Verwenden der neuen MFC-shellsteuerelemente](walkthrough-using-the-new-mfc-shell-controls.md) finden Sie Anweisungen zum Öffnen des Assistenten für Ihre Version von Visual Studio.
 
 1. Legen Sie im **MFC-Anwendungs-Assistenten**die folgenden Optionen fest:
 
@@ -54,7 +54,7 @@ Diese exemplarische Vorgehensweise setzt voraus, dass Sie Visual Studio für die
 
     Klicken Sie mit der rechten Maustaste auf **Category1** und dann auf **Eigenschaften**. Ändern Sie im Fenster **Eigenschaften** die **Beschriftung** in *Benutzer*definiert.
 
-    In den Eigenschaften für **große Bilder** und **kleine Images** werden die Bitmaps angegeben, die als Symbole für die Menü Band Elemente in dieser Kategorie verwendet werden. Da die Erläuterungen zum Erstellen von benutzerdefinierten Bitmaps über den Rahmen dieser exemplarischen Vorgehensweise hinausgehen, verwenden Sie einfach die vom Assistenten erstellten Bitmaps erneut. Kleine Bitmaps sind 16 Pixel x 16 Pixel. Verwenden Sie bei kleinen Bildern die Bitmaps, auf die über die `IDB_FILESMALL` Ressourcen-ID zugegriffen wird. Große Bitmaps sind 32 Pixel x 32 Pixel. Verwenden Sie bei großen Bildern die Bitmaps, auf die über die `IDB_FILELARGE` Ressourcen-ID zugegriffen wird.
+    In den Eigenschaften für **große Bilder** und **kleine Images** werden die Bitmaps angegeben, die als Symbole für die Menü Band Elemente in dieser Kategorie verwendet werden. Da die Erläuterungen zum Erstellen von benutzerdefinierten Bitmaps über den Rahmen dieser exemplarischen Vorgehensweise hinausgehen, verwenden Sie einfach die vom Assistenten erstellten Bitmaps erneut. Kleine Bitmaps sind 16 Pixel x 16 Pixel. Verwenden Sie bei kleinen Bildern die Bitmaps, auf die über die `IDB_FILESMALL` Ressourcen-ID zugegriffen wird. Große Bitmaps sind 32 Pixel x 32 Pixel. Verwenden Sie bei großen Bildern die Bitmaps, auf die über die Ressourcen-ID `IDB_FILELARGE` zugegriffen wird.
 
     > [!NOTE]
     > In HDPI-Anzeigen, die mehr Pixel pro Zoll enthalten, werden automatisch die HDPI-Versionen der Bilder verwendet.
@@ -73,7 +73,7 @@ Diese exemplarische Vorgehensweise setzt voraus, dass Sie Visual Studio für die
 
     Um die Schaltfläche **Drucken** zu erstellen, ziehen Sie ein Schaltflächen Tool in das Panel.
 
-    Ändern Sie im Fenster **Eigenschaften** die Eigenschaft **ID** in **ID_FILE_PRINT**, die bereits definiert sein sollte. Ändern Sie die **Beschriftung** in *Drucken*. Ändern Sie den **Abbild Index** in *4*.
+    Ändern Sie im **Eigenschaften** Fenster die Eigenschaft **ID** in **ID_FILE_PRINT**, das bereits definiert sein sollte. Ändern Sie die **Beschriftung** in *Drucken*. Ändern Sie den **Abbild Index** in *4*.
 
     Um die Schaltfläche **schnell Druck** zu erstellen, klicken Sie auf die Spalte Eigenschafts Wert neben **Menü Elemente**, und klicken Sie dann auf die Auslassungs Punkte ( **..** .). Klicken Sie im **Items-Editor**auf die Schaltfläche ohne Bezeichnung **Hinzufügen** , um ein Menü Element zu erstellen. Ändern Sie im Fenster **Eigenschaften** die **Beschriftung** in *schnell Druck*, **ID** in *ID_FILE_PRINT_DIRECT*und **Bild** in *5*. Die Image-Eigenschaft gibt das Symbol für den **schnell Druck** in der `IDB_FILESMALL` Bitmap-Ressource an.
 

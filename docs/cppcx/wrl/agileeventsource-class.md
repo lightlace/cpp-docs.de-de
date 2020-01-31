@@ -1,5 +1,5 @@
 ---
-title: AgileEventSource-Klasse
+title: Agileeventsource-Klasse
 ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
@@ -7,16 +7,16 @@ f1_keywords:
 - event/Microsoft::WRL::InvokeModeOptions
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: 095c61dcef208028bf1c0f4b3443ba10110da8ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa1e0a72d865b2993e149f6e4d2b57fe13463a61
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223033"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821739"
 ---
-# <a name="agileeventsource-class"></a>AgileEventSource-Klasse
+# <a name="agileeventsource-class"></a>Agileeventsource-Klasse
 
-Stellt ein Ereignis, das von einem agile-Komponente ausgelöst wird, wird eine Komponente, die von jedem Thread aus zugegriffen werden kann. Erbt von [EventSource](eventsource-class.md) und überschreibt die `Add` Memberfunktion mit einem weiteren Typ-Parameter zum Angeben von Optionen für das agile-Ereignis aufrufen.
+Stellt ein Ereignis dar, das von einer Agile-Komponente ausgelöst wird. Hierbei handelt es sich um eine Komponente, auf die von jedem Thread aus zugegriffen werden kann. Erbt von [eventSource](eventsource-class.md) und überschreibt die `Add` Member-Funktion mit einem zusätzlichen Typparameter zum Angeben von Optionen für das Aufrufen des Agile-Ereignisses.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,17 +30,17 @@ class AgileEventSource :
         TDelegateInterface, TEventSourceOptions>;
 ```
 
-## <a name="parameters"></a>Parameter
+## <a name="parameters"></a>Parameters
 
 *TDelegateInterface*<br/>
-Die Schnittstelle, ein Delegat, der einen Ereignishandler darstellt.
+Die-Schnittstelle zu einem Delegaten, der einen Ereignishandler darstellt.
 
 *TEventSourceOptions*<br/>
-Ein [InvokeModeOptions](invokemodeoptions-structure.md) Struktur, deren Feld InvokeMode NA hodnotu nastaven `InvokeMode::StopOnFirstError` oder `InvokeMode::FireAll`.
+Eine [invokemodeoptions](invokemodeoptions-structure.md) -Struktur, deren invokemode-Feld auf `InvokeMode::StopOnFirstError` oder `InvokeMode::FireAll`festgelegt ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Die große Mehrheit der Komponenten in der Windows-Runtime handelt es sich um agile-Komponenten. Weitere Informationen finden Sie unter [Threading und Marshalling (C++ / CX)](../../cppcx/threading-and-marshaling-c-cx.md).
+Bei den meisten Komponenten in der Windows-Runtime handelt es sich um Agile-Komponenten. Weitere Informationen finden Sie unter [Threading und MarshallingC++(/CX)](../../cppcx/threading-and-marshaling-c-cx.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -48,9 +48,9 @@ Die große Mehrheit der Komponenten in der Windows-Runtime handelt es sich um ag
 
 `AgileEventSource`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
-**Header:** event.h
+**Header:** Event. h
 
 **Namespace:** Microsoft::WRL
 
@@ -58,13 +58,13 @@ Die große Mehrheit der Komponenten in der Windows-Runtime handelt es sich um ag
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|-Name|Beschreibung|
 |----------|-----------------|
-|[AgileEventSource::Add-Methode](#add)|Fügt den agile-Ereignishandler durch die Schnittstelle für die angegebenen Delegaten dargestellt wird, auf den Satz von Ereignishandlern für die aktuelle **AgileEventSource** Objekt.|
+|[Agileeventsource:: Add-Methode](#add)|Fügt den von der angegebenen delegatschnittstelle dargestellten Agile-Ereignishandler an den Satz von Ereignis Handlern für das aktuelle **agileeventsource** -Objekt an.|
 
-## <a name="add"></a> AgileEventSource::Add-Methode
+## <a name="add"></a>Agileeventsource:: Add-Methode
 
-Fügt den Ereignishandler, die durch die Schnittstelle für die angegebenen Delegaten dargestellt wird, auf den Satz von Ereignishandlern für die aktuelle [EventSource](eventsource-class.md) Objekt.
+Fügt den Ereignishandler, der durch die angegebene delegatschnittstelle dargestellt wird, an den Satz von Ereignis Handlern für das aktuelle [eventSource](eventsource-class.md) -Objekt an.
 
 ### <a name="syntax"></a>Syntax
 
@@ -75,13 +75,13 @@ HRESULT Add(
 );
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *delegateInterface*<br/>
-Die Schnittstelle an ein Delegatobjekt, das einen Ereignishandler darstellt.
+Die-Schnittstelle zu einem Delegatobjekt, das einen Ereignishandler darstellt.
 
 *token*<br/>
-Wenn dieser Vorgang abgeschlossen ist, ein Handle, das das Ereignis darstellt. Verwenden Sie dieses Token als Parameter an die `Remove()` Methode, um den Ereignishandler zu verwerfen.
+Wenn dieser Vorgang abgeschlossen ist, ein Handle, das das Ereignis darstellt. Verwenden Sie dieses Token als Parameter für die `Remove()`-Methode, um den Ereignishandler zu verwerfen.
 
 ### <a name="return-value"></a>Rückgabewert
 
