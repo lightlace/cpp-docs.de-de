@@ -1,5 +1,5 @@
 ---
-title: CComApartment-Klasse
+title: Ccomapartment-Klasse
 ms.date: 11/04/2016
 f1_keywords:
 - CComApartment
@@ -16,19 +16,19 @@ helpviewer_keywords:
 - apartments in ATL EXE modules
 - CComApartment class
 ms.assetid: dbc177d7-7ee4-45f2-b563-d578a467ca93
-ms.openlocfilehash: 92db42a45a0863f8b43f7c46da9624e424d1e488
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f4c7fc356e61210e9b99bf9989b1bb3f0abc98a
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246777"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821674"
 ---
-# <a name="ccomapartment-class"></a>CComApartment-Klasse
+# <a name="ccomapartment-class"></a>Ccomapartment-Klasse
 
-Diese Klasse bietet Unterstützung für die Verwaltung einer Appartementnummer in einem Thread Pooling-EXE-Modul.
+Diese Klasse bietet Unterstützung für die Verwaltung eines Apartment in einem Modul mit einem Thread im Pool.
 
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
+>  Diese Klasse und ihre Member können in Anwendungen, die im Windows-Runtime ausgeführt werden, nicht verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,38 +40,38 @@ class CComApartment
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|-Name|Beschreibung|
 |----------|-----------------|
 |[CComApartment::CComApartment](#ccomapartment)|Der Konstruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|-Name|Beschreibung|
 |----------|-----------------|
-|[CComApartment::Apartment](#apartment)|Markiert die Startadresse des Threads.|
-|[CComApartment::GetLockCount](#getlockcount)|Gibt die Anzahl von aktuellen Sperren des Threads zurück.|
+|[CComApartment::Apartment](#apartment)|Markiert die Anfangsadresse des Threads.|
+|[CComApartment::GetLockCount](#getlockcount)|Gibt die aktuelle Sperrenanzahl des Threads zurück.|
 |[CComApartment::Lock](#lock)|Erhöht die Sperrenanzahl des Threads.|
 |[CComApartment::Unlock](#unlock)|Verringert die Sperrenanzahl des Threads.|
 
-### <a name="public-data-members"></a>Öffentliche Datenmember
+### <a name="public-data-members"></a>Öffentliche Datenelemente
 
-|Name|Beschreibung|
+|-Name|Beschreibung|
 |----------|-----------------|
-|[CComApartment::m_dwThreadID](#m_dwthreadid)|Enthält den Threadbezeichner des.|
+|[CComApartment::m_dwThreadID](#m_dwthreadid)|Enthält den Bezeichner des Threads.|
 |[CComApartment::m_hThread](#m_hthread)|Enthält das Handle des Threads.|
-|[CComApartment::m_nLockCnt](#m_nlockcnt)|Enthält die Anzahl von aktuellen Sperren des Threads.|
+|[CComApartment::m_nLockCnt](#m_nlockcnt)|Enthält die aktuelle Sperrenanzahl des Threads.|
 
 ## <a name="remarks"></a>Hinweise
 
-`CComApartment` Dient der [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) eine Wohnung in einem Thread Pooling-EXE-Modul zu verwalten. `CComApartment` bietet Methoden zum Inkrementieren und Dekrementieren die Sperre für einen Thread zählen.
+`CComApartment` wird von [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) verwendet, um ein Apartment in einem Modul mit einem Thread im Pool zusammengefasst zu verwalten. `CComApartment` stellt Methoden zum Inkrementieren und Dekrementieren der Sperrenanzahl in einem Thread bereit.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
-**Header:** atlbase.h
+**Header:** atlbase. h
 
-##  <a name="apartment"></a>  CComApartment::Apartment
+##  <a name="apartment"></a>Ccomapartment:: Apartment
 
-Markiert die Startadresse des Threads.
+Markiert die Anfangsadresse des Threads.
 
 ```
 DWORD Apartment();
@@ -79,13 +79,13 @@ DWORD Apartment();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Always 0.
+Immer 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Automatisch festgelegt, während der [CComAutoThreadModule::Init](../../atl/reference/ccomautothreadmodule-class.md#init).
+Wird automatisch während [CComAutoThreadModule:: init](../../atl/reference/ccomautothreadmodule-class.md#init)festgelegt.
 
-##  <a name="ccomapartment"></a>  CComApartment::CComApartment
+##  <a name="ccomapartment"></a>Ccomapartment:: ccomapartment
 
 Der Konstruktor.
 
@@ -95,11 +95,11 @@ CComApartment();
 
 ### <a name="remarks"></a>Hinweise
 
-Initialisiert die `CComApartment` Datenmember [M_nLockCnt](#m_nlockcnt) und [M_hThread](#m_hthread).
+Initialisiert die `CComApartment` Datenmember [m_nLockCnt](#m_nlockcnt) und [m_hThread](#m_hthread).
 
-##  <a name="getlockcount"></a>  CComApartment::GetLockCount
+##  <a name="getlockcount"></a>Ccomapartment:: GetLockCount
 
-Gibt die Anzahl von aktuellen Sperren des Threads zurück.
+Gibt die aktuelle Sperrenanzahl des Threads zurück.
 
 ```
 LONG GetLockCount();
@@ -107,9 +107,9 @@ LONG GetLockCount();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Anzahl der Sperren für den Thread.
+Die Sperrenanzahl für den Thread.
 
-##  <a name="lock"></a>  CComApartment::Lock
+##  <a name="lock"></a>Ccomapartment:: Lock
 
 Erhöht die Sperrenanzahl des Threads.
 
@@ -119,23 +119,23 @@ LONG Lock();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Wert, der möglicherweise bei der Diagnose hilfreich oder testen.
+Ein Wert, der für die Diagnose oder das Testen nützlich sein kann.
 
 ### <a name="remarks"></a>Hinweise
 
-Wird aufgerufen, indem [CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock).
+Wird von [CComAutoThreadModule:: Lock](../../atl/reference/ccomautothreadmodule-class.md#lock)aufgerufen.
 
-Die Anzahl der Sperren für den Thread wird für statistische Zwecke verwendet.
+Die Sperrenanzahl für den Thread wird für statistische Zwecke verwendet.
 
 ##  <a name="m_dwthreadid"></a>  CComApartment::m_dwThreadID
 
-Enthält den Threadbezeichner des.
+Enthält den Bezeichner des Threads.
 
 ```
 DWORD m_dwThreadID;
 ```
 
-##  <a name="m_hthread"></a>  CComApartment::m_hThread
+##  <a name="m_hthread"></a>Ccomapartment:: m_hThread
 
 Enthält das Handle des Threads.
 
@@ -143,15 +143,15 @@ Enthält das Handle des Threads.
 HANDLE m_hThread;
 ```
 
-##  <a name="m_nlockcnt"></a>  CComApartment::m_nLockCnt
+##  <a name="m_nlockcnt"></a>Ccomapartment:: m_nLockCnt
 
-Enthält die Anzahl von aktuellen Sperren des Threads.
+Enthält die aktuelle Sperrenanzahl des Threads.
 
 ```
 LONG m_nLockCnt;
 ```
 
-##  <a name="unlock"></a>  CComApartment::Unlock
+##  <a name="unlock"></a>Ccomapartment:: Unlock
 
 Verringert die Sperrenanzahl des Threads.
 
@@ -161,14 +161,14 @@ LONG Unlock();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Wert, der möglicherweise bei der Diagnose hilfreich oder testen.
+Ein Wert, der für die Diagnose oder das Testen nützlich sein kann.
 
 ### <a name="remarks"></a>Hinweise
 
-Wird aufgerufen, indem [CComAutoThreadModule::Unlock](../../atl/reference/ccomautothreadmodule-class.md#lock).
+Wird von [CComAutoThreadModule:: Unlock](../../atl/reference/ccomautothreadmodule-class.md#lock)aufgerufen.
 
-Die Anzahl der Sperren für den Thread wird für statistische Zwecke verwendet.
+Die Sperrenanzahl für den Thread wird für statistische Zwecke verwendet.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)
+[Klassen Übersicht](../../atl/atl-class-overview.md)

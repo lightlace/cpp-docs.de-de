@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Implements::FillArrayWithIid method
 - Microsoft::WRL::Implements::IidCount method
 ms.assetid: 29b13e90-34d4-4a0b-babd-5187c9eb0c36
-ms.openlocfilehash: 63cac6931428644cc5ddec7d87e49007e95e039d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ce6e9193107cbd0d033d99b257e41004b4343a8
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398250"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821856"
 ---
 # <a name="implements-structure"></a>Implements-Struktur
 
-Implementiert `QueryInterface` und `GetIid` für die angegebene Schnittstelle.
+Implementiert `QueryInterface` und `GetIid` für die angegebenen Schnittstellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -74,7 +74,7 @@ struct __declspec(novtable) Implements<
     Details::ImplementsBase;
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *I0*<br/>
 Die nullte Schnittstellen-ID. (Erforderlich)
@@ -107,35 +107,35 @@ Die achte Schnittstellen-ID. (Optional)
 Die neunte Schnittstellen-ID. (Optional)
 
 *flags*<br/>
-Von konfigurationsflags für die Klasse. Eine oder mehrere [RuntimeClassType](runtimeclasstype-enumeration.md) Enumerationen, die im angegebenen ein [RuntimeClassFlags](runtimeclassflags-structure.md) Struktur.
+Konfigurationsflags für die-Klasse. Mindestens eine [runtimeclasstype](runtimeclasstype-enumeration.md) -Enumeration, die in einer [runtimeclassflags](runtimeclassflags-structure.md) -Struktur angegeben ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Aus der Liste der angegebenen Schnittstellen abgeleitet und implementiert Helper-Vorlagen für `QueryInterface` und `GetIid`.
+Wird von der Liste der angegebenen Schnittstellen abgeleitet und implementiert hilfsvorlagen für `QueryInterface` und `GetIid`.
 
-Jede *I0* über *I9* Schnittstellenparameter muss abgeleitet werden, entweder `IUnknown`, `IInspectable`, oder die [ChainInterfaces](chaininterfaces-structure.md) Vorlage. Die *Flags* Parameter bestimmt, ob die Unterstützung für generiert wird, `IUnknown` oder `IInspectable`.
+Jeder *I0* through *i9* -Schnittstellenparameter muss entweder von `IUnknown`, `IInspectable`oder der [chaininterfaces](chaininterfaces-structure.md) -Vorlage abgeleitet werden. Der *Flags* -Parameter bestimmt, ob die Unterstützung für `IUnknown` oder `IInspectable`generiert wird.
 
 ## <a name="members"></a>Member
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-| Name        | Beschreibung                               |
+| -Name        | Beschreibung                               |
 | ----------- | ----------------------------------------- |
 | `ClassFlags`| Ein Synonym für `RuntimeClassFlags<WinRt>`. |
 
 ### <a name="protected-methods"></a>Geschützte Methoden
 
-| Name                                              | Beschreibung                                                                                                   |
+| -Name                                              | Beschreibung                                                                                                   |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| [Implements::CanCastTo](#cancastto)               | Ruft einen Zeiger auf die angegebene Schnittstelle.                                                                    |
-| [Implements::CastToUnknown](#casttounknown)       | Ruft einen Zeiger auf die zugrunde liegende `IUnknown` Schnittstelle.                                                        |
-| [Implements::FillArrayWithIid](#fillarraywithiid) | Fügt die Schnittstellen-ID, die durch den aktuellen nullten Vorlagenparameter angegeben wird, in das angegebene Array-Element. |
+| [Implements::CanCastTo](#cancastto)               | Ruft einen Zeiger auf die angegebene-Schnittstelle ab.                                                                    |
+| [Implementiert:: castto Unknown](#casttounknown)       | Ruft einen Zeiger auf die zugrunde liegende `IUnknown`-Schnittstelle ab.                                                        |
+| [Implements::FillArrayWithIid](#fillarraywithiid) | Fügt die vom aktuellen nullte-Vorlagen Parameter angegebene Schnittstellen-ID in das angegebene Array Element ein. |
 
 ### <a name="protected-constants"></a>Geschützte Konstanten
 
-| Name                              | Beschreibung                                    |
+| -Name                              | Beschreibung                                    |
 | --------------------------------- | ---------------------------------------------- |
-| [Implements::IidCount](#iidcount) | Enthält die Anzahl von implementierten Schnittstellen-IDs. |
+| [Implements::IidCount](#iidcount) | Enthält die Anzahl der implementierten Schnittstellen-IDs. |
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -151,15 +151,15 @@ Jede *I0* über *I9* Schnittstellenparameter muss abgeleitet werden, entweder `I
 
 `Implements`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
-**Header:** implements.h
+**Header:** implementiert. h
 
 **Namespace:** Microsoft::WRL
 
-## <a name="cancastto"></a>Implements::CanCastTo
+## <a name="cancastto"></a>Implementiert:: CanCastTo
 
-Ruft einen Zeiger auf die angegebene Schnittstelle.
+Ruft einen Zeiger auf die angegebene-Schnittstelle ab.
 
 ```cpp
 __forceinline HRESULT CanCastTo(
@@ -168,25 +168,25 @@ __forceinline HRESULT CanCastTo(
 );
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *riid*<br/>
 Ein Verweis auf eine Schnittstellen-ID.
 
 *ppv*<br/>
-Wenn erfolgreich, ein Zeiger auf die Schnittstelle durch angegeben *Riid*.
+Wenn erfolgreich, ein Zeiger auf die durch *riid*angegebene Schnittstelle.
 
 ### <a name="return-value"></a>Rückgabewert
 
-S_OK, wenn erfolgreich; andernfalls ein HRESULT, der den Fehler, z.B. E_NOINTERFACE angibt.
+S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt, z. b. E_NOINTERFACE.
 
 ### <a name="remarks"></a>Hinweise
 
-Dies ist eine interne Hilfsmethode-Funktion, die einen QueryInterface-Vorgang ausführt.
+Dies ist eine interne Hilfsfunktion, die einen QueryInterface-Vorgang ausführt.
 
-## <a name="casttounknown"></a>Implements:: casttounknown
+## <a name="casttounknown"></a>Implementiert:: castto Unknown
 
-Ruft einen Zeiger auf die zugrunde liegende `IUnknown` Schnittstelle.
+Ruft einen Zeiger auf die zugrunde liegende `IUnknown`-Schnittstelle ab.
 
 ```cpp
 __forceinline IUnknown* CastToUnknown();
@@ -194,15 +194,15 @@ __forceinline IUnknown* CastToUnknown();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Dieser Vorgang immer erfolgreich ist, und gibt die `IUnknown` Zeiger.
+Dieser Vorgang ist immer erfolgreich und gibt den `IUnknown` Zeiger zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Interne Hilfsmethode-Funktion.
+Interne Hilfsfunktion.
 
 ## <a name="fillarraywithiid"></a>Implements::FillArrayWithIid
 
-Fügt die Schnittstellen-ID, die durch den aktuellen nullten Vorlagenparameter angegeben wird, in das angegebene Array-Element.
+Fügt die vom aktuellen nullte-Vorlagen Parameter angegebene Schnittstellen-ID in das angegebene Array Element ein.
 
 ```cpp
 __forceinline static void FillArrayWithIid(
@@ -211,21 +211,21 @@ __forceinline static void FillArrayWithIid(
 );
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *index*<br/>
-Ein nullbasierter Index, der das Startelement "Array" für diesen Vorgang angibt. Klicken Sie nach Abschluss dieses Vorgangs *Index* um 1 erhöht.
+Ein NULL basierter Index, der das Start Array Element für diesen Vorgang angibt. Wenn dieser Vorgang abgeschlossen ist, wird der *Index* um 1 erhöht.
 
-*iids*<br/>
+*IIDs*<br/>
 Ein Array vom Typ IID.
 
 ### <a name="remarks"></a>Hinweise
 
-Interne Hilfsmethode-Funktion.
+Interne Hilfsfunktion.
 
-## <a name="iidcount"></a>Implements::IidCount
+## <a name="iidcount"></a>Implementiert:: iidcount
 
-Enthält die Anzahl von implementierten Schnittstellen-IDs.
+Enthält die Anzahl der implementierten Schnittstellen-IDs.
 
 ```cpp
 static const unsigned long IidCount;

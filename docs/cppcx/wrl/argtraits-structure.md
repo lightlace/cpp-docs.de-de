@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ArgTraits structure
 - Microsoft::WRL::Details::ArgTraits::args constant
 ms.assetid: 58ae4115-c1bc-48c8-b01b-e60554841c30
-ms.openlocfilehash: 17109508cf99888ccde79be39a41c5361da24c6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c13e7fec3289b66b40e44f91404a50cba7a473b1
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398809"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821713"
 ---
 # <a name="argtraits-structure"></a>ArgTraits-Struktur
 
-Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+Unterstützt die WRL-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -127,50 +127,50 @@ struct ArgTraits<
              (TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9)>;
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-*TMemberFunction*<br/>
-TypeName-Parameter für eine ArgTraits-Struktur, die einer entsprechen, kann keine `Invoke` Methodensignatur.
+*Tmembership-Funktion*<br/>
+Typname-Parameter für eine argtrait-Struktur, die keiner `Invoke` Methoden Signatur entsprechen kann.
 
 *TDelegateInterface*<br/>
-Ein Delegat-Schnittstelle.
+Eine delegatschnittstelle.
 
 *TArg1*<br/>
-Der Typ, der das erste Argument von der `Invoke` Methode.
+Der Typ des ersten Arguments der `Invoke` Methode.
 
 *TArg2*<br/>
-Der Typ des zweiten Arguments des der `Invoke` Methode.
+Der Typ des zweiten Arguments der `Invoke` Methode.
 
 *TArg3*<br/>
-Der Typ des dritten Arguments der der `Invoke` Methode.
+Der Typ des dritten Arguments der `Invoke` Methode.
 
 *TArg4*<br/>
-Der Typ des vierten Arguments der der `Invoke` Methode.
+Der Typ des vierten Arguments der `Invoke` Methode.
 
 *TArg5*<br/>
-Der Typ des fünften Arguments der der `Invoke` Methode.
+Der Typ des fünften Arguments der `Invoke` Methode.
 
 *TArg6*<br/>
-Der Typ des sechsten Arguments der der `Invoke` Methode.
+Der Typ des sechsten Arguments der `Invoke` Methode.
 
 *TArg7*<br/>
-Der Typ des siebten Arguments der der `Invoke` Methode.
+Der Typ des siebten Arguments der `Invoke` Methode.
 
 *TArg8*<br/>
-Der Typ des Arguments achte der `Invoke` Methode.
+Der Typ des achten Arguments der `Invoke` Methode.
 
 *TArg9*<br/>
-Der Typ des neunten Arguments der der `Invoke` Methode.
+Der Typ des neunten Arguments der `Invoke` Methode.
 
 ## <a name="remarks"></a>Hinweise
 
-Die `ArgTraits` Struktur deklariert einen Delegaten angegebenen Schnittstelle und eine anonyme Memberfunktion, die eine angegebene Anzahl von Parametern.
+Die `ArgTraits`-Struktur deklariert eine angegebene delegatschnittstelle und eine anonyme Member-Funktion, die über eine angegebene Anzahl von Parametern verfügt.
 
 ## <a name="members"></a>Member
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-Name       | Beschreibung
+-Name       | Beschreibung
 ---------- | ----------------------
 `Arg1Type` | Die Typedef für TArg1.
 `Arg2Type` | Die Typedef für TArg2.
@@ -184,23 +184,23 @@ Name       | Beschreibung
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-Name                     | Beschreibung
+-Name                     | Beschreibung
 ------------------------ | ---------------------------------------------------------------------------------------
-[ArgTraits::args](#args) | Verfolgt die Anzahl von Parametern für die `Invoke` Methode einer Schnittstelle des Delegaten.
+[ArgTraits::args](#args) | Gibt die Anzahl der Parameter für die `Invoke`-Methode einer delegatschnittstelle an.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 `ArgTraits`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
-**Header:** event.h
+**Header:** Event. h
 
-**Namespace:** Microsoft::WRL::Details
+**Namespace:** Microsoft:: WRL::D etails
 
 ## <a name="args"></a>ArgTraits::args
 
-Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+Unterstützt die WRL-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.
 
 ```cpp
 static const int args = -1;
@@ -208,4 +208,4 @@ static const int args = -1;
 
 ### <a name="remarks"></a>Hinweise
 
-Verfolgt die Anzahl von Parametern für die `Invoke` Methode einer Schnittstelle des Delegaten. Wenn `args` gleich-1 ist, es darf keine Übereinstimmung für die `Invoke` Methodensignatur.
+Gibt die Anzahl der Parameter für die `Invoke`-Methode einer delegatschnittstelle an. Wenn `args` gleich-1 ist, kann die Signatur der `Invoke` Methode nicht gefunden werden.
