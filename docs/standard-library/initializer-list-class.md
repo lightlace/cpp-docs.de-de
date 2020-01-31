@@ -1,6 +1,7 @@
 ---
 title: initializer_list-Klasse
-ms.date: 11/04/2016
+description: Eine Referenz für die initializer_list-Klasse in C++ der Standard Bibliothek, die von Microsoft in Visual Studio implementiert wird.
+ms.date: 01/28/2020
 f1_keywords:
 - initializer_list/std::initializer_list::initializer_list
 - initializer_list/std::initializer_list::begin
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.openlocfilehash: acd11f3b3a3bf0ba17e34a802cc8988410e17b12
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6be51835958a07162ce22ff9d619fb793102669f
+ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455361"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76894332"
 ---
-# <a name="initializerlist-class"></a>initializer_list-Klasse
+# <a name="initializer_list-class"></a>initializer_list-Klasse
 
 Bietet Zugriff auf ein Array von Elementen, in dem jedes Mitglied von einem angegebenen Typ ist.
 
@@ -30,11 +31,10 @@ template <class Type>
 class initializer_list
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-|Parameter|Beschreibung|
-|---------------|-----------------|
-|*Typ*|Der in `initializer_list` zu speichernde Elementdatentyp.|
+\ *eingeben*
+Der in `initializer_list` zu speichernde Elementdatentyp.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -44,24 +44,24 @@ Ein `initializer_list`-Element kann mit einer Initialisiererliste in Klammern er
 initializer_list<int> i1{ 1, 2, 3, 4 };
 ```
 
-Der Compiler transformiert in Klammern gesetzte Initialisiererlisten mit homogenen Elementen in `initializer_list`, wenn für die Funktionssignatur `initializer_list` erforderlich ist. Ausführlichere Informationen zum Verwenden von `initializer_list` finden Sie unter [Einheitliche Initialisierung und Delegierung von Konstruktoren](../cpp/uniform-initialization-and-delegating-constructors.md).
+Der Compiler transformiert in Klammern gesetzte Initialisiererlisten mit homogenen Elementen in `initializer_list`, wenn für die Funktionssignatur `initializer_list` erforderlich ist. Weitere Informationen zum Verwenden von `initializer_list`finden Sie unter [einheitliche Initialisierung und Delegierung von Konstruktoren](../cpp/uniform-initialization-and-delegating-constructors.md) .
 
 ### <a name="constructors"></a>Konstruktoren
 
 |Konstruktor|Beschreibung|
 |-|-|
-|[initializer_list](../standard-library/forward-list-class.md#forward_list)|Konstruiert ein Objekt vom Typ `initializer_list`.|
+|[initializer_list](#initializer_list)|Konstruiert ein Objekt vom Typ `initializer_list`.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Typname|Beschreibung|
 |-|-|
-|value_type|Der Typ der Elemente im `initializer_list`.|
-|Verweis|Ein Typ, der einen Verweis auf ein in der `initializer_list` gespeichertes Element bereitstellt.|
-|const_reference|Ein Typ, der einen Konstantenverweis auf ein in der `initializer_list` gespeichertes Element bereitstellt.|
-|size_type|Ein Typ, der die Anzahl von Elementen in der `initializer_list` darstellt.|
-|Iterator|Ein Typ, der einen Iterator für die `initializer_list` bereitstellt.|
-|const_iterator|Ein Typ, der einen konstanten Iterator für die `initializer_list` bereitstellt.|
+|`value_type`|Der Typ der Elemente im `initializer_list`.|
+|`reference`|Ein Typ, der einen Verweis auf ein in der `initializer_list` gespeichertes Element bereitstellt.|
+|`const_reference`|Ein Typ, der einen Konstantenverweis auf ein in der `initializer_list` gespeichertes Element bereitstellt.|
+|`size_type`|Ein Typ, der die Anzahl von Elementen in der `initializer_list` darstellt.|
+|`iterator`|Ein Typ, der einen Iterator für die `initializer_list` bereitstellt.|
+|`const_iterator`|Ein Typ, der einen konstanten Iterator für die `initializer_list` bereitstellt.|
 
 ### <a name="member-functions"></a>Memberfunktionen
 
@@ -71,9 +71,9 @@ Der Compiler transformiert in Klammern gesetzte Initialisiererlisten mit homogen
 |[end](#end)|Gibt einen Zeiger auf das Element hinter dem letzten Element in einer `initializer_list` zurück.|
 |[size](#size)|Gibt die Anzahl von Elementen in der `initializer_list` zurück.|
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
-**Header:** \<initializer_list>
+**Header:** \<initializer_list >
 
 **Namespace:** std
 
@@ -89,8 +89,6 @@ constexpr const InputIterator* begin() const noexcept;
 
 Ein Zeiger auf das erste Element von `initializer_list`. Wenn die Liste leer ist, ist der Zeiger für den Beginn und das Ende der Liste gleich.
 
-### <a name="remarks"></a>Hinweise
-
 ## <a name="end"></a> initializer_list::end
 
 Gibt einen Zeiger auf das Element hinter dem letzten Element in einer `initializer list` zurück.
@@ -101,7 +99,7 @@ constexpr const InputIterator* end() const noexcept;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf das Element eine Position hinter dem letzten Element in der Liste. Wenn die Liste leer ist, entspricht dies dem Zeiger zum ersten Element in der Liste.
+Ein Zeiger auf das Element eine Position hinter dem letzten Element in der Liste. Wenn die Liste leer ist, ist sie identisch mit dem Zeiger auf das erste Element in der Liste.
 
 ## <a name="initializer_list"></a> initializer_list::initializer_list
 
@@ -112,16 +110,17 @@ constexpr initializer_list() noexcept;
 initializer_list(const InputIterator First, const InputIterator Last);
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
-|Parameter|Beschreibung|
-|---------------|-----------------|
-|*Erstes*|Die Position des ersten Elements in dem zu kopierenden Elementbereich.|
-|*Letzten*|Die Position des ersten Elements nach dem zu kopierenden Elementbereich.|
+*Erste*\
+Die Position des ersten Elements in dem zu kopierenden Elementbereich.
+
+*Letzter*\
+Die Position des ersten Elements nach dem zu kopierenden Elementbereich.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine `initializer_list` basiert auf einem Array von Objekten des angegebenen Typs. Mit dem Kopieren einer `initializer_list` wird eine zweite Instanz einer Liste erstellt, die auf die gleichen Objekte zeigt. Die zugrunde liegenden Objekte werden nicht kopiert.
+Eine `initializer_list` basiert auf einem Array von Objekten des angegebenen Typs. Beim Kopieren eines `initializer_list` wird eine zweite Instanz einer Liste erstellt, die auf die gleichen Objekte zeigt. die zugrunde liegenden Objekte werden nicht kopiert.
 
 ### <a name="example"></a>Beispiel
 
@@ -170,11 +169,6 @@ int main()
         cout << " " << c;
     cout << endl;
 
-    cout << "c4 =";
-    for (auto c : c4)
-        cout << " " << c;
-    cout << endl;
-
     cout << "c5 =";
     for (auto c : c5)
         cout << " " << c;
@@ -183,7 +177,10 @@ int main()
 ```
 
 ```Output
-c1 = 3c2 = 5 4 3 2 1c3 = 5 4 3 2 1c4 = 5 4c5 = 5 4
+c1 = 3
+c2 = 5 4 3 2 1
+c3 = 5 4 3 2 1
+c5 = 5 4
 ```
 
 ## <a name="size"></a> initializer_list::size
@@ -197,8 +194,6 @@ constexpr size_t size() const noexcept;
 ### <a name="return-value"></a>Rückgabewert
 
 Die Anzahl von Elementen in der Liste.
-
-### <a name="remarks"></a>Hinweise
 
 ## <a name="see-also"></a>Siehe auch
 
