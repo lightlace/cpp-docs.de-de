@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3390
 ms.assetid: 84800a87-c8e6-45aa-82ae-02f816dc8d97
-ms.openlocfilehash: 3f1149d4584a0ea3d0061a3ec4e2b77830603ef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c624d3b0379d057b0ed566deffc2a0efcc324f88
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400317"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912875"
 ---
 # <a name="compiler-error-c3390"></a>Compilerfehler C3390
 
@@ -21,9 +21,9 @@ Ein generischer Typ wurde fehlerhaft instanziiert.  Überprüfen Sie die Typdefi
 
 ## <a name="example"></a>Beispiel
 
-Im ersten Beispiel wird c# eine Komponente zu erstellen, die einen generischen Typ, die über bestimmte Einschränkungen, die nicht unterstützt werden enthält verfügt, wenn generische Typen in C++ erstellen / CLR. Weitere Informationen finden Sie unter [Einschränkungen für Typparameter](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+Im ersten Beispiel wird C# verwendet, um eine Komponente zu erstellen, die einen generischen Typ mit bestimmten Einschränkungen enthält, die beim Erstellen von C++generischen Typen in/CLR. nicht unterstützt werden. Weitere Informationen finden Sie unter [Einschränkungen für Typparameter](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
-```cs
+```csharp
 // C3390.cs
 // Compile by using: csc /target:library C3390.cs
 // a C# program
@@ -33,7 +33,7 @@ where V : struct
 where N : new() {}
 ```
 
-Wenn die Komponente C3390.dll verfügbar ist, im folgende Beispiel wird C3390 generiert:
+Wenn die C3390. dll-Komponente verfügbar ist, generiert das folgende Beispiel C3390.
 
 ```cpp
 // C3390_b.cpp

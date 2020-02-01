@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-ms.openlocfilehash: 72bdef1b3344b3d69ba0d014f92a85e9381de4b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4109a59f093740c9e0865cef6a31f3b09127c747
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243023"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912806"
 ---
 # <a name="compiler-error-c3392"></a>Compilerfehler C3392
 
@@ -21,9 +21,9 @@ Ein generischer Typ wurde fehlerhaft instanziiert. Überprüfen Sie die Typdefin
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird c# verwendet eine Komponente zu erstellen, die einen generischen Typ mit bestimmten Einschränkungen, die beim Erstellen von generischer Typen in C++ nicht unterstützt werden, enthält c++ / CLI. Weitere Informationen finden Sie unter [Einschränkungen für Typparameter](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+Im folgenden Beispiel wird C# verwendet, um eine Komponente zu erstellen, die einen generischen Typ mit bestimmten Einschränkungen enthält, die beim Erstellen von C++generischen Typen in/CLI. nicht unterstützt werden. Weitere Informationen finden Sie unter [Einschränkungen für Typparameter](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
-```cs
+```csharp
 // C3392.cs
 // Compile by using: csc /target:library C3392.cs
 // a C# program
@@ -33,7 +33,7 @@ where V : struct
 where N : new() {}
 ```
 
-Wenn die Komponente C3392.dll verfügbar ist, im folgende Beispiel wird C3392 generiert:
+Wenn die C3392. dll-Komponente verfügbar ist, generiert das folgende Beispiel C3392.
 
 ```cpp
 // C3392_b.cpp

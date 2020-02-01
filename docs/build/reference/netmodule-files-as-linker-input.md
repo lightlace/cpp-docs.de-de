@@ -1,48 +1,55 @@
 ---
-title: .NETMODULE-Dateien als Eingabe für den Linker
-ms.date: 05/16/2019
+title: .netmodule Dateien als Eingabe für den Linker
+description: Beschreibt, wie gemischt verwendet wird.obj immer.netmodule Dateien als Linker-Eingabe beim Erstellen von .NET-Assemblys.
+ms.date: 01/30/2020
 helpviewer_keywords:
 - MSIL linking
 - linking [C++], modules
-- .netmodules
+- .netmodule files
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-ms.openlocfilehash: 50a0f0a1ff5f65a7512e8372de2fe5296c866dca
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+no-loc:
+- obj
+- netmodule
+- clr
+- pure
+- safe
+ms.openlocfilehash: 83eab25624bdb81ba9191e4efe6a774551502ee0
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837424"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912817"
 ---
-# <a name="netmodule-files-as-linker-input"></a>.NETMODULE-Dateien als Eingabe für den Linker
+# <a name="opno-locnetmodule-files-as-linker-input"></a>.netmodule Dateien als Eingabe für den Linker
 
-„link.exe“ akzeptiert jetzt OBJ- und NETMODULES-Dateien von MSIL als Eingabe. Die vom Linker erzeugte Ausgabedatei ist eine Assembly oder ein NETMODULE ohne Laufzeitabhängigkeiten zu einer der OBJ- oder NETMODULE-Dateien, die als Eingabe für den Linker dienten.
+"Link. exe" akzeptiert MSIL- *`.obj`* und *`.netmodule`* Dateien als Eingabe. Die vom Linker erstellte Ausgabedatei ist eine Assembly oder eine *`.netmodule`* Datei ohne Laufzeitabhängigkeit von einer der *`.obj`* -oder *`.netmodule`* Dateien, die für den Linker eingegeben wurden.
 
-NETMODULE-Dateien werden vom MSVC-Compiler mit [/LN (MSIL-Modul erstellen)](ln-create-msil-module.md) oder vom Linker mit [/NOASSEMBLY (MSIL-Modul erstellen)](noassembly-create-a-msil-module.md) erstellt. OBJ-Dateien werden immer in einer Visual C++-Kompilierung erstellt. Verwenden Sie für andere Visual Studio-Compiler die Compileroption **/target:module**.
+## <a name="remarks"></a>Hinweise
 
-Sie müssen dem Linker die OBJ-Datei aus der Visual C++-Kompilierung übergeben, in der das NETMODULE erstellt wurde. Die Übergabe in einem NETMODULE wird nicht mehr unterstützt, da die Compileroptionen **/clr:pure** und **/clr:safe** in Visual Studio 2015 als veraltet definiert wurden und in Visual Studio 2017 und höher nicht mehr unterstützt werden.
+*`.netmodule`* Dateien werden vom MSVC-Compiler mit [/ln (Create MSIL Module)](ln-create-msil-module.md) oder vom Linker mit/noAssembly erstellt [(erstellen Sie ein MSIL-Modul)](noassembly-create-a-msil-module.md). *`.obj`* Dateien werden immer in einer C++ Kompilierung erstellt. Verwenden Sie für andere Visual Studio-Compiler die Compileroption **/target:module**.
 
-Informationen zum Aufrufen des Linkers über die Befehlszeile finden Sie unter [Linker-Befehlszeilensyntax](linking.md), [Verwenden des MSVC-Toolsets über die Befehlszeile](../building-on-the-command-line.md) und [Festlegen von Pfad und Umgebungsvariablen für Befehlszeilenbuilds](../setting-the-path-and-environment-variables-for-command-line-builds.md).
+Dem Linker muss die *`.obj`* Datei von der C++ Kompilierung, von der die *`.netmodule`* erstellt wurde, übermittelt werden. Das Übergeben eines *`.netmodule`* wird nicht mehr unterstützt, da die Compileroptionen **/clr:pure** und **/clr:safe** in Visual Studio 2015 als veraltet eingestuft und in Visual Studio 2017 und höher nicht unterstützt werden.
 
-Das Übergeben einer NETMODULE- oder DLL-Datei an den Linker, die mit dem MSVC-Compiler mit **/clr** kompiliert wurde, kann zu einem Linkerfehler führen. Weitere Informationen finden Sie unter [Auswählen des Formats von .netmodule-Eingabedateien](choosing-the-format-of-netmodule-input-files.md).
+Informationen dazu, wie Sie den Linker von der Befehlszeile aufrufen, finden Sie unter [Befehlszeilen Syntax von linker](linking.md), [verwenden Sie das MSVC-Toolset von der Befehlszeile aus](../building-on-the-command-line.md), und legen Sie [die Pfad-und Umgebungsvariablen für Befehlszeilenbuilds fest](../setting-the-path-and-environment-variables-for-command-line-builds.md).
 
-Der Linker akzeptiert native OBJ-Dateien ebenso wie MSIL-OBJ-Dateien, die mit **/clr** kompiliert wurden. Bei der Übergabe gemischter OBJ-Dateien im selben Build entspricht die Überprüfbarkeit der erstellten Ausgabedatei standardmäßig der geringsten Überprüfbarkeitsstufe der Eingabemodule.
+Das übergeben einer *`.netmodule`* oder *`.dll`* Datei an den Linker, der vom MSVC-Compiler mit **/clr** kompiliert wurde, kann zu einem Linker-Fehler führen. Weitere Informationen finden Sie unter [auswählen des Formats dernetmodule-Eingabedateien](choosing-the-format-of-netmodule-input-files.md).
 
-Wenn eine Ihrer Anwendungen aktuell aus zwei oder mehr Assemblys zusammengesetzt ist und Sie wünschen, dass die Anwendung in einer Assembly enthalten ist, müssen Sie die Assemblys erneut Kompilieren und anschließend die OBJ- oder NETMODULE-Dateien linken, um eine einzelne Assembly zu erstellen.
+Der Linker nimmt sowohl systemeigene *`.obj`* Dateien als auch MSIL- *`.obj`* Dateien an, die mit **/clr** kompiliert wurden. Sie können gemischte *`.obj`* Dateien im gleichen Build übergeben. Die Standardüberprüfung der Ausgabedatei ist mit der über Prüfbarkeit des niedrigsten Eingabe Moduls identisch.
 
-Beim Erstellen eines ausführbaren Images müssen Sie mithilfe von [/ENTRY (Symbol für Einstiegspunkt)](entry-entry-point-symbol.md) einen Einstiegspunkt angeben.
+Sie können eine Anwendung ändern, die aus mindestens zwei Assemblys besteht, die in einer Assembly enthalten sein sollen. Kompilieren Sie die Quellen der Assembly neu, und verknüpfen Sie dann die *`.obj`* Dateien oder *`.netmodule`* Dateien, um eine einzelne Assembly zu erstellen.
 
-Verwenden Sie beim Linken mit einer MSIL-OBJ- oder -NETMODULE-Datei [/LTCG (Codegenerierung zur Verknüpfungszeit)](ltcg-link-time-code-generation.md), andernfalls startet der Linker den Linkprozess erneut mit /LTCG, wenn er auf die MSIL-OBJ- oder NETMODULE-Datei trifft.
+Geben Sie einen Einstiegspunkt mit [/Entry (Einstiegspunkt Symbol)](entry-entry-point-symbol.md) an, wenn Sie ein ausführbares Image erstellen.
 
-MSIL-OBJ- oder -NETMODULE-Dateien können außerdem an „cl.exe“ übergeben werden.
+Verwenden Sie beim Verknüpfen mit einer MSIL- *`.obj`* oder *`.netmodule`* Datei [/LTCG (Link-Time Code Generation)](ltcg-link-time-code-generation.md), andernfalls wird der Link mit **/LTCG**neu gestartet, wenn der Linker die MSIL- *`.obj`* oder *`.netmodule`* trifft. Es wird eine Informations Meldung angezeigt, dass der Link neu gestartet wird. Sie können diese Meldung ignorieren, aber um die Linkerleistung zu verbessern, geben Sie **/LTCG**explizit an.
 
-MSIL-OBJ- oder -NETMODULE-Dateien können keine eingebetteten Ressourcen aufweisen. In anderen Visual Studio-Compilern wird eine Ressource in eine Ausgabedatei (Modul oder Assembly) mit der Linkeroption [/ASSEMBLYRESOURCE (Verwaltete Ressource einbetten)](assemblyresource-embed-a-managed-resource.md) oder der Compileroption **/resource** eingebettet.
+MSIL- *`.obj`* oder *`.netmodule`* Dateien können auch an cl. exe übermittelt werden.
 
-Beim Ausführen eines MSIL-Linkprozesses ohne explizite Angabe von [/LTCG (Codegenerierung zur Verknüpfungszeit)](ltcg-link-time-code-generation.md) wird eine Informationsnachricht angezeigt, dass der Linkvorgang erneut gestartet wird. Diese Nachricht kann ignoriert werden, um die Linkerleistung beim MSIL-Linken zu verbessern, sollten Sie **/LTCG** explizit angeben.
+Eingabe-MSIL- *`.obj`* oder *`.netmodule`* Dateien können keine eingebetteten Ressourcen aufweisen. Betten Sie Ressourcen in ein Ausgabemodul oder eine Assemblydatei ein, indem Sie die Linkeroption [/ASSEMBLYRESOURCE (verwaltete Ressource einbetten)](assemblyresource-embed-a-managed-resource.md) verwenden. Oder verwenden Sie die **/Resource** -Compileroption in anderen Visual Studio-Compilern.
 
-## <a name="example"></a>Beispiel
+## <a name="examples"></a>Beispiele
 
-In C++-Code wird der **catch**-Block einer entsprechenden **try**-Klausel für eine nicht vom System stammende Ausnahme aufgerufen. Allerdings umschließt die CLR nicht vom System stammende Ausnahmen standardmäßig mit <xref:System.Runtime.CompilerServices.RuntimeWrappedException>. Wenn eine Assembly aus Visual C++-Modulen und nicht aus Visual C++ stammenden Modulen erstellt wird und Sie möchten, dass ein **catch**-Block in C++-Code von seiner entsprechenden **try**-Klausel aufgerufen wird, wenn der **try**-Block eine nicht vom System stammende Ausnahme auslöst, müssen Sie dem Quellcode für die nicht aus C++ stammenden Module das Attribut `[assembly:System::Runtime::CompilerServices::RuntimeCompatibility(WrapNonExceptionThrows=false)]` hinzufügen.
+Im C++ Code wird der **`catch`** -Block eines entsprechenden **`try`** für eine nicht`System` Ausnahme aufgerufen. Standardmäßig umschließt die CLR jedoch nicht-`System` Ausnahmen mit <xref:System.Runtime.CompilerServices.RuntimeWrappedException>. Wenn eine C++ Assembly aus-und nicht--C++ Modulen erstellt wird und Sie möchten, dass ein C++ **`catch`** Block im Code aus der entsprechenden **`try`** -Klausel aufgerufen wird, wenn der **`try`** -Block eine nicht`System` Ausnahme auslöst, müssen Sie dem Quellcode für die nicht--C++ Module das `[assembly:System::Runtime::CompilerServices::RuntimeCompatibility(WrapNonExceptionThrows=false)]`-Attribut hinzufügen.
 
 ```cpp
 // MSIL_linking.cpp
@@ -67,11 +74,9 @@ int main() {
 */
 ```
 
-## <a name="example"></a>Beispiel
+Wenn Sie den `Boolean` Wert des `WrapNonExceptionThrows` Attributs ändern, ändern Sie die Fähigkeit des C++ Codes, eine nicht-`System` Ausnahme abzufangen.
 
-Durch Ändern des booleschen Werts des `WrapNonExceptionThrows`-Attributs ändern Sie die Fähigkeit des Visual C++-Codes, eine nicht vom System stammende Ausnahme abzufangen.
-
-```cpp
+```csharp
 // MSIL_linking_2.cs
 // compile with: /target:module /addmodule:MSIL_linking.obj
 // post-build command: link /LTCG MSIL_linking.obj MSIL_linking_2.netmodule /entry:MLinkTest.Main /out:MSIL_linking_2.exe /subsystem:console
