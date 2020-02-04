@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
-ms.openlocfilehash: 29a6b36b0744bec30463fe55df05fe26180b93fe
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b16de7ea54b5f1df21b6626febe773c8cef556f5
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941092"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972143"
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 
@@ -45,10 +45,10 @@ int fesetexceptflag(
 );
 ```
 
-### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameters
 
 *pstatus*<br/>
-Zeiger auf ein **fexcept_t** -Objekt mit den Werten, auf die die ausnahmestatusflags festgelegt werden sollen. Das Objekt kann auf einen früheren Aufruf von [fegetexceptflag](fegetexceptflag2.md) festgelegt werden .
+Zeiger auf ein **fexcept_t** Objekt, das die Werte enthält, auf die die ausnahmestatusflags festgelegt werden. Das Objekt kann auf einen früheren Aufruf von [fegetexceptflag](fegetexceptflag2.md) festgelegt werden .
 
 *ausgenommen*<br/>
 Die festzulegenden Gleitkommaausnahme-Statusflags
@@ -59,7 +59,7 @@ Wenn alle angegebenen Ausnahmestatusflags erfolgreich festgelegt wurden, wird 0 
 
 ## <a name="remarks"></a>Hinweise
 
-Die Funktion " **fesetexceptflag** " legt den Status der durch " *Exception* " angegebenen Gleit Komma Ausnahme-Statusflags auf die entsprechenden Werte fest, die im **fexcept_t** -Objekt festgelegt sind, auf das von *pstatus*verwiesen wird.  Es löst die Ausnahmen aber nicht aus. Der *pstatus* -Zeiger muss auf ein gültiges **fexcept_t** -Objekt zeigen, oder das nachfolgende Verhalten ist nicht definiert. Die Funktion " **fesetexceptflag** " unterstützt diese Exception-Makro Werte in Ausnahme \<Werten, die in "fenv. h" > definiert sind:
+Die Funktion " **fesetexceptflag** " legt den Status der durch " *Exception* " angegebenen Gleit Komma Ausnahme-Statusflags auf die entsprechenden Werte fest, die im **fexcept_t** Objekt festgelegt sind, auf das von *pstatus*verwiesen wird.  Es löst die Ausnahmen aber nicht aus. Der *pstatus* -Zeiger muss auf ein gültiges **fexcept_t** Objekt zeigen, oder das nachfolgende Verhalten ist nicht definiert. Die Funktion " **fesetexceptflag** " unterstützt diese Ausnahme Makro Werte in den *Ausnahmen*, die in \<fenv. h > definiert sind:
 
 |Ausnahmemakro|Beschreibung|
 |---------------------|-----------------|
@@ -68,19 +68,19 @@ Die Funktion " **fesetexceptflag** " legt den Status der durch " *Exception* " a
 |FE_INVALID|Ein Domänenfehler ist in einer früheren Gleitkommaoperation aufgetreten.|
 |FE_OVERFLOW|Ein Bereichsfehler ist aufgetreten; das Ergebnis einer früheren Gleitkommaoperation war zu groß, um dargestellt zu werden.|
 |FE_UNDERFLOW|Das Ergebnis einer früheren Gleitkommaoperation war zu klein, um ganz genau dargestellt zu werden; ein nicht normaler Wert wurde erstellt.|
-|FE_ALLEXCEPT|Bitweiser OR-Operator oder alle unterstützten Gleitkommaausnahmen|
+|FE_ALL_EXCEPT|Bitweiser OR-Operator oder alle unterstützten Gleitkommaausnahmen|
 
 Das *excepts* -Argument kann 0 (null), eines der unterstützten Gleit Komma Ausnahme-Makros oder das bitweise OR von mindestens zwei Makros sein. Der Effekt von jedem anderen Argumentwert ist nicht definiert.
 
 Um diese Funktion zu verwenden, müssen Sie vor dem Aufruf Gleitkommaoptimierungen deaktivieren, die den Zugriff mithilfe der `#pragma fenv_access(on)`-Direktive verhindern könnten. Weitere Informationen finden Sie unter [fenv_access](../../preprocessor/fenv-access.md).
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
 |Funktion|C-Header|C++-Header|
 |--------------|--------------|------------------|
 |**fesetexceptflag**|\<fenv.h>|\<cfenv>|
 
-Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Zusätzliche Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Siehe auch
 

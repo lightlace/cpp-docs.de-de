@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: 07c8a79e0a9569db80607e1ec1e16cd4b502783c
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: e98c402169ed0f35ab1bdf0b8221a2248f252f21
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857826"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972213"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -61,7 +61,7 @@ Die **feraianwith** -Funktion versucht, die durch *Exception*angegebenen Gleit K
 |FE_INVALID|Ein Domänenfehler ist in einer früheren Gleitkommaoperation aufgetreten.|
 |FE_OVERFLOW|Ein Bereichsfehler ist aufgetreten; das Ergebnis einer früheren Gleitkommaoperation war zu groß, um dargestellt zu werden.|
 |FE_UNDERFLOW|Das Ergebnis einer früheren Gleitkommaoperation war zu klein, um ganz genau dargestellt zu werden; ein nicht normaler Wert wurde erstellt.|
-|FE_ALLEXCEPT|Bitweises OR oder alle unterstützten Gleitkommaausnahmen.|
+|FE_ALL_EXCEPT|Bitweiser OR-Operator oder alle unterstützten Gleitkommaausnahmen|
 
 Das *excepts* -Argument kann NULL, einer der ausnahmemakrowerte oder das bitweise OR von mindestens zwei unterstützten Ausnahme Makros sein. Wenn eines der angegebenen Ausnahmemakros FE_OVERFLOW oder FE_UNDERFLOW ist, kann die Ausnahme FE_INEXACT als Nebeneffekt ausgelöst werden.
 

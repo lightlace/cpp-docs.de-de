@@ -1,6 +1,7 @@
 ---
-title: /w,/W0,/W1,/W2,/w3,/W4,/W1,/W2,/w3,/W4,/Wall,/WD,/We,/wo,/WV,/WX (Warnstufe)
-ms.date: 01/31/2018
+title: /w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Warnstufe)
+description: Referenz für die Microsoft C/C++ Compiler-Optionen:/w,/W0,/W1,/W2,/w3,/W4,/W1,/W2,/w3,/W4,/Wall,/WD,/We,/wo,/WV und/WX.
+ms.date: 01/31/2020
 f1_keywords:
 - VC.Project.VCCLCompilerTool.DisableSpecificWarnings
 - VC.Project.VCCLCompilerTool.WarningLevel
@@ -57,14 +58,14 @@ helpviewer_keywords:
 - -w compiler option [C++]
 - /W2 compiler option [C++]
 - /Wv compiler option [C++]
-ms.openlocfilehash: 7d2fd21c476ef4346aa86e682047ea644183b2f3
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: 80b6d0c1fe684de9af62683a75f0fd1107a94089
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683058"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972177"
 ---
-# <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>/w,/W0,/W1,/W2,/w3,/W4,/W1,/W2,/w3,/W4,/Wall,/WD,/We,/wo,/WV,/WX (Warnstufe)
+# <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Warnstufe)
 
 Gibt an, wie der Compiler Warnungen für eine bestimmte Kompilierung generiert.
 
@@ -91,21 +92,26 @@ Gibt an, wie der Compiler Warnungen für eine bestimmte Kompilierung generiert.
 
 Die Warnungs Optionen geben an, welche Compilerwarnungen angezeigt werden sollen, und das Warnungs Verhalten der gesamten Kompilierung.
 
-Die Warnungs Optionen und die zugehörigen Argumente werden in der folgenden Tabelle beschrieben:
+Die Warnungs Optionen und die zugehörigen Argumente werden in den folgenden Tabellen beschrieben:
 
-|Option|Beschreibung|
-------------|-----------------|
-|**/w**|Unterdrückt alle Compilerwarnungen.|
-|**/W0**<br /><br /> **/W1**<br /><br /> **/W2**<br /><br /> **/W3**<br /><br /> **/W4**|Gibt die Ebene der Warnungen an, die vom Compiler generiert werden sollen. Gültige Warn Stufen liegen zwischen 0 und 4:<br />**/W0** unterdrückt alle Warnungen. Dies entspricht **/w**.<br />**/W1** zeigt Warnungen der Stufe 1 (schwerwiegend) an. **/W1** ist die Standardeinstellung im Befehlszeilen Compiler.<br />**/W2** zeigt Warnungen der Stufe 1 und der Ebene 2 (signifikant) an.<br />**/W3** zeigt Warnungen der Stufe 1, Ebene 2 und Ebene 3 (Produktionsqualität) an. **/W3** ist die Standardeinstellung in der IDE.<br />**/W4** zeigt Warnungen auf Ebene 1, Ebene 2 und Ebene 3 sowie alle Warnungen der Stufe 4 (Information) an, die nicht standardmäßig deaktiviert sind. Es wird empfohlen, diese Option zu verwenden, um lint-ähnliche Warnungen bereitzustellen. Bei einem neuen Projekt ist es möglicherweise am besten, **/W4** in allen Kompilierungen zu verwenden. Dadurch wird sichergestellt, dass möglichst wenige schwer zu suchende Code Fehler gefunden werden.|
-|**/Wall**|Zeigt alle Warnungen an, die von **/W4** angezeigt werden, und alle anderen Warnungen, die **/W4** nicht enthält – z. b. Warnungen, die standardmäßig deaktiviert sind. Weitere Informationen finden Sie unter [standardmäßig](../../preprocessor/compiler-warnings-that-are-off-by-default.md)deaktivierte Compilerwarnungen.|
-|**/WV**\[ **:** _Version_]|Zeigt nur die Warnungen an, die in *der Version der Version und früheren* Versionen von Mit dieser Option können Sie neue Warnungen im Code unterdrücken, wenn Sie zu einer neueren Version des Compilers migrieren und den vorhandenen Buildprozess während der Behebung beibehalten. Die optionale Parameter *Version* hat die Form *NN*[. *mm*[. *bbbbb*]], wobei *NN* die Hauptversionsnummer, *mm* die optionale neben Versionsnummer und *bbbbb* die optionale Buildnummer des Compilers ist. Verwenden Sie z. b. */WV: 17* zum Anzeigen von Warnungen, die in Visual Studio 2012 (d. h. eine beliebige Version des Compilers mit der Hauptversionsnummer 17) oder früher eingeführt wurden, aber die in Visual Studio 2013 (Hauptversion 18) und höher eingeführten Warnungen unterdrücken. Standardmäßig verwendet **/WV** die aktuelle compilerversionsnummer, und es werden keine Warnungen unterdrückt. Informationen dazu, welche Warnungen von der Compilerversion unterdrückt werden, finden Sie unter [Compilerwarnungen by Compiler Version](../../error-messages/compiler-warnings/compiler-warnings-by-compiler-version.md).|
-|**/WX**|Behandelt alle Compilerwarnungen als Fehler. Bei einem neuen Projekt ist es möglicherweise am besten, **/WX** in allen Kompilierungen zu verwenden. durch das Auflösen aller Warnungen wird sichergestellt, dass möglichst wenige schwer zu suchende Code Fehler gefunden werden.<br /><br /> Der Linker verfügt auch über eine **/WX** -Option. Weitere Informationen finden Sie unter [/WX (Linkerwarnungen als Fehler behandeln)](wx-treat-linker-warnings-as-errors.md).|
-|**/w1**_nnnn_<br /><br /> **/w2**_nnnn_<br /><br /> **/w3**_nnnn_<br /><br /> **/w4**_nnnn_|Legt die Warnstufe für die durch _nnnn_angegebene Warnungs Nummer fest. Auf diese Weise können Sie das Compilerverhalten für diese Warnung ändern, wenn eine bestimmte Warnstufe festgelegt ist. Diese Optionen können in Kombination mit anderen Warn Optionen verwendet werden, um eigene Codierungsstandards für Warnungen zu erzwingen, anstelle der von Visual Studio bereitgestellten Standardwerte.<br /><br /> Beispielsweise bewirkt **/w34326** , dass C4326 als Warnung der Ebene 3 anstelle von Ebene 1 generiert wird. Wenn Sie mit der **/w34326** -Option und der **/W2** -Option kompilieren, wird Warning C4326 nicht generiert.|
-|**/wd**_nnnn_|Unterdrückt die Compilerwarnung, die von _nnnn_angegeben wird.<br /><br /> Beispielsweise **/wd4326** unterdrückt die Compilerwarnung C4326.|
-|**/We**_nnnn_|Behandelt die Compilerwarnung, die von _nnnn_ als Fehler angegeben wird.<br /><br /> Beispielsweise bewirkt **/we4326** , dass die Warnungs Nummer C4326 vom Compiler als Fehler behandelt wird.|
-|**/wo**_nnnn_|Meldet die Compilerwarnung, die von _nnnn_ nur einmal angegeben wird.<br /><br /> Beispielsweise bewirkt **/wo4326** , dass Warning C4326 nur einmal gemeldet wird, wenn der Compiler das erste Mal gefunden hat.|
+-Option | Beschreibung
+------ | -----------
+**/w** | Unterdrückt alle Compilerwarnungen.
+**/W0**<br /><br /> **/W1**<br /><br /> **/W2**<br /><br /> **/W3**<br /><br /> **/W4** | Gibt die Ebene der Warnungen an, die vom Compiler generiert werden sollen. Gültige Warn Stufen liegen zwischen 0 und 4:<br />**/W0** unterdrückt alle Warnungen. Dies entspricht **/w**.<br />**/W1** zeigt Warnungen der Stufe 1 (schwerwiegend) an. **/W1** ist die Standardeinstellung im Befehlszeilen Compiler.<br />**/W2** zeigt Warnungen der Stufe 1 und der Ebene 2 (signifikant) an.<br />**/W3** zeigt Warnungen der Stufe 1, Ebene 2 und Ebene 3 (Produktionsqualität) an. **/W3** ist die Standardeinstellung in der IDE.<br />**/W4** zeigt Warnungen auf Ebene 1, Ebene 2 und Ebene 3 sowie alle Warnungen der Stufe 4 (Information) an, die nicht standardmäßig deaktiviert sind. Es wird empfohlen, diese Option zu verwenden, um lint-ähnliche Warnungen bereitzustellen. Bei einem neuen Projekt ist es möglicherweise am besten, **/W4** in allen Kompilierungen zu verwenden. Mit dieser Option wird sichergestellt, dass möglichst wenige schwer zu suchende Code Fehler gefunden werden.
+**/Wall** | Zeigt alle Warnungen an, die von **/W4** angezeigt werden, und alle anderen Warnungen, die **/W4** nicht enthält – z. b. Warnungen, die standardmäßig deaktiviert sind. Weitere Informationen finden Sie unter [standardmäßig](../../preprocessor/compiler-warnings-that-are-off-by-default.md)deaktivierte Compilerwarnungen.
+**/WV**\[ **:** _Version_] | In werden nur die Warnungen angezeigt, die in der *Version* Compilerversion und früher eingeführt wurden Sie können diese Option verwenden, um neue Warnungen im Code zu unterdrücken, wenn Sie zu einer neueren Version des Compilers migrieren. Es ermöglicht Ihnen, den vorhandenen Buildprozess beizubehalten, während Sie Sie beheben. Die optionale Parameter *Version* hat die Form *NN*\[. *mm* -\[. *bbbbb*]], wobei *NN* die Hauptversionsnummer, *mm* die optionale neben Versionsnummer und *bbbbb* die optionale Buildnummer des Compilers ist. Verwenden Sie z. b. " **/WV: 17** ", um nur die Warnungen anzuzeigen, die in Visual Studio 2012 (Hauptversion 17) oder früher eingeführt wurden. Das heißt, es werden Warnungen von einer beliebigen Version des Compilers angezeigt, die eine Hauptversionsnummer von 17 oder weniger aufweist. Sie unterdrückt Warnungen, die in Visual Studio 2013 (Hauptversion 18) und höher eingeführt wurden. Standardmäßig verwendet **/WV** die aktuelle compilerversionsnummer, und es werden keine Warnungen unterdrückt. Informationen dazu, welche Warnungen von der Compilerversion unterdrückt werden, finden Sie unter [Compilerwarnungen by Compiler Version](../../error-messages/compiler-warnings/compiler-warnings-by-compiler-version.md).
+**/WX** | Behandelt alle Compilerwarnungen als Fehler. Bei einem neuen Projekt ist es möglicherweise am besten, **/WX** in allen Kompilierungen zu verwenden. durch das Auflösen aller Warnungen wird sichergestellt, dass möglichst wenige schwer zu suchende Code Fehler gefunden werden.<br /><br /> Der Linker verfügt auch über eine **/WX** -Option. Weitere Informationen finden Sie unter [/WX (Linkerwarnungen als Fehler behandeln)](wx-treat-linker-warnings-as-errors.md).
 
-Wenn Sie eine der Warn Optionen verwenden, wenn Sie mithilfe der [/Yc](yc-create-precompiled-header-file.md) -Option einen vorkompilierten Header erstellen, werden die gleichen Warn Optionen durch jede Verwendung des vorkompilierten Headers mithilfe der [/Yu](yu-use-precompiled-header-file.md) -Option erneut wirksam. Sie können die im vorkompilierten Header festgelegten Warnungs Optionen überschreiben, indem Sie eine andere Warn Option in der Befehlszeile verwenden.
+Die folgenden Optionen schließen sich gegenseitig aus. Die letzte von dieser Gruppe angegebene Option ist die angewendete Option:
+
+-Option | Beschreibung
+------ | -----------
+**/w1**_nnnn_<br /><br /> **/w2**_nnnn_<br /><br /> **/w3**_nnnn_<br /><br /> **/w4**_nnnn_ | Legt die Warnstufe für die durch _nnnn_angegebene Warnungs Nummer fest. Mit diesen Optionen können Sie das Compilerverhalten für diese Warnung ändern, wenn eine bestimmte Warnstufe festgelegt ist. Diese Optionen können in Kombination mit anderen Warn Optionen verwendet werden, um eigene Codierungsstandards für Warnungen zu erzwingen, anstelle der von Visual Studio bereitgestellten Standardwerte.<br /><br /> Beispielsweise bewirkt **/w34326** , dass C4326 als Warnung der Ebene 3 anstelle von Ebene 1 generiert wird. Wenn Sie mit der **/w34326** -Option und der **/W2** -Option kompilieren, wird Warning C4326 nicht generiert.
+**/wd**_nnnn_ | Unterdrückt die Compilerwarnung, die von _nnnn_angegeben wird.<br /><br /> Beispielsweise **/wd4326** unterdrückt die Compilerwarnung C4326.
+**/We**_nnnn_ | Behandelt die Compilerwarnung, die von _nnnn_ als Fehler angegeben wird.<br /><br /> Beispielsweise bewirkt **/we4326** , dass die Warnungs Nummer C4326 vom Compiler als Fehler behandelt wird.
+**/wo**_nnnn_ | Meldet die Compilerwarnung, die von _nnnn_ nur einmal angegeben wird.<br /><br /> Beispielsweise bewirkt **/wo4326** , dass Warning C4326 nur einmal gemeldet wird, wenn der Compiler das erste Mal gefunden hat.
+
+Wenn Sie beim Erstellen eines vorkompilierten Headers Warn Optionen verwenden, werden diese Einstellungen beibehalten. Wenn Sie den vorkompilierten Header verwenden, werden dieselben Warn Optionen wieder verwendet. Um die Warnungs Optionen für vorkompilierte Header außer Kraft zu setzen, legen Sie eine andere Warn Option in der Befehlszeile
 
 Sie können eine [#pragma warning](../../preprocessor/warning.md) -Direktive verwenden, um die Warnstufe zu steuern, die zur Kompilierzeit in bestimmten Quelldateien gemeldet wird.
 
@@ -117,7 +123,7 @@ In der [buildfehlerdokumentation](../../error-messages/compiler-errors-1/c-cpp-b
 
 1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen erhalten Sie unter [Set C++ compiler and build properties in Visual Studio (Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio)](../working-with-project-properties.md).
 
-1. Um die Optionen **/W0**, **/W1**, **/W2**, **/w3**, **/W4**, **/Wall,/WV**, **/WX** oder **/WX-** festzulegen, wählen Sie die **Eigenschaften Seite Konfigurations Eigenschaften** > **C/C++**  > **Allgemein** aus.
+1. Um die Optionen **/W0**, **/W1**, **/W2**, **/w3**, **/W4**, **/Wall**, **/WV**, **/WX**oder **/WX-** festzulegen, wählen Sie **Konfigurations Eigenschaften** > **CC++ /**  > **Allgemein**aus.
 
    - Um die Optionen **/W0**, **/W1**, **/W2**, **/w3**, **/W4**oder **/Wall** festzulegen, ändern Sie die Eigenschaft **Warnstufe** .
 
@@ -142,4 +148,4 @@ In der [buildfehlerdokumentation](../../error-messages/compiler-errors-1/c-cpp-b
 ## <a name="see-also"></a>Siehe auch
 
 [MSVC-Compileroptionen](compiler-options.md)\
-[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)
+[MSVC-compilerbefehlszeilensyntax](compiler-command-line-syntax.md)
