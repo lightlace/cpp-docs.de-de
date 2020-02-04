@@ -1,13 +1,14 @@
 ---
 title: Ereignisse (C++/CX)
-ms.date: 07/15/2019
+description: Verwenden C++von/CX zum Erstellen und Verwenden von Ereignis Handlern in der Windows-Runtime.
+ms.date: 02/03/2020
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: aab37353b1ea8d9f81a8e9a9ae489a4dd3542cc0
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 45f9a7bc17d9a695613ce551dae796b2cd2e0e6f
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740525"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972198"
 ---
 # <a name="events-ccx"></a>Ereignisse (C++/CX)
 
@@ -27,7 +28,7 @@ Im folgenden Beispiel werden die Deklaration und das Auslösen einer Schnittstel
 
 [!code-cpp[cx_events#01](../cppcx/codesnippet/CPP/cx_events/class1.h#01)]
 
-### <a name="usage"></a>Verwendung
+### <a name="usage"></a>Verwendungs-
 
 Im folgenden Beispiel wird gezeigt, wie der `+=` -Operator von einer abonnierenden Klasse verwendet wird, um das Ereignis zu abonnieren, und wie ein Ereignishandler bereitgestellt wird, der ausgeführt wird, wenn das Ereignis ausgelöst wird. Beachten Sie, dass die bereitstellende Funktion der Signatur des Delegaten entspricht, der auf der Herausgeberseite im `EventTest` -Namespace definiert ist.
 
@@ -48,7 +49,7 @@ Im nächsten Beispiel wird veranschaulicht, wie Sie benutzerdefinierte Hinzufüg
 
 ## <a name="removing-an-event-handler-from-the-subscriber-side"></a>Entfernen eines Ereignishandlers von der Abonnentenseite
 
-In einigen wenigen Fällen möchten Sie vielleicht einen Ereignishandler für ein Ereignis entfernen, das Sie zuvor abonniert hatten. Sie möchten es beispielsweise durch einen anderen Ereignishandler ersetzen oder einige Ressourcen löschen, die durch diesen Ereignishandler gehalten werden. Um einen Handler zu entfernen, müssen Sie das von der `+=` -Operation zurückgegebene EventRegistrationToken speichern. Sie können den `-=` -Operator im Token dann verwenden, um einen Ereignishandler zu entfernen.  Allerdings kann der ursprüngliche Handler noch aufgerufen werden, nachdem er entfernt wurde. Wenn Sie beabsichtigen, einen Ereignishandler zu entfernen, erstellen Sie daher einen Memberflag und setzen Sie diesen, wenn das Ereignis entfernt wird. Aktivieren Sie dann im Ereignishandler den Flag und kehren Sie sofort zurück, wenn der Flag gesetzt wird. Das grundlegende Muster wird im nächsten Beispiel veranschaulicht.
+In einigen wenigen Fällen möchten Sie vielleicht einen Ereignishandler für ein Ereignis entfernen, das Sie zuvor abonniert hatten. Sie möchten es beispielsweise durch einen anderen Ereignishandler ersetzen oder einige Ressourcen löschen, die durch diesen Ereignishandler gehalten werden. Um einen Handler zu entfernen, müssen Sie das von der `+=` -Operation zurückgegebene EventRegistrationToken speichern. Sie können den `-=` -Operator im Token dann verwenden, um einen Ereignishandler zu entfernen.  Allerdings kann der ursprüngliche Handler noch aufgerufen werden, nachdem er entfernt wurde. So kann z. b. eine Racebedingung auftreten, wenn die Ereignis Quelle eine Liste von Handlern erhält und diese aufruft. Wenn ein Ereignishandler entfernt wird, wird die Liste veraltet. Wenn Sie also einen Ereignishandler entfernen möchten, erstellen Sie ein Member-Flag. Legen Sie den Wert fest, wenn das Ereignis entfernt wird, und überprüfen Sie dann im Ereignishandler das Flag, und geben Sie sofort zurück, wenn es festgelegt ist. Das grundlegende Muster wird im nächsten Beispiel veranschaulicht.
 
 [!code-cpp[cx_events#04](../cppcx/codesnippet/CPP/eventsupportinvs/eventclientclass.h#04)]
 
