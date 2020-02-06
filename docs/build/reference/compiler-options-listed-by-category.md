@@ -4,20 +4,20 @@ ms.date: 01/08/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 0734cdc6fb7d8b543c6415bfd6b4f98469703586
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 191ea3d5d6f4647f7130757a4657820483d212b5
+ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518412"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034583"
 ---
 # <a name="compiler-options-listed-by-category"></a>Compileroptionen (nach Kategorie sortiert)
 
 Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptionen. Eine alphabetische Liste finden Sie unter [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md).
 
-## <a name="optimization"></a>Optimierung
+## <a name="optimization"></a>Optimization
 
-|-Option|Zweck|
+|Option|Zweck|
 |------------|-------------|
 |[/O1](o1-o2-minimize-size-maximize-speed.md)|Erstellt kompakten Code.|
 |[/O2](o1-o2-minimize-size-maximize-speed.md)|Erstellt schnellen Code.|
@@ -31,9 +31,9 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/Oy](oy-frame-pointer-omission.md)|Unterdrückt Framezeiger. (nur x86)|
 |[/favor](favor-optimize-for-architecture-specifics.md)|Erzeugt Code, der für eine bestimmte Architektur optimiert wird, oder für einen Bereich von Architekturen.|
 
-## <a name="code-generation"></a>Codeerzeugung
+## <a name="code-generation"></a>Codegenerierung
 
-|-Option|Zweck|
+|Option|Zweck|
 |------------|-------------|
 |[/arch](arch-x86.md)|Verwendet SSE- oder SSE2-Anweisungen bei der Codeerzeugung. (nur x86)|
 |[/clr](clr-common-language-runtime-compilation.md)|Erzeugt eine Ausgabedatei, die auf der Common Language Runtime ausgeführt werden kann.|
@@ -69,13 +69,15 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|Aktiviert die Berichterstellungsebenen für die automatische Parallelisierung.|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Verwendet ganzzahlige Verschiebungsanweisungen für Gleitkommawerte und deaktiviert bestimmte Gleitkomma-Ladeoptimierungen.|
 |[/Qspectre](qspectre.md)|Aktivieren Sie entschärfungen für CVE 2017-5753 für eine Klasse von Spectre-Angriffen.|
-|[/Qvec-report](qvec-report-auto-vectorizer-reporting-level.md)|Aktiviert die Berichterstellungsebenen für die automatische Vektorisierung.|
+|[/Qspectre-load](qspectre-load.md)|Generieren Sie serialisierungsanweisungen für jede LOAD-Anweisung.|
+|[/Qspectre-load-cf](qspectre-load-cf.md)|Generieren Sie serialisierungsanweisungen für jede Ablauf Steuerungs Anweisung, die Arbeitsspeicher lädt.|
+|[/Qvec-Report](qvec-report-auto-vectorizer-reporting-level.md)|Aktiviert die Berichterstellungsebenen für die automatische Vektorisierung.|
 |[/RTC](rtc-run-time-error-checks.md)|Aktiviert Laufzeitfehlerüberprüfung.|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|Wählt aus, wie das volatile-Schlüsselwort interpretiert wird.|
 
 ## <a name="output-files"></a>Ausgabedateien
 
-|-Option|Zweck|
+|Option|Zweck|
 |------------|-------------|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|Verarbeitet Dokumentationskommentare zu einer XML-Datei.|
 |[/FA](fa-fa-listing-file.md)|Konfiguriert eine Assemblylistendatei.|
@@ -86,11 +88,11 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/Fm](fm-name-mapfile.md)|Erstellt eine Zuordnungsdatei.|
 |[/Fo](fo-object-file-name.md)|Erstellt eine Objektdatei.|
 |[/Fp](fp-name-dot-pch-file.md)|Gibt den Namen einer vorkompilierten Headerdatei an.|
-|[/FR, /Fr](fr-fr-create-dot-sbr-file.md)|Name generierte SBR-Browser Dateien.|
+|[/Fr,/Fr](fr-fr-create-dot-sbr-file.md)|Name generierte SBR-Browser Dateien.|
 
 ## <a name="preprocessor"></a>Präprozessor
 
-|-Option|Zweck|
+|Option|Zweck|
 |------------|-------------|
 |[/AI](ai-specify-metadata-directories.md)|Gibt das zu durchsuchende Verzeichnis an, um Dateiverweise aufzulösen, die an die [#using](../../preprocessor/hash-using-directive-cpp.md) -Direktive übergeben wurden.|
 |[/C](c-preserve-comments-during-preprocessing.md)|Behält Kommentare beim Präprozessorlauf bei|
@@ -106,9 +108,9 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/u](u-u-undefine-symbols.md)|Entfernt alle vorkompilierten Makros.|
 |[/X](x-ignore-standard-include-paths.md)|Ignoriert das standardmäßige Includeverzeichnis.|
 
-## <a name="language"></a>Language
+## <a name="language"></a>Sprache
 
-|-Option|Zweck|
+|Option|Zweck|
 |------------|-------------|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|Die constexpr-Auswertung zum Zeitpunkt der Kompilierung steuern.|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|Ermöglicht [#pragma omp](../../preprocessor/omp.md) im Quellcode.|
@@ -122,7 +124,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/Za](za-ze-disable-language-extensions.md)|Deaktiviert die C89-Spracherweiterungen.|
 |[/Zc](zc-conformance.md)|Legt Standardverhalten unter [/Ze](za-ze-disable-language-extensions.md)fest.|
 |[/Ze](za-ze-disable-language-extensions.md)|Veraltet. Aktiviert die C89-Spracherweiterungen.|
-|[/Zf](zf.md)|Verbessert die PDB-Generierungs Zeit in parallelen Builds.|
+|[/ZF](zf.md)|Verbessert die PDB-Generierungs Zeit in parallelen Builds.|
 |[/ZH](zh.md)|Gibt MD5, SHA-1 oder SHA-256 für Prüfsummen in Debuginformationen an.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Fügt Debuginformationen in eine Programmdatenbank ein, die mit Bearbeiten und Fortfahren kompatibel ist. (nur x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Erzeugt vollständige Debuginformationen.|
@@ -133,7 +135,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 
 ## <a name="linking"></a>Verknüpfen
 
-|-Option|Zweck|
+|Option|Zweck|
 |------------|-------------|
 |[/F](f-set-stack-size.md)|Legt die Stapelgröße fest.|
 |[/LD](md-mt-ld-use-run-time-library.md)|Erstellt eine Dynamic Link Library (DLL).|
@@ -145,9 +147,9 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/MT](md-mt-ld-use-run-time-library.md)|Kompiliert, um mit LIBCMT.LIB eine ausführbare Multithreaddatei zu erstellen.|
 |[/MTd](md-mt-ld-use-run-time-library.md)|Kompiliert, um mit LIBCMTD.LIB eine ausführbare Multithreaddatei für den Debugger zu erstellen.|
 
-## <a name="miscellaneous"></a>Verschiedenes
+## <a name="miscellaneous"></a>Sonstiges
 
-|-Option|Zweck|
+|Option|Zweck|
 |------------|-------------|
 |[/?](help-compiler-command-line-help.md)|Listet die Compileroptionen auf.|
 |[@](at-specify-a-compiler-response-file.md)|Legt eine Antwortdatei fest.|
@@ -189,26 +191,26 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/Y-](y-ignore-precompiled-header-options.md)|Ignoriert alle anderen Optionen für vorkompilierte Header im aktuellen Erstellungsprozess.|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|Legt die maximale Speicherbelegung für den vorkompilierten Header fest.|
 |[/await](await-enable-coroutine-support.md)|Aktivieren von Coroutinen-Erweiterungen (fort Setz Bare Funktionen).|
-|[/source-charset](source-charset-set-source-character-set.md)|Quell Zeichensatz festlegen.|
-|[/execution-charset](execution-charset-set-execution-character-set.md)|Festlegen des Ausführungs Zeichensatzes.|
-|[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Legen Sie die Quell-und Ausführungs Zeichensätze auf UTF-8 fest.|
-|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|Überprüfen Sie die UTF-8-Dateien nur für kompatible Zeichen.|
-|[/diagnostics](diagnostics-compiler-diagnostic-options.md)|Steuert das Format von Diagnosemeldungen.|
+|["/Source-charset"](source-charset-set-source-character-set.md)|Quell Zeichensatz festlegen.|
+|["/Execution-charset"](execution-charset-set-execution-character-set.md)|Festlegen des Ausführungs Zeichensatzes.|
+|["/UTF-8"](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Legen Sie die Quell-und Ausführungs Zeichensätze auf UTF-8 fest.|
+|[/Validate-charset](validate-charset-validate-for-compatible-characters.md)|Überprüfen Sie die UTF-8-Dateien nur für kompatible Zeichen.|
+|[/Diagnostics](diagnostics-compiler-diagnostic-options.md)|Steuert das Format von Diagnosemeldungen.|
 |[/permissive-](permissive-standards-conformance.md)|Legen Sie den Standard Konformitäts Modus fest.|
-|[/std](std-specify-language-standard-version.md)|C++Standard Versions Kompatibilitäts Auswahl.|
+|[/Std](std-specify-language-standard-version.md)|C++Standard Versions Kompatibilitäts Auswahl.|
 
 ## <a name="experimental-options"></a>Experimentelle Optionen
 
 Experimentelle Optionen können nur von bestimmten Versionen des Compilers unterstützt werden und können sich in unterschiedlichen Compilerversionen unterschiedlich verhalten. Häufig ist die beste oder einzige Dokumentation für experimentelle Optionen im [ C++ Microsoft Team Blog](https://devblogs.microsoft.com/cppblog/).
 
-|-Option|Zweck|
+|Option|Zweck|
 |------------|-------------|
 |[/experimental: Modul](experimental-module.md)|Ermöglicht die Unterstützung von experimentellen Modulen.|
 |[/experimental: Präprozessor](experimental-preprocessor.md)|Aktiviert die experimentelle Unterstützung für den Präprozessor.|
 
 ## <a name="deprecated-and-removed-compiler-options"></a>Veraltete und entfernte Compileroptionen
 
-|-Option|Zweck|
+|Option|Zweck|
 |------------|-------------|
 |[/clr:noAssembly](clr-common-language-runtime-compilation.md)|Veraltet. Verwenden Sie stattdessen [/LN (Create MSIL Module)](ln-create-msil-module.md) .|
 |[/Fr](fr-fr-create-dot-sbr-file.md)|Veraltet. Erstellt eine Browseinformationsdatei ohne lokale Variablen.|
@@ -226,7 +228,7 @@ Experimentelle Optionen können nur von bestimmten Versionen des Compilers unter
 |[/Ze](za-ze-disable-language-extensions.md)|Veraltet. Aktiviert Spracherweiterungen.|
 |[/Zg](zg-generate-function-prototypes.md)|In Visual Studio 2015 entfernt. Erzeugt Funktionsprototypen.|
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Referenz zur C/C++-Erstellung](c-cpp-building-reference.md)<br/>
 [MSVC-Compileroptionen](compiler-options.md)<br/>

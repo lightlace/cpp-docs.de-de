@@ -3,43 +3,43 @@ title: Compileroptionen alphabetisch sortiert
 ms.date: 01/08/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 72441692869dbed806474a7054fedff53b923d42
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: d64a41802c18627cf8e07f0d83b53fa5a4555f5b
+ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518373"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034596"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Compileroptionen alphabetisch sortiert
 
 In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in alphabetischer Reihenfolge. Eine nach Kategorien sortierte Liste finden Sie unter [Compileroptionen nach Kategorien sortiert](compiler-options-listed-by-category.md).
 
-|-Option|Zweck|
+|Option|Zweck|
 |------------|-------------|
 |[@](at-specify-a-compiler-response-file.md)|Legt eine Antwortdatei fest.|
 |[/?](help-compiler-command-line-help.md)|Listet die Compileroptionen auf.|
 |[/AI](ai-specify-metadata-directories.md)|Gibt das zu durchsuchende Verzeichnis an, um Dateiverweise aufzulösen, die an die [#using](../../preprocessor/hash-using-directive-cpp.md) -Direktive übergeben wurden.|
 |[/analyze](analyze-code-analysis.md)|Aktiviert die Codeanalyse.|
 |[/arch](arch-minimum-cpu-architecture.md)|Gibt die Architektur für die Codegenerierung an.|
-|[/await](await-enable-coroutine-support.md)|Enable coroutines (resumable functions) extensions.|
+|[/await](await-enable-coroutine-support.md)|Aktivieren von Coroutinen-Erweiterungen (fort Setz Bare Funktionen).|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Erhöht die Anzahl von adressierbaren Abschnitten in einer OBJ-Datei.|
 |[/C](c-preserve-comments-during-preprocessing.md)|Behält Kommentare beim Präprozessorlauf bei|
 |[/c](c-compile-without-linking.md)|Kompiliert ohne Verknüpfen.|
 |[/cgthreads](cgthreads-code-generation-threads.md)|Gibt die Anzahl der cl.exe-Threads an, die für Optimierung und Codegenerierung verwendet werden.|
 |[/clr](clr-common-language-runtime-compilation.md)|Erzeugt eine Ausgabedatei, die auf der Common Language Runtime ausgeführt werden kann.|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|Control constexpr evaluation at compile-time.|
+|[/constexpr](constexpr-control-constexpr-evaluation.md)|Die constexpr-Auswertung zum Zeitpunkt der Kompilierung steuern.|
 |[/D](d-preprocessor-definitions.md)|Definiert Konstanten und Makros.|
-|[/diagnostics](diagnostics-compiler-diagnostic-options.md)|Controls the format of diagnostic messages.|
+|[/Diagnostics](diagnostics-compiler-diagnostic-options.md)|Steuert das Format von Diagnosemeldungen.|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|Verarbeitet Dokumentationskommentare zu einer XML-Datei.|
 |[/E](e-preprocess-to-stdout.md)|Kopiert die Präprozessorausgabe in die Standardausgabe.|
 |[/EH](eh-exception-handling-model.md)|Gibt das Modell der Ausnahmebehandlung an.|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Kopiert die Präprozessorausgabe in die Standardausgabe.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|Allows you to provide internal compiler error (ICE) information directly to the Microsoft C++ team.|
-|[/execution-charset](execution-charset-set-execution-character-set.md)|Set execution character set.|
-|[/experimental:module](experimental-module.md)|Enables experimental module support.|
-|[/experimental:preprocessor](experimental-preprocessor.md)|Enables experimental conforming preprocessor support.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|Ermöglicht Ihnen, dem Microsoft C++ -teaminterne Compilerfehlerinformationen (ICE) direkt bereitzustellen.|
+|["/Execution-charset"](execution-charset-set-execution-character-set.md)|Festlegen des Ausführungs Zeichensatzes.|
+|[/experimental: Modul](experimental-module.md)|Ermöglicht die Unterstützung von experimentellen Modulen.|
+|[/experimental: Präprozessor](experimental-preprocessor.md)|Aktiviert die experimentelle Unterstützung für den Präprozessor.|
 |[/F](f-set-stack-size.md)|Legt die Stapelgröße fest.|
-|[/favor](favor-optimize-for-architecture-specifics.md)|Produces code that is optimized for a specific x64 architecture or for the specifics of micro-architectures in both the AMD64 and Extended Memory 64 Technology (EM64T) architectures.|
+|[/favor](favor-optimize-for-architecture-specifics.md)|Erzeugt Code, der für eine bestimmte x64-Architektur optimiert ist, oder für die Besonderheiten von Mikro Architekturen in den amd64-und Extended Memory 64 Technology (EM64T)-Architekturen.|
 |[/FA](fa-fa-listing-file.md)|Erstellt eine Listendatei.|
 |[/Fa](fa-fa-listing-file.md)|Legt den Namen der Listendatei fest.|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Anzeige des vollständigen Pfads der Quellcodedateien im Diagnosetext in "cl.exe".|
@@ -47,7 +47,7 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/Fe](fe-name-exe-file.md)|Benennt die ausführbare Datei um.|
 |[/FI](fi-name-forced-include-file.md)|Führt eine Vorverarbeitung der angegebenen Includedatei durch.|
 |[/Fi](fi-preprocess-output-file-name.md)|Legt den vorverarbeiteten Ausgabedateinamen fest.|
-|[/Fm](fm-name-mapfile.md)|Creates a map file.|
+|[/Fm](fm-name-mapfile.md)|Erstellt eine Zuordnungs Datei.|
 |[/Fo](fo-object-file-name.md)|Erstellt eine Objektdatei.|
 |[/fp](fp-specify-floating-point-behavior.md)|Gibt das Gleitkommaverhalten an.|
 |[/Fp](fp-name-dot-pch-file.md)|Gibt den Namen einer vorkompilierten Headerdatei an.|
@@ -77,11 +77,11 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|Verwendet die `__stdcall` -Aufrufkonvention (nur x86).|
 |[/H](h-restrict-length-of-external-names.md)|Veraltet. Beschränkt die Länge externer (öffentlicher) Namen.|
 |[/HELP](help-compiler-command-line-help.md)|Listet die Compileroptionen auf.|
-|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Erzwingt, dass in Registern übergebene Parameter beim Funktionseinstieg in ihre Speicherorte auf dem Stapel geschrieben werden. This compiler option is only for the x64 compilers (native and cross compile).|
-|[/hotpatch](hotpatch-create-hotpatchable-image.md)|Creates a hot-patchable image.|
+|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Erzwingt, dass in Registern übergebene Parameter beim Funktionseinstieg in ihre Speicherorte auf dem Stapel geschrieben werden. Diese Compileroption gilt nur für die x64-Compiler (systemeigene und Cross-Kompilierung).|
+|[/hotpatch](hotpatch-create-hotpatchable-image.md)|Erstellt ein Abbild, das heiß patchfähig ist.|
 |[/I](i-additional-include-directories.md)|Sucht in einem Verzeichnis nach Includedateien.|
 |[/J](j-default-char-type-is-unsigned.md)|Ändert den `char` -Standardtyp.|
-|[/JMC](jmc.md)|Supports native C++ Just My Code debugging.|
+|[/JMC](jmc.md)|Unterstützt C++ natives nur eigenen Code Debugging.|
 |[/kernel](kernel-create-kernel-mode-binary.md)|Der Compiler und der Linker erstellen eine Binärdatei, die im Kernel von Windows ausgeführt werden kann.|
 |[/LD](md-mt-ld-use-run-time-library.md)|Erstellt eine Dynamic Link Library (DLL).|
 |[/LDd](md-mt-ld-use-run-time-library.md)|Erstellt eine Debug-Dynamic Link Library.|
@@ -99,35 +99,37 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/Od](od-disable-debug.md)|Deaktiviert Optimierung.|
 |[/Og](og-global-optimizations.md)|Veraltet. Verwendet globale Optimierung.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Erstellt systeminterne Funktionen.|
-|[/openmp](openmp-enable-openmp-2-0-support.md)|Enables the [`#pragma omp`](../../preprocessor/omp.md) directive in source code.|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|Aktiviert die [`#pragma omp`](../../preprocessor/omp.md) -Direktive im Quellcode.|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|Bevorzugt kompakten Code.|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Bevorzugt schnellen Code.|
-|[/Ox](ox-full-optimization.md)|A subset of /O2 that doesn't include /GF or /Gy.|
+|[/Ox](ox-full-optimization.md)|Eine Teilmenge von/O2, die/GF oder/Gy. nicht enthält.|
 |[/Oy](oy-frame-pointer-omission.md)|Unterdrückt Framezeiger (nur x86).|
 |[/P](p-preprocess-to-a-file.md)|Schreibt Präprozessorausgaben in eine Datei.|
-|[/permissive-](permissive-standards-conformance.md)|Set standard-conformance mode.|
+|[/permissive-](permissive-standards-conformance.md)|Legen Sie den Standard Konformitäts Modus fest.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Generiert schnelle Transzendente.|
 |[/QIfist](qifist-suppress-ftol.md)|Veraltet. Unterdrückt `_ftol` , wenn eine Konvertierung von einem Gleitkommatyp zu einem ganzzahligen Typ erforderlich ist (nur x86).|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Entfernt `fwait` -Befehle in `try` -Blöcken.|
-|[/QIntel-jcc-erratum](qintel-jcc-erratum.md)|Mitigates the performance impact of the Intel JCC erratum microcode update.|
+|[/QIntel-jcc-erratum](qintel-jcc-erratum.md)|Verringert die Auswirkungen der Intel JCC Erratum-mikrocodeaktualisierung auf die Leistung.|
 |[/Qpar (Automatische Parallelisierung)](qpar-auto-parallelizer.md)|Ermöglicht automatische Parallelisierung von Schleifen, die mit der [#pragma loop()](../../preprocessor/loop.md) -Direktive gekennzeichnet sind.|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Verwendet ganzzahlige Verschiebungsanweisungen für Gleitkommawerte und deaktiviert bestimmte Gleitkomma-Ladeoptimierungen.|
 |[/Qspectre](qspectre.md)|Gibt die Compilergenerierung von Anweisungen an, um bestimmte mit Spectre-Variante 1 zusammenhängende Sicherheitsrisiken abzumildern.|
+|[/Qspectre-load](qspectre-load.md)|Gibt die Compilergenerierung von serialisierungsanweisungen zum mindern von Spectre-Sicherheitsrisiken basierend auf Ladeanweisungen an.|
+|[/Qspectre-load-cf](qspectre-load-cf.md)|Gibt die Compilergenerierung von serialisierungsanweisungen zum mindern von Spectre-Sicherheitsrisiken basierend auf Anweisungen zur Ablauf Steuerung an, die Speicher laden|
 |[/Qvec-report (Berichtebene der automatischen Vektorisierung)](qvec-report-auto-vectorizer-reporting-level.md)|Aktiviert die Berichterstellungsebenen für die automatische Vektorisierung.|
 |[/RTC](rtc-run-time-error-checks.md)|Aktiviert Laufzeitfehlerüberprüfung.|
 |[/sdl](sdl-enable-additional-security-checks.md)|Aktiviert zusätzliche Sicherheitsfunktionen und Warnungen.|
 |[/showIncludes](showincludes-list-include-files.md)|Zeigt während der Kompilierung eine Liste der Includedateien an.|
-|[/source-charset](source-charset-set-source-character-set.md)|Set source character set.|
-|[/std](std-specify-language-standard-version.md)|C++ standard version compatibility selector.|
+|["/Source-charset"](source-charset-set-source-character-set.md)|Quell Zeichensatz festlegen.|
+|[/Std](std-specify-language-standard-version.md)|C++Standard Versions Kompatibilitäts Auswahl.|
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|Gibt eine C-Quelldatei an.|
-|[/TC](tc-tp-tc-tp-specify-source-file-type.md)|Specifies all source files are C.|
+|[/TC](tc-tp-tc-tp-specify-source-file-type.md)|Gibt an, dass alle Quelldateien C sind.|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|Gibt eine C++-Quelldatei an.|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Specifies all source files are C++.|
+|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Gibt an, dass alle C++Quelldateien lauten.|
 |[/U](u-u-undefine-symbols.md)|Entfernt ein vorkompiliertes Makro.|
 |[/u](u-u-undefine-symbols.md)|Entfernt alle vorkompilierten Makros.|
-|[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Set source and execution character sets to UTF-8.|
+|["/UTF-8"](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Legen Sie die Quell-und Ausführungs Zeichensätze auf UTF-8 fest.|
 |[/V](v-version-number.md)|Veraltet. Legt die Versionszeichenfolge der OBJ-Datei fest.|
-|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|Validate UTF-8 files for only compatible characters.|
+|[/Validate-charset](validate-charset-validate-for-compatible-characters.md)|Überprüfen Sie die UTF-8-Dateien nur für kompatible Zeichen.|
 |[/vd](vd-disable-construction-displacements.md)|Unterdrückt oder aktiviert ausgeblendete vtordisp-Klassenmember.|
 |[/vmb](vmb-vmg-representation-method.md)|Verwendet bestmögliche Basis für Zeiger auf Member.|
 |[/vmg](vmb-vmg-representation-method.md)|Verwendet volle Allgemeingültigkeit für Zeiger auf Member.|
@@ -152,11 +154,11 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/Yd](yd-place-debug-information-in-object-file.md)|Veraltet. Legt vollständige Debuginformationen in allen Objektdateien ab. Verwenden Sie stattdessen [/Zi](z7-zi-zi-debug-information-format.md) .|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|Fügt beim Erstellen einer Debugbibliothek einen PCH-Verweis ein|
 |[/Yu](yu-use-precompiled-header-file.md)|Verwendet eine vorkompilierte Headerdatei beim Erstellungsvorgang.|
-|[/Z7](z7-zi-zi-debug-information-format.md)|Generates C 7.0-compatible debugging information.|
+|[/Z7](z7-zi-zi-debug-information-format.md)|Generiert C 7,0-kompatible Debuginformationen.|
 |[/Za](za-ze-disable-language-extensions.md)|Deaktiviert Spracherweiterungen.|
 |[/Zc](zc-conformance.md)|Gibt das Standardverhalten unter [/Ze](za-ze-disable-language-extensions.md)an. [/Za,/Ze (Spracherweiterungen deaktivieren)](za-ze-disable-language-extensions.md)|
 |[/Ze](za-ze-disable-language-extensions.md)|Veraltet. Aktiviert Spracherweiterungen.|
-|[/Zf](zf.md)|Verbessert die PDB-Generierungs Zeit in parallelen Builds.|
+|[/ZF](zf.md)|Verbessert die PDB-Generierungs Zeit in parallelen Builds.|
 |[/Zg](zg-generate-function-prototypes.md)|In Visual Studio 2015 entfernt. Erzeugt Funktionsprototypen.|
 |[/ZH](zh.md)|Gibt MD5, SHA-1 oder SHA-256 für Prüfsummen in Debuginformationen an.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Fügt Debuginformationen in eine Programmdatenbank ein, die mit Bearbeiten und Fortfahren kompatibel ist.|
@@ -168,7 +170,7 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/Zs](zs-syntax-check-only.md)|Prüft nur die Syntax.|
 |[/ZW](zw-windows-runtime-compilation.md)|Erzeugt eine Ausgabedatei, die auf dem Windows-Runtime ausgeführt wird.|
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [MSVC-Compileroptionen](compiler-options.md)<br/>
 [Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Q compiler option [C++]
 - -Q compiler option [C++]
 - /Q compiler option [C++]
-ms.openlocfilehash: 9dd3675f200be4f0ec66620bcf3cf05706991b66
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 722a63a43e5e08fe80b26f908c7ae92df2fdb29c
+ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518170"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034518"
 ---
 # <a name="q-options-low-level-operations"></a>/Q-Optionen (Operationen auf niedriger Ebene)
 
@@ -34,9 +34,13 @@ Mit den **/Q** -Compileroptionen können Sie die folgenden Compilervorgänge auf
 
 - [/Qspectre](qspectre.md): generiert Anweisungen, um bestimmte Spectre-Sicherheitslücken zu mindern.
 
+- [/Qspectre-Load](qspectre-load.md): generiert Anweisungen zur Entschärfung von Spectre-Sicherheitsrisiken auf der Grundlage von Belastungen.
+
+- [/Qspectre-Load-CF](qspectre-load-cf.md): generiert Anweisungen zur Abwehr von Spectre-Sicherheitsrisiken basierend auf Ablauf Steuerungs Anweisungen, die geladen werden.
+
 - [/Qvec-Report (Auto-Vectorizer-Berichts Ebene)](qvec-report-auto-vectorizer-reporting-level.md): aktiviert Berichterstattungs Ebenen für die automatische Vektorisierung.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [MSVC-Compileroptionen](compiler-options.md)<br/>
 [Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)
