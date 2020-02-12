@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-ms.openlocfilehash: ce7734a1330f2d6e495565338879764482439d09
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8686b5ef0906e3188a1e683d1190bbe6124cd19e
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337543"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143265"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup-Klasse
 
@@ -24,54 +24,54 @@ Stellt die Abstraktion für eine Planungsgruppe dar. In Planungsgruppen werden S
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class ScheduleGroup;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="protected-constructors"></a>Geschützte Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[~ ScheduleGroup-Destruktor](#dtor)||
+|[~ ScheduleGroup-Dekonstruktor](#dtor)||
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[Id](#id)|Gibt einen Bezeichner für die Planungsgruppe zurück, der innerhalb des Planers eindeutig ist, zu dem die Gruppe gehört.|
-|[Verweis](#reference)|Inkrementiert den Verweiszähler dieser Planergruppe.|
-|[Version](#release)|Dekrementiert den Verweiszähler dieser Planergruppe.|
+|[Referenz](#reference)|Inkrementiert den Verweiszähler dieser Planergruppe.|
+|[Release](#release)|Dekrementiert den Verweiszähler dieser Planergruppe.|
 |[ScheduleTask](#scheduletask)|Plant eine einfache Aufgabe innerhalb der Planungsgruppe.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 `ScheduleGroup`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** concrt.h
+**Header:** ConcRT. h
 
 **Namespace:** Parallelität
 
-##  <a name="id"></a> Id
+## <a name="id"></a>Name
 
 Gibt einen Bezeichner für die Planungsgruppe zurück, der innerhalb des Planers eindeutig ist, zu dem die Gruppe gehört.
 
-```
+```cpp
 virtual unsigned int Id() const = 0;
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Bezeichner für die Planungsgruppe, die innerhalb des Planers eindeutig ist, der die Gruppe gehört.
+Ein Bezeichner für die Zeit Plan Gruppe, der innerhalb des Planers eindeutig ist, zu dem die Gruppe gehört.
 
-##  <a name="operator_delete"></a> Delete-Operator
+## <a name="operator_delete"></a>Operator löschen
 
-Ein `ScheduleGroup` Objekt wird intern von der Laufzeit zerstört, wenn alle externen Verweise darauf freigegeben werden. Es kann nicht explizit gelöscht werden.
+Ein `ScheduleGroup` Objekt wird von der Laufzeit intern zerstört, wenn alle externen Verweise darauf freigegeben werden. Sie kann nicht explizit gelöscht werden.
 
-```
+```cpp
 void operator delete(
     void* _PObject);
 
@@ -85,53 +85,53 @@ const char *,
 ### <a name="parameters"></a>Parameter
 
 *_PObject*<br/>
-Ein Zeiger auf das Objekt, das gelöscht werden.
+Ein Zeiger auf das Objekt, das gelöscht werden soll.
 
-##  <a name="reference"></a> Referenz
+## <a name="reference"></a>Angabe
 
 Inkrementiert den Verweiszähler dieser Planergruppe.
 
-```
+```cpp
 virtual unsigned int Reference() = 0;
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der neu inkrementiert Verweiszähler.
+Der neu inkrementierte Verweis Zähler.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Dies wird normalerweise zum Verwalten der Lebensdauer der Gruppe "Zeitplan" für die Komposition verwendet. Wenn der Verweiszähler des einer Planungsgruppe aus 0 (null) fällt, wird die Planungsgruppe von der Laufzeit gelöscht. Eine Zeitplan-Gruppe erstellt haben, verwenden entweder die [CurrentScheduler:: CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) -Methode, oder die [Scheduler:: CreateScheduleGroup](scheduler-class.md#createschedulegroup) Methode beginnt mit einer Verweisanzahl von einem.
+Dies wird normalerweise verwendet, um die Lebensdauer der Zeit Plan Gruppe für die Komposition zu verwalten. Wenn der Verweis Zähler einer Zeit Plan Gruppe auf 0 (null) fällt, wird die Zeit Plan Gruppe von der Laufzeit gelöscht. Eine Zeit Plan Gruppe, die mit der [CurrentScheduler:: aufgabenschedulegroup](currentscheduler-class.md#createschedulegroup) -Methode erstellt wurde, oder die [Scheduler:: up ScheduleGroup](scheduler-class.md#createschedulegroup) -Methode beginnt mit einem Verweis Zähler von 1.
 
-##  <a name="release"></a> Version
+## <a name="release"></a>Abgabe
 
 Dekrementiert den Verweiszähler dieser Planergruppe.
 
-```
+```cpp
 virtual unsigned int Release() = 0;
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der neu dekrementiert Verweiszähler.
+Der neu dekrementierte Verweis Zähler.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Dies wird normalerweise zum Verwalten der Lebensdauer der Gruppe "Zeitplan" für die Komposition verwendet. Wenn der Verweiszähler des einer Planungsgruppe aus 0 (null) fällt, wird die Planungsgruppe von der Laufzeit gelöscht. Nach dem Sie aufgerufen haben die `Release` Methode verweisen kann die bestimmte Anzahl von Malen So entfernen Sie die Erstellung, Anzahl und zusätzliche Verweise eingefügt der `Reference` -Methode, Sie können nicht die Planungsgruppe weiter nutzen. Dies führt zu nicht definiertem Verhalten.
+Dies wird normalerweise verwendet, um die Lebensdauer der Zeit Plan Gruppe für die Komposition zu verwalten. Wenn der Verweis Zähler einer Zeit Plan Gruppe auf 0 (null) fällt, wird die Zeit Plan Gruppe von der Laufzeit gelöscht. Nachdem Sie die `Release`-Methode so oft wie möglich, um den Verweis Zähler für die Erstellung und alle zusätzlichen Verweise, die mit der `Reference`-Methode platziert wurden, aufgerufen haben, können Sie die Zeit Plan Gruppe nicht weiter verwenden. Dies führt zu undefiniertem Verhalten.
 
-Eine Planungsgruppe ist ein bestimmtes Zeitplanungsmodul-Instanz zugeordnet. Sie müssen sicherstellen, dass alle Verweise auf die Planungsgruppe freigegeben werden, bevor alle Verweise auf den Planer veröffentlicht werden, da in der Planer zerstört führen können. Andernfalls kann dies nicht definiertem Verhalten.
+Eine Zeit Plan Gruppe ist einer bestimmten Scheduler-Instanz zugeordnet. Sie müssen sicherstellen, dass alle Verweise auf die Zeit Plan Gruppe freigegeben werden, bevor alle Verweise auf den Scheduler freigegeben werden, da letztere möglicherweise dazu führt, dass der Scheduler zerstört wird. Andernfalls führt dies zu einem nicht definierten Verhalten.
 
-##  <a name="dtor"></a> ~ScheduleGroup
+## <a name="dtor"></a>~ ScheduleGroup
 
-```
+```cpp
 virtual ~ScheduleGroup();
 ```
 
-##  <a name="scheduletask"></a> ScheduleTask
+## <a name="scheduletask"></a>ScheduleTask
 
 Plant eine einfache Aufgabe innerhalb der Planungsgruppe.
 
-```
+```cpp
 virtual void ScheduleTask(
     TaskProc _Proc,
     _Inout_opt_ void* _Data) = 0;
@@ -140,16 +140,16 @@ virtual void ScheduleTask(
 ### <a name="parameters"></a>Parameter
 
 *_Proc*<br/>
-Ein Zeiger auf die Funktion, die ausgeführt werden, um den Text der Aufgabe leicht durchführen.
+Ein Zeiger auf die Funktion, die ausgeführt wird, um den Text der einfachen Aufgabe auszuführen.
 
 *_Data*<br/>
-Ein void-Zeiger auf die Daten, die in den Text der Aufgabe als Parameter übergeben werden.
+Ein void-Zeiger auf die Daten, die als Parameter an den Textkörper der Aufgabe übergeben werden.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Aufrufen der `ScheduleTask` -Methode setzt implizit einen Verweiszähler für die Planungsgruppe, die von der Laufzeit, zu einem geeigneten Zeitpunkt entfernt wird, nachdem der Task ausgeführt wird.
+Wenn Sie die `ScheduleTask`-Methode aufrufen, wird implizit ein Verweis Zähler für die Zeit Plan Gruppe eingefügt, der nach der Ausführung des Tasks von der Laufzeit zu einem passenden Zeitpunkt entfernt wird.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [CurrentScheduler-Klasse](currentscheduler-class.md)<br/>
