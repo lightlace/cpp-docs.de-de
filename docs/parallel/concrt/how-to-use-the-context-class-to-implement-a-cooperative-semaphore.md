@@ -1,22 +1,24 @@
 ---
-title: 'Vorgehensweise: Implementieren einer kooperativen Semaphore mithilfe der Context-Klasse'
+title: 'Gewusst wie: Implementieren einer kooperativen Semaphore mithilfe der Context-Klasse'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - cooperative semaphore implementing
 - context class
 ms.assetid: 22f4b9c0-ca22-4a68-90ba-39e99ea76696
-ms.openlocfilehash: 92f77fade972bff1528bc9a22416670354c70f34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5075052592993f413290242e70206b1e227064aa
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366705"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141904"
 ---
-# <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>Vorgehensweise: Implementieren einer kooperativen Semaphore mithilfe der Context-Klasse
+# <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>Gewusst wie: Implementieren einer kooperativen Semaphore mithilfe der Context-Klasse
 
-In diesem Thema zeigt, wie die Concurrency:: Context-Klasse, die zum Implementieren einer kooperativen Semaphore-Klasse verwendet wird.
+In diesem Thema wird erläutert, wie die concurrency::Context-Klasse verwendet wird, um eine kooperative Semaphorenklasse zu implementieren.
 
-Mit der `Context`-Klasse können Sie den aktuellen Ausführungskontext blockieren oder zurückhalten. Das Blockieren oder Zurückhalten des aktuellen Kontexts ist nützlich, wenn der aktuelle Kontext nicht fortfahren kann, da eine Ressource nicht verfügbar ist. Ein *Semaphor* ist ein Beispiel für eine Situation, in dem der aktuelle Ausführungskontext warten muss, eine Ressource verfügbar wird. Eine Semaphore ist wie ein kritisches Abschnittsobjekt ein Synchronisierungsobjekt, das dem Code in einem Kontext ermöglicht, exklusiv auf eine Ressource zuzugreifen. Im Gegensatz zu einem kritischen Abschnittsobjekt ermöglicht eine Semaphore jedoch mehr als einem Kontext, gleichzeitig auf die Ressource zuzugreifen. Wenn die maximale Anzahl von Kontexten eine Semaphorensperre hat, muss jeder zusätzliche Kontext warten, bis ein anderer Kontext die Sperre aufhebt.
+## <a name="remarks"></a>Bemerkungen
+
+Mit der `Context`-Klasse können Sie den aktuellen Ausführungskontext blockieren oder zurückhalten. Das Blockieren oder Zurückhalten des aktuellen Kontexts ist nützlich, wenn der aktuelle Kontext nicht fortfahren kann, da eine Ressource nicht verfügbar ist. Ein *Semaphor* ist ein Beispiel für eine Situation, in der der aktuelle Ausführungs Kontext warten muss, bis eine Ressource verfügbar wird. Eine Semaphore ist wie ein kritisches Abschnittsobjekt ein Synchronisierungsobjekt, das dem Code in einem Kontext ermöglicht, exklusiv auf eine Ressource zuzugreifen. Im Gegensatz zu einem kritischen Abschnittsobjekt ermöglicht eine Semaphore jedoch mehr als einem Kontext, gleichzeitig auf die Ressource zuzugreifen. Wenn die maximale Anzahl von Kontexten eine Semaphorensperre hat, muss jeder zusätzliche Kontext warten, bis ein anderer Kontext die Sperre aufhebt.
 
 ### <a name="to-implement-the-semaphore-class"></a>So implementieren Sie die Semaphorenklasse
 
@@ -24,7 +26,7 @@ Mit der `Context`-Klasse können Sie den aktuellen Ausführungskontext blockiere
 
 [!code-cpp[concrt-cooperative-semaphore#1](../../parallel/concrt/codesnippet/cpp/how-to-use-the-context-class-to-implement-a-cooperative-semaphore_1.cpp)]
 
-1. In der `private` Teil der `semaphore` Klasse, deklarieren Sie eine [Std:: Atomic](../../standard-library/atomic-structure.md) Variablen, die die Semaphorenanzahl enthält und eine [Concurrency:: concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md) Objekt, das die Kontexte enthält die müssen mit dem das Abrufen der Semaphore warten.
+1. Deklarieren Sie im `private` Abschnitt der `semaphore`-Klasse eine [Std:: Atomic](../../standard-library/atomic-structure.md) -Variable, die die Anzahl der Semaphor und ein [parallelcurrency:: Concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md) -Objekt enthält, das die Kontexte enthält, die auf das Abrufen des Semaphors warten müssen.
 
 [!code-cpp[concrt-cooperative-semaphore#2](../../parallel/concrt/codesnippet/cpp/how-to-use-the-context-class-to-implement-a-cooperative-semaphore_2.cpp)]
 
@@ -32,7 +34,7 @@ Mit der `Context`-Klasse können Sie den aktuellen Ausführungskontext blockiere
 
 [!code-cpp[concrt-cooperative-semaphore#3](../../parallel/concrt/codesnippet/cpp/how-to-use-the-context-class-to-implement-a-cooperative-semaphore_3.cpp)]
 
-1. Implementieren Sie im `public`-Abschnitt der `semaphore`-Klasse die `acquire`-Methode. Diese Methode dekrementiert die Semaphorenanzahl als atomaren Vorgang. Wenn die Semaphorenanzahl negativ wird, fügen Sie den aktuellen Kontext am Ende der Warteschlange und rufen die [Concurrency::Context::Block](reference/context-class.md#block) Methode blockiert den aktuellen Kontext.
+1. Implementieren Sie im `public`-Abschnitt der `semaphore`-Klasse die `acquire`-Methode. Diese Methode dekrementiert die Semaphorenanzahl als atomaren Vorgang. Wenn die Anzahl der Semaphor negativ wird, fügen Sie den aktuellen Kontext am Ende der Warteschlange hinzu, und wenden Sie die Methode " [parallelcurrency:: context:: Block](reference/context-class.md#block) " an, um den aktuellen Kontext zu blockieren.
 
 [!code-cpp[concrt-cooperative-semaphore#4](../../parallel/concrt/codesnippet/cpp/how-to-use-the-context-class-to-implement-a-cooperative-semaphore_4.cpp)]
 
@@ -44,11 +46,11 @@ Mit der `Context`-Klasse können Sie den aktuellen Ausführungskontext blockiere
 
 Die `semaphore`-Klasse in diesem Beispiel verhält sich kooperativ, da die `Context::Block`-Methode und `Context::Yield`-Methode die Ausführung zurückhalten, damit die Laufzeit andere Aufgaben ausführen kann.
 
-Die `acquire`-Methode dekrementiert den Zähler, es kann jedoch sein, dass sie das Hinzufügen des Kontexts zur Warteschlange noch nicht abgeschlossen hat, bevor ein anderer Kontext die `release`-Methode aufruft. Um dies zu berücksichtigen die `release` Methode verwendet eine Spinschleife, die aufruft, die [yield](reference/context-class.md#yield) Methode warten, die `acquire` Methode zum Hinzufügen des Kontexts abgeschlossen.
+Die `acquire`-Methode dekrementiert den Zähler, es kann jedoch sein, dass sie das Hinzufügen des Kontexts zur Warteschlange noch nicht abgeschlossen hat, bevor ein anderer Kontext die `release`-Methode aufruft. Um dies zu berücksichtigen, verwendet die `release`-Methode eine Spin-Schleife, die die [parallelcurrency:: context:: Yield](reference/context-class.md#yield) -Methode aufruft, um zu warten, bis die `acquire` Methode das Hinzufügen des Kontexts abgeschlossen hat.
 
 Die `release`-Methode kann die `Context::Unblock`-Methode aufrufen, bevor die `acquire`-Methode die `Context::Block`-Methode aufruft. Sie müssen keinen Schutz vor dieser Racebedingung implementieren, da die Laufzeit diesen Methoden ermöglicht, in beliebiger Reihenfolge aufgerufen zu werden. Wenn die `release`-Methode `Context::Unblock` aufruft, bevor die `acquire`-Methode `Context::Block` für den gleichen Kontext aufruft, bleibt dieser Kontext weiterhin unblockiert. Die Laufzeit erfordert nur, dass für jeden Aufruf von `Context::Block` ein entsprechender Aufruf von `Context::Unblock` vorhanden ist.
 
-Im folgenden Beispiel wird die vollständige `semaphore`-Klasse dargestellt. Die `wmain`-Funktion zeigt die grundlegende Verwendung dieser Klasse. Die `wmain` Funktion verwendet die [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) Algorithmus, um verschiedene Aufgaben zu erstellen, die Zugriff auf die Semaphore benötigen. Da drei Threads jederzeit über die Sperre verfügen können, müssen einige Aufgaben warten, bis eine andere Aufgabe abgeschlossen ist und die Sperre freigibt.
+Im folgenden Beispiel wird die vollständige `semaphore`-Klasse dargestellt. Die `wmain`-Funktion zeigt die grundlegende Verwendung dieser Klasse. Die `wmain`-Funktion verwendet den " [parallelcurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) "-Algorithmus, um mehrere Tasks zu erstellen, die Zugriff auf das Semaphor benötigen. Da drei Threads jederzeit über die Sperre verfügen können, müssen einige Aufgaben warten, bis eine andere Aufgabe abgeschlossen ist und die Sperre freigibt.
 
 [!code-cpp[concrt-cooperative-semaphore#6](../../parallel/concrt/codesnippet/cpp/how-to-use-the-context-class-to-implement-a-cooperative-semaphore_6.cpp)]
 
@@ -67,26 +69,26 @@ In loop iteration 9...
 In loop iteration 4...
 ```
 
-Weitere Informationen zu den `concurrent_queue` Klasse, finden Sie unter [parallele Container und Objekte](../../parallel/concrt/parallel-containers-and-objects.md). Weitere Informationen zu den `parallel_for` -Algorithmus finden Sie unter [parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md).
+Weitere Informationen zum `concurrent_queue`-Klasse finden Sie unter [parallele Container und Objekte](../../parallel/concrt/parallel-containers-and-objects.md). Weitere Informationen zum `parallel_for` Algorithmus finden Sie unter [parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md).
 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
-Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, oder fügen Sie ihn in eine Datei mit dem Namen `cooperative-semaphore.cpp` und führen Sie dann den folgenden Befehl in einem Fenster von Visual Studio-Eingabeaufforderung.
+Kopieren Sie den Beispielcode, und fügen Sie ihn in ein Visual Studio-Projekt ein, oder fügen Sie ihn in eine Datei mit dem Namen `cooperative-semaphore.cpp` ein, und führen Sie dann den folgenden Befehl in einem Visual Studio-Eingabe Aufforderungs Fenster aus.
 
-**CL.exe/EHsc Cooperative-semaphore.cpp**
+> **cl. exe/EHsc Cooperative-Semaphore. cpp**
 
-## <a name="robust-programming"></a>Stabile Programmierung
+## <a name="robust-programming"></a>Robuste Programmierung
 
-Können Sie die *Resource Acquisition Is Initialization* (RAII)-Muster können Sie beschränken den Zugriff auf eine `semaphore` Objekt, das einem bestimmten Bereich. Unter dem RAII-Muster wird dem Stapel eine Datenstruktur zugeordnet. Diese Datenstruktur initialisiert oder ruft eine Ressource ab, wenn sie erstellt wird, und zerstört oder gibt diese Ressource frei, wenn die Datenstruktur zerstört wird. Das RAII-Muster garantiert, dass der Destruktor aufgerufen wird, bevor der einschließende Bereich beendet wird. Daher wird die Ressource ordnungsgemäß verwaltet, wenn eine Ausnahme ausgelöst wird, oder wenn eine Funktion mehrere `return`-Anweisungen enthält.
+Mit dem *Resource Acquisition Is Initialization* (RAII)-Muster können Sie den Zugriff auf ein `semaphore` Objekt auf einen bestimmten Bereich beschränken. Unter dem RAII-Muster wird dem Stapel eine Datenstruktur zugeordnet. Diese Datenstruktur initialisiert oder ruft eine Ressource ab, wenn sie erstellt wird, und zerstört oder gibt diese Ressource frei, wenn die Datenstruktur zerstört wird. Das RAII-Muster garantiert, dass der Destruktor aufgerufen wird, bevor der einschließende Bereich beendet wird. Daher wird die Ressource ordnungsgemäß verwaltet, wenn eine Ausnahme ausgelöst wird, oder wenn eine Funktion mehrere `return`-Anweisungen enthält.
 
-Im folgenden Beispiel wird eine Klasse mit dem Namen `scoped_lock` definiert, die im `public`-Abschnitt der `semaphore`-Klasse definiert ist. Die `scoped_lock` -Klasse ähnelt der [Concurrency::critical_section::scoped_lock](reference/critical-section-class.md#critical_section__scoped_lock_class) und [Concurrency::reader_writer_lock::scoped_lock](reference/reader-writer-lock-class.md#scoped_lock_class) Klassen. Der Konstruktor der `semaphore::scoped_lock`-Klasse erhält Zugriff auf das angegebene `semaphore`-Objekt, und der Destruktor gibt den Zugriff auf dieses Objekt frei.
+Im folgenden Beispiel wird eine Klasse mit dem Namen `scoped_lock` definiert, die im `public`-Abschnitt der `semaphore`-Klasse definiert ist. Die `scoped_lock`-Klasse ähnelt der Klasse [parallelcurrency:: critical_section:: scoped_lock](reference/critical-section-class.md#critical_section__scoped_lock_class) und [parallelcurrency:: reader_writer_lock:: scoped_lock](reference/reader-writer-lock-class.md#scoped_lock_class) . Der Konstruktor der `semaphore::scoped_lock`-Klasse erhält Zugriff auf das angegebene `semaphore`-Objekt, und der Destruktor gibt den Zugriff auf dieses Objekt frei.
 
 [!code-cpp[concrt-cooperative-semaphore#7](../../parallel/concrt/codesnippet/cpp/how-to-use-the-context-class-to-implement-a-cooperative-semaphore_7.cpp)]
 Im folgenden Beispiel wird der Text der Arbeitsfunktion geändert, die an den `parallel_for`-Algorithmus übergeben wird, damit RAII verwendet wird um sicherzustellen, dass die Semaphore vor der Rückkehr der Funktion freigegeben wird. Durch diese Methode wird sichergestellt, dass die Arbeitsfunktion sicher vor Ausnahmen ist.
 
 [!code-cpp[concrt-cooperative-semaphore#8](../../parallel/concrt/codesnippet/cpp/how-to-use-the-context-class-to-implement-a-cooperative-semaphore_8.cpp)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Kontext](../../parallel/concrt/contexts.md)<br/>
 [Parallele Container und Objekte](../../parallel/concrt/parallel-containers-and-objects.md)

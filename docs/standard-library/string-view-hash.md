@@ -1,20 +1,20 @@
 ---
-title: Hash&lt;String_view&gt; Spezialisierung
+title: Hash&lt;string_view&gt; Spezialisierung
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/basic_string_view::hash
 helpviewer_keywords:
 - std::basic_string_view::hash
-ms.openlocfilehash: 60b6fdecc371ee950532dee3f69cc8dd07b8b5eb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 7a69473b6fe39655e7cf3154671017c39c453e29
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346958"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126174"
 ---
-# <a name="hashltstringviewgt-specialization"></a>Hash&lt;String_view&gt; Spezialisierung
+# <a name="hashltstring_viewgt-specialization"></a>Hash&lt;string_view&gt; Spezialisierung
 
-Eine Spezialisierung einer Klassenvorlage, die einen Hashwert, erhalten eine String_view erzeugt.
+Eine Vorlagen Spezialisierung, die einen Hashwert erstellt, wenn ein string_view angegeben wird.
 
 ```cpp
 template <class CharType, class Traits>
@@ -27,9 +27,9 @@ struct hash<basic_string_view<CharType, Traits>>
         noexcept;
 };
 ```
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Der Hash ein String_view entspricht den Hash des zugrunde liegenden String-Objekt.
+Der Hash einer string_view der dem Hash des zugrunde liegenden Zeichen folgen Objekts gleicht.
 
 ### <a name="example"></a>Beispiel
 

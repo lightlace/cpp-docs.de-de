@@ -1,30 +1,30 @@
 ---
-title: 'Vorgehensweise: Der Ausführungsreihenfolge mithilfe von Zeitplangruppen'
+title: 'Vorgehensweise: Beeinflussen der Ausführungsreihenfolge mithilfe von Zeitplangruppen'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - schedule groups, using [Concurrency Runtime]
 - using schedule groups [Concurrency Runtime]
 ms.assetid: 73124194-fc3a-491e-a23f-fbd7b5a4455c
-ms.openlocfilehash: 99e0383fc8d16f3eeb6e43e59424ab0984ee5c14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 84829664603999893f32caab39af250059bf9788
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367043"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141914"
 ---
-# <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Vorgehensweise: Der Ausführungsreihenfolge mithilfe von Zeitplangruppen
+# <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Vorgehensweise: Beeinflussen der Ausführungsreihenfolge mithilfe von Zeitplangruppen
 
-In der Concurrency Runtime ist die Reihenfolge, in der Aufgaben geplant werden, nicht deterministisch. Sie können die Reihenfolge der Aufgabenausführung jedoch mithilfe von Planungsrichtlinien beeinflussen. In diesem Thema veranschaulicht, wie Planungsgruppen zusammen mit den [SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey) Planerrichtlinie, um die Reihenfolge beeinflussen, in dem Aufgaben ausgeführt werden.
+In der Concurrency Runtime ist die Reihenfolge, in der Aufgaben geplant werden, nicht deterministisch. Sie können die Reihenfolge der Aufgabenausführung jedoch mithilfe von Planungsrichtlinien beeinflussen. In diesem Thema wird gezeigt, wie Zeit Plan Gruppen zusammen mit der Richtlinie " [parallelcurrency:: SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey) " verwendet werden, um die Reihenfolge zu beeinflussen, in der Tasks ausgeführt werden.
 
-In diesem Beispiel wird eine Gruppe von Aufgaben zweimal ausgeführt, wobei jedes Mal eine andere Planungsrichtlinie verwendet wird. Beide Richtlinien beschränken die maximale Anzahl von Verarbeitungsressourcen auf zwei. Der ersten Ausführung wird der `EnhanceScheduleGroupLocality` Richtlinie, dies ist die Standardeinstellung, und führen Sie die zweite verwendet den `EnhanceForwardProgress` Richtlinie. Unter der `EnhanceScheduleGroupLocality`-Richtlinie führt der Planer alle Aufgaben in einer Planungsgruppe aus, bis alle Aufgaben beendet oder erzeugt wurden. Unter der `EnhanceForwardProgress`-Richtlinie wechselt der Planer mittels Roundrobin zur nächsten Planungsgruppe, nachdem eine Aufgabe beendet oder erzeugt wurde.
+In diesem Beispiel wird eine Gruppe von Aufgaben zweimal ausgeführt, wobei jedes Mal eine andere Planungsrichtlinie verwendet wird. Beide Richtlinien beschränken die maximale Anzahl von Verarbeitungsressourcen auf zwei. Bei der ersten Durchführung wird die `EnhanceScheduleGroupLocality`-Richtlinie verwendet. Dies ist die Standardeinstellung, und der zweite Testlauf verwendet die Richtlinie `EnhanceForwardProgress`. Unter der `EnhanceScheduleGroupLocality`-Richtlinie führt der Planer alle Aufgaben in einer Planungsgruppe aus, bis alle Aufgaben beendet oder erzeugt wurden. Unter der `EnhanceForwardProgress`-Richtlinie wechselt der Planer mittels Roundrobin zur nächsten Planungsgruppe, nachdem eine Aufgabe beendet oder erzeugt wurde.
 
 Wenn alle Planungsgruppen verwandte Aufgaben enthalten, ist die `EnhanceScheduleGroupLocality`-Richtlinie in der Regel leistungsfähiger, da die Cachelokalität zwischen Aufgaben erhalten bleibt. Die `EnhanceForwardProgress`-Richtlinie ermöglicht es, dass Aufgaben Fortschritte machen. Zudem ist sie nützlich, wenn über Planungsgruppen hinweg Planungsfairness erforderlich ist.
 
 ## <a name="example"></a>Beispiel
 
-Dieses Beispiel definiert die `work_yield_agent` -Klasse, die abgeleitet [Concurrency:: Agent](../../parallel/concrt/reference/agent-class.md). Die `work_yield_agent`-Klasse führt eine Arbeitseinheit aus, erzeugt den aktuellen Kontext und führt dann eine weitere Arbeitseinheit aus. Der Agent verwendet die [Concurrency:: wait](reference/concurrency-namespace-functions.md#wait) Funktion, um den aktuellen Kontext kooperativ zurückgehalten werden soll, sodass andere Kontexte ausgeführt werden können.
+In diesem Beispiel wird die `work_yield_agent`-Klasse definiert, die von " [parallelcurrency:: Agent](../../parallel/concrt/reference/agent-class.md)" abgeleitet wird. Die `work_yield_agent`-Klasse führt eine Arbeitseinheit aus, erzeugt den aktuellen Kontext und führt dann eine weitere Arbeitseinheit aus. Der Agent verwendet die [parallelcurrency:: Wait](reference/concurrency-namespace-functions.md#wait) -Funktion, um den aktuellen Kontext kooperativ zu erzeugen, sodass andere Kontexte ausgeführt werden können.
 
-In diesem Beispiel werden vier `work_yield_agent`-Objekte erstellt. Im Beispiel werden die ersten beiden Agents einer Planungsgruppe und die anderen beiden Agents einer anderen Planungsgruppe zugeordnet, um zu zeigen, wie Planerrichtlinien zum Beeinflussen der Ausführungsreihenfolge von Agents festgelegt werden. Im Beispiel wird die [:: CurrentScheduler:: CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup) Methode zum Erstellen der [Concurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) Objekte. Im Beispiel werden alle vier Agents zweimal ausgeführt, wobei jedes Mal eine andere Planungsrichtlinie verwendet wird.
+In diesem Beispiel werden vier `work_yield_agent`-Objekte erstellt. Im Beispiel werden die ersten beiden Agents einer Planungsgruppe und die anderen beiden Agents einer anderen Planungsgruppe zugeordnet, um zu zeigen, wie Planerrichtlinien zum Beeinflussen der Ausführungsreihenfolge von Agents festgelegt werden. Das Beispiel verwendet die [Concurrency:: CurrentScheduler:: aufgabenschedulegroup](reference/currentscheduler-class.md#createschedulegroup) -Methode zum Erstellen der [Concurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) -Objekte. Im Beispiel werden alle vier Agents zweimal ausgeführt, wobei jedes Mal eine andere Planungsrichtlinie verwendet wird.
 
 [!code-cpp[concrt-scheduling-protocol#1](../../parallel/concrt/codesnippet/cpp/how-to-use-schedule-groups-to-influence-order-of-execution_1.cpp)]
 
@@ -104,11 +104,11 @@ Beide Richtlinien erzeugen dieselbe Sequenz von Ereignissen. Die Richtlinie, die
 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
-Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, oder fügen Sie ihn in eine Datei mit dem Namen `scheduling-protocol.cpp` und führen Sie dann den folgenden Befehl in einem Fenster von Visual Studio-Eingabeaufforderung.
+Kopieren Sie den Beispielcode, und fügen Sie ihn in ein Visual Studio-Projekt ein, oder fügen Sie ihn in eine Datei mit dem Namen `scheduling-protocol.cpp` ein, und führen Sie dann den folgenden Befehl in einem Visual Studio-Eingabe Aufforderungs Fenster aus.
 
-**CL.exe/EHsc scheduling-protocol.cpp**
+> **cl. exe/EHsc Scheduling-Protocol. cpp**
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Planungsgruppen](../../parallel/concrt/schedule-groups.md)<br/>
 [Asynchrone Agents](../../parallel/concrt/asynchronous-agents.md)

@@ -8,34 +8,34 @@ f1_keywords:
 helpviewer_keywords:
 - nested_scheduler_missing_detach class
 ms.assetid: 65d3f277-6d43-4160-97ef-caf8b26c1641
-ms.openlocfilehash: db51f7b083cc0cbd9337fbbe5c672d190208f328
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c9553b036890c4ce28f1060bfe2f58ee1904935
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394389"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138856"
 ---
-# <a name="nestedschedulermissingdetach-class"></a>nested_scheduler_missing_detach-Klasse
+# <a name="nested_scheduler_missing_detach-class"></a>nested_scheduler_missing_detach-Klasse
 
 Diese Klasse beschreibt eine Ausnahme, die ausgelöst wird, wenn die Concurrency Runtime erkennt, dass versäumt wurde, die `CurrentScheduler::Detach`-Methode für einen Kontext aufzurufen, der mittels der `Attach`-Methode des `Scheduler`-Objekts an einen zweiten Planer angefügt wurde.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class nested_scheduler_missing_detach : public std::exception;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[nested_scheduler_missing_detach](#ctor)|Überladen. Erstellt ein `nested_scheduler_missing_detach`-Objekt.|
+|[nested_scheduler_missing_detach](#ctor)|Ist überladen. Erstellt ein `nested_scheduler_missing_detach`-Objekt.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Diese Ausnahme wird ausgelöst, nur, wenn Sie einen Planer in einen anderen, durch den Aufruf Schachteln der `Attach` Methode eine `Scheduler` Objekt in einem Kontext, der bereits im Besitz von oder an ein anderes Zeitplanungsmodul angefügt ist. Die Concurrency Runtime löst diese Ausnahme opportunistisch aus, wenn das Szenario als Hilfe beim Auffinden des Problems erkannt werden können. Nicht jede Instanz aufrufen, es sein, die `CurrentScheduler::Detach` Methode garantiert wird diese Ausnahme auslösen.
+Diese Ausnahme wird nur ausgelöst, wenn Sie einen Planer in einem anderen zusammenstellen, indem Sie die `Attach`-Methode eines `Scheduler` Objekts in einem Kontext aufrufen, der bereits im Besitz eines anderen Zeit Planungs Moduls ist oder einem anderen Planer zugeordnet ist. Der Concurrency Runtime löst diese Ausnahme opportunistisch aus, wenn er das Szenario als Hilfe beim Auffinden des Problems erkennen kann. Nicht jede Instanz von, die die `CurrentScheduler::Detach`-Methode nicht aufruft, wird garantiert diese Ausnahme auslösen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -43,17 +43,17 @@ Diese Ausnahme wird ausgelöst, nur, wenn Sie einen Planer in einen anderen, dur
 
 `nested_scheduler_missing_detach`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** concrt.h
+**Header:** ConcRT. h
 
 **Namespace:** Parallelität
 
-##  <a name="ctor"></a> nested_scheduler_missing_detach
+## <a name="ctor"></a>nested_scheduler_missing_detach
 
 Erstellt ein `nested_scheduler_missing_detach`-Objekt.
 
-```
+```cpp
 explicit _CRTIMP nested_scheduler_missing_detach(_In_z_ const char* _Message) throw();
 
 nested_scheduler_missing_detach() throw();
@@ -64,7 +64,7 @@ nested_scheduler_missing_detach() throw();
 *_Message*<br/>
 Eine beschreibende Fehlermeldung.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [Scheduler-Klasse](scheduler-class.md)

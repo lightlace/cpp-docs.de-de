@@ -10,20 +10,20 @@ f1_keywords:
 helpviewer_keywords:
 - task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-ms.openlocfilehash: 9d0ab271b20eb02c1dc4cb8e54cf2632eead4325
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3e3093cb76df507f8c707e497c9aec75a065057
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212884"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142595"
 ---
-# <a name="taskcompletionevent-class"></a>task_completion_event-Klasse
+# <a name="task_completion_event-class"></a>task_completion_event-Klasse
 
 Mit der `task_completion_event`-Klasse können Sie die Ausführung einer Aufgabe verzögern, bis eine Bedingung erfüllt ist, oder eine Aufgabe als Reaktion auf ein externes Ereignis starten.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 template<typename _ResultType>
 class task_completion_event;
 
@@ -31,27 +31,27 @@ template<>
 class task_completion_event<void>;
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
 *_ResultType*<br/>
 Der Ergebnistyp dieser `task_completion_event`-Klasse.
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[task_completion_event](#ctor)|Erstellt ein `task_completion_event`-Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[set](#set)|Überladen. Legt das Aufgabenabschlussereignis fest.|
-|[set_exception](#set_exception)|Überladen. Gibt eine Ausnahme an alle Aufgaben weiter, die dem Ereignis zugeordnet sind.|
+|[set](#set)|Ist überladen. Legt das Aufgabenabschlussereignis fest.|
+|[set_exception](#set_exception)|Ist überladen. Gibt eine Ausnahme an alle Aufgaben weiter, die dem Ereignis zugeordnet sind.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Verwenden Sie eine Aufgabe, die aus einem Aufgabenabschlussereignis erstellt wird, wenn Ihr Szenario die Erstellung einer Aufgabe erfordert, die abgeschlossen wird, und planen Sie die Ausführung ihrer Fortsetzungen für einen späteren Zeitpunkt. `task_completion_event` muss den gleichen Typ haben, wie die Aufgabe, die Sie erstellen, und das Aufrufen der set-Methode für das Aufgabenabschlussereignis mit einem Wert dieses Typs führt zu einem Abschluss der zugeordneten Aufgabe und liefert diesen Wert als Ergebnis ihrer Fortsetzungen.
 
@@ -63,17 +63,17 @@ Wenn das Aufgabenabschlussereignis kein Signal erhält, werden alle Aufgaben, di
 
 `task_completion_event`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** ppltasks.h
+**Header:** ppltasks. h
 
 **Namespace:** Parallelität
 
-##  <a name="set"></a> Legen Sie
+## <a name="set"></a>Set
 
 Legt das Aufgabenabschlussereignis fest.
 
-```
+```cpp
 bool set(_ResultType _Result) const ;
 
 bool set() const ;
@@ -86,17 +86,17 @@ Das Ergebnis, das für dieses Ereignis festgelegt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt die Methode zurück **"true"** Falls diese Festlegung des Ereignisses erfolgreich war. Es gibt **"false"** , wenn das Ereignis bereits festgelegt wurde.
+Die Methode gibt " **true** " zurück, wenn das Ereignis erfolgreich festgelegt wurde. Gibt **false** zurück, wenn das Ereignis bereits festgelegt ist.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Bei mehrfachen oder gleichzeitigen Aufrufen von `set` ist nur der erste Aufruf erfolgreich, und sein Ergebnis (falls vorhanden) wird im Aufgabenabschlussereignis gespeichert. Die verbleibenden Sätze werden ignoriert, und die Methode gibt "false" zurück. Wenn Sie ein Aufgabenabschlussereignis festlegen, werden alle Aufgaben, die aus diesem Ereignis erstellt wurden, abgeschlossen, und ihre Fortsetzungen, falls vorhanden, werden geplant. Aufgabenabschlussobjekte, die eine `_ResultType` außer **"void"** übergeben den Wert an ihre Fortsetzungen.
+Bei mehrfachen oder gleichzeitigen Aufrufen von `set` ist nur der erste Aufruf erfolgreich, und sein Ergebnis (falls vorhanden) wird im Aufgabenabschlussereignis gespeichert. Die verbleibenden Sätze werden ignoriert, und die Methode gibt "false" zurück. Wenn Sie ein Aufgabenabschlussereignis festlegen, werden alle Aufgaben, die aus diesem Ereignis erstellt wurden, abgeschlossen, und ihre Fortsetzungen, falls vorhanden, werden geplant. Aufgaben Vervollständigungs Objekte, die eine andere `_ResultType` als **void** aufweisen, übergeben den Wert an Ihre Fortsetzungen.
 
-##  <a name="set_exception"></a> set_exception
+## <a name="set_exception"></a>set_exception
 
 Gibt eine Ausnahme an alle Aufgaben weiter, die dem Ereignis zugeordnet sind.
 
-```
+```cpp
 template<typename _E>
 __declspec(noinline) bool set_exception(_E _Except) const;
 
@@ -109,21 +109,21 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 Der Ausnahmetyp.
 
 *_Except*<br/>
-Die Ausnahme fest.
+Die festzulegende Ausnahme.
 
 *_ExceptionPtr*<br/>
-Der Ausnahmezeiger festgelegt.
+Der festzulegende Ausnahme Zeiger.
 
 ### <a name="return-value"></a>Rückgabewert
 
-##  <a name="ctor"></a> task_completion_event
+## <a name="ctor"></a>task_completion_event
 
 Erstellt ein `task_completion_event`-Objekt.
 
-```
+```cpp
 task_completion_event();
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)

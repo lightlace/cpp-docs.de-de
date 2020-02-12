@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
-ms.openlocfilehash: e0870eb046f1cec091a72d49c94a2fea41484340
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 34c3c10fa6bec2737ba78a71c282f90f284a28c2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346037"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139371"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Concurrency-Namespace (C++ AMP)
 
-Stellt Klassen und Funktionen bereit, die die Ausführung von C++-Code auf datenparalleler Hardware beschleunigen. Weitere Informationen finden Sie unter [Übersicht über C++ AMP](../cpp-amp-overview.md)
+Stellt Klassen und Funktionen bereit, die die Ausführung von C++-Code auf datenparalleler Hardware beschleunigen. Weitere Informationen finden [ C++ Sie unter amp Overview.](../cpp-amp-overview.md)
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 namespace Concurrency;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="namespaces"></a>Namespaces
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[Concurrency::direct3d Namespace](concurrency-direct3d-namespace.md)|Stellt Funktionen bereit, welche die D3D-Interoperabilität unterstützen. Ermöglicht die einfache Verwendung von D3D-Ressourcen für Berechnungen in AMP-Code sowie die Verwendung von in AMP erstellten Ressourcen in D3D-Code, ohne dass redundante Zwischenkopien erstellt werden. Sie können C++ AMP verwenden, um die berechnungsintensiven Abschnitte Ihrer DirectX-Anwendungen inkrementell zu beschleunigen und die D3D-API für Daten nutzen, die aus AMP-Berechnungen resultieren.|
 |[Concurrency::fast_math Namespace](concurrency-fast-math-namespace.md)|Funktionen im `fast_math`-Namespace sind nicht C99-kompatibel. Für jede Funktion werden nur Versionen mit einfacher Genauigkeit bereitgestellt. Diese Funktionen verwenden die intrinsischen DirectX-Funktionen, die schneller als die entsprechenden Funktionen im `precise_math`-Namespace sind und keine erweiterte Unterstützung doppelter Genauigkeit auf der Zugriffstaste benötigen. Sie sind jedoch weniger genau. Für jede Funktion gibt es zwei Versionen für Quellebenenkompatibilität mit Code C99. Beide Versionen akzeptieren und geben Werte mit einfacher Genauigkeit zurück.|
@@ -36,13 +36,13 @@ namespace Concurrency;
 
 ### <a name="classes"></a>Klassen
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[accelerator-Klasse](accelerator-class.md)|Stellt eine Abstraktion eines physischen DP-optimierten Berechnungsknotens dar.|
 |[accelerator_view-Klasse](accelerator-view-class.md)|Stellt die Abstraktion eines virtuellen Geräts für einen datenparallelen C++ AMP-Beschleuniger dar.|
 |[accelerator_view_removed-Klasse](accelerator-view-removed-class.md)|Die Ausnahme, die ausgelöst wird, wenn ein zugrunde liegender DirectX-Aufruf aufgrund des Windows-TDR-Mechanismus (Timeout Detection and Recovery) fehlschlägt.|
 |[array-Klasse](array-class.md)|Ein Datenaggregat auf einem `accelerator_view`-Objekt in der Rasterdomäne. Es ist eine Auflistung von Variablen, eine für jedes Element in einer "grid"-Domäne. Jede Variable enthält einen Wert, der einem C++-Typ entspricht.|
-|[array_view-Klasse](array-view-class.md)|Stellt einen Einblick in die Daten in einem Array\<T, N >.|
+|[array_view-Klasse](array-view-class.md)|Stellt eine Ansicht der Daten in einem Array\<t, N > dar.|
 |[completion_future-Klasse](completion-future-class.md)|Stellt ein "future"-Objekt dar, das einem asynchronen C++ AMP-Vorgang entspricht.|
 |[extent-Klasse](extent-class.md)|Stellt einen Vektor von n ganzzahligen Werten dar, die die Grenzen eines n-dimensionalen Raums mit dem Ursprung 0 angeben. Die Werte im Koordinatenvektor sind vom wichtigsten zum am wenigsten wichtigen Wert sortiert. Im kartesischen 3-dimensionalen Raum stellt der "extent"-Vektor (7,5,3) beispielsweise einen Raum dar, in dem die z-Koordinate im Bereich von 0 bis 7, die y-Koordinate im Bereich von 0 bis 5 und die x-Koordinate im Bereich von 0 bis 3 liegt.|
 |[index-Klasse](index-class.md)|Definiert einen n-dimensionalen Indexpunkt.|
@@ -57,60 +57,60 @@ namespace Concurrency;
 
 ### <a name="enumerations"></a>Enumerationen
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Access_type-Enumeration](concurrency-namespace-enums-amp.md#access_type)|Gibt den Datenzugriffstyp an.|
-|[Queuing_mode-Enumeration](concurrency-namespace-enums-amp.md#queuing_mode)|Gibt die Modi für das Hinzufügen zur Warteschlange an, die auf dem Beschleuniger unterstützt werden.|
+|[access_type-Enumeration](concurrency-namespace-enums-amp.md#access_type)|Gibt den Datenzugriffstyp an.|
+|[queuing_mode-Enumeration](concurrency-namespace-enums-amp.md#queuing_mode)|Gibt die Modi für das Hinzufügen zur Warteschlange an, die auf dem Beschleuniger unterstützt werden.|
 
 ### <a name="operators"></a>Operatoren
 
-|Operator|Beschreibung|
+|Operator|BESCHREIBUNG|
 |--------------|-----------------|
-|[Operator ==-Operator (C++-AMP)](concurrency-namespace-operators-amp.md#operator_eq_eq)|Bestimmt, ob die angegebenen Datenstrukturen gleich sind.|
-|[Operator! =-Operator (C++-AMP)](concurrency-namespace-operators-amp.md#operator_neq)|Bestimmt, ob die angegebenen Datenstrukturen ungleich sind.|
-|[Operator +-Operator (C++-AMP)](concurrency-namespace-operators-amp.md#operator_add)|Berechnet die komponentenbezogene Summe der angegebenen Argumente.|
-|[Operator--Operator (C++-AMP)](concurrency-namespace-operators-amp.md#operator-)|Berechnet die Differenz zwischen den angegebenen Argumenten pro Komponente.|
-|[Operator *-Operator (C++-AMP)](concurrency-namespace-operators-amp.md#operator_star)|Berechnet das komponentenbezogene Produkt der angegebenen Argumente.|
-|[Operator /-Operator (C++-AMP)](concurrency-namespace-operators-amp.md#operator_div)|Berechnet den komponentenbezogenen Quotienten der angegebenen Argumente.|
-|[Operator%-Operator (C++ AMP)](concurrency-namespace-operators-amp.md#operator_mod)|Berechnet den Modul des angegebenen ersten Arguments dividiert durch das zweite angegebene Argument.|
+|[Operator = =-OperatorC++ (amp)](concurrency-namespace-operators-amp.md#operator_eq_eq)|Bestimmt, ob die angegebenen Datenstrukturen gleich sind.|
+|[Operator! =-OperatorC++ (amp)](concurrency-namespace-operators-amp.md#operator_neq)|Bestimmt, ob die angegebenen Datenstrukturen ungleich sind.|
+|[Operator +-OperatorC++ (amp)](concurrency-namespace-operators-amp.md#operator_add)|Berechnet die komponentenbezogene Summe der angegebenen Argumente.|
+|[Operator Operator (C++ amp)](concurrency-namespace-operators-amp.md#operator-)|Berechnet die Differenz zwischen den angegebenen Argumenten pro Komponente.|
+|[Operator *-OperatorC++ (amp)](concurrency-namespace-operators-amp.md#operator_star)|Berechnet das komponentenbezogene Produkt der angegebenen Argumente.|
+|[Operator/Operator (C++ amp)](concurrency-namespace-operators-amp.md#operator_div)|Berechnet den komponentenbezogenen Quotienten der angegebenen Argumente.|
+|[Operator%-OperatorC++ (amp)](concurrency-namespace-operators-amp.md#operator_mod)|Berechnet den Modul des angegebenen ersten Arguments dividiert durch das zweite angegebene Argument.|
 
-### <a name="functions"></a>Funktionen
+### <a name="functions"></a>Functions
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[all_memory_fence](concurrency-namespace-functions-amp.md#all_memory_fence)|Blockiert die Ausführung aller Threads in einer Kachel, bis alle Speicherzugriffe abgeschlossen sind.|
 |[amp_uninitialize](concurrency-namespace-functions-amp.md#amp_uninitialize)|Hebt die Initialisierung der C++ AMP-Laufzeit auf.|
-|[atomic_compare_exchange](concurrency-namespace-functions-amp.md#atomic_compare_exchange)|Überladen. Wenn der Wert, der am angegebenen Speicherort abgelegt ist, mit dem ersten angegebenen Wert übereinstimmt, wird der zweite angegebene Wert als atomischen Vorgang an demselben Speicherort abgelegt.|
-|[atomic_exchange](concurrency-namespace-functions-amp.md#atomic_exchange)|Überladen. Legt den Wert, der am angegebenen Speicherort abgelegt ist, als atomischen Vorgang auf den angegebenen Wert fest.|
-|[atomic_fetch_add](concurrency-namespace-functions-amp.md#atomic_fetch_add)|Überladen. Legt den Wert, der am angegebenen Speicherort abgelegt ist, als atomischen Vorgang auf die Summe dieses Werts und auf einen angegebenen Wert fest.|
-|[atomic_fetch_and](concurrency-namespace-functions-amp.md#atomic_fetch_and)|Überladen. Legt den Wert, der am angegebenen Speicherort abgelegt ist, als atomischen Vorgang auf das bitweise `and` dieses Werts und auf einen angegebenen Wert fest.|
-|[atomic_fetch_dec](concurrency-namespace-functions-amp.md#atomic_fetch_dec)|Überladen. Dekrementiert den Wert, der am angegebenen Speicherort abgelegt ist, und speichert das Ergebnis als atomischen Vorgang an demselben Speicherort.|
-|[atomic_fetch_inc](concurrency-namespace-functions-amp.md#atomic_fetch_inc)|Überladen. Inkrementiert den Wert, der am angegebenen Speicherort abgelegt ist, und speichert das Ergebnis als atomischen Vorgang an demselben Speicherort.|
-|[atomic_fetch_max](concurrency-namespace-functions-amp.md#atomic_fetch_max)|Überladen. Legt den Wert, der am angegebenen Speicherort abgelegt ist, als atomischen Vorgang größer als diesen Wert und auf einen angegebenen Wert fest.|
-|[atomic_fetch_min](concurrency-namespace-functions-amp.md#atomic_fetch_min)|Überladen. Legt den Wert, der am angegebenen Speicherort abgelegt ist, als atomischen Vorgang kleiner als diesen Wert und auf einen angegebenen Wert fest.|
-|[atomic_fetch_or](concurrency-namespace-functions-amp.md#atomic_fetch_or)|Überladen. Legt den Wert, der am angegebenen Speicherort abgelegt ist, als atomischen Vorgang auf das bitweise `or` dieses Werts und auf einen angegebenen Wert fest.|
-|[atomic_fetch_sub](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|Überladen. Legt den Wert, der am angegebenen Speicherort abgelegt ist, als atomischen Vorgang auf die Differenz dieses Werts und auf einen angegebenen Wert fest.|
-|[atomic_fetch_xor](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|Überladen. Legt den Wert, der am angegebenen Speicherort abgelegt ist, als atomischen Vorgang auf das bitweise `xor` dieses Werts und auf einen angegebenen Wert fest.|
+|[atomic_compare_exchange](concurrency-namespace-functions-amp.md#atomic_compare_exchange)|Ist überladen. Wenn der Wert, der am angegebenen Speicherort abgelegt ist, mit dem ersten angegebenen Wert übereinstimmt, wird der zweite angegebene Wert als atomischen Vorgang an demselben Speicherort abgelegt.|
+|[atomic_exchange](concurrency-namespace-functions-amp.md#atomic_exchange)|Ist überladen. Legt den Wert, der am angegebenen Speicherort abgelegt ist, als atomischen Vorgang auf den angegebenen Wert fest.|
+|[atomic_fetch_add](concurrency-namespace-functions-amp.md#atomic_fetch_add)|Ist überladen. Legt den Wert, der am angegebenen Speicherort abgelegt ist, als atomischen Vorgang auf die Summe dieses Werts und auf einen angegebenen Wert fest.|
+|[atomic_fetch_and](concurrency-namespace-functions-amp.md#atomic_fetch_and)|Ist überladen. Legt den Wert, der am angegebenen Speicherort abgelegt ist, als atomischen Vorgang auf das bitweise `and` dieses Werts und auf einen angegebenen Wert fest.|
+|[atomic_fetch_dec](concurrency-namespace-functions-amp.md#atomic_fetch_dec)|Ist überladen. Dekrementiert den Wert, der am angegebenen Speicherort abgelegt ist, und speichert das Ergebnis als atomischen Vorgang an demselben Speicherort.|
+|[atomic_fetch_inc](concurrency-namespace-functions-amp.md#atomic_fetch_inc)|Ist überladen. Inkrementiert den Wert, der am angegebenen Speicherort abgelegt ist, und speichert das Ergebnis als atomischen Vorgang an demselben Speicherort.|
+|[atomic_fetch_max](concurrency-namespace-functions-amp.md#atomic_fetch_max)|Ist überladen. Legt den Wert, der am angegebenen Speicherort abgelegt ist, als atomischen Vorgang größer als diesen Wert und auf einen angegebenen Wert fest.|
+|[atomic_fetch_min](concurrency-namespace-functions-amp.md#atomic_fetch_min)|Ist überladen. Legt den Wert, der am angegebenen Speicherort abgelegt ist, als atomischen Vorgang kleiner als diesen Wert und auf einen angegebenen Wert fest.|
+|[atomic_fetch_or](concurrency-namespace-functions-amp.md#atomic_fetch_or)|Ist überladen. Legt den Wert, der am angegebenen Speicherort abgelegt ist, als atomischen Vorgang auf das bitweise `or` dieses Werts und auf einen angegebenen Wert fest.|
+|[atomic_fetch_sub](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|Ist überladen. Legt den Wert, der am angegebenen Speicherort abgelegt ist, als atomischen Vorgang auf die Differenz dieses Werts und auf einen angegebenen Wert fest.|
+|[atomic_fetch_xor](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|Ist überladen. Legt den Wert, der am angegebenen Speicherort abgelegt ist, als atomischen Vorgang auf das bitweise `xor` dieses Werts und auf einen angegebenen Wert fest.|
 |[copy](concurrency-namespace-functions-amp.md#copy)|Kopiert ein C++ AMP-Objekt. Alle Anforderungen der synchronen Datenübertragung werden erfüllt. Es können keine Daten kopiert werden, wenn auf einer Zugriffstaste Code ausgeführt wird. Das allgemeine Format dieser Funktion ist `copy(src, dest)`.|
-|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Kopiert ein C++ AMP-Objekt und gibt [Completion_future](completion-future-class.md) , die gewartet werden kann, auf. Es können keine Daten kopiert werden, wenn auf einer Zugriffstaste Code ausgeführt wird. Das allgemeine Format dieser Funktion ist `copy(src, dest)`.|
+|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Kopiert ein C++ amp-Objekt und gibt [completion_future](completion-future-class.md) zurück, auf das gewartet werden kann. Es können keine Daten kopiert werden, wenn auf einer Zugriffstaste Code ausgeführt wird. Das allgemeine Format dieser Funktion ist `copy(src, dest)`.|
 |[direct3d_abort](concurrency-namespace-functions-amp.md#direct3d_abort)|Bricht die Ausführung einer Funktion mit der Einschränkungsklausel `restrict(amp)` ab.|
-|[direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|Gibt eine formatierte Zeichenfolge im Visual Studio **Ausgabe** Fenster und löst eine [Runtime_exception](runtime-exception-class.md) Ausnahme, die der gleichen Formatierung eine Zeichenfolge.|
-|[direct3d_printf](concurrency-namespace-functions-amp.md#direct3d_printf)|Gibt eine formatierte Zeichenfolge im Visual Studio **Ausgabe** Fenster. Sie wird von einer Funktion mit der Einschränkungsklausel `restrict(amp)` aufgerufen.|
+|[direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|Druckt eine formatierte Zeichenfolge im Visual Studio- **Ausgabe** Fenster und löst eine [runtime_exception](runtime-exception-class.md) Ausnahme aus, die die gleiche Formatierungs Zeichenfolge aufweist.|
+|[direct3d_printf](concurrency-namespace-functions-amp.md#direct3d_printf)|Druckt eine formatierte Zeichenfolge im Visual Studio- **Ausgabe** Fenster. Sie wird von einer Funktion mit der Einschränkungsklausel `restrict(amp)` aufgerufen.|
 |[global_memory_fence](concurrency-namespace-functions-amp.md#global_memory_fence)|Blockiert die Ausführung aller Threads in einer Kachel, bis alle globalen Speicherzugriffe abgeschlossen sind.|
-|[Parallel_for_each-Funktion (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)|Führt eine Funktion übergreifend über die "compute"-Domäne aus.|
+|[Parallel_for_each-FunktionC++ (amp)](concurrency-namespace-functions-amp.md#parallel_for_each)|Führt eine Funktion übergreifend über die "compute"-Domäne aus.|
 |[tile_static_memory_fence](concurrency-namespace-functions-amp.md#tile_static_memory_fence)|Blockiert die Ausführung aller Threads in einer Kachel, bis alle Speicherzugriffe vom Typ `tile_static` abgeschlossen sind.|
 
 ## <a name="constants"></a>Konstanten
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[HLSL_MAX_NUM_BUFFERS Constant](concurrency-namespace-constants-amp.md#hlsl_max_num_buffers)|Die maximale Anzahl der von DirectX zugelassenen Puffer.|
-|[MODULENAME_MAX_LENGTH-Konstante](concurrency-namespace-constants-amp.md#modulename_max_length)|Speichert die maximale Länge des Modulnamens. Dieser Wert muss für den Compiler und die Laufzeit identisch sein.|
+|[HLSL_MAX_NUM_BUFFERS Konstante](concurrency-namespace-constants-amp.md#hlsl_max_num_buffers)|Die maximale Anzahl der von DirectX zugelassenen Puffer.|
+|[MODULENAME_MAX_LENGTH Konstante](concurrency-namespace-constants-amp.md#modulename_max_length)|Speichert die maximale Länge des Modulnamens. Dieser Wert muss für den Compiler und die Laufzeit identisch sein.|
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Header:** amp.h
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Referenz (C++ AMP)](reference-cpp-amp.md)

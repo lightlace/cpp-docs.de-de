@@ -8,34 +8,34 @@ f1_keywords:
 helpviewer_keywords:
 - improper_lock class
 ms.assetid: 8f494942-7748-4a2a-8de2-23414bfe6346
-ms.openlocfilehash: c10a7f302b63c33869425c4e5bddb36a15373ea8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 886444f3e856234be010715a8ee0c707cf919bb4
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262592"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142403"
 ---
-# <a name="improperlock-class"></a>improper_lock-Klasse
+# <a name="improper_lock-class"></a>improper_lock-Klasse
 
 Diese Klasse beschreibt eine Ausnahme, die ausgelöst wird, wenn eine Sperre nicht ordnungsgemäß abgerufen wird.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class improper_lock : public std::exception;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[improper_lock](#ctor)|Überladen. Konstruiert ein `improper_lock exception`.|
+|[improper_lock](#ctor)|Ist überladen. Konstruiert ein `improper_lock exception`.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-In der Regel wird diese Ausnahme ausgelöst, bei dem Versuch, eine nicht wiedereintretende Sperre rekursiv im gleichen Kontext abzurufen.
+Normalerweise wird diese Ausnahme ausgelöst, wenn versucht wird, eine nicht wieder eintretende Sperre rekursiv im gleichen Kontext abzurufen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -43,17 +43,17 @@ In der Regel wird diese Ausnahme ausgelöst, bei dem Versuch, eine nicht wiedere
 
 `improper_lock`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** concrt.h
+**Header:** ConcRT. h
 
 **Namespace:** Parallelität
 
-##  <a name="ctor"></a> improper_lock
+## <a name="ctor"></a>improper_lock
 
 Konstruiert ein `improper_lock exception`.
 
-```
+```cpp
 explicit _CRTIMP improper_lock(_In_z_ const char* _Message) throw();
 
 improper_lock() throw();
@@ -64,7 +64,7 @@ improper_lock() throw();
 *_Message*<br/>
 Eine beschreibende Fehlermeldung.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [critical_section-Klasse](critical-section-class.md)<br/>

@@ -1,20 +1,20 @@
 ---
-title: 'Vorgehensweise: Schreiben einer Parallel_for-Schleife'
+title: 'Vorgehensweise: Schreiben einer parallel_for-Schleife'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - writing a parallel_for loop [Concurrency Runtime]
 - parallel_for function, example
 ms.assetid: adb4d64e-5514-4b70-8dcb-b9210e6b5a1c
-ms.openlocfilehash: d6ac30a5de0ff45adad1064aeab708e6a84f5e9f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 5903114a12de46dc06929c83e9995b39d0136810
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346360"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141865"
 ---
-# <a name="how-to-write-a-parallelfor-loop"></a>Vorgehensweise: Schreiben einer Parallel_for-Schleife
+# <a name="how-to-write-a-parallel_for-loop"></a>Vorgehensweise: Schreiben einer parallel_for-Schleife
 
-In diesem Beispiel wird veranschaulicht, wie [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) um das Produkt von zwei Matrizen zu berechnen.
+Dieses Beispiel veranschaulicht die Verwendung von Parallelität [::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) , um das Produkt von zwei Matrizen zu berechnen.
 
 ## <a name="example"></a>Beispiel
 
@@ -45,11 +45,11 @@ parallel: 1311
 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
-Um den Code zu kompilieren, kopieren Sie ihn und fügen Sie ihn in ein Visual Studio-Projekt ein, oder fügen Sie ihn in eine Datei mit dem Namen `parallel-matrix-multiply.cpp` und führen Sie dann den folgenden Befehl in einem Fenster von Visual Studio-Eingabeaufforderung.
+Um den Code zu kompilieren, kopieren Sie ihn, und fügen Sie ihn in ein Visual Studio-Projekt ein, oder fügen Sie ihn in eine Datei mit dem Namen `parallel-matrix-multiply.cpp` ein, und führen Sie dann den folgenden Befehl in einem Visual Studio-Eingabe Aufforderungs Fenster aus.
 
-**/ EHsc CL.exe Parallel-Matrix-multiply.cpp**
+> **cl. exe/EHsc parallel-Matrix-Multiply. cpp**
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md)<br/>
-[Parallel_for-Funktion](reference/concurrency-namespace-functions.md#parallel_for)
+[parallel_for-Funktion](reference/concurrency-namespace-functions.md#parallel_for)

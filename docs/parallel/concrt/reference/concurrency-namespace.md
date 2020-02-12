@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: 5449362454c5899e544ed370f13d28471a59bd13
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 06134838494e38c182d7c8328497666862f40fd6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821843"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143223"
 ---
 # <a name="concurrency-namespace"></a>concurrency-Namespace
 
@@ -33,15 +33,15 @@ Der `Concurrency`-Namespace stellt Klassen und Funktionen bereit, die Ihnen den 
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 namespace concurrency;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>TypeDefs
 
-|-Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |`runtime_object_identity`|Jede Meldungsinstanz verfügt über eine Identität, die ihr beim Klonen folgt und die zwischen Messagingkomponenten übergeben wird. Dies kann nicht die Adresse des Meldungsobjekts sein.|
 |`task_status`|Ein Typ, der den abschließenden Zustand einer Aufgabe darstellt. Gültige Werte sind `completed` und `canceled`.|
@@ -50,11 +50,11 @@ namespace concurrency;
 
 ### <a name="classes"></a>Klassen
 
-|-Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[affinity_partitioner-Klasse](affinity-partitioner-class.md)|Die `affinity_partitioner`-Klasse ist der `static_partitioner`-Klasse ähnlich, allerdings wird die Cacheaffinität dank der Auswahl, den Arbeitsthreads Unterbereiche zuzuordnen, verbessert. Sie kann die Leistung, bei erneutem Ausführen einer Schleife über dem gleichen Dataset, und wenn die Daten im Cache gespeichert werden können, erheblich verbessern. Beachten Sie, dass das gleiche `affinity_partitioner`-Objekt mit nachfolgenden Iterationen einer parallelen Schleife verwendet werden muss, die für ein bestimmtes Dataset ausgeführt wird, um vom Datenort zu profitieren.|
 |[agent-Klasse](agent-class.md)|Diese Klasse ist als Basisklasse für alle unabhängigen Agents vorgesehen. Sie wird verwendet, um den Zustand von anderen Agents auszublenden und mithilfe von Meldungsübergabe zu interagieren.|
-|[auto_partitioner-Klasse](auto-partitioner-class.md)|Die `auto_partitioner`-Klasse stellt die Standardmethoden `parallel_for`, `parallel_for_each` und `parallel_transform` dar, die verwendet werden, um den Bereich zu partitionieren, den sie durchlaufen. Diese Partitionierungsmethode verwendet Bereichsstealing zum Lastenausgleich sowie Abbruch pro Durchlauf.|
+|[auto_partitioner-Klasse](auto-partitioner-class.md)|Die `auto_partitioner`-Klasse stellt die Standardmethoden `parallel_for`, `parallel_for_each` und `parallel_transform` dar, die verwendet werden, um den Bereich zu partitionieren, den sie durchlaufen. Diese Partitionierungs Methode setzt den Bereichs Diebstahl für den Lastenausgleich und den Abbruch pro iterate ein.|
 |[bad_target-Klasse](bad-target-class.md)|Diese Klasse beschreibt eine Ausnahme, die dann ausgelöst wird, wenn einem Meldungsblock ein Zeiger auf ein Ziel zugeordnet wird, das für die auszuführende Operation ungültig ist.|
 |[call-Klasse](call-class.md)|Ein `call`-Meldungsblock ist ein geordneter `target_block` mit mehreren Quellen, der eine bestimmte Funktion aufruft, wenn eine Nachricht empfangen wird.|
 |[cancellation_token-Klasse](cancellation-token-class.md)|Mit der `cancellation_token`-Klasse kann bestimmt werden, ob für einen Vorgang ein Abbruch angefordert wurde. Dem angegebenen Token kann `task_group`, `structured_task_group` oder `task` zugeordnet werden, um einen impliziten Abbruch bereitzustellen. Es kann auch zum Abbruch abgerufen oder für einen Rückruf registriert werden, wenn das zugeordnete `cancellation_token_source`-Element abgebrochen wird.|
@@ -116,7 +116,7 @@ namespace concurrency;
 |[single_link_registry-Klasse](single-link-registry-class.md)|Das `single_link_registry`-Objekt ist eine `network_link_registry`, die nur eine einzige Quelle oder einen einzigen Zielblock verwaltet.|
 |[source_block-Klasse](source-block-class.md)|Die `source_block`-Klasse ist eine abstrakte Basisklasse ausschließlich für Quellblöcke. Die Klasse stellt grundlegende Linkmanagementfunktionalität sowie allgemeine Fehlerüberprüfungen bereit.|
 |[source_link_manager-Klasse](source-link-manager-class.md)|Das `source_link_manager`-Objekt verwaltet Meldungsblock-Netzwerklinks zu `ISource`-Blöcken.|
-|[static_partitioner-Klasse](static-partitioner-class.md)|Die `static_partitioner`-Klasse stellt eine statische Partitionierung des Bereichs dar, der von `parallel_for` durchlaufen wird. Mit dem Partitionierer wird der Bereich in so viele Blöcke unterteilt, wie Worker für den zugrunde liegenden Planer verfügbar sind.|
+|[static_partitioner-Klasse](static-partitioner-class.md)|Die `static_partitioner`-Klasse stellt eine statische Partitionierung des Bereichs dar, der von `parallel_for` durchlaufen wird. Der Partitionierer dividiert den Bereich in so viele Blöcke, wie worker für den zugrunde liegenden Scheduler verfügbar sind.|
 |[structured_task_group-Klasse](structured-task-group-class.md)|Die `structured_task_group`-Klasse stellt eine stark strukturierte Auflistung paralleler Arbeit dar. Sie können einzelne parallele Aufgaben mithilfe von `structured_task_group`-Objekten in eine `task_handle` stellen und warten, bis sie abgeschlossen werden, oder Sie können die Aufgabengruppe abbrechen, bevor deren Ausführung beendet wird, wodurch auch alle Aufgaben abgebrochen werden, deren Ausführung nicht gestartet wurde.|
 |[target_block-Klasse](target-block-class.md)|Die `target_block`-Klasse ist eine abstrakte Basisklasse, mit der grundlegende Linkmanagementfunktionalität und Fehlerüberprüfung für Nur-Ziel-Blöcke bereitgestellt werden.|
 |[task-Klasse (Concurrency Runtime)](task-class.md)|Die Parallel Patterns Library (PPL) `task`-Klasse. Ein `task`-Objekt stellt Arbeit dar, die asynchron und übereinstimmend mit anderen Tasks und paralleler Arbeit , die von parallelen Algorithmen in der Concurrency Runtime erzeugt wird, ausgeführt werden kann. Es enthält bei erfolgreichem Abschluss ein Ergebnis vom Typ `_ResultType`. Tasks des Typs `task<void>` führen zu keinem Ergebnis. Eine Aufgabe kann erwartet und unabhängig von anderen Aufgaben abgebrochen werden. Er kann mit anderen Tasks mithilfe von Continuations (`then`) sowie Join-Muster (`when_all`) und Choise-Muster (`when_any`) erstellt werden.|
@@ -133,7 +133,7 @@ namespace concurrency;
 
 ### <a name="structures"></a>Strukturen
 
-|-Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[DispatchState-Struktur](dispatchstate-structure.md)|Die `DispatchState`-Struktur wird zur Zustandsübertragung auf die `IExecutionContext::Dispatch`-Methode verwendet. Sie beschreibt die Umstände, unter denen die `Dispatch`-Methode für eine `IExecutionContext`-Schnittstelle aufgerufen wird.|
 |[IExecutionContext-Struktur](iexecutioncontext-structure.md)|Eine Schnittstelle zu einem Ausführungskontext, der auf einem angegebenen virtuellen Prozessor ausgeführt werden kann und einen gemeinsamen Kontextwechsel zulässt.|
@@ -154,7 +154,7 @@ namespace concurrency;
 
 ### <a name="enumerations"></a>Enumerationen
 
-|-Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[agent_status](concurrency-namespace-enums.md#agent_status)|Die gültigen Zustände für einen `agent`.|
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|Die Typen von Ereignissen, die mit der von der Agents Library angebotenen Ablaufverfolgungsfunktionalität aufgezeichnet werden können|
@@ -171,15 +171,15 @@ namespace concurrency;
 |[task_group_status](concurrency-namespace-enums.md#task_group_status)|Beschreibt den Ausführungsstatus eines `task_group`-Objekts oder eines `structured_task_group`-Objekts. Ein Wert dieses Typs wird von zahlreichen Methoden zurückgegeben, die auf den Abschluss von Aufgaben warten, die für eine Aufgabengruppe geplant wurden.|
 |[WinRTInitializationType](concurrency-namespace-enums.md#winrtinitializationtype)|Wird von der `WinRTInitialization`-Richtlinie verwendet, um zu beschreiben, ob und wie die Windows Runtime auf Planerthreads für eine Anwendung initialisiert wird, die auf Windows-Betriebssystemen ab Version 8 ausgeführt wird. Weitere Informationen zu verfügbaren Scheduler-Richtlinien finden Sie unter [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey).|
 
-### <a name="functions"></a>Funktionen
+### <a name="functions"></a>Functions
 
-|-Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |["Zuweisung"-Funktion](concurrency-namespace-functions.md#alloc)|Reserviert einen Speicherblock mit der in der Unterbelegungsfunktion für die Zwischenspeicherung der Concurrency Runtime angegebenen Größe.|
-|[ASend-Funktion](concurrency-namespace-functions.md#asend)|Überladen. Ein asynchroner Sendevorgang, der eine Aufgabe zum Weitergeben der Daten an den Zielblock plant.|
+|[ASend-Funktion](concurrency-namespace-functions.md#asend)|Ist überladen. Ein asynchroner Sendevorgang, der eine Aufgabe zum Weitergeben der Daten an den Zielblock plant.|
 |[cancel_current_task-Funktion](concurrency-namespace-functions.md#cancel_current_task)|Bricht die gerade ausgeführte Aufgabe ab. Diese Funktion kann aus dem Text einer Aufgabe aufgerufen werden, um die Ausführung der Aufgabe abzubrechen und ihn dabei in den `canceled` Zustand übergehen zu lassen.<br /><br /> Der Aufruf dieser Funktion, wenn Sie sich nicht innerhalb des Texts von einem `task` befinden, ist kein unterstütztes Szenario. Dies würde zu nicht definiertem Verhalten, wie einem Absturz oder einem Hänger in der Anwendung, führen.|
 |[create_async-Funktion](concurrency-namespace-functions.md#create_async)|Erstellt ein asynchrones Konstrukt der Windows Runtime auf einem vom Benutzer angegebenes Lambda oder Funktionsobjekt. Der Rückgabetyp von `create_async` ist entweder `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` oder `IAsyncOperationWithProgress<TResult, TProgress>^` auf Grundlage der Signatur des Lambda-Ausdrucks, der an die Methode übergeben wurde.|
-|[create_task-Funktion](concurrency-namespace-functions.md#create_task)|Überladen. Erstellt ein ppl- [Aufgaben](task-class.md) Objekt. Das Element `create_task` kann überall dort verwendet werden, wo Sie einen Aufgabenkonstruktor verwendet hätten. Es wird hauptsächlich der Einfachheit halber bereitgestellt, da es beim Erstellen eines Tasks die Verwendung des `auto`-Schlüsselwort ermöglicht.|
+|[create_task-Funktion](concurrency-namespace-functions.md#create_task)|Ist überladen. Erstellt ein ppl- [Aufgaben](task-class.md) Objekt. Das Element `create_task` kann überall dort verwendet werden, wo Sie einen Aufgabenkonstruktor verwendet hätten. Es wird hauptsächlich der Einfachheit halber bereitgestellt, da es beim Erstellen eines Tasks die Verwendung des `auto`-Schlüsselwort ermöglicht.|
 |[Funktion "" in der Funktion "".](concurrency-namespace-functions.md#createresourcemanager)|Gibt eine Schnittstelle zurück, die die Singletoninstanz des Ressourcen-Managers der Concurrency Runtime darstellt. Der Ressourcen-Manager ist für das Zuweisen von Ressourcen für Planer, die miteinander kooperieren möchten, zuständig.|
 |[DisableTracing-Funktion](concurrency-namespace-functions.md#disabletracing)|Deaktiviert die Ablaufverfolgung in der Concurrency Runtime. Diese Funktion ist veraltet, da die Registrierung der ETW-Ablaufverfolgung standardmäßig aufgehoben wird.|
 |[EnableTracing-Funktion](concurrency-namespace-functions.md#enabletracing)|Aktiviert die Ablaufverfolgung in der Concurrency Runtime. Diese Funktion ist veraltet, da die Registrierung der ETW-Ablaufverfolgung jetzt standardmäßig erfolgt.|
@@ -192,39 +192,39 @@ namespace concurrency;
 |[GetSchedulerId-Funktion](concurrency-namespace-functions.md#getschedulerid)|Gibt einen eindeutigen Bezeichner zurück, der einem Planer zugewiesen werden kann, der die `IScheduler`-Schnittstelle implementiert.|
 |[interruption_point-Funktion](concurrency-namespace-functions.md#interruption_point)|Erstellt einen Unterbrechungspunkt für den Abbruch. Wenn ein Abbruch im Kontext, in dem diese Funktion aufgerufen wird, ausgeführt wird, löst diese eine interne Ausnahme aus, mit der die Ausführung der aktuell ausgeführten parallelen Verarbeitung abgebrochen wird. Wenn kein Abbruch ausgeführt wird, bleibt die Funktion untätig.|
 |[Is_current_task_group_canceling-Funktion](concurrency-namespace-functions.md#is_current_task_group_canceling)|Gibt zurück, ob die Aufgabengruppe, die gerade inline auf dem aktuellen Kontext ausgeführt wird, in diesem Moment (oder in Kürze) einen Abbruch durchführt. Beachten Sie, dass `false` zurückgegeben wird, wenn auf dem aktuellen Kontext zurzeit inline keine Aufgabengruppe ausgeführt wird.|
-|[Make_choice-Funktion](concurrency-namespace-functions.md#make_choice)|Überladen. Erstellt einen `choice`-Meldungsblock aus einem optionalen `Scheduler` oder einer `ScheduleGroup` und mindestens zwei Eingabequellen.|
-|[Make_greedy_join-Funktion](concurrency-namespace-functions.md#make_greedy_join)|Überladen. Erstellt einen `greedy multitype_join`-Meldungsblock aus einem optionalen `Scheduler` oder einer `ScheduleGroup` und mindestens zwei Eingabequellen.|
-|[Make_join-Funktion](concurrency-namespace-functions.md#make_join)|Überladen. Erstellt einen `non_greedy multitype_join`-Meldungsblock aus einem optionalen `Scheduler` oder einer `ScheduleGroup` und mindestens zwei Eingabequellen.|
+|[Make_choice-Funktion](concurrency-namespace-functions.md#make_choice)|Ist überladen. Erstellt einen `choice`-Meldungsblock aus einem optionalen `Scheduler` oder einer `ScheduleGroup` und mindestens zwei Eingabequellen.|
+|[Make_greedy_join-Funktion](concurrency-namespace-functions.md#make_greedy_join)|Ist überladen. Erstellt einen `greedy multitype_join`-Meldungsblock aus einem optionalen `Scheduler` oder einer `ScheduleGroup` und mindestens zwei Eingabequellen.|
+|[Make_join-Funktion](concurrency-namespace-functions.md#make_join)|Ist überladen. Erstellt einen `non_greedy multitype_join`-Meldungsblock aus einem optionalen `Scheduler` oder einer `ScheduleGroup` und mindestens zwei Eingabequellen.|
 |[Make_task-Funktion](concurrency-namespace-functions.md#make_task)|Eine Factorymethode zum Erstellen eines `task_handle`-Objekts.|
-|[parallel_buffered_sort-Funktion](concurrency-namespace-functions.md#parallel_buffered_sort)|Überladen. Ordnet die Elemente in einem angegebenen Bereich in einer aufsteigenden Reihenfolge oder gemäß eines Sortierkriteriums an, das von einem binären Prädikat parallel angegeben wird. Diese Funktion entspricht `std::sort` semantisch darin, dass sie eine vergleichsbasierte, instabile, direkte Sortierung ist, abgesehen von den zusätzlich erforderlichen `O(n)`-Leerzeichen und er notwendigen Standardinitialisierung für die sortierten Elemente.|
-|[parallel_for-Funktion](concurrency-namespace-functions.md#parallel_for)|Überladen. `parallel_for` durchläuft einen Bereich von Indizes und führt bei jeder Iteration parallel eine vom Benutzer bereitgestellte Funktion aus.|
-|[Parallel_for_each-Funktion](concurrency-namespace-functions.md#parallel_for_each)|Überladen. `parallel_for_each` wendet eine angegebene Funktion parallel auf jedes Element innerhalb eines Bereichs an. Sie entspricht semantisch der `for_each`-Funktion im `std`-Namespace, außer dass die Iteration über die Elemente parallel ausgeführt wird und die Reihenfolge der Iteration nicht angegeben ist. Das Argument `_Func` muss einen Funktionsaufrufoperator in der Form `operator()(T)` unterstützen, wobei der Parameter `T` der Elementtyp des durchlaufenen Containers ist.|
-|[Parallel_invoke-Funktion](concurrency-namespace-functions.md#parallel_invoke)|Überladen. Führt die als Parameter angegebenen Funktionsobjekte parallel aus, und blockiert, bis die Ausführung beendet ist. Jedes Funktionsobjekt kann ein Lambdaausdruck, ein Zeiger auf eine Funktion oder ein anderes Objekt sein, das den Funktionsaufrufoperator mit der Signatur `void operator()()` unterstützt.|
-|[parallel_radixsort-Funktion](concurrency-namespace-functions.md#parallel_radixsort)|Überladen. Ordnet Elemente in einem angegebenen Bereich mithilfe eines Basis-Sortieralgorithmus in einer absteigenden Reihenfolge an. Dies ist eine stabile Sortierfunktion, die eine Projektionsfunktion erfordert, mit der Elemente zur Sortierung in Schlüssel, die ganzen Zahlen ohne Vorzeichen ähneln, projiziert werden können. Standardinitialisierung ist für die zu sortierenden Elemente erforderlich.|
-|[parallel_reduce-Funktion](concurrency-namespace-functions.md#parallel_reduce)|Überladen. Berechnet die Summe aller Elemente in einem angegebenen Bereich, indem aufeinander folgende Teilsummen berechnet werden, oder berechnet das Ergebnis der aufeinander folgenden Teilergebnisse, die auf ähnliche Weise mithilfe eines angegebenen binären Vorgangs (außer Summe) abgerufen werden parallel. `parallel_reduce` entspricht `std::accumulate` semantisch, außer dass der binäre Vorgang assoziativ sein muss und ein Identitätswert anstelle eines Anfangswerts erforderlich ist.|
-|[parallel_sort-Funktion](concurrency-namespace-functions.md#parallel_sort)|Überladen. Ordnet die Elemente in einem angegebenen Bereich in einer aufsteigenden Reihenfolge oder gemäß eines Sortierkriteriums an, das von einem binären Prädikat parallel angegeben wird. Diese Funktion entspricht `std::sort` semantisch insofern, dass sie eine vergleichsbasierte, instabile, direkte Sortierung ist.|
-|[parallel_transform-Funktion](concurrency-namespace-functions.md#parallel_transform)|Überladen. Wendet ein angegebenes Funktionsobjekt auf jedes Element in einem Quellbereich oder auf ein Elementpaar aus zwei Quellbereichen an und kopiert die Rückgabewerte des Funktionsobjekts parallel in einen Zielbereich. Diese Funktion entspricht semantisch `std::transform`.|
-|[Receive-Funktion](concurrency-namespace-functions.md#receive)|Überladen. Eine allgemeine Empfangsimplementierung, mit der ein Kontext auf Daten von genau einer Quelle warten und die akzeptierten Werte filtern kann.|
+|[parallel_buffered_sort-Funktion](concurrency-namespace-functions.md#parallel_buffered_sort)|Ist überladen. Ordnet die Elemente in einem angegebenen Bereich in einer nicht absteigenden Reihenfolge oder entsprechend einem Sortierkriterium an, das von einem binären Prädikat gleichzeitig angegeben wird. Diese Funktion entspricht `std::sort` semantisch darin, dass sie eine vergleichsbasierte, instabile, direkte Sortierung ist, abgesehen von den zusätzlich erforderlichen `O(n)`-Leerzeichen und er notwendigen Standardinitialisierung für die sortierten Elemente.|
+|[parallel_for-Funktion](concurrency-namespace-functions.md#parallel_for)|Ist überladen. `parallel_for` durchläuft einen Bereich von Indizes und führt bei jeder Iteration parallel eine vom Benutzer bereitgestellte Funktion aus.|
+|[Parallel_for_each-Funktion](concurrency-namespace-functions.md#parallel_for_each)|Ist überladen. `parallel_for_each` wendet eine angegebene Funktion parallel auf jedes Element innerhalb eines Bereichs an. Sie entspricht semantisch der `for_each`-Funktion im `std`-Namespace, außer dass die Iteration über die Elemente parallel ausgeführt wird und die Reihenfolge der Iteration nicht angegeben ist. Das Argument `_Func` muss einen Funktionsaufrufoperator in der Form `operator()(T)` unterstützen, wobei der Parameter `T` der Elementtyp des durchlaufenen Containers ist.|
+|[Parallel_invoke-Funktion](concurrency-namespace-functions.md#parallel_invoke)|Ist überladen. Führt die als Parameter angegebenen Funktionsobjekte parallel aus, und blockiert, bis die Ausführung beendet ist. Jedes Funktionsobjekt kann ein Lambdaausdruck, ein Zeiger auf eine Funktion oder ein anderes Objekt sein, das den Funktionsaufrufoperator mit der Signatur `void operator()()` unterstützt.|
+|[parallel_radixsort-Funktion](concurrency-namespace-functions.md#parallel_radixsort)|Ist überladen. Ordnet Elemente in einem angegebenen Bereich mithilfe eines Basis-Sortieralgorithmus in einer absteigenden Reihenfolge an. Dies ist eine stabile Sortierfunktion, die eine Projektionsfunktion erfordert, mit der Elemente zur Sortierung in Schlüssel, die ganzen Zahlen ohne Vorzeichen ähneln, projiziert werden können. Standardinitialisierung ist für die zu sortierenden Elemente erforderlich.|
+|[parallel_reduce-Funktion](concurrency-namespace-functions.md#parallel_reduce)|Ist überladen. Berechnet die Summe aller Elemente in einem angegebenen Bereich, indem aufeinander folgende Teilsummen berechnet werden, oder berechnet das Ergebnis der aufeinander folgenden Teilergebnisse, die auf ähnliche Weise mithilfe eines angegebenen binären Vorgangs (außer Summe) abgerufen werden parallel. `parallel_reduce` entspricht `std::accumulate` semantisch, außer dass der binäre Vorgang assoziativ sein muss und ein Identitätswert anstelle eines Anfangswerts erforderlich ist.|
+|[parallel_sort-Funktion](concurrency-namespace-functions.md#parallel_sort)|Ist überladen. Ordnet die Elemente in einem angegebenen Bereich in einer nicht absteigenden Reihenfolge oder entsprechend einem Sortierkriterium an, das von einem binären Prädikat gleichzeitig angegeben wird. Diese Funktion entspricht `std::sort` semantisch insofern, dass sie eine vergleichsbasierte, instabile, direkte Sortierung ist.|
+|[parallel_transform-Funktion](concurrency-namespace-functions.md#parallel_transform)|Ist überladen. Wendet ein angegebenes Funktionsobjekt auf jedes Element in einem Quellbereich oder auf ein Elementpaar aus zwei Quellbereichen an und kopiert die Rückgabewerte des Funktionsobjekts parallel in einen Zielbereich. Diese Funktion entspricht semantisch `std::transform`.|
+|[Receive-Funktion](concurrency-namespace-functions.md#receive)|Ist überladen. Eine allgemeine Empfangsimplementierung, mit der ein Kontext auf Daten von genau einer Quelle warten und die akzeptierten Werte filtern kann.|
 |[run_with_cancellation_token-Funktion](concurrency-namespace-functions.md#run_with_cancellation_token)|Führt sofort synchron ein Funktionsobjekt im Kontext eines angegebenen Abbruchtokens aus.|
-|[Send-Funktion](concurrency-namespace-functions.md#send)|Überladen. Ein synchroner Sendevorgang, der wartet, bis das Ziel die Meldung akzeptiert oder ablehnt.|
+|[Send-Funktion](concurrency-namespace-functions.md#send)|Ist überladen. Ein synchroner Sendevorgang, der wartet, bis das Ziel die Meldung akzeptiert oder ablehnt.|
 |[set_ambient_scheduler-Funktion (Concurrency Runtime)](concurrency-namespace-functions.md#set_ambient_scheduler)||
-|[set_task_execution_resources-Funktion](concurrency-namespace-functions.md#set_task_execution_resources)|Überladen. Schränkt die Ausführungsressourcen, die von den internen Arbeitsthreads der Concurrency Runtime verwendet werden, auf den angegebenen Affinitätssatz ein.<br /><br /> Es ist nur gültig, diese Methode vor Erstellung des Ressourcen-Managers oder zwischen der Lebensdauer zweier Ressourcen-Manager aufzurufen. Sie kann mehrmals aufgerufen werden, solange der Ressourcen-Manager zum Zeitpunkt des Aufrufs nicht vorhanden ist. Nachdem eine Affinitätsgrenze eingerichtet wurde, bleibt diese bis zum nächsten gültigen Aufruf der `set_task_execution_resources`-Methode bestehen.<br /><br /> Die bereitgestellte Affinitätsmaske muss keine Teilmenge der Prozessaffinitätsmaske sein. Die Prozessaffinität wird bei Bedarf aktualisiert.|
+|[set_task_execution_resources-Funktion](concurrency-namespace-functions.md#set_task_execution_resources)|Ist überladen. Schränkt die Ausführungsressourcen, die von den internen Arbeitsthreads der Concurrency Runtime verwendet werden, auf den angegebenen Affinitätssatz ein.<br /><br /> Es ist nur gültig, diese Methode vor Erstellung des Ressourcen-Managers oder zwischen der Lebensdauer zweier Ressourcen-Manager aufzurufen. Sie kann mehrmals aufgerufen werden, solange der Ressourcen-Manager zum Zeitpunkt des Aufrufs nicht vorhanden ist. Nachdem eine Affinitätsgrenze eingerichtet wurde, bleibt diese bis zum nächsten gültigen Aufruf der `set_task_execution_resources`-Methode bestehen.<br /><br /> Die bereitgestellte Affinitätsmaske muss keine Teilmenge der Prozessaffinitätsmaske sein. Die Prozessaffinität wird bei Bedarf aktualisiert.|
 |[swap-Funktion](concurrency-namespace-functions.md#swap)|Tauscht die Elemente zweier `concurrent_vector`-Objekte.|
 |[task_from_exception-Funktion (Concurrency Runtime)](concurrency-namespace-functions.md#task_from_exception)||
 |[task_from_result-Funktion (Concurrency Runtime)](concurrency-namespace-functions.md#task_from_result)||
 |[Trace_agents_register_name-Funktion](concurrency-namespace-functions.md#trace_agents_register_name)|Ordnet den angegebenen Namen dem Nachrichtenblock oder dem Agent in der ETW-Ablaufverfolgung zu.|
-|[Try_receive-Funktion](concurrency-namespace-functions.md#try_receive)|Überladen. Eine allgemeine try-receive-Implementierung, mit der ein Kontext Daten von genau einer Quelle suchen und die akzeptierten Werte filtern kann. Wenn die Daten nicht bereit sind, gibt die Methode "false" zurück.|
+|[Try_receive-Funktion](concurrency-namespace-functions.md#try_receive)|Ist überladen. Eine allgemeine try-receive-Implementierung, mit der ein Kontext Daten von genau einer Quelle suchen und die akzeptierten Werte filtern kann. Wenn die Daten nicht bereit sind, gibt die Methode "false" zurück.|
 |[wait-Funktion](concurrency-namespace-functions.md#wait)|Hält den aktuellen Kontext für eine bestimmte Zeit an.|
 |[when_all-Funktion](concurrency-namespace-functions.md#when_all)|Erstellt eine Aufgabe, die erfolgreich abgeschlossen wird, wenn alle als Argumente angegeben Aufgaben erfolgreich abgeschlossen werden.|
-|[when_any-Funktion](concurrency-namespace-functions.md#when_any)|Überladen. Erstellt eine Aufgabe, die erfolgreich abgeschlossen wird, wenn eine der als Argumente angegeben Aufgaben erfolgreich abgeschlossen wird.|
+|[when_any-Funktion](concurrency-namespace-functions.md#when_any)|Ist überladen. Erstellt eine Aufgabe, die erfolgreich abgeschlossen wird, wenn eine der als Argumente angegeben Aufgaben erfolgreich abgeschlossen wird.|
 
 ### <a name="operators"></a>Operatoren
 
-|-Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Operator!=](concurrency-namespace-operators.md#operator_neq)|Testet, ob das `concurrent_vector`-Objekt links vom Operator ungleich dem `concurrent_vector`-Objekt rechts vom Operator ist.|
-|[operator&&](concurrency-namespace-operators.md#operator_amp_amp)|Überladen. Erstellt eine Aufgabe, die erfolgreich abgeschlossen wird, wenn beide Aufgaben, die als Argumente bereitgestellt werden, erfolgreich abgeschlossen werden.|
-|[operator||](concurrency-namespace-operators.md#operator_lor)|Überladen. Erstellt eine Aufgabe, die erfolgreich abgeschlossen wird, wenn eine der als Argumente angegeben Aufgaben erfolgreich abgeschlossen wird.|
+|[operator!=](concurrency-namespace-operators.md#operator_neq)|Testet, ob das `concurrent_vector`-Objekt links vom Operator ungleich dem `concurrent_vector`-Objekt rechts vom Operator ist.|
+|[operator&&](concurrency-namespace-operators.md#operator_amp_amp)|Ist überladen. Erstellt eine Aufgabe, die erfolgreich abgeschlossen wird, wenn beide Aufgaben, die als Argumente bereitgestellt werden, erfolgreich abgeschlossen werden.|
+|[operator||](concurrency-namespace-operators.md#operator_lor)|Ist überladen. Erstellt eine Aufgabe, die erfolgreich abgeschlossen wird, wenn eine der als Argumente angegeben Aufgaben erfolgreich abgeschlossen wird.|
 |[operator<](concurrency-namespace-operators.md#operator_lt)|Testet, ob das `concurrent_vector`-Objekt links vom Operator kleiner als das `concurrent_vector`-Objekt auf der rechten Seite ist.|
 |[operator<=](concurrency-namespace-operators.md#operator_lt_eq)|Testet, ob das `concurrent_vector`-Objekt links vom Operator kleiner oder gleich dem `concurrent_vector`-Objekt auf der rechten Seite ist.|
 |[operator==](concurrency-namespace-operators.md#operator_eq_eq)|Testet, ob das `concurrent_vector`-Objekt links vom Operator gleich dem `concurrent_vector`-Objekt rechts vom Operator ist.|
@@ -233,7 +233,7 @@ namespace concurrency;
 
 ### <a name="constants"></a>Konstanten
 
-|-Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[AgentEventGuid](concurrency-namespace-constants1.md#agenteventguid)|Ein Kategorie-GUID ({B9B5B78C-0713-4898-A21A-C67949DCED07}), die von der Agents Library in der Concurrency Runtime ausgelöste ETW-Ereignisse beschreibt.|
 |[ChoreEventGuid](concurrency-namespace-constants1.md#choreeventguid)|Ein Kategorie-GUID, die ETW-Ereignisse beschreibt, die von der Concurrency Runtime ausgelöst werden und sich direkt auf Arbeiten oder Aufgaben beziehen.|
@@ -254,10 +254,10 @@ namespace concurrency;
 |[SchedulerEventGuid](concurrency-namespace-constants1.md#schedulereventguid)|Ein Kategorie-GUID, die ETW-Ereignisse beschreibt, die von der Concurrency Runtime ausgelöst werden und sich direkt auf Planeraktivitäten beziehen.|
 |[VirtualProcessorEventGuid](concurrency-namespace-constants1.md#virtualprocessoreventguid)|Ein Kategorie-GUID, die ETW-Ereignisse beschreibt, die von der Concurrency Runtime ausgelöst werden und sich direkt auf virtuelle Prozessoren beziehen.|
 
-## <a name="requirements"></a>-Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Header:** "Agents. h", "ConcRT. h", "concrtrm. h", "concurrent_priority_queue. h", "Concurrent_queue. h", "concurrent_unordered_map. h", "concurrent_unordered_set. h", "Concurrent_vector. h", "internal_concurrent_hash. h", "internal_split_ordered_list. h", "ppl. h", "pplcancellation_token
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[Verweis](reference-concurrency-runtime.md)
+[Referenz](reference-concurrency-runtime.md)

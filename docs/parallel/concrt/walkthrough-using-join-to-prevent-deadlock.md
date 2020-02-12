@@ -7,20 +7,20 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: 196bb4441430c19aa165024e0fc4e42beec6d724
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 4df83e944552fd6c0d2482efa72883d87cd45f8c
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857464"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77140653"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Exemplarische Vorgehensweise: Verhindern von Deadlocks mit join
 
-In diesem Thema verwendet das Philosophenproblem um zu veranschaulichen, wie Sie mit der [Concurrency:: Join](../../parallel/concrt/reference/join-class.md) Klasse, um zu verhindern, dass Deadlocks in der Anwendung. In einer Softwareanwendung kommt es zu einem *Deadlock*, wenn zwei oder mehr Prozesse jeweils eine Ressource halten und gegenseitig darauf warten, dass ein anderer Prozess eine andere Ressource freigibt.
+In diesem Thema wird das Problem mit dem Thema "gastronomische Philosophen" verwendet, um zu veranschaulichen, wie die Klasse " [parallelcurrency:: Join](../../parallel/concrt/reference/join-class.md) " verwendet wird, um Deadlocks In einer Softwareanwendung kommt es zu einem *Deadlock*, wenn zwei oder mehr Prozesse jeweils eine Ressource halten und gegenseitig darauf warten, dass ein anderer Prozess eine andere Ressource freigibt.
 
 Das Philosophenproblem ist ein spezifisches Beispiel dafür, welche Probleme allgemein auftreten können, wenn ein Satz von Ressourcen von mehreren gleichzeitig ablaufenden Prozessen gemeinsam verwendet wird.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Lesen Sie sich folgende Themen durch, bevor Sie mit dieser exemplarischen Vorgehensweise beginnen:
 
@@ -34,29 +34,29 @@ Lesen Sie sich folgende Themen durch, bevor Sie mit dieser exemplarischen Vorgeh
 
 - [Synchronisierungsdatenstrukturen](../../parallel/concrt/synchronization-data-structures.md)
 
-##  <a name="top"></a> Abschnitte
+## <a name="top"></a> Abschnitte
 
 Diese exemplarische Vorgehensweise enthält folgende Abschnitte:
 
-- [Das Philosophenproblem](#problem)
+- [Das Problem mit den gastronomischen Philosophen](#problem)
 
 - [Eine naive Implementierung](#deadlock)
 
-- [Mithilfe von Join zum Verhindern von Deadlocks](#solution)
+- [Verwenden von Join zum Verhindern von Deadlocks](#solution)
 
-##  <a name="problem"></a> Das Philosophenproblem
+## <a name="problem"></a>Das Problem mit den gastronomischen Philosophen
 
 Das Philosophenproblem veranschaulicht, wie Deadlocks in einer Anwendung auftreten. Bei diesem Problem sitzen fünf Philosophen an einem runden Tisch. Die einzelnen Philosophen haben Phasen, in denen sie denken, und Phasen, in denen sie essen. Jeder Philosoph muss ein Essstäbchen mit dem Tischnachbarn zu seiner Linken und ein anderes Essstäbchen mit dem Tischnachbarn zu seiner Rechten teilen. Die folgende Abbildung veranschaulicht diese Anordnung.
 
-![Das Philosophenproblem](../../parallel/concrt/media/dining_philosophersproblem.png "das Philosophenproblem")
+![Das Problem mit den gastronomischen Philosophen](../../parallel/concrt/media/dining_philosophersproblem.png "Das Philosophenproblem")
 
 Um essen zu können, benötigt ein Philosoph zwei Essstäbchen. Wenn jeder Philosoph nur ein Essstäbchen hat und auf das zweite wartet, kann kein Philosoph essen und alle bleiben hungrig.
 
 [[Nach oben](#top)]
 
-##  <a name="deadlock"></a> Eine naive Implementierung
+## <a name="deadlock"></a>Eine naive Implementierung
 
-Im folgenden Beispiel wird eine naive Implementierung des Philosophenproblems veranschaulicht. Die `philosopher` -Klasse, die abgeleitet [Concurrency:: Agent](../../parallel/concrt/reference/agent-class.md), kann jeder Philosoph unabhängig handeln. Im Beispiel wird ein freigegebenes Array von [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) Objekte, damit jedes `philosopher` -Objekt exklusiven Zugriff auf ein Paar Essstäbchen hat.
+Im folgenden Beispiel wird eine naive Implementierung des Philosophenproblems veranschaulicht. Die `philosopher`-Klasse, die von " [parallelcurrency:: Agent](../../parallel/concrt/reference/agent-class.md)" abgeleitet wird, ermöglicht jedem Philosoph, unabhängig zu agieren. Im Beispiel wird ein frei gegebenes Array von [parallelcurrency:: CRITICAL_SECTION](../../parallel/concrt/reference/critical-section-class.md) -Objekten verwendet, um jedem `philosopher` Objekt exklusiven Zugriff auf ein paar von Essstäbchen zu geben.
 
 Um die Implementierung mit der Abbildung in Verbindung zu bringen, stellt die `philosopher`-Klasse einen Philosophen dar. Jedes Essstäbchen wird durch eine `int`-Variable dargestellt. Die `critical_section`-Objekte dienen als Halter für die Essstäbchen. Die `run`-Methode simuliert das Leben des Philosophen. Die `think`-Methode simuliert das Denken und die `eat`-Methode das Essen.
 
@@ -64,35 +64,31 @@ Ein `philosopher`-Objekt sperrt beide `critical_section`-Objekte, um das Herausn
 
 Die `pickup_chopsticks`-Methode veranschaulicht, wo ein Deadlock auftreten kann. Wenn jedes `philosopher`-Objekt Zugriff auf eine der Sperren erlangt, kann kein `philosopher`-Objekt fortfahren, weil die andere Sperre von einem anderen `philosopher`-Objekt gesteuert wird.
 
-## <a name="example"></a>Beispiel
-
-### <a name="description"></a>Beschreibung
-
-### <a name="code"></a>Code
+### <a name="example"></a>Beispiel
 
 [!code-cpp[concrt-philosophers-deadlock#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_1.cpp)]
 
-## <a name="compiling-the-code"></a>Kompilieren des Codes
+### <a name="compiling-the-code"></a>Kompilieren des Codes
 
-Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, oder fügen Sie ihn in eine Datei mit dem Namen `philosophers-deadlock.cpp` und führen Sie dann den folgenden Befehl in einem Fenster von Visual Studio-Eingabeaufforderung.
+Kopieren Sie den Beispielcode, und fügen Sie ihn in ein Visual Studio-Projekt ein, oder fügen Sie ihn in eine Datei mit dem Namen `philosophers-deadlock.cpp` ein, und führen Sie dann den folgenden Befehl in einem Visual Studio-Eingabe Aufforderungs Fenster aus.
 
-**CL.exe/EHsc Philosophers-deadlock.cpp**
+> **cl. exe/EHsc Philosophers-Deadlock. cpp**
 
 [[Nach oben](#top)]
 
-##  <a name="solution"></a> Mithilfe von Join zum Verhindern von Deadlocks
+## <a name="solution"></a>Verwenden von Join zum Verhindern von Deadlocks
 
 In diesem Abschnitt wird gezeigt, wie Meldungspuffer und Meldungsübergabefunktionen verwendet werden, um Deadlocks zu vermeiden.
 
-In diesem Beispiel mit der früheren, Verbinden der `philosopher` Klasse ersetzt jede `critical_section` -Objekt unter Verwendung einer [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) Objekt und ein `join` Objekt. Das `join`-Objekt dient als Vermittler, das dem Philosophen die Essstäbchen bereitstellt.
+Um dieses Beispiel mit dem vorherigen zu verknüpfen, ersetzt die `philosopher`-Klasse jedes `critical_section`-Objekt mithilfe eines [parallelcurrency:: Unbounded_buffer](reference/unbounded-buffer-class.md) -Objekts und eines `join` Objekts. Das `join`-Objekt dient als Vermittler, das dem Philosophen die Essstäbchen bereitstellt.
 
 In diesem Beispiel wird die `unbounded_buffer`-Klasse verwendet, da die Meldung aus der Meldungswarteschlange entfernt wird, wenn ein Ziel eine Meldung von einem `unbounded_buffer`-Objekt empfängt. So kann ein `unbounded_buffer`-Objekt, das eine Meldung enthält, darauf hinweisen, dass das Essstäbchen zur Verfügung steht. Ein `unbounded_buffer`-Objekt, das keine Meldung enthält, weist darauf hin, dass das Essstäbchen verwendet wird.
 
 In diesem Beispiel wird ein nicht gieriges `join`-Objekt verwendet, da ein nicht gieriger Join nur dann jedem `philosopher`-Objekt Zugriff auf beide Essstäbchen gewährt, wenn beide `unbounded_buffer`-Objekte eine Meldung enthalten. Ein gieriger Join würde Deadlocks nicht verhindern, da Meldungen von ihm akzeptiert werden, sobald sie verfügbar sind. Deadlocks können auftreten, wenn alle gierigen `join`-Objekte eine der Meldungen empfangen, aber ewig warten, bis die andere verfügbar wird.
 
-Weitere Informationen zu gierigen und nicht gierige Joins und die Unterschiede zwischen den verschiedenen Meldungspuffertypen finden Sie unter [asynchrone Meldungsblöcke](../../parallel/concrt/asynchronous-message-blocks.md).
+Weitere Informationen über gierige und nicht gierige Joins sowie die Unterschiede zwischen den verschiedenen Nachrichten Puffer Typen finden Sie unter [asynchrone Nachrichten Blöcke](../../parallel/concrt/asynchronous-message-blocks.md).
 
-#### <a name="to-prevent-deadlock-in-this-example"></a>So verhindern Sie Deadlocks in diesem Beispiel
+### <a name="to-prevent-deadlock-in-this-example"></a>So verhindern Sie Deadlocks in diesem Beispiel
 
 1. Entfernen Sie folgenden Code aus dem Beispiel.
 
@@ -122,17 +118,13 @@ Weitere Informationen zu gierigen und nicht gierige Joins und die Unterschiede z
 
 [!code-cpp[concrt-philosophers-join#7](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_8.cpp)]
 
-## <a name="example"></a>Beispiel
-
-### <a name="description"></a>Beschreibung
+### <a name="description"></a>BESCHREIBUNG
 
 Nachfolgend sehen Sie das vollständige Beispiel, bei dem nicht gierige `join`-Objekte verwendet werden, um das Risiko von Deadlocks auszuschließen.
 
-### <a name="code"></a>Code
+### <a name="example"></a>Beispiel
 
 [!code-cpp[concrt-philosophers-join#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_9.cpp)]
-
-### <a name="comments"></a>Kommentare
 
 Folgende Ergebnisse werden zurückgegeben:
 
@@ -144,15 +136,15 @@ socrates ate 50 times.
 plato ate 50 times.
 ```
 
-## <a name="compiling-the-code"></a>Kompilieren des Codes
+### <a name="compiling-the-code"></a>Kompilieren des Codes
 
-Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, oder fügen Sie ihn in eine Datei mit dem Namen `philosophers-join.cpp` und führen Sie dann den folgenden Befehl in einem Fenster von Visual Studio-Eingabeaufforderung.
+Kopieren Sie den Beispielcode, und fügen Sie ihn in ein Visual Studio-Projekt ein, oder fügen Sie ihn in eine Datei mit dem Namen `philosophers-join.cpp` ein, und führen Sie dann den folgenden Befehl in einem Visual Studio-Eingabe Aufforderungs Fenster aus.
 
-**CL.exe/EHsc Philosophers-join.cpp**
+> **cl. exe/EHsc Philosophers-Join. cpp**
 
 [[Nach oben](#top)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Exemplarische Vorgehensweisen für die Concurrency Runtime](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Asynchrone Agents Library](../../parallel/concrt/asynchronous-agents-library.md)<br/>

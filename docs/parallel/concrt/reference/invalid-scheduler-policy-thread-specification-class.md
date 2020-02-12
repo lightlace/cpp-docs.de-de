@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_thread_specification class
 ms.assetid: 2d0fafb2-18f8-4284-8040-3db640d33303
-ms.openlocfilehash: 26d09610c6bb9e0c87852c9804e094617b021273
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: b6c2fd853ae19c48ae04d6601eb47e5afcb71944
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341089"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143036"
 ---
-# <a name="invalidschedulerpolicythreadspecification-class"></a>invalid_scheduler_policy_thread_specification-Klasse
+# <a name="invalid_scheduler_policy_thread_specification-class"></a>invalid_scheduler_policy_thread_specification-Klasse
 
 Diese Klasse beschreibt eine Ausnahme, die bei dem Versuch ausgelöst wird, die Parallelitätsgrenzen eines `SchedulerPolicy`-Objekts so festzulegen, dass der Wert des `MinConcurrency`-Schlüssels kleiner ist, als der Wert des `MaxConcurrency`-Schlüssels.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class invalid_scheduler_policy_thread_specification : public std::exception;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-value-class.md#ctor|Überladen. Erstellt ein `invalid_scheduler_policy_value`-Objekt.|
+|[invalid_scheduler_policy_thread_specification] (ungültig-Scheduler-Policy-value-class. MD # ctor|Ist überladen. Erstellt ein `invalid_scheduler_policy_value`-Objekt.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -37,16 +37,17 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
 
 `invalid_scheduler_policy_thread_specification`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** concrt.h
+**Header:** ConcRT. h
 
 **Namespace:** Parallelität
-##  <a name="ctor"></a> invalid_scheduler_policy_thread_specification
+
+## <a name="ctor"></a>invalid_scheduler_policy_thread_specification
 
 Erstellt ein `invalid_scheduler_policy_value`-Objekt.
 
-```
+```cpp
 explicit _CRTIMP invalid_scheduler_policy_thread_specification(_In_z_ const char* _Message) throw();
 
 invalid_scheduler_policy_thread_specification() throw();
@@ -57,7 +58,7 @@ invalid_scheduler_policy_thread_specification() throw();
 *_Message*<br/>
 Eine beschreibende Fehlermeldung.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [SchedulerPolicy-Klasse](schedulerpolicy-class.md)

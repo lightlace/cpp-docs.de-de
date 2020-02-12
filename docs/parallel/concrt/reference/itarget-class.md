@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-ms.openlocfilehash: 59a0f66a0ba3b10c3307a835ff6ccaa216596538
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: dc9eacad744536e640417a4ebf51b975bd05bcc7
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339537"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142037"
 ---
 # <a name="itarget-class"></a>ITarget-Klasse
 
@@ -26,91 +26,91 @@ Die `ITarget`-Klasse ist die Schnittstelle für alle Zielblöcke. Zielblöcke ne
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 template<class T>
 class ITarget;
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
 *T*<br/>
-Der Datentyp der Nutzlast in den Nachrichten, die vom Zielblock akzeptiert.
+Der Datentyp der Nutzlast in den Nachrichten, die vom Zielblock akzeptiert werden.
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|`filter_method`|Die Signatur einer Methode, die vom Block, der zurückgibt, verwendet eine `bool` um zu bestimmen, ob eine angebotene Nachricht akzeptiert werden soll.|
+|`filter_method`|Die Signatur einer beliebigen Methode, die vom-Block verwendet wird, der einen `bool` Wert zurückgibt, um zu bestimmen, ob eine angebotene Nachricht akzeptiert werden soll.|
 |`type`|Ein Typalias für `T`.|
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[~ ITarget-Destruktor](#dtor)|Zerstört das `ITarget`-Objekt.|
+|[~ ITarget-Dekonstruktor](#dtor)|Zerstört das `ITarget`-Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[propagate](#propagate)|Ruft beim Überschreiben in einer abgeleiteten Klasse übergibt asynchron eine Meldung von einem Quellblock an diesen Zielblock.|
-|[Senden](#send)|Ruft beim Überschreiben in einer abgeleiteten Klasse übergibt eine Nachricht synchron an den Zielblock.|
-|[supports_anonymous_source](#supports_anonymous_source)|Ruft beim Überschreiben in einer abgeleiteten Klasse gibt "true" oder "false", je nachdem, ob die Nachrichtenblock akzeptiert Nachrichten, die angeboten, die von einer Quelle, die nicht verknüpft ist. Wenn die überschriebene Methode zurückgibt **"true"**, das Ziel kann keine angebotene Nachricht verschieben, wie die Nutzung von eine zurückgestellte Nachricht zu einem späteren Zeitpunkt die Quelle in seiner Sourse Link Registrierung identifiziert werden erforderlich sind.|
+|[Pixeln](#propagate)|Übergibt beim Überschreiben in einer abgeleiteten Klasse eine Nachricht asynchron von einem Quell Block an diesen Zielblock.|
+|[Senden](#send)|Übergibt beim Überschreiben in einer abgeleiteten Klasse eine Nachricht synchron an den Zielblock.|
+|[supports_anonymous_source](#supports_anonymous_source)|Gibt beim Überschreiben in einer abgeleiteten Klasse true oder false zurück, abhängig davon, ob der Nachrichtenblock von einer nicht verknüpften Quelle angebotene Nachrichten akzeptiert. Wenn die überschriebene Methode **true**zurückgibt, kann das Ziel eine angebotene Nachricht nicht verschieben, da die Nutzung einer verschobenen Nachricht zu einem späteren Zeitpunkt in der Quell Verknüpfungs Registrierung identifiziert werden muss.|
 
 ### <a name="protected-methods"></a>Geschützte Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[link_source](#link_source)|Ruft beim Überschreiben in einer abgeleiteten Klasse einen angegebenen Quellblock verknüpft, mit diesem `ITarget` Block.|
-|[unlink_source](#unlink_source)|Ruft beim Überschreiben in einer abgeleiteten Klasse hebt die Verknüpfung mit einem angegebenen Quellblock aus diesem `ITarget` Block.|
-|[unlink_sources](#unlink_sources)|Ruft beim Überschreiben in einer abgeleiteten Klasse hebt die Verknüpfung aller Quellblöcke dies `ITarget` Block.|
+|[link_source](#link_source)|Verknüpft beim Überschreiben in einer abgeleiteten Klasse einen angegebenen Quell Block mit diesem `ITarget`-Block.|
+|[unlink_source](#unlink_source)|Beim Überschreiben in einer abgeleiteten Klasse wird ein angegebener Quell Block von diesem `ITarget` Block entfernt.|
+|[unlink_sources](#unlink_sources)|Hebt beim Überschreiben in einer abgeleiteten Klasse die Verknüpfung aller Quell Blöcke von diesem `ITarget`-Block auf.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Weitere Informationen finden Sie unter [asynchrone Meldungsblöcke](../../../parallel/concrt/asynchronous-message-blocks.md).
+Weitere Informationen finden Sie unter [asynchrone Nachrichten Blöcke](../../../parallel/concrt/asynchronous-message-blocks.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 `ITarget`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Header:** agents.h
 
 **Namespace:** Parallelität
 
-##  <a name="dtor"></a> ~ITarget
+## <a name="dtor"></a>~ ITarget
 
 Zerstört das `ITarget`-Objekt.
 
-```
+```cpp
 virtual ~ITarget();
 ```
 
-##  <a name="link_source"></a> link_source
+## <a name="link_source"></a>link_source
 
-Ruft beim Überschreiben in einer abgeleiteten Klasse einen angegebenen Quellblock verknüpft, mit diesem `ITarget` Block.
+Verknüpft beim Überschreiben in einer abgeleiteten Klasse einen angegebenen Quell Block mit diesem `ITarget`-Block.
 
-```
+```cpp
 virtual void link_source(_Inout_ ISource<T>* _PSource) = 0;
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_PSource*<br/>
-Die `ISource` blockieren, der mit dieser verknüpft `ITarget` Block.
+Der `ISource` Block, der mit diesem `ITarget` Block verknüpft wird.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Diese Funktion sollte nicht aufgerufen werden, direkt auf eine `ITarget` Block. Blöcke über miteinander verbunden werden soll die `link_target` Methode `ISource` -Blöcken, die aufgerufen werden, die `link_source` Methode auf dem entsprechenden Ziel.
+Diese Funktion sollte nicht direkt auf einem `ITarget`-Block aufgerufen werden. Blöcke sollten mithilfe der `link_target`-Methode für `ISource` Blöcke verbunden werden, die die `link_source`-Methode für das entsprechende Ziel aufrufen.
 
-##  <a name="propagate"></a> weitergeben
+## <a name="propagate"></a>Pixeln
 
-Ruft beim Überschreiben in einer abgeleiteten Klasse übergibt asynchron eine Meldung von einem Quellblock an diesen Zielblock.
+Übergibt beim Überschreiben in einer abgeleiteten Klasse eine Nachricht asynchron von einem Quell Block an diesen Zielblock.
 
-```
+```cpp
 virtual message_status propagate(
     _Inout_opt_ message<T>* _PMessage,
     _Inout_opt_ ISource<T>* _PSource) = 0;
@@ -122,21 +122,21 @@ virtual message_status propagate(
 Ein Zeiger auf das `message`-Objekt.
 
 *_PSource*<br/>
-Ein Zeiger auf den Quellblock die Nachricht anbietet.
+Ein Zeiger auf den Quell Block, der die Nachricht anbietet.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein [Message_status](concurrency-namespace-enums.md) Überblick, was das Ziel beschlossen, die Sie mit der Meldung.
+Eine [Message_status](concurrency-namespace-enums.md) , die angibt, wie sich das Ziel für die Nachricht entschieden hat.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Löst die Methode eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) -Ausnahme aus, wenn entweder die `_PMessage` oder `_PSource` Parameter `NULL`.
+Die-Methode löst eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme aus, wenn der `_PMessage`-oder `_PSource`-Parameter `NULL`ist.
 
-##  <a name="send"></a> Senden
+## <a name="send"></a>Senden
 
-Ruft beim Überschreiben in einer abgeleiteten Klasse übergibt eine Nachricht synchron an den Zielblock.
+Übergibt beim Überschreiben in einer abgeleiteten Klasse eine Nachricht synchron an den Zielblock.
 
-```
+```cpp
 virtual message_status send(
     _Inout_ message<T>* _PMessage,
     _Inout_ ISource<T>* _PSource) = 0;
@@ -148,58 +148,58 @@ virtual message_status send(
 Ein Zeiger auf das `message`-Objekt.
 
 *_PSource*<br/>
-Ein Zeiger auf den Quellblock die Nachricht anbietet.
+Ein Zeiger auf den Quell Block, der die Nachricht anbietet.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein [Message_status](concurrency-namespace-enums.md) Überblick, was das Ziel beschlossen, die Sie mit der Meldung.
+Eine [Message_status](concurrency-namespace-enums.md) , die angibt, wie sich das Ziel für die Nachricht entschieden hat.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Löst die Methode eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) -Ausnahme aus, wenn entweder die `_PMessage` oder `_PSource` Parameter `NULL`.
+Die-Methode löst eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme aus, wenn der `_PMessage`-oder `_PSource`-Parameter `NULL`ist.
 
-Mithilfe der `send` Methode außerhalb der Nachrichteninitiierung und Weitergabe von Nachrichten innerhalb eines Netzwerks ist gefährlich, und kann zu einem Deadlock führen.
+Die Verwendung der `send` Methode außerhalb der Nachrichten Initiierung und die Weitergabe von Nachrichten innerhalb eines Netzwerks ist gefährlich und kann zu einem Deadlock führen.
 
-Wenn `send` zurückgegeben wird, die Nachricht entweder bereits akzeptiert, und wurde in den Zielblock übertragen, oder es vom Ziel abgelehnt wurde.
+Wenn `send` zurückgibt, wurde die Nachricht entweder bereits akzeptiert und in den Zielblock übertragen, oder Sie wurde vom Ziel abgelehnt.
 
-##  <a name="supports_anonymous_source"></a> supports_anonymous_source
+## <a name="supports_anonymous_source"></a>supports_anonymous_source
 
-Ruft beim Überschreiben in einer abgeleiteten Klasse gibt "true" oder "false", je nachdem, ob die Nachrichtenblock akzeptiert Nachrichten, die angeboten, die von einer Quelle, die nicht verknüpft ist. Wenn die überschriebene Methode zurückgibt **"true"**, das Ziel kann keine angebotene Nachricht verschieben, wie die Nutzung von eine zurückgestellte Nachricht zu einem späteren Zeitpunkt die Quelle in seiner Sourse Link Registrierung identifiziert werden erforderlich sind.
+Gibt beim Überschreiben in einer abgeleiteten Klasse true oder false zurück, abhängig davon, ob der Nachrichtenblock von einer nicht verknüpften Quelle angebotene Nachrichten akzeptiert. Wenn die überschriebene Methode **true**zurückgibt, kann das Ziel eine angebotene Nachricht nicht verschieben, da die Nutzung einer verschobenen Nachricht zu einem späteren Zeitpunkt erfordert, dass die Quelle in der sourse-Link Registrierung identifiziert wird.
 
-```
+```cpp
 virtual bool supports_anonymous_source();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** , wenn der Block Nachricht von einer Quelle akzeptieren kann, die nicht verknüpft ist **"false"** andernfalls.
+**true** , wenn der Block eine Nachricht von einer Quelle akzeptieren kann, die nicht mit diesem verknüpft ist, andernfalls **false** .
 
-##  <a name="unlink_source"></a> unlink_source
+## <a name="unlink_source"></a>unlink_source
 
-Ruft beim Überschreiben in einer abgeleiteten Klasse hebt die Verknüpfung mit einem angegebenen Quellblock aus diesem `ITarget` Block.
+Beim Überschreiben in einer abgeleiteten Klasse wird ein angegebener Quell Block von diesem `ITarget` Block entfernt.
 
-```
+```cpp
 virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_PSource*<br/>
-Die `ISource` Sperren aufgehoben wird, aus dieser `ITarget` Block.
+Der `ISource` Block, von dem die Verknüpfung mit diesem `ITarget` Block aufgehoben wird.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Diese Funktion sollte nicht aufgerufen werden, direkt auf eine `ITarget` Block. Blöcke sollten getrennt werden, mithilfe der `unlink_target` oder `unlink_targets` Methoden `ISource` -Blöcken, die aufgerufen werden, die `unlink_source` Methode auf dem entsprechenden Ziel.
+Diese Funktion sollte nicht direkt auf einem `ITarget`-Block aufgerufen werden. Blöcke sollten mithilfe der Methoden `unlink_target` oder `unlink_targets` für `ISource` Blöcke getrennt werden, die die `unlink_source`-Methode für das entsprechende Ziel aufrufen.
 
-##  <a name="unlink_sources"></a> unlink_sources
+## <a name="unlink_sources"></a>unlink_sources
 
-Ruft beim Überschreiben in einer abgeleiteten Klasse hebt die Verknüpfung aller Quellblöcke dies `ITarget` Block.
+Hebt beim Überschreiben in einer abgeleiteten Klasse die Verknüpfung aller Quell Blöcke von diesem `ITarget`-Block auf.
 
-```
+```cpp
 virtual void unlink_sources() = 0;
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [ISource-Klasse](isource-class.md)

@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - default_scheduler_exists class
 ms.assetid: f6e575e2-4e0f-455a-9e06-54f462ce0c1c
-ms.openlocfilehash: 326a2dfc6837665adb4d46a6aaa8780052ad2b22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eed5dd242beb4c4cd481f22635e0d5f71c28d7e6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296097"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139187"
 ---
-# <a name="defaultschedulerexists-class"></a>default_scheduler_exists-Klasse
+# <a name="default_scheduler_exists-class"></a>default_scheduler_exists-Klasse
 
 Diese Klasse beschreibt eine Ausnahme, die ausgelöst wird, sobald die `Scheduler::SetDefaultSchedulerPolicy`-Methode aufgerufen wird, sofern ein Standardplaner bereits innerhalb des Prozesses vorhanden ist.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class default_scheduler_exists : public std::exception;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[default_scheduler_exists](#ctor)|Überladen. Erstellt ein `default_scheduler_exists`-Objekt.|
+|[default_scheduler_exists](#ctor)|Ist überladen. Erstellt ein `default_scheduler_exists`-Objekt.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -39,17 +39,17 @@ class default_scheduler_exists : public std::exception;
 
 `default_scheduler_exists`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** concrt.h
+**Header:** ConcRT. h
 
 **Namespace:** Parallelität
 
-##  <a name="ctor"></a> default_scheduler_exists
+## <a name="ctor"></a>default_scheduler_exists
 
 Erstellt ein `default_scheduler_exists`-Objekt.
 
-```
+```cpp
 explicit _CRTIMP default_scheduler_exists(_In_z_ const char* _Message) throw();
 
 default_scheduler_exists() throw();
@@ -60,6 +60,6 @@ default_scheduler_exists() throw();
 *_Message*<br/>
 Eine beschreibende Fehlermeldung.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)

@@ -12,12 +12,12 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::sampler::graphics::border_color
 - AMP_GRAPHICS/concurrency::sampler::graphics::filter_mode
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
-ms.openlocfilehash: 1a66e4d025a7592b78839dbe5f25f9103da41224
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f47bf6e9b88dba1e94e9e2ed2b93c8d2d3f9b8c
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352592"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126351"
 ---
 # <a name="sampler-class"></a>Samplerklasse
 
@@ -29,17 +29,17 @@ Die Samplerklasse aggregiert Informationen für die Samplingkonfiguration, die f
 class sampler;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Sampler-Konstruktor](#ctor)|Überladen. Erstellt eine Samplerinstanz.|
+|[Sampler-Konstruktor](#ctor)|Ist überladen. Erstellt eine Samplerinstanz.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[get_address_mode](#get_address_mode)|Gibt das `address_mode`-Objekt zurück, das mit dem Samplerobjekt verknüpft ist.|
 |[get_border_color](#get_border_color)|Gibt die Rahmenfarbe zurück, die dem Samplerobjekt verknüpft ist.|
@@ -47,13 +47,13 @@ class sampler;
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[operator=](#operator_eq)|Überladen. Zuweisungsoperator.|
+|[operator=](#operator_eq)|Ist überladen. Zuweisungsoperator.|
 
-### <a name="public-data-members"></a>Öffentliche Datenmember
+### <a name="public-data-members"></a>Öffentliche Datenelemente
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[address_mode](#address_mode)|Ruft den Adressmodus des `sampler`-Objekts ab.|
 |[border_color](#border_color)|Legt die Rahmenfarbe des `sampler`-Objekts fest.|
@@ -63,13 +63,13 @@ class sampler;
 
 `sampler`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amp_graphics.h
+**Header:** amp_graphics. h
 
-**Namespace:** concurrency::graphics
+**Namespace:** Parallelität:: graphics
 
-##  <a name="ctor"></a> Sampler
+## <a name="ctor"></a>Sammel
 
 Erstellt eine Instanz der [samplerklasse](sampler-class.md).
 
@@ -112,14 +112,14 @@ Der im Sampling verwendete Filtermodus.
 Die im Sampling für alle Dimensionen zu verwendenden Adressierung.
 
 *_Border_color*<br/>
-Die zu verwendenden Rahmenfarbe, wenn der Adressmodus address_border lautet. Der Standardwert ist `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.
+Die zu verwendenden Rahmenfarbe, wenn der Adressmodus address_border lautet. Standardwert: `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.
 
 *_Other*<br/>
-[5]-Kopierkonstruktor der `sampler` zu kopierende in das neue Objekt `sampler` Instanz.
+[5] kopieren Sie den Konstruktor des `sampler` Objekts, das in die neue `sampler` Instanz kopiert werden soll.
 
-[6]-Bewegungskonstruktor die `sampler` Objekt, das Verschieben in das neue `sampler` Instanz.
+[6] bewegungskonstruktor das `sampler` Objekt, das in die neue `sampler` Instanz verschoben werden soll.
 
-##  <a name="address_mode"></a> address_mode
+## <a name="address_mode"></a>address_mode
 
 Ruft den Adressmodus des `sampler`-Objekts ab.
 
@@ -127,7 +127,7 @@ Ruft den Adressmodus des `sampler`-Objekts ab.
 __declspec(property(get= get_address_mode)) Concurrency::graphics::address_mode address_mode;
 ```
 
-##  <a name="border_color"></a> border_color
+## <a name="border_color"></a>border_color
 
 Legt die Rahmenfarbe des `sampler`-Objekts fest.
 
@@ -135,7 +135,7 @@ Legt die Rahmenfarbe des `sampler`-Objekts fest.
 __declspec(property(get= get_border_color)) Concurrency::graphics::float_4 border_color;
 ```
 
-##  <a name="filter_mode"></a> filter_mode
+## <a name="filter_mode"></a>filter_mode
 
 Ruft den Filtermodus des `sampler`-Objekts ab.
 
@@ -143,7 +143,7 @@ Ruft den Filtermodus des `sampler`-Objekts ab.
 __declspec(property(get= get_filter_mode)) Concurrency::graphics::filter_mode filter_mode;
 ```
 
-##  <a name="get_address_mode"></a> get_address_mode
+## <a name="get_address_mode"></a>get_address_mode
 
 Gibt den Filtermodus zurück, der für dieses `sampler`-Objekt konfiguriert ist.
 
@@ -155,7 +155,7 @@ Concurrency::graphics::address_mode get_address_mode() const __GPU;
 
 Der Adressmodus, der für den Sampler konfiguriert ist.
 
-##  <a name="get_border_color"></a> get_border_color
+## <a name="get_border_color"></a>get_border_color
 
 Gibt die Rahmenfarbe zurück, die für dieses `sampler`-Objekt konfiguriert ist.
 
@@ -167,7 +167,7 @@ Concurrency::graphics::float_4 get_border_color() const restrict(amp, cpu);
 
 Ein float_4-Objekt, das die Rahmenfarbe enthält.
 
-##  <a name="get_filter_mode"></a> get_filter_mode
+## <a name="get_filter_mode"></a>get_filter_mode
 
 Gibt den Filtermodus zurück, der für dieses `sampler`-Objekt konfiguriert ist.
 
@@ -179,7 +179,7 @@ Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
 
 Der Filtermodus, der für den Sampler konfiguriert ist.
 
-##  <a name="operator_eq"></a> operator=
+## <a name="operator_eq"></a>Operator =
 
 Weist den Wert eines anderen Samplerobjekts einem vorhandenen Sampler zu.
 
@@ -194,14 +194,14 @@ sampler& operator= (    // [2] move assignment operator
 ### <a name="parameters"></a>Parameter
 
 *_Other*<br/>
-[1]-Kopierzuweisungsoperator der `sampler` Objekt, das in diese kopiert `sampler`.
+[1] Kopier Zuweisungs Operator das `sampler` Objekt, das in diese `sampler`kopiert werden soll.
 
-[2] Move-Zuweisungsoperator der `sampler` Objekt zum Umwandeln dieses `sampler`.
+[2] Bewegungs Zuweisungs Operator das `sampler` Objekt, das in diesen `sampler`verschoben werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Ein Verweis auf diese Samplerinstanz.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

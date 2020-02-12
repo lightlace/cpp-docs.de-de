@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 9cc48687eb083ea4fab53380f62856b747c9d86a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5bc6691f6d0b166bb3084091ee6af70474937568
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512815"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141328"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Concurrency Runtime im Vergleich zu anderen Parallelitätsmodellen
 
@@ -19,7 +19,7 @@ Wenn Sie derzeit ein anderes Programmiermodell verwenden, zum Beispiel Windows T
 
 Sie können die Funktionen und Produktivitätsvorteile der Concurrency Runtime auch als Ergänzung in vorhandenen Anwendungen verwenden, die ein anderes Parallelitätsmodell verwenden. Die Concurrency Runtime garantiert nicht einen Lastenausgleich, wenn mehrere Aufgabenplaner um die gleichen Ressourcen konkurrieren. Wenn sich Arbeitslasten nicht überlappen, ist dieser Effekt minimal.
 
-##  <a name="top"></a> Abschnitte
+## <a name="top"></a> Abschnitte
 
 - [Vergleich von präemptiver Planung mit kooperativer Planung](#models)
 
@@ -27,13 +27,13 @@ Sie können die Funktionen und Produktivitätsvorteile der Concurrency Runtime a
 
 - [Vergleich der Concurrency Runtime mit OpenMP](#openmp)
 
-##  <a name="models"></a> Vergleich von präemptiver Planung mit kooperativer Planung
+## <a name="models"></a> Vergleich von präemptiver Planung mit kooperativer Planung
 
 Das präemptive Modell und kooperative Planungsmodelle sind zwei allgemeine Verfahren zum Aktivieren mehrerer Aufgaben zum Freigeben von Ressourcen, z.B. Prozessoren oder Hardwarethreads.
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>Präemptive und kooperative Planung
 
-*Präemptive Planung* ist ein prioritätsbasierter Roundrobin-Mechanismus, bei dem Aufgaben nacheinander jeweils für einen bestimmten Zeitraum exklusiven Zugriff auf eine Computerressource erhalten. Die präemptiver Planung erfolgt häufig in Multitasking-Betriebssystemen wie Windows. *Kooperative Planung* ist ein Mechanismus, der jeder Aufgabe exklusiven Zugriff auf eine Computer Ressource gibt, bis die Aufgabe abgeschlossen ist oder die Aufgabe den Zugriff auf die Ressource gewährt. Concurrency Runtime verwendet die kooperative Planung zusammen mit dem präemptiven Planer des Betriebssystems, um eine maximale Nutzung der Verarbeitungsressourcen zu erreichen.
+*Präemptive Planung* ist ein prioritätsbasierter Roundrobin-Mechanismus, bei dem Aufgaben nacheinander jeweils für einen bestimmten Zeitraum exklusiven Zugriff auf eine Computerressource erhalten. Präemptive Planung wird häufig in Multitasking-Betriebssystemen wie Windows verwendet. *Kooperative Planung* ist ein Mechanismus, der jeder Aufgabe exklusiven Zugriff auf eine Computer Ressource gibt, bis die Aufgabe abgeschlossen ist oder die Aufgabe den Zugriff auf die Ressource gewährt. Concurrency Runtime verwendet die kooperative Planung zusammen mit dem präemptiven Planer des Betriebssystems, um eine maximale Nutzung der Verarbeitungsressourcen zu erreichen.
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>Unterschiede zwischen präemptiven und kooperativen Planern
 
@@ -51,7 +51,7 @@ Kooperative Planung löst nicht alle Planungsprobleme. Beispielsweise können Au
 
 [[Nach oben](#top)]
 
-##  <a name="winapi"></a> Vergleich der Concurrency Runtime mit der Windows-API
+## <a name="winapi"></a> Vergleich der Concurrency Runtime mit der Windows-API
 
 Die Microsoft Windows Anwendungsprogrammierschnittstelle (API), die in der Regel als Windows-API (und früher als Win32) bezeichnet wird, bietet ein Programmiermodell, das Parallelität in der Anwendung ermöglicht. Die Concurrency Runtime basiert auf der Windows-API und stellt zusätzliche Programmiermodelle bereit, die nicht über das zugrunde liegende Betriebssystem verfügbar sind.
 
@@ -81,7 +81,7 @@ Unter Windows 7 und Windows Server 2008 R2 unterstützt das Betriebssystem Paral
 
 [[Nach oben](#top)]
 
-##  <a name="openmp"></a> Vergleich der Concurrency Runtime mit OpenMP
+## <a name="openmp"></a> Vergleich der Concurrency Runtime mit OpenMP
 
 Concurrency Runtime ermöglicht eine Vielzahl von Programmiermodellen. Diese Modelle überlappen oder ergänzen die Modelle von anderen Bibliotheken. In diesem Abschnitt wird die Concurrency Runtime mit [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) verglichen.
 
@@ -95,7 +95,7 @@ Weitere Informationen zum Vergleich von Concurrency Runtime und OpenMP und wie v
 
 [[Nach oben](#top)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)<br/>
 [Übersicht](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

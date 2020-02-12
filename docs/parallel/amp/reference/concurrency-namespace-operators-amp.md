@@ -2,26 +2,26 @@
 title: Concurrency-Namespace-Operatoren (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: e2957aa84ffbf420dcf2672359a442b754866649
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b536f75e4ef6405b60d45e89290a7d97a01707d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180413"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126916"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Concurrency-Namespace-Operatoren (AMP)
 
 ||||
 |-|-|-|
-|[Operator!=](#operator_neq)|[operator%](#operator_mod)|[operator*](#operator_star)|
+|[operator!=](#operator_neq)|[operator%](#operator_mod)|[operator*](#operator_star)|
 |[operator+](#operator_add)|[operator-](#operator-)|[operator/](#operator_div)|
 |[operator==](#operator_eq_eq)|
 
-##  <a name="operator_eq_eq"></a> operator==
+## <a name="operator_eq_eq"></a> operator==
 
 Bestimmt, ob die angegebenen Argumente gleich sind.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -44,13 +44,13 @@ Eines der zu vergleichenden Tupel.
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** , wenn die Tupel gleich; andernfalls sind, **"false"**.
+**true** , wenn die Tupel gleich sind. andernfalls **false**.
 
-##  <a name="operator_neq"></a> operator!=
+## <a name="operator_neq"></a> operator!=
 
 Bestimmt, ob die angegebenen Argumente ungleich sind.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -73,13 +73,13 @@ Eines der zu vergleichenden Tupel.
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** , wenn die Tupel nicht gleich; andernfalls sind, **"false"**.
+**true** , wenn die Tupel nicht gleich sind. andernfalls **false**.
 
-##  <a name="operator_add"></a> operator+
+## <a name="operator_add"></a> operator+
 
 Berechnet die komponentenbezogene Summe der angegebenen Argumente.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -120,11 +120,11 @@ Eines der hinzuzufügenden Argumente.
 
 Die komponentenbezogene Summe der angegebenen Argumente.
 
-##  <a name="operator-"></a> operator-
+## <a name="operator-"></a> operator-
 
 Berechnet die Differenz zwischen den angegebenen Argumenten pro Komponente.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -165,11 +165,11 @@ Das zu subtrahierende Argument.
 
 Die Differenz zwischen den angegebenen Argumenten pro Komponente.
 
-##  <a name="operator_star"></a> operator*
+## <a name="operator_star"></a> operator*
 
 Berechnet das komponentenbezogene Produkt der angegebenen Argumente.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -202,11 +202,11 @@ Eines der zu multiplizierenden Tupel.
 
 Das komponentenbezogene Produkt der angegebenen Argumente.
 
-##  <a name="operator_div"></a> operator/
+## <a name="operator_div"></a> operator/
 
 Berechnet den komponentenbezogenen Quotienten der angegebenen Argumente.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -239,11 +239,11 @@ Das Tupel für die Division.
 
 Der komponentenbezogene Quotient der angegebenen Argumente.
 
-##  <a name="operator_mod"></a> operator%
+## <a name="operator_mod"></a> operator%
 
 Berechnet den Modul des angegebenen ersten Arguments dividiert durch das zweite angegebene Argument.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -276,6 +276,6 @@ Das Tupel für die Modulo-Berechnung.
 
 Das Ergebnis des ersten angegebenen Arguments ergibt das zweite angegebene Argument.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[Concurrency-Namespace ](concurrency-namespace-cpp-amp.md)
+[Parallelitäts Namespace](concurrency-namespace-cpp-amp.md)

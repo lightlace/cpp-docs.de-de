@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-ms.openlocfilehash: 83cfdb5807581f7092709691a1839052abdd657c
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 700d052b6f22c970387a3ab45d299538a5b74e1b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343855"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139539"
 ---
 # <a name="message-class"></a>message-Klasse
 
@@ -25,76 +25,76 @@ Der grundlegende Nachrichtenumschlag, der die zwischen den Meldungsblöcken übe
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 template<class T>
 class message : public ::Concurrency::details::_Runtime_object;
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
 *T*<br/>
-Der Datentyp der Nutzlast innerhalb der Nachricht.
+Der Datentyp der Nutzlast in der Nachricht.
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |`type`|Ein Typalias für `T`.|
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[message](#ctor)|Überladen. Erstellt ein `message`-Objekt.|
-|[~ message-Destruktor](#dtor)|Zerstört das `message`-Objekt.|
+|[Nachricht](#ctor)|Ist überladen. Erstellt ein `message`-Objekt.|
+|[~ Message-debugtor](#dtor)|Zerstört das `message`-Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[add_ref](#add_ref)|Fügt hinzu, um den Verweiszähler für den `message` Objekt. Verwendet für Meldungsblöcke, die verweiszählung, um die Lebensdauer der Meldung zu bestimmen.|
-|[msg_id](#msg_id)|Gibt die ID des dem `message` Objekt.|
-|[remove_ref](#remove_ref)|Subtrahiert von den Verweiszähler für den `message` Objekt. Verwendet für Meldungsblöcke, die verweiszählung, um die Lebensdauer der Meldung zu bestimmen.|
+|[add_ref](#add_ref)|Fügt den Verweis Zähler für das `message` Objekt hinzu. Wird für Nachrichten Blöcke verwendet, die eine Verweis Zählung zum Bestimmen der Lebensdauer von Nachrichten benötigen.|
+|[msg_id](#msg_id)|Gibt die ID des `message` Objekts zurück.|
+|[remove_ref](#remove_ref)|Subtrahiert vom Verweis Zähler für das `message` Objekt. Wird für Nachrichten Blöcke verwendet, die eine Verweis Zählung zum Bestimmen der Lebensdauer von Nachrichten benötigen.|
 
-### <a name="public-data-members"></a>Öffentliche Datenmember
+### <a name="public-data-members"></a>Öffentliche Datenelemente
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[payload](#payload)|Die Nutzlast der `message` Objekt.|
+|[payload](#payload)|Die Nutzlast des `message` Objekts.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Weitere Informationen finden Sie unter [asynchrone Meldungsblöcke](../../../parallel/concrt/asynchronous-message-blocks.md).
+Weitere Informationen finden Sie unter [asynchrone Nachrichten Blöcke](../../../parallel/concrt/asynchronous-message-blocks.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 `message`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Header:** agents.h
 
 **Namespace:** Parallelität
 
-##  <a name="add_ref"></a> add_ref
+## <a name="add_ref"></a>add_ref
 
-Fügt hinzu, um den Verweiszähler für den `message` Objekt. Verwendet für Meldungsblöcke, die verweiszählung, um die Lebensdauer der Meldung zu bestimmen.
+Fügt den Verweis Zähler für das `message` Objekt hinzu. Wird für Nachrichten Blöcke verwendet, die eine Verweis Zählung zum Bestimmen der Lebensdauer von Nachrichten benötigen.
 
-```
+```cpp
 long add_ref();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der neue Wert des Verweiszählers.
+Der neue Wert des Verweis zählungs Werts.
 
-##  <a name="ctor"></a> Nachricht
+## <a name="ctor"></a>Nachricht
 
 Erstellt ein `message`-Objekt.
 
-```
+```cpp
 message(
     T const& _P);
 
@@ -118,52 +118,52 @@ Die Nutzlast dieser Nachricht.
 Die eindeutige ID dieser Nachricht.
 
 *_Msg*<br/>
-Ein Verweis oder Zeiger auf eine `message` Objekt.
+Ein Verweis oder Zeiger auf ein `message` Objekt.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Der Konstruktor, einen Zeiger auf eine `message` Objekt wie ein Argument löst eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme wenn der Parameter `_Msg` ist `NULL`.
+Der Konstruktor, der einen Zeiger auf ein `message` Objekt als Argument annimmt, löst eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme aus, wenn der Parameter `_Msg` `NULL`ist.
 
-##  <a name="dtor"></a> ~ Nachricht
+## <a name="dtor"></a>~ Meldung
 
 Zerstört das `message`-Objekt.
 
-```
+```cpp
 virtual ~message();
 ```
 
-##  <a name="msg_id"></a> msg_id
+## <a name="msg_id"></a>msg_id
 
-Gibt die ID des dem `message` Objekt.
+Gibt die ID des `message` Objekts zurück.
 
-```
+```cpp
 runtime_object_identity msg_id() const;
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die `runtime_object_identity` von der `message` Objekt.
+`runtime_object_identity` des `message`-Objekts.
 
-##  <a name="payload"></a> Nutzlast
+## <a name="payload"></a>Nutz
 
-Die Nutzlast der `message` Objekt.
+Die Nutzlast des `message` Objekts.
 
-```
+```cpp
 T const payload;
 ```
 
-##  <a name="remove_ref"></a> remove_ref
+## <a name="remove_ref"></a>remove_ref
 
-Subtrahiert von den Verweiszähler für den `message` Objekt. Verwendet für Meldungsblöcke, die verweiszählung, um die Lebensdauer der Meldung zu bestimmen.
+Subtrahiert vom Verweis Zähler für das `message` Objekt. Wird für Nachrichten Blöcke verwendet, die eine Verweis Zählung zum Bestimmen der Lebensdauer von Nachrichten benötigen.
 
-```
+```cpp
 long remove_ref();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der neue Wert des Verweiszählers.
+Der neue Wert des Verweis zählungs Werts.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)

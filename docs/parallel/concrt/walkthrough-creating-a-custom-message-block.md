@@ -5,20 +5,20 @@ helpviewer_keywords:
 - creating custom message blocks Concurrency Runtime]
 - custom message blocks, creating [Concurrency Runtime]
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
-ms.openlocfilehash: e7dfc5d78d2281d77b9ce882b302c4d7db776d3b
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: a29ed382d67b91443bd13e029af2a37c42ee834d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856986"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142825"
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>Exemplarische Vorgehensweise: Erstellen eines benutzerdefinierten Nachrichtenblocks
 
 In diesem Dokument wird beschrieben, wie ein benutzerdefinierter Nachrichtenblocktyp erstellt wird, um eingehende Nachrichten nach Priorität zu sortieren.
 
-Obwohl die integrierten Nachrichtenblocktypen eine breite Palette von Funktionen bereitstellen, können Sie auch eigene Nachrichtenblocktypen erstellen und anpassen, um die Anforderungen Ihrer Anwendung zu erfüllen. Eine Beschreibung der integrierten Nachrichtenblocktypen, die von der Asynchronous Agents Library bereitgestellt werden, finden Sie unter [asynchrone Meldungsblöcke](../../parallel/concrt/asynchronous-message-blocks.md).
+Obwohl die integrierten Nachrichtenblocktypen eine breite Palette von Funktionen bereitstellen, können Sie auch eigene Nachrichtenblocktypen erstellen und anpassen, um die Anforderungen Ihrer Anwendung zu erfüllen. Eine Beschreibung der integrierten Nachrichtenblock Typen, die von der Asynchronous Agents Library bereitgestellt werden, finden Sie unter [asynchrone Nachrichten Blöcke](../../parallel/concrt/asynchronous-message-blocks.md).
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Lesen Sie die folgenden Dokumente, bevor Sie mit dieser exemplarischen Vorgehensweise beginnen:
 
@@ -26,59 +26,59 @@ Lesen Sie die folgenden Dokumente, bevor Sie mit dieser exemplarischen Vorgehens
 
 - [Funktionen zum Übergeben von Nachrichten](../../parallel/concrt/message-passing-functions.md)
 
-##  <a name="top"></a> Abschnitte
+## <a name="top"></a> Abschnitte
 
 Diese exemplarische Vorgehensweise enthält folgende Abschnitte:
 
-- [Entwerfen eines benutzerdefinierten Nachrichtenblocks](#design)
+- [Entwerfen eines benutzerdefinierten Nachrichten Blocks](#design)
 
-- [Definieren der Priority_buffer-Klasse](#class)
+- [Definieren der priority_buffer-Klasse](#class)
 
 - [Vollständiges Beispiel](#complete)
 
-##  <a name="design"></a> Entwerfen eines benutzerdefinierten Nachrichtenblocks
+## <a name="design"></a>Entwerfen eines benutzerdefinierten Nachrichten Blocks
 
-Nachrichtenblöcke sind am Senden und Empfangen von Nachrichten beteiligt. Ein Nachrichtenblock, der Nachrichten sendet, wird als bezeichnet ein *Quellblock*. Ein Nachrichtenblock, der Nachrichten empfängt, wird als bezeichnet ein *Zielblock*. Ein Nachrichtenblock, der sowohl Nachrichten sendet und empfängt, wird als bezeichnet ein *Weitergabeblock*. Die Agents Library verwendet die abstrakte Klasse [Concurrency:: ISource](../../parallel/concrt/reference/isource-class.md) zur Darstellung von Quellblöcke und der abstrakten Klasse [Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md) um Zielblöcke darzustellen. Nachrichtenblocktypen, die als Quelle dienen, werden von der `ISource`-Klasse abgeleitet, während Nachrichtenblocktypen, die als Ziel dienen, von der `ITarget`-Klasse abgeleitet werden.
+Nachrichtenblöcke sind am Senden und Empfangen von Nachrichten beteiligt. Ein Nachrichtenblock, der Nachrichten sendet, wird als *Quell Block*bezeichnet. Ein Nachrichtenblock, der Nachrichten empfängt, wird als *Zielblock*bezeichnet. Ein Nachrichtenblock, der Nachrichten sendet und empfängt, wird als *propagatorblock*bezeichnet. Die Agents Library verwendet die abstrakte Klasse " [parallelcurrency:: ISource](../../parallel/concrt/reference/isource-class.md) ", um Quell Blöcke darzustellen, und die abstrakte Klasse " [parallelcurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md) ", die Ziel Blöcke darstellt. Nachrichtenblocktypen, die als Quelle dienen, werden von der `ISource`-Klasse abgeleitet, während Nachrichtenblocktypen, die als Ziel dienen, von der `ITarget`-Klasse abgeleitet werden.
 
-Der Nachrichtenblocktyp kann prinzipiell unmittelbar von `ISource` und `ITarget` abgeleitet werden. Die Agents Library definiert jedoch drei Basisklassen, deren Funktionalität weitestgehend der aller Nachrichtenblocktypen entspricht. Beispiel: parallelitätssicheres Behandeln von Fehlern und parallelitätssicheres Verbinden von Nachrichtenblöcken. Die [Concurrency:: source_block](../../parallel/concrt/reference/source-block-class.md) Klasse leitet sich von `ISource` und sendet Nachrichten an andere Blöcke. Die [Concurrency:: target_block](../../parallel/concrt/reference/target-block-class.md) Klasse leitet sich von `ITarget` und empfängt Nachrichten von anderen Blöcken. Die [Concurrency:: propagator_block](../../parallel/concrt/reference/propagator-block-class.md) Klasse leitet sich von `ISource` und `ITarget` und sendet Nachrichten an andere Blöcke und empfängt Nachrichten von anderen Blöcken. Es wird empfohlen, Infrastrukturdetails mit diesen drei Basisklassen zu behandeln, sodass Sie sich auf das Verhalten des Nachrichtenblocks konzentrieren können.
+Der Nachrichtenblocktyp kann prinzipiell unmittelbar von `ISource` und `ITarget` abgeleitet werden. Die Agents Library definiert jedoch drei Basisklassen, deren Funktionalität weitestgehend der aller Nachrichtenblocktypen entspricht. Beispiel: parallelitätssicheres Behandeln von Fehlern und parallelitätssicheres Verbinden von Nachrichtenblöcken. Die Klasse " [parallelcurrency:: source_block](../../parallel/concrt/reference/source-block-class.md) " wird von `ISource` abgeleitet und sendet Nachrichten an andere Blöcke. Die Klasse " [parallelcurrency:: target_block](../../parallel/concrt/reference/target-block-class.md) " wird von `ITarget` abgeleitet und empfängt Nachrichten von anderen Blöcken. Die Klasse "Parallelität [::p ropagator_block](../../parallel/concrt/reference/propagator-block-class.md) " wird von `ISource` und `ITarget` abgeleitet und sendet Nachrichten an andere Blöcke und empfängt Nachrichten von anderen Blöcken. Es wird empfohlen, Infrastrukturdetails mit diesen drei Basisklassen zu behandeln, sodass Sie sich auf das Verhalten des Nachrichtenblocks konzentrieren können.
 
-Die Klassen `source_block`, `target_block` und `propagator_block` sind Vorlagen, die auf der Grundlage eines Typs parametrisiert werden, der die Verbindungen oder Links zwischen Quell- und Zielblöcken verwaltet, sowie auf Grundlage eines Typs, der die Verarbeitung von Nachrichten verwaltet. Die Agents Library definiert zwei Typen, die linkverwaltung [Concurrency:: single_link_registry](../../parallel/concrt/reference/single-link-registry-class.md) und [Concurrency:: multi_link_registry](../../parallel/concrt/reference/multi-link-registry-class.md). Die `single_link_registry`-Klasse ermöglicht das Verknüpfen eines Nachrichtenblocks mit einer Quelle oder einem Ziel. Die `multi_link_registry`-Klasse ermöglicht das Verknüpfen eines Nachrichtenblocks mit mehreren Quellen oder mehreren Zielen. Die Agents Library definiert eine Klasse, die Verwaltung von Nachrichten [Concurrency:: ordered_message_processor](../../parallel/concrt/reference/ordered-message-processor-class.md). Die `ordered_message_processor`-Klasse ermöglicht Nachrichtenblöcken die Verarbeitung von Nachrichten in der Reihenfolge ihres Empfangs.
+Die Klassen `source_block`, `target_block` und `propagator_block` sind Vorlagen, die auf der Grundlage eines Typs parametrisiert werden, der die Verbindungen oder Links zwischen Quell- und Zielblöcken verwaltet, sowie auf Grundlage eines Typs, der die Verarbeitung von Nachrichten verwaltet. Die Agents Library definiert zwei Typen, die Link Verwaltung, Parallelität [:: single_link_registry](../../parallel/concrt/reference/single-link-registry-class.md) und Parallelität [:: multi_link_registry](../../parallel/concrt/reference/multi-link-registry-class.md)ausführen. Die `single_link_registry`-Klasse ermöglicht das Verknüpfen eines Nachrichtenblocks mit einer Quelle oder einem Ziel. Die `multi_link_registry`-Klasse ermöglicht das Verknüpfen eines Nachrichtenblocks mit mehreren Quellen oder mehreren Zielen. Die Agents Library definiert eine Klasse, die die Nachrichten Verwaltung durchführt, Parallelität [:: ordered_message_processor](../../parallel/concrt/reference/ordered-message-processor-class.md). Die `ordered_message_processor`-Klasse ermöglicht Nachrichtenblöcken die Verarbeitung von Nachrichten in der Reihenfolge ihres Empfangs.
 
-Im folgenden Beispiel wird die Beziehung zwischen Nachrichtenblöcken sowie Quellen und Zielen veranschaulicht. Dieses Beispiel zeigt die Deklaration der [Concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md) Klasse.
+Im folgenden Beispiel wird die Beziehung zwischen Nachrichtenblöcken sowie Quellen und Zielen veranschaulicht. In diesem Beispiel wird die Deklaration der Klasse " [parallelcurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md) " veranschaulicht.
 
 [!code-cpp[concrt-priority-buffer#20](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_1.cpp)]
 
 Die `transformer`-Klasse wird von `propagator_block` abgeleitet und fungiert daher als Quell- sowie als Zielblock. Sie akzeptiert Nachrichten vom Typ `_Input` und sendet Nachrichten vom Typ `_Output`. Die `transformer`-Klasse gibt `single_link_registry` als Link-Manager für alle Zielblöcke und `multi_link_registry` als Link-Manager für alle Quellblöcke an. Aus diesem Grund kann ein `transformer`-Objekt ein Ziel sowie eine unbegrenzte Anzahl von Quellen haben.
 
-Eine abgeleitete Klasse `source_block` muss sechs Methoden implementieren: [Propagate_to_any_targets](reference/source-block-class.md#propagate_to_any_targets), [Accept_message](reference/source-block-class.md#accept_message), [Reserve_message](reference/source-block-class.md#reserve_message), [ Consume_message](reference/source-block-class.md#consume_message), [Release_message](reference/source-block-class.md#release_message), und [Resume_propagation](reference/source-block-class.md#resume_propagation). Eine abgeleitete Klasse `target_block` müssen implementieren die [Propagate_message](reference/propagator-block-class.md#propagate_message) Methode implementieren und kann die [Send_message](reference/propagator-block-class.md#send_message) Methode. Ableitungen von `propagator_block` sowie von `source_block` und `target_block` sind funktional äquivalent.
+Eine Klasse, die von `source_block` abgeleitet ist, muss sechs Methoden implementieren: [propagate_to_any_targets](reference/source-block-class.md#propagate_to_any_targets), [accept_message](reference/source-block-class.md#accept_message), [reserve_message](reference/source-block-class.md#reserve_message), [consume_message](reference/source-block-class.md#consume_message), [release_message](reference/source-block-class.md#release_message)und [resume_propagation](reference/source-block-class.md#resume_propagation). Eine Klasse, die von `target_block` abgeleitet ist, muss die [propagate_message](reference/propagator-block-class.md#propagate_message) -Methode implementieren und optional die [send_message](reference/propagator-block-class.md#send_message) -Methode implementieren. Ableitungen von `propagator_block` sowie von `source_block` und `target_block` sind funktional äquivalent.
 
-Die `propagate_to_any_targets`-Methode wird von der Laufzeit aufgerufen, um alle eingehenden Nachrichten synchron oder asynchron zu verarbeiten und alle ausgehenden Nachrichten weiterzugeben. Die `accept_message`-Methode wird von Zielblöcken aufgerufen, um Nachrichten zu akzeptieren. Viele Nachrichtenblocktypen wie `unbounded_buffer` senden Nachrichten nur an das erste Ziel, das diese empfangen würde. Daher wird der Besitz der Nachricht auf das Ziel übertragen. Andere Nachrichtenblocktypen wie z. B. [Concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md), bieten Nachrichten für alle entsprechenden Zielblöcke. `overwrite_buffer` erstellt daher eine Kopie der Nachricht für alle diesbezüglichen Ziele.
+Die `propagate_to_any_targets`-Methode wird von der Laufzeit aufgerufen, um alle eingehenden Nachrichten synchron oder asynchron zu verarbeiten und alle ausgehenden Nachrichten weiterzugeben. Die `accept_message`-Methode wird von Zielblöcken aufgerufen, um Nachrichten zu akzeptieren. Viele Nachrichtenblocktypen wie `unbounded_buffer` senden Nachrichten nur an das erste Ziel, das diese empfangen würde. Daher wird der Besitz der Nachricht auf das Ziel übertragen. Andere Nachrichtenblock Typen, wie z. b. " [parallelcurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md)", bieten den einzelnen Ziel Blöcken Nachrichten. `overwrite_buffer` erstellt daher eine Kopie der Nachricht für alle diesbezüglichen Ziele.
 
 Mit den Methoden `reserve_message`, `consume_message`, `release_message` und `resume_propagation` können Nachrichtenblöcke an der Reservierung von Nachrichten teilnehmen. Zielblöcke rufen die `reserve_message`-Methode auf, wenn eine Nachricht für sie bereitgestellt wird, die zur späteren Verwendung reserviert werden muss. Nach dem Reservieren einer Nachricht durch den Zielblock kann dieser die `consume_message`-Methode aufrufen, um die Nachricht zu verarbeiten, oder die `release_message`-Methode, um die Reservierung abzubrechen. Analog zur `accept_message`-Methode kann die Implementierung von `consume_message` den Besitz der Nachricht übertragen oder eine Kopie der Nachricht zurückgeben. Nachdem eine reservierte Nachricht von einem Zielblock verarbeitet oder freigegeben wurde, wird die `resume_propagation`-Methode von der Laufzeit aufgerufen. Diese Methode setzt die Nachrichtenweitergabe i. d. R. mit der nächsten Nachricht in der Warteschlange fort.
 
-Die `propagate_message`-Methode wird von der Laufzeit aufgerufen, um eine Nachricht asynchron von einem anderen Block zum aktuellen zu übertragen. Die `send_message`-Methode ähnelt der `propagate_message`-Methode, sendet die Nachrichten im Unterschied zu dieser jedoch synchron an die Zielblöcke. Die Standardimplementierung von `send_message` weist alle eingehenden Nachrichten zurück. Die Laufzeit ruft keine der Methoden auf, wenn von der Nachricht nicht die optionale Filterfunktion übergeben wird, die dem Zielblock zugeordnet ist. Weitere Informationen zu Nachrichtenfiltern finden Sie unter [asynchrone Meldungsblöcke](../../parallel/concrt/asynchronous-message-blocks.md).
+Die `propagate_message`-Methode wird von der Laufzeit aufgerufen, um eine Nachricht asynchron von einem anderen Block zum aktuellen zu übertragen. Die `send_message`-Methode ähnelt der `propagate_message`-Methode, sendet die Nachrichten im Unterschied zu dieser jedoch synchron an die Zielblöcke. Die Standardimplementierung von `send_message` weist alle eingehenden Nachrichten zurück. Die Laufzeit ruft keine der Methoden auf, wenn von der Nachricht nicht die optionale Filterfunktion übergeben wird, die dem Zielblock zugeordnet ist. Weitere Informationen zu Nachrichten filtern finden Sie unter [asynchrone Nachrichten Blöcke](../../parallel/concrt/asynchronous-message-blocks.md).
 
 [[Nach oben](#top)]
 
-##  <a name="class"></a> Definieren der Priority_buffer-Klasse
+## <a name="class"></a>Definieren der priority_buffer-Klasse
 
-Die `priority_buffer`-Klasse ist ein benutzerdefinierter Nachrichtenblocktyp, der eingehende Meldungen zunächst nach der Priorität und anschließend nach der Reihenfolge ihres Empfangs sortiert. Die `priority_buffer` -Klasse ähnelt der [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) Klasse, da es sich um eine Warteschlange Nachrichten enthält und auch daran, dass sie sowohl eine Quelle als auch als Zielnachrichtenblock fungiert und können mehrere Quellen sowie mehrere Ziele. `unbounded_buffer` legt als Kriterium für die Weitergabe von Nachrichten jedoch nur die Reihenfolge ihres Empfangs aus den Quellen zugrunde.
+Die `priority_buffer`-Klasse ist ein benutzerdefinierter Nachrichtenblocktyp, der eingehende Meldungen zunächst nach der Priorität und anschließend nach der Reihenfolge ihres Empfangs sortiert. Die `priority_buffer`-Klasse ähnelt der Klasse " [parallelcurrency:: Unbounded_buffer](reference/unbounded-buffer-class.md) ", da Sie eine Warteschlange für Nachrichten enthält und auch weil Sie sowohl als Quell-als auch als Ziel Nachrichtenblock fungiert und sowohl mehrere Quellen als auch mehrere Ziele aufweisen kann. `unbounded_buffer` legt als Kriterium für die Weitergabe von Nachrichten jedoch nur die Reihenfolge ihres Empfangs aus den Quellen zugrunde.
 
-Die `priority_buffer` -Klasse empfängt Nachrichten vom Typ std::[Tupel](../../standard-library/tuple-class.md) enthalten `PriorityType` und `Type` Elemente. `PriorityType` verweist auf den Typ, der die Priorität einer Nachricht angibt; `Type` verweist auf den Datenteil der Nachricht. Die `priority_buffer`-Klasse sendet Nachrichten vom Typ `Type`. Die `priority_buffer` Klasse verwaltet auch zwei Nachrichtenwarteschlangen: ein [Std:: priority_queue](../../standard-library/priority-queue-class.md) Objekt für eingehende Nachrichten und eine std::[Warteschlange](../../standard-library/queue-class.md) Objekt für ausgehende Nachrichten. Das Sortieren von Nachrichten nach der Priorität ist hilfreich, wenn ein `priority_buffer`-Objekt mehrere Nachrichten gleichzeitig oder bevor diese von Consumern gelesen werden empfängt.
+Die `priority_buffer`-Klasse empfängt Nachrichten vom Typ Std::[Tupel](../../standard-library/tuple-class.md) , die `PriorityType` und `Type` Elemente enthalten. `PriorityType` verweist auf den Typ, der die Priorität einer Nachricht angibt; `Type` verweist auf den Datenteil der Nachricht. Die `priority_buffer`-Klasse sendet Nachrichten vom Typ `Type`. Die `priority_buffer`-Klasse verwaltet außerdem zwei Nachrichten Warteschlangen: ein [Std::p riority_queue](../../standard-library/priority-queue-class.md) -Objekt für eingehende Nachrichten und ein Std::[Queue](../../standard-library/queue-class.md) -Objekt für ausgehende Nachrichten. Das Sortieren von Nachrichten nach der Priorität ist hilfreich, wenn ein `priority_buffer`-Objekt mehrere Nachrichten gleichzeitig oder bevor diese von Consumern gelesen werden empfängt.
 
 Zusätzlich zu den sieben Methoden, die von einer Klasse implementiert werden müssen, die von `propagator_block` abgeleitet wird, überschreibt die `priority_buffer`-Klasse die noch die `link_target_notification`-Methode und die `send_message`-Methode. Die `priority_buffer`-Klasse definiert außerdem zwei öffentliche Hilfsmethoden (, `enqueue` und `dequeue`) sowie eine private Hilfsmethode ( `propagate_priority_order`).
 
 Im folgenden Verfahren wird beschrieben, wie die `priority_buffer`-Klasse implementiert wird.
 
-#### <a name="to-define-the-prioritybuffer-class"></a>So definieren Sie die priority_buffer-Klasse
+#### <a name="to-define-the-priority_buffer-class"></a>So definieren Sie die priority_buffer-Klasse
 
-1. Erstellen eine C++-Header-Datei und nennen sie `priority_buffer.h`. Sie können auch eine bestehende Headerdatei verwenden, die Teil Ihres Projekts ist.
+1. Erstellen Sie C++ eine Header Datei, und benennen Sie Sie `priority_buffer.h`. Sie können auch eine bestehende Headerdatei verwenden, die Teil Ihres Projekts ist.
 
-1. In `priority_buffer.h`, fügen Sie den folgenden Code hinzu.
+1. Fügen Sie in `priority_buffer.h`den folgenden Code hinzu.
 
 [!code-cpp[concrt-priority-buffer#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_2.h)]
 
-1. In der `std` -Namespace definiert spezialisierungen von [Std:: less](../../standard-library/less-struct.md) und [Std:: Greater](../../standard-library/greater-struct.md) , fungieren, in der Concurrency::[Nachricht](../../parallel/concrt/reference/message-class.md) Objekte.
+1. Definieren Sie im `std`-Namespace spezizierungen von [Std:: less](../../standard-library/less-struct.md) und [Std:: Greater](../../standard-library/greater-struct.md) , die auf parallelcurrency::[Message](../../parallel/concrt/reference/message-class.md) -Objekte reagieren.
 
 [!code-cpp[concrt-priority-buffer#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_3.h)]
 
@@ -162,7 +162,7 @@ Im folgenden Verfahren wird beschrieben, wie die `priority_buffer`-Klasse implem
 
    Die `propagate_message`-Methode ermöglicht der `priority_buffer`-Klasse als Nachrichtenempfänger oder -ziel fungieren. Diese Methode empfängt die vom angegebenen Quellblock bereitgestellte Nachricht und fügt sie in die Prioritätswarteschlange ein. Anschließend werden alle Ausgabenachrichten von der `propagate_message`-Methode asynchron an die Zielblöcke gesendet.
 
-   Die Runtime ruft diese Methode beim Aufrufen der [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend) Funktion oder wenn die Nachrichtenblock mit anderen Nachrichtenblocks verbunden wird.
+   Die Laufzeit ruft diese Methode auf, wenn Sie die Funktion " [parallelcurrency:: Asend](reference/concurrency-namespace-functions.md#asend) " aufrufen oder wenn der Nachrichtenblock mit anderen Nachrichten Blöcken verbunden ist.
 
 18. Definieren Sie die `protected`-Methode im `send_message`-Abschnitt.
 
@@ -170,21 +170,21 @@ Im folgenden Verfahren wird beschrieben, wie die `priority_buffer`-Klasse implem
 
    Die `send_message`-Methode ähnelt der `propagate_message`-Methode. Im Unterschied zu dieser sendet sie die Ausgabemeldungen jedoch synchron.
 
-   Die Runtime ruft diese Methode während eines synchronen Sendevorgangs, z. B. beim Aufruf der [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) Funktion.
+   Diese Methode wird von der Laufzeit während eines synchronen Sendevorgangs aufgerufen, z. b. beim Aufrufen der Funktion " [parallelcurrency:: Send](reference/concurrency-namespace-functions.md#send) ".
 
-Die `priority_buffer`-Klasse enthält Konstruktorüberladungen, die in vielen Nachrichtenblocktypen verwendet werden. Einige Konstruktorüberladungen akzeptieren [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) oder [Concurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) Objekte, denen die Nachrichtenblock von einem bestimmten Aufgabenplaner verwaltet werden können. Andere Konstruktorüberladungen übernehmen eine Filterfunktion. Filterfunktionen ermöglichen Nachrichtenblöcken das Annehmen oder Ablehnen von Nachrichten anhand der Nutzlast. Weitere Informationen zu Nachrichtenfiltern finden Sie unter [asynchrone Meldungsblöcke](../../parallel/concrt/asynchronous-message-blocks.md). Weitere Informationen zum Aufgabenplaner finden Sie unter [Taskplaner](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
+Die `priority_buffer`-Klasse enthält Konstruktorüberladungen, die in vielen Nachrichtenblocktypen verwendet werden. Einige Konstruktorüberladungen akzeptieren [parallelcurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) -oder [parallelcurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) -Objekte, die es ermöglichen, dass der Nachrichtenblock von einem bestimmten Aufgabenplaner verwaltet wird. Andere Konstruktorüberladungen übernehmen eine Filterfunktion. Filterfunktionen ermöglichen Nachrichtenblöcken das Annehmen oder Ablehnen von Nachrichten anhand der Nutzlast. Weitere Informationen zu Nachrichten filtern finden Sie unter [asynchrone Nachrichten Blöcke](../../parallel/concrt/asynchronous-message-blocks.md). Weitere Informationen zu Aufgabenplaner finden Sie unter [Taskplaner](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
-Da die `priority_buffer` -Klasse ordnet die Nachrichten nach Priorität, und klicken Sie dann durch die Reihenfolge, in dem Nachrichten empfangen werden, diese Klasse eignet sich am besten, wenn Nachrichten asynchron, z. B. beim Aufrufen Erhalt der [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend)Funktion oder wenn die Nachrichtenblock mit anderen Nachrichtenblocks verbunden wird.
+Da die `priority_buffer`-Klasse Nachrichten nach Priorität und dann nach der Reihenfolge sortiert, in der Nachrichten empfangen werden, ist diese Klasse besonders nützlich, wenn Sie Nachrichten asynchron empfängt, z. b. Wenn Sie die Funktion " [parallelcurrency:: Asend](reference/concurrency-namespace-functions.md#asend) " aufzurufen, oder wenn der Nachrichtenblock mit anderen Nachrichten Blöcken verbunden ist.
 
 [[Nach oben](#top)]
 
-##  <a name="complete"></a> Das vollständige Beispiel
+## <a name="complete"></a>Das komplette Beispiel
 
 Im folgenden Beispiel wird die vollständige Definition der `priority_buffer`-Klasse veranschaulicht.
 
 [!code-cpp[concrt-priority-buffer#18](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_19.h)]
 
-Im folgende Beispiel wird eine Reihe von `asend` und [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) Vorgänge für eine `priority_buffer` Objekt.
+Das folgende Beispiel führt gleichzeitig eine Reihe von `asend`-und [parallelcurrency:: Receive](reference/concurrency-namespace-functions.md#receive) -Vorgängen für ein `priority_buffer`-Objekt aus.
 
 [!code-cpp[concrt-priority-buffer#19](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_20.cpp)]
 
@@ -202,11 +202,11 @@ Die `priority_buffer`-Klasse ordnet die Nachrichten zunächst nach der Prioritä
 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
-Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, bzw. Fügen Sie die Definition der `priority_buffer` Klasse in einer Datei mit dem Namen `priority_buffer.h` und das Testprogramm in einer Datei mit dem Namen `priority_buffer.cpp` und führen Sie dann den folgenden Befehl in einer Visual Studio Eingabeaufforderungsfenster.
+Kopieren Sie den Beispielcode, und fügen Sie ihn in ein Visual Studio-Projekt ein, oder fügen Sie die Definition der `priority_buffer`-Klasse in eine Datei mit dem Namen `priority_buffer.h` und das Testprogramm in eine Datei mit dem Namen `priority_buffer.cpp` ein, und führen Sie dann den folgenden Befehl in einem Visual Studio-Eingabe Aufforderungs Fenster aus.
 
-**CL.exe/EHsc priority_buffer.cpp**
+**cl. exe/EHsc priority_buffer. cpp**
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Exemplarische Vorgehensweisen für die Concurrency Runtime](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Asynchrone Nachrichtenblöcke](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

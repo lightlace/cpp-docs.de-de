@@ -8,63 +8,63 @@ f1_keywords:
 helpviewer_keywords:
 - simple_partitioner class
 ms.assetid: d7e997af-54d1-43f5-abe0-def72df6edb3
-ms.openlocfilehash: 372773926903da32f1690904b34cd143a04940dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 503f36b90c5eb3319f9aa2d56528172ffa95bb11
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337244"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142497"
 ---
-# <a name="simplepartitioner-class"></a>simple_partitioner-Klasse
+# <a name="simple_partitioner-class"></a>simple_partitioner-Klasse
 
 Die `simple_partitioner`-Klasse stellt eine statische Partitionierung des Bereichs dar, der von `parallel_for` durchlaufen wird. Mit dem Partitionierer wird der Bereich in Blöcke unterteilt, sodass jeder Block mindestens die von der Segmentgröße angegebene Anzahl von Iterationen enthält.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class simple_partitioner;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[simple_partitioner](#ctor)|Erstellt ein `simple_partitioner`-Objekt.|
-|[~ Simple_partitioner-Destruktor](#dtor)|Zerstört ein `simple_partitioner`-Objekt.|
+|[~ simple_partitioner-Dekonstruktor](#dtor)|Zerstört ein `simple_partitioner` -Objekt.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 `simple_partitioner`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** ppl.h
+**Header:** ppl. h
 
 **Namespace:** Parallelität
 
-##  <a name="dtor"></a> ~simple_partitioner
+## <a name="dtor"></a>~ simple_partitioner
 
-Zerstört ein `simple_partitioner`-Objekt.
+Zerstört ein `simple_partitioner` -Objekt.
 
-```
+```cpp
 ~simple_partitioner();
 ```
 
-##  <a name="ctor"></a> simple_partitioner
+## <a name="ctor"></a>simple_partitioner
 
 Erstellt ein `simple_partitioner`-Objekt.
 
-```
+```cpp
 explicit simple_partitioner(_Size_type _Chunk_size);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_Chunk_size*<br/>
-Die erforderliche Mindestpartitionsgröße angezeigt.
+Die minimale Partitionsgröße.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-ms.openlocfilehash: 258f249aa178b73da2080cca888409dc07f63dbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4fb43a4223cad8cc63049d2a0f8345e48b90f17
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345512"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139961"
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy-Struktur
 
@@ -25,21 +25,21 @@ Eine Abstraktion für einen Thread der Ausführung. Wenn dem Planer im Benutzerm
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 struct IUMSThreadProxy : public IThreadProxy;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[IUMSThreadProxy::EnterCriticalRegion](#entercriticalregion)|Wird aufgerufen, um einen kritischen Bereich eingeben. In einem kritischen Bereich, berücksichtigt der Planer nicht asynchronen blockierende Vorgänge, die während des Bereichs stattfinden. Dies bedeutet, dass das Zeitplanungsmodul nicht für Seitenfehler, Threadunterbrechungen, asynchrone Kernelprozeduraufrufe (APCs) und So weiter, ein UMS-Thread erneut geöffnet wird.|
-|[IUMSThreadProxy::EnterHyperCriticalRegion](#enterhypercriticalregion)|Wird aufgerufen, um eine äußerst wichtigen Region einzugeben. In einem äußerst wichtigen Bereich, berücksichtigt der Planer nicht blockierende Vorgänge, die während des Bereichs stattfinden. Dies bedeutet, dass der Planer nicht erneut geöffnet wird für die Funktionsaufrufe, Sperre Abruf versuchen, welcher Block, Seitenfehlern, thread-Unterbrechungen, asynchrone Kernelprozeduraufrufe (APCs), und so weiter, für eine UMS Thread, blockiert.|
-|[IUMSThreadProxy::ExitCriticalRegion](#exitcriticalregion)|Wird aufgerufen, um einen kritischen Bereich zu verlassen.|
-|[IUMSThreadProxy::ExitHyperCriticalRegion](#exithypercriticalregion)|Wird aufgerufen, um einen äußerst wichtigen Bereich zu verlassen.|
-|[IUMSThreadProxy::GetCriticalRegionType](#getcriticalregiontype)|Gibt zurück, welche Art von kritischen Bereich innerhalb der Threadproxy befindet. Da sich wichtige Bereiche eine Obermenge von kritischen Bereich sind, wenn der Code eingegeben hat, einen kritischen Bereich, und klicken Sie dann eine äußerst wichtigen Region `InsideHyperCriticalRegion` zurückgegeben werden.|
+|[Iumsthloproxy:: entercriticalregion](#entercriticalregion)|Wird aufgerufen, um einen kritischen Bereich einzugeben. In einer kritischen Region werden vom Scheduler keine asynchronen Blockierungs Vorgänge beobachtet, die während der Region durchgeführt werden. Dies bedeutet, dass der Scheduler für einen ums-Thread nicht erneut für Seiten Fehler, Thread Suspendierungen, Kernel-asynchrone Prozedur Aufrufe (APCs) usw. eingegeben wird.|
+|[Iumsthloproxy:: EnterHyperCriticalRegion](#enterhypercriticalregion)|Wird aufgerufen, um einen hyperkritischen Bereich einzugeben. Im Rahmen eines hyperkritischen Bereichs werden vom Scheduler keine blockierenden Vorgänge beobachtet, die während des Bereichs auftreten. Dies bedeutet, dass der Scheduler nicht erneut zum Blockieren von Funktionsaufrufen, bei einem Sperr Abruf versucht wird, die Blockierung, Seiten Fehler, Thread Suspendierungen, asynchrone Kernel Prozedur Aufrufe (APCs) usw. für einen ums-Thread ausführen.|
+|[Iumsthlesproxy:: ExitCriticalRegion](#exitcriticalregion)|Wird aufgerufen, um einen kritischen Bereich zu beenden.|
+|[Iumsthloproxy:: ExitHyperCriticalRegion](#exithypercriticalregion)|Wird aufgerufen, um einen hyperkritischen Bereich zu beenden.|
+|[Iumsthlesproxy:: getcriticalregiontype](#getcriticalregiontype)|Gibt die Art der kritischen Region zurück, in der sich der Thread Proxy befindet. Da es sich bei den hyperkritischen Regionen um eine übergeordnete Gruppe kritischer Regionen handelt, wird `InsideHyperCriticalRegion` zurückgegeben, wenn Code eine kritische Region und dann eine hyperkritische Region eingegeben hat.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -47,77 +47,77 @@ struct IUMSThreadProxy : public IThreadProxy;
 
 `IUMSThreadProxy`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** concrtrm.h
+**Header:** concrtrm. h
 
 **Namespace:** Parallelität
 
-##  <a name="entercriticalregion"></a>  IUMSThreadProxy:: EnterCriticalRegion-Methode
+## <a name="entercriticalregion"></a>Iumsthlesproxy:: entercriticalregion-Methode
 
-Wird aufgerufen, um einen kritischen Bereich eingeben. In einem kritischen Bereich, berücksichtigt der Planer nicht asynchronen blockierende Vorgänge, die während des Bereichs stattfinden. Dies bedeutet, dass das Zeitplanungsmodul nicht für Seitenfehler, Threadunterbrechungen, asynchrone Kernelprozeduraufrufe (APCs) und So weiter, ein UMS-Thread erneut geöffnet wird.
+Wird aufgerufen, um einen kritischen Bereich einzugeben. In einer kritischen Region werden vom Scheduler keine asynchronen Blockierungs Vorgänge beobachtet, die während der Region durchgeführt werden. Dies bedeutet, dass der Scheduler für einen ums-Thread nicht erneut für Seiten Fehler, Thread Suspendierungen, Kernel-asynchrone Prozedur Aufrufe (APCs) usw. eingegeben wird.
 
-```
+```cpp
 virtual int EnterCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die neue Tiefe eines kritischen Bereichs. Kritische Bereiche sind wiedereintrittsfähig.
+Die neue Tiefe des kritischen Bereichs. Kritische Bereiche sind Wiedereinstiegs fähig.
 
-##  <a name="enterhypercriticalregion"></a>  IUMSThreadProxy:: EnterHyperCriticalRegion-Methode
+## <a name="enterhypercriticalregion"></a>Iumsthlesproxy:: EnterHyperCriticalRegion-Methode
 
-Wird aufgerufen, um eine äußerst wichtigen Region einzugeben. In einem äußerst wichtigen Bereich, berücksichtigt der Planer nicht blockierende Vorgänge, die während des Bereichs stattfinden. Dies bedeutet, dass der Planer nicht erneut geöffnet wird für die Funktionsaufrufe, Sperre Abruf versuchen, welcher Block, Seitenfehlern, thread-Unterbrechungen, asynchrone Kernelprozeduraufrufe (APCs), und so weiter, für eine UMS Thread, blockiert.
+Wird aufgerufen, um einen hyperkritischen Bereich einzugeben. Im Rahmen eines hyperkritischen Bereichs werden vom Scheduler keine blockierenden Vorgänge beobachtet, die während des Bereichs auftreten. Dies bedeutet, dass der Scheduler nicht erneut zum Blockieren von Funktionsaufrufen, bei einem Sperr Abruf versucht wird, die Blockierung, Seiten Fehler, Thread Suspendierungen, asynchrone Kernel Prozedur Aufrufe (APCs) usw. für einen ums-Thread ausführen.
 
-```
+```cpp
 virtual int EnterHyperCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die neue Tiefe eines hyper-kritischen Bereichs. Hyper-kritische Bereiche sind wiedereintrittsfähig.
+Die neue Tiefe der hyperkritischen Region. Hyperkritische Regionen sind Wiedereinstiegs fähig.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Der Scheduler muss besonders vorsichtig, welche Methoden, die er aufruft und Sperren in Bereichen erhält. Wenn Code in solchen Bereichs auf eine Sperre, die von einem Element gehalten wird, dass der Planer blockiert für die Planung verantwortlich ist, kann Deadlock zur Folge haben.
+Der Planer muss besonders sorgfältig darauf achten, welche Methoden er aufruft und welche Sperren er in solchen Regionen erhält. Wenn Code in einem solchen Bereich bei einer Sperre blockiert wird, die von dem Planer für die Planung zuständig ist, kann der Deadlock folgen.
 
-##  <a name="exitcriticalregion"></a>  IUMSThreadProxy:: ExitCriticalRegion-Methode
+## <a name="exitcriticalregion"></a>Iumsthlesproxy:: ExitCriticalRegion-Methode
 
-Wird aufgerufen, um einen kritischen Bereich zu verlassen.
+Wird aufgerufen, um einen kritischen Bereich zu beenden.
 
-```
+```cpp
 virtual int ExitCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die neue Tiefe eines kritischen Bereichs. Kritische Bereiche sind wiedereintrittsfähig.
+Die neue Tiefe des kritischen Bereichs. Kritische Bereiche sind Wiedereinstiegs fähig.
 
-##  <a name="exithypercriticalregion"></a>  IUMSThreadProxy:: ExitHyperCriticalRegion-Methode
+## <a name="exithypercriticalregion"></a>Iumsthlesproxy:: ExitHyperCriticalRegion-Methode
 
-Wird aufgerufen, um einen äußerst wichtigen Bereich zu verlassen.
+Wird aufgerufen, um einen hyperkritischen Bereich zu beenden.
 
-```
+```cpp
 virtual int ExitHyperCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die neue Tiefe eines hyper-kritischen Bereichs. Hyper-kritische Bereiche sind wiedereintrittsfähig.
+Die neue Tiefe der hyperkritischen Region. Hyperkritische Regionen sind Wiedereinstiegs fähig.
 
-##  <a name="getcriticalregiontype"></a>  IUMSThreadProxy:: GetCriticalRegionType-Methode
+## <a name="getcriticalregiontype"></a>Iumsthlesproxy:: getcriticalregiontype-Methode
 
-Gibt zurück, welche Art von kritischen Bereich innerhalb der Threadproxy befindet. Da sich wichtige Bereiche eine Obermenge von kritischen Bereich sind, wenn der Code eingegeben hat, einen kritischen Bereich, und klicken Sie dann eine äußerst wichtigen Region `InsideHyperCriticalRegion` zurückgegeben werden.
+Gibt die Art der kritischen Region zurück, in der sich der Thread Proxy befindet. Da es sich bei den hyperkritischen Regionen um eine übergeordnete Gruppe kritischer Regionen handelt, wird `InsideHyperCriticalRegion` zurückgegeben, wenn Code eine kritische Region und dann eine hyperkritische Region eingegeben hat.
 
-```
+```cpp
 virtual CriticalRegionType GetCriticalRegionType() const = 0;
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Typ des kritischen Bereichs, die der Threadproxy befindet.
+Der Typ der kritischen Region, in der sich der Thread Proxy befindet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [IUMSScheduler-Struktur](iumsscheduler-structure.md)

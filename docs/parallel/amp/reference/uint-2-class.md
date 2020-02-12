@@ -28,61 +28,61 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-ms.openlocfilehash: 42c4f238e7277174a5f6b04a9e692f541b32a3e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f01e4d50dc3fab8d7cb909d1ea2f3d1801f0db0
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405533"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126209"
 ---
-# <a name="uint2-class"></a>uint_2-Klasse
+# <a name="uint_2-class"></a>uint_2-Klasse
 
 Stellt einen kurzen Vektor von zwei ganze Zahlen ohne Vorzeichen dar.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class uint_2;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[uint_2-Konstruktor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
+|[uint_2-Konstruktor](#ctor)|Ist überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |uint_2::get_x||
 |uint_2::get_xy||
-|uint_2::get_y||
+|uint_2:: get_Y||
 |uint_2::get_yx||
 |uint_2::ref_g_Method||
 |uint_2::ref_r_Method||
 |uint_2::ref_x_Method||
 |uint_2::ref_y_Method||
-|uint_2::set_x||
+|uint_2:: set_X||
 |uint_2::set_xy||
-|uint_2::set_y||
+|uint_2:: set_Y||
 |uint_2::set_yx||
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|uint_2::operator--||
+|uint_2:: Operator--||
 |uint_2::operator%=||
-|uint_2::operator&=||
+|uint_2:: Operator & =||
 |uint_2::operator*=||
 |uint_2::operator/=||
 |uint_2::operator^=||
@@ -90,20 +90,20 @@ class uint_2;
 |uint_2::operator~||
 |uint_2::operator++||
 |uint_2::operator+=||
-|uint_2::operator<\<=||
+|uint_2:: Operator <\<=||
 |uint_2::operator=||
-|uint_2::operator-=||
-|uint_2::operator>>=||
+|uint_2:: Operator-=||
+|uint_2:: Operator > > =||
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Size-Konstante](#uint_2__size)||
+|[Größen Konstante](#uint_2__size)||
 
-### <a name="public-data-members"></a>Öffentliche Datenmember
+### <a name="public-data-members"></a>Öffentliche Datenelemente
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |uint_2::g||
 |uint_2::gr||
@@ -118,17 +118,17 @@ class uint_2;
 
 `uint_2`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amp_short_vectors.h
+**Header:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Parallelität:: Grafiken
 
-##  <a name="ctor"></a> uint_2
+## <a name="ctor"></a>uint_2
 
 Standardkonstruktor, initialisiert alle Elemente mit 0.
 
-```
+```cpp
 uint_2() restrict(amp,
     cpu);
 
@@ -169,23 +169,23 @@ explicit inline uint_2(
 ### <a name="parameters"></a>Parameter
 
 *_V0*<br/>
-Der Wert, der 0-Element zu initialisieren.
+Der Wert, mit dem Element 0 initialisiert werden soll.
 
 *_V1*<br/>
-Der Wert 1 Element initialisiert werden.
+Der Wert, mit dem Element 1 initialisiert werden soll.
 
 *_V*<br/>
 Der Wert für die Initialisierung.
 
 *_Other*<br/>
-Das Objekt, das zum Initialisieren verwendet.
+Das-Objekt, das zum Initialisieren von verwendet wird.
 
-##  <a name="uint_2__size"></a> Größe
+## <a name="uint_2__size"></a>Größe
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

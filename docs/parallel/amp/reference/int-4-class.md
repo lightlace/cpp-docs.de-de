@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::bg
 - amp_short_vectors/Concurrency::graphics::int_4::yxz
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-ms.openlocfilehash: 7bcdd005ab5f530e08fc6e5326404d19f85faf4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ca8eb4c93b3e9cd9108712727d1f83421c9d679
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180207"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126668"
 ---
-# <a name="int4-class"></a>int_4-Klasse
+# <a name="int_4-class"></a>int_4-Klasse
 
 Stellt einen kurzen Vektor aus vier ganzen Zahlen dar.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class int_4;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[int_4-Konstruktor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
+|[int_4-Konstruktor](#ctor)|Ist überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |int_4::get_w||
 |int_4::get_wx||
@@ -313,7 +313,7 @@ class int_4;
 |int_4::get_wyx||
 |int_4::get_wyxz||
 |int_4::get_wyz||
-|int_4::get_wyzx||
+|int_4:: get_wyzx||
 |int_4::get_wz||
 |int_4::get_wzx||
 |int_4::get_wzxy||
@@ -350,7 +350,7 @@ class int_4;
 |int_4::get_yzw||
 |int_4::get_yzwx||
 |int_4::get_yzx||
-|int_4::get_yzxw||
+|int_4:: get_yzxw||
 |int_4::get_z||
 |int_4::get_zw||
 |int_4::get_zwx||
@@ -385,7 +385,7 @@ class int_4;
 |int_4::set_wyx||
 |int_4::set_wyxz||
 |int_4::set_wyz||
-|int_4::set_wyzx||
+|int_4:: set_wyzx||
 |int_4::set_wz||
 |int_4::set_wzx||
 |int_4::set_wzxy||
@@ -424,7 +424,7 @@ class int_4;
 |int_4::set_yzx||
 |int_4::set_yzxw||
 |int_4::set_z||
-|int_4::set_zw||
+|int_4:: set_zw||
 |int_4::set_zwx||
 |int_4::set_zwxy||
 |int_4::set_zwy||
@@ -434,20 +434,20 @@ class int_4;
 |int_4::set_zxwy||
 |int_4::set_zxy||
 |int_4::set_zxyw||
-|int_4::set_zy||
-|int_4::set_zyw||
-|int_4::set_zywx||
+|int_4:: set_zy||
+|int_4:: set_zyw||
+|int_4:: set_zywx||
 |int_4::set_zyx||
 |int_4::set_zyxw||
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|int_4::operator-||
-|int_4::operator--||
+|int_4:: Operator-||
+|int_4:: Operator--||
 |int_4::operator%=||
-|int_4::operator&=||
+|int_4:: Operator & =||
 |int_4::operator*=||
 |int_4::operator/=||
 |int_4::operator^=||
@@ -455,20 +455,20 @@ class int_4;
 |int_4::operator~||
 |int_4::operator++||
 |int_4::operator+=||
-|int_4::operator<\<=||
+|int_4:: Operator <\<=||
 |int_4::operator=||
-|int_4::operator-=||
-|int_4::operator>>=||
+|int_4:: Operator-=||
+|int_4:: Operator > > =||
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Size-Konstante](#int_4__size)||
+|[Größen Konstante](#int_4__size)||
 
-### <a name="public-data-members"></a>Öffentliche Datenmember
+### <a name="public-data-members"></a>Öffentliche Datenelemente
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |int_4::a||
 |int_4::ab||
@@ -507,7 +507,7 @@ class int_4;
 |int_4::gab||
 |int_4::gabr||
 |int_4::gar||
-|int_4::garb||
+|int_4:: Garb||
 |int_4::gb||
 |int_4::gba||
 |int_4::gbar||
@@ -551,7 +551,7 @@ class int_4;
 |int_4::wzy||
 |int_4::wzyx||
 |int_4::x||
-|int_4::xw||
+|int_4:: XW||
 |int_4::xwy||
 |int_4::xwyz||
 |int_4::xwz||
@@ -603,17 +603,17 @@ class int_4;
 
 `int_4`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amp_short_vectors.h
+**Header:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Parallelität:: Grafiken
 
-##  <a name="ctor"></a> int_4
+## <a name="ctor"></a>int_4
 
 Standardkonstruktor, initialisiert alle Elemente mit 0.
 
-```
+```cpp
 int_4() restrict(amp,
     cpu);
 
@@ -656,29 +656,29 @@ explicit inline int_4(
 ### <a name="parameters"></a>Parameter
 
 *_V0*<br/>
-Der Wert, der 0-Element zu initialisieren.
+Der Wert, mit dem Element 0 initialisiert werden soll.
 
 *_V1*<br/>
-Der Wert 1 Element initialisiert werden.
+Der Wert, mit dem Element 1 initialisiert werden soll.
 
 *_V2*<br/>
-Der Wert 2-Element zu initialisieren.
+Der Wert, mit dem Element 2 initialisiert werden soll.
 
 *_V3*<br/>
-Der Wert 3-Element zu initialisieren.
+Der Wert, mit dem Element 3 initialisiert werden soll.
 
 *_V*<br/>
 Der Wert für die Initialisierung.
 
 *_Other*<br/>
-Das Objekt, das zum Initialisieren verwendet.
+Das-Objekt, das zum Initialisieren von verwendet wird.
 
-##  <a name="int_4__size"></a> Größe
+## <a name="int_4__size"></a>Größe
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

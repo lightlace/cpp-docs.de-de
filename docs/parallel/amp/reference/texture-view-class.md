@@ -14,20 +14,20 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-ms.openlocfilehash: 0f2b627afa216f03592fe913afece1a80f5bd5a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6bf4b9666d746199cea92fa2bd52b691c67e4a5b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351520"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126346"
 ---
-# <a name="textureview-class"></a>texture_view-Klasse
+# <a name="texture_view-class"></a>texture_view-Klasse
 
 Stellt einer Textur Lese- und Schreibzugriff zur Verfügung. `texture_view` kann nur verwendet werden, um Texturen zu lesen, deren Werttyp `int`, `unsigned int` oder `float` mit 32-Bit-Standard ist. Verwenden Sie zum Lesen anderer Texturformate `texture_view<const value_type, _Rank>`.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 template<typename value_type,int _Rank>
 class texture_view;
 
@@ -40,7 +40,7 @@ class texture_view<const value_type, _Rank>
    : public details::_Texture_base<value_type, _Rank>;
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
 *value_type*<br/>
 Der Typ der Elemente im Texturaggregat.
@@ -48,11 +48,11 @@ Der Typ der Elemente im Texturaggregat.
 *_Rank*<br/>
 Der Rang des `texture_view`-Objekts.
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |`value_type`|Der Typ der Elemente in den Texturaggregaten.|
 |`coordinates_type`|Der Koordinatentyp, mit dem ein Texel im `texture_view`-Objekt angegeben wird, d. h. ein `short_vector`-Objekt, das den gleichen Rang wie die zugeordnete Textur mit dem Werttyp `float` hat.|
@@ -60,34 +60,34 @@ Der Rang des `texture_view`-Objekts.
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Texture_view-Konstruktor](#ctor)|Überladen. Erstellt eine `texture_view`-Instanz.|
-|[~ Texture_view-Destruktor](#ctor)|Zerstört die `texture_view`-Instanz.|
+|[texture_view-Konstruktor](#ctor)|Ist überladen. Erstellt eine `texture_view`-Instanz.|
+|[~ texture_view-Dekonstruktor](#ctor)|Zerstört die `texture_view`-Instanz.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[gather_alpha](#gather_alpha)|Überladen. Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die blauen (w)-Komponenten der vier geprüften Texel zurück.|
-|[gather_blue](#gather_blue)|Überladen. Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die blauen (z)-Komponenten der vier geprüften Texel zurück.|
-|[gather_green](#gather_green)|Überladen. Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die grünen (y)-Komponenten der vier geprüften Texel zurück.|
-|[gather_red](#gather_red)|Überladen. Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die roten (x)-Komponenten der vier geprüften Texel zurück.|
-|[get](#get)|Überladen. Ruft den Elementwert durch Index ab.|
-|[sample](#sample)|Überladen. Prüft die Textur an den festgelegten Koordinaten und den Detailgrad mithilfe der angegebenen Samplingkonfiguration.|
+|[gather_alpha](#gather_alpha)|Ist überladen. Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die blauen (w)-Komponenten der vier geprüften Texel zurück.|
+|[gather_blue](#gather_blue)|Ist überladen. Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die blauen (z)-Komponenten der vier geprüften Texel zurück.|
+|[gather_green](#gather_green)|Ist überladen. Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die grünen (y)-Komponenten der vier geprüften Texel zurück.|
+|[gather_red](#gather_red)|Ist überladen. Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die roten (x)-Komponenten der vier geprüften Texel zurück.|
+|[get](#get)|Ist überladen. Ruft den Elementwert durch Index ab.|
+|[sample](#sample)|Ist überladen. Prüft die Textur an den festgelegten Koordinaten und den Detailgrad mithilfe der angegebenen Samplingkonfiguration.|
 |[set](#set)|Legt den Wert eines Elements mithilfe des Index fest.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Operator()](#operator_call)|Überladen. Ruft den Elementwert durch Index ab.|
-|[operator\[\]](#operator_at)|Überladen. Ruft den Elementwert durch Index ab.|
-|[operator=](#operator_eq)|Überladen. Zuweisungsoperator.|
+|[Operator()](#operator_call)|Ist überladen. Ruft den Elementwert durch Index ab.|
+|[operator\[\]](#operator_at)|Ist überladen. Ruft den Elementwert durch Index ab.|
+|[operator=](#operator_eq)|Ist überladen. Zuweisungsoperator.|
 
-### <a name="public-data-members"></a>Öffentliche Datenmember
+### <a name="public-data-members"></a>Öffentliche Datenelemente
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[value_type](#value_type)|Der Werttyp der Elemente des `texture_view`-Objekts.|
 
@@ -97,25 +97,25 @@ Der Rang des `texture_view`-Objekts.
 
 `texture_view`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amp_graphics.h
+**Header:** amp_graphics. h
 
-**Namespace:** concurrency::graphics
+**Namespace:** Parallelität:: graphics
 
-##  <a name="dtor"></a> ~ Texture_view
+## <a name="dtor"></a>~ texture_view
 
 Zerstört die `texture_view`-Instanz.
 
-```
+```cpp
 ~texture_view() restrict(amp, cpu);
 ```
 
-##  <a name="ctor"></a> texture_view
+## <a name="ctor"></a>texture_view
 
 Erstellt eine `texture_view`-Instanz.
 
-```
+```cpp
 texture_view(// [1] constructor
     texture<value_type, _Rank>& _Src) restrict(amp);
 
@@ -146,14 +146,14 @@ texture_view(// [7] copy constructor
 ### <a name="parameters"></a>Parameter
 
 *_Src*<br/>
-[1, 2] Konstruktor die `texture` auf dem das schreibbare `texture_view` erstellt wird.
+[1, 2] Konstruktor das `texture`, für das der beschreibbare `texture_view` erstellt wird.
 
-[3, 4] Konstruktor die `texture` auf dem das nicht schreibbare `texture_view` erstellt wird.
+[3, 4] Konstruktor das `texture`, für das die nicht beschreibbare `texture_view` erstellt wird.
 
 *_Other*<br/>
-[5]-Kopierkonstruktor der beschreibbare Quelle `texture_view`.
+[5] Kopierkonstruktor, der von der Quelle beschreibbar `texture_view`wird.
 
-[6, 7] Kopierkonstruktor der Quelle nicht geschrieben werden kann `texture_view`.
+[6, 7] Kopierkonstruktor der Quell-`texture_view`, der nicht beschreibbar ist.
 
 *_Mipmap_level*<br/>
 Die bestimmte MipMap-Ebene auf dem `texture`-Quellobjekt, an das dieses schreibbare `texture_view`-Objekt gebunden wird. Der Standardwert ist 0, was die oberste (ausführlichste) MIP-Ebene darstellt.
@@ -164,11 +164,11 @@ Die oberste (ausführlichste) Mip-Ebene für die Ansicht, relativ zum angegebene
 *_Mip_levels*<br/>
 Die Anzahl von MipMap-Ebenen, die über das `texture_view`-Objekt verfügbar sind.
 
-##  <a name="gather_red"></a> gather_red
+## <a name="gather_red"></a>gather_red
 
 Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die roten (x)-Komponenten der vier geprüften Texel zurück.
 
-```
+```cpp
 const gather_return_type gather_red(
     const sampler& _Sampler,
     const coordinates_type& _Coord) const restrict(amp);
@@ -195,11 +195,11 @@ Die Koordinaten, an denen die Stichprobe genommen werden soll. Bruchkoordinatenw
 
 Ein kurzer Vektor des Rangs 4, der die rote (x)-Komponente der 4 geprüften Texelwerte enthält.
 
-##  <a name="gather_green"></a> gather_green
+## <a name="gather_green"></a>gather_green
 
 Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die grünen (y)-Komponenten der vier geprüften Texel zurück.
 
-```
+```cpp
 const gather_return_type gather_green(
     const sampler& _Sampler,
     const coordinates_type& _Coord) const restrict(amp);
@@ -226,11 +226,11 @@ Die Koordinaten, an denen die Stichprobe genommen werden soll. Bruchkoordinatenw
 
 Ein kurzer Vektor des Rangs 4, der die grüne (y)-Komponente der 4 geprüften Texelwerte enthält.
 
-##  <a name="gather_blue"></a> gather_blue
+## <a name="gather_blue"></a>gather_blue
 
 Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die blauen (z)-Komponenten der vier geprüften Texel zurück.
 
-```
+```cpp
 const gather_return_type gather_blue(
     const sampler& _Sampler,
     const coordinates_type& _Coord) const restrict(amp);
@@ -257,11 +257,11 @@ Die Koordinaten, an denen die Stichprobe genommen werden soll. Bruchkoordinatenw
 
 Ein kurzer Vektor des Rangs 4, der die rote (x)-Komponente der 4 geprüften Texelwerte enthält.
 
-##  <a name="gather_alpha"></a> gather_alpha
+## <a name="gather_alpha"></a>gather_alpha
 
 Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die blauen (w)-Komponenten der vier geprüften Texel zurück.
 
-```
+```cpp
 const gather_return_type gather_alpha(
     const sampler& _Sampler,
     const coordinates_type& _Coord) const restrict(amp);
@@ -288,11 +288,11 @@ Die Koordinaten, an denen die Stichprobe genommen werden soll. Bruchkoordinatenw
 
 Ein kurzer Vektor des Rangs 4, der die Alpha-(w)-Komponente der 4 geprüften Texelwerte enthält.
 
-##  <a name="get"></a> Erhalten
+## <a name="get"></a>Erhalten
 
 Ruft den Wert des Elements am angegebenen Index ab.
 
-```
+```cpp
 const value_type get(
     const index<_Rank>& _Index) const restrict(amp);
 
@@ -313,11 +313,11 @@ Die MipMap-Ebene, von der der Wert abgerufen werden soll. Der Standardwert 0 ste
 
 Der Wert des Elements.
 
-##  <a name="operator_eq"></a> operator=
+## <a name="operator_eq"></a>Operator =
 
 Weist dieser `texture_view`-Instanz eine Ansicht der gleichen Textur wie die angegebene `texture_view` zu.
 
-```
+```cpp
 texture_view<value_type, _Rank>& operator= (// [1] copy constructor
     const texture_view<value_type, _Rank>& _Other) restrict(amp, cpu);
 
@@ -331,19 +331,19 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 ### <a name="parameters"></a>Parameter
 
 *_Other*<br/>
-[1, 2] Copy-Konstruktor eine beschreibbare `texture_view` Objekt.
+[1, 2] Kopierkonstruktor ein beschreibbares `texture_view` Objekt.
 
-[3]-Kopierkonstruktor eine schreibgeschützte `texture_view` Objekt.
+[3] Kopierkonstruktor ein nicht beschreibbares `texture_view` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Ein Verweis auf diese `texture_view`-Instanz.
 
-##  <a name="operator_at"></a> []-Operator
+## <a name="operator_at"></a>[]-Operator
 
 Gibt den Elementwert durch Index zurück.
 
-```
+```cpp
 const value_type operator[] (const index<_Rank>& _Index) const restrict(amp);
 
 const value_type operator[] (int _I0) const restrict(amp);
@@ -365,11 +365,11 @@ Der eindimensionale Index.
 
 Der durch `_Index` indizierte Elementwert.
 
-##  <a name="operator_call"></a> operator()
+## <a name="operator_call"></a>Operator ()
 
 Gibt den Elementwert durch Index zurück.
 
-```
+```cpp
 const value_type operator() (
     const index<_Rank>& _Index) const restrict(amp);
 
@@ -418,11 +418,11 @@ Die unwichtigste Komponente des Index.
 
 Der durch `_Index` indizierte Elementwert.
 
-##  <a name="sample"></a> Beispiel
+## <a name="sample"></a>Blutprobe
 
 Prüft die Textur an den festgelegten Koordinaten und den Detailgrad mithilfe der angegebenen Samplingkonfiguration.
 
-```
+```cpp
 value_type sample(
     const sampler& _Sampler,
     const coordinates_type& _Coord,
@@ -458,11 +458,11 @@ Der Wert gibt die MipMap-Ebene für das Sampling an. Bruchwerte werden verwendet
 
 Der interpolierte Beispielwert.
 
-##  <a name="set"></a> Legen Sie
+## <a name="set"></a>Set
 
 Legt den Wert des Elements am angegebenen Index auf den angegebenen Wert fest.
 
-```
+```cpp
 void set(
     const index<_Rank>& _Index,
     const value_type& value) const restrict(amp);
@@ -476,14 +476,14 @@ Der Index des festzulegenden Elements, möglicherweise mehrdimensional.
 *value*<br/>
 Der Wert, auf den das Element festgelegt werden soll.
 
-##  <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
 Der Werttyp der Elemente des texture_view-Objekts.
 
-```
+```cpp
 typedef typename const value_type value_type;
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

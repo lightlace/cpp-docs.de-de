@@ -11,120 +11,120 @@ f1_keywords:
 helpviewer_keywords:
 - message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-ms.openlocfilehash: be6cb1c614a41919663a4cc063da66679556e498
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88944b2d935eebd0e031be1431c2a0f4efa3d760
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409946"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139466"
 ---
-# <a name="messageprocessor-class"></a>message_processor-Klasse
+# <a name="message_processor-class"></a>message_processor-Klasse
 
 Die `message_processor`-Klasse ist die abstrakte Basisklasse für die Verarbeitung von `message`-Objekten. Für die Reihenfolge der Meldungen besteht keine Garantie.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 template<class T>
 class message_processor;
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
 *T*<br/>
-Der Datentyp der Nutzlast innerhalb der Nachrichten von diesem verarbeitet `message_processor` Objekt.
+Der Datentyp der Nutzlast in Nachrichten, die von diesem `message_processor` Objekt verarbeitet werden.
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |`type`|Ein Typalias für `T`.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[async_send](#async_send)|Ruft beim Überschreiben in einer abgeleiteten Klasse platziert Nachrichten asynchron in den Block.|
-|[sync_send](#sync_send)|Ruft beim Überschreiben in einer abgeleiteten Klasse platziert Nachrichten synchron in den Block.|
-|[wait](#wait)|Ruft beim Überschreiben in einer abgeleiteten Klasse wartet, bis alle asynchronen Vorgänge abgeschlossen.|
+|[async_send](#async_send)|Fügt beim Überschreiben in einer abgeleiteten Klasse Nachrichten asynchron in den-Block ein.|
+|[sync_send](#sync_send)|Fügt beim Überschreiben in einer abgeleiteten Klasse Nachrichten synchron in den-Block ein.|
+|[Warte](#wait)|Wartet beim Überschreiben in einer abgeleiteten Klasse darauf, dass alle asynchronen Vorgänge vollständig ausgeführt werden.|
 
 ### <a name="protected-methods"></a>Geschützte Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[process_incoming_message](#process_incoming_message)|Führt beim Überschreiben in einer abgeleiteten Klasse die forward-Verarbeitung von Nachrichten in den Block aus. Wird einmal aufgerufen, jedes Mal, wenn eine neue Nachricht hinzugefügt wird, und befindet sich die Warteschlange leer sein.|
+|[process_incoming_message](#process_incoming_message)|Führt beim Überschreiben in einer abgeleiteten Klasse die vorwärts Verarbeitung von Nachrichten in den-Block aus. Wird jedes Mal aufgerufen, wenn eine neue Nachricht hinzugefügt wird und die Warteschlange als leer festgestellt wird.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 `message_processor`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Header:** agents.h
 
 **Namespace:** Parallelität
 
-##  <a name="async_send"></a> async_send
+## <a name="async_send"></a>async_send
 
-Ruft beim Überschreiben in einer abgeleiteten Klasse platziert Nachrichten asynchron in den Block.
+Fügt beim Überschreiben in einer abgeleiteten Klasse Nachrichten asynchron in den-Block ein.
 
-```
+```cpp
 virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_Msg*<br/>
-Ein `message` Objekt asynchron gesendet werden.
+Ein `message`-Objekt, das asynchron gesendet werden soll.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Implementierungen von ereignissprozessoren sollten diese Methode überschreiben.
+Prozessor Implementierungen sollten diese Methode überschreiben.
 
-##  <a name="process_incoming_message"></a> process_incoming_message
+## <a name="process_incoming_message"></a>process_incoming_message
 
-Führt beim Überschreiben in einer abgeleiteten Klasse die forward-Verarbeitung von Nachrichten in den Block aus. Wird einmal aufgerufen, jedes Mal, wenn eine neue Nachricht hinzugefügt wird, und befindet sich die Warteschlange leer sein.
+Führt beim Überschreiben in einer abgeleiteten Klasse die vorwärts Verarbeitung von Nachrichten in den-Block aus. Wird jedes Mal aufgerufen, wenn eine neue Nachricht hinzugefügt wird und die Warteschlange als leer festgestellt wird.
 
-```
+```cpp
 virtual void process_incoming_message() = 0;
 ```
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Message-Block-Implementierungen sollten diese Methode überschreiben.
+Nachrichtenblock Implementierungen sollten diese Methode überschreiben.
 
-##  <a name="sync_send"></a> sync_send
+## <a name="sync_send"></a>sync_send
 
-Ruft beim Überschreiben in einer abgeleiteten Klasse platziert Nachrichten synchron in den Block.
+Fügt beim Überschreiben in einer abgeleiteten Klasse Nachrichten synchron in den-Block ein.
 
-```
+```cpp
 virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_Msg*<br/>
-Ein `message` Objekt, das synchron gesendet.
+Ein `message`-Objekt, das synchron gesendet werden soll.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Implementierungen von ereignissprozessoren sollten diese Methode überschreiben.
+Prozessor Implementierungen sollten diese Methode überschreiben.
 
-##  <a name="wait"></a> Warte
+## <a name="wait"></a>Warte
 
-Ruft beim Überschreiben in einer abgeleiteten Klasse wartet, bis alle asynchronen Vorgänge abgeschlossen.
+Wartet beim Überschreiben in einer abgeleiteten Klasse darauf, dass alle asynchronen Vorgänge vollständig ausgeführt werden.
 
-```
+```cpp
 virtual void wait() = 0;
 ```
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Implementierungen von ereignissprozessoren sollten diese Methode überschreiben.
+Prozessor Implementierungen sollten diese Methode überschreiben.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [ordered_message_processor-Klasse](ordered-message-processor-class.md)

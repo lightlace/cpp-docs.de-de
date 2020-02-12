@@ -1,30 +1,30 @@
 ---
-title: 'Vorgehensweise: Verwalten einer planerinstanz'
+title: 'Vorgehensweise: Verwalten einer Planerinstanz'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-ms.openlocfilehash: f402e82a18f7b804f2c25ebf0a4392d19694d25c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c7ec321eaf0960dc14b61bbd8fdc76b53a31f8c5
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510526"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141726"
 ---
-# <a name="how-to-manage-a-scheduler-instance"></a>Vorgehensweise: Verwalten einer planerinstanz
+# <a name="how-to-manage-a-scheduler-instance"></a>Vorgehensweise: Verwalten einer Planerinstanz
 
 Mit Planerinstanzen können Sie bestimmte Planungsrichtlinien verschiedenen Arten von Arbeitslasten zuordnen. Dieses Thema enthält zwei grundlegende Beispiele, die zeigen, wie eine Planerinstanz erstellt und verwaltet wird.
 
-In den Beispielen werden Planer erstellt, die die standardmäßigen Planerrichtlinien verwenden. Ein Beispiel, das einen Planer erstellt, der eine benutzerdefinierte Richtlinie verwendet [, finden Sie unter Gewusst wie: Geben Sie bestimmte Scheduler](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)-Richtlinien an.
+In den Beispielen werden Planer erstellt, die die standardmäßigen Planerrichtlinien verwenden. Ein Beispiel für das Erstellen eines Zeit Planungs Moduls, das eine benutzerdefinierte Richtlinie verwendet, finden Sie unter Gewusst [wie: Angeben spezifischer Scheduler-Richtlinien](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
 
-### <a name="to-manage-a-scheduler-instance-in-your-application"></a>So verwalten Sie eine Planerinstanz in der Anwendung
+## <a name="to-manage-a-scheduler-instance-in-your-application"></a>So verwalten Sie eine Planerinstanz in der Anwendung
 
 1. Erstellen Sie ein [parallelcurrency:: SchedulerPolicy](../../parallel/concrt/reference/schedulerpolicy-class.md) -Objekt, das die Richtlinien Werte für den zu verwendenden Scheduler enthält.
 
 1. Rufen Sie die [Concurrency:: CurrentScheduler:: Create](reference/currentscheduler-class.md#create) -Methode oder die [Concurrency:: Scheduler:: Create](reference/scheduler-class.md#create) -Methode auf, um eine planerinstanz zu erstellen.
 
-   Wenn Sie die `Scheduler::Create` -Methode verwenden, wenden Sie die Methode " [parallelcurrency:: Scheduler:: Attach](reference/scheduler-class.md#attach) " an, wenn Sie den Scheduler dem aktuellen Kontext zuordnen müssen.
+   Wenn Sie die `Scheduler::Create`-Methode verwenden, wenden Sie die Methode " [parallelcurrency:: Scheduler:: Attach](reference/scheduler-class.md#attach) " an, wenn Sie den Scheduler dem aktuellen Kontext zuordnen müssen.
 
 1. Rufen Sie [die Funktion](/windows/win32/api/synchapi/nf-synchapi-createeventw) "-Funktion" auf, um ein Handle für ein nicht signalisiertes Ereignis Objekt zu erstellen, das automatisch zurückgesetzt wird.
 
@@ -34,7 +34,7 @@ In den Beispielen werden Planer erstellt, die die standardmäßigen Planerrichtl
 
 1. Wenden Sie die [Concurrency:: CurrentScheduler::D Etach](reference/currentscheduler-class.md#detach) -Methode an, um den aktuellen Planer zu trennen und den vorherigen Scheduler als aktuellen Scheduler wiederherzustellen.
 
-   Wenn Sie die `Scheduler::Create` -Methode verwenden, wird die Methode " [parallelcurrency:: Scheduler:: Release](reference/scheduler-class.md#release) " aufgerufen, um den `Scheduler` Verweis Zähler des Objekts zu Dekrementen.
+   Wenn Sie die `Scheduler::Create`-Methode verwenden, wird die Methode " [parallelcurrency:: Scheduler:: Release](reference/scheduler-class.md#release) " aufgerufen, um den Verweis Zähler des `Scheduler` Objekts zu Dekrementen.
 
 1. Übergeben Sie das Handle an das-Ereignis an die [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) -Funktion, um zu warten, bis der Scheduler heruntergefahren wird.
 
@@ -71,11 +71,11 @@ Current scheduler id: 0
 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
-Kopieren Sie den Beispielcode, und fügen Sie ihn in ein Visual Studio-Projekt ein. Alternativ dazu können Sie `scheduler-instance.cpp` ihn auch in eine Datei mit dem Namen einfügen und dann den folgenden Befehl in einem Visual Studio-Eingabe Aufforderungs Fenster ausführen.
+Kopieren Sie den Beispielcode, und fügen Sie ihn in ein Visual Studio-Projekt ein, oder fügen Sie ihn in eine Datei mit dem Namen `scheduler-instance.cpp` ein, und führen Sie dann den folgenden Befehl in einem Visual Studio-Eingabe Aufforderungs Fenster aus.
 
-**cl. exe/EHsc Scheduler-instance. cpp**
+> **cl. exe/EHsc Scheduler-instance. cpp**
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Planerinstanzen](../../parallel/concrt/scheduler-instances.md)<br/>
 [Vorgehensweise: Angeben von bestimmten Planerrichtlinien](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)

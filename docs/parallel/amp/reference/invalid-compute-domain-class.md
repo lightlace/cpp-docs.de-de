@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_compute_domain class
 ms.assetid: ac7a7166-8bdb-4db1-8caf-ea129ab5117e
-ms.openlocfilehash: 51fcd9e42bc4497131da5adb3dff72efb46537b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b8179e8e92665fa6482bd092504af71aa0106f0
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351718"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126460"
 ---
-# <a name="invalidcomputedomain-class"></a>invalid_compute_domain-Klasse
+# <a name="invalid_compute_domain-class"></a>invalid_compute_domain-Klasse
 
-Die Ausnahme, die ausgelöst wird, wenn Sie einen Kernel nicht mithilfe der Compute-Domäne angegeben, an die Laufzeit starten die [Parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) Aufrufsite.
+Die Ausnahme, die ausgelöst wird, wenn die Laufzeit einen Kernel nicht mithilfe der COMPUTE-Domäne starten kann, die auf der [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) -anrufsite angegeben ist.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class invalid_compute_domain : public runtime_exception;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Invalid_compute_domain-Konstruktor](#ctor)|Initialisiert eine neue Instanz der `invalid_compute_domain`-Klasse.|
+|[invalid_compute_domain-Konstruktor](#ctor)|Initialisiert eine neue Instanz der Klasse `invalid_compute_domain`.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -41,19 +41,19 @@ class invalid_compute_domain : public runtime_exception;
 
 `invalid_compute_domain`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amprt.h
+**Header:** amprt. h
 
 **Namespace:** Parallelität
 
-## <a name="ctor"></a> invalid_compute_domain
+## <a name="ctor"></a>invalid_compute_domain
 
 Initialisiert eine neue Instanz der Klasse.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 explicit invalid_compute_domain(
     const char * _Message ) throw();
 
@@ -69,6 +69,6 @@ Eine Beschreibung des Fehlers.
 
 Eine Instanz der `invalid_compute_domain`-Klasse
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)

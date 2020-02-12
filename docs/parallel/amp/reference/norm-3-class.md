@@ -72,47 +72,47 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-ms.openlocfilehash: cec778e6cdc53871b7987ef5a2faf529eea6d4f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7123f047a92c377dedefbc5be11e30f5d77db46
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351653"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142166"
 ---
-# <a name="norm3-class"></a>norm_3-Klasse
+# <a name="norm_3-class"></a>norm_3-Klasse
 
 Stellt einen kurzen Vektor aus drei normalen Zahlen dar.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class norm_3;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[norm_3-Konstruktor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
+|[norm_3-Konstruktor](#ctor)|Ist überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |norm_3::get_x||
 |norm_3::get_xy||
 |norm_3::get_xyz||
 |norm_3::get_xz||
 |norm_3::get_xzy||
-|norm_3::get_y||
+|norm_3:: get_Y||
 |norm_3::get_yx||
 |norm_3::get_yxz||
 |norm_3::get_yz||
@@ -120,7 +120,7 @@ class norm_3;
 |norm_3::get_z||
 |norm_3::get_zx||
 |norm_3::get_zxy||
-|norm_3::get_zy||
+|norm_3:: get_zy||
 |norm_3::get_zyx||
 |norm_3::ref_b||
 |norm_3::ref_g||
@@ -130,10 +130,10 @@ class norm_3;
 |norm_3::ref_z||
 |norm_3::set_x||
 |norm_3::set_xy||
-|norm_3::set_xyz||
+|norm_3:: set_xyz||
 |norm_3::set_xz||
 |norm_3::set_xzy||
-|norm_3::set_y||
+|norm_3:: set_Y||
 |norm_3::set_yx||
 |norm_3::set_yxz||
 |norm_3::set_yz||
@@ -141,31 +141,31 @@ class norm_3;
 |norm_3::set_z||
 |norm_3::set_zx||
 |norm_3::set_zxy||
-|norm_3::set_zy||
+|norm_3:: set_zy||
 |norm_3::set_zyx||
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|norm_3::operator-||
-|norm_3::operator--||
+|norm_3:: Operator-||
+|norm_3:: Operator--||
 |norm_3::operator*=||
 |norm_3::operator/=||
 |norm_3::operator++||
 |norm_3::operator+=||
 |norm_3::operator=||
-|norm_3::operator-=||
+|norm_3:: Operator-=||
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Size-Konstante](#size)||
+|[Größen Konstante](#size)||
 
-### <a name="public-data-members"></a>Öffentliche Datenmember
+### <a name="public-data-members"></a>Öffentliche Datenelemente
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |norm_3::b||
 |norm_3::bg||
@@ -186,7 +186,7 @@ class norm_3;
 |norm_3::xy||
 |norm_3::xyz||
 |norm_3::xz||
-|norm_3::xzy||
+|norm_3:: XZY||
 |norm_3::y||
 |norm_3::yx||
 |norm_3::yxz||
@@ -195,26 +195,26 @@ class norm_3;
 |norm_3::z||
 |norm_3::zx||
 |norm_3::zxy||
-|norm_3::zy||
+|norm_3:: Zy||
 |norm_3::zyx||
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 `norm_3`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amp_short_vectors.h
+**Header:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Parallelität:: Grafiken
 
-## <a name="ctor"></a> norm_3-Konstruktor
+## <a name="ctor"></a>norm_3-Konstruktor
 
 Standardkonstruktor, initialisiert alle Elemente mit 0.
 
-## <a name="syntax"></a>Syntax
+### <a name="syntax"></a>Syntax
 
-```
+```cpp
 norm_3() restrict(amp,cpu);
 norm_3(
    norm _V0,
@@ -257,31 +257,31 @@ explicit inline norm_3(
 ) restrict(amp,cpu);
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
 *_V0*<br/>
-Der Wert, der 0-Element zu initialisieren.
+Der Wert, mit dem Element 0 initialisiert werden soll.
 
 *_V1*<br/>
-Der Wert 1 Element initialisiert werden.
+Der Wert, mit dem Element 1 initialisiert werden soll.
 
 *_V2*<br/>
-Der Wert 2-Element zu initialisieren.
+Der Wert, mit dem Element 2 initialisiert werden soll.
 
 *_V*<br/>
 Der Wert für die Initialisierung.
 
 *_Other*<br/>
-Das Objekt, das zum Initialisieren verwendet.
+Das-Objekt, das zum Initialisieren von verwendet wird.
 
-## <a name="a-namesize-size-constant"></a><a name="size"> Size-Konstante
+## <a name="a-namesize-size-constant"></a><a name="size"> size-Konstante
 
 ### <a name="syntax"></a>Syntax
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

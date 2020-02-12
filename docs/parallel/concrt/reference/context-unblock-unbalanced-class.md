@@ -8,34 +8,34 @@ f1_keywords:
 helpviewer_keywords:
 - context_unblock_unbalanced class
 ms.assetid: a76066c8-19dd-44fa-959a-6941ec1b0d2d
-ms.openlocfilehash: f4f385cde2a27665afa5eb9869eb52bc42c70111
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 261ec96c1a83fbec423e6dbbfe403c4db53a2962
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296215"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143095"
 ---
-# <a name="contextunblockunbalanced-class"></a>context_unblock_unbalanced-Klasse
+# <a name="context_unblock_unbalanced-class"></a>context_unblock_unbalanced-Klasse
 
 Diese Klasse beschreibt eine Ausnahme, die ausgelöst wird, wenn Aufrufe der `Block`-Methode und der `Unblock`-Methode eines `Context`-Objekts nicht ordnungsgemäß zugeordnet werden.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class context_unblock_unbalanced : public std::exception;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[context_unblock_unbalanced](#ctor)|Überladen. Erstellt ein `context_unblock_unbalanced`-Objekt.|
+|[context_unblock_unbalanced](#ctor)|Ist überladen. Erstellt ein `context_unblock_unbalanced`-Objekt.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Aufrufe von der `Block` und `Unblock` Methoden eine `Context` Objekt muss immer ordnungsgemäß kombiniert werden. Die Concurrency Runtime ermöglicht, die Vorgänge in beliebiger Reihenfolge ausgeführt wird. Z. B. einen Aufruf von `Block` kann durch einen Aufruf folgen `Unblock`, oder umgekehrt. Diese Ausnahme wird ausgelöst, wenn, z. B. zwei Aufrufe der `Unblock` Methode in einer Zeile vorgenommen wurden, auf eine `Context` Objekt, das nicht gesperrt wurde.
+Aufrufe der Methoden `Block` und `Unblock` eines `Context` Objekts müssen immer ordnungsgemäß gekoppelt werden. Der Concurrency Runtime ermöglicht die Ausführung der Vorgänge in einer der beiden Reihenfolge. So kann z. b. ein Aufrufen von `Block` von einem `Unblock`aufgerufen werden oder umgekehrt. Diese Ausnahme wird ausgelöst, wenn beispielsweise zwei Aufrufe der `Unblock`-Methode in einer Zeile für ein `Context` Objekt erfolgen, das nicht blockiert war.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -43,17 +43,17 @@ Aufrufe von der `Block` und `Unblock` Methoden eine `Context` Objekt muss immer 
 
 `context_unblock_unbalanced`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** concrt.h
+**Header:** ConcRT. h
 
 **Namespace:** Parallelität
 
-##  <a name="ctor"></a> context_unblock_unbalanced
+## <a name="ctor"></a>context_unblock_unbalanced
 
 Erstellt ein `context_unblock_unbalanced`-Objekt.
 
-```
+```cpp
 explicit _CRTIMP context_unblock_unbalanced(_In_z_ const char* _Message) throw();
 
 context_unblock_unbalanced() throw();
@@ -64,6 +64,6 @@ context_unblock_unbalanced() throw();
 *_Message*<br/>
 Eine beschreibende Fehlermeldung.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)

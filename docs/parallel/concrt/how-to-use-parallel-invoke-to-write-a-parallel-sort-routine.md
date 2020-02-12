@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Parallele Sortierung Schreiben einer mithilfe von parallel_invoke'
+title: 'Vorgehensweise: Verwenden von parallel_invoke zum Schreiben einer Runtime für paralleles Sortieren'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - task_handle class, example
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-ms.openlocfilehash: 329cf275f283ba7b57276d06e909905c9a900697
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6acac3f6bc82db6e6981f83715c7ee88cfd06fbd
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252924"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141931"
 ---
-# <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Vorgehensweise: Parallele Sortierung Schreiben einer mithilfe von parallel_invoke
+# <a name="how-to-use-parallel_invoke-to-write-a-parallel-sort-routine"></a>Vorgehensweise: Verwenden von parallel_invoke zum Schreiben einer Runtime für paralleles Sortieren
 
-Dieses Dokument beschreibt, wie die [Parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) -Algorithmus die Leistung des bitonischen Sortieralgorithmus verbessert werden kann. Der bitonische Sortieralgorithmus unterteilt die Eingabesequenz rekursiv in kleinere sortierte Partitionen. Der bitonische Sortieralgorithmus kann parallel ausgeführt werden, da alle Partitionsvorgänge von allen anderen Vorgängen unabhängig sind.
+In diesem Dokument wird beschrieben, wie der [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) -Algorithmus verwendet wird, um die Leistung des bitischen Sortieralgorithmus zu verbessern. Der bitonische Sortieralgorithmus unterteilt die Eingabesequenz rekursiv in kleinere sortierte Partitionen. Der bitonische Sortieralgorithmus kann parallel ausgeführt werden, da alle Partitionsvorgänge von allen anderen Vorgängen unabhängig sind.
 
-Obwohl das bitonische sortieren ein Beispiel ist eine *sortiernetzwerk* , die alle Kombinationen von Eingabesequenzen sortiert, die in diesem Beispiel sortiert, deren Länge eine Potenz von zwei sind, Sequenzen.
+Obwohl die bitonische Sortierung ein Beispiel für ein *Sortierungs Netzwerk* ist, das alle Kombinationen von Eingabe Sequenzen sortiert, werden in diesem Beispiel Sequenzen sortiert, deren Längen eine Potenz von zwei ist.
 
 > [!NOTE]
->  Dieses Beispiel verwendet eine parallele Sortierungsroutine zur Veranschaulichung. Sie können auch die integrierten Sortieralgorithmen, der die PPL bereitstellt: [Concurrency:: parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort), [Concurrency:: parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort), und [concurrency::parallel_ Radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort). Weitere Informationen finden Sie unter [parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md).
+> Dieses Beispiel verwendet eine parallele Sortierungsroutine zur Veranschaulichung. Sie können auch die integrierten Sortieralgorithmen verwenden, die die ppl bereitstellt: Parallelität [::p arallel_sort](reference/concurrency-namespace-functions.md#parallel_sort), Parallelität [::p arallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort)und Parallelität [::p arallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort). Weitere Informationen finden Sie unter [parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md).
 
-##  <a name="top"></a> Abschnitte
+## <a name="top"></a> Abschnitte
 
 In diesem Dokument werden die folgenden Aufgaben erläutert:
 
-- [Ausführen der Bitonischen Sortierung](#serial)
+- [Seriale durchführen von bitonischer Sortierung](#serial)
 
-- [Verwenden von Parallel_invoke für Bitonische parallel](#parallel)
+- [Verwenden von parallel_invoke, um eine bitonische Sortierung parallel auszuführen](#parallel)
 
-##  <a name="serial"></a> Ausführen der Bitonischen Sortierung
+## <a name="serial"></a>Seriale durchführen von bitonischer Sortierung
 
 Im folgenden Beispiel wird die serielle Version des bitonischen Sortieralgorithmus dargestellt. Die `bitonic_sort`-Funktion unterteilt die Sequenz in zwei Partitionen, sortiert diese Partitionen in entgegengesetzten Richtungen, und führt dann die Ergebnisse zusammen. Diese Funktion ruft sich selbst zweimal auf, um alle Partitionen rekursiv zu sortieren.
 
@@ -40,13 +40,11 @@ Im folgenden Beispiel wird die serielle Version des bitonischen Sortieralgorithm
 
 [[Nach oben](#top)]
 
-##  <a name="parallel"></a> Verwenden von Parallel_invoke für Bitonische parallel
+## <a name="parallel"></a>Verwenden von parallel_invoke, um eine bitonische Sortierung parallel auszuführen
 
 In diesem Abschnitt wird beschrieben, wie der bitonischen Sortieralgorithmus mit dem `parallel_invoke`-Algorithmus parallel ausgeführt werden kann.
 
-### <a name="procedures"></a>Verfahren
-
-##### <a name="to-perform-the-bitonic-sort-algorithm-in-parallel"></a>So führen Sie den bitonischen Sortieralgorithmus parallel aus
+### <a name="to-perform-the-bitonic-sort-algorithm-in-parallel"></a>So führen Sie den bitonischen Sortieralgorithmus parallel aus
 
 1. Fügen Sie für die Headerdatei ppl.h eine `#include`-Direktive hinzu.
 
@@ -85,15 +83,15 @@ parallel time: 1248
 
 [[Nach oben](#top)]
 
-## <a name="compiling-the-code"></a>Kompilieren des Codes
+### <a name="compiling-the-code"></a>Kompilieren des Codes
 
-Um den Code zu kompilieren, kopieren Sie ihn und fügen Sie ihn in ein Visual Studio-Projekt ein, oder fügen Sie ihn in eine Datei mit dem Namen `parallel-bitonic-sort.cpp` und führen Sie dann den folgenden Befehl in einem Fenster von Visual Studio-Eingabeaufforderung.
+Um den Code zu kompilieren, kopieren Sie ihn, und fügen Sie ihn in ein Visual Studio-Projekt ein, oder fügen Sie ihn in eine Datei mit dem Namen `parallel-bitonic-sort.cpp` ein, und führen Sie dann den folgenden Befehl in einem Visual Studio-Eingabe Aufforderungs Fenster aus.
 
-**/ EHsc CL.exe Parallel-Bitonic-sort.cpp**
+> **cl. exe/EHsc parallel-Bitonic-Sort. cpp**
 
-## <a name="robust-programming"></a>Stabile Programmierung
+## <a name="robust-programming"></a>Robuste Programmierung
 
-Dieses Beispiel verwendet die `parallel_invoke` Algorithmus anstelle von der [Concurrency:: task_group](reference/task-group-class.md) Klasse, da die Lebensdauer der einzelnen Aufgabengruppen nicht über eine Funktion hinausreicht. Es wird empfohlen, wenn möglich `parallel_invoke`-Objekte zu verwenden, da diese im Vergleich zu `task group`-Objekten einen geringeren Ausführungsaufwand erfordern, sodass Sie einen leistungsfähigeren Code schreiben können.
+In diesem Beispiel wird der `parallel_invoke` Algorithmus anstelle der Klasse " [parallelcurrency:: task_group](reference/task-group-class.md) " verwendet, da die Lebensdauer der einzelnen Aufgaben Gruppen nicht über eine Funktion hinausgeht. Es wird empfohlen, wenn möglich `parallel_invoke`-Objekte zu verwenden, da diese im Vergleich zu `task group`-Objekten einen geringeren Ausführungsaufwand erfordern, sodass Sie einen leistungsfähigeren Code schreiben können.
 
 Die parallelen Versionen einiger Algorithmen erzielen nur eine bessere Leistung, wenn es genügend Arbeit gibt. So ruft beispielsweise die `parallel_bitonic_merge`-Funktion die serielle Version `bitonic_merge` auf, wenn in der Sequenz 500 oder weniger Elemente vorhanden sind. Sie können die allgemeine Vorgehensweise bei der Sortierung auch an dem voraussichtlichen Arbeitsaufwand ausrichten. Beispielsweise ist es möglicherweise effizienter, die serielle Version des QuickSort-Algorithmus zu verwenden, wenn das Array weniger als 500 Elemente enthält, wie im folgenden Beispiel gezeigt:
 
@@ -101,7 +99,7 @@ Die parallelen Versionen einiger Algorithmen erzielen nur eine bessere Leistung,
 
 Analog zu allen anderen parallelen Algorithmen wird empfohlen, nach Bedarf Profile und Anpassungen für den Code bereitzustellen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[Aufgabenparallelität](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
+[Aufgaben Parallelität](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [Parallel_invoke-Funktion](reference/concurrency-namespace-functions.md#parallel_invoke)

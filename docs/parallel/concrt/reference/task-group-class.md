@@ -7,91 +7,91 @@ f1_keywords:
 - PPL/concurrency::task_group::task_group
 helpviewer_keywords:
 - task_group class
-ms.openlocfilehash: 545b368b3042da74a42db5a6ea30e97054d5fd03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60c147f38ddc3936f47aea0cfd1ab1548b382441
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180179"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142563"
 ---
-# <a name="taskgroup-class"></a>task_group-Klasse
+# <a name="task_group-class"></a>task_group-Klasse
 
 Die `task_group`-Klasse stellt eine Auflistung der parallelen Arbeit dar, auf die gewartet oder die abgebrochen werden kann.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class task_group;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[task_group](#ctor)|Überladen. Erstellt ein neues `task_group`-Objekt.|
-|[~ Task_group-Destruktor](#dtor)|Zerstört ein `task_group`-Objekt. Es wird erwartet, rufen Sie entweder die `wait` oder `run_and_wait` Methode für das Objekt vor der Destruktor ausgeführt, es sei denn, der Destruktor als Ergebnis der stapelentladung aufgrund einer Ausnahme ausgeführt wird.|
+|[task_group](#ctor)|Ist überladen. Erstellt ein neues `task_group`-Objekt.|
+|[~ Task_group-Dekonstruktor](#dtor)|Zerstört ein `task_group` -Objekt. Es wird erwartet, dass Sie die `wait`-oder `run_and_wait`-Methode für das-Objekt vor dem Ausführen des Dekonstruktors aufruft, es sei denn, der Dekonstruktor wird aufgrund einer Ausnahme als Ergebnis der Stapel Auflösung ausgeführt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[cancel](#cancel)|Macht die Teilstruktur des Arbeit Rooting manipuliert wurde, klicken Sie auf diese Aufgabengruppe abbrechen versucht. Jede Aufgabe, die für die Aufgabengruppe geplant werden transitiv abgebrochen, wenn möglich.|
-|[is_canceling](#is_canceling)|Informiert den Aufrufer, und zwar unabhängig davon, ob die Aufgabengruppe derzeit sich mitten in der ein Abbruch ist. Dies bedeutet nicht unbedingt, die die `cancel` Methode wurde aufgerufen, auf die `task_group` Objekt (auch wenn diese Methode zurückgibt, das z. B. sicherlich qualifiziert ist `true`). Es kann der Fall sein, die die `task_group` Objekt Inline ausführt und eine Aufgabengruppe weiter oben in der Arbeitsstruktur wurde abgebrochen. In Fällen, z. B. diesen, in denen die Laufzeit voraus, die dies Abbruch durchlaufen wird bestimmen kann `task_group` Objekt `true` wird ebenfalls zurückgegeben werden.|
-|[run](#run)|Überladen. Plant eine Aufgabe für die `task_group` Objekt. Wenn eine `task_handle` Objekt wird als Parameter übergeben `run`, der Aufrufer ist verantwortlich für die Verwaltung der Lebensdauer der `task_handle` Objekt. Führen Sie die Version der Methode, die einen Verweis auf ein Funktionsobjekt akzeptiert, wie ein Parameter Heapzuordnung in der Laufzeit enthält, der möglicherweise nicht so gut wie mit der Version, die akzeptiert einen Verweis auf eine `task_handle` Objekt. Die Version, die den Parameter akzeptiert `_Placement` bewirkt, dass der Task Blockcontainer ausführen an der Position, die durch diesen Parameter angegeben werden.|
-|[run_and_wait](#run_and_wait)|Überladen. Plant eine Aufgabe Inline im aufrufenden Kontext ausgeführt werden, mit der Hilfe von der `task_group` -Objekt für die vollständige Abbruch-Unterstützung. Die Funktion dann wartet, bis die gesamte Arbeit der `task_group` Objekt wurde entweder abgeschlossen oder abgebrochen wurde. Wenn eine `task_handle` Objekt wird als Parameter übergeben `run_and_wait`, der Aufrufer ist verantwortlich für die Verwaltung der Lebensdauer der `task_handle` Objekt.|
-|[wait](#wait)|Wartet, bis die gesamte Arbeit der `task_group` Objekt wurde entweder abgeschlossen oder abgebrochen wurde.|
+|[cancel](#cancel)|Versucht, die Unterstruktur der Arbeit abzubrechen, die an dieser Aufgaben Gruppe verankert ist. Alle Aufgaben, die für die Aufgaben Gruppe geplant werden, werden, wenn möglich, vorübergehend abgebrochen.|
+|[is_canceling](#is_canceling)|Informiert den Aufrufer darüber, ob die Aufgaben Gruppe derzeit in der Mitte eines Abbruchs liegt. Dies weist nicht unbedingt darauf hin, dass die `cancel`-Methode für das `task_group` Objekt aufgerufen wurde (obwohl diese Methode sicherlich für die Rückgabe von `true`qualifiziert ist). Dies kann der Fall sein, wenn das `task_group` Objekt Inline ausgeführt wird und eine Aufgaben Gruppe weiter oben in der Arbeitsstruktur abgebrochen wurde. In Fällen, in denen die Common Language Runtime feststellen kann, dass der Abbruch durch dieses `task_group` Objekt fließt, werden `true` ebenfalls zurückgegeben.|
+|[run](#run)|Ist überladen. Plant eine Aufgabe für das `task_group` Objekt. Wenn ein `task_handle` Objekt als Parameter an `run`übergeben wird, ist der Aufrufer für die Verwaltung der Lebensdauer des `task_handle` Objekts verantwortlich. Die Version der-Methode, die einen Verweis auf ein Funktions Objekt als Parameter annimmt, umfasst die Heap Zuordnung innerhalb der Laufzeit, die weniger gut ausgeführt werden kann als die Verwendung der-Version, die einen Verweis auf ein `task_handle`-Objekt annimmt. Die Version, die den-Parameter annimmt, `_Placement` bewirkt, dass die Aufgabe an der durch den-Parameter angegebenen Position vorangeht.|
+|[run_and_wait](#run_and_wait)|Ist überladen. Plant, dass eine Aufgabe Inline im aufrufenden Kontext ausgeführt wird, wobei die Unterstützung des `task_group` Objekts für vollständige Abbruch Unterstützung unterstützt wird. Die Funktion wartet dann, bis alle Aufgaben am `task_group` Objekt entweder abgeschlossen oder abgebrochen wurden. Wenn ein `task_handle` Objekt als Parameter an `run_and_wait`übergeben wird, ist der Aufrufer für die Verwaltung der Lebensdauer des `task_handle` Objekts verantwortlich.|
+|[Warte](#wait)|Wartet, bis alle Arbeiten am `task_group` Objekt entweder abgeschlossen oder abgebrochen wurden.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Im Gegensatz zu den stark eingeschränkten `structured_task_group` -Klasse, die `task_group` Klasse ist wesentlich allgemeineren Konstrukt. Es verfügt über keine der beschriebenen Einschränkungen [Structured_task_group](structured-task-group-class.md). `task_group` Objekte können sicher threadübergreifend verwendet und in Freiform-Methoden verwendet werden. Den Nachteil, dass die `task_group` Konstrukt ist, die nicht ausgeführt werden kann, sowie die `structured_task_group` für Aufgaben, die wenig Arbeit führen zu erstellen.
+Anders als bei der stark eingeschränkten `structured_task_group`-Klasse ist die `task_group`-Klasse weitaus allgemeineres Konstrukt. Sie verfügt nicht über die Einschränkungen, die durch [structured_task_group](structured-task-group-class.md)beschrieben werden. `task_group` Objekte können problemlos Thread übergreifend verwendet und in frei Form Weise verwendet werden. Der Nachteil des `task_group`-Konstrukts besteht darin, dass es möglicherweise nicht ebenso wie das `structured_task_group` Konstrukt für Aufgaben, die eine kleine Menge an Arbeit ausführen, nicht ausgeführt werden kann.
 
-Weitere Informationen finden Sie unter [Aufgabenparallelität](../task-parallelism-concurrency-runtime.md).
+Weitere Informationen finden Sie unter [Aufgaben Parallelität](../task-parallelism-concurrency-runtime.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 `task_group`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** ppl.h
+**Header:** ppl. h
 
 **Namespace:** Parallelität
 
-##  <a name="cancel"></a> Abbrechen
+## <a name="cancel"></a>Abbrechen
 
-Macht die Teilstruktur des Arbeit Rooting manipuliert wurde, klicken Sie auf diese Aufgabengruppe abbrechen versucht. Jede Aufgabe, die für die Aufgabengruppe geplant werden transitiv abgebrochen, wenn möglich.
+Versucht, die Unterstruktur der Arbeit abzubrechen, die an dieser Aufgaben Gruppe verankert ist. Alle Aufgaben, die für die Aufgaben Gruppe geplant werden, werden, wenn möglich, vorübergehend abgebrochen.
 
-```
+```cpp
 void cancel();
 ```
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Weitere Informationen finden Sie unter [Abbruch](../cancellation-in-the-ppl.md).
 
-##  <a name="is_canceling"></a> is_canceling
+## <a name="is_canceling"></a>is_canceling
 
-Informiert den Aufrufer, und zwar unabhängig davon, ob die Aufgabengruppe derzeit sich mitten in der ein Abbruch ist. Dies bedeutet nicht unbedingt, die die `cancel` Methode wurde aufgerufen, auf die `task_group` Objekt (auch wenn diese Methode zurückgibt, das z. B. sicherlich qualifiziert ist `true`). Es kann der Fall sein, die die `task_group` Objekt Inline ausführt und eine Aufgabengruppe weiter oben in der Arbeitsstruktur wurde abgebrochen. In Fällen, z. B. diesen, in denen die Laufzeit voraus, die dies Abbruch durchlaufen wird bestimmen kann `task_group` Objekt `true` wird ebenfalls zurückgegeben werden.
+Informiert den Aufrufer darüber, ob die Aufgaben Gruppe derzeit in der Mitte eines Abbruchs liegt. Dies weist nicht unbedingt darauf hin, dass die `cancel`-Methode für das `task_group` Objekt aufgerufen wurde (obwohl diese Methode sicherlich für die Rückgabe von `true`qualifiziert ist). Dies kann der Fall sein, wenn das `task_group` Objekt Inline ausgeführt wird und eine Aufgaben Gruppe weiter oben in der Arbeitsstruktur abgebrochen wurde. In Fällen, in denen die Common Language Runtime feststellen kann, dass der Abbruch durch dieses `task_group` Objekt fließt, werden `true` ebenfalls zurückgegeben.
 
-```
+```cpp
 bool is_canceling();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Angabe, ob die `task_group` Objekt in ein Abbruch ist (oder gewährleistet ist in Kürze).
+Ein Hinweis darauf, ob sich das `task_group` Objekt mitten in einem Abbruch befindet (oder sicher ist, dass es in Kürze ist).
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Weitere Informationen finden Sie unter [Abbruch](../cancellation-in-the-ppl.md).
 
-##  <a name="run"></a> Führen Sie
+## <a name="run"></a>Lauf
 
-Plant eine Aufgabe für die `task_group` Objekt. Wenn eine `task_handle` Objekt wird als Parameter übergeben `run`, der Aufrufer ist verantwortlich für die Verwaltung der Lebensdauer der `task_handle` Objekt. Führen Sie die Version der Methode, die einen Verweis auf ein Funktionsobjekt akzeptiert, wie ein Parameter Heapzuordnung in der Laufzeit enthält, der möglicherweise nicht so gut wie mit der Version, die akzeptiert einen Verweis auf eine `task_handle` Objekt. Die Version, die den Parameter akzeptiert `_Placement` bewirkt, dass der Task Blockcontainer ausführen an der Position, die durch diesen Parameter angegeben werden.
+Plant eine Aufgabe für das `task_group` Objekt. Wenn ein `task_handle` Objekt als Parameter an `run`übergeben wird, ist der Aufrufer für die Verwaltung der Lebensdauer des `task_handle` Objekts verantwortlich. Die Version der-Methode, die einen Verweis auf ein Funktions Objekt als Parameter annimmt, umfasst die Heap Zuordnung innerhalb der Laufzeit, die weniger gut ausgeführt werden kann als die Verwendung der-Version, die einen Verweis auf ein `task_handle`-Objekt annimmt. Die Version, die den-Parameter annimmt, `_Placement` bewirkt, dass die Aufgabe an der durch den-Parameter angegebenen Position vorangeht.
 
-```
+```cpp
 template<
    typename _Function
 >
@@ -126,30 +126,30 @@ void run(
 ### <a name="parameters"></a>Parameter
 
 *_Function*<br/>
-Der Typ des Funktionsobjekts, das aufgerufen wird, um den Text der Aufgabenhandle auszuführen.
+Der Typ des Funktions Objekts, das aufgerufen wird, um den Text des Task Handles auszuführen.
 
 *_Func*<br/>
-Eine Funktion, die aufgerufen wird, um den Text der Aufgabe aufzurufen. Dies ist möglicherweise ein Lambda-Ausdruck oder ein anderes Objekt, das eine Version von den Funktionsaufrufoperator mit der Signatur unterstützt `void operator()()`.
+Eine Funktion, die aufgerufen wird, um den Textkörper der Aufgabe aufzurufen. Hierbei kann es sich um einen Lambda-Ausdruck oder ein anderes Objekt handeln, das eine Version des Funktions aufrufoperators mit der Signatur `void operator()()`unterstützt.
 
 *_Placement*<br/>
-Ein Verweis auf den Speicherort, in denen die Aufgabe, durch dargestellt, die `_Func` Parameter sollte ausgeführt werden.
+Ein Verweis auf den Speicherort, an dem die durch den `_Func`-Parameter dargestellte Aufgabe ausgeführt werden soll.
 
 *_Task_handle*<br/>
-Ein Handle für die Arbeit geplant. Beachten Sie, dass der Aufrufer die Verantwortung für die Lebensdauer dieses Objekts verfügt. Die Laufzeit ist so lange Sie erwartet, bis entweder die Gültigkeitsdauer der `wait` oder `run_and_wait` für diese Methode aufgerufen wurde `task_group` Objekt.
+Ein Handle für die geplante Arbeit. Beachten Sie, dass der Aufrufer für die Lebensdauer dieses Objekts zuständig ist. Die Laufzeit erwartet, dass Sie aktiv bleibt, bis entweder die `wait` oder `run_and_wait` Methode für dieses `task_group` Objekt aufgerufen wurde.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Die Runtime plant, die bereitgestellte Arbeitsfunktion zu einem späteren Zeitpunkt ausgeführt werden kann, nachdem die aufrufende Funktion zurückgegeben wird. Diese Methode verwendet eine [Task_handle](task-handle-class.md) Objekt, das eine Kopie der bereitgestellte Arbeitsfunktion enthalten. Aus diesem Grund werden alle Zustandsänderungen, die in ein Funktionsobjekt auftreten, die Sie für diese Methode übergeben, in Ihrer Kopie des Funktionsobjekts nicht angezeigt. Darüber hinaus stellen Sie sicher, dass die Lebensdauer von Objekten, die Sie, Zeiger oder Verweis auf die Arbeitsfunktion übergeben gültig bleiben, bis die Arbeitsfunktion zurückgegeben.
+Die Laufzeit plant, dass die bereitgestellte Arbeitsfunktion zu einem späteren Zeitpunkt ausgeführt wird. Dies kann nach der Rückgabe der aufrufenden Funktion erfolgen. Diese Methode verwendet ein [task_handle](task-handle-class.md) Objekt, um eine Kopie der bereitgestellten Arbeitsfunktion zu speichern. Daher werden alle Zustandsänderungen, die in einem Funktions Objekt auftreten, das Sie an diese Methode übergeben, nicht in Ihrer Kopie des Funktions Objekts angezeigt. Stellen Sie außerdem sicher, dass die Lebensdauer von Objekten, die Sie als Zeiger oder als Verweis an die Arbeitsfunktion übergeben, gültig bleibt, bis die Arbeitsfunktion zurückgibt.
 
-Wenn die `task_group` Destructs als Ergebnis der stapelentladung von einer Ausnahme, Sie müssen nicht garantieren, dass ein Aufruf entweder wurde die `wait` oder `run_and_wait` Methode. In diesem Fall der Destruktor wird entsprechend abgebrochen und warten, bis die Aufgabe, dargestellt durch die `_Task_handle` Parameter ausführen.
+Wenn die `task_group` als Ergebnis der Stapel Auflösung von einer Ausnahme zerstört wird, müssen Sie nicht garantieren, dass ein-oder `run_and_wait`-Methode `wait` aufgerufen wurde. In diesem Fall wird der Dekonstruktor entsprechend abbrechen und darauf warten, dass die durch den `_Task_handle`-Parameter dargestellte Aufgabe beendet wird.
 
-Löst die Methode eine [Invalid_multiple_scheduling](invalid-multiple-scheduling-class.md) -Ausnahme aus, wenn der Task behandeln Angabe durch die `_Task_handle` Parameter wurde bereits einem Aufgabengruppenobjekt über geplant wurde die `run` Methode und es wurde keine dazwischen liegenden rufen Sie entweder die `wait` oder `run_and_wait` Methode für diese Aufgabengruppe.
+Die-Methode löst eine [Invalid_multiple_scheduling](invalid-multiple-scheduling-class.md) Ausnahme aus, wenn das vom `_Task_handle`-Parameter angegebene Aufgaben handle bereits über die `run`-Methode für ein Aufgaben Gruppen Objekt geplant wurde und es keinen zwischenzeitlichen Aufrufen der `wait`-oder `run_and_wait`-Methode für diese Aufgaben Gruppe gab.
 
-##  <a name="run_and_wait"></a> run_and_wait
+## <a name="run_and_wait"></a>run_and_wait
 
-Plant eine Aufgabe Inline im aufrufenden Kontext ausgeführt werden, mit der Hilfe von der `task_group` -Objekt für die vollständige Abbruch-Unterstützung. Die Funktion dann wartet, bis die gesamte Arbeit der `task_group` Objekt wurde entweder abgeschlossen oder abgebrochen wurde. Wenn eine `task_handle` Objekt wird als Parameter übergeben `run_and_wait`, der Aufrufer ist verantwortlich für die Verwaltung der Lebensdauer der `task_handle` Objekt.
+Plant, dass eine Aufgabe Inline im aufrufenden Kontext ausgeführt wird, wobei die Unterstützung des `task_group` Objekts für vollständige Abbruch Unterstützung unterstützt wird. Die Funktion wartet dann, bis alle Aufgaben am `task_group` Objekt entweder abgeschlossen oder abgebrochen wurden. Wenn ein `task_handle` Objekt als Parameter an `run_and_wait`übergeben wird, ist der Aufrufer für die Verwaltung der Lebensdauer des `task_handle` Objekts verantwortlich.
 
-```
+```cpp
 template<
    class _Function
 >
@@ -168,33 +168,33 @@ task_group_status run_and_wait(
 ### <a name="parameters"></a>Parameter
 
 *_Function*<br/>
-Der Typ des Funktionsobjekts, das aufgerufen wird, um den Text der Aufgabe auszuführen.
+Der Typ des Funktions Objekts, das aufgerufen wird, um den Hauptteil der Aufgabe auszuführen.
 
 *_Task_handle*<br/>
-Ein Handle für die Aufgabe, die Inline im aufrufenden Kontext ausgeführt wird. Beachten Sie, dass der Aufrufer die Verantwortung für die Lebensdauer dieses Objekts verfügt. Die Laufzeit ist so lange Sie erwartet, bis die Gültigkeitsdauer der `run_and_wait` -Methode die Ausführung beendet.
+Ein Handle für die Aufgabe, die Inline im aufrufenden Kontext ausgeführt wird. Beachten Sie, dass der Aufrufer für die Lebensdauer dieses Objekts zuständig ist. Die Laufzeit wird fortgesetzt, bis die Ausführung der `run_and_wait`-Methode abgeschlossen ist.
 
 *_Func*<br/>
-Eine Funktion, die aufgerufen wird, um den Text der Arbeit aufzurufen. Dies ist möglicherweise ein Lambda-Ausdruck oder ein anderes Objekt, das eine Version von den Funktionsaufrufoperator mit der Signatur unterstützt `void operator()()`.
+Eine Funktion, die aufgerufen wird, um den Hauptteil der Arbeit aufzurufen. Hierbei kann es sich um einen Lambda-Ausdruck oder ein anderes Objekt handeln, das eine Version des Funktions aufrufoperators mit der Signatur `void operator()()`unterstützt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Anzeichen dafür, ob der Wartevorgang erfüllt wurde oder die Aufgabengruppe wurde, entweder eine explizite Abbruchvorgang oder eine Ausnahme ausgelöst wird, von einer der Tasks abgebrochen. Weitere Informationen finden Sie unter [Task_group_status](concurrency-namespace-enums.md#task_group_status).
+Gibt an, ob der Warte Vorgang durch einen expliziten Abbruch Vorgang oder durch Auslösen einer Ausnahme von einer seiner Aufgaben abgebrochen wurde oder ob die Aufgaben Gruppe abgebrochen wurde. Weitere Informationen finden Sie unter [Task_group_status](concurrency-namespace-enums.md#task_group_status).
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Beachten Sie, dass eine oder mehrere dieser geplante Aufgaben `task_group` Objekt kann Inline im aufrufenden Kontext ausgeführt.
+Beachten Sie, dass mindestens eine der Aufgaben, die für dieses `task_group` Objekt geplant sind, im aufrufenden Kontext Inline ausgeführt werden kann.
 
-Wenn eine oder mehrere dieser geplante Aufgaben `task_group` Objekt löst eine Ausnahme aus. die Laufzeit wird, wählen Sie eine solche Ausnahme seiner Wahl und aus dem Aufruf zum Weitergeben der `run_and_wait` Methode.
+Wenn mindestens eine der Aufgaben, die für dieses `task_group` Objekt geplant sind, eine Ausnahme auslöst, wählt die Common Language Runtime eine Ausnahme von Ihrer Wahl aus und gibt Sie aus dem Aufrufen der `run_and_wait`-Methode weiter.
 
-Bei der Rückgabe aus der `run_and_wait` Methode für eine `task_group` Objekt ist, wird die Laufzeit setzt das Objekt zurück, um einen fehlerfreien Zustand, in denen es wiederverwendet werden kann. Dies schließt die Groß-/Kleinschreibung, in denen die `task_group` Objekt wurde abgebrochen.
+Bei der Rückgabe von der `run_and_wait`-Methode für ein `task_group`-Objekt setzt die Laufzeit das Objekt auf einen fehlerfreien Zustand zurück, in dem es wieder verwendet werden kann. Dies gilt auch für den Fall, dass das `task_group` Objekt abgebrochen wurde.
 
-In den Pfad ohne Ausnahmen der Ausführung haben Sie eine zwingende Vorgabe entweder diese Methode aufrufen oder die `wait` -Methode auf, bevor der Destruktor von der `task_group` ausgeführt wird.
+Im nicht außergewöhnlichen Ausführungs Pfad haben Sie die Möglichkeit, entweder diese Methode oder die `wait` Methode aufzurufen, bevor der Dekonstruktor des `task_group` ausgeführt wird.
 
-##  <a name="ctor"></a> task_group
+## <a name="ctor"></a>task_group
 
 Erstellt ein neues `task_group`-Objekt.
 
-```
+```cpp
 task_group();
 
 task_group(
@@ -205,47 +205,47 @@ task_group(
 ### <a name="parameters"></a>Parameter
 
 *_CancellationToken*<br/>
-Ein Abbruchtoken, das diese Aufgabengruppe zugeordnet werden soll. Wenn das Token abgebrochen wird, wird die Aufgabengruppe abgebrochen werden.
+Ein Abbruch Token, das dieser Aufgaben Gruppe zugeordnet werden soll. Die Aufgaben Gruppe wird abgebrochen, wenn das Token abgebrochen wird.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Der Konstruktor, die ein Abbruchtoken akzeptiert erstellt eine `task_group` wird, die abgebrochen werden, wenn die Quelle mit dem Token verknüpften abgebrochen wird. Als explizites Abbruchtoken bereitstellen, werden auch diese Aufgabengruppe aus der Einbeziehung in einen impliziten Abbruch von einer übergeordneten Gruppe mit einem anderen Token "oder" kein Token isoliert.
+Der Konstruktor, der ein Abbruch Token annimmt, erstellt eine `task_group`, die abgebrochen wird, wenn die dem Token zugeordnete Quelle abgebrochen wird. Das Bereitstellen eines expliziten Abbruch Tokens isoliert diese Aufgaben Gruppe auch von der Teilnahme an einem impliziten Abbruch von einer übergeordneten Gruppe mit einem anderen Token oder ohne Token.
 
-##  <a name="dtor"></a> ~task_group
+## <a name="dtor"></a>~ Task_group
 
-Zerstört ein `task_group`-Objekt. Es wird erwartet, rufen Sie entweder die `wait` oder `run_and_wait` Methode für das Objekt vor der Destruktor ausgeführt, es sei denn, der Destruktor als Ergebnis der stapelentladung aufgrund einer Ausnahme ausgeführt wird.
+Zerstört ein `task_group` -Objekt. Es wird erwartet, dass Sie die `wait`-oder `run_and_wait`-Methode für das-Objekt vor dem Ausführen des Dekonstruktors aufruft, es sei denn, der Dekonstruktor wird aufgrund einer Ausnahme als Ergebnis der Stapel Auflösung ausgeführt.
 
-```
+```cpp
 ~task_group();
 ```
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Wenn der Destruktor ausgeführt wird, als Ergebnis der normalen programmausführung (z. B. keine stapelentladung aufgrund einer Ausnahme) und weder der `wait` noch `run_and_wait` Methoden aufgerufen wurden, der Destruktor Auslösen einer [Missing_wait](missing-wait-class.md) Diese Ausnahme.
+Wenn der Dekonstruktor als Ergebnis der normalen Ausführung ausgeführt wird (z. b. aufgrund einer Ausnahme keine Stapel entruppe) und weder die `wait` noch `run_and_wait` Methoden aufgerufen wurden, kann der Dekonstruktor eine [Missing_wait](missing-wait-class.md) Ausnahme auslösen.
 
-##  <a name="wait"></a> Warte
+## <a name="wait"></a>Warte
 
-Wartet, bis die gesamte Arbeit der `task_group` Objekt wurde entweder abgeschlossen oder abgebrochen wurde.
+Wartet, bis alle Arbeiten am `task_group` Objekt entweder abgeschlossen oder abgebrochen wurden.
 
-```
+```cpp
 task_group_status wait();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Anzeichen dafür, ob der Wartevorgang erfüllt wurde oder die Aufgabengruppe wurde, entweder eine explizite Abbruchvorgang oder eine Ausnahme ausgelöst wird, von einer der Tasks abgebrochen. Weitere Informationen finden Sie unter [Task_group_status](concurrency-namespace-enums.md#task_group_status).
+Gibt an, ob der Warte Vorgang durch einen expliziten Abbruch Vorgang oder durch Auslösen einer Ausnahme von einer seiner Aufgaben abgebrochen wurde oder ob die Aufgaben Gruppe abgebrochen wurde. Weitere Informationen finden Sie unter [Task_group_status](concurrency-namespace-enums.md#task_group_status).
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Beachten Sie, dass eine oder mehrere dieser geplante Aufgaben `task_group` Objekt kann Inline im aufrufenden Kontext ausgeführt.
+Beachten Sie, dass mindestens eine der Aufgaben, die für dieses `task_group` Objekt geplant sind, im aufrufenden Kontext Inline ausgeführt werden kann.
 
-Wenn eine oder mehrere dieser geplante Aufgaben `task_group` Objekt löst eine Ausnahme aus. die Laufzeit wird, wählen Sie eine solche Ausnahme seiner Wahl und aus dem Aufruf zum Weitergeben der `wait` Methode.
+Wenn mindestens eine der Aufgaben, die für dieses `task_group` Objekt geplant sind, eine Ausnahme auslöst, wählt die Common Language Runtime eine Ausnahme von Ihrer Wahl aus und gibt Sie aus dem Aufrufen der `wait`-Methode weiter.
 
-Aufrufen von `wait` auf eine `task_group` Objekt setzt es zurück, in einen fehlerfreien Zustand, in denen es wiederverwendet werden kann. Dies schließt die Groß-/Kleinschreibung, in denen die `task_group` Objekt wurde abgebrochen.
+Wenn Sie `wait` für ein `task_group`-Objekt aufrufen, wird es auf einen sauberen Zustand zurückgesetzt, in dem es wieder verwendet werden kann. Dies gilt auch für den Fall, dass das `task_group` Objekt abgebrochen wurde.
 
-In den Pfad ohne Ausnahmen der Ausführung haben Sie eine zwingende Vorgabe entweder diese Methode aufrufen oder die `run_and_wait` -Methode auf, bevor der Destruktor von der `task_group` ausgeführt wird.
+Im nicht außergewöhnlichen Ausführungs Pfad haben Sie die Möglichkeit, entweder diese Methode oder die `run_and_wait` Methode aufzurufen, bevor der Dekonstruktor des `task_group` ausgeführt wird.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [structured_task_group-Klasse](structured-task-group-class.md)<br/>

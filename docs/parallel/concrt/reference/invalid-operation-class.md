@@ -8,32 +8,32 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_operation class
 ms.assetid: 26ba07dc-fcdf-44cb-b748-a31d35205b52
-ms.openlocfilehash: 8b971a12ff83753546cfea7b90288d1bc43400c0
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e17d530569d16ba0084a58bf0be00d4a8423b7f6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341037"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77140873"
 ---
-# <a name="invalidoperation-class"></a>invalid_operation-Klasse
+# <a name="invalid_operation-class"></a>invalid_operation-Klasse
 
 Diese Klasse beschreibt eine Ausnahme, die bei Ausführen einer ungültigen Operation ausgelöst wird, die nicht genauer von einem anderen von der Concurrency Runtime ausgelösten Ausnahmetyp beschrieben wird.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class invalid_operation : public std::exception;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[invalid_operation](#ctor)|Überladen. Erstellt ein `invalid_operation`-Objekt.|
+|[invalid_operation](#ctor)|Ist überladen. Erstellt ein `invalid_operation`-Objekt.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Die verschiedenen Methoden, die diese Ausnahme auslösen, dokumentieren im Allgemeinen die Umstände, unter denen sie diese auslösen.
 
@@ -43,17 +43,17 @@ Die verschiedenen Methoden, die diese Ausnahme auslösen, dokumentieren im Allge
 
 `invalid_operation`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** concrt.h
+**Header:** ConcRT. h
 
 **Namespace:** Parallelität
 
-##  <a name="ctor"></a> invalid_operation
+## <a name="ctor"></a>invalid_operation
 
 Erstellt ein `invalid_operation`-Objekt.
 
-```
+```cpp
 explicit _CRTIMP invalid_operation(_In_z_ const char* _Message) throw();
 
 invalid_operation() throw();
@@ -64,6 +64,6 @@ invalid_operation() throw();
 *_Message*<br/>
 Eine beschreibende Fehlermeldung.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)
