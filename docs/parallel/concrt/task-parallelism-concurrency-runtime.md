@@ -8,67 +8,67 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-ms.openlocfilehash: c9f18dfd1498538ce3700fd73a27ce6f6088ee42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 634b4b584e997007a7de72e23c9b16e937a694ae
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180042"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143323"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Aufgabenparallelität (Concurrency Runtime)
 
-In der Concurrency Runtime eine *Aufgabe* ist eine Arbeitseinheit, die einen bestimmten Auftrag ausführt und normalerweise parallel mit anderen Aufgaben ausgeführt wird. Eine Aufgabe in weitere, differenziertere Aufgaben, die unterteilt werden zerlegt werden kann. eine *Aufgabengruppe*.
+Im Concurrency Runtime handelt es sich bei einer *Aufgabe* um eine Arbeitseinheit, die einen bestimmten Auftrag ausführt und in der Regel parallel mit anderen Aufgaben ausgeführt wird. Eine Aufgabe kann in zusätzliche, differenziertere Aufgaben zerlegt werden, die in einer *Aufgaben Gruppe*organisiert sind.
 
-Sie verwenden Aufgaben, wenn Sie asynchronen Code schreiben und ein Vorgang erst ausgeführt werden soll, nachdem der asynchrone Vorgang abgeschlossen ist. Sie können z. B. eine Aufgabe verwenden, asynchron aus einer Datei gelesen und anschließend eine andere Aufgabe – eine *Fortsetzungsaufgabe*, die weiter unten in diesem Dokument erläutert wird – zum Verarbeiten der Daten, nachdem er wieder verfügbar ist. Umgekehrt können Sie Aufgabengruppen verwenden, um parallele Arbeitsvorgänge in kleinere Teile zu zerlegen. Nehmen Sie zum Beispiel einmal an, dass Sie über einen rekursiven Algorithmus verfügen, der die verbleibende Arbeit in zwei Partitionen unterteilt. Sie können Aufgabengruppen verwenden, um diese Partitionen gleichzeitig auszuführen, und dann warten, bis die aufgeteilte Arbeit abgeschlossen ist.
+Sie verwenden Aufgaben, wenn Sie asynchronen Code schreiben und ein Vorgang erst ausgeführt werden soll, nachdem der asynchrone Vorgang abgeschlossen ist. Beispielsweise können Sie eine Aufgabe verwenden, um asynchron aus einer Datei zu lesen und dann eine andere Aufgabe zu verwenden – eine *Fortsetzungs Aufgabe*, die weiter unten in diesem Dokument erläutert wird –, um die Daten zu verarbeiten, nachdem Sie verfügbar ist. Umgekehrt können Sie Aufgabengruppen verwenden, um parallele Arbeitsvorgänge in kleinere Teile zu zerlegen. Nehmen Sie zum Beispiel einmal an, dass Sie über einen rekursiven Algorithmus verfügen, der die verbleibende Arbeit in zwei Partitionen unterteilt. Sie können Aufgabengruppen verwenden, um diese Partitionen gleichzeitig auszuführen, und dann warten, bis die aufgeteilte Arbeit abgeschlossen ist.
 
 > [!TIP]
-> Wenn Sie die gleiche Routine auf jedes Element einer Auflistung gleichzeitig anwenden möchten, verwenden Sie parallele Algorithmen, wie z. B. [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for), statt einer Aufgabe oder Aufgabengruppe. Weitere Informationen zu parallelen Algorithmen finden Sie unter [parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md).
+> Wenn Sie dieselbe Routine parallel auf jedes Element einer Auflistung anwenden möchten, verwenden Sie einen parallelen Algorithmus, z. b. Parallelität [::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for), anstelle einer Aufgabe oder Aufgaben Gruppe. Weitere Informationen zu parallelen Algorithmen finden Sie unter [parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md).
 
-## <a name="key-points"></a>Wesentliche Punkte
+## <a name="key-points"></a>Die wichtigsten Punkte
 
 - Wenn Sie Variablen als Verweis an einen Lambdaausdruck übergeben, müssen Sie sicherstellen, dass die Lebensdauer dieser Variablen bis zum Beenden der Aufgabe erhalten bleibt.
 
-- Verwenden Sie Aufgaben (die [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) Klasse) Wenn Sie asynchronen Code schreiben. Die Aufgabenklasse verwendet den Windows-ThreadPool als zugehörigen Planer und nicht die Concurrency Runtime.
+- Verwenden Sie zum Schreiben von asynchronem Code Tasks (die Klasse "Parallelität [:: Task](../../parallel/concrt/reference/task-class.md) "). Die Aufgabenklasse verwendet den Windows-ThreadPool als zugehörigen Planer und nicht die Concurrency Runtime.
 
-- Aufgabengruppen verwenden (die [Concurrency:: task_group](reference/task-group-class.md) Klasse oder die [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) Algorithmus) Wenn Sie parallelen Arbeitsvorgänge in kleinere Teile zu zerlegen und warten Sie dann diese kleineren möchten Schritte abgeschlossen.
+- Verwenden Sie Aufgaben Gruppen (die [parallelcurrency:: task_group](reference/task-group-class.md) -Klasse oder den Algorithmus "Parallelität [::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) "), wenn Sie parallele Arbeit in kleinere Teile zerlegen möchten, und warten Sie, bis die kleineren Teile fertig sind.
 
-- Verwenden der [Concurrency::task::then](reference/task-class.md#then) Methode, um Fortsetzungen zu erstellen. Ein *Fortsetzung* ist eine Aufgabe, die nach Abschluss einer anderen Aufgabe asynchron ausgeführt wird. Sie können eine beliebige Anzahl an Fortsetzungen verbinden, um eine Kette asynchroner Arbeitsvorgänge zu bilden.
+- Verwenden Sie die " [parallelcurrency:: Task:: Then](reference/task-class.md#then) "-Methode, um Fortsetzungen zu erstellen. Eine *Fortsetzung* ist eine Aufgabe, die asynchron ausgeführt wird, nachdem eine andere Aufgabe abgeschlossen wurde. Sie können eine beliebige Anzahl an Fortsetzungen verbinden, um eine Kette asynchroner Arbeitsvorgänge zu bilden.
 
 - Die Ausführung einer aufgabenbasierten Fortsetzung wird immer für den Zeitpunkt geplant, zu dem die Vorgängeraufgabe abgeschlossen ist, auch wenn die Vorgängeraufgabe abgebrochen wird oder wenn diese eine Ausnahme auslöst.
 
-- Verwendung [Concurrency:: when_all](reference/concurrency-namespace-functions.md#when_all) zum Erstellen einer Aufgabe, die nach Abschluss jedes Mitglied eine Reihe von Aufgaben abgeschlossen ist. Verwendung [Concurrency:: when_any](reference/concurrency-namespace-functions.md#when_any) zum Erstellen einer Aufgabe, die abgeschlossen wird, nachdem ein Mitglied einer Gruppe von Aufgaben abgeschlossen wurde.
+- Verwenden Sie "Parallelität [:: when_all](reference/concurrency-namespace-functions.md#when_all) ", um eine Aufgabe zu erstellen, die abgeschlossen wird, nachdem alle Mitglieder eines Satzes von Aufgaben abgeschlossen wurden. Verwenden Sie "Parallelität [:: when_any](reference/concurrency-namespace-functions.md#when_any) ", um eine Aufgabe zu erstellen, die abgeschlossen wird, nachdem ein Mitglied eines Satzes von Aufgaben abgeschlossen wurde.
 
-- Für Aufgaben und Aufgabengruppen kann der Abbruchmechanismus der Parallel Patterns Library (PPL) verwendet werden. Weitere Informationen finden Sie unter [Abbruch in der PPL](cancellation-in-the-ppl.md).
+- Für Aufgaben und Aufgabengruppen kann der Abbruchmechanismus der Parallel Patterns Library (PPL) verwendet werden. Weitere Informationen finden Sie unter [Abbruch in der ppl](cancellation-in-the-ppl.md).
 
-- Um zu erfahren, wie die Runtime Ausnahmen behandelt, die von Aufgaben und Aufgabengruppen ausgelöst werden, finden Sie unter [Exception Handling](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
+- Informationen dazu, wie die Runtime Ausnahmen behandelt, die von Aufgaben und Aufgaben Gruppen ausgelöst werden, finden Sie unter [Ausnahmebehandlung](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 
 ## <a name="in-this-document"></a>In diesem Dokument
 
 - [Verwenden von Lambda-Ausdrücken](#lambdas)
 
-- [Der Task-Klasse](#task-class)
+- [Die Task-Klasse](#task-class)
 
-- [Fortsetzungsaufgaben](#continuations)
+- [Fortsetzungs Aufgaben](#continuations)
 
-- [Wertbasierte und aufgabenbasierte Fortsetzungen](#value-versus-task)
+- [Wert basierte und aufgabenbasierte Fortsetzungen](#value-versus-task)
 
 - [Verfassen von Aufgaben](#composing-tasks)
 
-    - [Die When_all-Funktion](#when-all)
+    - [Die when_all-Funktion](#when-all)
 
-    - [When_any-Funktion](#when-any)
+    - [Die when_any-Funktion](#when-any)
 
-- [Verzögerte Aufgabenausführung](#delayed-tasks)
+- [Verzögerte Task Ausführung](#delayed-tasks)
 
-- [Aufgabengruppen](#task-groups)
+- [Aufgaben Gruppen](#task-groups)
 
-- [Task_group und structured_task_group im Vergleich](#comparing-groups)
+- [Vergleichen von task_group mit structured_task_group](#comparing-groups)
 
 - [Beispiel](#example)
 
-- [Stabile Programmierung](#robust)
+- [Robuste Programmierung](#robust)
 
-##  <a name="lambdas"></a> Verwenden von Lambda-Ausdrücken
+## <a name="lambdas"></a>Verwenden von Lambda-Ausdrücken
 
 Aufgrund ihrer kompakten Syntax werden Lambda-Ausdrücke häufig zur Definition der Arbeit verwendet, die von Aufgaben und Aufgabengruppen ausgeführt wird. Im Folgenden finden Sie einige Verwendungstipps:
 
@@ -80,25 +80,25 @@ Aufgrund ihrer kompakten Syntax werden Lambda-Ausdrücke häufig zur Definition 
 
 Häufig wird in einer Aufgabe in einer Fortsetzungskette eine Zuweisung zu einer Variablen vorgenommen und in einer anderen Aufgabe diese Variable gelesen. Sie können die Variable nicht als Wert erfassen, da jede Fortsetzungsaufgabe über eine andere Kopie der Variablen verfügen würde. Bei auf dem Stapel zugeordneten Variablen können Sie diese auch nicht als Verweis erfassen, da die Variable möglicherweise nicht mehr gültig ist.
 
-Um dieses Problem zu beheben, verwenden Sie einen intelligenten Zeiger, z. B. [Std:: shared_ptr](../../standard-library/shared-ptr-class.md), um die Variable zu umschließen und den intelligenten Zeiger als Wert übergeben. Auf diese Weise kann eine Zuweisung zum zugrunde liegenden Objekt erfolgen, und es kann aus diesem Objekt gelesen werden. Außerdem ist seine Lebensdauer länger als die der Aufgaben, die es verwenden. Verwenden Sie diese Methode auch, wenn die Variable ein Zeiger oder ein Handle mit Verweiszählung (`^`) für ein Windows-Runtime-Objekt ist. Es folgt ein einfaches Beispiel:
+Um dieses Problem zu beheben, verwenden Sie einen intelligenten Zeiger, wie z. b. " [Std:: shared_ptr](../../standard-library/shared-ptr-class.md)", um die Variable zu umschließen und den intelligenten Zeiger als Wert zu übergeben. Auf diese Weise kann eine Zuweisung zum zugrunde liegenden Objekt erfolgen, und es kann aus diesem Objekt gelesen werden. Außerdem ist seine Lebensdauer länger als die der Aufgaben, die es verwenden. Verwenden Sie diese Methode auch, wenn die Variable ein Zeiger oder ein Handle mit Verweiszählung (`^`) für ein Windows-Runtime-Objekt ist. Es folgt ein einfaches Beispiel:
 
 [!code-cpp[concrt-lambda-task-lifetime#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_1.cpp)]
 
 Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../../cpp/lambda-expressions-in-cpp.md).
 
-##  <a name="task-class"></a> Der Task-Klasse
+## <a name="task-class"></a>Die Task-Klasse
 
-Sie können die [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) Klasse, um Aufgaben in einem Satz abhängiger Vorgänge zu kombinieren. Dieses kompositionsmodell wird durch das Konzept der unterstützt *Fortsetzungen*. Eine Fortsetzung ermöglicht Code ausgeführt wird, wenn der vorangehenden oder *Vorgänger*, Aufgabe abgeschlossen ist. Das Ergebnis der Vorgängeraufgabe wird als Eingabe an eine oder mehrere Fortsetzungsaufgaben übergeben. Wenn eine Vorgängeraufgabe abgeschlossen wird, werden alle Fortsetzungsaufgaben, die darauf warten, für die Ausführung geplant. Jede Fortsetzungsaufgabe erhält eine Kopie des Ergebnisses der Vorgängeraufgabe. Diese Fortsetzungsaufgaben wiederum können auch Vorgängeraufgaben für andere Fortsetzungen sein, sodass sie eine Kette von Aufgaben bilden. Mit Fortsetzungen können Sie Ketten von Aufgaben beliebiger Länge erstellen, die bestimmte Abhängigkeiten untereinander aufweisen. Außerdem kann für eine Aufgabe der Abbruchmechanismus verwendet werden – entweder vor dem Start einer Aufgabe oder in kooperativer Weise, während die Aufgabe ausgeführt wird. Weitere Informationen zu diesem Abbruchmodell finden Sie unter [Abbruch in der PPL](cancellation-in-the-ppl.md).
+Sie können die Klasse " [parallelcurrency:: Task](../../parallel/concrt/reference/task-class.md) " verwenden, um Aufgaben in einen Satz abhängiger Vorgänge zu verfassen. Dieses Kompositions Modell wird durch das Konzept von *Fortsetzungen*unterstützt. Eine Fortsetzung ermöglicht das Ausführen von Code, wenn die vorherige (oder *vorangehende*) Aufgabe abgeschlossen ist. Das Ergebnis der Vorgängeraufgabe wird als Eingabe an eine oder mehrere Fortsetzungsaufgaben übergeben. Wenn eine Vorgängeraufgabe abgeschlossen wird, werden alle Fortsetzungsaufgaben, die darauf warten, für die Ausführung geplant. Jede Fortsetzungsaufgabe erhält eine Kopie des Ergebnisses der Vorgängeraufgabe. Diese Fortsetzungsaufgaben wiederum können auch Vorgängeraufgaben für andere Fortsetzungen sein, sodass sie eine Kette von Aufgaben bilden. Mit Fortsetzungen können Sie Ketten von Aufgaben beliebiger Länge erstellen, die bestimmte Abhängigkeiten untereinander aufweisen. Außerdem kann für eine Aufgabe der Abbruchmechanismus verwendet werden – entweder vor dem Start einer Aufgabe oder in kooperativer Weise, während die Aufgabe ausgeführt wird. Weitere Informationen zu diesem Abbruch Modell finden Sie unter [Abbruch in der ppl](cancellation-in-the-ppl.md).
 
 Bei `task` handelt es sich um eine Vorlagenklasse. Der Typparameter `T` gibt den Typ des Ergebnisses an, das von der Aufgabe erzeugt wird. Dieser Typ kann `void` sein, wenn die Aufgabe keinen Wert zurückgibt. Für `T` kann der `const`-Modifizierer nicht verwendet werden.
 
-Wenn Sie einen Task erstellen, geben Sie einen *Arbeitsfunktion* , die den Aufgabentext ausführt. Bei dieser Arbeitsfunktion kann es sich um eine Lambda-Funktion, einen Funktionszeiger oder ein Funktionsobjekt handeln. Um zu warten, für eine Aufgabe abgeschlossen, ohne das Ergebnis abzurufen, rufen Sie die [Concurrency:: Task::](reference/task-class.md#wait) Methode. Die `task::wait` Methode gibt eine [Concurrency:: task_status](reference/concurrency-namespace-enums.md#task_group_status) -Wert, der angibt, ob die Aufgabe abgeschlossen oder abgebrochen wurde. Um das Ergebnis des Vorgangs zu erhalten, rufen die [Concurrency](reference/task-class.md#get) Methode. Von dieser Methode wird `task::wait` aufgerufen, um darauf zu warten, dass die Aufgabe beendet wird. Daher wird die Ausführung des aktuellen Threads blockiert, bis das Ergebnis zur Verfügung steht.
+Wenn Sie eine Aufgabe erstellen, geben Sie eine *Arbeitsfunktion* an, die den Aufgaben Text ausführt. Bei dieser Arbeitsfunktion kann es sich um eine Lambda-Funktion, einen Funktionszeiger oder ein Funktionsobjekt handeln. Um auf den Abschluss einer Aufgabe zu warten, ohne das Ergebnis zu erhalten, müssen Sie die Methode " [parallelcurrency:: Task:: Wait](reference/task-class.md#wait) " aufrufen. Die `task::wait`-Methode gibt einen " [parallelcurrency:: task_status](reference/concurrency-namespace-enums.md#task_group_status) "-Wert zurück, der beschreibt, ob die Aufgabe abgeschlossen oder abgebrochen wurde. Um das Ergebnis der Aufgabe abzurufen, wenden Sie die Methode " [parallelcurrency:: Task:: Get](reference/task-class.md#get) " an. Von dieser Methode wird `task::wait` aufgerufen, um darauf zu warten, dass die Aufgabe beendet wird. Daher wird die Ausführung des aktuellen Threads blockiert, bis das Ergebnis zur Verfügung steht.
 
 Im folgenden Beispiel wird gezeigt, wie eine Aufgabe erstellt, auf das Ergebnis gewartet und dessen Wert angezeigt wird. In den Beispielen in dieser Dokumentation werden Lambda-Funktionen verwendet, da sie eine kompaktere Syntax aufweisen. Sie können bei der Verwendung von Aufgaben jedoch auch Funktionszeiger und Funktionsobjekte verwenden.
 
 [!code-cpp[concrt-basic-task#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_2.cpp)]
 
-Bei Verwendung der [Concurrency:: create_task](reference/concurrency-namespace-functions.md#create_task) -Funktion können Sie die `auto` -Schlüsselwort anstelle der Deklaration des Typs. Betrachten Sie beispielsweise diesen Code, mit dem die Identitätsmatrix erstellt und ausgegeben wird:
+Wenn Sie die Funktion " [parallelcurrency:: create_task](reference/concurrency-namespace-functions.md#create_task) " verwenden, können Sie das Schlüsselwort `auto` verwenden, anstatt den Typ zu deklarieren. Betrachten Sie beispielsweise diesen Code, mit dem die Identitätsmatrix erstellt und ausgegeben wird:
 
 [!code-cpp[concrt-create-task#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_3.cpp)]
 
@@ -106,16 +106,16 @@ Sie können die `create_task`-Funktion verwenden, um den entsprechenden Vorgang 
 
 [!code-cpp[concrt-create-task#2](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_4.cpp)]
 
-Wenn während der Ausführung einer Aufgabe eine Ausnahme ausgelöst wird, wird die Ausnahme von der Laufzeit im nachfolgenden Aufruf an `task::get`, `task::wait` oder eine aufgabenbasierte Fortsetzung gemarshallt. Weitere Informationen zu dem Mechanismus für die Aufgabe für die Ausnahmebehandlung finden Sie unter [Exception Handling](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
+Wenn während der Ausführung einer Aufgabe eine Ausnahme ausgelöst wird, wird die Ausnahme von der Laufzeit im nachfolgenden Aufruf an `task::get`, `task::wait` oder eine aufgabenbasierte Fortsetzung gemarshallt. Weitere Informationen zum Task Ausnahme Behandlungs Mechanismus finden Sie unter [Ausnahmebehandlung](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 
-Ein Beispiel für die Verwendung `task`, [Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), Abbruch, finden Sie unter [Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md). (Die `task_completion_event`-Klasse wird weiter unten in diesem Dokument beschrieben.)
+Ein Beispiel für die Verwendung von `task`, Parallelität [:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), Abbruch finden Sie unter Exemplarische Vorgehensweise [: Herstellen einer Verbindung mithilfe von Aufgaben und XML-HTTP-Anforderungen](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md). (Die `task_completion_event`-Klasse wird weiter unten in diesem Dokument beschrieben.)
 
 > [!TIP]
->  Informationen, die speziell für Aufgaben in UWP-apps finden Sie unter [asynchrone Programmierung in C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) und [Erstellen von asynchronen Vorgängen in C++ für UWP-Apps](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).
+> Ausführliche Informationen zu Aufgaben in UWP-apps finden Sie unter [asynchrone Programmierung C++ in](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) und [Erstellen von asynchronen Vorgängen in C++ für UWP-apps](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).
 
-##  <a name="continuations"></a> Fortsetzungsaufgaben
+## <a name="continuations"></a>Fortsetzungs Aufgaben
 
-Bei der asynchronen Programmierung werden nach Abschluss eines asynchronen Vorgangs häufig ein zweiter Vorgang aufgerufen und Daten an diesen weitergegeben. Herkömmlicherweise werden hierfür Rückrufmethoden verwendet. In der Concurrency Runtime, erfolgt über die gleiche Funktionalität *Fortsetzungsaufgaben*. Eine Fortsetzungsaufgabe (auch kurz als Fortsetzung bezeichnet) ist eine asynchrone Aufgabe, die von einer anderen Aufgabe, bekannt aufgerufen wird als die *Vorgänger*, wenn die vorangehende Aufgabe abgeschlossen ist. Mithilfe von Fortsetzungen können Sie folgende Aufgaben ausführen:
+Bei der asynchronen Programmierung werden nach Abschluss eines asynchronen Vorgangs häufig ein zweiter Vorgang aufgerufen und Daten an diesen weitergegeben. Herkömmlicherweise werden hierfür Rückrufmethoden verwendet. Im Concurrency Runtime wird die gleiche Funktionalität durch *Fortsetzungs Aufgaben*bereitgestellt. Eine Fortsetzungs Aufgabe (auch als Fortsetzung bezeichnet) ist eine asynchrone Aufgabe, die von einer anderen Aufgabe aufgerufen wird, die als *Vorgänger*bezeichnet wird, wenn der Vorgänger abgeschlossen ist. Mithilfe von Fortsetzungen können Sie folgende Aufgaben ausführen:
 
 - Übergeben von Daten vom Vorgänger an die Fortsetzung
 
@@ -123,7 +123,7 @@ Bei der asynchronen Programmierung werden nach Abschluss eines asynchronen Vorga
 
 - Abbrechen einer Fortsetzung, bevor diese gestartet wird oder kooperativ während sie ausgeführt wird
 
-- Bereitstellen von Hinweisen zur Planung der Fortsetzung (Dies gilt für nur für apps der universellen Windows-Plattform (UWP). Weitere Informationen finden Sie unter [Erstellen von asynchronen Vorgängen in C++ für UWP-Apps](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).)
+- Bereitstellen von Hinweisen zur Planung der Fortsetzung (Dies gilt nur für universelle Windows-Plattform-Apps (UWP). Weitere Informationen finden Sie unter [Erstellen von asynchronen Vorgängen in C++ für UWP-apps](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).)
 
 - Aufrufen mehrerer Fortsetzungen durch den gleichen Vorgänger
 
@@ -135,7 +135,7 @@ Bei der asynchronen Programmierung werden nach Abschluss eines asynchronen Vorga
 
 Mithilfe dieser Funktionen können Sie eine oder mehrere Aufgaben ausführen, wenn die erste Aufgabe abgeschlossen wird. Sie können beispielsweise eine Fortsetzung erstellen, in der eine Datei komprimiert wird, nachdem sie von der ersten Aufgabe vom Datenträger gelesen wurde.
 
-Im folgende Beispiel wird das vorherige geändert, verwenden Sie die [Concurrency::task::then](reference/task-class.md#then) Methode zum Planen einer Fortsetzung, die den Wert der Vorgängeraufgabe ausgibt, sobald diese verfügbar ist.
+Im folgenden Beispiel wird das vorherige so geändert, dass die " [parallelcurrency:: Task:: Then](reference/task-class.md#then) "-Methode verwendet wird, um eine Fortsetzung zu planen, die den Wert der Vorgänger Aufgabe ausgibt, wenn Sie verfügbar ist.
 
 [!code-cpp[concrt-basic-continuation#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_5.cpp)]
 
@@ -143,29 +143,29 @@ Sie können Aufgaben auf eine beliebige Länge verketten und schachteln. Eine Au
 
 [!code-cpp[concrt-continuation-chain#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_6.cpp)]
 
-Eine Fortsetzung kann auch eine andere Aufgabe zurückgeben. Wenn kein Abbruch erfolgt, wird diese Aufgabe vor der nachfolgenden Fortsetzung ausgeführt. Diese Technik wird als bezeichnet *asynchrones Entpacken*. Das asynchrone Entpacken ist nützlich, wenn Sie zusätzliche Arbeitsvorgänge im Hintergrund ausführen möchten, jedoch nicht möchten, dass der aktuelle Thread durch die aktuelle Aufgabe blockiert wird. (Dies ist häufig in UWP-apps, in denen Fortsetzungen im UI-Thread ausführen können). Im folgenden Beispiel werden drei Aufgaben gezeigt. Die erste Aufgabe gibt eine andere Aufgabe zurück, die vor einer Fortsetzungsaufgabe ausgeführt wird.
+Eine Fortsetzung kann auch eine andere Aufgabe zurückgeben. Wenn kein Abbruch erfolgt, wird diese Aufgabe vor der nachfolgenden Fortsetzung ausgeführt. Diese Technik wird als *asynchrone entpacken*bezeichnet. Das asynchrone Entpacken ist nützlich, wenn Sie zusätzliche Arbeitsvorgänge im Hintergrund ausführen möchten, jedoch nicht möchten, dass der aktuelle Thread durch die aktuelle Aufgabe blockiert wird. (Dies ist bei UWP-apps üblich, bei denen Fortsetzungen im UI-Thread ausgeführt werden können.) Im folgenden Beispiel werden drei Aufgaben gezeigt. Die erste Aufgabe gibt eine andere Aufgabe zurück, die vor einer Fortsetzungsaufgabe ausgeführt wird.
 
 [!code-cpp[concrt-async-unwrapping#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_7.cpp)]
 
 > [!IMPORTANT]
->  Wenn eine Fortsetzung einer Aufgabe eine geschachtelte Aufgabe vom Typ `N` zurückgibt, ist die resultierende Aufgabe vom Typ `N`, nicht vom Typ `task<N>`, und wird abgeschlossen, wenn die geschachtelte Aufgabe abgeschlossen wird. Das heißt, die Fortsetzung entpackt die geschachtelte Aufgabe.
+> Wenn eine Fortsetzung einer Aufgabe eine geschachtelte Aufgabe vom Typ `N` zurückgibt, ist die resultierende Aufgabe vom Typ `N`, nicht vom Typ `task<N>`, und wird abgeschlossen, wenn die geschachtelte Aufgabe abgeschlossen wird. Das heißt, die Fortsetzung entpackt die geschachtelte Aufgabe.
 
-##  <a name="value-versus-task"></a> Wertbasierte und aufgabenbasierte Fortsetzungen
+## <a name="value-versus-task"></a>Wert basierte und aufgabenbasierte Fortsetzungen
 
-Bei einem `task`-Objekt, dessen Rückgabetyp `T` ist, können Sie einen Wert des Typs `T` oder `task<T>` für die zugehörigen Fortsetzungsaufgaben bereitstellen. Eine Fortsetzung, die Typ akzeptiert jedoch `T` heißt eine *wertbasierte Fortsetzung*. Eine wertbasierte Fortsetzung wird für die Ausführung geplant, wenn die Vorgängeraufgabe ohne Fehler abgeschlossen und nicht abgebrochen wird. Eine Fortsetzung, die Typ akzeptiert jedoch `task<T>` wie Parameter als bekannt ist, eine *aufgabenbasierte Fortsetzung*. Die Ausführung einer aufgabenbasierten Fortsetzung wird immer für den Zeitpunkt geplant, zu dem die Vorgängeraufgabe abgeschlossen ist, auch wenn die Vorgängeraufgabe abgebrochen wird oder wenn diese eine Ausnahme auslöst. Sie können dann `task::get` aufrufen, um das Ergebnis der Vorgängeraufgabe abzurufen. Wenn die Vorgängeraufgabe abgebrochen wurde, `task::get` löst [Concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md). Wenn von der Vorgängeraufgabe eine Ausnahme ausgelöst wurde, wird von `task::get` diese Ausnahme erneut ausgelöst. Eine aufgabenbasierte Fortsetzung wird nicht als abgebrochen markiert, wenn die zugehörige Vorgängeraufgabe abgebrochen wird.
+Bei einem `task`-Objekt, dessen Rückgabetyp `T` ist, können Sie einen Wert des Typs `T` oder `task<T>` für die zugehörigen Fortsetzungsaufgaben bereitstellen. Eine Fortsetzung, die Type `T` annimmt, wird als *Wert basierte Fortsetzung*bezeichnet. Eine wertbasierte Fortsetzung wird für die Ausführung geplant, wenn die Vorgängeraufgabe ohne Fehler abgeschlossen und nicht abgebrochen wird. Eine Fortsetzung, die den Typ `task<T>` als Parameter annimmt, wird als *aufgabenbasierte Fortsetzung*bezeichnet. Die Ausführung einer aufgabenbasierten Fortsetzung wird immer für den Zeitpunkt geplant, zu dem die Vorgängeraufgabe abgeschlossen ist, auch wenn die Vorgängeraufgabe abgebrochen wird oder wenn diese eine Ausnahme auslöst. Sie können dann `task::get` aufrufen, um das Ergebnis der Vorgängeraufgabe abzurufen. Wenn die Vorgänger Aufgabe abgebrochen wurde, löst `task::get` " [parallelcurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md)" aus. Wenn von der Vorgängeraufgabe eine Ausnahme ausgelöst wurde, wird von `task::get` diese Ausnahme erneut ausgelöst. Eine aufgabenbasierte Fortsetzung wird nicht als abgebrochen markiert, wenn die zugehörige Vorgängeraufgabe abgebrochen wird.
 
-##  <a name="composing-tasks"></a> Verfassen von Aufgaben
+## <a name="composing-tasks"></a>Verfassen von Aufgaben
 
-In diesem Abschnitt wird beschrieben, die [Concurrency:: when_all](reference/concurrency-namespace-functions.md#when_all) und [Concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all) compose-Funktionen, die Ihnen helfen können mehrere Aufgaben aus, um allgemeine Muster zu implementieren.
+In diesem Abschnitt werden die Funktionen " [parallelcurrency:: when_all](reference/concurrency-namespace-functions.md#when_all) " und " [parallelcurrency:: when_any](reference/concurrency-namespace-functions.md#when_all) " beschrieben, die Ihnen helfen können, mehrere Aufgaben zum Implementieren allgemeiner Muster zu verfassen.
 
-###  <a name="when-all"></a> Die When_all-Funktion
+### <a name="when-all"></a>Die when_all-Funktion
 
-Von der `when_all`-Funktion wird eine Aufgabe erstellt, die abgeschlossen wird, nachdem ein Satz von Aufgaben abgeschlossen wurde. Diese Funktion gibt eine std::[Vektor](../../standard-library/vector-class.md) -Objekt, das das Ergebnis jeder Aufgabe im Satz enthält. Im folgenden einfachen Beispiel wird mithilfe von `when_all` eine Aufgabe erstellt, die den Abschluss von drei anderen Aufgaben darstellt.
+Von der `when_all`-Funktion wird eine Aufgabe erstellt, die abgeschlossen wird, nachdem ein Satz von Aufgaben abgeschlossen wurde. Diese Funktion gibt ein Std::[Vector](../../standard-library/vector-class.md) -Objekt zurück, das das Ergebnis jeder Aufgabe im Satz enthält. Im folgenden einfachen Beispiel wird mithilfe von `when_all` eine Aufgabe erstellt, die den Abschluss von drei anderen Aufgaben darstellt.
 
 [!code-cpp[concrt-join-tasks#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_8.cpp)]
 
 > [!NOTE]
->  Die Aufgaben, die Sie an `when_all` übergeben, müssen einheitlich sein. Das heißt, sie müssen alle den gleichen Typ zurückgeben.
+> Die Aufgaben, die Sie an `when_all` übergeben, müssen einheitlich sein. Das heißt, sie müssen alle den gleichen Typ zurückgeben.
 
 Sie können auch die Syntax `&&` verwenden, um eine Aufgabe zu erstellen, die nach Abschluss eines Satzes von Aufgaben abgeschlossen wird, wie im folgenden Beispiel gezeigt.
 
@@ -183,7 +183,7 @@ Es steht eine Hilfsfunktion zur Verfügung, mit der Sie sicherstellen können, d
 
 [!code-cpp[concrt-eh-when_all#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_10.cpp)]
 
-Erwägen Sie eine UWP-app, die c++ und XAML verwendet und einen Satz von Dateien auf den Datenträger schreibt. Im folgenden Beispiel wird gezeigt, wie `when_all` und `observe_all_exceptions` verwendet werden, um sicherzustellen, dass das Programm alle Ausnahmen berücksichtigt.
+Stellen Sie sich eine UWP- C++ APP vor, die und XAML verwendet und eine Gruppe von Dateien auf den Datenträger schreibt. Im folgenden Beispiel wird gezeigt, wie `when_all` und `observe_all_exceptions` verwendet werden, um sicherzustellen, dass das Programm alle Ausnahmen berücksichtigt.
 
 [!code-cpp[concrt-eh-when_all#2](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_11.cpp)]
 
@@ -204,11 +204,11 @@ Erwägen Sie eine UWP-app, die c++ und XAML verwendet und einen Satz von Dateien
 1. Implementieren Sie in "MainPage.xaml.cpp" `WriteFilesAsync` wie im Beispiel dargestellt.
 
 > [!TIP]
-> `when_all` ist eine nicht blockierende Funktion, die `task` als Ergebnis erzeugt. Im Gegensatz zu [Task:: wait](reference/task-class.md#wait), es ist sicher, diese Funktion in einer UWP-app auf dem ASTA (Application STA-) Thread aufzurufen.
+> `when_all` ist eine nicht blockierende Funktion, die `task` als Ergebnis erzeugt. Anders als bei [Task:: Wait](reference/task-class.md#wait)ist es sicher, diese Funktion in einer UWP-App auf dem AStA-Thread (Application STA) aufzurufen.
 
-###  <a name="when-any"></a> When_any-Funktion
+### <a name="when-any"></a>Die when_any-Funktion
 
-Die `when_any`-Funktion erstellt eine Aufgabe, die abgeschlossen wird, wenn die erste Aufgabe in einem Satz von Aufgaben abgeschlossen wird. Diese Funktion gibt eine [Std:: Pair](../../standard-library/pair-structure.md) -Objekt, das Ergebnis der abgeschlossenen Aufgabe und der Index dieser Aufgabe in der Menge enthält.
+Die `when_any`-Funktion erstellt eine Aufgabe, die abgeschlossen wird, wenn die erste Aufgabe in einem Satz von Aufgaben abgeschlossen wird. Diese Funktion gibt ein [Std::p Air](../../standard-library/pair-structure.md) -Objekt zurück, das das Ergebnis der abgeschlossenen Aufgabe und den Index der Aufgabe in der Menge enthält.
 
 Die `when_any`-Funktion ist insbesondere in folgenden Szenarien nützlich:
 
@@ -234,56 +234,56 @@ Sie können auch die Syntax `||` verwenden, um eine Aufgabe zu erstellen, die na
 `auto t = t1 || t2; // same as when_any`
 
 > [!TIP]
-> Wie bei `when_all`, `when_any` nicht blockierend und sicher in einer UWP-app auf dem ASTA-Thread aufgerufen wird.
+> Wie bei `when_all`ist `when_any` nicht blockierend und kann sicher in einer UWP-App auf dem AStA-Thread aufgerufen werden.
 
-##  <a name="delayed-tasks"></a> Verzögerte Aufgabenausführung
+## <a name="delayed-tasks"></a>Verzögerte Task Ausführung
 
 In einigen Fällen ist es notwendig, die Ausführung einer Aufgabe zu verzögern, bis eine Bedingung erfüllt ist, oder eine Aufgabe als Reaktion auf ein externes Ereignis zu starten. Bei der asynchronen Programmierung müssen Sie zum Beispiel möglicherweise eine Aufgabe als Reaktion auf ein E/A-Abschlussereignis starten.
 
-Es gibt zwei Möglichkeiten, dies zu erreichen: Sie können eine Fortsetzung verwenden oder eine Aufgabe starten und auf ein Ereignis innerhalb der Arbeitsfunktion der Aufgabe warten. Allerdings gibt es Fälle, in denen es nicht möglich, eine dieser Techniken zu verwenden. Sie müssen beispielsweise über die Vorgängeraufgabe verfügen, um eine Fortsetzung zu erstellen. Aber wenn Sie nicht über die Vorgängeraufgabe verfügen, können Sie erstellen eine *aufgabenabschlussereignis* und später dieses Ereignis mit der Vorgängeraufgabe verketten, sobald diese verfügbar ist. Da eine wartende Aufgabe auch einen Thread blockiert, können Sie Aufgabenabschlussereignisse außerdem dazu verwenden, Arbeitsvorgänge auszuführen, wenn ein asynchroner Vorgang abgeschlossen wird, und dadurch einen Thread freigeben.
+Es gibt zwei Möglichkeiten, dies zu erreichen: Sie können eine Fortsetzung verwenden oder eine Aufgabe starten und auf ein Ereignis innerhalb der Arbeitsfunktion der Aufgabe warten. Allerdings gibt es Fälle, in denen es nicht möglich, eine dieser Techniken zu verwenden. Sie müssen beispielsweise über die Vorgängeraufgabe verfügen, um eine Fortsetzung zu erstellen. Wenn Sie jedoch nicht über die Vorgänger Aufgabe verfügen, können Sie ein *Aufgaben Abschluss Ereignis* erstellen und das Abschluss Ereignis später an die vorangehende Aufgabe verketten, wenn Sie verfügbar wird. Da eine wartende Aufgabe auch einen Thread blockiert, können Sie Aufgabenabschlussereignisse außerdem dazu verwenden, Arbeitsvorgänge auszuführen, wenn ein asynchroner Vorgang abgeschlossen wird, und dadurch einen Thread freigeben.
 
-Die [Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) Klasse vereinfacht eine solche Komposition von Aufgaben. Wie die `task`-Klasse ist der Typparameter `T` der Typ des Ergebnisses, das von der Aufgabe erzeugt wird. Dieser Typ kann `void` sein, wenn die Aufgabe keinen Wert zurückgibt. Für `T` kann der `const`-Modifizierer nicht verwendet werden. In der Regel wird ein `task_completion_event`-Objekt für einen Thread oder eine Aufgabe bereitgestellt, der bzw. die signalisieren, wenn der Wert für das Objekt zur Verfügung steht. Gleichzeitig wird mindestens eine Aufgabe als Listener dieses Ereignisses festgelegt. Wenn das Ereignis festgelegt wird, werden die Listeneraufgaben abgeschlossen und ihre Fortsetzungen für die Ausführung geplant.
+Die Klasse " [parallelcurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) " hilft, eine solche Komposition von Aufgaben zu vereinfachen. Wie die `task`-Klasse ist der Typparameter `T` der Typ des Ergebnisses, das von der Aufgabe erzeugt wird. Dieser Typ kann `void` sein, wenn die Aufgabe keinen Wert zurückgibt. Für `T` kann der `const`-Modifizierer nicht verwendet werden. In der Regel wird ein `task_completion_event`-Objekt für einen Thread oder eine Aufgabe bereitgestellt, der bzw. die signalisieren, wenn der Wert für das Objekt zur Verfügung steht. Gleichzeitig wird mindestens eine Aufgabe als Listener dieses Ereignisses festgelegt. Wenn das Ereignis festgelegt wird, werden die Listeneraufgaben abgeschlossen und ihre Fortsetzungen für die Ausführung geplant.
 
-Ein Beispiel für die Verwendung `task_completion_event` zum Implementieren einer Aufgabe, die nach einer Verzögerung abgeschlossen wird, finden Sie unter [Vorgehensweise: Erstellen Sie eine Aufgabe, die nach einer Verzögerung abgeschlossen wird](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md).
+Ein Beispiel, in dem `task_completion_event` verwendet wird, um eine Aufgabe zu implementieren, die nach einer Verzögerung abgeschlossen wird, finden Sie unter Gewusst [wie: Erstellen einer Aufgabe, die nach einer Verzögerung abgeschlossen](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)wird.
 
-##  <a name="task-groups"></a> Aufgabengruppen
+## <a name="task-groups"></a>Aufgaben Gruppen
 
-Ein *Aufgabengruppe* ordnet eine Auflistung von Aufgaben. Aufgabengruppen verschieben Aufgaben in eine Arbeitsübernahme-Warteschlange. Der Planer entfernt Aufgaben aus dieser Warteschlange und führt sie auf verfügbaren Computerressourcen aus. Nachdem Sie einer Aufgabengruppe Aufgaben hinzugefügt haben, können Sie warten, bis alle Aufgaben aufgeführt wurden, oder Sie können Aufgaben abbrechen, die noch nicht gestartet wurden.
+Eine Aufgaben *Gruppe* organisiert eine Auflistung von Aufgaben. Aufgabengruppen verschieben Aufgaben in eine Arbeitsübernahme-Warteschlange. Der Planer entfernt Aufgaben aus dieser Warteschlange und führt sie auf verfügbaren Computerressourcen aus. Nachdem Sie einer Aufgabengruppe Aufgaben hinzugefügt haben, können Sie warten, bis alle Aufgaben aufgeführt wurden, oder Sie können Aufgaben abbrechen, die noch nicht gestartet wurden.
 
-In der PPL mithilfe der [Concurrency:: task_group](reference/task-group-class.md) und [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) Klassen zum Darstellen von Aufgabengruppen hinzugefügt, und die [Concurrency:: task_handle](../../parallel/concrt/reference/task-handle-class.md) Klasse die Aufgaben dar, die in diesen Gruppen ausführen. In der `task_handle`-Klasse wird der Code gekapselt, der die Arbeit ausführt. Wie die `task`-Klasse steht die Arbeitsfunktion in Form einer Lambda-Funktion, eines Funktionszeigers oder eines Funktionsobjekts zur Verfügung. In der Regel ist es nicht erforderlich, direkt mit `task_handle`-Objekten zu arbeiten. Stattdessen übergeben Sie Arbeitsfunktionen an eine Aufgabengruppe, die die `task_handle`-Objekte erstellt und verwaltet.
+Die ppl verwendet die Klassen " [parallelcurrency:: task_group](reference/task-group-class.md) " und " [parallelcurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) " zur Darstellung von Aufgaben Gruppen, und die Klasse " [parallelcurrency:: task_handle](../../parallel/concrt/reference/task-handle-class.md) " stellt die Aufgaben dar, die in diesen Gruppen ausgeführt werden. In der `task_handle`-Klasse wird der Code gekapselt, der die Arbeit ausführt. Wie die `task`-Klasse steht die Arbeitsfunktion in Form einer Lambda-Funktion, eines Funktionszeigers oder eines Funktionsobjekts zur Verfügung. In der Regel ist es nicht erforderlich, direkt mit `task_handle`-Objekten zu arbeiten. Stattdessen übergeben Sie Arbeitsfunktionen an eine Aufgabengruppe, die die `task_handle`-Objekte erstellt und verwaltet.
 
-Die PPL Unterscheidet zwischen Aufgabengruppen zu diesen beiden Kategorien: *unstrukturierte Aufgabengruppen* und *strukturierte Aufgabengruppen*. In der PPL werden unstrukturierte Aufgabengruppen mithilfe der `task_group`-Klasse und strukturierte Aufgabengruppen mithilfe der `structured_task_group`-Klasse dargestellt.
+Die ppl dividiert Aufgaben Gruppen in diese zwei Kategorien: *unstrukturierte Aufgaben Gruppen* und *strukturierte Aufgaben Gruppen*. In der PPL werden unstrukturierte Aufgabengruppen mithilfe der `task_group`-Klasse und strukturierte Aufgabengruppen mithilfe der `structured_task_group`-Klasse dargestellt.
 
 > [!IMPORTANT]
-> Die PPL definiert auch die [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) -Algorithmus, der verwendet die `structured_task_group` Klasse, um eine Reihe von Aufgaben parallel ausgeführt. Da der `parallel_invoke`-Algorithmus eine kompaktere Syntax aufweist, wird empfohlen, diesen, sofern möglich, anstelle der `structured_task_group`-Klasse zu verwenden. Das Thema [parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md) beschreibt `parallel_invoke` ausführlicher.
+> Die ppl definiert auch den " [parallelcurrency::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) -Algorithmus, der die `structured_task_group`-Klasse verwendet, um eine Reihe von Aufgaben parallel auszuführen. Da der `parallel_invoke`-Algorithmus eine kompaktere Syntax aufweist, wird empfohlen, diesen, sofern möglich, anstelle der `structured_task_group`-Klasse zu verwenden. Im Thema [parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md) werden `parallel_invoke` ausführlicher beschrieben.
 
-Verwenden Sie `parallel_invoke`, um mehrere unabhängige Aufgaben gleichzeitig auszuführen und sofort darauf zu warten, dass alle Aufgaben abgeschlossen sind. Diese Technik wird häufig als bezeichnet *Zweig- und Joinknoten* Parallelität. Verwenden Sie `task_group`, um mehrere unabhängige Aufgaben gleichzeitig auszuführen und später darauf zu warten, dass allle Aufgaben abgeschlossen sind. Beispielsweise können Sie einem `task_group`-Objekt Aufgaben hinzufügen und in einer anderen Funktion oder einem anderen Thread darauf warten, dass die Aufgaben beendet werden.
+Verwenden Sie `parallel_invoke`, um mehrere unabhängige Aufgaben gleichzeitig auszuführen und sofort darauf zu warten, dass alle Aufgaben abgeschlossen sind. Diese Technik wird häufig als *Verzweigung und* joinparallelität bezeichnet. Verwenden Sie `task_group`, um mehrere unabhängige Aufgaben gleichzeitig auszuführen und später darauf zu warten, dass allle Aufgaben abgeschlossen sind. Beispielsweise können Sie einem `task_group`-Objekt Aufgaben hinzufügen und in einer anderen Funktion oder einem anderen Thread darauf warten, dass die Aufgaben beendet werden.
 
-Aufgabengruppen unterstützen das Konzept eines Abbruchs. Mit einem Abbruch können Sie für alle aktiven Aufgaben angeben, dass der gesamte Vorgang abgebrochen werden soll. Durch den Abbruch wird außerdem verhindert, dass Aufgaben gestartet werden, die noch nicht gestartet wurden. Weitere Informationen über Abbrüche finden Sie unter [Abbruch in der PPL](cancellation-in-the-ppl.md).
+Aufgabengruppen unterstützen das Konzept eines Abbruchs. Mit einem Abbruch können Sie für alle aktiven Aufgaben angeben, dass der gesamte Vorgang abgebrochen werden soll. Durch den Abbruch wird außerdem verhindert, dass Aufgaben gestartet werden, die noch nicht gestartet wurden. Weitere Informationen zu Abbruch finden Sie unter [Abbruch in der ppl](cancellation-in-the-ppl.md).
 
-Die Laufzeit stellt außerdem ein Modell für die Ausnahmebehandlung bereit, mit dem Sie eine Ausnahme für eine Aufgabe auslösen und behandeln können, während Sie darauf warten, das die zugeordnete Aufgabengruppe fertig gestellt wird. Weitere Informationen zu diesem Modell für die Ausnahmebehandlung finden Sie unter [Exception Handling](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
+Die Laufzeit stellt außerdem ein Modell für die Ausnahmebehandlung bereit, mit dem Sie eine Ausnahme für eine Aufgabe auslösen und behandeln können, während Sie darauf warten, das die zugeordnete Aufgabengruppe fertig gestellt wird. Weitere Informationen zu diesem Modell zur Ausnahmebehandlung finden Sie unter [Ausnahmebehandlung](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 
-##  <a name="comparing-groups"></a> Task_group und structured_task_group im Vergleich
+## <a name="comparing-groups"></a>Vergleichen von task_group mit structured_task_group
 
 Grundsätzlich wird die Verwendung von `task_group` oder `parallel_invoke` anstelle der `structured_task_group`-Klasse empfohlen. In Einzelfällen, beispielsweise beim Schreiben eines parallelen Algorithmus für eine variable Anzahl von Aufgaben oder mit der Möglichkeit eines Abbruchs, können Sie jedoch `structured_task_group` verwenden. In diesem Abschnitt werden die Unterschiede zwischen der `task_group`-Klasse und der `structured_task_group`-Klasse erläutert.
 
-Die `task_group`-Klasse ist threadsicher. Sie können einem `task_group`-Objekt daher Aufgaben von mehreren Threads hinzufügen und in mehreren Threads auf ein `task_group`-Objekt warten oder dieses abbrechen. Das Erstellen und Zerstören eines `structured_task_group`-Objekts muss im gleichen lexikalischen Gültigkeitsbereich erfolgen. Darüber hinaus müssen alle Vorgänge für ein `structured_task_group`-Objekt im gleichen Thread ausgeführt werden. Die Ausnahme von dieser Regel wird die [Concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) und [is_canceling](reference/structured-task-group-class.md#is_canceling) Methoden. Eine untergeordnete Aufgabe kann diese Methoden aufrufen, um die übergeordnete Aufgabengruppe abzubrechen oder das Abbrechen jederzeit zu überprüfen.
+Die `task_group`-Klasse ist threadsicher. Sie können einem `task_group`-Objekt daher Aufgaben von mehreren Threads hinzufügen und in mehreren Threads auf ein `task_group`-Objekt warten oder dieses abbrechen. Das Erstellen und Zerstören eines `structured_task_group`-Objekts muss im gleichen lexikalischen Gültigkeitsbereich erfolgen. Darüber hinaus müssen alle Vorgänge für ein `structured_task_group`-Objekt im gleichen Thread ausgeführt werden. Eine Ausnahme von dieser Regel sind die Methoden " [parallelcurrency:: structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) " und " [parallelcurrency:: structured_task_group:: is_canceling](reference/structured-task-group-class.md#is_canceling) ". Eine untergeordnete Aufgabe kann diese Methoden aufrufen, um die übergeordnete Aufgabengruppe abzubrechen oder das Abbrechen jederzeit zu überprüfen.
 
-Sie können weitere Aufgaben ausführen, auf eine `task_group` Objekt aufzurufen, nachdem Sie die [Concurrency:: task_group::](reference/task-group-class.md#wait) oder [run_and_wait](reference/task-group-class.md#run_and_wait) Methode. Im Gegensatz dazu, wenn Sie zusätzliche Aufgaben ausführen, auf eine `structured_task_group` Objekt aufzurufen, nachdem Sie die [structured_task_group](reference/structured-task-group-class.md#wait) oder [Concurrency::structured_task_group::run_and_wait](reference/structured-task-group-class.md#run_and_wait) Methoden , und klicken Sie dann das Verhalten nicht definiert ist.
+Nachdem Sie die Methode " [parallelcurrency:: task_group:: Wait](reference/task-group-class.md#wait) " oder " [parallelcurrency:: task_group:: run_and_wait](reference/task-group-class.md#run_and_wait) " aufgerufen haben, können Sie zusätzliche Aufgaben für ein `task_group` Objekt ausführen. Wenn Sie im Gegensatz dazu zusätzliche Aufgaben für ein `structured_task_group` Objekt ausführen, nachdem Sie die Methoden " [parallelcurrency:: structured_task_group:: Wait](reference/structured-task-group-class.md#wait) " oder " [parallelcurrency:: structured_task_group:: run_and_wait](reference/structured-task-group-class.md#run_and_wait) " aufgerufen haben, ist das Verhalten nicht definiert.
 
 Da die `structured_task_group`-Klasse nicht threadübergreifend synchronisiert, ist ihr Ausführungsaufwand im Vergleich zur `task_group`-Klasse geringer. Wenn die Planung von Arbeit für mehrere Threads nicht Teil eines Problems ist und der `parallel_invoke`-Algorithmus nicht verwendet werden kann, können Sie mit der `structured_task_group`-Klasse leistungsfähigeren Code schreiben.
 
 Wenn Sie ein `structured_task_group`-Objekt in einem anderen `structured_task_group`-Objekt verwenden, muss das innere Objekt abgeschlossen und zerstört sein, bevor das äußere Objekt beendet wird. Bei der `task_group`-Klasse ist die Fertigstellung geschachtelter Aufgabengruppen vor der äußeren Gruppe nicht erforderlich.
 
-Unstrukturierte Aufgabengruppen und strukturierte Aufgabengruppen verwenden Aufgabenhandles auf unterschiedliche Weise. Sie können Arbeitsfunktionen direkt an ein `task_group`-Objekt übergeben; das Aufgabenhandle wird unmittelbar vom `task_group`-Objekt für Sie erstellt und verwaltet. Die `structured_task_group`-Klasse erfordert die Verwaltung eines `task_handle`-Objekts für jede Aufgabe. Jedes `task_handle`-Objekt muss über die gesamte Lebensdauer des zugeordneten `structured_task_group`-Objekts hinweg gültig sein. Verwenden der [Concurrency:: make_task](reference/concurrency-namespace-functions.md#make_task) Funktion zum Erstellen einer `task_handle` Objekt, wie im folgenden grundlegenden Beispiel gezeigt:
+Unstrukturierte Aufgabengruppen und strukturierte Aufgabengruppen verwenden Aufgabenhandles auf unterschiedliche Weise. Sie können Arbeitsfunktionen direkt an ein `task_group`-Objekt übergeben; das Aufgabenhandle wird unmittelbar vom `task_group`-Objekt für Sie erstellt und verwaltet. Die `structured_task_group`-Klasse erfordert die Verwaltung eines `task_handle`-Objekts für jede Aufgabe. Jedes `task_handle`-Objekt muss über die gesamte Lebensdauer des zugeordneten `structured_task_group`-Objekts hinweg gültig sein. Verwenden Sie die Funktion " [parallelcurrency:: Make_task](reference/concurrency-namespace-functions.md#make_task) ", um ein `task_handle` Objekt zu erstellen, wie im folgenden grundlegenden Beispiel gezeigt:
 
 [!code-cpp[concrt-make-task-structure#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_16.cpp)]
 
-Verwenden Sie zum Verwalten von Aufgabenhandles für Fälle, in dem Sie eine Variable Anzahl von Aufgaben haben z. B. eine Routine stapelzuordnung [_malloca](../../c-runtime-library/reference/malloca.md) oder einer Containerklasse wie z. B. std::[Vektor](../../standard-library/vector-class.md).
+Verwenden Sie zum Verwalten von Task Handles in Fällen mit einer Variablen Anzahl von Tasks eine Stapel Zuordnungs Routine, wie z. b. [_malloca](../../c-runtime-library/reference/malloca.md) oder eine Container Klasse wie Std::[Vector](../../standard-library/vector-class.md).
 
-`task_group` und `structured_task_group` unterstützen die Möglichkeit eines Abbruchs. Weitere Informationen über Abbrüche finden Sie unter [Abbruch in der PPL](cancellation-in-the-ppl.md).
+`task_group` und `structured_task_group` unterstützen die Möglichkeit eines Abbruchs. Weitere Informationen zu Abbruch finden Sie unter [Abbruch in der ppl](cancellation-in-the-ppl.md).
 
-##  <a name="example"></a> Beispiel
+## <a name="example"></a> Beispiel
 
 Im folgenden grundlegenden Beispiel wird die Verwendung von Aufgabengruppen veranschaulicht. In diesem Beispiel werden vom `parallel_invoke`-Algorithmus zwei Aufgaben gleichzeitig ausgeführt. In jeder Aufgabe werden einem `task_group`-Objekt untergeordnete Aufgaben hinzugefügt. Die `task_group`-Klasse ermöglicht das zeitgleiche Hinzufügen für mehrere Aufgaben.
 
@@ -299,31 +299,31 @@ Message from task: 42
 
 Da die Aufgaben vom `parallel_invoke`-Algorithmus gleichzeitig ausgeführt werden, kann sich die Reihenfolge der Ausgabemeldungen unterscheiden.
 
-Vollständige Beispiele für die Verwendung der `parallel_invoke` -Algorithmus finden Sie unter [Vorgehensweise: Mithilfe von Parallel_invoke zum parallele Sortierung Schreiben einer](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) und [Vorgehensweise: Mithilfe von Parallel_invoke zum Ausführen von parallelen Vorgängen](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). Für ein vollständiges Beispiel, verwendet der `task_group` Klasse zur Implementierung asynchroner Futures finden Sie unter [Exemplarische Vorgehensweise: Implementieren von Futures](../../parallel/concrt/walkthrough-implementing-futures.md).
+Vollständige Beispiele, die zeigen, wie der `parallel_invoke` Algorithmus verwendet wird, finden Sie unter Gewusst [wie: Verwenden von parallel_invoke zum Schreiben einer parallelen Sortier Routine](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) und Gewusst [wie: Verwenden von parallel_invoke zum Ausführen paralleler Vorgänge](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). Ein umfassendes Beispiel, das die `task_group`-Klasse verwendet, um asynchrone Futures zu implementieren, finden Sie unter Exemplarische Vorgehensweise [: Implementieren von Futures](../../parallel/concrt/walkthrough-implementing-futures.md).
 
-##  <a name="robust"></a> Stabile Programmierung
+## <a name="robust"></a>Robuste Programmierung
 
-Es ist wichtig, dass Sie die Rolle des Abbruchs und der Ausnahmebehandlung verstehen, wenn Sie Aufgaben, Aufgabengruppen und parallele Algorithmen verwenden. Beispielweise kann eine abgebrochene Aufgabe in einer Struktur paralleler Arbeitsaufgaben dazu führen, dass untergeordnete Aufgaben nicht ausgeführt werden. Dies kann Probleme verursachen, wenn eine der untergeordneten Aufgaben einen Vorgang ausführen soll, der für die Anwendung von Bedeutung ist, beispielsweise das Freigeben einer Ressource. Wenn eine untergeordnete Aufgabe eine Ausnahme auslöst, kann diese Ausnahme außerdem über einen Objektdestruktor weitergeben werden und nicht definiertes Verhalten in der Anwendung auslösen. Ein Beispiel, das diese Punkte veranschaulicht, finden Sie die [verstehen wie Abbruch und Ausnahmebehandlung beeinflussen Objekt auf die Zerstörung](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction) in die bewährten Methoden in der Parallel Patterns Library-Dokument im Abschnitt. Weitere Informationen über die Abbruchs- und ausnahmeverarbeitungsmodelle in der PPL finden Sie unter [Abbruch](../../parallel/concrt/cancellation-in-the-ppl.md) und [Exception Handling](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
+Es ist wichtig, dass Sie die Rolle des Abbruchs und der Ausnahmebehandlung verstehen, wenn Sie Aufgaben, Aufgabengruppen und parallele Algorithmen verwenden. Beispielweise kann eine abgebrochene Aufgabe in einer Struktur paralleler Arbeitsaufgaben dazu führen, dass untergeordnete Aufgaben nicht ausgeführt werden. Dies kann Probleme verursachen, wenn eine der untergeordneten Aufgaben einen Vorgang ausführen soll, der für die Anwendung von Bedeutung ist, beispielsweise das Freigeben einer Ressource. Wenn eine untergeordnete Aufgabe eine Ausnahme auslöst, kann diese Ausnahme außerdem über einen Objektdestruktor weitergeben werden und nicht definiertes Verhalten in der Anwendung auslösen. Ein Beispiel, das diese Punkte veranschaulicht, finden Sie im Abschnitt Grundlegendes zur [Auswirkung von Abbruch und Ausnahmebehandlung auf die Objekt Zerstörung](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction) in den bewährten Methoden im Dokument zur Parallel Patterns Library. Weitere Informationen zu Abbruch-und Ausnahme Behandlungs Modellen in der ppl finden Sie unter [Abbruch](../../parallel/concrt/cancellation-in-the-ppl.md) und [Ausnahmebehandlung](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Titel|Beschreibung|
+|Titel|BESCHREIBUNG|
 |-----------|-----------------|
-|[Vorgehensweise: Verwenden von „parallel_invoke“ zum Schreiben einer Routine für paralleles Sortieren](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|Erläutert, wie die Leistung des bitonischen Sortieralgorithmus mit dem `parallel_invoke`-Algorithmus verbessert werden.|
-|[Vorgehensweise: Ausführen von parallelen Vorgängen mithilfe von „parallel_invoke“](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Erläutert, wie die Leistung eines Programms mit dem `parallel_invoke`-Algorithmus verbessert werden kann, das mehrere Vorgänge in einer freigegebenen Datenquelle ausführt.|
-|[Vorgehensweise: Erstellen eines Tasks, der nach einer Verzögerung abgeschlossen wird](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|Zeigt, wie die `task`, `cancellation_token_source`, `cancellation_token`, und `task_completion_event` Klassen zum Erstellen einer Aufgabe, die nach einer Verzögerung abgeschlossen wird.|
+|[Vorgehensweise: Verwenden von parallel_invoke zum Schreiben einer Runtime für paralleles Sortieren](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|Erläutert, wie die Leistung des bitonischen Sortieralgorithmus mit dem `parallel_invoke`-Algorithmus verbessert werden.|
+|[Vorgehensweise: Ausführen von parallelen Vorgängen mithilfe von parallel_invoke](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Erläutert, wie die Leistung eines Programms mit dem `parallel_invoke`-Algorithmus verbessert werden kann, das mehrere Vorgänge in einer freigegebenen Datenquelle ausführt.|
+|[Vorgehensweise: Erstellen einer Aufgabe, die nach einer Verzögerung abgeschlossen wird](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|Zeigt, wie die Klassen `task`, `cancellation_token_source`, `cancellation_token`und `task_completion_event` verwendet werden, um eine Aufgabe zu erstellen, die nach einer Verzögerung abgeschlossen wird.|
 |[Exemplarische Vorgehensweise: Implementieren von Futures](../../parallel/concrt/walkthrough-implementing-futures.md)|Zeigt, wie die vorhandene Funktionalität in der Concurrency Runtime kombiniert werden kann, um mehr Funktionalität zu erreichen.|
 |[Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Beschreibt die PPL, die ein obligatorisches Programmiermodell zum Entwickeln gleichzeitiger Anwendungen bereitstellt.|
 
-## <a name="reference"></a>Referenz
+## <a name="reference"></a>Verweis
 
 [task-Klasse (Concurrency Runtime)](../../parallel/concrt/reference/task-class.md)
 
 [task_completion_event-Klasse](../../parallel/concrt/reference/task-completion-event-class.md)
 
-[When_all-Funktion](reference/concurrency-namespace-functions.md#when_all)
+[when_all-Funktion](reference/concurrency-namespace-functions.md#when_all)
 
-[When_any-Funktion](reference/concurrency-namespace-functions.md#when_any)
+[when_any-Funktion](reference/concurrency-namespace-functions.md#when_any)
 
 [task_group-Klasse](reference/task-group-class.md)
 
