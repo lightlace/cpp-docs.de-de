@@ -33,19 +33,19 @@ f1_keywords:
 - ppltasks/concurrency::when_all
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-ms.openlocfilehash: 75401c08d3ce1fac4f3791a18a1564788016905d
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 4005ae888511ec987fe83ab3d616aa0fc3675a22
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821329"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143254"
 ---
 # <a name="concurrency-namespace-functions"></a>concurrency-Namespace-Funktionen
 
 ||||
 |-|-|-|
 |[Alloc](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|
-|[EnableTracing](#enabletracing)|[Kosten](#free)|[GetExecutionContextId](#getexecutioncontextid)|
+|[EnableTracing](#enabletracing)|[Free](#free)|[GetExecutionContextId](#getexecutioncontextid)|
 |[GetOSVersion](#getosversion)|[GetProcessorCount](#getprocessorcount)|[GetProcessorNodeCount](#getprocessornodecount)|
 |[GetSchedulerId](#getschedulerid)|[Trace_agents_register_name](#trace_agents_register_name)|[asend](#asend)|
 |[cancel_current_task](#cancel_current_task)|[clear](#clear)|[create_async](#create_async)|
@@ -60,15 +60,15 @@ ms.locfileid: "76821329"
 |[task_from_result](#task_from_result)|[try_receive](#try_receive)|[wait](#wait)|
 |[when_all](#when_all)|[when_any](#when_any)|
 
-##  <a name="alloc"></a>Zuordnungseinheits
+## <a name="alloc"></a>Zuordnungseinheits
 
 Reserviert einen Speicherblock mit der in der Unterbelegungsfunktion für die Zwischenspeicherung der Concurrency Runtime angegebenen Größe.
 
-```
+```cpp
 void* __cdecl Alloc(size_t _NumBytes);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *_NumBytes*<br/>
 Die Anzahl der zuzuordnenden Arbeitsspeicher bytes.
@@ -81,11 +81,11 @@ Ein Zeiger auf den neu belegten Arbeitsspeicher.
 
 Weitere Informationen darüber, welche Szenarien in Ihrer Anwendung von der Verwendung der cachesubzuweisung profitieren können, finden Sie unter [Taskplaner](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
-##  <a name="asend"></a>ASend
+## <a name="asend"></a>ASend
 
 Ein asynchroner Sendevorgang, der eine Aufgabe zum Weitergeben der Daten an den Zielblock plant.
 
-```
+```cpp
 template <class T>
 bool asend(
     _Inout_ ITarget<T>* _Trg,
@@ -97,7 +97,7 @@ bool asend(
     const T& _Data);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *T*<br/>
 Der Typ der zu sendenden Daten.
@@ -116,42 +116,42 @@ Ein Verweis auf die zu sendenden Daten.
 
 Weitere Informationen finden Sie unter [Nachrichten Übergabe Funktionen](../../../parallel/concrt/message-passing-functions.md).
 
-##  <a name="cancel_current_task"></a>cancel_current_task
+## <a name="cancel_current_task"></a>cancel_current_task
 
 Bricht die gerade ausgeführte Aufgabe ab. Diese Funktion kann aus dem Text einer Aufgabe aufgerufen werden, um die Ausführung der Aufgabe abzubrechen und ihn dabei in den `canceled` Zustand übergehen zu lassen.
 
 Der Aufruf dieser Funktion, wenn Sie sich nicht innerhalb des Texts von einem `task` befinden, ist kein unterstütztes Szenario. Dies würde zu nicht definiertem Verhalten, wie einem Absturz oder einem Hänger in der Anwendung, führen.
 
-```
+```cpp
 inline __declspec(noreturn) void __cdecl cancel_current_task();
 ```
 
-##  <a name="clear"></a>Klartext
+## <a name="clear"></a>Klartext
 
 Löscht die gleichzeitige Warteschlange und zerstört alle Elemente, die in die Warteschlange eingereiht sind Diese Methode ist nicht nebenläufigkeitssicher.
 
-```
+```cpp
 template<typename T, class _Ax>
 void concurrent_queue<T, _Ax>::clear();
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *T*<br/>
 
 *_Ax*<br/>
 
-##  <a name="create_async"></a>create_async
+## <a name="create_async"></a>create_async
 
 Erstellt ein asynchrones Konstrukt der Windows Runtime auf einem vom Benutzer angegebenes Lambda oder Funktionsobjekt. Der Rückgabetyp von `create_async` ist entweder `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` oder `IAsyncOperationWithProgress<TResult, TProgress>^` auf Grundlage der Signatur des Lambda-Ausdrucks, der an die Methode übergeben wurde.
 
-```
+```cpp
 template<typename _Function>
 __declspec(noinline) auto create_async(const _Function& _Func)
     -> decltype(ref new details::_AsyncTaskGeneratorThunk<_Function>(_Func));
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *_Function*<br/>
 Typ.
@@ -179,11 +179,11 @@ Wenn der Text des Lambda-Ausdrucks eine Aufgabe zurückgibt, wird der Lambda-Aus
 
 Diese Funktion ist nur für Windows-Runtime-apps verfügbar.
 
-##  <a name="createresourcemanager"></a>CreateResourceManager
+## <a name="createresourcemanager"></a>CreateResourceManager
 
 Gibt eine Schnittstelle zurück, die die Singletoninstanz des Ressourcen-Managers der Concurrency Runtime darstellt. Der Ressourcen-Manager ist für das Zuweisen von Ressourcen für Planer, die miteinander kooperieren möchten, zuständig.
 
-```
+```cpp
 IResourceManager* __cdecl CreateResourceManager();
 ```
 
@@ -197,11 +197,11 @@ Mehrere nachfolgende Aufrufe dieser Methode geben die gleiche Instanz des Ressou
 
 [Unsupported_os](unsupported-os-class.md) wird ausgelöst, wenn das Betriebssystem vom Concurrency Runtime nicht unterstützt wird.
 
-##  <a name="create_task"></a>create_task
+## <a name="create_task"></a>create_task
 
 Erstellt ein ppl- [Aufgaben](task-class.md) Objekt. Das Element `create_task` kann überall dort verwendet werden, wo Sie einen Aufgabenkonstruktor verwendet hätten. Es wird hauptsächlich der Einfachheit halber bereitgestellt, da es beim Erstellen eines Tasks die Verwendung des `auto`-Schlüsselwort ermöglicht.
 
-```
+```cpp
 template<typename T>
 __declspec(noinline) auto create_task(T _Param, const task_options& _TaskOptions = task_options())
     -> task<typename details::_TaskTypeFromParam<T>::T>;
@@ -210,7 +210,7 @@ template<typename _ReturnType>
 __declspec( noinline) task<_ReturnType> create_task(const task<_ReturnType>& _Task);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *T*<br/>
 Der Typ des Parameters, von dem die Aufgabe erstellt werden soll.
@@ -225,7 +225,7 @@ Der Parameter, von dem der Task erstellt werden soll. Dies kann ein Lambda-oder 
 Die Aufgaben Optionen.
 
 *_Task*<br/>
-Die zu Erstell gende Aufgabe.
+Der zu erstellende Task.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -241,11 +241,11 @@ Der Typ des zurückgegebenen Tasks wird vom ersten Parameter zur Funktion abgele
 
 Wenn `_Param` in einer UWP-APP vom Typ Windows:: Foundation:: iasyncoperation\<t > ^ oder Windows:: Foundation:: iasyncoperationwithprogress\<t, P > ^ oder ein Funktionselement ist, das einen dieser Typen zurückgibt, ist die erstellte Aufgabe vom Typ `task<T>`. Wenn `_Param` vom Typ Windows:: Foundation:: iasyncaction ^ oder Windows:: Foundation:: iasyncactionwithprogress\<P > ^ oder ein Funktionselement ist, das einen dieser Typen zurückgibt, hat die erstellte Aufgabe den Typ `task<void>`.
 
-##  <a name="disabletracing"></a>DisableTracing
+## <a name="disabletracing"></a>DisableTracing
 
 Deaktiviert die Ablaufverfolgung in der Concurrency Runtime. Diese Funktion ist veraltet, da die Registrierung der ETW-Ablaufverfolgung standardmäßig aufgehoben wird.
 
-```
+```cpp
 __declspec(deprecated("Concurrency::DisableTracing is a deprecated function.")) _CRTIMP HRESULT __cdecl DisableTracing();
 ```
 
@@ -253,11 +253,11 @@ __declspec(deprecated("Concurrency::DisableTracing is a deprecated function.")) 
 
 Wenn die Ablauf Verfolgung ordnungsgemäß deaktiviert wurde, wird `S_OK` zurückgegeben. Wenn die Ablauf Verfolgung zuvor nicht initiiert wurde, wird `E_NOT_STARTED` zurückgegeben.
 
-##  <a name="enabletracing"></a>EnableTracing
+## <a name="enabletracing"></a>EnableTracing
 
 Aktiviert die Ablaufverfolgung in der Concurrency Runtime. Diese Funktion ist veraltet, da die Registrierung der ETW-Ablaufverfolgung jetzt standardmäßig erfolgt.
 
-```
+```cpp
 __declspec(deprecated("Concurrency::EnableTracing is a deprecated function.")) _CRTIMP HRESULT __cdecl EnableTracing();
 ```
 
@@ -265,15 +265,15 @@ __declspec(deprecated("Concurrency::EnableTracing is a deprecated function.")) _
 
 Wenn die Ablauf Verfolgung ordnungsgemäß initiiert wurde, wird `S_OK` zurückgegeben. Andernfalls wird `E_NOT_STARTED` zurückgegeben.
 
-##  <a name="free"></a>Kosten
+## <a name="free"></a>Kosten
 
 Gibt einen Speicherblock frei, der zuvor mit der `Alloc`-Methode der Unterbelegungsfunktion für die Zwischenspeicherung der Concurrency Runtime reserviert wurde.
 
-```
+```cpp
 void __cdecl Free(_Pre_maybenull_ _Post_invalid_ void* _PAllocation);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *_PAllocation*<br/>
 Ein Zeiger auf den Arbeitsspeicher, der zuvor mit der `Alloc`-Methode reserviert wurde und jetzt freigegeben werden soll. Wenn der `_PAllocation`-Parameter auf den Wert `NULL` festgelegt wurde, ignoriert diese Methode den Parameter und kehrt sofort zurück.
@@ -282,19 +282,19 @@ Ein Zeiger auf den Arbeitsspeicher, der zuvor mit der `Alloc`-Methode reserviert
 
 Weitere Informationen darüber, welche Szenarien in Ihrer Anwendung von der Verwendung der cachesubzuweisung profitieren können, finden Sie unter [Taskplaner](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
-##  <a name="get_ambient_scheduler"></a>get_ambient_scheduler
+## <a name="get_ambient_scheduler"></a>get_ambient_scheduler
 
-```
+```cpp
 inline std::shared_ptr<::Concurrency::scheduler_interface> get_ambient_scheduler();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-##  <a name="getexecutioncontextid"></a>GetExecutionContextId
+## <a name="getexecutioncontextid"></a>GetExecutionContextId
 
 Gibt einen eindeutigen Bezeichner zurück, der einem Ausführungskontext zugewiesen werden kann, der die `IExecutionContext`-Schnittstelle implementiert.
 
-```
+```cpp
 unsigned int __cdecl GetExecutionContextId();
 ```
 
@@ -306,11 +306,11 @@ Ein eindeutiger Bezeichner für einen Ausführungs Kontext.
 
 Verwenden Sie diese Methode, um einen Bezeichner für den Ausführungs Kontext abzurufen, bevor Sie eine `IExecutionContext`-Schnittstelle als Parameter an eine der Methoden übergeben, die vom Ressourcen-Manager bereitgestellt werden.
 
-##  <a name="getosversion"></a>GetOSVersion
+## <a name="getosversion"></a>GetOSVersion
 
 Gibt die Betriebssystemversion zurück.
 
-```
+```cpp
 IResourceManager::OSVersion __cdecl GetOSVersion();
 ```
 
@@ -322,11 +322,11 @@ Ein Enumerationswert, der das Betriebssystem darstellt.
 
 [Unsupported_os](unsupported-os-class.md) wird ausgelöst, wenn das Betriebssystem vom Concurrency Runtime nicht unterstützt wird.
 
-##  <a name="getprocessorcount"></a>GetProcessorCount
+## <a name="getprocessorcount"></a>GetProcessorCount
 
 Gibt die Anzahl von Hardwarethreads des zugrunde liegenden Systems zurück.
 
-```
+```cpp
 unsigned int __cdecl GetProcessorCount();
 ```
 
@@ -338,11 +338,11 @@ Die Anzahl der Hardwarethreads.
 
 [Unsupported_os](unsupported-os-class.md) wird ausgelöst, wenn das Betriebssystem vom Concurrency Runtime nicht unterstützt wird.
 
-##  <a name="getprocessornodecount"></a>GetProcessorNodeCount
+## <a name="getprocessornodecount"></a>GetProcessorNodeCount
 
 Gibt die Anzahl von NUMA-Knoten oder Prozessorpaketen des zugrunde liegenden Systems zurück.
 
-```
+```cpp
 unsigned int __cdecl GetProcessorNodeCount();
 ```
 
@@ -356,11 +356,11 @@ Wenn das System mehr NUMA-Knoten als Prozessorpakete enthält, wird die Anzahl d
 
 [Unsupported_os](unsupported-os-class.md) wird ausgelöst, wenn das Betriebssystem vom Concurrency Runtime nicht unterstützt wird.
 
-##  <a name="getschedulerid"></a>GetSchedulerId
+## <a name="getschedulerid"></a>GetSchedulerId
 
 Gibt einen eindeutigen Bezeichner zurück, der einem Planer zugewiesen werden kann, der die `IScheduler`-Schnittstelle implementiert.
 
-```
+```cpp
 unsigned int __cdecl GetSchedulerId();
 ```
 
@@ -372,9 +372,9 @@ Ein eindeutiger Bezeichner für einen Scheduler.
 
 Verwenden Sie diese Methode, um einen Bezeichner für den Scheduler abzurufen, bevor Sie eine `IScheduler`-Schnittstelle als Parameter an eine der Methoden übergeben, die vom Ressourcen-Manager bereitgestellt werden.
 
-##  <a name="internal_assign_iterators"></a>internal_assign_iterators
+## <a name="internal_assign_iterators"></a>internal_assign_iterators
 
-```
+```cpp
 template<typename T, class _Ax>
 template<class _I>
 void concurrent_vector<T, _Ax>::internal_assign_iterators(
@@ -382,7 +382,7 @@ void concurrent_vector<T, _Ax>::internal_assign_iterators(
    _I last);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *T*<br/>
 
@@ -390,15 +390,15 @@ void concurrent_vector<T, _Ax>::internal_assign_iterators(
 
 *_I*<br/>
 
-*erstes*<br/>
+*first*<br/>
 
 *last*<br/>
 
-##  <a name="interruption_point"></a>interruption_point
+## <a name="interruption_point"></a>interruption_point
 
 Erstellt einen Unterbrechungspunkt für den Abbruch. Wenn ein Abbruch im Kontext, in dem diese Funktion aufgerufen wird, ausgeführt wird, löst diese eine interne Ausnahme aus, mit der die Ausführung der aktuell ausgeführten parallelen Verarbeitung abgebrochen wird. Wenn kein Abbruch ausgeführt wird, bleibt die Funktion untätig.
 
-```
+```cpp
 inline void interruption_point();
 ```
 
@@ -406,11 +406,11 @@ inline void interruption_point();
 
 Die interne Abbruch Ausnahme, die von der `interruption_point()` Funktion ausgelöst wurde, sollte nicht abgefangen werden. Die Ausnahme wird von der Laufzeit abgefangen und behandelt, und das abfangen kann dazu führen, dass sich das Programm nicht ordnungsgemäß verhält.
 
-##  <a name="is_current_task_group_canceling"></a>is_current_task_group_canceling
+## <a name="is_current_task_group_canceling"></a>is_current_task_group_canceling
 
 Gibt zurück, ob die Aufgabengruppe, die gerade inline auf dem aktuellen Kontext ausgeführt wird, in diesem Moment (oder in Kürze) einen Abbruch durchführt. Beachten Sie, dass `false` zurückgegeben wird, wenn auf dem aktuellen Kontext zurzeit inline keine Aufgabengruppe ausgeführt wird.
 
-```
+```cpp
 bool __cdecl is_current_task_group_canceling();
 ```
 
@@ -422,11 +422,11 @@ bool __cdecl is_current_task_group_canceling();
 
 Weitere Informationen finden Sie unter [Abbruch](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
 
-##  <a name="make_choice"></a>make_choice
+## <a name="make_choice"></a>make_choice
 
 Erstellt einen `choice`-Meldungsblock aus einem optionalen `Scheduler` oder einer `ScheduleGroup` und mindestens zwei Eingabequellen.
 
-```
+```cpp
 template<typename T1, typename T2, typename... Ts>
 choice<std::tuple<T1, T2, Ts...>> make_choice(
     Scheduler& _PScheduler,
@@ -448,7 +448,7 @@ choice<std::tuple<T1, T2, Ts...>> make_choice(
     Ts... _Items);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *T1*<br/>
 Der Meldungsblocktyp der ersten Quelle.
@@ -475,11 +475,11 @@ Das `ScheduleGroup` -Objekt, in dem die Weiterleitungsaufgabe für den `choice` 
 
 Ein `choice`-Nachrichtenblock mit zwei oder mehr Eingabequellen.
 
-##  <a name="make_greedy_join"></a>make_greedy_join
+## <a name="make_greedy_join"></a>make_greedy_join
 
 Erstellt einen `greedy multitype_join`-Meldungsblock aus einem optionalen `Scheduler` oder einer `ScheduleGroup` und mindestens zwei Eingabequellen.
 
-```
+```cpp
 template<typename T1, typename T2, typename... Ts>
 multitype_join<std::tuple<T1, T2, Ts...>,greedy> make_greedy_join(
     Scheduler& _PScheduler,
@@ -501,7 +501,7 @@ multitype_join<std::tuple<T1, T2, Ts...>, greedy> make_greedy_join(
     Ts... _Items);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *T1*<br/>
 Der Meldungsblocktyp der ersten Quelle.
@@ -528,11 +528,11 @@ Das `ScheduleGroup` -Objekt, in dem die Weiterleitungsaufgabe für den `multityp
 
 Ein `greedy multitype_join`-Nachrichtenblock mit zwei oder mehr Eingabequellen.
 
-##  <a name="make_join"></a>make_join
+## <a name="make_join"></a>make_join
 
 Erstellt einen `non_greedy multitype_join`-Meldungsblock aus einem optionalen `Scheduler` oder einer `ScheduleGroup` und mindestens zwei Eingabequellen.
 
-```
+```cpp
 template<typename T1, typename T2, typename... Ts>
 multitype_join<std::tuple<T1, T2, Ts...>>
     make_join(
@@ -555,7 +555,7 @@ multitype_join<std::tuple<T1, T2, Ts...>> make_join(
     Ts... _Items);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *T1*<br/>
 Der Meldungsblocktyp der ersten Quelle.
@@ -582,16 +582,16 @@ Das `ScheduleGroup` -Objekt, in dem die Weiterleitungsaufgabe für den `multityp
 
 Ein `non_greedy multitype_join`-Nachrichtenblock mit zwei oder mehr Eingabequellen.
 
-##  <a name="make_task"></a>make_task
+## <a name="make_task"></a>make_task
 
 Eine Factorymethode zum Erstellen eines `task_handle`-Objekts.
 
-```
+```cpp
 template <class _Function>
 task_handle<_Function> make_task(const _Function& _Func);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *_Function*<br/>
 Der Typ des Funktions Objekts, das aufgerufen wird, um die durch das `task_handle` Objekt dargestellte Arbeit auszuführen.
@@ -607,11 +607,11 @@ Ein `task_handle`-Objekt.
 
 Diese Funktion ist nützlich, wenn Sie ein `task_handle` Objekt mit einem Lambda-Ausdruck erstellen müssen, da Sie es Ihnen ermöglicht, das Objekt zu erstellen, ohne den wahren Typ des Lambda-funktors zu kennen.
 
-##  <a name="parallel_buffered_sort"></a>parallel_buffered_sort
+## <a name="parallel_buffered_sort"></a>parallel_buffered_sort
 
-Ordnet die Elemente in einem angegebenen Bereich in einer aufsteigenden Reihenfolge oder gemäß eines Sortierkriteriums an, das von einem binären Prädikat parallel angegeben wird. Diese Funktion entspricht `std::sort` semantisch darin, dass sie eine vergleichsbasierte, instabile, direkte Sortierung ist, abgesehen von den zusätzlich erforderlichen `O(n)`-Leerzeichen und er notwendigen Standardinitialisierung für die sortierten Elemente.
+Ordnet die Elemente in einem angegebenen Bereich in einer nicht absteigenden Reihenfolge oder entsprechend einem Sortierkriterium an, das von einem binären Prädikat gleichzeitig angegeben wird. Diese Funktion entspricht `std::sort` semantisch darin, dass sie eine vergleichsbasierte, instabile, direkte Sortierung ist, abgesehen von den zusätzlich erforderlichen `O(n)`-Leerzeichen und er notwendigen Standardinitialisierung für die sortierten Elemente.
 
-```
+```cpp
 template<typename _Random_iterator>
 inline void parallel_buffered_sort(
     const _Random_iterator& _Begin,
@@ -658,7 +658,7 @@ inline void parallel_buffered_sort(
     const size_t _Chunk_size = 2048);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *_Random_iterator*<br/>
 Der iteratortyp des Eingabe Bereichs.
@@ -694,11 +694,11 @@ Wenn Sie keinen allocatortyp oder keine Instanz angeben, wird C++ der Speicher B
 
 Der Algorithmus dividiert den Eingabebereich in zwei Blöcke und dividiert jeden Block nacheinander in zwei unter Segmente für die parallele Ausführung. Das optionale Argument `_Chunk_size` kann verwendet werden, um für den Algorithmus anzugeben, dass er Blöcke von Größen < `_Chunk_size` seriell verarbeiten soll.
 
-##  <a name="parallel_for"></a>parallel_for
+## <a name="parallel_for"></a>parallel_for
 
 `parallel_for` durchläuft einen Bereich von Indizes und führt bei jeder Iteration parallel eine vom Benutzer bereitgestellte Funktion aus.
 
-```
+```cpp
 template <typename _Index_type, typename _Function, typename _Partitioner>
 void parallel_for(
     _Index_type first,
@@ -743,7 +743,7 @@ void parallel_for(
     affinity_partitioner& _Part);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *_Index_type*<br/>
 Der Typ des Indexes, der für die Iterationen verwendet wird.
@@ -754,7 +754,7 @@ Der Typ der Funktion, die bei jeder Iterationen ausgeführt wird.
 *_Partitioner*<br/>
 Der Typ des Partitionierers, der verwendet wird, um den angegebenen Bereich zu partitionieren.
 
-*erstes*<br/>
+*first*<br/>
 Der erste Index, der in die Iterations eingefügt werden soll.
 
 *last*<br/>
@@ -767,17 +767,17 @@ Der Wert, um den bei der Iteration von `first` bis `last`ein Schritt durchlaufen
 Die Funktion, die bei jeder Iterationen ausgeführt werden soll. Hierbei kann es sich um einen Lambda-Ausdruck, einen Funktionszeiger oder ein beliebiges Objekt handeln, das eine Version des Funktions aufrufoperators mit der Signatur `void operator()(_Index_type)`unterstützt.
 
 *_Part*<br/>
-Ein Verweis auf das Partitionierer-Objekt. Beim Argument kann es sich um einen `const`[auto_partitioner](auto-partitioner-class.md)`&`, `const`[static_partitioner](static-partitioner-class.md)`&``const`[simple_partitioner`&`](simple-partitioner-class.md) affinity_partitioner [oder`&` affinity_partitioner bei](affinity-partitioner-class.md) Verwendung eines [affinity_partitioner](affinity-partitioner-class.md) Objekts handelt es sich bei dem Verweis um einen nicht konstanten l-Wert-Verweis, damit der Algorithmus den Zustand für zukünftige Schleifen speichern kann.
+Ein Verweis auf das Partitionierer-Objekt. Beim Argument kann es sich um einen `const`[auto_partitioner](auto-partitioner-class.md)`&`, `const`[static_partitioner](static-partitioner-class.md)`&``const`[simple_partitioner](simple-partitioner-class.md)`&` [affinity_partitioner](affinity-partitioner-class.md) oder`&` [affinity_partitioner](affinity-partitioner-class.md) bei Verwendung eines Objekts handelt es sich bei dem Verweis um einen nicht konstanten l-Wert-Verweis, damit der Algorithmus den Zustand für zukünftige Schleifen speichern kann.
 
 ### <a name="remarks"></a>Hinweise
 
 Weitere Informationen finden Sie unter [parallele Algorithmen](../../../parallel/concrt/parallel-algorithms.md).
 
-##  <a name="parallel_for_each"></a>parallel_for_each
+## <a name="parallel_for_each"></a>parallel_for_each
 
 `parallel_for_each` wendet eine angegebene Funktion parallel auf jedes Element innerhalb eines Bereichs an. Sie entspricht semantisch der `for_each`-Funktion im `std`-Namespace, außer dass die Iteration über die Elemente parallel ausgeführt wird und die Reihenfolge der Iteration nicht angegeben ist. Das Argument `_Func` muss einen Funktionsaufrufoperator in der Form `operator()(T)` unterstützen, wobei der Parameter `T` der Elementtyp des durchlaufenen Containers ist.
 
-```
+```cpp
 template <typename _Iterator, typename _Function>
 void parallel_for_each(
     _Iterator first,
@@ -792,7 +792,7 @@ void parallel_for_each(
     _Partitioner&& _Part);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *_Iterator*<br/>
 Der Typ des Iterators, der verwendet wird, um den Container zu durchlaufen.
@@ -801,7 +801,7 @@ Der Typ des Iterators, der verwendet wird, um den Container zu durchlaufen.
 Der Typ der Funktion, die auf jedes Element im Bereich angewendet wird.
 
 *_Partitioner*<br/>
-*erstes*<br/>
+*first*<br/>
 Ein Iterator, der die Position des ersten Elements adressiert, das in die parallele Iterationen eingeschlossen werden soll.
 
 *last*<br/>
@@ -811,7 +811,7 @@ Ein Iterator, der die Position hinter dem letzten Element adressiert, das in die
 Ein benutzerdefiniertes Funktions Objekt, das auf jedes Element im Bereich angewendet wird.
 
 *_Part*<br/>
-Ein Verweis auf das Partitionierer-Objekt. Beim Argument kann es sich um einen `const`[auto_partitioner](auto-partitioner-class.md)`&`, `const`[static_partitioner](static-partitioner-class.md)`&``const`[simple_partitioner`&`](simple-partitioner-class.md) affinity_partitioner [oder`&` affinity_partitioner bei](affinity-partitioner-class.md) Verwendung eines [affinity_partitioner](affinity-partitioner-class.md) Objekts handelt es sich bei dem Verweis um einen nicht konstanten l-Wert-Verweis, damit der Algorithmus den Zustand für zukünftige Schleifen speichern kann.
+Ein Verweis auf das Partitionierer-Objekt. Beim Argument kann es sich um einen `const`[auto_partitioner](auto-partitioner-class.md)`&`, `const`[static_partitioner](static-partitioner-class.md)`&``const`[simple_partitioner](simple-partitioner-class.md)`&` [affinity_partitioner](affinity-partitioner-class.md) oder`&` [affinity_partitioner](affinity-partitioner-class.md) bei Verwendung eines Objekts handelt es sich bei dem Verweis um einen nicht konstanten l-Wert-Verweis, damit der Algorithmus den Zustand für zukünftige Schleifen speichern kann.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -821,11 +821,11 @@ Für Iteratoren, die keinen zufälligen Zugriff unterstützen, wird nur [auto_pa
 
 Weitere Informationen finden Sie unter [parallele Algorithmen](../../../parallel/concrt/parallel-algorithms.md).
 
-##  <a name="parallel_invoke"></a>parallel_invoke
+## <a name="parallel_invoke"></a>parallel_invoke
 
 Führt die als Parameter angegebenen Funktionsobjekte parallel aus, und blockiert, bis die Ausführung beendet ist. Jedes Funktionsobjekt kann ein Lambdaausdruck, ein Zeiger auf eine Funktion oder ein anderes Objekt sein, das den Funktionsaufrufoperator mit der Signatur `void operator()()` unterstützt.
 
-```
+```cpp
 template <typename _Function1, typename _Function2>
 void parallel_invoke(
     const _Function1& _Func1,
@@ -950,7 +950,7 @@ void parallel_invoke(
     const _Function10& _Func10);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *_Function1*<br/>
 Der Typ des ersten Funktions Objekts, das parallel ausgeführt werden soll.
@@ -1020,11 +1020,11 @@ Wenn mindestens eines der Funktions Objekte, das als Parameter an diese Funktion
 
 Weitere Informationen finden Sie unter [parallele Algorithmen](../../../parallel/concrt/parallel-algorithms.md).
 
-##  <a name="parallel_radixsort"></a>parallel_radixsort
+## <a name="parallel_radixsort"></a>parallel_radixsort
 
 Ordnet Elemente in einem angegebenen Bereich mithilfe eines Basis-Sortieralgorithmus in einer absteigenden Reihenfolge an. Dies ist eine stabile Sortierfunktion, die eine Projektionsfunktion erfordert, mit der Elemente zur Sortierung in Schlüssel, die ganzen Zahlen ohne Vorzeichen ähneln, projiziert werden können. Standardinitialisierung ist für die zu sortierenden Elemente erforderlich.
 
-```
+```cpp
 template<typename _Random_iterator>
 inline void parallel_radixsort(
     const _Random_iterator& _Begin,
@@ -1067,7 +1067,7 @@ inline void parallel_radixsort(
     const size_t _Chunk_size = 256* 256);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *_Random_iterator*<br/>
 Der iteratortyp des Eingabe Bereichs.
@@ -1103,11 +1103,11 @@ Wenn Sie keinen allocatortyp oder keine Instanz angeben, wird C++ der Speicher B
 
 Der Algorithmus dividiert den Eingabebereich in zwei Blöcke und dividiert jeden Block nacheinander in zwei unter Segmente für die parallele Ausführung. Das optionale Argument `_Chunk_size` kann verwendet werden, um für den Algorithmus anzugeben, dass er Blöcke von Größen < `_Chunk_size` seriell verarbeiten soll.
 
-##  <a name="parallel_reduce"></a>parallel_reduce
+## <a name="parallel_reduce"></a>parallel_reduce
 
 Berechnet die Summe aller Elemente in einem angegebenen Bereich, indem aufeinander folgende Teilsummen berechnet werden, oder berechnet das Ergebnis der aufeinander folgenden Teilergebnisse, die auf ähnliche Weise mithilfe eines angegebenen binären Vorgangs (außer Summe) abgerufen werden parallel. `parallel_reduce` entspricht `std::accumulate` semantisch, außer dass der binäre Vorgang assoziativ sein muss und ein Identitätswert anstelle eines Anfangswerts erforderlich ist.
 
-```
+```cpp
 template<typename _Forward_iterator>
 inline typename std::iterator_traits<_Forward_iterator>::value_type parallel_reduce(
     _Forward_iterator _Begin,
@@ -1133,7 +1133,7 @@ inline _Reduce_type parallel_reduce(
     const _Sym_reduce_fun& _Sym_fun);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *_Forward_iterator*<br/>
 Der iteratortyp des Eingabe Bereichs.
@@ -1176,11 +1176,11 @@ Die zweite Überladung erfordert auch, dass der Iterator `value_type` identisch 
 
 Für die dritte Überladung muss der Identitäts Werttyp mit dem reduzierungstyp identisch sein, aber die `value_type` des Iterators kann sich von beiden unterscheiden. Die Bereichs Reduzierungs Funktion `_Range_fun` wird in der ersten Phase mit dem Identitäts Wert als Anfangswert verwendet, und die binäre Funktion `_Sym_reduce_fun` wird in der zweiten Phase auf Sub-Ergebnisse angewendet.
 
-##  <a name="parallel_sort"></a>parallel_sort
+## <a name="parallel_sort"></a>parallel_sort
 
-Ordnet die Elemente in einem angegebenen Bereich in einer aufsteigenden Reihenfolge oder gemäß eines Sortierkriteriums an, das von einem binären Prädikat parallel angegeben wird. Diese Funktion entspricht `std::sort` semantisch insofern, dass sie eine vergleichsbasierte, instabile, direkte Sortierung ist.
+Ordnet die Elemente in einem angegebenen Bereich in einer nicht absteigenden Reihenfolge oder entsprechend einem Sortierkriterium an, das von einem binären Prädikat gleichzeitig angegeben wird. Diese Funktion entspricht `std::sort` semantisch insofern, dass sie eine vergleichsbasierte, instabile, direkte Sortierung ist.
 
-```
+```cpp
 template<typename _Random_iterator>
 inline void parallel_sort(
     const _Random_iterator& _Begin,
@@ -1194,7 +1194,7 @@ inline void parallel_sort(
     const size_t _Chunk_size = 2048);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *_Random_iterator*<br/>
 Der iteratortyp des Eingabe Bereichs.
@@ -1212,7 +1212,7 @@ Ein zufälliger Eingabeiterator, der die Position des ersten Elements direkt hin
 Ein benutzerdefiniertes Prädikat Funktions Objekt, das das Vergleichskriterium definiert, das von aufeinander folgenden Elementen in der Reihenfolge erfüllt werden soll. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück. Diese Vergleichoperatorfunktion muss eine strikte schwache Sortierung auf Elementenpaare der Sequenz anwenden.
 
 *_Chunk_size*<br/>
-Die imitige Größe eines Blocks, der für die parallele Ausführung in zwei Spalten aufgeteilt wird.
+Die minimale Größe eines Blocks, der für die parallele Ausführung in zwei Spalten aufgeteilt wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1222,11 +1222,11 @@ Der zweite überladene verwendet den bereitgestellten binären Vergleichs Operat
 
 Der Algorithmus dividiert den Eingabebereich in zwei Blöcke und dividiert jeden Block nacheinander in zwei unter Segmente für die parallele Ausführung. Das optionale Argument `_Chunk_size` kann verwendet werden, um für den Algorithmus anzugeben, dass er Blöcke von Größen < `_Chunk_size` seriell verarbeiten soll.
 
-##  <a name="parallel_transform"></a>parallel_transform
+## <a name="parallel_transform"></a>parallel_transform
 
 Wendet ein angegebenes Funktionsobjekt auf jedes Element in einem Quellbereich oder auf ein Elementpaar aus zwei Quellbereichen an und kopiert die Rückgabewerte des Funktionsobjekts parallel in einen Zielbereich. Diese Funktion entspricht semantisch `std::transform`.
 
-```
+```cpp
 template <typename _Input_iterator1,
     typename _Output_iterator,
     typename _Unary_operator>
@@ -1294,7 +1294,7 @@ first2,
     const _Binary_operator& _Binary_op);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *_Input_iterator1*<br/>
 Der Typ des ersten oder einzigen eingabeiterators.
@@ -1325,7 +1325,7 @@ Ein Ausgabeiterator, der die Position des ersten Elements im Zielbereich adressi
 Ein benutzerdefiniertes unäres Funktions Objekt, das auf jedes Element im Quellbereich angewendet wird.
 
 *_Part*<br/>
-Ein Verweis auf das Partitionierer-Objekt. Beim Argument kann es sich um einen `const`[auto_partitioner](auto-partitioner-class.md)`&`, `const`[static_partitioner](static-partitioner-class.md)`&``const`[simple_partitioner`&`](simple-partitioner-class.md) affinity_partitioner [oder`&` affinity_partitioner bei](affinity-partitioner-class.md) Verwendung eines [affinity_partitioner](affinity-partitioner-class.md) Objekts handelt es sich bei dem Verweis um einen nicht konstanten l-Wert-Verweis, damit der Algorithmus den Zustand für zukünftige Schleifen speichern kann.
+Ein Verweis auf das Partitionierer-Objekt. Beim Argument kann es sich um einen `const`[auto_partitioner](auto-partitioner-class.md)`&`, `const`[static_partitioner](static-partitioner-class.md)`&``const`[simple_partitioner](simple-partitioner-class.md)`&` [affinity_partitioner](affinity-partitioner-class.md) oder`&` [affinity_partitioner](affinity-partitioner-class.md) bei Verwendung eines Objekts handelt es sich bei dem Verweis um einen nicht konstanten l-Wert-Verweis, damit der Algorithmus den Zustand für zukünftige Schleifen speichern kann.
 
 *first2*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im zweiten Quellbereich adressiert.
@@ -1349,11 +1349,11 @@ Die über Ladungen, die das-Argument akzeptieren, `_Binary_op` zwei Eingabe Bere
 
 Weitere Informationen finden Sie unter [parallele Algorithmen](../../../parallel/concrt/parallel-algorithms.md).
 
-##  <a name="receive"></a>medizinisch
+## <a name="receive"></a>medizinisch
 
 Eine allgemeine Empfangsimplementierung, mit der ein Kontext auf Daten von genau einer Quelle warten und die akzeptierten Werte filtern kann.
 
-```
+```cpp
 template <class T>
 T receive(
     _Inout_ ISource<T>* _Src,
@@ -1377,7 +1377,7 @@ T receive(
     unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *T*<br/>
 Der Nutz Lasttyp.
@@ -1401,18 +1401,18 @@ Wenn der Parameter `_Timeout` einen anderen Wert als die Konstante `COOPERATIVE_
 
 Weitere Informationen finden Sie unter [Nachrichten Übergabe Funktionen](../../../parallel/concrt/message-passing-functions.md).
 
-##  <a name="run_with_cancellation_token"></a>run_with_cancellation_token
+## <a name="run_with_cancellation_token"></a>run_with_cancellation_token
 
 Führt sofort synchron ein Funktionsobjekt im Kontext eines angegebenen Abbruchtokens aus.
 
-```
+```cpp
 template<typename _Function>
 void run_with_cancellation_token(
     const _Function& _Func,
     cancellation_token _Ct);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *_Function*<br/>
 Der Typ des Funktions Objekts, das aufgerufen wird.
@@ -1427,11 +1427,11 @@ Das Abbruch Token, das den impliziten Abbruch des Funktions Objekts steuert. Ver
 
 Alle Unterbrechungs Punkte im Funktions Objekt werden ausgelöst, wenn die `cancellation_token` abgebrochen wird. Die explizite Token`_Ct` isolieren diese `_Func` vom übergeordneten Abbruch, wenn das übergeordnete Element über ein anderes Token oder kein Token verfügt.
 
-##  <a name="send"></a>Senden
+## <a name="send"></a>Senden
 
 Ein synchroner Sendevorgang, der wartet, bis das Ziel die Meldung akzeptiert oder ablehnt.
 
-```
+```cpp
 template <class T>
 bool send(_Inout_ ITarget<T>* _Trg, const T& _Data);
 
@@ -1439,7 +1439,7 @@ template <class T>
 bool send(ITarget<T>& _Trg, const T& _Data);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *T*<br/>
 Der Nutz Lasttyp.
@@ -1458,18 +1458,18 @@ Ein Verweis auf die zu sendenden Daten.
 
 Weitere Informationen finden Sie unter [Nachrichten Übergabe Funktionen](../../../parallel/concrt/message-passing-functions.md).
 
-##  <a name="set_ambient_scheduler"></a>set_ambient_scheduler
+## <a name="set_ambient_scheduler"></a>set_ambient_scheduler
 
-```
+```cpp
 inline void set_ambient_scheduler(std::shared_ptr<::Concurrency::scheduler_interface> _Scheduler);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *_Scheduler*<br/>
 Der zu fest Legende Ambient-Scheduler.
 
-##  <a name="set_task_execution_resources"></a>set_task_execution_resources
+## <a name="set_task_execution_resources"></a>set_task_execution_resources
 
 Schränkt die Ausführungsressourcen, die von den internen Arbeitsthreads der Concurrency Runtime verwendet werden, auf den angegebenen Affinitätssatz ein.
 
@@ -1477,7 +1477,7 @@ Es ist nur gültig, diese Methode vor Erstellung des Ressourcen-Managers oder zw
 
 Die bereitgestellte Affinitätsmaske muss keine Teilmenge der Prozessaffinitätsmaske sein. Die Prozessaffinität wird bei Bedarf aktualisiert.
 
-```
+```cpp
 void __cdecl set_task_execution_resources(
     DWORD_PTR _ProcessAffinityMask);
 
@@ -1486,7 +1486,7 @@ void __cdecl set_task_execution_resources(
     PGROUP_AFFINITY _PGroupAffinity);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *_ProcessAffinityMask*<br/>
 Die Affinitäts Maske, auf die die Concurrency Runtime Arbeitsthreads beschränkt werden soll. Verwenden Sie diese Methode nur auf einem System mit mehr als 64 Hardwarethreads, wenn Sie die Concurrency Runtime auf eine Teilmenge der aktuellen Prozessor Gruppe begrenzen möchten. Im Allgemeinen sollten Sie die Version der-Methode verwenden, die ein Array von Gruppen Affinitäten als Parameter annimmt, um die Affinität auf Computern mit mehr als 64 Hardwarethreads einzuschränken.
@@ -1503,20 +1503,20 @@ Die Methode löst eine [Invalid_operation](invalid-operation-class.md) Ausnahme 
 
 Die Version der-Methode, die ein Array von Gruppen Affinitäten als Parameter annimmt, sollte nur auf Betriebssystemen mit Version Windows 7 oder höher verwendet werden. Andernfalls wird eine [Invalid_operation](invalid-operation-class.md) Ausnahme ausgelöst.
 
-Das programmgesteuerte Ändern der Prozess Affinität, nachdem diese Methode aufgerufen wurde, bewirkt nicht, dass die Ressourcen-Manager die Affinität, auf die Sie beschränkt ist, neu auswerten. Daher sollten alle Änderungen an der Prozess Affinität vorgenommen werden, bevor diese Methode aufgerufen wird.
+Die programmgesteuerte Änderung der Prozess Affinität, nachdem diese Methode aufgerufen wurde, bewirkt nicht, dass die Ressourcen-Manager die Affinität, auf die Sie beschränkt ist, neu auswerten. Daher sollten alle Änderungen an der Prozess Affinität vorgenommen werden, bevor diese Methode aufgerufen wird.
 
-##  <a name="swap"></a>  swap
+## <a name="swap"></a>  swap
 
 Tauscht die Elemente zweier `concurrent_vector`-Objekte.
 
-```
+```cpp
 template<typename T, class _Ax>
 inline void swap(
     concurrent_vector<T, _Ax>& _A,
     concurrent_vector<T, _Ax>& _B);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *T*<br/>
 Der Datentyp der Elemente, die in den gleichzeitigen Vektoren gespeichert werden.
@@ -1532,20 +1532,20 @@ Der gleichzeitige Vektor, der die auszutauschenden Elemente bereitstellt, oder d
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagen Funktion ist ein Algorithmus, der sich auf die Container Klasse spezialisiert `concurrent_vector`, um die Element Funktion `_A`auszuführen. [concurrent_vector:: Swap](concurrent-vector-class.md#swap)(`_B`). Hierbei handelt es sich um Instanzen der partiellen Sortierung von Funktionsvorlagen durch den Compiler. Wenn Vorlagenfunktionen so überladen werden, dass die Übereinstimmung der Vorlage mit dem Funktionsaufruf nicht eindeutig ist, wählt der Compiler die spezialisierteste Version der Vorlagenfunktion aus. Die allgemeine Version der Vorlagen Funktion `template <class T> void swap(T&, T&)`in der Algorithmusklasse funktioniert nach Zuweisung und ist ein langsamer Vorgang. Die spezialisierte Version in jedem Container ist viel schneller, da sie mit der internen Darstellung der Containerklasse verwendet werden kann.
+Die Vorlagen Funktion ist ein Algorithmus, der sich auf die Container Klasse spezialisiert `concurrent_vector`, um die Element Funktion `_A`auszuführen. [concurrent_vector:: Swap](concurrent-vector-class.md#swap)(`_B`). Hierbei handelt es sich um Instanzen der partiellen Sortierung von Funktionsvorlagen durch den Compiler. Wenn Vorlagenfunktionen so überladen werden, dass die Übereinstimmung der Vorlage mit dem Funktionsaufruf nicht eindeutig ist, wählt der Compiler die spezialisierteste Version der Vorlagenfunktion. Die allgemeine Version der Vorlagen Funktion `template <class T> void swap(T&, T&)`in der Algorithmusklasse funktioniert nach Zuweisung und ist ein langsamer Vorgang. Die spezialisierte Version in jedem Container ist viel schneller, da sie mit der internen Darstellung der Containerklasse verwendet werden kann.
 
 Diese Methode ist nicht nebenläufigkeitssicher. Wenn Sie diese Methode aufgerufen haben, müssen Sie sicherstellen, dass keine anderen Threads Vorgänge für einen der gleichzeitigen Vektoren durchführen.
 
-##  <a name="task_from_exception"></a>task_from_exception
+## <a name="task_from_exception"></a>task_from_exception
 
-```
+```cpp
 template<typename _TaskType, typename _ExType>
 task<_TaskType> task_from_exception(
     _ExType _Exception,
     const task_options& _TaskOptions = task_options());
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *_TaskType*<br/>
 
@@ -1557,9 +1557,9 @@ task<_TaskType> task_from_exception(
 
 ### <a name="return-value"></a>Rückgabewert
 
-##  <a name="task_from_result"></a>task_from_result
+## <a name="task_from_result"></a>task_from_result
 
-```
+```cpp
 template<typename T>
 task<T> task_from_result(
     T _Param,
@@ -1571,7 +1571,7 @@ inline task<void> task_from_result(
     const task_options& _TaskOptions = task_options());
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *T*<br/>
 
@@ -1581,18 +1581,18 @@ inline task<void> task_from_result(
 
 ### <a name="return-value"></a>Rückgabewert
 
-##  <a name="trace_agents_register_name"></a>Trace_agents_register_name
+## <a name="trace_agents_register_name"></a>Trace_agents_register_name
 
 Ordnet den angegebenen Namen dem Nachrichtenblock oder dem Agent in der ETW-Ablaufverfolgung zu.
 
-```
+```cpp
 template <class T>
 void Trace_agents_register_name(
     _Inout_ T* _PObject,
     _In_z_ const wchar_t* _Name);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *T*<br/>
 Der Typ des Objekts. Dabei handelt es sich in der Regel um einen Nachrichtenblock oder einen Agent.
@@ -1603,11 +1603,11 @@ Ein Zeiger auf den Nachrichtenblock oder den Agent, der in der Ablauf Verfolgung
 *_Name*<br/>
 Der Name für das angegebene Objekt.
 
-##  <a name="try_receive"></a>try_receive
+## <a name="try_receive"></a>try_receive
 
 Eine allgemeine try-receive-Implementierung, mit der ein Kontext Daten von genau einer Quelle suchen und die akzeptierten Werte filtern kann. Wenn die Daten nicht bereit sind, gibt die Methode " **false**" zurück.
 
-```
+```cpp
 template <class T>
 bool try_receive(_Inout_ ISource<T>* _Src, T& _value);
 
@@ -1627,7 +1627,7 @@ bool try_receive(
     typename ITarget<T>::filter_method const& _Filter_proc);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *T*<br/>
 Der Nutz Lasttyp.
@@ -1649,15 +1649,15 @@ Ein `bool` Wert, der angibt, ob eine Nutzlast in `_value`abgelegt wurde.
 
 Weitere Informationen finden Sie unter [Nachrichten Übergabe Funktionen](../../../parallel/concrt/message-passing-functions.md).
 
-##  <a name="wait"></a>Warte
+## <a name="wait"></a>Warte
 
 Hält den aktuellen Kontext für eine bestimmte Zeit an.
 
-```
+```cpp
 void __cdecl wait(unsigned int _Milliseconds);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *_Milliseconds*<br/>
 Die Anzahl von Millisekunden, für die der aktuelle Kontext angehalten werden soll. Wenn der `_Milliseconds`-Parameter auf den Wert `0`festgelegt ist, sollte der aktuelle Kontext die Ausführung in anderen ausführbaren Kontexten erzielen, bevor Sie fortfahren.
@@ -1666,11 +1666,11 @@ Die Anzahl von Millisekunden, für die der aktuelle Kontext angehalten werden so
 
 Wenn diese Methode für einen Concurrency Runtime Scheduler-Kontext aufgerufen wird, findet der Planer einen anderen Kontext, der für die zugrunde liegende Ressource ausgeführt werden kann. Da der Scheduler in der Natur kooperativ ist, kann dieser Kontext nicht genau nach der angegebenen Anzahl von Millisekunden wieder aufgenommen werden. Wenn das Zeit Planungs Modul mit dem Ausführen anderer Aufgaben beschäftigt ist, die nicht kooperativ an den Scheduler übergeben werden, kann die Wartezeit unbegrenzt sein.
 
-##  <a name="when_all"></a>when_all
+## <a name="when_all"></a>when_all
 
 Erstellt eine Aufgabe, die erfolgreich abgeschlossen wird, wenn alle als Argumente angegeben Aufgaben erfolgreich abgeschlossen werden.
 
-```
+```cpp
 template <typename _Iterator>
 auto when_all(
     _Iterator _Begin,
@@ -1680,7 +1680,7 @@ auto when_all(
     _Iterator>::_Perform(_TaskOptions, _Begin,  _End));
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *_Iterator*<br/>
 Der Typ des Eingabeiterators.
@@ -1702,15 +1702,15 @@ Eine Aufgabe, die erfolgreich abgeschlossen wird, wenn alle Eingabe Aufgaben erf
 
 `when_all` ist eine nicht blockierende Funktion, die `task` als Ergebnis erzeugt. Anders als bei [Task:: Wait](task-class.md#wait)ist es sicher, diese Funktion in einer UWP-App auf dem AStA-Thread (Application STA) aufzurufen.
 
-Wenn eine der Aufgaben abgebrochen wird oder eine Ausnahme auslöst, wird die zurückgegebene Aufgabe früh im Zustand "abgebrochen" ausgeführt, und die Ausnahme wird ausgelöst, wenn Sie " [Task:: Get](task-class.md#get) " oder `task::wait` für diese Aufgabe aufruft.
+Wenn eine der Aufgaben abgebrochen wird oder eine Ausnahme auslöst, wird die zurückgegebene Aufgabe früh im abgebrochenen Zustand ausgeführt, und die Ausnahme wird ausgelöst, wenn Sie [Task:: Get](task-class.md#get) oder `task::wait` für diese Aufgabe aufruft.
 
 Weitere Informationen finden Sie unter [Aufgaben Parallelität](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
-##  <a name="when_any"></a>when_any
+## <a name="when_any"></a>when_any
 
 Erstellt eine Aufgabe, die erfolgreich abgeschlossen wird, wenn eine der als Argumente angegeben Aufgaben erfolgreich abgeschlossen wird.
 
-```
+```cpp
 template<typename _Iterator>
 auto when_any(
     _Iterator _Begin,
@@ -1732,7 +1732,7 @@ auto when_any(
                _Iterator>::_Perform(_CancellationToken._GetImplValue(), _Begin, _End));
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *_Iterator*<br/>
 Der Typ des Eingabeiterators.
