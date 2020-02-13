@@ -8,28 +8,28 @@ helpviewer_keywords:
 - rubber banding [MFC]
 - WM_LBUTTONDOWN [MFC]
 ms.assetid: 0d0fa64c-6418-4baf-ab7f-2d16ca039230
-ms.openlocfilehash: a6a9c9848e21129d4e6a8ce300e8750b4a0c6126
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 095f3c15546466c6a495f6aa348990ed69b04a9e
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308848"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127365"
 ---
 # <a name="rubber-banding-and-trackers"></a>Gummibandtechnik und Ziehpunkte
 
-Ein weiteres Feature, mit Tracker ist die "-" Gummibandauswahl, die einem Benutzer ermöglicht, mehrere OLE-Elemente auswählen, indem Sie ziehen ein Rechteck zur größenanpassung für die Elemente ausgewählt werden. Wenn der Benutzer die linke Maustaste loslässt, Elemente in der Region, die vom Benutzer ausgewählten ausgewählt sind, und können vom Benutzer bearbeitet werden. Beispielsweise kann der Benutzer die Auswahl in eine andere containeranwendung ziehen.
+Ein weiteres Feature, das mit Tracker bereitgestellt wird, ist die "Gummi Bandauswahl", die es Benutzern ermöglicht, mehrere OLE-Elemente auszuwählen, indem Sie ein Größen Rechteck um die auszuwählenden Elemente ziehen. Wenn der Benutzer die linke Maustaste loslässt, werden die Elemente in dem vom Benutzer ausgewählten Bereich ausgewählt und können vom Benutzer bearbeitet werden. Beispielsweise kann der Benutzer die Auswahl in eine andere Containeranwendung ziehen.
 
-Implementieren dieses Feature erfordert zusätzlichen Code in Ihrer Anwendung WM_LBUTTONDOWN Handler-Funktion.
+Die Implementierung dieser Funktion erfordert zusätzlichen Code in der WM_LBUTTONDOWN Handlerfunktion Ihrer Anwendung.
 
-Das folgende Codebeispiel implementiert die Gummibandauswahl- und zusätzliche Features.
+Im folgenden Codebeispiel werden die Gummi Bandauswahl und zusätzliche Features implementiert.
 
 [!code-cpp[NVC_MFCOClient#6](../mfc/codesnippet/cpp/rubber-banding-and-trackers_1.cpp)]
 
-Wenn Sie rückgängig gemacht werden Ausrichtung der nachverfolgung während der Gummibandtechnik zulassen möchten, sollten Sie aufrufen [CRectTracker::TrackRubberBand](../mfc/reference/crecttracker-class.md#trackrubberband) mit den dritten Parameter auf **"true"**. Beachten Sie, dass rückgängig gemacht werden Ausrichtung ermöglicht in einigen Fällen bewirkt [CRectTracker::m_rect](../mfc/reference/crecttracker-class.md#m_rect) umgekehrt werden. Dies kann korrigiert werden, durch einen Aufruf von [CRect:: NormalizeRect](../atl-mfc-shared/reference/crect-class.md#normalizerect).
+Wenn Sie die rückgängig-Ausrichtung der Tracker während der Gummi Bandbreite zulassen möchten, sollten Sie [CRectTracker:: trackgumband](../mfc/reference/crecttracker-class.md#trackrubberband) aufrufen, wobei der dritte Parameter auf **true**festgelegt ist. Beachten Sie, dass das Zulassen von umkehrbarer Ausrichtung manchmal dazu führt, dass [CRectTracker:: m_rect](../mfc/reference/crecttracker-class.md#m_rect) invertiert wird. Dies kann durch einen [CRect:: NormalizeRect-CRect](../atl-mfc-shared/reference/crect-class.md#normalizerect)-Befehl korrigiert werden.
 
-Weitere Informationen finden Sie unter [Containerclientelemente](../mfc/containers-client-items.md) und [Anpassen von Drag & Drop](../mfc/drag-and-drop-customizing.md).
+Weitere Informationen finden Sie unter [Container Client Items](../mfc/containers-client-items.md) und [OLE Drag & Drop: Anpassen von Drag & Drop](../mfc/drag-and-drop-ole.md#customize-drag-and-drop).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Tracker: Implementieren von Trackern in einer OLE-Anwendung](../mfc/trackers-implementing-trackers-in-your-ole-application.md)<br/>
 [CRectTracker-Klasse](../mfc/reference/crecttracker-class.md)

@@ -72,40 +72,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::rbg
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-ms.openlocfilehash: 6423220d8203b0d0fba73a4888f967e159db26de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 981b3026e1efb6c3b4e06457a0eb1f986cdcaafa
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180361"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126694"
 ---
-# <a name="double3-class"></a>double_3-Klasse
+# <a name="double_3-class"></a>double_3-Klasse
 
 Stellt einen kurzen Vektor aus drei Doubles dar.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class double_3;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |value_type||
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[double_3-Konstruktor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
+|[double_3-Konstruktor](#ctor)|Ist überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |double_3::get_x||
 |double_3::get_xy||
@@ -141,31 +141,31 @@ class double_3;
 |double_3::set_z||
 |double_3::set_zx||
 |double_3::set_zxy||
-|double_3::set_zy||
+|double_3:: set_zy||
 |double_3::set_zyx||
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |double_3::operator-||
 |double_3::operator--||
-|double_3::operator*=||
+|double_3:: Operator * =||
 |double_3::operator/=||
 |double_3::operator++||
 |double_3::operator+=||
 |double_3::operator=||
-|double_3::operator-=||
+|double_3:: Operator-=||
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Size-Konstante](#double_3__size)||
+|[Größen Konstante](#double_3__size)||
 
-### <a name="public-data-members"></a>Öffentliche Datenmember
+### <a name="public-data-members"></a>Öffentliche Datenelemente
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |double_3::b||
 |double_3::bg||
@@ -182,18 +182,18 @@ class double_3;
 |double_3::rbg||
 |double_3::rg||
 |double_3::rgb||
-|double_3::x||
+|double_3:: x||
 |double_3::xy||
 |double_3::xyz||
 |double_3::xz||
-|double_3::xzy||
+|double_3:: XZY||
 |double_3::y||
 |double_3::yx||
 |double_3::yxz||
 |double_3::yz||
 |double_3::yzx||
 |double_3::z||
-|double_3::zx||
+|double_3:: ZX||
 |double_3::zxy||
 |double_3::zy||
 |double_3::zyx||
@@ -202,17 +202,17 @@ class double_3;
 
 `double_3`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amp_short_vectors.h
+**Header:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Parallelität:: Grafiken
 
-##  <a name="ctor"></a> double_3
+## <a name="ctor"></a>double_3
 
 Standardkonstruktor, initialisiert alle Elemente mit 0.
 
-```
+```cpp
 double_3() restrict(amp,
     cpu);
 
@@ -254,26 +254,26 @@ explicit inline double_3(
 ### <a name="parameters"></a>Parameter
 
 *_V0*<br/>
-Der Wert, der 0-Element zu initialisieren.
+Der Wert, mit dem Element 0 initialisiert werden soll.
 
 *_V1*<br/>
-Der Wert 1 Element initialisiert werden.
+Der Wert, mit dem Element 1 initialisiert werden soll.
 
 *_V2*<br/>
-Der Wert 2-Element zu initialisieren.
+Der Wert, mit dem Element 2 initialisiert werden soll.
 
 *_V*<br/>
 Der Wert für die Initialisierung.
 
 *_Other*<br/>
-Das Objekt, das zum Initialisieren verwendet.
+Das-Objekt, das zum Initialisieren von verwendet wird.
 
-##  <a name="double_3__size"></a> Größe
+## <a name="double_3__size"></a>Größe
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

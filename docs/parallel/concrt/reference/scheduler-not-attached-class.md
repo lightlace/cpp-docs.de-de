@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_not_attached class
 ms.assetid: 26001970-b400-463b-be3d-8623359c399a
-ms.openlocfilehash: be8a04c7cf6ef5aa4d6070e92df14e643395ef00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3b1c113e5c6c5feb5b2fa1940ee9b984233e4af
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160119"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142206"
 ---
-# <a name="schedulernotattached-class"></a>scheduler_not_attached-Klasse
+# <a name="scheduler_not_attached-class"></a>scheduler_not_attached-Klasse
 
 Diese Klasse beschreibt eine Ausnahme, die bei Ausführen eines Vorgangs ausgelöst wird, der erfordert, dass ein Planer an den aktuellen Kontext angefügt wird, und einer nicht.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class scheduler_not_attached : public std::exception;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[scheduler_not_attached](#ctor)|Überladen. Erstellt ein `scheduler_not_attached`-Objekt.|
+|[scheduler_not_attached](#ctor)|Ist überladen. Erstellt ein `scheduler_not_attached`-Objekt.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -39,17 +39,17 @@ class scheduler_not_attached : public std::exception;
 
 `scheduler_not_attached`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** concrt.h
+**Header:** ConcRT. h
 
 **Namespace:** Parallelität
 
-##  <a name="ctor"></a> scheduler_not_attached
+## <a name="ctor"></a>scheduler_not_attached
 
 Erstellt ein `scheduler_not_attached`-Objekt.
 
-```
+```cpp
 explicit _CRTIMP scheduler_not_attached(_In_z_ const char* _Message) throw();
 
 scheduler_not_attached() throw();
@@ -60,7 +60,7 @@ scheduler_not_attached() throw();
 *_Message*<br/>
 Eine beschreibende Fehlermeldung.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [Scheduler-Klasse](scheduler-class.md)

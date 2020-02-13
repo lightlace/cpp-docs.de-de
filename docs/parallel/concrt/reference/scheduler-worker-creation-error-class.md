@@ -8,34 +8,34 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_worker_creation_error class
 ms.assetid: 4aec1c3e-c32a-41b2-899d-2d898f23b3c7
-ms.openlocfilehash: 66e7485787606c22aba2970dbe481a7d29e66621
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7f2763d7244be9e5e5b006b31b97c08e213a4f2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337361"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142765"
 ---
-# <a name="schedulerworkercreationerror-class"></a>scheduler_worker_creation_error-Klasse
+# <a name="scheduler_worker_creation_error-class"></a>scheduler_worker_creation_error-Klasse
 
 Diese Klasse beschreibt eine Ausnahme, die aufgrund eines Fehlers bei der Erstellung eines Workerausführungskontexts in der Concurrency Runtime ausgelöst wird.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class scheduler_worker_creation_error : public scheduler_resource_allocation_error;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[scheduler_worker_creation_error](#ctor)|Überladen. Erstellt ein `scheduler_worker_creation_error`-Objekt.|
+|[scheduler_worker_creation_error](#ctor)|Ist überladen. Erstellt ein `scheduler_worker_creation_error`-Objekt.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Diese Ausnahme wird in der Regel ausgelöst, wenn ein Aufruf an das Betriebssystem zum Erstellen der Ausführungskontexte aus in der Concurrency Runtime fehlschlägt. Ausführungskontexte sind Threads, die Aufgaben in der Concurrency Runtime ausführen. Der Fehlercode, die normalerweise von einem Aufruf der Win32-Methode zurückgegeben werden sollen `GetLastError` wird in einen Wert vom Typ konvertiert `HRESULT` und können abgerufen werden, mithilfe der Methode der Basisklasse `get_error_code`.
+Diese Ausnahme wird normalerweise ausgelöst, wenn ein Systemaufrufe zum Erstellen von Ausführungs Kontexten innerhalb des Concurrency Runtime fehlschlägt. Ausführungs Kontexte sind Threads, die Tasks im Concurrency Runtime ausführen. Der Fehlercode, der normalerweise von einem aufgerufenen Win32-Methode zurückgegeben wird `GetLastError` wird in einen Wert vom Typ "`HRESULT`" konvertiert und kann mit der `get_error_code`der Basisklassen Methode abgerufen werden.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -45,17 +45,17 @@ Diese Ausnahme wird in der Regel ausgelöst, wenn ein Aufruf an das Betriebssyst
 
 `scheduler_worker_creation_error`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** concrt.h
+**Header:** ConcRT. h
 
 **Namespace:** Parallelität
 
-##  <a name="ctor"></a> scheduler_worker_creation_error
+## <a name="ctor"></a>scheduler_worker_creation_error
 
 Erstellt ein `scheduler_worker_creation_error`-Objekt.
 
-```
+```cpp
 scheduler_worker_creation_error(
     _In_z_ const char* _Message,
     HRESULT _Hresult) throw();
@@ -70,8 +70,8 @@ explicit _CRTIMP scheduler_worker_creation_error(
 Eine beschreibende Fehlermeldung.
 
 *_Hresult*<br/>
-Die `HRESULT` Wert des Fehlers, der die Ausnahme verursacht hat.
+Der `HRESULT` Wert des Fehlers, der die Ausnahme verursacht hat.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)

@@ -4,125 +4,125 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-ms.openlocfilehash: 19bd871857dcef6aaef153798388c0272239fa1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9e9b8124254084ac30191d37d49f2ef72bd677e
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180166"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142295"
 ---
 # <a name="scheduler-instances"></a>Planerinstanzen
 
-Dieses Dokument beschreibt die Rolle des Scheduler-Instanzen in der Concurrency Runtime und wie Sie mit der [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) und [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) Klassen zum Erstellen und verwalten Scheduler-Instanzen. Planerinstanzen sind nützlich, wenn Sie explizite Planungsrichtlinien bestimmten Arten von Arbeitslasten zuordnen möchten. Beispielsweise können Sie eine Planerinstanz erstellen, um einige Aufgaben mit höherer Threadpriorität auszuführen und andere Aufgaben mit dem Standardplaner mit normaler Threadpriorität auszuführen.
+In diesem Dokument wird die Rolle von Scheduler-Instanzen in der Concurrency Runtime und die Verwendung der [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) -Klasse und der [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) -Klasse zum Erstellen und Verwalten von Scheduler-Instanzen beschrieben. Scheduler-Instanzen sind hilfreich, wenn Sie explizite Planungsrichtlinien bestimmten Arten von Arbeits Auslastungen zuordnen möchten. Beispielsweise können Sie eine Planerinstanz erstellen, um einige Aufgaben mit höherer Threadpriorität auszuführen und andere Aufgaben mit dem Standardplaner mit normaler Threadpriorität auszuführen.
 
 > [!TIP]
->  Die Concurrency Runtime stellt einen Standardplaner bereit. Sie müssen daher keinen in Ihrer Anwendung erstellen. Da der Taskplaner die Leistung Ihrer Anwendungen optimieren können, es wird empfohlen, zunächst die [Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) oder [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md) möchten noch nicht mit der Concurrency Runtime.
+> Die Concurrency Runtime stellt einen Standardplaner bereit. Sie müssen daher keinen in Ihrer Anwendung erstellen. Da der Taskplaner Sie bei der Feinabstimmung der Leistung Ihrer Anwendungen unterstützt, empfehlen wir Ihnen, mit der [Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) oder der [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md) zu beginnen, wenn Sie mit der Concurrency Runtime noch nicht vertraut sind.
 
-##  <a name="top"></a> Abschnitte
+## <a name="top"></a> Abschnitte
 
-- [Der Scheduler und die CurrentScheduler-Klasse](#classes)
+- [Die Scheduler-Klasse und die CurrentScheduler-Klasse](#classes)
 
-- [Erstellen einer Planerinstanz](#creating)
+- [Erstellen einer planerinstanz](#creating)
 
-- [Verwalten der Lebensdauer einer Planerinstanz](#managing)
+- [Verwalten der Lebensdauer einer planerinstanz](#managing)
 
-- [Methoden und Funktionen](#features)
+- [Methoden und Features](#features)
 
 - [Beispiel](#example)
 
-##  <a name="classes"></a> Der Scheduler und die CurrentScheduler-Klasse
+## <a name="classes"></a>Die Scheduler-Klasse und die CurrentScheduler-Klasse
 
-Die Aufgabenplanung ermöglicht Anwendungen die eine oder mehrere *Planerinstanzen* um Arbeit einzuplanen. Die [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) Klasse stellt eine Planerinstanz und kapselt die Funktionalität, die sich auf das Planen von Aufgaben beziehen.
+Der-Taskplaner ermöglicht Anwendungen die Verwendung einer oder mehrerer *Scheduler-Instanzen* zum Planen von Arbeit. Die " [parallelcurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) "-Klasse stellt eine planerinstanz dar und kapselt die Funktionalität, die mit Planungsaufgaben verknüpft ist.
 
-Ein Thread, der an einen Planer angefügt ist, wird als bezeichnet ein *Ausführungskontext*, oder nur *Kontext*. Ein Planer kann zu einem beliebigen Zeitpunkt auf den aktuellen Kontext aktiv sein. Der aktive Planer ist auch bekannt als die *aktuellen Planer*. Die Concurrency Runtime verwendet die [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) Klasse, um Zugriff auf den aktuellen Planer zu ermöglichen. Die aktuelle Planer für einen Kontext kann vom aktuellen Planer für einen anderen Kontext unterscheiden. Die Laufzeit stellt keine auf Prozessebene-Darstellung des aktuellen Planers bereit.
+Ein Thread, der an einen Scheduler angefügt ist, wird als *Ausführungs Kontext*oder nur als *Kontext*bezeichnet. Ein Scheduler kann jederzeit im aktuellen Kontext aktiv sein. Der aktive Scheduler wird auch als *Aktueller Planer*bezeichnet. Der Concurrency Runtime verwendet die [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) -Klasse, um den Zugriff auf den aktuellen Scheduler bereitzustellen. Der aktuelle Scheduler für einen Kontext kann sich vom aktuellen Zeit Planungs Modul für einen anderen Kontext unterscheiden. Die Laufzeit stellt keine Darstellung des aktuellen Zeit Planungs Moduls auf Prozessebene bereit.
 
-In der Regel die `CurrentScheduler` Klasse wird verwendet, um den aktuellen Scheduler zugreifen. Die `Scheduler` Klasse ist hilfreich, wenn es sich bei müssen Sie einen Planer zu verwalten, die nicht dem aktuellen Objekt ist.
+In der Regel wird die `CurrentScheduler`-Klasse für den Zugriff auf den aktuellen Scheduler verwendet. Die `Scheduler`-Klasse ist nützlich, wenn Sie einen Scheduler verwalten müssen, der nicht der aktuelle ist.
 
-In den folgenden Abschnitten wird beschrieben, wie zum Erstellen und Verwalten einer Planerinstanz. Ein vollständiges Beispiel, das diese Aufgaben veranschaulicht, finden Sie unter [Vorgehensweise: Verwalten einer Planerinstanz](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
-
-[[Nach oben](#top)]
-
-##  <a name="creating"></a> Erstellen einer Planerinstanz
-
-Es sind diese drei Methoden zum Erstellen einer `Scheduler` Objekt:
-
-- Wenn kein Planer vorhanden ist, erstellt die Laufzeit einen Standardplaner für Sie bei der Verwendung von Common Language Runtime-Funktionen, z. B. parallele Algorithmen, Arbeiten ausführen. Der Standard-Scheduler wird, den aktuellen Scheduler für den Kontext an, der die parallele Verarbeitung initiiert wird.
-
-- Die [CurrentScheduler](reference/currentscheduler-class.md#create) -Methode erstellt eine `Scheduler` Objekt, das eine bestimmte Richtlinie verwendet, und dieser Planer mit dem aktuellen Kontext verknüpft.
-
-- Die [Scheduler](reference/scheduler-class.md#create) -Methode erstellt eine `Scheduler` -Objekt, das eine bestimmte Richtlinie verwendet, aber nicht mit dem aktuellen Kontext zuzuordnen.
-
-Ermöglicht die Laufzeit einen Standardplaner erstellt kann alle gleichzeitig ausgeführten Aufgaben, die demselben Zeitplanungsmodul freizugeben. In der Regel die Funktionalität, die von bereitgestellte der [Parallel Patterns Library](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL) oder die [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md) wird verwendet, um die Ausführung paralleler arbeiten. Aus diesem Grund müssen Sie nicht direkt mit den Scheduler so steuern die Richtlinie oder für die Lebensdauer zu arbeiten. Bei Verwendung von der PPL oder der Agents Library erstellt die Laufzeit den Standard-Scheduler, wenn es nicht vorhanden, und es den aktuellen Scheduler für jeden Kontext macht. Wenn Sie einen Planer erstellen und als aktuellen Planer festgelegt, verwendet die Runtime dieser Planer, um Aufgaben zu planen. Erstellen Sie zusätzliche Planerinstanzen, nur, wenn Sie eine bestimmte Richtlinie zur Taskplanung benötigen. Weitere Informationen zu den Richtlinien, die einen Planer zugeordnet sind, finden Sie unter [Planerrichtlinien](../../parallel/concrt/scheduler-policies.md).
+In den folgenden Abschnitten wird beschrieben, wie eine Scheduler-Instanz erstellt und verwaltet wird. Ein umfassendes Beispiel, das diese Aufgaben veranschaulicht, finden [Sie unter Gewusst wie: Verwalten einer planerinstanz](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
 
 [[Nach oben](#top)]
 
-##  <a name="managing"></a> Verwalten der Lebensdauer einer Planerinstanz
+## <a name="creating"></a>Erstellen einer planerinstanz
 
-Die Runtime verwendet einen Mechanismus zum Zählen von verweisen, um die Steuerung der Lebensdauer des `Scheduler` Objekte.
+Es gibt drei Möglichkeiten, ein `Scheduler` Objekt zu erstellen:
 
-Bei Verwendung der `CurrentScheduler::Create` Methode oder die `Scheduler::Create` Methode zum Erstellen einer `Scheduler` Objekt ist, wird die Laufzeit legt die Initiale Verweisanzahl dieses Planers auf einen. Die Laufzeit inkrementiert den Verweiszähler beim Aufrufen der [Concurrency::Scheduler::Attach](reference/scheduler-class.md#attach) Methode. Die `Scheduler::Attach` Methode ordnet die `Scheduler` Objekt zusammen mit den aktuellen Kontext. Dies macht es den aktuellen Planer. Beim Aufrufen der `CurrentScheduler::Create` -Methode erstellt die Runtime eine `Scheduler` Objekt und fügt sie an den aktuellen Kontext (und legt die Anzahl der Verweise auf einen). Sie können auch die [Verweiszählerwert](reference/scheduler-class.md#reference) Methode inkrementiert den Verweiszähler des eine `Scheduler` Objekt.
+- Wenn kein Scheduler vorhanden ist, erstellt die Laufzeit einen Standard Planer für Sie, wenn Sie Lauf Zeitfunktionen verwenden, z. b. einen parallelen Algorithmus, um Arbeit auszuführen. Der Standard Planer wird zum aktuellen Scheduler für den Kontext, der die parallele Arbeit initiiert.
 
-Die Common Language Runtime dekrementiert den Verweiszähler beim Aufruf der [CurrentScheduler](reference/currentscheduler-class.md#detach) Methode, um die aktuellen Planer zu trennen, oder rufen Sie die [Concurrency::Scheduler::Release](reference/scheduler-class.md#release) Methode. Wenn der Verweiszähler null erreicht, löscht die Laufzeit die `Scheduler` Objekt nach dem alle geplanten Aufgaben beendet. Ein aktuell ausgeführter Task ist zulässig, um den Verweiszähler des dem aktuellen Planer zu erhöhen. Aus diesem Grund, wenn der Verweiszähler, 0 (null erreicht), eine Aufgabe den Verweiszähler inkrementiert die Laufzeit nicht zerstört die `Scheduler` Objekt, bis der Verweiszähler wird erneut 0 (null) erreicht, und alle Aufgaben abgeschlossen sind.
+- Die [Concurrency:: CurrentScheduler:: Create](reference/currentscheduler-class.md#create) -Methode erstellt ein `Scheduler` Objekt, das eine bestimmte Richtlinie verwendet und diesem Scheduler den aktuellen Kontext zuordnet.
 
-Die Common Language Runtime verwaltet einen internen Stapel von `Scheduler` Objekte für jeden Kontext. Beim Aufrufen der `Scheduler::Attach` oder `CurrentScheduler::Create` -Methode, die Laufzeit pushvorgängen, die `Scheduler` Objekt im Stapel für den aktuellen Kontext. Dies macht es den aktuellen Planer. Beim Aufruf `CurrentScheduler::Detach`, die Laufzeit wird der aktuelle Planer aus dem Stapel für den aktuellen Kontext und das vorherige Objekt als aktuellen Planer festgelegt.
+- Die [parallelcurrency:: Scheduler:: Create](reference/scheduler-class.md#create) -Methode erstellt ein `Scheduler` Objekt, das eine bestimmte Richtlinie verwendet, aber nicht dem aktuellen Kontext zuordnet.
 
-Die Runtime bietet verschiedene Möglichkeiten zum Verwalten der Lebensdauer einer Planerinstanz. Die folgende Tabelle zeigt die entsprechende Methode, die frei, oder trennt den Planer im aktuellen Kontext für jede Methode, die erstellt oder einen Planer an den aktuellen Kontext angefügt.
+Wenn die Laufzeit einen Standard Planer erstellen kann, können alle gleichzeitigen Tasks denselben Planer gemeinsam verwenden. In der Regel werden die Funktionen, die von der [Parallel Patterns Library](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL) oder der [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md) bereitgestellt werden, verwendet, um parallele Arbeiten auszuführen. Daher müssen Sie nicht direkt mit dem Scheduler zusammenarbeiten, um seine Richtlinie oder Lebensdauer zu steuern. Wenn Sie die PPL-oder die Agents-Bibliothek verwenden, erstellt die Laufzeit den Standard Planer, wenn er nicht vorhanden ist, und macht ihn zum aktuellen Planer für jeden Kontext. Wenn Sie einen Scheduler erstellen und ihn als aktuellen Planer festlegen, verwendet die Common Language Runtime den Scheduler, um Aufgaben zu planen. Erstellen Sie zusätzliche Scheduler-Instanzen nur dann, wenn Sie eine bestimmte Planungsrichtlinie benötigen. Weitere Informationen zu den Richtlinien, die einem Scheduler zugeordnet sind, finden Sie unter [Scheduler Policies](../../parallel/concrt/scheduler-policies.md).
 
-|Erstellen oder die attach-Methode|Freigegeben oder detach-Methode|
+[[Nach oben](#top)]
+
+## <a name="managing"></a>Verwalten der Lebensdauer einer planerinstanz
+
+Die Laufzeit verwendet einen Mechanismus zur Verweis Zählung, um die Lebensdauer von `Scheduler` Objekten zu steuern.
+
+Wenn Sie die `CurrentScheduler::Create`-Methode oder die `Scheduler::Create`-Methode verwenden, um ein `Scheduler`-Objekt zu erstellen, legt die Laufzeit den anfänglichen Verweis Zähler dieses Zeit Planungs Moduls auf 1 fest. Die Laufzeit erhöht den Verweis Zähler, wenn Sie die [parallelcurrency:: Scheduler:: Attach](reference/scheduler-class.md#attach) -Methode aufzurufen. Die `Scheduler::Attach`-Methode ordnet das `Scheduler`-Objekt zusammen mit dem aktuellen Kontext zu. Dadurch wird es zum aktuellen Scheduler. Wenn Sie die `CurrentScheduler::Create`-Methode aufzurufen, erstellt die Laufzeit ein `Scheduler`-Objekt und fügt es an den aktuellen Kontext an (und legt den Verweis Zähler auf 1 fest). Sie können auch die Methode " [parallelcurrency:: Scheduler:: Reference](reference/scheduler-class.md#reference) " verwenden, um den Verweis Zähler eines `Scheduler` Objekts zu erhöhen.
+
+Die Laufzeit verringert den Verweis Zähler, wenn Sie die [Concurrency:: CurrentScheduler::D Etach](reference/currentscheduler-class.md#detach) -Methode zum Trennen des aktuellen Zeit Planungs Moduls aufzurufen, oder Sie können die [Concurrency:: Scheduler:: Release](reference/scheduler-class.md#release) -Methode aufzurufen. Wenn der Verweis Zähler Null erreicht, zerstört die Laufzeit das `Scheduler` Objekt, nachdem alle geplanten Aufgaben abgeschlossen sind. Ein ausgelaufender Task darf den Verweis Zähler des aktuellen Zeit Planungs Moduls erhöhen. Wenn also der Verweis Zähler Null erreicht und ein Task den Verweis Zähler Inkremente, zerstört die Laufzeit das `Scheduler` Objekt erst, wenn der Verweis Zähler erneut Null erreicht und alle Aufgaben abgeschlossen sind.
+
+Die Laufzeit verwaltet einen internen Stapel von `Scheduler`-Objekten für jeden Kontext. Wenn Sie die `Scheduler::Attach`-oder `CurrentScheduler::Create`-Methode aufzurufen, überträgt die Laufzeit dieses `Scheduler` Objekt für den aktuellen Kontext auf den Stapel. Dadurch wird es zum aktuellen Scheduler. Wenn Sie `CurrentScheduler::Detach`aufzurufen, ruft die Laufzeit den aktuellen Scheduler aus dem Stapel für den aktuellen Kontext ab und legt den vorherigen Zeit Planungs Modul als aktuellen Planer fest.
+
+Die Laufzeit bietet mehrere Möglichkeiten zum Verwalten der Lebensdauer einer planerinstanz. Die folgende Tabelle zeigt die entsprechende Methode, die den Scheduler für jede Methode, die einen Planer erstellt oder an den aktuellen Kontext anfügt, vom aktuellen Kontext freigibt bzw. trennt.
+
+|Create-oder Attach-Methode|Release-oder trennen-Methode|
 |-----------------------------|------------------------------|
 |`CurrentScheduler::Create`|`CurrentScheduler::Detach`|
 |`Scheduler::Create`|`Scheduler::Release`|
 |`Scheduler::Attach`|`CurrentScheduler::Detach`|
 |`Scheduler::Reference`|`Scheduler::Release`|
 
-Aufrufen der ungeeignete freigegeben Sie oder trennen Sie die Methode verursacht nicht definiertes Verhalten in der Runtime.
+Wenn Sie die ungeeignete Release-oder trennen-Methode aufrufen, wird in der Laufzeit nicht bestimmtes Verhalten erzeugt.
 
-Bei Verwendung von Funktionen, z. B. in der PPL, die bewirkt, die Laufzeit den Standardplaner für Sie erstellt dass, nicht freigeben oder Trennen von diesem Zeitplanungsmodul. Die Runtime verwaltet die Lebensdauer des einen Planer, den erstellt wird.
+Wenn Sie z. b. die-Funktion verwenden, die bewirkt, dass die Laufzeit den Standard Planer für Sie erstellt, dürfen Sie diesen Scheduler nicht freigeben oder trennen. Die Laufzeit verwaltet die Lebensdauer eines beliebigen Schedulers, den Sie erstellt.
 
-Da die Runtime nicht zerstört wird eine `Scheduler` Objekt auf, bevor alle Aufgaben abgeschlossen haben, können Sie die [Concurrency::Scheduler::RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent) Methode oder der [Concurrency:: CurrentScheduler:: RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent) Methode, um eine Benachrichtigung bei einem `Scheduler` -Objekt zerstört wird. Dies ist nützlich, wenn Sie für jede Aufgabe warten müssen, die von geplant wird eine `Scheduler` Objekt, um den Vorgang abzuschließen.
-
-[[Nach oben](#top)]
-
-##  <a name="features"></a> Methoden und Funktionen
-
-In diesem Abschnitt werden die Hauptmethoden der zusammengefasst die `CurrentScheduler` und `Scheduler` Klassen.
-
-Stellen Sie sich die `CurrentScheduler` Klasse als ein Hilfsprogramm zum Erstellen eines Planers für auf dem aktuellen Kontext. Die `Scheduler` Klasse können Sie einen Planer steuern, die zu einem anderen Kontext gehört.
-
-Die folgende Tabelle zeigt die wichtigen Methoden, die von definiert sind die `CurrentScheduler` Klasse.
-
-|Methode|Beschreibung|
-|------------|-----------------|
-|[Erstellen](reference/currentscheduler-class.md#create)|Erstellt eine `Scheduler` -Objekt, das die angegebene Richtlinie verwendet und ordnet sie dem aktuellen Kontext.|
-|[Get](reference/currentscheduler-class.md#get)|Ruft einen Zeiger auf die `Scheduler` -Objekt, das mit dem aktuellen Kontext verknüpft ist. Diese Methode nicht inkrementiert den Verweiszähler des dem `Scheduler` Objekt.|
-|[Trennen](reference/currentscheduler-class.md#detach)|Trennt den aktuellen Planer aus dem aktuellen Kontext und dem vorherigen Beispiel als aktuellen Planer legt sie fest.|
-|[RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent)|Registriert ein Ereignis, das die Laufzeit legt fest, wenn die aktuelle Planer zerstört wird.|
-|[CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup)|Erstellt eine [Concurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) Objekt im aktuellen Planer.|
-|[ScheduleTask](reference/currentscheduler-class.md#scheduletask)|Eine einfache Aufgabe und der zeitplanwarteschlange des aktuellen Planer hinzugefügt.|
-|[GetPolicy](reference/currentscheduler-class.md#getpolicy)|Ruft eine Kopie der Richtlinie, die den aktuellen Planer zugeordnet ist.|
-
-Die folgende Tabelle zeigt die wichtigen Methoden, die von definiert sind die `Scheduler` Klasse.
-
-|Methode|Beschreibung|
-|------------|-----------------|
-|[Erstellen](reference/scheduler-class.md#create)|Erstellt eine `Scheduler` Objekt, das die angegebene Richtlinie verwendet.|
-|[Anfügen](reference/scheduler-class.md#attach)|Ordnet die `Scheduler` Objekt zusammen mit den aktuellen Kontext.|
-|[Verweis](reference/scheduler-class.md#reference)|Inkrementiert den Verweiszähler des dem `Scheduler` Objekt.|
-|[Version](reference/scheduler-class.md#release)|Dekrementiert den Verweiszähler des dem `Scheduler` Objekt.|
-|[RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent)|Registriert ein Ereignis, das die Laufzeit festgelegt wird, wenn die `Scheduler` -Objekt zerstört wird.|
-|[CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup)|Erstellt eine [Concurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) -Objekt in der `Scheduler` Objekt.|
-|[ScheduleTask](reference/scheduler-class.md#scheduletask)|Plant eine einfache Aufgabe aus der `Scheduler` Objekt.|
-|[GetPolicy](reference/scheduler-class.md#getpolicy)|Ruft eine Kopie der Richtlinie zugeordnet ist, die die `Scheduler` Objekt.|
-|[SetDefaultSchedulerPolicy](reference/scheduler-class.md#setdefaultschedulerpolicy)|Legt die Richtlinie für die Laufzeit verwendet wird, wenn es den Standard-Scheduler erstellt.|
-|[ResetDefaultSchedulerPolicy](reference/scheduler-class.md#resetdefaultschedulerpolicy)|Stellt wieder her, die vor dem Aufruf von aktiv war die Standardrichtlinie `SetDefaultSchedulerPolicy`. Wenn nach dem Aufruf der Standard-Scheduler erstellt wird, verwendet die Runtime die Einstellungen der Standardrichtlinie für den Scheduler zu erstellen.|
+Da die Laufzeit ein `Scheduler` Objekt nicht zerstört, bevor alle Aufgaben abgeschlossen sind, können Sie die [Concurrency:: Scheduler:: registershutdownetvent](reference/scheduler-class.md#registershutdownevent) -Methode oder die [Concurrency:: CurrentScheduler:: registershutdownetvent](reference/currentscheduler-class.md#registershutdownevent) -Methode verwenden, um eine Benachrichtigung zu erhalten, wenn ein `Scheduler` Objekt zerstört wird. Dies ist hilfreich, wenn Sie auf die Beendigung aller Aufgaben warten müssen, die von einem `Scheduler`-Objekt geplant werden.
 
 [[Nach oben](#top)]
 
-##  <a name="example"></a> Beispiel
+## <a name="features"></a>Methoden und Features
 
-Einfache Beispiele für das Erstellen und Verwalten einer Planerinstanz, finden Sie unter [Vorgehensweise: Verwalten einer Planerinstanz](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
+In diesem Abschnitt werden die wichtigen Methoden der Klassen `CurrentScheduler` und `Scheduler` zusammengefasst.
 
-## <a name="see-also"></a>Siehe auch
+Stellen Sie sich die `CurrentScheduler`-Klasse als Hilfsmethode zum Erstellen eines Zeit Planungs Moduls zur Verwendung im aktuellen Kontext vor. Mit der `Scheduler`-Klasse können Sie einen Planer steuern, der zu einem anderen Kontext gehört.
+
+In der folgenden Tabelle sind die wichtigen Methoden aufgeführt, die von der `CurrentScheduler`-Klasse definiert werden.
+
+|Methode|BESCHREIBUNG|
+|------------|-----------------|
+|[Erstellen](reference/currentscheduler-class.md#create)|Erstellt ein `Scheduler` Objekt, das die angegebene Richtlinie verwendet und dem aktuellen Kontext zuordnet.|
+|[Get](reference/currentscheduler-class.md#get)|Ruft einen Zeiger auf das `Scheduler` Objekt ab, das dem aktuellen Kontext zugeordnet ist. Diese Methode erhöht nicht den Verweis Zähler des `Scheduler` Objekts.|
+|[Trennen](reference/currentscheduler-class.md#detach)|Trennt den aktuellen Planer vom aktuellen Kontext und legt den vorherigen Zeit Planungs Modul als aktuellen Planer fest.|
+|[RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent)|Registriert ein Ereignis, das von der Laufzeit festgelegt wird, wenn der aktuelle Scheduler zerstört wird.|
+|[CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup)|Erstellt ein [parallelcurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) -Objekt im aktuellen Scheduler.|
+|[ScheduleTask](reference/currentscheduler-class.md#scheduletask)|Fügt der Planungs Warteschlange des aktuellen Zeit Planungs Moduls einen Lightweight-Task hinzu.|
+|[GetPolicy](reference/currentscheduler-class.md#getpolicy)|Ruft eine Kopie der Richtlinie ab, die dem aktuellen Scheduler zugeordnet ist.|
+
+In der folgenden Tabelle sind die wichtigen Methoden aufgeführt, die von der `Scheduler`-Klasse definiert werden.
+
+|Methode|BESCHREIBUNG|
+|------------|-----------------|
+|[Erstellen](reference/scheduler-class.md#create)|Erstellt ein `Scheduler` Objekt, das die angegebene Richtlinie verwendet.|
+|[Anfügen](reference/scheduler-class.md#attach)|Ordnet das `Scheduler`-Objekt zusammen mit dem aktuellen Kontext zu.|
+|[Referenz](reference/scheduler-class.md#reference)|Inkremente den Verweis Zählers des `Scheduler` Objekts.|
+|[Release](reference/scheduler-class.md#release)|Dekremente den Verweis Zählers des `Scheduler` Objekts.|
+|[RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent)|Registriert ein Ereignis, das von der Laufzeit festgelegt wird, wenn das `Scheduler` Objekt zerstört wird.|
+|[CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup)|Erstellt ein [parallelcurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) -Objekt im `Scheduler` Objekt.|
+|[ScheduleTask](reference/scheduler-class.md#scheduletask)|Plant eine leichte Aufgabe aus dem `Scheduler`-Objekt.|
+|[GetPolicy](reference/scheduler-class.md#getpolicy)|Ruft eine Kopie der Richtlinie ab, die dem `Scheduler` Objekt zugeordnet ist.|
+|[SetDefaultSchedulerPolicy](reference/scheduler-class.md#setdefaultschedulerpolicy)|Legt die Richtlinie fest, die beim Erstellen des Standardzeit Planungs Moduls von der Laufzeit verwendet werden soll.|
+|[ResetDefaultSchedulerPolicy](reference/scheduler-class.md#resetdefaultschedulerpolicy)|Stellt die Standard Richtlinie wieder her, die vor dem Aufruf`SetDefaultSchedulerPolicy`aktiv war. Wenn der Standard Planer nach diesem-Befehl erstellt wird, verwendet die Common Language Runtime die Standardrichtlinien Einstellungen, um den Scheduler zu erstellen.|
+
+[[Nach oben](#top)]
+
+## <a name="example"></a> Beispiel
+
+Grundlegende Beispiele zum Erstellen und Verwalten einer Scheduler-Instanz finden Sie unter Gewusst [wie: Verwalten einer planerinstanz](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
+
+## <a name="see-also"></a>Weitere Informationen
 
 [Aufgabenplanung](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Vorgehensweise: Verwalten einer Planerinstanz](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>

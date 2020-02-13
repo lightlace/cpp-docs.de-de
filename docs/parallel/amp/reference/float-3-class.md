@@ -74,46 +74,46 @@ f1_keywords:
 helpviewer_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3
 ms.assetid: 209df7a5-08d7-48b4-8ba5-77603642cdd8
-ms.openlocfilehash: ff9d9391efaeef5051424675dacf1f14c35b30df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 259d008c9819eed631026fd106c01644bb1179cc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180309"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126681"
 ---
-# <a name="float3-class"></a>float_3-Klasse
+# <a name="float_3-class"></a>float_3-Klasse
 
 Stellt einen kurzen Vektor aus drei Gleitkommazahlen dar.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class float_3;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[float_3-Konstruktor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
+|[float_3-Konstruktor](#ctor)|Ist überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |float_3::get_x||
 |float_3::get_xy||
 |float_3::get_xyz||
 |float_3::get_xz||
-|float_3::get_xzy||
+|float_3:: get_xzy||
 |float_3::get_y||
 |float_3::get_yx||
 |float_3::get_yxz||
@@ -122,7 +122,7 @@ class float_3;
 |float_3::get_z||
 |float_3::get_zx||
 |float_3::get_zxy||
-|float_3::get_zy||
+|float_3:: get_zy||
 |float_3::get_zyx||
 |float_3::ref_b||
 |float_3::ref_g||
@@ -130,91 +130,91 @@ class float_3;
 |float_3::ref_x||
 |float_3::ref_y||
 |float_3::ref_z||
-|float_3::set_x||
+|float_3:: set_X||
 |float_3::set_xy||
-|float_3::set_xyz||
+|float_3:: set_xyz||
 |float_3::set_xz||
-|float_3::set_xzy||
-|float_3::set_y||
+|float_3:: set_xzy||
+|float_3:: set_Y||
 |float_3::set_yx||
 |float_3::set_yxz||
 |float_3::set_yz||
 |float_3::set_yzx||
-|float_3::set_z||
-|float_3::set_zx||
+|float_3:: set_z||
+|float_3:: set_zx||
 |float_3::set_zxy||
-|float_3::set_zy||
+|float_3:: set_zy||
 |float_3::set_zyx||
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|float_3::operator-||
-|float_3::operator--||
+|float_3:: Operator-||
+|float_3:: Operator--||
 |float_3::operator*=||
 |float_3::operator/=||
 |float_3::operator++||
 |float_3::operator+=||
 |float_3::operator=||
-|float_3::operator-=||
+|float_3:: Operator-=||
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Size-Konstante](#float_3__size)||
+|[Größen Konstante](#float_3__size)||
 
-### <a name="public-data-members"></a>Öffentliche Datenmember
+### <a name="public-data-members"></a>Öffentliche Datenelemente
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|float_3::b||
+|float_3:: b||
 |float_3::bg||
-|float_3::bgr||
+|float_3:: BGR||
 |float_3::br||
-|float_3::brg||
-|float_3::g||
+|float_3:: BRG||
+|float_3:: g||
 |float_3::gb||
 |float_3::gbr||
 |float_3::gr||
 |float_3::grb||
-|float_3::r||
+|float_3:: r||
 |float_3::rb||
 |float_3::rbg||
 |float_3::rg||
 |float_3::rgb||
-|float_3::x||
-|float_3::xy||
-|float_3::xyz||
-|float_3::xz||
-|float_3::xzy||
+|float_3:: x||
+|float_3:: XY||
+|float_3:: XYZ||
+|float_3:: XZ||
+|float_3:: XZY||
 |float_3::y||
 |float_3::yx||
 |float_3::yxz||
-|float_3::yz||
+|float_3:: YZ||
 |float_3::yzx||
-|float_3::z||
-|float_3::zx||
+|float_3:: z||
+|float_3:: ZX||
 |float_3::zxy||
-|float_3::zy||
+|float_3:: Zy||
 |float_3::zyx||
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 `float_3`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amp_short_vectors.h
+**Header:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Parallelität:: Grafiken
 
-##  <a name="ctor"></a> float_3
+## <a name="ctor"></a>float_3
 
 Standardkonstruktor, initialisiert alle Elemente mit 0.
 
-```
+```cpp
 float_3() restrict(amp,
     cpu);
 
@@ -256,26 +256,26 @@ explicit inline float_3(
 ### <a name="parameters"></a>Parameter
 
 *_V0*<br/>
-Der Wert, der 0-Element zu initialisieren.
+Der Wert, mit dem Element 0 initialisiert werden soll.
 
 *_V1*<br/>
-Der Wert 1 Element initialisiert werden.
+Der Wert, mit dem Element 1 initialisiert werden soll.
 
 *_V2*<br/>
-Der Wert 2-Element zu initialisieren.
+Der Wert, mit dem Element 2 initialisiert werden soll.
 
 *_V*<br/>
 Der Wert für die Initialisierung.
 
 *_Other*<br/>
-Das Objekt, das zum Initialisieren verwendet.
+Das-Objekt, das zum Initialisieren von verwendet wird.
 
-##  <a name="float_3__size"></a> Größe
+## <a name="float_3__size"></a>Größe
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

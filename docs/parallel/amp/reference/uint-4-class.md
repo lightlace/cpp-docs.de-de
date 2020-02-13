@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-ms.openlocfilehash: 413edb5c83dba465aff804658afc6931c7181e73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a795ed3c04f114b6e15d5d9161605988bab2778a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405442"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142412"
 ---
-# <a name="uint4-class"></a>uint_4-Klasse
+# <a name="uint_4-class"></a>uint_4-Klasse
 
 Stellt einen kurzen Vektor von vier ganzen Zahlen ohne Vorzeichen dar.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class uint_4;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[uint_4-Konstruktor](#uint_4__ctor) |Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
+|[uint_4-Konstruktor](#uint_4__ctor) |Ist überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |uint_4::get_w||
 |uint_4::get_wx||
@@ -312,8 +312,8 @@ class uint_4;
 |uint_4::get_wy||
 |uint_4::get_wyx||
 |uint_4::get_wyxz||
-|uint_4::get_wyz||
-|uint_4::get_wyzx||
+|uint_4:: get_wyz||
+|uint_4:: get_wyzx||
 |uint_4::get_wz||
 |uint_4::get_wzx||
 |uint_4::get_wzxy||
@@ -335,7 +335,7 @@ class uint_4;
 |uint_4::get_xzwy||
 |uint_4::get_xzy||
 |uint_4::get_xzyw||
-|uint_4::get_y||
+|uint_4:: get_Y||
 |uint_4::get_yw||
 |uint_4::get_ywx||
 |uint_4::get_ywxz||
@@ -347,10 +347,10 @@ class uint_4;
 |uint_4::get_yxz||
 |uint_4::get_yxzw||
 |uint_4::get_yz||
-|uint_4::get_yzw||
+|uint_4:: get_yzw||
 |uint_4::get_yzwx||
 |uint_4::get_yzx||
-|uint_4::get_yzxw||
+|uint_4:: get_yzxw||
 |uint_4::get_z||
 |uint_4::get_zw||
 |uint_4::get_zwx||
@@ -362,7 +362,7 @@ class uint_4;
 |uint_4::get_zxwy||
 |uint_4::get_zxy||
 |uint_4::get_zxyw||
-|uint_4::get_zy||
+|uint_4:: get_zy||
 |uint_4::get_zyw||
 |uint_4::get_zywx||
 |uint_4::get_zyx||
@@ -378,53 +378,53 @@ class uint_4;
 |uint_4::set_w||
 |uint_4::set_wx||
 |uint_4::set_wxy||
-|uint_4::set_wxyz||
+|uint_4:: set_wxyz||
 |uint_4::set_wxz||
 |uint_4::set_wxzy||
-|uint_4::set_wy||
+|uint_4:: set_wy||
 |uint_4::set_wyx||
 |uint_4::set_wyxz||
-|uint_4::set_wyz||
-|uint_4::set_wyzx||
+|uint_4:: set_wyz||
+|uint_4:: set_wyzx||
 |uint_4::set_wz||
 |uint_4::set_wzx||
 |uint_4::set_wzxy||
 |uint_4::set_wzy||
 |uint_4::set_wzyx||
 |uint_4::set_x||
-|uint_4::set_xw||
+|uint_4:: set_xw||
 |uint_4::set_xwy||
 |uint_4::set_xwyz||
 |uint_4::set_xwz||
-|uint_4::set_xwzy||
+|uint_4:: set_xwzy||
 |uint_4::set_xy||
 |uint_4::set_xyw||
 |uint_4::set_xywz||
-|uint_4::set_xyz||
+|uint_4:: set_xyz||
 |uint_4::set_xyzw||
 |uint_4::set_xz||
-|uint_4::set_xzw||
+|uint_4:: set_xzw||
 |uint_4::set_xzwy||
 |uint_4::set_xzy||
 |uint_4::set_xzyw||
-|uint_4::set_y||
+|uint_4:: set_Y||
 |uint_4::set_yw||
 |uint_4::set_ywx||
 |uint_4::set_ywxz||
 |uint_4::set_ywz||
-|uint_4::set_ywzx||
+|uint_4:: set_ywzx||
 |uint_4::set_yx||
 |uint_4::set_yxw||
 |uint_4::set_yxwz||
 |uint_4::set_yxz||
 |uint_4::set_yxzw||
 |uint_4::set_yz||
-|uint_4::set_yzw||
+|uint_4:: set_yzw||
 |uint_4::set_yzwx||
 |uint_4::set_yzx||
-|uint_4::set_yzxw||
+|uint_4:: set_yzxw||
 |uint_4::set_z||
-|uint_4::set_zw||
+|uint_4:: set_zw||
 |uint_4::set_zwx||
 |uint_4::set_zwxy||
 |uint_4::set_zwy||
@@ -434,17 +434,17 @@ class uint_4;
 |uint_4::set_zxwy||
 |uint_4::set_zxy||
 |uint_4::set_zxyw||
-|uint_4::set_zy||
-|uint_4::set_zyw||
+|uint_4:: set_zy||
+|uint_4:: set_zyw||
 |uint_4::set_zywx||
 |uint_4::set_zyx||
 |uint_4::set_zyxw||
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|uint_4::operator-||
+|uint_4:: Operator-||
 |uint_4::operator--||
 |uint_4::operator*=||
 |uint_4::operator/=||
@@ -455,13 +455,13 @@ class uint_4;
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Size-Konstante](#size)||
+|[Größen Konstante](#size)||
 
-### <a name="public-data-members"></a>Öffentliche Datenmember
+### <a name="public-data-members"></a>Öffentliche Datenelemente
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |uint_4::a||
 |uint_4::ab||
@@ -484,7 +484,7 @@ class uint_4;
 |uint_4::bag||
 |uint_4::bagr||
 |uint_4::bar||
-|uint_4::barg||
+|uint_4:: barg||
 |uint_4::bg||
 |uint_4::bga||
 |uint_4::bgar||
@@ -537,28 +537,28 @@ class uint_4;
 |uint_4::wyx||
 |uint_4::wyxz||
 |uint_4::wyz||
-|uint_4::wyzx||
+|uint_4:: wyzx||
 |uint_4::wz||
 |uint_4::wzx||
 |uint_4::wzxy||
 |uint_4::wzy||
 |uint_4::wzyx||
 |uint_4::x||
-|uint_4:: xw –||
-|uint_4::xwy||
-|uint_4::xwyz||
+|uint_4:: XW||
+|uint_4:: xwy||
+|uint_4:: xwyz||
 |uint_4::xwz||
-|uint_4::xwzy||
+|uint_4:: xwzy||
 |uint_4::xy||
 |uint_4::xyw||
 |uint_4::xywz||
 |uint_4::xyz||
 |uint_4::xyzw||
 |uint_4::xz||
-|uint_4::xzw||
+|uint_4:: xzw||
 |uint_4::xzwy||
 |uint_4::xzy||
-|uint_4::xzyw||
+|uint_4:: xzyw||
 |uint_4::y||
 |uint_4::yw||
 |uint_4::ywx||
@@ -571,7 +571,7 @@ class uint_4;
 |uint_4::yxz||
 |uint_4::yxzw||
 |uint_4::yz||
-|uint_4::yzw||
+|uint_4:: yzw||
 |uint_4::yzwx||
 |uint_4::yzx||
 |uint_4::yzxw||
@@ -587,7 +587,7 @@ class uint_4;
 |uint_4::zxy||
 |uint_4::zxyw||
 |uint_4::zy||
-|uint_4::zyw||
+|uint_4:: zyw||
 |uint_4::zywx||
 |uint_4::zyx||
 |uint_4::zyxw||
@@ -596,19 +596,19 @@ class uint_4;
 
 `uint_4`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amp_short_vectors.h
+**Header:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Parallelität:: Grafiken
 
-## <a name="uint_4__ctor"></a> uint_4
+## <a name="uint_4__ctor"></a>uint_4
 
 Standardkonstruktor, initialisiert alle Elemente mit 0.
 
 ### <a name="syntax"></a>Syntax
 
-```
+```cpp
 uint_4() restrict(amp,cpu);
 uint_4(
    unsigned int _V0,
@@ -639,34 +639,34 @@ explicit inline uint_4(
 ) restrict(amp,cpu);
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
 *_V0*<br/>
-Der Wert, der 0-Element zu initialisieren.
+Der Wert, mit dem Element 0 initialisiert werden soll.
 
 *_V1*<br/>
-Der Wert 1 Element initialisiert werden.
+Der Wert, mit dem Element 1 initialisiert werden soll.
 
 *_V2*<br/>
-Der Wert 2-Element zu initialisieren.
+Der Wert, mit dem Element 2 initialisiert werden soll.
 
 *_V3*<br/>
-Der Wert 3-Element zu initialisieren.
+Der Wert, mit dem Element 3 initialisiert werden soll.
 
 *_V*<br/>
 Der Wert für die Initialisierung.
 
 *_Other*<br/>
-Das Objekt, das zum Initialisieren verwendet.
+Das-Objekt, das zum Initialisieren von verwendet wird.
 
 ## <a name="size"></a>size
 
 ### <a name="syntax"></a>Syntax
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

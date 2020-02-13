@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyExecutionResource structure
 ms.assetid: e36756f7-4cd9-4fa6-ba60-23fea58ef2bf
-ms.openlocfilehash: 4bfb614d5ffd6a399fae33d38a50cee62f17c208
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 82193a9b592cded96f3726cbabd6cf646eaa27c8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339497"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77140068"
 ---
 # <a name="itopologyexecutionresource-structure"></a>ITopologyExecutionResource-Struktur
 
@@ -22,57 +22,57 @@ Eine Schnittstelle zu einer vom Ressourcen-Manager definierten Ausführungsresso
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 struct ITopologyExecutionResource;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[ITopologyExecutionResource::GetId](#getid)|Gibt zurück, der Ressourcen-Manager eindeutige Bezeichner für diese Ausführungsressource.|
-|[ITopologyExecutionResource::GetNext](#getnext)|Gibt eine Schnittstelle zur nächsten Ausführungsressource Reihenfolge der zurück.|
+|[Itopologyexecutionresource:: GetId](#getid)|Gibt den eindeutigen Bezeichner der Ressourcen-Manager für diese Ausführungs Ressource zurück.|
+|[Itopologyexecutionresource:: GetNext](#getnext)|Gibt eine Schnittstelle zur nächsten Ausführungs Ressource in der Aufzählungs Reihenfolge zurück.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Diese Schnittstelle wird in der Regel verwendet, um die Topologie des Systems führen, als vom Ressourcen-Manager überwacht.
+Diese Schnittstelle wird in der Regel verwendet, um die Topologie des Systems zu durchlaufen, wie von der Ressourcen-Manager beobachtet.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 `ITopologyExecutionResource`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** concrtrm.h
+**Header:** concrtrm. h
 
 **Namespace:** Parallelität
 
-##  <a name="getid"></a>  Itopologyexecutionresource:: GetID-Methode
+## <a name="getid"></a>Itopologyexecutionresource:: GetId-Methode
 
-Gibt zurück, der Ressourcen-Manager eindeutige Bezeichner für diese Ausführungsressource.
+Gibt den eindeutigen Bezeichner der Ressourcen-Manager für diese Ausführungs Ressource zurück.
 
-```
+```cpp
 virtual unsigned int GetId() const = 0;
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Resource Manager Eindeutiger Bezeichner für diese Ausführungsressource.
+Der eindeutige Bezeichner des Ressourcen-Manager für diese Ausführungs Ressource.
 
-##  <a name="getnext"></a>  Itopologyexecutionresource:: GetNext-Methode
+## <a name="getnext"></a>Itopologyexecutionresource:: GetNext-Methode
 
-Gibt eine Schnittstelle zur nächsten Ausführungsressource Reihenfolge der zurück.
+Gibt eine Schnittstelle zur nächsten Ausführungs Ressource in der Aufzählungs Reihenfolge zurück.
 
-```
+```cpp
 virtual ITopologyExecutionResource *GetNext() const = 0;
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Eine Schnittstelle zur nächsten Ausführungsressource Reihenfolge der. Wenn die Reihenfolge des Knotens, zu dem diese Ausführungsressource gehört, keine weiteren Knoten vorhanden sind, gibt diese Methode den Wert `NULL`.
+Eine Schnittstelle zur nächsten Ausführungs Ressource in der Aufzählungs Reihenfolge. Wenn in der Aufzählungs Reihenfolge des Knotens, zu dem diese Ausführungs Ressource gehört, keine weiteren Knoten vorhanden sind, gibt diese Methode den Wert `NULL`zurück.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)

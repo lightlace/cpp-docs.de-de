@@ -7,20 +7,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-ms.openlocfilehash: c407c42e5c6a7035e911218ecb41c2da62967787
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7531a57dddcc85392380029afc6edd577bbc5cf3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351143"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126373"
 ---
-# <a name="shortvectortraits-structure"></a>short_vector_traits-Struktur
+# <a name="short_vector_traits-structure"></a>short_vector_traits-Struktur
 
-Short_vector_traits ermöglicht das Abrufen von der zugrunde liegenden Vektorlänge und skalaren Typ von einem kurzen vektortyp entspricht oder einen skalaren Typ
+short_vector_traits ermöglicht das Abrufen der zugrunde liegenden Vektor Länge und des skalaren Typs eines kurzen Vektor Typs oder eines skalaren Typs.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 template<
     typename T
 >
@@ -75,27 +75,27 @@ template<>
 struct short_vector_traits<double_4>;
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
 `T`
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[short_vector_traits:: short_vector_traits-Konstruktor](#ctor)||
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[short_vector_traits:: size-Konstante](#size)||
 
@@ -103,24 +103,24 @@ struct short_vector_traits<double_4>;
 
 `short_vector_traits`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amp_short_vectors.h
+**Header:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Parallelität:: Grafiken
 
-##  <a name="ctor"></a>  short_vector_traits:: short_vector_traits-Konstruktor
+## <a name="ctor"></a>short_vector_traits:: short_vector_traits-Konstruktor
 
-```
+```cpp
 short_vector_traits();
 ```
 
-##  <a name="size"></a>  short_vector_traits:: size-Konstante
+## <a name="size"></a>short_vector_traits:: size-Konstante
 
-```
+```cpp
 static int const size = 1;
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

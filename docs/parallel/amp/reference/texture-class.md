@@ -17,25 +17,25 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: cfcb65fa23fe4593e7dcf11da3b5da4b1785ce71
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7a38c84c5def629c7a42b2c05bf1ed04441593b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351533"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127776"
 ---
 # <a name="texture-class"></a>texture-Klasse
 
-Eine Textur ist ein Datenaggregat in einem `accelerator_view`-Objekt in der extent-Domäne. Es ist eine Auflistung von Variablen, eine für jedes Element in einer extent-Domäne. Jede Variable enthält einen Wert mit dem C++ primitivem Typ entspricht ( `unsigned int`, `int`, `float`, `double`), ein skalarer Typ ( `norm`, oder `unorm`), oder einem kurzen vektortyp entspricht.
+Eine Textur ist ein Datenaggregat in einem `accelerator_view`-Objekt in der extent-Domäne. Es ist eine Auflistung von Variablen, eine für jedes Element in einer extent-Domäne. Jede Variable enthält einen Wert, der C++ dem primitiven Typ (`unsigned int`, `int`, `float`, `double`), einem skalaren Typ (`norm`oder `unorm`) oder einem kurzen Vektortyp entspricht.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 template <typename value_type,  int _Rank>
 class texture;
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
 *value_type*<br/>
 Der Typ der Elemente in der Textur.
@@ -43,53 +43,53 @@ Der Typ der Elemente in der Textur.
 *_Rank*<br/>
 Der Rang der Textur.
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |`scalar_type`|Skalare Typen.|
 |`value_type`|Werttypen.|
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Texture-Konstruktor](#ctor)|Initialisiert eine neue Instanz der `texture`-Klasse.|
-|[~ texture-Destruktor](#ctor)|Zerstört das `texture`-Objekt.|
+|[Textur-Konstruktor](#ctor)|Initialisiert eine neue Instanz der Klasse `texture`.|
+|[~ Texture-Dekonstruktor](#ctor)|Zerstört das `texture`-Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[copy_to](#copy_to)|Kopiert die `texture` Objekt, das das Ziel, indem Sie eine tiefe Kopie.|
+|[copy_to](#copy_to)|Kopiert das `texture` Objekt durch eine tiefe Kopie in das Ziel.|
 |[data](#data)|Gibt einen CPU-Zeiger auf Rohdaten dieser Textur zurück.|
 |[get](#get)|Gibt den Wert des Elements am angegebenen Index zurück.|
-|[get_associated_accelerator_view](#get_associated_accelerator_view)|Gibt die ["accelerator_view"](accelerator-view-class.md) , das gewünschte Ziel zum Kopieren dieser Textur.|
+|[get_associated_accelerator_view](#get_associated_accelerator_view)|Gibt die [accelerator_view](accelerator-view-class.md) zurück, die das bevorzugte Ziel für diese Textur ist, in das kopiert werden soll.|
 |[get_depth_pitch](#get_depth_pitch)|Gibt die Anzahl von Bytes zwischen jedem Tiefensegment in einer 3D-Stagingtextur auf der CPU zurück.|
 |[get_row_pitch](#get_row_pitch)|Gibt die Anzahl von Bytes zwischen jeder Zeile in einer 2D- oder 3D-Stagingtextur auf der CPU zurück.|
 |[set](#set)|Legt den Wert des Elements am angegebenen Index ab.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[Operator()](#operator_call)|Gibt den Elementwert zurück, der von den Parametern angegeben wird.|
 |[operator\[\]](#operator_at)|Gibt das Element am angegebenen Index zurück.|
-|[operator=](#operator_eq)|Kopiert das angegebene [Textur](texture-class.md) -Objekts in dieses Objekt.|
+|[operator=](#operator_eq)|Kopiert das angegebene [Textur](texture-class.md) Objekt in dieses Objekt.|
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[Rank-Konstante](#rank)|Ruft den Rang des `texture`-Objekts ab.|
 
-### <a name="public-data-members"></a>Öffentliche Datenmember
+### <a name="public-data-members"></a>Öffentliche Datenelemente
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[associated_accelerator_view](#associated_accelerator_view)|Ruft die ["accelerator_view"](accelerator-view-class.md) , das gewünschte Ziel zum Kopieren dieser Textur.|
+|[associated_accelerator_view](#associated_accelerator_view)|Ruft das [accelerator_view](accelerator-view-class.md) ab, das das bevorzugte Ziel für diese Textur ist, in das kopiert werden soll.|
 |[depth_pitch](#depth_pitch)|Ruft die Anzahl von Bytes zwischen jedem Tiefensegment in einer 3D-Stagingtextur auf der CPU ab.|
 |[row_pitch](#row_pitch)|Ruft die Anzahl von Bytes zwischen jeder Zeile in einer 2D- oder 3D-Stagingtextur auf der CPU zurück.|
 
@@ -99,33 +99,33 @@ Der Rang der Textur.
 
 `texture`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amp_graphics.h
+**Header:** amp_graphics. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Parallelität:: Grafiken
 
-##  <a name="dtor"></a> ~ Texture
+## <a name="dtor"></a>~ Textur
 
 Zerstört das `texture`-Objekt.
 
-```
+```cpp
 ~texture() restrict(cpu);
 ```
 
-##  <a name="associated_accelerator_view"></a> associated_accelerator_view
+## <a name="associated_accelerator_view"></a>associated_accelerator_view
 
-Ruft die ["accelerator_view"](accelerator-view-class.md) , das gewünschte Ziel zum Kopieren dieser Textur.
+Ruft das [accelerator_view](accelerator-view-class.md) ab, das das bevorzugte Ziel für diese Textur ist, in das kopiert werden soll.
 
-```
+```cpp
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;
 ```
 
-##  <a name="copy_to"></a> copy_to
+## <a name="copy_to"></a>copy_to
 
-Kopiert die `texture` Objekt, das das Ziel, indem Sie eine tiefe Kopie.
+Kopiert das `texture` Objekt durch eine tiefe Kopie in das Ziel.
 
-```
+```cpp
 void copy_to(texture& _Dest) const;
 void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
 ```
@@ -133,7 +133,7 @@ void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
 ### <a name="parameters"></a>Parameter
 
 *_Dest*<br/>
-Das Objekt, in das kopiert werden soll.
+Das Objekt, in das kopiert wird.
 
 *_Rank*<br/>
 Der Rang der Textur.
@@ -141,11 +141,11 @@ Der Rang der Textur.
 *value_type*<br/>
 Der Typ der Elemente in der Textur.
 
-##  <a name="data"></a> Daten
+## <a name="data"></a>Vorrats
 
 Gibt einen CPU-Zeiger auf Rohdaten dieser Textur zurück.
 
-```
+```cpp
 void* data() restrict(cpu);
 
 const void* data() const restrict(cpu);
@@ -155,19 +155,19 @@ const void* data() const restrict(cpu);
 
 Ein Zeiger auf die Rohdaten der Textur.
 
-##  <a name="depth_pitch"></a> depth_pitch
+## <a name="depth_pitch"></a>depth_pitch
 
 Ruft die Anzahl von Bytes zwischen jedem Tiefensegment in einer 3D-Stagingtextur auf der CPU ab.
 
-```
+```cpp
 __declspec(property(get= get_depth_pitch)) unsigned int depth_pitch;
 ```
 
-##  <a name="get"></a> Erhalten
+## <a name="get"></a>Erhalten
 
 Gibt den Wert des Elements am angegebenen Index zurück.
 
-```
+```cpp
 const value_type get(const index<_Rank>& _Index) const restrict(amp);
 ```
 
@@ -180,23 +180,23 @@ Der Index des Elements.
 
 Der Wert des Elements am angegebenen Index.
 
-##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view
+## <a name="get_associated_accelerator_view"></a>get_associated_accelerator_view
 
 Gibt das accelerator_view-Objekt zurück, das das gewünschte Ziel zum Kopieren dieser Textur ist.
 
-```
+```cpp
 Concurrency::accelerator_view get_associated_accelerator_view() const restrict(cpu);
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die ["accelerator_view"](accelerator-view-class.md) , das gewünschte Ziel zum Kopieren dieser Textur.
+Der [accelerator_view](accelerator-view-class.md) , der das bevorzugte Ziel für diese Textur ist, in das kopiert werden soll.
 
-##  <a name="get_depth_pitch"></a> get_depth_pitch
+## <a name="get_depth_pitch"></a>get_depth_pitch
 
 Gibt die Anzahl von Bytes zwischen jedem Tiefensegment in einer 3D-Stagingtextur auf der CPU zurück.
 
-```
+```cpp
 unsigned int get_depth_pitch() const restrict(cpu);
 ```
 
@@ -204,11 +204,11 @@ unsigned int get_depth_pitch() const restrict(cpu);
 
 Die Anzahl von Bytes zwischen jedem Tiefensegment in einer 3D-Stagingtextur auf der CPU.
 
-##  <a name="get_row_pitch"></a> get_row_pitch
+## <a name="get_row_pitch"></a>get_row_pitch
 
 Gibt die Anzahl von Bytes zwischen jeder Zeile in einer zweidimensionalen Stagingtextur oder zwischen jeder Zeile eines Tiefensegments in einer dreidimensionalen Stagingtextur zurück.
 
-```
+```cpp
 unsigned int get_row_pitch() const restrict(cpu);
 ```
 
@@ -216,11 +216,11 @@ unsigned int get_row_pitch() const restrict(cpu);
 
 Die Anzahl von Bytes zwischen jeder Zeile in einer zweidimensionalen Stagingtextur oder zwischen jeder Zeile eines Tiefensegments in einer dreidimensionalen Stagingtextur.
 
-##  <a name="operator_call"></a> operator()
+## <a name="operator_call"></a>Operator ()
 
 Gibt den Elementwert zurück, der von den Parametern angegeben wird.
 
-```
+```cpp
 const value_type operator() (
     const index<_Rank>& _Index) const restrict(amp);
 
@@ -258,11 +258,11 @@ Der Rang des Index.
 
 Der Elementwert, der von den Parametern angegeben wird.
 
-##  <a name="operator_at"></a> []-Operator
+## <a name="operator_at"></a>[]-Operator
 
 Gibt das Element am angegebenen Index zurück.
 
-```
+```cpp
 const value_type operator[] (const index<_Rank>& _Index) const restrict(amp);
 
 const value_type operator[] (int _I0) const restrict(amp);
@@ -280,11 +280,11 @@ Der Index.
 
 Das Element am angegebenen Index.
 
-##  <a name="operator_eq"></a> operator=
+## <a name="operator_eq"></a>Operator =
 
-Kopiert das angegebene [Textur](texture-class.md) -Objekts in dieses Objekt.
+Kopiert das angegebene [Textur](texture-class.md) Objekt in dieses Objekt.
 
-```
+```cpp
 texture& operator= (
     const texture& _Other);
 
@@ -301,27 +301,27 @@ Das `texture`-Objekt, aus dem kopiert werden soll.
 
 Ein Verweis auf das `texture`-Objekt.
 
-##  <a name="rank"></a> Rang
+## <a name="rank"></a>gehören
 
 Ruft den Rang des `texture`-Objekts ab.
 
-```
+```cpp
 static const int rank = _Rank;
 ```
 
-##  <a name="row_pitch"></a> row_pitch
+## <a name="row_pitch"></a>row_pitch
 
 Ruft die Anzahl von Bytes zwischen jeder Zeile in einer 2D- oder 3D-Stagingtextur auf der CPU zurück.
 
-```
+```cpp
 __declspec(property(get= get_row_pitch)) unsigned int row_pitch;
 ```
 
-##  <a name="set"></a> Legen Sie
+## <a name="set"></a>Set
 
 Legt den Wert des Elements am angegebenen Index ab.
 
-```
+```cpp
 void set(
     const index<_Rank>& _Index,
     const value_type& value) restrict(amp);
@@ -338,11 +338,11 @@ Der Rang des Index.
 *value*<br/>
 Der neue Wert des Elements.
 
-##  <a name="ctor"></a> Textur
+## <a name="ctor"></a>Konsistenz
 
-Initialisiert eine neue Instanz der `texture`-Klasse.
+Initialisiert eine neue Instanz der Klasse `texture`.
 
-```
+```cpp
 texture(const Concurrency::extent<_Rank>& _Ext) restrict(cpu);
 
 texture(int _E0) restrict(cpu);
@@ -541,10 +541,10 @@ texture(
 ### <a name="parameters"></a>Parameter
 
 *_Acc_view*<br/>
-Die ["accelerator_view"](accelerator-view-class.md) , der den Speicherort der Textur angibt.
+Der [accelerator_view](accelerator-view-class.md) , der den Speicherort der Textur angibt.
 
 *_Av*<br/>
-Die ["accelerator_view"](accelerator-view-class.md) , der den Speicherort der Textur angibt.
+Der [accelerator_view](accelerator-view-class.md) , der den Speicherort der Textur angibt.
 
 *_Associated_av*<br/>
 Ein accelerator_view-Objekt, das das bevorzugte Ziel für Kopien in oder aus dieser Textur angibt.
@@ -594,6 +594,6 @@ Andere Datenquelle.
 *_Rank*<br/>
 Der Rang des Abschnitts.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

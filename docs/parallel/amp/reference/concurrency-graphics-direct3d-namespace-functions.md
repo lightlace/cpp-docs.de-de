@@ -1,30 +1,30 @@
 ---
-title: Concurrency::Graphics::Direct3D Namespace-Funktionen
+title: Concurrency::graphics::direct3d-Namespace-Funktionen
 ms.date: 11/04/2016
 f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::get_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-ms.openlocfilehash: 18fb409b033ea14c3a140ea6600fc43cf3a8d603
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 665732700ee6b85425f332a0eb96a5b75864a74e
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405546"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126967"
 ---
-# <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::Graphics::Direct3D Namespace-Funktionen
+# <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::graphics::direct3d-Namespace-Funktionen
 
 ||||
 |-|-|-|
 |[get_sampler](#get_sampler)|[get_texture](#get_texture)|[make_sampler](#make_sampler)|
 |[make_texture](#make_texture)|[msad4](#msad4)|
 
-##  <a name="get_sampler"></a>  get_sampler
+## <a name="get_sampler"></a>get_sampler
 
 Rufen Sie die D3D-Samplerstatus-Schnittstelle für die angegebene Zugriffstastenansicht ab, die das angegebene Samplerobjekt darstellt.
 
-```
+```cpp
 IUnknown* get_sampler(
     const Concurrency::accelerator_view& _Av,
     const sampler& _Sampler) restrict(amp);
@@ -42,11 +42,11 @@ Ein Samplerobjekt, für das die zugrunde liegende D3D-Samplerstatus-Schnittstell
 
 Der IUnknown-Schnittstellenzeiger, der dem D3D-Samplerstatus entspricht, der den angegebenen Sampler darstellt.
 
-##  <a name="get_texture"></a>  get_texture
+## <a name="get_texture"></a>get_texture
 
-Ruft die zugrunde liegende angegebenen Direct3D-texturschnittstelle [Textur](texture-class.md) Objekt.
+Ruft die Direct3D-Textur Schnittstelle ab, die dem angegebenen [Textur](texture-class.md) Objekt zugrunde liegt.
 
-```
+```cpp
 template<
     typename value_type,
     int _Rank
@@ -84,11 +84,11 @@ Eine Textur oder Texturansicht, die mit dem accelerator_view-Objekt verknüpft i
 
 Der IUnknown-Schnittstellenzeiger, der der Direct3D-Textur entspricht, die der Textur zugrunde liegt.
 
-##  <a name="make_sampler"></a>  make_sampler
+## <a name="make_sampler"></a>make_sampler
 
 Erstellen Sie einen Sampler aus einem D3D-Samplerstatusschnittstellenzeiger.
 
-```
+```cpp
 sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ```
 
@@ -101,11 +101,11 @@ IUnknown-Schnittstellenzeiger des D3D-Samplerstatus zum Erstellen des Samplers.
 
 Ein Sampler stellt den bereitgestellten D3D-Samplerstatus dar.
 
-##  <a name="make_texture"></a>  make_texture
+## <a name="make_texture"></a>make_texture
 
-Erstellt eine [Textur](texture-class.md) Objekt mit den angegebenen Parametern.
+Erstellt mit den angegebenen Parametern ein [Textur](texture-class.md) Objekt.
 
-```
+```cpp
 template<
     typename value_type,
     int _Rank
@@ -131,17 +131,17 @@ Eine D3D-Zugriffstastenansicht, in der die Textur erstellt werden soll.
 IUnknown-Schnittstellenzeiger der D3D-Textur zum Erstellen der Textur.
 
 *_View_format*<br/>
-Das DXGI-Format, das für Ansichten verwendet werden soll, die mit dieser Textur erstellt werden. Übergeben Sie DXGI_FORMAT_UNKNOWN (Standardeinstellung), um das Format von der zugrunde liegenden Formats von _D3D_texture und die Value_type dieser Vorlage abgeleitet werden. Das bereitgestellte Format muss mit dem zugrunde liegenden Format von _D3D_texture kompatibel sein.
+Das DXGI-Format, das für Ansichten verwendet werden soll, die mit dieser Textur erstellt werden. Übergeben Sie DXGI_FORMAT_UNKNOWN (Standardeinstellung), um das Format aus dem zugrunde liegenden Format von _D3D_texture und dem value_type dieser Vorlage abzuleiten. Das bereitgestellte Format muss mit dem zugrunde liegenden Format von _D3D_texture kompatibel sein.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Eine Textur, die die bereitgestellte D3D-Textur verwendet.
 
-##  <a name="msad4"></a>  msad4
+## <a name="msad4"></a>msad4
 
 Vergleicht einen 4-Byte-Verweiswert und einen 8-Byte-Quellwert und sammelt einen Vektor von 4 Summen. Jede Summe entspricht der maskierten Summe von absoluten Differenzen von verschiedenen Byteausrichtungen zwischen Verweiswert und Quellwert.
 
-```
+```cpp
 inline uint4 msad4(
     uint _Reference,
     uint2 _Source,
@@ -163,12 +163,12 @@ Ein Vektor von 4 Werten, die der maskierten Summe von absoluten Differenzen der 
 
 Gibt einen Vektor von 4 Summen zurück. Jede Summe entspricht der maskierten Summe von absoluten Differenzen von verschiedenen Byteausrichtungen zwischen Verweiswert und Quellwert.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amp_graphics.h
+**Header:** amp_graphics. h
 
-**Namespace:** Concurrency::graphics::direct3d
+**Namespace:** Parallelcurrency:: Graphics::d irect3d
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency::graphics::direct3d Namespace](concurrency-graphics-direct3d-namespace.md)

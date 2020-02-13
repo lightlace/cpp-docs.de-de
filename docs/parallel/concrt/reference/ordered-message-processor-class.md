@@ -14,59 +14,59 @@ f1_keywords:
 helpviewer_keywords:
 - ordered_message_processor class
 ms.assetid: 787adfb7-7f79-4a70-864a-80e3b64088cd
-ms.openlocfilehash: b88544f399031a5f770fa39aa1f3300306158511
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea9ca799f36cac0d843a578eb7cef9c1e9c5cda6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394428"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138784"
 ---
-# <a name="orderedmessageprocessor-class"></a>ordered_message_processor-Klasse
+# <a name="ordered_message_processor-class"></a>ordered_message_processor-Klasse
 
 Ein `ordered_message_processor` ist ein `message_processor`, mit dem Meldungsblöcke Meldungen in der Reihenfolge verarbeiten können, in der sie empfangen wurden.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 template<class T>
 class ordered_message_processor : public message_processor<T>;
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
 *T*<br/>
-Der Nutzlasttyp der Nachrichten, die vom Prozessor verarbeitet werden soll.
+Der Nutz Lasttyp der Nachrichten, die vom Prozessor verarbeitet werden.
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |`type`|Ein Typalias für `T`.|
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[ordered_message_processor](#ctor)|Erstellt ein `ordered_message_processor`-Objekt.|
-|[~ Ordered_message_processor-Destruktor](#dtor)|Zerstört das `ordered_message_processor`-Objekt.|
+|[~ ordered_message_processor-Dekonstruktor](#dtor)|Zerstört das `ordered_message_processor`-Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[async_send](#async_send)|Asynchron in eine Warteschlange Nachrichten und eine Verarbeitungsaufgabe beginnt, wenn dies nicht bereits geschehen ist. (Überschreibt [message_processor:: async_send](message-processor-class.md#async_send).)|
-|[initialize](#initialize)|Initialisiert die `ordered_message_processor` -Objekt mit der entsprechenden Callback-Funktion, den Planer und Zeitplan.|
-|[initialize_batched_processing](#initialize_batched_processing)|Initialisieren Sie als Batch erstellte Nachricht verarbeiten|
-|[sync_send](#sync_send)|Synchrone Nachrichten in eine Warteschlange und eine Verarbeitungsaufgabe beginnt, wenn dies nicht bereits geschehen ist. (Überschreibt [message_processor:: sync_send](message-processor-class.md#sync_send).)|
-|[wait](#wait)|Einer prozessorspezifischen Spin-Wartezeit in Destruktoren von Nachrichtenblöcken verwendet, um sicherzustellen, dass alle Aufgaben für die asynchrone Verarbeitung abgeschlossen ist, bevor der Block zerstören können. (Überschreibt [message_processor:: wait](message-processor-class.md#wait).)|
+|[async_send](#async_send)|Fügt Nachrichten asynchron in die Warteschlange ein und startet einen Verarbeitungs Task, wenn dies noch nicht geschehen ist. (Überschreibt [message_processor:: async_send](message-processor-class.md#async_send).)|
+|[Initialisieren](#initialize)|Initialisiert das `ordered_message_processor`-Objekt mit der entsprechenden Rückruffunktion, dem Scheduler und der Zeit Plan Gruppe.|
+|[initialize_batched_processing](#initialize_batched_processing)|Nachrichtenverarbeitung im Batch Modus initialisieren|
+|[sync_send](#sync_send)|Fügt Nachrichten synchron in die Warteschlange ein und startet einen Verarbeitungs Task, wenn dies noch nicht geschehen ist. (Überschreibt [message_processor:: sync_send](message-processor-class.md#sync_send).)|
+|[Warte](#wait)|Ein Prozessor spezifischer Spin-Wait-Vorgang, der in debugktoren von Nachrichten Blöcken verwendet wird, um sicherzustellen, dass alle asynchronen Verarbeitungs Tasks Zeit bis zum Ende haben, bevor der Block zerstört wird. (Überschreibt [message_processor:: Wait](message-processor-class.md#wait).)|
 
 ### <a name="protected-methods"></a>Geschützte Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[process_incoming_message](#process_incoming_message)|Die Processing-Funktion, die asynchron aufgerufen wird. Es entfernt Nachrichten und beginnt mit ihrer Verarbeitung. (Überschreibt [message_processor:: process_incoming_message](message-processor-class.md#process_incoming_message).)|
+|[process_incoming_message](#process_incoming_message)|Die Verarbeitungs Funktion, die asynchron aufgerufen wird. Er entfernt Nachrichten aus der Warteschlange und beginnt mit der Verarbeitung. (Überschreibt [message_processor::p rocess_incoming_message](message-processor-class.md#process_incoming_message).)|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -74,30 +74,30 @@ Der Nutzlasttyp der Nachrichten, die vom Prozessor verarbeitet werden soll.
 
 `ordered_message_processor`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Header:** agents.h
 
 **Namespace:** Parallelität
 
-##  <a name="async_send"></a> async_send
+## <a name="async_send"></a>async_send
 
-Asynchron in eine Warteschlange Nachrichten und eine Verarbeitungsaufgabe beginnt, wenn dies nicht bereits geschehen ist.
+Fügt Nachrichten asynchron in die Warteschlange ein und startet einen Verarbeitungs Task, wenn dies noch nicht geschehen ist.
 
-```
+```cpp
 virtual void async_send(_Inout_opt_ message<T>* _Msg);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_Msg*<br/>
-Ein Zeiger auf eine Nachricht.
+Ein Zeiger auf eine Meldung.
 
-##  <a name="initialize"></a> Initialisieren
+## <a name="initialize"></a>Initialisieren
 
-Initialisiert die `ordered_message_processor` -Objekt mit der entsprechenden Callback-Funktion, den Planer und Zeitplan.
+Initialisiert das `ordered_message_processor`-Objekt mit der entsprechenden Rückruffunktion, dem Scheduler und der Zeit Plan Gruppe.
 
-```
+```cpp
 void initialize(
     _Inout_opt_ Scheduler* _PScheduler,
     _Inout_opt_ ScheduleGroup* _PScheduleGroup,
@@ -107,19 +107,19 @@ void initialize(
 ### <a name="parameters"></a>Parameter
 
 *_PScheduler*<br/>
-Ein Zeiger auf den Zeitplan an, für die Planung von einfachen Aufgaben verwendet werden.
+Ein Zeiger auf den Scheduler, der zum Planen einfacher Aufgaben verwendet werden soll.
 
 *_PScheduleGroup*<br/>
-Ein Zeiger auf die Planungsgruppe zum Planen von Lightweight-Aufgaben verwendet werden soll.
+Ein Zeiger auf die Zeit Plan Gruppe, die für die Planung einfacher Aufgaben verwendet werden soll.
 
 *_Handler*<br/>
-Der Handlerfunktionselement während des Rückrufs aufgerufen.
+Der während des Rückrufs aufgerufene handlerfunktor.
 
-##  <a name="initialize_batched_processing"></a> initialize_batched_processing
+## <a name="initialize_batched_processing"></a>initialize_batched_processing
 
-Initialisieren Sie als Batch erstellte Nachricht verarbeiten
+Nachrichtenverarbeitung im Batch Modus initialisieren
 
-```
+```cpp
 virtual void initialize_batched_processing(
     _Handler_method const& _Processor,
     _Propagator_method const& _Propagator);
@@ -128,64 +128,64 @@ virtual void initialize_batched_processing(
 ### <a name="parameters"></a>Parameter
 
 *_Processor*<br/>
-Die Prozessor-Funktionselement während der Rückruf aufgerufen wird.
+Der während des Rückrufs aufgerufene prozessorfunktor.
 
 *_Propagator*<br/>
-Die Propagierung Funktionselement während des Rückrufs aufgerufen.
+Der während des Rückrufs aufgerufene propagatorfunktor.
 
-##  <a name="ctor"></a> ordered_message_processor
+## <a name="ctor"></a>ordered_message_processor
 
 Erstellt ein `ordered_message_processor`-Objekt.
 
-```
+```cpp
 ordered_message_processor();
 ```
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Dies `ordered_message_processor` werde nicht planen, asynchrone oder synchrone Handlern, bis die `initialize` -Funktion aufgerufen wird.
+Diese `ordered_message_processor` plant keine asynchronen oder synchronen Handler, bis die `initialize`-Funktion aufgerufen wird.
 
-##  <a name="dtor"></a> ~ordered_message_processor
+## <a name="dtor"></a>~ ordered_message_processor
 
 Zerstört das `ordered_message_processor`-Objekt.
 
-```
+```cpp
 virtual ~ordered_message_processor();
 ```
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Wartet darauf, alle ausstehenden asynchronen Prozesse vor dem Zerstören des Prozessors.
+Wartet auf alle ausstehenden asynchronen Vorgänge, bevor der Prozessor zerstört wird.
 
-##  <a name="process_incoming_message"></a> process_incoming_message
+## <a name="process_incoming_message"></a>process_incoming_message
 
-Die Processing-Funktion, die asynchron aufgerufen wird. Es entfernt Nachrichten und beginnt mit ihrer Verarbeitung.
+Die Verarbeitungs Funktion, die asynchron aufgerufen wird. Er entfernt Nachrichten aus der Warteschlange und beginnt mit der Verarbeitung.
 
-```
+```cpp
 virtual void process_incoming_message();
 ```
 
-##  <a name="sync_send"></a> sync_send
+## <a name="sync_send"></a>sync_send
 
-Synchrone Nachrichten in eine Warteschlange und eine Verarbeitungsaufgabe beginnt, wenn dies nicht bereits geschehen ist.
+Fügt Nachrichten synchron in die Warteschlange ein und startet einen Verarbeitungs Task, wenn dies noch nicht geschehen ist.
 
-```
+```cpp
 virtual void sync_send(_Inout_opt_ message<T>* _Msg);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_Msg*<br/>
-Ein Zeiger auf eine Nachricht.
+Ein Zeiger auf eine Meldung.
 
-##  <a name="wait"></a> Warte
+## <a name="wait"></a>Warte
 
-Einer prozessorspezifischen Spin-Wartezeit in Destruktoren von Nachrichtenblöcken verwendet, um sicherzustellen, dass alle Aufgaben für die asynchrone Verarbeitung abgeschlossen ist, bevor der Block zerstören können.
+Ein Prozessor spezifischer Spin-Wait-Vorgang, der in debugktoren von Nachrichten Blöcken verwendet wird, um sicherzustellen, dass alle asynchronen Verarbeitungs Tasks Zeit bis zum Ende haben, bevor der Block zerstört wird.
 
-```
+```cpp
 virtual void wait();
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)

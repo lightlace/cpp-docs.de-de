@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSUnblockNotification structure
 ms.assetid: eaca9529-c1cc-472b-8ec6-722a1ff0fa2a
-ms.openlocfilehash: bdf083e2ad418269e49e53dc164f2a60f693d5d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4fd95b1f11ed6edac26cb03e41e8b650acfafa3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180211"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139982"
 ---
 # <a name="iumsunblocknotification-structure"></a>IUMSUnblockNotification-Struktur
 
@@ -22,54 +22,54 @@ Stellt eine Benachrichtigung vom Ressourcen-Manager darüber dar, dass ein Threa
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 struct IUMSUnblockNotification;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[IUMSUnblockNotification::GetContext](#getcontext)|Gibt die `IExecutionContext` Schnittstelle für den Ausführungskontext der Threadproxy, der Blockierung aufgehoben hat zugeordnet. Nach Rückgabe dieser Methode und der zugrunde liegende Ausführungskontext neu geplant wurde, über einen Aufruf an die `IThreadProxy::SwitchTo` -Methode, die diese Schnittstelle ist nicht mehr gültig.|
-|[IUMSUnblockNotification::GetNextUnblockNotification](#getnextunblocknotification)|Gibt die nächste `IUMSUnblockNotification` -Schnittstelle in der Kette, die von der Methode zurückgegebenen `IUMSCompletionList::GetUnblockNotifications`.|
+|[Iversunblocknotification:: GetContext](#getcontext)|Gibt die `IExecutionContext`-Schnittstelle für den dem Thread Proxy zugeordneten Ausführungs Kontext zurück, dessen Blockierung aufgehoben wurde. Nachdem diese Methode zurückgegeben wurde und der zugrunde liegende Ausführungs Kontext über einen aufzurufenden `IThreadProxy::SwitchTo`-Methode neu geplant wurde, ist diese Schnittstelle nicht mehr gültig.|
+|[Iversunblocknotification:: GetNextUnblockNotification](#getnextunblocknotification)|Gibt die nächste `IUMSUnblockNotification` Schnittstelle in der Kette zurück, die von der-Methode `IUMSCompletionList::GetUnblockNotifications`zurückgegeben wird.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 `IUMSUnblockNotification`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** concrtrm.h
+**Header:** concrtrm. h
 
 **Namespace:** Parallelität
 
-##  <a name="getcontext"></a>  IUMSUnblockNotification:: GetContext-Methode
+## <a name="getcontext"></a>Ium sunblocknotification:: GetContext-Methode
 
-Gibt die `IExecutionContext` Schnittstelle für den Ausführungskontext der Threadproxy, der Blockierung aufgehoben hat zugeordnet. Nach Rückgabe dieser Methode und der zugrunde liegende Ausführungskontext neu geplant wurde, über einen Aufruf an die `IThreadProxy::SwitchTo` -Methode, die diese Schnittstelle ist nicht mehr gültig.
+Gibt die `IExecutionContext`-Schnittstelle für den dem Thread Proxy zugeordneten Ausführungs Kontext zurück, dessen Blockierung aufgehoben wurde. Nachdem diese Methode zurückgegeben wurde und der zugrunde liegende Ausführungs Kontext über einen aufzurufenden `IThreadProxy::SwitchTo`-Methode neu geplant wurde, ist diese Schnittstelle nicht mehr gültig.
 
-```
+```cpp
 virtual IExecutionContext* GetContext() = 0;
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein `IExecutionContext` Schnittstelle für den Ausführungskontext für eine Threadproxy, der Blockierung aufgehoben hat.
+Eine `IExecutionContext`-Schnittstelle für den Ausführungs Kontext eines Thread Proxys, der die Blockierung aufgehoben hat.
 
-##  <a name="getnextunblocknotification"></a>  IUMSUnblockNotification:: GetNextUnblockNotification-Methode
+## <a name="getnextunblocknotification"></a>Ium sunblocknotification:: GetNextUnblockNotification-Methode
 
-Gibt die nächste `IUMSUnblockNotification` -Schnittstelle in der Kette, die von der Methode zurückgegebenen `IUMSCompletionList::GetUnblockNotifications`.
+Gibt die nächste `IUMSUnblockNotification` Schnittstelle in der Kette zurück, die von der-Methode `IUMSCompletionList::GetUnblockNotifications`zurückgegeben wird.
 
-```
+```cpp
 virtual IUMSUnblockNotification* GetNextUnblockNotification() = 0;
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die nächste `IUMSUnblockNotification` -Schnittstelle in der Kette, die von der Methode zurückgegebenen `IUMSCompletionList::GetUnblockNotifications`.
+Die nächste `IUMSUnblockNotification`-Schnittstelle in der von der-Methode zurückgegebenen Kette `IUMSCompletionList::GetUnblockNotifications`.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [IUMSScheduler-Struktur](iumsscheduler-structure.md)<br/>

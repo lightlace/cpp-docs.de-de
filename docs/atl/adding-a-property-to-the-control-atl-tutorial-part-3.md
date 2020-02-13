@@ -3,32 +3,32 @@ title: Hinzufügen einer Eigenschaft zum Steuerelement (ATL-Lernprogramm, Teil 3
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
-ms.openlocfilehash: b5f9f9c8fde44dd67a9a05aeae0f91fb7b5f2f4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 288dc9f5af57c02639d15a9a971419a633cfc08d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252605"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127586"
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Hinzufügen einer Eigenschaft zum Steuerelement (ATL-Lernprogramm, Teil 3)
 
-`IPolyCtl` ist die Schnittstelle, die das Steuerelement die benutzerdefinierten Methoden und Eigenschaften enthält, und fügen Sie eine Eigenschaft zuzuweisen.
+`IPolyCtl` ist die Schnittstelle, die die benutzerdefinierten Methoden und Eigenschaften des Steuer Elements enthält, und Sie fügen ihr eine Eigenschaft hinzu.
 
-### <a name="to-add-the-property-definitions-to-your-project"></a>Die Eigenschaftendefinitionen zu Ihrem Projekt hinzufügen
+### <a name="to-add-the-property-definitions-to-your-project"></a>So fügen Sie dem Projekt die Eigenschafts Definitionen hinzu
 
-1. In **Klassenansicht**, erweitern Sie die `Polygon` Branch.
+1. Erweitern Sie in **Klassenansicht**die `Polygon` Verzweigung.
 
-1. Mit der rechten Maustaste `IPolyCtl`.
+1. Klicken Sie mit der rechten Maustaste `IPolyCtl`.
 
-1. Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Eigenschaft hinzufügen**. Die **Eigenschaft hinzufügen** -Assistent wird angezeigt.
+1. Klicken Sie im Kontextmenü auf **Hinzufügen**, und klicken Sie dann auf **Eigenschaft hinzufügen**. Der Assistent zum **Hinzufügen von Eigenschaften** wird angezeigt.
 
-1. Typ `Sides` als die **Eigenschaftennamen**.
+1. Geben Sie `Sides` als **Eigenschaftsnamen**ein.
 
-1. In der Dropdown-Liste der **Eigenschaftentyp**Option `short`.
+1. Wählen Sie in der Dropdown Liste mit dem **Eigenschaftentyp**die Option `short`aus.
 
-1. Klicken Sie auf **OK** auf die Eigenschaft hinzuzufügen.
+1. Klicken Sie auf **OK** , um die Eigenschaft hinzuzufügen.
 
-1. Von **Projektmappen-Explorer**Polygon.idl öffnen, und Ersetzen Sie die folgenden Zeilen am Ende der `IPolyCtl : IDispatch` Schnittstelle:
+1. Öffnen Sie in **Projektmappen-Explorer**Polygon. idl, und ersetzen Sie die folgenden Zeilen am Ende der `IPolyCtl : IDispatch` Schnittstelle:
 
     ```cpp
     short get_Sides();
@@ -42,28 +42,28 @@ ms.locfileid: "62252605"
     [propput, id(1), helpstring("property Sides")] HRESULT Sides([in] short newVal);
     ```
 
-1. Von **Projektmappen-Explorer**, öffnen Sie PolyCtl.h hinzu, und fügen Sie die folgenden Zeilen nach der Definition der `m_clrFillColor`:
+1. Öffnen Sie in **Projektmappen-Explorer**PolyCtl. h, und fügen Sie nach der Definition von `m_clrFillColor`die folgenden Zeilen hinzu:
 
     [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]
 
-Obwohl Sie Gerüstfunktionen zum Festlegen und Abrufen der Eigenschaft und eine Variable zum Speichern der Eigenschaft jetzt haben, müssen Sie entsprechend die Funktionen implementieren.
+Obwohl Sie nun über Skelett Funktionen verfügen, um die Eigenschaft festzulegen und abzurufen, und eine Variable zum Speichern der Eigenschaft, müssen Sie die Funktionen entsprechend implementieren.
 
-### <a name="to-update-the-get-and-put-methods"></a>Aktualisieren die Get und put-Methoden
+### <a name="to-update-the-get-and-put-methods"></a>So aktualisieren Sie die Get-und Put-Methoden
 
-1. Legen Sie den Standardwert `m_nSides`. Stellen Sie die Standardeinstellung, die ein Dreieck Form durch Hinzufügen einer Zeile an den Konstruktor in PolyCtl.h hinzu:
+1. Legen Sie den Standardwert `m_nSides`fest. Legen Sie die Standardform zu einem Dreieck, indem Sie dem Konstruktor in PolyCtl. h eine Zeile hinzufügen:
 
     [!code-cpp[NVC_ATL_Windowing#45](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_2.h)]
 
-1. Implementieren der `Get` und `Put` Methoden. Die `get_Sides` und `put_Sides` Funktionsdeklarationen PolyCtl.h hinzugefügt wurden. Fügen Sie nun den Code für `get_Sides` und `put_Sides` PolyCtl.cpp durch Folgendes:
+1. Implementieren Sie die Methoden `Get` und `Put`. Die `get_Sides`-und `put_Sides`-Funktions Deklarationen wurden PolyCtl. h hinzugefügt. Fügen Sie nun den Code für `get_Sides` und `put_Sides` zu "PolyCtl. cpp" hinzu:
 
     [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]
 
-Die `get_Sides` Methode gibt den aktuellen Wert des der `Sides` Eigenschaft über die `pVal` Zeiger. In der `put_Sides` -Methode, die der Code stellt sicher ist der Benutzer das Festlegen der `Sides` Eigenschaft einen zulässigen Wert. Der Minimalwert muss 3 sein, und da ein Array von Punkten für jede Seite verwendet wird, handelt es sich bei 100 ist ein vernünftiges Maß beschränken für einen maximalen Wert.
+Die `get_Sides`-Methode gibt den aktuellen Wert der Eigenschaft `Sides` über den `pVal`-Zeiger zurück. In der `put_Sides`-Methode stellt der Code sicher, dass der Benutzer die `Sides`-Eigenschaft auf einen zulässigen Wert festlegt. Der Minimalwert muss 3 sein, und da ein Array von Punkten für jede Seite verwendet wird, ist 100 eine angemessene Grenze für einen maximalen Wert.
 
-Sie verfügen nun über eine Eigenschaft namens `Sides`. Im nächsten Schritt ändern Sie den Code für dessen Verwendung zum Zeichnen.
+Sie verfügen nun über eine Eigenschaft mit dem Namen `Sides`. Im nächsten Schritt ändern Sie den Zeichnungs Code, um ihn zu verwenden.
 
-[Zurück zu Schritt 2.](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; [mit Schritt 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
+[Zurück zu Schritt 2](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; für [Schritt 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Tutorial](../atl/active-template-library-atl-tutorial.md)

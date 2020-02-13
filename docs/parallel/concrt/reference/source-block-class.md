@@ -33,85 +33,85 @@ f1_keywords:
 helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
-ms.openlocfilehash: 5ddfd5e139171c7097a793f12ac82767b8773107
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a0d69bc2e2904b1dcf37a7e9891d95bd869a610
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160090"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142706"
 ---
-# <a name="sourceblock-class"></a>source_block-Klasse
+# <a name="source_block-class"></a>source_block-Klasse
 
 Die `source_block`-Klasse ist eine abstrakte Basisklasse ausschließlich für Quellblöcke. Die Klasse stellt grundlegende Linkmanagementfunktionalität sowie allgemeine Fehlerüberprüfungen bereit.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 template<class _TargetLinkRegistry, class _MessageProcessorType = ordered_message_processor<typename _TargetLinkRegistry::type::type>>
 class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
 *_TargetLinkRegistry*<br/>
-Link-Registrierung für die mit die Ziellinks verwendet werden soll.
+Link Registrierung, die zum Speichern der Ziel Verknüpfungen verwendet werden soll.
 
 *_MessageProcessorType*<br/>
-Prozessortyp für die Nachrichtenverarbeitung.
+Der Prozessortyp für die Nachrichtenverarbeitung.
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|`target_iterator`|Der Iterator, der verbundenen Ziele zu durchlaufen.|
+|`target_iterator`|Der Iterator zum Durchlaufen der verbundenen Ziele.|
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[source_block](#ctor)|Erstellt ein `source_block`-Objekt.|
-|[~ Source_block-Destruktor](#dtor)|Zerstört das `source_block`-Objekt.|
+|[~ source_block-Dekonstruktor](#dtor)|Zerstört das `source_block`-Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[accept](#accept)|Akzeptiert eine Meldung, die von diesem angeboten wurde `source_block` -Objekt, das Übertragen des Besitzes an den Aufrufer.|
-|[acquire_ref](#acquire_ref)|Eine Verweisanzahl dazu `source_block` Objekt, das Löschen zu verhindern.|
-|[consume](#consume)|Nimmt eine Meldung, die zuvor von diesem angebotenen `source_block` Objekt aus, und vom Ziel übertragen des Besitzes an den Aufrufer erfolgreich reserviert wurde.|
+|[erst](#accept)|Akzeptiert eine Meldung, die von diesem `source_block` Objekt angeboten wurde, und überträgt den Besitz an den Aufrufer.|
+|[acquire_ref](#acquire_ref)|Ruft einen Verweis Zähler für dieses `source_block` Objekt ab, um das Löschen zu verhindern.|
+|[Nutzen](#consume)|Verarbeitet eine Meldung, die zuvor von diesem `source_block` Objekt bereitgestellt und vom Ziel erfolgreich reserviert wurde, und überträgt den Besitz an den Aufrufer.|
 |[link_target](#link_target)|Verknüpft einen Zielblock mit diesem `source_block` Objekt.|
-|[release](#release)|Gibt die nachrichtenreservierung einer vorherigen erfolgreichen frei.|
-|[release_ref](#release_ref)|Gibt einen Verweiszähler für diese `source_block` Objekt.|
-|[reserve](#reserve)|Reserviert eine Meldung, die zuvor von diesem angebotenen `source_block` Objekt.|
-|[unlink_target](#unlink_target)|Hebt die Verknüpfung mit einem Zielblock und dadurch `source_block` Objekt.|
-|[unlink_targets](#unlink_targets)|Hebt die Verknüpfung alle Zielblöcke aus diesem `source_block` Objekt. (Überschreibt [ISource:: Unlink_targets](isource-class.md#unlink_targets).)|
+|[release](#release)|Gibt eine vorherige erfolgreiche Nachrichten Reservierung frei.|
+|[release_ref](#release_ref)|Gibt einen Verweis Zähler für dieses `source_block` Objekt frei.|
+|[reserve](#reserve)|Reserviert eine Meldung, die zuvor von diesem `source_block` Objekt angeboten wurde.|
+|[unlink_target](#unlink_target)|Entbindet einen Zielblock von diesem `source_block` Objekt.|
+|[unlink_targets](#unlink_targets)|Hebt die Verknüpfung aller Ziel Blöcke von diesem `source_block` Objekt auf. (Überschreibt [ISource:: unlink_targets](isource-class.md#unlink_targets).)|
 
 ### <a name="protected-methods"></a>Geschützte Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[accept_message](#accept_message)|Ruft beim Überschreiben in einer abgeleiteten Klasse akzeptiert eine angebotene Nachricht von der Quelle. Nachrichtenblöcke sollten überschreiben Sie diese Methode zum Überprüfen der `_MsgId` und eine Meldung zurückgegeben.|
-|[async_send](#async_send)|Asynchron in eine Warteschlange Nachrichten und eine propagierungstask beginnt, wenn dies nicht bereits geschehen ist|
-|[consume_message](#consume_message)|Ruft beim Überschreiben in einer abgeleiteten Klasse verwendet eine Nachricht, die zuvor reserviert wurde.|
-|[enable_batched_processing](#enable_batched_processing)|Ermöglicht die Verarbeitung für diesen Block in einem Batch verarbeitet.|
-|[initialize_source](#initialize_source)|Initialisiert die `message_propagator` innerhalb dieser `source_block`.|
-|[link_target_notification](#link_target_notification)|Ein Rückruf, der benachrichtigt, dass ein neues Ziel mit dieser verknüpft wurde `source_block` Objekt.|
-|[process_input_messages](#process_input_messages)|Eingabe verarbeiten von Nachrichten. Dies ist nur nützlich für weitergabeblöcke, die von Source_block abgeleitet werden|
-|[propagate_output_messages](#propagate_output_messages)|Weitergabe von Nachrichten an Ziele.|
-|[propagate_to_any_targets](#propagate_to_any_targets)|Ruft beim Überschreiben in einer abgeleiteten Klasse wird die angegebene Nachricht in bestimmten oder allen verknüpften Zielen weitergegeben. Dies ist die wichtigste Weitergabe-Routine für Meldungsblöcke.|
-|[release_message](#release_message)|Ruft beim Überschreiben in einer abgeleiteten Klasse gibt die nachrichtenreservierung einer vorherigen frei.|
-|[remove_targets](#remove_targets)|Entfernt alle Ziellinks für diese Quellblock. Dies sollte im Destruktor aufgerufen werden.|
-|[reserve_message](#reserve_message)|Ruft beim Überschreiben in einer abgeleiteten Klasse reserviert eine Nachricht, die zuvor von diesem angebotenen `source_block` Objekt.|
-|[resume_propagation](#resume_propagation)|Ruft beim Überschreiben in einer abgeleiteten Klasse wird die Weitergabe fortgesetzt, nachdem eine Reservierung freigegeben wurde.|
-|[sync_send](#sync_send)|Synchrone Nachrichten in eine Warteschlange und ein propagierungstask beginnt, wenn dies nicht bereits geschehen ist.|
-|[unlink_target_notification](#unlink_target_notification)|Ein Rückruf, der benachrichtigt, dass ein Ziel aus dieser aufgehoben wurde `source_block` Objekt.|
-|[wait_for_outstanding_async_sends](#wait_for_outstanding_async_sends)|Wartet, bis alle asynchronen Weitergaben abgeschlossen. Diese Propagierung-spezifische Spin-Wartezeit wird in Destruktoren von Nachrichtenblöcken verwendet, um sicherzustellen, dass alle asynchrone Weitergaben Zeit vor dem Zerstören des Blocks abgeschlossen haben.|
+|[accept_message](#accept_message)|Akzeptiert beim Überschreiben in einer abgeleiteten Klasse eine angebotene Nachricht von der Quelle. Nachrichten Blöcke sollten diese Methode überschreiben, um die `_MsgId` zu überprüfen und eine Meldung zurückzugeben.|
+|[async_send](#async_send)|Fügt Nachrichten asynchron in die Warteschlange ein und startet einen propagierungs Task, wenn dies noch nicht geschehen ist.|
+|[consume_message](#consume_message)|Verarbeitet beim Überschreiben in einer abgeleiteten Klasse eine Nachricht, die zuvor reserviert war.|
+|[enable_batched_processing](#enable_batched_processing)|Aktiviert die Batch Verarbeitung für diesen Block.|
+|[initialize_source](#initialize_source)|Initialisiert die `message_propagator` in diesem `source_block`.|
+|[link_target_notification](#link_target_notification)|Ein Rückruf, der benachrichtigt, dass ein neues Ziel mit diesem `source_block` Objekt verknüpft wurde.|
+|[process_input_messages](#process_input_messages)|Verarbeiten von Eingabe Nachrichten. Dies ist nur für propagatorblöcke nützlich, die von abgeleitet werden source_block|
+|[propagate_output_messages](#propagate_output_messages)|Weiterleiten von Nachrichten an Ziele.|
+|[propagate_to_any_targets](#propagate_to_any_targets)|Gibt beim Überschreiben in einer abgeleiteten Klasse die angegebene Nachricht an ein beliebiges oder alle verknüpften Ziele weiter. Dies ist die hauptpropagierungs Routine für Nachrichten Blöcke.|
+|[release_message](#release_message)|Gibt beim Überschreiben in einer abgeleiteten Klasse eine vorherige Nachrichten Reservierung frei.|
+|[remove_targets](#remove_targets)|Entfernt alle Ziel Verknüpfungen für diesen Quell Block. Dies sollte vom Dekonstruktor aufgerufen werden.|
+|[reserve_message](#reserve_message)|Reserviert beim Überschreiben in einer abgeleiteten Klasse eine Meldung, die zuvor von diesem `source_block` Objekt bereitgestellt wurde.|
+|[resume_propagation](#resume_propagation)|Setzt beim Überschreiben in einer abgeleiteten Klasse die Verteilung fort, nachdem eine Reservierung freigegeben wurde.|
+|[sync_send](#sync_send)|Fügt Nachrichten synchron in die Warteschlange ein und startet einen propagierungs Task, wenn dies noch nicht geschehen ist.|
+|[unlink_target_notification](#unlink_target_notification)|Ein Rückruf, der benachrichtigt, dass die Verknüpfung eines Ziels mit diesem `source_block` Objekt aufgehoben wurde.|
+|[wait_for_outstanding_async_sends](#wait_for_outstanding_async_sends)|Wartet, bis alle asynchronen Propagierungen vollständig sind. Diese weiterverweiterungsspezifische Spin-Wartezeit wird in debugktoren von Nachrichten Blöcken verwendet, um sicherzustellen, dass alle asynchronen Weiterungen Zeit bis zum Ende haben, bevor der Block zerstört wird.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Nachrichtenblöcke sollte aus diesem Block zu nutzen und die Synchronisierung von dieser Klasse bereitgestellten abgeleitet werden.
+Nachrichten Blöcke sollten von diesem Block abgeleitet werden, um die von dieser Klasse bereitgestellte Link Verwaltung und Synchronisierung zu nutzen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -119,17 +119,17 @@ Nachrichtenblöcke sollte aus diesem Block zu nutzen und die Synchronisierung vo
 
 `source_block`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Header:** agents.h
 
 **Namespace:** Parallelität
 
-##  <a name="accept"></a> Akzeptieren
+## <a name="accept"></a>erst
 
-Akzeptiert eine Meldung, die von diesem angeboten wurde `source_block` -Objekt, das Übertragen des Besitzes an den Aufrufer.
+Akzeptiert eine Meldung, die von diesem `source_block` Objekt angeboten wurde, und überträgt den Besitz an den Aufrufer.
 
-```
+```cpp
 virtual message<_Target_type>* accept(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<_Target_type>* _PTarget);
@@ -138,72 +138,72 @@ virtual message<_Target_type>* accept(
 ### <a name="parameters"></a>Parameter
 
 *_MsgId*<br/>
-Die `runtime_object_identity` von den angebotenen `message` Objekt.
+Die `runtime_object_identity` des angebotenen `message` Objekts.
 
 *_PTarget*<br/>
-Ein Zeiger auf den Zielblock, der aufgerufen wird, wird die `accept` Methode.
+Ein Zeiger auf den Zielblock, der die `accept` Methode aufrufen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die `message` Objekt, mit der Aufrufer jetzt besitzt.
+Ein Zeiger auf das `message` Objekt, für das der Aufrufer nun den Besitz hat.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Löst die Methode eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme wenn der Parameter `_PTarget` ist `NULL`.
+Die-Methode löst eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme aus, wenn der Parameter `_PTarget` `NULL`ist.
 
-Die `accept` Methode wird von einem Ziel aufgerufen, während eine Nachricht von diesem angebotenen `ISource` Block. Der zurückgegebene abweichen kann von der übergebenen der `propagate` Methode der `ITarget` blockieren, wenn diese Quelle entscheidet, eine Kopie der Nachricht zu erstellen.
+Die `accept`-Methode wird von einem Ziel aufgerufen, während eine Nachricht von diesem `ISource` Block angeboten wird. Der zurückgegebene Meldungs Zeiger unterscheidet sich möglicherweise von dem, der an die `propagate`-Methode des `ITarget` Blocks übertragen wird, wenn diese Quelle beschließt, eine Kopie der Nachricht zu erstellen.
 
-##  <a name="accept_message"></a> accept_message
+## <a name="accept_message"></a>accept_message
 
-Ruft beim Überschreiben in einer abgeleiteten Klasse akzeptiert eine angebotene Nachricht von der Quelle. Nachrichtenblöcke sollten überschreiben Sie diese Methode zum Überprüfen der `_MsgId` und eine Meldung zurückgegeben.
+Akzeptiert beim Überschreiben in einer abgeleiteten Klasse eine angebotene Nachricht von der Quelle. Nachrichten Blöcke sollten diese Methode überschreiben, um die `_MsgId` zu überprüfen und eine Meldung zurückzugeben.
 
-```
+```cpp
 virtual message<_Target_type>* accept_message(runtime_object_identity _MsgId) = 0;
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_MsgId*<br/>
-Die Common Language Runtime-Objekt-Identität des der `message` Objekt.
+Die Laufzeitobjekt Identität des `message` Objekts.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die Meldung, der der Aufrufer jetzt besitzt.
+Ein Zeiger auf die Nachricht, für die der Aufrufer nun den Besitz hat.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Um den Besitz übertragen zu können, sollte der ursprünglichen Nachrichtenzeiger zurückgegeben werden. Um den Besitz zu gewährleisten, muss eine Kopie der Nutzlast der Nachricht erstellt und zurückgegeben werden.
+Um den Besitz zu übertragen, sollte der ursprüngliche Nachrichten Zeiger zurückgegeben werden. Um den Besitz aufrechtzuerhalten, muss eine Kopie der Nachrichten Nutzlast erstellt und zurückgegeben werden.
 
-##  <a name="acquire_ref"></a> acquire_ref
+## <a name="acquire_ref"></a>acquire_ref
 
-Eine Verweisanzahl dazu `source_block` Objekt, das Löschen zu verhindern.
+Ruft einen Verweis Zähler für dieses `source_block` Objekt ab, um das Löschen zu verhindern.
 
-```
+```cpp
 virtual void acquire_ref(_Inout_ ITarget<_Target_type> *);
 ```
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Diese Methode wird aufgerufen, indem ein `ITarget` -Objekt, das mit der Quelle während der zu verknüpfenden der `link_target` Methode.
+Diese Methode wird von einem `ITarget` Objekt aufgerufen, das während der `link_target` Methode mit dieser Quelle verknüpft wird.
 
-##  <a name="async_send"></a> async_send
+## <a name="async_send"></a>async_send
 
-Asynchron in eine Warteschlange Nachrichten und eine propagierungstask beginnt, wenn dies nicht bereits geschehen ist
+Fügt Nachrichten asynchron in die Warteschlange ein und startet einen propagierungs Task, wenn dies noch nicht geschehen ist.
 
-```
+```cpp
 virtual void async_send(_Inout_opt_ message<_Target_type>* _Msg);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_Msg*<br/>
-Ein Zeiger auf eine `message` Objekt asynchron gesendet werden.
+Ein Zeiger auf ein `message` Objekt, das asynchron gesendet werden soll.
 
-##  <a name="consume"></a> Nutzen
+## <a name="consume"></a>Verzehr
 
-Nimmt eine Meldung, die zuvor von diesem angebotenen `source_block` Objekt aus, und vom Ziel übertragen des Besitzes an den Aufrufer erfolgreich reserviert wurde.
+Verarbeitet eine Meldung, die zuvor von diesem `source_block` Objekt bereitgestellt und vom Ziel erfolgreich reserviert wurde, und überträgt den Besitz an den Aufrufer.
 
-```
+```cpp
 virtual message<_Target_type>* consume(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<_Target_type>* _PTarget);
@@ -212,57 +212,57 @@ virtual message<_Target_type>* consume(
 ### <a name="parameters"></a>Parameter
 
 *_MsgId*<br/>
-Die `runtime_object_identity` des reservierten `message` Objekt.
+Die `runtime_object_identity` des reservierten `message` Objekts.
 
 *_PTarget*<br/>
-Ein Zeiger auf den Zielblock, der aufgerufen wird, wird die `consume` Methode.
+Ein Zeiger auf den Zielblock, der die `consume` Methode aufrufen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die `message` Objekt, mit der Aufrufer jetzt besitzt.
+Ein Zeiger auf das `message` Objekt, für das der Aufrufer nun den Besitz hat.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Löst die Methode eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme wenn der Parameter `_PTarget` ist `NULL`.
+Die-Methode löst eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme aus, wenn der Parameter `_PTarget` `NULL`ist.
 
-Löst die Methode eine [Bad_target](bad-target-class.md) Ausnahme wenn der Parameter `_PTarget` ist nicht das Ziel darstellt, die aufgerufen `reserve`.
+Die-Methode löst eine [Bad_target](bad-target-class.md) Ausnahme aus, wenn der Parameter `_PTarget` nicht das Ziel darstellt, das `reserve`aufgerufen hat.
 
-Die `consume` -Methode ist vergleichbar mit `accept`, jedoch immer durch einen Aufruf von vorangestellt werden muss `reserve` zurückgegebenen **"true"**.
+Die `consume`-Methode ähnelt `accept`, aber muss immer ein `reserve` aufgerufen werden, der " **true**" zurückgegeben hat.
 
-##  <a name="consume_message"></a> consume_message
+## <a name="consume_message"></a>consume_message
 
-Ruft beim Überschreiben in einer abgeleiteten Klasse verwendet eine Nachricht, die zuvor reserviert wurde.
+Verarbeitet beim Überschreiben in einer abgeleiteten Klasse eine Nachricht, die zuvor reserviert war.
 
-```
+```cpp
 virtual message<_Target_type>* consume_message(runtime_object_identity _MsgId) = 0;
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_MsgId*<br/>
-Die `runtime_object_identity` von der `message` -Objekt verarbeitet.
+Die `runtime_object_identity` des verbrauchten `message` Objekts.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die Meldung, der der Aufrufer jetzt besitzt.
+Ein Zeiger auf die Nachricht, für die der Aufrufer nun den Besitz hat.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Ähnlich wie `accept`, steht aber immer durch einen Aufruf von ist `reserve`.
+Ähnlich wie bei `accept`, dem aber immer ein Aufruf`reserve`vorangestellt ist.
 
-##  <a name="enable_batched_processing"></a> enable_batched_processing
+## <a name="enable_batched_processing"></a>enable_batched_processing
 
-Ermöglicht die Verarbeitung für diesen Block in einem Batch verarbeitet.
+Aktiviert die Batch Verarbeitung für diesen Block.
 
-```
+```cpp
 void enable_batched_processing();
 ```
 
-##  <a name="initialize_source"></a> initialize_source
+## <a name="initialize_source"></a>initialize_source
 
-Initialisiert die `message_propagator` innerhalb dieser `source_block`.
+Initialisiert die `message_propagator` in diesem `source_block`.
 
-```
+```cpp
 void initialize_source(
     _Inout_opt_ Scheduler* _PScheduler = NULL,
     _Inout_opt_ ScheduleGroup* _PScheduleGroup = NULL);
@@ -271,41 +271,41 @@ void initialize_source(
 ### <a name="parameters"></a>Parameter
 
 *_PScheduler*<br/>
-Der Planer zum Planen von Aufgaben verwendet werden soll.
+Der Planer, der zum Planen von Aufgaben verwendet werden soll.
 
 *_PScheduleGroup*<br/>
-Der Planungsgruppe zum Planen von Aufgaben verwendet werden soll.
+Die Zeit Plan Gruppe, die zum Planen von Aufgaben verwendet werden soll.
 
-##  <a name="link_target"></a> link_target
+## <a name="link_target"></a>link_target
 
 Verknüpft einen Zielblock mit diesem `source_block` Objekt.
 
-```
+```cpp
 virtual void link_target(_Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_PTarget*<br/>
-Ein Zeiger auf ein `ITarget` Block, um Sie zu diesem link `source_block` Objekt.
+Ein Zeiger auf einen `ITarget` Block, der mit diesem `source_block` Objekt verknüpft werden soll.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Löst die Methode eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme wenn der Parameter `_PTarget` ist `NULL`.
+Die-Methode löst eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme aus, wenn der Parameter `_PTarget` `NULL`ist.
 
-##  <a name="link_target_notification"></a> link_target_notification
+## <a name="link_target_notification"></a>link_target_notification
 
-Ein Rückruf, der benachrichtigt, dass ein neues Ziel mit dieser verknüpft wurde `source_block` Objekt.
+Ein Rückruf, der benachrichtigt, dass ein neues Ziel mit diesem `source_block` Objekt verknüpft wurde.
 
-```
+```cpp
 virtual void link_target_notification(_Inout_ ITarget<_Target_type> *);
 ```
 
-##  <a name="process_input_messages"></a> process_input_messages
+## <a name="process_input_messages"></a>process_input_messages
 
-Eingabe verarbeiten von Nachrichten. Dies ist nur nützlich für weitergabeblöcke, die von Source_block abgeleitet werden
+Verarbeiten von Eingabe Nachrichten. Dies ist nur für propagatorblöcke nützlich, die von abgeleitet werden source_block
 
-```
+```cpp
 virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
 ```
 
@@ -314,32 +314,32 @@ virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
 *_PMessage*<br/>
 Ein Zeiger auf die Meldung, die verarbeitet werden soll.
 
-##  <a name="propagate_output_messages"></a> propagate_output_messages
+## <a name="propagate_output_messages"></a>propagate_output_messages
 
-Weitergabe von Nachrichten an Ziele.
+Weiterleiten von Nachrichten an Ziele.
 
-```
+```cpp
 virtual void propagate_output_messages();
 ```
 
-##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a>propagate_to_any_targets
 
-Ruft beim Überschreiben in einer abgeleiteten Klasse wird die angegebene Nachricht in bestimmten oder allen verknüpften Zielen weitergegeben. Dies ist die wichtigste Weitergabe-Routine für Meldungsblöcke.
+Gibt beim Überschreiben in einer abgeleiteten Klasse die angegebene Nachricht an ein beliebiges oder alle verknüpften Ziele weiter. Dies ist die hauptpropagierungs Routine für Nachrichten Blöcke.
 
-```
+```cpp
 virtual void propagate_to_any_targets(_Inout_opt_ message<_Target_type>* _PMessage);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_PMessage*<br/>
-Ein Zeiger auf die Meldung, die weitergeleitet werden soll.
+Ein Zeiger auf die Meldung, die weitergegeben werden soll.
 
-##  <a name="release"></a> Version
+## <a name="release"></a>Abgabe
 
-Gibt die nachrichtenreservierung einer vorherigen erfolgreichen frei.
+Gibt eine vorherige erfolgreiche Nachrichten Reservierung frei.
 
-```
+```cpp
 virtual void release(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<_Target_type>* _PTarget);
@@ -348,60 +348,60 @@ virtual void release(
 ### <a name="parameters"></a>Parameter
 
 *_MsgId*<br/>
-Die `runtime_object_identity` des reservierten `message` Objekt.
+Die `runtime_object_identity` des reservierten `message` Objekts.
 
 *_PTarget*<br/>
-Ein Zeiger auf den Zielblock, der aufgerufen wird, wird die `release` Methode.
+Ein Zeiger auf den Zielblock, der die `release` Methode aufrufen.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Löst die Methode eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme wenn der Parameter `_PTarget` ist `NULL`.
+Die-Methode löst eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme aus, wenn der Parameter `_PTarget` `NULL`ist.
 
-Löst die Methode eine [Bad_target](bad-target-class.md) Ausnahme wenn der Parameter `_PTarget` ist nicht das Ziel darstellt, die aufgerufen `reserve`.
+Die-Methode löst eine [Bad_target](bad-target-class.md) Ausnahme aus, wenn der Parameter `_PTarget` nicht das Ziel darstellt, das `reserve`aufgerufen hat.
 
-##  <a name="release_message"></a> release_message
+## <a name="release_message"></a>release_message
 
-Ruft beim Überschreiben in einer abgeleiteten Klasse gibt die nachrichtenreservierung einer vorherigen frei.
+Gibt beim Überschreiben in einer abgeleiteten Klasse eine vorherige Nachrichten Reservierung frei.
 
-```
+```cpp
 virtual void release_message(runtime_object_identity _MsgId) = 0;
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_MsgId*<br/>
-Die `runtime_object_identity` von der `message` Objekt freigegeben wird.
+Die `runtime_object_identity` des `message` Objekts, das freigegeben wird.
 
-##  <a name="release_ref"></a> release_ref
+## <a name="release_ref"></a>release_ref
 
-Gibt einen Verweiszähler für diese `source_block` Objekt.
+Gibt einen Verweis Zähler für dieses `source_block` Objekt frei.
 
-```
+```cpp
 virtual void release_ref(_Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_PTarget*<br/>
-Ein Zeiger auf den Zielblock, der diese Methode aufruft.
+Ein Zeiger auf den Zielblock, der diese Methode aufgerufen hat.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Diese Methode wird aufgerufen, indem ein `ITarget` -Objekt, das von dieser Quelle aufgehoben wird, ist. Der Quellblock darf für den Zielblock reservierten Ressourcen freizugeben.
+Diese Methode wird von einem `ITarget` Objekt aufgerufen, das von dieser Quelle entfernt wird. Der Quell Block darf alle für den Zielblock reservierten Ressourcen freigeben.
 
-##  <a name="remove_targets"></a> remove_targets
+## <a name="remove_targets"></a>remove_targets
 
-Entfernt alle Ziellinks für diese Quellblock. Dies sollte im Destruktor aufgerufen werden.
+Entfernt alle Ziel Verknüpfungen für diesen Quell Block. Dies sollte vom Dekonstruktor aufgerufen werden.
 
-```
+```cpp
 void remove_targets();
 ```
 
-##  <a name="reserve"></a> Hostreserven
+## <a name="reserve"></a>Schutz
 
-Reserviert eine Meldung, die zuvor von diesem angebotenen `source_block` Objekt.
+Reserviert eine Meldung, die zuvor von diesem `source_block` Objekt angeboten wurde.
 
-```
+```cpp
 virtual bool reserve(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<_Target_type>* _PTarget);
@@ -410,126 +410,126 @@ virtual bool reserve(
 ### <a name="parameters"></a>Parameter
 
 *_MsgId*<br/>
-Die `runtime_object_identity` von den angebotenen `message` Objekt.
+Die `runtime_object_identity` des angebotenen `message` Objekts.
 
 *_PTarget*<br/>
-Ein Zeiger auf den Zielblock, der aufgerufen wird, wird die `reserve` Methode.
+Ein Zeiger auf den Zielblock, der die `reserve` Methode aufrufen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** , wenn die Nachricht erfolgreich reserviert wurde, **"false"** andernfalls. Reservierungen können für viele Gründe, z. B. Fehler auftreten: die Nachricht wurde bereits reserviert oder von einem anderen Ziel akzeptiert wird, kann die Quelle Reservierungen verweigern und so weiter.
+**true** , wenn die Nachricht erfolgreich reserviert wurde, andernfalls **false** . Reservierungen können aus vielen Gründen fehlschlagen, z.b.: die Nachricht wurde bereits von einem anderen Ziel reserviert oder akzeptiert, die Quelle könnte Reservierungen ablehnen usw.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Löst die Methode eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme wenn der Parameter `_PTarget` ist `NULL`.
+Die-Methode löst eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme aus, wenn der Parameter `_PTarget` `NULL`ist.
 
-Nach dem Aufruf von `reserve`, wenn dies gelingt, müssen Sie entweder Aufrufen `consume` oder `release` zum Erstellen oder den Besitz der Nachricht bzw. aufgeben.
+Nachdem Sie `reserve`aufgerufen haben, müssen Sie bei erfolgreicher Ausführung entweder `consume` oder `release` abrufen, um die Nachricht bzw. den Besitz der Nachricht zu übernehmen.
 
-##  <a name="reserve_message"></a> reserve_message
+## <a name="reserve_message"></a>reserve_message
 
-Ruft beim Überschreiben in einer abgeleiteten Klasse reserviert eine Nachricht, die zuvor von diesem angebotenen `source_block` Objekt.
+Reserviert beim Überschreiben in einer abgeleiteten Klasse eine Meldung, die zuvor von diesem `source_block` Objekt bereitgestellt wurde.
 
-```
+```cpp
 virtual bool reserve_message(runtime_object_identity _MsgId) = 0;
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_MsgId*<br/>
-Die `runtime_object_identity` von der `message` Objekt reserviert wird.
+Die `runtime_object_identity` des reservierten `message` Objekts.
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** , wenn die Nachricht erfolgreich reserviert wurde, **"false"** andernfalls.
+**true** , wenn die Nachricht erfolgreich reserviert wurde, andernfalls **false** .
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Nach dem `reserve` aufgerufen wird, wenn zurückgegeben **"true"**, entweder `consume` oder `release` aufgerufen werden, um zu übernehmen oder den Besitz der Nachricht.
+Wenn `reserve` aufgerufen wird, muss entweder `consume` oder `release` aufgerufen **werden, um**den Besitz der Nachricht zu übernehmen oder freizugeben.
 
-##  <a name="resume_propagation"></a> resume_propagation
+## <a name="resume_propagation"></a>resume_propagation
 
-Ruft beim Überschreiben in einer abgeleiteten Klasse wird die Weitergabe fortgesetzt, nachdem eine Reservierung freigegeben wurde.
+Setzt beim Überschreiben in einer abgeleiteten Klasse die Verteilung fort, nachdem eine Reservierung freigegeben wurde.
 
-```
+```cpp
 virtual void resume_propagation() = 0;
 ```
 
-##  <a name="ctor"></a> source_block
+## <a name="ctor"></a>source_block
 
 Erstellt ein `source_block`-Objekt.
 
-```
+```cpp
 source_block();
 ```
 
-##  <a name="dtor"></a> ~source_block
+## <a name="dtor"></a>~ source_block
 
 Zerstört das `source_block`-Objekt.
 
-```
+```cpp
 virtual ~source_block();
 ```
 
-##  <a name="sync_send"></a> sync_send
+## <a name="sync_send"></a>sync_send
 
-Synchrone Nachrichten in eine Warteschlange und ein propagierungstask beginnt, wenn dies nicht bereits geschehen ist.
+Fügt Nachrichten synchron in die Warteschlange ein und startet einen propagierungs Task, wenn dies noch nicht geschehen ist.
 
-```
+```cpp
 virtual void sync_send(_Inout_opt_ message<_Target_type>* _Msg);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_Msg*<br/>
-Ein Zeiger auf eine `message` Objekt, das synchron gesendet.
+Ein Zeiger auf ein `message` Objekt, das synchron gesendet werden soll.
 
-##  <a name="unlink_target"></a> unlink_target
+## <a name="unlink_target"></a>unlink_target
 
-Hebt die Verknüpfung mit einem Zielblock und dadurch `source_block` Objekt.
+Entbindet einen Zielblock von diesem `source_block` Objekt.
 
-```
+```cpp
 virtual void unlink_target(_Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_PTarget*<br/>
-Ein Zeiger auf ein `ITarget` Block, um diese aufheben `source_block` Objekt.
+Ein Zeiger auf einen `ITarget` Block, um die Verknüpfung mit diesem `source_block`-Objekt aufzulösen.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Löst die Methode eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme wenn der Parameter `_PTarget` ist `NULL`.
+Die-Methode löst eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme aus, wenn der Parameter `_PTarget` `NULL`ist.
 
-##  <a name="unlink_target_notification"></a> unlink_target_notification
+## <a name="unlink_target_notification"></a>unlink_target_notification
 
-Ein Rückruf, der benachrichtigt, dass ein Ziel aus dieser aufgehoben wurde `source_block` Objekt.
+Ein Rückruf, der benachrichtigt, dass die Verknüpfung eines Ziels mit diesem `source_block` Objekt aufgehoben wurde.
 
-```
+```cpp
 virtual void unlink_target_notification(_Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_PTarget*<br/>
-Die `ITarget` Block, aufgehoben wurde.
+Der `ITarget` Block, der nicht verknüpft wurde.
 
-##  <a name="unlink_targets"></a> unlink_targets
+## <a name="unlink_targets"></a>unlink_targets
 
-Hebt die Verknüpfung alle Zielblöcke aus diesem `source_block` Objekt.
+Hebt die Verknüpfung aller Ziel Blöcke von diesem `source_block` Objekt auf.
 
-```
+```cpp
 virtual void unlink_targets();
 ```
 
-##  <a name="wait_for_outstanding_async_sends"></a> wait_for_outstanding_async_sends
+## <a name="wait_for_outstanding_async_sends"></a>wait_for_outstanding_async_sends
 
-Wartet, bis alle asynchronen Weitergaben abgeschlossen. Diese Propagierung-spezifische Spin-Wartezeit wird in Destruktoren von Nachrichtenblöcken verwendet, um sicherzustellen, dass alle asynchrone Weitergaben Zeit vor dem Zerstören des Blocks abgeschlossen haben.
+Wartet, bis alle asynchronen Propagierungen vollständig sind. Diese weiterverweiterungsspezifische Spin-Wartezeit wird in debugktoren von Nachrichten Blöcken verwendet, um sicherzustellen, dass alle asynchronen Weiterungen Zeit bis zum Ende haben, bevor der Block zerstört wird.
 
-```
+```cpp
 void wait_for_outstanding_async_sends();
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [ISource-Klasse](isource-class.md)

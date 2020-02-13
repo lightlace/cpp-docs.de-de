@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::rb
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-ms.openlocfilehash: e4996f65f4b7f707f6b86e05571cacd6987c83a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0164f595ba44999718895f5221250f12bd6b7344
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405403"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142938"
 ---
-# <a name="unorm4-class"></a>unorm_4-Klasse
+# <a name="unorm_4-class"></a>unorm_4-Klasse
 
 Stellt einen kurzen Vektor aus vier normalen Zahlen ohne Vorzeichen dar.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class unorm_4;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[unorm_4-Konstruktor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
+|[unorm_4-Konstruktor](#ctor)|Ist überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |unorm_4::get_w||
 |unorm_4::get_wx||
@@ -313,7 +313,7 @@ class unorm_4;
 |unorm_4::get_wyx||
 |unorm_4::get_wyxz||
 |unorm_4::get_wyz||
-|unorm_4::get_wyzx||
+|unorm_4:: get_wyzx||
 |unorm_4::get_wz||
 |unorm_4::get_wzx||
 |unorm_4::get_wzxy||
@@ -350,9 +350,9 @@ class unorm_4;
 |unorm_4::get_yzw||
 |unorm_4::get_yzwx||
 |unorm_4::get_yzx||
-|unorm_4::get_yzxw||
+|unorm_4:: get_yzxw||
 |unorm_4::get_z||
-|unorm_4::get_zw||
+|unorm_4:: get_zw||
 |unorm_4::get_zwx||
 |unorm_4::get_zwxy||
 |unorm_4::get_zwy||
@@ -362,8 +362,8 @@ class unorm_4;
 |unorm_4::get_zxwy||
 |unorm_4::get_zxy||
 |unorm_4::get_zxyw||
-|unorm_4::get_zy||
-|unorm_4::get_zyw||
+|unorm_4:: get_zy||
+|unorm_4:: get_zyw||
 |unorm_4::get_zywx||
 |unorm_4::get_zyx||
 |unorm_4::get_zyxw||
@@ -384,8 +384,8 @@ class unorm_4;
 |unorm_4::set_wy||
 |unorm_4::set_wyx||
 |unorm_4::set_wyxz||
-|unorm_4::set_wyz||
-|unorm_4::set_wyzx||
+|unorm_4:: set_wyz||
+|unorm_4:: set_wyzx||
 |unorm_4::set_wz||
 |unorm_4::set_wzx||
 |unorm_4::set_wzxy||
@@ -400,7 +400,7 @@ class unorm_4;
 |unorm_4::set_xy||
 |unorm_4::set_xyw||
 |unorm_4::set_xywz||
-|unorm_4::set_xyz||
+|unorm_4:: set_xyz||
 |unorm_4::set_xyzw||
 |unorm_4::set_xz||
 |unorm_4::set_xzw||
@@ -422,9 +422,9 @@ class unorm_4;
 |unorm_4::set_yzw||
 |unorm_4::set_yzwx||
 |unorm_4::set_yzx||
-|unorm_4::set_yzxw||
+|unorm_4:: set_yzxw||
 |unorm_4::set_z||
-|unorm_4::set_zw||
+|unorm_4:: set_zw||
 |unorm_4::set_zwx||
 |unorm_4::set_zwxy||
 |unorm_4::set_zwy||
@@ -434,34 +434,34 @@ class unorm_4;
 |unorm_4::set_zxwy||
 |unorm_4::set_zxy||
 |unorm_4::set_zxyw||
-|unorm_4::set_zy||
-|unorm_4::set_zyw||
-|unorm_4::set_zywx||
+|unorm_4:: set_zy||
+|unorm_4:: set_zyw||
+|unorm_4:: set_zywx||
 |unorm_4::set_zyx||
-|unorm_4::set_zyxw||
+|unorm_4:: set_zyxw||
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |unorm_4::operator-||
 |unorm_4::operator--||
-|unorm_4::operator*=||
+|unorm_4:: Operator * =||
 |unorm_4::operator/=||
 |unorm_4::operator++||
 |unorm_4::operator+=||
 |unorm_4::operator=||
-|unorm_4::operator-=||
+|unorm_4:: Operator-=||
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Size-Konstante](#unorm_4__size)||
+|[Größen Konstante](#unorm_4__size)||
 
-### <a name="public-data-members"></a>Öffentliche Datenmember
+### <a name="public-data-members"></a>Öffentliche Datenelemente
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |unorm_4::a||
 |unorm_4::ab||
@@ -469,11 +469,11 @@ class unorm_4;
 |unorm_4::abgr||
 |unorm_4::abr||
 |unorm_4::abrg||
-|unorm_4::ag||
+|unorm_4:: AG||
 |unorm_4::agb||
 |unorm_4::agbr||
-|unorm_4::agr||
-|unorm_4::agrb||
+|unorm_4:: AGR||
+|unorm_4:: agrb||
 |unorm_4::ar||
 |unorm_4::arb||
 |unorm_4::arbg||
@@ -484,10 +484,10 @@ class unorm_4;
 |unorm_4::bag||
 |unorm_4::bagr||
 |unorm_4:: Bar||
-|unorm_4::barg||
+|unorm_4:: barg||
 |unorm_4::bg||
 |unorm_4::bga||
-|unorm_4::bgar||
+|unorm_4:: bgar||
 |unorm_4::bgr||
 |unorm_4::bgra||
 |unorm_4::br||
@@ -500,7 +500,7 @@ class unorm_4;
 |unorm_4::gab||
 |unorm_4::gabr||
 |unorm_4::gar||
-|unorm_4::garb||
+|unorm_4:: Garb||
 |unorm_4::gb||
 |unorm_4::gba||
 |unorm_4::gbar||
@@ -537,28 +537,28 @@ class unorm_4;
 |unorm_4::wyx||
 |unorm_4::wyxz||
 |unorm_4::wyz||
-|unorm_4::wyzx||
+|unorm_4:: wyzx||
 |unorm_4::wz||
 |unorm_4::wzx||
 |unorm_4::wzxy||
 |unorm_4::wzy||
 |unorm_4::wzyx||
 |unorm_4:: x||
-|unorm_4::xw||
-|unorm_4::xwy||
-|unorm_4::xwyz||
+|unorm_4:: XW||
+|unorm_4:: xwy||
+|unorm_4:: xwyz||
 |unorm_4::xwz||
-|unorm_4::xwzy||
-|unorm_4::xy||
-|unorm_4::xyw||
+|unorm_4:: xwzy||
+|unorm_4:: XY||
+|unorm_4:: xyw||
 |unorm_4::xywz||
-|unorm_4::xyz||
-|unorm_4::xyzw||
+|unorm_4:: XYZ||
+|unorm_4:: xyzw||
 |unorm_4::xz||
-|unorm_4::xzw||
+|unorm_4:: xzw||
 |unorm_4::xzwy||
-|unorm_4::xzy||
-|unorm_4::xzyw||
+|unorm_4:: XZY||
+|unorm_4:: xzyw||
 |unorm_4::y||
 |unorm_4::yw||
 |unorm_4::ywx||
@@ -582,31 +582,31 @@ class unorm_4;
 |unorm_4::zwy||
 |unorm_4::zwyx||
 |unorm_4::zx||
-|unorm_4::zxw||
-|unorm_4::zxwy||
+|unorm_4:: zxw||
+|unorm_4:: zxwy||
 |unorm_4::zxy||
 |unorm_4::zxyw||
-|unorm_4::zy||
-|unorm_4::zyw||
+|unorm_4:: Zy||
+|unorm_4:: zyw||
 |unorm_4::zywx||
 |unorm_4::zyx||
-|unorm_4::zyxw||
+|unorm_4:: zyxw||
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 `unorm_4`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amp_short_vectors.h
+**Header:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Parallelität:: Grafiken
 
-##  <a name="ctor"></a> unorm_4
+## <a name="ctor"></a>unorm_4
 
 Standardkonstruktor, initialisiert alle Elemente mit 0.
 
-```
+```cpp
 unorm_4() restrict(amp,
     cpu);
 
@@ -660,29 +660,29 @@ explicit inline unorm_4(
 ### <a name="parameters"></a>Parameter
 
 *_V0*<br/>
-Der Wert, der 0-Element zu initialisieren.
+Der Wert, mit dem Element 0 initialisiert werden soll.
 
 *_V1*<br/>
-Der Wert 1 Element initialisiert werden.
+Der Wert, mit dem Element 1 initialisiert werden soll.
 
 *_V2*<br/>
-Der Wert 2-Element zu initialisieren.
+Der Wert, mit dem Element 2 initialisiert werden soll.
 
 *_V3*<br/>
-Der Wert 3-Element zu initialisieren.
+Der Wert, mit dem Element 3 initialisiert werden soll.
 
 *_V*<br/>
 Der Wert für die Initialisierung.
 
 *_Other*<br/>
-Das Objekt, das zum Initialisieren verwendet.
+Das-Objekt, das zum Initialisieren von verwendet wird.
 
-##  <a name="unorm_4__size"></a> Größe
+## <a name="unorm_4__size"></a>Größe
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

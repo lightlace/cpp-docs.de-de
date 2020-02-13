@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-ms.openlocfilehash: 9074dad572a3a74a5b456e9790dc359ddf8b7c60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c47d9db64b0af7d5413abed3f85e9d41a591fa2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262748"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143130"
 ---
 # <a name="context-class"></a>Context-Klasse
 
@@ -33,21 +33,21 @@ Stellt eine Abstraktion für einen Ausführungskontext dar.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class Context;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="protected-constructors"></a>Geschützte Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[~ Context-Destruktor](#dtor)||
+|[~ Context-debugtor](#dtor)||
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[Block](#block)|Blockiert den aktuellen Kontext.|
 |[CurrentContext](#currentcontext)|Gibt einen Zeiger auf den aktuellen Kontext zurück.|
@@ -57,15 +57,15 @@ class Context;
 |[Id](#id)|Gibt einen Bezeichner für den aktuellen Kontext zurück, der innerhalb des Planers eindeutig ist, zu dem der aktuelle Kontext gehört.|
 |[IsCurrentTaskCollectionCanceling](#iscurrenttaskcollectioncanceling)|Gibt zurück, ob die Aufgabenauflistung, die gerade inline für den aktuellen Kontext ausgeführt wird, in diesem Moment (oder in Kürze) einen Abbruch durchführt.|
 |[IsSynchronouslyBlocked](#issynchronouslyblocked)|Bestimmt, ob der Kontext synchron blockiert ist. Ein Kontext wird als synchron blockiert angesehen, wenn er explizit eine zu einer Blockierung führende Aktion ausgeführt hat.|
-|[Überzeichnen](#oversubscribe)|Fügt einen zusätzlichen virtuellen Prozessor für die Dauer eines Codeblocks in einen Planer ein, wenn er für einen Kontext aufgerufen wird, der auf einem der virtuellen Prozessoren in diesem Planer ausgeführt wird.|
+|[Oversubscribe](#oversubscribe)|Fügt einen zusätzlichen virtuellen Prozessor für die Dauer eines Codeblocks in einen Planer ein, wenn er für einen Kontext aufgerufen wird, der auf einem der virtuellen Prozessoren in diesem Planer ausgeführt wird.|
 |[ScheduleGroupId](#schedulegroupid)|Gibt einen Bezeichner für die Planungsgruppe zurück, an der der aktuelle Kontext arbeitet.|
-|[Unblock](#unblock)|Hebt die Blockierung des Kontexts auf und bewirkt, dass er ausführbar wird.|
+|[Blockierung](#unblock)|Hebt die Blockierung des Kontexts auf und bewirkt, dass er ausführbar wird.|
 |[VirtualProcessorId](#virtualprocessorid)|Gibt einen Bezeichner für den virtuellen Prozessor zurück, auf dem der aktuelle Kontext ausgeführt wird.|
 |[Yield](#yield)|Setzt die Ausführung aus, damit ein anderer Kontext ausgeführt werden kann. Wenn kein anderer Kontext für eine Übergabe verfügbar ist, kann der Planer ggf. an einen anderen Betriebssystemthread übergeben.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Die Concurrency Runtime-Planer (finden Sie unter [Scheduler](scheduler-class.md)) verwendet Ausführungskontexte, führen Sie die Arbeit in die Warteschlange eingereiht, von der Anwendung. Ein Win32-Thread ist ein Beispiel für einen Ausführungskontext auf einem Windows-Betriebssystem.
+Der Concurrency Runtime Planer (siehe [Scheduler](scheduler-class.md)) verwendet Ausführungs Kontexte, um die von der Anwendung in die Warteschlange eingereihte Arbeit auszuführen. Ein Win32-Thread ist ein Beispiel für einen Ausführungskontext auf einem Windows-Betriebssystem.
 
 Die Nebenläufigkeitsebene eines Planers ist immer gleich der Anzahl virtueller Prozessoren, die vom Ressourcen-Manager gewährt wurden. Ein virtueller Prozessor ist eine Abstraktion für eine Verarbeitungsressource und wird einem Hardwarethread des zugrunde liegenden Systems zugeordnet. Nur ein einzelner Planerkontext kann jeweils auf einem virtuellen Prozessor ausgeführt werden.
 
@@ -75,41 +75,41 @@ Der Planer ist grundsätzlich kooperativ, und ein Ausführungskontext kann seine
 
 `Context`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** concrt.h
+**Header:** ConcRT. h
 
 **Namespace:** Parallelität
 
-##  <a name="block"></a> Block
+## <a name="block"></a>Baustein
 
 Blockiert den aktuellen Kontext.
 
-```
+```cpp
 static void __cdecl Block();
 ```
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Diese Methode führt dazu, dass der Standardplaner des Prozesses erstellt und/oder an den aufrufenden Kontext angefügt wird, wenn derzeit dem aufrufenden Kontext kein Planer zugeordnet ist.
 
-Wenn auf einem virtuellen Prozessor im aufrufende Kontext ausgeführt wird, findet der virtuelle Prozessor anderen ausführbaren Kontext zum Ausführen oder möglicherweise kann ein neues erstellen.
+Wenn der Aufruf Kontext auf einem virtuellen Prozessor ausgeführt wird, findet der virtuelle Prozessor einen anderen ausführbaren Kontext, der ausgeführt werden kann, oder er kann potenziell einen neuen erstellen.
 
-Nach der `Block` Methode aufgerufen wurde oder aufgerufen wird, müssen Sie es mit einem Aufruf von koppeln der [Unblock](#unblock) Methode über einen anderen Ausführungskontext in der Reihenfolge dafür erneut ausführen. Werden Sie bemerken, dass es ein kritischen Zeitraum zwischen dem Code, in dem der Kontext für einen anderen Thread veröffentlicht aufrufen, kann die `Unblock` Methode und der Punkt, in dem die Methode aufrufen, um `Block` erfolgt. Während dieses Zeitraums müssen Sie keine Methode aufrufen, die wiederum blockieren und entsperren eine eigene Gründen (z. B. Sperren) können. Aufrufe von der `Block` und `Unblock` Methode nicht die Ursache für das Blockieren und wiederzulassen von nachverfolgen. Nur ein Objekt müssen den Besitz einer `Block` -  `Unblock` Paar.
+Nachdem die `Block`-Methode aufgerufen wurde oder aufgerufen wird, müssen Sie Sie mit einem Aufruf der [Unblock](#unblock) -Methode von einem anderen Ausführungs Kontext koppeln, damit Sie erneut ausgeführt werden kann. Beachten Sie, dass es einen kritischen Zeitraum zwischen dem Punkt gibt, an dem Ihr Code den Kontext veröffentlicht, damit ein anderer Thread die `Unblock`-Methode und den Punkt, an dem der tatsächliche Methodenaufruf an `Block` erfolgt, aufruft. Während dieses Zeitraums dürfen Sie keine Methode aufzurufen, die wiederum aus eigenen Gründen blockieren und die Blockierung blockieren kann (z. b. das Abrufen einer Sperre). Bei Aufrufen der `Block`-und `Unblock`-Methode wird der Grund für die Blockierung und Aufhebung der Blockierung nicht nachverfolgt. Nur ein Objekt muss den Besitz eines `Block`- `Unblock` Paar haben.
 
-Diese Methode kann eine Vielzahl von Ausnahmen, einschließlich auslösen [Scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md).
+Diese Methode kann eine Vielzahl von Ausnahmen auslösen, einschließlich [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md).
 
-##  <a name="dtor"></a> ~Context
+## <a name="dtor"></a>~ Kontext
 
-```
+```cpp
 virtual ~Context();
 ```
 
-##  <a name="currentcontext"></a> CurrentContext
+## <a name="currentcontext"></a>CurrentContext
 
 Gibt einen Zeiger auf den aktuellen Kontext zurück.
 
-```
+```cpp
 static Context* __cdecl CurrentContext();
 ```
 
@@ -117,15 +117,15 @@ static Context* __cdecl CurrentContext();
 
 Ein Zeiger auf den aktuellen Kontext.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Diese Methode führt dazu, dass der Standardplaner des Prozesses erstellt und/oder an den aufrufenden Kontext angefügt wird, wenn derzeit dem aufrufenden Kontext kein Planer zugeordnet ist.
 
-##  <a name="getid"></a> GetId
+## <a name="getid"></a>GetId
 
 Gibt einen Bezeichner für den Kontext zurück, der innerhalb des Planers eindeutig ist, zu dem der Kontext gehört.
 
-```
+```cpp
 virtual unsigned int GetId() const = 0;
 ```
 
@@ -133,67 +133,67 @@ virtual unsigned int GetId() const = 0;
 
 Ein Bezeichner für den Kontext, der innerhalb des Planers eindeutig ist, zu dem der Kontext gehört.
 
-##  <a name="getschedulegroupid"></a> GetScheduleGroupId
+## <a name="getschedulegroupid"></a>GetScheduleGroupId
 
 Gibt einen Bezeichner für die Planungsgruppe zurück, an der der Kontext gerade arbeitet.
 
-```
+```cpp
 virtual unsigned int GetScheduleGroupId() const = 0;
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Bezeichner für die Planungsgruppe Kontext arbeitet derzeit an.
+Ein Bezeichner für die Zeit Plan Gruppe, an der der Kontext gerade arbeitet.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Der Rückgabewert dieser Methode ist eine sofortige Stichprobe der Schedule-Gruppe, der den Kontext ausgeführt wird. Wenn diese Methode auf einem anderen Kontext als dem aktuellen Kontext aufgerufen wird, kann der Wert veraltet derzeit werden zurückgegeben, und es kann nicht als zuverlässig betrachtet werden. In der Regel wird diese Methode zum Debuggen oder Ablaufverfolgung Zwecken verwendet.
+Der Rückgabewert dieser Methode ist eine sofortige Stichprobe der Zeit Plan Gruppe, in der der Kontext ausgeführt wird. Wenn diese Methode in einem anderen Kontext als dem aktuellen Kontext aufgerufen wird, kann der Wert in dem Moment, in dem er zurückgegeben wird, veraltet sein, und er kann nicht darauf basieren. Diese Methode wird in der Regel nur zum Debuggen oder zum Ablauf Verfolgungs Zweck verwendet.
 
-##  <a name="getvirtualprocessorid"></a> GetVirtualProcessorId
+## <a name="getvirtualprocessorid"></a>GetVirtualProcessorId
 
 Gibt einen Bezeichner für den virtuellen Prozessor zurück, auf dem der Kontext gerade ausgeführt wird.
 
-```
+```cpp
 virtual unsigned int GetVirtualProcessorId() const = 0;
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn der Kontext zurzeit auf einem virtuellen Prozessor, einen Bezeichner für den virtuellen Prozessor ausgeführt wird, die der Kontext gerade ausgeführt wird; andernfalls den Wert `-1`.
+Wenn der Kontext zurzeit auf einem virtuellen Prozessor ausgeführt wird, ein Bezeichner für den virtuellen Prozessor, auf dem der Kontext derzeit ausgeführt wird; Andernfalls wird der Wert `-1`.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Der Rückgabewert dieser Methode ist eine sofortige Stichprobe für den virtuellen Prozessor, dem den Kontext ausgeführt wird. Dieser Wert kann veraltete Moment sein zurückgegeben wird, und kann nicht als zuverlässig betrachtet werden. In der Regel wird diese Methode zum Debuggen oder Ablaufverfolgung Zwecken verwendet.
+Der Rückgabewert dieser Methode ist eine sofortige Stichprobe des virtuellen Prozessors, auf dem der Kontext ausgeführt wird. Dieser Wert kann in dem Moment, in dem er zurückgegeben wird, veraltet sein und nicht mehr verlassen werden. Diese Methode wird in der Regel nur zum Debuggen oder zum Ablauf Verfolgungs Zweck verwendet.
 
-##  <a name="id"></a> Id
+## <a name="id"></a>Name
 
 Gibt einen Bezeichner für den aktuellen Kontext zurück, der innerhalb des Planers eindeutig ist, zu dem der aktuelle Kontext gehört.
 
-```
+```cpp
 static unsigned int __cdecl Id();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn der aktuelle Kontext, der einem Planer, der einen Bezeichner für den aktuellen Kontext, die innerhalb des Planers eindeutig ist angefügt ist, zu der der aktuelle Kontext gehört; andernfalls den Wert `-1`.
+, Wenn der aktuelle Kontext an einen Planer angefügt ist, ein Bezeichner für den aktuellen Kontext, der innerhalb des Planers eindeutig ist, zu dem der aktuelle Kontext gehört. Andernfalls wird der Wert `-1`.
 
-##  <a name="iscurrenttaskcollectioncanceling"></a> IsCurrentTaskCollectionCanceling
+## <a name="iscurrenttaskcollectioncanceling"></a>IsCurrentTaskCollectionCanceling
 
 Gibt zurück, ob die Aufgabenauflistung, die gerade inline für den aktuellen Kontext ausgeführt wird, in diesem Moment (oder in Kürze) einen Abbruch durchführt.
 
-```
+```cpp
 static bool __cdecl IsCurrentTaskCollectionCanceling();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn ein Planer an den aufrufenden Kontext angefügt ist, und eine Aufgabengruppe dieses Kontexts eine Aufgabe Inline ausgeführt, Angabe, ob diese Aufgabengruppe ist in einen Abbruch (oder werden in Kürze); andernfalls den Wert `false`.
+Wenn ein Scheduler an den aufrufenden Kontext angefügt wird und eine Aufgaben Gruppe eine Aufgabe Inline in diesem Kontext ausführt, gibt dies Aufschluss darüber, ob sich diese Aufgaben Gruppe in der Mitte eines aktiven Abbruchs befindet (oder in Kürze). Andernfalls wird der Wert `false`.
 
-##  <a name="issynchronouslyblocked"></a> IsSynchronouslyBlocked
+## <a name="issynchronouslyblocked"></a>IsSynchronouslyBlocked
 
 Bestimmt, ob der Kontext synchron blockiert ist. Ein Kontext wird als synchron blockiert angesehen, wenn er explizit eine zu einer Blockierung führende Aktion ausgeführt hat.
 
-```
+```cpp
 virtual bool IsSynchronouslyBlocked() const = 0;
 ```
 
@@ -201,109 +201,109 @@ virtual bool IsSynchronouslyBlocked() const = 0;
 
 Gibt an, ob der Kontext synchron blockiert wird.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Ein Kontext wird als synchron blockiert angesehen, wenn er explizit eine zu einer Blockierung führende Aktion ausgeführt hat. Auf den Threadplaner, würde dies einen direkten Aufruf der `Context::Block` Methode oder ein Synchronisierungsobjekt, das erstellt wurde, mithilfe der `Context::Block` Methode.
+Ein Kontext wird als synchron blockiert angesehen, wenn er explizit eine zu einer Blockierung führende Aktion ausgeführt hat. Auf dem Thread Planer würde dies auf einen direkten Aufrufder `Context::Block`-Methode oder ein Synchronisierungs Objekt hindeuten, das mit der `Context::Block`-Methode erstellt wurde.
 
-Der Rückgabewert dieser Methode ist ein Beispiel für eine sofortige der gibt an, ob der Kontext synchron blockiert wird. Dieser Wert veraltete derzeit möglicherweise er zurückgegeben wird, und kann nur unter ganz bestimmten Situationen verwendet werden.
+Der Rückgabewert dieser Methode ist ein sofortiges Beispiel dafür, ob der Kontext synchron blockiert wird. Dieser Wert ist möglicherweise veraltet, wenn er zurückgegeben wird und nur unter sehr spezifischen Umständen verwendet werden kann.
 
-##  <a name="operator_delete"></a> Delete-Operator
+## <a name="operator_delete"></a>Operator löschen
 
-Ein `Context` -Objekt intern von der Laufzeit zerstört wird. Es kann nicht explizit gelöscht werden.
+Ein `Context`-Objekt wird von der Common Language Runtime intern zerstört. Sie kann nicht explizit gelöscht werden.
 
-```
+```cpp
 void operator delete(void* _PObject);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_PObject*<br/>
-Ein Zeiger auf das Objekt, das gelöscht werden.
+Ein Zeiger auf das Objekt, das gelöscht werden soll.
 
-##  <a name="oversubscribe"></a> Überzeichnen
+## <a name="oversubscribe"></a>Oversubscribe
 
 Fügt einen zusätzlichen virtuellen Prozessor für die Dauer eines Codeblocks in einen Planer ein, wenn er für einen Kontext aufgerufen wird, der auf einem der virtuellen Prozessoren in diesem Planer ausgeführt wird.
 
-```
+```cpp
 static void __cdecl Oversubscribe(bool _BeginOversubscription);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_BeginOversubscription*<br/>
-Wenn **"true"**, ein Hinweis, dass ein weiterer virtueller Prozessor für die Dauer der Überzeichnung hinzugefügt werden soll. Wenn **"false"**, ein Hinweis, dass die Überzeichnung beendet und der zuvor hinzugefügte virtuelle Prozessor entfernt werden soll.
+Wenn der Wert **true**ist, ein Hinweis darauf, dass für die Dauer der Überzeichnung ein zusätzlicher virtueller Prozessor hinzugefügt werden soll. Wenn der Wert **false**ist, ein Hinweis darauf, dass die Überzeichnung enden soll und der zuvor hinzugefügte virtuelle Prozessor entfernt werden sollte.
 
-##  <a name="schedulegroupid"></a> ScheduleGroupId
+## <a name="schedulegroupid"></a>ScheduleGroupId
 
 Gibt einen Bezeichner für die Planungsgruppe zurück, an der der aktuelle Kontext arbeitet.
 
-```
+```cpp
 static unsigned int __cdecl ScheduleGroupId();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn der aktuelle Kontext, der einem Planer angefügt wird und an eine Planungsgruppe arbeiten, ein Bezeichner für das Zeitplanungsmodul gruppieren, die funktioniert auf der aktuelle Kontext; andernfalls den Wert `-1`.
+Wenn der aktuelle Kontext an einen Planer angefügt und an einer Zeit Plan Gruppe arbeitet, ein Bezeichner für die Planergruppe, an der der aktuelle Kontext arbeitet. Andernfalls wird der Wert `-1`.
 
-##  <a name="unblock"></a> Entsperren
+## <a name="unblock"></a>Blockierung
 
 Hebt die Blockierung des Kontexts auf und bewirkt, dass er ausführbar wird.
 
-```
+```cpp
 virtual void Unblock() = 0;
 ```
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Es ist durchaus zulässig für einen Aufruf der `Unblock` Methode vor einen zugehörigen Aufruf an die [Block](#block) Methode. So lange, wie Aufrufe der `Block` und `Unblock` Methoden sind nicht richtig paarweise angegeben, die Runtime ordnungsgemäß behandelt das natürliche Rennen entweder Sortierung. Ein `Unblock` Aufruf, der vor einem `Block` Aufruf einfach negiert die Wirkung der `Block` aufrufen.
+Es ist durchaus zulässig, dass ein aufrufungs Vorgang der `Unblock`-Methode vor einem entsprechenden aufrufungs Vorgang der [Block](#block) -Methode erfolgt. Solange Aufrufe an die Methoden `Block` und `Unblock` ordnungsgemäß gekoppelt sind, verarbeitet die Laufzeit das natürliche Race der beiden Reihenfolge ordnungsgemäß. Ein `Unblock`-Aufrufe, der vor einem `Block` aufgerufen wird, negiert einfach die Auswirkung des `Block`-Aufrufes.
 
-Es gibt mehrere Ausnahmen, die von dieser Methode ausgelöst werden können. Wenn ein Kontext aufrufen, versucht der `Unblock` Methode selbst eine [Context_self_unblock](context-self-unblock-class.md) Ausnahme wird ausgelöst. Wenn Aufrufe von `Block` und `Unblock` nicht ordnungsgemäß zugeordnet (z. B. die beiden Aufrufe von `Unblock` erfolgen für einen Kontext, der derzeit ausgeführt wird), ein [Context_unblock_unbalanced](context-unblock-unbalanced-class.md) Ausnahme ausgelöst.
+Es gibt mehrere Ausnahmen, die von dieser Methode ausgelöst werden können. Wenn ein Kontext versucht, die `Unblock` Methode für sich selbst aufzurufen, wird eine [context_self_unblock](context-self-unblock-class.md) Ausnahme ausgelöst. Wenn Aufrufe von `Block` und `Unblock` nicht ordnungsgemäß gekoppelt sind (z. b. werden zwei Aufrufe von `Unblock` für einen Kontext erfolgen, der derzeit ausgeführt wird), wird eine [context_unblock_unbalanced](context-unblock-unbalanced-class.md) Ausnahme ausgelöst.
 
-Werden Sie bemerken, dass es ein kritischen Zeitraum zwischen dem Code, in dem der Kontext für einen anderen Thread veröffentlicht aufrufen, kann die `Unblock` Methode und der Punkt, in dem die Methode aufrufen, um `Block` erfolgt. Während dieses Zeitraums müssen Sie keine Methode aufrufen, die wiederum blockieren und entsperren eine eigene Gründen (z. B. Sperren) können. Aufrufe von der `Block` und `Unblock` Methode nicht die Ursache für das Blockieren und wiederzulassen von nachverfolgen. Nur ein Objekt müssen den Besitz einer `Block` und `Unblock` Paar.
+Beachten Sie, dass es einen kritischen Zeitraum zwischen dem Punkt gibt, an dem Ihr Code den Kontext veröffentlicht, damit ein anderer Thread die `Unblock`-Methode und den Punkt, an dem der tatsächliche Methodenaufruf an `Block` erfolgt, aufruft. Während dieses Zeitraums dürfen Sie keine Methode aufzurufen, die wiederum aus eigenen Gründen blockieren und die Blockierung blockieren kann (z. b. das Abrufen einer Sperre). Bei Aufrufen der `Block`-und `Unblock`-Methode wird der Grund für die Blockierung und Aufhebung der Blockierung nicht nachverfolgt. Nur ein Objekt muss den Besitz eines `Block`-und `Unblock` Paars haben.
 
-##  <a name="virtualprocessorid"></a> VirtualProcessorId
+## <a name="virtualprocessorid"></a>VirtualProcessorId
 
 Gibt einen Bezeichner für den virtuellen Prozessor zurück, auf dem der aktuelle Kontext ausgeführt wird.
 
-```
+```cpp
 static unsigned int __cdecl VirtualProcessorId();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn der aktuelle Kontext, der einem Planer, der einen Bezeichner für den virtuellen Prozessor verbunden ist, die der aktuelle Kontext ausgeführt wird; andernfalls den Wert `-1`.
+, Wenn der aktuelle Kontext an einen Planer angefügt ist, ein Bezeichner für den virtuellen Prozessor, auf dem der aktuelle Kontext ausgeführt wird. Andernfalls wird der Wert `-1`.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Der Rückgabewert dieser Methode ist eine sofortige Stichprobe für den virtuellen Prozessor, dem der aktuelle Kontext ausgeführt wird. Dieser Wert kann veraltete Moment sein zurückgegeben wird, und kann nicht als zuverlässig betrachtet werden. In der Regel wird diese Methode zum Debuggen oder Ablaufverfolgung Zwecken verwendet.
+Der Rückgabewert dieser Methode ist eine sofortige Stichprobe des virtuellen Prozessors, auf dem der aktuelle Kontext ausgeführt wird. Dieser Wert kann in dem Moment, in dem er zurückgegeben wird, veraltet sein und nicht mehr verlassen werden. Diese Methode wird in der Regel nur zum Debuggen oder zum Ablauf Verfolgungs Zweck verwendet.
 
-##  <a name="yield"></a> "yield"
+## <a name="yield"></a>Yield
 
 Setzt die Ausführung aus, damit ein anderer Kontext ausgeführt werden kann. Wenn kein anderer Kontext für eine Übergabe verfügbar ist, kann der Planer ggf. an einen anderen Betriebssystemthread übergeben.
 
-```
+```cpp
 static void __cdecl Yield();
 ```
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Diese Methode führt dazu, dass der Standardplaner des Prozesses erstellt und/oder an den aufrufenden Kontext angefügt wird, wenn derzeit dem aufrufenden Kontext kein Planer zugeordnet ist.
 
-##  <a name="yieldexecution"></a> YieldExecution
+## <a name="yieldexecution"></a>YieldExecution
 
 Setzt die Ausführung aus, damit ein anderer Kontext ausgeführt werden kann. Wenn kein anderer Kontext für eine Übergabe verfügbar ist, kann der Planer ggf. an einen anderen Betriebssystemthread übergeben.
 
-```
+```cpp
 static void __cdecl YieldExecution();
 ```
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Diese Methode führt dazu, dass der Standardplaner des Prozesses erstellt und/oder an den aufrufenden Kontext angefügt wird, wenn derzeit dem aufrufenden Kontext kein Planer zugeordnet ist.
 
-Diese Funktion ist neu in Visual Studio 2015 und ist identisch mit der [Yield](#yield) funktionieren, aber nicht mit dem Yield-Makro in Windows.h in Konflikt steht.
+Diese Funktion ist neu in Visual Studio 2015 und ist mit der [Yield](#yield) -Funktion identisch, steht jedoch nicht in Konflikt mit dem Yield-Makro in Windows. h.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [Scheduler-Klasse](scheduler-class.md)<br/>

@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-ms.openlocfilehash: bb00c3ddb9a50a159174deccf8954f1e3bf1689d
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 15bae5ba25da4987b076cf3de67cd8484fe47df8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302223"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141774"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>Allgemein empfohlene Vorgehensweisen in der Concurrency Runtime
 
 Dieses Dokument beschreibt empfohlene Vorgehensweisen, die für mehrere Bereiche der Concurrency Runtime gelten.
 
-##  <a name="top"></a> Abschnitte
+## <a name="top"></a> Abschnitte
 
 Dieses Dokument enthält folgende Abschnitte:
 
@@ -33,13 +33,13 @@ Dieses Dokument enthält folgende Abschnitte:
 
 - [Verwenden Sie keine Parallelitäts Objekte in freigegebenen Datensegmenten.](#shared-data)
 
-##  <a name="synchronization"></a>Verwenden Sie nach Möglichkeit kooperative Synchronisierungs Konstrukte.
+## <a name="synchronization"></a>Verwenden Sie nach Möglichkeit kooperative Synchronisierungs Konstrukte.
 
 Die Concurrency Runtime stellt viele parallelitätssichere Konstrukte bereit, die kein externes Synchronisierungsobjekt erfordern. Beispielsweise stellt die [parallelcurrency:: Concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) -Klasse Parallelitäts sichere Anfüge-und Element Zugriffs Vorgänge bereit. Die Parallelitäts Sicherheit bedeutet, dass Zeiger oder Iteratoren immer gültig sind. Es handelt sich nicht um eine Garantie der Element Initialisierung oder einer bestimmten Durchlauf Reihenfolge. In Fällen, in denen Sie exklusiven Zugriff auf eine Ressource benötigen, stellt die Laufzeit jedoch die Klassen [parallelcurrency:: CRITICAL_SECTION](../../parallel/concrt/reference/critical-section-class.md), [parallelcurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)und [parallelcurrency:: Event](../../parallel/concrt/reference/event-class.md) bereit. Diese Typen weisen kooperatives Verhalten auf. Deshalb kann der Aufgabenplaner Verarbeitungsressourcen neu einem anderen Kontext zuteilen, während die erste Aufgabe auf Daten wartet. Verwenden Sie nach Möglichkeit diese Synchronisierungstypen statt anderer Synchronisierungsmechanismen, z. B. die von der Windows-API bereitgestellten Synchronisierungsmechanismen, die kein kooperatives Verhalten aufweisen. Weitere Informationen zu diesen Synchronisierungs Typen und ein Codebeispiel finden Sie unter [Synchronisierung von Datenstrukturen](../../parallel/concrt/synchronization-data-structures.md) und [vergleichen der Synchronisierungs Datenstrukturen mit der Windows-API](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md).
 
 [[Nach oben](#top)]
 
-##  <a name="yield"></a>Vermeiden Sie langwierige Aufgaben, die nicht
+## <a name="yield"></a>Vermeiden Sie langwierige Aufgaben, die nicht
 
 Da sich der Taskplaner kooperativ verhält, stellt er keine Fairness zwischen Aufgaben bereit. Daher kann eine Aufgabe das Starten anderer Aufgaben verhindern. Dies ist zwar in manchen Fällen akzeptabel, kann jedoch in anderen Fällen Deadlocks oder Ressourcenmangel verursachen.
 
@@ -47,7 +47,7 @@ Im folgenden Beispiel übersteigt die Anzahl der ausgeführten Aufgaben die Anza
 
 [!code-cpp[concrt-cooperative-tasks#1](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_1.cpp)]
 
-Dieses Beispiel erzeugt die folgende Ausgabe:
+Hierdurch wird folgende Ausgabe generiert:
 
 1: 250000000 1: 500000000 1: 750000000 1: 1000000000 2: 250000000 2: 500000000 2: 750000000 2: 1000000000
 
@@ -55,7 +55,7 @@ Es gibt mehrere Möglichkeiten, die Zusammenarbeit zwischen den beiden Aufgaben 
 
 [!code-cpp[concrt-cooperative-tasks#2](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_2.cpp)]
 
-Dieses Beispiel erzeugt die folgende Ausgabe:
+Hierdurch wird folgende Ausgabe generiert:
 
 ```Output
 1: 250000000
@@ -74,7 +74,7 @@ Es gibt weitere Verfahren, die Zusammenarbeit zwischen Aufgaben mit langer Ausf�
 
 [[Nach oben](#top)]
 
-##  <a name="oversubscription"></a>Verwenden von über schreibungen zum Versetzen von Vorgängen, die eine hohe Latenz blockieren oder aufweisen
+## <a name="oversubscription"></a>Verwenden von über schreibungen zum Versetzen von Vorgängen, die eine hohe Latenz blockieren oder aufweisen
 
 Der Concurrency Runtime stellt Synchronisierungs primitive, z. b. "Parallelität [:: CRITICAL_SECTION](../../parallel/concrt/reference/critical-section-class.md)", bereit, die es ermöglichen, dass Aufgaben gemeinsam blockiert werden und einander liefern. Wenn eine Aufgabe kooperativ blockiert oder zurückgehalten wird, kann der Taskplaner Verarbeitungsressourcen neu einem anderen Kontext zuteilen, während die erste Aufgabe auf Daten wartet.
 
@@ -88,7 +88,7 @@ Da die `GetHttpFile`-Funktion einen Vorgang mit potenzieller Wartezeit ausführt
 
 [[Nach oben](#top)]
 
-##  <a name="memory"></a>Parallele Speicherverwaltungsfunktionen verwenden, wenn möglich
+## <a name="memory"></a>Parallele Speicherverwaltungsfunktionen verwenden, wenn möglich
 
 Verwenden Sie die Speicherverwaltungsfunktionen "Parallelität [:: Alloc](reference/concurrency-namespace-functions.md#alloc) " und " [parallelcurrency:: Free](reference/concurrency-namespace-functions.md#free)", wenn Sie differenzierte Aufgaben haben, die häufig kleine Objekte mit einer relativ kurzen Lebensdauer zuordnen. Die Concurrency Runtime verwaltet für jeden ausgeführten Thread einen eigenen Arbeitsspeichercache. Die `Alloc`-Funktion und die `Free`-Funktion reservieren Arbeitsspeicher in diesen Caches und geben Arbeitsspeicher in den Caches frei, ohne Sperren oder Arbeitsspeicherbarrieren zu verwenden.
 
@@ -96,7 +96,7 @@ Weitere Informationen zu diesen Speicherverwaltungsfunktionen finden Sie unter [
 
 [[Nach oben](#top)]
 
-##  <a name="raii"></a>Verwenden von RAII zum Verwalten der Lebensdauer von Parallelitäts Objekten
+## <a name="raii"></a>Verwenden von RAII zum Verwalten der Lebensdauer von Parallelitäts Objekten
 
 Die Concurrency Runtime verwendet die Ausnahmebehandlung zum Implementieren von Funktionen, z. B. Abbruch. Schreiben Sie daher ausnahmesicheren Code, wenn Sie die Laufzeit oder eine andere Bibliothek aufrufen, die die Laufzeit aufruft.
 
@@ -128,7 +128,7 @@ Weitere Beispiele, in denen das RAII-Muster verwendet wird, um die Lebensdauer v
 
 [[Nach oben](#top)]
 
-##  <a name="global-scope"></a>Keine Parallelitäts Objekte im globalen Gültigkeitsbereich erstellen
+## <a name="global-scope"></a>Keine Parallelitäts Objekte im globalen Gültigkeitsbereich erstellen
 
 Wenn Sie ein Parallelitätsobjekt im globalen Gültigkeitsbereich erstellen, kann dies zu Problemen wie Deadlocks oder Arbeitsspeicher-Zugriffsverletzungen in der Anwendung führen.
 
@@ -142,13 +142,13 @@ Beispiele für die korrekte Vorgehensweise zum Erstellen von `Scheduler` Objekte
 
 [[Nach oben](#top)]
 
-##  <a name="shared-data"></a>Verwenden Sie keine Parallelitäts Objekte in freigegebenen Datensegmenten.
+## <a name="shared-data"></a>Verwenden Sie keine Parallelitäts Objekte in freigegebenen Datensegmenten.
 
 Der Concurrency Runtime unterstützt nicht die Verwendung von Parallelitäts Objekten in einem freigegebenen Daten Abschnitt, z. b. ein Daten Abschnitt, der von der [data_seg](../../preprocessor/data-seg.md)`#pragma`-Direktive erstellt wird. Ein über Prozessgrenzen hinweg gemeinsam genutztes Parallelitätsobjekt kann einen inkonsistenten oder ungültigen Zustand der Laufzeit verursachen.
 
 [[Nach oben](#top)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Bewährte Methoden im Zusammenhang mit der Concurrency Runtime](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>

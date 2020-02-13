@@ -28,40 +28,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_2::operator+=
 - amp_short_vectors/Concurrency::graphics::int_2::operator--
 ms.assetid: 258b02e9-f1ee-46c2-8edd-dc9f69184846
-ms.openlocfilehash: 3c5aefbfd1a4b06274fac0f56c1e1e45ef9dc5bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 000bda3a6ecc5b1ebf9be4e07ce8d703b6cd9194
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180257"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126642"
 ---
-# <a name="int2-class"></a>int_2-Klasse
+# <a name="int_2-class"></a>int_2-Klasse
 
 Stellt einen kurzen Vektor aus zwei ganzen Zahlen dar.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class int_2;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[int_2-Konstruktor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
+|[int_2-Konstruktor](#ctor)|Ist überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |int_2::get_x||
 |int_2::get_xy||
@@ -78,33 +78,33 @@ class int_2;
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |int_2::operator-||
-|int_2::operator--||
+|int_2:: Operator--||
 |int_2::operator%=||
 |int_2::operator&=||
 |int_2::operator*=||
 |int_2::operator/=||
 |int_2::operator^=||
 |int_2::operator&#124;=||
-|int_2::operator~||
+|int_2:: Operator ~||
 |int_2::operator++||
 |int_2::operator+=||
-|int_2::operator<\<=||
+|int_2:: Operator <\<=||
 |int_2::operator=||
-|int_2::operator-=||
+|int_2:: Operator-=||
 |int_2::operator>>=||
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Size-Konstante](#int_2__size)||
+|[Größen Konstante](#int_2__size)||
 
-### <a name="public-data-members"></a>Öffentliche Datenmember
+### <a name="public-data-members"></a>Öffentliche Datenelemente
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |int_2::g||
 |int_2::gr||
@@ -119,17 +119,17 @@ class int_2;
 
 `int_2`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amp_short_vectors.h
+**Header:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Parallelität:: Grafiken
 
-##  <a name="ctor"></a> int_2
+## <a name="ctor"></a>int_2
 
 Standardkonstruktor, initialisiert alle Elemente mit 0.
 
-```
+```cpp
 int_2() restrict(amp,
     cpu);
 
@@ -170,23 +170,23 @@ explicit inline int_2(
 ### <a name="parameters"></a>Parameter
 
 *_V0*<br/>
-Der Wert, der 0-Element zu initialisieren.
+Der Wert, mit dem Element 0 initialisiert werden soll.
 
 *_V1*<br/>
-Der Wert 1 Element initialisiert werden.
+Der Wert, mit dem Element 1 initialisiert werden soll.
 
 *_V*<br/>
 Der Wert für die Initialisierung.
 
 *_Other*<br/>
-Das Objekt, das zum Initialisieren verwendet.
+Das-Objekt, das zum Initialisieren von verwendet wird.
 
-##  <a name="int_2__size"></a> Größe
+## <a name="int_2__size"></a>Größe
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

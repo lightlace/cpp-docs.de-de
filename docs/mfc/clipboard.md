@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Clipboard, programming
 - transferring data
 ms.assetid: a71b2824-1f14-4914-8816-54578d73ad4e
-ms.openlocfilehash: d405a7bbe15d2658380e19c1c908e57f2e40a574
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1db089110904ab88eb9c0c111d9da4e4e6869c82
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508929"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127906"
 ---
 # <a name="clipboard"></a>Zwischenablage
 
@@ -21,7 +21,7 @@ In dieser Artikel Familie wird erläutert, wie die Unterstützung für die Windo
 
 - Implementieren von Standard Befehlen zum Bearbeiten von Menüs, z. b. Ausschneiden, kopieren und einfügen.
 
-- Implementieren von einheitlicher Datenübertragung mit Drag & Drop (OLE).
+- Implementieren von einheitlicher Datenübertragung mit OLE Drag & Drop.
 
 Die Zwischenablage ist die standardmäßige Windows-Methode zum Übertragen von Daten zwischen einer Quelle und einem Ziel. Dies kann auch bei OLE-Vorgängen sehr nützlich sein. Mit der Einführung von OLE gibt es zwei Zwischenablage Mechanismen in Windows. Die standardmäßige Windows-Zwischenablage-API ist weiterhin verfügbar, wurde jedoch mit dem OLE-Datenübertragungsmechanismus ergänzt. OLE Uniform Data Transfer (UDT) unterstützt Ausschneiden, kopieren und Einfügen mit der Zwischenablage und Drag & Drop.
 
@@ -41,8 +41,8 @@ Die Zwischenablage ist ein Systemdienst, der von der gesamten Windows-Sitzung ge
 
 - [Die Windows-Zwischenablage](/windows/win32/dataxchg/clipboard)
 
-- [Implementieren von Drag & Drop (OLE)](../mfc/drag-and-drop-ole.md)
+- [OLE-Drag & Drop](../mfc/drag-and-drop-ole.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Elemente der Benutzeroberfläche](../mfc/user-interface-elements-mfc.md)

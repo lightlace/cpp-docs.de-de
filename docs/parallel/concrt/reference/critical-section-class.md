@@ -14,107 +14,107 @@ f1_keywords:
 helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-ms.openlocfilehash: f334b159ae39f48006a135c6e36d413b737a7344
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aef3ae6100133374cb89098f118c447effafd840
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296155"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143089"
 ---
-# <a name="criticalsection-class"></a>critical_section-Klasse
+# <a name="critical_section-class"></a>critical_section-Klasse
 
 Ein nicht wieder eintretender Mutex, der explizit die Concurrency Runtime beachtet.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class critical_section;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |`native_handle_type`|Ein Verweis auf ein `critical_section`-Objekt.|
 
 ### <a name="public-classes"></a>Öffentliche Klassen
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[critical_section:: scoped_lock-Klasse](#critical_section__scoped_lock_class)|Ein sicher RAII-Wrapper für eine `critical_section` Objekt.|
+|[CRITICAL_SECTION:: scoped_lock-Klasse](#critical_section__scoped_lock_class)|Ein Ausnahme sicherer RAII-Wrapper für ein `critical_section` Objekt.|
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[critical_section](#ctor)|Erstellt einen neuen kritischen Abschnitt.|
-|[~ Critical_section-Destruktor](#dtor)|Löscht einen kritischen Abschnitt.|
+|[~ CRITICAL_SECTION-Dekonstruktor](#dtor)|Zerstört einen kritischen Abschnitt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[lock](#lock)|Ruft dieser kritischen Abschnitt ab.|
-|[native_handle](#native_handle)|Plattform bestimmte native gibt ein Handle zurück, falls vorhanden.|
+|[lock](#lock)|Ruft diesen kritischen Abschnitt ab.|
+|[native_handle](#native_handle)|Gibt einen plattformspezifischen systemeigenen Handle zurück, sofern vorhanden.|
 |[try_lock](#try_lock)|Versucht, die Sperre abzurufen, ohne zu blockieren.|
-|[try_lock_for](#try_lock_for)|Versucht, die Sperre zu übernehmen, ohne Blockierung für eine bestimmte Anzahl von Millisekunden.|
+|[try_lock_for](#try_lock_for)|Versucht, die Sperre abzurufen, ohne dass eine bestimmte Anzahl von Millisekunden blockiert wird.|
 |[unlock](#unlock)|Entsperrt den kritischen Abschnitt.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Weitere Informationen finden Sie unter [Synchronisierungsdatenstrukturen](../../../parallel/concrt/synchronization-data-structures.md).
+Weitere Informationen finden Sie unter [Synchronisierungs Datenstrukturen](../../../parallel/concrt/synchronization-data-structures.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 `critical_section`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** concrt.h
+**Header:** ConcRT. h
 
 **Namespace:** Parallelität
 
-##  <a name="ctor"></a> critical_section
+## <a name="ctor"></a>critical_section
 
 Erstellt einen neuen kritischen Abschnitt.
 
-```
+```cpp
 critical_section();
 ```
 
-##  <a name="dtor"></a> ~critical_section
+## <a name="dtor"></a>~ CRITICAL_SECTION
 
-Löscht einen kritischen Abschnitt.
+Zerstört einen kritischen Abschnitt.
 
-```
+```cpp
 ~critical_section();
 ```
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Es wird erwartet, dass die Sperre nicht mehr verwendet wird, wenn der Destruktor ausgeführt wird. Der kritische Abschnitt, mit dem Sperrtoken zerstört gespeichert wird, wird damit weiterhin Ergebnisse nicht definiertem Verhalten.
+Es wird erwartet, dass die Sperre nicht mehr aufrechterhalten wird, wenn der Dekonstruktor ausgeführt wird. Das zulassen, dass der kritische Abschnitt mit der gesperrten Sperre Zerstörung wird, führt zu nicht definiertem Verhalten.
 
-##  <a name="lock"></a> Sperre
+## <a name="lock"></a>Sperre
 
-Ruft dieser kritischen Abschnitt ab.
+Ruft diesen kritischen Abschnitt ab.
 
-```
+```cpp
 void lock();
 ```
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Häufig ist es sicherer, zu verwenden die [Scoped_lock](#critical_section__scoped_lock_class) -Konstrukt zum Abrufen und Freigeben einer `critical_section` Objekt zu einer Ausnahme sichere Weise.
+Es ist oft sicherer, das [scoped_lock](#critical_section__scoped_lock_class) -Konstrukt zu verwenden, um ein `critical_section` Objekt auf sichere Weise zu beschaffen und freizugeben.
 
-Wenn die Sperre bereits durch den aufrufenden Kontext, in Kraft ist ein [Improper_lock](improper-lock-class.md) Ausnahme ausgelöst.
+Wenn die Sperre bereits vom aufrufenden Kontext abgehalten wird, wird eine [Improper_lock](improper-lock-class.md) Ausnahme ausgelöst.
 
-##  <a name="native_handle"></a> native_handle
+## <a name="native_handle"></a>native_handle
 
-Plattform bestimmte native gibt ein Handle zurück, falls vorhanden.
+Gibt einen plattformspezifischen systemeigenen Handle zurück, sofern vorhanden.
 
-```
+```cpp
 native_handle_type native_handle();
 ```
 
@@ -122,77 +122,77 @@ native_handle_type native_handle();
 
 Ein Verweis auf den kritischen Abschnitt.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Ein `critical_section` Objekt ist kein bestimmtes Plattform-native-Handle für das Windows-Betriebssystem zugeordnet. Die Methode gibt einfach einen Verweis auf das Objekt selbst.
+Ein `critical_section`-Objekt ist keinem plattformspezifischen systemeigenen Handle für das Windows-Betriebssystem zugeordnet. Die-Methode gibt einfach einen Verweis auf das-Objekt selbst zurück.
 
-##  <a name="critical_section__scoped_lock_class"></a>  critical_section:: scoped_lock-Klasse
+## <a name="critical_section__scoped_lock_class"></a>CRITICAL_SECTION:: scoped_lock-Klasse
 
-Ein sicher RAII-Wrapper für eine `critical_section` Objekt.
+Ein Ausnahme sicherer RAII-Wrapper für ein `critical_section` Objekt.
 
-```
+```cpp
 class scoped_lock;
 ```
 
-##  <a name="critical_section__scoped_lock_ctor"></a> scoped_lock::scoped_lock
+## <a name="critical_section__scoped_lock_ctor"></a>scoped_lock:: scoped_lock
 
-Erstellt eine `scoped_lock` Objekt, und ruft die `critical_section` Objekt übergeben, der `_Critical_section` Parameter. Wenn von einem anderen Thread der kritische Abschnitt gehalten wird, wird dieser Aufruf blockiert.
+Erstellt ein `scoped_lock` Objekt und ruft das `critical_section` Objekt ab, das im `_Critical_section`-Parameter übergeben wird. Wenn der kritische Abschnitt von einem anderen Thread aufbewahrt wird, wird dieser-Befehl blockiert.
 
-```
+```cpp
 explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_Critical_section*<br/>
-Den kritischen Abschnitt, zu sperren.
+Der zu Sperrungs kritische Abschnitt.
 
-##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock::~scoped_lock
+## <a name="critical_section__scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock
 
-Zerstört eine `scoped_lock` Objekt und gibt die im Konstruktor bereitgestellte kritischen Abschnitt frei.
+Zerstört ein `scoped_lock` Objekt und gibt den kritischen Abschnitt frei, der im Konstruktor bereitgestellt wird.
 
-```
+```cpp
 ~scoped_lock();
 ```
 
-##  <a name="try_lock"></a> try_lock
+## <a name="try_lock"></a>try_lock
 
 Versucht, die Sperre abzurufen, ohne zu blockieren.
 
-```
+```cpp
 bool try_lock();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn die Sperre abgerufen wurde, den Wert **"true"** ist, andernfalls der Wert **"false"**.
+Wenn die Sperre abgerufen wurde, ist der Wert **true**. Andernfalls ist der Wert **false**.
 
-##  <a name="try_lock_for"></a> try_lock_for
+## <a name="try_lock_for"></a>try_lock_for
 
-Versucht, die Sperre zu übernehmen, ohne Blockierung für eine bestimmte Anzahl von Millisekunden.
+Versucht, die Sperre abzurufen, ohne dass eine bestimmte Anzahl von Millisekunden blockiert wird.
 
-```
+```cpp
 bool try_lock_for(unsigned int _Timeout);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_Timeout*<br/>
-Die Anzahl der Millisekunden, bevor ein Timeout gewartet werden soll.
+Die Anzahl der Millisekunden, die gewartet werden soll, bevor ein Timeout eintritt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn die Sperre abgerufen wurde, den Wert **"true"** ist, andernfalls der Wert **"false"**.
+Wenn die Sperre abgerufen wurde, ist der Wert **true**. Andernfalls ist der Wert **false**.
 
-##  <a name="unlock"></a> Entsperren
+## <a name="unlock"></a>Entsperren
 
 Entsperrt den kritischen Abschnitt.
 
-```
+```cpp
 void unlock();
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [reader_writer_lock-Klasse](reader-writer-lock-class.md)

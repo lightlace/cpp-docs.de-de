@@ -6,59 +6,59 @@ f1_keywords:
 - AMP_SHORT_VECTORS/unorm
 - AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
-ms.openlocfilehash: 059cd3a388d67e540a91146f2a287c375fb02bd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c9ec967be8be618e5f8ab3bad1bfd940bfeaef4
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405429"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126304"
 ---
 # <a name="unorm-class"></a>unorm-Klasse
 
-Darstellen Sie eine Zahl Unorm. Jedes Element ist ein Gleitkommatyp Zahl im Bereich [0, 0F, 1. 0f] zeigen.
+Stellt eine unorm-Zahl dar. Jedes Element ist eine Gleit Komma Zahl im Bereich von [0,0 f, 1.0 f].
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class unorm;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Unorm-Konstruktor](#ctor)|Überladen. Standardkonstruktor Mit 0, 0F initialisiert werden.|
+|[unorm-Konstruktor](#ctor)|Ist überladen. Der Standardkonstruktor. Initialisieren Sie den Wert 0,0 f.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|unorm::operator--||
-|unorm::Operator "float"|Konvertierungsoperator. Konvertieren Sie die Unorm-Zahl in eine Gleitkommazahl Wert.|
-|unorm::operator*=||
-|unorm::operator/=||
+|unorm:: Operator--||
+|unorm:: Operator float|Konvertierungs Operator. Konvertieren Sie die unorm-Zahl in einen Gleit Komma Wert.|
+|unorm:: Operator * =||
+|unorm:: Operator/=||
 |unorm::operator++||
 |unorm::operator+=||
 |unorm::operator=||
-|unorm::operator-=||
+|unorm:: Operator-=||
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 `unorm`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amp_short_vectors.h
+**Header:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Parallelität:: Grafiken
 
-##  <a name="ctor"></a> unorm
+## <a name="ctor"></a>unorm
 
-Standardkonstruktor Mit 0, 0F initialisiert werden.
+Der Standardkonstruktor. Initialisieren Sie den Wert 0,0 f.
 
-```
+```cpp
 unorm(
     void) restrict(amp,
     cpu);
@@ -91,11 +91,11 @@ inline explicit unorm(
 ### <a name="parameters"></a>Parameter
 
 *_V*<br/>
-Der Wert, der zum Initialisieren verwendet wird.
+Der Wert, der zum Initialisieren von verwendet wird.
 
 *_Other*<br/>
-Die Norm-Objekt, das zum Initialisieren verwendet.
+Das Norm Objekt, das zum Initialisieren von verwendet wird.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

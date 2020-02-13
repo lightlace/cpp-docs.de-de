@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - task_canceled class
 ms.assetid: c3f0b234-2cc1-435f-a48e-995f45b190be
-ms.openlocfilehash: caef1c62ff09ffb76f74d4a1453e9d59dcb7d45b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1436f921343843ee2b50888f00b6d470e513329
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385244"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142609"
 ---
-# <a name="taskcanceled-class"></a>task_canceled-Klasse
+# <a name="task_canceled-class"></a>task_canceled-Klasse
 
-Diese Klasse beschreibt eine Ausnahme, die von den PPL-Aufgaben ausgelöst wird, um das Abbrechen der aktuellen Aufgabe zu erzwingen. Es wird auch ausgelöst, durch die `get()` Methode [Aufgabe](/visualstudio/extensibility/debugger/task-class-internal-members), für eine abgebrochene Aufgabe.
+Diese Klasse beschreibt eine Ausnahme, die von den PPL-Aufgaben ausgelöst wird, um das Abbrechen der aktuellen Aufgabe zu erzwingen. Sie wird auch von der `get()`-Methode für einen [Task](/visualstudio/extensibility/debugger/task-class-internal-members)für eine abgebrochene Aufgabe ausgelöst.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class task_canceled : public std::exception;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[task_canceled](#ctor)|Überladen. Erstellt ein `task_canceled`-Objekt.|
+|[task_canceled](#ctor)|Ist überladen. Erstellt ein `task_canceled`-Objekt.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -39,17 +39,17 @@ class task_canceled : public std::exception;
 
 `task_canceled`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** concrt.h
+**Header:** ConcRT. h
 
 **Namespace:** Parallelität
 
-##  <a name="ctor"></a> task_canceled
+## <a name="ctor"></a>task_canceled
 
 Erstellt ein `task_canceled`-Objekt.
 
-```
+```cpp
 explicit _CRTIMP task_canceled(_In_z_ const char* _Message) throw();
 
 task_canceled() throw();
@@ -60,6 +60,6 @@ task_canceled() throw();
 *_Message*<br/>
 Eine beschreibende Fehlermeldung.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)

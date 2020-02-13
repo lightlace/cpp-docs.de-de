@@ -6,60 +6,60 @@ f1_keywords:
 - AMP_SHORT_VECTORS/norm
 - AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
-ms.openlocfilehash: 56f879ef2fc0d3010ab4f64fedaf2570dac565d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 272ac3685539eb03f773c8bc60d5938ed6c53876
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351562"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126512"
 ---
 # <a name="norm-class"></a>norm-Klasse
 
-Darstellen Sie eine Zahl für die Norm. Jedes Element ist ein Gleitkommatyp zeigen Sie die Zahl im Bereich [-1. 0f, 1. 0f].
+Stellt eine Norm Nummer dar. Jedes Element ist eine Gleit Komma Zahl im Bereich von [-1.0 f, 1.0 f].
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class norm;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Norm-Konstruktor](#ctor)|Überladen. Standardkonstruktor Mit 0, 0F initialisiert werden.|
+|[Norm-Konstruktor](#ctor)|Ist überladen. Der Standardkonstruktor. Initialisieren Sie den Wert 0,0 f.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|norm::operator-||
-|norm::operator--||
-|Norm::Operator "float"|Konvertierungsoperator. Die Anzahl der Norm auf einen Gleitkommatyp konvertieren Wert.|
-|norm::operator*=||
-|norm::operator/=||
+|Norm:: Operator-||
+|Norm:: Operator--||
+|Norm:: Operator float|Konvertierungs Operator. Konvertieren der Norm Nummer in einen Gleit Komma Wert.|
+|Norm:: Operator * =||
+|Norm:: Operator/=||
 |norm::operator++||
 |norm::operator+=||
 |norm::operator=||
-|norm::operator-=||
+|Norm:: Operator-=||
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 `norm`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amp_short_vectors.h
+**Header:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Parallelität:: Grafiken
 
-##  <a name="ctor"></a> Norm
+## <a name="ctor"></a>Regel
 
-Standardkonstruktor Mit 0, 0F initialisiert werden.
+Der Standardkonstruktor. Initialisieren Sie den Wert 0,0 f.
 
-```
+```cpp
 norm(
     void) restrict(amp,
     cpu);
@@ -92,11 +92,11 @@ norm(
 ### <a name="parameters"></a>Parameter
 
 *_V*<br/>
-Der Wert, der zum Initialisieren verwendet wird.
+Der Wert, der zum Initialisieren von verwendet wird.
 
 *_Other*<br/>
-Das Objekt, das zum Initialisieren verwendet.
+Das-Objekt, das zum Initialisieren von verwendet wird.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

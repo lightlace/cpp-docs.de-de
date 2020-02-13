@@ -28,44 +28,44 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2
 - amp_short_vectors/Concurrency::graphics::norm_2::operator--
 ms.assetid: 80703f9b-61f4-414a-93fd-bc774f7d3393
-ms.openlocfilehash: c48e6dd573e3303307cc8a0247a955aba62d809e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09bd33b5a8d9148c7959f69fcab4a260fe05c332
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353052"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126499"
 ---
-# <a name="norm2-class"></a>norm_2-Klasse
+# <a name="norm_2-class"></a>norm_2-Klasse
 
 Stellt einen kurzen Vektor aus zwei normalen Zahlen dar.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class norm_2;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[norm_2-Konstruktor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
+|[norm_2-Konstruktor](#ctor)|Ist überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |norm_2::get_x||
 |norm_2::get_xy||
-|norm_2::get_y||
+|norm_2:: get_Y||
 |norm_2::get_yx||
 |norm_2::ref_g||
 |norm_2::ref_r||
@@ -73,38 +73,38 @@ class norm_2;
 |norm_2::ref_y||
 |norm_2::set_x||
 |norm_2::set_xy||
-|norm_2::set_y||
+|norm_2:: set_Y||
 |norm_2::set_yx||
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |norm_2::operator-||
-|norm_2::operator--||
+|norm_2:: Operator--||
 |norm_2::operator*=||
 |norm_2::operator/=||
 |norm_2::operator++||
 |norm_2::operator+=||
 |norm_2::operator=||
-|norm_2::operator-=||
+|norm_2:: Operator-=||
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Size-Konstante](#norm_2__size)||
+|[Größen Konstante](#norm_2__size)||
 
-### <a name="public-data-members"></a>Öffentliche Datenmember
+### <a name="public-data-members"></a>Öffentliche Datenelemente
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |norm_2::g||
 |norm_2::gr||
 |norm_2::r||
 |norm_2::rg||
-|norm_2::x||
-|norm_2::xy||
+|norm_2:: x||
+|norm_2:: XY||
 |norm_2::y||
 |norm_2::yx||
 
@@ -112,17 +112,17 @@ class norm_2;
 
 `norm_2`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amp_short_vectors.h
+**Header:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Parallelität:: Grafiken
 
-##  <a name="ctor"></a> norm_2
+## <a name="ctor"></a>norm_2
 
 Standardkonstruktor, initialisiert alle Elemente mit 0.
 
-```
+```cpp
 norm_2() restrict(amp,
     cpu);
 
@@ -177,23 +177,23 @@ explicit inline norm_2(
 ### <a name="parameters"></a>Parameter
 
 *_V0*<br/>
-Der Wert, der 0-Element zu initialisieren.
+Der Wert, mit dem Element 0 initialisiert werden soll.
 
 *_V1*<br/>
-Der Wert 1 Element initialisiert werden.
+Der Wert, mit dem Element 1 initialisiert werden soll.
 
 *_V*<br/>
 Der Wert für die Initialisierung.
 
 *_Other*<br/>
-Das Objekt, das zum Initialisieren verwendet.
+Das-Objekt, das zum Initialisieren von verwendet wird.
 
-##  <a name="norm_2__size"></a> Größe
+## <a name="norm_2__size"></a>Größe
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Concurrency:: Direct3D Namespace-Funktionen (AMP)'
+title: Concurrency::direct3d-Namespace-Funktionen (AMP)
 ms.date: 08/31/2018
 f1_keywords:
 - amp/Concurrency::direct3d::abs
@@ -21,36 +21,36 @@ f1_keywords:
 - amp/Concurrency::direct3d::step
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-ms.openlocfilehash: 0a2977faf094aafb6290063e39e062ffaeaaec81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 438d211ac2f15bf781b704a7d0d7484d1542f131
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405585"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127045"
 ---
-# <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency:: Direct3D Namespace-Funktionen (AMP)
+# <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency::direct3d-Namespace-Funktionen (AMP)
 
 ||||
 |-|-|-|
-|[abs](#abs)|[clamp](#clamp)|[countbits](#countbits)|
+|[abs](#abs)|[gekl](#clamp)|[countbits](#countbits)|
 |[create_accelerator_view](#create_accelerator_view)|[d3d_access_lock](#d3d_access_lock)||
 |[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|[firstbithigh](#firstbithigh)|
 |[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|[get_device](#get_device)|
-|[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|
-|[mad](#mad)|[make_array](#make_array)|[noise](#noise)|
-|[radians](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|
-|[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|
-|[step](#step)|[umax](#umax)|[umin](#umin)|
+|[IMAX](#imax)|[Imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|
+|[geworden](#mad)|[make_array](#make_array)|[klein](#noise)|
+|[Bogenmaß](#radians)|[RCP](#rcp)|[reversebits](#reversebits)|
+|[auslasten](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|
+|[Schritt](#step)|[Umax](#umax)|[-in](#umin)|
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amp.h **Namespace:** Parallelität
+**Header:** amp. h- **Namespace:** Parallelität
 
-##  <a name="abs"></a> abs
+## <a name="abs"></a> abs
 
 Gibt den absoluten Wert des Arguments zurück.
 
-```
+```cpp
 inline int abs(int _X) restrict(amp);
 ```
 
@@ -63,11 +63,11 @@ Ganzzahliger Wert
 
 Gibt den absoluten Wert des Arguments zurück.
 
-##  <a name="clamp"></a>  Clamp
+## <a name="clamp"></a>gekl
 
 Berechnet den Wert des angegebenen ersten Arguments, das an einen Bereich gebunden ist, der vom zweiten und dritten angegebenen Argument definiert wird.
 
-```
+```cpp
 inline float clamp(
     float _X,
     float _Min,
@@ -94,30 +94,30 @@ Die obere Grenze des gebundenen Bereichs.
 
 Der gebundene Wert von `_X`.
 
-##  <a name="countbits"></a>  countbits
+## <a name="countbits"></a>countbits
 
 Zählt die Anzahl der festgelegten Bits in _X
 
-```
+```cpp
 inline unsigned int countbits(unsigned int _X) restrict(amp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_X*<br/>
-Ganzzahlwert ohne Vorzeichen
+Ganzzahliger Wert ohne Vorzeichen
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt die Anzahl der festgelegten Bits in _X
+Gibt die Anzahl der festgelegten Bits in _x
 
-## <a name="create_accelerator_view"></a> create_accelerator_view
+## <a name="create_accelerator_view"></a>create_accelerator_view
 
-Erstellt eine ["accelerator_view"](accelerator-view-class.md) Objekt von einem Zeiger auf die Schnittstelle eines Direct3D-Geräts.
+Erstellt ein [accelerator_view](accelerator-view-class.md) -Objekt aus einem Zeiger auf eine Direct3D-Geräteschnittstelle.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 accelerator_view create_accelerator_view(
     IUnknown * _D3D_device
     queuing_mode _Qmode = queuing_mode_automatic);
@@ -128,7 +128,7 @@ accelerator_view create_accelerator_view(
     queuing_mode _Qmode = queuing_mode_automatic);
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
 *_Accelerator*<br/>
 Die Zugriffstaste, auf der das neue accelerator_view-Objekt erstellt werden soll.
@@ -140,25 +140,25 @@ Der Zeiger auf die Schnittstelle eines Direct3D-Geräts.
 Ein boolescher Parameter, der angibt, ob das Timeout für das neu erstellte accelerator_view-Objekt deaktiviert werden sollte. Dies entspricht dem D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT-Flag für die Erstellung von Direct3D-Geräten und wird verwendet, um anzugeben, ob das Betriebssystem Arbeitslasten zulässt, deren Ausführung mehr als 2 Sekunden dauert, ohne das Gerät über den Windows-TDR-Mechanismus (Timeout Detection and Recovery) zurückzusetzen. Die Verwendung dieses Flags wird empfohlen, wenn Sie zeitintensive Aufgaben im accelerator_view-Objekt ausführen müssen.
 
 *_Qmode*<br/>
-Die [Queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) für das neu erstellte accelerator_view-Objekt verwendet werden soll. Der Standardwert dieses Parameters ist `queuing_mode_automatic`.
+Der [queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) , der für die neu erstellte accelerator_view verwendet werden soll. Der Standardwert dieses Parameters ist `queuing_mode_automatic`.
 
 ## <a name="return-value"></a>Rückgabewert
 
 Das `accelerator_view`-Objekt, das über die übergebene Direct3D-Geräteschnittstelle erstellt wurde.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Diese Funktion erstellt ein neues `accelerator_view`-Objekt von einem vorhandenen Zeiger auf eine Direct3D-Geräteschnittstelle. Wenn der Funktionsaufruf folgt, wird der Verweiszähler des Parameters mit einem `AddRef`-Aufruf der Schnittstelle erhöht. Sie können das Objekt sicher freigeben, wenn es im DirectX-Code nicht mehr benötigt wird. Wenn der Methodenaufruf fehlschlägt, eine [Runtime_exception](runtime-exception-class.md) ausgelöst.
+Diese Funktion erstellt ein neues `accelerator_view`-Objekt von einem vorhandenen Zeiger auf eine Direct3D-Geräteschnittstelle. Wenn der Funktionsaufruf folgt, wird der Verweiszähler des Parameters mit einem `AddRef`-Aufruf der Schnittstelle erhöht. Sie können das Objekt sicher freigeben, wenn es im DirectX-Code nicht mehr benötigt wird. Wenn der Methodenaufrufe fehlschlägt, wird eine [runtime_exception](runtime-exception-class.md) ausgelöst.
 
 Das `accelerator_view`-Objekt, das Sie mit dieser Funktion erstellen, ist threadsicher. Sie müssen die gleichzeitige Verwendung des `accelerator_view`-Objekts synchronisieren. Die unsynchronisierte gleichzeitige Verwendung des `accelerator_view`-Objekts und die unformatierte ID3D11Device-Schnittstelle verursachen ein nicht definiertes Verhalten.
 
 Die C++-AMP-Laufzeit stellt detaillierte Fehlerinformationen im Debugmodus mithilfe der D3D-Debugebene bereit, wenn Sie das `D3D11_CREATE_DEVICE_DEBUG`-Flag verwenden.
 
-##  <a name="d3d_access_lock"></a>  d3d_access_lock
+## <a name="d3d_access_lock"></a>d3d_access_lock
 
-Ruft eine Sperre für eine "accelerator_view" ab, um D3D-Vorgänge in Ressourcen, die gemeinsam mit der "accelerator_view" genutzt werden, sicher ausführen zu können. Die "accelerator_view" und alle C++ AMP-Ressourcen, die dieser "accelerator_view" intern zugeordnet sind, werden gesperrt, wenn Vorgänge ausgeführt werden, und blockieren, während ein anderer Thread die D3D-Zugriffssperre inne hat. Diese Sperre ist nicht rekursiv: Es ist nicht definiertes Verhalten, die diese Funktion von einem anderen Thread aufrufen, die bereits die Sperre besitzt. Es ist nicht definiertes Verhalten, Vorgänge für die "accelerator_view" oder Datencontainer auszuführen, die der "accelerator_view" vom Thread zugeordnet sind, der die D3D-Zugriffssperre besitzt. Siehe auch: "scoped_d3d_access_lock", eine RAII-Formatklasse für eine bereichsbasierte D3D-Zugriffssperre.
+Ruft eine Sperre für eine "accelerator_view" ab, um D3D-Vorgänge in Ressourcen, die gemeinsam mit der "accelerator_view" genutzt werden, sicher ausführen zu können. Die "accelerator_view" und alle C++ AMP-Ressourcen, die dieser "accelerator_view" intern zugeordnet sind, werden gesperrt, wenn Vorgänge ausgeführt werden, und blockieren, während ein anderer Thread die D3D-Zugriffssperre inne hat. Diese Sperre ist nicht rekursiv: Es ist nicht definiertes Verhalten, diese Funktion von einem Thread aufzurufen, der bereits die Sperre besitzt. Es ist nicht definiertes Verhalten, Vorgänge für die "accelerator_view" oder Datencontainer auszuführen, die der "accelerator_view" vom Thread zugeordnet sind, der die D3D-Zugriffssperre besitzt. Siehe auch: "scoped_d3d_access_lock", eine RAII-Formatklasse für eine bereichsbasierte D3D-Zugriffssperre.
 
-```
+```cpp
 void __cdecl d3d_access_lock(accelerator_view& _Av);
 ```
 
@@ -167,11 +167,11 @@ void __cdecl d3d_access_lock(accelerator_view& _Av);
 *_Av*<br/>
 Die zu sperrende "accelerator_view".
 
-##  <a name="d3d_access_try_lock"></a>  d3d_access_try_lock
+## <a name="d3d_access_try_lock"></a>d3d_access_try_lock
 
 Versuch, ohne Blockierung die D3D-Zugriffssperre für eine accelerator_view abzurufen.
 
-```
+```cpp
 bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
 ```
 
@@ -184,11 +184,11 @@ Die zu sperrende "accelerator_view".
 
 "true", wenn die Sperre abgerufen wurde, oder "false", wenn sie durch einen anderen Thread verwendet wird.
 
-##  <a name="d3d_access_unlock"></a>  d3d_access_unlock
+## <a name="d3d_access_unlock"></a>d3d_access_unlock
 
 Gibt die D3D-Zugriffssperre für die angegebene accelerator_view frei. Wenn der aufrufende Thread nicht die Sperre für "accelerator_view" hat, sind die Ergebnisse nicht definiert.
 
-```
+```cpp
 void __cdecl d3d_access_unlock(accelerator_view& _Av);
 ```
 
@@ -197,11 +197,11 @@ void __cdecl d3d_access_unlock(accelerator_view& _Av);
 *_Av*<br/>
 Die „accelerator_view“, für die die Sperre aufgehoben werden soll.
 
-##  <a name="firstbithigh"></a>  firstbithigh
+## <a name="firstbithigh"></a>firstbithigh
 
 Ruft den Speicherort des ersten festgelegten Bits in _X ab, beginnend mit dem höchsten Bit und arbeitet sich weiter bis zum niedrigsten Bit.
 
-```
+```cpp
 inline int firstbithigh(int _X) restrict(amp);
 ```
 
@@ -214,11 +214,11 @@ Ganzzahliger Wert
 
 Der Speicherort des ersten festgelegten Bits
 
-##  <a name="firstbitlow"></a>  firstbitlow
+## <a name="firstbitlow"></a>firstbitlow
 
 Ruft den Speicherort des ersten festgelegten Bits in _X ab, beginnend mit dem niederwertigsten Bit und arbeitet sich weiter bis zum höchsten Bit.
 
-```
+```cpp
 inline int firstbitlow(int _X) restrict(amp);
 ```
 
@@ -231,11 +231,11 @@ Ganzzahliger Wert
 
 Gibt den Speicherort des ersten festgelegten Bits zurück
 
-##  <a name="get_buffer"></a>  get_buffer
+## <a name="get_buffer"></a>get_buffer
 
 Rufen Sie die Direct3D-Pufferschnittstelle ab, die dem angegebenen Array zugrunde liegt.
 
-```
+```cpp
 template<
     typename value_type,
     int _Rank
@@ -259,28 +259,28 @@ Ein Array auf einem Direct3D-accelerator_view_Objekt, für das die zugrunde lieg
 
 Der IUnknown-Schnittstellenzeiger entspricht dem Direct3D-Puffer, der dem Array zugrunde liegt.
 
-## <a name="a-namegetdevice-getdevice"></a><a name="get_device"> get_device
+## <a name="a-nameget_device-get_device"></a><a name="get_device"> get_device
 
-Rufen Sie die D3D-Gerät-Schnittstelle, die zugrunde liegende einer "accelerator_view".
+Erhalten Sie die D3D-Geräteschnittstelle, die einem accelerator_view zugrunde liegt.
 
-```
+```cpp
 IUnknown* get_device(const accelerator_view Av);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Av*<br/>
-Die D3D "accelerator_view", für die die zugrunde liegende D3D-Gerät-Schnittstelle zurückgegeben wird.
+*Staff*<br/>
+Der D3D-accelerator_view, für den die zugrunde liegende D3D-Geräteschnittstelle zurückgegeben wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die `IUnknown` Schnittstellenzeiger des D3D-Geräts, das zugrunde liegende die "accelerator_view".
+Der `IUnknown` Schnittstellen Zeiger des D3D-Geräts, das der accelerator_view zugrunde liegt.
 
-##  <a name="imax"></a>  Imax
+## <a name="imax"></a>IMAX
 
 Festlegung des höchsten numerischen Werts der Argumente
 
-```
+```cpp
 inline int imax(
     int _X,
     int _Y) restrict(amp);
@@ -298,11 +298,11 @@ Ganzzahliger Wert
 
 Rückgabe des höchsten numerischen Werts der Argumente
 
-##  <a name="imin"></a>  imin
+## <a name="imin"></a>Imin
 
 Festlegung des niedrigsten numerischen Werts der Argumente
 
-```
+```cpp
 inline int imin(
     int _X,
     int _Y) restrict(amp);
@@ -320,11 +320,11 @@ Ganzzahliger Wert
 
 Rückgabe des niedrigsten numerischen Werts der Argumente
 
-##  <a name="is_timeout_disabled"></a>  is_timeout_disabled
+## <a name="is_timeout_disabled"></a>is_timeout_disabled
 
 Gibt ein boolesches Flag zurück, das angibt, ob Timeout für die angegebene "accelerator_view" deaktiviert ist. Dies entspricht dem D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT-Flag für Direct3D-Geräteerstellung.
 
-```
+```cpp
 bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
 ```
 
@@ -337,11 +337,11 @@ Die "accelerator_view", für die die deaktivierte Timeouteinstellung, abgefragt 
 
 Ein boolesches Flag, das angibt, ob Timeout für die angegebene "accelerator_view" deaktiviert ist.
 
-##  <a name="mad"></a>  MAD
+## <a name="mad"></a>geworden
 
 Berechnet das Produkt des ersten und zweiten angegebenen Arguments und fügt dann das dritte angegebene Argument hinzu.
 
-```
+```cpp
 inline float mad(
     float _X,
     float _Y,
@@ -376,13 +376,13 @@ Das dritte angegebene Argument.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Das Ergebnis des `_X` \* `_Y`  +  `_Z`.
+Das Ergebnis `_X` \* `_Y` + `_Z`.
 
-##  <a name="make_array"></a>  make_array
+## <a name="make_array"></a>make_array
 
 Erstellt ein Array aus dem Schnittstellenzeiger eines Direct3D-Puffers.
 
-```
+```cpp
 template<
     typename value_type,
     int _Rank
@@ -414,28 +414,28 @@ IUnknown-Schnittstellenzeiger des D3D-Puffers zum Erstellen des Arrays.
 
 Ein mithilfe des angegebenen Direct3D-Puffers erstelltes Array.
 
-##  <a name="noise"></a>  rauschunterdrückung
+## <a name="noise"></a>klein
 
-Generiert einen zufälligen Wert mithilfe des Perlin-Noise-Algorithmus
+Generiert einen zufälligen Wert mithilfe des Perlin-Rausch Algorithmus.
 
-```
+```cpp
 inline float noise(float _X) restrict(amp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_X*<br/>
-Gleitkommawert aus dem Perlin-Noise generiert.
+Gleit Komma Wert, aus dem Perlin-Rauschen generiert werden soll
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt die Perlin-Noise-Wert innerhalb eines Bereichs zwischen-1 und 1
+Gibt den Perlin-Rausch Wert innerhalb eines Bereichs zwischen-1 und 1 zurück.
 
-##  <a name="radians"></a>  Bogenmaß (Radiant)
+## <a name="radians"></a>Bogenmaß
 
 Konvertiert _X von Grad in Bogenmaß
 
-```
+```cpp
 inline float radians(float _X) restrict(amp);
 ```
 
@@ -446,13 +446,13 @@ Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt _X von Grad in Bogenmaß konvertiert.
+Gibt _x von Grad in Bogenmaß konvertiert zurück.
 
-##  <a name="rcp"></a>  rcp
+## <a name="rcp"></a>RCP
 
 Berechnet den Kehrwert des angegebenen Arguments mithilfe einer schnellen Näherung.
 
-```
+```cpp
 inline float rcp(float _X) restrict(amp);
 
 inline double rcp(double _X) restrict(amp);
@@ -467,28 +467,28 @@ Der Wert, für den der Kehrwert berechnet werden soll.
 
 Der Kehrwert des angegebenen Arguments.
 
-##  <a name="reversebits"></a>  reversebits
+## <a name="reversebits"></a>reversebits
 
 Kehrt die Reihenfolge der Bits in _X um
 
-```
+```cpp
 inline unsigned int reversebits(unsigned int _X) restrict(amp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_X*<br/>
-Ganzzahlwert ohne Vorzeichen
+Ganzzahliger Wert ohne Vorzeichen
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt den Wert in der Reihenfolge der Bit in _X in umgekehrter Reihenfolge zurück.
+Gibt den Wert mit umgekehrter bitreihenfolge in _x
 
-##  <a name="saturate"></a>  auslasten
+## <a name="saturate"></a>auslasten
 
 Bindet _X im Bereich zwischen 0 und 1
 
-```
+```cpp
 inline float saturate(float _X) restrict(amp);
 ```
 
@@ -499,13 +499,13 @@ Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt _X im Bereich von 0 bis 1 gebunden sind
+Gibt _x im Bereich von 0 bis 1 an.
 
-##  <a name="sign"></a>  Anmelden
+## <a name="sign"></a>Gebärden
 
 Bestimmt das Vorzeichen des angegebenen Arguments.
 
-```
+```cpp
 inline int sign(int _X) restrict(amp);
 ```
 
@@ -518,11 +518,11 @@ Ganzzahliger Wert
 
 Das Vorzeichen des Arguments.
 
-##  <a name="smoothstep"></a>  smoothstep
+## <a name="smoothstep"></a>smoothstep
 
 Gibt eine glatte Hermite-Interpolation zwischen 0 und 1 zurück, wenn _X im Bereich [_Min, _Max] liegt.
 
-```
+```cpp
 inline float smoothstep(
     float _Min,
     float _Max,
@@ -542,13 +542,13 @@ Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt 0 zurück, wenn _X _Min unterschreitet. 1, wenn _X _Max größer ist. andernfalls ein Wert zwischen 0 und 1, wenn _X im Bereich [_Min, _Max] liegt.
+Gibt 0 zurück, wenn _x kleiner als _Min ist. 1, wenn _x größer als _Max ist. andernfalls ein Wert zwischen 0 und 1, wenn _x im Bereich liegt [_Min, _Max]
 
-##  <a name="step"></a>  Schritt
+## <a name="step"></a>Schritt
 
 Vergleicht zwei Werte und gibt, je nachdem welcher Wert größer ist, 0 oder 1 zurück
 
-```
+```cpp
 inline float step(
     float _Y,
     float _X) restrict(amp);
@@ -564,13 +564,13 @@ Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt 1 zurück, die _X ist größer als oder gleich _Y. andernfalls 0
+Gibt 1 zurück, wenn die _x größer oder gleich _Y ist. andernfalls 0
 
-##  <a name="umax"></a>  UMAX
+## <a name="umax"></a>Umax
 
 Festlegung des höchsten numerischen Werts der Argumente
 
-```
+```cpp
 inline unsigned int umax(
     unsigned int _X,
     unsigned int _Y) restrict(amp);
@@ -588,11 +588,11 @@ Ganzzahliger Wert
 
 Rückgabe des höchsten numerischen Werts der Argumente
 
-##  <a name="umin"></a>  umin
+## <a name="umin"></a>-in
 
 Festlegung des niedrigsten numerischen Werts der Argumente
 
-```
+```cpp
 inline unsigned int umin(
     unsigned int _X,
     unsigned int _Y) restrict(amp);
@@ -610,6 +610,6 @@ Ganzzahliger Wert
 
 Rückgabe des niedrigsten numerischen Werts der Argumente
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency::direct3d Namespace](concurrency-direct3d-namespace.md)

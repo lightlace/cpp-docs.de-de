@@ -5,36 +5,36 @@ ms.date: 09/26/2018
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
-ms.openlocfilehash: 6ea7a0ae0c0a9be87fe507e6b934bd046c9ffe4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df89837e8f453443dc092a1b96e9c3f395fa2353
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250826"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127379"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Ändern des Zeichencodes (ATL-Lernprogramm, Teil 4)
 
-Standardmäßig zeigt Code zum Zeichnen des Steuerelements ein Quadrat und den Text **PolyCtl**. In diesem Schritt ändern Sie den Code, um etwas interessanteres anzuzeigen. Die folgenden Aufgaben sind beteiligt:
+Standardmäßig zeigt der Zeichnungs Code des Steuer Elements ein quadratisches und den Text **PolyCtl**an. In diesem Schritt ändern Sie den Code, um etwas interessanteres anzuzeigen. Die folgenden Aufgaben sind beteiligt:
 
-- Ändern die Header-Datei
+- Ändern der Header Datei
 
-- Ändern der `OnDraw` Funktion
+- Ändern der `OnDraw`-Funktion
 
-- Hinzufügen einer Methode, um die Punkte des Polygons zu berechnen.
+- Hinzufügen einer Methode zum Berechnen der Polygon Punkte
 
 - Initialisieren der Füllfarbe
 
-## <a name="modifying-the-header-file"></a>Ändern die Header-Datei
+## <a name="modifying-the-header-file"></a>Ändern der Header Datei
 
-Starten Sie durch Hinzufügen von Unterstützung für die mathematischen Funktionen `sin` und `cos`, die Polygonpunkte berechnet und durch Erstellen eines Arrays zum Speichern von positioniert das verwendet wird.
+Beginnen Sie mit dem Hinzufügen von Unterstützung für die mathematischen Funktionen `sin` und `cos`, die verwendet werden, um die Polygon Punkte zu berechnen, und durch Erstellen eines Arrays zum Speichern von Positionen.
 
-### <a name="to-modify-the-header-file"></a>So ändern Sie die Header-Datei
+### <a name="to-modify-the-header-file"></a>So ändern Sie die Header Datei
 
-1. Fügen Sie die Zeile `#include <math.h>` an den Anfang PolyCtl.h hinzu. Am Anfang der Datei sollte folgendermaßen aussehen:
+1. Fügen Sie die Zeile `#include <math.h>` oben in PolyCtl. h hinzu. Der Anfang der Datei sollte wie folgt aussehen:
 
     [!code-cpp[NVC_ATL_Windowing#47](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_1.cpp)]
 
-1. Implementieren der `IProvideClassInfo` Schnittstelle, um Informationen für das Steuerelement, durch den folgenden Code hinzufügen, um PolyCtl.h bereitzustellen. In der `CPolyCtl` -Klasse, ersetzen Sie die Zeile:
+1. Implementieren Sie die `IProvideClassInfo`-Schnittstelle zum Bereitstellen von Methoden Informationen für das-Steuerelement, indem Sie den folgenden Code zu PolyCtl. h hinzufügen. Ersetzen Sie in der `CPolyCtl`-Klasse die folgende Zeile:
 
     ```cpp
     public CComControl<CPolyCtl>
@@ -47,42 +47,42 @@ Starten Sie durch Hinzufügen von Unterstützung für die mathematischen Funktio
     public IProvideClassInfo2Impl<&CLSID_PolyCtl, &DIID__IPolyCtlEvents, &LIBID_PolygonLib>
     ```
 
-    im `BEGIN_COM_MAP(CPolyCtl)`, fügen Zeilen hinzu:
+    Fügen Sie in `BEGIN_COM_MAP(CPolyCtl)`die folgenden Zeilen hinzu:
 
     ```cpp
     COM_INTERFACE_ENTRY(IProvideClassInfo)
     COM_INTERFACE_ENTRY(IProvideClassInfo2)
     ```
 
-1. Sobald die Polygonpunkte berechnet werden, werden sie in ein Array vom Typ gespeichert `POINT`, fügen Sie das Array daher nach der definitionsanweisung `short m_nSides;` in PolyCtl.h hinzu:
+1. Nachdem die Polygon Punkte berechnet wurden, werden Sie in einem Array vom Typ `POINT`gespeichert. Fügen Sie daher das Array nach der Definitions Anweisung `short m_nSides;` in PolyCtl. h hinzu:
 
     [!code-cpp[NVC_ATL_Windowing#48](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_2.h)]
 
-## <a name="modifying-the-ondraw-method"></a>Ändern die OnDraw-Methode
+## <a name="modifying-the-ondraw-method"></a>Ändern der OnDraw-Methode
 
-Nachdem Sie ändern, sollten die `OnDraw` -Methode in PolyCtl.h hinzu. Sie fügen Code erstellt einen neuen Stift und der Pinsel, mit dem Sie das Polygon zeichnen, und ruft dann die `Ellipse` und `Polygon` Win32-API-Funktionen zum eigentlichen Zeichenvorgang ausführen.
+Nun sollten Sie die `OnDraw`-Methode in PolyCtl. h ändern. Der Code, den Sie hinzufügen, erstellt einen neuen Stift und Pinsel, mit dem das Polygon gezeichnet werden soll, und ruft dann die `Ellipse`-und `Polygon` Win32-API-Funktionen auf, um die eigentliche Zeichnung auszuführen.
 
 ### <a name="to-modify-the-ondraw-function"></a>So ändern Sie die OnDraw-Funktion
 
-1. Ersetzen Sie die vorhandene `OnDraw` Methode in PolyCtl.h hinzu, durch den folgenden Code:
+1. Ersetzen Sie die vorhandene `OnDraw`-Methode in PolyCtl. h durch den folgenden Code:
 
     [!code-cpp[NVC_ATL_Windowing#49](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_3.cpp)]
 
-## <a name="adding-a-method-to-calculate-the-polygon-points"></a>Hinzufügen einer Methode, um die Punkte des Polygons zu berechnen.
+## <a name="adding-a-method-to-calculate-the-polygon-points"></a>Hinzufügen einer Methode zum Berechnen der Polygon Punkte
 
-Fügen Sie eine Methode namens `CalcPoints`, die die Koordinaten der Punkte, aus denen der Umfang des Polygons berechnet. Diese Berechnungen werden auf die RECT-Variable basieren, die an die Funktion übergeben wird.
+Fügen Sie eine Methode namens "`CalcPoints`" hinzu, mit der die Koordinaten der Punkte berechnet werden, die den Umkreis des Polygons bilden. Diese Berechnungen basieren auf der Rect-Variablen, die an die Funktion weitergeleitet wird.
 
-### <a name="to-add-the-calcpoints-method"></a>Zum Hinzufügen der CalcPoints-Methode
+### <a name="to-add-the-calcpoints-method"></a>So fügen Sie die CalcPoints-Methode hinzu
 
-1. Fügen Sie die Deklaration der `CalcPoints` auf die `IPolyCtl` öffentlichen Abschnitt der der `CPolyCtl` Klasse in PolyCtl.h hinzu:
+1. Fügen Sie die Deklaration von `CalcPoints` dem `IPolyCtl` Public-Abschnitt der `CPolyCtl`-Klasse in PolyCtl. h hinzu:
 
     [!code-cpp[NVC_ATL_Windowing#50](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_4.h)]
 
-    Der letzte Teil der öffentliche Teil der `CPolyCtl` Klasse sieht wie folgt:
+    Der letzte Teil des öffentlichen Abschnitts der `CPolyCtl`-Klasse sieht wie folgt aus:
 
     [!code-cpp[NVC_ATL_Windowing#51](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_5.h)]
 
-1. Fügen Sie diese Implementierung von der `CalcPoints` Funktion am Ende der PolyCtl.cpp:
+1. Fügen Sie diese Implementierung der `CalcPoints` Funktion am Ende von PolyCtl. cpp hinzu:
 
     [!code-cpp[NVC_ATL_Windowing#52](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_6.cpp)]
 
@@ -90,27 +90,27 @@ Fügen Sie eine Methode namens `CalcPoints`, die die Koordinaten der Punkte, aus
 
 Initialisieren Sie `m_clrFillColor` mit einer Standardfarbe.
 
-### <a name="to-initialize-the-fill-color"></a>Die Füllfarbe initialisiert werden.
+### <a name="to-initialize-the-fill-color"></a>So initialisieren Sie die Füllfarbe
 
-1. Verwenden von Grün als die Standardfarben durch Hinzufügen dieser Zeile zum die `CPolyCtl` Konstruktor in PolyCtl.h hinzu:
+1. Verwenden Sie grün als Standardfarbe, indem Sie diese Zeile zum `CPolyCtl`-Konstruktor in PolyCtl. h hinzufügen:
 
     [!code-cpp[NVC_ATL_Windowing#53](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_7.h)]
 
-Der Konstruktor sieht nun folgendermaßen aus:
+Der Konstruktor sieht nun wie folgt aus:
 
 [!code-cpp[NVC_ATL_Windowing#54](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_8.h)]
 
 ## <a name="building-and-testing-the-control"></a>Erstellen und Testen des Steuerelements
 
-Erstellen Sie das Steuerelement neu. Stellen Sie sicher, dass die Datei "PolyCtl.htm" wird geschlossen, wenn es immer noch geöffnet, und klicken Sie dann auf **Polygon erstellen** auf die **erstellen** Menü. Sie können das Steuerelement erneut von der Seite "PolyCtl.htm" anzeigen, aber dieses Mal verwenden, den Testcontainer für ActiveX-Steuerelemente.
+Erstellen Sie das Steuerelement neu. Stellen Sie sicher, dass die Datei "PolyCtl. htm" geschlossen ist, wenn Sie noch geöffnet ist, und klicken Sie dann im Menü " **Build** " auf **Polygon erstellen** . Sie können das Steuerelement erneut auf der Seite PolyCtl. htm anzeigen, aber diesmal den Test Container des ActiveX-Steuer Elements verwenden.
 
-### <a name="to-use-the-activex-control-test-container"></a>Verwenden Sie den Testcontainer für ActiveX-Steuerelemente
+### <a name="to-use-the-activex-control-test-container"></a>So verwenden Sie den Test Container des ActiveX-Steuer Elements
 
-1. Erstellen Sie und starten Sie den Testcontainer für ActiveX-Steuerelemente. Die [TSTCON-Beispiel: ActiveX-Steuerelementtestcontainer](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole/TstCon) finden Sie auf GitHub.
+1. Erstellen und starten Sie den Test Container des ActiveX-Steuer Elements. Das [TSTCON-Beispiel für den Test Container für ActiveX-Steuer](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole/TstCon) Elemente finden Sie auf GitHub.
 
     > [!NOTE]
-    > Für Fehler im Zusammenhang mit `ATL::CW2AEX`, ersetzen Sie im Script.Cpp, Zeile `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT );` mit `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT.m_psz );`, und die Zeilennummer `TRACE( "Source Text: %s\n", COLE2CT( bstrSourceLineText ) );` mit `TRACE( "Source Text: %s\n", bstrSourceLineText );`.<br/>
-    > Für Fehler im Zusammenhang mit `HMONITOR`, öffnen Sie "stdafx.h" in der `TCProps` Projekts, und ersetzen:
+    > Ersetzen Sie bei Fehlern im Zusammenhang mit `ATL::CW2AEX`in Skript. cpp den Zeilen `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT );` durch `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT.m_psz );`und Line `TRACE( "Source Text: %s\n", COLE2CT( bstrSourceLineText ) );` durch `TRACE( "Source Text: %s\n", bstrSourceLineText );`.<br/>
+    > Öffnen Sie "stdafx. h" im `TCProps` Projekt, und ersetzen Sie Folgendes, um `HMONITOR`Fehler zu erhalten:
     > ```
     > #ifndef WINVER
     > #define WINVER 0x0400
@@ -124,39 +124,39 @@ Erstellen Sie das Steuerelement neu. Stellen Sie sicher, dass die Datei "PolyCtl
     > #endif
     > ```
 
-1. In **Testcontainer**auf die **bearbeiten** Menü klicken Sie auf **neues Steuerelement einfügen**.
+1. Klicken Sie im **Test Container**im Menü **Bearbeiten** auf **neues Steuerelement einfügen**.
 
-1. Suchen Sie das Steuerelement, die aufgerufen wird, `PolyCtl class`, und klicken Sie auf **OK**. Es wird ein grünes Dreieck innerhalb eines Kreises angezeigt.
+1. Suchen Sie das Steuerelement, das als `PolyCtl class`bezeichnet wird, und klicken Sie auf **OK**. Es wird ein grünes Dreieck innerhalb eines Kreises angezeigt.
 
-Versuchen Sie die Anzahl der Seiten nach dem nächsten Verfahren ändern. So ändern Sie Eigenschaften für eine duale Schnittstelle aus **Testcontainer**, verwenden Sie **Methoden aufrufen**.
+Versuchen Sie, die Anzahl der Seiten zu ändern, indem Sie das nächste Verfahren befolgen. Verwenden Sie zum Ändern der Eigenschaften für eine duale Schnittstelle aus dem **Test Container** **Methoden zum Aufrufen**.
 
-### <a name="to-modify-a-controls-property-from-within-the-test-container"></a>So ändern Sie die Eigenschaft eines Steuerelements aus im Test-Container
+### <a name="to-modify-a-controls-property-from-within-the-test-container"></a>So ändern Sie die-Eigenschaft eines Steuer Elements aus dem Test Container
 
-1. In **Testcontainer**, klicken Sie auf **Methoden aufrufen** auf die **Steuerelement** Menü.
+1. Klicken Sie im **Test Container**im Menü **Steuer** Element auf **Methoden aufrufen** .
 
-    Die **Aufrufmethode** Dialogfeld wird angezeigt.
+    Das Dialogfeld **Methode aufrufen** wird angezeigt.
 
-1. Wählen Sie die **PropPut** Version der **Seiten** Eigenschaft aus der **Methodenname** im Dropdown Listenfeld.
+1. Wählen Sie im Dropdown-Listenfeld **Methoden Name** die **PROPPUT** -Version der Eigenschaft **Seiten** aus.
 
-1. Typ `5` in die **Parameterwert** auf **Wert festlegen**, und klicken Sie auf **Invoke**.
+1. Geben Sie im Feld **Parameter Wert** `5` ein, klicken Sie auf **Wert festlegen**, und klicken Sie dann auf **aufrufen**.
 
-Beachten Sie, dass das Steuerelement nicht ändert. Obwohl Sie die Anzahl der Seiten intern durch die Einstellung geändert der `m_nSides` Variablen, Dies führte nicht zu dem Steuerelement neu zu zeichnen. Wenn Sie zu einer anderen Anwendung wechseln, und wechseln Sie zurück zum **Testcontainer**, sehen Sie, dass das Steuerelement neu gezeichnet hat und die richtige Anzahl von Seiten.
+Beachten Sie, dass sich das Steuerelement nicht ändert. Obwohl Sie die Anzahl der Seiten intern geändert haben, indem Sie die `m_nSides` Variable festgelegt haben, hat dies nicht bewirkt, dass das Steuerelement neu gezeichnet wird. Wenn Sie zu einer anderen Anwendung wechseln und dann wieder zum **Test Container**wechseln, werden Sie feststellen, dass das Steuerelement neu gezeichnet wurde und über die richtige Anzahl von Seiten verfügt.
 
-Um dieses Problem zu beheben, fügen Sie einen Aufruf der `FireViewChange` in definierte Funktion `IViewObjectExImpl`, nachdem Sie die Anzahl der Seiten festlegen. Wenn das Steuerelement, in einem eigenen Fenster ausgeführt wird, `FireViewChange` Ruft die `InvalidateRect` -Methode direkt. Wenn das Steuerelement fensterlose, läuft die `InvalidateRect` Methode wird für den Container-Standort-Schnittstelle aufgerufen werden. Dies erzwingt, dass das Steuerelement selbst neu zeichnet.
+Um dieses Problem zu beheben, fügen Sie nach dem Festlegen der Anzahl der Seiten einen aufzurufenden `FireViewChange` Funktion hinzu, der in `IViewObjectExImpl`definiert ist. Wenn das Steuerelement in einem eigenen Fenster ausgeführt wird, wird `FireViewChange` die `InvalidateRect` Methode direkt aufzurufen. Wenn das Steuerelement unter Windows less ausgeführt wird, wird die `InvalidateRect`-Methode auf der Website Schnittstelle des Containers aufgerufen. Dadurch wird das Steuerelement gezwungen, sich selbst neu zu zeichnen.
 
-### <a name="to-add-a-call-to-fireviewchange"></a>Einen Aufruf FireViewChange hinzufügen
+### <a name="to-add-a-call-to-fireviewchange"></a>So fügen Sie FireViewChange einen Befehl hinzu
 
-1. Aktualisieren Sie PolyCtl.cpp durch Hinzufügen des Aufrufs von `FireViewChange` auf die `put_Sides` Methode. Wenn Sie fertig sind, die `put_Sides` Methode sollte wie folgt aussehen:
+1. Aktualisieren Sie PolyCtl. cpp durch Hinzufügen des Aufrufes `FireViewChange` zur `put_Sides`-Methode. Wenn Sie fertig sind, sollte die `put_Sides`-Methode wie folgt aussehen:
 
     [!code-cpp[NVC_ATL_Windowing#55](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_9.cpp)]
 
-Nach dem Hinzufügen `FireViewChange`, neu zu erstellen und Testen Sie das Steuerelement erneut in den Testcontainer für ActiveX-Steuerelemente. Dieses Mal, wenn Sie die Anzahl der Seiten ändern, und klicken Sie auf `Invoke`, sollte das Steuerelement sofort zu ändern.
+Nachdem Sie `FireViewChange`hinzugefügt haben, erstellen Sie das Steuerelement erneut, und wiederholen Sie es im Test Container des ActiveX Wenn Sie die Anzahl der Seiten ändern und auf `Invoke`klicken, sollte das Steuerelement sofort angezeigt werden.
 
-Im nächsten Schritt fügen Sie ein Ereignis.
+Im nächsten Schritt fügen Sie ein Ereignis hinzu.
 
-[Zurück zu Schritt 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124; [mit Schritt 5 fort](../atl/adding-an-event-atl-tutorial-part-5.md)
+[Zurück zu Schritt 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124; [auf Schritt 5](../atl/adding-an-event-atl-tutorial-part-5.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Tutorial](../atl/active-template-library-atl-tutorial.md)<br/>
 [Testen der Eigenschaften und Ereignisse mit Test Container](../mfc/testing-properties-and-events-with-test-container.md)

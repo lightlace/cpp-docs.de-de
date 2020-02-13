@@ -12,20 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-ms.openlocfilehash: 46af59708ef3f0d91883c52502bce4d09676ca77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e8dae7b76ea2efc852486a19f5d298cda477012
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181943"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126720"
 ---
 # <a name="extent-class-c-amp"></a>extent-Klasse (C++ AMP)
 
-Stellt einen Vektor von *N* ganzzahlige Werte, die angeben, das die Begrenzungen des ein *N*-dimensionalen Raum mit dem Ursprung 0. Die Werte im Vektor sind vom wichtigsten zum am wenigsten wichtigen Wert sortiert.
+Stellt einen Vektor von *n* ganzzahligen Werten dar, die die Begrenzungen eines *n*-dimensionalen Raums mit dem Ursprung 0 angeben. Die Werte im Vektor sind vom wichtigsten zum am wenigsten wichtigen Wert sortiert.
 
-### <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntax
 
-```
+```cpp
 template <int _Rank>
 class extent;
 ```
@@ -35,38 +35,38 @@ class extent;
 *_Rank*<br/>
 Der Rang des `extent`-Objekts.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Header:** amp.h
 
 **Namespace:** Parallelität
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Extent-Konstruktor](#ctor)|Initialisiert eine neue Instanz der `extent`-Klasse.|
+|[Block-Konstruktor](#ctor)|Initialisiert eine neue Instanz der Klasse `extent`.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[contains](#contains)|Überprüft, ob das angegebene `extent`-Objekt über den angegebenen Rang verfügt.|
 |[size](#size)|Gibt die lineare Gesamtgröße des Wertebereichs zurück (in der Einheit Elemente).|
-|[tile](#tile)|Erzeugt ein `tiled_extent`-Objekt mit den Kachelwertebereichen, die durch angegebene Dimensionen festgelegt werden.|
+|[Stein](#tile)|Erzeugt ein `tiled_extent`-Objekt mit den Kachelwertebereichen, die durch angegebene Dimensionen festgelegt werden.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[operator-](#operator_min)|Gibt ein neues `extent`-Objekt zurück, das erstellt wird, indem die `index`-Elemente von den entsprechenden `extent`-Elementen subtrahiert werden.|
 |[operator--](#operator_min_min)|Dekrementiert jedes Element des `extent`-Objekts.|
 |[operator%=](#operator_mod_eq)|Berechnet den Modul (Rest) jedes Elements im `extent`-Objekt, wenn dieses Element durch eine Zahl dividiert wird.|
 |[operator*=](#operator_star_eq)|Multipliziert jedes Element des `extent`-Objekts mit einer Zahl.|
 |[operator/=](#operator_min_eq)|Dividiert jedes Element des `extent`-Objekts durch eine Zahl.|
-|[extent::operator\[\]](#operator_at)|Gibt das Element am angegebenen Index zurück.|
+|[Block:: Operator\[\]](#operator_at)|Gibt das Element am angegebenen Index zurück.|
 |[operator+](#operator_add)|Gibt ein neues `extent`-Objekt zurück, das durch Hinzufügen der entsprechenden `index`- und `extent`-Elemente erstellt wird.|
 |[operator++](#operator_add_add)|Inkrementiert jedes Element des `extent`-Objekts.|
 |[operator+=](#operator_add_eq)|Fügt die angegebene Zahl jedem Element des `extent`-Objekts hinzu.|
@@ -75,7 +75,7 @@ Der Rang des `extent`-Objekts.
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[Rank-Konstante](#rank_constant)|Ruft den Rang des `extent`-Objekts ab.|
 
@@ -83,13 +83,13 @@ Der Rang des `extent`-Objekts.
 
 `extent`
 
-## <a name="contains"></a> Enthält
+## <a name="contains"></a>Inhalt
 
-Gibt an, ob das angegebene [Index](index-class.md) Wert innerhalb des Objekts "Block" enthalten ist.
+Gibt an, ob der angegebene [Indexwert](index-class.md) im ' Block '-Objekt enthalten ist.
 
 ### <a name="syntax"></a>Syntax
 
-```
+```cpp
 bool contains(const index<rank>& _Index) const restrict(amp,cpu);
 ```
 
@@ -100,15 +100,15 @@ Der zu testende `index`-Wert.
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** Wenn das angegebene *Index* Wert befindet sich der `extent` Objekt; andernfalls **"false"**.
+**true** , wenn der angegebene *Indexwert* im `extent` Objekt enthalten ist. andernfalls **false**.
 
-##  <a name="ctor"></a> Wertebereich
+## <a name="ctor"></a>Ausdehnung
 
-Initialisiert eine neue Instanz der Klasse "Block".
+Initialisiert eine neue Instanz der "Block"-Klasse.
 
 ### <a name="syntax"></a>Syntax
 
-```
+```cpp
 extent() restrict(amp,cpu);
 extent(const extent<_Rank>& _Other) restrict(amp,cpu);
 explicit extent(int _I) restrict(amp,cpu);
@@ -137,38 +137,38 @@ Die Länge der unwichtigsten Dimension.
 *_Other*<br/>
 Ein `extent`-Objekt, auf dem das neue `extent`-Objekt basiert.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Der parameterlose Konstruktor initialisiert ein `extent`-Objekt, das den Rang 3 hat.
+Der Standardkonstruktor initialisiert ein `extent` Objekt, das den Rang drei hat.
 
 Wenn ein Array verwendet wird, um ein `extent`-Objekt zu erstellen, muss die Länge des Arrays mit dem Rang des `extent`-Objekts übereinstimmen.
 
-##  <a name="operator_mod_eq"></a> Operator% =
+## <a name="operator_mod_eq"></a>Operator% =
 
-Berechnet den Modul (Rest) jedes Elements in der "Block", wenn dieses Element durch eine Zahl dividiert wird.
+Berechnet den Modulo (Rest) jedes Elements im ' Block ', wenn dieses Element durch eine Zahl dividiert wird.
 
 ### <a name="syntax"></a>Syntax
 
-```
+```cpp
 extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_Rhs*<br/>
-Die Anzahl der Betrag zu finden.
+Die Zahl, für die der Modulo gefunden werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Das `extent`-Objekt.
 
-##  <a name="operator_star_eq"></a> Operator * =
+## <a name="operator_star_eq"></a>Operator * =
 
-Multipliziert jedes Element in das "Extent"-Objekt, mit der angegebenen Zahl.
+Multipliziert jedes Element im ' Block '-Objekt mit der angegebenen Zahl.
 
 ### <a name="syntax"></a>Syntax
 
-```
+```cpp
 extent<_Rank>& operator*=(int _Rhs) restrict(amp,cpu);
 ```
 
@@ -181,13 +181,13 @@ Die zu multiplizierende Zahl.
 
 Das `extent`-Objekt.
 
-## <a name="operator_add"></a> Operator +-
+## <a name="operator_add"></a>Operator +
 
 Gibt ein neues `extent`-Objekt zurück, das durch Hinzufügen der entsprechenden `index`- und `extent`-Elemente erstellt wird.
 
 ### <a name="syntax"></a>Syntax
 
-```
+```cpp
 extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ```
 
@@ -198,15 +198,15 @@ Das `index`-Objekt, das die hinzuzufügenden Elemente enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Das neue `extent` -Objekt.
+Das neue `extent`-Objekt.
 
-##  <a name="operator_add_add"></a> "Operator++"
+## <a name="operator_add_add"></a>Operator + +
 
-Inkrementiert jedes Element des Objekts "Block".
+Inkremente jedes Element des "Block"-Objekts.
 
 ### <a name="syntax"></a>Syntax
 
-```
+```cpp
 extent<_Rank>& operator++() restrict(amp,cpu);
 extent<_Rank> operator++(int)restrict(amp,cpu);
 ```
@@ -215,13 +215,13 @@ extent<_Rank> operator++(int)restrict(amp,cpu);
 
 Für den Präfixoperator das `extent`-Objekt (`*this`). Für den Suffixoperator ein neues `extent`-Objekt.
 
-##  <a name="operator_add_eq"></a> operator+=
+## <a name="operator_add_eq"></a>Operator + =
 
-Fügt die angegebene Anzahl auf jedes Element des Objekts "Block".
+Fügt die angegebene Zahl jedem Element des Block-Objekts hinzu.
 
 ### <a name="syntax"></a>Syntax
 
-```
+```cpp
 extent<_Rank>& operator+=(const extent<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator+=(const index<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
@@ -236,13 +236,13 @@ Die Zahl, der Index oder der Wertebereich, die bzw. der hinzugefügt werden soll
 
 Das resultierende `extent`-Objekt.
 
-##  <a name="operator_min"></a> Operator-
+## <a name="operator_min"></a>KOM
 
 Erstellt ein neues `extent`-Objekt durch Subtrahieren der einzelnen Elemente im angegebenen `index`-Objekt vom entsprechenden Element in diesem `extent`-Objekt.
 
 ### <a name="syntax"></a>Syntax
 
-```
+```cpp
 extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ```
 
@@ -253,15 +253,15 @@ Das `index`-Objekt, das die zu subtrahierenden Elemente enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Das neue `extent` -Objekt.
+Das neue `extent`-Objekt.
 
-##  <a name="operator_min_min"></a> Operator--
+## <a name="operator_min_min"></a>Operator--
 
-Dekrementiert jedes Element in das "Extent"-Objekt.
+Dekremente jedes Element im ' Block '-Objekt.
 
 ### <a name="syntax"></a>Syntax
 
-```
+```cpp
 extent<_Rank>& operator--() restrict(amp,cpu);
 extent<_Rank> operator--(int)restrict(amp,cpu);
 ```
@@ -270,13 +270,13 @@ extent<_Rank> operator--(int)restrict(amp,cpu);
 
 Für den Präfixoperator das `extent`-Objekt (`*this`). Für den Suffixoperator ein neues `extent`-Objekt.
 
-##  <a name="operator_div_eq"></a> Operator / =
+## <a name="operator_div_eq"></a>Operator/=
 
-Dividiert jedes Element in das "Extent"-Objekt mit der angegebenen Zahl.
+Dividiert jedes Element im ' Block '-Objekt durch die angegebene Zahl.
 
 ### <a name="syntax"></a>Syntax
 
-```
+```cpp
 extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
 ```
 
@@ -289,13 +289,13 @@ Die Zahl, durch die dividiert wird.
 
 Das `extent`-Objekt.
 
-##  <a name="operator_min_eq"></a> Operator =
+## <a name="operator_min_eq"></a>Operator-=
 
-Subtrahiert die angegebene Anzahl von jedem Element des Objekts "Block".
+Subtrahiert die angegebene Zahl von jedem Element des "Block"-Objekts.
 
 ### <a name="syntax"></a>Syntax
 
-```
+```cpp
 extent<_Rank>& operator-=(const extent<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator-=(const index<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
@@ -310,13 +310,13 @@ Die zu subtrahierende Zahl.
 
 Das resultierende `extent`-Objekt.
 
-##  <a name="operator_eq"></a> operator=
+## <a name="operator_eq"></a>Operator =
 
-Kopiert den Inhalt eines anderen "Block"-Objekts in dieses Objekt.
+Kopiert den Inhalt eines anderen ' Block '-Objekts in dieses Objekt.
 
 ### <a name="syntax"></a>Syntax
 
-```
+```cpp
 extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 ```
 
@@ -329,13 +329,13 @@ Das `extent`-Objekt, aus dem kopiert werden soll.
 
 Ein Verweis auf das `extent`-Objekt.
 
-##  <a name="operator_at"></a> Extent:: \[\]
+## <a name="operator_at"></a>Block:: Operator \[\]
 
 Gibt das Element am angegebenen Index zurück.
 
 ### <a name="syntax"></a>Syntax
 
-```
+```cpp
 int operator[](unsigned int _Index) const restrict(amp,cpu);
 int& operator[](unsigned int _Index) restrict(amp,cpu);
 ```
@@ -349,31 +349,31 @@ Eine ganze Zahl von 0 durch den Rang minus 1.
 
 Das Element am angegebenen Index.
 
-##  <a name="rank_constant"></a> Rang
+## <a name="rank_constant"></a>gehören
 
-Speichert den Rang des Objekts "Block".
+Speichert den Rang des ' Block '-Objekts.
 
 ### <a name="syntax"></a>Syntax
 
-```
+```cpp
 static const int rank = _Rank;
 ```
 
-##  <a name="size"></a> Größe
+## <a name="size"></a>Größe
 
-Gibt die lineare Gesamtgröße der `extent` Objekt (in Einheiten von Elementen).
+Gibt die lineare Gesamtgröße des `extent` Objekts zurück (in Einheiten von Elementen).
 
 ### <a name="syntax"></a>Syntax
 
-```
+```cpp
 unsigned int size() const restrict(amp,cpu);
 ```
 
-## <a name="tile"></a> Kachel "
+## <a name="tile"></a>Stein
 
-Erzeugt ein Tiled_extent-Objekt mit den angegebenen kacheldimensionen.
+Erzeugt ein tiled_extent-Objekt mit den angegebenen Kacheldimensionen.
 
-```
+```cpp
 template <int _Dim0>
 tiled_extent<_Dim0> tile() const ;
 
@@ -393,6 +393,6 @@ Die zweitwichtigste Komponente des unterteilten Wertebereichs.
 *_Dim2*<br/>
 Die unwichtigste Komponente des unterteilten Wertebereichs.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)

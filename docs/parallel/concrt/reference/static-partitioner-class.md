@@ -8,58 +8,58 @@ f1_keywords:
 helpviewer_keywords:
 - static_partitioner class
 ms.assetid: 2b3dbdf0-6eb9-49f6-8639-03df1d974143
-ms.openlocfilehash: 5120e3c53dc00ba9d5c3a4218efe1dcfb8f92e28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a58daa27bc7a2f51f78a3068a2f152979ffdd72
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337387"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142681"
 ---
-# <a name="staticpartitioner-class"></a>static_partitioner-Klasse
+# <a name="static_partitioner-class"></a>static_partitioner-Klasse
 
-Die `static_partitioner`-Klasse stellt eine statische Partitionierung des Bereichs dar, der von `parallel_for` durchlaufen wird. Mit dem Partitionierer wird der Bereich in so viele Blöcke unterteilt, wie Worker für den zugrunde liegenden Planer verfügbar sind.
+Die `static_partitioner`-Klasse stellt eine statische Partitionierung des Bereichs dar, der von `parallel_for` durchlaufen wird. Der Partitionierer dividiert den Bereich in so viele Blöcke, wie worker für den zugrunde liegenden Scheduler verfügbar sind.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class static_partitioner;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[static_partitioner](#ctor)|Erstellt ein `static_partitioner`-Objekt.|
-|[~ Static_partitioner-Destruktor](#dtor)|Zerstört ein `static_partitioner`-Objekt.|
+|[~ static_partitioner-Dekonstruktor](#dtor)|Zerstört ein `static_partitioner` -Objekt.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 `static_partitioner`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** ppl.h
+**Header:** ppl. h
 
 **Namespace:** Parallelität
 
-##  <a name="dtor"></a> ~static_partitioner
+## <a name="dtor"></a>~ static_partitioner
 
-Zerstört ein `static_partitioner`-Objekt.
+Zerstört ein `static_partitioner` -Objekt.
 
-```
+```cpp
 ~static_partitioner();
 ```
 
-##  <a name="ctor"></a> static_partitioner
+## <a name="ctor"></a>static_partitioner
 
 Erstellt ein `static_partitioner`-Objekt.
 
-```
+```cpp
 static_partitioner();
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)

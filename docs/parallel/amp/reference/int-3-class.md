@@ -72,40 +72,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::xz
 - amp_short_vectors/Concurrency::graphics::int_3::set_yz
 ms.assetid: d4af182f-30f1-455c-b16d-aa99cd314038
-ms.openlocfilehash: c7cef5c8d6750ba6e971be14aafce65020d05c10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc35562466ee33585be03739695d24da043415c2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180237"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127815"
 ---
-# <a name="int3-class"></a>int_3-Klasse
+# <a name="int_3-class"></a>int_3-Klasse
 
 Stellt einen kurzen Vektor aus drei ganzen Zahlen dar.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class int_3;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[int_3-Konstruktor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
+|[int_3-Konstruktor](#ctor)|Ist überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |int_3::get_x||
 |int_3::get_xy||
@@ -141,38 +141,38 @@ class int_3;
 |int_3::set_z||
 |int_3::set_zx||
 |int_3::set_zxy||
-|int_3::set_zy||
+|int_3:: set_zy||
 |int_3::set_zyx||
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|int_3::operator-||
-|int_3::operator--||
+|int_3:: Operator-||
+|int_3:: Operator--||
 |int_3::operator%=||
 |int_3::operator&=||
 |int_3::operator*=||
 |int_3::operator/=||
 |int_3::operator^=||
 |int_3::operator&#124;=||
-|int_3::operator~||
+|int_3:: Operator ~||
 |int_3::operator++||
 |int_3::operator+=||
-|int_3::operator<\<=||
+|int_3:: Operator <\<=||
 |int_3::operator=||
-|int_3::operator-=||
-|int_3::operator>>=||
+|int_3:: Operator-=||
+|int_3:: Operator > > =||
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Size-Konstante](#size)||
+|[Größen Konstante](#size)||
 
-### <a name="public-data-members"></a>Öffentliche Datenmember
+### <a name="public-data-members"></a>Öffentliche Datenelemente
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |int_3::b||
 |int_3::bg||
@@ -209,19 +209,19 @@ class int_3;
 
 `int_3`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amp_short_vectors.h
+**Header:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Parallelität:: Grafiken
 
-## <a name="ctor"></a> int_3
+## <a name="ctor"></a>int_3
 
 Standardkonstruktor, initialisiert alle Elemente mit 0.
 
-## <a name="syntax"></a>Syntax
+### <a name="syntax"></a>Syntax
 
-```
+```cpp
 int_3() restrict(amp,cpu);
 int_3(
    int _V0,
@@ -254,28 +254,28 @@ explicit inline int_3(
 ### <a name="parameters"></a>Parameter
 
 *_V0*<br/>
-Der Wert, der 0-Element zu initialisieren.
+Der Wert, mit dem Element 0 initialisiert werden soll.
 
 *_V1*<br/>
-Der Wert 1 Element initialisiert werden.
+Der Wert, mit dem Element 1 initialisiert werden soll.
 
 *_V2*<br/>
-Der Wert 2-Element zu initialisieren.
+Der Wert, mit dem Element 2 initialisiert werden soll.
 
 *_V*<br/>
 Der Wert für die Initialisierung.
 
 *_Other*<br/>
-Das Objekt, das zum Initialisieren verwendet.
+Das-Objekt, das zum Initialisieren von verwendet wird.
 
-## <a name="size"></a> Größe
+## <a name="size"></a>Größe
 
-## <a name="syntax"></a>Syntax
+### <a name="syntax"></a>Syntax
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

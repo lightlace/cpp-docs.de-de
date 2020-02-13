@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - improper_scheduler_reference class
 ms.assetid: 434a7512-7796-4255-92a7-f3bf71c6a7a7
-ms.openlocfilehash: 121e61447775cdcb5d7f5f1187c5d4cc6b7d68b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18536043b0d46a6f27f1e5c60778a22af82ad2d3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262904"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141110"
 ---
-# <a name="improperschedulerreference-class"></a>improper_scheduler_reference-Klasse
+# <a name="improper_scheduler_reference-class"></a>improper_scheduler_reference-Klasse
 
 Diese Klasse beschreibt eine Ausnahme, die ausgelöst wird, wenn die `Reference`-Methode für ein `Scheduler`-Objekt aufgerufen wird, das aus einem Kontext heruntergefahren wird, der nicht Teil dieses Planers ist.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class improper_scheduler_reference : public std::exception;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[improper_scheduler_reference](#ctor)|Überladen. Erstellt ein `improper_scheduler_reference`-Objekt.|
+|[improper_scheduler_reference](#ctor)|Ist überladen. Erstellt ein `improper_scheduler_reference`-Objekt.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -39,17 +39,17 @@ class improper_scheduler_reference : public std::exception;
 
 `improper_scheduler_reference`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** concrt.h
+**Header:** ConcRT. h
 
 **Namespace:** Parallelität
 
-##  <a name="ctor"></a> improper_scheduler_reference
+## <a name="ctor"></a>improper_scheduler_reference
 
 Erstellt ein `improper_scheduler_reference`-Objekt.
 
-```
+```cpp
 explicit _CRTIMP improper_scheduler_reference(_In_z_ const char* _Message) throw();
 
 improper_scheduler_reference() throw();
@@ -60,7 +60,7 @@ improper_scheduler_reference() throw();
 *_Message*<br/>
 Eine beschreibende Fehlermeldung.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [Scheduler-Klasse](scheduler-class.md)

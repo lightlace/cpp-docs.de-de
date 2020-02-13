@@ -1,28 +1,28 @@
 ---
-title: 'Concurrency:: Graphics Namespace-Funktionen'
+title: Concurrency::graphics-Namespace-Funktionen
 ms.date: 11/04/2016
 f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy_async
 - amp_graphics/Concurrency::fast_math::copy
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
-ms.openlocfilehash: 7ef181da43bb947230aaafe82b178938c85b9a8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46b8a171acd3b125749b4e2c519909b82c76dc39
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375638"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126980"
 ---
-# <a name="concurrencygraphics-namespace-functions"></a>Concurrency:: Graphics Namespace-Funktionen
+# <a name="concurrencygraphics-namespace-functions"></a>Concurrency::graphics-Namespace-Funktionen
 
 |||
 |-|-|
 |[copy](#copy)|[copy_async](#copy_async)|
 
-##  <a name="copy"></a>  Copy-Funktion (Concurrency:: Graphics-Namespace)
+## <a name="copy"></a>Copy-Funktion (parallelcurrency:: graphics-Namespace)
 
 Kopiert eine Quelltextur in einen Zielpuffer oder kopiert einen Quellpuffer in einen Zielpuffer. Das allgemeine Format dieser Funktion ist `copy(src, dest)`.
 
-```
+```cpp
 template <
     typename _Src_type,
     typename = typename std::enable_if<details::texture_traits<_Src_type>::is_texture, void>::type>
@@ -122,7 +122,7 @@ void copy (
 Der Umfang des zu kopierenden Texturabschnitts.
 
 *_Dst*<br/>
-Das Objekt, in das kopiert werden soll.
+Das Objekt, in das kopiert wird.
 
 *_Dst_byte_size*<br/>
 Die Anzahl von Bytes im Ziel.
@@ -157,11 +157,11 @@ Ein Anfangsiterator in den Quellcontainer.
 *last*<br/>
 Ein Endeiterator in den Quellcontainer.
 
-##  <a name="copy_async"></a>  Copy_async-Funktion (Concurrency:: Graphics-Namespace)
+## <a name="copy_async"></a>copy_async-Funktion (parallelcurrency:: graphics-Namespace)
 
-Kopiert asynchron eine Quelltextur in einen Zielpuffer oder kopiert einen Quellpuffer in einen Zielpuffer und gibt eine [Completion_future](completion-future-class.md) -Objekt, das auf das gewartet werden kann. Es können keine Daten kopiert werden, wenn auf einer Zugriffstaste Code ausgeführt wird. Das allgemeine Format dieser Funktion ist `copy(src, dest)`.
+Kopiert asynchron eine Quell Textur in einen Ziel Puffer oder kopiert einen Quell Puffer in einen Ziel Puffer und gibt dann ein [completion_future](completion-future-class.md) Objekt zurück, auf das gewartet werden kann. Es können keine Daten kopiert werden, wenn auf einer Zugriffstaste Code ausgeführt wird. Das allgemeine Format dieser Funktion ist `copy(src, dest)`.
 
-```
+```cpp
 template<
     typename _Src_type,
     typename = typename std::enable_if<details::texture_traits<_Src_type>::is_texture, void>::type
@@ -257,7 +257,7 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 Der Umfang des zu kopierenden Texturabschnitts.
 
 *_Dst*<br/>
-Das Objekt, in das kopiert werden soll.
+Das Objekt, in das kopiert wird.
 
 *_Dst_byte_size*<br/>
 Die Anzahl von Bytes im Ziel.
@@ -292,12 +292,12 @@ Ein Anfangsiterator in den Quellcontainer.
 *last*<br/>
 Ein Endeiterator in den Quellcontainer.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amp_graphics.h
+**Header:** amp_graphics. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Parallelität:: Grafiken
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

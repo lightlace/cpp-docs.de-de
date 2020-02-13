@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::bag
 - amp_short_vectors/Concurrency::graphics::double_4::zwy
 ms.assetid: a81c1595-24c6-4b3f-9574-d5942275e5e8
-ms.openlocfilehash: 14e85a2c9ff21ed451cc6141ab7940f9c614c662
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9ca413573ebd741ea2a9a813a25ec2679aff5b7
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180322"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139353"
 ---
-# <a name="double4-class"></a>double_4-Klasse
+# <a name="double_4-class"></a>double_4-Klasse
 
 Dies stellt einen Kurzvektor mit vier Double-Werten dar.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class double_4;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[double_4-Konstruktor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
+|[double_4-Konstruktor](#ctor)|Ist überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |double_4::get_w||
 |double_4::get_wx||
@@ -313,7 +313,7 @@ class double_4;
 |double_4::get_wyx||
 |double_4::get_wyxz||
 |double_4::get_wyz||
-|double_4::get_wyzx||
+|double_4:: get_wyzx||
 |double_4::get_wz||
 |double_4::get_wzx||
 |double_4::get_wzxy||
@@ -385,7 +385,7 @@ class double_4;
 |double_4::set_wyx||
 |double_4::set_wyxz||
 |double_4::set_wyz||
-|double_4::set_wyzx||
+|double_4:: set_wyzx||
 |double_4::set_wz||
 |double_4::set_wzx||
 |double_4::set_wzxy||
@@ -434,19 +434,19 @@ class double_4;
 |double_4::set_zxwy||
 |double_4::set_zxy||
 |double_4::set_zxyw||
-|double_4::set_zy||
-|double_4::set_zyw||
+|double_4:: set_zy||
+|double_4:: set_zyw||
 |double_4::set_zywx||
 |double_4::set_zyx||
 |double_4::set_zyxw||
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |double_4::operator-||
 |double_4::operator--||
-|double_4::operator*=||
+|double_4:: Operator * =||
 |double_4::operator/=||
 |double_4::operator++||
 |double_4::operator+=||
@@ -455,13 +455,13 @@ class double_4;
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Size-Konstante](#double_4__size)||
+|[Größen Konstante](#double_4__size)||
 
-### <a name="public-data-members"></a>Öffentliche Datenmember
+### <a name="public-data-members"></a>Öffentliche Datenelemente
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |double_4::a||
 |double_4::ab||
@@ -500,7 +500,7 @@ class double_4;
 |double_4::gab||
 |double_4::gabr||
 |double_4::gar||
-|double_4::garb||
+|double_4:: Garb||
 |double_4::gb||
 |double_4::gba||
 |double_4::gbar||
@@ -537,28 +537,28 @@ class double_4;
 |double_4::wyx||
 |double_4::wyxz||
 |double_4::wyz||
-|double_4::wyzx||
+|double_4:: wyzx||
 |double_4::wz||
 |double_4::wzx||
 |double_4::wzxy||
 |double_4::wzy||
 |double_4::wzyx||
-|double_4::x||
-|double_4::xw||
-|double_4::xwy||
+|double_4:: x||
+|double_4:: XW||
+|double_4:: xwy||
 |double_4::xwyz||
 |double_4::xwz||
-|double_4::xwzy||
+|double_4:: xwzy||
 |double_4::xy||
 |double_4::xyw||
 |double_4::xywz||
 |double_4::xyz||
-|double_4::xyzw||
+|double_4:: xyzw||
 |double_4::xz||
-|double_4::xzw||
+|double_4:: xzw||
 |double_4::xzwy||
-|double_4::xzy||
-|double_4::xzyw||
+|double_4:: XZY||
+|double_4:: xzyw||
 |double_4::y||
 |double_4::yw||
 |double_4::ywx||
@@ -581,13 +581,13 @@ class double_4;
 |double_4::zwxy||
 |double_4::zwy||
 |double_4::zwyx||
-|double_4::zx||
+|double_4:: ZX||
 |double_4::zxw||
 |double_4::zxwy||
 |double_4::zxy||
 |double_4::zxyw||
-|double_4::zy||
-|double_4::zyw||
+|double_4:: Zy||
+|double_4:: zyw||
 |double_4::zywx||
 |double_4::zyx||
 |double_4::zyxw||
@@ -596,17 +596,17 @@ class double_4;
 
 `double_4`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amp_short_vectors.h
+**Header:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Parallelität:: Grafiken
 
-##  <a name="ctor"></a> double_4
+## <a name="ctor"></a>double_4
 
 Standardkonstruktor, initialisiert alle Elemente mit 0.
 
-```
+```cpp
 double_4() restrict(amp,
     cpu);
 
@@ -649,29 +649,29 @@ explicit inline double_4(
 ### <a name="parameters"></a>Parameter
 
 *_V0*<br/>
-Der Wert, der 0-Element zu initialisieren.
+Der Wert, mit dem Element 0 initialisiert werden soll.
 
 *_V1*<br/>
-Der Wert 1 Element initialisiert werden.
+Der Wert, mit dem Element 1 initialisiert werden soll.
 
 *_V2*<br/>
-Der Wert 2-Element zu initialisieren.
+Der Wert, mit dem Element 2 initialisiert werden soll.
 
 *_V3*<br/>
-Der Wert 3-Element zu initialisieren.
+Der Wert, mit dem Element 3 initialisiert werden soll.
 
 *_V*<br/>
 Der Wert für die Initialisierung.
 
 *_Other*<br/>
-Das Objekt, das zum Initialisieren verwendet.
+Das-Objekt, das zum Initialisieren von verwendet wird.
 
-##  <a name="double_4__size"></a> Größe
+## <a name="double_4__size"></a>Größe
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - multithreading [C++], synchronization classes
 - threading [C++], thread-safe class design
 ms.assetid: f266d4c6-0454-4bda-9758-26157ef74cc5
-ms.openlocfilehash: 26a059e378edb92f5ff7f4e788ded90678e0c129
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ef76199813de417d2aa57eb7f3f15ae4d2fefc56
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511871"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77140500"
 ---
 # <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>Multithreading: Verwenden der MFC-Synchronisierungs Klassen
 
@@ -30,17 +30,17 @@ Als Beispiel wird eine Anwendung verwendet, in der eine verknüpfte Liste von Ko
 
 In dieser Beispielanwendung kommen alle drei Arten von Synchronisierungsklassen zum Einsatz. Da bis zu drei Konten gleichzeitig untersucht werden können, wird [CSemaphore](../mfc/reference/csemaphore-class.md) verwendet, um den Zugriff auf drei Ansichts Objekte einzuschränken. Beim Versuch, ein viertes Konto anzuzeigen, wartet die Anwendung entweder, bis eines der ersten drei Fenster geschlossen wird, oder der Versuch schlägt fehl. Wenn ein Konto aktualisiert wird, verwendet die Anwendung [CCriticalSection](../mfc/reference/ccriticalsection-class.md) , um sicherzustellen, dass jeweils nur ein Konto aktualisiert wird. Nachdem das Update erfolgreich abgeschlossen wurde, signalisiert es [CEvent](../mfc/reference/cevent-class.md), das einen Thread freigibt, der darauf wartet, dass das Ereignis signalisiert wird. Dieser Thread sendet die neuen Daten an das Datenarchiv.
 
-##  <a name="_mfc_designing_a_thread.2d.safe_class"></a>Entwerfen einer Thread sicheren Klasse
+## <a name="_mfc_designing_a_thread.2d.safe_class"></a>Entwerfen einer Thread sicheren Klasse
 
-Um eine Klasse vollständig threadsicher zu gestalten, fügen Sie zunächst den gemeinsam genutzten Klassen die entsprechende Synchronisierungsklasse als Datenmember hinzu. Im vorherigen Beispiel `CSemaphore` für die Kontoverwaltung würde der Ansichts Klasse ein Datenmember hinzugefügt, ein `CCriticalSection` Datenmember wird der Klasse "Linked-List" hinzugefügt, und der `CEvent` Datenspeicher Klasse wird ein Datenmember hinzugefügt.
+Um eine Klasse vollständig threadsicher zu gestalten, fügen Sie zunächst den gemeinsam genutzten Klassen die entsprechende Synchronisierungsklasse als Datenmember hinzu. Im vorherigen Beispiel für die Kontoverwaltung würde der Ansichts Klasse ein `CSemaphore` Datenmember hinzugefügt, ein `CCriticalSection` Datenmember wird der Klasse Linked-List hinzugefügt, und der Datenspeicher Klasse wird ein `CEvent` Datenmember hinzugefügt.
 
-Fügen Sie anschließend allen Memberfunktionen, die die Daten in der Klasse ändern bzw. auf eine gesteuerte Ressource zugreifen, Synchronisierungsaufrufe hinzu. In jeder Funktion sollten Sie entweder ein [CSingleLock](../mfc/reference/csinglelock-class.md) -oder ein [CMultiLock](../mfc/reference/cmultilock-class.md) -Objekt erstellen und die `Lock` Funktion dieses Objekts aufrufen. Wenn das `Unlock`-Objekt den Gültigkeitsbereich verlässt und zerstört wird, wird vom Destruktor des Objekts automatisch  aufgerufen und die Ressource freigegeben. Selbstverständlich können Sie `Unlock` auch direkt aufrufen.
+Fügen Sie anschließend allen Memberfunktionen, die die Daten in der Klasse ändern bzw. auf eine gesteuerte Ressource zugreifen, Synchronisierungsaufrufe hinzu. In jeder Funktion sollten Sie entweder ein [CSingleLock](../mfc/reference/csinglelock-class.md) -oder ein [CMultiLock](../mfc/reference/cmultilock-class.md) -Objekt erstellen und die `Lock` Funktion dieses Objekts aufrufen. Wenn das `Unlock`{2}-Objekt den Gültigkeitsbereich verlässt und zerstört wird, wird vom Destruktor des Objekts automatisch {3} aufgerufen und die Ressource freigegeben. Selbstverständlich können Sie `Unlock` auch direkt aufrufen.
 
 Wenn Sie auf diese Art eine threadsichere Klasse entwerfen, kann sie in einer Multithreadanwendung ebenso problemlos wie eine nicht threadsichere Klasse verwendet werden, jedoch mit größerer Sicherheit. Wenn sowohl das Synchronisierungsobjekt als auch das Synchronisierungszugriffsobjekt in die Klasse der Ressource eingeschlossen werden, können Sie sämtliche Vorteile einer vollständig threadsicheren Programmierung nutzen, ohne Synchronisierungscode verwalten zu müssen.
 
 Im folgenden Codebeispiel wird diese Methode anhand des `m_CritSection`-Datenmembers (vom Typ `CCriticalSection`) demonstriert, das in der gemeinsam genutzten Ressourcenklasse deklariert wurde; außerdem wird ein `CSingleLock`-Objekt verwendet. Der Versuch der Synchronisierung der gemeinsam genutzten Ressource (die von `CWinThread` abgeleitet wurde) wird durch Erstellung eines `CSingleLock`-Objekts unter Verwendung der Adresse des `m_CritSection`-Objekts unternommen. Nachdem die Ressource erfolgreich gesperrt wurde, wird das gemeinsam genutzte Objekt bearbeitet. Nachdem der Bearbeitungsvorgang abgeschlossen ist, wird die Ressource durch Aufruf von `Unlock` entsperrt.
 
-```
+```cpp
 CSingleLock singleLock(&m_CritSection);
 singleLock.Lock();
 // resource locked
@@ -54,8 +54,8 @@ singleLock.Unlock();
 
 Der Nachteil dieses Ansatzes liegt darin, dass die Klasse etwas langsamer als die gleiche Klasse ohne hinzugefügte Synchronisierungsobjekte ist. Wenn das Objekt außerdem durch mehrere Threads gelöscht werden könnte, führt eine Einbindung nicht immer zum Erfolg. In dieser Situation ist es besser, separate Synchronisierungsobjekte zu verwalten.
 
-Informationen zum Bestimmen der zu verwendenden Synchronisierungs Klasse in unterschiedlichen Situationen [finden Sie unter Multithreading: Verwendungszwecke der Synchronisierungs Klassen](multithreading-when-to-use-the-synchronization-classes.md) Weitere Informationen zur Synchronisierung finden Sie unter [Synchronisierung](/windows/win32/Sync/synchronization) in der Windows SDK. Weitere Informationen zur Unterstützung von Multithreading in MFC finden Sie unter [Multithreading mit C++ und MFC](multithreading-with-cpp-and-mfc.md).
+Informationen zum Bestimmen der zu verwendenden Synchronisierungs Klasse in unterschiedlichen Situationen finden Sie unter [Multithreading: wann die Synchronisierungs Klassen verwendet](multithreading-when-to-use-the-synchronization-classes.md)werden sollen. Weitere Informationen zur Synchronisierung finden Sie unter [Synchronisierung](/windows/win32/Sync/synchronization) in der Windows SDK. Weitere Informationen zur Unterstützung von Multithreading in MFC finden Sie unter [Multithreading mit C++ und MFC](multithreading-with-cpp-and-mfc.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Multithreading mit C++ und MFC](multithreading-with-cpp-and-mfc.md)

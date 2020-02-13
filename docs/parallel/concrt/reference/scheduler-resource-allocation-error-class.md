@@ -9,40 +9,40 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_resource_allocation_error class
 ms.assetid: 8b40449a-7abb-4d0a-bb85-c0e9a495ae97
-ms.openlocfilehash: 7f7254306253aabc33f46694f3da16734e6efccf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2955320b443fb61f26d9f07ca336a45c620e2aa9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160051"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143336"
 ---
-# <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error-Klasse
+# <a name="scheduler_resource_allocation_error-class"></a>scheduler_resource_allocation_error-Klasse
 
 Diese Klasse beschreibt eine Ausnahme, die aufgrund eines Fehlers ausgelöst wird, um in der Concurrency Runtime eine wichtige Ressource abzurufen.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class scheduler_resource_allocation_error : public std::exception;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[scheduler_resource_allocation_error](#ctor)|Überladen. Erstellt ein `scheduler_resource_allocation_error`-Objekt.|
+|[scheduler_resource_allocation_error](#ctor)|Ist überladen. Erstellt ein `scheduler_resource_allocation_error`-Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[get_error_code](#get_error_code)|Gibt den Fehlercode zurück, der die Ausnahme verursacht hat.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Diese Ausnahme wird in der Regel ausgelöst, wenn ein Aufruf an das Betriebssystem aus, in der Concurrency Runtime fehlschlägt. Der Fehlercode, die normalerweise von einem Aufruf der Win32-Methode zurückgegeben werden würde `GetLastError` wird in einen Wert vom Typ konvertiert `HRESULT` und können abgerufen werden, mithilfe der `get_error_code` Methode.
+Diese Ausnahme wird normalerweise ausgelöst, wenn ein Systemaufrufe innerhalb des Concurrency Runtime fehlschlägt. Der Fehlercode, der normalerweise von einem aufgerufenen Win32-Methode zurückgegeben wird `GetLastError` wird in einen Wert vom Typ "`HRESULT`" konvertiert und kann mit der `get_error_code`-Methode abgerufen werden.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -50,29 +50,29 @@ Diese Ausnahme wird in der Regel ausgelöst, wenn ein Aufruf an das Betriebssyst
 
 `scheduler_resource_allocation_error`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** concrt.h
+**Header:** ConcRT. h
 
 **Namespace:** Parallelität
 
-##  <a name="get_error_code"></a> get_error_code
+## <a name="get_error_code"></a>get_error_code
 
 Gibt den Fehlercode zurück, der die Ausnahme verursacht hat.
 
-```
+```cpp
 HRESULT get_error_code() const throw();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die `HRESULT` Wert des Fehlers, der die Ausnahme verursacht hat.
+Der `HRESULT` Wert des Fehlers, der die Ausnahme verursacht hat.
 
-##  <a name="ctor"></a> scheduler_resource_allocation_error
+## <a name="ctor"></a>scheduler_resource_allocation_error
 
 Erstellt ein `scheduler_resource_allocation_error`-Objekt.
 
-```
+```cpp
 scheduler_resource_allocation_error(
     _In_z_ const char* _Message,
     HRESULT _Hresult) throw();
@@ -87,8 +87,8 @@ explicit _CRTIMP scheduler_resource_allocation_error(
 Eine beschreibende Fehlermeldung.
 
 *_Hresult*<br/>
-Die `HRESULT` Wert des Fehlers, der die Ausnahme verursacht hat.
+Der `HRESULT` Wert des Fehlers, der die Ausnahme verursacht hat.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)

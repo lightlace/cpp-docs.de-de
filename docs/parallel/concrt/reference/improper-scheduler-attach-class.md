@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - improper_scheduler_attach class
 ms.assetid: 5a76da0a-091b-4748-8f62-b3a28f674f9e
-ms.openlocfilehash: 2d6a7b53269d305c976bcc596fe85dc018442332
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85adf3f919d94a82f5a68a5cd9e5f44cdca10006
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262475"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141229"
 ---
-# <a name="improperschedulerattach-class"></a>improper_scheduler_attach-Klasse
+# <a name="improper_scheduler_attach-class"></a>improper_scheduler_attach-Klasse
 
 Diese Klasse beschreibt eine Ausnahme, die ausgelöst wird, wenn die `Attach`-Methode für ein `Scheduler`-Objekt aufgerufen wird, das bereits an den aktuellen Kontext angefügt wurde.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class improper_scheduler_attach : public std::exception;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[improper_scheduler_attach](#ctor)|Überladen. Erstellt ein `improper_scheduler_attach`-Objekt.|
+|[improper_scheduler_attach](#ctor)|Ist überladen. Erstellt ein `improper_scheduler_attach`-Objekt.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -39,17 +39,17 @@ class improper_scheduler_attach : public std::exception;
 
 `improper_scheduler_attach`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** concrt.h
+**Header:** ConcRT. h
 
 **Namespace:** Parallelität
 
-##  <a name="ctor"></a> improper_scheduler_attach
+## <a name="ctor"></a>improper_scheduler_attach
 
 Erstellt ein `improper_scheduler_attach`-Objekt.
 
-```
+```cpp
 explicit _CRTIMP improper_scheduler_attach(_In_z_ const char* _Message) throw();
 
 improper_scheduler_attach() throw();
@@ -60,7 +60,7 @@ improper_scheduler_attach() throw();
 *_Message*<br/>
 Eine beschreibende Fehlermeldung.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [Scheduler-Klasse](scheduler-class.md)

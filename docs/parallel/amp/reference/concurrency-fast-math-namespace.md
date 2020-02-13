@@ -4,28 +4,28 @@ ms.date: 11/04/2016
 f1_keywords:
 - amp_math/Concurrency::fast_math
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-ms.openlocfilehash: e774c2d8e4431960e796ee1e6cc87b924d04174b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57e2134a2254dc4bc34d515e65e2ec629efeff33
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405598"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139511"
 ---
-# <a name="concurrencyfastmath-namespace"></a>Concurrency::fast_math-Namespace
+# <a name="concurrencyfast_math-namespace"></a>Concurrency::fast_math-Namespace
 
 Funktionen im `fast_math`-Namespace haben eine geringere Genauigkeit, unterstützen nur mit einfacher Genauigkeit (`float`) und rufen die systeminternen DirectX-Funktionen auf. Es gibt zwei Versionen jeder Funktion, beispielsweise `cos` und `cosf`. Beide Versionen erstellen und geben einen `float`-Wert zurück, aber jede ruft die gleiche systeminterne DirectX-Funktion auf.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 namespace fast_math;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
-### <a name="functions"></a>Funktionen
+### <a name="functions"></a>Functions
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |[cos](concurrency-fast-math-namespace-functions.md#cos)|Berechnet den Arkuskosinus des Arguments|
 |[cosf](concurrency-fast-math-namespace-functions.md#cosf)|Berechnet den Arkuskosinus des Arguments|
@@ -57,7 +57,7 @@ namespace fast_math;
 |[fmodf](concurrency-fast-math-namespace-functions.md#fmodf)|Berechnet den Gleitkommarest von _X/_Y|
 |[frexp](concurrency-fast-math-namespace-functions.md#frexp)|Ruft die Mantisse und den Exponenten von _X ab|
 |[frexpf](concurrency-fast-math-namespace-functions.md#frexpf)|Ruft die Mantisse und den Exponenten von _X ab|
-|[isfinite](concurrency-fast-math-namespace-functions.md#isfinite)|Bestimmt, ob das Argument einen über begrenzten Wert verfügt|
+|[isFinite](concurrency-fast-math-namespace-functions.md#isfinite)|Bestimmt, ob das Argument einen über begrenzten Wert verfügt|
 |[isinf](concurrency-fast-math-namespace-functions.md#isinf)|Bestimmt, ob das Argument unendlich ist|
 |[isnan](concurrency-fast-math-namespace-functions.md#isnan)|Bestimmt, ob das Argument ein NaN|
 |[ldexp](concurrency-fast-math-namespace-functions.md#ldexp)|Berechnet eine reelle Zahl aus der Mantisse und dem Exponent|
@@ -65,8 +65,8 @@ namespace fast_math;
 |[log](concurrency-fast-math-namespace-functions.md#log)|Berechnet den Basis-E-Logarithmus des Arguments|
 |[log10](concurrency-fast-math-namespace-functions.md#log10)|Berechnet den Basis-10-Logarithmus des Arguments|
 |[log10f](concurrency-fast-math-namespace-functions.md#log10f)|Berechnet den Basis-10-Logarithmus des Arguments|
-|[log2](concurrency-fast-math-namespace-functions.md#log2)|Berechnet den Basis-2-Logarithmus des Arguments|
-|[log2f](concurrency-fast-math-namespace-functions.md#log2f)|Berechnet den Basis-2-Logarithmus des Arguments|
+|[log2](concurrency-fast-math-namespace-functions.md#log2)|Berechnet den Logarithmus zur Basis 2 des Arguments.|
+|[log2f](concurrency-fast-math-namespace-functions.md#log2f)|Berechnet den Logarithmus zur Basis 2 des Arguments.|
 |[logf](concurrency-fast-math-namespace-functions.md#logf)|Berechnet den Basis-E-Logarithmus des Arguments|
 |[modf](concurrency-fast-math-namespace-functions.md#modf)|Teilt _X in Nachkommastellen und ganze Zahlen auf.|
 |[modff](concurrency-fast-math-namespace-functions.md#modff)|Teilt _X in Nachkommastellen und ganze Zahlen auf.|
@@ -79,7 +79,7 @@ namespace fast_math;
 |[signbit](concurrency-fast-math-namespace-functions.md#signbit)|Gibt das Vorzeichen des Arguments zurück|
 |[signbitf](concurrency-fast-math-namespace-functions.md#signbitf)|Gibt das Vorzeichen des Arguments zurück|
 |[sin](concurrency-fast-math-namespace-functions.md#sin)|Berechnet den Sinuswert des Arguments|
-|[sincos](concurrency-fast-math-namespace-functions.md#sincos)|Berechnet Sinus- und Kosinuswert von _X|
+|[SinCos](concurrency-fast-math-namespace-functions.md#sincos)|Berechnet Sinus- und Kosinuswert von _X|
 |[sincosf](concurrency-fast-math-namespace-functions.md#sincosf)|Berechnet Sinus- und Kosinuswert von _X|
 |[sinf](concurrency-fast-math-namespace-functions.md#sinf)|Berechnet den Sinuswert des Arguments|
 |[sinh](concurrency-fast-math-namespace-functions.md#sinh)|Berechnet den Hyperbelsinuswert des Arguments|
@@ -93,12 +93,12 @@ namespace fast_math;
 |[trunc](concurrency-fast-math-namespace-functions.md#trunc)|Schneidet das Argument der ganzzahligen Komponente ab|
 |[truncf](concurrency-fast-math-namespace-functions.md#truncf)|Schneidet das Argument der ganzzahligen Komponente ab|
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amp_math.h
+**Header:** amp_math. h
 
-**Namespace:** Concurrency::fast_math
+**Namespace:** Parallelität:: fast_math
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)

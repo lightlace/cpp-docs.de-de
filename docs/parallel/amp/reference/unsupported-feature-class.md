@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_feature class
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
-ms.openlocfilehash: 451318bfbcfb9c5e002677556944e3499c0ed5fb
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 561f0a258943f6d7e1c0f1b5cae716592c931fbc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525415"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127711"
 ---
-# <a name="unsupportedfeature-class"></a>unsupported_feature-Klasse
+# <a name="unsupported_feature-class"></a>unsupported_feature-Klasse
 
 Die Ausnahme, die ausgelöst wird, wenn eine nicht unterstützte Funktion verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class unsupported_feature : public runtime_exception;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Unsupported_feature-Konstruktor](#unsupported_feature)|Erstellt eine neue Instanz der `unsupported_feature`-Ausnahme.|
+|[unsupported_feature-Konstruktor](#unsupported_feature)|Erstellt eine neue Instanz der `unsupported_feature`-Ausnahme.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -41,13 +41,13 @@ class unsupported_feature : public runtime_exception;
 
 `unsupported_feature`
 
-## <a name="unsupported_feature"></a> unsupported_feature
+## <a name="unsupported_feature"></a>unsupported_feature
 
   Erstellt eine neue Instanz der `unsupported_feature`-Ausnahme.
 
 ### <a name="syntax"></a>Syntax
 
-```
+```cpp
 explicit unsupported_feature(
     const char * _Message ) throw();
 
@@ -63,12 +63,12 @@ Eine Beschreibung des Fehlers.
 
 Das `unsupported_feature`-Objekt.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amprt.h
+**Header:** amprt. h
 
 **Namespace:** Parallelität
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)

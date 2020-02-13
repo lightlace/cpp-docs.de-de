@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-ms.openlocfilehash: 5e90dd3b23b33f6699f2df4ce0df9178f95816b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f45ff6d3092bd7c27e81adddca72c9411f752d1
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375456"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139822"
 ---
 # <a name="location-class"></a>location-Klasse
 
@@ -23,86 +23,86 @@ Die Abstraktion eines physischen Speicherorts auf der Hardware.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class location;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[location](#ctor)|Überladen. Erstellt ein `location`-Objekt.|
-|[~ Location-Destruktor](#dtor)|Zerstört ein `location`-Objekt.|
+|[location](#ctor)|Ist überladen. Erstellt ein `location`-Objekt.|
+|[~ Location-debugtor](#dtor)|Zerstört ein `location` -Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[current](#current)|Gibt eine `location` Objekt, das die spezifischste Stelle, die den aufrufende Thread ausgeführt wird, darstellt.|
-|[from_numa_node](#from_numa_node)|Gibt eine `location` Objekt, das einen bestimmten NUMA-Knoten darstellt.|
+|[Strömung](#current)|Gibt ein `location` Objekt zurück, das den spezifischsten Ort darstellt, an dem der aufrufende Thread ausgeführt wird.|
+|[from_numa_node](#from_numa_node)|Gibt ein `location` Objekt zurück, das einen angegebenen NUMA-Knoten darstellt.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Operator!=](#operator_neq)|Bestimmt, ob zwei `location` Objekte darstellen, anderen Speicherort.|
-|[operator=](#operator_eq)|Weist den Inhalt von einem anderen `location` -Objekts in dieses Objekt.|
-|[operator==](#operator_eq_eq)|Bestimmt, ob zwei `location` Objekte darstellen, am gleichen Speicherort.|
+|[operator!=](#operator_neq)|Bestimmt, ob zwei `location`-Objekte einen anderen Speicherort darstellen.|
+|[operator=](#operator_eq)|Weist der den Inhalt eines anderen `location` Objekts zu.|
+|[operator==](#operator_eq_eq)|Bestimmt, ob zwei `location`-Objekte denselben Speicherort darstellen.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 `location`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** concrt.h
+**Header:** ConcRT. h
 
 **Namespace:** Parallelität
 
-##  <a name="dtor"></a> ~ Speicherort
+## <a name="dtor"></a>~ Speicherort
 
-Zerstört ein `location`-Objekt.
+Zerstört ein `location` -Objekt.
 
-```
+```cpp
 ~location();
 ```
 
-##  <a name="current"></a> Aktuelle
+## <a name="current"></a>Strömung
 
-Gibt eine `location` Objekt, das die spezifischste Stelle, die den aufrufende Thread ausgeführt wird, darstellt.
+Gibt ein `location` Objekt zurück, das den spezifischsten Ort darstellt, an dem der aufrufende Thread ausgeführt wird.
 
-```
+```cpp
 static location __cdecl current();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Einen Speicherort, der die spezifischste Stelle darstellt, an der aufrufende Thread ausgeführt wird.
+Ein Speicherort, der den spezifischsten Speicherort darstellt, den der aufrufende Thread ausführt.
 
-##  <a name="from_numa_node"></a> from_numa_node
+## <a name="from_numa_node"></a>from_numa_node
 
-Gibt eine `location` Objekt, das einen bestimmten NUMA-Knoten darstellt.
+Gibt ein `location` Objekt zurück, das einen angegebenen NUMA-Knoten darstellt.
 
-```
+```cpp
 static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_NumaNodeNumber*<br/>
-Die NUMA-Knotennummer um einen Speicherort für zu erstellen.
+Die NUMA-Knotennummer, für die ein Speicherort erstellt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Eine Position, die gemäß den NUMA-Knoten darstellt. die `_NumaNodeNumber` Parameter.
+Ein Speicherort, der den durch den `_NumaNodeNumber`-Parameter angegebenen NUMA-Knoten darstellt.
 
-##  <a name="ctor"></a> Speicherort
+## <a name="ctor"></a>Hotels
 
 Erstellt ein `location`-Objekt.
 
-```
+```cpp
 location();
 
 location(
@@ -126,34 +126,34 @@ location(
 *_BindingId*<br/>
 
 *_PBinding*<br/>
-(Optional) Bindung Zeiger.
+Optionale Bindungs Zeiger.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Ein Standardverzeichnis erstellt stellt das System als Ganzes dar.
+Ein standardmäßiger erstellter Speicherort stellt das System als Ganzes dar.
 
-##  <a name="operator_neq"></a> Operator! =
+## <a name="operator_neq"></a>Operator! =
 
-Bestimmt, ob zwei `location` Objekte darstellen, anderen Speicherort.
+Bestimmt, ob zwei `location`-Objekte einen anderen Speicherort darstellen.
 
-```
+```cpp
 bool operator!= (const location& _Rhs) const;
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_Rhs*<br/>
-Operand `location`.
+Operand-`location`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** Wenn die zwei Orten unterschiedlich sind, **"false"** andernfalls.
+**true** , wenn sich die beiden Speicherorte unterscheiden, andernfalls **false** .
 
-##  <a name="operator_eq"></a> operator=
+## <a name="operator_eq"></a>Operator =
 
-Weist den Inhalt von einem anderen `location` -Objekts in dieses Objekt.
+Weist der den Inhalt eines anderen `location` Objekts zu.
 
-```
+```cpp
 location& operator= (const location& _Rhs);
 ```
 
@@ -164,23 +164,23 @@ Das `location`-Quellobjekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-##  <a name="operator_eq_eq"></a> Operator ==
+## <a name="operator_eq_eq"></a>Operator = =
 
-Bestimmt, ob zwei `location` Objekte darstellen, am gleichen Speicherort.
+Bestimmt, ob zwei `location`-Objekte denselben Speicherort darstellen.
 
-```
+```cpp
 bool operator== (const location& _Rhs) const;
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_Rhs*<br/>
-Operand `location`.
+Operand-`location`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** Wenn es sich bei die beiden Standorten identisch sind und **"false"** andernfalls.
+**true** , wenn die beiden Speicherorte identisch sind, andernfalls **false** .
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)

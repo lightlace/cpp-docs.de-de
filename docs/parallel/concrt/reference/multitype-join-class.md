@@ -17,20 +17,20 @@ f1_keywords:
 helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-ms.openlocfilehash: 7a0c68c2c017eedfa23548bee1d17177e8eaaa1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4214c43fa0d0ab8fdd29ed54738c19f72a07267a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409942"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138952"
 ---
-# <a name="multitypejoin-class"></a>multitype_join-Klasse
+# <a name="multitype_join-class"></a>multitype_join-Klasse
 
 Ein `multitype_join`-Meldungsblock ist ein Block mit mehreren Quellen und einem einzelnen Ziel, der Meldungen verschiedener Typen aus allen Quellen kombiniert und dem Ziel ein Tupel der kombinierten Meldungen bereitstellt.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 template<
     typename T,
     join_type _Jtype = non_greedy
@@ -38,46 +38,46 @@ template<
 class multitype_join: public ISource<typename _Unwrap<T>::type>;
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
 *T*<br/>
-Die `tuple` Typ der Ereignisnutzlast der Nachrichten hinzugefügt und vom Block weitergegeben.
+Der `tuple` Nutz Lasttyp der Nachrichten, die dem-Block hinzugefügt und weitergegeben werden.
 
 *_Jtype*<br/>
-Die Art der `join` Blocks, entweder `greedy` oder `non_greedy`
+Die Art der `join` blockieren, ist entweder `greedy` oder `non_greedy`
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |`type`|Ein Typalias für `T`.|
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[multitype_join](#ctor)|Überladen. Erstellt einen `multitype_join` -Meldungsblock.|
-|[~ Multitype_join-Destruktor](#dtor)|Zerstört die `multitype_join` Meldungsblock.|
+|[multitype_join](#ctor)|Ist überladen. Erstellt einen `multitype_join` -Meldungsblock.|
+|[~ multitype_join-Dekonstruktor](#dtor)|Zerstört den `multitype_join`-Messaging-Block.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[accept](#accept)|Akzeptiert eine Meldung, die von diesem angeboten wurde `multitype_join` Block übertragen des Besitzes an den Aufrufer.|
-|[acquire_ref](#acquire_ref)|Eine Verweisanzahl dazu `multitype_join` Meldungsblock, um löschen zu verhindern.|
-|[consume](#consume)|Nimmt eine Meldung, die zuvor von Angeboten die `multitype_join` -Meldungsblock und erfolgreich vom Ziel übertragen des Besitzes an den Aufrufer reserviert.|
-|[link_target](#link_target)|Verknüpft einen Zielblock mit diesem `multitype_join` Meldungsblock.|
-|[release](#release)|Gibt die nachrichtenreservierung einer vorherigen erfolgreichen frei.|
-|[release_ref](#release_ref)|Gibt einen Verweiszähler für diese `multiple_join` Meldungsblock.|
-|[reserve](#reserve)|Reserviert eine Meldung, die zuvor von diesem angebotenen `multitype_join` Meldungsblock.|
-|[unlink_target](#unlink_target)|Hebt die Verknüpfung mit einem Zielblock und dadurch `multitype_join` Meldungsblock.|
-|[unlink_targets](#unlink_targets)|Hebt die Verknüpfung alle Ziele aus diesem `multitype_join` Meldungsblock. (Überschreibt [ISource:: Unlink_targets](isource-class.md#unlink_targets).)|
+|[erst](#accept)|Akzeptiert eine Meldung, die von diesem `multitype_join` Block angeboten wurde, und überträgt den Besitz an den Aufrufer.|
+|[acquire_ref](#acquire_ref)|Erhält einen Verweis Zähler für diesen `multitype_join` Messaging Block, um das Löschen zu verhindern.|
+|[Nutzen](#consume)|Verarbeitet eine Meldung, die zuvor vom `multitype_join` Messaging-Block bereitgestellt und vom Ziel erfolgreich reserviert wurde, und überträgt den Besitz an den Aufrufer.|
+|[link_target](#link_target)|Verknüpft einen Zielblock mit diesem `multitype_join`-Messaging-Block.|
+|[release](#release)|Gibt eine vorherige erfolgreiche Nachrichten Reservierung frei.|
+|[release_ref](#release_ref)|Gibt einen Verweis Zähler für diesen `multiple_join` Messaging Block frei.|
+|[reserve](#reserve)|Reserviert eine Meldung, die zuvor von diesem `multitype_join`-Nachrichtenblock angeboten wurde.|
+|[unlink_target](#unlink_target)|Entfernt einen Zielblock von diesem `multitype_join`-Messaging-Block.|
+|[unlink_targets](#unlink_targets)|Entfernt die Verknüpfung aller Ziele von diesem `multitype_join`-Messaging-Block. (Überschreibt [ISource:: unlink_targets](isource-class.md#unlink_targets).)|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Weitere Informationen finden Sie unter [asynchrone Meldungsblöcke](../../../parallel/concrt/asynchronous-message-blocks.md).
+Weitere Informationen finden Sie unter [asynchrone Nachrichten Blöcke](../../../parallel/concrt/asynchronous-message-blocks.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -85,17 +85,17 @@ Weitere Informationen finden Sie unter [asynchrone Meldungsblöcke](../../../par
 
 `multitype_join`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Header:** agents.h
 
 **Namespace:** Parallelität
 
-##  <a name="accept"></a> Akzeptieren
+## <a name="accept"></a>erst
 
-Akzeptiert eine Meldung, die von diesem angeboten wurde `multitype_join` Block übertragen des Besitzes an den Aufrufer.
+Akzeptiert eine Meldung, die von diesem `multitype_join` Block angeboten wurde, und überträgt den Besitz an den Aufrufer.
 
-```
+```cpp
 virtual message<_Destination_type>* accept(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<_Destination_type>* _PTarget);
@@ -104,37 +104,37 @@ virtual message<_Destination_type>* accept(
 ### <a name="parameters"></a>Parameter
 
 *_MsgId*<br/>
-Die `runtime_object_identity` von den angebotenen `message` Objekt.
+Die `runtime_object_identity` des angebotenen `message` Objekts.
 
 *_PTarget*<br/>
-Ein Zeiger auf den Zielblock, der aufgerufen wird, wird die `accept` Methode.
+Ein Zeiger auf den Zielblock, der die `accept` Methode aufrufen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die Meldung, der der Aufrufer jetzt besitzt.
+Ein Zeiger auf die Nachricht, für die der Aufrufer nun den Besitz hat.
 
-##  <a name="acquire_ref"></a> acquire_ref
+## <a name="acquire_ref"></a>acquire_ref
 
-Eine Verweisanzahl dazu `multitype_join` Meldungsblock, um löschen zu verhindern.
+Erhält einen Verweis Zähler für diesen `multitype_join` Messaging Block, um das Löschen zu verhindern.
 
-```
+```cpp
 virtual void acquire_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_PTarget*<br/>
-Ein Zeiger auf den Zielblock, der diese Methode aufruft.
+Ein Zeiger auf den Zielblock, der diese Methode aufgerufen hat.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Diese Methode wird aufgerufen, indem ein `ITarget` -Objekt, das mit der Quelle während der zu verknüpfenden der `link_target` Methode.
+Diese Methode wird von einem `ITarget` Objekt aufgerufen, das während der `link_target` Methode mit dieser Quelle verknüpft wird.
 
-##  <a name="consume"></a> Nutzen
+## <a name="consume"></a>Verzehr
 
-Nimmt eine Meldung, die zuvor von Angeboten die `multitype_join` -Meldungsblock und erfolgreich vom Ziel übertragen des Besitzes an den Aufrufer reserviert.
+Verarbeitet eine Meldung, die zuvor vom `multitype_join` Messaging-Block bereitgestellt und vom Ziel erfolgreich reserviert wurde, und überträgt den Besitz an den Aufrufer.
 
-```
+```cpp
 virtual message<_Destination_type>* consume(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<_Destination_type>* _PTarget);
@@ -143,37 +143,37 @@ virtual message<_Destination_type>* consume(
 ### <a name="parameters"></a>Parameter
 
 *_MsgId*<br/>
-Die `runtime_object_identity` des reservierten `message` Objekt.
+Die `runtime_object_identity` des reservierten `message` Objekts.
 
 *_PTarget*<br/>
-Ein Zeiger auf den Zielblock, der aufgerufen wird, wird die `consume` Methode.
+Ein Zeiger auf den Zielblock, der die `consume` Methode aufrufen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die `message` Objekt, mit der Aufrufer jetzt besitzt.
+Ein Zeiger auf das `message` Objekt, für das der Aufrufer nun den Besitz hat.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Die `consume` -Methode ist vergleichbar mit `accept`, jedoch immer durch einen Aufruf von vorangestellt werden muss `reserve` zurückgegebenen **"true"**.
+Die `consume`-Methode ähnelt `accept`, aber muss immer ein `reserve` aufgerufen werden, der " **true**" zurückgegeben hat.
 
-##  <a name="link_target"></a> link_target
+## <a name="link_target"></a>link_target
 
-Verknüpft einen Zielblock mit diesem `multitype_join` Meldungsblock.
+Verknüpft einen Zielblock mit diesem `multitype_join`-Messaging-Block.
 
-```
+```cpp
 virtual void link_target(_Inout_ ITarget<_Destination_type>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_PTarget*<br/>
-Ein Zeiger auf ein `ITarget` Block, um Sie zu diesem link `multitype_join` Meldungsblock.
+Ein Zeiger auf einen `ITarget` Block, der mit diesem `multitype_join` Messaging Block verknüpft werden soll.
 
-##  <a name="ctor"></a> multitype_join
+## <a name="ctor"></a>multitype_join
 
 Erstellt einen `multitype_join` -Meldungsblock.
 
-```
+```cpp
 explicit multitype_join(
     T _Tuple);
 
@@ -203,25 +203,25 @@ Das `ScheduleGroup` -Objekt, in dem die Weiterleitungsaufgabe für den `multityp
 *_Join*<br/>
 Ein `multitype_join` -Meldungsblock, aus dem kopiert werden soll. Beachten Sie, dass das ursprüngliche Objekt verwaist ist, sodass dies ein Bewegungskonstruktor ist.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Die Runtime verwendet das Standardplanungsprogramm, wenn Sie den `_PScheduler` -Parameter oder den `_PScheduleGroup` -Parameter nicht angeben.
 
 Bewegungskonstruktion wird bei einer aktiven Sperre nicht ausgeführt, d. h., der Benutzer muss sicherstellen, dass zum Zeitpunkt der Bewegung keine einfachen Aufgaben aktiv sind. Andernfalls können zahlreiche Wettläufe auftreten, wodurch Ausnahmen oder inkonsistente Zuständen verursacht werden.
 
-##  <a name="dtor"></a> ~multitype_join
+## <a name="dtor"></a>~ multitype_join
 
-Zerstört die `multitype_join` Meldungsblock.
+Zerstört den `multitype_join`-Messaging-Block.
 
-```
+```cpp
 ~multitype_join();
 ```
 
-##  <a name="release"></a> Version
+## <a name="release"></a>Abgabe
 
-Gibt die nachrichtenreservierung einer vorherigen erfolgreichen frei.
+Gibt eine vorherige erfolgreiche Nachrichten Reservierung frei.
 
-```
+```cpp
 virtual void release(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<_Destination_type>* _PTarget);
@@ -230,33 +230,33 @@ virtual void release(
 ### <a name="parameters"></a>Parameter
 
 *_MsgId*<br/>
-Die `runtime_object_identity` von der `message` Objekt freigegeben wird.
+Die `runtime_object_identity` des `message` Objekts, das freigegeben wird.
 
 *_PTarget*<br/>
-Ein Zeiger auf den Zielblock, der aufgerufen wird, wird die `release` Methode.
+Ein Zeiger auf den Zielblock, der die `release` Methode aufrufen.
 
-##  <a name="release_ref"></a> release_ref
+## <a name="release_ref"></a>release_ref
 
-Gibt einen Verweiszähler für diese `multiple_join` Meldungsblock.
+Gibt einen Verweis Zähler für diesen `multiple_join` Messaging Block frei.
 
-```
+```cpp
 virtual void release_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_PTarget*<br/>
-Ein Zeiger auf den Zielblock, der diese Methode aufruft.
+Ein Zeiger auf den Zielblock, der diese Methode aufgerufen hat.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Diese Methode wird aufgerufen, indem ein `ITarget` -Objekt, das von dieser Quelle aufgehoben wird, ist. Der Quellblock darf für den Zielblock reservierten Ressourcen freizugeben.
+Diese Methode wird von einem `ITarget` Objekt aufgerufen, das von dieser Quelle entfernt wird. Der Quell Block darf alle für den Zielblock reservierten Ressourcen freigeben.
 
-##  <a name="reserve"></a> Hostreserven
+## <a name="reserve"></a>Schutz
 
-Reserviert eine Meldung, die zuvor von diesem angebotenen `multitype_join` Meldungsblock.
+Reserviert eine Meldung, die zuvor von diesem `multitype_join`-Nachrichtenblock angeboten wurde.
 
-```
+```cpp
 virtual bool reserve(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<_Destination_type>* _PTarget);
@@ -265,41 +265,41 @@ virtual bool reserve(
 ### <a name="parameters"></a>Parameter
 
 *_MsgId*<br/>
-Die `runtime_object_identity` von der `message` Objekt reserviert wird.
+Die `runtime_object_identity` des reservierten `message` Objekts.
 
 *_PTarget*<br/>
-Ein Zeiger auf den Zielblock, der aufgerufen wird, wird die `reserve` Methode.
+Ein Zeiger auf den Zielblock, der die `reserve` Methode aufrufen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn die Nachricht erfolgreich reserviert wurde, `false` andernfalls. Reservierungen können für viele Gründe, z. B. Fehler auftreten: die Nachricht wurde bereits reserviert oder von einem anderen Ziel akzeptiert wird, kann die Quelle Reservierungen verweigern und so weiter.
+`true`, wenn die Nachricht erfolgreich reserviert wurde, andernfalls `false`. Reservierungen können aus vielen Gründen fehlschlagen, z.b.: die Nachricht wurde bereits von einem anderen Ziel reserviert oder akzeptiert, die Quelle könnte Reservierungen ablehnen usw.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Nach dem Aufruf von `reserve`, wenn dies gelingt, müssen Sie entweder Aufrufen `consume` oder `release` zum Erstellen oder den Besitz der Nachricht bzw. aufgeben.
+Nachdem Sie `reserve`aufgerufen haben, müssen Sie bei erfolgreicher Ausführung entweder `consume` oder `release` abrufen, um die Nachricht bzw. den Besitz der Nachricht zu übernehmen.
 
-##  <a name="unlink_target"></a> unlink_target
+## <a name="unlink_target"></a>unlink_target
 
-Hebt die Verknüpfung mit einem Zielblock und dadurch `multitype_join` Meldungsblock.
+Entfernt einen Zielblock von diesem `multitype_join`-Messaging-Block.
 
-```
+```cpp
 virtual void unlink_target(_Inout_ ITarget<_Destination_type>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_PTarget*<br/>
-Ein Zeiger auf ein `ITarget` Block, um diese aufheben `multitype_join` Meldungsblock.
+Ein Zeiger auf einen `ITarget` Block, um die Verknüpfung mit diesem `multitype_join` Messaging Block aufzulösen.
 
-##  <a name="unlink_targets"></a> unlink_targets
+## <a name="unlink_targets"></a>unlink_targets
 
-Hebt die Verknüpfung alle Ziele aus diesem `multitype_join` Meldungsblock.
+Entfernt die Verknüpfung aller Ziele von diesem `multitype_join`-Messaging-Block.
 
-```
+```cpp
 virtual void unlink_targets();
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [choice-Klasse](choice-class.md)<br/>

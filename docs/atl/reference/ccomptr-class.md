@@ -1,6 +1,7 @@
 ---
 title: CComPtr-Klasse
-ms.date: 11/04/2016
+description: Referenzhandbuch für die Microsoft C++ Active Template Library (ATL)-Klasse "CComPtr".
+ms.date: 02/07/2020
 f1_keywords:
 - CComPtr
 - ATLBASE/ATL::CComPtr
@@ -8,54 +9,54 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtr class
 ms.assetid: 22d9ea8d-ed66-4c34-940f-141db11e83bd
-ms.openlocfilehash: 5e3e510291daa50ddcf5d63451edef0428d66ed1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74a12b460f55a782fa2747b02f7d00287786fae6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259104"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127404"
 ---
 # <a name="ccomptr-class"></a>CComPtr-Klasse
 
-Eine intelligente Zeiger-Klasse für die Verwaltung von COM-Schnittstellenzeiger.
+Eine intelligente Zeiger Klasse zum Verwalten von COM-Schnittstellen Zeigern.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 template<class T>
 class CComPtr
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
 *T*<br/>
-Eine COM-Schnittstelle, die den Typ des Zeigers gespeichert werden.
+Eine COM-Schnittstelle, die den Typ des zu speichernden Zeigers angibt.
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[CComPtr::CComPtr](#ccomptr)|Der Konstruktor.|
+|[CComPtr:: CComPtr](#ccomptr)|Der Konstruktor.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[CComPtr::operator =](#operator_eq)|Weist einen Zeiger auf den Member-Zeiger.|
+|[CComPtr:: Operator =](#operator_eq)|Weist einen Zeiger auf den Member-Zeiger zu.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-ATL verwendet `CComPtr` und [CComQIPtr](../../atl/reference/ccomqiptr-class.md) zum Verwalten von COM-Schnittstellenzeiger. Beide basieren auf [CComPtrBase](../../atl/reference/ccomptrbase-class.md), und führen Sie sowohl automatische verweiszählung.
+ATL verwendet `CComPtr` und [CComQIPtr](../../atl/reference/ccomqiptr-class.md) zum Verwalten von COM-Schnittstellen Zeigern. Beide werden von [CComPtrBase](../../atl/reference/ccomptrbase-class.md)abgeleitet, und beide führen eine automatische Verweis Zählung aus.
 
-Die `CComPtr` und [CComQIPtr](../../atl/reference/ccomqiptr-class.md) Klassen können helfen, Speicherverluste zu vermeiden, indem Sie Ausführung automatische verweiszählung.  Die folgenden Funktionen ausführen, die gleichen logischen Vorgängen; Beachten Sie jedoch, wie die zweite Version weniger fehleranfällige mit möglicherweise die `CComPtr` Klasse:
+Die Klassen `CComPtr` und [CComQIPtr](../../atl/reference/ccomqiptr-class.md) können dabei helfen, Speicher Verluste durch die automatische Verweis Zählung zu vermeiden.  Die folgenden Funktionen führen beide dieselben logischen Vorgänge aus. Die zweite Version kann jedoch weniger fehleranfällig sein, da Sie die `CComPtr`-Klasse verwendet:
 
 [!code-cpp[NVC_ATL_Utilities#130](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]
 
 [!code-cpp[NVC_ATL_Utilities#131](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]
 
-Verknüpfen Sie in Debugbuilds atlsd.lib für die codeablaufverfolgung ein.
+Verknüpfen Sie atlsd. lib in Debugbuilds mit der Code Ablauf Verfolgung.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -63,15 +64,15 @@ Verknüpfen Sie in Debugbuilds atlsd.lib für die codeablaufverfolgung ein.
 
 `CComPtr`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** atlbase.h
+**Header:** atlbase. h
 
-##  <a name="ccomptr"></a>  CComPtr::CComPtr
+## <a name="ccomptr"></a>CComPtr:: CComPtr
 
 Der Konstruktor.
 
-```
+```cpp
 CComPtr() throw ();
 CComPtr(T* lp) throw ();
 CComPtr (const CComPtr<T>& lp) throw ();
@@ -79,31 +80,35 @@ CComPtr (const CComPtr<T>& lp) throw ();
 
 ### <a name="parameters"></a>Parameter
 
-*lp*<br/>
-Wird verwendet, um den Schnittstellenzeiger zu initialisieren.
+*LP*<br/>
+Wird verwendet, um den Schnittstellen Zeiger zu initialisieren.
 
 *T*<br/>
 Eine COM-Schnittstelle.
 
-##  <a name="operator_eq"></a>  CComPtr::operator =
+### <a name="remarks"></a>Bemerkungen
+
+Die Konstruktoren, die einen Argument Aufrufe übernehmen, `AddRef` auf *LP*, wenn es kein NULL-Zeiger ist. Ein Objekt, das nicht NULL ist, erhält einen `Release` aufzurufenden CComPtr-Objekts oder, wenn dem CComPtr-Objekt ein neues Objekt zugewiesen wird.
+
+## <a name="operator_eq"></a>CComPtr:: Operator =
 
 Zuweisungsoperator.
 
-```
+```cpp
 T* operator= (T* lp) throw ();
 T* operator= (const CComPtr<T>& lp) throw ();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf die aktualisierte `CComPtr` Objekt
+Gibt einen Zeiger auf das aktualisierte `CComPtr` Objekt zurück.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Dieser Vorgang AddRefs das neue Objekt und Versionen, die im vorhandene Objekt, wenn eine vorhanden ist.
+Dieser Vorgang adressiert das neue-Objekt und gibt ggf. das vorhandene-Objekt frei.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[CComPtr::CComPtr](#ccomptr)<br/>
-[CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)<br/>
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)
+[CComPtr:: CComPtr](#ccomptr)<br/>
+[CComQIPtr:: CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)<br/>
+[Klassen Übersicht](../../atl/atl-class-overview.md)

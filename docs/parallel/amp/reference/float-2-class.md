@@ -28,83 +28,83 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_2::y
 - amp_short_vectors/Concurrency::graphics::float_2::g
 ms.assetid: b3ebd48e-f8c8-4f00-a640-357f702f0cae
-ms.openlocfilehash: 94a0936c1e5630ae53af9d9386d3c9248061ed71
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af5116118c9821f5c1801789bff13f3de8d4026a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180270"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126655"
 ---
-# <a name="float2-class"></a>float_2-Klasse
+# <a name="float_2-class"></a>float_2-Klasse
 
 Stellt einen kurzen Vektor aus zwei Gleitkommazahlen dar.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class float_2;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[float_2-Konstruktor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
+|[float_2-Konstruktor](#ctor)|Ist überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
 |float_2::get_x||
 |float_2::get_xy||
-|float_2::get_y||
+|float_2:: get_Y||
 |float_2::get_yx||
 |float_2::ref_g||
 |float_2::ref_r||
 |float_2::ref_x||
 |float_2::ref_y||
-|float_2::set_x||
+|float_2:: set_X||
 |float_2::set_xy||
-|float_2::set_y||
+|float_2:: set_Y||
 |float_2::set_yx||
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|float_2::operator-||
-|float_2::operator--||
-|float_2::operator*=||
-|float_2::operator/=||
+|float_2:: Operator-||
+|float_2:: Operator--||
+|float_2:: Operator * =||
+|float_2:: Operator/=||
 |float_2::operator++||
 |float_2::operator+=||
 |float_2::operator=||
-|float_2::operator-=||
+|float_2:: Operator-=||
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Size-Konstante](#float_2__size)||
+|[Größen Konstante](#float_2__size)||
 
-### <a name="public-data-members"></a>Öffentliche Datenmember
+### <a name="public-data-members"></a>Öffentliche Datenelemente
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|float_2::g||
+|float_2:: g||
 |float_2::gr||
-|float_2::r||
-|float_2::rg||
+|float_2:: r||
+|float_2:: RG||
 |float_2:: x||
-|float_2::xy||
+|float_2:: XY||
 |float_2:: y||
 |float_2::yx||
 
@@ -112,17 +112,17 @@ class float_2;
 
 `float_2`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** amp_short_vectors.h
+**Header:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Parallelität:: Grafiken
 
-##  <a name="ctor"></a> float_2
+## <a name="ctor"></a>float_2
 
 Standardkonstruktor, initialisiert alle Elemente mit 0.
 
-```
+```cpp
 float_2() restrict(amp,
     cpu);
 
@@ -163,23 +163,23 @@ explicit inline float_2(
 ### <a name="parameters"></a>Parameter
 
 *_V0*<br/>
-Der Wert, der 0-Element zu initialisieren.
+Der Wert, mit dem Element 0 initialisiert werden soll.
 
 *_V1*<br/>
-Der Wert 1 Element initialisiert werden.
+Der Wert, mit dem Element 1 initialisiert werden soll.
 
 *_V*<br/>
 Der Wert für die Initialisierung.
 
 *_Other*<br/>
-Das Objekt, das zum Initialisieren verwendet.
+Das-Objekt, das zum Initialisieren von verwendet wird.
 
-##  <a name="float_2__size"></a> Größe
+## <a name="float_2__size"></a>Größe
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

@@ -103,7 +103,7 @@
               href: build-requirements-for-windows-vista-common-controls.md
             - name: Veraltete ANSI-APIs
               href: deprecated-ansi-apis.md
-        - name: 'Gewusst wie: Hinzufügen von Unterstützung für den Neustart-Manager'
+        - name: 'Vorgehensweise: Hinzufügen von Unterstützung für den Neustart-Manager'
           href: how-to-add-restart-manager-support.md
         - name: Dynamisches Layout
           href: dynamic-layout.md
@@ -429,16 +429,7 @@
             - name: 'Datenobjekte und Datenquellen: Bearbeitung'
               href: data-objects-and-data-sources-manipulation.md
         - name: Drag & Drop (OLE)
-          expanded: false
-          items:
-            - name: Drag & Drop (OLE)
-              href: drag-and-drop-ole.md
-            - name: 'Drag & Drop: Implementieren einer Drag & Drop-Quelle'
-              href: drag-and-drop-implementing-a-drop-source.md
-            - name: 'Drag & Drop: Implementieren eines Drag & Drop-Ziels'
-              href: drag-and-drop-implementing-a-drop-target.md
-            - name: 'Drag & Drop: Anpassen'
-              href: drag-and-drop-customizing.md
+          href: drag-and-drop-ole.md
         - name: Menüs und Ressourcen (OLE)
           expanded: false
           items:
@@ -2774,7 +2765,7 @@
               href: reference/message-map-macros-mfc.md
             - name: Zuordnungsmakros von Delegaten und Schnittstellen
               href: reference/delegate-and-interface-maps.md
-            - name: 'Gewusst wie: Verwenden des Querverweises zur Meldungszuordnung'
+            - name: 'Vorgehensweise: Verwenden des Querverweises zur Meldungszuordnung'
               href: reference/how-to-use-the-message-map-cross-reference.md
             - name: Meldungshandler für Benachrichtigungen von untergeordneten Fenstern
               href: reference/child-window-notification-message-handlers.md

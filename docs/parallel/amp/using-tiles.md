@@ -2,12 +2,12 @@
 title: Verwenden von Kacheln
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: 6c935134e033d12fc140c8d377ef59d0b47265fc
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: e5cedde255846f61ed0aaadacbd9966c00a03c9d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518256"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126265"
 ---
 # <a name="using-tiles"></a>Verwenden von Kacheln
 
@@ -15,7 +15,7 @@ Sie können Kacheln verwenden, um die Beschleunigung der App zu maximieren. Beim
 
 - `tile_static`-Variablen. Der wichtigste Vorteil des Kachelns liegt in der Leistungssteigerung durch den `tile_static`-Zugriff. Zugriff auf Daten im `tile_static`-Arbeitsspeicher kann erheblich schneller sein als ein Zugriff auf Daten im globalen Namensbereich (`array`-Objekte oder `array_view`-Objekte). Eine Instanz einer `tile_static`-Variable wird für jeden Tile erstellt, und alle Threads in den Tile haben Zugriff auf die Variable. In einem typischen Kachelalgorithmus werden Daten einmalig vom globalen Speicher in den `tile_static`-Speicher kopiert und darauf dann mehrfach vom `tile_static`-Speicher zugegriffen.
 
-- [tile_barrier:: Wait-Methode](reference/tile-barrier-class.md#wait). Ein Aufruf von `tile_barrier::wait` hält die Ausführung des aktuellen Threads an, bis alle Threads in derselben Kachel den Aufruf `tile_barrier::wait` erhalten. Sie können die Reihenfolge der Ausführung der Threads nicht sicherstellen, nur das keine Threads in der Kachel nach dem Aufruf `tile_barrier::wait` weiter ausgeführt werden, bis alle Threads den Aufruf erhalten haben. Dies bedeutet, dass durch die Verwendung der `tile_barrier::wait`-Methode die Möglichkeit entsteht, Aufgaben statt threadbezogen kachelbasiert durchzuführen. Ein typischer unterteilender Algorithmus verfügt über Code zum Initialisieren des `tile_static`-Speichers für die gesamte Kachel, gefolgt von einem Aufruf von `tile_barrer::wait`. Nach `tile_barrier::wait` folgender Code enthält Berechnungen, die Zugriff auf alle `tile_static`-Werte benötigen.
+- [tile_barrier:: Wait-Methode](reference/tile-barrier-class.md#wait). Ein Aufruf von `tile_barrier::wait` hält die Ausführung des aktuellen Threads an, bis alle Threads in derselben Kachel den Aufruf `tile_barrier::wait` erhalten. Sie können die Reihenfolge der Ausführung der Threads nicht sicherstellen, nur das keine Threads in der Kachel nach dem Aufruf `tile_barrier::wait` weiter ausgeführt werden, bis alle Threads den Aufruf erhalten haben. Dies bedeutet, dass durch die Verwendung der `tile_barrier::wait`-Methode die Möglichkeit entsteht, Aufgaben statt threadbezogen kachelbasiert durchzuführen. Ein typischer unterteilender Algorithmus verfügt über Code zum Initialisieren des `tile_static`-Speichers für die gesamte Kachel, gefolgt von einem Aufruf von `tile_barrier::wait`. Nach `tile_barrier::wait` folgender Code enthält Berechnungen, die Zugriff auf alle `tile_static`-Werte benötigen.
 
 - Lokale und globale Indizierung. Sie haben Zugriff auf den Index des Threads, relativ zum vollständigen `array_view`-Objekt oder das `array`-Objekt und dem Index relativ zur Kachel. Das Verwenden des lokalen Index kann den Code besser lesbar machen und einfacher zu debuggen. Üblicherweise verwenden Sie lokale Indizierung zum Zugreifen auf die `tile_static`-Variablen und globale Indizierung für den Zugriff auf `array`-Variablen und `array_view`-Variablen.
 
@@ -234,7 +234,7 @@ void SamplingExample() {
         }
         std::cout << "\n";
     }
-    // Output for SAMPLESSIZE = 2 is:
+    // Output for SAMPLESIZE = 2 is:
     //  4.5  6.5  8.5 10.5
     // 20.5 22.5 24.5 26.5
     // 36.5 38.5 40.5 42.5
@@ -329,7 +329,7 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
 });
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [tile_static-Schlüsselwort](../../cpp/tile-static-keyword.md)

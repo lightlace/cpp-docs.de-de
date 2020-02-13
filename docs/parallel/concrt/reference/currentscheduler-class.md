@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-ms.openlocfilehash: a27ec7c25962b6addd26e61af8f33130d4c653ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6bf61af9ff55722553353a045c87501dbd27fad9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296152"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143075"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler-Klasse
 
@@ -30,69 +30,69 @@ Stellt eine Abstraktion für den aktuellen Planer dar, der dem aufrufenden Konte
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 class CurrentScheduler;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |----------|-----------------|
-|[Erstellen](#create)|Erstellt einen neuen Planer, deren Verhalten, durch beschrieben wird, die `_Policy` Parameter und an den aufrufenden Kontext angefügt wurde. Der neu erstellte Planer werden für den aktuellen Scheduler für den aufrufenden Kontext.|
-|[CreateScheduleGroup](#createschedulegroup)|Überladen. Erstellt eine neue Planungsgruppe innerhalb des Planers, der dem aufrufenden Kontext zugeordnet. Die Version, die den Parameter akzeptiert `_Placement` bewirkt, dass Aufgaben innerhalb der Gruppe neu erstellten Zeitpläne Blockcontainer ausführen an der Position, die durch diesen Parameter angegeben werden.|
-|[Trennen](#detach)|Trennt den aktuellen Planer aus dem aufrufenden Kontext und stellt den zuvor angefügten Planer als aktuellen Planer, wieder her, sofern vorhanden. Nach der Rückgabe dieser Methode wird im aufrufende Kontext dann vom Planer, der an den Kontext, der entweder bereits vorher angefügt wurde verwaltet die `CurrentScheduler::Create` oder `Scheduler::Attach` Methode.|
-|[Get](#get)|Gibt einen Zeiger auf den Planer im aufrufenden Kontext, auch bezeichnet als aktuellen Planer zugeordnet.|
-|[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Gibt die aktuelle Anzahl virtueller Prozessoren für den Planer, der dem aufrufenden Kontext zugeordnet.|
-|[GetPolicy](#getpolicy)|Gibt eine Kopie der Richtlinie, der mit der aktuelle Planer erstellt wurde.|
-|[Id](#id)|Gibt einen eindeutigen Bezeichner für den aktuellen Planer zurück.|
-|[IsAvailableLocation](#isavailablelocation)|Bestimmt, ob eine angegebene Position auf dem aktuellen Planer verfügbar ist.|
-|[RegisterShutdownEvent](#registershutdownevent)|Bewirkt, dass das Windows-Ereignishandle zu, in übergeben der `_ShutdownEvent` -Parameter signalisiert wird, wenn der Planer dem aktuellen Kontext zugeordnet heruntergefahren wird, und zerstört. Zu dem Zeitpunkt, der das Ereignis signalisiert wird, ist die gesamte Arbeit, die auf den Planer geplant wurde abgeschlossen. Mehrere Herunterfahrereignisse können mit dieser Methode registriert werden.|
-|[ScheduleTask](#scheduletask)|Überladen. Plant eine einfache Aufgabe innerhalb des Planers, der dem aufrufenden Kontext zugeordnet. Die einfache Aufgabe wird in einer Planungsgruppe aus, die durch die Laufzeit bestimmt platziert werden. Die Version, die den Parameter akzeptiert `_Placement` bewirkt, dass der Task ausgeführt wird, an der angegebenen Position für Blockcontainer werden.|
+|[Erstellen](#create)|Erstellt einen neuen Scheduler, dessen Verhalten durch den `_Policy`-Parameter beschrieben und an den aufrufenden Kontext angefügt wird. Der neu erstellte Scheduler wird zum aktuellen Planer für den aufrufenden Kontext.|
+|[CreateScheduleGroup](#createschedulegroup)|Ist überladen. Erstellt eine neue Zeit Plan Gruppe innerhalb des Planers, der dem aufrufenden Kontext zugeordnet ist. Die Version, die den-Parameter annimmt `_Placement` bewirkt, dass Tasks innerhalb der neu erstellten Zeit Plan Gruppe für die Ausführung an der durch diesen Parameter angegebenen Position verzerrt werden.|
+|[Trennen](#detach)|Trennt den aktuellen Scheduler vom aufrufenden Kontext und stellt den zuvor angefügten Planer als aktuellen Scheduler wieder her, falls vorhanden. Nachdem diese Methode zurückgegeben wurde, wird der aufrufenden Kontext vom Scheduler verwaltet, der zuvor mit der `CurrentScheduler::Create`-oder `Scheduler::Attach`-Methode an den Kontext angefügt wurde.|
+|[Get](#get)|Gibt einen Zeiger auf den Scheduler zurück, der dem aufrufenden Kontext zugeordnet ist, auch als aktueller Planer bezeichnet.|
+|[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Gibt die aktuelle Anzahl virtueller Prozessoren für den Scheduler zurück, der dem aufrufenden Kontext zugeordnet ist.|
+|[GetPolicy](#getpolicy)|Gibt eine Kopie der Richtlinie zurück, mit der der aktuelle Scheduler erstellt wurde.|
+|[Id](#id)|Gibt einen eindeutigen Bezeichner für den aktuellen Scheduler zurück.|
+|[IsAvailableLocation](#isavailablelocation)|Bestimmt, ob ein angegebener Speicherort im aktuellen Scheduler verfügbar ist.|
+|[RegisterShutdownEvent](#registershutdownevent)|Bewirkt, dass das an den `_ShutdownEvent`-Parameter übergebenen Windows-Ereignis Handle signalisiert wird, wenn der dem aktuellen Kontext zugeordnete Scheduler heruntergefahren und selbst zerstört wird. Zum Zeitpunkt der Signalisierung des Ereignisses ist die gesamte Arbeit, die für den Scheduler geplant war, abgeschlossen. Mehrere Shutdown-Ereignisse können über diese Methode registriert werden.|
+|[ScheduleTask](#scheduletask)|Ist überladen. Plant eine leichte Aufgabe innerhalb des Planers, der dem aufrufenden Kontext zugeordnet ist. Die leichte Aufgabe wird in einer Zeit Plan Gruppe platziert, die von der Laufzeit bestimmt wird. Die Version, die den-Parameter annimmt `_Placement` bewirkt, dass die Aufgabe an der angegebenen Position für die Ausführung verzerrt wird.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Wenn kein Planer (finden Sie unter [Scheduler](scheduler-class.md)) verknüpft ist, mit dem aufrufenden Kontext, viele Methoden innerhalb der `CurrentScheduler` Klasse führt in der Anlage der Standardplaner des Prozesses. Dies bedeutet möglicherweise auch, dass bei solch einem Aufruf der Standardplaner des Prozesses erstellt wird.
+Wenn kein Planer (siehe [Scheduler](scheduler-class.md)) vorhanden ist, der dem aufrufenden Kontext zugeordnet ist, führen viele Methoden in der `CurrentScheduler` Klasse zu einer Anlage des Standard Planers des Prozesses. Dies kann auch bedeuten, dass der Standard Planer des Prozesses während eines solchen Aufrufes erstellt wird.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 `CurrentScheduler`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Header:** concrt.h
+**Header:** ConcRT. h
 
 **Namespace:** Parallelität
 
-##  <a name="create"></a> Erstellen
+## <a name="create"></a> Create
 
-Erstellt einen neuen Planer, deren Verhalten, durch beschrieben wird, die `_Policy` Parameter und an den aufrufenden Kontext angefügt wurde. Der neu erstellte Planer werden für den aktuellen Scheduler für den aufrufenden Kontext.
+Erstellt einen neuen Scheduler, dessen Verhalten durch den `_Policy`-Parameter beschrieben und an den aufrufenden Kontext angefügt wird. Der neu erstellte Scheduler wird zum aktuellen Planer für den aufrufenden Kontext.
 
-```
+```cpp
 static void __cdecl Create(const SchedulerPolicy& _Policy);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_Policy*<br/>
-Die Scheduler-Richtlinie, die das Verhalten des neu erstellten Zeitplanungsmoduls beschrieben wird.
+Die Scheduler-Richtlinie, die das Verhalten des neu erstellten Schedulers beschreibt.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Die Anlage des Zeitplanungsmoduls an den aufrufenden Kontext platziert einen Verweiszähler implizit auf den Planer.
+Die Anlage des Schedulers an den aufrufenden Kontext fügt implizit einen Verweis Zähler für den Planer ein.
 
-Nach Erstellung ein Planers mit der `Create` -Methode, die Sie aufrufen müssen die [CurrentScheduler:: Detach](#detach) Methode an einem bestimmten Punkt in der Zukunft, damit der Planer beendet werden kann.
+Nachdem ein Scheduler mit der `Create`-Methode erstellt wurde, müssen Sie zu einem beliebigen Zeitpunkt in der Zukunft die [CurrentScheduler::D Etach](#detach) -Methode abrufen, damit das Scheduler heruntergefahren werden kann.
 
-Wenn diese Methode aus einem Kontext aufgerufen wird, die bereits an einen anderen Planer angefügt ist, wird der vorhandene Scheduler als den vorherigen Planer gespeichert, und das neu erstellte Zeitplanungsmodul wird als aktueller Planer. Beim Aufrufen der `CurrentScheduler::Detach` Methode zu einem späteren Zeitpunkt, den vorherigen Planer als aktuellen Planer wiederhergestellt wird.
+Wenn diese Methode von einem Kontext aufgerufen wird, der bereits an einen anderen Planer angefügt ist, wird der vorhandene Planer als vorheriger Planer gespeichert, und der neu erstellte Scheduler wird zum aktuellen Scheduler. Wenn Sie die `CurrentScheduler::Detach`-Methode zu einem späteren Zeitpunkt aufzurufen, wird der vorherige Scheduler als aktueller Planer wieder hergestellt.
 
-Diese Methode kann eine Vielzahl von Ausnahmen, einschließlich auslösen [Scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md) und [Invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md).
+Diese Methode kann eine Vielzahl von Ausnahmen auslösen, einschließlich [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md) und [Invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md).
 
-##  <a name="createschedulegroup"></a> CreateScheduleGroup
+## <a name="createschedulegroup"></a>CreateScheduleGroup
 
-Erstellt eine neue Planungsgruppe innerhalb des Planers, der dem aufrufenden Kontext zugeordnet. Die Version, die den Parameter akzeptiert `_Placement` bewirkt, dass Aufgaben innerhalb der Gruppe neu erstellten Zeitpläne Blockcontainer ausführen an der Position, die durch diesen Parameter angegeben werden.
+Erstellt eine neue Zeit Plan Gruppe innerhalb des Planers, der dem aufrufenden Kontext zugeordnet ist. Die Version, die den-Parameter annimmt `_Placement` bewirkt, dass Tasks innerhalb der neu erstellten Zeit Plan Gruppe für die Ausführung an der durch diesen Parameter angegebenen Position verzerrt werden.
 
-```
+```cpp
 static ScheduleGroup* __cdecl CreateScheduleGroup();
 
 static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
@@ -101,147 +101,147 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 ### <a name="parameters"></a>Parameter
 
 *_Placement*<br/>
-Ein Verweis auf einen Speicherort, in dem die Aufgaben innerhalb der Planungsgruppe für Blockcontainer werden werden auf ausführen.
+Ein Verweis auf einen Speicherort, an dem die Tasks innerhalb der Zeit Plan Gruppe für die Ausführung bei unberücksichtigt werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die neu erstellte Planungsgruppe. Dies `ScheduleGroup` Objekt verfügt über eine Initiale Verweisanzahl platziert.
+Ein Zeiger auf die neu erstellte Zeit Plan Gruppe. Für dieses `ScheduleGroup` Objekt wurde ein anfänglicher Verweis Zähler eingefügt.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Diese Methode führt dazu, dass der Standardplaner des Prozesses erstellt und/oder an den aufrufenden Kontext angefügt wird, wenn derzeit dem aufrufenden Kontext kein Planer zugeordnet ist.
 
-Rufen Sie die [Version](schedulegroup-class.md#release) Methode für eine Planungsgruppe, wenn Sie Planungsarbeit dafür haben. Der Planer zerstört den Zeitplan Gruppe, wenn die gesamte Arbeit für sie in der Warteschlange abgeschlossen wurde.
+Sie müssen die [releasemethode](schedulegroup-class.md#release) in einer Zeit Plan Gruppe aufrufen, wenn Sie mit der Planung der Arbeit daran gearbeitet haben. Der Scheduler zerstört die Zeit Plan Gruppe, wenn alle Arbeiten in der Warteschlange abgeschlossen wurden.
 
-Beachten Sie, dass wenn Sie explizit diesem Zeitplanungsmodul erstellt, Sie alle Verweise freigeben müssen Planungsgruppen, bevor Sie den Verweis auf den Planer, freigeben, indem trennen den aktuellen Kontext aus.
+Beachten Sie, dass Sie, wenn Sie diesen Planer explizit erstellt haben, alle Verweise auf Zeit Plan Gruppen freigeben müssen, bevor Sie den Verweis auf den Scheduler freigeben, indem Sie den aktuellen Kontext davon trennen.
 
-##  <a name="detach"></a> Trennen
+## <a name="detach"></a>Trennen
 
-Trennt den aktuellen Planer aus dem aufrufenden Kontext und stellt den zuvor angefügten Planer als aktuellen Planer, wieder her, sofern vorhanden. Nach der Rückgabe dieser Methode wird im aufrufende Kontext dann vom Planer, der an den Kontext, der entweder bereits vorher angefügt wurde verwaltet die `CurrentScheduler::Create` oder `Scheduler::Attach` Methode.
+Trennt den aktuellen Scheduler vom aufrufenden Kontext und stellt den zuvor angefügten Planer als aktuellen Scheduler wieder her, falls vorhanden. Nachdem diese Methode zurückgegeben wurde, wird der aufrufenden Kontext vom Scheduler verwaltet, der zuvor mit der `CurrentScheduler::Create`-oder `Scheduler::Attach`-Methode an den Kontext angefügt wurde.
 
-```
+```cpp
 static void __cdecl Detach();
 ```
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Die `Detach` Methode entfernt einen Verweiszähler implizit vom Planer.
+Die `Detach`-Methode entfernt implizit einen Verweis Zähler aus dem Scheduler.
 
-Wenn keine Planer an den aufrufenden Kontext angefügt ist, das Aufrufen dieser Methode führt zu einem [Scheduler_not_attached](scheduler-not-attached-class.md) ausgelöste Ausnahme.
+Wenn kein Scheduler an den aufrufenden Kontext angefügt ist, wird beim Aufrufen dieser Methode eine [scheduler_not_attached](scheduler-not-attached-class.md) Ausnahme ausgelöst.
 
-Interne und durch einen Zeitplan oder einen Kontext an, die angefügt wurde mithilfe einer anderen Methode als verwaltete ist Aufrufen dieser Methode aus einem Kontext, der die [Scheduler:: Attach](scheduler-class.md#attach) oder [CurrentScheduler:: Create](#create) -Methoden führt zu einer [Improper_scheduler_detach](improper-scheduler-detach-class.md) ausgelöste Ausnahme.
+Wenn Sie diese Methode aus einem Kontext aufrufen, der von einem Scheduler verwendet und verwaltet wird, oder einen Kontext, der mit einer anderen Methode als der [Scheduler:: Attach](scheduler-class.md#attach) -Methode oder der [CurrentScheduler:: Create](#create) -Methode angefügt wurde, wird eine [improper_scheduler_detach](improper-scheduler-detach-class.md) Ausnahme ausgelöst.
 
-##  <a name="get"></a> Erhalten
+## <a name="get"></a>Erhalten
 
-Gibt einen Zeiger auf den Planer im aufrufenden Kontext, auch bezeichnet als aktuellen Planer zugeordnet.
+Gibt einen Zeiger auf den Scheduler zurück, der dem aufrufenden Kontext zugeordnet ist, auch als aktueller Planer bezeichnet.
 
-```
+```cpp
 static Scheduler* __cdecl Get();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf den Planer im aufrufenden Kontext (aktueller Planer) zugeordnet werden soll.
+Ein Zeiger auf den Scheduler, der dem aufrufenden Kontext (dem aktuellen Scheduler) zugeordnet ist.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Diese Methode führt dazu, dass der Standardplaner des Prozesses erstellt und/oder an den aufrufenden Kontext angefügt wird, wenn derzeit dem aufrufenden Kontext kein Planer zugeordnet ist. Befindet sich kein weiterer Verweis auf die `Scheduler` von dieser Methode zurückgegebene Objekt.
+Diese Methode führt dazu, dass der Standardplaner des Prozesses erstellt und/oder an den aufrufenden Kontext angefügt wird, wenn derzeit dem aufrufenden Kontext kein Planer zugeordnet ist. Auf dem `Scheduler` Objekt, das von dieser Methode zurückgegeben wird, wird kein zusätzlicher Verweis eingefügt.
 
-##  <a name="getnumberofvirtualprocessors"></a> GetNumberOfVirtualProcessors
+## <a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors
 
-Gibt die aktuelle Anzahl virtueller Prozessoren für den Planer, der dem aufrufenden Kontext zugeordnet.
+Gibt die aktuelle Anzahl virtueller Prozessoren für den Scheduler zurück, der dem aufrufenden Kontext zugeordnet ist.
 
-```
+```cpp
 static unsigned int __cdecl GetNumberOfVirtualProcessors();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn ein Planer im aufrufenden Kontext, der die aktuelle Anzahl virtueller Prozessoren für diesen Planer zugeordnet. andernfalls den Wert `-1`.
+Wenn ein Planer dem aufrufenden Kontext zugeordnet ist, entspricht dies der aktuellen Anzahl von virtuellen Prozessoren für diesen Scheduler. Andernfalls wird der Wert `-1`.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Diese Methode führt nicht in der Scheduler-Anlage, wenn der Kontext des aufrufende nicht bereits einem Planer zugeordnet ist.
+Diese Methode führt nicht zu einer planeranlage, wenn der aufrufenden Kontext nicht bereits einem Zeit Planungs Modul zugeordnet ist.
 
-Der Rückgabewert dieser Methode ist eine sofortige Sampling der Anzahl virtueller Prozessoren für den Planer, der dem aufrufenden Kontext zugeordnet. Dieser Wert kann veraltete Moment sein, die, den er zurückgegeben wird.
+Der Rückgabewert dieser Methode ist eine sofortige Stichprobe der Anzahl virtueller Prozessoren für den Scheduler, der dem aufrufenden Kontext zugeordnet ist. Dieser Wert kann veraltet sein, sobald er zurückgegeben wird.
 
-##  <a name="getpolicy"></a> GetPolicy
+## <a name="getpolicy"></a>GetPolicy
 
-Gibt eine Kopie der Richtlinie, der mit der aktuelle Planer erstellt wurde.
+Gibt eine Kopie der Richtlinie zurück, mit der der aktuelle Scheduler erstellt wurde.
 
-```
+```cpp
 static SchedulerPolicy __cdecl GetPolicy();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Eine Kopie der Richtlinie, der mit der aktuelle Planer erstellt wurde.
+Eine Kopie der Richtlinie, mit der der aktuelle Scheduler erstellt wurde.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Diese Methode führt dazu, dass der Standardplaner des Prozesses erstellt und/oder an den aufrufenden Kontext angefügt wird, wenn derzeit dem aufrufenden Kontext kein Planer zugeordnet ist.
 
-##  <a name="id"></a> Id
+## <a name="id"></a>Name
 
-Gibt einen eindeutigen Bezeichner für den aktuellen Planer zurück.
+Gibt einen eindeutigen Bezeichner für den aktuellen Scheduler zurück.
 
-```
+```cpp
 static unsigned int __cdecl Id();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn ein Planer im aufrufenden Kontext, einen eindeutigen Bezeichner für diese Planer zugeordnet. andernfalls den Wert `-1`.
+Wenn ein Scheduler dem aufrufenden Kontext zugeordnet ist, ein eindeutiger Bezeichner für diesen Scheduler; Andernfalls wird der Wert `-1`.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Diese Methode führt nicht in der Scheduler-Anlage, wenn der Kontext des aufrufende nicht bereits einem Planer zugeordnet ist.
+Diese Methode führt nicht zu einer planeranlage, wenn der aufrufenden Kontext nicht bereits einem Zeit Planungs Modul zugeordnet ist.
 
-##  <a name="isavailablelocation"></a> IsAvailableLocation
+## <a name="isavailablelocation"></a>IsAvailableLocation
 
-Bestimmt, ob eine angegebene Position auf dem aktuellen Planer verfügbar ist.
+Bestimmt, ob ein angegebener Speicherort im aktuellen Scheduler verfügbar ist.
 
-```
+```cpp
 static bool __cdecl IsAvailableLocation(const location& _Placement);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_Placement*<br/>
-Ein Verweis auf die Position, an den aktuellen Planer zu Fragen.
+Ein Verweis auf den Speicherort, zu dem der aktuelle Scheduler abgefragt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Hinweis auf, und zwar unabhängig davon, ob der Speicherort von angegeben die `_Placement` Argument auf den aktuellen Scheduler verfügbar ist.
+Gibt an, ob der durch das `_Placement`-Argument angegebene Speicherort im aktuellen Planer verfügbar ist.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Diese Methode führt nicht in der Scheduler-Anlage, wenn der Kontext des aufrufende nicht bereits einem Planer zugeordnet ist.
+Diese Methode führt nicht zu einer planeranlage, wenn der aufrufenden Kontext nicht bereits einem Zeit Planungs Modul zugeordnet ist.
 
-Beachten Sie, dass der Rückgabewert eine sofortige Stichprobe ist von, ob der angegebene Speicherort verfügbar ist. Bei mehreren Zeitplanungsmodulen kann dynamische ressourcenverwaltung hinzufügen oder entfernen Sie die nicht Ressourcen von Zeitplanungsmodulen zu einem beliebigen Zeitpunkt. In diesem Fall werden kann der angegebene Speicherort Verfügbarkeit ändern.
+Beachten Sie, dass der Rückgabewert eine sofortige Stichprobe dafür ist, ob der angegebene Speicherort verfügbar ist. Wenn mehrere Planer vorhanden sind, kann die dynamische Ressourcenverwaltung Ressourcen von Zeit Planungs Modulen jederzeit hinzufügen oder entfernen. Wenn dies der Fall ist, kann die Verfügbarkeit des angegebenen Standorts geändert werden.
 
-##  <a name="registershutdownevent"></a> RegisterShutdownEvent
+## <a name="registershutdownevent"></a>RegisterShutdownEvent
 
-Bewirkt, dass das Windows-Ereignishandle zu, in übergeben der `_ShutdownEvent` -Parameter signalisiert wird, wenn der Planer dem aktuellen Kontext zugeordnet heruntergefahren wird, und zerstört. Zu dem Zeitpunkt, der das Ereignis signalisiert wird, ist die gesamte Arbeit, die auf den Planer geplant wurde abgeschlossen. Mehrere Herunterfahrereignisse können mit dieser Methode registriert werden.
+Bewirkt, dass das an den `_ShutdownEvent`-Parameter übergebenen Windows-Ereignis Handle signalisiert wird, wenn der dem aktuellen Kontext zugeordnete Scheduler heruntergefahren und selbst zerstört wird. Zum Zeitpunkt der Signalisierung des Ereignisses ist die gesamte Arbeit, die für den Scheduler geplant war, abgeschlossen. Mehrere Shutdown-Ereignisse können über diese Methode registriert werden.
 
-```
+```cpp
 static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *_ShutdownEvent*<br/>
-Ein Handle für ein Windows-Ereignis-Objekt, das von der Laufzeit signalisiert wird, wenn der Planer dem aktuellen Kontext zugeordnet heruntergefahren wird, und zerstört.
+Ein Handle für ein Windows-Ereignis Objekt, das von der Laufzeit signalisiert wird, wenn der dem aktuellen Kontext zugeordnete Scheduler heruntergefahren und selbst zerstört wird.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Wenn keine Planer an den aufrufenden Kontext angefügt ist, das Aufrufen dieser Methode führt zu einem [Scheduler_not_attached](scheduler-not-attached-class.md) ausgelöste Ausnahme.
+Wenn kein Scheduler an den aufrufenden Kontext angefügt ist, wird beim Aufrufen dieser Methode eine [scheduler_not_attached](scheduler-not-attached-class.md) Ausnahme ausgelöst.
 
-##  <a name="scheduletask"></a> ScheduleTask
+## <a name="scheduletask"></a>ScheduleTask
 
-Plant eine einfache Aufgabe innerhalb des Planers, der dem aufrufenden Kontext zugeordnet. Die einfache Aufgabe wird in einer Planungsgruppe aus, die durch die Laufzeit bestimmt platziert werden. Die Version, die den Parameter akzeptiert `_Placement` bewirkt, dass der Task ausgeführt wird, an der angegebenen Position für Blockcontainer werden.
+Plant eine leichte Aufgabe innerhalb des Planers, der dem aufrufenden Kontext zugeordnet ist. Die leichte Aufgabe wird in einer Zeit Plan Gruppe platziert, die von der Laufzeit bestimmt wird. Die Version, die den-Parameter annimmt `_Placement` bewirkt, dass die Aufgabe an der angegebenen Position für die Ausführung verzerrt wird.
 
-```
+```cpp
 static void __cdecl ScheduleTask(
     TaskProc _Proc,
     _Inout_opt_ void* _Data);
@@ -255,19 +255,19 @@ static void __cdecl ScheduleTask(
 ### <a name="parameters"></a>Parameter
 
 *_Proc*<br/>
-Ein Zeiger auf die Funktion, die ausgeführt werden, um den Text der Aufgabe leicht durchführen.
+Ein Zeiger auf die Funktion, die ausgeführt wird, um den Text der einfachen Aufgabe auszuführen.
 
 *_Data*<br/>
-Ein void-Zeiger auf die Daten, die in den Text der Aufgabe als Parameter übergeben werden.
+Ein void-Zeiger auf die Daten, die als Parameter an den Textkörper der Aufgabe übergeben werden.
 
 *_Placement*<br/>
-Ein Verweis auf einen Speicherort, in denen die einfache Aufgabe für Blockcontainer werden werden auf ausführen.
+Ein Verweis auf einen Speicherort, an dem die leichte Aufgabe für die Ausführung bei unberücksichtigt wird.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Diese Methode führt dazu, dass der Standardplaner des Prozesses erstellt und/oder an den aufrufenden Kontext angefügt wird, wenn derzeit dem aufrufenden Kontext kein Planer zugeordnet ist.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [Scheduler-Klasse](scheduler-class.md)<br/>
