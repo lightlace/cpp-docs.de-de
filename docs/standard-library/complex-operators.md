@@ -15,20 +15,20 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: a8f8b623ad53b84b8e614a1831d1a060df890931
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e9ea296ab1b3440782871e3d4c7555ff2075e445
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244708"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257961"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt;-Operatoren
 
-## <a name="op_neq"></a> Operator! =
+## <a name="op_neq"></a>Operator! =
 
 Testet zwei komplexe Zahlen auf Ungleichheit, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.
 
-```
+```cpp
 template <class Type>
 bool operator!=(
     const complex<Type>& left,
@@ -47,17 +47,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*\
+*Linker*\
 Eine komplexe Zahl oder ein Objekt des zugehörigen Parametertyps, die bzw. das auf Ungleichheit getestet wird.
 
-*Richting*\
+*Rechte*\
 Eine komplexe Zahl oder ein Objekt des zugehörigen Parametertyps, die bzw. das auf Ungleichheit getestet wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
 **TRUE**, wenn die Zahlen ungleich sind; **FALSE**, wenn die Zahlen gleich sind.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Zwei komplexe Zahlen sind nur dann gleich, wenn ihre reellen Teile und ihre imaginären Teile gleich sind. Andernfalls sind sie ungleich.
 
@@ -167,8 +167,7 @@ The complex numbers cl3b & cr3b are equal.
 
 Multipliziert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.
 
-```
-
+```cpp
 template <class Type>
 complex<Type> operator*(
     const complex<Type>& left,
@@ -187,17 +186,17 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*\
-Die erste von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die multipliziert werden die \* Vorgang.
+*Linker*\
+Die erste von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die mit dem \* Vorgang multipliziert werden soll.
 
-*Richting*\
-Die zweite von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die multipliziert werden die \* Vorgang.
+*Rechte*\
+Die zweite von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die mit dem \* Vorgang multipliziert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Die komplexe Zahl, die sich aus der Multiplikation der beiden Zahlen ergibt, deren Wert und Typ durch die Parametereingaben festgelegt wird
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Die Operation wird überladen, damit einfache arithmetische Operationen ohne Konvertierung der Daten in ein bestimmtes Format ausgeführt werden können.
 
@@ -261,12 +260,11 @@ int main( )
 }
 ```
 
-## <a name="op_add"></a> Operator +-
+## <a name="op_add"></a>Operator +
 
 Addiert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.
 
-```
-
+```cpp
 template <class Type>
 complex<Type> operator+(
     const complex<Type>& left,
@@ -288,19 +286,19 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parameter
 
-*Links*\
+*Linker*\
 Die erste von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die mit dem +-Operator hinzugefügt werden soll
 
-*Richting*\
+*Rechte*\
 Die zweite von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die mit dem +-Operator hinzugefügt werden soll
 
 ### <a name="return-value"></a>Rückgabewert
 
 Die komplexe Zahl, die sich aus der Addition der beiden Zahlen ergibt, deren Wert und Typ durch die Parametereingaben festgelegt wird
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Die Operation wird überladen, damit einfache arithmetische Operationen ohne Konvertierung der Daten in ein bestimmtes Format ausgeführt werden können. Der unäre Operator gibt *linken*.
+Die Operation wird überladen, damit einfache arithmetische Operationen ohne Konvertierung der Daten in ein bestimmtes Format ausgeführt werden können. Der unäre Operator gibt *left*zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -402,7 +400,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-"></a> Operator-
+## <a name="operator-"></a>KOM
 
 Subtrahiert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.
 
@@ -428,17 +426,17 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parameter
 
-*Links*\
+*Linker*\
 Die erste von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die mit dem --Operator subtrahiert werden soll
 
-*Richting*\
+*Rechte*\
 Die zweite von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die mit dem --Operator subtrahiert werden soll
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die komplexe Zahl, die sich aus der Subtraktion ergibt *rechten* aus *linken*, die zwei Zahlen, deren Werte durch die Parametereingaben angegeben werden.
+Die komplexe Zahl, die sich aus der Subtraktion von *Rechts* von *Links*ergibt, die zwei Zahlen, deren Werte durch die Parameter Eingaben angegeben werden.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Die Operation wird überladen, damit einfache arithmetische Operationen ohne Konvertierung der Daten in ein bestimmtes Format ausgeführt werden können.
 
@@ -544,7 +542,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```
 
-## <a name="op_div"></a> Operator /
+## <a name="op_div"></a>KOM
 
 Dividiert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.
 
@@ -567,17 +565,17 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*\
+*Linker*\
 Eine komplexe Zahl oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die dem Zähler entspricht, der mit dem /-Operator durch den Nenner dividiert werden soll
 
-*Richting*\
+*Rechte*\
 Eine komplexe Zahl oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die dem Nenner entspricht, der mit dem /-Operator durch den Zähler dividiert werden soll
 
 ### <a name="return-value"></a>Rückgabewert
 
 Die komplexe Zahl, die sich aus der Division des Zählers durch den Nenner ergibt, dessen Werte durch die Parametereingaben angegeben werden
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Die Operation wird überladen, damit einfache arithmetische Operationen ohne Konvertierung der Daten in ein bestimmtes Format ausgeführt werden können.
 
@@ -664,7 +662,7 @@ The modulus of cs3 is: 1.66667
 The argument of cs3 is: -0.523599 radians, which is -30 degrees.
 ```
 
-## <a name="op_lt_lt"></a> Operator&lt;&lt;
+## <a name="op_lt_lt"></a>Operator&lt;&lt;
 
 Fügt eine angegebene komplexe Zahl in den Ausgabestream ein
 
@@ -677,17 +675,17 @@ basic_ostream<Elem, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parameter
 
-*Ostr*\
+*Ostr* -\
 Der Ausgabestream, in den die komplexe Zahl eingegeben wird
 
-*Richting*\
+*Rechte*\
 Die komplexe Zahl, die in den Ausgabestream eingegeben werden soll
 
 ### <a name="return-value"></a>Rückgabewert
 
-Schreibt den Wert der angegebenen komplexen Zahl, die *Ostr* in einem kartesischen Format: ( *Realteil, Imaginärteil* ).
+Schreibt den Wert der angegebenen komplexen Zahl in der *Ostr* in einem kartesischen Format: ( *echter Teil, imaginärer Teil* ).
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Der Ausgabestream ist überladen, sodass er jede Form einer komplexen Zahl akzeptiert. Das Standardausgabeformat ist das kartesische Format.
 
@@ -726,12 +724,11 @@ The modulus of c2 is: 2
 The argument of c2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq_eq"></a> Operator ==
+## <a name="op_eq_eq"></a>Operator = =
 
 Testet zwei komplexe Zahlen auf Gleichheit, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.
 
-```
-
+```cpp
 template <class Type>
 bool operator==(
     const complex<Type>& left,
@@ -750,17 +747,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*\
+*Linker*\
 Eine komplexe Zahl oder ein Objekt des zugehörigen Parametertyps, die bzw. das auf Ungleichheit getestet wird.
 
-*Richting*\
+*Rechte*\
 Eine komplexe Zahl oder ein Objekt des zugehörigen Parametertyps, die bzw. das auf Ungleichheit getestet wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
 **TRUE**, wenn die Zahlen gleich sind, **FALSE**, wenn die Zahlen ungleich sind.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Zwei komplexe Zahlen sind nur dann gleich, wenn ihre reellen Teile und ihre imaginären Teile gleich sind. Andernfalls sind sie ungleich.
 
@@ -866,12 +863,11 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_gt_gt"></a> Operator&gt;&gt;
+## <a name="op_gt_gt"></a>Operator&gt;&gt;
 
 Extrahiert einen komplexen Wert aus dem Eingabestream
 
-```
-
+```cpp
 template <class Type, class Elem, class Traits>
 basic_istream<Elem, Traits>& operator>>(
    basic_istream<Elem, Traits>& Istr,
@@ -880,17 +876,17 @@ basic_istream<Elem, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parameter
 
-*ISTR*\
+*ISTR* -\
 Der Eingabestream, aus dem die komplexe Zahl extrahiert wird
 
-*Richting*\
+*Rechte*\
 Die komplexe Zahl, die aus dem Eingabestream extrahiert wird
 
 ### <a name="return-value"></a>Rückgabewert
 
-Liest den Wert der angegebenen komplexen Zahl von *Istr* und gibt ihn in *rechten*.
+Liest den Wert der angegebenen komplexen Zahl aus *ISTR* und gibt ihn an der *rechten Seite*zurück.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Gültige Eingabeformate sind:
 

@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-ms.openlocfilehash: 471b149eba32d163e6e3e54e1c2820bbe0b94133
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2906e802072c43a93c59ca40d15e032adeeeef97
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449045"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257805"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
@@ -32,9 +32,9 @@ Deklariert Objekte, die das Auslesen und Schreiben in Standard-Streams steuern. 
 ```
 
 > [!NOTE]
-> Die \<iostream-> Bibliothek verwendet `#include <ios>`die `#include <streambuf>`Anweisungen `#include <istream>`,, `#include <ostream>` und.
+> Die \<iostream-> Bibliothek verwendet die Anweisungen `#include <ios>`, `#include <streambuf>`, `#include <istream>`und `#include <ostream>`.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Die Objekte können in zwei Gruppen unterteilt werden:
 
@@ -44,7 +44,7 @@ Die Objekte können in zwei Gruppen unterteilt werden:
 
 Wenn Sie bestimmte Vorgänge für einen Stream ausführen, wie z. b. die Standardeingabe, können Sie keine Vorgänge mit einer anderen Ausrichtung auf denselben Stream ausführen. Aus diesem Grund kann ein Programm beispielsweise nicht gleichzeitig für [CIN](#cin) und [wcin](#wcin)eingesetzt werden.
 
-Alle in diesem Header deklarierten Objekte verwenden eine besondere Eigenschaft – Sie können davon ausgehen, dass Sie vor statischen Objekten erstellt werden, die Sie definieren, in einer \<Übersetzungseinheit, die iostream-> enthält. Gleichermaßen können Sie davon ausgehen, dass diese Objekte nicht zerstört werden, bevor Sie die dektoren für statische Objekte definieren, die Sie definieren. (Die Ausgabe-Streams werden jedoch während der Beendigung des Programms geleert). Aus diesem Grund können Sie Standardstream vor Programmstart oder nach Beendigung des Programms sicher auslesen oder darin schreiben.
+Alle in diesem Header deklarierten Objekte verwenden eine besondere Eigenschaft – Sie können davon ausgehen, dass Sie vor statischen Objekten erstellt werden, die Sie definieren, in einer Übersetzungseinheit, die \<iostream-> enthält. Gleichermaßen können Sie davon ausgehen, dass diese Objekte nicht zerstört werden, bevor Sie die dektoren für statische Objekte definieren, die Sie definieren. (Die Ausgabestreams werden jedoch während der Beendigung des Programms geleert.) Aus diesem Grund können Sie vor dem Programmstart und nach Beendigung des Programms sicher aus den Standardstreams lesen oder in diese schreiben.
 
 Diese Garantie ist jedoch nicht universell. Ein statischer Konstruktor kann eine Funktion in einer anderen Übersetzungseinheit aufrufen. Die aufgerufene Funktion kann nicht davon ausgehen, dass die in diesem Header deklarierten Objekte erstellt wurden, und zwar anhand der unsicheren Reihenfolge, in der Übersetzungseinheiten an der statischen Konstruktion beteiligt sind. Um diese Objekte in diesem Zusammenhang zu verwenden, müssen Sie zuerst ein Objekt der Klasse [ios_base:: Init](../standard-library/ios-base-class.md#init) erstellen.
 
@@ -73,9 +73,9 @@ extern ostream cerr;
 
 Ein [ostream](../standard-library/ostream-typedefs.md#ostream)-Objekt.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
-Das Objekt steuert ungepufferte Einfügevorgänge in die Standardfehlerausgabe als Byte-Stream. Sobald das Objekt konstruiert wurde, ist der Ausdruck `cerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) ungleich null und `cerr.tie() == &cout`.
+Das Objekt steuert ungepufferte Einfügevorgänge in die Standardfehlerausgabe als Byte-Stream. Nachdem das Objekt erstellt wurde, ist der Ausdruck `cerr.`[Flags](../standard-library/ios-base-class.md#flags) `&` [Unitbuf](../standard-library/ios-functions.md#unitbuf) ungleich NULL und `cerr.tie() == &cout`.
 
 #### <a name="example"></a>Beispiel
 
@@ -119,13 +119,13 @@ extern istream cin;
 
 Ein [instream](../standard-library/istream-typedefs.md#istream)-Objekt.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
-Das Objekt steuert Extraktionen aus der Standardausgabe als Byte-Stream. Sobald das Objekt konstruiert wurde, gibt der Aufruf `cin.`[tie](../standard-library/basic-ios-class.md#tie) `&`[cout](#cout) zurück.
+Das Objekt steuert Extraktionen aus der Standardausgabe als Byte-Stream. Sobald das Objekt konstruiert wurde, gibt der Aufruf `cin.`[tie](../standard-library/basic-ios-class.md#tie)`&`[cout](#cout) zurück.
 
 #### <a name="example"></a>Beispiel
 
-In diesem Beispiel wird `cin` das Fehlerbit auf dem Stream festgelegt, wenn es über nicht numerische Zeichen verfügt. Das Programm löscht das Fehlerbit und entfernt das ungültige Zeichen aus dem Stream, um den Vorgang fortzusetzen.
+In diesem Beispiel legt `cin` das Fehlerbit im Stream fest, wenn es nicht numerische Zeichen enthält. Das Programm löscht das Fehlerbit und entfernt das ungültige Zeichen aus dem Stream, um den Vorgang fortzusetzen.
 
 ```cpp
 // iostream_cin.cpp
@@ -170,7 +170,7 @@ extern ostream clog;
 
 Ein [ostream](../standard-library/ostream-typedefs.md#ostream)-Objekt.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
 Das Objekt steuert gepufferte Einfügevorgänge in die Standardfehlerausgabe als Byte-Stream.
 
@@ -190,7 +190,7 @@ extern ostream cout;
 
 Ein [ostream](../standard-library/ostream-typedefs.md#ostream)-Objekt.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
 Das Objekt steuert Einfügevorgänge für die Standardausgabe als Byte-Stream.
 
@@ -210,9 +210,9 @@ extern wostream wcerr;
 
 Ein [wostream](../standard-library/ostream-typedefs.md#wostream)-Objekt.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
-Das Objekt steuert ungepufferte Einfügevorgänge in die Standardfehlerausgabe als weiten Stream. Sobald das Objekt konstruiert wurde, ist der Ausdruck `wcerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) ungleich null.
+Das Objekt steuert ungepufferte Einfügevorgänge in die Standardfehlerausgabe als weiten Stream. Nachdem das Objekt erstellt wurde, ist der Ausdruck `wcerr.`[Flags](../standard-library/ios-base-class.md#flags) `&` [Unitbuf](../standard-library/ios-functions.md#unitbuf) ungleich 0 (null).
 
 #### <a name="example"></a>Beispiel
 
@@ -230,9 +230,9 @@ extern wistream wcin;
 
 Ein [wistream](../standard-library/istream-typedefs.md#wistream)-Objekt.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
-Das Objekt steuert Extraktionen aus der Standardausgabe als weiten Stream. Sobald das Objekt konstruiert wurde, gibt der Aufruf `wcin.`[tie](../standard-library/basic-ios-class.md#tie) `&`[wcout](#wcout) zurück.
+Das Objekt steuert Extraktionen aus der Standardausgabe als weiten Stream. Sobald das Objekt konstruiert wurde, gibt der Aufruf `wcin.`[tie](../standard-library/basic-ios-class.md#tie)`&`[wcout](#wcout) zurück.
 
 #### <a name="example"></a>Beispiel
 
@@ -250,7 +250,7 @@ extern wostream wclog;
 
 Ein [wostream](../standard-library/ostream-typedefs.md#wostream)-Objekt.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
 Das Objekt steuert gepufferte Einfügevorgänge für die Standardfehlerausgabe als weiten Stream.
 
@@ -270,7 +270,7 @@ extern wostream wcout;
 
 Ein [wostream](../standard-library/ostream-typedefs.md#wostream)-Objekt.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
 Das Objekt steuert Einfügevorgänge für die Standardausgabe als weiten Stream.
 
@@ -280,7 +280,7 @@ Unter [cerr](#cerr) finden Sie ein Beispiel für die Verwendung von `wcout`.
 
 `CString`-Instanzen in einer `wcout`-Anweisung müssen in `const wchar_t*` umgewandelt werden, wie dies im folgenden Beispiel gezeigt ist.
 
-```
+```cpp
 CString cs("meow");
 
 wcout <<(const wchar_t*) cs <<endl;
@@ -288,7 +288,7 @@ wcout <<(const wchar_t*) cs <<endl;
 
 Weitere Informationen finden Sie unter [Basic CString Operations](../atl-mfc-shared/basic-cstring-operations.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
 [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

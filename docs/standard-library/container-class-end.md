@@ -4,29 +4,28 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - end method
 ms.assetid: 6fa38a20-3798-4387-9c6e-20fc3e90d813
-ms.openlocfilehash: db2563fff62d05765ad98c3405f1a658f5ce23e9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c947ecb0dd81aa805cefd0b5861c80e5bc1cf90b
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453340"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258184"
 ---
 # <a name="container-classend"></a>Container-Klasse::end
 
 > [!NOTE]
-> Dieses Thema ist in der Microsoft C++ -Dokumentation als nicht funktionales Beispiel für Container, die C++ in der Standard Bibliothek verwendet werden. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).
+> Dieses Thema ist in der Microsoft C++ -Dokumentation als nicht funktionales Beispiel für Container, die C++ in der Standard Bibliothek verwendet werden. Weitere Informationen finden Sie unter [C++ Standard Library Containers (C++-Standardbibliothekcontainer)](../standard-library/stl-containers.md).
 
-Gibt einen Iterator zurück, der direkt hinter das Ende der Sequenz verweist
+Gibt einen Iterator zurück, der direkt hinter das Ende der Sequenz verweist.
 
 ## <a name="syntax"></a>Syntax
 
-```
-
-    const_iterator end() const;
+```cpp
+const_iterator end() const;
 
 iterator end();
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[Sample Container-Klasse](../standard-library/sample-container-class.md)
+[Sample Container Class (Beispielcontainerklasse)](../standard-library/sample-container-class.md)
