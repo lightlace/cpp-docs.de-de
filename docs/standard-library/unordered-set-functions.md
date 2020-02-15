@@ -5,21 +5,20 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: f34d818c1829baba1740bf2776b2d47a8808bf68
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6b6e764acc9fa3410a44a4a11760933328365852
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243438"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257766"
 ---
-# <a name="ltunorderedsetgt-functions"></a>&lt;unordered_set&gt;-Funktionen
+# <a name="ltunordered_setgt-functions"></a>&lt;unordered_set&gt;-Funktionen
 
-## <a name="swap"></a> Swap (Unordered_set)
+## <a name="swap"></a>austauschen (unordered_set)
 
 Vertauscht den Inhalt von zwei Containern.
 
-```
-
+```cpp
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_set <Key, Hash, Pred, Alloc>& left,
@@ -34,19 +33,19 @@ Der Schlüsseltyp.
 *Hash*\
 Der Hashfunktionsobjekttyp.
 
-*Pred*\
+*Pred-* \
 Der Gleichheitsvergleich-Funktionsobjekttyp.
 
-*Alloc*\
+*Zuordnung*\
 Die Zuweisungsklasse.
 
-*Links*\
+*Linker*\
 Der erste zu tauschende Container.
 
-*Richting*\
+*Rechte*\
 Der zweite zu tauschende Container.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Die Vorlagenfunktion führt `left.`[unordered_set::swap](../standard-library/unordered-set-class.md#swap)`(right)` aus.
 
@@ -103,11 +102,11 @@ return (0);
 [c] [b] [a]
 ```
 
-## <a name="swap_unordered_multiset"></a> Swap (Unordered_multiset)
+## <a name="swap_unordered_multiset"></a>austauschen (unordered_multiset)
 
 Vertauscht den Inhalt von zwei Containern.
 
-```
+```cpp
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_multiset <Key, Hash, Pred, Alloc>& left,
@@ -122,19 +121,19 @@ Der Schlüsseltyp.
 *Hash*\
 Der Hashfunktionsobjekttyp.
 
-*Pred*\
+*Pred-* \
 Der Gleichheitsvergleich-Funktionsobjekttyp.
 
-*Alloc*\
+*Zuordnung*\
 Die Zuweisungsklasse.
 
-*Links*\
+*Linker*\
 Der erste zu tauschende Container.
 
-*Richting*\
+*Rechte*\
 Der zweite zu tauschende Container.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Die Vorlagenfunktion führt `left.`[unordered_multiset::swap](../standard-library/unordered-multiset-class.md#swap)`(right)` aus.
 

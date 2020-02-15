@@ -1,6 +1,7 @@
 ---
 title: Ausführen von NMAKE
-ms.date: 10/29/2019
+description: Referenzhandbuch zu den Befehlszeilenoptionen von Microsoft NMAKE.
+ms.date: 02/09/2020
 helpviewer_keywords:
 - targets, building
 - response files, NMAKE
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - NMAKE program, running
 - command files, NMAKE
 ms.assetid: 0421104d-8b7b-4bf3-86c1-928d9b7c1a8c
-ms.openlocfilehash: ed56b7cd69b683caa84f184d9d72e70aac12add3
-ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
+ms.openlocfilehash: bfada33a89c04d25bf7444cbf3b1e7ef3ed44385
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144538"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257589"
 ---
 # <a name="running-nmake"></a>Ausführen von NMAKE
 
@@ -23,7 +24,7 @@ ms.locfileid: "73144538"
 
 > **NMAKE** [*Option* ...] [*Makros* ...] [*Ziele* ...] [ **\@** _Befehlsdatei_ ...]
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 NMAKE erstellt nur angegebene *Ziele* oder, wenn keine angegeben ist, das erste Ziel im Makefile. Beim ersten Makefile-Ziel kann es sich um ein [pseudotarget](description-blocks.md#pseudotargets) -Ziel handeln, das andere Ziele erstellt. NMAKE verwendet Makefiles, die mit **/F**angegeben wurden, oder wenn **/F** nicht angegeben ist, die Makefile-Datei im aktuellen Verzeichnis. Wenn kein Makefile-Wert angegeben wird, werden mithilfe von Rückschluss Regeln Befehlszeilen *Ziele*erstellt.
 
@@ -40,7 +41,7 @@ NMAKE-Optionen werden in der folgenden Tabelle beschrieben. Den Optionen wird en
 | **/C** | Unterdrückt die Standardausgabe, einschließlich nicht schwerwiegender NMAKE-Fehler oder-Warnungen, Zeitstempel und NMAKE-Copyright Meldung. Unterdrückt Warnungen, die von **/K**ausgegeben werden. |
 | **/D** | Zeigt die Zeitstempel der einzelnen ausgewerteten Ziele und abhängigen und eine Meldung an, wenn ein Ziel nicht vorhanden ist. Nützlich bei **/P** für das Debuggen eines Makefile-Vorgangs. Verwenden Sie `!CMDSWITCHES`, um **/D** für einen Teil eines Makefile festzulegen oder zu löschen. |
 | **/E** | Bewirkt, dass Umgebungsvariablen Makefile-Makro Definitionen überschreiben. |
-| **/errorreport** [ **keine** &#124; **prompt** &#124; - **Warteschlange** &#124; **senden** ] | Wenn NMAKE. exe zur Laufzeit fehlschlägt, können Sie **/errorreport** verwenden, um Informationen zu diesen internen Fehlern an Microsoft zu senden.<br /><br /> Weitere Informationen finden Sie unter [/errorReport (Meldung über interne Compilerfehler)](errorreport-report-internal-compiler-errors.md). |
+| **/errorreport** [ **keine** &#124; **prompt** &#124; - **Warteschlange** &#124; **senden** ] | Veraltet. [Windows-Fehlerberichterstattung (wer)](/windows/win32/wer/windows-error-reporting) -Einstellungen für die Berichterstellung. |
 | **/F** *Dateiname* | Gibt den *Dateinamen* als Makefile an. Leerzeichen oder Tabstopps können dem *filename*vorangestellt werden. Geben Sie **/F** einmal für jedes Makefile an. Geben Sie einen Bindestrich (`-`) für *Dateiname*an, und beenden Sie Tastatureingaben mit **F6** oder **STRG + Z**, um ein Makefile-Zeichen aus der Standardeingabe bereitzustellen. |
 | **/G** | Zeigt die Makefiles an, die in der `!INCLUDE`-Anweisung enthalten sind. Weitere Informationen finden Sie unter [Makefile-Vorverarbeitungs Direktiven](makefile-preprocessing-directives.md). |
 | **/Help**, **/?** | Zeigt eine kurze Zusammenfassung der NMAKE-Befehlszeilen Syntax an. |
@@ -49,7 +50,7 @@ NMAKE-Optionen werden in der folgenden Tabelle beschrieben. Den Optionen wird en
 | **/N** | Zeigt Befehle an, führt Sie jedoch nicht aus. Vorverarbeitung-Befehle werden ausgeführt. Zeigt keine Befehle in rekursiven NMAKE-Aufrufen an. Nützlich zum Debuggen von Makefiles und Überprüfen von Zeitstempeln. Um **/N** für einen Teil eines Makefile festzulegen oder zu löschen, verwenden Sie `!CMDSWITCHES`. |
 | **/NOLOGO** | Unterdrückt die NMAKE-Copyright Meldung. |
 | **/P** | Zeigt Informationen (Makro Definitionen, Rückschluss Regeln, Ziele, [`.SUFFIXES`](dot-directives.md) Liste) für die Standardausgabe an und führt dann den Build aus. Wenn kein Makefile-oder Befehlszeilen Ziel vorhanden ist, werden nur Informationen angezeigt. Verwenden Sie with **/D** , um ein Makefile zu debuggen. |
-| **/Q** | Überprüft die Zeitstempel von Zielen. führt den Build nicht aus. Gibt einen Exitcode von 0 (null) zurück, wenn alle Ziele auf dem neuesten Stand sind, und einen Exitcode ungleich 0 (null), wenn ein Ziel veraltet ist. Preprocessing-Befehle werden ausgeführt. Nützlich, wenn NMAKE aus einer Batchdatei ausgeführt wird. |
+| **/Q** | Überprüft die Zeitstempel von Zielen. führt den Build nicht aus. Gibt einen Exitcode von 0 (null) zurück, wenn alle Ziele auf dem neuesten Stand sind, und einen Exitcode ungleich NULL, wenn ein Ziel veraltet ist. Preprocessing-Befehle werden ausgeführt. Nützlich, wenn NMAKE aus einer Batchdatei ausgeführt wird. |
 | **/R** | Löscht die `.SUFFIXES` Liste und ignoriert Rückschluss Regeln und Makros, die in der Datei "Tools. ini" definiert oder vordefiniert sind. |
 | **/S** | Unterdrückt die Anzeige der ausgeführten Befehle. Um die Anzeige im Rahmen einer Makefile-Datei zu unterdrücken, verwenden Sie den **\@** Befehlsmodifizierer oder [`.SILENT`](dot-directives.md). Um **/S** für einen Teil eines Makefile festzulegen oder zu löschen, verwenden Sie `!CMDSWITCHES`. |
 | **/T** | Aktualisiert Zeitstempel von Befehlszeilen Zielen (oder dem ersten Makefile-Ziel) und führt Vorverarbeitungs Befehle aus, führt den Build jedoch nicht aus. |
@@ -73,6 +74,6 @@ NMAKE gibt die folgenden Exitcodes zurück:
 | 4 | System Fehler – nicht genügend Arbeitsspeicher |
 | 255 | Das Ziel ist nicht auf dem neuesten Stand (wird nur ausgegeben, wenn **/Q** verwendet wird). |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [NMAKE-Referenz](nmake-reference.md)

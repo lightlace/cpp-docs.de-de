@@ -1,19 +1,20 @@
 ---
 title: Compileroptionen nach Kategorien sortiert
-ms.date: 01/08/2020
+description: Verweis Liste nach Kategorie der Befehlszeilenoptionen vonC++ Microsoft C/Compiler.
+ms.date: 02/09/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 191ea3d5d6f4647f7130757a4657820483d212b5
-ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
+ms.openlocfilehash: d29076e6eae4bcbd15a4bc50bb48477e3f93152d
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034583"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257714"
 ---
 # <a name="compiler-options-listed-by-category"></a>Compileroptionen (nach Kategorie sortiert)
 
-Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptionen. Eine alphabetische Liste finden Sie unter [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md).
+Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptionen. Eine alphabetische Liste finden Sie unter [Compileroptionen alphabetisch aufgelistet](compiler-options-listed-alphabetically.md).
 
 ## <a name="optimization"></a>Optimization
 
@@ -88,7 +89,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/Fm](fm-name-mapfile.md)|Erstellt eine Zuordnungsdatei.|
 |[/Fo](fo-object-file-name.md)|Erstellt eine Objektdatei.|
 |[/Fp](fp-name-dot-pch-file.md)|Gibt den Namen einer vorkompilierten Headerdatei an.|
-|[/Fr,/Fr](fr-fr-create-dot-sbr-file.md)|Name generierte SBR-Browser Dateien.|
+|[/Fr,/Fr](fr-fr-create-dot-sbr-file.md)|Name, der *`.sbr`* Browser Dateien generiert wird.|
 
 ## <a name="preprocessor"></a>Präprozessor
 
@@ -112,7 +113,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 
 |Option|Zweck|
 |------------|-------------|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|Die constexpr-Auswertung zum Zeitpunkt der Kompilierung steuern.|
+|[/constexpr](constexpr-control-constexpr-evaluation.md)|Die **constexpr** -Auswertung zum Zeitpunkt der Kompilierung steuern.|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|Ermöglicht [#pragma omp](../../preprocessor/omp.md) im Quellcode.|
 |[/vd](vd-disable-construction-displacements.md)|Unterdrückt oder aktiviert ausgeblendete `vtordisp` -Klassenmember.|
 |[/vmb](vmb-vmg-representation-method.md)|Verwendet bestmögliche Basis für Zeiger auf Member.|
@@ -128,7 +129,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/ZH](zh.md)|Gibt MD5, SHA-1 oder SHA-256 für Prüfsummen in Debuginformationen an.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Fügt Debuginformationen in eine Programmdatenbank ein, die mit Bearbeiten und Fortfahren kompatibel ist. (nur x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Erzeugt vollständige Debuginformationen.|
-|[/Zl](zl-omit-default-library-name.md)|Entfernt den Standardbibliotheksnamen aus der OBJ-Datei.|
+|[/Zl](zl-omit-default-library-name.md)|Entfernt den Standard Bibliotheksnamen aus der *`.obj`* Datei.|
 |[/ZP](zp-struct-member-alignment.md) *n*|Komprimiert Strukturmember.|
 |[/Zs](zs-syntax-check-only.md)|Prüft nur die Syntax.|
 |[/ZW](zw-windows-runtime-compilation.md)|Erzeugt eine Ausgabedatei, die auf dem Windows-Runtime ausgeführt wird.|
@@ -142,10 +143,10 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/LDd](md-mt-ld-use-run-time-library.md)|Erstellt eine Debug-Dynamic Link Library.|
 |[/link](link-pass-options-to-linker.md)|Übergibt die angegebene Option an LINK.|
 |[/LN](ln-create-msil-module.md)|Generiert ein MSIL-Modul.|
-|[/MD](md-mt-ld-use-run-time-library.md)|Kompiliert, um mit MSVCRT.LIB eine Multithread-DLL zu erstellen.|
-|[/MDd](md-mt-ld-use-run-time-library.md)|Kompiliert, um mit MSVCRTD.LIB eine Multithread-DLL für den Debugger zu erstellen.|
-|[/MT](md-mt-ld-use-run-time-library.md)|Kompiliert, um mit LIBCMT.LIB eine ausführbare Multithreaddatei zu erstellen.|
-|[/MTd](md-mt-ld-use-run-time-library.md)|Kompiliert, um mit LIBCMTD.LIB eine ausführbare Multithreaddatei für den Debugger zu erstellen.|
+|[/MD](md-mt-ld-use-run-time-library.md)|Kompiliert, um mit *msvcrt. lib*eine Multithread-DLL zu erstellen.|
+|[/MDd](md-mt-ld-use-run-time-library.md)|Kompiliert, um mit *msvcrtd. lib*eine Multithread-DLL für das Debuggen zu erstellen.|
+|[/MT](md-mt-ld-use-run-time-library.md)|Kompiliert, um mit *LIBCMT. lib*eine ausführbare Multithread-Datei zu erstellen.|
+|[/MTd](md-mt-ld-use-run-time-library.md)|Kompiliert, um mit *LIBCMTD. lib*eine ausführbare Multithread-Datei zu erstellen.|
 
 ## <a name="miscellaneous"></a>Sonstiges
 
@@ -156,10 +157,10 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/analyze](analyze-code-analysis.md)|Aktiviert die Codeanalyse.|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Erhöht die Anzahl von adressierbaren Abschnitten in einer OBJ-Datei.|
 |[/c](c-compile-without-linking.md)|Kompiliert ohne Verknüpfen.|
-|[/cgthreads](cgthreads-code-generation-threads.md)|Gibt die Anzahl der cl.exe-Threads an, die für Optimierung und Codegenerierung verwendet werden.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|Ermöglicht Ihnen, dem Microsoft C++ -teaminterne Compilerfehlerinformationen (ICE) direkt bereitzustellen.|
-|[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Zeigt den vollständigen Pfad der Quellcodedateien im Diagnosetext in CL.EXE an.|
-|[/FS](fs-force-synchronous-pdb-writes.md)|Erzwingt die Serialisierung von Schreibvorgängen auf die Programmdatenbank (PDB) mithilfe von MSPDBSRV.EXE.|
+|[/cgthreads](cgthreads-code-generation-threads.md)|Gibt die Anzahl der *cl. exe* -Threads an, die für die Optimierung und Codegenerierung verwendet werden sollen.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| Veraltet. Die Fehlerberichterstattung wird durch [Windows-Fehlerberichterstattung (wer)](/windows/win32/wer/windows-error-reporting) -Einstellungen gesteuert. |
+|[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Zeigt den vollständigen Pfad der Quell Code Dateien an, die im Diagnose Text an *cl. exe* übermittelt werden.|
+|[/FS](fs-force-synchronous-pdb-writes.md)|Erzwingt das Serialisieren von Schreibvorgängen in die PDB-Datei über *mspdbsrv. EXE*.|
 |[/H](h-restrict-length-of-external-names.md)|Veraltet. Beschränkt die Länge externer (öffentlicher) Namen.|
 |[/HELP](help-compiler-command-line-help.md)|Listet die Compileroptionen auf.|
 |[/J](j-default-char-type-is-unsigned.md)|Ändert den `char` -Standardtyp.|
@@ -184,7 +185,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/wo](compiler-option-warning-level.md)|Zeigt die angegebene Warnung nur einmal an.|
 |[/Wv](compiler-option-warning-level.md)|Deaktiviert die Warnungen, die durch spätere Versionen des Compilers eingeführt wurden.|
 |[/WX](compiler-option-warning-level.md)|Behandelt Warnungen wie Fehler.|
-|[/Yc](yc-create-precompiled-header-file.md)|Stelle. PCH-Datei.|
+|[/Yc](yc-create-precompiled-header-file.md)|Erstellen Sie *`.PCH`* Datei.|
 |[/Yd](yd-place-debug-information-in-object-file.md)|Veraltet. Legt vollständige Debuginformationen in allen Objektdateien ab. Verwenden Sie stattdessen [/Zi](z7-zi-zi-debug-information-format.md) .|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|Fügt beim Erstellen einer Debugbibliothek einen PCH-Verweis ein.|
 |[/Yu](yu-use-precompiled-header-file.md)|Verwendet eine vorkompilierte Headerdatei beim Erstellungsvorgang.|
@@ -201,7 +202,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 
 ## <a name="experimental-options"></a>Experimentelle Optionen
 
-Experimentelle Optionen können nur von bestimmten Versionen des Compilers unterstützt werden und können sich in unterschiedlichen Compilerversionen unterschiedlich verhalten. Häufig ist die beste oder einzige Dokumentation für experimentelle Optionen im [ C++ Microsoft Team Blog](https://devblogs.microsoft.com/cppblog/).
+Experimentelle Optionen können nur von bestimmten Versionen des Compilers unterstützt werden. Sie können sich auch in unterschiedlichen Compilerversionen unterschiedlich verhalten. Häufig ist die beste oder einzige Dokumentation für experimentelle Optionen im [ C++ Microsoft Team Blog](https://devblogs.microsoft.com/cppblog/).
 
 |Option|Zweck|
 |------------|-------------|
@@ -213,6 +214,7 @@ Experimentelle Optionen können nur von bestimmten Versionen des Compilers unter
 |Option|Zweck|
 |------------|-------------|
 |[/clr:noAssembly](clr-common-language-runtime-compilation.md)|Veraltet. Verwenden Sie stattdessen [/LN (Create MSIL Module)](ln-create-msil-module.md) .|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| Veraltet. Die Fehlerberichterstattung wird durch [Windows-Fehlerberichterstattung (wer)](/windows/win32/wer/windows-error-reporting) -Einstellungen gesteuert. |
 |[/Fr](fr-fr-create-dot-sbr-file.md)|Veraltet. Erstellt eine Browseinformationsdatei ohne lokale Variablen.|
 |[/Ge](ge-enable-stack-probes.md)|Veraltet. Aktiviert Stapelüberprüfungen. Standardmäßig aktiviert.|
 |[/Gm](gm-enable-minimal-rebuild.md)|Veraltet. Aktiviert minimale Neuerstellung.|
@@ -221,7 +223,7 @@ Experimentelle Optionen können nur von bestimmten Versionen des Compilers unter
 |[/H](h-restrict-length-of-external-names.md)|Veraltet. Beschränkt die Länge externer (öffentlicher) Namen.|
 |[/Og](og-global-optimizations.md)|Veraltet. Verwendet globale Optimierung.|
 |[/QIfist](qifist-suppress-ftol.md)|Veraltet. Wurde verwendet, um anzugeben, wie aus einem Gleitkommatyp in einen ganzzahligen Typ konvertiert werden soll.|
-|[/V](v-version-number.md)|Veraltet. Legt die Versionszeichenfolge der OBJ-Datei fest.|
+|[/V](v-version-number.md)|Veraltet. Legt die Versions Zeichenfolge der *`.obj`* Datei fest.|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|Veraltet. Erkennt 64-Bit-Portabilitätsprobleme.|
 |[/Yd](yd-place-debug-information-in-object-file.md)|Veraltet. Legt vollständige Debuginformationen in allen Objektdateien ab. Verwenden Sie stattdessen [/Zi](z7-zi-zi-debug-information-format.md) .|
 |[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|Veraltet. Deaktiviert Übereinstimmung in einem for-Schleifenbereich.|
@@ -230,6 +232,6 @@ Experimentelle Optionen können nur von bestimmten Versionen des Compilers unter
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Referenz zur C/C++-Erstellung](c-cpp-building-reference.md)<br/>
-[MSVC-Compileroptionen](compiler-options.md)<br/>
-[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)<br/>
+[C/C++ Verweis](c-cpp-building-reference.md)\
+[MSVC-Compileroptionen](compiler-options.md)\
+[MSVC-compilerbefehlszeilensyntax](compiler-command-line-syntax.md)

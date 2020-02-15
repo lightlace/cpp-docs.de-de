@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 687665d2ad8bf80f4f2db07ce11c4866ff1ee903
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 0c72726bfb92965a2152830d7ce77ae13f763d35
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688260"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257974"
 ---
 # <a name="complex-class"></a>complex-Klasse
 
-In der Klassen Vorlage wird ein Objekt beschrieben, das zwei Objekte vom Typ `Type` speichert, eine, die den Realteil einer komplexen Zahl darstellt, und eine, die den imaginären Teil darstellt.
+In der Klassen Vorlage wird ein Objekt beschrieben, das zwei Objekte vom Typ `Type`speichert, eine, die den Realteil einer komplexen Zahl darstellt, und eine, die den imaginären Teil darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,7 +28,7 @@ template <class Type>
 class complex
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Ein Objekt der Klasse `Type`:
 
@@ -40,9 +40,9 @@ Ein Objekt der Klasse `Type`:
 
 Insbesondere dürfen keine feinen Unterschiede zwischen einer Kopierkonstruktion und einer Standardkonstruktion bestehen, auf die eine Zuweisung folgt. Keiner der Vorgänge für Objekte der Klasse `Type` kann Ausnahmen auslösen.
 
-Für die drei Gleit Komma Typen sind explizite Spezialisierungs Klassen Vorlagen Komplex vorhanden. In dieser Implementierung wird ein Wert eines beliebigen anderen Typs `Type` für tatsächliche Berechnungen in **Double** umgewandelt, wobei dem gespeicherten Objekt vom Typ `Type` das **doppelte** Ergebnis zurück zugewiesen wird.
+Für die drei Gleit Komma Typen sind explizite Spezialisierungs Klassen Vorlagen Komplex vorhanden. In dieser Implementierung wird ein Wert eines beliebigen anderen Typs `Type` für tatsächliche Berechnungen in **Double** umgewandelt, wobei dem gespeicherten Objekt vom Typ `Type`das **doppelte** Ergebnis zurück zugewiesen wird.
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -50,18 +50,18 @@ Für die drei Gleit Komma Typen sind explizite Spezialisierungs Klassen Vorlagen
 |-|-|
 |[complex](#complex)|Erstellt eine komplexe Zahl aus den angegebenen reellen und imaginären Teilen oder eine Kopie einer anderen komplexen Zahl.|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>TypeDefs
 
 |||
 |-|-|
 |[value_type](#value_type)|Ein Typ, der den Datentyp darstellt, der für die Darstellung der Real- und Imaginärteile einer komplexen Zahl verwendet wird|
 
-### <a name="functions"></a>Funktionen
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
 |[imag](#imag)|Extrahiert die imaginäre Komponente einer komplexen Zahl.|
-|[Real](#real)|Extrahiert die reelle Komponente einer komplexen Zahl.|
+|[real](#real)|Extrahiert die reelle Komponente einer komplexen Zahl.|
 
 ### <a name="operators"></a>Operatoren
 
@@ -72,8 +72,6 @@ Für die drei Gleit Komma Typen sind explizite Spezialisierungs Klassen Vorlagen
 |[operator-=](#operator-_eq)|Subtrahiert eine Zahl von der komplexen Zielzahl, wobei die subtrahiert Zahl komplex ist oder vom gleichen Typ wie die Real- und Imaginärteile der komplexen Zahl, von der sie subtrahiert wurde|
 |[operator/=](#op_div_eq)|Dividiert eine komplexe Zielzahl durch einen komplexen Faktor oder einen Faktor vom gleichen Typ wie die Real- und Imaginärteile der komplexen Zahl|
 |[operator=](#op_eq)|Weist der komplexen Zielzahl eine Zahl hinzu, die komplex ist oder vom gleichen Typ wie die Real- und Imaginärteile der komplexen Zahl, der sie hinzugefügt wird|
-
-
 
 ## <a name="complex"></a>viel
 
@@ -91,18 +89,18 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parameter
 
-*_RealVal* \
+*_RealVal*\
 Der Wert des reellen Teils, der zum Initialisieren der zu erstellenden komplexen Zahl verwendet wird.
 
-*_ImagVal* \
+*_ImagVal*\
 Der Wert des imaginären Teils, der zum Initialisieren der zu erstellenden komplexen Zahl verwendet wird.
 
 *complexnum* -\
 Die komplexe Zahl, deren reelle und imaginäre Teile zum Initialisieren der zu erstellenden komplexen Zahl verwendet werden.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Der erste Konstruktor initialisiert den gespeicherten reellen Teil *\_RealVal* und den gespeicherten imaginären Teil, der *\_Imagval*werden soll. Der zweite Konstruktor initialisiert den gespeicherten reellen Teil `complexNum.real()` und den gespeicherten imaginären Teil, der `complexNum.imag()` werden soll.
+Der erste Konstruktor initialisiert den gespeicherten reellen Teil in *\_RealVal* und den gespeicherten imaginären Teil in *\_Imagval*. Der zweite Konstruktor initialisiert den gespeicherten reellen Teil `complexNum.real()` und den gespeicherten imaginären Teil, der `complexNum.imag()`werden soll.
 
 In dieser Implementierung wird, falls ein Konvertierungsprogramm Memberfunktionen der Vorlage nicht unterstützt, die Vorlage:
 
@@ -113,7 +111,7 @@ complex(const complex<Other>& right);
 
 durch Folgendes ersetzt:
 
-```
+```cpp
 complex(const complex& right);
 ```
 
@@ -171,14 +169,14 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Rechte* \
+*Rechte*\
 Eine komplexe Zahl, deren imaginärer Wert extrahiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Der imaginäre Teil der komplexen Zahl.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Für eine komplexe Zahl *a + BI*ist der Imaginärteil bzw. die imaginäre Komponente *im (a + BI) = b*.
 
@@ -228,14 +226,14 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Rechte* \
+*Rechte*\
 Eine komplexe Zahl oder eine Zahl vom gleichen Typ wie der Parameter der komplexen Zielzahl
 
 ### <a name="return-value"></a>Rückgabewert
 
 Eine komplexe Zahl, die mit der als Parameter angegebenen Zahl multipliziert wurde
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Die Operation wird überladen, damit einfache arithmetische Operationen ohne Konvertierung der Daten in ein bestimmtes Format ausgeführt werden können.
 
@@ -313,14 +311,14 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Rechte* \
+*Rechte*\
 Eine komplexe Zahl oder eine Zahl vom gleichen Typ wie der Parameter der komplexen Zielzahl
 
 ### <a name="return-value"></a>Rückgabewert
 
 Eine komplexe Zahl, der die als Parameter angegebene Zahl hinzugefügt wurde
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Die Operation wird überladen, damit einfache arithmetische Operationen ohne Konvertierung der Daten in ein bestimmtes Format ausgeführt werden können.
 
@@ -419,14 +417,14 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 *complexnum* -\
 Eine komplexe Zahl, die von der komplexen Zielzahl subtrahiert werden soll
 
-*_RealPart* \
+*_RealPart*\
 Eine reelle Zahl, die von der komplexen Zielzahl subtrahiert werden soll
 
 ### <a name="return-value"></a>Rückgabewert
 
 Eine komplexe Zahl, von der die als Parameter angegebene Zahl subtrahiert wurde
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Die Operation wird überladen, damit einfache arithmetische Operationen ohne Konvertierung der Daten in ein bestimmtes Format ausgeführt werden können.
 
@@ -527,14 +525,14 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 *complexnum* -\
 Eine komplexe Zahl, die von der komplexen Zielzahl subtrahiert werden soll
 
-*_RealPart* \
+*_RealPart*\
 Eine reelle Zahl, die von der komplexen Zielzahl subtrahiert werden soll
 
 ### <a name="return-value"></a>Rückgabewert
 
 Eine komplexe Zahl, die durch die als Parameter angegebene Zahl dividiert wurde
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Die Operation wird überladen, damit einfache arithmetische Operationen ohne Konvertierung der Daten in ein bestimmtes Format ausgeführt werden können.
 
@@ -626,14 +624,14 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Rechte* \
+*Rechte*\
 Eine komplexe Zahl oder eine Zahl vom gleichen Typ wie der Parameter der komplexen Zielzahl
 
 ### <a name="return-value"></a>Rückgabewert
 
 Eine komplexe Zahl, der die als Parameter angegebene Zahl zugewiesen wurde
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Die Operation wird überladen, damit einfache arithmetische Operationen ohne Konvertierung der Daten in ein bestimmtes Format ausgeführt werden können.
 
@@ -703,14 +701,14 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Rechte* \
+*Rechte*\
 Eine komplexe Zahl, deren reeller Wert extrahiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Der reelle Teil der komplexen Zahl.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Für eine komplexe Zahl *a + BI*ist der reelle Teil bzw. die reelle Komponente *re (a + BI) = a*.
 
@@ -749,11 +747,11 @@ The imaginary part of c1 is c1.imag() = 3.
 
 Ein Typ, der den Datentyp darstellt, der für die Darstellung der Real- und Imaginärteile einer komplexen Zahl verwendet wird
 
-```
+```cpp
 typedef Type value_type;
 ```
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 `value_type` ist ein Synonym für die Klasse Complex `Type` Template-Parameter.
 
@@ -782,6 +780,6 @@ Specifying initial real & imaginary parts
 of type value_type: c1 = (3,4).
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

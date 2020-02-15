@@ -1,18 +1,21 @@
 ---
-title: Compileroptionen alphabetisch sortiert
-ms.date: 01/08/2020
+title: Compileroptionen (alphabetisch sortiert)
+description: Verweis Auflistung in alphabetischer Reihenfolge der BefehlszeilenC++ Optionen von Microsoft C/Compiler.
+ms.date: 02/09/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: d64a41802c18627cf8e07f0d83b53fa5a4555f5b
-ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
+ms.openlocfilehash: 6b3412378aa4bb36ea861a81758d2227df3432c6
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034596"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257740"
 ---
-# <a name="compiler-options-listed-alphabetically"></a>Compileroptionen alphabetisch sortiert
+# <a name="compiler-options-listed-alphabetically"></a>Compileroptionen (alphabetisch sortiert)
 
-In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in alphabetischer Reihenfolge. Eine nach Kategorien sortierte Liste finden Sie unter [Compileroptionen nach Kategorien sortiert](compiler-options-listed-by-category.md).
+Diese Tabelle enthält eine alphabetische Liste der Compileroptionen. Eine Liste der Compileroptionen nach Kategorie finden Sie im Artikel zu den in der [Kategorie aufgeführten Compileroptionen](compiler-options-listed-by-category.md) .
+
+## <a name="compiler-options"></a>Compileroptionen
 
 |Option|Zweck|
 |------------|-------------|
@@ -27,19 +30,19 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/c](c-compile-without-linking.md)|Kompiliert ohne Verknüpfen.|
 |[/cgthreads](cgthreads-code-generation-threads.md)|Gibt die Anzahl der cl.exe-Threads an, die für Optimierung und Codegenerierung verwendet werden.|
 |[/clr](clr-common-language-runtime-compilation.md)|Erzeugt eine Ausgabedatei, die auf der Common Language Runtime ausgeführt werden kann.|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|Die constexpr-Auswertung zum Zeitpunkt der Kompilierung steuern.|
+|[/constexpr](constexpr-control-constexpr-evaluation.md)|Die **constexpr** -Auswertung zum Zeitpunkt der Kompilierung steuern.|
 |[/D](d-preprocessor-definitions.md)|Definiert Konstanten und Makros.|
 |[/Diagnostics](diagnostics-compiler-diagnostic-options.md)|Steuert das Format von Diagnosemeldungen.|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|Verarbeitet Dokumentationskommentare zu einer XML-Datei.|
 |[/E](e-preprocess-to-stdout.md)|Kopiert die Präprozessorausgabe in die Standardausgabe.|
 |[/EH](eh-exception-handling-model.md)|Gibt das Modell der Ausnahmebehandlung an.|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Kopiert die Präprozessorausgabe in die Standardausgabe.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|Ermöglicht Ihnen, dem Microsoft C++ -teaminterne Compilerfehlerinformationen (ICE) direkt bereitzustellen.|
-|["/Execution-charset"](execution-charset-set-execution-character-set.md)|Festlegen des Ausführungs Zeichensatzes.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| Veraltet. Die Fehlerberichterstattung wird durch [Windows-Fehlerberichterstattung (wer)](/windows/win32/wer/windows-error-reporting) -Einstellungen gesteuert. |
+|["/Execution-charset"](execution-charset-set-execution-character-set.md)|Legen Sie den Ausführungs Zeichensatz fest.|
 |[/experimental: Modul](experimental-module.md)|Ermöglicht die Unterstützung von experimentellen Modulen.|
 |[/experimental: Präprozessor](experimental-preprocessor.md)|Aktiviert die experimentelle Unterstützung für den Präprozessor.|
 |[/F](f-set-stack-size.md)|Legt die Stapelgröße fest.|
-|[/favor](favor-optimize-for-architecture-specifics.md)|Erzeugt Code, der für eine bestimmte x64-Architektur optimiert ist, oder für die Besonderheiten von Mikro Architekturen in den amd64-und Extended Memory 64 Technology (EM64T)-Architekturen.|
+|[/favor](favor-optimize-for-architecture-specifics.md)|Erzeugt Code, der für eine bestimmte x64-Architektur optimiert ist. Oder für die speziellen Mikro Architekturen in den amd64-und EM64T-Architekturen.|
 |[/FA](fa-fa-listing-file.md)|Erstellt eine Listendatei.|
 |[/Fa](fa-fa-listing-file.md)|Legt den Namen der Listendatei fest.|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Anzeige des vollständigen Pfads der Quellcodedateien im Diagnosetext in "cl.exe".|
@@ -52,7 +55,7 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/fp](fp-specify-floating-point-behavior.md)|Gibt das Gleitkommaverhalten an.|
 |[/Fp](fp-name-dot-pch-file.md)|Gibt den Namen einer vorkompilierten Headerdatei an.|
 |[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/Fr](fr-fr-create-dot-sbr-file.md)|Erstellt Browserdateien. **/Fr** ist veraltet.|
-|[/FS](fs-force-synchronous-pdb-writes.md)|Erzwingt die Serialisierung von Schreibvorgängen auf die Programmdatenbank (PDB) mithilfe von MSPDBSRV.EXE.|
+|[/FS](fs-force-synchronous-pdb-writes.md)|Erzwingt die Serialisierung aller Schreibvorgänge in die Programm Datenbankdatei (PDB) über mspdbsrv. Speichert.|
 |[/FU](fu-name-forced-hash-using-file.md)|Erzwingt die Verwendung eines Dateinamens, als ob er an die [#using](../../preprocessor/hash-using-directive-cpp.md) -Direktive übergeben worden wäre.|
 |[/Fx](fx-merge-injected-code.md)|Führt eingefügten Code mit der Quelldatei zusammen.|
 |[/GA](ga-optimize-for-windows-application.md)|Codeoptimierung für Windows-Anwendung.|
@@ -114,7 +117,7 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Verwendet ganzzahlige Verschiebungsanweisungen für Gleitkommawerte und deaktiviert bestimmte Gleitkomma-Ladeoptimierungen.|
 |[/Qspectre](qspectre.md)|Gibt die Compilergenerierung von Anweisungen an, um bestimmte mit Spectre-Variante 1 zusammenhängende Sicherheitsrisiken abzumildern.|
 |[/Qspectre-load](qspectre-load.md)|Gibt die Compilergenerierung von serialisierungsanweisungen zum mindern von Spectre-Sicherheitsrisiken basierend auf Ladeanweisungen an.|
-|[/Qspectre-load-cf](qspectre-load-cf.md)|Gibt die Compilergenerierung von serialisierungsanweisungen zum mindern von Spectre-Sicherheitsrisiken basierend auf Anweisungen zur Ablauf Steuerung an, die Speicher laden|
+|[/Qspectre-load-cf](qspectre-load-cf.md)|Gibt die Compilergenerierung von serialisierungsanweisungen zum mindern von Spectre-Sicherheitsrisiken basierend auf Ablauf Steuerungs Anweisungen an, die Speicher laden.|
 |[/Qvec-report (Berichtebene der automatischen Vektorisierung)](qvec-report-auto-vectorizer-reporting-level.md)|Aktiviert die Berichterstellungsebenen für die automatische Vektorisierung.|
 |[/RTC](rtc-run-time-error-checks.md)|Aktiviert Laufzeitfehlerüberprüfung.|
 |[/sdl](sdl-enable-additional-security-checks.md)|Aktiviert zusätzliche Sicherheitsfunktionen und Warnungen.|
@@ -172,5 +175,5 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[MSVC-Compileroptionen](compiler-options.md)<br/>
-[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)
+[MSVC-Compileroptionen](compiler-options.md)\
+[MSVC-compilerbefehlszeilensyntax](compiler-command-line-syntax.md)
