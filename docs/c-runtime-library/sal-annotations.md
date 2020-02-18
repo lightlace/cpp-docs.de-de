@@ -47,19 +47,19 @@ helpviewer_keywords:
 - ecount annotation
 - bcount annotation
 ms.assetid: 81893638-010c-41a0-9cb3-666fe360f3e0
-ms.openlocfilehash: a50e37b41c6e90428bed5ae113d2d9f064e042d0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 77b934010b7f76b556a4c7ba9826fbedfc36b95e
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741755"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415843"
 ---
 # <a name="sal-annotations"></a>SAL-Anmerkungen
 
 Wenn Sie die Headerdateien der Bibliothek untersuchen, fallen Ihnen unter Umständen einige ungewöhnliche Anmerkungen auf, z. B. `_In_z` und `_Out_z_cap_(_Size)`. Dies sind Beispiele für die Microsoft-Quellcodeanmerkungssprache (Source-Code Annotation Language, SAL). Mit den darin verfügbaren Anmerkungen kann beschrieben werden, wie eine Funktion ihre Parameter verwendet, z. B. die getroffenen Annahmen und die Garantien für den Abschluss. In der Headerdatei \<sal.h> sind die Anmerkungen definiert.
 
-Weitere Informationen zur Verwendung von SAL-Anmerkungen in Visual Studio finden Sie unter [Verwenden von SAL-Anmerkungen zum Reduzieren von C/C++-Codefehlern](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+Weitere Informationen zur Verwendung von SAL-Anmerkungen in Visual Studio finden Sie unter [Verwenden von SAL-Anmerkungen zum Reduzieren von C/C++-Codefehlern](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [CRT-Bibliotheksfunktionen](../c-runtime-library/crt-library-features.md)

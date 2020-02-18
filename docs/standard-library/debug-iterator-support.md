@@ -1,5 +1,5 @@
 ---
-title: Debug Iterator Support
+title: Unterstützung für Iteratordebugging
 ms.date: 09/13/2018
 helpviewer_keywords:
 - Safe Libraries
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: 3ccb618c9a3c6b21d6ffe3fbbce7b6c1140e0564
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f43367fd58d8ab2a62fb2312efcd9fc9ec0cfc42
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450590"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416206"
 ---
-# <a name="debug-iterator-support"></a>Debug Iterator Support
+# <a name="debug-iterator-support"></a>Unterstützung für Iteratordebugging
 
 Mit der Laufzeitbibliothek von Visual C++ wird eine nicht ordnungsgemäße Verwendung eines Iterators erkannt, zur Laufzeit eine Assertanweisung ausgeführt und ein entsprechendes Dialogfeld angezeigt. Wenn Sie die Unterstützung für das Iteratordebugging aktivieren möchten, kompilieren Sie Ihr Programm mit Debugversionen der C++-Standardbibliothek und der C-Laufzeitbibliothek. Weitere Informationen finden Sie unter [CRT Library Features (CRT-Bibliotheksfunktionen)](../c-runtime-library/crt-library-features.md). Informationen zur Verwendung von überprüften Iteratoren finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
 
@@ -54,7 +54,7 @@ int main() {
 }
 ```
 
-## <a name="using-iteratordebuglevel"></a>Verwenden von _ITERATOR_DEBUG_LEVEL
+## <a name="using-_iterator_debug_level"></a>Verwenden von _ITERATOR_DEBUG_LEVEL
 
 Mit dem Präprozessormakro [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) können Sie die Funktion für das Iteratordebugging in einem Debugbuild deaktivieren. Von diesem Programm werden keine Assertanweisungen ausgeführt. Dennoch zeigt sich ein undefiniertes Verhalten.
 
@@ -148,7 +148,7 @@ int main() {
 
 ## <a name="destructors-for-debug-iterators"></a>Debugtoren für Debug-Iteratoren
 
-Debugiteratoren enthalten nicht triviale Destruktoren. Wenn ein Dekonstruktor nicht ausgeführt wird, aber der Arbeitsspeicher des Objekts freigegeben wird, können Zugriffs Verletzungen und Daten Beschädigungen auftreten. Betrachten Sie das folgende Beispiel:
+Debugiteratoren enthalten nicht triviale Destruktoren. Wenn ein Dekonstruktor nicht ausgeführt wird, aber der Arbeitsspeicher des Objekts freigegeben wird, können Zugriffs Verletzungen und Daten Beschädigungen auftreten. Betrachten Sie dieses Beispiel:
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -165,7 +165,7 @@ struct derived : base {
    ~derived() {}
 };
 
- int main() {
+int main() {
    std::vector<int> vect( 10 );
    base * pb = new derived( vect.begin() );
    delete pb;  // doesn't call ~derived()

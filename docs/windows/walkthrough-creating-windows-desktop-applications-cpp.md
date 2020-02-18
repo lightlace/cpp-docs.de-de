@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 6f219a0c199971b563b1c0ff291f2f5d12803023
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: cebc748f207cb1283add4b494b422a13bdc17f8c
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627476"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416133"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Exemplarische Vorgehensweise: Erstellen einer herkömmlichen Windows-C++Desktop Anwendung ()
 
@@ -23,7 +23,7 @@ Die Windows-API (auch als Win32-API, Windows-Desktop-API und Windows-Classic API
 > [!IMPORTANT]
 > Aus Gründen der Übersichtlichkeit werden einige Code Anweisungen im Text ausgelassen. Der Abschnitt [Build the Code](#build-the-code) am Ende dieses Dokuments zeigt den gesamten Code.
 
-## <a name="prerequisites"></a>Erforderliche Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - Ein Computer, auf dem Microsoft Windows 7 oder eine höhere Version ausgeführt wird. Für ein optimales Entwicklungserlebnis empfehlen wir Windows 10.
 
@@ -43,7 +43,7 @@ Führen Sie diese Schritte aus, um Ihr erstes Windows-Desktop Projekt zu erstell
 
 ### <a name="to-create-a-windows-desktop-project-in-visual-studio-2019"></a>So erstellen Sie ein Windows-Desktop Projekt in Visual Studio 2019
 
-1. Klicken Sie im Hauptmenü auf **Datei** > **Neu** > **Projekt**, um das Dialogfeld **Neues Projekt erstellen** zu öffnen.
+1. Wählen Sie im Hauptmenü **Datei** > **neue** > **Projekt** aus, um das Dialogfeld **Neues Projekt erstellen** zu öffnen.
 
 1. Legen Sie am oberen Rand des Dialog Felds **Sprache** auf **C++** fest, legen Sie **Platform** auf **Windows**fest, und legen Sie **Projekttyp** auf **Desktop**fest.
 
@@ -71,7 +71,7 @@ Das Projekt wird jetzt erstellt, und die Quelldatei wird im Editor geöffnet. Fa
 
 1. Wählen Sie im Menü **Datei** die Option **Neu** und anschließend **Projekt** aus.
 
-1. Erweitern Sie im Dialogfeld **Neues Projekt** im linken Bereich den Knoten **installiert**  > **Visualisierung C++** , und wählen Sie dann **Windows-Desktop**aus. Wählen Sie im mittleren Bereich die Option **Windows-Desktop-Assistent**aus.
+1. Erweitern Sie im Dialogfeld **Neues Projekt** im linken Bereich den Knoten **installiert** > **Visualisierung C++** , und wählen Sie dann **Windows-Desktop**aus. Wählen Sie im mittleren Bereich die Option **Windows-Desktop-Assistent**aus.
 
    Geben Sie im Feld **Name** einen Namen für das Projekt ein, z. b. *desktopapp*. Klicken Sie auf **OK**.
 
@@ -97,7 +97,7 @@ Das Projekt wird jetzt erstellt, und die Quelldatei wird im Editor geöffnet. Fa
 
 1. Wählen Sie im Menü **Datei** die Option **Neu** und anschließend **Projekt** aus.
 
-1. Erweitern Sie im Dialogfeld **Neues Projekt** im linken Bereich den Knoten **installierte**  > **Vorlagen**  > **Visualisierung C++** , und wählen Sie dann **Win32**aus. Wählen Sie im mittleren Bereich **Win32-Projekt**aus.
+1. Erweitern Sie im Dialogfeld **Neues Projekt** im linken Bereich den Knoten **installierte** > **Vorlagen** > **Visualisierung C++** , und wählen Sie dann **Win32**aus. Wählen Sie im mittleren Bereich **Win32-Projekt**aus.
 
    Geben Sie im Feld **Name** einen Namen für das Projekt ein, z. b. *desktopapp*. Klicken Sie auf **OK**.
 
@@ -141,16 +141,16 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-Desktop Anwendung
    Informationen zu den Parametern und Rückgabe Werten dieser Funktion finden Sie unter [WinMain Entry Point](/windows/win32/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
-   > Was sind diese zusätzlichen Wörter, wie z. b. `CALLBACK`oder `HINSTANCE`, oder `_In_`? Die herkömmliche Windows-API verwendet häufig Typedefs-und Präprozessormakros, um einige Details von Typen und Platt Form spezifischem Code, wie z. b. Aufruf Konventionen, **__declspec** -Deklarationen und compilerpragmas, zu abstrahieren. In Visual Studio können Sie die Funktion "IntelliSense [Quick Info](/visualstudio/ide/using-intellisense#quick-info) " verwenden, um zu sehen, was diese Typedefs und Makros definieren. Zeigen Sie mit der Maus auf das gewünschte Wort, oder wählen Sie es aus, und drücken Sie **STRG** +**K**, **STRG** +**I** für ein kleines Popup Fenster, das die Definition enthält. Weitere Informationen finden Sie unter [Verwenden von IntelliSense](/visualstudio/ide/using-intellisense). Parameter und Rückgabe Typen verwenden oftmals *SAL* -Anmerkungen, um Programmierfehler zu erfassen. Weitere Informationen finden Sie unter [Verwenden von Sal-Anmerkungen zum Reduzieren vonC++ C/Code-Fehlern](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+   > Was sind diese zusätzlichen Wörter, wie z. b. `CALLBACK`oder `HINSTANCE`, oder `_In_`? Die herkömmliche Windows-API verwendet häufig Typedefs-und Präprozessormakros, um einige Details von Typen und Platt Form spezifischem Code, z. b. Aufruf Konventionen, **__declspec** Deklarationen und compilerpragmas, zu abstrahieren. In Visual Studio können Sie die Funktion "IntelliSense [Quick Info](/visualstudio/ide/using-intellisense#quick-info) " verwenden, um zu sehen, was diese Typedefs und Makros definieren. Zeigen Sie mit der Maus auf das gewünschte Wort, oder wählen Sie es aus, und drücken Sie **STRG**+**K**, **STRG**+**I** für ein kleines Popup Fenster, das die Definition enthält. Weitere Informationen finden Sie unter [Using IntelliSense](/visualstudio/ide/using-intellisense). Parameter und Rückgabe Typen verwenden oftmals *SAL* -Anmerkungen, um Programmierfehler zu erfassen. Weitere Informationen finden Sie unter [Verwenden von Sal-Anmerkungen zum Reduzieren vonC++ C/Code-Fehlern](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
-1. Für Windows-Desktop Programme ist &lt;windows. h-> erforderlich. &lt;Tchar. h > definiert das `TCHAR`-Makro, das letztendlich in **wchar_t** aufgelöst wird, wenn das Unicode-Symbol im Projekt definiert ist. andernfalls wird es in **char**aufgelöst.  Wenn Sie immer mit aktiviertem Unicode erstellen, benötigen Sie keinen TCHAR und können **wchar_t** einfach direkt verwenden.
+1. Windows-Desktop Programme erfordern &lt;Windows. h->. &lt;Tchar. h > definiert das `TCHAR`-Makro, das letztendlich in **wchar_t** aufgelöst wird, wenn das Unicode-Symbol im Projekt definiert ist. andernfalls wird es in **char**aufgelöst.  Wenn Sie immer mit aktiviertem Unicode erstellen, benötigen Sie keinen TCHAR und können nur **wchar_t** direkt verwenden.
 
    ```cpp
    #include <windows.h>
    #include <tchar.h>
    ```
 
-1. Zusammen mit der `WinMain`-Funktion muss jede Windows-Desktop Anwendung auch über eine Fenster Prozedur Funktion verfügen. Diese Funktion wird in der Regel `WndProc` benannt, Sie können Sie aber beliebig benennen. `WndProc` besitzt die folgende Syntax.
+1. Zusammen mit der `WinMain`-Funktion muss jede Windows-Desktop Anwendung auch über eine Fenster Prozedur Funktion verfügen. Diese Funktion wird in der Regel `WndProc`benannt, Sie können Sie aber beliebig benennen. `WndProc` besitzt die folgende Syntax.
 
    ```cpp
    LRESULT CALLBACK WndProc(
@@ -240,7 +240,7 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-Desktop Anwendung
    }
    ```
 
-   Diese Funktion gibt einen `HWND` zurück, bei dem es sich um ein Handle für ein Fenster handelt. Ein Handle ähnelt einem Zeiger, den Windows verwendet, um geöffnete Fenster nachzuverfolgen. Weitere Informationen finden Sie unter [Windows-Datentypen](/windows/win32/WinProg/windows-data-types).
+   Diese Funktion gibt einen `HWND`zurück, bei dem es sich um ein Handle für ein Fenster handelt. Ein Handle ähnelt einem Zeiger, den Windows verwendet, um geöffnete Fenster nachzuverfolgen. Weitere Informationen finden Sie unter [Windows-Datentypen](/windows/win32/WinProg/windows-data-types).
 
 1. An diesem Punkt wurde das Fenster erstellt, aber wir müssen Windows darauf hinweisen, das Fenster sichtbar zu machen. Dies ist der folgende Code:
 
@@ -361,7 +361,7 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-Desktop Anwendung
 
 1. Damit die `WndProc` -Funktion die Nachrichten behandeln kann, die von der Anwendung empfangen werden, implementieren Sie eine switch-Anweisung.
 
-   Eine wichtige zu behandelnde Nachricht ist die [WM_PAINT](/windows/win32/gdi/wm-paint) -Nachricht. Die Anwendung empfängt die `WM_PAINT` Nachricht, wenn ein Teil des angezeigten Fensters aktualisiert werden muss. Das Ereignis kann auftreten, wenn ein Benutzer ein Fenster vor dem Fenster bewegt und dann wieder entfernt. Ihre Anwendung weiß nicht, wann diese Ereignisse eintreten. Nur Windows weiß, damit Ihre APP mit einer `WM_PAINT` Meldung benachrichtigt wird. Wenn das Fenster zum ersten Mal angezeigt wird, müssen alle Updates aktualisiert werden.
+   Eine wichtige zu behandelnde Nachricht ist die [WM_PAINT](/windows/win32/gdi/wm-paint) Nachricht. Die Anwendung empfängt die `WM_PAINT` Nachricht, wenn ein Teil des angezeigten Fensters aktualisiert werden muss. Das Ereignis kann auftreten, wenn ein Benutzer ein Fenster vor dem Fenster bewegt und dann wieder entfernt. Ihre Anwendung weiß nicht, wann diese Ereignisse eintreten. Nur Windows weiß, damit Ihre APP mit einer `WM_PAINT` Meldung benachrichtigt wird. Wenn das Fenster zum ersten Mal angezeigt wird, müssen alle Updates aktualisiert werden.
 
    Rufen Sie zur Behandlung einer `WM_PAINT` -Nachricht zuerst [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint)auf, behandeln Sie anschließend die gesamte Logik, um das Layout von Text, Schaltflächen und anderen Steuerelementen im Fenster zu behandeln, und rufen Sie anschließend [EndPaint](/windows/win32/api/winuser/nf-winuser-endpaint)auf. Bei der Anwendung besteht die Logik zwischen dem Anfangs-und dem Endbefehl in der Anzeige der Zeichenfolge "Hello, Windows Desktop!". im Fenster. Im folgenden Code wird die [TextOut](/windows/win32/api/wingdi/nf-wingdi-textoutw) -Funktion zur Anzeige der Zeichenfolge verwendet.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 914498a79d3d3ddae08ae672aac35c6e913ef238
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: eaaa581ff622438c2e395c34b4b026aca693a845
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988076"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416167"
 ---
 # <a name="security-best-practices-for-c"></a>Empfohlene Vorgehensweisen bezüglich der Sicherheit in C++
 
@@ -35,14 +35,14 @@ Der Linker wird angewiesen, dem Ausgabeabbild eine Tabelle mit den Adressen alle
 [/NXCOMPAT](../build/reference/nxcompat.md), [/NXCOMPAT (kompatibel mit Daten Ausführungs Verhinderung)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md) Diese Compileroptionen und Linkeroptionen ermöglichen die Einhaltung der Daten Ausführungs Verhinderung (Data Execution Prevention, DEP). DEP schützt die CPU vor der Ausführung von Seiten, die keine Codepages sind.
 
 [/analyze (Codeanalyse)](../build/reference/analyze-code-analysis.md)<br/>
-Diese Compileroption aktiviert die Codeanalyse, die über potentielle Sicherheitslücken wie Pufferüberlauf, nicht initialisierten Speicher, Dereferenzierung von NULL-Zeigern und Speicherverlusten Bericht erstattet. Diese Option ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Code Analyse für C/C++ Overview](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+Diese Compileroption aktiviert die Codeanalyse, die über potentielle Sicherheitslücken wie Pufferüberlauf, nicht initialisierten Speicher, Dereferenzierung von NULL-Zeigern und Speicherverlusten Bericht erstattet. Diese Option ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Code Analyse für C/C++ Overview](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 [/DYNAMICBASE (Address Space Layout Randomization verwenden)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
 Diese Linkeroption ermöglicht das Erstellen eines ausführbaren Images, das am Anfang der Ausführung an anderen Orten im Arbeitsspeicher geladen werden kann. Durch diese Option lässt sich die Position des Stapels im Arbeitsspeicher auch schlechter vorhersagen.
 
 ## <a name="security-enhanced-crt"></a>CRT mit erweiterter Sicherheit
 
-Die C-Laufzeitbibliothek (CRT) wurde um sichere Versionen von Funktionen erweitert, die ein Sicherheitsrisiko darstellen, z. B. die aufwerfen, die ungeprüfte `strcpy`-Funktion zum Kopieren von Zeichenfolgen. Da die älteren, nicht sicheren Versionen dieser Funktionen jetzt veraltet sind, verursacht ihre Verwendung Compilerwarnungen. Es wird empfohlen, die sicheren Versionen dieser CRT-Funktionen zu verwenden, anstatt die Compilerwarnungen zu unterdrücken. Weitere Informationen finden Sie unter [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).
+Die C-Laufzeitbibliothek (CRT) wurde um sichere Versionen von Funktionen erweitert, die ein Sicherheitsrisiko darstellen, z. B. die aufwerfen, die ungeprüfte `strcpy`-Funktion zum Kopieren von Zeichenfolgen. Da die älteren, nicht sicheren Versionen dieser Funktionen jetzt veraltet sind, verursacht ihre Verwendung Compilerwarnungen. Es wird empfohlen, die sicheren Versionen dieser CRT-Funktionen zu verwenden, anstatt die Compilerwarnungen zu unterdrücken. Weitere Informationen finden Sie unter [Security Features in the CRT (Sicherheitsfunktionen in der CRT)](../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="safeint-library"></a>SafeInt-Bibliothek
 
@@ -64,7 +64,7 @@ Codeanalyse für verwalteten Code, auch bekannt als FxCop, überprüft Assemblys
 
 - Lokalisierung
 
-- Namenskonventionen
+- Benennungskonventionen
 
 - Leistung
 

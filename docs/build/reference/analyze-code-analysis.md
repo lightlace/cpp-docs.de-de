@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: f537fdea2703805c7ab1c57ba0d4429f6b683ae4
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: c0cebe1cbd160bdec257a960f90039c1af3bfee2
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444887"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416050"
 ---
 # <a name="analyze-code-analysis"></a>/analyze (Codeanalyse)
 
@@ -24,7 +24,7 @@ Aktiviert Codeanalyse- und Steueroptionen.
 
 ## <a name="syntax"></a>Syntax
 
-> **/analyze**[-] [ **: WX-** ] [ **: Protokoll** *Dateiname*] [ **: Quiet**] [ **: STACKSIZE** *Number*] [ **: max_paths** *Number*] [ **: Only**] [ **: RuleSet** *RuleSet*] [ **:p Lugin**  *Plug-in-dll*]
+> **/analyze**[-] [ **: WX-** ] [ **: Protokoll** *Dateiname*] [ **: Quiet**] [ **: STACKSIZE** *Number*] [ **: max_paths** *Number*] [ **: Only**] [ **: RuleSet** *RuleSet*] [ **:p Lugin** *Plugin-DLL*]
 
 ## <a name="arguments"></a>Argumente
 
@@ -41,9 +41,9 @@ Ausführliche Analyseergebnisse werden als XML in die Datei geschrieben, die dur
 Deaktiviert die Analyzer-Ausgabe im **Ausgabe** Fenster.
 
 **/analyze: STACKSIZE** - *Nummer*\
-Der mit dieser Option verwendete *Number* -Parameter gibt die Größe (in Bytes) des Stapel Rahmens an, für den die Warnung [C6262](/visualstudio/code-quality/c6262) generiert wird. Der Leerraum vor der *Zahl* ist optional. Wenn dieser Parameter nicht angegeben wird, beträgt die Stapel Rahmengröße standardmäßig 16 KB.
+Der mit dieser Option verwendete *Number* -Parameter gibt die Größe (in Bytes) des Stapel Rahmens an, für den die Warnung [C6262](/cpp/code-quality/c6262) generiert wird. Der Leerraum vor der *Zahl* ist optional. Wenn dieser Parameter nicht angegeben wird, beträgt die Stapel Rahmengröße standardmäßig 16 KB.
 
-**/analyze: max_paths** *Number*\
+**/analyze: max_paths** *Anzahl*\
 Der mit dieser Option verwendete *Number* -Parameter gibt die maximale Anzahl von Codepfade an, die analysiert werden sollen. Wenn dieser Parameter nicht angegeben wird, ist die Zahl standardmäßig 256. Größere Werte führen zu einer gründlicheren Überprüfung, aber die Analyse kann länger dauern.
 
 **/analyze: nur**\
@@ -54,7 +54,7 @@ Ermöglicht Ihnen die Angabe der zu analysierenden Regelsätze, einschließlich 
 
 Die RuleSets, die mit Visual Studio ausgeliefert werden, finden Sie unter *%VSInstallDir%\Team Tools\Static Analysis tools\rule Sets.*
 
-Der folgende Beispiel benutzerdefinierte Regelsatz weist das Regel Modul an, nach C6001 und C26494 zu suchen. Sie können diese Datei beliebig lange platzieren, wenn Sie über eine `.ruleset`-Erweiterung verfügt, und Sie geben den vollständigen Pfad im Argument an.
+Der folgende Beispiel benutzerdefinierte Regelsatz weist das Regel Modul an, nach C6001 und C26494 zu suchen. Sie können diese Datei beliebig lange platzieren, wenn Sie über eine `.ruleset` Erweiterung verfügt, und Sie geben den vollständigen Pfad im Argument an.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -71,14 +71,14 @@ Aktiviert das angegebene PREfast-Plug-in als Teil der Code Analyse Ausführungen
 
 ::: moniker range="<=vs-2017"
 
-Localespc. dll ist das Plug-in, das Parallelitäts bezogene Code Analyse Überprüfungen im Bereich der C261XX-Warnungen implementiert. Beispiel: [C26100](/visualstudio/code-quality/c26100), [C26101](/visualstudio/code-quality/c26101),..., [C26167](/visualstudio/code-quality/c26167).
+Localespc. dll ist das Plug-in, das Parallelitäts bezogene Code Analyse Überprüfungen im Bereich der C261XX-Warnungen implementiert. Beispiel: [C26100](/cpp/code-quality/c26100), [C26101](/cpp/code-quality/c26101),..., [C26167](/cpp/code-quality/c26167).
 
 Verwenden Sie zum Ausführen von "localespc. dll" Diese Compileroption: **/analyze: Plugin localespc. dll**
 
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 
-Die Datei "-Parallelität" implementiert neben läufigkeits bezogene Code Analyse Überprüfungen im Bereich von C261XX-Warnungen. Beispiel: [C26100](/visualstudio/code-quality/c26100), [C26101](/visualstudio/code-quality/c26101),..., [C26167](/visualstudio/code-quality/c26167).
+Die Datei "-Parallelität" implementiert neben läufigkeits bezogene Code Analyse Überprüfungen im Bereich von C261XX-Warnungen. Beispiel: [C26100](/cpp/code-quality/c26100), [C26101](/cpp/code-quality/c26101),..., [C26167](/cpp/code-quality/c26167).
 
 Zum Ausführen von "" "" "" "" "" "" ".
 
@@ -100,7 +100,7 @@ Verwenden Sie dann diese Compileroption: **/analyze: Plugin espxengine. dll**.
 
 ## <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [Code Analyse für c/C++ Overview](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) und [Code Analyse für c/C++ Warnungen](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings).
+Weitere Informationen finden Sie unter [Code Analyse für c/C++ Overview](/cpp/code-quality/code-analysis-for-c-cpp-overview) und [Code Analyse für c/C++ Warnungen](/cpp/code-quality/code-analysis-for-c-cpp-warnings).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
