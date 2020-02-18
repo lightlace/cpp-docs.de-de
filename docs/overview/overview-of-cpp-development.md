@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: d72ea2ab4fa83259152101b357c6b2b69e74c723
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: 4e04e189b44fe61759a9422139d856ab8a09f201
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810625"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415712"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Übersicht über die C++-Entwicklung in Visual Studio
 
@@ -47,7 +47,7 @@ Visual Studio unterstützt alle Projektsysteme und benutzerdefinierten Buildtool
 
 ## <a name="add-to-source-control"></a>Zur Quellcodeverwaltung hinzufügen
 
-Mithilfe von Quellcodeverwaltung können Sie die Arbeit mehrerer Entwickler koordinieren, im Bearbeitungsprozess stehende Arbeit von Produktionscode trennen und Ihren Quellcode sichern. Visual Studio unterstützt Git und [Team Foundation Version Control \(TFVC\)](/azure/devops/repos/tfvc/) über sein Fenster **Team Explorer**. 
+Mithilfe von Quellcodeverwaltung können Sie die Arbeit mehrerer Entwickler koordinieren, im Bearbeitungsprozess stehende Arbeit von Produktionscode trennen und Ihren Quellcode sichern. Visual Studio unterstützt Git und [Team Foundation Version Control \(TFVC\)](/azure/devops/repos/tfvc/) über sein Fenster **Team Explorer**.
 
 ::: moniker range="vs-2019"
 
@@ -117,7 +117,7 @@ Weitere Informationen finden Sie unter [Verifying Code by Using Unit Tests](/vis
 
 ## <a name="analyze"></a>Analysieren
 
-Visual Studio enthält statische Codeanalysetools, die potenzielle Probleme in Ihrem Quellcode erkennen können. Diese Tools beinhalten eine Implementierung der [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)-Regelüberprüfung. Weitere Informationen finden Sie unter [Code analysis for C/C++ overview (Übersicht: Codeanalyse für C/C++)](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+Visual Studio enthält statische Codeanalysetools, die potenzielle Probleme in Ihrem Quellcode erkennen können. Diese Tools beinhalten eine Implementierung der [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)-Regelüberprüfung. Weitere Informationen finden Sie unter [Code analysis for C/C++ overview (Übersicht: Codeanalyse für C/C++)](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 ## <a name="deploy-completed-applications"></a>Bereitstellen fertiger Anwendungen
 
