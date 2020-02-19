@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: 74e1b34549a8e8d0f1e22e6f40aacbd4429b272f
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: 0a4093860c7d06e8240e03b1487546f80da24b88
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793787"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416101"
 ---
 # <a name="c-in-visual-studio"></a>C++ in Visual Studio
 
@@ -82,7 +82,7 @@ Erfahren Sie, wie die Produktivitätsfeatures im C++-Editor zum Umgestalten, Nav
 [Debuggen von nativem Code](/visualstudio/debugger/debugging-native-code)<br/>
 Verwenden des Visual Studio-Debuggers mit C++-Projekten
 
-[Übersicht über die Codeanalyse für C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[Übersicht über die Codeanalyse für C/C++](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
 Verwenden von SAL-Anmerkungen oder der C++ Core Guidelines-Überprüfungen, um statische Analysen durchführen.
 
 [Schreiben von Komponententests für C/C++ in Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>

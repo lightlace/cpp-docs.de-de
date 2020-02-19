@@ -3,12 +3,12 @@ title: Visual Studio-IDE-Tools C++ für die Aktualisierung von Code
 description: Der C++ Code-Editor und die Code Analysetools in Visual Studio unterstützen Sie C++ beim modernisieren Ihrer Codebasis.
 ms.date: 11/13/2019
 ms.topic: conceptual
-ms.openlocfilehash: 3f85b955b688489bfc04c4bfc0605201e883e3d4
-ms.sourcegitcommit: 4dde7914608508e47c21cae03ac58fe953a0c29b
+ms.openlocfilehash: 409fc0a2fa6cd39c7751dc34b20b231ffbea3956
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119633"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416152"
 ---
 # <a name="visual-studio-ide-tools-for-upgrading-c-code"></a>Visual Studio-IDE-Tools C++ für die Aktualisierung von Code
 
@@ -24,7 +24,7 @@ Visual Studio unterstützt Sie bei C++ der Aktualisierung von Legacy Code mit Co
 
 - Code, der allen Versionen des Standards entspricht, aber nicht mehr als bewährte Vorgehensweise in modernen C++gilt.
 
-   Führen Sie die [Code Analyse](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)aus, um Code zu identifizieren, in dem Änderungen empfohlen werden.
+   Führen Sie die [Code Analyse](/cpp/code-quality/code-analysis-for-c-cpp-overview)aus, um Code zu identifizieren, in dem Änderungen empfohlen werden.
 
 ## <a name="open-and-convert-a-legacy-project"></a>Öffnen und Konvertieren eines Legacy Projekts
 
@@ -74,7 +74,7 @@ Code Analysefehler und-Warnungen werden auch im **Fehlerliste** wie Compilerfehl
 
 ![Code Analyse Warnungen in Fehlerliste](media/code-analysis-error-list.png "Code Analyse Warnungen in Fehlerliste")
 
-Sie können ändern, welche Regeln aktiv sind, und benutzerdefinierte RuleSets erstellen. Weitere Informationen zur Verwendung der Code Analyse finden Sie unter [Code Analyse für CC++ /Overview](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+Sie können ändern, welche Regeln aktiv sind, und benutzerdefinierte RuleSets erstellen. Weitere Informationen zur Verwendung der Code Analyse finden Sie unter [Code Analyse für CC++ /Overview](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 ## <a name="use-quick-actions-to-modernize-code"></a>Verwenden von schnellen Aktionen zur Modernisierung von Code
 
@@ -101,7 +101,7 @@ Und der `AVERAGE`-Aufrufe wird jetzt als Funktions aufzurufen markiert, und der 
 
 ![constexpr-Funktionsaufrufe](media/constexpr-function-call.png "constexpr-Funktionsaufrufe")
 
-### <a name="initialize-variables"></a>Variablen initialisieren
+### <a name="initialize-variables"></a>Initialisieren der Variablen
 
 Nicht initialisierte Variablen können zufällige Werte enthalten, die zu schwerwiegenden Fehlern führen. Die Code Analyse Flags diese Instanzen, und der Editor stellt eine schnelle Aktion bereit:
 

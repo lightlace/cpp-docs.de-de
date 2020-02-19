@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: 02aee3101156b28dbd59ccd51c071e6774ca1e7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be5a905725c2ed0f056f1686d17d87c74b9cdc5e
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161601"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416059"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator-Klasse
 
@@ -41,7 +41,7 @@ Die BackInsertIterator-Klasse implementiert die Regeln, die für die [back_inser
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[BackInsertIterator::BackInsertIterator](#ctor)|Initialisiert eine neue Instanz der BackInsertIterator-Klasse.|
+|[Backinsertiterator:: backinsertiterator](#ctor)|Initialisiert eine neue Instanz der BackInsertIterator-Klasse.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
@@ -55,14 +55,13 @@ Die BackInsertIterator-Klasse implementiert die Regeln, die für die [back_inser
 
 `BackInsertIterator`
 
-### <a name="requirements"></a>Anforderungen
+### <a name="requirements"></a>Voraussetzungen
 
 **Header:** collection.h
 
-**Namespace:** Platform::Collections
-
+<a name="namespace-platformcollections"></a>**Namespace:** Platform::Collections
 ---
-## <a name="ctor"></a>  Backinsertiterator:: Backinsertiterator-Konstruktor
+## <a name="ctor"></a>Backinsertiterator:: backinsertiterator-Konstruktor
 
 Initialisiert eine neue Instanz der `BackInsertIterator`-Klasse.
 
@@ -77,13 +76,13 @@ explicit BackInsertIterator(
 #### <a name="parameters"></a>Parameter
 
 *v*<br/>
-Ein IVector\<T > Objekt.
+Ein IVector\<t >-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
 Ein `BackInsertIterator` fügt Elemente nach dem letzten Element des Objekts ein, das vom Parameter `v` angegeben wird.
 
-## <a name="operator-assign"></a>  Backinsertiterator:: Operator =-Operator
+## <a name="operator-assign"></a>Backinsertiterator:: Operator =-Operator
 
 Fügt das angegebene Objekt am Ende der aktuellen sequenziellen Auflistung an.
 
@@ -102,7 +101,7 @@ Das Objekt, das der aktuellen Auflistung angefügt werden soll.
 
 Ein Verweis auf den aktuellen BackInsertIterator.
 
-## <a name="operator-dereference"></a>  Backinsertiterator:: *-Operator
+## <a name="operator-dereference"></a>Backinsertiterator:: Operator *-Operator
 
 Ruft einen Verweis auf den aktuellen BackInsertIterator ab.
 
@@ -120,7 +119,7 @@ Ein Verweis auf den aktuellen BackInsertIterator.
 
 Dieser Operator gibt einen Verweis auf den aktuellen BackInsertIterator zurück; nicht auf ein Element in der aktuellen Sammlung.
 
-## <a name="operator-increment"></a>  Backinsertiterator:: Operator++-Operator
+## <a name="operator-increment"></a>Backinsertiterator:: Operator + +-Operator
 
 Gibt einen Verweis auf den aktuellen BackInsertIterator zurück. Der Iterator ist unverändert.
 
@@ -141,8 +140,8 @@ Ein Verweis auf den aktuellen BackInsertIterator.
 
 Im ersten Syntaxbeispiel wird der aktuelle BackInsertIterator absichtlich präinkrementiert und in der zweiten Syntax wird der aktuelle BackInsertIterator postinkrementiert. Der Typ `int` in der zweiten Syntax gibt eine Nach-Inkrementierungsoperation an, keinen tatsächlichen ganzzahligen Operanden.
 
-Dieser Operator ändert jedoch nicht wirklich den BackInsertIterator. Stattdessen gibt dieser Operator einen Verweis auf den unveränderten, aktuellen Iterator zurück. Dies ist das gleiche Verhalten wie [Operator *](#operator-dereference).
+Dieser Operator ändert jedoch nicht wirklich den BackInsertIterator. Stattdessen gibt dieser Operator einen Verweis auf den unveränderten, aktuellen Iterator zurück. Dies entspricht dem Verhalten von [Operator *](#operator-dereference).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Plattform-Namespace](platform-namespace-c-cx.md)
+[Platform-Namespace](platform-namespace-c-cx.md)

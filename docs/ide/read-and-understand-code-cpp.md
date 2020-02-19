@@ -2,12 +2,12 @@
 title: Lesen und Verstehen von C++-Code in Visual Studio
 description: Verwenden Sie den C++-Code-Editor in Visual Studio, um Ihren Code zu formatieren und zu verstehen.
 ms.date: 05/28/2019
-ms.openlocfilehash: d4af4c9bc747540bada49de305c45cffc5c44374
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 2ddeabd9d70ebb344fe6d14abe520ee51a42eebb
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303107"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416127"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>Lesen und Verstehen von C++-Code in Visual Studio
 
@@ -19,9 +19,9 @@ Visual Studio färbt Syntaxelemente ein, um zwischen Typen von Symbolen zu unter
 
 ![Farbige Kennzeichnung von Code](../ide/media/code-outline-colorization.png "C++farbliche Kennzeichnung")
 
- Nicht verwendeter Code (z. B. Code unter „#if 0“) wird blasser dargestellt.
+Nicht verwendeter Code (z. B. Code unter „#if 0“) wird blasser dargestellt.
 
- ![Inaktiver Code](../ide/media/inactive-code-cpp.png "C++inaktiver Code")
+![Inaktiver Code](../ide/media/inactive-code-cpp.png "C++inaktiver Code")
 
 Sie können die Farben anpassen, indem Sie „Fonts“ (Schriftarten) im **Schnellstart** eingeben und **Schriftarten und Farben** auswählen. Scrollen Sie im Dialogfeld **Schriftarten und Farben** nach unten zu dem C-/C++-Optionen, und wählen Sie dann eine benutzerdefinierte Schriftart und/oder Farbe aus.
 
@@ -111,8 +111,8 @@ Klicken Sie mit der rechten Maustaste auf einen beliebigen Funktionsaufruf, und 
 
 ![C&#43; &#43; -Rückruf Hierarchie](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Schreiben und Umgestalten von Code (C++)](writing-and-refactoring-code-cpp.md)</br>
-[Navigieren in C++-Code in Visual Studio](navigate-code-cpp.md)</br>
+[Navigate your C++ code base in Visual Studio (Navigieren in Ihrer C++-Codebasis in Visual Studio)](navigate-code-cpp.md)</br>
 [Collaborate with Live Share for C++ (Zusammenarbeit über Live Share für C++)](live-share-cpp.md)

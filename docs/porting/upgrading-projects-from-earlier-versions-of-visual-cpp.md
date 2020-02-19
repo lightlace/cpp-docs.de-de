@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: a18d2dbabdeec0f283fb4eca7ed52e616f9d224a
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: bc9fb5628c1a628b91f306c346f2bbb1dea13de8
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725720"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416112"
 ---
 # <a name="upgrade-c-projects-from-earlier-versions-of-visual-studio"></a>Aktualisieren C++ von Projekten aus früheren Versionen von Visual Studio
 
@@ -47,7 +47,7 @@ Einige aktualisierte Projekte und Projektmappen können ohne Änderung erfolgrei
 
 1. Legen Sie das Platt Form Toolset, C++ den sprach Standard und Windows SDK Version (falls zutreffend) auf die bevorzugten Versionen fest. (**Projekt** > **Eigenschaften** > **Konfigurations Eigenschaften** > **Allgemein**)
 
-1. Wenn viele Fehler auftreten, können Sie einige Optionen temporär deaktivieren, während Sie Sie beheben. Wenn Sie die Option [/permissive-](../build/reference/permissive-standards-conformance.md) deaktivieren möchten, verwenden Sie ** > Eigenschaften** des **Projekts** > **Konfigurations Eigenschaften** > **C++ C-** / > **Sprache**. Um die [Code Analyse](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) Option zu deaktivieren, verwenden Sie **Projekt** > **Eigenschaften** > **Konfigurations Eigenschaften** > **Code Analyse**.
+1. Wenn viele Fehler auftreten, können Sie einige Optionen temporär deaktivieren, während Sie Sie beheben. Wenn Sie die Option [/permissive-](../build/reference/permissive-standards-conformance.md) deaktivieren möchten, verwenden Sie ** > Eigenschaften** des **Projekts** > **Konfigurations Eigenschaften** > **C++ C-** / > **Sprache**. Um die [Code Analyse](/cpp/code-quality/code-analysis-for-c-cpp-overview) Option zu deaktivieren, verwenden Sie **Projekt** > **Eigenschaften** > **Konfigurations Eigenschaften** > **Code Analyse**.
 
 1. Stellen Sie sicher, dass alle Abhängigkeiten vorhanden sind und dass die Includepfade oder Bibliotheks Speicherorte korrekt sind. (**Projekt** > **Eigenschaften** > **Konfigurations Eigenschaften** > **VC + +-Verzeichnisse**)
 

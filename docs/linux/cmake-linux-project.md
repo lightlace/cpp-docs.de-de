@@ -3,12 +3,12 @@ title: Erstellen und Konfigurieren eines Linux CMake-Projekts in Visual Studio
 description: Hier erfahren Sie, wie Sie ein Linux CMake-Projekt in Visual Studio erstellen, konfigurieren, bearbeiten und kompilieren.
 ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 128b8dac297398ffbfadfaade5b36c843d55e163
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 9c6a60162c2dbbab8e348b27d1987d7f1001bee0
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625951"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416092"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Erstellen und Konfigurieren eines Linux-CMake-Projekts
 
@@ -64,7 +64,7 @@ Die Binärdateien werden in `~/.vs/cmake` installiert. Nach dem Bereitstellen de
 
 ## <a name="open-a-folder"></a>Öffnen eines Ordners
 
-Um zu beginnen, wählen Sie **Datei**  >  **Öffnen**  >  **Ordner** aus dem Hauptmenü aus, oder geben Sie `devenv.exe <foldername>` in der Befehlszeile ein. Der Ordner, den Sie öffnen, sollte eine Datei „CMakeLists.txt“ sowie Ihren Quellcode enthalten.
+Um zu beginnen, wählen Sie **Datei** > **Öffnen** > **Ordner** aus dem Hauptmenü aus, oder geben Sie `devenv.exe <foldername>` in der Befehlszeile ein. Der Ordner, den Sie öffnen, sollte eine Datei „CMakeLists.txt“ sowie Ihren Quellcode enthalten.
 Das folgende Beispiel zeigt eine einfache Datei „CMakeLists.txt“ und CPP-Datei:
 
 ```cpp
@@ -175,7 +175,7 @@ Das folgende Beispiel zeigt die Standardkonfiguration für Linux-Debug in Visual
 
 ::: moniker range="vs-2019"
 
- Die Standardkonfiguration für Linux-Debug in Visual Studio 2019 ab Version 16.1 ist wie hier gezeigt:
+Die Standardkonfiguration für Linux-Debug in Visual Studio 2019 ab Version 16.1 ist wie hier gezeigt:
 
 ```json
 {

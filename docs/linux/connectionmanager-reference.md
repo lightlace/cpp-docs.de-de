@@ -5,12 +5,12 @@ f1_keywords:
 - ConnectionManager
 helpviewer_keywords:
 - ConnectionManager program
-ms.openlocfilehash: 2b01bfbcd81984e7ddf32cd5ab0485fff17b3d2b
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 1c6236cedba88714e9918dd2c096b5e78d2f08ce
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520468"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258032"
 ---
 # <a name="connectionmanager-reference"></a>Referenz zu ConnectionManager
 
@@ -22,7 +22,7 @@ ms.locfileid: "76520468"
 
 ::: moniker range="vs-2019"
 
-„ConnectionManager.exe“ ist ein Befehlszeilenhilfsprogramm zum Verwalten von Remoteentwicklungsverbindungen außerhalb von Visual Studio. Es ist gut für Aufgaben wie die Bereitstellung eines neuen Entwicklungscomputers geeignet. Sie können es auch zum Einrichten von Visual Studio für Continuous Integration verwenden. Sie können das Hilfsprogramm in einem Developer-Eingabeaufforderungsfenster verwenden. Weitere Informationen zur Developer-Eingabeaufforderung finden Sie unter [Verwenden des Microsoft C++-Toolsets in der Befehlszeile](..\build\building-on-the-command-line.md).
+„ConnectionManager.exe“ ist ein Befehlszeilenhilfsprogramm zum Verwalten von Remoteentwicklungsverbindungen außerhalb von Visual Studio. Es ist gut für Aufgaben wie die Bereitstellung eines neuen Entwicklungscomputers geeignet. Sie können es auch zum Einrichten von Visual Studio für Continuous Integration verwenden. Sie können das Hilfsprogramm in einem Developer-Eingabeaufforderungsfenster verwenden. Weitere Informationen zur Developer-Eingabeaufforderung finden Sie unter [Verwenden des Microsoft C++-Toolsets in der Befehlszeile](../build/building-on-the-command-line.md).
 
 „ConnectionManager.exe“ ist ab Visual Studio 2019 Version 16.5 verfügbar. Das Hilfsprogramm ist Teil der Workload **Linux-Entwicklung mit C++** . Es wird auch automatisch installiert, wenn Sie die Komponente **Verbindungs-Manager** im Installationsprogramm auswählen. Es wird in *%VCIDEInstallDir%\\Linux\\bin\\ConnectionManagerExe\\ConnectionManager.exe* installiert.
 

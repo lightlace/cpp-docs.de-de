@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b7a18354257333bb71fff6aedb3cf623c47c2d5c
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 335db55f3b181021f4deb391358df5bbfb607815
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821804"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415703"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Änderungsverlauf von Visual C++ von 2003 bis 2015
 
@@ -22,29 +22,29 @@ Informationen zur neuesten Version von Visual Studio finden Sie unter [What's ne
 
 Wenn Sie auf eine neue Version von Visual Studio upgraden, treten unter Umständen Kompilierungs- und/oder Laufzeitfehler im Code auf, der zuvor ordnungsgemäß kompiliert und ausgeführt wurde. Änderungen in der neuen Version, die solche Probleme verursachen, werden als *bedeutende Änderungen* bezeichnet und werden in der Regel durch Änderungen im C++-Sprachenstandard, in den Funktionssignaturen oder im Layout von Objekten im Arbeitsspeicher erforderlich.
 
-Es wird empfohlen, dass Sie keine statischen Links zu Binärdateien mit einer anderen Version des Compilers erstellen, um Laufzeitfehler zu vermeiden, die schwer zu erkennen und zu diagnostizieren sind. Stellen Sie beim Aktualisieren eines EXE- oder DLL-Projekts außerdem sicher, die Bibliotheken zu aktualisieren, mit denen es verknüpft ist. Übergeben Sie keine CRT- (C-Laufzeit) oder C++-Standardbibliothekstypen zwischen Binärdateien, einschließlich DLL-Dateien, die mit verschiedenen Versionen des Compilers kompiliert wurden. Weitere Informationen finden Sie unter [Potenzielle Fehler bei der Übergabe von CRT-Objekten über DLL-Grenzen](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
+Es wird empfohlen, dass Sie keine statischen Links zu Binärdateien mit einer anderen Version des Compilers erstellen, um Laufzeitfehler zu vermeiden, die schwer zu erkennen und zu diagnostizieren sind. Stellen Sie beim Aktualisieren eines EXE- oder DLL-Projekts außerdem sicher, die Bibliotheken zu aktualisieren, mit denen es verknüpft ist. Übergeben Sie keine CRT- (C-Laufzeit) oder C++-Standardbibliothekstypen zwischen Binärdateien, einschließlich DLL-Dateien, die mit verschiedenen Versionen des Compilers kompiliert wurden. Weitere Informationen finden Sie unter [Potential Errors Passing CRT Objects Across DLL Boundaries](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
 
 Sie sollten außerdem nie Code schreiben, der von einem bestimmten Layout für ein Objekt abhängt, das weder eine COM-Schnittstelle noch ein POD-Objekt ist. Wenn Sie diesen Code schreiben, müssen Sie sicherstellen, dass er nach dem Upgrade funktioniert. Weitere Informationen finden Sie unter [Portabilität an ABI-Grenzen](../cpp/portability-at-abi-boundaries-modern-cpp.md).
 
 Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Compilers mit Standards mitunter ändern, wie der Compiler den vorhandenen Quellcode versteht. Beispielsweise können während des Buildvorgangs neue oder andere Fehler oder sogar Verhaltensunterschiede im Code auftreten, für den zuvor Builds erstellt wurden und die Ausführung ordnungsgemäß schien. Obwohl diese Verbesserungen keine Breaking Changes wie die in diesem Artikel genannten Änderungen sind, müssen Sie möglicherweise einige Änderungen an Ihrem Quellcode vornehmen, um diese Probleme zu beheben:
 
-- [C-Laufzeitbibliothek (CRT): Bedeutende Änderungen](#BK_CRT)
+- [Wichtige Änderungen der C-Laufzeitbibliothek (CRT)](#BK_CRT)
 
 - [Standard C++ und C++-Standardbibliothek: Bedeutende Änderungen](#BK_STL)
 
-- [MFC und ATL: Bedeutende Änderungen](#BK_MFC)
+- [Wichtige MFC- und ATL-Änderungen](#BK_MFC)
 
-- [Concurrency Runtime: Bedeutende Änderungen](#BK_ConcRT)
+- [Wichtige Concurrency Runtime-Änderungen](#BK_ConcRT)
 
 ## <a name="VC_2015"></a> Visual Studio 2015: Änderungen bei der Konformität mit Standards
 
-###  <a name="BK_CRT"></a> C-Laufzeitbibliothek (CRT)
+###  <a name="BK_CRT"></a> C Runtime Library (CRT)
 
 #### <a name="general-changes"></a>Allgemeine Änderungen
 
 - **Umgestaltete Binärdateien**
 
-   Die CRT-Bibliothek wurde in zwei verschiedene Binärdateien umgestaltet: eine Universal CRT (ucrtbase), die den Großteil der Standardfunkionen enthält, und eine VC-Laufzeitbibliothek (vcruntime). Die VC-Laufzeitbibliothek enthält die compilergebundenen Funktionen wie die Ausnahmebehandlung und intrinsische Funktionen. Wenn Sie die standardmäßigen Projekteinstellungen verwenden, sind Sie von dieser Änderung nicht betroffen, da der Linker automatisch die neuen Standardbibliotheken verwendet. Wenn Sie die **Linker**-Eigenschaft **Alle Standardbibliotheken ignorieren** des Projekts auf **Ja** festgelegt haben oder die `/NODEFAULTLIB`-Linkeroption in der Befehlszeile verwenden, müssen Sie die Liste der Bibliotheken (bei der Eigenschaft **Zusätzliche Abhängigkeiten**) so aktualisieren, dass sie die neuen umgestalteten Bibliotheken enthält. Ersetzen Sie die alte CRT-Bibliothek (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib) mit den entsprechenden umgestalteten Bibliotheken. Für jede der beiden umgestalteten Bibliotheken gibt es eine statische (.lib) und eine dynamische (.dll) Version sowie endgültige (ohne Suffix) und Debugversionen (mit dem Suffix „d“). Die dynamischen Versionen haben eine Importbibliothek, mit der eine Verknüpfung erstellt wird. Die zwei umgestalteten Bibliotheken sind Universal CRT, d. h. „ucrtbase.dll“ oder „ucrtbase.lib“, „ucrtbased.dll“ oder „ucrtbased.lib“, und die VC-Laufzeitbibliothek, „libvcruntime.lib“, die „vcruntime*Version*.dll“, „libvcruntimed.lib“ und „vcruntimed*Version*.dll“. Die *Version* sowohl in Visual Studio 2015 als auch in Visual Studio 2017 ist 140. Siehe [CRT-Bibliotheksfunktionen](../c-runtime-library/crt-library-features.md).
+   Die CRT-Bibliothek wurde in zwei verschiedene Binärdateien umgestaltet: eine Universal CRT (ucrtbase), die den Großteil der Standardfunkionen enthält, und eine VC-Laufzeitbibliothek (vcruntime). Die VC-Laufzeitbibliothek enthält die compilergebundenen Funktionen wie die Ausnahmebehandlung und intrinsische Funktionen. Wenn Sie die standardmäßigen Projekteinstellungen verwenden, sind Sie von dieser Änderung nicht betroffen, da der Linker automatisch die neuen Standardbibliotheken verwendet. Wenn Sie die **Linker**-Eigenschaft **Alle Standardbibliotheken ignorieren** des Projekts auf **Ja** festgelegt haben oder die `/NODEFAULTLIB`-Linkeroption in der Befehlszeile verwenden, müssen Sie die Liste der Bibliotheken (bei der Eigenschaft **Zusätzliche Abhängigkeiten**) so aktualisieren, dass sie die neuen umgestalteten Bibliotheken enthält. Ersetzen Sie die alte CRT-Bibliothek (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib) mit den entsprechenden umgestalteten Bibliotheken. Für jede der beiden umgestalteten Bibliotheken gibt es eine statische (.lib) und eine dynamische (.dll) Version sowie endgültige (ohne Suffix) und Debugversionen (mit dem Suffix „d“). Die dynamischen Versionen haben eine Importbibliothek, mit der eine Verknüpfung erstellt wird. Die zwei umgestalteten Bibliotheken sind Universal CRT, d. h. „ucrtbase.dll“ oder „ucrtbase.lib“, „ucrtbased.dll“ oder „ucrtbased.lib“, und die VC-Laufzeitbibliothek, „libvcruntime.lib“, die „vcruntime*Version*.dll“, „libvcruntimed.lib“ und „vcruntimed*Version*.dll“. Die *Version* sowohl in Visual Studio 2015 als auch in Visual Studio 2017 ist 140. Siehe [CRT Library Features](../c-runtime-library/crt-library-features.md).
 
 #### <a name="localeh"></a>\<locale.h>
 
@@ -108,7 +108,7 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
 #### <a name="stdio_and_conio"></a>\<"stdio. h" > und \<"" die Datei "" >.
 
-- **Die printf- und scanf-Funktionsreihe werden nun inline definiert.**
+- **Die printf- und scanf-Funktionsreihen werden nun inline definiert.**
 
    Die Definitionen aller `printf`- und `scanf`-Funktionen wurden nun in \<stdio.h>, \<conio.h> und andere CRT-Header verschoben. Dieser Breaking Change führt zu einem Linkerfehler (LNK2019: Unresolved External Symbol (LNK2019: nicht aufgelöstes externes Symbol)) für alle Programme, die diese Funktionen ohne entsprechende CRT-Header lokal deklariert haben. Sie sollten nach Möglichkeit den Code um die CRT-Header (d.h. `#include <stdio.h>`) und die Inlinefunktionen ergänzen. Wenn Sie diese Headerdateien nicht zu Ihrem Code hinzufügen möchten, können Sie alternativ eine Bibliothek zur Linkereingabe, „legacy_stdio_definitions.lib“, hinzufügen.
 
@@ -257,7 +257,7 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
 - **smallheap**
 
-   Die Linkoption `smallheap` wurde entfernt. Siehe [Linkoptionen](../c-runtime-library/link-options.md).
+   Die Linkoption `smallheap` wurde entfernt. Siehe [Link Options](../c-runtime-library/link-options.md).
 
 #### <a name="stringh"></a>\<string.h>
 
@@ -305,7 +305,7 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
 ####  <a name="BK_STL"></a> C++-Standardbibliothek
 
-Um neue Optimierungen und Debuggingüberprüfungen zu aktivieren, unterbricht die Visual Studio-Implementierung der C++-Standardbibliothek absichtlich die binäre Kompatibilität von einer Version zur nächsten. Wenn die C++-Standardbibliothek verwendet wird, können Objektdateien und statische Bibliotheken, die unter Verwendung von verschiedenen Versionen kompiliert werden, nicht in einer Binärdatei (EXE oder DLL) vermischt werden, und C++-Standardbibliotheksobjekte können nicht zwischen Binärdateien übergeben werden, die mit verschiedenen Versionen kompiliert werden. Eine solche Kombination gibt Linkerfehler über _MSC_VER-Konflikte aus. (_MSC_VER ist das Makro, das die Hauptversion des Compilers enthält – z. b. 1800 für Visual Studio 2013.) Diese Überprüfung kann keine DLL-Mischung erkennen und keine Vermischung erkennen, die Visual Studio 2008 oder früher betrifft.
+Um neue Optimierungen und Debuggingüberprüfungen zu aktivieren, unterbricht die Visual Studio-Implementierung der C++-Standardbibliothek absichtlich die Binärkompatibilität von einer Version zur nächsten. Wenn die C++-Standardbibliothek verwendet wird, können Objektdateien und statische Bibliotheken, die unter Verwendung von verschiedenen Versionen kompiliert werden, nicht in einer Binärdatei (EXE oder DLL) vermischt werden, und C++-Standardbibliotheksobjekte können nicht zwischen Binärdateien übergeben werden, die mit verschiedenen Versionen kompiliert werden. Eine solche Kombination gibt Linkerfehler über _MSC_VER-Konflikte aus. (_MSC_VER ist das Makro, das die Hauptversion des Compilers enthält – z. b. 1800 für Visual Studio 2013.) Diese Überprüfung kann keine DLL-Mischung erkennen und keine Vermischung erkennen, die Visual Studio 2008 oder früher betrifft.
 
 - **Includedateien der C++-Standardbibliothek**
 
@@ -335,7 +335,7 @@ Um neue Optimierungen und Debuggingüberprüfungen zu aktivieren, unterbricht di
 
 - **std::allocator::deallocate**
 
-   In Visual Studio 2013 und früheren Versionen hat `std::allocator::deallocate(p, n)` das für *n* übergebene Argument ignoriert.  Der C++-Standard erfordert, dass *n* dem Wert entspricht, der als erstes Argument für den Aufruf dem von *p* zurückgegebenen `allocate`-Spezifizierer entspricht. In der aktuellen Version wird jedoch der Wert *n* untersucht. Code, der die von Standardanforderungen abweichenden Argumente für *n* übergibt, stürzt möglicherweise zur Laufzeit ab.
+   In Visual Studio 2013 und früheren Versionen hat `std::allocator::deallocate(p, n)` das für *n* übergebene Argument ignoriert.  Der C++-Standard erfordert, dass *n* dem Wert entspricht, der als erstes Argument für den Aufruf dem von `allocate`p*zurückgegebenen*-Spezifizierer entspricht. In der aktuellen Version wird jedoch der Wert *n* untersucht. Code, der die von Standardanforderungen abweichenden Argumente für *n* übergibt, stürzt möglicherweise zur Laufzeit ab.
 
 - **hash_map und hash_set**
 
@@ -383,7 +383,7 @@ Um neue Optimierungen und Debuggingüberprüfungen zu aktivieren, unterbricht di
 
 - **launch::any- und launch::sync-Richtlinien**
 
-   Der nicht dem Standard entsprechenden `launch::any`- und `launch::sync`-Richtlinien wurden entfernt. Stattdessen wird `launch:async | launch:deferred` für `launch::any` verwendet. Verwenden Sie für `launch::sync` den Typ `launch::deferred`. Siehe [launch-Enumeration](../standard-library/future-enums.md#launch).
+   Der nicht dem Standard entsprechenden `launch::any`- und `launch::sync`-Richtlinien wurden entfernt. Stattdessen wird `launch::any` für `launch:async | launch:deferred` verwendet. Verwenden Sie `launch::sync` für `launch::deferred`. Siehe [launch-Enumeration](../standard-library/future-enums.md#launch).
 
 ####  <a name="BK_MFC"></a> MFC und ATL
 
@@ -451,7 +451,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 - **mutable (Schlüsselwort)**
 
-   Der **mutable**-Speicherklassenspezifizierer ist nicht mehr an Positionen zulässig, an denen beim Kompilieren zuvor ein Fehler aufgetreten ist. Der Compiler generiert nun den Fehler C2071 (Ungültige Speicherklasse). Gemäß dem Standard kann der **mutable**-Spezifizierer nur auf Namen von Klassendatenmembern angewendet werden und kann nicht auf als konstant oder statisch deklarierte Namen sowie nicht auf Verweismember angewendet werden.
+   Der **mutable**-Speicherklassenspezifizierer ist an Positionen nicht mehr zulässig, an denen zuvor beim Kompilieren ein Fehler aufgetreten ist. Der Compiler generiert nun den Fehler C2071 (Ungültige Speicherklasse). Gemäß dem Standard kann der **mutable**-Spezifizierer nur auf Namen von Klassendatenmembern angewendet werden und kann nicht auf als konstant oder statisch deklarierte Namen sowie nicht auf Verweismember angewendet werden.
 
    Beachten Sie z. B. folgenden Code:
 
@@ -532,7 +532,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
    Entfernen Sie zum Beheben dieses Problems `__declspec(align)` aus der Funktionsdeklaration. Da dies keine Auswirkungen hatte, ändert sich durch das Entfernen nichts.
 
-- **Ausnahmebehandlung**
+- **Fehlerbehandlung**
 
    Es gibt eine Reihe von Änderungen bei der Ausnahmebehandlung. Ausnahmeobjekte müssen kopiert oder verschoben werden können. Der folgende Code wird zwar in Visual Studio 2013 kompiliert, aber nicht in Visual Studio 2015:
 
@@ -627,7 +627,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 - **Angrenzende Zeichenfolgenliterale**
 
-   Auf ähnliche Weise wurden angrenzende Zeichenfolgenliterale ohne Leerzeichen aufgrund von zugehörigen Änderungen in der Zeichenfolgenanalyse als eine verkettete Zeichenfolge in den vorherigen Versionen von Visual C++ interpretiert. In Visual Studio 2015 müssen Sie ein Leerzeichen zwischen den beiden Zeichenfolgen hinzufügen. Der folgende Code muss z. B. geändert werden:
+   Auf ähnliche Weise wurden angrenzende Zeichenfolgenliterale ohne Leerzeichen aufgrund von zugehörigen Änderungen in der Zeichenfolgenanalyse als eine verkettete Zeichenfolge in den vorherigen Versionen von Visual C++ interpretiert. In Visual Studio 2015 müssen Sie zwischen den beiden Zeichenfolgen ein Leerzeichen hinzufügen. Der folgende Code muss z. B. geändert werden:
 
     ```cpp
     char * str = "abc""def";
@@ -643,7 +643,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
    An dem **delete**-Operator wurde eine Änderung vorgenommen, damit er dem C++14-Standard entspricht. Detaillierte Informationen zur Standardänderung finden Sie unter [Aufhebung der Zuordnung mit C++-Größeninformationen](https://isocpp.org/files/papers/n3778.html). Durch die Änderungen wird eine Form des globalen **delete**-Operators hinzugefügt, der einen Größenparameter erfordert. Eine wichtige Änderung ist, dass wenn Sie zuvor einen **delete**-Operator mit der gleichen Signatur verwendet haben (damit dieser dem Platzierungsoperator **new** entspricht) nun ein Compilerfehler geniert wird, nämlich C2956. Dieser tritt an der Stelle auf, an der der Platzierungsoperator „new“ verwendet wird, denn an dieser Stelle im Code versucht der Compiler einen entsprechenden **delete**-Operator zu identifizieren.
 
-   Bei der Funktion `void operator delete(void *, size_t)` hat es sich um einen **delete**-Platzierungsoperator gehandelt, der der Funktion `void * operator new(size_t, size_t)` des Platzierungsoperators **new** in C++11 entspricht. Durch die Aufhebung der Zuordnung mit C++14-Größeninformationen ist diese Funktion „delete“ nun eine *gewöhnliche Funktion zum Aufheben der Zuordnung* (globaler **delete**-Operator). Der Standard erfordert es, dass das Programm bei Verwendung eines Platzierungsoperators „new“, der eine entsprechenden delete-Funktion sucht und eine gewöhnliche Funktion zum Aufheben der Zuordnung ermittelt, nicht ordnungsgemäß formatiert ist.
+   Bei der `void operator delete(void *, size_t)`-Funktion hat es sich um einen **„delete“-Platzierungsoperator** gehandelt, der dem **„new“-Platzierungsoperator**`void * operator new(size_t, size_t)` in C++11 entspricht. Durch die Aufhebung der Zuordnung mit C++14-Größeninformationen ist diese Funktion „delete“ nun eine *gewöhnliche Funktion zum Aufheben der Zuordnung* (globaler **delete**-Operator). Der Standard erfordert es, dass das Programm bei Verwendung eines Platzierungsoperators „new“, der eine entsprechenden delete-Funktion sucht und eine gewöhnliche Funktion zum Aufheben der Zuordnung ermittelt, nicht ordnungsgemäß formatiert ist.
 
    Angenommen Ihr Code definiert einen **new**- und einen **delete**-Platzierungsoperator:
 
@@ -652,7 +652,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     void operator delete(void*, std::size_t) noexcept;
     ```
 
-   Das Problem tritt aufgrund der Übereinstimmung zwischen den Funktionssignaturen im definierten Platzierungsoperator **delete** und im neuen globalen Operator **delete** auf. Überlegen Sie, ob Sie einen anderen Typ als `size_t` für alle **new**- und **delete**-Platzierungsoperatoren verwenden können. Der Typ der `size_t` **typedef** ist vom Compiler abhängig. Dabei handelt es sich um eine **typedef** für **Ganzzahl ohne Vorzeichen int** in MSVC. Eine gute Lösung hierfür stellt die Verwendung eines enumerierten Typs wie die des folgenden dar:
+   Das Problem tritt aufgrund der Übereinstimmung zwischen den Funktionssignaturen im definierten Platzierungsoperator **delete** und im neuen globalen Operator **delete** auf. Überlegen Sie, ob Sie einen anderen Typ als `size_t` für alle Platzierungsoperatoren **new** und **delete** verwenden können. Der Typ der `size_t` **typedef** ist vom Compiler abhängig. Dabei handelt es sich um eine **typedef** für **Ganzzahl ohne Vorzeichen int** in MSVC. Eine gute Lösung hierfür stellt die Verwendung eines enumerierten Typs wie die des folgenden dar:
 
     ```cpp
     enum class my_type : size_t {};
@@ -1739,7 +1739,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     }
     ```
 
-   \- oder -
+   \- oder –
 
     ```cpp
     class base;  // as above
@@ -1755,7 +1755,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 - **Überladener Operator „new“ und „delete“**
 
-   In früheren Versionen des Compilers konnte ein **new**-Platzierungsoperator, der kein Member war, und ein **delete**-Platzierungsoperator, der kein Member war, statisch deklariert werden und in anderen Namespaces als dem globalen deklariert werden.  Durch dieses alte Verhalten entstand das Risiko, dass das Programm die Operatoren **new** oder **delete** nicht in der vom Programmierer beabsichtigten Implementierung aufruft, was zu einem schlechten Laufzeitverhalten ohne Rückmeldung führte. Der Compiler akzeptiert in dieser Weise erstellten Code nicht mehr und gibt den Compilerfehler C2323 als Ergebnis aus.
+   In früheren Versionen des Compilers konnte ein **new**-Platzierungsoperator, der kein Member war, und ein **delete**-Platzierungsoperator, der kein Member war, statisch deklariert werden und in anderen Namespaces als dem globalen deklariert werden.  Durch dieses alte Verhalten entstand das Risiko, dass das Programm die Operatoren **new** oder **delete** nicht in der vom Programmierer beabsichtigten Implementierung aufrief, was zu einem schlechten Laufzeitverhalten ohne Rückmeldung führte. Der Compiler akzeptiert in dieser Weise erstellten Code nicht mehr und gibt den Compilerfehler C2323 als Ergebnis aus.
 
     ```Output
     error C2323: 'operator new': non-member operator new or delete functions may not be declared static or in a namespace other than the global namespace.
@@ -2491,7 +2491,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     static_assert(std::is_convertible<X1&, X1>::value, "BOOM");static_assert(std::is_convertible<X2&, X2>::value, "BOOM");
     ```
 
-   In früheren Versionen des Compilers wurden die statischen Assertionen unten in diesem Beispiel übergeben, da `std::is_convertable<>::value` fälschlicherweise auf **TRUE** festgelegt war. Jetzt ist `std::is_convertable<>::value` richtig auf **FALSE** festgelegt, wodurch ein Fehler in den statischen Assertionen verursacht wird.
+   In früheren Versionen des Compilers wurden die statischen Assertionen unten in diesem Beispiel übergeben, da `std::is_convertable<>::value` fälschlicherweise auf **TRUE** festgelegt war. Jetzt ist `std::is_convertable<>::value` richtig auf **FALSE** festgelegt, was einen Fehler der statischen Assertionen verursacht.
 
 - **Als Standard festgelegte und gelöschte triviale Kopier- und Verschiebekonstruktoren beachten Zugriffsspezifizierer**
 
@@ -2854,7 +2854,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
    In Visual Studio 2012 wurde `E1` im Ausdruck `E1::b` im globalen Gültigkeitsbereich in `::E1` aufgelöst. In Visual Studio 2013 wird `E1` im Ausdruck `E1::b` in die Definition `typedef E2` in `main()` aufgelöst und weist den Typ `::E2` auf.
 
-- Das Objektlayout wurde geändert. Auf x64-Computern kann sich das Objektlayout einer Klasse gegenüber vorherigen Versionen möglicherweise ändern. Wenn es eine **virtuelle** Funktion aufweist, jedoch über keine Basisklasse mit einer **virtuellen** Funktion verfügt, fügt das Objektmodell des Compilers nach dem Datenmemberlayout einen Zeiger in eine **virtuelle** Funktionstabelle ein. Dies bedeutet, dass das Layout möglicherweise nicht in allen Fällen optimal ist. In vorherigen Releases wurde mithilfe einer Optimierung für x64 versucht, das Layout zu verbessern. Da dies jedoch in komplexen Codesituationen nicht richtig funktionierte, wurde diese Optimierung in Visual Studio 2013 entfernt. Betrachten Sie beispielsweise folgenden Code:
+- Das Objektlayout wurde geändert. Auf x64-Computern kann sich das Objektlayout einer Klasse gegenüber vorherigen Versionen möglicherweise ändern. Wenn es eine **virtuelle** Funktion aufweist, jedoch über keine Basisklasse mit einer **virtuellen** Funktion verfügt, fügt das Objektmodell des Compilers nach dem Datenmemberlayout einen Zeiger in eine **virtuelle** Funktionstabelle ein. Dies bedeutet, dass das Layout möglicherweise nicht in allen Fällen optimal ist. In vorherigen Releases wurde mithilfe einer Optimierung für x64 versucht, das Layout zu verbessern. Da dies jedoch in komplexen Codesituationen nicht richtig funktionierte, wurde diese Optimierung in Visual Studio 2013 entfernt. Betrachten Sie z. B. diesen Code:
 
     ```cpp
     __declspec(align(16)) struct S1 {
@@ -2883,7 +2883,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     };
     ```
 
-   Um Stellen im Code zu suchen, die in einer früheren Version optimiert worden wären, verwenden Sie einen Compiler dieser Version zusammen mit der `/W3`-Compileroption und aktivieren Sie die Warnung 4370. Beispiel:
+   Wenn Sie Positionen im Code finden möchten, die von einer früheren Version optimiert wurden, verwenden Sie einen Compiler aus dieser Version mit der `/W3`-Compileroption, und aktivieren Sie Warning C4370. Beispiel:
 
     ```cpp
     #pragma warning(default:4370)
@@ -2952,7 +2952,7 @@ Der C++-Compiler in Visual Studio 2013 erkennt Konflikte im _ITERATOR_DEBUG_LEVE
 
    Als Nebeneffekt dieser Änderung funktioniert der Identitätsfall nicht mehr (common_type\<T> ergibt nicht immer den Typ „T“). Dieses Verhalten entspricht der vorgeschlagenen Lösung, beeinträchtigt jedoch den Code, der auf dem vorherigen Verhalten beruhte.
 
-   Wenn ein Identitätstypmerkmal erforderlich ist, verwenden Sie nicht `std::identity`, das kein Standard ist und in \< definiert ist, da dies bei \<void> nicht funktioniert. Implementieren Sie stattdessen Ihr eigenes Identitätstypmerkmal, um Ihre Anforderungen zu erfüllen. Im Folgenden ein Beispiel:
+   Wenn ein Identitätstypmerkmal erforderlich ist, verwenden Sie nicht `std::identity`, das kein Standard ist und in \< definiert ist, da dies bei \<void> nicht funktioniert. Implementieren Sie stattdessen Ihr eigenes Identitätstypmerkmal, um Ihre Anforderungen zu erfüllen. Hier sehen Sie ein Beispiel:
 
     ```cpp
     template < typename T> struct Identity {
@@ -3030,7 +3030,7 @@ Der C++-Compiler in Visual Studio 2013 erkennt Konflikte im _ITERATOR_DEBUG_LEVE
 
 - Der verwaltete Compiler (Visual Basic/C#) unterstützt auch `/HIGHENTROPYVA` für verwaltete Builds.  In diesem Fall ist `/HIGHENTROPYVAswitch` jedoch standardmäßig deaktiviert.
 
-### <a name="ide"></a>-IDE
+### <a name="ide"></a>IDE
 
 - Wenngleich nicht empfohlen wird, Windows Forms-Anwendungen in C++/CLI zu erstellen, wird die Wartung vorhandener C++/CLI UI-Anwendungen unterstützt. Wenn Sie eine Windows Forms-Anwendung oder andere .NET UI-Anwendung erstellen müssen, verwenden Sie C# oder Visual Basic. Verwenden Sie C++/CLI nur zu Interoperabilitätszwecken.
 
@@ -3080,7 +3080,7 @@ Die `SchedulerType`-Enumeration von `UmsThreadDefault` ist veraltet. Bei Angabe 
 
 - Die Signatur von `CMFCEditBrowseCtrl::EnableBrowseButton` wurde geändert.
 
-- `m_fntTabs` und `m_fntTabsBold` wurden aus `CMFCBaseTabCtrl` entfernt.
+- `m_fntTabs` und `m_fntTabsBold` aus `CMFCBaseTabCtrl` entfernt.
 
 - Es wurde ein Parameter zu den `CMFCRibbonStatusBarPane`-Konstruktoren hinzugefügt. (Dies ist ein Standardparameter, weshalb kein Eingriff in den Quellcode erforderlich ist.)
 
@@ -3252,7 +3252,7 @@ Die `SchedulerType`-Enumeration von `UmsThreadDefault` ist veraltet. Bei Angabe 
 
 - In Visual Studio 2010 entspricht die „RuntimeLibrary“-Eigenschaft der „MultiThreaded“-Eigenschaft (`/MD`) und die „DebugInformationFormat“-Eigenschaft der „ProgramDatabase“-Eigenschaft (`/Zi`). In Visual C++ 9.0 ist RuntimeLibrary = MultiThreaded (`/MT`) und DebugInformationFormat = Disabled.
 
-### <a name="clr"></a>-CLR
+### <a name="clr"></a>CLR
 
 - Die Microsoft C#- und Visual Basic-Compiler können jetzt eine nicht primäre Interopassembly (Nicht-PIA) erzeugen. Eine Nicht-PIA-Assembly kann COM-Typen ohne die Bereitstellung der entsprechenden primären Interopassembly (PIA) verwenden. Bei der Nutzung von Nicht-PIA-Assemblys, die mit Visual C# oder Visual Basic erstellt wurden, müssen Sie die PIA-Assembly an den Compile-Befehl verweisen, bevor Sie auf Nicht-PIA-Assemblys verweisen, die die Bibliothek verwenden.
 
@@ -3262,7 +3262,7 @@ Die `SchedulerType`-Enumeration von `UmsThreadDefault` ist veraltet. Bei Angabe 
 
 - In früheren Versionen unterstützte Visual C++ die späte Auswertung von Eigenschaftenblättern. Beispiel: Ein übergeordnetes Eigenschaftenblatt konnte ein untergeordnetes Eigenschaftenblatt importieren, und das übergeordnete Element konnte eine Variable verwenden, die im untergeordneten Element definiert ist, um andere Variablen zu definieren. Die späte Auswertung ermöglichte dem übergeordneten Element das Verwenden der untergeordneten Variablen, ehe das Eigenschaftenblatt des untergeordneten Elements importiert wurde. In Visual Studio 2010 kann eine Projektblattvariable nicht vor ihrer Definition verwendet werden, da MSBuild nur die frühe Auswertung unterstützt.
 
-### <a name="ide"></a>-IDE
+### <a name="ide"></a>IDE
 
 - Das Dialogfeld zum Beenden von Anwendungen beendet eine Anwendung nicht mehr. Wenn in früheren Versionen die Funktion `abort()` oder `terminate()` die Verkaufsversion einer Anwendung geschlossen hat, zeigte die C-Laufzeitbibliothek im Konsolenfenster oder Dialogfeld eine Meldung zur Beendigung der Anwendung an. Ein Teil der Meldung lautet ungefähr so: „Diese Anwendung hat ein nicht ordnungsgemäßes Beenden der Runtime angefordert. Weitere Informationen erhalten Sie von dem für die Anwendung zuständigen Supportteam.“ Die Meldung zum Beenden der Anwendung war redundant, da Windows daraufhin den aktuellen Beendigungs Handler angezeigt hat, der normalerweise das Dialogfeld Windows-Fehlerberichterstattung (Dr. Watson) oder den Visual Studio-Debugger war. Ab Visual Studio 2010 zeigt die C-Laufzeitbibliothek die Meldung nicht mehr an. Darüber hinaus hindert die Laufzeit die Anwendung am Beenden, bevor ein Debugger gestartet wird. Dies ist nur dann eine bedeutende Änderung, wenn Sie vom früheren Verhalten der Meldung zum Beenden der Anwendung abhängig sind.
 
@@ -3302,7 +3302,7 @@ Die `SchedulerType`-Enumeration von `UmsThreadDefault` ist veraltet. Bei Angabe 
 
 - Die Umgebungsvariable __MSVCRT_HEAP_SELECT wird nicht mehr unterstützt. Diese Umgebungsvariable wurde ersatzlos entfernt.
 
-### <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler – Referenz
+### <a name="microsoft-macro-assembler-reference"></a>Referenz zum Microsoft Macro Assembler
 
 - Mehrere Direktiven wurden aus der Referenz zum Microsoft Macro Assembler-Compiler entfernt. Die folgenden Anweisungen wurden entfernt: `.186`, `.286`, `.286P`, `.287`, `.8086`, `.8087` und `.NO87`.
 
@@ -3522,6 +3522,6 @@ Die `SchedulerType`-Enumeration von `UmsThreadDefault` ist veraltet. Bei Angabe 
 
 - Der Compiler meldet jetzt nicht erreichbaren Code (C4702).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Neues bei Visual C++ in Visual Studio 2015](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)
