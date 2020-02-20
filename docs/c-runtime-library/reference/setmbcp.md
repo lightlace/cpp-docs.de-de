@@ -27,12 +27,12 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-ms.openlocfilehash: 1db6a83bd864180d513f61cf255bd862283a6cd0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a3408f04eb60a33a84c628c989ebc9c4c4a261df
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948214"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473875"
 ---
 # <a name="_setmbcp"></a>_setmbcp
 
@@ -64,10 +64,10 @@ Die Multibyte-Codepage hat auch Auswirkungen auf die Multibyteverarbeitung durch
 ||||
 |-|-|-|
 |[_exec-Funktionen](../../c-runtime-library/exec-wexec-functions.md)|[_mktemp](mktemp-wmktemp.md)|[_stat](stat-functions.md)|
-|[_fullpath](fullpath-wfullpath.md)|[_spawn-Funktionen](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
+|[_fullpath](fullpath-wfullpath.md)|[_spawn functions](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 |[_makepath](makepath-wmakepath.md)|[_splitpath](splitpath-wsplitpath.md)|[tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 
-Außerdem verarbeiten alle Lauf Zeit Bibliotheks Routinen, die Multibytezeichen- *argv* -oder *envp* -Programm Argumente als Parameter (z. b. die **_exec** -und **_spawn** -Familien) empfangen, diese Zeichen folgen entsprechend der Multibytezeichen-Codepage. Daher sind diese Routinen auch durch einen **_setmbcp** -aufrufswert betroffen, der die Multibytezeichen-Codepage ändert.
+Außerdem verarbeiten alle Lauf Zeit Bibliotheks Routinen, die Multibytezeichen- *argv* -oder *envp* -Programm Argumente als Parameter (z. b. die **_exec** -und **_spawn** Familien) empfangen, diese Zeichen folgen entsprechend der Multibytezeichen-Codepage. Aus diesem Grund werden diese Routinen auch durch einen **aufrufs_setmbcp** beeinflusst, der die Multibytezeichen-Codepage ändert.
 
 Das *Codepage* -Argument kann auf einen der folgenden Werte festgelegt werden:
 
@@ -79,9 +79,11 @@ Das *Codepage* -Argument kann auf einen der folgenden Werte festgelegt werden:
 
 - **_MB_CP_SBCS** Einzel Byte-Codepage verwenden. Wenn die Codepage auf **_MB_CP_SBCS**festgelegt ist, gibt eine Routine wie [_ismbblead](ismbblead-ismbblead-l.md) immer false zurück.
 
-- Jeder beliebige andere gültige Codepage-Wert unabhängig davon, ob der Wert eine ANSI-, OEM- oder einem anderen Betriebssystem unterstützte Codepage ist (außer UTF-7 und UTF-8, die nicht unterstützt werden).
+- **_MB_CP_UTF8** Verwenden Sie UTF-8.  Wenn die Codepage auf **_MB_CP_UTF8**festgelegt ist, gibt eine Routine wie [_ismbblead](ismbblead-ismbblead-l.md) immer false zurück.
 
-## <a name="requirements"></a>Anforderungen
+- Jeder andere gültige Codepage-Wert, unabhängig davon, ob der Wert eine ANSI-, OEM-oder andere vom Betriebssystem unterstützte Codepage ist (mit Ausnahme von UTF-7, die nicht unterstützt wird).
+
+## <a name="requirements"></a>Voraussetzungen
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|

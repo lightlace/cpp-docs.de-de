@@ -2,12 +2,12 @@
 title: ARM64-Ausnahmebehandlung
 description: Beschreibt die Ausnahme Behandlungs Konventionen und-Daten, die von Windows auf ARM64 verwendet werden.
 ms.date: 11/19/2018
-ms.openlocfilehash: 1ed147a27cfeb545e2a5fe265df8113a5befac73
-ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
+ms.openlocfilehash: 2304c04c5e9be31299e30bb48771f7c9777d1cd5
+ms.sourcegitcommit: b9aaaebe6e7dc5a18fe26f73cc7cf5fce09262c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72276833"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504483"
 ---
 # <a name="arm64-exception-handling"></a>ARM64-Ausnahmebehandlung
 
@@ -23,7 +23,7 @@ Die Ausnahme bei der Entwickelung von Daten Konventionen und diese Beschreibung 
 
    - Das Analysieren des Codes ist komplex. der Compiler muss darauf achten, nur Anweisungen zu generieren, die der Entlader decodieren kann.
 
-   - Wenn das Entladen nicht durch die Verwendung von Entladungs Codes vollständig beschrieben werden kann, muss es in einigen Fällen auf die Anweisungs Decodierung zurückgreifen. Dies erhöht die Gesamtkomplexität und wird idealerweise vermieden.
+   - Wenn das Entladen nicht durch die Verwendung von Entladungs Codes vollständig beschrieben werden kann, muss es in einigen Fällen auf die Anweisungs Decodierung zurückgreifen. Dies erhöht die Gesamtkomplexität und sollte idealerweise vermieden werden.
 
 1. Unterstützung der Entwickelung in Mid-Prolog und Mid-Epilog.
 
@@ -39,7 +39,7 @@ Die Ausnahme bei der Entwickelung von Daten Konventionen und diese Beschreibung 
 
 Diese Annahmen werden in der Ausnahme Behandlungs Beschreibung vorgenommen:
 
-1. Prologs und Epilogs spiegeln tendenziell beides wider. Durch die Nutzung dieses allgemeinen Merkmals kann die Größe der Metadaten, die zum Beschreiben der Entwickelung erforderlich sind, erheblich reduziert werden. Im Hauptteil der Funktion ist es unerheblich, ob die Vorgänge des Prologs rückgängig gemacht werden, oder die Vorgänge des epiprotokolls werden vorwärts ausgeführt. Beides sollte zum gleichen Ergebnis führen.
+1. Prologs und Epilogs spiegeln sich tendenziell gegenseitig wider. Durch die Nutzung dieses allgemeinen Merkmals kann die Größe der Metadaten, die zum Beschreiben der Entwickelung erforderlich sind, erheblich reduziert werden. Im Hauptteil der Funktion ist es unerheblich, ob die Vorgänge des Prologs rückgängig gemacht werden, oder die Vorgänge des epiprotokolls werden vorwärts ausgeführt. Beides sollte zum gleichen Ergebnis führen.
 
 1. Die Funktionen sind tendenziell relativ klein. Mehrere Optimierungen für den Speicherplatz basieren auf dieser Tatsache, um das effizienteste Verpacken von Daten zu erreichen.
 
@@ -53,7 +53,7 @@ Diese Annahmen werden in der Ausnahme Behandlungs Beschreibung vorgenommen:
 
 ## <a name="arm64-stack-frame-layout"></a>ARM64 Stapel Rahmen Layout
 
-Stapel Rahmen(media/arm64-exception-handling-stack-frame.png "Layout") für ![Stapel Rahmen Layout]
+![Stapel Rahmen Layout](media/arm64-exception-handling-stack-frame.png "Stapelrahmenlayout")
 
 Bei Frame verketteten Funktionen können das FP-und LR-Paar in Abhängigkeit von Optimierungs Überlegungen an jeder beliebigen Position im lokalen Variablen Bereich gespeichert werden. Das Ziel besteht darin, die Anzahl der lokalen Variablen zu maximieren, die durch eine einzelne Anweisung erreicht werden können, die auf dem Frame Zeiger (x29) oder dem Stapelzeiger (SP) basiert. Für `alloca` Funktionen muss Sie jedoch verkettet werden, und x29 muss auf den unteren Rand des Stapels zeigen. Um eine bessere Abdeckung im Register-paar-Adressierungs Modus zu ermöglichen, werden nicht flüchtige Registrierungs Speicherbereiche am oberen Rand des lokalen Stapel Bereichs positioniert. Im folgenden finden Sie Beispiele, die einige der effizientesten Prolog Sequenzen veranschaulichen. Um Klarheit und eine bessere Cache Lokalität zu erzielen, wird die Reihenfolge der Speicherung gespeicherter Register in allen kanonischen Prologe in der Reihenfolge "wächst" angezeigt. `#framesz` unten steht für die Größe des gesamten Stapels (mit Ausnahme des Bereichs "Zuweisung"). `#localsz` und `#outsz` die lokale Bereichs Größe (einschließlich des Speicherbereichs für die \<x29, LR > Paar) bzw. die ausgehende Parameter Größe an.
 
@@ -188,7 +188,7 @@ Bei den pData-Datensätzen handelt es sich um ein geordnetes Array von Elementen
 
 Jeder pData-Datensatz für ARM64 hat eine Länge von 8 Bytes. Im allgemeinen Format jedes Datensatzes wird die 32-Bit-RVA der Funktion im ersten Wort gestartet, gefolgt von einem zweiten Wort, das entweder einen Zeiger auf einen. XData-Block mit variabler Länge enthält, oder ein gepacktes Wort, das eine Sequenz für die Entwickelung einer kanonischen Funktion beschreibt.
 
-![pData]-Daten Satz Layout(media/arm64-exception-handling-pdata-record.png ". pdata-Daten Satz Layout")
+![pData-Daten Satz Layout](media/arm64-exception-handling-pdata-record.png "pData-Daten Satz Layout")
 
 Die Felder lauten wie folgt:
 
@@ -204,7 +204,7 @@ Die Felder lauten wie folgt:
 
 Wenn das gepackte Entladeformat nicht zur Beschreibung der Entladung einer Funktion ausreicht, muss ein .xdata-Datensatz mit variabler Länge erstellt werden. Die Adresse dieses Datensatzes wird im zweiten Wort des .pdata-Datensatzes gespeichert. Das Format von XData ist ein gepackter Satz von Wörtern mit variabler Länge:
 
-![. XData]-Daten Satz Layout(media/arm64-exception-handling-xdata-record.png ". XData-Daten Satz Layout")
+![. XData-Daten Satz Layout](media/arm64-exception-handling-xdata-record.png ". XData-Daten Satz Layout")
 
 Diese Daten sind in vier Abschnitte unterteilt:
 
@@ -336,7 +336,7 @@ Für Funktionen, deren Prologe und Epilogs der unten beschriebenen kanonischen F
 
 Das Format eines pData-Datensatzes mit gepackten Entladedaten sieht wie folgt aus:
 
-![pData-Datensatz mit gepackten Entladungs Daten](media/arm64-exception-handling-packed-unwind-data.png ". pdata-Datensatz mit gepackten Entladedaten")
+![pData-Datensatz mit gepackten Entladedaten](media/arm64-exception-handling-packed-unwind-data.png "pData-Datensatz mit gepackten Entladedaten")
 
 Die Felder lauten wie folgt:
 
@@ -375,14 +375,14 @@ Schritt #|Flagwerte|Anzahl von Anweisungen|Opcode|Entladungs Code
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
 1|0 < **RegI** < = 10|REGI/2 + **RegI** %2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
-2|**CR**==01*|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
+2|**CR**= = 01 *|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
 3|0 < **regf** < = 7|(Regf + 1)/2 +<br/>(Regf + 1) %2)|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
-4|**H** == 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**CR** == 11 && #locsz<br/> < = 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
-5 b|**CR** == 11 &&<br/>512 < #locsz <= 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5C|**CR** == 11 && #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5D|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
-5e|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
+4|**H** = = 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
+5a|**CR** = = 11 & & #locsz<br/> < = 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+5 b|**CR** = = 11 & &<br/>512 < #locsz <= 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5C|**CR** = = 11 & & #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5D|(**CR** = = 00 \|\| **CR**= = 01) & &<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
+5e|(**CR** = = 00 \|\| **CR**= = 01) & &<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
 \* Wenn **CR** = = 01 und **RegI** eine ungerade Zahl ist, werden Schritt 2 und letzte save_rep in Schritt 1 zu einem save_regp zusammengeführt.
 

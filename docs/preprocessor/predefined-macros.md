@@ -226,12 +226,12 @@ no-loc:
 - _WIN64
 - _WINRT_DLL
 - __func__
-ms.openlocfilehash: 7d019b527abea89ab8337270fbd22abc9dbecc4e
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: ff3945fa9476e090f26ce029c63b1813401082e0
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74305474"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473848"
 ---
 # <a name="predefined-macros"></a>Vordefinierte Makros
 
@@ -459,24 +459,27 @@ MSVC unterstützt diese zusätzlichen vordefinierten Makros.
    |-|-|
    |Visual Studio 6.0|1200|
    |Visual Studio .NET 2002 (7,0)|1300|
-   |Visual Studio .NET 2003 (7,1)|1310|
+   |Visual Studio .NET 2003 (7,1)|1\.310|
    |Visual Studio 2005 (8,0)|1400|
    |Visual Studio 2008 (9,0)|1500|
    |Visual Studio 2010 (10,0)|1600|
    |Visual Studio 2012 (11,0)|1700|
    |Visual Studio 2013 (12,0)|1800|
-   |Visual Studio 2015 (14,0)|1900|
+   |Visual Studio 2015 (14,0)|1\.900|
    |Visual Studio 2017 RTW (15,0)|1910|
    |Visual Studio 2017 Version 15.3|1911|
    |Visual Studio 2017 Version 15.5|1912|
    |Visual Studio 2017 Version 15.6|1913|
    |Visual Studio 2017-Version 15.7|1914|
    |Visual Studio 2017 Version 15.8|1915|
-   |Visual Studio 2017, Version 15,9|1916|
+   |Visual Studio 2017 Version 15.9|1916|
    |Visual Studio 2019 RTW (16,0)|1920|
    |Visual Studio 2019 Version 16.1|1921|
    |Visual Studio 2019 Version 16.2|1922|
    |Visual Studio 2019, Version 16,3|1923|
+   |Visual Studio 2019, Version 16,4|1924|
+   |Visual Studio 2019, Version 16,5|1925|
+   |Visual Studio 2019, Version 16,6|1926|
 
    Verwenden Sie den `>=`-Operator, um auf compilerreleases oder Updates in einer bestimmten Version von Visual Studio oder nach zu testen. Sie können Sie in einer bedingten Direktive verwenden, um `_MSC_VER` mit dieser bekannten Version zu vergleichen. Wenn Sie über mehrere gegenseitig ausschließende Versionen verfügen, ordnen Sie Ihre Vergleiche in absteigender Reihenfolge der Versionsnummer an. Mit diesem Code wird beispielsweise auf Compiler überprüft, die in Visual Studio 2017 oder höher veröffentlicht wurden. Als nächstes überprüft er, ob Compiler in oder nach Visual Studio 2015 veröffentlicht wurden. Anschließend werden alle Compiler überprüft, die vor Visual Studio 2015 veröffentlicht wurden:
 
