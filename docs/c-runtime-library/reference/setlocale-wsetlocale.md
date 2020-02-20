@@ -37,12 +37,12 @@ ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
 no-loc:
 - setlocale
 - _wsetlocale
-ms.openlocfilehash: 08684e17a801e660ae2771c9e717dfa28621d600
-ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
+ms.openlocfilehash: b1c7b739e671caebc51022945a369a632ecebb9e
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76894345"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473859"
 ---
 # <a name="setlocale-_wsetlocale"></a>setlocale, _wsetlocale
 
@@ -61,7 +61,7 @@ wchar_t *_wsetlocale(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parameter
 
 *Kategorie* -\
 Vom Gebietsschema betroffene Kategorie.
@@ -118,7 +118,7 @@ Zum Programmstart wird die Entsprechung der folgenden Anweisung ausgeführt:
 
 `setlocale( LC_ALL, "C" );`
 
-Das *locale* -Argument kann einen Gebiets Schema Namen, eine Sprachen Zeichenfolge, eine Sprachen Zeichenfolge und Länder-/Regionscode, eine Codepage oder eine Sprachen Zeichenfolge, einen Länder-/Regionscode und eine Codepage annehmen. Der Satz verfügbarer Gebietsschemanamen, Sprachen, Länder-/Regionscodes und Codepages umfasst alle diejenigen, die von der Windows NLS API unterstützt werden, ausgenommen Codepages, die mehr als zwei Bytes pro Zeichen benötigen, wie z. B. UTF-7 und UTF-8. Wenn Sie den Codepage-Wert UTF-7 oder UTF-8 bereitstellen, schlägt **setlocale** fehl und gibt **null**zurück. Der von **setlocale** unterstützte Satz von Gebiets Schema Namen wird in Gebiets Schema [Namen, Sprachen und Zeichen folgen für Länder/Regionen](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)beschrieben. Die von **setlocale** unterstützten sprach-und Länder-/regionszeichenfolgen werden in [sprach](../../c-runtime-library/language-strings.md) Zeichenfolgen und Zeichen folgen für [Länder/Regionen](../../c-runtime-library/country-region-strings.md)aufgeführt. Wie empfehlen die Gebietsschema-Namensform aus Gründen der Leistung und leichteren Verwaltung von Gebietsschema-Zeichenfolgen, die in Code eingebettet sind oder für den Speicher serialisiert sind. Es ist weniger wahrscheinlich, dass Gebietsschema-Zeichenfolgen durch eine Betriebssystemaktualisierung geändert werden, als dies bei der Namensform für Sprache und Land/Region der Fall ist.
+Das *locale* -Argument kann einen Gebiets Schema Namen, eine Sprachen Zeichenfolge, eine Sprachen Zeichenfolge und Länder-/Regionscode, eine Codepage oder eine Sprachen Zeichenfolge, einen Länder-/Regionscode und eine Codepage annehmen. Der Satz verfügbarer Gebiets Schema Namen, Sprachen, Länder-/Regionscodes und Codepages umfasst alle vom Windows-NLS API unterstützten Gebiets Schema Namen. Der von **setlocale** unterstützte Satz von Gebiets Schema Namen wird in Gebiets Schema [Namen, Sprachen und Zeichen folgen für Länder/Regionen](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)beschrieben. Die von **setlocale** unterstützten sprach-und Länder-/regionszeichenfolgen werden in [sprach](../../c-runtime-library/language-strings.md) Zeichenfolgen und Zeichen folgen für [Länder/Regionen](../../c-runtime-library/country-region-strings.md)aufgeführt. Wie empfehlen die Gebietsschema-Namensform aus Gründen der Leistung und leichteren Verwaltung von Gebietsschema-Zeichenfolgen, die in Code eingebettet sind oder für den Speicher serialisiert sind. Es ist weniger wahrscheinlich, dass Gebietsschema-Zeichenfolgen durch eine Betriebssystemaktualisierung geändert werden, als dies bei der Namensform für Sprache und Land/Region der Fall ist.
 
 Ein als Gebiets *Schema Argument* übergebener NULL-Zeiger weist **setlocale** an, die internationale Umgebung abzufragen, anstatt sie festzulegen. Wenn das *locale* -Argument ein NULL-Zeiger ist, wird die aktuelle Gebiets Schema Einstellung des Programms nicht geändert. Stattdessen gibt **setlocale** einen Zeiger auf die Zeichenfolge zurück, die der *Kategorie* des aktuellen Gebiets Schemas des Threads zugeordnet ist. Wenn das *Category* -Argument **LC_ALL**ist, gibt die Funktion eine Zeichenfolge zurück, die die aktuelle Einstellung der einzelnen Kategorien angibt, getrennt durch Semikolons. Beispiel: Die Reihenfolge der Aufrufe
 
@@ -130,7 +130,7 @@ setlocale(LC_MONETARY, "fr-FR");
 printf("%s\n", setlocale(LC_ALL, NULL));
 ```
 
-gibt zurück
+gibt Folgendes zurück:
 
 ```Output
 LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
@@ -200,14 +200,14 @@ Weitere Informationen finden Sie unter [setlocale](../../preprocessor/setlocale.
 
 Die Funktion [_configthreadlocale](configthreadlocale.md) wird verwendet, um zu steuern, ob **setlocale** das Gebiets Schema aller Threads in einem Programm oder nur das Gebiets Schema des aufrufenden Threads beeinflusst.
 
-## <a name="requirements"></a>-Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**setlocale**|\<locale.h>|
-|**_wsetlocale**|\<locale.h> oder \<wchar.h>|
+|**_wsetlocale**|\<locale.h> or \<wchar.h>|
 
-Zusätzliche Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -318,14 +318,14 @@ The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'
 [Gebietsschema-Namen, Sprachen und Zeichenfolgen für Länder und Regionen](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
 [_configthreadlocale](configthreadlocale.md)\
 [_create_locale, _wcreate_locale](create-locale-wcreate-locale.md)\
-[Locale](../../c-runtime-library/locale.md)\
+[Gebietsschema](../../c-runtime-library/locale.md)\
 [localeconv](localeconv.md)\
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)\
 [strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)\
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)\
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)\
 [_setmbcp](setmbcp.md)\
-[strcoll Functions](../../c-runtime-library/strcoll-functions.md)\
+[strcoll-Funktionen](../../c-runtime-library/strcoll-functions.md)\
 [strftime, wcsftime, _strftime_l, _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)\
 [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)\
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)\

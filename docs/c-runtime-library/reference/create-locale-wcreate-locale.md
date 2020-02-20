@@ -31,12 +31,12 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: a7098dc572ecdbefd891efc8443e977b01850fa4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 58274b63a09847fb8593247bd2777cfa19935510
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938856"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473830"
 ---
 # <a name="_create_locale-_wcreate_locale"></a>_create_locale, _wcreate_locale
 
@@ -69,7 +69,7 @@ Wenn *ein gültiges Gebiets* Schema und eine gültige *Kategorie* angegeben werd
 
 ## <a name="remarks"></a>Hinweise
 
-Mit der **_create_locale** -Funktion können Sie ein Objekt erstellen, das bestimmte regionsspezifische Einstellungen darstellt, die in Gebiets Schema spezifischen Versionen vieler CRT-Funktionen (Funktionen mit dem **_l** -Suffix) verwendet werden können. Das Verhalten ähnelt **setlocale**, mit dem Unterschied, dass die Einstellungen in einer **_locale_t** -Struktur gespeichert werden, die zurückgegeben wird, anstatt die angegebenen Gebiets Schema Einstellungen auf die aktuelle Umgebung anzuwenden. Die **_locale_t** -Struktur sollte mithilfe von [_free_locale](free-locale.md) freigegeben werden, wenn Sie nicht mehr benötigt wird.
+Mit der **_create_locale** -Funktion können Sie ein Objekt erstellen, das bestimmte regionsspezifische Einstellungen darstellt, die in Gebiets Schema spezifischen Versionen vieler CRT-Funktionen (Funktionen mit dem **_l** Suffix) verwendet werden können. Das Verhalten ähnelt **setlocale**, mit der Ausnahme, dass die Einstellungen in einer **_locale_t** -Struktur gespeichert werden, die zurückgegeben wird, anstatt die angegebenen Gebiets Schema Einstellungen auf die aktuelle Umgebung anzuwenden. Die **_locale_t** Struktur sollte mithilfe [_free_locale](free-locale.md) freigegeben werden, wenn Sie nicht mehr benötigt wird.
 
 **_wcreate_locale** ist eine breit Zeichen Version von **_create_locale**. Das *Gebiets* Schema Argument für **_wcreate_locale** ist eine Zeichenfolge mit breit Zeichen. **_wcreate_locale** und **_create_locale** Verhalten sich andernfalls identisch.
 
@@ -78,7 +78,7 @@ Das *Category* -Argument gibt die Teile des Gebiets Schema spezifischen Verhalte
 | *kategorieflag* | Betrifft |
 |-----------------|---------|
 | **LC_ALL** |Alle unten aufgeführten Kategorien. |
-| **LC_COLLATE** |Die Funktionen "", "_stricoll", " **wcscoll**", " **_wcsicoll** **", "** **", "** **_strncoll**", " **_strnicoll**", " **_wcsncoll**", " **_wcsnicoll**" und " **wcsxfrm** |
+| **LC_COLLATE** |Die **Funktionen "** **strincoll**", " **_stricoll**", " **wcscoll**", " **_wcsicoll**", " **Straum**", " **_strncoll**", " **_strnicoll**", **"_wcsncoll"** , " **_wcsnicoll**" |
 | **LC_CTYPE** | Die Funktionen zur Zeichen Behandlung (außer **IsDigit**, **isxdigit**, **mbstowcs**und **mbtowc**, die nicht betroffen sind). |
 | **LC_MONETARY** | Informationen zur monetären Formatierung, die von der **localeconv** -Funktion zurückgegeben werden. |
 | **LC_NUMERIC** | Ein Dezimaltrennzeichen für die formatierten Ausgaberoutinen (z. **b. printf**), für die Daten Konvertierungs Routinen und für die nicht monetären Formatierungsinformationen, die von **localeconv**zurückgegeben werden. Neben dem Dezimaltrennzeichen legt **LC_NUMERIC** das Tausender Trennzeichen und die Zeichenfolge für die Gruppierungs Steuerung fest, die von [localeconv](localeconv.md)zurückgegeben wurde. |
@@ -88,18 +88,18 @@ Diese Funktion überprüft die *Kategorieparameter* *und Gebiets* Schema Paramet
 
 Das *locale* -Argument ist ein Zeiger auf eine Zeichenfolge, die das Gebiets Schema angibt. Weitere Informationen zum *Format des Gebiets Schema Arguments finden* Sie unter Gebiets Schema [Namen, Sprachen und Länder-](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)/regionszeichenfolgen.
 
-Das *locale* -Argument kann einen Gebiets Schema Namen, eine Sprachen Zeichenfolge, eine Sprachen Zeichenfolge und Länder-/Regionscode, eine Codepage oder eine Sprachen Zeichenfolge, einen Länder-/Regionscode und eine Codepage annehmen. Der Satz verfügbarer Gebietsschemanamen, Sprachen, Länder-/Regionscodes und Codepages umfasst alle diejenigen, die von der Windows NLS-API unterstützt werden, ausgenommen Codepages, die mehr als zwei Bytes pro Zeichen benötigen, wie z. B. UTF-7 und UTF-8. Wenn Sie eine Codepage wie UTF-7 oder UTF-8 bereitstellen, schlägt **_create_locale** fehl und gibt **null**zurück. Der von **_create_locale** unterstützte Satz von Gebiets Schema Namen wird in Gebiets Schema [Namen, Sprachen und Zeichen folgen für Länder/Regionen](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)beschrieben. Die von **_create_locale** unterstützten sprach-und Länder-/regionszeichenfolgen werden in [sprach](../../c-runtime-library/language-strings.md) Zeichenfolgen und Zeichen folgen für [Länder/Regionen](../../c-runtime-library/country-region-strings.md)aufgeführt.
+Das *locale* -Argument kann einen Gebiets Schema Namen, eine Sprachen Zeichenfolge, eine Sprachen Zeichenfolge und Länder-/Regionscode, eine Codepage oder eine Sprachen Zeichenfolge, einen Länder-/Regionscode und eine Codepage annehmen. Der Satz verfügbarer Gebiets Schema Namen, Sprachen, Länder-/Regionscodes und Codepages umfasst alle, die vom Windows-NLS API unterstützt werden. Der von **_create_locale** unterstützte Satz von Gebiets Schema Namen wird in Gebiets Schema [Namen, Sprachen und Zeichen folgen für Länder/Regionen](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)beschrieben. Die von **_create_locale** unterstützten sprach-und Länder-/regionszeichenfolgen werden in [sprach](../../c-runtime-library/language-strings.md) Zeichenfolgen und Zeichen folgen für [Länder/Regionen](../../c-runtime-library/country-region-strings.md)aufgeführt.
 
 Weitere Informationen zu Gebietsschemaeinstellungen finden Sie unter [setlocale, _wsetlocale](setlocale-wsetlocale.md).
 
 Der vorherige Name dieser Funktion, **__create_locale** (mit zwei führenden unterstrichen), ist veraltet.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_create_locale**|\<locale.h>|
-|**_wcreate_locale**|\<locale.h> oder \<wchar.h>|
+|**_wcreate_locale**|\<locale.h> or \<wchar.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
@@ -173,7 +173,7 @@ In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'
 [_free_locale](free-locale.md)<br/>
 [_configthreadlocale](configthreadlocale.md)<br/>
 [setlocale](../../preprocessor/setlocale.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Gebietsschema](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)<br/>
