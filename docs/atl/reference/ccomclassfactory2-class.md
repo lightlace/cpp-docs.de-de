@@ -34,7 +34,7 @@ class CComClassFactory2 : public IClassFactory2,
 
 #### <a name="parameters"></a>Parameter
 
-*Führer*<br/>
+*Lizenz*<br/>
 Eine Klasse, die die folgenden statischen Funktionen implementiert:
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
