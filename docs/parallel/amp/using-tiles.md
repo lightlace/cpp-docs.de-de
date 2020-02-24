@@ -11,7 +11,7 @@ ms.locfileid: "77126265"
 ---
 # <a name="using-tiles"></a>Verwenden von Kacheln
 
-Sie können Kacheln verwenden, um die Beschleunigung der App zu maximieren. Beim Zicken werden Threads in gleiche rechteckige Teilmengen oder *Kacheln*aufgeteilt. Wenn Sie eine geeignete Flächengröße und Kachelalgorithmus verwenden, können Sie noch mehr Beschleunigung aus dem C++ AMPcode abrufen. Die grundlegenden Komponenten des Kachelns sind:
+Sie können Kacheln verwenden, um die Beschleunigung der App zu maximieren. Mit der Kachelfunktion werden Threads in gleiche rechteckige Teilmengen oder *Kacheln*aufgeteilt. Wenn Sie eine geeignete Flächengröße und Kachelalgorithmus verwenden, können Sie noch mehr Beschleunigung aus dem C++ AMPcode abrufen. Die grundlegenden Komponenten des Kachelns sind:
 
 - `tile_static`-Variablen. Der wichtigste Vorteil des Kachelns liegt in der Leistungssteigerung durch den `tile_static`-Zugriff. Zugriff auf Daten im `tile_static`-Arbeitsspeicher kann erheblich schneller sein als ein Zugriff auf Daten im globalen Namensbereich (`array`-Objekte oder `array_view`-Objekte). Eine Instanz einer `tile_static`-Variable wird für jeden Tile erstellt, und alle Threads in den Tile haben Zugriff auf die Variable. In einem typischen Kachelalgorithmus werden Daten einmalig vom globalen Speicher in den `tile_static`-Speicher kopiert und darauf dann mehrfach vom `tile_static`-Speicher zugegriffen.
 
