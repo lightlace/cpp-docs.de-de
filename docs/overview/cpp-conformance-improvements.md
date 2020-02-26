@@ -2589,7 +2589,7 @@ struct D : B<T*> {
 };
 ```
 
-Für Version 15.7 von Visual Studio 2017 im Modus **/std:c++17** ist das Schlüsselwort **typename** in der Anweisung **using** von D erforderlich. Wenn **typename** nicht vorhanden ist, löst der Compiler die Warnung C4346: ('B<T>::type': Abhängiger Name ist kein Typ.* ) und den Fehler C2061 (*Syntaxfehler: Bezeichner 'type'* ) aus:
+Für Version 15.7 von Visual Studio 2017 im Modus **/std:c++17** ist das Schlüsselwort **typename** in der Anweisung **using** von D erforderlich. Wenn **typename** nicht vorhanden ist, löst der Compiler die Warnung C4346: ( *'B<T\*>::type': Abhängiger Name ist kein Typ.* ) und den Fehler C2061 (*Syntaxfehler: Bezeichner 'type'* ) aus:
 
 ```cpp
 template<typename T>
