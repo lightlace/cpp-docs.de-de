@@ -1,76 +1,74 @@
 ---
 title: 'Vererbung von Eigenschaften in Visual Studio-Projekten: C++'
-ms.date: 05/16/2019
+description: Funktionsweise der Eigenschafts Vererbung in systemeigenen (MSBuild) Visual Studio C++ -Projekten.
+ms.date: 02/21/2020
 helpviewer_keywords:
 - C++ projects, property inheritance
-ms.openlocfilehash: 472700226ffc1f265f6fab84dbd44fca651b3c87
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 2032ab63c7d278a080742dba8d8d0c6c3ed7a094
+ms.sourcegitcommit: 9a63e9b36d5e7fb13eab15c2c35bedad4fb03ade
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837403"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600022"
 ---
 # <a name="property-inheritance-in-visual-studio-projects"></a>Vererbung von Eigenschaften in Visual Studio-Projekten
 
-Das Visual Studio-Projektsystem basiert auf MSBuild. MSBuild definiert die Dateiformate und die Regeln für das Erstellen von Projekten. MSBuild verwaltet einen Großteil der Komplexität für das Erstellen für mehrere Konfigurationen und Plattformen. Sie sollten jedoch die Funktionsweise kennen. Dies ist besonders wichtig, wenn Sie benutzerdefinierte Konfigurationen definieren oder wiederverwendbare Eigenschaften erstellen möchten, die Sie für mehrere Projekte freigeben und in diese importieren können.
+Das Native Visual Studio-Projekt System basiert auf MSBuild. MSBuild definiert Dateiformate und Regeln zum Erstellen von Projekten beliebiger Art. Es verwaltet den größten Teil der Komplexität beim Aufbau mehrerer Konfigurationen und Plattformen. Es ist hilfreich, die Funktionsweise zu verstehen. Dies ist besonders wichtig, wenn Sie benutzerdefinierte Konfigurationen definieren möchten. Oder, um wiederverwendbare Sätze von Eigenschaften zu erstellen, die Sie freigeben und in mehrere Projekte importieren können.
 
 ## <a name="the-vcxproj-file-props-files-and-targets-files"></a>Die VCXPROJ-Datei, PROPS- und TARGETS-Dateien
 
-Projekteigenschaften werden entweder direkt in der Projektdatei (*.vcxproj) oder in weiteren TARGETS- oder PROPS-Dateien gespeichert, die Standardwerte angeben und von der Projektdatei importiert werden. Für Visual Studio 2015 befinden sich diese Dateien unter **\Programme (x86)\MSBuild\Microsoft.Cpp\v4.0\V140**. Für Visual Studio 2017 oder Visual Studio 2019 befinden sich diese Dateien unter **\\Programme (x86)\\Microsoft Visual Studio\\&lt;2017 oder 2019>\\_Edition_\\Common7\\IDE\\VC\\VCTargets**. Hierbei entspricht _Edition_ der installierten Visual Studio-Edition. Eigenschaften werden ebenfalls in einer PROPS-Datei gespeichert, die Sie zu Ihrem Projekt hinzufügen können. Es wird dringend empfohlen, diese Dateien nicht manuell zu bearbeiten, sondern die Eigenschaftenseiten in der IDE dafür zu verwenden. Dies gilt insbesondere für die Dateien, die in die Vererbung mit einbezogen werden, sofern Sie nicht über gute MSBuild-Kenntnisse verfügen.
+Projekteigenschaften werden entweder direkt in der Projektdatei ( *`.vcxproj`* ) oder in anderen *`.targets`* -oder *`.props`* Dateien gespeichert, die von der Projektdatei importiert werden und die Standardwerte bereitstellen. Für Visual Studio 2015 befinden sich diese Dateien in *`\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140`* . Für Visual Studio 2017 befinden sich diese Dateien in *`\Program Files (x86)\Microsoft Visual Studio\2017\<edition>\Common7\IDE\VC\VCTargets`* , in dem *`<edition>`* die installierte Version von Visual Studio ist. In Visual Studio 2019 befinden sich diese Dateien in *`\Program Files (x86)\Microsoft Visual Studio\2019\<edition>\MSBuild\Microsoft\VC\v160`* . Eigenschaften werden auch in allen benutzerdefinierten *`.props`* Dateien gespeichert, die Sie Ihrem eigenen Projekt hinzufügen können. Es wird dringend empfohlen, diese Dateien nicht manuell zu bearbeiten. Verwenden Sie stattdessen die Eigenschaften Seiten in der IDE, um alle Eigenschaften zu ändern, insbesondere diejenigen, die an der Vererbung beteiligt sind, es sei denn, Sie haben ein tiefgreifendes Verständnis von MSBuild.
 
-Wie zuvor beschrieben kann der gleichen Eigenschaft für die gleiche Konfiguration in verschiedenen Dateien ein anderer Wert zugewiesen werden. Wenn Sie ein Projekt erstellen, wertet die MSBuild-Engine die Projektdatei und alle importierten Dateien in einer klar definierten Reihenfolge (siehe unten) aus. Während die Dateien ausgewertet werden, überschreiben alle Eigenschaftswerte, die in den Dateien definiert sind, die vorhandenen Werte. Alle nicht angegebenen Werte werden von Dateien geerbt, die zuvor ausgewertet wurden. Deshalb ist beim Festlegen einer Eigenschaft mit Eigenschaftenseiten ebenfalls wichtig, darauf zu achten, wo Sie diese festlegen. Wenn Sie eine Eigenschaft in einer PROPS-Datei auf „X“ festlegen, diese aber in der Projektdatei auf „Y“ festgelegt ist, wird das Projekt mit der auf „Y“ festgelegten Eigenschaft erstellt. Wenn die gleiche Eigenschaft in einem Projektelement (z.B. in einer CPP-Datei) auf „Z“ festgelegt ist, verwendet die MSBuild-Engine den Wert „Z“. 
+Wie zuvor beschrieben kann der gleichen Eigenschaft für die gleiche Konfiguration in verschiedenen Dateien ein anderer Wert zugewiesen werden. Wenn Sie ein Projekt erstellen, wertet die MSBuild-Engine die Projektdatei und alle importierten Dateien in einer klar definierten Reihenfolge (siehe unten) aus. Während die Dateien ausgewertet werden, überschreiben alle Eigenschaftswerte, die in den Dateien definiert sind, die vorhandenen Werte. Alle Werte, die nicht angegeben werden, werden von Dateien geerbt, die zuvor ausgewertet wurden. Wenn Sie eine Eigenschaft mit Eigenschaften Seiten festlegen, ist es auch wichtig, darauf zu achten, wo Sie Sie festlegen. Wenn Sie eine Eigenschaft in einer *`.props`* Datei auf "X" festlegen, aber die-Eigenschaft in der Projektdatei auf "y" festgelegt ist, wird das Projekt erstellt, wobei die-Eigenschaft auf "y" festgelegt ist. Wenn die gleiche Eigenschaft für ein Projekt Element auf "z" festgelegt ist (z. b. eine *`.cpp`* Datei), verwendet die MSBuild-Engine den Wert "z".
 
 So sieht die grundlegende Vererbungsstruktur aus:
 
-1. Standardeinstellungen von MSBuild CPP Toolset („..\Programme\MSBuild\Microsoft.Cpp\v4.0\Microsoft.Cpp.Default.props“, die durch die VCXPROJ-Datei importiert wird)
+1. Standardeinstellungen aus dem MSBuild-Toolset für cpp (.. \Program ..\programme\msbuild\microsoft.cpp\v4.0\Microsoft.cpp.default.Props ", das von der *`.vcxproj`* Datei importiert wird.)
 
-2. Eigenschaftenblätter
+1. Eigenschaftenblätter
 
-3. VCXPROJ-Datei (Kann Standard- und die Eigenschaftenblatteinstellungen überschreiben.)
+1. *`.vcxproj`* Datei. (Kann Standard- und die Eigenschaftenblatteinstellungen überschreiben.)
 
-4. Elementmetadaten
+1. Elementmetadaten
 
 > [!TIP]
-> Auf einer Eigenschaftenseite wird eine Eigenschaft in `bold` im aktuellen Kontext definiert. Eine Eigenschaft in normaler Schriftart ist geerbt.
+> Auf einer Eigenschaften Seite wird eine **Fett** formatierte Eigenschaft im aktuellen Kontext definiert. Eine Eigenschaft in normaler Schriftart ist geerbt.
 
 ## <a name="view-an-expanded-project-file-with-all-imported-values"></a>Anzeigen einer erweiterten Projektdatei mit allen importierten Werten
 
 Manchmal ist es hilfreich, die erweiterte Datei anzuzeigen, um zu bestimmen, wie ein bestimmter Eigenschaftswert vererbt wird. Um die erweiterte Version anzuzeigen, geben Sie folgenden Befehl an einer Visual Studio-Eingabeaufforderung ein. (Ändern Sie die Platzhalterdateinamen in die Namen der Dateien, die Sie verwenden möchten.)
 
-**msbuild /pp:** *temp* **.txt** *myapp* **.vcxproj**
+> **MSBuild/PP:** _Temp_ **. txt** _myapp_ **. vcxproj**
 
-Erweiterte Projektdateien können sehr groß und schwierig zu verstehen sein, wenn Sie nicht mit MSBuild vertraut sind. So sieht die grundlegende Struktur einer Projektdatei aus:
+Erweiterte Projektdateien können groß und schwer zu verstehen sein, es sei denn, Sie sind mit MSBuild vertraut. So sieht die grundlegende Struktur einer Projektdatei aus:
 
 1. Grundlegende Projekteigenschaften, die in der IDE nicht verfügbar gemacht werden.
 
-2. Import von Microsoft.cpp.default.props, die einige einfache, Toolset-unabhängige Eigenschaften definiert.
+1. Import von *`Microsoft.cpp.default.props`* , die einige grundlegende, toolsetunabhängige Eigenschaften definiert.
 
-3. Globale Konfigurationseigenschaften (verfügbar als Standardeigenschaften **PlatformToolset** und **Project** auf der Seite **Konfiguration > Allgemein**). Diese Eigenschaften bestimmen, welche Toolset- und systeminternen Eigenschaftenblätter im nächsten Schritt in Microsoft.cpp.props importiert werden.
+1. Globale Konfigurationseigenschaften (verfügbar als Standardeigenschaften **PlatformToolset** und **Project** auf der Seite **Konfiguration > Allgemein**). Diese Eigenschaften bestimmen, welche Toolset-und systeminternen Eigenschaften Blätter in *`Microsoft.cpp.props`* im nächsten Schritt importiert werden.
 
-4. Import von Microsoft.cpp.props, die die meisten Projektstandardwerte festlegt.
+1. Der Import von *`Microsoft.cpp.props`* , der die meisten Projekt Standardwerte festlegt.
 
-5. Import aller Eigenschaftenblätter, einschließlich USER-Dateien. Diese Eigenschaftenblätter können alle Eigenschaften außer die Standardeigenschaften **PlatformToolset** und **Project** überschreiben.
+1. Importieren aller Eigenschaften Blätter, einschließlich *`.user`* Dateien Diese Eigenschaftenblätter können alle Eigenschaften außer die Standardeigenschaften **PlatformToolset** und **Project** überschreiben.
 
-6. Die restlichen Eigenschaften der Projektkonfiguration. Diese Werte können das überschreiben, was in den Eigenschaftenblättern festgelegt wurde.
+1. Der Rest der Projekt Konfigurations Eigenschaften. Diese Werte können das überschreiben, was in den Eigenschaftenblättern festgelegt wurde.
 
-7. Elemente (Dateien) zusammen mit ihren Metadaten. Diese stellen immer das letzte Wort in den MSBuild-Auswertungsregeln dar, selbst wenn sie vor anderen Eigenschaften und Importen auftreten.
+1. Elemente (Dateien) zusammen mit ihren Metadaten. Diese Elemente sind immer das letzte Wort in den MSBuild-Auswertungs Regeln, auch wenn Sie vor anderen Eigenschaften und Importen auftreten.
 
-Weitere Informationen finden Sie unter [MSBuild Properties](/visualstudio/msbuild/msbuild-properties) (MSBuild-Eigenschaften).
+Weitere Informationen finden Sie unter [MSBuild-Eigenschaften](/visualstudio/msbuild/msbuild-properties).
 
 ## <a name="build-configurations"></a>Buildkonfigurationen
 
-Eine Konfiguration ist nur eine beliebige Gruppe von Eigenschaften, denen ein Name zugewiesen wird. Visual Studio stellt Debug- und Releasekonfigurationen bereit und legt jeweils verschiedene Eigenschaften fest, die einem Debugbuild oder einem Releasebuild entsprechen. Sie können den **Konfigurations-Manager** verwenden, um benutzerdefinierte Konfigurationen zu definieren und somit Eigenschaften einfach für einen bestimmten Build gruppieren. 
+Eine Konfiguration ist nur eine beliebige Gruppe von Eigenschaften, denen ein Name zugewiesen wird. Visual Studio bietet Debug-und Releasekonfigurationen. Jede legt verschiedene Eigenschaften für einen Debugbuild oder Releasebuild entsprechend fest. Sie können den **Configuration Manager** verwenden, um benutzerdefinierte Konfigurationen zu definieren. Sie sind eine bequeme Methode, um Eigenschaften für eine bestimmte Art von Build zu gruppieren.
 
-Um eine bessere Vorstellung von Buildkonfigurationen zu bekommen, öffnen Sie den **Eigenschaften-Manager**, indem Sie **Ansicht &#124; Eigenschaften-Manager** oder **Ansicht &#124; Weitere Fenster &#124; Eigenschaften-Manager** auswählen, je nach Ihren Einstellungen. Der **Eigenschaften-Manager** weist Knoten für jede Konfiguration/jedes Plattform-Paar im Projekt auf. Unter jedem dieser Knoten sind Knoten für Eigenschaftenblätter (PROPS-Dateien), die für diese Konfiguration spezifische Eigenschaften festlegen.
+Um eine bessere Vorstellung von Buildkonfigurationen zu erhalten, öffnen Sie **Eigenschaften-Manager**. Sie können Sie öffnen, indem Sie in Abhängigkeit von Ihren Einstellungen **> Eigenschaften-Manager** anzeigen oder **> anderen Windows-> Eigenschaften-Manager anzeigen**. **Eigenschaften-Manager** verfügt über Knoten für jedes Konfigurations-und Platt Form Paar im Projekt. Unter jedem dieser Knoten befinden sich Knoten für Eigenschaften Blätter ( *`.props`* Dateien), mit denen bestimmte Eigenschaften für diese Konfiguration festgelegt werden.
 
-![Eigenschaften-Manager](media/property-manager.png "Property Manager")
+![Eigenschaften-Manager](media/property-manager.png "Eigenschaften-Manager")
 
-Wenn Sie auf den Eigenschaftenseiten zum Bereich „Allgemein“ wechseln und die Eigenschaft „Zeichensatz“ auf „Nicht festgelegt“ statt auf „Unicode-Zeichensatz verwenden“ festlegen und auf **OK** klicken, zeigt der Eigenschaften-Manager das Eigenschaftenblatt **Unicode-Unterstützung** für die aktuelle Konfiguration nicht an. Für andere Konfigurationen ist es jedoch vorhanden.
+Beispielsweise können Sie auf den Eigenschaften Seiten zum Bereich Allgemein wechseln. Ändern Sie die Eigenschaft Zeichensatz in "nicht festgelegt" anstelle von "Unicode verwenden", und klicken Sie dann auf **OK**. Die Eigenschaften-Manager zeigt jetzt kein Eigenschaften Blatt für die **Unicode-Unterstützung** an. Sie wird für die aktuelle Konfiguration entfernt, ist aber noch für andere Konfigurationen vorhanden.
 
 Weitere Informationen zum Eigenschaften-Manager und zu Eigenschaftenblättern finden Sie unter [Teilen oder Wiederverwenden von Visual Studio C++-Projekteinstellungen](create-reusable-property-configurations.md).
 
 > [!TIP]
-> Bei der USER-Datei handelt es sich um ein veraltetes Feature. Es wird empfohlen, diese zu löschen, damit die Eigenschaften entsprechend der Konfiguration und Plattform richtig gruppiert werden.
-
-
-
+> Die *`.user`* -Datei ist ein Legacy Feature. Es wird empfohlen, dass Sie Sie löschen, damit die Eigenschaften entsprechend der Konfiguration und Plattform ordnungsgemäß gruppiert bleiben.
