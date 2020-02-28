@@ -2455,7 +2455,7 @@
 - name: Linux-Entwicklung
   href: linux/
 - name: Plattformübergreifende mobile Entwicklung
-  href: /visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development
+  href: cross-platform/
 - name: .NET-Entwicklung mit C++/CLI
   expanded: false
   items:
