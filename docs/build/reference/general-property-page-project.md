@@ -1,5 +1,5 @@
 ---
-title: Eigenschaftenseite "Allgemein" (Projekt)
+title: Eigenschaftenseite „Allgemein“ (Projekt)
 ms.date: 07/17/2019
 f1_keywords:
 - VC.Project.VCConfiguration.IntermediateDirectory
@@ -25,18 +25,18 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: 0fb6e1289b44940cabaee02e62690c94ec5bf131
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: eb172e7bd76816458a0efff7b053d136f52076ab
+ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299772"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78166757"
 ---
-# <a name="general-property-page-project"></a>Eigenschaftenseite "Allgemein" (Projekt)
+# <a name="general-property-page-project"></a>Eigenschaftenseite „Allgemein“ (Projekt)
 
 ::: moniker range=">=vs-2019"
 
-Dieses Thema bezieht sich auf Visual Studio-Projekte für Windows. Informationen zu Linux-Projekten finden Sie unter [Referenz zu C++ Linux-Eigenschaften Seiten](../../linux/prop-pages-linux.md). Informationen zu cmake-Projekten finden Sie unter [cmake-Projekte in Visual Studio](../cmake-projects-in-visual-studio.md).
+Dieses Thema bezieht sich auf Visual Studio-Projekte für Windows. Informationen zu Linux-Projekten finden Sie unter [Referenz zu C++ Linux-Eigenschaften Seiten](../../linux/prop-pages-linux.md). Informationen zu cmake-Projekten finden Sie unter [cmake-Projekte in Visual Studio](../cmake-projects-in-visual-studio.md). Informationen zu Android-Projekten finden Sie unter [Allgemeine Projekt C++Eigenschaften (Android)](/cpp/cross-platform/general-android-prop-page). Informationen zu Android Makefile-Projekten finden Sie unter [Allgemeine Projekt C++ Eigenschaften (Android Makefile)](/cpp/cross-platform/general-makefile-android-prop-page) .
 
 Wenn Sie in Projektmappen-Explorer mit der rechten Maustaste auf einen Projekt Knoten klicken und **Eigenschaften**auswählen, werden auf der Eigenschaften Seite **Allgemein** unter dem Knoten **Konfigurations Eigenschaften** im linken Bereich folgende Eigenschaften angezeigt:
 
@@ -88,11 +88,11 @@ Wenn Sie in Projektmappen-Explorer mit der rechten Maustaste auf einen Projekt K
 
    Verwenden Sie den Wert **8.1**, um Windows 7 oder Windows Vista als Zielplattform anzugeben, da Windows SDK 8.1 für diese Plattformen abwärtskompatibel ist. Darüber hinaus müssen Sie den entsprechenden Wert für **_WIN32_WINNT** in „argetver.h“ definieren. Für Windows 7 ist dies "0x0601". Siehe [Ändern von WINVER und _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md)
 
-   Sie können das in Visual Studio enthaltene Windows XP-Plattformtoolset installieren, um die aktuellen Versionen der Bibliotheken zum Erstellen von Windows XP- und Windows 2003-Serverprojekten zu verwenden. Informationen zum Herunterladen und Verwenden dieses Plattformtoolsets finden Sie unter [Konfigurieren von Programmen für Windows XP](../configuring-programs-for-windows-xp.md). Weitere Informationen zum Ändern des Plattformtoolsets finden Sie unter [How to: Modify the Target Framework and Platform Toolset (Vorgehensweise: Ändern des Zielframeworks und des Plattformtoolsets)](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Sie können das in Visual Studio enthaltene Windows XP-Plattformtoolset installieren, um die aktuellen Versionen der Bibliotheken zum Erstellen von Windows XP- und Windows 2003-Serverprojekten zu verwenden. Informationen zum Herunterladen und Verwenden dieses Plattformtoolsets finden Sie unter [Konfigurieren von Programmen für Windows XP](../configuring-programs-for-windows-xp.md). Weitere Informationen zum Ändern des Plattformtoolsets finden Sie unter [Vorgehensweise: Ändern des Zielframeworks und des Plattformtoolsets](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Plattformtoolset**
 
-   Ermöglicht eine Ausrichtung des Projekts auf andere Versionen der Visual C++-Bibliotheken und des Compilers. Visual Studio C++ -Projekte können entweder auf das von Visual Studio installierte Standard Toolset oder auf eines der Toolsets abzielen, die von mehreren früheren Versionen von Visual Studio installiert wurden. Hierzu zählen auch Toolsets, mit denen ausführbare Dateien erstellt werden können, die unter WindowX XP ausgeführt werden können. Weitere Informationen zum Ändern des Platt Form Tool Sets finden [Sie unter Gewusst wie: Modify the Target Framework and Platform Toolset (Vorgehensweise: Ändern des Zielframeworks und des Plattformtoolsets)](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Ermöglicht eine Ausrichtung des Projekts auf andere Versionen der Visual C++-Bibliotheken und des Compilers. Visual Studio C++ -Projekte können entweder auf das von Visual Studio installierte Standard Toolset oder auf eines der Toolsets abzielen, die von mehreren früheren Versionen von Visual Studio installiert wurden. Hierzu zählen auch Toolsets, mit denen ausführbare Dateien erstellt werden können, die unter Windows XP ausgeführt werden können. Informationen zum Ändern des Plattformtoolsets finden Sie unter [How to: Modify the Target Framework and Platform Toolset (Vorgehensweise: Ändern des Zielframeworks und des Plattformtoolsets)](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **C++Sprach Standard**
 
@@ -102,7 +102,7 @@ Wenn Sie in Projektmappen-Explorer mit der rechten Maustaste auf einen Projekt K
 
 ::: moniker range="<=vs-2017"
 
-Wenn Sie in Visual Studio 2015 und Visual Studio 2017 in **Projektmappen-Explorer**mit der rechten Maustaste auf einen Projekt Knoten klicken und **Eigenschaften**auswählen, wird auf der Eigenschaften Seite **Allgemein** unter dem Knoten **Konfigurations Eigenschaften** im linken Fensterbereich angezeigt. zwei Abschnitte der Eigenschaften:
+Wenn Sie in Visual Studio 2015 und Visual Studio 2017 in **Projektmappen-Explorer**mit der rechten Maustaste auf einen Projekt Knoten klicken und **Eigenschaften**auswählen, werden auf der Eigenschaften Seite **Allgemein** unter dem Knoten **Konfigurations Eigenschaften** im linken Bereich zwei Eigenschaften Abschnitte angezeigt:
 
 - Allgemein
 
@@ -126,7 +126,7 @@ Wenn Sie in Visual Studio 2015 und Visual Studio 2017 in **Projektmappen-Explore
 
    Verwenden Sie den Wert **8.1**, um Windows 7 oder Windows Vista als Zielplattform anzugeben, da Windows SDK 8.1 für diese Plattformen abwärtskompatibel ist. Darüber hinaus müssen Sie den entsprechenden Wert für **_WIN32_WINNT** in „argetver.h“ definieren. Für Windows 7 ist dies "0x0601". Siehe [Ändern von WINVER und _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md)
 
-   Sie können das in Visual Studio enthaltene Windows XP-Plattformtoolset installieren, um die aktuellen Versionen der Bibliotheken zum Erstellen von Windows XP- und Windows 2003-Serverprojekten zu verwenden. Informationen zum Herunterladen und Verwenden dieses Plattformtoolsets finden Sie unter [Konfigurieren von Programmen für Windows XP](../configuring-programs-for-windows-xp.md). Weitere Informationen zum Ändern des Plattformtoolsets finden Sie unter [How to: Modify the Target Framework and Platform Toolset (Vorgehensweise: Ändern des Zielframeworks und des Plattformtoolsets)](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Sie können das in Visual Studio enthaltene Windows XP-Plattformtoolset installieren, um die aktuellen Versionen der Bibliotheken zum Erstellen von Windows XP- und Windows 2003-Serverprojekten zu verwenden. Informationen zum Herunterladen und Verwenden dieses Plattformtoolsets finden Sie unter [Konfigurieren von Programmen für Windows XP](../configuring-programs-for-windows-xp.md). Weitere Informationen zum Ändern des Plattformtoolsets finden Sie unter [Vorgehensweise: Ändern des Zielframeworks und des Plattformtoolsets](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Ausgabeverzeichnis**
 
@@ -162,14 +162,14 @@ Wenn Sie in Visual Studio 2015 und Visual Studio 2017 in **Projektmappen-Explore
 
 - **Plattformtoolset**
 
-   Ermöglicht eine Ausrichtung des Projekts auf andere Versionen der Visual C++-Bibliotheken und des Compilers. Visual Studio C++ -Projekte können entweder auf das von Visual Studio installierte Standard Toolset oder auf eines der Toolsets abzielen, die von mehreren früheren Versionen von Visual Studio installiert wurden. Hierzu zählen auch Toolsets, mit denen ausführbare Dateien erstellt werden können, die unter WindowX XP ausgeführt werden können. Weitere Informationen zum Ändern des Platt Form Tool Sets finden [Sie unter Gewusst wie: Modify the Target Framework and Platform Toolset (Vorgehensweise: Ändern des Zielframeworks und des Plattformtoolsets)](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Ermöglicht eine Ausrichtung des Projekts auf andere Versionen der Visual C++-Bibliotheken und des Compilers. Visual Studio C++ -Projekte können entweder auf das von Visual Studio installierte Standard Toolset oder auf eines der Toolsets abzielen, die von mehreren früheren Versionen von Visual Studio installiert wurden. Hierzu zählen auch Toolsets, mit denen ausführbare Dateien erstellt werden können, die unter Windows XP ausgeführt werden können. Informationen zum Ändern des Plattformtoolsets finden Sie unter [How to: Modify the Target Framework and Platform Toolset (Vorgehensweise: Ändern des Zielframeworks und des Plattformtoolsets)](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Verwalteten inkrementellen Build aktivieren**
 
    Für verwaltete Projekte aktiviert diese Option die Erkennung von externer Sichtbarkeit, wenn Sie Assemblys generieren. Wenn eine Änderung an einem verwalteten Projekt nicht für andere Projekte sichtbar ist, werden abhängige Projekte nicht neu erstellt. Dies kann Buildzeiten in Projektmappen mit verwalteten Projekten deutlich verbessern.
 
 ## <a name="project-defaults"></a>Projektstandards
- 
+
 Die Eigenschaften im Abschnitt “Projektstandards“ stellen änderbare Standardeigenschaften dar. Die Definition für diese Eigenschaften befindet sich in den PROPS-Dateien unter *Installationsverzeichnis*\VC\VCProjectDefaults.
 
 - **Konfigurationstyp**
